@@ -5,55 +5,55 @@ ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19aeab232f366818291bd682ab9c063a75be6687
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa004f0def04c7efe2ba7450050a899760b0bbcd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724504"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590201"
 ---
-# <a name="node-types-recognized-with-xpath-queries"></a><span data-ttu-id="66a5d-102">Tipos de nodos reconocidos con consultas XPath</span><span class="sxs-lookup"><span data-stu-id="66a5d-102">Node Types Recognized with XPath Queries</span></span>
-<span data-ttu-id="66a5d-103">Los tipos de nodos que se reconocen en una consulta XPath no son los mismos que se encuentran en el Modelo de objetos de documento (DOM).</span><span class="sxs-lookup"><span data-stu-id="66a5d-103">The types of nodes recognized in an XPath query are not the same node types found in the Document Object Model (DOM).</span></span>  
+# <a name="node-types-recognized-with-xpath-queries"></a><span data-ttu-id="bcfe1-102">Tipos de nodos reconocidos con consultas XPath</span><span class="sxs-lookup"><span data-stu-id="bcfe1-102">Node Types Recognized with XPath Queries</span></span>
+<span data-ttu-id="bcfe1-103">Los tipos de nodos que se reconocen en una consulta XPath no son los mismos que se encuentran en el Modelo de objetos de documento (DOM).</span><span class="sxs-lookup"><span data-stu-id="bcfe1-103">The types of nodes recognized in an XPath query are not the same node types found in the Document Object Model (DOM).</span></span>  
   
-## <a name="w3c-xpath-node-types"></a><span data-ttu-id="66a5d-104">Tipos de nodos XPath del W3C</span><span class="sxs-lookup"><span data-stu-id="66a5d-104">W3C XPath Node Types</span></span>  
- <span data-ttu-id="66a5d-105">Los tipos de nodos que se reconocen en una consulta XPath no son los tipos de nodos que se encuentran en el Modelo de objetos de documento (DOM).</span><span class="sxs-lookup"><span data-stu-id="66a5d-105">The types of nodes recognized in an XPath query are not the types of nodes found in the Document Object Model (DOM).</span></span> <span data-ttu-id="66a5d-106">A continuación se enumeran los tipos de nodos XPath representados por la enumeración <xref:System.Xml.XPath.XPathNodeType>.</span><span class="sxs-lookup"><span data-stu-id="66a5d-106">The following are the XPath node types represented by the <xref:System.Xml.XPath.XPathNodeType> enumeration.</span></span>  
+## <a name="w3c-xpath-node-types"></a><span data-ttu-id="bcfe1-104">Tipos de nodos XPath del W3C</span><span class="sxs-lookup"><span data-stu-id="bcfe1-104">W3C XPath Node Types</span></span>  
+ <span data-ttu-id="bcfe1-105">Los tipos de nodos que se reconocen en una consulta XPath no son los tipos de nodos que se encuentran en el Modelo de objetos de documento (DOM).</span><span class="sxs-lookup"><span data-stu-id="bcfe1-105">The types of nodes recognized in an XPath query are not the types of nodes found in the Document Object Model (DOM).</span></span> <span data-ttu-id="bcfe1-106">A continuación se enumeran los tipos de nodos XPath representados por la enumeración <xref:System.Xml.XPath.XPathNodeType>.</span><span class="sxs-lookup"><span data-stu-id="bcfe1-106">The following are the XPath node types represented by the <xref:System.Xml.XPath.XPathNodeType> enumeration.</span></span>  
   
--   <xref:System.Xml.XPath.XPathNodeType.All>  
+- <xref:System.Xml.XPath.XPathNodeType.All>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Attribute>  
+- <xref:System.Xml.XPath.XPathNodeType.Attribute>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Comment>  
+- <xref:System.Xml.XPath.XPathNodeType.Comment>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Element>  
+- <xref:System.Xml.XPath.XPathNodeType.Element>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Namespace>  
+- <xref:System.Xml.XPath.XPathNodeType.Namespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
+- <xref:System.Xml.XPath.XPathNodeType.ProcessingInstruction>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Root>  
+- <xref:System.Xml.XPath.XPathNodeType.Root>  
   
--   <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
+- <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Text>  
+- <xref:System.Xml.XPath.XPathNodeType.Text>  
   
--   <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
+- <xref:System.Xml.XPath.XPathNodeType.Whitespace>  
   
- <span data-ttu-id="66a5d-107">Estos tipos de nodos se basan en el modelo de datos XPath, donde los nodos se derivan del conjunto de información XML.</span><span class="sxs-lookup"><span data-stu-id="66a5d-107">These node types are based on the XPath data model, where the nodes are derived from the XML Information Set.</span></span> <span data-ttu-id="66a5d-108">Los tipos de nodos <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> y <xref:System.Xml.XPath.XPathNodeType.Whitespace> son extensiones de Microsoft .NET Framework para los tipos de nodos básicos que se describen en el modelo de datos XPath.</span><span class="sxs-lookup"><span data-stu-id="66a5d-108">The <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> and <xref:System.Xml.XPath.XPathNodeType.Whitespace> node types are Microsoft .NET Framework extensions to the base node types described in the XPath data model.</span></span>  
+ <span data-ttu-id="bcfe1-107">Estos tipos de nodos se basan en el modelo de datos XPath, donde los nodos se derivan del conjunto de información XML.</span><span class="sxs-lookup"><span data-stu-id="bcfe1-107">These node types are based on the XPath data model, where the nodes are derived from the XML Information Set.</span></span> <span data-ttu-id="bcfe1-108">Los tipos de nodos <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> y <xref:System.Xml.XPath.XPathNodeType.Whitespace> son extensiones de Microsoft .NET Framework para los tipos de nodos básicos que se describen en el modelo de datos XPath.</span><span class="sxs-lookup"><span data-stu-id="bcfe1-108">The <xref:System.Xml.XPath.XPathNodeType.SignificantWhitespace> and <xref:System.Xml.XPath.XPathNodeType.Whitespace> node types are Microsoft .NET Framework extensions to the base node types described in the XPath data model.</span></span>  
   
- <span data-ttu-id="66a5d-109">El tipo de nodo de atributos se utiliza de manera diferente en el modelo de datos XPath y en el DOM.</span><span class="sxs-lookup"><span data-stu-id="66a5d-109">The attribute node type is used differently in the XPath data model than it is in the DOM.</span></span> <span data-ttu-id="66a5d-110">En el modelo de datos XPath, el nodo de elementos tiene un conjunto de nodos de atributos relacionados con él y el nodo de elementos es el nodo principal de cada nodo de atributos.</span><span class="sxs-lookup"><span data-stu-id="66a5d-110">In the XPath data model, the element node has a set of attribute nodes related to it and the element node is the parent of each attribute node.</span></span> <span data-ttu-id="66a5d-111">Sin embargo, en el DOM, el nodo de elementos es el propietario y no el nodo principal.</span><span class="sxs-lookup"><span data-stu-id="66a5d-111">However, in the DOM, the element node is the owner and not the parent.</span></span> <span data-ttu-id="66a5d-112">En ambos modelos, los nodos de espacios de nombres y atributos no se consideran nodos secundarios del nodo de elementos.</span><span class="sxs-lookup"><span data-stu-id="66a5d-112">In both models, attribute and namespace nodes are not considered child nodes of the element node.</span></span>  
+ <span data-ttu-id="bcfe1-109">El tipo de nodo de atributos se utiliza de manera diferente en el modelo de datos XPath y en el DOM.</span><span class="sxs-lookup"><span data-stu-id="bcfe1-109">The attribute node type is used differently in the XPath data model than it is in the DOM.</span></span> <span data-ttu-id="bcfe1-110">En el modelo de datos XPath, el nodo de elementos tiene un conjunto de nodos de atributos relacionados con él y el nodo de elementos es el nodo principal de cada nodo de atributos.</span><span class="sxs-lookup"><span data-stu-id="bcfe1-110">In the XPath data model, the element node has a set of attribute nodes related to it and the element node is the parent of each attribute node.</span></span> <span data-ttu-id="bcfe1-111">Sin embargo, en el DOM, el nodo de elementos es el propietario y no el nodo principal.</span><span class="sxs-lookup"><span data-stu-id="bcfe1-111">However, in the DOM, the element node is the owner and not the parent.</span></span> <span data-ttu-id="bcfe1-112">En ambos modelos, los nodos de espacios de nombres y atributos no se consideran nodos secundarios del nodo de elementos.</span><span class="sxs-lookup"><span data-stu-id="bcfe1-112">In both models, attribute and namespace nodes are not considered child nodes of the element node.</span></span>  
   
- <span data-ttu-id="66a5d-113">El tipo de nodo de espacios de nombres es una adición al modelo de datos XPath y no es un tipo de nodo DOM reconocido.</span><span class="sxs-lookup"><span data-stu-id="66a5d-113">The namespace node type is an addition to the XPath data model and is not a recognized DOM node type.</span></span>  
+ <span data-ttu-id="bcfe1-113">El tipo de nodo de espacios de nombres es una adición al modelo de datos XPath y no es un tipo de nodo DOM reconocido.</span><span class="sxs-lookup"><span data-stu-id="bcfe1-113">The namespace node type is an addition to the XPath data model and is not a recognized DOM node type.</span></span>  
   
- <span data-ttu-id="66a5d-114">Para más información sobre la navegación por los nodos de elemento, atributo y espacio de nombres, vea los temas [Navegación por un conjunto de nodos con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) y [Navegación por nodos de espacios de nombres y atributos con XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md).</span><span class="sxs-lookup"><span data-stu-id="66a5d-114">For more information about navigating element, attribute, and namespace nodes, see the [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) and [Attribute and Namespace Node Navigation Using XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) topics.</span></span>  
+ <span data-ttu-id="bcfe1-114">Para más información sobre la navegación por los nodos de elemento, atributo y espacio de nombres, vea los temas [Navegación por un conjunto de nodos con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) y [Navegación por nodos de espacios de nombres y atributos con XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md).</span><span class="sxs-lookup"><span data-stu-id="bcfe1-114">For more information about navigating element, attribute, and namespace nodes, see the [Node Set Navigation Using XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md) and [Attribute and Namespace Node Navigation Using XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md) topics.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="66a5d-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="66a5d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bcfe1-115">Vea también</span><span class="sxs-lookup"><span data-stu-id="bcfe1-115">See also</span></span>
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [<span data-ttu-id="66a5d-116">Procesamiento de datos XML con el modelo de datos XPath</span><span class="sxs-lookup"><span data-stu-id="66a5d-116">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [<span data-ttu-id="66a5d-117">Seleccionar datos XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="66a5d-117">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
-- [<span data-ttu-id="66a5d-118">Evaluación de expresiones XPath con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="66a5d-118">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
-- [<span data-ttu-id="66a5d-119">Coincidencia de nodos con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="66a5d-119">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [<span data-ttu-id="66a5d-120">Espacios de nombres y consultas XPath</span><span class="sxs-lookup"><span data-stu-id="66a5d-120">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
-- [<span data-ttu-id="66a5d-121">Expresiones XPath compiladas</span><span class="sxs-lookup"><span data-stu-id="66a5d-121">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+- [<span data-ttu-id="bcfe1-116">Procesamiento de datos XML con el modelo de datos XPath</span><span class="sxs-lookup"><span data-stu-id="bcfe1-116">Process XML Data Using the XPath Data Model</span></span>](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [<span data-ttu-id="bcfe1-117">Seleccionar datos XML con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bcfe1-117">Select XML Data Using XPathNavigator</span></span>](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
+- [<span data-ttu-id="bcfe1-118">Evaluación de expresiones XPath con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bcfe1-118">Evaluate XPath Expressions using XPathNavigator</span></span>](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
+- [<span data-ttu-id="bcfe1-119">Coincidencia de nodos con XPathNavigator</span><span class="sxs-lookup"><span data-stu-id="bcfe1-119">Matching Nodes using XPathNavigator</span></span>](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
+- [<span data-ttu-id="bcfe1-120">Espacios de nombres y consultas XPath</span><span class="sxs-lookup"><span data-stu-id="bcfe1-120">XPath Queries and Namespaces</span></span>](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+- [<span data-ttu-id="bcfe1-121">Expresiones XPath compiladas</span><span class="sxs-lookup"><span data-stu-id="bcfe1-121">Compiled XPath Expressions</span></span>](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
