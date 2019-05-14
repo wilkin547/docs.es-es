@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c69210c3d8f35ccab4375cfe7e49e2de147f2289
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103420"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599882"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introducción a las aplicaciones de servicios de Windows
 Los servicios de Microsoft Windows, anteriormente conocidos como servicios NT, le permiten crear aplicaciones de larga ejecución que se ejecutan en sesiones propias de Windows. Estos servicios se pueden iniciar automáticamente al arrancar el equipo, se pueden pausar y reiniciar, y no muestran ninguna interfaz de usuario. Estas características hacen que los servicios sean idóneos para su uso en un servidor o siempre que necesite una funcionalidad de larga duración que no interfiera con otros usuarios que estén trabajando en el mismo equipo. También puede ejecutar servicios en el contexto de seguridad de una cuenta de usuario específica que sea diferente del usuario conectado o de la cuenta de equipo predeterminada. Para obtener más información acerca de los servicios y las sesiones de Windows, consulte la documentación de Windows SDK.  
@@ -41,19 +41,19 @@ Los servicios de Microsoft Windows, anteriormente conocidos como servicios NT, l
 ## <a name="service-applications-vs-other-visual-studio-applications"></a>Aplicaciones de servicios y Otras aplicaciones de Visual Studio  
  Las aplicaciones de servicios funcionan de forma diferente a muchos otros tipos de proyectos de varias maneras:  
   
--   El archivo ejecutable compilado que crea un proyecto de aplicación de servicio debe instalarse en el servidor antes de que el proyecto pueda funcionar de forma significativa. No puede depurar o ejecutar una aplicación de servicio, presione las teclas F5 o F11; no puede ejecutar inmediatamente un servicio o depurar paso a paso el código por instrucciones. En su lugar, debe instalar e iniciar el servicio y, después, asociar un depurador al proceso del servicio. Para obtener más información, vea [Cómo: Depurar aplicaciones de servicios de Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
+- El archivo ejecutable compilado que crea un proyecto de aplicación de servicio debe instalarse en el servidor antes de que el proyecto pueda funcionar de forma significativa. No puede depurar o ejecutar una aplicación de servicio, presione las teclas F5 o F11; no puede ejecutar inmediatamente un servicio o depurar paso a paso el código por instrucciones. En su lugar, debe instalar e iniciar el servicio y, después, asociar un depurador al proceso del servicio. Para obtener más información, vea [Cómo: Depurar aplicaciones de servicios de Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md).  
   
--   A diferencia de algunos tipos de proyectos, debe crear componentes de instalación para aplicaciones de servicios. Los componentes de instalación instalan y registran el servicio en el servidor y crean una entrada para el servicio con el **Administrador de control de servicios de Windows**. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- A diferencia de algunos tipos de proyectos, debe crear componentes de instalación para aplicaciones de servicios. Los componentes de instalación instalan y registran el servicio en el servidor y crean una entrada para el servicio con el **Administrador de control de servicios de Windows**. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
--   El método `Main` para la aplicación de servicio debe emitir el comando Ejecutar para los servicios que contiene el proyecto. El método `Run` carga los servicios en el **Administrador de control de servicios** en el servidor apropiado. Si utiliza la plantilla de proyecto de **servicios de Windows**, este método se escribe automáticamente. Tenga en cuenta que cargar un servicio no es lo mismo que iniciarlo. Consulte "Duración del servicio" más abajo para obtener más información.  
+- El método `Main` para la aplicación de servicio debe emitir el comando Ejecutar para los servicios que contiene el proyecto. El método `Run` carga los servicios en el **Administrador de control de servicios** en el servidor apropiado. Si utiliza la plantilla de proyecto de **servicios de Windows**, este método se escribe automáticamente. Tenga en cuenta que cargar un servicio no es lo mismo que iniciarlo. Consulte "Duración del servicio" más abajo para obtener más información.  
   
--   Las aplicaciones de servicios de Windows se ejecutan en una estación de ventana diferente a la sesión interactiva del usuario que ha iniciado sesión. Una estación de ventana es un objeto seguro que contiene un Portapapeles, un conjunto de átomos globales y un grupo de objetos de escritorio. Debido a que la estación del servicio Windows no es una estación interactiva, no se verán los cuadros de diálogo que aparecen desde una aplicación de servicio de Windows y es posible que el programa deje de responder. Del mismo modo, los mensajes de error deben registrarse en el registro de eventos de Windows en lugar de aparecer en la interfaz de usuario.  
+- Las aplicaciones de servicios de Windows se ejecutan en una estación de ventana diferente a la sesión interactiva del usuario que ha iniciado sesión. Una estación de ventana es un objeto seguro que contiene un Portapapeles, un conjunto de átomos globales y un grupo de objetos de escritorio. Debido a que la estación del servicio Windows no es una estación interactiva, no se verán los cuadros de diálogo que aparecen desde una aplicación de servicio de Windows y es posible que el programa deje de responder. Del mismo modo, los mensajes de error deben registrarse en el registro de eventos de Windows en lugar de aparecer en la interfaz de usuario.  
   
      Las clases de servicio de Windows compatibles con .NET Framework no admiten la interacción con estaciones interactivas, es decir, el usuario conectado. .NET Framework tampoco incluye clases que representan las estaciones y escritorios. Si el servicio de Windows debe interactuar con otras estaciones, debe tener acceso a la API no administrada de Windows. Para más información, consulte la documentación de Windows SDK.  
   
      La interacción del servicio de Windows con el usuario u otras estaciones debe diseñarse cuidadosamente para incluir escenarios tales como que no haya ningún usuario conectado o que el usuario tenga un conjunto inesperado de objetos de escritorio. En algunos casos, puede ser más adecuado escribir una aplicación de Windows que se ejecute bajo el control del usuario.  
   
--   Las aplicaciones de servicios de Windows se ejecutan en su propio contexto de seguridad y se inician antes de que el usuario inicie sesión en el equipo con Windows en el que están instaladas. Debe planificar cuidadosamente la cuenta de usuario en la que se ejecutará el servicio; un servicio que se ejecute bajo la cuenta del sistema tiene más permisos y privilegios que una cuenta de usuario.  
+- Las aplicaciones de servicios de Windows se ejecutan en su propio contexto de seguridad y se inician antes de que el usuario inicie sesión en el equipo con Windows en el que están instaladas. Debe planificar cuidadosamente la cuenta de usuario en la que se ejecutará el servicio; un servicio que se ejecute bajo la cuenta del sistema tiene más permisos y privilegios que una cuenta de usuario.  
   
 ## <a name="service-lifetime"></a>Duración del servicio  
  Un servicio pasa por varios estados internos durante su vigencia. En primer lugar, el servicio se instala en el sistema en el que se va a ejecutar. Este proceso ejecuta los instaladores para el proyecto de servicio y carga el servicio en el **Administrador de control de servicios** de ese equipo. El **Administrador de control de servicios** es la utilidad central que proporciona Windows para administrar servicios.  
@@ -76,9 +76,9 @@ Los servicios de Microsoft Windows, anteriormente conocidos como servicios NT, l
   
 ## <a name="requirements"></a>Requisitos  
   
--   Los servicios deben crearse en un proyecto de aplicación de **servicio de Windows** u otro proyecto habilitado para .NET Framework que cree un archivo .exe cuando se crea y herede de la clase <xref:System.ServiceProcess.ServiceBase>.  
+- Los servicios deben crearse en un proyecto de aplicación de **servicio de Windows** u otro proyecto habilitado para .NET Framework que cree un archivo .exe cuando se crea y herede de la clase <xref:System.ServiceProcess.ServiceBase>.  
   
--   Los proyectos que contengan servicios de Windows deben tener componentes de instalación para el proyecto y sus servicios. Esto se puede lograr fácilmente desde la ventana **Propiedades**. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+- Los proyectos que contengan servicios de Windows deben tener componentes de instalación para el proyecto y sus servicios. Esto se puede lograr fácilmente desde la ventana **Propiedades**. Para obtener más información, vea [Cómo: Agregar instaladores a una aplicación de servicio](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Vea también
 

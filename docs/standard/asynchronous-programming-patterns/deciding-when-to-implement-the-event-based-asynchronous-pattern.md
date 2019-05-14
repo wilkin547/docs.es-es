@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: acc732f72e9dae0796da78cdbb8ef4666ae9791a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c41940e74682653339207b4c7cfc48eb3e48b322
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574435"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628962"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decidir cuándo implementar el modelo asincrónico basado en eventos
 El modelo asincrónico basado en eventos proporciona un modelo para exponer el comportamiento asincrónico de una clase. Con la introducción de este modelo, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define dos modelos para exponer el comportamiento asincrónico: el modelo asincrónico basado en la interfaz <xref:System.IAsyncResult?displayProperty=nameWithType> y el modelo basado en eventos. En este tema se describe cuándo es adecuado permitirle implementar ambos modelos.  
@@ -33,36 +33,36 @@ El modelo asincrónico basado en eventos proporciona un modelo para exponer el c
 ## <a name="guidelines"></a>Instrucciones  
  En la lista siguiente se describen las instrucciones sobre cuándo implementar el modelo asincrónico basado en eventos:  
   
--   Utilice el modelo basado en eventos como la API predeterminada para exponer el comportamiento asincrónico para la clase.  
+- Utilice el modelo basado en eventos como la API predeterminada para exponer el comportamiento asincrónico para la clase.  
   
--   No exponga el modelo <xref:System.IAsyncResult> cuando la clase se utiliza principalmente en una aplicación cliente, por ejemplo, Windows Forms.  
+- No exponga el modelo <xref:System.IAsyncResult> cuando la clase se utiliza principalmente en una aplicación cliente, por ejemplo, Windows Forms.  
   
--   Exponga el modelo <xref:System.IAsyncResult> solo cuando sea necesario para satisfacer sus requisitos. Por ejemplo, la compatibilidad con una API existente puede requerir que se exponga el modelo <xref:System.IAsyncResult>.  
+- Exponga el modelo <xref:System.IAsyncResult> solo cuando sea necesario para satisfacer sus requisitos. Por ejemplo, la compatibilidad con una API existente puede requerir que se exponga el modelo <xref:System.IAsyncResult>.  
   
--   No exponga el modelo <xref:System.IAsyncResult> sin exponer también el modelo basado en eventos.  
+- No exponga el modelo <xref:System.IAsyncResult> sin exponer también el modelo basado en eventos.  
   
--   Si debe exponer el modelo <xref:System.IAsyncResult>, hágalo como una opción avanzada. Por ejemplo, si genera un objeto proxy, genere el modelo basado en eventos de forma predeterminada, con una opción para generar el modelo <xref:System.IAsyncResult>.  
+- Si debe exponer el modelo <xref:System.IAsyncResult>, hágalo como una opción avanzada. Por ejemplo, si genera un objeto proxy, genere el modelo basado en eventos de forma predeterminada, con una opción para generar el modelo <xref:System.IAsyncResult>.  
   
--   Compile su implementación del modelo basado en eventos en la implementación del modelo <xref:System.IAsyncResult>.  
+- Compile su implementación del modelo basado en eventos en la implementación del modelo <xref:System.IAsyncResult>.  
   
--   Evite exponer tanto el modelo basado en eventos como el modelo <xref:System.IAsyncResult> en la misma clase. Exponga el modelo basado en eventos en las clases de "nivel superior" y el modelo <xref:System.IAsyncResult> en las clases de "nivel inferior". Por ejemplo, compare el modelo basado en eventos del componente <xref:System.Net.WebClient> con el modelo <xref:System.IAsyncResult> de la clase <xref:System.Web.HttpRequest>.  
+- Evite exponer tanto el modelo basado en eventos como el modelo <xref:System.IAsyncResult> en la misma clase. Exponga el modelo basado en eventos en las clases de "nivel superior" y el modelo <xref:System.IAsyncResult> en las clases de "nivel inferior". Por ejemplo, compare el modelo basado en eventos del componente <xref:System.Net.WebClient> con el modelo <xref:System.IAsyncResult> de la clase <xref:System.Web.HttpRequest>.  
   
-    -   Exponga el modelo basado en eventos y el modelo <xref:System.IAsyncResult> en la misma clase cuando lo requiera la compatibilidad. Por ejemplo, si ya ha publicado una API que usa el modelo <xref:System.IAsyncResult>, quizá necesite conservar el modelo <xref:System.IAsyncResult> por compatibilidad con versiones anteriores.  
+    - Exponga el modelo basado en eventos y el modelo <xref:System.IAsyncResult> en la misma clase cuando lo requiera la compatibilidad. Por ejemplo, si ya ha publicado una API que usa el modelo <xref:System.IAsyncResult>, quizá necesite conservar el modelo <xref:System.IAsyncResult> por compatibilidad con versiones anteriores.  
   
-    -   Exponga el modelo basado en eventos y el modelo <xref:System.IAsyncResult> en la misma clase si la complejidad del modelo de objetos resultante supera la ventaja de separar las implementaciones. Es mejor exponer ambos modelos en una sola clase que evitar exponer el modelo basado en eventos.  
+    - Exponga el modelo basado en eventos y el modelo <xref:System.IAsyncResult> en la misma clase si la complejidad del modelo de objetos resultante supera la ventaja de separar las implementaciones. Es mejor exponer ambos modelos en una sola clase que evitar exponer el modelo basado en eventos.  
   
-    -   Si debe exponer tanto el modelo basado en eventos como el modelo <xref:System.IAsyncResult> en una sola clase, use <xref:System.ComponentModel.EditorBrowsableAttribute> establecido en <xref:System.ComponentModel.EditorBrowsableState.Advanced> para marcar la implementación del modelo <xref:System.IAsyncResult> como una característica avanzada. Esto indica a los entornos de diseño, como IntelliSense en Visual Studio, que no muestren las propiedades y los métodos de <xref:System.IAsyncResult>. Estas propiedades y métodos todavía son totalmente utilizables, pero el desarrollador que trabaja con IntelliSense tiene una visión más clara de la API.  
+    - Si debe exponer tanto el modelo basado en eventos como el modelo <xref:System.IAsyncResult> en una sola clase, use <xref:System.ComponentModel.EditorBrowsableAttribute> establecido en <xref:System.ComponentModel.EditorBrowsableState.Advanced> para marcar la implementación del modelo <xref:System.IAsyncResult> como una característica avanzada. Esto indica a los entornos de diseño, como IntelliSense en Visual Studio, que no muestren las propiedades y los métodos de <xref:System.IAsyncResult>. Estas propiedades y métodos todavía son totalmente utilizables, pero el desarrollador que trabaja con IntelliSense tiene una visión más clara de la API.  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Criterios para exponer el modelo IAsyncResult además del modelo basado en eventos  
  Aunque el modelo asincrónico basado en eventos tiene muchas ventajas en los escenarios mencionados anteriormente, también tiene algunas desventajas, que debe tener en cuenta si el rendimiento es el requisito más importante.  
   
  Hay tres escenarios que no se abordan con el modelo basado en eventos ni con el modelo <xref:System.IAsyncResult>:  
   
--   Espera bloqueada en un objeto <xref:System.IAsyncResult>  
+- Espera bloqueada en un objeto <xref:System.IAsyncResult>  
   
--   Espera bloqueada en muchos objetos <xref:System.IAsyncResult>  
+- Espera bloqueada en muchos objetos <xref:System.IAsyncResult>  
   
--   Sondeo de la finalización del objeto <xref:System.IAsyncResult>  
+- Sondeo de la finalización del objeto <xref:System.IAsyncResult>  
   
  Puede resolver estos escenarios con el modelo basado en eventos, pero es más complicado que usar el modelo <xref:System.IAsyncResult>.  
   
@@ -72,13 +72,13 @@ El modelo asincrónico basado en eventos proporciona un modelo para exponer el c
   
  En la lista siguiente se indican algunas recomendaciones que deben seguirse si decide utilizar el modelo <xref:System.IAsyncResult>:  
   
--   Solo exponga el modelo <xref:System.IAsyncResult> si necesita compatibilidad específica para los objetos <xref:System.Threading.WaitHandle> o <xref:System.IAsyncResult>.  
+- Solo exponga el modelo <xref:System.IAsyncResult> si necesita compatibilidad específica para los objetos <xref:System.Threading.WaitHandle> o <xref:System.IAsyncResult>.  
   
--   Solo exponga el modelo <xref:System.IAsyncResult> si tiene una API existente que usa el modelo <xref:System.IAsyncResult>.  
+- Solo exponga el modelo <xref:System.IAsyncResult> si tiene una API existente que usa el modelo <xref:System.IAsyncResult>.  
   
--   Si tiene una API existente basada en el modelo <xref:System.IAsyncResult>, considere también la posibilidad de exponer el modelo basado en eventos en la próxima versión.  
+- Si tiene una API existente basada en el modelo <xref:System.IAsyncResult>, considere también la posibilidad de exponer el modelo basado en eventos en la próxima versión.  
   
--   Solo exponga el modelo <xref:System.IAsyncResult> si tiene requisitos de alto rendimiento que haya comprobado que no se pueden satisfacer con el modelo basado en eventos, pero sí con el modelo <xref:System.IAsyncResult>.  
+- Solo exponga el modelo <xref:System.IAsyncResult> si tiene requisitos de alto rendimiento que haya comprobado que no se pueden satisfacer con el modelo basado en eventos, pero sí con el modelo <xref:System.IAsyncResult>.  
   
 ## <a name="see-also"></a>Vea también
 

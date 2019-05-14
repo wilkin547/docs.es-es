@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579594"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615373"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet para compilación de esquemas
 Describe la clase <xref:System.Xml.Schema.XmlSchemaSet>, una caché en la que se pueden almacenar y validar esquemas del lenguaje de definición de esquemas XML (XSD).  
@@ -37,9 +37,9 @@ Describe la clase <xref:System.Xml.Schema.XmlSchemaSet>, una caché en la que se
 ## <a name="migrating-to-the-xmlschemaset"></a>Migración a XmlSchemaSet  
  En el siguiente código muestra se proporciona una guía para realizar la migración a la nueva clase <xref:System.Xml.Schema.XmlSchemaSet> desde la clase <xref:System.Xml.Schema.XmlSchemaCollection> obsoleta. El código muestra ilustra las siguientes diferencias principales entre las dos clases.  
   
--   Al contrario que el método <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> de la clase <xref:System.Xml.Schema.XmlSchemaCollection>, los esquemas no se compilan al llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> de <xref:System.Xml.Schema.XmlSchemaSet>. El método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> se llama explícitamente en el código muestra.  
+- Al contrario que el método <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> de la clase <xref:System.Xml.Schema.XmlSchemaCollection>, los esquemas no se compilan al llamar al método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> de <xref:System.Xml.Schema.XmlSchemaSet>. El método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet> se llama explícitamente en el código muestra.  
   
--   Para iterar sobre <xref:System.Xml.Schema.XmlSchemaSet>, se debe utilizar la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
+- Para iterar sobre <xref:System.Xml.Schema.XmlSchemaSet>, se debe utilizar la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  Éste es el código muestra de <xref:System.Xml.Schema.XmlSchemaCollection> obsoleto.  
   

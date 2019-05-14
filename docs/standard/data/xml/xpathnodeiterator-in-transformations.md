@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b191114731b63916d1bc9ecca4eee01f83c4fa48
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836058"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615332"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator en transformaciones
 <xref:System.Xml.XPath.XPathNodeIterator> proporciona métodos para iterar por un conjunto de nodos creados como resultado de una consulta XPath o un fragmento del árbol de resultados convertido en un conjunto de nodos mediante el uso del método node-set. <xref:System.Xml.XPath.XPathNodeIterator> permite iterar por los nodos de un conjunto de nodos. Una vez que se ha recuperado un conjunto de nodos, la clase <xref:System.Xml.XPath.XPathNodeIterator> proporciona un cursor de solo avance y de solo lectura para el conjunto de nodos seleccionado. El conjunto de nodos se crea en orden de documento, de forma que al llamar a este método se desplaza al siguiente nodo en orden de documento. <xref:System.Xml.XPath.XPathNodeIterator> no construye un árbol de nodos de todos los nodos en el conjunto. En lugar de ello, proporciona una ventana de un único nodo en los datos y expone el nodo subyacente al que apunta a medida que se recorre el árbol. Los métodos y las propiedades disponibles desde la clase <xref:System.Xml.XPath.XPathNodeIterator> permiten obtener información desde el nodo actual. Para obtener una lista de los métodos y de las propiedades disponibles, vea <xref:System.Windows.Forms.ToolBar>.  
   
  Puesto que <xref:System.Xml.XPath.XPathNodeIterator> se mueve a través de un conjunto de nodos creado a partir de una consulta XPath y lo hace solo hacia adelante, hay que utilizar el método <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> para recorrerlo. El tipo de valor devuelto por este método es `Boolean` y devuelve `true` si se desplaza hasta el siguiente nodo seleccionado, y `false` si no hay más nodos seleccionados. Si devuelve `true`, en la lista siguiente se muestran las propiedades disponibles:  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.CurrentPosition%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.CurrentPosition%2A>  
   
--   <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
+- <xref:System.Xml.XPath.XPathNodeIterator.Count%2A>  
   
  Cuando se encuentre ante un conjunto de nodos por primera vez, debe realizar una llamada a <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> para colocar <xref:System.Xml.XPath.XPathNodeIterator> en el primer nodo del conjunto seleccionado. De esta forma se puede escribir un bucle while.  
   

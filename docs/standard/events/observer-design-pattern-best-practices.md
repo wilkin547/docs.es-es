@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600003"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615190"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Procedimientos recomendados para modelos de diseño de observador
 En .NET Framework, el patrón de diseño de observador se implementa como un conjunto de interfaces. La interfaz <xref:System.IObservable%601?displayProperty=nameWithType> representa al proveedor de datos, que también es responsable de proporcionar una implementación <xref:System.IDisposable> que permite a los observadores cancelar la suscripción a las notificaciones. La interfaz <xref:System.IObserver%601?displayProperty=nameWithType> representa al observador. En este tema se describen los procedimientos recomendados que los desarrolladores deben seguir al implementar el patrón de diseño de observador con estas interfaces.  
@@ -31,11 +31,11 @@ En .NET Framework, el patrón de diseño de observador se implementa como un con
   
  El proveedor debe seguir estas recomendaciones a la hora de controlar las excepciones y llamar al método <xref:System.IObserver%601.OnError%2A>:  
   
--   El proveedor debe controlar sus propias excepciones si tiene requisitos específicos.  
+- El proveedor debe controlar sus propias excepciones si tiene requisitos específicos.  
   
--   El proveedor no debe esperar ni exigir que los observadores controlen las excepciones en ningún modo en particular.  
+- El proveedor no debe esperar ni exigir que los observadores controlen las excepciones en ningún modo en particular.  
   
--   El proveedor debe llamar al método <xref:System.IObserver%601.OnError%2A> cuando controla una excepción que pone en peligro su capacidad para proporcionar actualizaciones. La información sobre este tipo de excepciones se puede pasar al observador. En otros casos, no es necesario informar a los observadores de una excepción.  
+- El proveedor debe llamar al método <xref:System.IObserver%601.OnError%2A> cuando controla una excepción que pone en peligro su capacidad para proporcionar actualizaciones. La información sobre este tipo de excepciones se puede pasar al observador. En otros casos, no es necesario informar a los observadores de una excepción.  
   
  Una vez que el proveedor llama al método <xref:System.IObserver%601.OnError%2A> o <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>, no debe haber más notificaciones y el proveedor puede cancelar la suscripción de sus observadores. No obstante, también los observadores pueden cancelar ellos mismos su suscripción en cualquier momento, incluso antes y después de recibir una notificación <xref:System.IObserver%601.OnError%2A> o <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType>. El patrón de diseño de observador no indica si el proveedor o el observador son responsables de cancelar la suscripción; por lo tanto, es posible que ambos traten de cancelar la suscripción. Normalmente, cuando los observadores cancelan su suscripción, se quitan de una colección de los suscriptores. En una aplicación de un único subproceso, la implementación de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> debe asegurarse de la validez de una referencia de objeto y de que el objeto es miembro de la colección de suscriptores antes de intentar quitarlo. En una aplicación multiproceso, debe utilizarse un objeto de colección seguro para subprocesos, por ejemplo, un objeto <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>.  
   
@@ -44,9 +44,9 @@ En .NET Framework, el patrón de diseño de observador se implementa como un con
   
  El observador debe seguir estas recomendaciones al responder a una llamada de método <xref:System.IObserver%601.OnError%2A> de un proveedor:  
   
--   El observador no debe generar excepciones desde sus implementaciones de interfaz, como <xref:System.IObserver%601.OnNext%2A> o <xref:System.IObserver%601.OnError%2A>. No obstante, si el observador genera excepciones, no debe esperar que se controlen.  
+- El observador no debe generar excepciones desde sus implementaciones de interfaz, como <xref:System.IObserver%601.OnNext%2A> o <xref:System.IObserver%601.OnError%2A>. No obstante, si el observador genera excepciones, no debe esperar que se controlen.  
   
--   Para conservar la pila de llamadas, un observador que desee producir un objeto <xref:System.Exception> pasado a su método <xref:System.IObserver%601.OnError%2A>, debe encapsular la excepción antes generarla. Para este propósito, debe usarse un objeto de excepción estándar.  
+- Para conservar la pila de llamadas, un observador que desee producir un objeto <xref:System.Exception> pasado a su método <xref:System.IObserver%601.OnError%2A>, debe encapsular la excepción antes generarla. Para este propósito, debe usarse un objeto de excepción estándar.  
   
 ## <a name="additional-best-practices"></a>Recomendaciones adicionales  
  Intentar anular el registro en el método <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> puede producir una referencia nula. Por lo tanto, se recomienda evitar esta práctica.  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205033"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647851"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Opciones de salida en la clase XslCompiledTransform
 En este tema se describen las opciones de salida XSLT disponibles. Puede especificar opciones de salida en la hoja de estilos o en el método <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -55,7 +55,7 @@ En este tema se describen las opciones de salida XSLT disponibles. Puede especif
   
 ## <a name="notes"></a>Notas  
   
--   Cuando escriba etiquetas vacías, se escribe un espacio entre el último carácter del nombre del elemento y la barra diagonal inversa, por ejemplo, `<myElement />`. Esto permite que los exploradores más antiguos muestren correctamente las páginas HTML generadas.  
+- Cuando escriba etiquetas vacías, se escribe un espacio entre el último carácter del nombre del elemento y la barra diagonal inversa, por ejemplo, `<myElement />`. Esto permite que los exploradores más antiguos muestren correctamente las páginas HTML generadas.  
   
 ## <a name="see-also"></a>Vea también
 

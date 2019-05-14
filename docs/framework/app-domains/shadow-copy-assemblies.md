@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f1f9a88a347650474c7a63b41984e3346e0ce205
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607525"
 ---
 # <a name="shadow-copying-assemblies"></a>Copias sombra de ensamblados
 Las instantáneas permiten que los ensamblados que se usan en un dominio de aplicación se actualicen sin descargar el dominio de aplicación. Esto es especialmente útil para las aplicaciones que tienen que estar disponibles continuamente, como los sitios de ASP.NET.  
@@ -30,21 +30,21 @@ Las instantáneas permiten que los ensamblados que se usan en un dominio de apli
   
  Este artículo contiene las siguientes secciones:  
   
--   En [Habilitar y usar instantáneas](#EnablingAndUsing) se describe el uso básico y las opciones disponibles para crear instantáneas.  
+- En [Habilitar y usar instantáneas](#EnablingAndUsing) se describe el uso básico y las opciones disponibles para crear instantáneas.  
   
--   En [Rendimiento de inicio](#StartupPerformance) se describen los cambios que se realizan para crear instantáneas en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] de cara a mejorar el rendimiento de inicio y cómo revertir al comportamiento de las versiones anteriores.  
+- En [Rendimiento de inicio](#StartupPerformance) se describen los cambios que se realizan para crear instantáneas en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] de cara a mejorar el rendimiento de inicio y cómo revertir al comportamiento de las versiones anteriores.  
   
--   En [Métodos obsoletos](#ObsoleteMethods) se describen los cambios realizados en las propiedades y los métodos que controlan las instantáneas en [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
+- En [Métodos obsoletos](#ObsoleteMethods) se describen los cambios realizados en las propiedades y los métodos que controlan las instantáneas en [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)].  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>Habilitar y usar instantáneas  
  Puede utilizar las propiedades de la clase <xref:System.AppDomainSetup> como se indica a continuación para configurar un dominio de aplicación y crear instantáneas:  
   
--   Habilite las instantáneas estableciendo la propiedad <xref:System.AppDomainSetup.ShadowCopyFiles%2A> como el valor de cadena `"true"`.  
+- Habilite las instantáneas estableciendo la propiedad <xref:System.AppDomainSetup.ShadowCopyFiles%2A> como el valor de cadena `"true"`.  
   
      De forma predeterminada, este ajuste hace que todos los ensamblados de la ruta de acceso de la aplicación se copien en una caché de descarga antes de cargarse. Se trata de la misma caché mantenida por Common Language Runtime para almacenar archivos descargados de otros equipos, y Common Language Runtime elimina automáticamente los archivos cuando dejan de ser necesarios.  
   
--   Si quiere, establezca una ubicación personalizada para los archivos de instantáneas con las propiedades <xref:System.AppDomainSetup.CachePath%2A> y <xref:System.AppDomainSetup.ApplicationName%2A>.  
+- Si quiere, establezca una ubicación personalizada para los archivos de instantáneas con las propiedades <xref:System.AppDomainSetup.CachePath%2A> y <xref:System.AppDomainSetup.ApplicationName%2A>.  
   
      La ruta de acceso base de la ubicación se forma concatenando la propiedad <xref:System.AppDomainSetup.ApplicationName%2A> a la propiedad <xref:System.AppDomainSetup.CachePath%2A> como un subdirectorio. Las instantáneas de los ensamblados se colocan en los subdirectorios de esta ruta, no en la ruta de acceso base.  
   
@@ -55,7 +55,7 @@ Las instantáneas permiten que los ensamblados que se usan en un dominio de apli
   
      Hay varias razones por las que puede que le convenga establecer una ubicación personalizada para los archivos de instantáneas. Puede que le venga bien establecer una ubicación personalizada para los archivos de instantáneas si la aplicación genera un gran número de copias. La caché de descarga tiene un límite de tamaño, no de duración, por lo que es posible que Common Language Runtime trate de eliminar un archivo que todavía se esté usando. Otra razón para establecer una ubicación personalizada se da cuando los usuarios que ejecutan la aplicación no tienen acceso de escritura a la ubicación del directorio que Common Language Runtime utiliza para la caché de descarga.  
   
--   Si quiere, puede limitar los ensamblados de los que se toman instantáneas con la propiedad <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>.  
+- Si quiere, puede limitar los ensamblados de los que se toman instantáneas con la propiedad <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>.  
   
      Al habilitar las instantáneas en un dominio de aplicación, el valor predeterminado es copiar todos los ensamblados en la ruta de acceso de la aplicación, es decir, en los directorios especificados por las propiedades <xref:System.AppDomainSetup.ApplicationBase%2A> y <xref:System.AppDomainSetup.PrivateBinPath%2A>. Puede limitar la copia a determinados directorios: para ello, cree una cadena que contenga solo los directorios de los que quiera crear instantáneas y asigne la cadena a la propiedad <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>. Separe los directorios con punto y coma. Solo se realizarán instantáneas de los ensamblados situados en los directorios seleccionados.  
   

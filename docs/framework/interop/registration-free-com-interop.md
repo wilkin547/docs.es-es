@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24e7eed539898c511250a1a09a187448e9424890
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a3de327001f987b6c35d547b7cf3cbe7feeac49
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301001"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648522"
 ---
 # <a name="registration-free-com-interop"></a>Interoperabilidad COM sin registro
 La interoperabilidad COM sin registrar activa un componente sin usar el Registro de Windows para almacenar la información de los ensamblados. En vez de registrar un componente en un equipo durante la implementación, se crean archivos de manifiesto del estilo de Win32 en tiempo de diseño, con información sobre enlace y activación. En lugar de las claves del Registro, estos archivos de manifiesto dirigen la activación de un objeto.  
   
  Activar los ensamblados sin registrarlos en lugar de registrarlos durante la implementación ofrece dos ventajas:  
   
--   Puede controlar qué versión del archivo DLL se activa cuando hay más de una versión instalada en un equipo.  
+- Puede controlar qué versión del archivo DLL se activa cuando hay más de una versión instalada en un equipo.  
   
--   Los usuarios finales pueden usar XCOPY o FTP para copiar la aplicación en un directorio adecuado de su equipo. La aplicación puede entonces ejecutarse desde ese directorio.  
+- Los usuarios finales pueden usar XCOPY o FTP para copiar la aplicación en un directorio adecuado de su equipo. La aplicación puede entonces ejecutarse desde ese directorio.  
   
  En esta sección se describen los dos tipos de manifiestos que se necesitan para la interoperabilidad COM sin registro: manifiestos de aplicación y de componente. Estos manifiestos son archivos XML. Un manifiesto de aplicación, creado por un desarrollador de aplicaciones, contiene metadatos que describen los ensamblados y las dependencias de ensamblado. Un manifiesto de componente, creado por un desarrollador de componentes, contiene información que se encontraría en el Registro de Windows.  
   

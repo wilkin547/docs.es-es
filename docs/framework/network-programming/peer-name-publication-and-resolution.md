@@ -2,12 +2,12 @@
 title: Publicación y resolución de nombres del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a0787972a61f5700d1e8728be96db8ef9ee749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769494"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623198"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Publicación y resolución de nombres del mismo nivel
 
@@ -15,9 +15,9 @@ ms.locfileid: "59769494"
 
  Para publicar un nuevo identificador PNRP, un elemento de mismo nivel realiza lo siguiente:  
   
--   Envía mensajes de publicación de PNRP a sus vecinos de caché (los elementos de mismo nivel que han registrado identificadores PNRP en el nivel más bajo de la memoria caché) para inicializar sus cachés.  
+- Envía mensajes de publicación de PNRP a sus vecinos de caché (los elementos de mismo nivel que han registrado identificadores PNRP en el nivel más bajo de la memoria caché) para inicializar sus cachés.  
   
--   Elige nodos aleatorios en la nube que no son sus vecinos y les envía solicitudes de resolución de nombres de PNRP para su propio identificador P2P. El proceso de determinación del punto de conexión resultante inicializa las memorias caché de los nodos aleatorios en la nube con el identificador PNRP del elemento de mismo nivel de publicación.  
+- Elige nodos aleatorios en la nube que no son sus vecinos y les envía solicitudes de resolución de nombres de PNRP para su propio identificador P2P. El proceso de determinación del punto de conexión resultante inicializa las memorias caché de los nodos aleatorios en la nube con el identificador PNRP del elemento de mismo nivel de publicación.  
   
 Los nodos de la versión 2 de PNRP no publican identificadores PNRP si solo resuelven otros identificadores de P2P. El valor del Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (tipo REG_DWORD) especifica que los elementos de mismo nivel solo usen PNRP para la resolución de nombres, nunca para la publicación de nombres. Este valor del Registro también se puede configurar mediante Directiva de grupo.  
   
@@ -37,11 +37,11 @@ Los nodos de la versión 2 de PNRP no publican identificadores PNRP si solo resu
   
  Para realizar la resolución de nombres en PNRP, el equipo de mismo nivel examina las entradas en su propia memoria caché para buscar una que coincida con el identificador PNRP de destino. Si se encuentra, el equipo de mismo nivel envía un mensaje de solicitud de PNRP y espera una respuesta. Si no se encuentra una entrada para el identificador PNRP, el equipo de mismo nivel envía un mensaje de solicitud PNRP al equipo de mismo nivel que se corresponde a la entrada que tiene un identificador PNRP que mejor coincida con el identificador PNRP de destino. El nodo que recibe el mensaje de solicitud de PNRP examina su propia memoria caché y realiza las acciones siguientes:  
   
--   Si se encuentra el identificador PNRP, el punto de conexión de mismo nivel solicitado responde directamente al equipo de mismo nivel que realizó la solicitud.  
+- Si se encuentra el identificador PNRP, el punto de conexión de mismo nivel solicitado responde directamente al equipo de mismo nivel que realizó la solicitud.  
   
--   Si no se encuentra el identificador PNRP y un identificador PNRP de la memoria caché está más próximo al identificador PNRP de destino, el equipo de mismo nivel receptor de la solicitud envía una respuesta al emisor de la solicitud que contiene la dirección IPv6 del equipo de mismo nivel que representa la entrada con un identificador PNRP que mejor coincida con el identificador PNRP de destino. Con la dirección IP en la respuesta, el nodo solicitante envía otro mensaje de solicitud de PNRP a la dirección IPv6 para responder o examinar su caché.  
+- Si no se encuentra el identificador PNRP y un identificador PNRP de la memoria caché está más próximo al identificador PNRP de destino, el equipo de mismo nivel receptor de la solicitud envía una respuesta al emisor de la solicitud que contiene la dirección IPv6 del equipo de mismo nivel que representa la entrada con un identificador PNRP que mejor coincida con el identificador PNRP de destino. Con la dirección IP en la respuesta, el nodo solicitante envía otro mensaje de solicitud de PNRP a la dirección IPv6 para responder o examinar su caché.  
   
--   Si no se encuentra el identificador PNRP y no hay ningún identificador PNRP en su memoria caché que se aproxime más al identificador PNRP de destino, el equipo de mismo nivel al que se realiza la solicitud envía al equipo solicitante una respuesta que indica esta condición. Después, el equipo de mismo nivel solicitante elige el identificador PNRP más cercano siguiente.  
+- Si no se encuentra el identificador PNRP y no hay ningún identificador PNRP en su memoria caché que se aproxime más al identificador PNRP de destino, el equipo de mismo nivel al que se realiza la solicitud envía al equipo solicitante una respuesta que indica esta condición. Después, el equipo de mismo nivel solicitante elige el identificador PNRP más cercano siguiente.  
   
 El equipo de mismo nivel solicitante continúa con iteraciones sucesivas, hasta localizar el nodo que registró el identificador PNRP.  
   

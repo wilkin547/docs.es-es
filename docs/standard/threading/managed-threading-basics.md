@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479573"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644819"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
 
@@ -42,9 +42,6 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
   
  [Subprocesamiento administrado y no administrado en Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Se describe la relación entre subprocesos administrados y no administrados, se enumeran los administrados equivalentes para las API de subprocesos de Windows y se describe la interacción entre apartamentos COM y subprocesos administrados.  
-  
- [Thread.Suspend, recolección de elementos no utilizados y puntos de seguridad](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- Se describe la recolección de elementos no utilizados y la suspensión del subproceso.  
   
  [Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Se describen los mecanismos de almacenamiento relacionados con subprocesos.  

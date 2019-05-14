@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2717655ac73cac6635aba563f008feb460a5f788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074526"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591377"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de seguridad en la emisión de la reflexión
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona tres maneras para emitir Lenguaje Intermedio de Microsoft (MSIL), cada una con sus propios problemas de seguridad:  
   
--   [Ensamblados dinámicos](#Dynamic_Assemblies)  
+- [Ensamblados dinámicos](#Dynamic_Assemblies)  
   
--   [Métodos dinámicos hospedados de forma anónima](#Anonymously_Hosted_Dynamic_Methods)  
+- [Métodos dinámicos hospedados de forma anónima](#Anonymously_Hosted_Dynamic_Methods)  
   
--   [Métodos dinámicos asociados a ensamblados existentes](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [Métodos dinámicos asociados a ensamblados existentes](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  Independientemente de la manera en que se genere código dinámico, la ejecución del código generado exige todos los permisos requeridos por los tipos y métodos que usa el código generado.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "59074526"
 ### <a name="generating-dynamic-assemblies-from-partially-trusted-code"></a>Generación de ensamblados dinámicos a partir de código de confianza parcial  
  Tenga en cuenta las condiciones en las que un ensamblado con permisos de Internet puede generar un ensamblado dinámico transitorio y ejecutar su código:  
   
--   El ensamblado dinámico solo usa miembros y tipos públicos de otros ensamblados.  
+- El ensamblado dinámico solo usa miembros y tipos públicos de otros ensamblados.  
   
--   Los permisos exigidos por esos tipos y miembros se incluyen en el conjunto de permisos del ensamblado de confianza parcial.  
+- Los permisos exigidos por esos tipos y miembros se incluyen en el conjunto de permisos del ensamblado de confianza parcial.  
   
--   El ensamblado no se guarda en el disco.  
+- El ensamblado no se guarda en el disco.  
   
--   Los símbolos de depuración no se generan. (Los conjuntos de permisos `Internet` y `LocalIntranet` no incluyen los permisos necesarios).  
+- Los símbolos de depuración no se generan. (Los conjuntos de permisos `Internet` y `LocalIntranet` no incluyen los permisos necesarios).  
   
 <a name="Anonymously_Hosted_Dynamic_Methods"></a>   
 ## <a name="anonymously-hosted-dynamic-methods"></a>Métodos dinámicos hospedados de forma anónima  
@@ -70,9 +70,9 @@ ms.locfileid: "59074526"
   
  Si el dominio de aplicación lo permite, los métodos dinámicos hospedados de forma anónima pueden omitir las comprobaciones de visibilidad de JIT, con la restricción siguiente: Los tipos y miembros no públicos a los que accede un método dinámico hospedado de forma anónima deben estar en ensamblados cuyos conjuntos de permisos sean iguales (o sean subconjuntos) al conjunto de permisos de la pila de llamadas emisora. Esta capacidad restringida para omitir las comprobaciones de visibilidad JIT está habilitada si el dominio de aplicación concede <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
--   Si su método usa solo tipos y miembros públicos, no se requieren permisos durante la construcción.  
+- Si su método usa solo tipos y miembros públicos, no se requieren permisos durante la construcción.  
   
--   Si especifica que las comprobaciones de visibilidad JIT deben omitirse, la petición que se realiza cuando se construye el método incluye <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y el conjunto de permisos del ensamblado que contiene el miembro no público al que se tiene acceso.  
+- Si especifica que las comprobaciones de visibilidad JIT deben omitirse, la petición que se realiza cuando se construye el método incluye <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y el conjunto de permisos del ensamblado que contiene el miembro no público al que se tiene acceso.  
   
  Dado que se tiene en cuenta el conjunto de permisos del miembro no público, el código de confianza parcial al que se le ha concedido <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> no puede elevar sus privilegios mediante la ejecución de miembros no públicos de ensamblados de confianza.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59074526"
 ### <a name="generating-anonymously-hosted-dynamic-methods-from-partially-trusted-code"></a>Generación de métodos dinámicos hospedados de forma anónima a partir de código de confianza parcial  
  Tenga en cuenta las condiciones en las que un ensamblado con permisos de Internet puede generar un método dinámico hospedado de forma anónima y ejecutarlo:  
   
--   El método dinámico solo usa miembros y tipos públicos. Si su conjunto de permisos incluye <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, puede usar los tipos y miembros no públicos de cualquier ensamblado cuyo conjunto de permisos sea igual al conjunto de permisos (o un subconjunto del mismo) del ensamblado emisor.  
+- El método dinámico solo usa miembros y tipos públicos. Si su conjunto de permisos incluye <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, puede usar los tipos y miembros no públicos de cualquier ensamblado cuyo conjunto de permisos sea igual al conjunto de permisos (o un subconjunto del mismo) del ensamblado emisor.  
   
--   Los permisos requeridos por todos los tipos y miembros usados por el método dinámico se incluyen en el conjunto de permisos del ensamblado de confianza parcial.  
+- Los permisos requeridos por todos los tipos y miembros usados por el método dinámico se incluyen en el conjunto de permisos del ensamblado de confianza parcial.  
   
 > [!NOTE]
 >  Los métodos dinámicos no admiten símbolos de depuración.  
@@ -96,21 +96,21 @@ ms.locfileid: "59074526"
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Métodos dinámicos asociados a ensamblados existentes  
  Para asociar un método dinámico con un tipo o módulo en un ensamblado existente, use cualquiera de los constructores <xref:System.Reflection.Emit.DynamicMethod> que especifican el tipo o módulo asociado. Los permisos necesarios para llamar a estos constructores varían, ya que al asociar un método dinámico con un tipo o módulo existente, el método dinámico obtiene acceso a los miembros y tipos no públicos:  
   
--   Un método dinámico que está asociado a un tipo tiene acceso a todos los miembros de ese tipo, incluso a los miembros privados, y a todos los tipos y miembros internos del ensamblado que contiene el tipo asociado.  
+- Un método dinámico que está asociado a un tipo tiene acceso a todos los miembros de ese tipo, incluso a los miembros privados, y a todos los tipos y miembros internos del ensamblado que contiene el tipo asociado.  
   
--   Un método dinámico que está asociado a un módulo tiene acceso a todos los tipos y miembros `internal` (`Friend` en Visual Basic, `assembly` en los metadatos de Common Language Runtime) del módulo.  
+- Un método dinámico que está asociado a un módulo tiene acceso a todos los tipos y miembros `internal` (`Friend` en Visual Basic, `assembly` en los metadatos de Common Language Runtime) del módulo.  
   
  Además, se puede usar un constructor que especifique la capacidad de omitir las comprobaciones de visibilidad del compilador JIT. De este modo, el método dinámico obtiene acceso a todos los tipos y miembros de todos los ensamblados, con independencia del nivel de acceso.  
   
  Los permisos exigidos por el constructor dependen del nivel de acceso que decida conceder al método dinámico:  
   
--   Si su método solo usa miembros y tipos públicos y lo asocia con su propio tipo o su propio módulo, no se requiere ningún permiso.  
+- Si su método solo usa miembros y tipos públicos y lo asocia con su propio tipo o su propio módulo, no se requiere ningún permiso.  
   
--   Si especifica que se deben omitir las comprobaciones de visibilidad JIT, el constructor exige <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
+- Si especifica que se deben omitir las comprobaciones de visibilidad JIT, el constructor exige <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>.  
   
--   Si asocia el método dinámico con otro tipo, incluso de su propio ensamblado, el constructor exige <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> y <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
+- Si asocia el método dinámico con otro tipo, incluso de su propio ensamblado, el constructor exige <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> y <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
--   Si asocia el método dinámico con un tipo o módulo de otro ensamblado, el constructor exige dos cosas: <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y el conjunto de permisos del ensamblado que contiene el otro módulo. Es decir, la pila de llamadas debe incluir todos los permisos del conjunto de permisos del módulo de destino, además de <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
+- Si asocia el método dinámico con un tipo o módulo de otro ensamblado, el constructor exige dos cosas: <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y el conjunto de permisos del ensamblado que contiene el otro módulo. Es decir, la pila de llamadas debe incluir todos los permisos del conjunto de permisos del módulo de destino, además de <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
     >  Por motivos de compatibilidad con versiones anteriores, si se produce un error en la petición del conjunto de permisos más <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, el constructor exige <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
@@ -126,13 +126,13 @@ ms.locfileid: "59074526"
   
  Tenga en cuenta las condiciones en las que un ensamblado con permisos de Internet puede generar un método dinámico y ejecutarlo:  
   
--   El método dinámico está asociado con el módulo o el tipo que lo emite, o su conjunto de permisos incluye <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y está asociado con un módulo de un ensamblado cuyo conjunto de permisos es igual al conjunto de permisos del ensamblado emisor (o un subconjunto del mismo).  
+- El método dinámico está asociado con el módulo o el tipo que lo emite, o su conjunto de permisos incluye <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y está asociado con un módulo de un ensamblado cuyo conjunto de permisos es igual al conjunto de permisos del ensamblado emisor (o un subconjunto del mismo).  
   
--   El método dinámico solo usa miembros y tipos públicos. Si su conjunto de permisos incluye <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y está asociado con un módulo de un ensamblado cuyo conjunto de permisos es igual al conjunto de permisos del ensamblado emisor (o un subconjunto del mismo), puede usar tipos y miembros marcados `internal` (`Friend` en Visual Basic, `assembly` en los metadatos de Common Language Runtime) en el módulo asociado.  
+- El método dinámico solo usa miembros y tipos públicos. Si su conjunto de permisos incluye <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y está asociado con un módulo de un ensamblado cuyo conjunto de permisos es igual al conjunto de permisos del ensamblado emisor (o un subconjunto del mismo), puede usar tipos y miembros marcados `internal` (`Friend` en Visual Basic, `assembly` en los metadatos de Common Language Runtime) en el módulo asociado.  
   
--   Los permisos exigidos por todos los tipos y miembros usados por el método dinámico se incluyen en el conjunto de permisos del ensamblado de confianza parcial.  
+- Los permisos exigidos por todos los tipos y miembros usados por el método dinámico se incluyen en el conjunto de permisos del ensamblado de confianza parcial.  
   
--   El método dinámico no omite las comprobaciones de visibilidad JIT.  
+- El método dinámico no omite las comprobaciones de visibilidad JIT.  
   
 > [!NOTE]
 >  Los métodos dinámicos no admiten símbolos de depuración.  
