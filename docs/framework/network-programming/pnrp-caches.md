@@ -2,12 +2,12 @@
 title: Cachés PNRP
 ms.date: 03/30/2017
 ms.assetid: 270068d9-1b6b-4eb9-9e14-e02326bb88df
-ms.openlocfilehash: 9cd1901e716cab9f1b47825a5d3ecdb071a58440
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ed3e11e702c8933b500421de5654b212cdd80d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59182486"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622992"
 ---
 # <a name="pnrp-caches"></a>Cachés PNRP
 Las cachés del Protocolo de resolución de nombres de mismo nivel (PNRP) son colecciones locales de puntos de conexión de mismo nivel seleccionados de forma algorítmica y mantenidos en el elemento de mismo nivel.  
@@ -15,9 +15,9 @@ Las cachés del Protocolo de resolución de nombres de mismo nivel (PNRP) son co
 ## <a name="pnrp-cache-initialization"></a>Inicialización de la caché de PNRP  
  Para inicializar la caché de PNRP, o la colección de registros de nombre de mismo nivel cuando se inicia un nodo de mismo nivel, un nodo puede usar los métodos siguientes:  
   
--   Las entradas de caché persistente que se encontraban cuando se cerró el nodo se cargan desde el almacenamiento de disco duro.  
+- Las entradas de caché persistente que se encontraban cuando se cerró el nodo se cargan desde el almacenamiento de disco duro.  
   
--   Si una aplicación usa la infraestructura de colaboración P2P, la información de colaboración está disponible en el Administrador de contactos para ese nodo.  
+- Si una aplicación usa la infraestructura de colaboración P2P, la información de colaboración está disponible en el Administrador de contactos para ese nodo.  
   
 ## <a name="scaling-peer-name-resolution-with-a-multi-level-cache"></a>Escalado de la resolución de nombres de mismo nivel con una caché de varios niveles  
  Para mantener reducidos los tamaños de las caché de PNRP, los nodos de mismo nivel usan una caché de varios niveles en la que cada nivel contiene un número máximo de entradas. Cada nivel de la memoria caché representa una parte que es una décima parte menor del espacio de números de identificador PNRP (2<sup>256</sup>). El nivel más bajo en la memoria caché contiene un identificador PNRP registrado localmente y otros identificadores PNRP que están numéricamente cerca de él. Cuando un nivel de la memoria caché se rellena con un máximo de 20 entradas, se crea un nuevo nivel inferior. El número máximo de niveles en la memoria caché es del orden de log10(número total de identificadores PNRP en la nube). Por ejemplo, para una nube global con 100 millones de identificadores PNRP, no hay más de 8 (=log10(100,000,000)) niveles en la memoria caché y un número similar de saltos para resolver un identificador PNRP durante la resolución de nombres. Este mecanismo permite una tabla hash distribuida para la que se puede resolver un identificador PNRP arbitrario mediante el reenvío de mensajes de solicitud de PNRP al siguiente elemento de mismo nivel más cercano hasta que se encuentra el elemento de mismo nivel con la CPA correspondiente.  

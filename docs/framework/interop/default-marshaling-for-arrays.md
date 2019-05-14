@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098226"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626363"
 ---
 # <a name="default-marshaling-for-arrays"></a>Cálculo de referencias predeterminado para matrices
 En una aplicación que consta únicamente de código administrado, Common Language Runtime pasa los tipos de matriz como parámetros In/Out. En cambio, el serializador de interoperabilidad pasa una matriz como parámetros In de forma predeterminada.  
@@ -146,7 +146,7 @@ void New3(ref String ar);
   
  Puede proporcionar al serializador el tamaño de la matriz si modifica el código de lenguaje intermedio de Microsoft (MSIL) generado mediante Tlbimp.exe y después lo vuelve a compilar. Para más información sobre cómo modificar código MSIL, vea [Personalización de contenedores RCW](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100)). Para indicar el número de elementos de la matriz, aplique el tipo <xref:System.Runtime.InteropServices.MarshalAsAttribute> al parámetro de matriz de la definición de método administrado de una de las maneras siguientes:  
   
--   Identifique otro parámetro que contenga el número de elementos de la matriz. Los parámetros se identifican por posición, empezando con el primer parámetro como el número 0.     
+- Identifique otro parámetro que contenga el número de elementos de la matriz. Los parámetros se identifican por posición, empezando con el primer parámetro como el número 0.     
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -160,7 +160,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   Defina el tamaño de la matriz como una constante. Por ejemplo:  
+- Defina el tamaño de la matriz como una constante. Por ejemplo:  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  

@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bd1ced48847739318f22ec77b17a83a36fd36ee0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328314"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647769"
 ---
 # <a name="memory-mapped-files"></a>Archivos asignados a memoria
 Un archivo asignado a memoria incluye el contenido de un archivo en la memoria virtual. Esta asignación entre un archivo y el espacio de memoria permite a una aplicación, incluidos varios procesos, modificar el archivo leyendo y escribiendo directamente en la memoria. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], se puede usar código administrado para tener acceso a los archivos asignados a memoria del mismo modo que las funciones nativas de Windows tienen acceso a los archivos asignados a memoria, tal como se describe en [Administración de archivos asignados a memoria](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)).  
   
  Hay dos tipos de archivos asignados a memoria:  
   
--   Archivos asignados a memoria persistentes  
+- Archivos asignados a memoria persistentes  
   
      Los archivos persistentes son archivos asignados a memoria que están asociados a un archivo de origen ubicado en un disco. Cuando el último proceso termina de usar el archivo, los datos se guardan en el archivo de origen ubicado en el disco. Estos archivos asignados a memoria son idóneos para trabajar con archivos de origen muy grandes.  
   
--   Archivos asignados a memoria no persistentes  
+- Archivos asignados a memoria no persistentes  
   
      Los archivos no persistentes son archivos asignados a memoria que no están asociados a un archivo ubicado en un disco. Cuando el último proceso termina de usar el archivo, se pierden los datos y la recolección de elementos no utilizados reclama el archivo. Estos archivos son idóneos para crear memoria compartida para las comunicaciones entre procesos (IPC).  
   
@@ -64,11 +64,11 @@ Un archivo asignado a memoria incluye el contenido de un archivo en la memoria v
 ### <a name="security"></a>Seguridad  
  Se pueden aplicar derechos de acceso cuando se crea un archivo asignado a memoria si se usan los siguientes métodos con la enumeración <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> como parámetro:  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
  Se pueden especificar derechos de acceso para abrir un archivo asignado a memoria existente si se usan los métodos <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> con la enumeración <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> como parámetro.  
   

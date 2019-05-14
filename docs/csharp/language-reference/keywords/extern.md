@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: d860f1a3c6917238a529093672dc5f2abc5ae066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc513a31d348dc685ce70aa8e63577473e47d97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755888"
 ---
 # <a name="extern-c-reference"></a>extern (Referencia de C#)
 
@@ -43,46 +43,46 @@ En este ejemplo se muestra un programa de C# que llama a una biblioteca de C (un
 
 1. Cree el archivo de C siguiente y denomínelo `cmdll.c`:
 
-```c
-// cmdll.c
-// Compile with: -LD
-int __declspec(dllexport) SampleMethod(int i)
-{
-  return i*10;
-}
-```
+    ```c
+    // cmdll.c
+    // Compile with: -LD
+    int __declspec(dllexport) SampleMethod(int i)
+    {
+      return i*10;
+    }
+    ```
 
 2. Abra una ventana del símbolo del sistema de las herramientas nativas de Visual Studio x64 (o x32) desde el directorio de instalación de Visual Studio y compile el archivo `cmdll.c` escribiendo **cl -LD cmdll.c** en el símbolo del sistema.
 
 3. En el mismo directorio, cree el siguiente archivo de C# y denomínelo `cm.cs`:
 
-```csharp
-// cm.cs
-using System;
-using System.Runtime.InteropServices;
-public class MainClass
-{
-    [DllImport("Cmdll.dll")]
-      public static extern int SampleMethod(int x);
-
-    static void Main()
+    ```csharp
+    // cm.cs
+    using System;
+    using System.Runtime.InteropServices;
+    public class MainClass
     {
-        Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        [DllImport("Cmdll.dll")]
+          public static extern int SampleMethod(int x);
+
+        static void Main()
+        {
+            Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        }
     }
-}
-```
+    ```
 
 4. Abra una ventana del símbolo del sistema de las herramientas nativas de Visual Studio x64 (o x32) del directorio de instalación de Visual Studio y compile el archivo `cm.cs` escribiendo:
 
-> **csc cm.cs** (para el símbolo del sistema x64), o bien **csc -platform:x86 cm.cs** (para el símbolo del sistema x32)
+    > **csc cm.cs** (para el símbolo del sistema x64), o bien **csc -platform:x86 cm.cs** (para el símbolo del sistema x32)
 
-De esta forma, se creará el archivo ejecutable `cm.exe`.
+    De esta forma, se creará el archivo ejecutable `cm.exe`.
 
 5. Ejecute `cm.exe`. El método `SampleMethod` pasa el valor 5 al archivo DLL, que devuelve el valor multiplicado por 10.  El programa produce el siguiente resultado:
 
-```
-SampleMethod() returns 50.
-```
+    ```
+    SampleMethod() returns 50.
+    ```
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

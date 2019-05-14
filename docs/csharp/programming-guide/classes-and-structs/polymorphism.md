@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322087"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583070"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guía de programación de C#)
 El polimorfismo suele considerarse el tercer pilar de la programación orientada a objetos, después de la encapsulación y la herencia. Polimorfismo es una palabra griega que significa "con muchas formas" y tiene dos aspectos diferentes:  
   
--   En tiempo de ejecución, los objetos de una clase derivada pueden ser tratados como objetos de una clase base en lugares como parámetros de métodos y colecciones o matrices. Cuando ocurre, el tipo declarado del objeto ya no es idéntico a su tipo en tiempo de ejecución.  
+- En tiempo de ejecución, los objetos de una clase derivada pueden ser tratados como objetos de una clase base en lugares como parámetros de métodos y colecciones o matrices. Cuando ocurre, el tipo declarado del objeto ya no es idéntico a su tipo en tiempo de ejecución.  
   
--   Las clases base pueden definir e implementar *métodos* [virtuales](../../../csharp/language-reference/keywords/virtual.md), y las clases derivadas pueden [invalidarlos](../../../csharp/language-reference/keywords/override.md), lo que significa que pueden proporcionar su propia definición e implementación. En tiempo de ejecución, cuando el código de cliente llama al método, CLR busca el tipo en tiempo de ejecución del objeto e invoca esa invalidación del método virtual. Por lo tanto, en el código fuente puede llamar a un método en una clase base y hacer que se ejecute una versión del método de la clase derivada.  
+- Las clases base pueden definir e implementar *métodos* [virtuales](../../../csharp/language-reference/keywords/virtual.md), y las clases derivadas pueden [invalidarlos](../../../csharp/language-reference/keywords/override.md), lo que significa que pueden proporcionar su propia definición e implementación. En tiempo de ejecución, cuando el código de cliente llama al método, CLR busca el tipo en tiempo de ejecución del objeto e invoca esa invalidación del método virtual. Por lo tanto, en el código fuente puede llamar a un método en una clase base y hacer que se ejecute una versión del método de la clase derivada.  
   
  Los métodos virtuales permiten trabajar con grupos de objetos relacionados de manera uniforme. Por ejemplo, supongamos que tiene una aplicación de dibujo que permite a un usuario crear varios tipos de formas en una superficie de dibujo. En tiempo de compilación, no sabe qué tipos específicos de formas creará el usuario. Sin embargo, la aplicación tiene que realizar el seguimiento de los distintos tipos de formas que se crean, y tiene que actualizarlos en respuesta a las acciones del mouse del usuario. Para solucionar este problema en dos pasos básicos, puede usar el polimorfismo:  
   
@@ -37,11 +37,11 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
 ### <a name="virtual-members"></a>Miembros virtuales  
  Cuando una clase derivada hereda de una clase base, obtiene todos los métodos, campos, propiedades y eventos de la clase base. El diseñador de la clase derivada tiene las siguientes opciones:  
   
--   Invalidar los miembros virtuales de la clase base.  
+- Invalidar los miembros virtuales de la clase base.  
   
--   Heredar el método de la clase base más próximo sin invalidarlo.  
+- Heredar el método de la clase base más próximo sin invalidarlo.  
   
--   Definir una nueva implementación no virtual de esos miembros que oculte las implementaciones de la clase base.  
+- Definir una nueva implementación no virtual de esos miembros que oculte las implementaciones de la clase base.  
   
  Una clase derivada puede invalidar un miembro de la clase base si este se declara como [virtual](../../../csharp/language-reference/keywords/virtual.md) o [abstracto](../../../csharp/language-reference/keywords/abstract.md). El miembro derivado debe usar la palabra clave [override](../../../csharp/language-reference/keywords/override.md) para indicar explícitamente que el propósito del método es participar en una invocación virtual. El siguiente fragmento de código muestra un ejemplo:  
   
@@ -89,11 +89,11 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Control de versiones con las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Control de versiones con las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Saber cuándo utilizar las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Saber cuándo utilizar las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [Cómo: Invalidar el método ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [Cómo: Invalidar el método ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Vea también
 

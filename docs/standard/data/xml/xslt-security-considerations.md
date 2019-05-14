@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 526805dff9fc59ed317a38b2512c8a97a711227a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69ee0743f7b0c64efbfd8a75e8dc463d79323d4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661742"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615315"
 ---
 # <a name="xslt-security-considerations"></a>Consideraciones de seguridad de XSLT
 El lenguaje XSLT posee un amplio conjunto de características que aportan gran potencia y flexibilidad. Incluye muchas características que, aunque son útiles, también se podrían aprovechar desde orígenes externos. Para poder utilizar XSLT con seguridad, debe conocer los tipos de problemas de seguridad que surgen al utilizar XSLT y las estrategias básicas que puede emplear para mitigar estos riesgos.  
@@ -18,9 +18,9 @@ El lenguaje XSLT posee un amplio conjunto de características que aportan gran p
 ## <a name="xslt-extensions"></a>Extensiones XSLT  
  Dos extensiones XSLT conocidas son los objetos de extensión y el scripting de hoja de estilos. Estas extensiones permiten al procesador XSLT ejecutar código.  
   
--   Los objetos de extensión agregan capacidades de programación a las transformaciones XSL.  
+- Los objetos de extensión agregan capacidades de programación a las transformaciones XSL.  
   
--   Los scripts se pueden incrustar en la hoja de estilos utilizando el elemento de extensión `msxsl:script`.  
+- Los scripts se pueden incrustar en la hoja de estilos utilizando el elemento de extensión `msxsl:script`.  
   
 ### <a name="extension-objects"></a>Objetos de extensión  
  Los objetos de extensión se agregan con el método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Se requiere el conjunto de permisos FullTrust para admitir los objetos de extensión. De esta manera, se garantiza que no se produzca una elevación de permisos cuando se ejecuta el código de objetos de extensión. Al intentar llamar al método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> sin permisos FullTrust, se produce el inicio de una excepción de seguridad.  
@@ -34,9 +34,9 @@ El lenguaje XSLT posee un amplio conjunto de características que aportan gran p
 ## <a name="external-resources"></a>Recursos externos  
  El lenguaje XSLT tiene características como, por ejemplo, `xsl:import`, `xsl:include` o la función `document()`, en las que el procesador tiene que resolver referencias de URI. La clase <xref:System.Xml.XmlResolver> se utiliza para resolver recursos externos. Puede que haya que resolver los recursos externos en los siguientes dos casos:  
   
--   Al compilar una hoja de estilos, el <xref:System.Xml.XmlResolver> se utiliza para la resolución de `xsl:import` y `xsl:include`.  
+- Al compilar una hoja de estilos, el <xref:System.Xml.XmlResolver> se utiliza para la resolución de `xsl:import` y `xsl:include`.  
   
--   Al ejecutar la transformación, <xref:System.Xml.XmlResolver> se utiliza para resolver la función `document()`.  
+- Al ejecutar la transformación, <xref:System.Xml.XmlResolver> se utiliza para resolver la función `document()`.  
   
     > [!NOTE]
     >  La función `document()` se deshabilita de manera predeterminada en la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Esta característica se puede habilitar estableciendo la propiedad <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> en `true` y pasando el objeto <xref:System.Xml.Xsl.XsltSettings> al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
@@ -48,13 +48,13 @@ El lenguaje XSLT posee un amplio conjunto de características que aportan gran p
   
  En la siguiente lista se describe cuándo es conveniente especificar un objeto <xref:System.Xml.XmlResolver>:  
   
--   Si el proceso XSLT necesita tener acceso a un recurso de red que requiere autenticación, puede utilizar un <xref:System.Xml.XmlResolver> con las credenciales necesarias.  
+- Si el proceso XSLT necesita tener acceso a un recurso de red que requiere autenticación, puede utilizar un <xref:System.Xml.XmlResolver> con las credenciales necesarias.  
   
--   Si desea restringir los recursos a los que tiene acceso el proceso XSLT, puede utilizar un <xref:System.Xml.XmlSecureResolver> con el conjunto de permisos correcto. Utilice la clase <xref:System.Xml.XmlSecureResolver> si necesita abrir un recurso que no controla o que no es de confianza.  
+- Si desea restringir los recursos a los que tiene acceso el proceso XSLT, puede utilizar un <xref:System.Xml.XmlSecureResolver> con el conjunto de permisos correcto. Utilice la clase <xref:System.Xml.XmlSecureResolver> si necesita abrir un recurso que no controla o que no es de confianza.  
   
--   Si desea personalizar el comportamiento, puede implementar su propia clase <xref:System.Xml.XmlResolver> y utilizarla para resolver recursos.  
+- Si desea personalizar el comportamiento, puede implementar su propia clase <xref:System.Xml.XmlResolver> y utilizarla para resolver recursos.  
   
--   Si desea asegurarse de que no se tiene acceso a ningún recurso externo, puede especificar `null` para el argumento <xref:System.Xml.XmlResolver>.  
+- Si desea asegurarse de que no se tiene acceso a ningún recurso externo, puede especificar `null` para el argumento <xref:System.Xml.XmlResolver>.  
   
 ## <a name="see-also"></a>Vea también
 

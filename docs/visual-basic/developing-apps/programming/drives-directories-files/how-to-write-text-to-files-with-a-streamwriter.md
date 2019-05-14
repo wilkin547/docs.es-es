@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text, writing to files
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
-ms.openlocfilehash: ca792106bdd341fa4be8f3554ce70cd7d3f22522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b4f74836b32fea0e5c24fd4500581f17e39cd4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816073"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623128"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>Procedimiento para escribir texto en archivos con un objeto StreamWriter en Visual Basic
 Este ejemplo abre un objeto <xref:System.IO.StreamWriter> con el método `My.Computer.FileSystem.OpenTextFileWriter` y lo usa para escribir una cadena en un archivo de texto con el método <xref:System.IO.TextWriter.WriteLine%2A> de la clase <xref:System.IO.StreamWriter>.  
@@ -22,11 +22,11 @@ Este ejemplo abre un objeto <xref:System.IO.StreamWriter> con el método `My.Com
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El archivo ya existe y es de solo lectura (<xref:System.IO.IOException>).  
+- El archivo ya existe y es de solo lectura (<xref:System.IO.IOException>).  
   
--   El disco está lleno (<xref:System.IO.IOException>).  
+- El disco está lleno (<xref:System.IO.IOException>).  
   
--   El nombre de la ruta de acceso es demasiado largo (<xref:System.IO.PathTooLongException>).  
+- El nombre de la ruta de acceso es demasiado largo (<xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  En este ejemplo se crea un nuevo archivo, si este no existe aún. Si una aplicación necesita crear un archivo, precisará acceso `Create` para la carpeta. Si el archivo ya existe, la aplicación necesitará solo acceso `Write`, un privilegio menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo acceso `Read` a un único archivo, en lugar de acceso `Create` para una carpeta.  

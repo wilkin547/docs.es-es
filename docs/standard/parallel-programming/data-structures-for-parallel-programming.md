@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 87ea2cbb46aca87af15b2c12321322c1b048df56
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625608"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Estructuras de datos para la programación paralela
 .NET Framework 4 incorpora varios tipos nuevos que son útiles en la programación paralela, incluido un conjunto de clases de colecciones simultáneas, primitivos de sincronización ligera y tipos para la inicialización diferida. Puede usar estos tipos con cualquier código de aplicación multiproceso, como la biblioteca TPL y PLINQ.  
@@ -48,9 +48,9 @@ ms.locfileid: "55479703"
   
  Para obtener más información, consulte:  
   
--   [Cómo: Usar SpinLock para la sincronización de bajo nivel](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [Cómo: Usar SpinLock para la sincronización de bajo nivel](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [Cómo: Sincronizar operaciones simultáneas con una clase Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
+- [Cómo: Sincronizar operaciones simultáneas con una clase Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   
 ## <a name="lazy-initialization-classes"></a>Clases de inicialización diferida  
  Con la inicialización diferida, no se asigna la memoria para un objeto hasta que se necesite. La inicialización diferida puede mejorar el rendimiento al distribuir las asignaciones de objetos uniformemente a lo largo de la duración de un programa. Puede habilitar la inicialización diferida para cualquier tipo personalizado ajustando el tipo <xref:System.Lazy%601>.  

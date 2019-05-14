@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626415"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>Crear una clase para contener funciones de archivos DLL
 Encapsular una función DLL que se usa con frecuencia en una clase administrada es un enfoque efectivo para encapsular la funcionalidad de la plataforma. Aunque no es obligatorio hacerlo en todos los casos, proporcionar un contenedor de clases es cómodo porque la definición de funciones DLL puede ser compleja y propensa a errores. Si está programando en Visual Basic o C#, debe declarar las funciones DLL dentro de una clase o módulo de Visual Basic.  
@@ -28,11 +28,11 @@ Encapsular una función DLL que se usa con frecuencia en una clase administrada 
   
  Al diseñar una clase administrada para la invocación de plataforma, tenga en cuenta las relaciones entre las clases y las funciones de archivo DLL. Por ejemplo, se puede:  
   
--   Declarar funciones DLL dentro de una clase existente.  
+- Declarar funciones DLL dentro de una clase existente.  
   
--   Crear una clase individual para cada función DLL, para mantener las funciones aisladas y facilitar su búsqueda.  
+- Crear una clase individual para cada función DLL, para mantener las funciones aisladas y facilitar su búsqueda.  
   
--   Crear una clase para un conjunto de funciones DLL relacionadas para formar grupos lógicos y reducir la sobrecarga.  
+- Crear una clase para un conjunto de funciones DLL relacionadas para formar grupos lógicos y reducir la sobrecarga.  
   
  Puede asignar el nombre que quiera a la clase y sus métodos. Para obtener ejemplos que muestran cómo construir declaraciones basadas en .NET para usarse con la invocación de plataforma, vea [Serialización de datos con invocación de plataforma](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   

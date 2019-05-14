@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 336a0fb5bc0fca5dd6ef917a2eeaf0908680d12b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219599"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591498"
 ---
 # <a name="using-the-codedom"></a>Usar CodeDOM
 CodeDOM proporciona tipos que representan muchos tipos comunes de elementos de código fuente. Se puede diseñar un programa que compile un modelo de código fuente utilizando los elementos de CodeDOM para ensamblar un gráfico de objetos. Este gráfico de objetos se puede representar como código fuente utilizando un generador de código de CodeDOM para un lenguaje de programación compatible. CodeDOM también se puede utilizar para compilar código fuente en un ensamblado binario.  
   
  Algunos usos habituales de CodeDOM son:  
   
--   Generación de código mediante plantillas: generación de código para ASP.NET, proxies de clientes de servicios Web XML, asistentes para código, diseñadores y otros mecanismos de emisión de código.  
+- Generación de código mediante plantillas: generación de código para ASP.NET, proxies de clientes de servicios Web XML, asistentes para código, diseñadores y otros mecanismos de emisión de código.  
   
--   Compilación dinámica: compatibilidad para compilación de código en uno o varios lenguajes.  
+- Compilación dinámica: compatibilidad para compilación de código en uno o varios lenguajes.  
   
 ## <a name="building-a-codedom-graph"></a>Compilar un gráfico CodeDOM  
  El espacio de nombres <xref:System.CodeDom> proporciona clases para representar la estructura lógica del código fuente, independientemente de la sintaxis del lenguaje.  

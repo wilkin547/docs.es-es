@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788549"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623792"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modelo asincrónico basado en tareas (TAP)
 El patrón asincrónico basado en tareas (TAP) se basa en los tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> del espacio de nombres <xref:System.Threading.Tasks?displayProperty=nameWithType>, que se usan para representar operaciones asincrónicas arbitrarias. TAP es el patrón asincrónico de diseño recomendado para los nuevos desarrollos.  
@@ -39,9 +39,9 @@ TAP usa un solo método para representar el inicio y la finalización de una ope
 ## <a name="initiating-an-asynchronous-operation"></a>Inicio de una operación asincrónica  
  Un método asincrónico basado en TAP puede hacer una pequeña cantidad de trabajo sincrónicamente, como validar argumentos e iniciar la operación asincrónica, antes de que devuelva la tarea resultante. El trabajo sincrónico debe reducirse al mínimo de modo que el método asincrónico pueda volver rápidamente. Entre las razones para un retorno rápido se incluyen las siguientes:  
   
--   Los métodos asincrónicos se pueden invocar desde subprocesos de la interfaz de usuario (UI) y cualquier trabajo sincrónico de ejecución prolongada puede dañar la capacidad de respuesta de la aplicación.  
+- Los métodos asincrónicos se pueden invocar desde subprocesos de la interfaz de usuario (UI) y cualquier trabajo sincrónico de ejecución prolongada puede dañar la capacidad de respuesta de la aplicación.  
   
--   Se pueden iniciar varios métodos asincrónicos simultáneamente. Por tanto, cualquier trabajo de ejecución prolongada en la parte sincrónica de un método asincrónico puede retrasar el inicio de otras operaciones asincrónicas, lo que reduce las ventajas de la simultaneidad.  
+- Se pueden iniciar varios métodos asincrónicos simultáneamente. Por tanto, cualquier trabajo de ejecución prolongada en la parte sincrónica de un método asincrónico puede retrasar el inicio de otras operaciones asincrónicas, lo que reduce las ventajas de la simultaneidad.  
   
  En algunos casos, la cantidad de trabajo necesario para completar la operación es menor que la cantidad de trabajo necesario para iniciar la operación de forma asincrónica. La lectura de una secuencia donde la operación de lectura se puede satisfacer mediante datos que ya están almacenados en búfer en la memoria es un ejemplo de este escenario. En casos como este, la operación puede completarse sincrónicamente y puede devolver una tarea que ya se ha completado.  
   

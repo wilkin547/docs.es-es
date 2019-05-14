@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d6b092b499af2003e8a43987677b13741c362b1b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834652"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662719"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>Procedimiento para mostrar los puertos serie disponibles en Visual Basic
 En este tema se explica cómo usar `My.Computer.Ports` para mostrar los puertos serie disponibles del equipo en Visual Basic.  
@@ -31,11 +31,11 @@ En este tema se explica cómo usar `My.Computer.Ports` para mostrar los puertos 
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una referencia de proyecto a System.Windows.Forms.dll.  
+- Una referencia de proyecto a System.Windows.Forms.dll.  
   
--   Acceso a los miembros del espacio de nombres <xref:System.Windows.Forms>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Acceso a los miembros del espacio de nombres <xref:System.Windows.Forms>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
--   Que su formulario tenga un control <xref:System.Windows.Forms.ListBox> denominado `ListBox1`.  
+- Que su formulario tenga un control <xref:System.Windows.Forms.ListBox> denominado `ListBox1`.  
   
 ## <a name="robust-programming"></a>Programación sólida  
  No resulta necesario usar el control <xref:System.Windows.Forms.ListBox> para mostrar los nombres de los puertos serie disponibles. En su lugar, puede usar un <xref:System.Windows.Forms.ComboBox> u otro control. Si la aplicación no necesita una respuesta del usuario, puede usar un control <xref:System.Windows.Forms.TextBox> para mostrar la información.  

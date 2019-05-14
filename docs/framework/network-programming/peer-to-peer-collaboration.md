@@ -2,12 +2,12 @@
 title: Colaboración de punto a punto
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0c257782ad391bb8de61caffdd13af1f2872ef6c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225305"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623172"
 ---
 # <a name="peer-to-peer-collaboration"></a>Colaboración de punto a punto
 
@@ -19,21 +19,21 @@ La infraestructura de colaboración de punto a punto es una implementación simp
 
  Una aplicación de colaboración de punto a punto típica consta de los siguientes pasos:  
   
--   Un elemento de mismo nivel determina la identidad de otro elemento de mismo nivel que está interesado en hospedar una sesión de colaboración.  
+- Un elemento de mismo nivel determina la identidad de otro elemento de mismo nivel que está interesado en hospedar una sesión de colaboración.  
   
--   Se envía una solicitud para hospedar una sesión y el host de mismo nivel acepta administrar la actividad de colaboración.  
+- Se envía una solicitud para hospedar una sesión y el host de mismo nivel acepta administrar la actividad de colaboración.  
   
--   El host invita a los contactos en la subred (incluido el solicitante) a una sesión.  
+- El host invita a los contactos en la subred (incluido el solicitante) a una sesión.  
   
--   Todos los elementos de mismo nivel que quieran colaborar pueden agregar el host a sus administradores de contactos.  
+- Todos los elementos de mismo nivel que quieran colaborar pueden agregar el host a sus administradores de contactos.  
   
--   En el momento adecuado, la mayoría de los elementos de mismo nivel enviarán al host respuestas a la invitación, para aceptarla como para rechazarla.  
+- En el momento adecuado, la mayoría de los elementos de mismo nivel enviarán al host respuestas a la invitación, para aceptarla como para rechazarla.  
   
--   Todos los equipos de mismo nivel que quieran colaborar se suscribirán al host de mismo nivel.  
+- Todos los equipos de mismo nivel que quieran colaborar se suscribirán al host de mismo nivel.  
   
--   Mientras los equipos de mismo nivel están realizando su actividad de colaboración inicial, el host de mismo nivel puede agregar equipos de mismo nivel remotos a su administrador de contactos. También procesa todas las respuestas a la invitación para determinar quién la ha aceptado, quién la ha rechazado y quién no ha respondido.  Puede cancelar las invitaciones a los que no hayan respondido, o realizar otra actividad.  
+- Mientras los equipos de mismo nivel están realizando su actividad de colaboración inicial, el host de mismo nivel puede agregar equipos de mismo nivel remotos a su administrador de contactos. También procesa todas las respuestas a la invitación para determinar quién la ha aceptado, quién la ha rechazado y quién no ha respondido.  Puede cancelar las invitaciones a los que no hayan respondido, o realizar otra actividad.  
   
--   En este momento, el host de mismo nivel puede iniciar una sesión de colaboración con todos los equipos de mismo nivel invitados o registrar una aplicación con la infraestructura de colaboración.  Las aplicaciones de P2P usan la infraestructura de colaboración punto a punto y el espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> para coordinar las comunicaciones de juegos, tablones de anuncios, conferencias y otras aplicaciones de presencia sin servidor.  
+- En este momento, el host de mismo nivel puede iniciar una sesión de colaboración con todos los equipos de mismo nivel invitados o registrar una aplicación con la infraestructura de colaboración.  Las aplicaciones de P2P usan la infraestructura de colaboración punto a punto y el espacio de nombres <xref:System.Net.PeerToPeer.Collaboration> para coordinar las comunicaciones de juegos, tablones de anuncios, conferencias y otras aplicaciones de presencia sin servidor.  
   
 ## <a name="peer-to-peer-networking-security"></a>Seguridad de redes punto a punto  
 
