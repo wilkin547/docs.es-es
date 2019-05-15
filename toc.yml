@@ -630,3 +630,6 @@
             - name: Tutoriales
               tocHref: /dotnet/machine-learning/tutorials/
               topicHref: /dotnet/machine-learning/tutorials/index
+        - name: Guía de .NET para Apache Spark
+          tocHref: /dotnet/spark/
+          topicHref: /dotnet/spark/index
