@@ -2,17 +2,17 @@
 title: Procedimiento Consultar el contenido de archivos en una carpeta (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: edacbcd3-f3e4-4429-a8be-28a58dc0dd70
-ms.openlocfilehash: 04909de9fe3898600b127f1f7a5ba46834bc239a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8af6653c3cffe846082606de81d4bbefedaa30e9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794724"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592123"
 ---
-# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a><span data-ttu-id="a0ace-102">Procedimiento Consultar el contenido de archivos en una carpeta (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0ace-102">How to: Query the Contents of Files in a Folder (LINQ) (Visual Basic)</span></span>
-<span data-ttu-id="a0ace-103">En este ejemplo se muestra cómo consultar todos los archivos en un árbol de directorios especificado, abrir cada archivo e inspeccionar su contenido.</span><span class="sxs-lookup"><span data-stu-id="a0ace-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="a0ace-104">Este tipo de técnica puede usarse para crear índices o índices inversos del contenido de un árbol de directorios.</span><span class="sxs-lookup"><span data-stu-id="a0ace-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="a0ace-105">En este ejemplo, se realiza una búsqueda de cadena simple.</span><span class="sxs-lookup"><span data-stu-id="a0ace-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="a0ace-106">Pero los tipos más complejos de coincidencia de patrones se pueden realizar con una expresión regular.</span><span class="sxs-lookup"><span data-stu-id="a0ace-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="a0ace-107">Para obtener más información, vea [Cómo: Combinar consultas LINQ con expresiones regulares (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="a0ace-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
+# <a name="how-to-query-the-contents-of-files-in-a-folder-linq-visual-basic"></a><span data-ttu-id="75cd7-102">Procedimiento Consultar el contenido de archivos en una carpeta (LINQ) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75cd7-102">How to: Query the Contents of Files in a Folder (LINQ) (Visual Basic)</span></span>
+<span data-ttu-id="75cd7-103">En este ejemplo se muestra cómo consultar todos los archivos en un árbol de directorios especificado, abrir cada archivo e inspeccionar su contenido.</span><span class="sxs-lookup"><span data-stu-id="75cd7-103">This example shows how to query over all the files in a specified directory tree, open each file, and inspect its contents.</span></span> <span data-ttu-id="75cd7-104">Este tipo de técnica puede usarse para crear índices o índices inversos del contenido de un árbol de directorios.</span><span class="sxs-lookup"><span data-stu-id="75cd7-104">This type of technique could be used to create indexes or reverse indexes of the contents of a directory tree.</span></span> <span data-ttu-id="75cd7-105">En este ejemplo, se realiza una búsqueda de cadena simple.</span><span class="sxs-lookup"><span data-stu-id="75cd7-105">A simple string search is performed in this example.</span></span> <span data-ttu-id="75cd7-106">Pero los tipos más complejos de coincidencia de patrones se pueden realizar con una expresión regular.</span><span class="sxs-lookup"><span data-stu-id="75cd7-106">However, more complex types of pattern matching can be performed with a regular expression.</span></span> <span data-ttu-id="75cd7-107">Para obtener más información, vea [Cómo: Combinar consultas LINQ con expresiones regulares (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="75cd7-107">For more information, see [How to: Combine LINQ Queries with Regular Expressions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a0ace-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="a0ace-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="75cd7-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="75cd7-108">Example</span></span>  
   
 ```vb  
 Module Module1  
@@ -70,10 +70,10 @@ Module Module1
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a0ace-109">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="a0ace-109">Compiling the Code</span></span>  
- <span data-ttu-id="a0ace-110">Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="a0ace-110">Create a project that targets the .NET Framework version 3.5 or higher with a reference to System.Core.dll and a `Imports` statement for the System.Linq namespace.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="75cd7-109">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="75cd7-109">Compiling the Code</span></span>  
+<span data-ttu-id="75cd7-110">Cree un proyecto de aplicación de consola VB.NET, con un `Imports` instrucción del espacio de nombres System.Linq.</span><span class="sxs-lookup"><span data-stu-id="75cd7-110">Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.</span></span>
   
-## <a name="see-also"></a><span data-ttu-id="a0ace-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="a0ace-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="75cd7-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="75cd7-111">See also</span></span>
 
-- [<span data-ttu-id="a0ace-112">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0ace-112">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [<span data-ttu-id="a0ace-113">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0ace-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [<span data-ttu-id="75cd7-112">LINQ to Objects (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75cd7-112">LINQ to Objects (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [<span data-ttu-id="75cd7-113">LINQ y directorios de archivos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="75cd7-113">LINQ and File Directories (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
