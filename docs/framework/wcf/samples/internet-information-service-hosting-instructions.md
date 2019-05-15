@@ -2,12 +2,12 @@
 title: Instrucciones de hospedaje Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600252"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591882"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>Instrucciones de hospedaje Internet Information Services
 Para ejecutar los ejemplos que son hospedados por Internet Information Services (IIS), debe asegurarse de que IIS está instalado correctamente y se está ejecutando.  
@@ -163,7 +163,7 @@ Para ejecutar los ejemplos que son hospedados por Internet Information Services 
 4. Debe aparecer una página web con el texto "Hello World".  
   
 > [!NOTE]
->  Cada vez que instale una nueva versión de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], debe volver a registrar aspnet_isapi como una extensión de servicio Web para IIS. Para ello, ejecute el comando `aspnet_regiis –I –enable`.  
+>  Cada vez que instale una nueva versión de .NET Framework, volver a debe registrar aspnet_isapi como una extensión de servicio Web de IIS. Para ello, ejecute el comando `aspnet_regiis –I –enable`.  
   
 ## <a name="sample-code"></a>Código de ejemplo  
   

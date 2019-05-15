@@ -2,12 +2,12 @@
 title: Novedades de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 76ded71e7fa5ece382d0b0947eefa05682dc0f8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b54f7ab6505f86d0447654f21b197644d68254c0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673112"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583439"
 ---
 # <a name="whats-new-in-adonet"></a>Novedades de ADO.NET
 
@@ -15,7 +15,7 @@ Las siguientes características son nuevas en [!INCLUDE[vstecado](../../../../in
 
 ## <a name="sqlclient-data-provider"></a>Proveedor de datos SqlClient
 
-Las siguientes características son nuevas en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proveedor de datos para SQL Server en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+Las siguientes características son nuevas en el proveedor de datos de .NET Framework para SQL Server en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
 
 - Las palabras clave de cadena de conexión ConnectRetryCount y ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) permiten controlar la característica de resistencia de conexión inactiva.
 

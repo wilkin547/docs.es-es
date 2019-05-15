@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 175296a904a6aed70147f513959fce74b3288abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8ac04a94fb567afa184172c0685438e26834fe5b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630491"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589235"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Procedimiento para modificar la entrada de teclado en un control estándar
 Windows Forms permite consumir y modificar la entrada de teclado. Consumir una tecla es controlar una tecla dentro de un método o controlador de eventos para que otros métodos y eventos más abajo en la cola de mensajes no reciban el valor de la tecla. Modificar una tecla es modificar el valor de una tecla para que los métodos y controladores de eventos más abajo en la cola de mensajes reciban un valor de tecla diferente. En este tema se muestra cómo realizar estas tareas.  
@@ -64,8 +64,6 @@ Windows Forms permite consumir y modificar la entrada de teclado. Consumir una t
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

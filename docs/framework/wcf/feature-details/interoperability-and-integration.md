@@ -2,12 +2,12 @@
 title: Interoperabilidad e integración
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 5a50a8ebece72a0f2f8dc95fd87e73bef5db3195
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919157"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591227"
 ---
 # <a name="interoperability-and-integration"></a>Interoperabilidad e integración
 Esta sección trata la interoperabilidad e integración con Windows Communication Foundation (WCF).  
@@ -23,7 +23,7 @@ Esta sección trata la interoperabilidad e integración con Windows Communicatio
  Describe los diversos métodos para las aplicaciones COM para llamar a los servicios WCF.  
   
  [Migración de aplicaciones de .NET Remoting a WCF](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- Describe cómo se puede usar WCF con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] comunicación remota.  
+ Describe cómo se puede usar WCF con comunicación remota de .NET Framework.  
   
  [Interoperabilidad con Web Services Enhancements 3.0](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
  Describe cómo se puede usar WCF con servicios Web implementados con Web Services Enhancements (WSE) 3.0.  

@@ -2,12 +2,12 @@
 title: Perfiles de seguimiento
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699686"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589934"
 ---
 # <a name="tracking-profiles"></a>Perfiles de seguimiento
 
@@ -17,7 +17,7 @@ Los perfiles de seguimiento contienen consultas de seguimiento que permiten a un
 
 Los perfiles de seguimiento se usan para especificar qué información de seguimiento se emite para una instancia de flujo de trabajo. Si no se especifica ningún perfil, se emiten todos los eventos de seguimiento. Si se especifica un perfil, se emitirán los eventos de seguimiento especificados en el perfil. Dependiendo de sus requisitos de supervisión, puede escribir un perfil que es muy general, que se suscribe a un conjunto pequeño de cambios de estado de alto nivel en un flujo de trabajo. En cambio, puede crear un perfil muy detallado cuyos eventos resultantes estén lo suficientemente enriquecidos para reconstruir un flujo de ejecución detallado más adelante.
 
-Los perfiles de seguimiento se manifiestan como elementos XML dentro de un archivo de configuración [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] estándar o especificado en el código. El siguiente ejemplo es de un perfil de seguimiento de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] en un archivo de configuración que permite a un participante de seguimiento suscribirse a los eventos de flujo de trabajo `Started` y `Completed`.
+Perfiles de seguimiento se manifiestan como elementos XML dentro de un archivo de configuración de .NET Framework estándar o especifican en el código. El siguiente ejemplo es de un perfil de seguimiento de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] en un archivo de configuración que permite a un participante de seguimiento suscribirse a los eventos de flujo de trabajo `Started` y `Completed`.
 
 ```xml
 <system.serviceModel>

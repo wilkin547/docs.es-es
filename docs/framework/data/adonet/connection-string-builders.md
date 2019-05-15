@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034546"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583803"
 ---
 # <a name="connection-string-builders"></a>Generadores de cadenas de conexión
-En versiones anteriores de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], comprobación de las cadenas de conexión con la cadena concatenada valores no se produjeron, por lo que en tiempo de ejecución genera una palabra clave incorrecta en el tiempo de compilación un <xref:System.ArgumentException>. Cada uno de los proveedores de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] admitía una sintaxis diferente para las palabras claves de cadenas de conexión, lo que dificultaba la construcción de cadenas de conexión válidas de forma manual. Para solucionar este problema, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 incorporó nuevos compiladores de cadenas de conexión para cada proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Cada uno de los proveedores de datos incluye una clase creadora de cadenas de conexión fuertemente tipadas que hereda de <xref:System.Data.Common.DbConnectionStringBuilder>. En la tabla siguiente se indican los proveedores de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y sus clases compiladoras de cadenas de conexión asociadas.  
+En versiones anteriores de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], comprobación de las cadenas de conexión con la cadena concatenada valores no se produjeron, por lo que en tiempo de ejecución genera una palabra clave incorrecta en el tiempo de compilación un <xref:System.ArgumentException>. Cada uno de los proveedores de datos de .NET Framework admite una sintaxis diferente para palabras clave de cadena de conexión, lo que dificultaba construir cadenas de conexión válidas si se realiza manualmente. Para solucionar este problema, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 incorporó nuevos generadores de cadenas de conexión para cada proveedor de datos de .NET Framework. Cada uno de los proveedores de datos incluye una clase creadora de cadenas de conexión fuertemente tipadas que hereda de <xref:System.Data.Common.DbConnectionStringBuilder>. En la tabla siguiente se enumera los proveedores de datos de .NET Framework y sus clases generadoras de cadenas de conexión asociada.  
   
 |Proveedor|Clase ConnectionStringBuilder|  
 |--------------|-----------------------------------|  

@@ -2,12 +2,12 @@
 title: Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662470"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591239"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 Windows Communication Foundation (WCF) expone los datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de Instrumental de administración de Windows (WMI) de WCF.  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) expone los datos de inspección de un ser
  Esta entrada de configuración expone una interfaz WMI. Ahora, las aplicaciones de administración pueden establecer la conexión a través de esta interfaz y obtener acceso a la instrumentación de administración de la aplicación.  
   
 ## <a name="accessing-wmi-data"></a>Obtener acceso a datos WMI  
- Puede obtenerse acceso a los datos WMI de maneras muy distintas. Microsoft proporciona las API de WMI para scripts, aplicaciones de Visual Basic, las aplicaciones de C++ y el [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Para obtener más información, consulte [mediante WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
+ Puede obtenerse acceso a los datos WMI de maneras muy distintas. Microsoft proporciona las API de WMI para scripts, aplicaciones de Visual Basic, C++ aplicaciones y .NET Framework. Para obtener más información, consulte [mediante WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Si utiliza los métodos proporcionados por .NET Framework para tener acceso mediante programación a los datos de WMI, debe tener en cuenta que tales métodos pueden iniciar excepciones una vez establecida la conexión. La conexión no se establece durante la construcción de la instancia <xref:System.Management.ManagementObject>, sino con la primera solicitud que implique el intercambio real de datos. Por lo tanto, utilice un bloque `try..catch` para detectar las posibles excepciones.  

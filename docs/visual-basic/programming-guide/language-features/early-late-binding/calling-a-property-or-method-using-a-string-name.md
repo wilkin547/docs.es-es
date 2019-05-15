@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973347"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590031"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>Llamar a una propiedad o método mediante un nombre de cadena (Visual Basic)
 En la mayoría de los casos, puede detectar las propiedades y métodos de un objeto en tiempo de diseño y escribir código para controlarlos. Sin embargo, en algunos casos es posible que no sabe acerca de los métodos y propiedades de un objeto de antemano, o simplemente desea la flexibilidad de la habilitación de un usuario final especificar las propiedades o ejecutar métodos en tiempo de ejecución.  
@@ -31,7 +31,7 @@ En la mayoría de los casos, puede detectar las propiedades y métodos de un obj
   
  El primer argumento, *objeto*, toma el nombre del objeto que desea actuar. El *NombreDeProcedimiento* argumento toma una cadena que contiene el nombre del procedimiento que se debe invocar método o propiedad. El *CallType* argumento toma una constante que representa el tipo de procedimiento que debe invocarse: un método (`Microsoft.VisualBasic.CallType.Method`), una lectura de propiedad (`Microsoft.VisualBasic.CallType.Get`), o un conjunto de propiedades (`Microsoft.VisualBasic.CallType.Set`). El *argumentos* argumento, que es opcional, toma una matriz de tipo `Object` que contiene los argumentos para el procedimiento.  
   
- Puede usar `CallByName` con clases en la solución actual, pero se suele utilizar para tener acceso a objetos COM o los objetos de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados.  
+ Puede usar `CallByName` con clases en la solución actual, pero se suele utilizar para tener acceso a objetos COM u objetos de ensamblados de .NET Framework.  
   
  Supongamos que se agrega una referencia a un ensamblado que contiene una clase denominada `MathClass`, que tiene una función nueva denominada `SquareRoot`, tal y como se muestra en el código siguiente:  
   
