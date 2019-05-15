@@ -14,31 +14,31 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eefd3773d26fe71741668a9df366f041ba0ae0a4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607823"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Ensamblados en Common Language Runtime
 Los ensamblados son los bloques de creación de las aplicaciones .NET Framework; constituyen la unidad fundamental de implementación, control de versiones, reutilización, ámbitos de activación y permisos de seguridad. Un ensamblado es una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Los ensamblados proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Para la ejecución, un tipo no existe fuera del contexto de un ensamblado.  
   
  Un ensamblado realiza las funciones siguientes:  
   
--   Contiene el código que ejecuta Common Language Runtime. El código del lenguaje intermedio de Microsoft (MSIL) de un archivo ejecutable portable (PE) no se ejecuta si no tiene asociado un manifiesto del ensamblado. Hay que tener en cuenta que cada ensamblado solo puede tener un punto de entrada (es decir, `DllMain`, `WinMain` o `Main`).  
+- Contiene el código que ejecuta Common Language Runtime. El código del lenguaje intermedio de Microsoft (MSIL) de un archivo ejecutable portable (PE) no se ejecuta si no tiene asociado un manifiesto del ensamblado. Hay que tener en cuenta que cada ensamblado solo puede tener un punto de entrada (es decir, `DllMain`, `WinMain` o `Main`).  
   
--   Crea un límite de seguridad. Un ensamblado es la unidad en la que se solicitan y conceden los permisos. Para más información sobre los límites de seguridad en lo que respecta a los ensamblados, vea [Consideraciones de seguridad sobre ensamblados](../../../docs/framework/app-domains/assembly-security-considerations.md).  
+- Crea un límite de seguridad. Un ensamblado es la unidad en la que se solicitan y conceden los permisos. Para más información sobre los límites de seguridad en lo que respecta a los ensamblados, vea [Consideraciones de seguridad sobre ensamblados](../../../docs/framework/app-domains/assembly-security-considerations.md).  
   
--   Crea un límite de tipos. La identidad de cada tipo incluye el nombre del ensamblado en que reside. Por ello, un tipo `MyType` cargado en el ámbito de un ensamblado no es igual que un tipo denominado `MyType` cargado en el ámbito de otro ensamblado.  
+- Crea un límite de tipos. La identidad de cada tipo incluye el nombre del ensamblado en que reside. Por ello, un tipo `MyType` cargado en el ámbito de un ensamblado no es igual que un tipo denominado `MyType` cargado en el ámbito de otro ensamblado.  
   
--   Crea un límite de ámbito de referencia. El manifiesto del ensamblado contiene los metadatos del ensamblado que se utilizan para resolver tipos y satisfacer las solicitudes de recursos. Especifica los tipos y recursos que se exponen fuera del ensamblado. El manifiesto también enumera otros ensamblados de los que depende.  
+- Crea un límite de ámbito de referencia. El manifiesto del ensamblado contiene los metadatos del ensamblado que se utilizan para resolver tipos y satisfacer las solicitudes de recursos. Especifica los tipos y recursos que se exponen fuera del ensamblado. El manifiesto también enumera otros ensamblados de los que depende.  
   
--   Forma un límite de versión. El ensamblado es la unidad versionable más pequeña de Common Language Runtime; todos los tipos y recursos del mismo ensamblado pertenecen a la misma versión. El manifiesto del ensamblado describe las dependencias de versión que se especifiquen para los ensamblados dependientes. Para más información sobre las versiones, vea [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md).  
+- Forma un límite de versión. El ensamblado es la unidad versionable más pequeña de Common Language Runtime; todos los tipos y recursos del mismo ensamblado pertenecen a la misma versión. El manifiesto del ensamblado describe las dependencias de versión que se especifiquen para los ensamblados dependientes. Para más información sobre las versiones, vea [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md).  
   
--   Crea una unidad de implementación. Cuando se inicia una aplicación, sólo deben estar presentes los ensamblados a los que llama la aplicación inicialmente. Los demás ensamblados, como los recursos de localización o los ensamblados que contengan clases de utilidad, se pueden recuperar a petición. De este modo, se puede mantener la simplicidad y transparencia de las aplicaciones la primera vez que se descargan. Para más información sobre cómo implementar ensamblados, vea [Implementar .NET Framework y aplicaciones](../../../docs/framework/deployment/index.md).  
+- Crea una unidad de implementación. Cuando se inicia una aplicación, sólo deben estar presentes los ensamblados a los que llama la aplicación inicialmente. Los demás ensamblados, como los recursos de localización o los ensamblados que contengan clases de utilidad, se pueden recuperar a petición. De este modo, se puede mantener la simplicidad y transparencia de las aplicaciones la primera vez que se descargan. Para más información sobre cómo implementar ensamblados, vea [Implementar .NET Framework y aplicaciones](../../../docs/framework/deployment/index.md).  
   
--   Es la unidad que permite la ejecución en paralelo. Para más información sobre cómo ejecutar varias versiones de un ensamblado, vea [Ensamblados y ejecución simultánea](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
+- Es la unidad que permite la ejecución en paralelo. Para más información sobre cómo ejecutar varias versiones de un ensamblado, vea [Ensamblados y ejecución simultánea](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
   
  Los ensamblados pueden ser estáticos o dinámicos. Los ensamblados estáticos pueden incluir tipos de .NET Framework (interfaces y clases), así como recursos para el ensamblado (mapas de bits, archivos JPEG, archivos de recursos, etc.). Los ensamblados estáticos se almacenan en el disco, en archivos ejecutables portables PE. También se puede utilizar .NET Framework para crear ensamblados dinámicos, que se ejecutan directamente desde la memoria y no se guardan en el disco antes de su ejecución. Los ensamblados dinámicos se pueden guardar en el disco una vez que se hayan ejecutado.  
   
@@ -46,7 +46,7 @@ Los ensamblados son los bloques de creación de las aplicaciones .NET Framework;
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Contenido de los ensamblados](../../../docs/framework/app-domains/assembly-contents.md)|Describe los elementos que componen el ensamblado.|  
 |[Manifiesto del ensamblado](../../../docs/framework/app-domains/assembly-manifest.md)|Describe los datos incluidos en el manifiesto del ensamblado y cómo se almacenan en los ensamblados.|  
