@@ -2,12 +2,12 @@
 title: Tipos serializables
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586158"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591677"
 ---
 # <a name="serializable-types"></a>Tipos serializables
 De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializer> serializa todos los tipos públicamente visibles. Se serializan todas las propiedades de lectura y escritura públicas y campos del tipo.  
@@ -36,7 +36,7 @@ De forma predeterminada, <xref:System.Runtime.Serialization.DataContractSerializ
 - Para descartar la serialización de miembros públicos, propiedades o campos, aplique el atributo <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> a ese miembro.  
   
 ## <a name="inheritance"></a>Herencia  
- Los tipos no marcados (tipos sin el atributo <xref:System.Runtime.Serialization.DataContractAttribute>) pueden heredar de los tipos que tienen este atributo; sin embargo, no es posible el caso inverso: los tipos con el atributo no pueden heredar de los tipos no marcados. Esta regla se aplica principalmente para garantizar la compatibilidad con el código escrito en versiones anteriores de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Los tipos no marcados (tipos sin el atributo <xref:System.Runtime.Serialization.DataContractAttribute>) pueden heredar de los tipos que tienen este atributo; sin embargo, no es posible el caso inverso: los tipos con el atributo no pueden heredar de los tipos no marcados. Esta regla se aplica principalmente para garantizar la compatibilidad con versiones anteriores con el código escrito en versiones anteriores de .NET Framework.  
   
 ## <a name="see-also"></a>Vea también
 

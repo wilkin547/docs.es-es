@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648128"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589019"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Información general del control DataGrid (Formularios Windows Forms)
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "64648128"
   
  <xref:System.Windows.Forms.DataGrid> puede proporcionar una interfaz de usuario para un conjunto de datos, navegación entre tablas relacionadas, formato enriquecido y capacidades de edición.  
   
- La presentación y manipulación de datos son funciones independientes: El control administra la interfaz de usuario, mientras que las actualizaciones de datos se controlan con la arquitectura de enlace de datos de Windows Forms y con [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proveedores de datos. Por lo tanto, si hay varios controles enlazados al mismo origen de datos, estarán sincronizados.  
+ La presentación y manipulación de datos son funciones independientes: El control administra la interfaz de usuario, mientras que las actualizaciones de datos se controlan mediante la arquitectura de enlace de datos de Windows Forms y los proveedores de datos de .NET Framework. Por lo tanto, si hay varios controles enlazados al mismo origen de datos, estarán sincronizados.  
   
 > [!NOTE]
 >  Si está familiarizado con el control DataGrid en Visual Basic 6.0, encontrará algunas diferencias significativas en el control <xref:System.Windows.Forms.DataGrid> de Windows Forms.  
