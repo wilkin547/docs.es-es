@@ -1,21 +1,16 @@
 ---
 title: Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística
 description: Descubra cómo usar la programación probabilística con Infer.NET para crear una aplicación de listas de enfrentamientos en juegos basada en una versión simplificada de TrueSkill.
-ms.date: 03/05/2019
+ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679143"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211433"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Creación de una aplicación de listas de enfrentamientos en juegos con Infer.NET y programación probabilística
-
-> [!NOTE]
-> Este tema hace referencia a ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. Para obtener más información, visite [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
-
-Este tutorial y el ejemplo relacionado usan actualmente **ML.NET en su versión 0.10**. Para obtener más información, consulte las notas de la versión en el [repositorio de GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Esta guía paso a paso le enseña la programación probabilística mediante Infer.NET. La programación probabilística es un enfoque de aprendizaje automático donde los modelos personalizados se expresan como programas. Permite la incorporación del conocimiento del dominio en los modelos y hace que el sistema de aprendizaje automático sea más interpretable. También admite la inferencia en línea (proceso de aprendizaje a medida que llegan nuevos datos). Infer.NET se usa en varios productos de Microsoft, como Azure, Xbox y Bing.
 

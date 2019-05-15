@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971954"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620997"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemas potenciales en el paralelismo de datos y tareas
 En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pueden proporcionar importantes mejoras de rendimiento con respecto a los bucles secuenciales normales. Sin embargo, el trabajo de paralelizar el bucle aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir bucles paralelos.  
@@ -31,11 +31,11 @@ En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
   
  El escenario más común en el que se puede producir un exceso de paralelización son los bucles anidados. En la mayoría de los casos, es mejor paralelizar únicamente el bucle exterior, a menos que se cumplan una o varias de las siguientes condiciones:  
   
--   Se sabe que el bucle interno es muy largo.  
+- Se sabe que el bucle interno es muy largo.  
   
--   Se realiza un cálculo costoso en cada pedido (la operación que se muestra en el ejemplo no es costosa).  
+- Se realiza un cálculo costoso en cada pedido (la operación que se muestra en el ejemplo no es costosa).  
   
--   Se sabe que el sistema de destino tiene suficientes procesadores como para controlar el número de subprocesos que se producirán al paralelizar la consulta de `cust.Orders`.  
+- Se sabe que el sistema de destino tiene suficientes procesadores como para controlar el número de subprocesos que se producirán al paralelizar la consulta de `cust.Orders`.  
   
  En todos los casos, la mejor manera de determinar la forma óptima de la consulta es mediante la prueba y la medición.  
   

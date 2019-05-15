@@ -8,29 +8,29 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a944cf87783c59c21bffc9c48a18237c9fe6cdec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295502"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910767"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 Hay dos maneras de generar un ensamblado de interoperabilidad primario:  
   
--   Mediante el [importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) proporcionado por [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Mediante el [importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) proporcionado por [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
   
      La manera más sencilla de generar ensamblados de interoperabilidad primarios es usar el [importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe ofrece las siguientes medidas de protección:  
   
-    -   Busca otros ensamblados de interoperabilidad primarios registrados antes de crear nuevos ensamblados de interoperabilidad para las referencias de biblioteca de tipos anidadas.  
+    - Busca otros ensamblados de interoperabilidad primarios registrados antes de crear nuevos ensamblados de interoperabilidad para las referencias de biblioteca de tipos anidadas.  
   
-    -   No emite el ensamblado de interoperabilidad primario si no se especifica el contenedor o el nombre de archivo para asignar un nombre seguro al ensamblado de interoperabilidad primario.  
+    - No emite el ensamblado de interoperabilidad primario si no se especifica el contenedor o el nombre de archivo para asignar un nombre seguro al ensamblado de interoperabilidad primario.  
   
-    -   No emite un ensamblado de interoperabilidad primario si se omiten las referencias a los ensamblados dependientes.  
+    - No emite un ensamblado de interoperabilidad primario si se omiten las referencias a los ensamblados dependientes.  
   
-    -   No emite un ensamblado de interoperabilidad primario si se agregan referencias a ensamblados dependientes que no son ensamblados de interoperabilidad primarios.  
+    - No emite un ensamblado de interoperabilidad primario si se agregan referencias a ensamblados dependientes que no son ensamblados de interoperabilidad primarios.  
   
--   Creando ensamblados de interoperabilidad primarios manualmente en el código fuente usando un lenguaje compatible con Common Language Specification (CLS), como C#. Este enfoque es útil cuando no hay una biblioteca de tipos disponible.  
+- Creando ensamblados de interoperabilidad primarios manualmente en el código fuente usando un lenguaje compatible con Common Language Specification (CLS), como C#. Este enfoque es útil cuando no hay una biblioteca de tipos disponible.  
   
  Es necesario disponer de un par de claves criptográficas para firmar un ensamblado con un nombre seguro. Para más información, vea [Crear un par de claves](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   

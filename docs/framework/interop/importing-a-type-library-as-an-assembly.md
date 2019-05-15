@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 23a05279615a589bca7bb61507caf8dcc3630020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151273"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648704"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importar una biblioteca de tipos como un ensamblado
 Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Por el contrario, los compiladores conformes a CLS generan metadatos de tipos en un ensamblado. Las dos fuentes de información de tipos son muy diferentes. En este tema se describen técnicas para generar metadatos a partir de una biblioteca de tipos. El ensamblado resultante se denomina ensamblado de interoperabilidad y la información de tipos que contiene permite a las aplicaciones de .NET Framework usar tipos COM.  
   
  Hay dos maneras de hacer que esta información de tipos esté disponible para la aplicación:  
   
--   Mediante ensamblados de interoperabilidad solo de tiempo de diseño: a partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], se puede indicar al compilador que inserte información de tipos del ensamblado de interoperabilidad en el archivo ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.  
+- Mediante ensamblados de interoperabilidad solo de tiempo de diseño: a partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], se puede indicar al compilador que inserte información de tipos del ensamblado de interoperabilidad en el archivo ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.  
   
--   Mediante la implementación de ensamblados de interoperabilidad: se puede crear una referencia estándar al ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
+- Mediante la implementación de ensamblados de interoperabilidad: se puede crear una referencia estándar al ensamblado de interoperabilidad. En este caso, el ensamblado de interoperabilidad debe implementarse con la aplicación. Si emplea esta técnica y no usa ningún componente COM privado, haga siempre referencia al ensamblado de interoperabilidad primario (PIA) publicado por el autor del componente COM que va a incorporar en el código administrado. Para más información sobre generar y usar ensamblados de interoperabilidad primarios, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
  Al usar ensamblados de interoperabilidad solo de tiempo de diseño, se puede insertar información de tipos del ensamblado de interoperabilidad primario publicado por el autor del componente COM. En cambio, no es necesario implementar el ensamblado de interoperabilidad primario con la aplicación.  
   
@@ -42,29 +42,29 @@ Las definiciones de tipos COM residen normalmente en una biblioteca de tipos. Po
   
  Después de encontrar la biblioteca de tipos que contiene la implementación del tipo COM de destino, tiene las siguientes opciones para generar un ensamblado de interoperabilidad que contenga metadatos de tipos:  
   
--   Programa para la mejora  
+- Programa para la mejora  
   
      Visual Studio convierte automáticamente los tipos COM de una biblioteca de tipos a metadatos en un ensamblado. Para obtener instrucciones, vea [Cómo: Adición de referencias a bibliotecas de tipos](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
--   [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+- [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
      El importador de la biblioteca de tipos proporciona opciones de línea de comandos para ajustar los metadatos en el archivo de interoperabilidad resultante, importa tipos desde una biblioteca de tipos existente y genera un ensamblado de interoperabilidad y un espacio de nombres. Para obtener instrucciones, vea [Cómo: Generar ensamblados de interoperabilidad a partir de bibliotecas de tipos](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   Clase <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>  
+- Clase <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>  
   
      Esta clase proporciona métodos para convertir coclases e interfaces de una biblioteca de tipos en metadatos de un ensamblado. Genera el mismo resultado de metadatos que Tlbimp.exe. Pero a diferencia de Tlbimp.exe, la clase <xref:System.Runtime.InteropServices.TypeLibConverter> puede convertir una biblioteca de tipos en memoria en metadatos.  
   
--   Contenedores personalizados  
+- Contenedores personalizados  
   
      Cuando una biblioteca de tipos no está disponible o es incorrecta, una opción es crear una definición duplicada de la clase o interfaz en código fuente administrado. Después, se compila el código fuente con un compilador que tenga como destino el tiempo de ejecución para generar metadatos en un ensamblado.  
   
      Para definir tipos COM manualmente, se debe tener acceso a los siguientes elementos:  
   
-    -   Descripciones precisas de las coclases e interfaces que se van a definir.  
+    - Descripciones precisas de las coclases e interfaces que se van a definir.  
   
-    -   Un compilador, como el compilador de C#, que pueda generar las definiciones de clase de .NET Framework correspondientes.  
+    - Un compilador, como el compilador de C#, que pueda generar las definiciones de clase de .NET Framework correspondientes.  
   
-    -   Conocimiento de las reglas de conversión de bibliotecas de tipos a ensamblados.  
+    - Conocimiento de las reglas de conversión de bibliotecas de tipos a ensamblados.  
   
      Escribir un contenedor personalizado es una técnica avanzada. Para obtener información adicional sobre cómo generar un contenedor personalizado, vea [Personalizar contenedores estándar](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100)).  
   

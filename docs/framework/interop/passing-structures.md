@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8e35a09bd3348d5f53c662cf6e0ee9fec733d88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e932481496aef7fd0533054316deb32f65e95deb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142823"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063191"
 ---
 # <a name="passing-structures"></a>Pasar estructuras
 Muchas funciones no administradas esperan que el usuario pase, como parámetro de la función, miembros de estructuras (tipos definidos por el usuario en Visual Basic) o miembros de clases definidos en código administrado. Al pasar estructuras o clases al código no administrado mediante la invocación de plataforma, debe proporcionarse información adicional para mantener la distribución y alineación originales. En este tema se presenta el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>, que se utiliza para definir tipos con formato. Para estructuras y clases administradas, se puede seleccionar entre varios comportamientos de distribución previsibles que proporciona la enumeración **LayoutKind**.  
@@ -29,11 +29,11 @@ Muchas funciones no administradas esperan que el usuario pase, como parámetro d
   
  La tabla describe las siguientes directrices para las declaraciones de invocación de plataforma:  
   
--   Utilice una estructura pasada por valor cuando la función no administrada no requiera direccionamiento indirecto.  
+- Utilice una estructura pasada por valor cuando la función no administrada no requiera direccionamiento indirecto.  
   
--   Utilice una estructura pasada por referencia o una clase pasada por valor cuando la función no administrada requiera un nivel de direccionamiento indirecto.  
+- Utilice una estructura pasada por referencia o una clase pasada por valor cuando la función no administrada requiera un nivel de direccionamiento indirecto.  
   
--   Utilice una clase pasada por referencia cuando la función no administrada requiera dos niveles de direccionamiento indirecto.  
+- Utilice una clase pasada por referencia cuando la función no administrada requiera dos niveles de direccionamiento indirecto.  
   
 ## <a name="declaring-and-passing-structures"></a>Declarar y pasar estructuras  
  En el siguiente ejemplo se muestra la forma de definir las estructuras `Point` y `Rect` en código administrado y la forma de pasar los tipos como parámetros a la función **PtInRect** en el archivo User32.dll. **PtInRect** tiene la siguiente firma no administrada:  
@@ -59,8 +59,8 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Friend Class WindowsAPI      
-    Friend Shared Declare Auto Function PtInRect Lib "user32.dll" (
+Friend Class NativeMethods      
+    Friend Declare Auto Function PtInRect Lib "user32.dll" (
         ByRef r As Rect, p As Point) As Boolean  
 End Class  
 ```  
@@ -82,7 +82,7 @@ public struct Rect {
     [FieldOffset(12)] public int bottom;  
 }     
   
-internal static class WindowsAPI
+internal static class NativeMethods
 {  
     [DllImport("User32.dll")]  
     internal static extern bool PtInRect(ref Rect r, Point p);  
@@ -99,9 +99,7 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  A diferencia de los tipos de valor, las clases siempre tienen al menos un nivel de direccionamiento indirecto.  
   
 ```vb  
-Imports System  
 Imports System.Runtime.InteropServices  
-Imports Microsoft.VisualBasic  
   
 <StructLayout(LayoutKind.Sequential)> Public Class MySystemTime  
     Public wYear As Short  
@@ -114,17 +112,17 @@ Imports Microsoft.VisualBasic
     Public wMiliseconds As Short  
 End Class  
   
-Friend Class WindowsAPI  
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods  
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         sysTime As MySystemTime)  
-    Friend Shared Declare Auto Function MessageBox Lib "User32.dll" (
+    Friend Declare Auto Function MessageBox Lib "User32.dll" (
         hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
 Public Class TestPlatformInvoke      
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
-        WindowsAPI.GetSystemTime(sysTime)  
+        NativeMethods.GetSystemTime(sysTime)  
   
         Dim dt As String  
         dt = "System time is:" & ControlChars.CrLf & _  
@@ -132,7 +130,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
 ```  
@@ -149,7 +147,7 @@ public class MySystemTime {
     public ushort wSecond;   
     public ushort wMilliseconds;   
 }  
-internal static class WindowsAPI
+internal static class NativeMethods
 {  
     [DllImport("Kernel32.dll")]  
     internal static extern void GetSystemTime(MySystemTime st);  
@@ -164,7 +162,7 @@ public class TestPlatformInvoke
     public static void Main()  
     {  
         MySystemTime sysTime = new MySystemTime();  
-        WindowsAPI.GetSystemTime(sysTime);  
+        NativeMethods.GetSystemTime(sysTime);  
   
         string dt;  
         dt = "System time is: \n" +  
@@ -172,7 +170,7 @@ public class TestPlatformInvoke
               "Month: " + sysTime.wMonth + "\n" +  
               "DayOfWeek: " + sysTime.wDayOfWeek + "\n" +  
               "Day: " + sysTime.wDay;  
-        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
     }  
 }  
 ```  
@@ -180,6 +178,5 @@ public class TestPlatformInvoke
 ## <a name="see-also"></a>Vea también
 
 - [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md)
-- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

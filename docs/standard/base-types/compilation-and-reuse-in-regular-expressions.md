@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: ca2dfcfbb5407be2727343a5b3a5b429af83ae20
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877778"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634582"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Compilar y volver a utilizar en expresiones regulares
 Puede optimizar el rendimiento de aplicaciones que usan en gran medida las expresiones regulares al comprender cómo compila expresiones el motor de expresiones regulares y cómo se almacenan en caché las expresiones regulares. En este tema, se describen la compilación y el almacenamiento en caché.  
@@ -40,9 +40,9 @@ En cambio, el lenguaje MSIL generado no se puede descargar. La única forma de d
   
  La aplicación puede aprovechar las expresiones regulares compiladas previamente en una de las siguientes formas:  
   
--   Mediante el uso de un método estático del objeto <xref:System.Text.RegularExpressions.Regex> para definir la expresión regular. Si usa un patrón de expresión regular que ya se ha definido en otra llamada al método estático, el motor de expresiones regulares lo recuperará de la caché. De lo contrario, el motor compilará la expresión regular y la agregará a la caché.  
+- Mediante el uso de un método estático del objeto <xref:System.Text.RegularExpressions.Regex> para definir la expresión regular. Si usa un patrón de expresión regular que ya se ha definido en otra llamada al método estático, el motor de expresiones regulares lo recuperará de la caché. De lo contrario, el motor compilará la expresión regular y la agregará a la caché.  
   
--   Al volver a usar un objeto <xref:System.Text.RegularExpressions.Regex> existente siempre que sea necesario su patrón de expresión regular.  
+- Al volver a usar un objeto <xref:System.Text.RegularExpressions.Regex> existente siempre que sea necesario su patrón de expresión regular.  
   
  Debido a la sobrecarga de la creación de instancias de objeto y la compilación de expresiones regulares, crear y destruir rápidamente numerosos objetos <xref:System.Text.RegularExpressions.Regex> es un proceso muy costoso. Para aplicaciones que usan un gran número de expresiones regulares diferentes, puede optimizar el rendimiento al realizar llamadas a métodos `Regex` estáticos y posiblemente al aumentar el tamaño de la caché de expresiones regulares.  
   

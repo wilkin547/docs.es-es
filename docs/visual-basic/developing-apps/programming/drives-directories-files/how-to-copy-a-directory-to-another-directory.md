@@ -7,12 +7,12 @@ helpviewer_keywords:
 - folders [Visual Basic], copying
 - directories [Visual Basic], copying
 ms.assetid: 2a370bd7-10ba-4219-afc4-4519d031eb6c
-ms.openlocfilehash: e45de705eb25d58857239cc549125c524765aaa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9a02407ea805db4ae23f001de49ed6610f807b8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816582"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628885"
 ---
 # <a name="how-to-copy-a-directory-to-another-directory-in-visual-basic"></a>Procedimiento para copiar un directorio en otro directorio en Visual Basic
 Use el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> para copiar un directorio en otro directorio. Este método copia el contenido del directorio además del propio directorio. Si el directorio de destino no existe, se creará. Si existe un directorio con el mismo nombre en la ubicación de destino y `overwrite` se establece en `False`, se combinará el contenido de los dos directorios. Puede especificar un nuevo nombre para el directorio durante la operación.  
@@ -21,7 +21,7 @@ Use el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> p
   
 ### <a name="to-copy-a-directory-to-another-directory"></a>Para copiar un directorio en otro  
   
--   Use el método `CopyDirectory` y especifique los nombres de los directorios de origen y destino. En el ejemplo siguiente se copia el directorio denominado `TestDirectory1` en `TestDirectory2`, lo que sobrescribe los archivos existentes.  
+- Use el método `CopyDirectory` y especifique los nombres de los directorios de origen y destino. En el ejemplo siguiente se copia el directorio denominado `TestDirectory1` en `TestDirectory2`, lo que sobrescribe los archivos existentes.  
   
      [!code-vb[VbVbcnMyFileSystem#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#16)]  
   
@@ -30,35 +30,35 @@ Use el método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyDirectory%2A> p
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El nuevo nombre especificado para el directorio contiene un signo de dos puntos (:) o una barra diagonal (\ o /) (<xref:System.ArgumentException>).  
+- El nuevo nombre especificado para el directorio contiene un signo de dos puntos (:) o una barra diagonal (\ o /) (<xref:System.ArgumentException>).  
   
--   La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  
+- La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  
   
--   La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
+- La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `destinationDirectoryName` es `Nothing` o una cadena vacía (<xref:System.ArgumentNullException>)  
+- `destinationDirectoryName` es `Nothing` o una cadena vacía (<xref:System.ArgumentNullException>)  
   
--   El directorio de origen no existe (<xref:System.IO.DirectoryNotFoundException>).  
+- El directorio de origen no existe (<xref:System.IO.DirectoryNotFoundException>).  
   
--   El directorio de origen es un directorio raíz (<xref:System.IO.IOException>).  
+- El directorio de origen es un directorio raíz (<xref:System.IO.IOException>).  
   
--   La ruta de acceso combinada apunta a un archivo existente (<xref:System.IO.IOException>).  
+- La ruta de acceso combinada apunta a un archivo existente (<xref:System.IO.IOException>).  
   
--   Las rutas de acceso de origen y destino son iguales (<xref:System.IO.IOException>).  
+- Las rutas de acceso de origen y destino son iguales (<xref:System.IO.IOException>).  
   
--   `ShowUI` se establece en `UIOption.AllDialogs` y el usuario cancela la operación o uno o más archivos del directorio no pueden copiarse (<xref:System.OperationCanceledException>).  
+- `ShowUI` se establece en `UIOption.AllDialogs` y el usuario cancela la operación o uno o más archivos del directorio no pueden copiarse (<xref:System.OperationCanceledException>).  
   
--   La operación es cíclica (<xref:System.InvalidOperationException>).  
+- La operación es cíclica (<xref:System.InvalidOperationException>).  
   
--   La ruta de acceso contiene un signo de dos puntos (:) (<xref:System.NotSupportedException>).  
+- La ruta de acceso contiene un signo de dos puntos (:) (<xref:System.NotSupportedException>).  
   
--   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+- La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
--   Un nombre de archivo o de carpeta de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
+- Un nombre de archivo o de carpeta de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   
--   El usuario no tiene los permisos necesarios para ver la ruta de acceso (<xref:System.Security.SecurityException>).  
+- El usuario no tiene los permisos necesarios para ver la ruta de acceso (<xref:System.Security.SecurityException>).  
   
--   Un archivo de destino existe pero no se puede acceder a él (<xref:System.UnauthorizedAccessException>).  
+- Un archivo de destino existe pero no se puede acceder a él (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Vea también
 

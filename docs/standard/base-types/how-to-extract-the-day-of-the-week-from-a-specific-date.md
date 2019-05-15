@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8012d2898e9722d1cfb93f5c9dcacce291fe6e78
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327768"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633901"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Procedimiento para extraer el día de la semana de una fecha concreta
 .NET Framework permite determinar fácilmente el número de día de la semana correspondiente a una fecha concreta, así como mostrar el nombre localizado del día de la semana para una fecha en particular. Las propiedades <xref:System.DateTime.DayOfWeek%2A> o <xref:System.DateTimeOffset.DayOfWeek%2A> proporcionan un valor enumerado que indica el día de la semana correspondiente a una fecha concreta. Por el contrario, la recuperación del nombre del día de la semana es una operación de formato que puede realizarse con una llamada a un método de formato como, por ejemplo, un método `ToString` de un valor de fecha y hora o un método <xref:System.String.Format%2A?displayProperty=nameWithType>. En este tema se muestra cómo realizar estas operaciones de formato.  
@@ -53,12 +53,12 @@ ms.locfileid: "59327768"
   
 2. Puede obtener el nombre abreviado de un día de la semana de la referencia cultural actual o de una referencia cultural específica:  
   
-    1.  Para obtener el nombre abreviado del día de la semana de la referencia cultural actual, llame al método de instancia <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> del valor de fecha y hora, y pase la cadena "ddd" como parámetro `format`. En el ejemplo siguiente se muestra la llamada al método <xref:System.DateTime.ToString%28System.String%29>.  
+    1. Para obtener el nombre abreviado del día de la semana de la referencia cultural actual, llame al método de instancia <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> del valor de fecha y hora, y pase la cadena "ddd" como parámetro `format`. En el ejemplo siguiente se muestra la llamada al método <xref:System.DateTime.ToString%28System.String%29>.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2.  Para obtener el nombre abreviado del día de la semana de una referencia cultural específica, llame al método de instancia <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> del valor de fecha y hora. Pase la cadena "ddd" como parámetro `format`. Pase un objeto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> que represente la referencia cultural cuyo nombre del día de la semana desee recuperar como parámetro `provider`. En el código siguiente se muestra una llamada al método <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> con un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural fr-FR.  
+    2. Para obtener el nombre abreviado del día de la semana de una referencia cultural específica, llame al método de instancia <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> del valor de fecha y hora. Pase la cadena "ddd" como parámetro `format`. Pase un objeto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> que represente la referencia cultural cuyo nombre del día de la semana desee recuperar como parámetro `provider`. En el código siguiente se muestra una llamada al método <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> con un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural fr-FR.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
@@ -69,12 +69,12 @@ ms.locfileid: "59327768"
   
 2. Puede obtener el nombre completo de un día de la semana de la referencia cultural actual o de una referencia cultural específica:  
   
-    1.  Para obtener el nombre del día de la semana de la referencia cultural actual, llame al método de instancia <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> del valor de fecha y hora, y pase la cadena "dddd" como parámetro `format`. En el ejemplo siguiente se muestra la llamada al método <xref:System.DateTime.ToString%28System.String%29>.  
+    1. Para obtener el nombre del día de la semana de la referencia cultural actual, llame al método de instancia <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> del valor de fecha y hora, y pase la cadena "dddd" como parámetro `format`. En el ejemplo siguiente se muestra la llamada al método <xref:System.DateTime.ToString%28System.String%29>.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2.  Para obtener el nombre del día de la semana de una referencia cultural específica, llame al método de instancia <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> del valor de fecha y hora. Pase la cadena "dddd" como parámetro `format`. Pase un objeto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> que represente la referencia cultural cuyo nombre del día de la semana desee recuperar como parámetro `provider`. En el código siguiente se muestra una llamada al método <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> con un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural es-ES.  
+    2. Para obtener el nombre del día de la semana de una referencia cultural específica, llame al método de instancia <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> o <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> del valor de fecha y hora. Pase la cadena "dddd" como parámetro `format`. Pase un objeto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.DateTimeFormatInfo> que represente la referencia cultural cuyo nombre del día de la semana desee recuperar como parámetro `provider`. En el código siguiente se muestra una llamada al método <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> con un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural es-ES.  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
@@ -87,9 +87,9 @@ ms.locfileid: "59327768"
   
  Puede haber lenguajes que ofrezcan una funcionalidad que duplique o complemente a la proporcionada por [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Por ejemplo, Visual Basic incluye dos funciones así:  
   
--   `Weekday`, que devuelve un número que indica el día de la semana a partir de una fecha específica. Considera que el valor ordinal del primer día de la semana es uno, mientras que la propiedad <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> considera que es cero.  
+- `Weekday`, que devuelve un número que indica el día de la semana a partir de una fecha específica. Considera que el valor ordinal del primer día de la semana es uno, mientras que la propiedad <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> considera que es cero.  
   
--   `WeekdayName`, que devuelve el nombre de la semana en la referencia cultural actual que corresponde a un número concreto del día de la semana.  
+- `WeekdayName`, que devuelve el nombre de la semana en la referencia cultural actual que corresponde a un número concreto del día de la semana.  
   
  En el ejemplo siguiente se demuestra el uso de las funciones `Weekday` y `WeekdayName`.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 80a07e389f84c56f6fa3f718b8ba7e0504201ba7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329523"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591524"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Visor de registro de enlaces de ensamblados)
 El Visor de registro de enlaces de ensamblados es una herramienta que muestra los detalles de los enlaces de ensamblados. Esta información ayuda a diagnosticar la causa por la que .NET Framework no puede encontrar un ensamblado en tiempo de ejecución. Normalmente, estos errores se deben a que el ensamblado se ha implementado en una ubicación incorrecta, a que una imagen nativa ha dejado de ser válida o a que los números de versiones o referencias culturales no coinciden. Normalmente, el error de Common Language Runtime al localizar un ensamblado se muestra como <xref:System.TypeLoadException> en la aplicación.  
@@ -51,17 +51,17 @@ fuslogvw
   
      La herramienta muestra los siguientes detalles sobre el error de enlace seleccionado:  
   
-    -   El motivo específico del error del enlace, como "Archivo no encontrado" o "No coinciden las versiones".  
+    - El motivo específico del error del enlace, como "Archivo no encontrado" o "No coinciden las versiones".  
   
-    -   Información sobre la aplicación que inició el enlace, incluidos el nombre y el directorio raíz de la aplicación (AppBase) y una descripción de la ruta de acceso de búsqueda privada, si existe.  
+    - Información sobre la aplicación que inició el enlace, incluidos el nombre y el directorio raíz de la aplicación (AppBase) y una descripción de la ruta de acceso de búsqueda privada, si existe.  
   
-    -   La identidad del ensamblado que busca la herramienta.  
+    - La identidad del ensamblado que busca la herramienta.  
   
-    -   Una descripción de las directivas de versión (aplicación, edición o administrador) que se han aplicado.  
+    - Una descripción de las directivas de versión (aplicación, edición o administrador) que se han aplicado.  
   
-    -   Si se ha encontrado el ensamblado en la [caché global de ensamblados](../../../docs/framework/app-domains/gac.md).  
+    - Si se ha encontrado el ensamblado en la [caché global de ensamblados](../../../docs/framework/app-domains/gac.md).  
   
-    -   Una lista de todas las direcciones URL de búsqueda.  
+    - Una lista de todas las direcciones URL de búsqueda.  
   
  En el siguiente ejemplo de entrada del registro se muestra información detallada sobre un enlace de ensamblado con errores.  
   
@@ -105,26 +105,26 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-all-entries-from-the-log"></a>Para eliminar todas las entradas del registro  
   
--   Haga clic en el botón **Eliminar todo**.  
+- Haga clic en el botón **Eliminar todo**.  
   
 ### <a name="to-refresh-the-user-interface"></a>Para actualizar la interfaz de usuario  
   
--   Haga clic en el botón **Actualizar**. Mientras se ejecuta, el visor no detecta automáticamente las entradas nuevas del registro. Debe usar el botón **Actualizar** para mostrarlas.  
+- Haga clic en el botón **Actualizar**. Mientras se ejecuta, el visor no detecta automáticamente las entradas nuevas del registro. Debe usar el botón **Actualizar** para mostrarlas.  
   
 ### <a name="to-change-the-log-settings"></a>Para cambiar la configuración de registro  
   
--   Haga clic en el botón **Configuración** para abrir el cuadro de diálogo **Configuración de registro**.  
+- Haga clic en el botón **Configuración** para abrir el cuadro de diálogo **Configuración de registro**.  
   
 ### <a name="to-view-the-about-dialog"></a>Para ver el cuadro de diálogo Acerca de  
   
--   Haga clic en el botón **Acerca de**.  
+- Haga clic en el botón **Acerca de**.  
   
 ## <a name="binding-logs-for-native-images"></a>Registros de enlaces de las imágenes nativas  
  De forma predeterminada, Fuslogvw.exe registra las solicitudes de enlace de ensamblado normales. También tiene la opción de registrar los enlaces de ensamblado de las imágenes nativas creadas mediante [Ngen.exe (Generador de imágenes nativas)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
 #### <a name="to-log-assembly-binds-for-native-images"></a>Para registrar los enlaces de ensamblado de las imágenes nativas  
   
--   En el grupo **Categorías de registro**, seleccione el botón de opción **Imágenes nativas**.  
+- En el grupo **Categorías de registro**, seleccione el botón de opción **Imágenes nativas**.  
   
  El registro siguiente muestra un error producido por una dependencia que no existía cuando se creó la imagen nativa para la aplicación. Si las dependencias en tiempo de ejecución difieren de las dependencias en el momento de la ejecución de Ngen.exe, no se permitirá el enlace a una imagen nativa.  
   
@@ -185,23 +185,23 @@ Discarding native image.
   
 #### <a name="to-disable-logging"></a>Para deshabilitar el registro  
   
--   Seleccione el botón de opción **Registro deshabilitado**.  Tenga en cuenta que esta opción está seleccionada de forma predeterminada.  
+- Seleccione el botón de opción **Registro deshabilitado**.  Tenga en cuenta que esta opción está seleccionada de forma predeterminada.  
   
 #### <a name="to-log-assembly-binds-in-exceptions"></a>Para registrar enlaces de ensamblado en excepciones  
   
--   Seleccione el botón de opción **Registrar texto de excepciones**. En el texto de excepciones solo se registra la información de registro de Fusion menos detallada. Para ver toda la información, use cualquier otra opción.  
+- Seleccione el botón de opción **Registrar texto de excepciones**. En el texto de excepciones solo se registra la información de registro de Fusion menos detallada. Para ver toda la información, use cualquier otra opción.  
   
      Vea la nota Importante referente a los ensamblados que se cargan como dominios neutros.  
   
 #### <a name="to-log-assembly-bind-failures"></a>Para registrar los errores de enlace de ensamblado  
   
--   Seleccione el botón de opción **Registrar errores de enlace en el disco**.  
+- Seleccione el botón de opción **Registrar errores de enlace en el disco**.  
   
      Vea la nota Importante referente a los ensamblados que se cargan como dominios neutros.  
   
 #### <a name="to-log-all-assembly-binds"></a>Para registrar todos los enlaces de ensamblado  
   
--   Seleccione el botón de opción **Registrar todos los enlaces en el disco**.  
+- Seleccione el botón de opción **Registrar todos los enlaces en el disco**.  
   
      Vea la nota Importante referente a los ensamblados que se cargan como dominios neutros.  
   

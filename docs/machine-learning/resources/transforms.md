@@ -1,15 +1,15 @@
 ---
-title: Transformaciones de datos | ML.NET
+title: Transformaciones de datos
 description: Explore los componentes de ingeniería de características que se admiten en ML.NET.
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 506abcc826059f4d252378b1bde0b852949a42e1
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553854"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636552"
 ---
 # <a name="data-transformations"></a>Transformaciones de datos
 
@@ -21,7 +21,7 @@ Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, 
 
 ## <a name="column-mapping-and-grouping"></a>Agrupación y asignación de columnas
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A> | Concatenar una o más columnas de entrada en una columna de salida nueva |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.CopyColumns%2A> | Copiar y cambiar el nombre de una o más columnas de entrada |
@@ -30,7 +30,7 @@ Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, 
 
 ## <a name="normalization-and-scaling"></a>Normalización y escalado
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> | Restar la media (de los datos de aprendizaje) y dividir por la varianza (de los datos de aprendizaje) |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeLogMeanVariance%2A> | Normalizar en función del logaritmo de los datos de aprendizaje |
@@ -42,7 +42,7 @@ Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, 
 
 ## <a name="conversions-between-data-types"></a>Conversiones entre los tipos de datos
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | Convertir el tipo de una columna de entrada en un tipo nuevo |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue*> | Asignar valores a claves (categorías) en función del diccionario de asignaciones suministrado |
@@ -54,7 +54,7 @@ Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, 
 
 ## <a name="text-transformations"></a>Transformaciones de texto
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Transformar una columna de texto en una matriz flotante de recuentos de n-gramas y char-gramas normalizados | 
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Dividir una o más columnas de texto en palabras individuales |
@@ -71,7 +71,7 @@ Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, 
 
 ## <a name="image-transformations"></a>Transformaciones de imagen
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> | Convertir una imagen en escala de grises |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage*> | Convertir un vector de píxeles en <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
@@ -81,27 +81,27 @@ Otras transformaciones de datos no requieren datos de aprendizaje. Por ejemplo, 
 
 ## <a name="categorical-data-transformations"></a>Transformaciones de datos categóricos
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding*> | Convertir una o más columnas de texto en vectores codificados [one-hot](https://en.wikipedia.org/wiki/One-hot) |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding*> | Convertir una o más columnas de texto en vectores codificados one-hot basados en hash |
 
 ## <a name="missing-values"></a>Valores ausentes
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues*> | Crear una columna de salida booleana nueva cuyo valor es true cuando falta el valor en la columna de entrada |
 | <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues*> | Crear una columna de salida nueva cuyo valor se establece en un valor predeterminado si falta el valor de la columna de entrada y, de otro modo, el valor de entrada |
 
 ## <a name="feature-selection"></a>Selección de características
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount*> | Seleccionar las características con valores no predeterminados que sobrepasan un umbral |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation*> | Seleccionar las características de las que más dependen los datos de la columna de etiqueta |
 
 ## <a name="custom-transformations"></a>Transformaciones personalizadas
 
-| Transformación | de esquema JSON |
+| Transformación | Definición |
 | --- | --- |
 | <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping*> | Transformar las columnas existentes en columnas nuevas con una asignación definida por el usuario |

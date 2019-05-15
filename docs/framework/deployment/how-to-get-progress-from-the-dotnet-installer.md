@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355641"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750428"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedimiento para obtener el progreso del instalador de .NET Framework 4.5
 
@@ -40,13 +40,13 @@ ms.locfileid: "57355641"
 
 - **Códigos de salida**. Los códigos de salida siguientes que proceden del comando que llama al programa redistribuible de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indican si la instalación se ha realizado correctamente o no:
 
-    - 0: la instalación se completó correctamente.
+  - 0: la instalación se completó correctamente.
 
-    - 3010: el programa de instalación se completó correctamente; es necesario reiniciar el sistema.
+  - 3010: el programa de instalación se completó correctamente; es necesario reiniciar el sistema.
 
-    - 1602: se ha cancelado la instalación.
+  - 1602: se ha cancelado la instalación.
 
-    - Todos los demás códigos: se han producido errores en la instalación. Consulte los archivos de registro creados en %temp% para ver los detalles.
+  - Todos los demás códigos: se han producido errores en la instalación. Consulte los archivos de registro creados en %temp% para ver los detalles.
 
 - **Cancelación de la instalación**. Puede cancelar la instalación en cualquier momento utilizando el método `Abort` para establecer las marcas `m_downloadAbort` y `m_ installAbort` en la sección MMIO.
 

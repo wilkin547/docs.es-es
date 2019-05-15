@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 160d1b5f0604cff96549c9d94dc5d8ddc7e39f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 514cc8177bc5968c9d6e92eec07a03a8a7855bd3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217164"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649400"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Procedimiento para continuar un servicio de Windows (Visual Basic)
 En este ejemplo se utiliza el componente <xref:System.ServiceProcess.ServiceController> para continuar un servicio IIS Admin en el equipo local.  
@@ -29,9 +29,9 @@ En este ejemplo se utiliza el componente <xref:System.ServiceProcess.ServiceCont
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Una referencia de proyecto a System.serviceprocess.dll.  
+- Una referencia de proyecto a System.serviceprocess.dll.  
   
--   Acceso a los miembros del espacio de nombres <xref:System.ServiceProcess>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
+- Acceso a los miembros del espacio de nombres <xref:System.ServiceProcess>. Agregue una instrucción `Imports` si no hay nombres de miembros completos en el código. Para obtener más información, consulte [Instrucción Imports (Tipo y espacio de nombres de .NET)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="robust-programming"></a>Programación sólida  
  De manera predeterminada, la propiedad <xref:System.ServiceProcess.ServiceController.MachineName%2A> de la clase <xref:System.ServiceProcess.ServiceController> es el equipo local. Para hacer referencia a los servicios de Windows en otro equipo, cambie la propiedad <xref:System.ServiceProcess.ServiceController.MachineName%2A> al nombre de ese equipo.  
@@ -40,9 +40,9 @@ En este ejemplo se utiliza el componente <xref:System.ServiceProcess.ServiceCont
   
  Las condiciones siguientes pueden provocar una excepción:  
   
--   No se puede reanudar el servicio. (<xref:System.InvalidOperationException>)  
+- No se puede reanudar el servicio. (<xref:System.InvalidOperationException>)  
   
--   Error de acceso a la API del sistema. (<xref:System.ComponentModel.Win32Exception>)  
+- Error de acceso a la API del sistema. (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  El control de servicios en el equipo puede restringirse con la enumeración <xref:System.ServiceProcess.ServiceControllerPermissionAccess> para establecer los permisos en la clase <xref:System.ServiceProcess.ServiceControllerPermission>.  

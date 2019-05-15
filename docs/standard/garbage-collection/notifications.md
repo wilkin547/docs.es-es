@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084954"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622706"
 ---
 # <a name="garbage-collection-notifications"></a>Notificaciones de recolección de elementos no utilizados
 Hay situaciones en que una colección de elementos no utilizados completa (es decir, una colección de generación 2) de Common Language Runtime puede afectar negativamente al rendimiento. Esto puede ser un problema especialmente con servidores que procesan grandes volúmenes de solicitudes; en este caso, una recolección grande de elementos no utilizados puede causar un tiempo de espera en la solicitud. Para evitar una recolección grande durante un período crítico, puede recibir una notificación de la proximidad de una recolección grande de elementos no utilizados y adoptar las medidas pertinentes para redirigir la carga de trabajo a otra instancia del servidor. También puede incluir una recolección por su cuenta, siempre que la instancia de servidor actual no necesite procesar solicitudes.  
@@ -28,26 +28,26 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
  Para determinar cuándo se ha generado una notificación, use los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A>. Por lo general, utilice estos métodos en un bucle `while` para obtener continuamente una enumeración <xref:System.GCNotificationStatus> que muestra el estado de la notificación. Si el valor es <xref:System.GCNotificationStatus.Succeeded>, puede hacer lo siguiente:  
   
--   En respuesta a una notificación obtenida con el método <xref:System.GC.WaitForFullGCApproach%2A>, puede redirigir la carga de trabajo y posiblemente inducir una recolección.  
+- En respuesta a una notificación obtenida con el método <xref:System.GC.WaitForFullGCApproach%2A>, puede redirigir la carga de trabajo y posiblemente inducir una recolección.  
   
--   En respuesta a una notificación obtenida con el método <xref:System.GC.WaitForFullGCComplete%2A>, puede habilitar la instancia de servidor actual para volver a procesar las solicitudes. También puede recopilar información. Por ejemplo, puede usar el método <xref:System.GC.CollectionCount%2A> para registrar el número de recolecciones.  
+- En respuesta a una notificación obtenida con el método <xref:System.GC.WaitForFullGCComplete%2A>, puede habilitar la instancia de servidor actual para volver a procesar las solicitudes. También puede recopilar información. Por ejemplo, puede usar el método <xref:System.GC.CollectionCount%2A> para registrar el número de recolecciones.  
   
  Los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A> están diseñados para que funcionen de forma conjunta. Utilizar un método sin el otro puede producir resultados indeterminados.  
   
 ## <a name="full-garbage-collection"></a>Recolección de elementos no utilizados completa  
  El tiempo de ejecución produce una recolección de elementos no utilizados completa cuando se cumple alguna de las situaciones siguientes:  
   
--   Se ha promocionado suficiente memoria en la generación 2 para generar la siguiente recolección de la generación 2.  
+- Se ha promocionado suficiente memoria en la generación 2 para generar la siguiente recolección de la generación 2.  
   
--   Se ha promocionado suficiente memoria en el montón de objetos grandes para generar la siguiente recolección de la generación 2.  
+- Se ha promocionado suficiente memoria en el montón de objetos grandes para generar la siguiente recolección de la generación 2.  
   
--   Una recolección de la generación 1 se escala a una recolección de la generación 2 debido a dos factores.  
+- Una recolección de la generación 1 se escala a una recolección de la generación 2 debido a dos factores.  
   
  Los umbrales especificados en el método <xref:System.GC.RegisterForFullGCNotification%2A> se aplican a los dos primeros escenarios. Sin embargo, en el primer escenario no siempre recibirá la notificación en el tiempo proporcional a los valores de umbral especificados por dos motivos:  
   
--   El tiempo de ejecución no comprueba cada asignación de objetos pequeños (por motivos de rendimiento).  
+- El tiempo de ejecución no comprueba cada asignación de objetos pequeños (por motivos de rendimiento).  
   
--   Solo las recolecciones de la generación 1 promueven la memoria a la generación 2.  
+- Solo las recolecciones de la generación 1 promueven la memoria a la generación 2.  
   
  El tercer escenario también contribuye a la incertidumbre de cuándo recibirá la notificación. Aunque esto no es una garantía, demuestra ser útil para mitigar los efectos de una recolección de elementos no utilizados completa inoportuna redirigiendo las solicitudes durante este tiempo o induciendo la recolección por su cuenta cuando sea más apropiado.  
   
@@ -70,7 +70,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
  Los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A> llaman a sus respectivos métodos de usuario de control de eventos cuando se emite una notificación:  
   
--   `OnFullGCApproachNotify`  
+- `OnFullGCApproachNotify`  
   
      Este método llama al método de usuario `RedirectRequests`, que indica al servidor de puesta en cola de solicitudes que suspenda el envío de solicitudes al servidor. Esto se simula con la definición de la variable de nivel de clase `bAllocate` en `false`, para que no se asignen más objetos.  
   
@@ -78,7 +78,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
      Por último, se indujo una recolección de elementos no utilizados porque la carga de trabajo es ligera.  
   
--   `OnFullGCCompleteNotify`  
+- `OnFullGCCompleteNotify`  
   
      Este método llama al método de usuario `AcceptRequests` para reanudar la aceptación de solicitudes porque el servidor ya no es susceptible a una recolección de elementos no utilizados completa. Esta acción se simula estableciendo la variable `bAllocate` en `true`, para que se reanude la adición de los objetos a la recolección <xref:System.Collections.Generic.List%601>.  
   

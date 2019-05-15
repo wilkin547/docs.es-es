@@ -20,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 352848f9b14300a6e8291cefa8d7a7ee251e1d14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466158"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647790"
 ---
 # <a name="types-of-isolation"></a>Tipos de aislamiento
 El acceso al almacenamiento aislado siempre está restringido al usuario que lo creó. Para implementar este tipo de aislamiento, Common Language Runtime usa el mismo concepto de identidad de usuario que reconoce el sistema operativo, que es la identidad asociada con el proceso en el que se ejecuta el código cuando se abre el almacén. Esta identidad es una identidad de usuario autenticado, pero la suplantación puede hacer que la identidad del usuario actual cambie de forma dinámica.  
   
  El acceso al almacenamiento aislado también está restringido por la identidad asociada con el dominio y el ensamblado de la aplicación, o solo con el ensamblado. El tiempo de ejecución obtiene estas identidades de las maneras siguientes:  
   
--   La identidad de dominio representa la evidencia de la aplicación, que en el caso de una aplicación web podría ser la dirección URL completa. Para el código hospedado en el shell, la identidad de dominio podría basarse en la ruta de acceso del directorio de la aplicación. Por ejemplo, si se ejecuta el ejecutable desde la ruta de acceso C:\Office\MyApp.exe, la identidad de dominio sería C:\Office\MyApp.exe.  
+- La identidad de dominio representa la evidencia de la aplicación, que en el caso de una aplicación web podría ser la dirección URL completa. Para el código hospedado en el shell, la identidad de dominio podría basarse en la ruta de acceso del directorio de la aplicación. Por ejemplo, si se ejecuta el ejecutable desde la ruta de acceso C:\Office\MyApp.exe, la identidad de dominio sería C:\Office\MyApp.exe.  
   
--   Identidad del ensamblado es la evidencia del ensamblado. Esto podría proceder de una firma digital criptográfica, que puede ser el [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md) del ensamblado, el editor de software del ensamblado o su identidad de dirección URL. Si un ensamblado tiene un nombre seguro y una identidad del editor de software, se utiliza la identidad del editor de software. Si el ensamblado procede de Internet y no está firmado, se utiliza la identidad de dirección URL. Para obtener más información sobre los ensamblados y nombres seguros, vea [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md).  
+- Identidad del ensamblado es la evidencia del ensamblado. Esto podría proceder de una firma digital criptográfica, que puede ser el [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md) del ensamblado, el editor de software del ensamblado o su identidad de dirección URL. Si un ensamblado tiene un nombre seguro y una identidad del editor de software, se utiliza la identidad del editor de software. Si el ensamblado procede de Internet y no está firmado, se utiliza la identidad de dirección URL. Para obtener más información sobre los ensamblados y nombres seguros, vea [Programar con ensamblados](../../../docs/framework/app-domains/programming-with-assemblies.md).  
   
--   Los almacenes móviles se mueven con un usuario que tenga un perfil de usuario móvil. Los archivos se escriben en un directorio de red y se descargan en cualquier equipo en que el usuario inicia sesión. Para obtener más información sobre los perfiles de usuarios móviles, consulte <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
+- Los almacenes móviles se mueven con un usuario que tenga un perfil de usuario móvil. Los archivos se escriben en un directorio de red y se descargan en cualquier equipo en que el usuario inicia sesión. Para obtener más información sobre los perfiles de usuarios móviles, consulte <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>.  
   
  Mediante la combinación de los conceptos de usuario, dominio e identidad de ensamblado, el almacenamiento aislado puede aislar los datos de las siguientes formas, cada una de las cuales tiene sus propios escenarios de uso:  
   
--   [Aislamiento por usuario y ensamblado](#UserAssembly)  
+- [Aislamiento por usuario y ensamblado](#UserAssembly)  
   
--   [Aislamiento por usuario, dominio y ensamblado](#UserDomainAssembly)  
+- [Aislamiento por usuario, dominio y ensamblado](#UserDomainAssembly)  
   
  Cualquiera de estos aislamientos se puede combinar con un perfil de usuario móvil. Para obtener más información, vea la sección [Aislamiento aislado y movilidad](#Roaming).  
   

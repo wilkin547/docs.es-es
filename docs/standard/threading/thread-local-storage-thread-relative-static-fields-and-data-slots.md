@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718265"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644891"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos
 Puede usar el almacenamiento local para el subproceso (TLS) administrado para almacenar los datos que sean exclusivos de un subproceso y un dominio de aplicación. .NET Framework proporciona dos maneras de utilizar el TLS administrado: ranuras para datos y campos estáticos relacionados con subprocesos.  
   
--   Use campos estáticos relacionados con subprocesos (campos `Shared` relacionados con subprocesos en Visual Basic) si puede anticipar las necesidades exactas en tiempo de compilación. Los campos estáticos relacionados con subprocesos proporcionan el mejor rendimiento. También proporcionan las ventajas de la comprobación de tipos en tiempo de compilación.  
+- Use campos estáticos relacionados con subprocesos (campos `Shared` relacionados con subprocesos en Visual Basic) si puede anticipar las necesidades exactas en tiempo de compilación. Los campos estáticos relacionados con subprocesos proporcionan el mejor rendimiento. También proporcionan las ventajas de la comprobación de tipos en tiempo de compilación.  
   
--   Use las ranuras de datos si se pueden detectar los requisitos reales solo en tiempo de ejecución. Las ranuras de datos son más lentas y más difíciles de usar que los campos estáticos relacionados con subprocesos, y los datos se almacenan como tipos <xref:System.Object>, por lo que debe convertirlos al tipo correcto antes de utilizarlos.  
+- Use las ranuras de datos si se pueden detectar los requisitos reales solo en tiempo de ejecución. Las ranuras de datos son más lentas y más difíciles de usar que los campos estáticos relacionados con subprocesos, y los datos se almacenan como tipos <xref:System.Object>, por lo que debe convertirlos al tipo correcto antes de utilizarlos.  
   
  En C++ no administrado, use `TlsAlloc` para asignar ranuras de forma dinámica y `__declspec(thread)` para declarar que una variable debería asignarse en el almacenamiento relacionado con los subprocesos. Los campos estáticos y las ranuras para datos relacionados con los subprocesos proporcionan la versión administrada de este comportamiento.  
   
@@ -31,9 +31,9 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado para al
 ## <a name="uniqueness-of-data-in-managed-tls"></a>Unicidad de los datos en la TLS administrada  
  Si usa los campos estáticos o las ranuras para datos relacionados con subprocesos, los datos de la TLS administrada son exclusivos de la combinación de subproceso y dominio de aplicación.  
   
--   Dentro de un dominio de aplicación, un subproceso no puede modificar datos de otro subproceso, aunque ambos subprocesos utilicen el mismo campo o ranura.  
+- Dentro de un dominio de aplicación, un subproceso no puede modificar datos de otro subproceso, aunque ambos subprocesos utilicen el mismo campo o ranura.  
   
--   Cuando un subproceso accede al mismo campo o ranura desde varios dominios de aplicación, se mantiene un valor independiente en cada dominio de aplicación.  
+- Cuando un subproceso accede al mismo campo o ranura desde varios dominios de aplicación, se mantiene un valor independiente en cada dominio de aplicación.  
   
  Por ejemplo, si un subproceso establece el valor de un campo estático relacionado con el subproceso, escribe otro dominio de aplicación y luego recupera el valor del campo, entonces el valor recuperado en el segundo dominio de aplicación difiere del valor del primer dominio de aplicación. Establecer un nuevo valor para el campo del segundo dominio de aplicación no influye en el valor del campo del primer dominio de aplicación.  
   
@@ -49,9 +49,9 @@ Puede usar el almacenamiento local para el subproceso (TLS) administrado para al
 ## <a name="data-slots"></a>Ranuras para datos  
  .NET Framework proporciona ranuras para datos dinámicos exclusivas para la combinación de subproceso y dominio de aplicación. Hay dos tipos de ranuras para datos: ranuras con nombre y ranuras sin nombre. Ambos tipos se implementan mediante la estructura <xref:System.LocalDataStoreSlot>.  
   
--   Para crear una ranura de datos con nombre, use los métodos <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>. Para obtener una referencia a una ranura con nombre existente, pase su nombre al método <xref:System.Threading.Thread.GetNamedDataSlot%2A>.  
+- Para crear una ranura de datos con nombre, use los métodos <xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> o <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>. Para obtener una referencia a una ranura con nombre existente, pase su nombre al método <xref:System.Threading.Thread.GetNamedDataSlot%2A>.  
   
--   Para crear una ranura para datos sin nombre, use el método <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType>.  
+- Para crear una ranura para datos sin nombre, use el método <xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType>.  
   
  Para las ranuras con nombre y sin nombre, use los métodos <xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> y <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> para establecer y recuperar la información en la ranura. Se trata de métodos estáticos que siempre actúan en los datos para el subproceso que los ejecuta actualmente.  
   

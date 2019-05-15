@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298401"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647090"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
 En este tutorial se muestra cómo cambiar el filtrado del registro predeterminado para el objeto `My.Application.Log`, para controlar qué información se pasa desde el objeto `Log` a los agentes de escucha y qué información escriben estos. Puede cambiar el comportamiento del registro incluso después de generar la aplicación, porque la información de configuración se almacena en el archivo de configuración de la aplicación.  
@@ -77,11 +77,11 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
      Si no hay ningún archivo app.config:  
   
-    1.  En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
+    1. En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
   
-    2.  En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
+    2. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
   
-    3.  Haga clic en **Agregar**.  
+    3. Haga clic en **Agregar**.  
   
 2. Busque la sección `<switches>`, en la sección `<system.diagnostics>`, que se encuentra en la sección de nivel superior `<configuration>`.  
   
@@ -152,11 +152,11 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
   
      Si no hay ningún archivo app.config:  
   
-    1.  En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
+    1. En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
   
-    2.  En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
+    2. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
   
-    3.  Haga clic en **Agregar**.  
+    3. Haga clic en **Agregar**.  
   
 2. Haga clic con el botón derecho en app.config en el **Explorador de soluciones**. Pulse **Abrir**.  
   

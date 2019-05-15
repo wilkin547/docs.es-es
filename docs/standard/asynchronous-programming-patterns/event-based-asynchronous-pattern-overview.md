@@ -16,25 +16,25 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678296"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629008"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Información general sobre el modelo asincrónico basado en eventos
 Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen respondiendo a la interacción del usuario, a menudo exigen un diseño que utiliza varios subprocesos. El espacio de nombres <xref:System.Threading> proporciona todas las herramientas necesarias para crear aplicaciones multiproceso de gran rendimiento, pero, para usar estas herramientas de forma eficaz, es necesario atesorar una gran experiencia en ingeniería de software multiproceso. Para aplicaciones multiproceso relativamente simples, el componente <xref:System.ComponentModel.BackgroundWorker> ofrece una solución sencilla. Para aplicaciones asincrónicas más sofisticadas, considere la opción de implementar una clase que se adhiera al modelo asincrónico basado en eventos.  
   
  El modelo asincrónico basado en eventos pone a su disposición las ventajas de las aplicaciones multiproceso al tiempo que oculta muchos de los problemas complejos inherentes al diseño multiproceso. El uso de una clase compatible con este modelo permite:  
   
--   Realizar «en segundo plano» tareas que exigen mucho tiempo, como las descargas y las operaciones de base de datos, sin interrumpir la aplicación.  
+- Realizar «en segundo plano» tareas que exigen mucho tiempo, como las descargas y las operaciones de base de datos, sin interrumpir la aplicación.  
   
--   Ejecutar varias operaciones simultáneamente y recibir una notificación cuando finalice cada una de ellas.  
+- Ejecutar varias operaciones simultáneamente y recibir una notificación cuando finalice cada una de ellas.  
   
--   Esperar a que los recursos estén disponibles sin detener la aplicación, es decir, sin que se quede «colgada».  
+- Esperar a que los recursos estén disponibles sin detener la aplicación, es decir, sin que se quede «colgada».  
   
--   Comunicarse con operaciones asincrónicas pendientes mediante el modelo conocido de eventos y delegados. Para obtener más información sobre el uso de controladores de eventos y delegados, vea [Eventos](../../../docs/standard/events/index.md).  
+- Comunicarse con operaciones asincrónicas pendientes mediante el modelo conocido de eventos y delegados. Para obtener más información sobre el uso de controladores de eventos y delegados, vea [Eventos](../../../docs/standard/events/index.md).  
   
  Una clase que admita el modelo asincrónico basado en eventos tendrá uno o varios métodos denominados _NombreDeMétodo_**Async**. Estos métodos pueden reflejar versiones sincrónicas, que desempeñan la misma operación en el subproceso actual. La clase también puede tener un evento _NombreDeMétodo_**Completed** y un método _NombreDeMétodo_**AsyncCancel** (o simplemente **CancelAsync**).  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095105"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648605"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Cálculo de referencias de tipos diferentes de matrices
 Una matriz es un tipo de referencia en código administrado que contiene uno o varios elementos del mismo tipo. Aunque las matrices son tipos de referencia, se pasan como parámetros In a funciones no administradas. Este comportamiento no se corresponde con la manera en que se pasan las matrices administradas a los objetos administrados, que es como parámetros In/Out. Para obtener más información, consulte [Copiar y fijar](copying-and-pinning.md).  
@@ -34,53 +34,53 @@ Una matriz es un tipo de referencia en código administrado que contiene uno o v
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo pasar los siguientes tipos de matrices:  
   
--   Matriz de enteros por valor.  
+- Matriz de enteros por valor.  
   
--   Matriz de enteros por referencia, que se puede cambiar de tamaño.  
+- Matriz de enteros por referencia, que se puede cambiar de tamaño.  
   
--   Matriz multidimensional de enteros por valor.  
+- Matriz multidimensional de enteros por valor.  
   
--   Matriz de cadenas por valor.  
+- Matriz de cadenas por valor.  
   
--   Matriz de estructuras con enteros.  
+- Matriz de estructuras con enteros.  
   
--   Matriz de estructuras con cadenas.  
+- Matriz de estructuras con cadenas.  
   
  A menos que una matriz se calcule explícitamente por referencia, el comportamiento predeterminado calcula las referencias de la matriz como un parámetro In. Puede cambiar este comportamiento aplicando explícitamente los atributos <xref:System.Runtime.InteropServices.InAttribute> y <xref:System.Runtime.InteropServices.OutAttribute> .  
   
  En el ejemplo Arrays se usan las siguientes funciones no administradas, que se muestran con su declaración de función original:  
   
--   **TestArrayOfInts** exportada desde PinvokeLib.dll.  
+- **TestArrayOfInts** exportada desde PinvokeLib.dll.  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   **TestRefArrayOfInts** exportada desde PinvokeLib.dll.  
+- **TestRefArrayOfInts** exportada desde PinvokeLib.dll.  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   **TestMatrixOfInts** exportada desde PinvokeLib.dll.  
+- **TestMatrixOfInts** exportada desde PinvokeLib.dll.  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   **TestArrayOfStrings** exportada desde PinvokeLib.dll.  
+- **TestArrayOfStrings** exportada desde PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   **TestArrayOfStructs** exportada desde PinvokeLib.dll.  
+- **TestArrayOfStructs** exportada desde PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   **TestArrayOfStructs2** exportada desde PinvokeLib.dll.  
+- **TestArrayOfStructs2** exportada desde PinvokeLib.dll.  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

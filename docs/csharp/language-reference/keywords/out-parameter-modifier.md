@@ -5,12 +5,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 769d1ac0b6266c87e99605c76a25e016f15eb11c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 704b66e6cdec5caa47f85ed8e3acbd2a6a73b730
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125759"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598239"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Modificador del parámetro out (Referencia de C#)
 La palabra clave `out` hace que los argumentos se pasen por referencia. Hace que el parámetro formal sea un alias para el argumento, que debe ser una variable. En otras palabras, cualquier operación en el parámetro se realiza en el argumento. Esto es como la palabra clave [ref](ref.md), salvo que `ref` requiere que se inicialice la variable antes de pasarla. También es como la palabra clave [in](in-parameter-modifier.md), salvo que `in` no permite que el método llamado modifique el valor del argumento. Para usar un parámetro `out`, tanto la definición de método como el método de llamada deben utilizar explícitamente la palabra clave `out`. Por ejemplo:  
@@ -44,9 +44,9 @@ Las propiedades no son variables y, por tanto, no pueden pasarse como parámetro
   
 Las palabras clave `in`, `ref` y `out` no pueden usarse para estos tipos de métodos:  
   
--   Métodos asincrónicos, que se definen mediante el uso del modificador [async](../../../csharp/language-reference/keywords/async.md).  
+- Métodos asincrónicos, que se definen mediante el uso del modificador [async](../../../csharp/language-reference/keywords/async.md).  
   
--   Métodos de iterador, que incluyen una instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) o `yield break`.  
+- Métodos de iterador, que incluyen una instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) o `yield break`.  
 
 ## <a name="declaring-out-parameters"></a>Declaración de parámetros `out`   
 

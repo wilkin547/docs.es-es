@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-ms.openlocfilehash: 107e57ca947012f5e2f65835d684f5e6068b3681
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 044a48aaffbd2d4ef490405a65236b17ecca1fbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176597"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645797"
 ---
 # <a name="how-to-access-http-specific-properties"></a>Procedimiento para acceder a propiedades específicas de HTTP
 En este ejemplo se muestra cómo desactivar el comportamiento de **conexión persistente** HTTP y obtener el número de versión del protocolo de servidor web.  
@@ -47,7 +47,7 @@ HttpWResp.Close();
 ## <a name="compiling-the-code"></a>Compilar el código  
  Para este ejemplo se necesita:  
   
--   Referencias al espacio de nombres **System.Net**.  
+- Referencias al espacio de nombres **System.Net**.  
   
 ## <a name="see-also"></a>Vea también
 

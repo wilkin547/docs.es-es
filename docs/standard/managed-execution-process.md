@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336153"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647718"
 ---
 # <a name="managed-execution-process"></a>proceso de ejecución administrada
 <a name="introduction"></a> El proceso de ejecución administrada incluye los pasos siguientes, que se describen en detalle más adelante en este tema:  
@@ -58,9 +58,9 @@ ms.locfileid: "59336153"
 ## <a name="compiling-msil-to-native-code"></a>Compilar MSIL a código nativo  
  Para poder ejecutar el lenguaje intermedio de Microsoft (MSIL), primero debe compilarse a código nativo con Common Language Runtime para la arquitectura del equipo de destino. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona dos mecanismos para realizar esta conversión:  
   
--   Un compilador Just-In-Time (JIT) de .NET Framework.  
+- Un compilador Just-In-Time (JIT) de .NET Framework.  
   
--   [Ngen.exe (Generador de imágenes nativas)](../../docs/framework/tools/ngen-exe-native-image-generator.md) de .NET Framework.  
+- [Ngen.exe (Generador de imágenes nativas)](../../docs/framework/tools/ngen-exe-native-image-generator.md) de .NET Framework.  
   
 ### <a name="compilation-by-the-jit-compiler"></a>Compilación mediante el compilador JIT  
  La compilación JIT convierte MSIL en código nativo a petición en el tiempo de ejecución de la aplicación, cuando el contenido de un ensamblado se carga y ejecuta. Common Language Runtime proporciona un compilador JIT para cada arquitectura de CPU compatible, por lo que los programadores pueden crear un conjunto de ensamblados MSIL que se puede compilar con un compilador JIT y se puede ejecutar en equipos distintos con diferentes arquitecturas. No obstante, si el código administrado llama a las API nativas específicas de la plataforma o a una biblioteca de clases específica de la plataforma, solo se ejecutará en ese sistema operativo.  
@@ -70,22 +70,22 @@ ms.locfileid: "59336153"
 ### <a name="install-time-code-generation-using-ngenexe"></a>Generación de código en tiempo de instalación mediante NGen.exe  
  Puesto que el compilador JIT convierte el MSIL de un ensamblado en código nativo cuando se llama a cada uno de los métodos definidos en ese ensamblado, esto afecta negativamente al rendimiento en tiempo de ejecución. En la mayoría de los casos, esa disminución del rendimiento es aceptable. Y lo que es más importante, el código generado por el compilador JIT se enlaza al proceso que activó la compilación. Este código no se puede compartir en varios procesos. Para permitir que el código generado se comparta en varias invocaciones de una aplicación o en varios procesos que compartan un conjunto de ensamblados, Common Language Runtime admite un modo de compilación anticipado. Este modo de compilación Ahead Of Time usa [Ngen.exe (Generador de imágenes nativas)](../../docs/framework/tools/ngen-exe-native-image-generator.md) para convertir los ensamblados MSIL en código nativo de forma muy similar a como lo hace el compilador JIT. Sin embargo, la operación de Ngen.exe se diferencia de la del compilador JIT en tres aspectos:  
   
--   Realiza la conversión de MSIL a código nativo antes de ejecutar la aplicación en lugar de realizarla durante su ejecución.  
+- Realiza la conversión de MSIL a código nativo antes de ejecutar la aplicación en lugar de realizarla durante su ejecución.  
   
--   Compila a la vez un ensamblado completo, en lugar de compilar un método cada vez.  
+- Compila a la vez un ensamblado completo, en lugar de compilar un método cada vez.  
   
--   Conserva el código generado en la memoria caché de imágenes nativas como un archivo en disco.  
+- Conserva el código generado en la memoria caché de imágenes nativas como un archivo en disco.  
   
 ### <a name="code-verification"></a>Comprobación del código  
  Como parte de su compilación en código nativo, el código de MILS debe pasar un proceso de comprobación, a menos que un administrador haya establecido una directiva de seguridad que permita al código omitir esta comprobación. En esta comprobación se examina el MSIL y los metadatos para determinar si el código garantiza la seguridad de tipos, lo que significa que el código solo tiene acceso a aquellas ubicaciones de la memoria para las que está autorizado. La seguridad de tipos ayuda a aislar los objetos entre sí y ayuda a protegerlos frente a daños involuntarios o malintencionados. Además, garantiza que las restricciones de seguridad sobre el código se aplican con toda certeza.  
   
  El motor en tiempo de ejecución se basa en el hecho de que se cumplan las siguientes condiciones para el código seguro comprobable:  
   
--   La referencia a un tipo es estrictamente compatible con el tipo al que hace referencia.  
+- La referencia a un tipo es estrictamente compatible con el tipo al que hace referencia.  
   
--   En un objeto sólo se invocan las operaciones definidas adecuadamente.  
+- En un objeto sólo se invocan las operaciones definidas adecuadamente.  
   
--   Una identidad es precisamente lo que dice ser.  
+- Una identidad es precisamente lo que dice ser.  
   
  Durante el proceso de comprobación, se examina el código MSIL para intentar confirmar que el código tiene acceso a las ubicaciones de memoria y puede llamar a los métodos sólo a través de los tipos definidos correctamente. Por ejemplo, un código no permite el acceso a los campos de un objeto si esta acción sobrecarga las ubicaciones de memoria. Además, el proceso de comprobación examina el código para determinar si el MSIL se ha generado correctamente, ya que un MSIL incorrecto puede llevar a la infracción de las reglas en materia de seguridad de tipos. El proceso de comprobación pasa un conjunto de código seguro bien definido, y pasa exclusivamente código seguro. No obstante, algunos códigos con seguridad de tipos no pasan la comprobación debido a algunas limitaciones de este proceso, y algunos lenguajes no producen código seguro comprobable debido a su diseño. Si la directiva de seguridad requiere código seguro de tipos y el código no pasa la comprobación, se produce una excepción al ejecutar el código.  
   

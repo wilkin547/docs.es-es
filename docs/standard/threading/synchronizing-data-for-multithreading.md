@@ -9,25 +9,25 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617920"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644764"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Sincronizar datos para subprocesamiento múltiple
 Cuando varios subprocesos pueden realizar llamadas a las propiedades y los métodos de un objeto individual, es fundamental sincronizarlas. De lo contrario, un subproceso puede interrumpir lo que esté realizando otro y el objeto podría quedar en un estado no válido. La clase cuyos miembros están protegidos de tales interrupciones se conoce como segura para subprocesos.  
   
  Common Language Infrastructure proporciona diversas estrategias para sincronizar el acceso a miembros estáticos y de instancia:  
   
--   Regiones de código sincronizado. Puede usar la clase <xref:System.Threading.Monitor> o la compatibilidad de compilador para esta clase para sincronizar solo el bloque de código que lo necesite y mejorar así el rendimiento.  
+- Regiones de código sincronizado. Puede usar la clase <xref:System.Threading.Monitor> o la compatibilidad de compilador para esta clase para sincronizar solo el bloque de código que lo necesite y mejorar así el rendimiento.  
   
--   Sincronización manual. Puede utilizar los objetos de sincronización que proporciona la biblioteca de clases .NET Framework. Consulte [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que incluye una explicación de la clase <xref:System.Threading.Monitor>.  
+- Sincronización manual. Puede utilizar los objetos de sincronización que proporciona la biblioteca de clases .NET Framework. Consulte [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md), que incluye una explicación de la clase <xref:System.Threading.Monitor>.  
   
--   Contextos sincronizados. Puede usar <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar la sincronización automática y simple de objetos <xref:System.ContextBoundObject>.  
+- Contextos sincronizados. Puede usar <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> para habilitar la sincronización automática y simple de objetos <xref:System.ContextBoundObject>.  
   
--   Clases de colección del espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Estas clases proporcionan operaciones de incorporación y eliminación sincronizadas incorporadas. Para obtener más información, consulte [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md).  
+- Clases de colección del espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>. Estas clases proporcionan operaciones de incorporación y eliminación sincronizadas incorporadas. Para obtener más información, consulte [Colecciones seguras para subprocesos](../../../docs/standard/collections/thread-safe/index.md).  
   
  Common Language Runtime proporciona un modelo de subprocesos en el que las clases se dividen en varias categorías que se pueden sincronizar de distintas maneras (según sea necesario). En la siguiente tabla se muestra la compatibilidad de sincronización que se proporciona para los campos y los métodos de determinadas categorías de sincronización.  
   

@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318382"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634240"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedimiento para definir y usar proveedores de formato numérico personalizado
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ofrece un amplio control sobre la representación de cadena de valores numéricos. Admite las siguientes características para personalizar el formato de los valores numéricos:  
   
--   Cadenas con formato numérico estándar, que proporcionan un conjunto predefinido de formatos para convertir números en su representación de cadena. Se pueden usar con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, vea [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
+- Cadenas con formato numérico estándar, que proporcionan un conjunto predefinido de formatos para convertir números en su representación de cadena. Se pueden usar con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, vea [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
--   Cadenas con formato numérico personalizado, que proporcionan un conjunto de símbolos que pueden combinarse para definir especificadores de formato numérico personalizado. Se pueden usar también con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, consulte [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- Cadenas con formato numérico personalizado, que proporcionan un conjunto de símbolos que pueden combinarse para definir especificadores de formato numérico personalizado. Se pueden usar también con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, consulte [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   Objetos personalizados <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo>, que definen los símbolos y los modelos de formato que se usan para mostrar las representaciones de cadena de valores numéricos. Se pueden usar con cualquier método de formato numérico, como <xref:System.Int32.ToString%2A>, que tiene un parámetro `provider`. Normalmente, el parámetro `provider` se usa para especificar el formato específico de la referencia cultural.  
+- Objetos personalizados <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo>, que definen los símbolos y los modelos de formato que se usan para mostrar las representaciones de cadena de valores numéricos. Se pueden usar con cualquier método de formato numérico, como <xref:System.Int32.ToString%2A>, que tiene un parámetro `provider`. Normalmente, el parámetro `provider` se usa para especificar el formato específico de la referencia cultural.  
   
  En algunos casos (por ejemplo, cuando una aplicación debe mostrar un número de cuenta con formato, un número de identificación o un código postal) estas tres técnicas no resultan apropiadas. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] también permite definir un objeto de formato que no es ni un objeto <xref:System.Globalization.CultureInfo> ni un objeto <xref:System.Globalization.NumberFormatInfo> para determinar cómo se aplica formato a un valor numérico. En este tema se proporcionan instrucciones paso a paso para implementar este tipo de objeto y se ofrece un ejemplo que da formato a números de teléfono.  
   
@@ -41,21 +41,21 @@ ms.locfileid: "59318382"
   
 2. Implemente el método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. <xref:System.IFormatProvider.GetFormat%2A> es un método de devolución de llamada que el método de formato (como el método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>) invoca para recuperar el objeto realmente responsable del formato personalizado. Una implementación típica de <xref:System.IFormatProvider.GetFormat%2A> hace lo siguiente:  
   
-    1.  Determina si el objeto <xref:System.Type> pasado como un parámetro de método representa a una interfaz <xref:System.ICustomFormatter>.  
+    1. Determina si el objeto <xref:System.Type> pasado como un parámetro de método representa a una interfaz <xref:System.ICustomFormatter>.  
   
-    2.  Si el parámetro representa a la interfaz <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> devuelve un objeto que implementa la interfaz <xref:System.ICustomFormatter>, que es responsable de proporcionar el formato personalizado. Normalmente, el objeto de formato personalizado se devuelve a sí mismo.  
+    2. Si el parámetro representa a la interfaz <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> devuelve un objeto que implementa la interfaz <xref:System.ICustomFormatter>, que es responsable de proporcionar el formato personalizado. Normalmente, el objeto de formato personalizado se devuelve a sí mismo.  
   
-    3.  Si el parámetro no representa la interfaz <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> devuelve `null`.  
+    3. Si el parámetro no representa la interfaz <xref:System.ICustomFormatter>, <xref:System.IFormatProvider.GetFormat%2A> devuelve `null`.  
   
 3. Implemente el método <xref:System.ICustomFormatter.Format%2A>. Este método es invocado por el método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> y es responsable de devolver la representación de cadena de un número. La implementación del método normalmente implica lo siguiente:  
   
-    1.  Opcionalmente, asegúrese de que el método se haya diseñado para proporcionar servicios de formato al examinar el parámetro `provider`. En el caso de los objetos de formato que implementan <xref:System.IFormatProvider> y <xref:System.ICustomFormatter>, esto implica probar la igualdad del parámetro `provider` y el objeto de formato actual.  
+    1. Opcionalmente, asegúrese de que el método se haya diseñado para proporcionar servicios de formato al examinar el parámetro `provider`. En el caso de los objetos de formato que implementan <xref:System.IFormatProvider> y <xref:System.ICustomFormatter>, esto implica probar la igualdad del parámetro `provider` y el objeto de formato actual.  
   
-    2.  Determine si el objeto de formato debe admitir especificadores de formato personalizado. (Por ejemplo, un especificador de formato "N" podría indicar que debe generarse un número de teléfono de los Estados Unidos en formato NANP, mientras que una "I" podría indicar la salida en el formato de la recomendación E.123 de ITU-T). Si se usan especificadores de formato, el método debe controlar el especificador de formato específico. Se pasa al método en el parámetro `format`. Si no hay ningún especificador, el valor del parámetro `format` es <xref:System.String.Empty?displayProperty=nameWithType>.  
+    2. Determine si el objeto de formato debe admitir especificadores de formato personalizado. (Por ejemplo, un especificador de formato "N" podría indicar que debe generarse un número de teléfono de los Estados Unidos en formato NANP, mientras que una "I" podría indicar la salida en el formato de la recomendación E.123 de ITU-T). Si se usan especificadores de formato, el método debe controlar el especificador de formato específico. Se pasa al método en el parámetro `format`. Si no hay ningún especificador, el valor del parámetro `format` es <xref:System.String.Empty?displayProperty=nameWithType>.  
   
-    3.  Recupere el valor numérico pasado al método como parámetro `arg`. Realice todas las manipulaciones necesarias para convertirlo en su representación de cadena.  
+    3. Recupere el valor numérico pasado al método como parámetro `arg`. Realice todas las manipulaciones necesarias para convertirlo en su representación de cadena.  
   
-    4.  Devuelva la representación de cadena del parámetro `arg`.  
+    4. Devuelva la representación de cadena del parámetro `arg`.  
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>Para usar un objeto de formato numérico personalizado  
   

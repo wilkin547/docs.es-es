@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a7aebc98627a079d08870b59e4a848a51dbfaaf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ab2dbe79e1b4b89070d07e0f2c966cb54f6e500
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520118"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589988"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Seleccionar datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para seleccionar un conjunto de nodos de un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument> utilizando una expresión XPath. Una vez seleccionado, puede iterar por el conjunto de nodos seleccionado.  
@@ -24,9 +24,9 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos 
 ### <a name="selecting-nodes-using-xpath-expressions"></a>Selección de nodos con expresiones XPath  
  Para seleccionar un conjunto de nodos con una expresión XPath, utilice uno de los siguientes métodos de selección.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  Cuando se llama a estos métodos, éstos devuelven un conjunto de nodos por los que puede navegar libremente utilizando un objeto <xref:System.Xml.XPath.XPathNodeIterator> o un objeto <xref:System.Xml.XPath.XPathNavigator> en el caso de que haya un solo nodo seleccionado.  
   

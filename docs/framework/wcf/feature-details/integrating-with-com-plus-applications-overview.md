@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638640"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590538"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
 Windows Communication Foundation (WCF) proporciona un entorno rico para crear aplicaciones distribuidas. Si ya usa lógica de la aplicación basada en componentes alojada en COM +, puede usar WCF para extender su lógica existente en lugar de tener que rescribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
   
 - Interfaces que pasan referencias de objeto como parámetros: el siguiente enfoque de referencia de objeto limitado se describe en la sección Compatibilidad de referencia de objeto limitado.  
   
-- Interfaces que pasan tupos que no son compatibles con las conversiones [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de interoperabilidad de COM.  
+- Las interfaces que pasan a tupos que no son compatibles con las conversiones de interoperabilidad COM de .NET Framework.  
   
 - Interfaces para las aplicaciones que tienen la agrupación de aplicaciones habilitadas cuando lo hospedan COM+.  
   

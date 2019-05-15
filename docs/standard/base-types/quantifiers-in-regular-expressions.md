@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678270"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633637"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
@@ -228,11 +228,11 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 ## <a name="greedy-and-lazy-quantifiers"></a>Cuantificadores expansivos y diferidos  
  Varios cuantificadores tienen dos versiones:  
   
--   Una versión expansiva.  
+- Una versión expansiva.  
   
      Un cuantificador expansivo intenta coincidir con un elemento tantas veces como sea posible.  
   
--   Una versión no expansiva o diferida.  
+- Una versión no expansiva o diferida.  
   
      Un cuantificador no expansivo intenta coincidir con un elemento el menor número de veces que sea posible. Para convertir un cuantificador expansivo en un cuantificador diferido con tan solo agregar el signo `?`.  
   

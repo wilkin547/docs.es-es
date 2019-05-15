@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45f0e30efac32dec42cf0687fa0da40f4d6dca4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1a5fa5113afdfb94a0b035b83cb59946d0970c9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551831"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664585"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Comparaciones y ordenaciones en colecciones
 Las clases <xref:System.Collections> realizan comparaciones en casi todos los procesos implicados en la administración de colecciones, bien al buscar el elemento que se va a quitar, bien al devolver el valor de un par de clave y valor.  
@@ -30,9 +30,9 @@ Las clases <xref:System.Collections> realizan comparaciones en casi todos los pr
 ## <a name="checking-for-equality"></a>Comprobar la igualdad  
  Los métodos como `Contains`, <xref:System.Collections.IList.IndexOf%2A>, <xref:System.Collections.Generic.List%601.LastIndexOf%2A>y `Remove` utilizan un comparador de igualdad para los elementos de la colección. Si la colección es genérica, se compara la igualdad de los elementos según las siguientes directrices:  
   
--   Si el tipo T implementa la interfaz genérica <xref:System.IEquatable%601> , el comparador de igualdad es el método <xref:System.IEquatable%601.Equals%2A> de dicha interfaz.  
+- Si el tipo T implementa la interfaz genérica <xref:System.IEquatable%601> , el comparador de igualdad es el método <xref:System.IEquatable%601.Equals%2A> de dicha interfaz.  
   
--   Si el tipo T no implementa <xref:System.IEquatable%601>, se utiliza <xref:System.Object.Equals%2A?displayProperty=nameWithType> .  
+- Si el tipo T no implementa <xref:System.IEquatable%601>, se utiliza <xref:System.Object.Equals%2A?displayProperty=nameWithType> .  
   
  Además, algunas sobrecargas de constructores para colecciones de diccionario aceptan una implementación de <xref:System.Collections.Generic.IEqualityComparer%601> , que se utiliza para comparar la igualdad de claves. Para ver un ejemplo, consulte el constructor <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> .  
   
@@ -42,11 +42,11 @@ Las clases <xref:System.Collections> realizan comparaciones en casi todos los pr
   
  El comparador predeterminado se basa en al menos uno de los objetos que se comparan para implementar la interfaz **IComparable** . Una práctica recomendada es implementar **IComparable** en todas las clases que se utilizan como valores en una colección de lista o como claves en una colección de diccionarios. Para una colección genérica, la comparación de igualdad se determina según lo siguiente:  
   
--   Si el tipo T implementa la interfaz genérica <xref:System.IComparable%601?displayProperty=nameWithType> , el comparador predeterminado es el método <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> de dicha interfaz.  
+- Si el tipo T implementa la interfaz genérica <xref:System.IComparable%601?displayProperty=nameWithType> , el comparador predeterminado es el método <xref:System.IComparable%601.CompareTo%28%600%29?displayProperty=nameWithType> de dicha interfaz.  
   
--   Si el tipo T implementa la interfaz no genérica <xref:System.IComparable?displayProperty=nameWithType> , el comparador predeterminado es el método <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> de dicha interfaz.  
+- Si el tipo T implementa la interfaz no genérica <xref:System.IComparable?displayProperty=nameWithType> , el comparador predeterminado es el método <xref:System.IComparable.CompareTo%28System.Object%29?displayProperty=nameWithType> de dicha interfaz.  
   
--   Si el tipo T no implementa ninguna de estas interfaces, no hay ningún comparador predeterminado y debe proporcionarse explícitamente un delegado de comparación o comparador.  
+- Si el tipo T no implementa ninguna de estas interfaces, no hay ningún comparador predeterminado y debe proporcionarse explícitamente un delegado de comparación o comparador.  
   
  Para proporcionar comparaciones explícitas, algunos métodos aceptan una implementación de **IComparer** como parámetro. Por ejemplo, el método <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> acepta una implementación de <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> .  
   

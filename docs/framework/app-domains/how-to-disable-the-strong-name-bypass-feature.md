@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296178"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593616"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedimiento para deshabilitar la característica de omisión de nombres seguros
 A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nombre seguro no se validan cuando un ensamblado se carga en un objeto <xref:System.AppDomain> de plena confianza, como el objeto <xref:System.AppDomain> predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La única restricción es que el ensamblado debe ser de plena confianza porque su zona es de plena confianza. Dado que el nombre seguro no es un factor determinante en estas condiciones, no hay ninguna razón para que se valide. La omisión de la validación de firmas de nombre seguro proporciona importantes mejoras en el rendimiento.  
@@ -28,9 +28,9 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nomb
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Para deshabilitar la característica de omisión de nombres seguros para todas las aplicaciones  
   
--   En equipos de 32 bits, en el Registro del sistema, cree una entrada DWORD con un valor de 0 denominada `AllowStrongNameBypass` en la clave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework.  
+- En equipos de 32 bits, en el Registro del sistema, cree una entrada DWORD con un valor de 0 denominada `AllowStrongNameBypass` en la clave HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework.  
   
--   En equipos de 64 bits, en el Registro del sistema, cree una entrada DWORD con un valor de 0 denominada `AllowStrongNameBypass` en las claves HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework y HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
+- En equipos de 64 bits, en el Registro del sistema, cree una entrada DWORD con un valor de 0 denominada `AllowStrongNameBypass` en las claves HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework y HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>Para deshabilitar la característica de omisión de nombres seguros para una sola aplicación  
   

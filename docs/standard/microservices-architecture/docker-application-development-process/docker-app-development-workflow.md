@@ -4,12 +4,12 @@ description: Comprenda los detalles del flujo de trabajo para desarrollar aplica
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613374"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751453"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Flujo de trabajo de desarrollo para aplicaciones de Docker
 
@@ -181,7 +181,7 @@ El Dockerfile inicial podría ser algo parecido a esto:
  5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
- 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
+ 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
  9  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.Extensions.HealthChecks …
 10  COPY src/BuildingBlocks/EventBus/IntegrationEventLogEF/ …
 11  COPY src/BuildingBlocks/EventBus/EventBus/EventBus.csproj …
@@ -206,6 +206,7 @@ El Dockerfile inicial podría ser algo parecido a esto:
 
 Y estos son los detalles, línea a línea:
 
+<!-- markdownlint-disable MD029-->
 1. Comience una fase con una imagen base "pequeña" de solo el entorno de ejecución, denomínela **base** para referencia.
 2. Cree un directorio **/app** en la imagen.
 3. Exponga el puerto **80**.
@@ -226,6 +227,7 @@ Y estos son los detalles, línea a línea:
 26. Cambie el directorio actual a **/app**
 27. Copie el directorio **/app** de la fase **publish** en el directorio actual
 28. Defina el comando que se va a ejecutar cuando se inicie el contenedor.
+<!-- markdownlint-enable MD029-->
 
 Ahora vamos a examinar algunas optimizaciones para mejorar el rendimiento del proceso completo, lo que, en el caso de eShopOnContainers, significa aproximadamente 22 minutos o más para compilar la solución completa en contenedores de Linux.
 
@@ -233,7 +235,7 @@ Puede aprovechar la característica de caché de capas de Docker, que es bastant
 
 Así, vamos a centrarnos en la fase **build**, las líneas 5 y 6 son prácticamente iguales, pero las líneas 7-17 son diferentes para cada servicio de eShopOnContainers, así que se tienen que ejecutar cada vez, pero si ha cambiado las líneas 7-16 a:
 
-```
+```Dockerfile
 COPY . .
 ```
 
@@ -245,7 +247,7 @@ Luego, sería igual para cada servicio, se copiaría la solución completa y se 
 
 La siguiente optimización importante implica al comando `restore` ejecutado en la línea 17, que también es diferente para cada servicio de eShopOnContainers. Si cambia esa línea a:
 
-```console
+```Dockerfile
 RUN dotnet restore
 ```
 
@@ -253,13 +255,13 @@ Restauraría los paquetes de toda la solución, pero, de nuevo, lo haría una so
 
 Pero `dotnet restore` únicamente se ejecuta si hay un solo archivo de proyecto o solución en la carpeta, así que lograrlo es un poco más complicado y la forma de solucionarlo, sin entrar en demasiados detalles, es esta:
 
-1) Agregue las líneas siguientes a **.dockerignore**:
+1. Agregue las líneas siguientes a **.dockerignore**:
 
    - `*.sln`, para omitir todos los archivos de solución del árbol de la carpeta principal
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`, para incluir solo este archivo de solución.
 
-2) Incluya el argumento `/ignoreprojectextensions:.dcproj` en `dotnet restore`, de modo que también omita el proyecto docker-compose y solo restaure los paquetes de la solución eShopOnContainers-ServicesAndWebApps.
+2. Incluya el argumento `/ignoreprojectextensions:.dcproj` en `dotnet restore`, de modo que también omita el proyecto docker-compose y solo restaure los paquetes de la solución eShopOnContainers-ServicesAndWebApps.
 
 Para la optimización final, resulta que la línea 20 es redundante, ya que la línea 23 también compila la aplicación y viene, básicamente, justo después de la línea 20, así que ahí tenemos otro comando que usa mucho tiempo.
 
@@ -542,7 +544,7 @@ Además, debe realizar el paso 2 (agregar compatibilidad con Docker a los proyec
 - **Steve Lasker. .NET Docker Development with Visual Studio 2017** \ (Desarrollo de Docker de .NET con Visual Studio 2017, de Steve Lasker)
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
-## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Uso de comandos de PowerShell en un Dockerfile para configurar contenedores de Windows 
+## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Uso de comandos de PowerShell en un Dockerfile para configurar contenedores de Windows
 
 Los [contenedores de Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/index) permiten convertir las aplicaciones de Windows existentes en imágenes de Docker e implementarlas con las mismas herramientas que el resto del ecosistema de Docker. Para usar contenedores de Windows, ejecute comandos de PowerShell en el Dockerfile, como se muestra en el ejemplo siguiente:
 

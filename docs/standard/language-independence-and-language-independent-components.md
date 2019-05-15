@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 57934742e378df9bf77938e8c6b3b49cb25e6ecf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313377"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647757"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 .NET Framework. es independiente del lenguaje. Esto significa que, como desarrollador, puede utilizar uno de los muchos lenguajes que tienen como destino .NET Framework; por ejemplo, C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL y Windows PowerShell. Puede acceder a los tipos y miembros de las bibliotecas de clases desarrolladas para .NET Framework sin necesidad de conocer el lenguaje en el que se escribieron originalmente y sin necesidad de seguir ninguna de las convenciones del lenguaje original. Si es un desarrollador de componentes, podrá acceder a su componente desde cualquier aplicación de .NET Framework, con independencia del lenguaje.  
@@ -34,41 +34,41 @@ ms.locfileid: "59313377"
   
  En este artículo:  
   
--   [Reglas de conformidad con CLS](#Rules)  
+- [Reglas de conformidad con CLS](#Rules)  
   
-    -   [Signaturas de tipos y miembros de tipo](#Types)  
+    - [Signaturas de tipos y miembros de tipo](#Types)  
   
-    -   [Convenciones de nomenclatura](#naming)  
+    - [Convenciones de nomenclatura](#naming)  
   
-    -   [Conversión de tipos](#conversion)  
+    - [Conversión de tipos](#conversion)  
   
-    -   [Matrices](#arrays)  
+    - [Matrices](#arrays)  
   
-    -   [Interfaces](#Interfaces)  
+    - [Interfaces](#Interfaces)  
   
-    -   [Enumeraciones](#enums)  
+    - [Enumeraciones](#enums)  
   
-    -   [Miembros de tipos en general](#members)  
+    - [Miembros de tipos en general](#members)  
   
-    -   [Accesibilidad de miembros](#MemberAccess)  
+    - [Accesibilidad de miembros](#MemberAccess)  
   
-    -   [Miembros y tipos genéricos](#Generics)  
+    - [Miembros y tipos genéricos](#Generics)  
   
-    -   [Constructores](#ctors)  
+    - [Constructores](#ctors)  
   
-    -   [Propiedades](#properties)  
+    - [Propiedades](#properties)  
   
-    -   [Eventos](#events)  
+    - [Eventos](#events)  
   
-    -   [Sobrecargas](#overloads)  
+    - [Sobrecargas](#overloads)  
   
-    -   [Excepciones](#exceptions)  
+    - [Excepciones](#exceptions)  
   
-    -   [Atributos](#attributes)  
+    - [Atributos](#attributes)  
   
--   [CLSCompliantAttribute (Atributo)](#CLSAttribute)  
+- [CLSCompliantAttribute (Atributo)](#CLSAttribute)  
   
--   [Interoperabilidad entre lenguajes](#CrossLang)  
+- [Interoperabilidad entre lenguajes](#CrossLang)  
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>Reglas de conformidad con CLS  
@@ -94,11 +94,11 @@ ms.locfileid: "59313377"
   
  Las interfaces públicas de una biblioteca se componen de los elementos siguientes:  
   
--   Definiciones de clases públicas.  
+- Definiciones de clases públicas.  
   
--   Definiciones de los miembros públicos de las clases públicas y de los miembros accesibles por las clases derivadas (es decir, miembros protegidos).  
+- Definiciones de los miembros públicos de las clases públicas y de los miembros accesibles por las clases derivadas (es decir, miembros protegidos).  
   
--   Parámetros y tipos devueltos de los métodos públicos de las clases públicas y parámetros y tipos devueltos de los métodos accesibles por las clases derivadas.  
+- Parámetros y tipos devueltos de los métodos públicos de las clases públicas y parámetros y tipos devueltos de los métodos accesibles por las clases derivadas.  
   
  Las reglas de conformidad con CLS se muestran en la tabla siguiente. El texto de las normas se toma literalmente del [estándar ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), Copyright de 2012 de Ecma International. En las secciones siguientes encontrará información más detallada sobre estas reglas.  
   
@@ -163,9 +163,9 @@ ms.locfileid: "59313377"
   
  Todos los tipos que aparecen en las signaturas de miembros, incluidos los tipos de propiedades y los tipos de valores devueltos de un método, deben ser conformes a CLS. Además, en el caso de los tipos genéricos:  
   
--   Todos los tipos que forman un tipo genérico con instancias deben ser conformes a CLS.  
+- Todos los tipos que forman un tipo genérico con instancias deben ser conformes a CLS.  
   
--   Todos los tipos que se utilizan como restricciones en parámetros genéricos deben ser conformes a CLS.  
+- Todos los tipos que se utilizan como restricciones en parámetros genéricos deben ser conformes a CLS.  
   
  El [sistema de tipos común](../../docs/standard/base-types/common-type-system.md) de .NET Framework incluye varios tipos integrados que se admiten directamente en Common Language Runtime y que se codifican de forma especial en los metadatos de un ensamblado. De estos tipos intrínsecos, los tipos enumerados en la tabla siguiente son conformes a CLS.  
   
@@ -196,11 +196,11 @@ ms.locfileid: "59313377"
   
  La biblioteca de clases de .NET Framework o cualquier otra biblioteca de clases puede incluir otros tipos que no sean conformes a CLS; por ejemplo:  
   
--   Tipos de valor a los que se les ha aplicado la conversión boxing. En el siguiente ejemplo de C# se crea una clase con una propiedad pública de tipo `int*` denominada `Value`. Dado que `int*` es un tipo de valor al que se le ha aplicado la conversión boxing, el compilador lo marca como no conforme a CLS.  
+- Tipos de valor a los que se les ha aplicado la conversión boxing. En el siguiente ejemplo de C# se crea una clase con una propiedad pública de tipo `int*` denominada `Value`. Dado que `int*` es un tipo de valor al que se le ha aplicado la conversión boxing, el compilador lo marca como no conforme a CLS.  
   
      [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]  
   
--   Referencias con establecimiento de tipos, que son construcciones especiales que contienen una referencia a un objeto y una referencia a un tipo. Las referencias con establecimiento de tipos se representan en .NET Framework mediante la clase <xref:System.TypedReference>.  
+- Referencias con establecimiento de tipos, que son construcciones especiales que contienen una referencia a un objeto y una referencia a un tipo. Las referencias con establecimiento de tipos se representan en .NET Framework mediante la clase <xref:System.TypedReference>.  
   
  Si un tipo no es conforme a CLS, deberá aplicarle el atributo <xref:System.CLSCompliantAttribute> con el valor de `isCompliant` establecido en `false`. Para obtener más información, vea la sección [CLSCompliantAttribute (Atributo)](#CLSAttribute).  
   
@@ -228,9 +228,9 @@ ms.locfileid: "59313377"
   
  Los identificadores de los lenguajes de programación, como los nombres de los espacios de nombres, tipos y miembros, deben ajustarse al [Estándar Unicode 3.0, Informe técnico 15, Anexo 7](https://www.unicode.org/reports/tr15/tr15-18.html). Esto significa que:  
   
--   El primer carácter de un identificador puede ser cualquier letra en mayúscula, letra en minúscula, letra de inicial en mayúscula, letra modificadora, otra letra o número de letra. Para obtener información acerca de las categorías de caracteres Unicode, vea la enumeración <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
+- El primer carácter de un identificador puede ser cualquier letra en mayúscula, letra en minúscula, letra de inicial en mayúscula, letra modificadora, otra letra o número de letra. Para obtener información acerca de las categorías de caracteres Unicode, vea la enumeración <xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType>.  
   
--   Los caracteres siguientes pueden proceder de cualquier categoría cuando funcionan como primer carácter y también pueden incluir marcas no espaciadas, marcas de combinación de espaciado, números decimales, puntuaciones de conexión y códigos de formato.  
+- Los caracteres siguientes pueden proceder de cualquier categoría cuando funcionan como primer carácter y también pueden incluir marcas no espaciadas, marcas de combinación de espaciado, números decimales, puntuaciones de conexión y códigos de formato.  
   
  Antes de comparar los identificadores, debe filtrar los códigos de formato y convertir los identificadores a la forma de normalización Unicode C, ya que un mismo carácter se puede representar mediante diferentes unidades de código UTF-16. Las secuencias de caracteres que producen las mismas unidades de código en la forma de normalización Unicode C no son conformes a CLS. En el ejemplo siguiente se define una propiedad llamada `Å`, que se compone del carácter SIGNO DE ANGSTROM (U+212B) y una segunda propiedad llamada `Å`, que se compone de la LETRA MAYÚSCULA A LATINA CON UN ANILLO ENCIMA (U+00C5). Los compiladores de C# y Visual Basic identifican el código fuente como no conforme a CLS.  
   
@@ -239,9 +239,9 @@ ms.locfileid: "59313377"
   
  Los nombres de miembros con un ámbito determinado (como los espacios de nombres de un ensamblado, los tipos de un espacio de nombres o los miembros de un tipo) deben ser únicos, excepto los nombres que se resuelven a través de la sobrecarga. Este requisito es más estricto que el del sistema de tipos comunes, que permite a varios miembros de un ámbito tener nombres idénticos siempre que sean diferentes tipos de miembros (por ejemplo, que uno sea un método y otro, un campo). En particular, en el caso de los miembros de tipo:  
   
--   Los campos y los tipos anidados solo se distinguen por el nombre.  
+- Los campos y los tipos anidados solo se distinguen por el nombre.  
   
--   Los métodos, las propiedades y los eventos que tienen el mismo nombre deben distinguirse por algo más que el tipo de valor devuelto.  
+- Los métodos, las propiedades y los eventos que tienen el mismo nombre deben distinguirse por algo más que el tipo de valor devuelto.  
   
  En el ejemplo siguiente se muestra el requisito que establece que los nombres de miembro deben ser únicos dentro de su ámbito. En este ejemplo se define una clase denominada `Converter`, que incluye cuatro miembros denominados `Conversion`. Tres son métodos y uno es una propiedad. El método que incluye un parámetro <xref:System.Int64> recibe un nombre único, pero no ocurre lo mismo con los dos métodos que tienen un parámetro <xref:System.Int32>, ya que el valor devuelto no se considera parte de la signatura del miembro. La propiedad `Conversion` también infringe este requisito, ya que las propiedades no pueden tener el mismo nombre que los métodos sobrecargados.  
   
@@ -260,9 +260,9 @@ ms.locfileid: "59313377"
 ### <a name="type-conversion"></a>Conversión de tipos  
  Common Language Specification define dos operadores de conversión:  
   
--   `op_Implicit`, que se utiliza en las conversiones de ampliación que no dan lugar a la pérdida de datos o de precisión. Por ejemplo, la estructura <xref:System.Decimal> contiene un operador sobrecargado `op_Implicit` para convertir valores de tipos enteros y valores <xref:System.Char> en valores <xref:System.Decimal>.  
+- `op_Implicit`, que se utiliza en las conversiones de ampliación que no dan lugar a la pérdida de datos o de precisión. Por ejemplo, la estructura <xref:System.Decimal> contiene un operador sobrecargado `op_Implicit` para convertir valores de tipos enteros y valores <xref:System.Char> en valores <xref:System.Decimal>.  
   
--   `op_Explicit`, que se utiliza en las conversiones de restricción que pueden producir una pérdida de magnitud (un valor se convierte en un valor que tiene un intervalo menor) o de precisión. Por ejemplo, la estructura <xref:System.Decimal> contiene un operador sobrecargado `op_Explicit` para convertir los valores <xref:System.Double> y <xref:System.Single> en <xref:System.Decimal> y convertir <xref:System.Decimal> en los valores integrales <xref:System.Double>, <xref:System.Single> y <xref:System.Char>.  
+- `op_Explicit`, que se utiliza en las conversiones de restricción que pueden producir una pérdida de magnitud (un valor se convierte en un valor que tiene un intervalo menor) o de precisión. Por ejemplo, la estructura <xref:System.Decimal> contiene un operador sobrecargado `op_Explicit` para convertir los valores <xref:System.Double> y <xref:System.Single> en <xref:System.Decimal> y convertir <xref:System.Decimal> en los valores integrales <xref:System.Double>, <xref:System.Single> y <xref:System.Char>.  
   
  Sin embargo, no todos los lenguajes admiten la sobrecarga de operadores o la definición de operadores personalizados. Si decide implementar estos operadores de conversión, debe proporcionar un mecanismo alternativo para realizar la conversión. Se recomienda proporcionar los métodos `From`*Xxx* y `To`*Xxx*.  
   
@@ -275,17 +275,17 @@ ms.locfileid: "59313377"
 ### <a name="arrays"></a>Matrices  
  Las matrices conformes a CLS cumplen las reglas siguientes:  
   
--   Todas las dimensiones de una matriz deben tener un límite inferior igual a cero. En el ejemplo siguiente se crea una matriz no conforme a CLS cuyo límite inferior es uno. Observe que, a pesar de la presencia del atributo <xref:System.CLSCompliantAttribute>, el compilador no detecta que la matriz devuelta por el método `Numbers.GetTenPrimes` no es conforme a CLS.  
+- Todas las dimensiones de una matriz deben tener un límite inferior igual a cero. En el ejemplo siguiente se crea una matriz no conforme a CLS cuyo límite inferior es uno. Observe que, a pesar de la presencia del atributo <xref:System.CLSCompliantAttribute>, el compilador no detecta que la matriz devuelta por el método `Numbers.GetTenPrimes` no es conforme a CLS.  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
--   Todos los elementos de la matriz deben componerse de tipos conformes a CLS. En el ejemplo siguiente se definen dos métodos que devuelven matrices no conformes a CLS. El primero devuelve una matriz de valores <xref:System.UInt32>. El segundo devuelve una matriz <xref:System.Object> que contiene los valores <xref:System.Int32> y <xref:System.UInt32>. Aunque el compilador identifica la primera matriz como no conforme debido a su tipo <xref:System.UInt32>, no reconoce que la segunda matriz incluye elementos no conformes a CLS.  
+- Todos los elementos de la matriz deben componerse de tipos conformes a CLS. En el ejemplo siguiente se definen dos métodos que devuelven matrices no conformes a CLS. El primero devuelve una matriz de valores <xref:System.UInt32>. El segundo devuelve una matriz <xref:System.Object> que contiene los valores <xref:System.Int32> y <xref:System.UInt32>. Aunque el compilador identifica la primera matriz como no conforme debido a su tipo <xref:System.UInt32>, no reconoce que la segunda matriz incluye elementos no conformes a CLS.  
   
      [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
      [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
--   La resolución de desbordamiento de los métodos que tienen parámetros de matriz se basa en el hecho de que son matrices y en su tipo de elemento. Por esta razón, la siguiente definición de un método `GetSquares` sobrecargado es conforme a CLS.  
+- La resolución de desbordamiento de los métodos que tienen parámetros de matriz se basa en el hecho de que son matrices y en su tipo de elemento. Por esta razón, la siguiente definición de un método `GetSquares` sobrecargado es conforme a CLS.  
   
      [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
      [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
@@ -294,11 +294,11 @@ ms.locfileid: "59313377"
 ### <a name="interfaces"></a>Interfaces  
  Las interfaces conformes a CLS pueden definir propiedades, eventos y métodos virtuales (métodos sin implementación). Una interfaz conforme a CLS no puede tener ninguno de los elementos siguientes:  
   
--   Métodos estáticos o campos estáticos. Los compiladores de C# y Visual Basic generan errores de compilación si se define un miembro estático en una interfaz.  
+- Métodos estáticos o campos estáticos. Los compiladores de C# y Visual Basic generan errores de compilación si se define un miembro estático en una interfaz.  
   
--   Campos. Los compiladores de C# y Visual Basic generan errores de compilación si se define un campo en una interfaz.  
+- Campos. Los compiladores de C# y Visual Basic generan errores de compilación si se define un campo en una interfaz.  
   
--   Métodos que no son conformes a CLS. Por ejemplo, la siguiente definición de interfaz incluye un método, `INumber.GetUnsigned`, que está marcado como no conforme a CLS. Este ejemplo genera una advertencia del compilador.  
+- Métodos que no son conformes a CLS. Por ejemplo, la siguiente definición de interfaz incluye un método, `INumber.GetUnsigned`, que está marcado como no conforme a CLS. Este ejemplo genera una advertencia del compilador.  
   
      [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
      [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
@@ -314,24 +314,24 @@ ms.locfileid: "59313377"
 ### <a name="enumerations"></a>Enumeraciones  
  Las enumeraciones conformes a CLS deben seguir estas reglas:  
   
--   El tipo subyacente de una enumeración debe ser un entero intrínseco conforme a CLS (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> o <xref:System.Int64>). Por ejemplo, el código siguiente intenta definir una enumeración cuyo tipo subyacente es <xref:System.UInt32> y genera una advertencia del compilador.  
+- El tipo subyacente de una enumeración debe ser un entero intrínseco conforme a CLS (<xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> o <xref:System.Int64>). Por ejemplo, el código siguiente intenta definir una enumeración cuyo tipo subyacente es <xref:System.UInt32> y genera una advertencia del compilador.  
   
      [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
      [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   Un tipo de enumeración debe tener un campo de instancia único denominado `Value__` marcado con el atributo <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>. Esto permite hacer referencia al valor del campo de forma implícita.  
+- Un tipo de enumeración debe tener un campo de instancia único denominado `Value__` marcado con el atributo <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType>. Esto permite hacer referencia al valor del campo de forma implícita.  
   
--   Las enumeraciones incluyen campos estáticos literales del mismo tipo que el de la enumeración. Por ejemplo, si define una enumeración `State` con los valores `State.On` y `State.Off`, `State.On` y `State.Off` son campos estáticos literales cuyo tipo será `State`.  
+- Las enumeraciones incluyen campos estáticos literales del mismo tipo que el de la enumeración. Por ejemplo, si define una enumeración `State` con los valores `State.On` y `State.Off`, `State.On` y `State.Off` son campos estáticos literales cuyo tipo será `State`.  
   
--   Hay dos tipos de enumeraciones:  
+- Hay dos tipos de enumeraciones:  
   
-    -   Las enumeraciones que representan un conjunto de valores enteros con nombre mutuamente excluyentes. Este tipo de enumeración se indica por la ausencia del atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
+    - Las enumeraciones que representan un conjunto de valores enteros con nombre mutuamente excluyentes. Este tipo de enumeración se indica por la ausencia del atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
-    -   Las enumeraciones que representan un conjunto de marcadores de bits que se pueden combinar para generar un valor sin nombre. Este tipo de enumeración se indica por la presencia del atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
+    - Las enumeraciones que representan un conjunto de marcadores de bits que se pueden combinar para generar un valor sin nombre. Este tipo de enumeración se indica por la presencia del atributo personalizado <xref:System.FlagsAttribute?displayProperty=nameWithType>.  
   
      Para obtener más información, consulte la documentación de la estructura <xref:System.Enum>.  
   
--   El valor de una enumeración no se limita al intervalo de sus valores especificados. Es decir, el intervalo de valores de una enumeración es el intervalo de su valor subyacente. Puede utilizar el método <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para determinar si un valor especificado es miembro de una enumeración.  
+- El valor de una enumeración no se limita al intervalo de sus valores especificados. Es decir, el intervalo de valores de una enumeración es el intervalo de su valor subyacente. Puede utilizar el método <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> para determinar si un valor especificado es miembro de una enumeración.  
   
 <a name="members"></a>   
 ### <a name="type-members-in-general"></a>Miembros de tipos en general  
@@ -390,34 +390,34 @@ ms.locfileid: "59313377"
 ### <a name="constructors"></a>Constructores  
  Los constructores de clases y estructuras conformes a CLS deben seguir estas reglas:  
   
--   Un constructor de una clase derivada debe llamar al constructor de instancia de su clase base antes de tener acceso a datos de instancia heredados. Este requisito se debe al hecho de que los constructores de clase base no se heredan por sus clases derivadas. Esta regla no se aplica a las estructuras, que no admiten la herencia directa.  
+- Un constructor de una clase derivada debe llamar al constructor de instancia de su clase base antes de tener acceso a datos de instancia heredados. Este requisito se debe al hecho de que los constructores de clase base no se heredan por sus clases derivadas. Esta regla no se aplica a las estructuras, que no admiten la herencia directa.  
   
      Normalmente, los compiladores aplican esta regla independientemente de la conformidad con CLS, como se muestra en el ejemplo siguiente. En este ejemplo, se crea una clase `Doctor` que se deriva de una clase `Person`, pero la clase `Doctor` no consigue llamar al constructor de la clase `Person` para inicializar los campos de instancia heredados.  
   
      [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
      [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   No se puede llamar a un constructor de objetos excepto para crear un objeto. Además, un objeto no se puede inicializar dos veces. Esto significa, por ejemplo, que el método <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> y los métodos de deserialización, como <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>, no deben llamar a constructores.  
+- No se puede llamar a un constructor de objetos excepto para crear un objeto. Además, un objeto no se puede inicializar dos veces. Esto significa, por ejemplo, que el método <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> y los métodos de deserialización, como <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType>, no deben llamar a constructores.  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>Propiedades  
  Las propiedades de los tipos conformes a CLS deben seguir estas reglas:  
   
--   Una propiedad debe tener un establecedor, un captador o ambos. En un ensamblado, estos elementos se implementan como métodos especiales, lo que significa que aparecerán como métodos independientes (el captador se llama `get_`*propertyname* y el establecedor es `set_`*propertyname*) marcados como `SpecialName` en los metadatos del ensamblado. Los compiladores de C# y Visual Basic aplican esta regla automáticamente sin necesidad de aplicar el atributo <xref:System.CLSCompliantAttribute>.  
+- Una propiedad debe tener un establecedor, un captador o ambos. En un ensamblado, estos elementos se implementan como métodos especiales, lo que significa que aparecerán como métodos independientes (el captador se llama `get_`*propertyname* y el establecedor es `set_`*propertyname*) marcados como `SpecialName` en los metadatos del ensamblado. Los compiladores de C# y Visual Basic aplican esta regla automáticamente sin necesidad de aplicar el atributo <xref:System.CLSCompliantAttribute>.  
   
--   El tipo de una propiedad es el tipo de valor devuelto del captador de la propiedad y el último argumento del establecedor. Estos tipos deben ser conformes a CLS y los argumentos no se pueden asignar a la propiedad por referencia (es decir, no pueden ser punteros administrados).  
+- El tipo de una propiedad es el tipo de valor devuelto del captador de la propiedad y el último argumento del establecedor. Estos tipos deben ser conformes a CLS y los argumentos no se pueden asignar a la propiedad por referencia (es decir, no pueden ser punteros administrados).  
   
--   Si una propiedad tiene un captador y un establecedor, estos deben ser virtuales, estáticos o de instancia. Los compiladores de C# y Visual Basic aplican automáticamente esta regla a través de la sintaxis de definición de la propiedad.  
+- Si una propiedad tiene un captador y un establecedor, estos deben ser virtuales, estáticos o de instancia. Los compiladores de C# y Visual Basic aplican automáticamente esta regla a través de la sintaxis de definición de la propiedad.  
   
 <a name="events"></a>   
 ### <a name="events"></a>Eventos  
  Un evento se define por su nombre y su tipo. El tipo de evento es un delegado que se utiliza para indicar el evento. Por ejemplo, el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> es del tipo <xref:System.ResolveEventHandler>. Además del propio evento, hay tres métodos con nombres basados en el nombre de evento que proporcionan la implementación del evento y que se marcan como `SpecialName` en los metadatos de ensamblado:  
   
--   Un método para agregar un controlador de eventos, llamado `add_`*EventName*. Por ejemplo, el método de suscripción de eventos del evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> se denomina `add_AssemblyResolve`.  
+- Un método para agregar un controlador de eventos, llamado `add_`*EventName*. Por ejemplo, el método de suscripción de eventos del evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> se denomina `add_AssemblyResolve`.  
   
--   Un método para quitar un controlador de eventos, llamado `remove_`*EventName*. Por ejemplo, el método de eliminación del evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> se denomina `remove_AssemblyResolve`.  
+- Un método para quitar un controlador de eventos, llamado `remove_`*EventName*. Por ejemplo, el método de eliminación del evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> se denomina `remove_AssemblyResolve`.  
   
--   Un método para indicar que el evento se produjo, llamado `raise_`*EventName*.  
+- Un método para indicar que el evento se produjo, llamado `raise_`*EventName*.  
   
 > [!NOTE]
 >  La mayoría de las reglas de Common Language Specification relacionadas con los eventos se implementan mediante compiladores del lenguaje y son transparentes para los desarrolladores de componentes.  
@@ -433,11 +433,11 @@ ms.locfileid: "59313377"
 ### <a name="overloads"></a>Overloads  
  Common Language Specification impone los siguientes requisitos a los miembros sobrecargados:  
   
--   Los miembros se pueden sobrecargar según el número de parámetros y el tipo de cualquiera de los parámetros. A la hora de distinguir entre sobrecargas, no se tienen en cuenta los factores de convención de llamada, el tipo de valor devuelto, los modificadores personalizados aplicados al método o a su parámetro, ni si los parámetros se pasan por valor o por referencia. Para consultar un ejemplo, vea el código del requisito que establece que los nombres deben ser únicos en cada ámbito que se incluye en la sección [Convenciones de nomenclatura](#naming).  
+- Los miembros se pueden sobrecargar según el número de parámetros y el tipo de cualquiera de los parámetros. A la hora de distinguir entre sobrecargas, no se tienen en cuenta los factores de convención de llamada, el tipo de valor devuelto, los modificadores personalizados aplicados al método o a su parámetro, ni si los parámetros se pasan por valor o por referencia. Para consultar un ejemplo, vea el código del requisito que establece que los nombres deben ser únicos en cada ámbito que se incluye en la sección [Convenciones de nomenclatura](#naming).  
   
--   Solo las propiedades y los métodos se pueden sobrecargar. Los campos y eventos no se pueden sobrecargar.  
+- Solo las propiedades y los métodos se pueden sobrecargar. Los campos y eventos no se pueden sobrecargar.  
   
--   Los métodos genéricos pueden sobrecargarse en función del número de parámetros genéricos.  
+- Los métodos genéricos pueden sobrecargarse en función del número de parámetros genéricos.  
   
 > [!NOTE]
 >  Los operadores `op_Explicit` y `op_Implicit` son una excepción de la regla que establece que el valor devuelto no se considera parte de la signatura de un método en la resolución de la sobrecarga. Estos dos operadores se pueden sobrecargar según sus parámetros y su valor devuelto.  
@@ -465,27 +465,27 @@ ms.locfileid: "59313377"
   
  El constructor o las propiedades de un atributo conforme a CLS pueden exponer solo los tipos siguientes:  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Type>  
+- <xref:System.Type>  
   
--   Cualquier tipo de enumeración cuyo tipo subyacente sea <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> o <xref:System.Int64>.  
+- Cualquier tipo de enumeración cuyo tipo subyacente sea <xref:System.Byte>, <xref:System.Int16>, <xref:System.Int32> o <xref:System.Int64>.  
   
  En el ejemplo siguiente se define una clase `DescriptionAttribute` que se deriva de <xref:System.Attribute>. El constructor de clase tiene un parámetro de tipo `Descriptor`, de modo que la clase no es conforme a CLS. Observe que el compilador de C# emite una advertencia, aunque realiza la compilación correctamente, mientras que el compilador de Visual Basic no emite ninguna una advertencia ni ningún error.  
   
@@ -500,9 +500,9 @@ ms.locfileid: "59313377"
   
  Los desarrolladores de componentes pueden usar el atributo <xref:System.CLSCompliantAttribute> de dos maneras:  
   
--   Para definir las partes de la interfaz pública expuestas por un componente que son conformes a CLS y las que no lo son. Cuando el atributo se utiliza para marcar determinados elementos del programa como conformes a CLS, este uso garantiza que dichos elementos son accesibles desde todos los lenguajes y herramientas que tienen como destino .NET Framework.  
+- Para definir las partes de la interfaz pública expuestas por un componente que son conformes a CLS y las que no lo son. Cuando el atributo se utiliza para marcar determinados elementos del programa como conformes a CLS, este uso garantiza que dichos elementos son accesibles desde todos los lenguajes y herramientas que tienen como destino .NET Framework.  
   
--   Para garantizar que la interfaz pública de la biblioteca de componentes expone solo elementos del programa que son conformes a CLS. Si los elementos no son conformes a CLS, los compiladores normalmente emitirán una advertencia.  
+- Para garantizar que la interfaz pública de la biblioteca de componentes expone solo elementos del programa que son conformes a CLS. Si los elementos no son conformes a CLS, los compiladores normalmente emitirán una advertencia.  
   
 > [!WARNING]
 >  En algunos casos, los compiladores de lenguaje aplican reglas conformes a CLS independientemente de si se usa el atributo <xref:System.CLSCompliantAttribute> o no. Por ejemplo, la definición de un miembro estático en una interfaz infringe una regla de CLS. En este sentido, si se define un miembro `static` (en C#) o `Shared` (en Visual Basic) en una interfaz, los compiladores de C# y Visual Basic mostrarán un mensaje de error y no podrán compilar la aplicación.  

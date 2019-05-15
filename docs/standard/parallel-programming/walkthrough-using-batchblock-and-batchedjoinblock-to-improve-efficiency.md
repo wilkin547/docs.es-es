@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 91520b8967445a70a7775b99faef0cefc5e01cc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302988"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654402"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Tutorial: Uso de BatchBlock y BatchedJoinBlock para mejorar la eficacia
 La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> para poder recibir y almacenar en búfer datos de uno o más orígenes y después propagar esos datos almacenados en búfer como una colección. Este mecanismo por lotes es útil cuando se recopilan datos de uno o más orígenes y después se procesan varios elementos de datos como un lote. Por ejemplo, piense en una aplicación que usa flujo de datos para insertar registros en una base de datos. Esta operación puede ser más eficaz si varios elementos se insertan al mismo tiempo en lugar de insertar de uno en uno de forma secuencial. En este documento se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para mejorar la eficacia de las operaciones de inserción de la base de datos. También se describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar los resultados y cualquier excepción que se produce cuando el programa lee de una base de datos.
@@ -34,19 +34,19 @@ La biblioteca de flujos de datos TPL proporciona las clases <xref:System.Threadi
   
  Este tutorial contiene las siguientes secciones:  
   
--   [Crear la aplicación de consola](#creating)  
+- [Crear la aplicación de consola](#creating)  
   
--   [Definir la clase Employee](#employeeClass)  
+- [Definir la clase Employee](#employeeClass)  
   
--   [Definir las operaciones de la base de datos de empleados](#operations)  
+- [Definir las operaciones de la base de datos de empleados](#operations)  
   
--   [Agregar datos de empleados a la base de datos sin usar el almacenamiento en búfer](#nonBuffering)  
+- [Agregar datos de empleados a la base de datos sin usar el almacenamiento en búfer](#nonBuffering)  
   
--   [Usar el almacenamiento en búfer para agregar datos de empleados en la base de datos](#buffering)  
+- [Usar el almacenamiento en búfer para agregar datos de empleados en la base de datos](#buffering)  
   
--   [Usar una combinación almacenada en búfer para leer datos de empleados de la base de datos](#bufferedJoin)  
+- [Usar una combinación almacenada en búfer para leer datos de empleados de la base de datos](#bufferedJoin)  
   
--   [Ejemplo completo](#complete)  
+- [Ejemplo completo](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>Crear la aplicación de consola  

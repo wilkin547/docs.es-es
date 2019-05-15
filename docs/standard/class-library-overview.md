@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82854b87f922f9937e593d0936fb1b29e6380ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664622"
 ---
 # <a name="net-class-library-overview"></a>Información general de la biblioteca de clases de .NET
 
@@ -52,17 +52,17 @@ Las implementaciones de .NET incluyen clases, interfaces, delegados y tipos de v
   
  Los tipos de .NET son la base sobre la que se compilan aplicaciones, componentes y controles de .NET. Las implementaciones de .NET incluyen tipos que efectúan las siguientes funciones:  
   
--   Representar tipos de datos base y excepciones.  
+- Representar tipos de datos base y excepciones.  
   
--   Encapsular estructuras de datos.  
+- Encapsular estructuras de datos.  
   
--   Realizar E/S.  
+- Realizar E/S.  
   
--   Obtener acceso a información sobre tipos cargados.  
+- Obtener acceso a información sobre tipos cargados.  
   
--   Invocar las comprobaciones de seguridad de .NET Framework.  
+- Invocar las comprobaciones de seguridad de .NET Framework.  
   
--   Proporcionar: acceso a datos, interfaz gráfica para el usuario (GUI) independiente de cliente e interfaz GUI de cliente controlada por el servidor.  
+- Proporcionar: acceso a datos, interfaz gráfica para el usuario (GUI) independiente de cliente e interfaz GUI de cliente controlada por el servidor.  
   
  .NET proporciona un conjunto completo de interfaces, así como clases abstractas y concretas (no abstractas). Se pueden utilizar las clases concretas tal como están o, en muchos casos, derivar las clases propias de ellas. Para usar la funcionalidad de una interfaz se puede crear una clase que implemente la interfaz o derivar una clase de una de las clases de .NET que implementa la interfaz.  
   

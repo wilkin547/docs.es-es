@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 31c43607a710316696a9765feb6f36b7676f906f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334060"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593645"
 ---
 # <a name="delay-signing-an-assembly"></a>Retrasar la firma de un ensamblado
 Una organización podría tener un par de claves muy bien guardado al que los desarrolladores no tuvieran acceso cada día. La clave pública suele estar disponible, pero el acceso a la clave privada estaría restringido a algunas personas. Al desarrollar ensamblados con nombres seguros, cada ensamblado que hace referencia al ensamblado de destino con nombre seguro contiene el token de la clave pública usada para asignar un nombre seguro al ensamblado de destino. Esto requiere que la clave pública esté disponible durante el proceso de desarrollo.  
@@ -32,9 +32,9 @@ Una organización podría tener un par de claves muy bien guardado al que los de
   
 2. Se anota el código fuente del ensamblado con dos atributos personalizados de <xref:System.Reflection>:  
   
-    -   <xref:System.Reflection.AssemblyKeyFileAttribute>, que pasa el nombre del archivo que contiene la clave pública como parámetro a su constructor.  
+    - <xref:System.Reflection.AssemblyKeyFileAttribute>, que pasa el nombre del archivo que contiene la clave pública como parámetro a su constructor.  
   
-    -   <xref:System.Reflection.AssemblyDelaySignAttribute>, que indica que se está retrasando la firma. Para ello, se pasa **true** como parámetro a su constructor. Por ejemplo:  
+    - <xref:System.Reflection.AssemblyDelaySignAttribute>, que indica que se está retrasando la firma. Para ello, se pasa **true** como parámetro a su constructor. Por ejemplo:  
   
          [!code-cpp[AssemblyDelaySignAttribute#4](../../../samples/snippets/cpp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cpp/source2.cpp#4)]
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]

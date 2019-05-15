@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: a593ea324d39d8161ad87c4df6d6010970f3e1c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9f7d6bfcaa0d1cc4eb6c83cb53120bec695fe85e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109062"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583474"
 ---
 # <a name="using-streams-on-the-network"></a>Usar flujos en la red
 Los recursos de red se representan como secuencias en .NET Framework. Al tratar las secuencias de forma genérica, .NET Framework ofrece lo siguiente:  
   
--   Un método común para enviar y recibir datos web. Independientemente del contenido real del archivo (HTML, XML, etc.), la aplicación usará <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> y <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> para enviar y recibir datos.  
+- Un método común para enviar y recibir datos web. Independientemente del contenido real del archivo (HTML, XML, etc.), la aplicación usará <xref:System.IO.Stream.Write%2A?displayProperty=nameWithType> y <xref:System.IO.Stream.Read%2A?displayProperty=nameWithType> para enviar y recibir datos.  
   
--   Compatibilidad con las secuencias en .NET Framework. Las secuencias se usan por todo .NET Framework, que posee una amplia infraestructura para gestionarlas. Por ejemplo, puede modificar una aplicación que lee datos XML de una <xref:System.IO.FileStream> para que lea los datos de una <xref:System.Net.Sockets.NetworkStream> cambiando únicamente las pocas líneas de código que inicializan la secuencia. Las principales diferencias entre la clase **NetworkStream** y otras secuencias radican en que no se pueden hacer búsquedas en **NetworkStream**, la propiedad <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> siempre devuelve **false** y los métodos <xref:System.Net.Sockets.NetworkStream.Seek%2A> y <xref:System.Net.Sockets.NetworkStream.Position%2A> generan <xref:System.NotSupportedException>.  
+- Compatibilidad con las secuencias en .NET Framework. Las secuencias se usan por todo .NET Framework, que posee una amplia infraestructura para gestionarlas. Por ejemplo, puede modificar una aplicación que lee datos XML de una <xref:System.IO.FileStream> para que lea los datos de una <xref:System.Net.Sockets.NetworkStream> cambiando únicamente las pocas líneas de código que inicializan la secuencia. Las principales diferencias entre la clase **NetworkStream** y otras secuencias radican en que no se pueden hacer búsquedas en **NetworkStream**, la propiedad <xref:System.Net.Sockets.NetworkStream.CanSeek%2A> siempre devuelve **false** y los métodos <xref:System.Net.Sockets.NetworkStream.Seek%2A> y <xref:System.Net.Sockets.NetworkStream.Position%2A> generan <xref:System.NotSupportedException>.  
   
--   Procesamiento de los datos a medida que llegan. Las secuencias proporcionan acceso a los datos a medida que llegan de la red, en lugar de obligar a la aplicación a esperar mientras se descarga un conjunto completo de datos.  
+- Procesamiento de los datos a medida que llegan. Las secuencias proporcionan acceso a los datos a medida que llegan de la red, en lugar de obligar a la aplicación a esperar mientras se descarga un conjunto completo de datos.  
   
  El espacio de nombres <xref:System.Net.Sockets> contiene una clase **NetworkStream** que implementa la clase <xref:System.IO.Stream> específicamente para su uso con recursos de red. Las clases del espacio de nombres <xref:System.Net.Sockets> usan la clase **NetworkStream** para representar las secuencias.  
   
@@ -72,15 +72,15 @@ End Try
   
  Si usa secuencias de recursos de red, tenga en cuenta lo siguiente:  
   
--   La propiedad **CanSeek** siempre devuelve **false**, ya que la clase **NetworkStream** no puede cambiar la posición en la secuencia. Los métodos **Seek** y **Position** generan **NotSupportedException**.  
+- La propiedad **CanSeek** siempre devuelve **false**, ya que la clase **NetworkStream** no puede cambiar la posición en la secuencia. Los métodos **Seek** y **Position** generan **NotSupportedException**.  
   
--   Si usa **WebRequest** y **WebResponse**, las instancias de secuencia creadas mediante la llamada a **GetResponseStream** son de solo lectura, mientras que las instancias de secuencia creadas mediante la llamada a **GetRequestStream** son de solo escritura.  
+- Si usa **WebRequest** y **WebResponse**, las instancias de secuencia creadas mediante la llamada a **GetResponseStream** son de solo lectura, mientras que las instancias de secuencia creadas mediante la llamada a **GetRequestStream** son de solo escritura.  
   
--   Use la clase <xref:System.IO.StreamReader> para facilitar la codificación. En el siguiente ejemplo de código se usa un **StreamReader** para leer una secuencia con codificación ASCII de una **WebResponse** (en el ejemplo no se muestra la creación de la solicitud).  
+- Use la clase <xref:System.IO.StreamReader> para facilitar la codificación. En el siguiente ejemplo de código se usa un **StreamReader** para leer una secuencia con codificación ASCII de una **WebResponse** (en el ejemplo no se muestra la creación de la solicitud).  
   
--   La llamada a **GetResponse** puede bloquearse si los recursos de red no están disponibles. Debe considerar el uso de una solicitud asincrónica con los métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> y <xref:System.Net.WebRequest.EndGetResponse%2A>.  
+- La llamada a **GetResponse** puede bloquearse si los recursos de red no están disponibles. Debe considerar el uso de una solicitud asincrónica con los métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> y <xref:System.Net.WebRequest.EndGetResponse%2A>.  
   
--   La llamada a **GetRequestStream** puede bloquearse mientras se establece la conexión con el servidor. Debe considerar el uso de una solicitud asincrónica para la secuencia con los métodos <xref:System.Net.WebRequest.BeginGetRequestStream%2A> y <xref:System.Net.WebRequest.EndGetRequestStream%2A>.  
+- La llamada a **GetRequestStream** puede bloquearse mientras se establece la conexión con el servidor. Debe considerar el uso de una solicitud asincrónica para la secuencia con los métodos <xref:System.Net.WebRequest.BeginGetRequestStream%2A> y <xref:System.Net.WebRequest.EndGetRequestStream%2A>.  
   
 ```csharp  
 // Create a response object.  

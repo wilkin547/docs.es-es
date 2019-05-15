@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334294"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628918"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedimiento para implementar un componente que admita el modelo asincrónico basado en eventos
 Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -34,19 +34,19 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
  Las tareas ilustradas en este tutorial incluyen:  
   
--   Crear el componente  
+- Crear el componente  
   
--   Definir delegados y eventos asincrónicos públicos  
+- Definir delegados y eventos asincrónicos públicos  
   
--   Definir delegados privados  
+- Definir delegados privados  
   
--   Implementar eventos públicos  
+- Implementar eventos públicos  
   
--   Implementar el método de finalización  
+- Implementar el método de finalización  
   
--   Implementar los métodos de trabajo  
+- Implementar los métodos de trabajo  
   
--   Implementar métodos de inicio y cancelación  
+- Implementar métodos de inicio y cancelación  
   
  Para copiar el código de este tema como una sola lista, vea [Cómo: Implementar un cliente en un modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
@@ -55,7 +55,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
 #### <a name="to-create-the-component"></a>Para crear el componente  
   
--   Cree una clase llamada `PrimeNumberCalculator` y heredada de <xref:System.ComponentModel.Component>.  
+- Cree una clase llamada `PrimeNumberCalculator` y heredada de <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definir delegados y eventos asincrónicos públicos  
  El componente se comunica con los clientes mediante eventos. El evento _MethodName_**Completed** informa a los clientes de la finalización de una tarea asincrónica, y el evento _MethodName_**ProgressChanged** informa a los clientes del progreso de una tarea asincrónica.  
@@ -87,7 +87,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
 #### <a name="to-test-your-component"></a>Para probar el componente  
   
--   Compile el componente.  
+- Compile el componente.  
   
      Recibirá dos advertencias del compilador:  
   
@@ -148,7 +148,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
 #### <a name="to-complete-an-asynchronous-operation"></a>Para completar una operación asincrónica:  
   
--   Implemente el método de finalización. Adopta seis parámetros, que se usan para rellenar un objeto `CalculatePrimeCompletedEventArgs` devuelto al cliente mediante el objeto `CalculatePrimeCompletedEventHandler` del cliente. Quita el token del identificador de tarea del cliente de la colección interna y finaliza la duración de la operación asincrónica con una llamada a <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> serializa la llamada al subproceso o contexto que son apropiados para el modelo de aplicación.  
+- Implemente el método de finalización. Adopta seis parámetros, que se usan para rellenar un objeto `CalculatePrimeCompletedEventArgs` devuelto al cliente mediante el objeto `CalculatePrimeCompletedEventHandler` del cliente. Quita el token del identificador de tarea del cliente de la colección interna y finaliza la duración de la operación asincrónica con una llamada a <xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A>. <xref:System.ComponentModel.AsyncOperation> serializa la llamada al subproceso o contexto que son apropiados para el modelo de aplicación.  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
 #### <a name="to-test-your-component"></a>Para probar el componente  
   
--   Compile el componente.  
+- Compile el componente.  
   
      Recibirá una advertencia del compilador:  
   
@@ -212,7 +212,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
 #### <a name="to-test-your-component"></a>Para probar el componente  
   
--   Compile el componente.  
+- Compile el componente.  
   
      Todo lo que queda por escribir son los métodos para iniciar y cancelar operaciones asincrónicas, `CalculatePrimeAsync` y `CancelAsync`.  
   
@@ -238,7 +238,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
   
 #### <a name="to-test-your-component"></a>Para probar el componente  
   
--   Compile el componente.  
+- Compile el componente.  
   
  El componente `PrimeNumberCalculator` ya está completo y listo para usarse.  
   

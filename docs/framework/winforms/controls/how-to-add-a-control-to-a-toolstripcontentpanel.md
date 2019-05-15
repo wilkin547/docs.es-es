@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: 4fbc97502431b681a77d58a112344287f582ff0f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99b6b8615a16715caaf95109cfbba3ba389946fa
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624138"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591359"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Procedimiento para agregar un control a un ToolStripContentPanel
 Puede agregar uno o más controles a <xref:System.Windows.Forms.ToolStripContentPanel> mediante programación.  
@@ -27,8 +27,6 @@ Puede agregar uno o más controles a <xref:System.Windows.Forms.ToolStripContent
  Para este ejemplo de código se necesita:  
   
 - Referencias a los ensamblados System, System.Data y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.
   
 ## <a name="see-also"></a>Vea también
 

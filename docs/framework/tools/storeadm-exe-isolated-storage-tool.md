@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092272"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647249"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (herramienta de almacenamiento aislado)
 La herramienta de almacenamiento aislado incluye o quita todos los almacenes existentes del usuario actual.  
@@ -49,11 +49,11 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Las aplicaciones tienen la opción de guardar los datos en uno de los dos siguientes almacenes de usuario o en el almacén del equipo:  
   
--   El almacén local, que está situado en una ubicación donde se anula la posibilidad de movilidad (en Windows 2000 y posterior), aunque la movilidad de datos de usuario esté habilitada para el usuario.  
+- El almacén local, que está situado en una ubicación donde se anula la posibilidad de movilidad (en Windows 2000 y posterior), aunque la movilidad de datos de usuario esté habilitada para el usuario.  
   
--   El almacén móvil, que se encuentra en una ubicación con posibilidad de movilidad, pero esta acción solo es posible si la movilidad está habilitada para el usuario mediante la administración de Windows NT.  
+- El almacén móvil, que se encuentra en una ubicación con posibilidad de movilidad, pero esta acción solo es posible si la movilidad está habilitada para el usuario mediante la administración de Windows NT.  
   
--   El almacén del equipo, que es común a todos los usuarios del equipo y se almacena bajo un directorio común en dicho equipo.  
+- El almacén del equipo, que es común a todos los usuarios del equipo y se almacena bajo un directorio común en dicho equipo.  
   
     > [!NOTE]
     >  El almacén del equipo es una novedad de la versión 2.0 de .NET Framework.  

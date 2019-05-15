@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641035"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Ejecución en paralelo en .NET Framework
 La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de una aplicación o componente en el mismo equipo. Se pueden tener varias versiones de Common Language Runtime y varias versiones de las aplicaciones y componentes que utilice una versión del motor en tiempo de ejecución, de forma simultánea y en el mismo equipo.  
@@ -33,15 +33,15 @@ La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de un
   
  La ejecución en paralelo y .NET Framework proporcionan las siguientes características que eliminan los conflictos con las DLL:  
   
--   Ensamblados con nombre seguro  
+- Ensamblados con nombre seguro  
   
      La ejecución en paralelo utiliza ensamblados con nombre seguro para enlazar la información de los tipos a una versión específica de un ensamblado. De este modo, se impide que una aplicación o componente se enlace a una versión no válida de un ensamblado. Los ensamblados con nombre seguro también permiten múltiples versiones de un archivo en el mismo equipo y que las aplicaciones las utilicen. Para más información, vea [Ensamblados con nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md).  
   
--   Almacenamiento de código con identificación de versión  
+- Almacenamiento de código con identificación de versión  
   
      .NET Framework ofrece un almacenamiento de código con identificación de la versión en la caché global de ensamblados. La caché global de ensamblados es una memoria caché de código que afecta a todo el equipo y que existe en los equipos con .NET Framework. Almacena ensamblados en función de la información de versión, referencia cultural y editor, y admite múltiples versiones de componentes y aplicaciones. Para obtener más información, vea [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) (Caché global de ensamblados).  
   
--   Aislamiento.  
+- Aislamiento.  
   
      Con .NET Framework, puede crear aplicaciones y componentes que se ejecutan de forma aislada. El aislamiento es un componente esencial de la ejecución en paralelo. Implica que se reconocen los recursos que se usan y que se comparten con confianza entre varias versiones de una aplicación o un componente. El aislamiento también incluye el almacenamiento de archivos en el modo específico de la versión. Para obtener más información sobre el aislamiento, vea [Guidelines for Creating Components for Side-by-Side Execution](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md) (Instrucciones para crear componentes para la ejecución en paralelo).  
   
@@ -66,9 +66,9 @@ La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de un
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>Determinar qué versión del motor en tiempo de ejecución debe cargarse  
  Common Language Runtime usa la siguiente información para determinar qué versión del tiempo de ejecución se debe cargar para una aplicación:  
   
--   Versiones del tiempo de ejecución que hay disponibles.  
+- Versiones del tiempo de ejecución que hay disponibles.  
   
--   Versiones del tiempo de ejecución que admite una aplicación.  
+- Versiones del tiempo de ejecución que admite una aplicación.  
   
 ### <a name="supported-runtime-versions"></a>Versiones del tiempo de ejecución admitidas  
  Common Language Runtime usa el archivo de configuración de la aplicación y el encabezado del archivo portable ejecutable (PE) para determinar qué versión del tiempo de ejecución admite una aplicación. Si no hay ningún archivo de configuración de la aplicación, Common Language Runtime carga la versión del tiempo de ejecución especificada en el encabezado del archivo PE de la aplicación, si esa versión está disponible.  

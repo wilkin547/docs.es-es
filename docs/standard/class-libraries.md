@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745773"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664600"
 ---
 # <a name="net-class-libraries"></a>Bibliotecas de clases de .NET
 
@@ -19,9 +19,9 @@ Las bibliotecas de clases son el concepto de [biblioteca compartida](https://en.
 
 Hay tres tipos de bibliotecas de clases que puede usar:
 
-*   Las bibliotecas de clases **específicas de la plataforma** tienen acceso a todas las API de una plataforma determinada (por ejemplo, .NET Framework, Xamarin iOS), pero solo las pueden usar las aplicaciones y bibliotecas destinadas a esa plataforma.
-*   Las bibliotecas de clases **portables** tienen acceso a un subconjunto de API y las pueden usar las aplicaciones y bibliotecas que tienen como destino varias plataformas.
-*   Las bibliotecas de clases de **.NET Standard** son una fusión del concepto de biblioteca específica de la plataforma y portable en un único modelo que ofrece lo mejor de ambas.
+* Las bibliotecas de clases **específicas de la plataforma** tienen acceso a todas las API de una plataforma determinada (por ejemplo, .NET Framework, Xamarin iOS), pero solo las pueden usar las aplicaciones y bibliotecas destinadas a esa plataforma.
+* Las bibliotecas de clases **portables** tienen acceso a un subconjunto de API y las pueden usar las aplicaciones y bibliotecas que tienen como destino varias plataformas.
+* Las bibliotecas de clases de **.NET Standard** son una fusión del concepto de biblioteca específica de la plataforma y portable en un único modelo que ofrece lo mejor de ambas.
 
 ## <a name="platform-specific-class-libraries"></a>Bibliotecas de clases específicas de la plataforma
 

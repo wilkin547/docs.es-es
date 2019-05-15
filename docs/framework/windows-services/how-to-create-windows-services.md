@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313273"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649410"
 ---
 # <a name="how-to-create-windows-services"></a>Procedimiento para crear servicios de Windows
 Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio denominada **Servicio de Windows**. Esta plantilla realiza automáticamente gran parte del trabajo: hace referencia a las clases y los espacios de nombres correctos, configura la herencia de la clase base para los servicios y reemplazar algunos de los métodos que es probable que desee reemplazar.  
@@ -21,11 +21,11 @@ Al crear un servicio, puede usar una plantilla de proyecto de Visual Studio deno
   
  Como mínimo, para crear un servicio funcional, deberá:  
   
--   Establecer la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
+- Establecer la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A>.  
   
--   Crear los instaladores necesarios para la aplicación de servicio.  
+- Crear los instaladores necesarios para la aplicación de servicio.  
   
--   Reemplazar y especificar el código para los métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para personalizar el modo en que se comporta el servicio.  
+- Reemplazar y especificar el código para los métodos <xref:System.ServiceProcess.ServiceBase.OnStart%2A> y <xref:System.ServiceProcess.ServiceBase.OnStop%2A> para personalizar el modo en que se comporta el servicio.  
   
 ### <a name="to-create-a-windows-service-application"></a>Para crear una aplicación de servicio de Windows  
   

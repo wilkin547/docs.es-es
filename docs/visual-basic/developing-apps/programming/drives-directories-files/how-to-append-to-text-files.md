@@ -6,19 +6,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: 83f34e9cb669e8d2e841b13875b5237626164dd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e855293ac3636049520a85abdf685091d437bb60
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819845"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628908"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>Procedimiento para anexar a archivos de texto en Visual Basic
 El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> se puede usar para anexar datos a un archivo de texto especificando que el parámetro `append` está establecido en `True`.  
   
 ### <a name="to-append-to-a-text-file"></a>Para anexar a un archivo de texto  
   
--   Use el método `WriteAllText`, especificando el archivo de destino y la cadena que se va a anexar y estableciendo el parámetro `append` en `True`.  
+- Use el método `WriteAllText`, especificando el archivo de destino y la cadena que se va a anexar y estableciendo el parámetro `append` en `True`.  
   
      En este ejemplo se escribe la cadena `"This is a test string."` en el archivo `Testfile.txt`.  
   
@@ -27,19 +27,19 @@ El método <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> se pue
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  
+- La ruta de acceso no es válida por una de las siguientes razones: es una cadena de longitud cero, solo contiene un espacio en blanco, contiene caracteres no válidos o es una ruta de acceso de dispositivo (empieza por \\\\.\\) (<xref:System.ArgumentException>).  
   
--   La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
+- La ruta de acceso no es válida porque es `Nothing` (<xref:System.ArgumentNullException>).  
   
--   `File` apunta a una ruta de acceso que no existe (<xref:System.IO.FileNotFoundException> o <xref:System.IO.DirectoryNotFoundException>).  
+- `File` apunta a una ruta de acceso que no existe (<xref:System.IO.FileNotFoundException> o <xref:System.IO.DirectoryNotFoundException>).  
   
--   El archivo está en uso por otro proceso o hay un error de E/S (<xref:System.IO.IOException>).  
+- El archivo está en uso por otro proceso o hay un error de E/S (<xref:System.IO.IOException>).  
   
--   La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
+- La ruta supera la longitud máxima definida por el sistema (<xref:System.IO.PathTooLongException>).  
   
--   Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
+- Un nombre de archivo o de directorio de la ruta de acceso contiene un signo de dos puntos (:) o tiene un formato no válido (<xref:System.NotSupportedException>).  
   
--   El usuario no tiene los permisos necesarios para ver la ruta de acceso (<xref:System.Security.SecurityException>).  
+- El usuario no tiene los permisos necesarios para ver la ruta de acceso (<xref:System.Security.SecurityException>).  
   
 ## <a name="see-also"></a>Vea también
 

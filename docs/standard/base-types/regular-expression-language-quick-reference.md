@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410529"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664678"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Lenguaje de expresiones regulares - Referencia rápida
  Una expresión regular es un modelo con el que el motor de expresiones regulares intenta buscar una coincidencia en el texto de entrada. Un modelo consta de uno o más literales de carácter, operadores o estructuras.  Para obtener una breve introducción, consulte [Expresiones regulares de .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -170,9 +170,9 @@ ms.locfileid: "58410529"
   
  Puede especificar una opción alineada de dos formas:  
   
--   Con la [construcción miscelánea](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, donde el signo menos (-) delante de una opción o un conjunto de opciones desactiva dichas opciones. Por ejemplo, `(?i-mn)` activa una coincidencia sin distinción entre mayúsculas y minúsculas (`i`), desactiva el modo multilínea (`m`) y desactiva las capturas de grupo sin nombre (`n`). La opción se aplica al patrón de expresión regular a partir del punto en el que esta se define y es efectiva hasta el final del patrón o hasta el punto en el que otro constructor invierte la opción.  
+- Con la [construcción miscelánea](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, donde el signo menos (-) delante de una opción o un conjunto de opciones desactiva dichas opciones. Por ejemplo, `(?i-mn)` activa una coincidencia sin distinción entre mayúsculas y minúsculas (`i`), desactiva el modo multilínea (`m`) y desactiva las capturas de grupo sin nombre (`n`). La opción se aplica al patrón de expresión regular a partir del punto en el que esta se define y es efectiva hasta el final del patrón o hasta el punto en el que otro constructor invierte la opción.  
   
--   Con la [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpresión*`)`, que define opciones solo para el grupo especificado.  
+- Con la [Construcciones de agrupamiento](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpresión*`)`, que define opciones solo para el grupo especificado.  
   
  El motor de expresiones regulares de .NET admite las siguientes opciones insertadas.  
   

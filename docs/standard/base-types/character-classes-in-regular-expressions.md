@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622954"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634710"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de carácter en expresiones regulares
 <a name="Top"></a> Una clase de caracteres define un conjunto de caracteres, cualquiera de los cuales puede estar en una cadena de entrada para que se produzca una coincidencia. El lenguaje de expresiones regulares de .NET admite las siguientes clases de caracteres:  
   
--   Grupos de caracteres positivos. Un carácter de la cadena de entrada debe coincidir con uno de los caracteres del conjunto especificado. Para obtener más información, consulte [Grupo de caracteres positivos](#PositiveGroup).  
+- Grupos de caracteres positivos. Un carácter de la cadena de entrada debe coincidir con uno de los caracteres del conjunto especificado. Para obtener más información, consulte [Grupo de caracteres positivos](#PositiveGroup).  
   
--   Grupos de caracteres negativos. Ningún carácter de la cadena de entrada debe coincidir con ninguno de los caracteres del conjunto especificado. Para obtener más información, consulte [Grupo de caracteres negativos](#NegativeGroup).  
+- Grupos de caracteres negativos. Ningún carácter de la cadena de entrada debe coincidir con ninguno de los caracteres del conjunto especificado. Para obtener más información, consulte [Grupo de caracteres negativos](#NegativeGroup).  
   
--   Cualquier carácter. El carácter `.` (punto) en una expresión regular es un carácter comodín que coincide con cualquier carácter excepto con `\n`. Para obtener más información, consulte [Cualquier carácter](#AnyCharacter).  
+- Cualquier carácter. El carácter `.` (punto) en una expresión regular es un carácter comodín que coincide con cualquier carácter excepto con `\n`. Para obtener más información, consulte [Cualquier carácter](#AnyCharacter).  
   
--   Una categoría general o un bloque con nombre Unicode. Para que se produzca una coincidencia, un carácter de la cadena de entrada debe ser miembro de una categoría Unicode determinada o debe estar dentro de un intervalo contiguo de caracteres Unicode. Para obtener más información, consulte [Categoría Unicode o bloque Unicode](#CategoryOrBlock).  
+- Una categoría general o un bloque con nombre Unicode. Para que se produzca una coincidencia, un carácter de la cadena de entrada debe ser miembro de una categoría Unicode determinada o debe estar dentro de un intervalo contiguo de caracteres Unicode. Para obtener más información, consulte [Categoría Unicode o bloque Unicode](#CategoryOrBlock).  
   
--   Un bloque con nombre o una categoría general negativa Unicode. Para que se produzca una coincidencia, un carácter de la cadena de entrada no debe ser miembro de una categoría Unicode determinada o no debe estar dentro de un intervalo contiguo de caracteres Unicode. Para obtener más información, consulte [Categoría Unicode o bloque Unicode negativo](#NegativeCategoryOrBlock).  
+- Un bloque con nombre o una categoría general negativa Unicode. Para que se produzca una coincidencia, un carácter de la cadena de entrada no debe ser miembro de una categoría Unicode determinada o no debe estar dentro de un intervalo contiguo de caracteres Unicode. Para obtener más información, consulte [Categoría Unicode o bloque Unicode negativo](#NegativeCategoryOrBlock).  
   
--   Un carácter de palabra. Un carácter de la cadena de entrada puede pertenecer a cualquiera de las categorías Unicode que son adecuadas para los caracteres que se usan para formar palabras. Para obtener más información, consulte [Carácter de palabra](#WordCharacter).  
+- Un carácter de palabra. Un carácter de la cadena de entrada puede pertenecer a cualquiera de las categorías Unicode que son adecuadas para los caracteres que se usan para formar palabras. Para obtener más información, consulte [Carácter de palabra](#WordCharacter).  
   
--   Un carácter que no se usa en las palabras. Un carácter de la cadena de entrada puede pertenecer a cualquier categoría Unicode que no se usa para formar palabras. Para obtener más información, consulte [Carácter que no se usa en las palabras](#NonWordCharacter).  
+- Un carácter que no se usa en las palabras. Un carácter de la cadena de entrada puede pertenecer a cualquier categoría Unicode que no se usa para formar palabras. Para obtener más información, consulte [Carácter que no se usa en las palabras](#NonWordCharacter).  
   
--   Un carácter de espacio en blanco. Un carácter de la cadena de entrada puede ser cualquiera de los caracteres separadores Unicode, así como cualquiera de los caracteres de una serie de caracteres de control. Para obtener más información, consulte [Carácter de espacio en blanco](#WhitespaceCharacter).  
+- Un carácter de espacio en blanco. Un carácter de la cadena de entrada puede ser cualquiera de los caracteres separadores Unicode, así como cualquiera de los caracteres de una serie de caracteres de control. Para obtener más información, consulte [Carácter de espacio en blanco](#WhitespaceCharacter).  
   
--   Un carácter que no sea un espacio en blanco. Un carácter de la cadena de entrada puede ser cualquier carácter que no sea un espacio en blanco. Para obtener más información, consulte [Carácter que no sea un espacio en blanco](#NonWhitespaceCharacter).  
+- Un carácter que no sea un espacio en blanco. Un carácter de la cadena de entrada puede ser cualquier carácter que no sea un espacio en blanco. Para obtener más información, consulte [Carácter que no sea un espacio en blanco](#NonWhitespaceCharacter).  
   
--   Un dígito decimal. Un carácter de la cadena de entrada puede ser cualquiera de los caracteres clasificados como dígitos decimales de Unicode. Para obtener más información, consulte [Carácter de dígito decimal](#DigitCharacter).  
+- Un dígito decimal. Un carácter de la cadena de entrada puede ser cualquiera de los caracteres clasificados como dígitos decimales de Unicode. Para obtener más información, consulte [Carácter de dígito decimal](#DigitCharacter).  
   
--   Un carácter que no sea un dígito decimal. Un carácter de la cadena de entrada puede ser cualquier carácter que no sea un dígito decimal de Unicode. Para obtener más información, consulte [Carácter de dígito decimal](#NonDigitCharacter).  
+- Un carácter que no sea un dígito decimal. Un carácter de la cadena de entrada puede ser cualquier carácter que no sea un dígito decimal de Unicode. Para obtener más información, consulte [Carácter de dígito decimal](#NonDigitCharacter).  
   
  .NET admite expresiones de sustracción de clases de caracteres, que permiten definir un conjunto de caracteres como el resultado de excluir una clase de caracteres de otra clase de caracteres. Para obtener más información, consulte [Sustracción de clases de caracteres](#CharacterClassSubtraction).  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622954"
 ## <a name="any-character-"></a>Cualquier carácter: .  
  El carácter de punto (.) coincide con cualquier carácter excepto con `\n` (carácter de nueva línea, \u000A), con los dos requisitos siguientes:  
   
--   Si la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> modifica un patrón de expresión regular o si la opción `.` modifica la parte del patrón que contiene la clase de caracteres `s`, `.` coincide con cualquier carácter. Para obtener más información, consulta [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md).  
+- Si la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> modifica un patrón de expresión regular o si la opción `.` modifica la parte del patrón que contiene la clase de caracteres `s`, `.` coincide con cualquier carácter. Para obtener más información, consulte [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
      El ejemplo siguiente muestra el comportamiento predeterminado de la clase de caracteres `.` y con la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. La expresión regular `^.+` comienza en el principio de la cadena y coincide con todos los caracteres. De forma predeterminada, la coincidencia termina al final de la primera línea; el patrón de la expresión regular coincide con el carácter de retorno de carro, `\r` o \u000D, pero no coincide con `\n`. Dado que la opción <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> interpreta la cadena de entrada completa como una sola línea, coincide con cada carácter de la cadena de entrada, incluido `\n`.  
   
@@ -170,13 +170,13 @@ ms.locfileid: "54622954"
 > [!NOTE]
 >  Dado que coincide con cualquier carácter excepto con `\n`, la clase de caracteres `.` también coincide con `\r` (el carácter de retorno de carro, \u000D).  
   
--   En un grupo de caracteres positivos o negativos, un punto se considera un carácter de punto literal, no una clase de caracteres. Para más información, consulte las secciones [Grupo de caracteres positivos](#PositiveGroup) y [Grupo de caracteres negativos](#NegativeGroup) anteriormente en este tema. En el ejemplo siguiente se define una expresión regular que incluye el carácter de punto (`.`) como una clase de caracteres y como un miembro de un grupo de caracteres positivos. La expresión regular `\b.*[.?!;:](\s|\z)` comienza en un límite de palabras, coincide con cualquier carácter hasta que encuentra uno de cinco signos de puntuación, incluido el punto, y después coincide con un carácter de espacio en blanco o con el final de la cadena.  
+- En un grupo de caracteres positivos o negativos, un punto se considera un carácter de punto literal, no una clase de caracteres. Para más información, consulte las secciones [Grupo de caracteres positivos](#PositiveGroup) y [Grupo de caracteres negativos](#NegativeGroup) anteriormente en este tema. En el ejemplo siguiente se define una expresión regular que incluye el carácter de punto (`.`) como una clase de caracteres y como un miembro de un grupo de caracteres positivos. La expresión regular `\b.*[.?!;:](\s|\z)` comienza en un límite de palabras, coincide con cualquier carácter hasta que encuentra uno de cinco signos de puntuación, incluido el punto, y después coincide con un carácter de espacio en blanco o con el final de la cadena.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
->  Dado que coincide con cualquier carácter, el elemento del lenguaje `.` se utiliza a menudo con un cuantificador no expansivo si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter. Para obtener más información, consulta [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Dado que coincide con cualquier carácter, el elemento del lenguaje `.` se utiliza a menudo con un cuantificador no expansivo si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter. Para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  [Volver al principio](#Top)  
   
@@ -186,7 +186,7 @@ ms.locfileid: "54622954"
   
  La construcción de expresión regular  
   
- `\p{` *name* `}`  
+ `\p{` *nombre* `}`  
   
  coincide con cualquier carácter que pertenezca a una categoría general o bloque con nombre de Unicode, donde *nombre* es la abreviatura de la categoría o el nombre del bloque con nombre. Para obtener una lista de abreviaturas de categorías, consulte la sección [Categorías generales Unicode compatibles](#SupportedUnicodeGeneralCategories) más adelante en este tema. Para obtener una lista de bloques con nombre, consulte la sección [Bloques con nombre compatibles](#SupportedNamedBlocks) más adelante en este tema.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "54622954"
   
  La construcción de expresión regular  
   
- `\P{` *name* `}`  
+ `\P{` *nombre* `}`  
   
  coincide con cualquier carácter que no pertenezca a una categoría general o bloque con nombre de Unicode, donde *nombre* es la abreviatura de la categoría o el nombre del bloque con nombre. Para obtener una lista de abreviaturas de categorías, consulte la sección [Categorías generales Unicode compatibles](#SupportedUnicodeGeneralCategories) más adelante en este tema. Para obtener una lista de bloques con nombre, consulte la sección [Bloques con nombre compatibles](#SupportedNamedBlocks) más adelante en este tema.  
   
@@ -248,7 +248,7 @@ ms.locfileid: "54622954"
  Si se especifica un comportamiento conforme a ECMAScript, `\w` es equivalente a `[a-zA-Z_0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Dado que coincide con cualquier carácter de palabra, el elemento del lenguaje `\w` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter de palabra, seguido de un carácter de palabra específico. Para obtener más información, consulta [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Dado que coincide con cualquier carácter de palabra, el elemento del lenguaje `\w` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter de palabra, seguido de un carácter de palabra específico. Para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  En el ejemplo siguiente se usa el elemento del lenguaje `\w` para buscar coincidencias de caracteres duplicados en una palabra. El ejemplo define un patrón de expresión regular, `(\w)\1`, que se puede interpretar de la siguiente manera.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "54622954"
  Si se especifica un comportamiento conforme a ECMAScript, `\W` es equivalente a `[^a-zA-Z_0-9]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Dado que coincide con cualquier carácter que no sea de palabra, el elemento del lenguaje `\W` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter que no sea de palabra, seguido de un carácter que no sea de palabra específico. Para obtener más información, consulta [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
+>  Dado que coincide con cualquier carácter que no sea de palabra, el elemento del lenguaje `\W` se suele usar con un cuantificador diferido si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter que no sea de palabra, seguido de un carácter que no sea de palabra específico. Para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
  En el ejemplo siguiente se ilustra la clase de caracteres `\W`.  Define un patrón de expresión regular, `\b(\w+)(\W){1,2}`, que coincide con una palabra seguida de uno o dos caracteres que no son de palabra, como un espacio en blanco o un signo de puntuación. La expresión regular se interpreta como se muestra en la tabla siguiente.  
   

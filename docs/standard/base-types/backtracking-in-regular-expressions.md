@@ -20,12 +20,12 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: dcfa029f3feeafd9d75cd6cd19b36d32b0d5fce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88e8bfadf34aecb207b1d2858eacf40338363599
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615985"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634728"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
 <a name="top"></a> El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
@@ -35,13 +35,13 @@ ms.locfileid: "54615985"
   
  Este tema contiene las siguientes secciones:  
   
--   [Comparación lineal sin retroceso](#linear_comparison_without_backtracking)  
+- [Comparación lineal sin retroceso](#linear_comparison_without_backtracking)  
   
--   [Retroceso con cuantificadores o construcciones de alternancia opcionales](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
+- [Retroceso con cuantificadores o construcciones de alternancia opcionales](#backtracking_with_optional_quantifiers_or_alternation_constructs)  
   
--   [Retroceso con cuantificadores opcionales anidados](#backtracking_with_nested_optional_quantifiers)  
+- [Retroceso con cuantificadores opcionales anidados](#backtracking_with_nested_optional_quantifiers)  
   
--   [Controlar el retroceso](#controlling_backtracking)  
+- [Controlar el retroceso](#controlling_backtracking)  
   
 <a name="linear_comparison_without_backtracking"></a>   
 ## <a name="linear-comparison-without-backtracking"></a>Comparación lineal sin retroceso  
@@ -91,15 +91,15 @@ ms.locfileid: "54615985"
   
  Para ello, el motor de expresiones regulares usa el retroceso de la manera siguiente:  
   
--   Coincide con `.*` (que coincide con cero, una o más apariciones de cualquier carácter) con la cadena de entrada completa.  
+- Coincide con `.*` (que coincide con cero, una o más apariciones de cualquier carácter) con la cadena de entrada completa.  
   
--   Intenta hacer coincidir "e" en el patrón de expresión regular. Sin embargo, la cadena de entrada no tiene ningún carácter restante disponible para coincidir.  
+- Intenta hacer coincidir "e" en el patrón de expresión regular. Sin embargo, la cadena de entrada no tiene ningún carácter restante disponible para coincidir.  
   
--   Retrocede hasta su última coincidencia correcta, "Essential services are provided by regular expressions", e intenta hacer coincidir "e" con el punto del final de la frase. Se produce un error de coincidencia.  
+- Retrocede hasta su última coincidencia correcta, "Essential services are provided by regular expressions", e intenta hacer coincidir "e" con el punto del final de la frase. Se produce un error de coincidencia.  
   
--   Sigue retrocediendo hasta una coincidencia correcta anterior, de carácter en carácter, hasta que la subcadena coincidente tentativa sea "Essential services are provided by regular expr". A continuación, compara la "e" del patrón con la segunda "e" de "expressions" y encuentra una coincidencia.  
+- Sigue retrocediendo hasta una coincidencia correcta anterior, de carácter en carácter, hasta que la subcadena coincidente tentativa sea "Essential services are provided by regular expr". A continuación, compara la "e" del patrón con la segunda "e" de "expressions" y encuentra una coincidencia.  
   
--   Compara la "s" del patrón con la "s" que sigue al carácter "e" coincidente (la primera "s" de "expressions"). La coincidencia es correcta.  
+- Compara la "s" del patrón con la "s" que sigue al carácter "e" coincidente (la primera "s" de "expressions"). La coincidencia es correcta.  
   
  Cuando se usa retroceso, la coincidencia del patrón de expresión regular con la cadena de entrada, que tiene 55 caracteres de longitud, necesita 67 operaciones de comparación. Normalmente, si un patrón de expresión regular tiene una única construcción de alternancia o un único cuantificador opcional, el número de operaciones de comparación necesarias para que coincida con el patrón es más del doble del número de caracteres de la cadena de entrada.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "54615985"
   
  Como muestra el resultado del ejemplo, el motor de expresiones regulares tardó en descubrir que una cadena de entrada no coincidía con el patrón aproximadamente el doble que en identificar una cadena coincidente. Esto se debe a que una coincidencia infructuosa siempre representa un escenario de caso peor. El motor de expresiones regulares debe usar la expresión regular para seguir todas las rutas posibles a través de los datos antes de poder concluir que la coincidencia no es correcta y los paréntesis anidados crean muchas rutas de acceso adicionales a través de los datos. El motor de expresiones regulares concluye que la segunda cadena no coincide con el patrón; para ello, hace lo siguiente:  
   
--   Comprueba que está al principio de la cadena y, a continuación, busca una coincidencia de los cinco primeros caracteres de la cadena con el patrón `a+`. A continuación, determina que no hay ningún grupo adicional de caracteres "a" en la cadena. Por último, comprueba que está al final de la cadena. Como en la cadena queda un carácter adicional, la coincidencia produce un error. Esta coincidencia errónea necesita 9 comparaciones. El motor de expresiones regulares también guarda información de estado de las coincidencias de "a" (que llamaremos coincidencia 1), "aa" (coincidencia 2), "aaa" (coincidencia 3) y "aaaa" (coincidencia 4).  
+- Comprueba que está al principio de la cadena y, a continuación, busca una coincidencia de los cinco primeros caracteres de la cadena con el patrón `a+`. A continuación, determina que no hay ningún grupo adicional de caracteres "a" en la cadena. Por último, comprueba que está al final de la cadena. Como en la cadena queda un carácter adicional, la coincidencia produce un error. Esta coincidencia errónea necesita 9 comparaciones. El motor de expresiones regulares también guarda información de estado de las coincidencias de "a" (que llamaremos coincidencia 1), "aa" (coincidencia 2), "aaa" (coincidencia 3) y "aaaa" (coincidencia 4).  
   
--   Vuelve a la coincidencia 4 guardada previamente. Determina que hay un carácter "a" adicional para asignar a un grupo capturado adicional. Por último, comprueba que está al final de la cadena. Como en la cadena queda un carácter adicional, la coincidencia produce un error. Esta coincidencia errónea necesita 4 comparaciones. Hasta ahora, se han realizado un total de 13 comparaciones.  
+- Vuelve a la coincidencia 4 guardada previamente. Determina que hay un carácter "a" adicional para asignar a un grupo capturado adicional. Por último, comprueba que está al final de la cadena. Como en la cadena queda un carácter adicional, la coincidencia produce un error. Esta coincidencia errónea necesita 4 comparaciones. Hasta ahora, se han realizado un total de 13 comparaciones.  
   
--   Vuelve a la coincidencia 3 guardada previamente. Determina que hay dos caracteres "a" adicionales para asignar a un grupo capturado adicional. Sin embargo, se produce un error en la prueba de fin de cadena. Vuelva a la coincidencia 3 e intenta hacer coincidir los dos caracteres "a" adicionales en dos grupos capturados adicionales. Se sigue produciendo un error en la prueba de fin de cadena. Estas coincidencias con error necesitan 12 comparaciones. Hasta ahora, se ha realizado un total de 25 comparaciones.  
+- Vuelve a la coincidencia 3 guardada previamente. Determina que hay dos caracteres "a" adicionales para asignar a un grupo capturado adicional. Sin embargo, se produce un error en la prueba de fin de cadena. Vuelva a la coincidencia 3 e intenta hacer coincidir los dos caracteres "a" adicionales en dos grupos capturados adicionales. Se sigue produciendo un error en la prueba de fin de cadena. Estas coincidencias con error necesitan 12 comparaciones. Hasta ahora, se ha realizado un total de 25 comparaciones.  
   
  La comparación de la cadena de entrada con la expresión regular continúa de esta manera hasta que el motor de expresiones regulares ha intentado todas las posibles combinaciones de coincidencias y, a continuación, concluye que no hay ninguna coincidencia. Debido a los cuantificadores anidados, esta comparación es O(2<sup>n</sup>) o una operación exponencial, donde *n* es el número de caracteres de la cadena de entrada. Esto significa que, en el peor de los casos, una cadena de entrada de 30 caracteres necesita aproximadamente 1.073.741.824 comparaciones y una cadena de entrada de 40 caracteres necesita aproximadamente 1.099.511.627.776 comparaciones. Si usa cadenas de estas longitudes o incluso mayores, los métodos de expresión regular pueden tardar mucho tiempo en completarse cuando procesan datos de entrada que no coinciden con el patrón de expresión regular.  
   

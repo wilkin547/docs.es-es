@@ -14,19 +14,19 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634677"
 ---
 # <a name="character-encoding-in-net"></a>Codificación de caracteres de .NET
 Los caracteres son entidades abstractas que se pueden representar de muchas maneras diferentes. Una codificación de caracteres es un sistema que empareja cada carácter de un juego de caracteres compatible con algún valor que representa ese carácter. Por ejemplo, el código Morse es una codificación de caracteres que empareja cada carácter del alfabeto latino con un patrón de puntos y guiones que son adecuados para la transmisión a través de las líneas de telégrafo. Una codificación de caracteres para los equipos empareja cada carácter de un juego de caracteres compatible con un valor numérico que representa ese carácter. Una codificación de caracteres tiene dos componentes distintos:  
   
--   Un codificador, que traduce una secuencia de caracteres en una secuencia de valores numéricos (bytes).  
+- Un codificador, que traduce una secuencia de caracteres en una secuencia de valores numéricos (bytes).  
   
--   Un descodificador, que traduce una secuencia de bytes en una secuencia de caracteres.  
+- Un descodificador, que traduce una secuencia de bytes en una secuencia de caracteres.  
   
  La codificación de caracteres describe las reglas por las que funcionan un codificador y un descodificador. Por ejemplo, la clase <xref:System.Text.UTF8Encoding> describe las reglas para codificar y descodificar del Formato de transformación Unicode de 8 bits (UTF-8), que usa de uno a cuatro bytes para representar un único carácter Unicode. La codificación y la descodificación también pueden incluir validación. Por ejemplo, la clase <xref:System.Text.UnicodeEncoding> comprueba todos los suplentes para asegurarse de que constituyen pares suplentes válidos. (Un par suplente consta de un carácter con un punto de código que va de U+D800 a U+DBFF, seguido de un carácter con un punto de código que va de U+DC00 a U+DFFF.)  Una estrategia de reserva determina cómo trata un codificador los caracteres no válidos o cómo trata un descodificador los bytes no válidos.  
   
@@ -37,27 +37,27 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
   
  Este tema consta de las siguientes secciones:  
   
--   [Codificaciones de .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [Codificaciones de .NET](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [Seleccionar una clase de codificación](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [Seleccionar una clase de codificación](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [Usar un objeto de codificación](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [Usar un objeto de codificación](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [Elegir una estrategia de reinterpretación](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [Elegir una estrategia de reinterpretación](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>Codificaciones de .NET  
  Todas las clases de codificación de caracteres de .NET heredan de la clase <xref:System.Text.Encoding?displayProperty=nameWithType>, que es una clase abstracta que define la funcionalidad común a todas las codificaciones de caracteres. Para acceder a los objetos individuales de codificación implementados en .NET, haga lo siguiente:  
   
--   Use las propiedades estáticas de la clase <xref:System.Text.Encoding>, que devuelven objetos que representan las codificaciones de caracteres estándar disponibles en .NET (ASCII, UTF-7, UTF-8, UTF-16 y UTF-32). Por ejemplo, la propiedad <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Text.UnicodeEncoding> : Cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar. (Para obtener más información, vea la sección [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) ).  
+- Use las propiedades estáticas de la clase <xref:System.Text.Encoding>, que devuelven objetos que representan las codificaciones de caracteres estándar disponibles en .NET (ASCII, UTF-7, UTF-8, UTF-16 y UTF-32). Por ejemplo, la propiedad <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Text.UnicodeEncoding> : Cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar. (Para obtener más información, vea la sección [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) ).  
   
--   Llame al constructor de clase de la codificación. Se pueden crear instancias de los objetos para las codificaciones ASCII, UTF-7, UTF-8, UTF-16 y UTF-32 de esta manera. De forma predeterminada, cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar, pero puede especificar que se debe producir una excepción en su lugar. (Para obtener más información, vea las secciones [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) y [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) ).  
+- Llame al constructor de clase de la codificación. Se pueden crear instancias de los objetos para las codificaciones ASCII, UTF-7, UTF-8, UTF-16 y UTF-32 de esta manera. De forma predeterminada, cada objeto usa la reserva de reemplazo para controlar las cadenas que no puede codificar y los bytes que no puede descodificar, pero puede especificar que se debe producir una excepción en su lugar. (Para obtener más información, vea las secciones [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) y [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) ).  
   
--   Llame al constructor <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> y pásele un entero que represente la codificación. Los objetos de codificación estándar usan la reserva de reemplazo, y los objetos de codificación para la página de códigos y el juego de caracteres de doble byte (DBCS) usan el retroceso de ajuste perfecto para controlar las cadenas que no pueden codificar y los bytes que no pueden descodificar. (Para obtener más información, vea la sección [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) ).  
+- Llame al constructor <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> y pásele un entero que represente la codificación. Los objetos de codificación estándar usan la reserva de reemplazo, y los objetos de codificación para la página de códigos y el juego de caracteres de doble byte (DBCS) usan el retroceso de ajuste perfecto para controlar las cadenas que no pueden codificar y los bytes que no pueden descodificar. (Para obtener más información, vea la sección [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) ).  
   
--   Llame al método <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, que devuelve cualquier estándar, página de códigos o codificación DBCS disponible en .NET. Las sobrecargas permiten especificar un objeto de reserva para el codificador y para el descodificador.  
+- Llame al método <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType>, que devuelve cualquier estándar, página de códigos o codificación DBCS disponible en .NET. Las sobrecargas permiten especificar un objeto de reserva para el codificador y para el descodificador.  
   
 > [!NOTE]
 >  El estándar Unicode asigna un punto de código (un número) y un nombre a cada carácter en todos los scripts admitidos. Por ejemplo, el carácter "A" está representado por el punto de código U+0041 y el nombre "LATIN CAPITAL LETTER A". Las codificaciones de Formato de transformación Unicode (UTF) definen formas de codificar ese punto de código en una secuencia de uno o más bytes. Un esquema de codificación Unicode simplifica el desarrollo de aplicaciones de uso internacional porque permite que los caracteres de cualquier juego de caracteres estén representados en una única codificación. Los desarrolladores de aplicaciones ya no tienen que realizar el seguimiento del esquema de codificación empleado para producir caracteres para un idioma o un sistema de escritura concreto, y se pueden compartir los datos internacionalmente entre sistemas sin dañarlos.  
@@ -87,17 +87,17 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
   
  Si piensa usar una codificación ASCII (<xref:System.Text.ASCIIEncoding>), elija <xref:System.Text.UTF8Encoding> en su lugar. Las dos codificaciones son idénticas para el juego de caracteres ASCII, pero <xref:System.Text.UTF8Encoding> presenta las ventajas siguientes:  
   
--   Puede representar todos los caracteres Unicode, mientras que <xref:System.Text.ASCIIEncoding> solo admite los valores de caracteres Unicode entre U+0000 y U+007F.  
+- Puede representar todos los caracteres Unicode, mientras que <xref:System.Text.ASCIIEncoding> solo admite los valores de caracteres Unicode entre U+0000 y U+007F.  
   
--   Proporciona detección de errores y una mayor seguridad.  
+- Proporciona detección de errores y una mayor seguridad.  
   
--   Se ha mejorado en materia de velocidad y debe ser más rápida que cualquier otra codificación. Incluso cuando todo el contenido es ASCII, las operaciones realizadas con <xref:System.Text.UTF8Encoding> son más rápidas que las operaciones realizadas con <xref:System.Text.ASCIIEncoding>.  
+- Se ha mejorado en materia de velocidad y debe ser más rápida que cualquier otra codificación. Incluso cuando todo el contenido es ASCII, las operaciones realizadas con <xref:System.Text.UTF8Encoding> son más rápidas que las operaciones realizadas con <xref:System.Text.ASCIIEncoding>.  
   
  Debe considerar la posibilidad de usar <xref:System.Text.ASCIIEncoding> solo para las aplicaciones heredadas. Sin embargo, incluso para las aplicaciones heredadas, <xref:System.Text.UTF8Encoding> podría ser una opción mejor por las razones siguientes (suponiendo la configuración predeterminada):  
   
--   Si la aplicación tiene contenido que no es estrictamente ASCII y lo codifica con <xref:System.Text.ASCIIEncoding>, cada carácter no ASCII se codifica como un signo de interrogación (?). Si la aplicación descodifica después estos datos, la información se pierde.  
+- Si la aplicación tiene contenido que no es estrictamente ASCII y lo codifica con <xref:System.Text.ASCIIEncoding>, cada carácter no ASCII se codifica como un signo de interrogación (?). Si la aplicación descodifica después estos datos, la información se pierde.  
   
--   Si la aplicación tiene contenido que no es estrictamente ASCII y lo codifica con <xref:System.Text.UTF8Encoding>, el resultado parece ininteligible si se interpreta como ASCII. Sin embargo, si la aplicación usa un descodificador UTF-8 para descodificar estos datos, los datos realizan una acción de ida y vuelta correctamente.  
+- Si la aplicación tiene contenido que no es estrictamente ASCII y lo codifica con <xref:System.Text.UTF8Encoding>, el resultado parece ininteligible si se interpreta como ASCII. Sin embargo, si la aplicación usa un descodificador UTF-8 para descodificar estos datos, los datos realizan una acción de ida y vuelta correctamente.  
   
  En una aplicación web, los caracteres enviados al cliente como respuesta a una solicitud web deben reflejar la codificación empleada en el cliente. En la mayoría de los casos, debe establecer la propiedad <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> en el valor devuelto por la propiedad <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> para mostrar el texto en la codificación que el usuario espera.  
   
@@ -130,11 +130,11 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
 ## <a name="choosing-a-fallback-strategy"></a>Elegir una estrategia de reinterpretación  
  Cuando un método intenta codificar o descodificar un carácter pero no existe ninguna asignación, debe implementar una estrategia de reserva que determine cómo se debe tratar la asignación incorrecta. Hay tres tipos de estrategias de reserva:  
   
--   Best-Fit Fallback  
+- Best-Fit Fallback  
   
--   Replacement Fallback  
+- Replacement Fallback  
   
--   Exception Fallback  
+- Exception Fallback  
   
 > [!IMPORTANT]
 >  Los problemas más frecuentes en las operaciones de codificación se producen cuando un carácter Unicode no se puede asignar a una codificación determinada de la página de códigos. Los problemas más comunes de las operaciones de descodificación se producen cuando las secuencias no válidas de bytes no se pueden traducir a caracteres Unicode válidos. Por estas razones, debe saber qué estrategia de reserva emplea un determinado objeto de codificación. Siempre que sea posible, debe especificar la estrategia de reserva usada por un objeto de codificación cuando se crea una instancia del objeto.  
@@ -195,9 +195,9 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
   
  Los objetos <xref:System.Text.EncoderFallbackException> y <xref:System.Text.DecoderFallbackException> proporcionan la siguiente información acerca de la condición que provocó la excepción:  
   
--   El objeto <xref:System.Text.EncoderFallbackException> incluye un método <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> , que indica si el carácter o los caracteres que no se pueden codificar representan un par suplente desconocido (en este caso, el método devuelve `true`) o un único carácter desconocido (en este caso, el método devuelve `false`). Los caracteres del par suplente están disponibles a partir de las propiedades <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> y <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> . El carácter único desconocido está disponible en la propiedad <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> . La propiedad <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> indica la posición de la cadena en la que se encontró el primer carácter que no se pudo codificar.  
+- El objeto <xref:System.Text.EncoderFallbackException> incluye un método <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> , que indica si el carácter o los caracteres que no se pueden codificar representan un par suplente desconocido (en este caso, el método devuelve `true`) o un único carácter desconocido (en este caso, el método devuelve `false`). Los caracteres del par suplente están disponibles a partir de las propiedades <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> y <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> . El carácter único desconocido está disponible en la propiedad <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> . La propiedad <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> indica la posición de la cadena en la que se encontró el primer carácter que no se pudo codificar.  
   
--   El objeto <xref:System.Text.DecoderFallbackException> incluye una propiedad <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> que devuelve una matriz de bytes que no se pueden descodificar. La propiedad <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> indica la posición inicial de los bytes desconocidos.  
+- El objeto <xref:System.Text.DecoderFallbackException> incluye una propiedad <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> que devuelve una matriz de bytes que no se pueden descodificar. La propiedad <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> indica la posición inicial de los bytes desconocidos.  
   
  Aunque los objetos <xref:System.Text.EncoderFallbackException> y <xref:System.Text.DecoderFallbackException> proporcionan información suficiente de diagnóstico sobre la excepción, no proporcionan acceso al búfer de codificación o descodificación. Por tanto, no permiten reemplazar o corregir datos no válidos dentro del método de codificación o descodificación.  
   
@@ -205,13 +205,13 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  Además de la asignación con ajuste perfecto implementada internamente por las páginas de códigos, .NET incluye las siguientes clases para implementar una estrategia de reserva:  
   
--   Use <xref:System.Text.EncoderReplacementFallback> y <xref:System.Text.EncoderReplacementFallbackBuffer> para reemplazar caracteres en operaciones de codificación.  
+- Use <xref:System.Text.EncoderReplacementFallback> y <xref:System.Text.EncoderReplacementFallbackBuffer> para reemplazar caracteres en operaciones de codificación.  
   
--   Use <xref:System.Text.DecoderReplacementFallback> y <xref:System.Text.DecoderReplacementFallbackBuffer> para reemplazar caracteres en operaciones de descodificación.  
+- Use <xref:System.Text.DecoderReplacementFallback> y <xref:System.Text.DecoderReplacementFallbackBuffer> para reemplazar caracteres en operaciones de descodificación.  
   
--   Use <xref:System.Text.EncoderExceptionFallback> y <xref:System.Text.EncoderExceptionFallbackBuffer> para producir <xref:System.Text.EncoderFallbackException> cuando un carácter no se puede codificar.  
+- Use <xref:System.Text.EncoderExceptionFallback> y <xref:System.Text.EncoderExceptionFallbackBuffer> para producir <xref:System.Text.EncoderFallbackException> cuando un carácter no se puede codificar.  
   
--   Use <xref:System.Text.DecoderExceptionFallback> y <xref:System.Text.DecoderExceptionFallbackBuffer> para producir <xref:System.Text.DecoderFallbackException> cuando un carácter no se puede descodificar.  
+- Use <xref:System.Text.DecoderExceptionFallback> y <xref:System.Text.DecoderExceptionFallbackBuffer> para producir <xref:System.Text.DecoderFallbackException> cuando un carácter no se puede descodificar.  
   
  Además, puede implementar una solución personalizada que use reserva con ajuste perfecto, reserva de reemplazo o reserva de excepción siguiendo estos pasos:  
   
@@ -226,24 +226,24 @@ Los caracteres son entidades abstractas que se pueden representar de muchas mane
   
  Cuando se crea una solución de reserva personalizada para un codificador o un descodificador, debe implementar los miembros siguientes:  
   
--   La propiedad <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> , que devuelve el número máximo de caracteres posible que el reemplazo con mejor ajuste o la reserva de excepción pueda devolver para reemplazar un único carácter. En el caso de la reserva de excepción personalizada, su valor es cero.  
+- La propiedad <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> , que devuelve el número máximo de caracteres posible que el reemplazo con mejor ajuste o la reserva de excepción pueda devolver para reemplazar un único carácter. En el caso de la reserva de excepción personalizada, su valor es cero.  
   
--   El método <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> , que devuelve una implementación personalizada de <xref:System.Text.EncoderFallbackBuffer> o <xref:System.Text.DecoderFallbackBuffer> . El codificador llama al método cuando encuentra el primer carácter que no puede codificar correctamente o lo llama el decodificador cuando encuentra el primer byte que no puede descodificar correctamente.  
+- El método <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> , que devuelve una implementación personalizada de <xref:System.Text.EncoderFallbackBuffer> o <xref:System.Text.DecoderFallbackBuffer> . El codificador llama al método cuando encuentra el primer carácter que no puede codificar correctamente o lo llama el decodificador cuando encuentra el primer byte que no puede descodificar correctamente.  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>Derivar de EncoderFallbackBuffer o DecoderFallbackBuffer  
  Para implementar una solución de reserva personalizada, debe crear también una clase que herede de <xref:System.Text.EncoderFallbackBuffer> para las operaciones de codificación y de <xref:System.Text.DecoderFallbackBuffer> para las operaciones de descodificación. El método <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> de las clases <xref:System.Text.EncoderFallback> y <xref:System.Text.DecoderFallback> devuelve instancias de estas clases. El codificador llama al método <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> cuando encuentra el primer carácter que no puede codificar y el descodificador llama al método <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> cuando encuentra uno o más bytes que no puede descodificar. Las clases <xref:System.Text.EncoderFallbackBuffer> y <xref:System.Text.DecoderFallbackBuffer> proporcionan la implementación de reserva. Cada instancia representa un búfer que contiene los caracteres de reserva que reemplazarán el carácter que no se puede codificar o la secuencia de bytes que no se puede descodificar.  
   
  Cuando se crea una solución de reserva personalizada para un codificador o un descodificador, debe implementar los miembros siguientes:  
   
--   El método <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> . El codificador llama a<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> para proporcionar el búfer de reserva con información sobre el carácter que no puede codificar. Puesto que el carácter que se va a codificar puede ser un par suplente, este método está sobrecargado. Se pasa a una sobrecarga el carácter que se va a codificar y su índice en la cadena. A la segunda sobrecarga se le pasa el suplente máximo y mínimo junto con su índice en la cadena. El descodificador llama al método <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> para proporcionar el búfer de reserva con información sobre los bytes que no puede descodificar. Se pasa a este método una matriz de bytes que no puede descodificar, junto con el índice del primer byte. El método de reserva debe devolver `true` si el búfer de reserva puede proporcionar un carácter o caracteres de mejor ajuste o de reemplazo; de lo contrario, debe devolver `false`. En el caso de una reserva de excepción, el método de reserva debe producir una excepción.  
+- El método <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> . El codificador llama a<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> para proporcionar el búfer de reserva con información sobre el carácter que no puede codificar. Puesto que el carácter que se va a codificar puede ser un par suplente, este método está sobrecargado. Se pasa a una sobrecarga el carácter que se va a codificar y su índice en la cadena. A la segunda sobrecarga se le pasa el suplente máximo y mínimo junto con su índice en la cadena. El descodificador llama al método <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> para proporcionar el búfer de reserva con información sobre los bytes que no puede descodificar. Se pasa a este método una matriz de bytes que no puede descodificar, junto con el índice del primer byte. El método de reserva debe devolver `true` si el búfer de reserva puede proporcionar un carácter o caracteres de mejor ajuste o de reemplazo; de lo contrario, debe devolver `false`. En el caso de una reserva de excepción, el método de reserva debe producir una excepción.  
   
--   El método <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> , al que llama repetidamente el codificador o el descodificador para obtener el siguiente carácter del búfer de reserva. Cuando se han devuelto todos los caracteres de reserva, el método debe devolver U+0000.  
+- El método <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> , al que llama repetidamente el codificador o el descodificador para obtener el siguiente carácter del búfer de reserva. Cuando se han devuelto todos los caracteres de reserva, el método debe devolver U+0000.  
   
--   La propiedad <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> , que devuelve el número de caracteres que permanecen en el búfer de reserva.  
+- La propiedad <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> , que devuelve el número de caracteres que permanecen en el búfer de reserva.  
   
--   El método <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> , que mueve la posición actual en el búfer de reserva al carácter anterior.  
+- El método <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> , que mueve la posición actual en el búfer de reserva al carácter anterior.  
   
--   El método <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> , que se reinicializa el búfer de reserva.  
+- El método <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> o <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> , que se reinicializa el búfer de reserva.  
   
  Si la implementación de reserva es una reserva con ajuste perfecto o una reserva de reemplazo, las clases derivadas de <xref:System.Text.EncoderFallbackBuffer> y <xref:System.Text.DecoderFallbackBuffer> también mantienen dos campos de instancia privados: el número exacto de caracteres del búfer y el índice del carácter siguiente del búfer que se va a devolver.  
   

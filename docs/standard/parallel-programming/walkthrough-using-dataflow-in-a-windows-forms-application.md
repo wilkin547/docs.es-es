@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344382"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654424"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms
 Este documento muestra cómo crear una red de bloques de flujo de datos que realizan el procesamiento de imágenes en una aplicación de Windows Forms.  
@@ -29,13 +29,13 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
 ## <a name="sections"></a>Secciones  
  Este tutorial contiene las siguientes secciones:  
   
--   [Crear una aplicación de Windows Forms](#winforms)  
+- [Crear una aplicación de Windows Forms](#winforms)  
   
--   [Crear la red del flujo de datos](#network)  
+- [Crear la red del flujo de datos](#network)  
   
--   [Conectar la red del flujo de datos a la interfaz de usuario](#ui)  
+- [Conectar la red del flujo de datos a la interfaz de usuario](#ui)  
   
--   [Ejemplo completo](#complete)  
+- [Ejemplo completo](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Crear una aplicación de Windows Forms  

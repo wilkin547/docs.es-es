@@ -2,12 +2,12 @@
 title: Colas y sesiones de confianza
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643526"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557153"
 ---
 # <a name="queues-and-reliable-sessions"></a>Colas y sesiones de confianza
 Las colas y sesiones confiables son las características de Windows Communication Foundation (WCF) que implementan la mensajería de confianza. Los temas contenidos en esta sección describen las características de mensajería confiables de WCF.  
@@ -31,7 +31,7 @@ Las colas y sesiones confiables son las características de Windows Communicatio
   
  Las sesiones de confianza proporcionan transferencias de mensajes de confianza de latencia baja. Los proporcionan para los mensajes SOAP sobre cualquier proxy o intermediario, el equivalente a lo que TCP proporciona para los paquetes sobre puentes de IP. Para obtener más información acerca de las sesiones confiables, vea [sesiones confiables](../../../../docs/framework/wcf/feature-details/reliable-sessions.md).  
   
-### <a name="queues"></a>Colas  
+## <a name="queues"></a>Colas  
  Las colas en WCF proporcionan a transferencias confiables de mensajes y la separación entre orígenes y destinos a costa de una latencia elevada. WCF en cola la comunicación se basa en Message Queuing (también conocido como MSMQ).  
   
  MSMQ se distribuye como una opción con Windows que se ejecuta como un servicio de NT. Captura mensajes para la transmisión en una cola de transmisión en nombre del origen y lo entrega a una cola de destino. La cola de destino acepta los mensajes en nombre del destino para la entrega posterior siempre que el destino solicite mensajes. Los administradores de cola de MSMQ implementan un protocolo de transferencias de mensajes de confianza para que los mensajes no se pierdan durante la transmisión. El protocolo puede ser nativo o basado en SOAP, como, por ejemplo, Soap Reliable Messaging Protocol (SRMP).  

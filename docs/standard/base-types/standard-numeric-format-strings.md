@@ -18,20 +18,20 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a11a9d18999bc7741e12af16d43fba8c03318da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979970"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664650"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
 Las cadenas de formato numérico estándar se utilizan para dar formato a tipos numéricos comunes. La forma de una cadena de formato numérico estándar es `Axx`, donde:  
   
--   `A` es un carácter alfabético único denominado *especificador de formato*. Cualquier cadena de formato numérico que contenga más de un carácter alfabético, incluido el espacio en blanco, se interpreta como una cadena de formato numérico personalizado. Para obtener más información, consulte [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+- `A` es un carácter alfabético único denominado *especificador de formato*. Cualquier cadena de formato numérico que contenga más de un carácter alfabético, incluido el espacio en blanco, se interpreta como una cadena de formato numérico personalizado. Para obtener más información, consulte [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx` es un entero opcional denominado *especificador de precisión*. El especificador de precisión está comprendido entre el 0 y el 99 y afecta al número de dígitos del resultado. Observe que el especificador de precisión controla el número de dígitos en la representación de cadena de un número. No redondea el número en sí. Para realizar una operación de redondeo, use el método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
+- `xx` es un entero opcional denominado *especificador de precisión*. El especificador de precisión está comprendido entre el 0 y el 99 y afecta al número de dígitos del resultado. Observe que el especificador de precisión controla el número de dígitos en la representación de cadena de un número. No redondea el número en sí. Para realizar una operación de redondeo, use el método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
     Cuando el *especificador de precisión* controla el número de dígitos fraccionarios de la cadena de resultado, esta refleja un número redondeado al resultado representable más cercano al resultado de precisión infinita. En el caso de que haya dos resultados representables igualmente cercanos:
     - **En .NET Framework y .NET Core (hasta la versión 2.0)**, el runtime selecciona el resultado con el dígito menos significativo más elevado (es decir, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
@@ -73,13 +73,13 @@ Las cadenas con formato numérico estándar son compatibles con:
 
 Una cadena de formato numérico estándar se puede usar para definir el formato de un valor numérico de una de dos maneras:  
   
--   Se puede pasar a una sobrecarga del método `ToString` que tiene un parámetro `format`. En el ejemplo siguiente se da formato a un valor numérico como una cadena de divisa en la referencia cultural actual (en este caso, en-US).  
+- Se puede pasar a una sobrecarga del método `ToString` que tiene un parámetro `format`. En el ejemplo siguiente se da formato a un valor numérico como una cadena de divisa en la referencia cultural actual (en este caso, en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
--   Se puede proporcionar como el argumento `formatString` de un elemento de formato usado con métodos como <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> y <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Para obtener más información, consulte [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md). En el ejemplo siguiente se usa un elemento de formato para insertar un valor de divisa en una cadena.  
+- Se puede proporcionar como el argumento `formatString` de un elemento de formato usado con métodos como <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> y <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Para obtener más información, consulte [Formatos compuestos](../../../docs/standard/base-types/composite-formatting.md). En el ejemplo siguiente se usa un elemento de formato para insertar un valor de divisa en una cadena.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
      [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
@@ -91,7 +91,7 @@ Una cadena de formato numérico estándar se puede usar para definir el formato 
      [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
--   Se puede proporcionar como el argumento `formatString` en un elemento de la expresión interpolada de una cadena interpolada. Para más información, vea el tema [$ (Referencia de C#)](../../csharp/language-reference/tokens/interpolated.md) en la referencia de C# o el tema [Interpolated Strings (Visual Basic Reference)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) [Cadenas interpoladas (Referencia de Visual Basic)] en la referencia de Visual Basic.  
+- Se puede proporcionar como el argumento `formatString` en un elemento de la expresión interpolada de una cadena interpolada. Para más información, vea el tema [$ (Referencia de C#)](../../csharp/language-reference/tokens/interpolated.md) en la referencia de C# o el tema [Interpolated Strings (Visual Basic Reference)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) [Cadenas interpoladas (Referencia de Visual Basic)] en la referencia de Visual Basic.  
   
  En las secciones siguientes se proporciona información detallada sobre cada una de las cadenas de formato numérico estándar.  
   

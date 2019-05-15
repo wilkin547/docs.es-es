@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315769"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063320"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  Por ejemplo, el serializador determina que el contenedor de clase se debe usar para encapsular la interfaz que se pasó a código administrado. Cuando la interfaz pasa primero por el serializador, este comprueba si la interfaz procede de un objeto conocido. Esta comprobación se produce en dos situaciones:  
   
--   Se está implementando una interfaz mediante otro objeto administrado que se pasó a COM en otro lugar. El serializador puede identificar inmediatamente las interfaces expuestas por los objetos administrados y es capaz de hacer coincidir la interfaz con el objeto administrado que proporciona la implementación. El objeto administrado se pasa a continuación al método y no se necesita ningún contenedor.  
+- Se está implementando una interfaz mediante otro objeto administrado que se pasó a COM en otro lugar. El serializador puede identificar inmediatamente las interfaces expuestas por los objetos administrados y es capaz de hacer coincidir la interfaz con el objeto administrado que proporciona la implementación. El objeto administrado se pasa a continuación al método y no se necesita ningún contenedor.  
   
--   Un objeto que ya se ha encapsulado se está implementando en la interfaz. Para determinar si este es el caso, el serializador consulta al objeto su interfaz **IUnknown** y compara la interfaz devuelta con las interfaces de otros objetos que ya están encapsulados. Si la interfaz es la misma que la de otro contenedor, los objetos tienen la misma identidad y el contenedor existente se pasa al método.  
+- Un objeto que ya se ha encapsulado se está implementando en la interfaz. Para determinar si este es el caso, el serializador consulta al objeto su interfaz **IUnknown** y compara la interfaz devuelta con las interfaces de otros objetos que ya están encapsulados. Si la interfaz es la misma que la de otro contenedor, los objetos tienen la misma identidad y el contenedor existente se pasa al método.  
   
  Si no es una interfaz de un objeto conocido, el serializador realiza lo siguiente:  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>Serialización predeterminada para delegados  
  Un delegado administrado se serializa como una interfaz COM o como un puntero de función según el mecanismo de llamada:  
   
--   Para invocación de plataforma, se serializa un delegado como un puntero de función no administrada de forma predeterminada.  
+- Para invocación de plataforma, se serializa un delegado como un puntero de función no administrada de forma predeterminada.  
   
--   Para interoperabilidad COM, se serializa un delegado como una interfaz COM de tipo **_Delegate** de forma predeterminada. La interfaz **_Delegate** se define en la biblioteca de tipos Mscorlib.tlb y contiene el método <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, que permite llamar al método al que hace referencia el delegado.  
+- Para interoperabilidad COM, se serializa un delegado como una interfaz COM de tipo **_Delegate** de forma predeterminada. La interfaz **_Delegate** se define en la biblioteca de tipos Mscorlib.tlb y contiene el método <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType>, que permite llamar al método al que hace referencia el delegado.  
   
  En la siguiente tabla se muestran las opciones de serialización para el tipo de datos de delegado administrado. El atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute> proporciona varios valores de enumeración <xref:System.Runtime.InteropServices.UnmanagedType> para serializar los delegados.  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  En esta sección se proporciona información sobre los tipos de valor con el formato siguiente:  
   
--   [Tipos de valor utilizados en la invocación de plataforma](#value-types-used-in-platform-invoke)  
+- [Tipos de valor utilizados en la invocación de plataforma](#value-types-used-in-platform-invoke)  
   
--   [Tipos de valor utilizados en la interoperabilidad COM](#value-types-used-in-com-interop)  
+- [Tipos de valor utilizados en la interoperabilidad COM](#value-types-used-in-com-interop)  
   
  Además de describir tipos con formato, en este tema se identifican [tipos de valor System](#system-value-types) que tienen un comportamiento de serialización poco habitual.  
   
  Un tipo con formato es un tipo complejo que contiene información que controla explícitamente la distribución de sus miembros en la memoria. La información de distribución de miembros se proporciona mediante el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La distribución puede ser uno de los siguientes valores de enumeración <xref:System.Runtime.InteropServices.LayoutKind>:  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      Indica que Common Language Runtime puede volver a ordenar los miembros del tipo para lograr una mayor eficacia. Sin embargo, cuando un tipo de valor se pasa a código no administrado, la distribución de los miembros es predecible. Si se intenta serializar automáticamente una estructura de este tipo, se produce una excepción.  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      Indica que los miembros del tipo se distribuyen en la memoria no administrada en el mismo orden en que aparecen en la definición de tipo administrado.  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      Indica que los miembros se distribuyen según el <xref:System.Runtime.InteropServices.FieldOffsetAttribute> proporcionado con cada campo.  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  Las estructuras se pueden pasar mediante la siguiente definición de invocación de plataforma:  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  La definición de invocación de plataforma equivalente para **GetSystemTime** es la siguiente:  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d3825ef73a6ec312ff51d1bddf5360f3de6cc69
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758929"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666318"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> es un primitivo de sincronización que desbloquea los subprocesos de espera después de haber sido señalado un número de veces determinado. <xref:System.Threading.CountdownEvent> está diseñado para escenarios en los que de lo contrario se tendría que usar <xref:System.Threading.ManualResetEvent> o <xref:System.Threading.ManualResetEventSlim> y disminuir manualmente una variable antes de señalar el evento. Por ejemplo, en un escenario de bifurcación/combinación, puede crear simplemente una clase <xref:System.Threading.CountdownEvent> que tiene un recuento de señal de 5 y, a continuación, iniciar cinco elementos de trabajo del grupo de subprocesos y realizar cada llamada <xref:System.Threading.CountdownEvent.Signal%2A> del elemento de trabajo cuando se completa. Cada llamada a <xref:System.Threading.CountdownEvent.Signal%2A> disminuye el recuento de señales en 1. En el subproceso principal, la llamada a <xref:System.Threading.CountdownEvent.Wait%2A> se bloqueará hasta que el recuento de señales sea cero.  
@@ -25,13 +25,13 @@ ms.locfileid: "55758929"
   
  <xref:System.Threading.CountdownEvent> tiene estas características adicionales:  
   
--   La operación de espera puede cancelarse mediante el uso de tokens de cancelación.  
+- La operación de espera puede cancelarse mediante el uso de tokens de cancelación.  
   
--   Una vez creada la instancia, se puede incrementar su recuento de señales.  
+- Una vez creada la instancia, se puede incrementar su recuento de señales.  
   
--   Las instancias se pueden reutilizar después de que se devuelva <xref:System.Threading.CountdownEvent.Wait%2A> tras una llamada al método <xref:System.Threading.CountdownEvent.Reset%2A>.  
+- Las instancias se pueden reutilizar después de que se devuelva <xref:System.Threading.CountdownEvent.Wait%2A> tras una llamada al método <xref:System.Threading.CountdownEvent.Reset%2A>.  
   
--   Las instancias exponen <xref:System.Threading.WaitHandle> para la integración con otras API de sincronización de .NET Framework como <xref:System.Threading.WaitHandle.WaitAll%2A>.  
+- Las instancias exponen <xref:System.Threading.WaitHandle> para la integración con otras API de sincronización de .NET Framework como <xref:System.Threading.WaitHandle.WaitAll%2A>.  
   
 ## <a name="basic-usage"></a>Uso básico  
  En el siguiente ejemplo se muestra cómo se usa <xref:System.Threading.CountdownEvent> con los elementos de trabajo <xref:System.Threading.ThreadPool>.  

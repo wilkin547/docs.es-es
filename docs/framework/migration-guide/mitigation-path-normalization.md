@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 51291fbc9ad2927bc3b9649074a6dbf374aaf7f1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176545"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648449"
 ---
 # <a name="mitigation-path-normalization"></a>Mitigación: normalización de la ruta de acceso
 A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la normalización de la ruta de acceso en .NET Framework ha cambiado.  
@@ -17,26 +17,26 @@ A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../.
 ## <a name="what-is-path-normalization"></a>¿Qué es la normalización de la ruta de acceso?  
  La normalización de una ruta de acceso implica la modificación de la cadena que identifica a una ruta de acceso o archivo de manera que sea conforme con una ruta de acceso válida en el sistema operativo de destino. La normalización implica normalmente:  
   
--   La canonicalización del componente y los separadores de directorios.  
+- La canonicalización del componente y los separadores de directorios.  
   
--   La aplicación del directorio actual en una ruta de acceso relativa.  
+- La aplicación del directorio actual en una ruta de acceso relativa.  
   
--   La evaluación del directorio relativo (`.`) o el directorio principal (`..`) en una ruta de acceso.  
+- La evaluación del directorio relativo (`.`) o el directorio principal (`..`) en una ruta de acceso.  
   
--   El recorte de caracteres especificados.  
+- El recorte de caracteres especificados.  
   
 ## <a name="the-changes"></a>Cambios  
  A partir de las aplicaciones que tienen como destino [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], la normalización de la ruta de acceso ha cambiado de las siguientes maneras:  
   
--   El tiempo de ejecución se aplaza para la función [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) del sistema operativo con el objetivo de normalizar las rutas de acceso.  
+- El tiempo de ejecución se aplaza para la función [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) del sistema operativo con el objetivo de normalizar las rutas de acceso.  
   
--   La normalización ya no implica el recorte del final de los segmentos de directorio (como el espacio al final de un nombre de directorio).  
+- La normalización ya no implica el recorte del final de los segmentos de directorio (como el espacio al final de un nombre de directorio).  
   
--   Compatibilidad de la sintaxis de la ruta de acceso del dispositivo con plena confianza ( incluido `\\.\`) y, para las API de E/S del archivo en mscorlib.dll, `\\?\`.  
+- Compatibilidad de la sintaxis de la ruta de acceso del dispositivo con plena confianza ( incluido `\\.\`) y, para las API de E/S del archivo en mscorlib.dll, `\\?\`.  
   
--   El tiempo de ejecución o valida las rutas de acceso de la sintaxis del dispositivo.  
+- El tiempo de ejecución o valida las rutas de acceso de la sintaxis del dispositivo.  
   
--   Es compatible el uso de la sintaxis del dispositivo para obtener acceso a los flujos de datos alternativos.  
+- Es compatible el uso de la sintaxis del dispositivo para obtener acceso a los flujos de datos alternativos.  
   
 ## <a name="impact"></a>Impacto  
  Para aplicaciones que tienen como destino [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] o posterior, estos cambios están activados de forma predeterminada. Deben mejorar el rendimiento a la vez que permiten a los métodos obtener acceso a las rutas de acceso a las que no se podía obtener acceso anteriormente.  

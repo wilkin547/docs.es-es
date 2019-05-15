@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 43037f897dfb591572a62a9bb3cccf9170d1f5fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865184"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645010"
 ---
 # <a name="exceptions-in-managed-threads"></a>Excepciones en subprocesos administrados
 A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente. En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.  
@@ -25,11 +25,11 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
   
  Common Language Runtime ofrece un mecanismo de seguridad para determinadas excepciones no controladas que se usan para controlar el flujo del programa:  
   
--   Se genera <xref:System.Threading.ThreadAbortException> en un subproceso, porque se llamó a <xref:System.Threading.Thread.Abort%2A>.  
+- Se genera <xref:System.Threading.ThreadAbortException> en un subproceso, porque se llamó a <xref:System.Threading.Thread.Abort%2A>.  
   
--   Se inicia <xref:System.AppDomainUnloadedException> en un subproceso porque el dominio de aplicación donde se ejecuta el subproceso se está descargando.  
+- Se inicia <xref:System.AppDomainUnloadedException> en un subproceso porque el dominio de aplicación donde se ejecuta el subproceso se está descargando.  
   
--   Common Language Runtime o un proceso de host finalizan el subproceso iniciando una excepción interna.  
+- Common Language Runtime o un proceso de host finalizan el subproceso iniciando una excepción interna.  
   
  Si alguna de estas excepciones no se controla en subprocesos que Common Language Runtime crea, la excepción finaliza el subproceso, pero Common Language Runtime no permite la excepción continúe.  
   
@@ -47,11 +47,11 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
 ## <a name="change-from-previous-versions"></a>Cambio con respecto a las versiones anteriores  
  El cambio más significativo está relacionado con los subprocesos administrados. En las versiones 1.0 y 1.1 de .NET Framework, Common Language Runtime ofrece un mecanismo de seguridad para las excepciones no controladas en las situaciones siguientes:  
   
--   No hay ninguna excepción no controlada en un subproceso de grupo. Cuando una tarea inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego devuelve el subproceso al grupo de subprocesos.  
+- No hay ninguna excepción no controlada en un subproceso de grupo. Cuando una tarea inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego devuelve el subproceso al grupo de subprocesos.  
   
--   Esto no se produce como una excepción no controlada en un subproceso creado con el método <xref:System.Threading.Thread.Start%2A> de la clase <xref:System.Threading.Thread>. Cuando un código que se ejecuta en ese tipo de subproceso inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego finaliza correctamente el subproceso.  
+- Esto no se produce como una excepción no controlada en un subproceso creado con el método <xref:System.Threading.Thread.Start%2A> de la clase <xref:System.Threading.Thread>. Cuando un código que se ejecuta en ese tipo de subproceso inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego finaliza correctamente el subproceso.  
   
--   No hay ninguna excepción no controlada en un subproceso el subproceso del finalizador. Cuando un finalizador inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego permite que el subproceso de finalizador reanude la ejecución de finalizadores.  
+- No hay ninguna excepción no controlada en un subproceso el subproceso del finalizador. Cuando un finalizador inicia una excepción que no controla, el runtime imprime el seguimiento de la pila de excepciones en la consola y luego permite que el subproceso de finalizador reanude la ejecución de finalizadores.  
   
  El estado en primer plano o en segundo plano de un subproceso administrado no afecta a este comportamiento.  
   
@@ -60,11 +60,11 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
 ### <a name="migrating-code"></a>Migrar código  
  En general, el cambio expondrá problemas de programación anteriormente no reconocidos para que se puedan corregir. Pero, en algunos casos, los programadores podrían haber aprovechado el mecanismo de seguridad de runtime; por ejemplo, para finalizar subprocesos. Según la situación, deben plantearse una de las estrategias de migración siguientes:  
   
--   Reestructurar el código para que el subproceso salga correctamente cuando se reciba una señal.  
+- Reestructurar el código para que el subproceso salga correctamente cuando se reciba una señal.  
   
--   Use el método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para anular el subproceso.  
+- Use el método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> para anular el subproceso.  
   
--   Si es preciso detener un subproceso para que la finalización del proceso pueda continuar, convierta el subproceso en un subproceso en segundo plano para que finalice automáticamente al salir del proceso.  
+- Si es preciso detener un subproceso para que la finalización del proceso pueda continuar, convierta el subproceso en un subproceso en segundo plano para que finalice automáticamente al salir del proceso.  
   
  En todos los casos, la estrategia debe seguir las instrucciones de diseño de excepciones. Vea [Design Guidelines for Exceptions](../../../docs/standard/design-guidelines/exceptions.md) (Instrucciones de diseño de excepciones).  
   

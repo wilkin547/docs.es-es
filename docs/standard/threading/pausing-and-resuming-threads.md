@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1855027e89f21d96e6cf761afcaaabb9b5138f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b39f91c5fabcfb5d7929a645b438b5db77f70956
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648224"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644917"
 ---
 # <a name="pausing-and-interrupting-threads"></a>Pausa e interrupción de subprocesos
 
@@ -45,9 +45,9 @@ Las maneras más habituales de sincronizar las actividades de los subprocesos so
   
  Si una espera es administrada, tanto <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> como <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> activan el subproceso inmediatamente. Si una espera es de tipo no administrado (por ejemplo, una llamada de invocación de plataforma a la función [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) de Win32), ni <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> ni <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> pueden tomar el control del subproceso hasta que este vuelva o llame a código administrado. En código administrado, el comportamiento es el siguiente:  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> activa un subproceso de cualquier tipo de espera que pueda haber y hace que se genere una <xref:System.Threading.ThreadInterruptedException> en el subproceso de destino.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> activa un subproceso de cualquier tipo de espera que pueda haber y hace que se genere una <xref:System.Threading.ThreadInterruptedException> en el subproceso de destino.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> activa un subproceso de cualquier tipo de espera que pueda haber y hace que se genere <xref:System.Threading.ThreadAbortException> en el subproceso. Para detalles, consulte [Destrucción de subprocesos](../../../docs/standard/threading/destroying-threads.md).  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> activa un subproceso de cualquier tipo de espera que pueda haber y hace que se genere <xref:System.Threading.ThreadAbortException> en el subproceso. Para detalles, consulte [Destrucción de subprocesos](../../../docs/standard/threading/destroying-threads.md).  
   
 ## <a name="see-also"></a>Vea también
 

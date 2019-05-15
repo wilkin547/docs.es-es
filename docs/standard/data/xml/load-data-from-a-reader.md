@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e4b789a23b790757ce2dfaa82b6eaec7fdaf3cb3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207231"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647870"
 ---
 # <a name="load-data-from-a-reader"></a>Carga de datos desde un sistema de lectura
 Si se carga un documento XML utilizando el método <xref:System.Xml.XmlDocument.Load%2A> y un parámetro de <xref:System.Xml.XmlReader>, existen diferencias en el comportamiento que se produce cuando se compara con el comportamiento derivado de la carga de datos desde otros formatos. Si el sistema de lectura está en su estado inicial, <xref:System.Xml.XmlDocument.Load%2A> consume todo el contenido del sistema de lectura y compila el Modelo de objetos de documento (DOM) XML a partir de todos los datos del sistema de lectura.  
   
  Si el sistema de lectura ya se encuentra situado en un nodo en algún lugar del documento y, a continuación, se pasa al método <xref:System.Xml.XmlDocument.Load%2A>, <xref:System.Xml.XmlDocument.Load%2A> intenta leer el nodo actual y todos sus nodos relacionados hasta la etiqueta final que cierra el nivel de profundidad actual en la memoria. El resultado correcto del intento de <xref:System.Xml.XmlDocument.Load%2A> depende del nodo en el que se encuentre el sistema de lectura cuando se intente realizar la carga, ya que <xref:System.Xml.XmlDocument.Load%2A> comprueba que el XML del sistema de lectura es correcto. Si el XML no es correcto, <xref:System.Xml.XmlDocument.Load%2A> inicia una excepción. Por ejemplo, el siguiente conjunto de nodos contiene dos elementos a nivel raíz, el XML no es correcto y <xref:System.Xml.XmlDocument.Load%2A> inicia una excepción.  
   
--   Nodo Comment, seguido de un nodo Element, seguido de otro nodo Element, seguido de un nodo EndElement.  
+- Nodo Comment, seguido de un nodo Element, seguido de otro nodo Element, seguido de un nodo EndElement.  
   
  El siguiente conjunto de nodos crea un DOM incompleto porque no hay ningún elemento a nivel raíz.  
   
--   Nodo Comment seguido de un nodo ProcessingInstruction, seguido de un nodo Comment, seguido de un nodo EndElement.  
+- Nodo Comment seguido de un nodo ProcessingInstruction, seguido de un nodo Comment, seguido de un nodo EndElement.  
   
  Esto no inicia una excepción y los datos se cargan. Puede agregar un elemento raíz por encima de estos nodos y crear XML correcto que se pueda guardar sin errores.  
   

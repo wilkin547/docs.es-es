@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19a671cac609e79088956ecb4324ebb0a25fb941
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a935ec663dd178d35aff745e907d2aae48e5b65c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547407"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622592"
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>Procedimiento para eliminar almacenes de almacenamiento aislado
 La clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona dos métodos para eliminar archivos de almacenamiento aislado:  
   
--   El método de instancia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> no toma ningún argumento y elimina el almacén que lo llama. No se requieren permisos para realizar esta operación. Cualquier código que pueda acceder al almacén puede eliminar alguno o todos los datos que contenga.  
+- El método de instancia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> no toma ningún argumento y elimina el almacén que lo llama. No se requieren permisos para realizar esta operación. Cualquier código que pueda acceder al almacén puede eliminar alguno o todos los datos que contenga.  
   
--   El método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> toma el valor de enumeración <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> y elimina todos los almacenes del usuario que está ejecutando el código. Esta operación requiere permiso <xref:System.Security.Permissions.IsolatedStorageFilePermission> para el valor <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> .  
+- El método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29> toma el valor de enumeración <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> y elimina todos los almacenes del usuario que está ejecutando el código. Esta operación requiere permiso <xref:System.Security.Permissions.IsolatedStorageFilePermission> para el valor <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> .  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra el uso de los métodos <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A> estático y de instancia. La clase obtiene dos almacenes; uno está aislado de usuario y ensamblado, y el otro está aislado de usuario, dominio y ensamblado. El almacén de usuario, dominio y ensamblado se elimina con una llamada al método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> del archivo de almacenamiento aislado  `isoStore1`. A continuación, se eliminan todos los demás almacenes del usuario con una llamada al método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%28System.IO.IsolatedStorage.IsolatedStorageScope%29>.  

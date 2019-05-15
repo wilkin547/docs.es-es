@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ba1ded1757d71a2b7839ae8b45489da53763b8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603617"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633320"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizar cadenas numéricas en .NET
 Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` y `TryParse`, que puede usar para convertir la representación de cadena de un número en un tipo numérico. Estos métodos permiten analizar cadenas generadas mediante el uso de las cadenas de formato que se documentan en [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md) y [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md). De forma predeterminada, los métodos `Parse` y `TryParse` pueden convertir correctamente las cadenas que contienen dígitos decimales enteros solo en valores enteros. Pueden convertir correctamente las cadenas que contienen dígitos decimales enteros y fraccionarios, separadores de grupos y un separador decimal en valores de punto flotante. El método `Parse` produce una excepción si se produce un error en la operación, mientras que el método `TryParse` devuelve `false`.  
@@ -28,9 +28,9 @@ Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` 
   
  Un proveedor de formato se representa mediante una implementación <xref:System.IFormatProvider>. Esta interfaz tiene un solo miembro, el método <xref:System.IFormatProvider.GetFormat%2A>, cuyo único parámetro es un objeto <xref:System.Type> que representa el tipo al que se va a dar formato. Este método devuelve el objeto que proporciona información de formato. .NET es compatible con las dos implementaciones <xref:System.IFormatProvider> siguientes para analizar cadenas numéricas:  
   
--   Un objeto <xref:System.Globalization.CultureInfo> cuyo método <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Globalization.NumberFormatInfo> que proporciona información de formato específica de la referencia cultural.  
+- Un objeto <xref:System.Globalization.CultureInfo> cuyo método <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> devuelve un objeto <xref:System.Globalization.NumberFormatInfo> que proporciona información de formato específica de la referencia cultural.  
   
--   Un objeto <xref:System.Globalization.NumberFormatInfo> cuyo método <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> se devuelve a sí mismo.  
+- Un objeto <xref:System.Globalization.NumberFormatInfo> cuyo método <xref:System.Globalization.NumberFormatInfo.GetFormat%2A?displayProperty=nameWithType> se devuelve a sí mismo.  
   
  En el ejemplo siguiente se intenta convertir cada cadena de una matriz en un valor <xref:System.Double>. Primero se intenta analizar la cadena mediante un proveedor de formato que refleja las convenciones de la referencia cultural Inglés (Estados Unidos). Si esta operación produce una excepción <xref:System.FormatException>, se intenta analizar la cadena mediante un proveedor de formato que refleja las convenciones de la referencia cultural Francés (Francia).  
   

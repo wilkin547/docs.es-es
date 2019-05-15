@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295996"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592347"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 Los archivos de recursos desempeñan un papel fundamental en las aplicaciones localizadas. Permiten que una aplicación muestre cadenas, imágenes y otros datos en el idioma y la referencia cultural del usuario, y que proporcione datos alternativos si los recursos para el idioma o la referencia cultural del usuario no están disponibles. .NET Framework usa un modelo de concentrador y radio para buscar y recuperar recursos localizados. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación y se usa si no hay recursos localizados disponibles. El atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> se usa para designar la referencia cultural predeterminada de la aplicación. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural localizada, pero no contiene código. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden actualizar o reemplazar fácilmente sin reemplazar el ensamblado principal de la aplicación.  
@@ -41,16 +41,16 @@ Los archivos de recursos desempeñan un papel fundamental en las aplicaciones lo
 ## <a name="satellite-assembly-name-and-location"></a>Nombre y ubicación del ensamblado satélite  
  El modelo de concentrador y radio requiere colocar recursos en ubicaciones específicas para que sea fácil ubicarlos y usarlos. Si no compila los recursos y les asigna el nombre de la manera prevista, o si no los coloca en las ubicaciones correctas, Common Language Runtime no podrá encontrarlos y usará en su lugar los recursos de la referencia cultural predeterminada. Para tener acceso automáticamente a los recursos localizados se usa el Administrador de recursos de .NET Framework, representado por un objeto <xref:System.Resources.ResourceManager>. El Administrador de recursos requiere lo siguiente:  
   
--   Todos los recursos de una referencia cultural determinada deben estar incluidos en un solo ensamblado satélite. En otras palabras, debe compilar varios archivos .txt o .resx en un solo archivo .resources binario.  
+- Todos los recursos de una referencia cultural determinada deben estar incluidos en un solo ensamblado satélite. En otras palabras, debe compilar varios archivos .txt o .resx en un solo archivo .resources binario.  
   
--   Debe haber un subdirectorio independiente en el directorio de la aplicación para cada referencia cultural localizada que almacena los recursos de esa referencia cultural. El nombre del subdirectorio debe ser el mismo que el nombre de la referencia cultural. Como alternativa, puede almacenar los ensamblados satélite en la caché global de ensamblados. En este caso, el componente de información de referencia cultural del nombre seguro del ensamblado debe indicar su referencia cultural. (Vea la sección [Instalar ensamblados satélite en la caché global de ensamblados](#SN) más adelante en este tema).  
+- Debe haber un subdirectorio independiente en el directorio de la aplicación para cada referencia cultural localizada que almacena los recursos de esa referencia cultural. El nombre del subdirectorio debe ser el mismo que el nombre de la referencia cultural. Como alternativa, puede almacenar los ensamblados satélite en la caché global de ensamblados. En este caso, el componente de información de referencia cultural del nombre seguro del ensamblado debe indicar su referencia cultural. (Vea la sección [Instalar ensamblados satélite en la caché global de ensamblados](#SN) más adelante en este tema).  
   
     > [!NOTE]
     >  Si la aplicación incluye recursos para referencias culturales secundarias, coloque cada una de ellas en un subdirectorio independiente bajo el directorio de la aplicación. No coloque las referencias culturales secundarias en subdirectorios bajo el directorio de la referencia cultural principal.  
   
--   El ensamblado satélite debe tener el mismo nombre que la aplicación y debe usar la extensión de nombre de archivo ".resources.dll". Por ejemplo, si una aplicación se denomina Example.exe, el nombre de cada ensamblado satélite debe ser Example.resources.dll. Tenga en cuenta que el nombre del ensamblado satélite no indica la referencia cultural de sus archivos de recursos. Aun así, el ensamblado satélite aparece en un directorio que especifica la referencia cultural.  
+- El ensamblado satélite debe tener el mismo nombre que la aplicación y debe usar la extensión de nombre de archivo ".resources.dll". Por ejemplo, si una aplicación se denomina Example.exe, el nombre de cada ensamblado satélite debe ser Example.resources.dll. Tenga en cuenta que el nombre del ensamblado satélite no indica la referencia cultural de sus archivos de recursos. Aun así, el ensamblado satélite aparece en un directorio que especifica la referencia cultural.  
   
--   La información sobre la referencia cultural del ensamblado satélite debe incluirse en los metadatos del ensamblado. Para almacenar el nombre de la referencia cultural en los metadatos del ensamblado satélite, especifique la opción `/culture` cuando use [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) para insertar recursos en el ensamblado satélite.  
+- La información sobre la referencia cultural del ensamblado satélite debe incluirse en los metadatos del ensamblado. Para almacenar el nombre de la referencia cultural en los metadatos del ensamblado satélite, especifique la opción `/culture` cuando use [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) para insertar recursos en el ensamblado satélite.  
   
  En la ilustración siguiente se muestran los requisitos de ejemplo de la estructura y la ubicación de los directorios para las aplicaciones que no se instalan en la [caché global de ensamblados](../../../docs/framework/app-domains/gac.md). Los elementos con las extensiones .txt y .resources no se incluirán en la aplicación final. Estos son los archivos de recursos intermedios que se usan para crear los ensamblados de recursos satélite finales. En este ejemplo, los archivos .resx se pueden sustituir por archivos .txt. Para obtener más información, vea [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) (Empaquetar e implementar recursos). 
  
@@ -97,11 +97,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. Agregue compatibilidad para referencias culturales adicionales (en-US, fr-FR y ru-RU) a la aplicación de la manera siguiente:  
   
-    -   Para admitir la referencia cultural en-US o inglés (Estados Unidos), cree un archivo de recursos denominado Greeting.en-US.resx o Greeting.en-US.txt y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Hi world!".  
+    - Para admitir la referencia cultural en-US o inglés (Estados Unidos), cree un archivo de recursos denominado Greeting.en-US.resx o Greeting.en-US.txt y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Hi world!".  
   
-    -   Para admitir la referencia cultural fr-FR o francés (Francia), cree un archivo de recursos denominado Greeting.fr-FR.resx o Greeting.fr-FR.txt y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Salut tout le monde!".  
+    - Para admitir la referencia cultural fr-FR o francés (Francia), cree un archivo de recursos denominado Greeting.fr-FR.resx o Greeting.fr-FR.txt y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Salut tout le monde!".  
   
-    -   Para admitir la referencia cultural ru-RU o ruso (Rusia), cree un archivo de recursos denominado Greeting.ru-RU.resx o Greeting.ru-RU.txt, y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Всем привет!".  
+    - Para admitir la referencia cultural ru-RU o ruso (Rusia), cree un archivo de recursos denominado Greeting.ru-RU.resx o Greeting.ru-RU.txt, y almacene en él una sola cadena denominada `HelloString` cuyo valor sea "Всем привет!".  
   
 4. Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto o archivo de recursos XML en un archivo .resources binario. La salida es un conjunto de archivos que tienen el mismo nombre de archivo raíz, como los archivos .resx o .txt, pero con una extensión .resources. Si crea el ejemplo con Visual Studio, el proceso de compilación se realiza automáticamente. Si no está usando Visual Studio, ejecute los comandos siguientes para compilar los archivos .resx en archivos .resources:  
   
@@ -226,11 +226,11 @@ gacutil -i:StringLibrary.resources.dll
   
 5. Agregue compatibilidad para referencias culturales adicionales (en-US, fr-FR y ru-RU) a la aplicación de la manera siguiente:  
   
-    -   Para admitir la referencia cultural "en-US" o inglés (Estados Unidos), cree un archivo de recursos denominado Strings.en-US.resx o Strings.en-US.txt y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Hello!".  
+    - Para admitir la referencia cultural "en-US" o inglés (Estados Unidos), cree un archivo de recursos denominado Strings.en-US.resx o Strings.en-US.txt y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Hello!".  
   
-    -   Para admitir la referencia cultural "fr-FR" o francés (Francia), cree un archivo de recursos denominado Strings.fr-FR.resx o Strings.fr-FR.txt y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Bonjour!".  
+    - Para admitir la referencia cultural "fr-FR" o francés (Francia), cree un archivo de recursos denominado Strings.fr-FR.resx o Strings.fr-FR.txt y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Bonjour!".  
   
-    -   Para admitir la referencia cultural "ru-RU" o ruso (Rusia), cree un archivo de recursos denominado Strings.ru-RU.resx o Strings.ru-RU.txt, y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Привет!".  
+    - Para admitir la referencia cultural "ru-RU" o ruso (Rusia), cree un archivo de recursos denominado Strings.ru-RU.resx o Strings.ru-RU.txt, y almacene en él una sola cadena denominada `Greeting` cuyo valor sea "Привет!".  
   
 6. Use [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) para compilar cada texto o archivo de recursos XML en un archivo .resources binario. La salida es un conjunto de archivos que tienen el mismo nombre de archivo raíz, como los archivos .resx o .txt, pero con una extensión .resources. Si crea el ejemplo con Visual Studio, el proceso de compilación se realiza automáticamente. Si no está usando Visual Studio, ejecute el comando siguiente para compilar los archivos .resx en archivos .resources:  
   
