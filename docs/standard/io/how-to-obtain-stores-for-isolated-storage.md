@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0968443af28e2d403b08a1af50846e7a1369db49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ef65356d84016462941850ef9b9d6210debc62c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622690"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Procedimiento para obtener los almacenes de almacenamiento aislado
 Un almacén aislado expone un sistema de archivos virtual dentro de un compartimiento de datos. La clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona una serie de métodos para interactuar con un almacén aislado. Para crear y recuperar almacenes, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> proporciona tres métodos estáticos:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> devuelve el almacenamiento que está aislado por usuario y ensamblado.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> devuelve el almacenamiento que está aislado por usuario y ensamblado.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> devuelve el almacenamiento que está aislado por dominio y ensamblado.  
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> devuelve el almacenamiento que está aislado por dominio y ensamblado.  
   
      Ambos métodos recuperan un almacén que pertenece al código desde el que se les llama.  
   
--   El método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> devuelve un almacén aislado que se especifica pasando una combinación de parámetros de ámbito.  
+- El método estático <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> devuelve un almacén aislado que se especifica pasando una combinación de parámetros de ámbito.  
   
  El código siguiente devuelve un almacén aislado por usuario, dominio y ensamblado.  
   

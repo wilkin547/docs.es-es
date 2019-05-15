@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1a72a2b2443b419ea4f4b036664fb5f8932096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef107ae0dceb7ee937b21d65cba92cbcf6a9a96c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554249"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628998"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Procedimiento para controlar excepciones en una consulta PLINQ
 El primer ejemplo de este tema muestra cómo controlar la clase <xref:System.AggregateException?displayProperty=nameWithType> que se puede iniciar desde una consulta PLINQ cuando se ejecuta. El segundo ejemplo muestra cómo colocar bloques try-catch dentro de los delegados, lo más cerca posible de donde se producirá la excepción. De este modo, se pueden detectar en cuanto se producen y posiblemente continuar con la ejecución de la consulta. Cuando las excepciones pueden propagarse de nuevo al subproceso de unión, es posible que una consulta continúe procesando algunos elementos después de que se haya producido la excepción.  
@@ -43,7 +43,7 @@ El primer ejemplo de este tema muestra cómo controlar la clase <xref:System.Agg
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   Para compilar y ejecutar estos ejemplos, cópielos en el ejemplo de datos de PLINQ y llame al método desde Main.  
+- Para compilar y ejecutar estos ejemplos, cópielos en el ejemplo de datos de PLINQ y llame al método desde Main.  
   
 ## <a name="robust-programming"></a>Programación sólida  
  No se detecta ninguna excepción a menos que sepa cómo controlarla para que no se dañe el estado del programa.  

@@ -2,12 +2,12 @@
 title: Transformación funcional de XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 75ad909994d75387648dbfa72f827cf63b85739e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 237a96e3cc1a2e2cb231b23954613f6a0ad0761c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643046"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596653"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Transformación funcional de XML (C#)
 Este tema trata acerca de la aproximación enfocada a la transformación funcional pura para modificar documentos XML, comparándola con la aproximación basada en procedimientos.  
@@ -15,11 +15,11 @@ Este tema trata acerca de la aproximación enfocada a la transformación funcion
 ## <a name="modifying-an-xml-document"></a>Modificar un documento XML  
  Una de las tareas más comunes que deben llevar a cabo los programadores de XML es la de transformar XML de una forma a otra. La forma de un documento XML es la estructura del documento, que incluye lo siguiente:  
   
--   La jerarquía expresada por el documento.  
+- La jerarquía expresada por el documento.  
   
--   Los nombres de elementos y atributos.  
+- Los nombres de elementos y atributos.  
   
--   Los tipos de datos de los elementos y atributos.  
+- Los tipos de datos de los elementos y atributos.  
   
  En general, la aproximación que resulta más efectiva a la hora de transformar un XML de una forma a otra, es realizar una transformación funcional pura. De esta forma, la principal tarea del programador es crear una transformación que se aplique a todo el documento XML (o a uno o más nodos estrictamente definidos). Se puede argüir que la transformación funcional es la más sencilla de programar (siempre y cuando el programador esté familiarizado con esta técnica), que genera un código muy fácil de mantener y que, a menudo, es una alternativa más compacta que las otras.  
   

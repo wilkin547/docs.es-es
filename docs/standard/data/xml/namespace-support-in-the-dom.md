@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1a468d1a2b15d1f92726d8d429fbc5ddece96e6d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990965"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647859"
 ---
 # <a name="namespace-support-in-the-dom"></a>Compatibilidad con los espacios de nombres en DOM
 El modelo de objetos de documento XML (DOM) tiene en cuenta completamente al espacio de nombres. Sólo se admiten documentos XML que tengan en cuenta los espacios de nombres. El W3C especifica que las aplicaciones DOM que implementan el nivel 1 pueden no tener en cuenta los espacios de nombres, a diferencia de las características de nivel 2 de DOM, que sí los tienen en cuenta. No obstante, todas las características de DOM XML tienen en cuenta los espacios de nombres, independientemente de si el método proviene del nivel 1 o del nivel 2 de la recomendación de DOM.  
@@ -21,9 +21,9 @@ El modelo de objetos de documento XML (DOM) tiene en cuenta completamente al esp
   
  Por tanto, todos los métodos que aceptan un parámetro para el nombre aceptan también un prefijo para calificarlo. El parámetro de nombre, como `A:b` en el método de nivel 1 de DOM **setAttribute**, se analiza como se muestra a continuación:  
   
--   Si no hay caracteres de signo de dos puntos (:), el nombre local se configura con el parámetro `name` y el prefijo y URI de espacio de nombres son cadenas vacías.  
+- Si no hay caracteres de signo de dos puntos (:), el nombre local se configura con el parámetro `name` y el prefijo y URI de espacio de nombres son cadenas vacías.  
   
--   Si se encuentra un signo de dos puntos, el nombre se divide en dos partes en función de la posición del primer signo de dos puntos. El prefijo se establece según la cadena que se encuentre antes del signo de dos puntos mientras que el nombre local se establece según la cadena que se encuentre después. Para los métodos que no aceptan un valor de URI de espacio de nombres, éste no se resuelve y sigue establecido como una cadena vacía. De lo contrario, el URI de espacio de nombres se establece como la cadena pasada al método. Si el prefijo no se define, el método **Save** y las propiedades **InnerXml** y **OuterXml** generan un error.  
+- Si se encuentra un signo de dos puntos, el nombre se divide en dos partes en función de la posición del primer signo de dos puntos. El prefijo se establece según la cadena que se encuentre antes del signo de dos puntos mientras que el nombre local se establece según la cadena que se encuentre después. Para los métodos que no aceptan un valor de URI de espacio de nombres, éste no se resuelve y sigue establecido como una cadena vacía. De lo contrario, el URI de espacio de nombres se establece como la cadena pasada al método. Si el prefijo no se define, el método **Save** y las propiedades **InnerXml** y **OuterXml** generan un error.  
   
 ## <a name="see-also"></a>Vea también
 

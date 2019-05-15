@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9ae041ae278dc6f2423a679dab8982f4ccc35620
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297530"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592493"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Procedimiento para crear un archivo de documentación XML mediante CodeDOM
 Se puede usar CodeDOM para crear código que genere documentación XML. El proceso implica crear el gráfico CodeDOM que contenga los comentarios de la documentación XML, generar el código y compilar el código generado con la opción del compilador que crea el archivo de documentación XML.  
@@ -77,7 +77,7 @@ Se puede usar CodeDOM para crear código que genere documentación XML. El proce
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   En este ejemplo de código, el permiso `FullTrust` debe estar establecido para que se ejecute correctamente.  
+- En este ejemplo de código, el permiso `FullTrust` debe estar establecido para que se ejecute correctamente.  
   
 ## <a name="see-also"></a>Vea también
 

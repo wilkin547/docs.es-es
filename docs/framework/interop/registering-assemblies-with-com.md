@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169031"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648551"
 ---
 # <a name="registering-assemblies-with-com"></a>Registrar ensamblados con COM
 Puede ejecutar una herramienta de línea de comandos denominada [Registro de ensamblados (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado o anular su registro para su uso con COM. Regasm.exe agrega información sobre la clase al Registro del sistema, de modo que los clientes COM puedan usar la clase .NET Framework de forma transparente. La clase <xref:System.Runtime.InteropServices.RegistrationServices> proporciona la funcionalidad equivalente.  
@@ -30,11 +30,11 @@ Puede ejecutar una herramienta de línea de comandos denominada [Registro de ens
   
  Bajo la clave HKCR\CLSID\\{0000…0000}, el valor predeterminado se establece en el ProgID de la clase y se agregan dos nuevos valores con nombre, Class y Assembly. El tiempo de ejecución lee el valor de Assembly del Registro y lo pasa a la resolución de ensamblado en tiempo de ejecución. La resolución de ensamblado intenta localizar el ensamblado en función de la información de ensamblado, como el nombre y el número de versión. Para que la resolución de ensamblado busque un ensamblado, este debe encontrarse en una de las ubicaciones siguientes:  
   
--   En la caché global de ensamblados (debe ser un ensamblado con nombre seguro).  
+- En la caché global de ensamblados (debe ser un ensamblado con nombre seguro).  
   
--   En el directorio de la aplicación. Los ensamblados cargados desde la ruta de acceso a la aplicación solo son accesibles desde la misma aplicación.  
+- En el directorio de la aplicación. Los ensamblados cargados desde la ruta de acceso a la aplicación solo son accesibles desde la misma aplicación.  
   
--   En una ruta de acceso de archivo especificada con la opción **/codebase** en Regasm.exe.  
+- En una ruta de acceso de archivo especificada con la opción **/codebase** en Regasm.exe.  
   
  Regasm.exe también crea la clave InProcServer32 bajo la clave HKCR\CLSID\\{0000…0000}. El valor predeterminado de la clave se establece en el nombre del archivo DLL que inicializa Common Language Runtime (Mscoree.dll).  
   

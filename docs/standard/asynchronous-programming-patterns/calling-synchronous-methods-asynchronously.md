@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 342af20b78ae996bb61c6b563ecf42137ee51022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702886"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629101"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>Llamar a métodos sincrónicos de forma asincrónica
 
@@ -45,13 +45,13 @@ El método `EndInvoke` recupera los resultados de la llamada asincrónica. Se pu
 
 En los ejemplos de código de este tema se muestran cuatro de las formas más comunes de utilizar los métodos `BeginInvoke` y `EndInvoke` para realizar llamadas asincrónicas. Después de llamar a `BeginInvoke` , puede hacer lo siguiente:
 
--   Realizar algunas operaciones y, a continuación, llamar al método `EndInvoke` para que mantenga un bloqueo hasta que se complete la llamada.
+- Realizar algunas operaciones y, a continuación, llamar al método `EndInvoke` para que mantenga un bloqueo hasta que se complete la llamada.
 
--   Obtener un objeto <xref:System.Threading.WaitHandle> mediante la propiedad <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType>, utilizar su método <xref:System.Threading.WaitHandle.WaitOne%2A> para bloquear la ejecución hasta que se señalice <xref:System.Threading.WaitHandle> y, a continuación, llamar al método `EndInvoke`.
+- Obtener un objeto <xref:System.Threading.WaitHandle> mediante la propiedad <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> , utilizar su método <xref:System.Threading.WaitHandle.WaitOne%2A> para bloquear la ejecución hasta que se señalice <xref:System.Threading.WaitHandle> y, a continuación, llamar al método `EndInvoke`.
 
--   Sondear el resultado <xref:System.IAsyncResult> devuelto por `BeginInvoke` para determinar cuándo se completa la llamada asincrónica y, a continuación, llamar al método `EndInvoke`.
+- Sondear el resultado <xref:System.IAsyncResult> devuelto por `BeginInvoke` para determinar cuándo se completa la llamada asincrónica y, a continuación, llamar al método `EndInvoke`.
 
--   Pasar un delegado de un método de devolución de llamada a `BeginInvoke`. El método se ejecuta en un subproceso <xref:System.Threading.ThreadPool> una vez finalizada la llamada asincrónica. El método de devolución de llamada llama a `EndInvoke`.
+- Pasar un delegado de un método de devolución de llamada a `BeginInvoke`. El método se ejecuta en un subproceso <xref:System.Threading.ThreadPool> una vez finalizada la llamada asincrónica. El método de devolución de llamada llama a `EndInvoke`.
 
 > [!IMPORTANT]
 > Con independencia de la técnica que utilice, llame siempre a `EndInvoke` para completar la llamada asincrónica.
@@ -81,7 +81,7 @@ En los ejemplos de código de este tema se muestran cuatro de las formas más co
  Si utiliza un objeto <xref:System.Threading.WaitHandle>, puede realizar otros procesamientos adicionales antes o después de que se complete la llamada asincrónica, pero antes de llamar al método `EndInvoke` para recuperar los resultados.
 
 > [!NOTE]
-> El identificador de espera no se cierra automáticamente cuando llama a `EndInvoke`. Si libera todas las referencias al identificador de espera, se liberarán los recursos del sistema cuando la recolección de elementos no utilizados reclame el identificador de espera. Para liberar los recursos del sistema tan pronto como se deje de utilizar el identificador de espera, elimínelo llamando al método <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType>. La recolección de elementos no utilizados funciona más eficazmente cuando los objetos descartables se eliminan de forma explícita.
+> El identificador de espera no se cierra automáticamente cuando llama a `EndInvoke`. Si libera todas las referencias al identificador de espera, se liberarán los recursos del sistema cuando la recolección de elementos no utilizados reclame el identificador de espera. Para liberar los recursos del sistema tan pronto como se deje de utilizar el identificador de espera, elimínelo llamando al método <xref:System.Threading.WaitHandle.Close%2A?displayProperty=nameWithType> . La recolección de elementos no utilizados funciona más eficazmente cuando los objetos descartables se eliminan de forma explícita.
 
  [!code-cpp[AsyncDelegateExamples#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/waithandle.cpp#3)]
  [!code-csharp[AsyncDelegateExamples#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/waithandle.cs#3)]
@@ -101,11 +101,11 @@ En los ejemplos de código de este tema se muestran cuatro de las formas más co
 
  Notas sobre el ejemplo:
 
--   El parámetro `threadId` de `TestMethod` es un parámetro `out` (`<Out>` `ByRef` en Visual Basic), por lo que `TestMethod` nunca usa el valor de entrada. Una variable ficticia se pasa a la llamada a `BeginInvoke` . Si el parámetro `threadId` fuera un parámetro `ref` (`ByRef` en Visual Basic), la variable tendría que ser un campo de nivel de clase para que pudiera pasarse a los métodos `BeginInvoke` y `EndInvoke`.
+- El parámetro `threadId` de `TestMethod` es un parámetro `out` (`<Out>` `ByRef` en Visual Basic), por lo que `TestMethod` nunca usa el valor de entrada. Una variable ficticia se pasa a la llamada a `BeginInvoke` . Si el parámetro `threadId` fuera un parámetro `ref` (`ByRef` en Visual Basic), la variable tendría que ser un campo de nivel de clase para que pudiera pasarse a los métodos `BeginInvoke` y `EndInvoke`.
 
--   La información de estado que se pasa a `BeginInvoke` es una cadena de formato, que el método de devolución de llamada utiliza para dar formato a un mensaje de salida. Dado que se pasa como un tipo <xref:System.Object>, la información de estado tiene que convertirse a su tipo apropiado antes de poderse utilizar.
+- La información de estado que se pasa a `BeginInvoke` es una cadena de formato, que el método de devolución de llamada utiliza para dar formato a un mensaje de salida. Dado que se pasa como un tipo <xref:System.Object>, la información de estado tiene que convertirse a su tipo apropiado antes de poderse utilizar.
 
--   La devolución de llamada se realiza en un subproceso <xref:System.Threading.ThreadPool> . Los subprocesos<xref:System.Threading.ThreadPool> son subprocesos en segundo plano, que no mantienen la aplicación en ejecución si el subproceso principal finaliza, por lo que el subproceso principal del ejemplo debe permanecer en suspensión el tiempo suficiente para que la devolución de llamada finalice.
+- La devolución de llamada se realiza en un subproceso <xref:System.Threading.ThreadPool> . Los subprocesos<xref:System.Threading.ThreadPool> son subprocesos en segundo plano, que no mantienen la aplicación en ejecución si el subproceso principal finaliza, por lo que el subproceso principal del ejemplo debe permanecer en suspensión el tiempo suficiente para que la devolución de llamada finalice.
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

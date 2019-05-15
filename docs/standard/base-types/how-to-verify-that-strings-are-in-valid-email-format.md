@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78210f9f007060551130812fcb5a9cd5b4728adc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890506"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633437"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedimiento para comprobar si las cadenas tienen un formato de correo electrónico válido
 En el ejemplo siguiente se usa una expresión regular para comprobar que una cadena tiene un formato de correo electrónico válido.  
@@ -91,9 +91,9 @@ vbc /t:library RegexUtilities.vb
   
  Suponiendo que haya creado una biblioteca de clases denominada RegexUtilities.dll que incluya la expresión regular de validación de correo electrónico, puede compilar este ejemplo de cualquiera de las siguientes maneras:  
   
--   En Visual Studio, cree una aplicación de consola y agregue una referencia a RegexUtilities.dll al proyecto.  
+- En Visual Studio, cree una aplicación de consola y agregue una referencia a RegexUtilities.dll al proyecto.  
   
--   Desde la línea de comandos, copie y pegue el código fuente en un archivo de texto y compílelo con un comando como el siguiente (suponiendo que el nombre del archivo de código fuente es Example.cs o Example.vb:  
+- Desde la línea de comandos, copie y pegue el código fuente en un archivo de texto y compílelo con un comando como el siguiente (suponiendo que el nombre del archivo de código fuente es Example.cs o Example.vb:  
   
     ```csharp  
     csc Example.cs /r:RegexUtilities.dll  

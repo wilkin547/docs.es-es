@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143381"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615174"
 ---
 # <a name="framework-libraries"></a>Bibliotecas de Framework
 
@@ -41,23 +41,23 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 
 .NET incluye un conjunto de estructuras de datos que son la piedra angular de casi cualquier aplicación .NET. Principalmente se trata de colecciones, pero también incluyen otros tipos.
 
-*   <xref:System.Array>: representa una matriz de objetos fuertemente tipados a la que se puede obtener acceso por índice. Tiene un tamaño fijo debido a su construcción.
-*   <xref:System.Collections.Generic.List%601>: representa una lista de objetos fuertemente tipados a la que se puede obtener acceso por índice. Cambia automáticamente de tamaño según sea necesario.
-*   <xref:System.Collections.Generic.Dictionary%602>: representa una colección de valores que se indexan mediante una clave. Se puede obtener acceso a los valores a través de la clave. Cambia automáticamente de tamaño según sea necesario.
-*   <xref:System.Uri>: proporciona una representación de objeto de un identificador uniforme de recursos (URI) y un acceso sencillo a las partes del identificador URI.
-*   <xref:System.DateTime>: representa un instante de tiempo, normalmente expresado en forma de fecha y hora del día.
+* <xref:System.Array>: representa una matriz de objetos fuertemente tipados a la que se puede obtener acceso por índice. Tiene un tamaño fijo debido a su construcción.
+* <xref:System.Collections.Generic.List%601>: representa una lista de objetos fuertemente tipados a la que se puede obtener acceso por índice. Cambia automáticamente de tamaño según sea necesario.
+* <xref:System.Collections.Generic.Dictionary%602>: representa una colección de valores que se indexan mediante una clave. Se puede obtener acceso a los valores a través de la clave. Cambia automáticamente de tamaño según sea necesario.
+* <xref:System.Uri>: proporciona una representación de objeto de un identificador uniforme de recursos (URI) y un acceso sencillo a las partes del identificador URI.
+* <xref:System.DateTime>: representa un instante de tiempo, normalmente expresado en forma de fecha y hora del día.
 
 ## <a name="utility-apis"></a>API de utilidades
 
 .NET incluye un conjunto de API de utilidades que proporcionan funcionalidad para muchas tareas importantes.
 
-*   <xref:System.Net.Http.HttpClient>: una API para enviar solicitudes HTTP y recibir respuestas HTTP de un recurso identificado por un URI.
-*   <xref:System.Xml.Linq.XDocument>: una API para cargar y consultar documentos XML con LINQ.
-*   <xref:System.IO.StreamReader>: una API para leer archivos. 
-*   <xref:System.IO.StreamWriter>: una API para escribir archivos.
+* <xref:System.Net.Http.HttpClient>: una API para enviar solicitudes HTTP y recibir respuestas HTTP de un recurso identificado por un URI.
+* <xref:System.Xml.Linq.XDocument>: una API para cargar y consultar documentos XML con LINQ.
+* <xref:System.IO.StreamReader>: una API para leer archivos. 
+* <xref:System.IO.StreamWriter>: una API para escribir archivos.
 
 ## <a name="app-model-apis"></a>API del modelo de aplicaciones
 
 Hay muchos modelos de aplicaciones que pueden usarse con .NET, proporcionados por varias empresas.
 
-*   [ASP.NET](https://www.asp.net): proporciona un marco de trabajo web para la creación de sitios Web y servicios. Es compatible con Windows, Linux y macOS (depende de la versión de ASP.NET).
+* [ASP.NET](https://www.asp.net): proporciona un marco de trabajo web para la creación de sitios Web y servicios. Es compatible con Windows, Linux y macOS (depende de la versión de ASP.NET).

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314014"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634563"
 ---
 # <a name="composite-formatting"></a>Formatos compuestos
 
@@ -126,11 +126,11 @@ La característica de formato compuesto se admite mediante métodos como los sig
   
 3. Si el valor implementa la interfaz <xref:System.IFormattable>, se llama al método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> de esta. Se pasa al método el valor *formatString*, si hubiera uno presente en el elemento de formato, o `null` si no lo hubiera. El argumento <xref:System.IFormatProvider> se determina de la siguiente forma:  
   
-    -   Para un valor numérico, si se llama a un método de formato compuesto con un argumento <xref:System.IFormatProvider> que no sea null, el runtime solicita un objeto <xref:System.Globalization.NumberFormatInfo> a su método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. En caso de no poder proporcionar uno, si el valor del argumento es `null`, o si el método de formato compuesto no tiene un parámetro <xref:System.IFormatProvider>, se usa el objeto <xref:System.Globalization.NumberFormatInfo> para la referencia cultural del subproceso actual.  
+    - Para un valor numérico, si se llama a un método de formato compuesto con un argumento <xref:System.IFormatProvider> que no sea null, el runtime solicita un objeto <xref:System.Globalization.NumberFormatInfo> a su método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. En caso de no poder proporcionar uno, si el valor del argumento es `null`, o si el método de formato compuesto no tiene un parámetro <xref:System.IFormatProvider>, se usa el objeto <xref:System.Globalization.NumberFormatInfo> para la referencia cultural del subproceso actual.  
   
-    -   Para un valor de fecha y hora, si se llama a un método de formato compuesto con un argumento <xref:System.IFormatProvider> que no sea nulo, el runtime solicita un objeto <xref:System.Globalization.DateTimeFormatInfo> a su método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. En caso de no poder proporcionar uno, si el valor del argumento es `null`, o si el método de formato compuesto no tiene un parámetro <xref:System.IFormatProvider>, se usa el objeto <xref:System.Globalization.DateTimeFormatInfo> para la referencia cultural del subproceso actual.  
+    - Para un valor de fecha y hora, si se llama a un método de formato compuesto con un argumento <xref:System.IFormatProvider> que no sea nulo, el runtime solicita un objeto <xref:System.Globalization.DateTimeFormatInfo> a su método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. En caso de no poder proporcionar uno, si el valor del argumento es `null`, o si el método de formato compuesto no tiene un parámetro <xref:System.IFormatProvider>, se usa el objeto <xref:System.Globalization.DateTimeFormatInfo> para la referencia cultural del subproceso actual.  
   
-    -   Para objetos de otros tipos, si se llama a un formato compuesto con un argumento <xref:System.IFormatProvider>, su valor se pasa directamente a la implementación <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. En caso contrario, `null` se pasa a la implementación <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
+    - Para objetos de otros tipos, si se llama a un formato compuesto con un argumento <xref:System.IFormatProvider>, su valor se pasa directamente a la implementación <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. En caso contrario, `null` se pasa a la implementación <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
 4. Se llama al método sin parámetros `ToString` del tipo, que reemplaza a <xref:System.Object.ToString?displayProperty=nameWithType> o hereda el comportamiento de su clase base. En este caso, se omite la cadena de formato especificada por el componente *formatString* en el elemento de formato, si estuviera presente.  
   

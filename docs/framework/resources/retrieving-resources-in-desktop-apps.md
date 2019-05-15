@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109803"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650505"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperar recursos de aplicaciones de escritorio
 Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Framework, en principio se deberían empaquetar los recursos de la referencia cultural predeterminada o neutra con el ensamblado principal y, luego, crear un ensamblado satélite independiente para todos los idiomas o referencias culturales que admita la aplicación. Después podrá usar la clase <xref:System.Resources.ResourceManager> como se describe en la siguiente sección para obtener acceso a los recursos con nombre. Si opta por no insertar los recursos en el ensamblado principal y los ensamblados satélite, también puede obtener acceso directamente a los archivos .resources binarios, como se describe en la sección [Recuperar recursos desde archivos .resources](#from_file) , que aparece más adelante en este artículo.  Para recuperar recursos en las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] , consulte [Crear y recuperar recursos en las aplicaciones de la Tienda Windows](https://go.microsoft.com/fwlink/p/?LinkID=241674) en el Centro de desarrollo de Windows.  
@@ -34,9 +34,9 @@ Al trabajar con recursos localizados en aplicaciones de escritorio de .NET Frame
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperar recursos de ensamblados  
  La clase <xref:System.Resources.ResourceManager> proporciona acceso a los recursos en tiempo de ejecución. Puede usar el método <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> para recuperar recursos de cadena y el método <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> o <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> para recuperar recursos que no son de cadena. Cada método tiene dos sobrecargas:  
   
--   Una sobrecarga cuyo parámetro único es una cadena que contiene el nombre del recurso. El método intenta recuperar ese recurso para la referencia cultural del subproceso actual. Para obtener más información, consulte los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
+- Una sobrecarga cuyo parámetro único es una cadena que contiene el nombre del recurso. El método intenta recuperar ese recurso para la referencia cultural del subproceso actual. Para obtener más información, consulte los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%29> .  
   
--   Una sobrecarga que tiene dos parámetros: una cadena que contiene el nombre del recurso y un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural cuyo recurso se debe recuperar. Si no se encuentra un recurso establecido para esa referencia cultural, el Administrador de recursos usa reglas de reserva para recuperar un recurso adecuado. Para obtener más información, consulte los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
+- Una sobrecarga que tiene dos parámetros: una cadena que contiene el nombre del recurso y un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural cuyo recurso se debe recuperar. Si no se encuentra un recurso establecido para esa referencia cultural, el Administrador de recursos usa reglas de reserva para recuperar un recurso adecuado. Para obtener más información, consulte los métodos <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>, <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>y <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> .  
   
  El Administrador de recursos usa el proceso de reserva de recursos para controlar la forma en que la aplicación recupera los recursos específicos de referencia cultural. Para obtener más información, consulte la sección "El proceso de reserva de recursos" de [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md). Para obtener información sobre cómo crear una instancia de un objeto <xref:System.Resources.ResourceManager> , consulte la sección "Instantiating a ResourceManager Object" (Crear una instancia de un objeto ResourceManager) del tema de la clase <xref:System.Resources.ResourceManager> .  
   

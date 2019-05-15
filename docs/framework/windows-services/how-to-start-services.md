@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336842"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591452"
 ---
 # <a name="how-to-start-services"></a>Procedimiento para iniciar servicios
 Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> en la clase de servicio. Normalmente, el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> define el trabajo útil que realizará el servicio. Después de que se inicia un servicio, este permanece activo hasta que se pausa o se detiene manualmente.  
@@ -58,11 +58,11 @@ Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método
   
 1. Abra el **Administrador de control de servicios** llevando a cabo una de las siguientes acciones:  
   
-    -   En Windows XP y 2000 Professional, haga clic en **Mi PC** en el escritorio y, después, haga clic en **Administrar**. En el cuadro de diálogo que aparece, expanda el nodo **Servicios y aplicaciones**.  
+    - En Windows XP y 2000 Professional, haga clic en **Mi PC** en el escritorio y, después, haga clic en **Administrar**. En el cuadro de diálogo que aparece, expanda el nodo **Servicios y aplicaciones**.  
   
          \- o -  
   
-    -   En Windows Server 2003 y Windows 2000 Server, haga clic en **Iniciar**, seleccione **Programas**, haga clic en **Herramientas administrativas** y, a continuación, haga clic en **Servicios**.  
+    - En Windows Server 2003 y Windows 2000 Server, haga clic en **Iniciar**, seleccione **Programas**, haga clic en **Herramientas administrativas** y, a continuación, haga clic en **Servicios**.  
   
         > [!NOTE]
         >  En Windows NT versión 4.0, puede abrir este cuadro de diálogo desde el **Panel de control**.  

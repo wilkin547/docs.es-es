@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615154"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 <a name="top"></a> En el Common Language Runtime (CLR), el recolector de elementos no utilizados actúa como administrador de memoria automático. Proporciona las siguientes ventajas:  
   
--   Permite desarrollar la aplicación sin tener que liberar memoria.  
+- Permite desarrollar la aplicación sin tener que liberar memoria.  
   
--   Asigna con eficacia los objetos del montón administrado.  
+- Asigna con eficacia los objetos del montón administrado.  
   
--   Reclama los objetos que ya no se utilizan, borra la memoria correspondiente y mantiene la memoria disponible para asignaciones futuras. Los objetos administrados obtienen automáticamente contenido limpio desde el principio, de modo que sus constructores no tienen que inicializar todos los campos de datos.  
+- Reclama los objetos que ya no se utilizan, borra la memoria correspondiente y mantiene la memoria disponible para asignaciones futuras. Los objetos administrados obtienen automáticamente contenido limpio desde el principio, de modo que sus constructores no tienen que inicializar todos los campos de datos.  
   
--   Proporciona seguridad de memoria, al asegurarse de que un objeto no pueda utilizar el contenido de otro objeto.  
+- Proporciona seguridad de memoria, al asegurarse de que un objeto no pueda utilizar el contenido de otro objeto.  
   
  En este tema se describen los conceptos básicos de la recolección de elementos no utilizados. 
  
@@ -37,25 +37,25 @@ ms.locfileid: "58826605"
 ## <a name="fundamentals-of-memory"></a>Fundamentos de memoria  
  En la lista siguiente se resumen los conceptos importantes de memoria de CLR.  
   
--   Cada proceso tiene propio espacio de direcciones virtuales independiente. Todos los procesos del equipo comparten la misma memoria física y comparten el archivo de paginación si hay alguno.  
+- Cada proceso tiene propio espacio de direcciones virtuales independiente. Todos los procesos del equipo comparten la misma memoria física y comparten el archivo de paginación si hay alguno.  
   
--   De forma predeterminada, en los equipos de 32 bits, cada proceso tiene un espacio de direcciones virtuales en modo usuario de 2 GB.  
+- De forma predeterminada, en los equipos de 32 bits, cada proceso tiene un espacio de direcciones virtuales en modo usuario de 2 GB.  
   
--   Como desarrollador de aplicaciones, solo trabaja con el espacio de direcciones virtuales y nunca manipula la memoria física directamente. El recolector de elementos no utilizados asigna y libera memoria virtual en el montón administrado.  
+- Como desarrollador de aplicaciones, solo trabaja con el espacio de direcciones virtuales y nunca manipula la memoria física directamente. El recolector de elementos no utilizados asigna y libera memoria virtual en el montón administrado.  
   
      Si está escribiendo código nativo, use funciones de Win32 para trabajar con el espacio de direcciones virtuales. Estas funciones asignan y liberan memoria virtual en pilas nativas.  
   
--   La memoria virtual puede estar en tres estados:  
+- La memoria virtual puede estar en tres estados:  
   
-    -   Libre. El bloque de memoria no tiene ninguna referencia a ella y está disponible para su asignación.  
+    - Libre. El bloque de memoria no tiene ninguna referencia a ella y está disponible para su asignación.  
   
-    -   Reservado. El bloque de memoria está disponible para su uso y no se puede emplear para ninguna otra solicitud de asignación. Sin embargo, no puede almacenar datos en este bloque de memoria hasta que se confirme.  
+    - Reservado. El bloque de memoria está disponible para su uso y no se puede emplear para ninguna otra solicitud de asignación. Sin embargo, no puede almacenar datos en este bloque de memoria hasta que se confirme.  
   
-    -   Confirmado. El bloque de memoria se asigna al almacenamiento físico.  
+    - Confirmado. El bloque de memoria se asigna al almacenamiento físico.  
   
--   El espacio de direcciones virtuales puede llegar a fragmentarse. Esto significa que hay bloques libres, también conocidos como marcadores, en el espacio de direcciones. Cuando se solicita una asignación de memoria virtual, el administrador de memoria virtual tiene que encontrar un único bloque libre que sea suficientemente grande para satisfacer esa solicitud de asignación. Aunque tenga 2 GB de espacio disponible, la asignación que necesita 2 GB será incorrecta a menos que todo ese espacio disponible esté en un único bloque de direcciones.  
+- El espacio de direcciones virtuales puede llegar a fragmentarse. Esto significa que hay bloques libres, también conocidos como marcadores, en el espacio de direcciones. Cuando se solicita una asignación de memoria virtual, el administrador de memoria virtual tiene que encontrar un único bloque libre que sea suficientemente grande para satisfacer esa solicitud de asignación. Aunque tenga 2 GB de espacio disponible, la asignación que necesita 2 GB será incorrecta a menos que todo ese espacio disponible esté en un único bloque de direcciones.  
   
--   Puede quedarse sin memoria si no tiene espacio de direcciones virtuales para reservar o espacio físico para confirmar.  
+- Puede quedarse sin memoria si no tiene espacio de direcciones virtuales para reservar o espacio físico para confirmar.  
   
  El archivo de paginación se usa aunque haya poca necesidad de memoria física (es decir, demanda de memoria física). La primera vez que se necesita mucha memoria física, el sistema operativo debe hacer sitio en la memoria física para almacenar los datos y hace una copia de seguridad en el archivo de paginación de algunos datos que están en la memoria física. Esos datos no se paginan hasta que no se necesitan, por lo que es posible encontrar paginación en situaciones donde haya muy poca necesidad de memoria física. 
  
@@ -65,11 +65,11 @@ ms.locfileid: "58826605"
 ## <a name="conditions-for-a-garbage-collection"></a>Condiciones para la recolección de elementos no utilizados  
  La recolección de elementos no utilizados se produce cuando se cumple alguna de las siguientes condiciones:  
   
--   El sistema tiene poca memoria física. Esto detecta cualquier la notificación memoria insuficiente desde el sistema operativo o de poca memoria indicada por el host.
+- El sistema tiene poca memoria física. Esto detecta cualquier la notificación memoria insuficiente desde el sistema operativo o de poca memoria indicada por el host.
   
--   La memoria que utilizan los objetos asignados del montón administrado supera un umbral aceptable. Este umbral se ajusta continuamente a medida que se ejecuta el proceso.  
+- La memoria que utilizan los objetos asignados del montón administrado supera un umbral aceptable. Este umbral se ajusta continuamente a medida que se ejecuta el proceso.  
   
--   Se llama al método <xref:System.GC.Collect%2A?displayProperty=nameWithType> . En casi todos casos, no es necesario llamar a este método, porque el recolector de elementos no utilizados se ejecuta continuamente. Este método se utiliza principalmente para pruebas y situaciones singulares.  
+- Se llama al método <xref:System.GC.Collect%2A?displayProperty=nameWithType> . En casi todos casos, no es necesario llamar a este método, porque el recolector de elementos no utilizados se ejecuta continuamente. Este método se utiliza principalmente para pruebas y situaciones singulares.  
   
  [Volver al principio](#top)  
   
@@ -100,15 +100,15 @@ ms.locfileid: "58826605"
 ## <a name="generations"></a>Generaciones  
  El montón se organiza en generaciones, para poder administrar objetos de larga y corta duración. La recolección de elementos no utilizados se produce principalmente con la reclamación de objetos de corta duración que suelen ocupar solamente una parte reducida del montón. Hay tres generaciones de objetos en el montón:  
   
--   **Generación 0**. Es la generación más joven y contiene los objetos de corta duración. Un ejemplo de objeto de corta duración es una variable temporal. La recolección de elementos no utilizados se produce con mayor frecuencia en esta generación.  
+- **Generación 0**. Es la generación más joven y contiene los objetos de corta duración. Un ejemplo de objeto de corta duración es una variable temporal. La recolección de elementos no utilizados se produce con mayor frecuencia en esta generación.  
   
      Los objetos recién asignados constituyen una nueva generación de objetos e implícitamente son recolecciones de generación 0, a menos que sean objetos grandes, en cuyo caso entran en el montón de objetos grandes en una recolección de la generación 2.  
   
      La mayoría de los objetos se reclaman para la recolección de elementos no utilizados en la generación 0 y no sobreviven a la generación siguiente.  
   
--   **Generación 1** Esta generación contiene objetos de corta duración y sirve como búfer entre los objetos de corta y larga duración.  
+- **Generación 1** Esta generación contiene objetos de corta duración y sirve como búfer entre los objetos de corta y larga duración.  
   
--   **Generación 2** Esta generación contiene los objetos de larga duración. Un ejemplo de objeto de larga duración es un objeto de una aplicación de servidor que contiene datos estáticos que están activos mientras dura el proceso.  
+- **Generación 2** Esta generación contiene los objetos de larga duración. Un ejemplo de objeto de larga duración es un objeto de una aplicación de servidor que contiene datos estáticos que están activos mientras dura el proceso.  
   
  Las recolecciones de elementos no utilizados se producen en generaciones concretas según lo permitan las condiciones. La recolección de una generación significa recolectar los objetos de esa generación y de todas las generaciones anteriores. Una recolección de elementos no utilizados de la generación 2 se denomina también recolección de elementos no utilizados completa, porque reclama todos los objetos de todas las generaciones (es decir, todos los objetos del montón administrado).  
   
@@ -141,11 +141,11 @@ ms.locfileid: "58826605"
 ## <a name="what-happens-during-a-garbage-collection"></a>Lo que sucede durante la recolección de elementos no utilizados  
  Una recolección de elementos no utilizados tiene las siguientes fases:  
   
--   Una fase de marcado que busca y crea una lista de todos los objetos activos.  
+- Una fase de marcado que busca y crea una lista de todos los objetos activos.  
   
--   Una fase de reubicación, que actualiza las referencias a los objetos que se van a compactar.  
+- Una fase de reubicación, que actualiza las referencias a los objetos que se van a compactar.  
   
--   Una fase de compactación, que reclama el espacio ocupado por los objetos muertos y compacta los objetos supervivientes. En la fase de compactación se mueven los objetos que han sobrevivido a una recolección de elementos no utilizados hacia el extremo más antiguo del segmento.  
+- Una fase de compactación, que reclama el espacio ocupado por los objetos muertos y compacta los objetos supervivientes. En la fase de compactación se mueven los objetos que han sobrevivido a una recolección de elementos no utilizados hacia el extremo más antiguo del segmento.  
   
      Debido a que las recolecciones de la generación 2 pueden ocupar varios segmentos, los objetos que se promueven a la generación 2 se pueden mover a un segmento anterior. Los supervivientes de las generaciones 1 y 2 se pueden mover a un segmento diferente, porque se promueven a la generación 2.  
   
@@ -153,11 +153,11 @@ ms.locfileid: "58826605"
   
  El recolector de elementos no utilizados utiliza la siguiente información para determinar si los objetos están activos:  
   
--   **Raíces de la pila**. Variables de pila proporcionadas por el compilador Just-In-Time (JIT) y el rastreador de pila. Tenga en cuenta que las optimizaciones de JIT pueden prolongar o acortar regiones de código en las que se notifican variables de pila al recolector de elementos no utilizados.
+- **Raíces de la pila**. Variables de pila proporcionadas por el compilador Just-In-Time (JIT) y el rastreador de pila. Tenga en cuenta que las optimizaciones de JIT pueden prolongar o acortar regiones de código en las que se notifican variables de pila al recolector de elementos no utilizados.
   
--   **Identificadores de recolección de elementos no utilizados**. Identificadores que señalan a objetos administrados y que se pueden asignar mediante código de usuario o mediante Common Language Runtime.  
+- **Identificadores de recolección de elementos no utilizados**. Identificadores que señalan a objetos administrados y que se pueden asignar mediante código de usuario o mediante Common Language Runtime.  
   
--   **Datos estáticos**. Objetos estáticos de dominios de aplicación que podrían hacer referencia a otros objetos. Cada dominio de aplicación realiza el seguimiento de sus objetos estáticos.  
+- **Datos estáticos**. Objetos estáticos de dominios de aplicación que podrían hacer referencia a otros objetos. Cada dominio de aplicación realiza el seguimiento de sus objetos estáticos.  
   
  Antes de que iniciarse una recolección de elementos no utilizados, todos los subprocesos administrados se suspenden salvo el subproceso que activó la recolección de elementos no utilizados.  
   
@@ -182,13 +182,13 @@ Subproceso que desencadena una recolección de elementos no utilizados
 ## <a name="workstation-and-server-garbage-collection"></a>Recolección de elementos no utilizados de estación de trabajo y de servidor  
  El recolector de elementos no utilizados se ajusta automáticamente y puede funcionar en gran variedad de escenarios. Puede usar un valor del archivo de configuración para establecer el tipo de recolección de elementos no utilizados en función de las características de la carga de trabajo. El CLR proporciona los tipos siguientes de recolección de elementos no utilizados:  
   
--   Recolección de elementos no utilizados de estación de trabajo, para las estaciones de trabajo cliente y los equipos independientes. Se trata de la configuración predeterminada para el [elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) del esquema de configuración del tiempo de ejecución.  
+- Recolección de elementos no utilizados de estación de trabajo, para las estaciones de trabajo cliente y los equipos independientes. Se trata de la configuración predeterminada para el [elemento \<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) del esquema de configuración del tiempo de ejecución.  
   
      La recolección de elementos no utilizados de estación de trabajo puede ser simultánea o no simultánea. La recolección simultánea de elementos no utilizados permite que los subprocesos administrados continúen con sus operaciones durante una recolección de elementos no utilizados.  
   
      A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la recolección de elementos no utilizados en segundo plano reemplaza la recolección simultánea de elementos no utilizados.  
   
--   Recolección de elementos no utilizados de servidor, diseñada para las aplicaciones de servidor que necesitan un alto nivel de rendimiento y escalabilidad. La recolección de elementos no utilizados de servidor puede ser no simultánea o en segundo plano.  
+- Recolección de elementos no utilizados de servidor, diseñada para las aplicaciones de servidor que necesitan un alto nivel de rendimiento y escalabilidad. La recolección de elementos no utilizados de servidor puede ser no simultánea o en segundo plano.  
   
  En las siguientes ilustraciones se muestran los subprocesos dedicados que realizan la recolección de elementos no utilizados en un servidor.  
   
@@ -205,23 +205,23 @@ Recolección de elementos no utilizados del servidor
 ### <a name="comparing-workstation-and-server-garbage-collection"></a>Comparación de la recolección de elementos no utilizados de estación de trabajo y de servidor  
  Estas son algunas consideraciones sobre subprocesos y rendimiento para la recolección de elementos no utilizados de estación de trabajo:  
   
--   La recolección se produce en el subproceso del usuario que desencadenó la recolección de elementos no utilizados y permanece en la misma prioridad. Como los subprocesos de usuario suelen ejecutarse con prioridad normal, el recolector de elementos no utilizados (que se ejecuta en un subproceso de prioridad normal) debe competir con otros subprocesos por el tiempo de la CPU.  
+- La recolección se produce en el subproceso del usuario que desencadenó la recolección de elementos no utilizados y permanece en la misma prioridad. Como los subprocesos de usuario suelen ejecutarse con prioridad normal, el recolector de elementos no utilizados (que se ejecuta en un subproceso de prioridad normal) debe competir con otros subprocesos por el tiempo de la CPU.  
   
      Los subprocesos que ejecutan código nativo no se suspenden.  
   
--   La recolección de elementos no utilizados de estación de trabajo siempre se utiliza en un equipo que tiene un solo procesador, sin tener en cuenta el valor de [\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md). Si especifica la recolección de elementos no utilizados de servidor, el CLR usa la recolección de elementos no utilizados de estación de trabajo con la simultaneidad deshabilitada.  
+- La recolección de elementos no utilizados de estación de trabajo siempre se utiliza en un equipo que tiene un solo procesador, sin tener en cuenta el valor de [\<gcServer>](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md). Si especifica la recolección de elementos no utilizados de servidor, el CLR usa la recolección de elementos no utilizados de estación de trabajo con la simultaneidad deshabilitada.  
   
  Estas son algunas consideraciones sobre subprocesos y rendimiento para la recolección de elementos no utilizados de servidor:  
   
--   La recolección se produce en varios subprocesos dedicados que se ejecutan en el nivel de prioridad `THREAD_PRIORITY_HIGHEST` .  
+- La recolección se produce en varios subprocesos dedicados que se ejecutan en el nivel de prioridad `THREAD_PRIORITY_HIGHEST` .  
   
--   Para cada CPU se proporciona un montón y un subproceso dedicado para realizar recolección de elementos no utilizados y, al mismo tiempo, se recolectan los montones. Cada montón contiene un montón de objetos pequeños y un montón de objetos grandes; a todos ellos se puede tener acceso mediante código de usuario. Los objetos de montones diferentes pueden hacerse referencia a entre sí.  
+- Para cada CPU se proporciona un montón y un subproceso dedicado para realizar recolección de elementos no utilizados y, al mismo tiempo, se recolectan los montones. Cada montón contiene un montón de objetos pequeños y un montón de objetos grandes; a todos ellos se puede tener acceso mediante código de usuario. Los objetos de montones diferentes pueden hacerse referencia a entre sí.  
   
--   Dado que varios subprocesos de recolección de elementos no utilizados funcionan juntos, la recolección de elementos no utilizados de servidor es más rápida que la de estación de trabajo, con un montón del mismo tamaño.  
+- Dado que varios subprocesos de recolección de elementos no utilizados funcionan juntos, la recolección de elementos no utilizados de servidor es más rápida que la de estación de trabajo, con un montón del mismo tamaño.  
   
--   La recolección de elementos no utilizados de servidor suele tener segmentos de mayor tamaño. Sin embargo, tenga en cuenta que esto es solo una generalización: el tamaño de los segmentos es específico de la implementación y está sujeto a cambios. No debe hacer ninguna suposición sobre el tamaño de los segmentos asignados por el recolector de elementos no utilizados al optimizar la aplicación.  
+- La recolección de elementos no utilizados de servidor suele tener segmentos de mayor tamaño. Sin embargo, tenga en cuenta que esto es solo una generalización: el tamaño de los segmentos es específico de la implementación y está sujeto a cambios. No debe hacer ninguna suposición sobre el tamaño de los segmentos asignados por el recolector de elementos no utilizados al optimizar la aplicación.  
   
--   La recolección de elementos no utilizados de servidor puede consumir gran cantidad de recursos. Por ejemplo, si hay 12 procesos que se ejecutan en un equipo con 4 procesadores, habrá 48 subprocesos de recolección de elementos no utilizados dedicados, en caso de que todos utilicen la recolección de elementos no utilizados de servidor. En una situación de carga de memoria elevada, si todos los procesos empiezan a realizar la recolección de elementos no utilizados, el recolector de elementos no utilizados tendrá 48 subprocesos que programar.  
+- La recolección de elementos no utilizados de servidor puede consumir gran cantidad de recursos. Por ejemplo, si hay 12 procesos que se ejecutan en un equipo con 4 procesadores, habrá 48 subprocesos de recolección de elementos no utilizados dedicados, en caso de que todos utilicen la recolección de elementos no utilizados de servidor. En una situación de carga de memoria elevada, si todos los procesos empiezan a realizar la recolección de elementos no utilizados, el recolector de elementos no utilizados tendrá 48 subprocesos que programar.  
   
  Si se ejecutan centenares de instancias de una aplicación, puede ser más conveniente utilizar la recolección de elementos no utilizados de estación de trabajo con la recolección simultánea de elementos no utilizados deshabilitada. De este modo se realizarán menos cambios de contexto, lo que puede mejorar el rendimiento.  
   

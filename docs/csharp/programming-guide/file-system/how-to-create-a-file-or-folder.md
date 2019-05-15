@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595640"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procedimiento Crear archivos o carpetas (Guía de programación de C#)
 Puede crear una carpeta en el equipo mediante programación, crear una subcarpeta, crear un archivo en la subcarpeta y escribir datos en el archivo.  
@@ -25,7 +25,7 @@ Puede crear una carpeta en el equipo mediante programación, crear una subcarpet
   
  Al realizar los siguientes cambios en el ejemplo, puede especificar diferentes resultados en función de si ya existe un archivo con un nombre determinado. Si no existe ese archivo, el código crea uno. Si ese archivo ya existe, el código anexa datos a ese archivo.  
   
--   Especifique un nombre de archivo no aleatorio.  
+- Especifique un nombre de archivo no aleatorio.  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ Puede crear una carpeta en el equipo mediante programación, crear una subcarpet
     string fileName = "MyNewFile.txt";  
     ```  
   
--   Sustituya la instrucción `if`-`else` por la instrucción `using` en el código siguiente.  
+- Sustituya la instrucción `if`-`else` por la instrucción `using` en el código siguiente.  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ Puede crear una carpeta en el equipo mediante programación, crear una subcarpet
   
  Las condiciones siguientes pueden provocar una excepción:  
   
--   El nombre de la carpeta tiene un formato incorrecto. Por ejemplo, contiene caracteres no válidos o solo tiene espacios en blanco (clase <xref:System.ArgumentException>). Use la clase <xref:System.IO.Path> para crear nombres de ruta válidos.  
+- El nombre de la carpeta tiene un formato incorrecto. Por ejemplo, contiene caracteres no válidos o solo tiene espacios en blanco (clase <xref:System.ArgumentException>). Use la clase <xref:System.IO.Path> para crear nombres de ruta válidos.  
   
--   La carpeta principal de la que se va a crear es de solo lectura (clase <xref:System.IO.IOException>).  
+- La carpeta principal de la que se va a crear es de solo lectura (clase <xref:System.IO.IOException>).  
   
--   El nombre de la carpeta es `null` (clase <xref:System.ArgumentNullException>).  
+- El nombre de la carpeta es `null` (clase <xref:System.ArgumentNullException>).  
   
--   El nombre de la carpeta es demasiado largo (clase <xref:System.IO.PathTooLongException>).  
+- El nombre de la carpeta es demasiado largo (clase <xref:System.IO.PathTooLongException>).  
   
--   El nombre de la carpeta es solo un carácter de dos puntos, ":" (clase <xref:System.IO.PathTooLongException>).  
+- El nombre de la carpeta es solo un carácter de dos puntos, ":" (clase <xref:System.IO.PathTooLongException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  En los casos de confiabilidad parcial, es posible que se devuelva una instancia de la clase <xref:System.Security.SecurityException>.  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7031d34916c520f52550d215a1a8e62880209c87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336140"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590036"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Cómo quitar atributos de un nodo de elementos en el DOM
 Existen muchas formas de quitar atributos. Una de estas técnicas consiste en quitarlos de la colección de atributos. Para ello, hay que realizar los siguientes pasos:  
@@ -19,19 +19,19 @@ Existen muchas formas de quitar atributos. Una de estas técnicas consiste en qu
   
 2. Quite el atributo de la colección de atributos utilizando uno de estos tres métodos:  
   
-    -   Utilice <xref:System.Xml.XmlAttributeCollection.Remove%2A> para quitar un atributo específico.  
+    - Utilice <xref:System.Xml.XmlAttributeCollection.Remove%2A> para quitar un atributo específico.  
   
-    -   Utilice <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> para quitar todos los atributos de la colección y deje el elemento sin atributos.  
+    - Utilice <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> para quitar todos los atributos de la colección y deje el elemento sin atributos.  
   
-    -   Utilice <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> para quitar un atributo de la colección de atributos utilizando su número de índice.  
+    - Utilice <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> para quitar un atributo de la colección de atributos utilizando su número de índice.  
   
  Los siguientes métodos sirven para quitar atributos del nodo de elementos.  
   
--   Utilice <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> para quitar la colección de atributos.  
+- Utilice <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> para quitar la colección de atributos.  
   
--   Utilice <xref:System.Xml.XmlElement.RemoveAttribute%2A> para quitar un solo atributo por el nombre de la colección.  
+- Utilice <xref:System.Xml.XmlElement.RemoveAttribute%2A> para quitar un solo atributo por el nombre de la colección.  
   
--   Utilice <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> para quitar un solo atributo por el número de índice de la colección.  
+- Utilice <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> para quitar un solo atributo por el número de índice de la colección.  
   
  Otra alternativa es obtener el elemento, obtener el atributo de la colección de atributos y quitar directamente el nodo de atributos. Para obtener el atributo de la colección de atributos, puede utilizar un nombre, `XmlAttribute attr = attrs["attr_name"];`, un índice `XmlAttribute attr = attrs[0];` o certificar por completo el nombre con el espacio de nombres `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`.  
   
