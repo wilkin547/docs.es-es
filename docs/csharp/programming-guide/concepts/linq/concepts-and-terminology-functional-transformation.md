@@ -2,12 +2,12 @@
 title: Conceptos y terminología (transformación funcional) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: 83c2f531f5747047c60ddbcedabc0747641d80c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878ecdbbc4155ca5ca145480ae610701eed9a0c8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583368"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597826"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Conceptos y terminología (transformación funcional) (C#)
 Este tema presenta los conceptos y la terminología en relación con las transformaciones funcionales. La aproximación que utiliza la transformación funcional para transformar datos permite obtener un código que normalmente se escribe más rápido, es más expresivo y fácil de mantener y depurar, si lo comparamos con la programación imperativa, que es más tradicional.  
@@ -17,9 +17,9 @@ Este tema presenta los conceptos y la terminología en relación con las transfo
 ## <a name="what-is-pure-functional-transformation"></a>¿En qué consiste la transformación funcional pura?  
  En la *transformación funcional pura*, existe un conjunto de funciones, llamadas *funciones puras*, que definen cómo transformar un conjunto de datos estructurados de su forma original a otra forma. La palabra "pura" indica que las funciones *admiten composición*, lo que significa que son:  
   
--   *Autocontenidas*, de forma que se pueden ordenar o reorganizar libremente sin preocuparse por las dependencias que puedan tener con el resto del programa. Las transformaciones puras no tienen conocimiento sobre su entorno ni ningún efecto sobre éste. Es decir, las funciones que se usan en la transformación no tienen *efectos secundarios*.  
+- *Autocontenidas*, de forma que se pueden ordenar o reorganizar libremente sin preocuparse por las dependencias que puedan tener con el resto del programa. Las transformaciones puras no tienen conocimiento sobre su entorno ni ningún efecto sobre éste. Es decir, las funciones que se usan en la transformación no tienen *efectos secundarios*.  
   
--   *Sin estado*, lo que significa que si se ejecuta la misma función o un conjunto específico de funciones en los mismos datos de entrada, el resultado siempre será el mismo. Las transformaciones puras no recuerdan sus ejecuciones anteriores.  
+- *Sin estado*, lo que significa que si se ejecuta la misma función o un conjunto específico de funciones en los mismos datos de entrada, el resultado siempre será el mismo. Las transformaciones puras no recuerdan sus ejecuciones anteriores.  
   
 > [!IMPORTANT]
 >  Para el resto de este tutorial, el término "función pura" se utilizará en sentido general para señalar una técnica de programación y no una característica específica del lenguaje.  

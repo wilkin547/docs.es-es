@@ -9,12 +9,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: 93cf9844a1c5b9d6eb052c94c2309cbff1f4ad56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab088e3f34f3f03be2073864a440006259fe5679
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612389"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591332"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Procedimiento para enlazar un control de formularios Windows Forms a un tipo
 Al crear controles que interactúan con datos, a veces necesitará enlazar un control a un tipo en lugar de a un objeto. Estas situaciones se producen especialmente en tiempo de diseño, cuando puede que los datos no estén disponibles pero los controles enlazados a datos necesitan mostrar la información de una interfaz pública del tipo. Por ejemplo, puede enlazar un control <xref:System.Windows.Forms.DataGridView> a un objeto expuesto por un servicio Web y quiere que el control <xref:System.Windows.Forms.DataGridView> etiquete sus columnas en tiempo de diseño con los nombres de miembro de un tipo personalizado.  
@@ -31,8 +31,6 @@ Al crear controles que interactúan con datos, a veces necesitará enlazar un co
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

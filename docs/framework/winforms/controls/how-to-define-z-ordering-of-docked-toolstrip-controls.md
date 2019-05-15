@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: b7643c9599ceeba08cbe9f5580739043f6d89edc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 514c9dd1c91adcadf6f5d383ba734886dec3151d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666324"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591904"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Procedimiento para definir el orden Z de los controles ToolStrip acoplados
 Para colocar correctamente un control <xref:System.Windows.Forms.ToolStrip> con acoplamiento, debe colocar de forma adecuada el control en el orden z del formulario.  
@@ -39,8 +39,6 @@ Para colocar correctamente un control <xref:System.Windows.Forms.ToolStrip> con 
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System.Design, System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

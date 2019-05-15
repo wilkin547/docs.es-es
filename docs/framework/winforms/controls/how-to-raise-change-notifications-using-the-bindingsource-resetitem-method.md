@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], detecting changes
 - change notifications
 ms.assetid: ab8b4096-37ff-4e30-aabc-de79a2f2e972
-ms.openlocfilehash: bb5c05d22dd9fa47f4d1abe46acccdee19dfa38e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 39beb5c7162fb01a51360330216687c158ff433c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662311"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583714"
 ---
 # <a name="how-to-raise-change-notifications-using-the-bindingsource-resetitem-method"></a>Procedimiento para provocar notificaciones de cambios mediante el método ResetItem de BindingSource
 Algunos orígenes de datos para sus controles no provocan notificaciones de cambios cuando se cambian, agregan o eliminan elementos. Con el componente <xref:System.Windows.Forms.BindingSource>, puede enlazar a tales orígenes de datos y provocar una notificación de cambios desde el código.  
@@ -33,8 +33,6 @@ Algunos orígenes de datos para sus controles no provocan notificaciones de camb
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

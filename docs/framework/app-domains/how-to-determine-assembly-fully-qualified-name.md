@@ -12,26 +12,26 @@ helpviewer_keywords:
 ms.assetid: 009dae23-e1f6-4a64-9a9a-32e4c34802b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60a4ef1f5bde121d5773925437307b2749aa7282
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2f1dbfde5e13d771f82ab1542e02de4c72b68678
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097543"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607742"
 ---
 # <a name="how-to-determine-an-assemblys-fully-qualified-name"></a>Procedimiento Determinar el nombre completo de un ensamblado
 Para conocer el nombre completo de un ensamblado de la caché global de ensamblados, use la herramienta Caché global de ensamblados ([Gacutil.exe](../../../docs/framework/tools/gacutil-exe-gac-tool.md)). Vea [Cómo: Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md).  
   
  En el caso de los ensamblados que no están en la caché global de ensamblados, puede obtener el nombre completo del ensamblado de varias formas: puede usar código para enviar la información a la consola o a una variable, o puede usar [Ildasm.exe (Desensamblador de MSIL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar los metadatos del ensamblado, que contienen el nombre completo.  
   
--   Si el ensamblado ya está cargado por la aplicación, puede recuperar el valor de la propiedad <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> para obtener el nombre completo. Puede usar este enfoque tanto si el ensamblado está en la GAC como si no. En este ejemplo se ilustra.  
+- Si el ensamblado ya está cargado por la aplicación, puede recuperar el valor de la propiedad <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> para obtener el nombre completo. Puede usar este enfoque tanto si el ensamblado está en la GAC como si no. En este ejemplo se ilustra.  
   
--   Si conoce la ruta del sistema de archivos del ensamblado, puede llamar al método estático (`Shared` en Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> para obtener el nombre completo del ensamblado. Este es un ejemplo sencillo.  
+- Si conoce la ruta del sistema de archivos del ensamblado, puede llamar al método estático (`Shared` en Visual Basic) <xref:System.Reflection.AssemblyName.GetAssemblyName%2A?displayProperty=nameWithType> para obtener el nombre completo del ensamblado. Este es un ejemplo sencillo.  
   
      [!code-csharp[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/cs/getassemblyname1.cs#1)]
      [!code-vb[System.Reflection.AssemblyName.GetAssemblyName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.reflection.assemblyname.getassemblyname/vb/getassemblyname1.vb#1)]  
   
--   Puede usar [Ildasm.exe (Desensamblador de MSIL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar los metadatos del ensamblado, que contiene el nombre completo.  
+- Puede usar [Ildasm.exe (Desensamblador de MSIL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar los metadatos del ensamblado, que contiene el nombre completo.  
   
  Para más información sobre el establecimiento de atributos del ensamblado como la versión, la referencia cultural y el nombre de ensamblado, vea [Setting Assembly Attributes (Configurar atributos de ensamblados)](../../../docs/framework/app-domains/set-assembly-attributes.md). Para más información sobre cómo poner un nombre seguro a un ensamblado, vea [Creating and Using Strong-Named Assemblies](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) (Crear y utilizar ensamblados con nombre seguro).  
   

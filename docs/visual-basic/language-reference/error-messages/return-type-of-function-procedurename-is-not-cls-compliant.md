@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40027
 ms.assetid: 33c088c7-48e7-400c-920e-6d8967e1f3fc
-ms.openlocfilehash: 797dbf7f6203b7f85846dc6596751c4298e96481
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d6ac07b653a27a7c4c5534f441b9d673592124c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593299"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592261"
 ---
 # <a name="return-type-of-function-procedurename-is-not-cls-compliant"></a>Tipo de función de valor devuelto '\<NombreDeProcedimiento >' no es conforme a CLS
 Un `Function` procedimiento está marcado como `<CLSCompliant(True)>` pero devuelve un tipo que está marcado como `<CLSCompliant(False)>`, no está marcado o no cumple los requisitos porque es un tipo no conforme.  
@@ -43,4 +43,4 @@ Un `Function` procedimiento está marcado como `<CLSCompliant(True)>` pero devue
   
 - Si el `Function` procedimiento debe ser conforme a CLS, cambie el tipo de valor devuelto al tipo conforme a CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
   
-- Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Por ejemplo, `int` suele ser de 16 bits en otros entornos. Si va a devolver un entero de 16 bits a esos componentes, declárelo como `Short` en lugar de `Integer` en el código administrado de Visual Basic.
+- Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos diferente que en .NET Framework. Por ejemplo, `int` suele ser de 16 bits en otros entornos. Si va a devolver un entero de 16 bits a esos componentes, declárelo como `Short` en lugar de `Integer` en el código administrado de Visual Basic.

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc48a8f79aa04892c514917da00b8fd6489695b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774834"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593085"
 ---
 # <a name="-win32icon"></a>-win32icon
 Inserta un archivo .ico en el archivo de salida. Este archivo .ico representa el archivo de salida en **Explorador de archivos**.  
@@ -31,7 +31,7 @@ Inserta un archivo .ico en el archivo de salida. Este archivo .ico representa el
 ## <a name="remarks"></a>Comentarios  
  Puede crear un archivo .ico con el compilador de recursos de Microsoft Windows (RC). El compilador de recursos se invoca cuando se compila un programa de Visual C++; se crea un archivo .ico en el archivo .rc. El `-win32icon` y `-win32resource` opciones son mutuamente excluyentes.  
   
- Consulte [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para hacer referencia a un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] archivo de recursos, o [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para adjuntar un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] archivo de recursos. Consulte [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) para importar un archivo. res.  
+ Consulte [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para hacer referencia a un archivo de recursos de .NET Framework, o [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para adjuntar un archivo de recursos de .NET Framework. Consulte [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) para importar un archivo. res.  
   
 |Para establecer - win32icon en el IDE de Visual Studio|  
 |---|  

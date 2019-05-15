@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 4f3dc61a6e78b0fb2135d4132c53e7efc22447a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c3c70b24de5163ca004b41a21017205a19d9730
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789056"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583376"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 Hace que el compilador no hacen referencia automáticamente a las bibliotecas estándar.  
@@ -23,7 +23,7 @@ Hace que el compilador no hacen referencia automáticamente a las bibliotecas es
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- El `-nostdlib` opción quita la referencia automática al ensamblado System.dll y evita que el compilador leer el archivo Vbc.rsp. El archivo Vbc.rsp, que se encuentra en el mismo directorio que el archivo Vbc.exe, hace referencia a la frecuente [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ensamblados y las importaciones del `System` y `Microsoft.VisualBasic` espacios de nombres.  
+ El `-nostdlib` opción quita la referencia automática al ensamblado System.dll y evita que el compilador leer el archivo Vbc.rsp. El archivo Vbc.rsp, que se encuentra en el mismo directorio que el archivo Vbc.exe, hace referencia a los ensamblados de .NET Framework usados e importa el `System` y `Microsoft.VisualBasic` espacios de nombres.  
   
 > [!NOTE]
 >  Los ensamblados de Mscorlib.dll y Microsoft.VisualBasic.dll siempre se hace referencia.  

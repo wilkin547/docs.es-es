@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033376"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583501"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integración de System.Transactions con SQL Server
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 2.0 incorporó un nuevo marco de trabajo de transacciones al que se puede obtener acceso a través del espacio de nombres <xref:System.Transactions> . Este marco de trabajo expone las transacciones de tal forma que se integra completamente en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], incluyendo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+.NET Framework versión 2.0 introdujo un nuevo marco de transacciones que se puede acceder a través de la <xref:System.Transactions> espacio de nombres. Este marco de trabajo expone las transacciones de manera que está totalmente integrado en .NET Framework, incluidos [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Además de las mejoras de programación, <xref:System.Transactions> y [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] pueden funcionar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
   
  A partir de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> admite transacciones promocionadas al trabajar con SQL Server. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Las transacciones promocionadas son automáticas y no requieran ninguna intervención del programador.  
   
- Las transacciones promocionadas solo están disponibles cuando se usa el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proveedor de datos para SQL Server (`SqlClient`) con SQL Server.  
+ Las transacciones promocionadas solo están disponibles cuando se usa el proveedor de datos de .NET Framework para SQL Server (`SqlClient`) con SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Creación de transacciones promocionadas  
- El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proveedor para SQL Server ofrece compatibilidad con transacciones promocionadas, que se controlan a través de las clases en el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> espacio de nombres. Las transacciones promocionadas optimizan las transacciones distribuidas ya que aplazan la creación de las mismas hasta que es necesario. Si solo se necesita un administrador de recursos, no tiene lugar ninguna transacción distribuida.  
+ El proveedor de .NET Framework para SQL Server proporciona compatibilidad con transacciones promocionadas, que se controlan a través de las clases de .NET Framework <xref:System.Transactions> espacio de nombres. Las transacciones promocionadas optimizan las transacciones distribuidas ya que aplazan la creación de las mismas hasta que es necesario. Si solo se necesita un administrador de recursos, no tiene lugar ninguna transacción distribuida.  
   
 > [!NOTE]
 >  En un caso que no es de plena confianza, se requiere <xref:System.Transactions.DistributedTransactionPermission> cuando la transacción se promueve al nivel de transacción distribuida.  

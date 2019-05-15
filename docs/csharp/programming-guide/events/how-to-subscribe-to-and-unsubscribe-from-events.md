@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306604"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595990"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Procedimiento Suscribir y cancelar la suscripción a eventos (Guía de programación de C#)
 La suscripción a un evento publicado por otra clase se realiza cuando quiere escribir código personalizado al que se llama cuando se produce ese evento. Por ejemplo, puede suscribirse al evento `click` de un botón para que la aplicación realice alguna operación cuando el usuario haga clic en el botón.  
@@ -74,7 +74,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Para suscribirse a eventos mediante un método anónimo  
   
--   Si no tiene que cancelar la suscripción a un evento más adelante, puede usar el operador de suma y asignación (`+=`) para asociar un método anónimo al evento. En el ejemplo siguiente, se presupone que un objeto denominado `publisher` tiene un evento denominado `RaiseCustomEvent` y que se ha definido una clase `CustomEventArgs` para proporcionar algún tipo de información específica del evento. Observe que la clase de suscriptor necesita una referencia a `publisher` para suscribirse a sus eventos.  
+- Si no tiene que cancelar la suscripción a un evento más adelante, puede usar el operador de suma y asignación (`+=`) para asociar un método anónimo al evento. En el ejemplo siguiente, se presupone que un objeto denominado `publisher` tiene un evento denominado `RaiseCustomEvent` y que se ha definido una clase `CustomEventArgs` para proporcionar algún tipo de información específica del evento. Observe que la clase de suscriptor necesita una referencia a `publisher` para suscribirse a sus eventos.  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ La suscripción a un evento publicado por otra clase se realiza cuando quiere es
   
 #### <a name="to-unsubscribe-from-an-event"></a>Para cancelar la suscripción a un evento  
   
--   Use el operador de resta y asignación (`-=`) para cancelar la suscripción a un evento:  
+- Use el operador de resta y asignación (`-=`) para cancelar la suscripción a un evento:  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0da874c74562822d521d4a44782d9372cd62f90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751009"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588652"
 ---
 # <a name="structured-navigation-overview"></a>Información general sobre la navegación estructurada
 Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, o un <xref:System.Windows.Navigation.NavigationWindow> se compone de páginas que se pueden identificar por módulo [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] y navegar mediante hipervínculos. La estructura de páginas y las formas en que se puede navegar por ellas, tal como se define mediante hipervínculos, se conoce como topología de navegación. Esta topología se adapta a diversos tipos de aplicaciones, especialmente a aquéllas que navegan por documentos. Con estas aplicaciones, el usuario puede navegar de una página a otra sin necesidad de saber nada sobre la otra.  
@@ -70,7 +70,7 @@ Contenido que puede hospedarse en una [!INCLUDE[TLA#tla_xbap](../../../../includ
   
  La declaración de un <xref:System.Windows.Navigation.PageFunction%601> es similar a la declaración de un <xref:System.Windows.Controls.Page> con la adición de los argumentos de tipo. Como puede ver en el ejemplo de código, se especifican los argumentos de tipo en el marcado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], con el atributo `x:TypeArguments`, y en el código subyacente, con la sintaxis del argumento de tipo genérico estándar.  
   
- No tiene que usar sólo clases [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] como argumentos de tipo. Un <xref:System.Windows.Navigation.PageFunction%601> podría invocarse para recopilar datos específicos de dominio que se resuman como un tipo personalizado. El código siguiente muestra cómo usar un tipo personalizado como un argumento de tipo para un <xref:System.Windows.Navigation.PageFunction%601>.  
+ No tienes que usar solo las clases de .NET Framework como argumentos de tipo. Un <xref:System.Windows.Navigation.PageFunction%601> podría invocarse para recopilar datos específicos de dominio que se resuman como un tipo personalizado. El código siguiente muestra cómo usar un tipo personalizado como un argumento de tipo para un <xref:System.Windows.Navigation.PageFunction%601>.  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  

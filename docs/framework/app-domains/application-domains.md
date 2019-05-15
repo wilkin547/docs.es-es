@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd6004bce42a3617c9b7de940336de0fb03c8cc9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: fe56c0ec3b8a5a150a999e7de98f283436a0ba9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674586"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607905"
 ---
 # <a name="application-domains"></a>Dominios de aplicación
 
@@ -41,18 +41,18 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  Éstas son las ventajas del aislamiento que ofrecen los dominios de aplicación:  
   
--   Los errores de una aplicación no pueden afectar a otras aplicaciones. Debido a que el código seguro no puede generar problemas de memoria, el uso de dominios de aplicación garantiza que el código que se ejecute en un dominio no afectará a las demás aplicaciones del proceso.  
+- Los errores de una aplicación no pueden afectar a otras aplicaciones. Debido a que el código seguro no puede generar problemas de memoria, el uso de dominios de aplicación garantiza que el código que se ejecute en un dominio no afectará a las demás aplicaciones del proceso.  
   
--   Es posible detener aplicaciones concretas sin detener todo el proceso. El uso de dominios de aplicación permite descargar el código que se ejecuta en una sola aplicación.  
+- Es posible detener aplicaciones concretas sin detener todo el proceso. El uso de dominios de aplicación permite descargar el código que se ejecuta en una sola aplicación.  
   
     > [!NOTE]
     >  No se puede descargar ensamblados o tipos por separado. Sólo se puede descargar un dominio completo.  
   
--   El código que se ejecuta en una aplicación no puede tener acceso directo al código o a los recursos de otra aplicación. Common Language Runtime impone este aislamiento al impedir que se realicen llamadas directas entre objetos de dominios de aplicación diferentes. Los objetos que se pasan entre dominios se copian o se obtiene acceso a ellos mediante proxy. Si el objeto se copia, la llamada al objeto es local. En otras palabras, el llamador y el objeto al que se hace referencia se encuentran en el mismo dominio de aplicación. Si se tiene acceso al objeto a través de un proxy, la llamada al objeto es remota. En este caso, el llamador y el objeto al que se hace referencia se encuentran en dominios de aplicación diferentes. En las llamadas entre dominios se utiliza la misma infraestructura de llamada remota que en las llamadas entre dos procesos o entre dos equipos. En consecuencia, los metadatos del objeto al que se hace referencia deben estar disponibles para ambos dominios de aplicación a fin de que la llamada al método no provoque un error en la compilación JIT. Si el dominio que llama no tiene acceso a los metadatos del objeto al que se está llamando, se podría producir un error de compilación con una excepción del tipo <xref:System.IO.FileNotFoundException>. Para obtener más información, consulta [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). El objeto es quien decide el mecanismo para determinar cómo se puede obtener acceso a los objetos entre dominios. Para obtener más información, vea <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+- El código que se ejecuta en una aplicación no puede tener acceso directo al código o a los recursos de otra aplicación. Common Language Runtime impone este aislamiento al impedir que se realicen llamadas directas entre objetos de dominios de aplicación diferentes. Los objetos que se pasan entre dominios se copian o se obtiene acceso a ellos mediante proxy. Si el objeto se copia, la llamada al objeto es local. En otras palabras, el llamador y el objeto al que se hace referencia se encuentran en el mismo dominio de aplicación. Si se tiene acceso al objeto a través de un proxy, la llamada al objeto es remota. En este caso, el llamador y el objeto al que se hace referencia se encuentran en dominios de aplicación diferentes. En las llamadas entre dominios se utiliza la misma infraestructura de llamada remota que en las llamadas entre dos procesos o entre dos equipos. En consecuencia, los metadatos del objeto al que se hace referencia deben estar disponibles para ambos dominios de aplicación a fin de que la llamada al método no provoque un error en la compilación JIT. Si el dominio que llama no tiene acceso a los metadatos del objeto al que se está llamando, se podría producir un error de compilación con una excepción del tipo <xref:System.IO.FileNotFoundException>. Para obtener más información, consulta [Remote Objects](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100)). El objeto es quien decide el mecanismo para determinar cómo se puede obtener acceso a los objetos entre dominios. Para obtener más información, vea <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
--   La aplicación en la que se ejecuta el código establece el comportamiento del mismo. En otras palabras, el dominio de aplicación proporciona valores de configuración tales como las directivas de versión de la aplicación, la ubicación de los ensamblados remotos a los que tiene acceso e información sobre dónde encontrar los ensamblados que se cargan en el dominio.  
+- La aplicación en la que se ejecuta el código establece el comportamiento del mismo. En otras palabras, el dominio de aplicación proporciona valores de configuración tales como las directivas de versión de la aplicación, la ubicación de los ensamblados remotos a los que tiene acceso e información sobre dónde encontrar los ensamblados que se cargan en el dominio.  
   
--   El dominio de aplicación en el que se ejecuta el código puede controlar los permisos que se conceden al código.  
+- El dominio de aplicación en el que se ejecuta el código puede controlar los permisos que se conceden al código.  
   
 ## <a name="application-domains-and-assemblies"></a>Dominios de aplicación y ensamblados
 
@@ -60,9 +60,9 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  El modo en que se carga un ensamblado determina si varios dominios de aplicación pueden compartir el código compilado Just-in-time (JIT) del ensamblado en el proceso y si el ensamblado se puede descargar del proceso.  
   
--   Si un ensamblado se carga con dominio neutro, todos los dominios de aplicación que comparten el mismo conjunto de permisos de seguridad pueden compartir el mismo código compilado JIT, lo que reduce la cantidad de memoria que necesita la aplicación. Sin embargo, el ensamblado nunca se puede descargar del proceso.  
+- Si un ensamblado se carga con dominio neutro, todos los dominios de aplicación que comparten el mismo conjunto de permisos de seguridad pueden compartir el mismo código compilado JIT, lo que reduce la cantidad de memoria que necesita la aplicación. Sin embargo, el ensamblado nunca se puede descargar del proceso.  
   
--   Si un ensamblado no se carga con dominio neutro, debe utilizarse la compilación JIT de ese ensamblado en los dominios de aplicación en que se carga. Sin embargo, el ensamblado se puede descargar del proceso; para ello, tendrán que descargarse todos los dominios de aplicación en que está cargado el ensamblado.  
+- Si un ensamblado no se carga con dominio neutro, debe utilizarse la compilación JIT de ese ensamblado en los dominios de aplicación en que se carga. Sin embargo, el ensamblado se puede descargar del proceso; para ello, tendrán que descargarse todos los dominios de aplicación en que está cargado el ensamblado.  
   
  El host en tiempo de ejecución determina si los ensamblados se cargan con dominio neutro cuando se carga el motor en tiempo de ejecución en un proceso. En las aplicaciones administradas, aplique el atributo <xref:System.LoaderOptimizationAttribute> al método de punto de entrada del proceso y especifique un valor de la enumeración <xref:System.LoaderOptimization> asociada. En las aplicaciones no administradas que hospedan Common Language Runtime, especifique el marcador adecuado cuando llame al método [CorBindToRuntimeEx Function](../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md).  
   
@@ -84,9 +84,9 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
   
  A la hora de determinar si va a cargar los ensamblados con dominio neutro, deberá decidir si prefiere reducir el consumo de memoria u otros factores relativos al rendimiento.  
   
--   El acceso a los métodos y datos estáticos es más lento en los ensamblados de dominio neutro porque es necesario aislar los ensamblados. Cada dominio de aplicación que tiene acceso al ensamblado debe disponer de una copia independiente de los datos estáticos para impedir que las referencias a objetos en los campos estáticos atraviesen los límites del dominio. Como resultado, el motor en tiempo de ejecución contiene lógica adicional para dirigir un llamador a la copia correspondiente del método o los datos estáticos. Esta lógica adicional retarda la llamada.  
+- El acceso a los métodos y datos estáticos es más lento en los ensamblados de dominio neutro porque es necesario aislar los ensamblados. Cada dominio de aplicación que tiene acceso al ensamblado debe disponer de una copia independiente de los datos estáticos para impedir que las referencias a objetos en los campos estáticos atraviesen los límites del dominio. Como resultado, el motor en tiempo de ejecución contiene lógica adicional para dirigir un llamador a la copia correspondiente del método o los datos estáticos. Esta lógica adicional retarda la llamada.  
   
--   Todas las dependencias de un ensamblado deben estar presentes y cargarse cuando el ensamblado se carga con dominio neutro, ya que si una dependencia no se puede cargar con dominio neutro, impedirá también que el ensamblado se cargue con dominio neutro.  
+- Todas las dependencias de un ensamblado deben estar presentes y cargarse cuando el ensamblado se carga con dominio neutro, ya que si una dependencia no se puede cargar con dominio neutro, impedirá también que el ensamblado se cargue con dominio neutro.  
   
 ## <a name="application-domains-and-threads"></a>Dominios de aplicación y subprocesos
 
@@ -100,9 +100,9 @@ Normalmente, los sistemas operativos y los entornos de Common Language Runtime p
 
  La referencia cultural, representada por un objeto <xref:System.Globalization.CultureInfo>, se asocia con subprocesos. Puede obtener la referencia cultural asociada al subproceso que está actualmente en ejecución utilizando la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, y puede utilizar la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> para obtener o establecer la referencia cultural asociada al subproceso que está actualmente en ejecución. Si la referencia cultural asociada a un subproceso se ha establecido explícitamente mediante la propiedad <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, seguirá asociada a ese subproceso cuando el subproceso cruce los límites del dominio de aplicación. De lo contrario, la referencia cultural que estaba asociada al subproceso en un momento concreto vendrá determinada por el valor de la propiedad <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> en el dominio de aplicación en el que se está ejecutando el subproceso:  
   
--   Si el valor de la propiedad no es `null`, se asociará al subproceso la referencia cultural devuelta por la propiedad (y por consiguiente devuelta por las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
+- Si el valor de la propiedad no es `null`, se asociará al subproceso la referencia cultural devuelta por la propiedad (y por consiguiente devuelta por las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
--   Si el valor de la propiedad es `null`, se asociará al subproceso la referencia cultural actual del sistema.  
+- Si el valor de la propiedad es `null`, se asociará al subproceso la referencia cultural actual del sistema.  
   
 ## <a name="programming-with-application-domains"></a>Programación con dominios de aplicación
 
@@ -138,9 +138,9 @@ COMPLUS_LoaderOptimization = 1
   
  La manera en que se carga el ensamblado determina si su código compilado Just-In-Time (JIT) se puede compartir entre varios dominios de aplicación del proceso.  
   
--   Si un ensamblado se carga con dominio neutro, todos los dominios de aplicación que comparten el mismo conjunto de permisos de seguridad pueden compartir el mismo código compilado JIT. Esto reduce la cantidad de memoria que necesita la aplicación.  
+- Si un ensamblado se carga con dominio neutro, todos los dominios de aplicación que comparten el mismo conjunto de permisos de seguridad pueden compartir el mismo código compilado JIT. Esto reduce la cantidad de memoria que necesita la aplicación.  
   
--   Si un ensamblado no se carga con dominio neutro, debe someterse a la compilación JIT en cada dominio de aplicación en el que se carga y el cargador no debe compartir recursos internos entre dominios de aplicación.  
+- Si un ensamblado no se carga con dominio neutro, debe someterse a la compilación JIT en cada dominio de aplicación en el que se carga y el cargador no debe compartir recursos internos entre dominios de aplicación.  
   
  Cuando se establece en 1, la marca de entorno COMPLUS_LoaderOptimization obliga al host del runtime a cargar todos los ensamblados de una manera no neutra para el dominio que se conoce como SingleDomain. SingleDomain no carga ensamblados con dominio neutro, a excepción de Mscorlib, que siempre se carga con dominio neutro. Esta configuración se denomina dominio simple porque suele utilizarse cuando el host ejecuta una sola aplicación en el proceso.  
   

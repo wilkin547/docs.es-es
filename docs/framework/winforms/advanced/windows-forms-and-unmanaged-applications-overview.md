@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: fc8e55d8f3824ca11c575479863491d7f949efa3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665843"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592501"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Información general sobre formularios Windows Forms y aplicaciones no administradas
 Los controles y aplicaciones de Windows Forms pueden interoperar con aplicaciones no administradas, con algunas advertencias. En las secciones siguientes se describen los escenarios y las configuraciones que las aplicaciones y los controles de Windows Forms admiten y no admiten.  
@@ -47,7 +47,7 @@ Los controles y aplicaciones de Windows Forms pueden interoperar con aplicacione
  El bucle de mensajes de una aplicación en un bucle de programa interno que recupera los mensajes de una cola de mensajes del subproceso, los traduce y, después, los envía a la aplicación para que los controle. El bucle de mensajes de un Windows Form no tiene la misma arquitectura que los bucles de mensajes que proporcionan aplicaciones anteriores, como las aplicaciones de Visual Basic 6.0 y las aplicaciones MFC. Es posible que los mensajes de ventana que se publican en el bucle de mensajes se controlen de una forma diferente a la que espera el Windows Form. Por lo tanto, se puede producir un comportamiento inesperado. Puede que algunas combinaciones de teclas no funcionen, que alguna actividad del mouse no funcione o que algunos eventos no se generen como se esperaba.  
   
 ## <a name="resolving-interoperability-issues"></a>Resolver problemas de interoperabilidad  
- Puede resolver estos problemas mostrando el formulario en un bucle de mensajes de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , que se crea con el método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> .  
+ Puede resolver estos problemas mostrando el formulario en un bucle de mensajes de .NET Framework, que se crea mediante el <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
   
  Para que un Windows Form funcione correctamente con una aplicación cliente COM, debe ejecutarlo en un bucle de mensajes de Windows Forms. Para ello, siga uno de estos procedimientos:  
   

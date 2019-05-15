@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e87fdd31a4dfb9b595f165225f7b86d5e88ea7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087539"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607753"
 ---
 # <a name="assembly-manifest"></a>Manifiesto del ensamblado
 Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección de datos que describen cómo se relacionan entre sí los elementos del ensamblado. El manifiesto contiene estos metadatos del ensamblado. Un manifiesto del ensamblado contiene todos los metadatos necesarios para especificar los requisitos de versión y la identidad de seguridad del ensamblado, y todos los metadatos necesarios para definir el ámbito del ensamblado y resolver las referencias a los recursos y las clases. El manifiesto del ensamblado se puede almacenar en un archivo PE (.exe o .dll) con código de lenguaje intermedio de Microsoft (MSIL) o en un archivo PE independiente que contenga sólo la información sobre el manifiesto del ensamblado.  
@@ -28,15 +28,15 @@ Todos los ensamblados, ya sean estáticos o dinámicos, contienen una colección
   
  Un manifiesto de ensamblado realiza las funciones siguientes:  
   
--   Enumera los archivos que componen el ensamblado.  
+- Enumera los archivos que componen el ensamblado.  
   
--   Controla cómo se asignan las referencias a los tipos y recursos del ensamblado a los archivos que contienen sus declaraciones e implementaciones.  
+- Controla cómo se asignan las referencias a los tipos y recursos del ensamblado a los archivos que contienen sus declaraciones e implementaciones.  
   
--   Enumera otros ensamblados de los que depende este ensamblado.  
+- Enumera otros ensamblados de los que depende este ensamblado.  
   
--   Proporciona un nivel de direccionamiento indirecto entre los consumidores del ensamblado y los detalles de implementación del ensamblado.  
+- Proporciona un nivel de direccionamiento indirecto entre los consumidores del ensamblado y los detalles de implementación del ensamblado.  
   
--   Representa el ensamblado como autodescriptivo.  
+- Representa el ensamblado como autodescriptivo.  
   
 ## <a name="assembly-manifest-contents"></a>Contenido del manifiesto del ensamblado  
  En la tabla siguiente, se muestra la información que contiene el manifiesto del ensamblado. Los cuatro primeros elementos (nombre del ensamblado, número de versión, referencia cultural e información sobre el nombre seguro) constituyen la identidad del ensamblado.  

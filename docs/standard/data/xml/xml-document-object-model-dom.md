@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b3a2432deb1e956060ab3615db01821658f8782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 664debd5432273cc25871f85d5d3c23f4c32dd6e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508684"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589837"
 ---
 # <a name="xml-document-object-model-dom"></a>Modelo de objetos de documento (DOM) XML
 La clase Modelo de objetos de documento XML (DOM) es una representación en la memoria de un documento XML. DOM permite leer, manipular y modificar un documento XML mediante programación. La clase **XmlReader** también lee XML, aunque proporciona acceso de solo avance y de solo lectura sin almacenamiento en memoria caché. Esto significa que no hay funciones para editar los valores de un atributo o contenido de un elemento, ni la posibilidad de agregar y quitar nodos con **XmlReader**. La edición es la función principal de DOM. Es la forma común y estructurada mediante la que se representan datos XML en la memoria, aunque los datos XML reales se almacenan de forma lineal cuando se encuentran en un archivo o proceden de otro objeto. A continuación se muestran datos XML:  
@@ -39,32 +39,32 @@ Estructura de documentos XML
   
  Dentro de la estructura de los documentos XML, cada círculo de esta ilustración representa un nodo, que se denomina objeto **XmlNode**. El objeto **XmlNode** es el objeto básico del árbol de DOM. La clase **XmlDocument**, que extiende la clase **XmlNode**, admite métodos para realizar operaciones en el documento en conjunto (por ejemplo, cargarlo en la memoria o guardar el código XML en un archivo). Además, la clase **XmlDocument** proporciona un medio para ver y manipular los nodos de todo el documento XML. Las clases **XmlNode** y **XmlDocument** han mejorado el rendimiento y la capacidad de uso y disponen de métodos y propiedades para realizar lo siguiente:  
   
--   Obtener acceso y modificar nodos específicos de DOM, como nodos de elemento, de referencia de entidad, etc.  
+- Obtener acceso y modificar nodos específicos de DOM, como nodos de elemento, de referencia de entidad, etc.  
   
--   Recuperar nodos completos, además de la información que contiene el nodo, como el texto de un nodo de elemento.  
+- Recuperar nodos completos, además de la información que contiene el nodo, como el texto de un nodo de elemento.  
   
     > [!NOTE]
     >  Si una aplicación no requiere la estructura o las funciones de edición proporcionadas por DOM, las clases **XmlReader** y **XmlWriter** proporcionan acceso a secuencias de XML de solo avance sin almacenamiento en caché. Para obtener más información, vea <xref:System.Xml.XmlReader> y <xref:System.Xml.XmlWriter>.  
   
  Los objetos **Node** tienen un conjunto de métodos y propiedades, así como características básicas y bien definidas. Algunas de estas características son:  
   
--   Un nodo tiene un único nodo primario, que se encuentra directamente encima de él. Los únicos nodos que no tienen un nodo primario son la raíz del documento, puesto que éste es el nodo de nivel superior y contiene el propio documento y fragmentos de documento.  
+- Un nodo tiene un único nodo primario, que se encuentra directamente encima de él. Los únicos nodos que no tienen un nodo primario son la raíz del documento, puesto que éste es el nodo de nivel superior y contiene el propio documento y fragmentos de documento.  
   
--   La mayor parte de los nodos pueden tener varios nodos secundarios, que son los que están situados inmediatamente debajo de ellos. A continuación se muestra una lista de tipos de nodo que pueden tener nodos secundarios.  
+- La mayor parte de los nodos pueden tener varios nodos secundarios, que son los que están situados inmediatamente debajo de ellos. A continuación se muestra una lista de tipos de nodo que pueden tener nodos secundarios.  
   
-    -   **Document**  
+    - **Document**  
   
-    -   **DocumentFragment**  
+    - **DocumentFragment**  
   
-    -   **EntityReference**  
+    - **EntityReference**  
   
-    -   **Element**  
+    - **Element**  
   
-    -   **Attribute**  
+    - **Attribute**  
   
      Los nodos **XmlDeclaration**, **Notation**, **Entity**, **CDATASection**, **Text**, **Comment**, **ProcessingInstruction** y **DocumentType** no tienen nodos secundarios.  
   
--   Los nodos que se encuentran en el mismo nivel, representados en el diagrama por los nodos **book** y **pubinfo**, son nodos relacionados.  
+- Los nodos que se encuentran en el mismo nivel, representados en el diagrama por los nodos **book** y **pubinfo**, son nodos relacionados.  
   
  La forma de controlar los atributos es una característica de DOM. Los atributos no son nodos que forman parte de las relaciones entre los nodos primarios y secundarios y entre nodos relacionados. Los atributos se consideran una propiedad del nodo de elemento y están formados por un par nombre-valor. Por ejemplo, si tiene datos XML formados por `format="dollar`" asociados con el elemento `price`, la palabra `format` es el nombre, y el valor del atributo `format` es `dollar`. Para recuperar el atributo `format="dollar"` del nodo **price**, se llama al método **GetAttribute** cuando el cursor se encuentra en el nodo de elemento `price`. Para obtener más información, vea [Acceso a atributos en DOM](../../../../docs/standard/data/xml/accessing-attributes-in-the-dom.md).  
   

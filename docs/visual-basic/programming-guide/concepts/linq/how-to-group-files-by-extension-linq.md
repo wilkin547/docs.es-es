@@ -2,12 +2,12 @@
 title: Procedimiento Agrupar archivos por extensión (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f36be784641d45aaae447097ae2bebb5fd650034
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778084"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593477"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Procedimiento Agrupar archivos por extensión (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo se puede usar LINQ para efectuar operaciones avanzadas de agrupación y ordenación en listas de archivos o de carpetas. También muestra cómo paginar la salida en la ventana de consola mediante los métodos <xref:System.Linq.Enumerable.Skip%2A> y <xref:System.Linq.Enumerable.Take%2A>.  
@@ -94,7 +94,7 @@ End Module
  La salida de este programa puede ser larga, dependiendo de los detalles del sistema de archivos local y de la configuración de `startFolder`. Para habilitar la visualización de todos los resultados, en este ejemplo se muestra cómo paginar los resultados. Se pueden aplicar las mismas técnicas a las aplicaciones web y Windows. Observe que, como el código pagina los elementos en un grupo, se necesita un bucle `For Each` anidado. También hay alguna lógica adicional para calcular la posición actual en la lista y para permitir que el usuario detenga la paginación y salga del programa. En este caso en concreto, la consulta de paginación se ejecuta en los resultados almacenados en caché de la consulta original. En otros contextos, como en LINQ to SQL, este almacenamiento en caché no es necesario.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Crear un proyecto que tiene como destino .NET Framework versión 3.5 o posterior con una referencia a System.Core.dll y una `Imports` instrucción del espacio de nombres System.Linq.  
+Cree un proyecto de aplicación de consola VB.NET, con un `Imports` instrucción del espacio de nombres System.Linq.
   
 ## <a name="see-also"></a>Vea también
 

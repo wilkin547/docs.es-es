@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584005"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589869"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Recuperación de nodos desordenados por nombre o índice
 La clase **XmlNamedNodeMap** se describe en la especificación del W3C como NamedNodeMap y es necesaria para controlar un conjunto de nodos desordenado con la capacidad de hacer referencia a los mismos mediante su nombre o índice. El único modo de acceder a una clase **XmlNamedNodeMap** es devolverla a través de un método o una propiedad. Hay tres métodos o propiedades que devuelven una clase **XmlNamedNodeMap**:  
   
--   XmlElement.Attributes  
+- XmlElement.Attributes  
   
--   XmlDocumentType.Entities  
+- XmlDocumentType.Entities  
   
--   XmlDocumentType.Notations  
+- XmlDocumentType.Notations  
   
  Por ejemplo, la propiedad **XmlDocumentType.Entities** obtiene la colección de nodos **XmlEntity** declarada en la declaración de tipos de documento. Esta colección se devuelve como una clase **XmlNamedNodeMap** y se puede recorrer en iteración mediante la propiedad **Count**. También se puede mostrar información de entidad. Para obtener un ejemplo de cómo recorrer en iteración una clase **XmlNamedNodeMap**, vea <xref:System.Xml.XmlDocumentType.Entities%2A>.  
   

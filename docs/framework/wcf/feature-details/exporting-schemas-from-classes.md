@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: c5c11ebf87f68a87c410c87fd860ba58f4f63a35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5365c5274d2810f8fd93f81f10bbedf903756e0b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587583"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586672"
 ---
 # <a name="exporting-schemas-from-classes"></a>Exportación de esquemas desde las clases
 Para generar esquemas (XSD) de lenguaje de definición de esquemas XML a partir de las clases utilizadas en el modelo de contrato de datos, utilice la clase <xref:System.Runtime.Serialization.XsdDataContractExporter> . En este tema se describe el proceso para crear los esquemas.  
@@ -21,7 +21,7 @@ Para generar esquemas (XSD) de lenguaje de definición de esquemas XML a partir 
 ## <a name="the-export-process"></a>Proceso de exportación  
  El proceso de exportación de esquema se inicia con uno o más tipos y genera un <xref:System.Xml.Schema.XmlSchemaSet> que describe la proyección de XML de estos tipos.  
   
- `XmlSchemaSet` forma parte del Modelo de objetos de esquemas  (SOM) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]que representa un conjunto de documentos esquema XSD. Para crear documentos XSD a partir de `XmlSchemaSet`, utilice la colección de esquemas de la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> de la clase `XmlSchemaSet` . A continuación, serialice cada objeto <xref:System.Xml.Schema.XmlSchema> mediante <xref:System.Xml.Serialization.XmlSerializer>.  
+ El `XmlSchemaSet` forma parte de .NET Framework esquema (SOM Object Model) que representa un conjunto de documentos de esquema XSD. Para crear documentos XSD a partir de `XmlSchemaSet`, utilice la colección de esquemas de la propiedad <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> de la clase `XmlSchemaSet` . A continuación, serialice cada objeto <xref:System.Xml.Schema.XmlSchema> mediante <xref:System.Xml.Serialization.XmlSerializer>.  
   
 #### <a name="to-export-schemas"></a>Exportar esquemas  
   

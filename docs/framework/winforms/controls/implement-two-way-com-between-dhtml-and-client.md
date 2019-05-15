@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: a31a35257921c6dec6229b5cc3222ee3119c325e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47002ffaee33be66e2cc99ac1a01896d4656885c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625381"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591813"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Procedimiento para implementar la comunicación bidireccional entre código DHTML y código de la aplicación cliente
 Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar código de aplicación web de HTML dinámico (DHTML) existente a sus aplicaciones de cliente de Windows Forms. Esto es útil cuando se ha invertido un tiempo de desarrollo importante para crear controles basados en DHTML y quiere aprovechar las funciones de la interfaz de usuario enriquecida de Windows Forms sin tener que volver a escribir el código existente.  
@@ -104,8 +104,6 @@ Puede usar el control <xref:System.Windows.Forms.WebBrowser> para agregar códig
  Este código requiere:  
   
 - Referencias a los ensamblados System y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

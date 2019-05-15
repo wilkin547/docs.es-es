@@ -1,24 +1,24 @@
 ---
-title: Filtrar para crear y usar ensamblados mediante la línea de comandos (C#)
+title: Procedimiento para crear y usar ensamblados mediante la línea de comandos (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: df22d52ad71b2a98d7e85f4c2002091b97d87b21
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746894"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599865"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Procedimiento para crear y usar ensamblados mediante la línea de comandos (C#)
 Un ensamblado, o una biblioteca de vínculos dinámicos (DLL), se vincula al programa en tiempo de ejecución. Para ilustrar la creación y uso de una DLL, considere el siguiente escenario:  
   
--   `MathLibrary.DLL`: el archivo de biblioteca que contiene los métodos que se van a llamar en tiempo de ejecución. En este ejemplo, la DLL contiene dos métodos, `Add` y `Multiply`.  
+- `MathLibrary.DLL`: el archivo de biblioteca que contiene los métodos que se van a llamar en tiempo de ejecución. En este ejemplo, la DLL contiene dos métodos, `Add` y `Multiply`.  
   
--   `Add`: el archivo de origen que contiene el método `Add`. Devuelve la suma de sus parámetros. La clase `AddClass` que contiene el método `Add` es un miembro del espacio de nombres `UtilityMethods`.  
+- `Add`: el archivo de origen que contiene el método `Add`. Devuelve la suma de sus parámetros. La clase `AddClass` que contiene el método `Add` es un miembro del espacio de nombres `UtilityMethods`.  
   
--   `Mult`: el código fuente que contiene el método `Multiply`. Devuelve el producto de sus parámetros. La clase `MultiplyClass` que contiene el método `Multiply` también es un miembro del espacio de nombres `UtilityMethods`.  
+- `Mult`: el código fuente que contiene el método `Multiply`. Devuelve el producto de sus parámetros. La clase `MultiplyClass` que contiene el método `Multiply` también es un miembro del espacio de nombres `UtilityMethods`.  
   
--   `TestCode`: el archivo que contiene el método `Main`. Usa los métodos en el archivo DLL para calcular la suma y el producto de los argumentos de tiempo de ejecución.  
+- `TestCode`: el archivo que contiene el método `Main`. Usa los métodos en el archivo DLL para calcular la suma y el producto de los argumentos de tiempo de ejecución.  
   
 ## <a name="example"></a>Ejemplo  
   

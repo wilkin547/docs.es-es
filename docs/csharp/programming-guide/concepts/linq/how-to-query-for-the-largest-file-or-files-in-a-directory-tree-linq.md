@@ -2,25 +2,25 @@
 title: Procedimiento para buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: 20453c754c792d4f5c59fde481e1fec56dcd0e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 134183da58b490635284699de2f1721dda5422dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564138"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597073"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>Procedimiento para buscar el archivo o archivos de mayor tamaño en un árbol de directorios (LINQ) (C#)
 En este ejemplo se muestran cinco consultas relacionadas con el tamaño de archivo en bytes:  
   
--   Cómo recuperar el tamaño en bytes del archivo más grande.  
+- Cómo recuperar el tamaño en bytes del archivo más grande.  
   
--   Cómo recuperar el tamaño en bytes del archivo más pequeño.  
+- Cómo recuperar el tamaño en bytes del archivo más pequeño.  
   
--   Cómo recuperar el archivo de mayor o menor tamaño del objeto <xref:System.IO.FileInfo> de una o más carpetas en una carpeta raíz especificada.  
+- Cómo recuperar el archivo de mayor o menor tamaño del objeto <xref:System.IO.FileInfo> de una o más carpetas en una carpeta raíz especificada.  
   
--   Cómo recuperar una secuencia, como los 10 archivos de mayor tamaño.  
+- Cómo recuperar una secuencia, como los 10 archivos de mayor tamaño.  
   
--   Cómo ordenar los archivos en grupos según su tamaño en bytes, sin incluir los archivos inferiores a un tamaño especificado.  
+- Cómo ordenar los archivos en grupos según su tamaño en bytes, sin incluir los archivos inferiores a un tamaño especificado.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente contiene cinco consultas independientes que muestran cómo consultar y agrupar archivos, en función de su tamaño en bytes. Puede modificar fácilmente estos ejemplos para basar la consulta en otra propiedad del objeto <xref:System.IO.FileInfo>.  

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3049b56589b2cd7f5e6cab462955a67289315b35
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669321"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588774"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Consideraciones de seguridad adicionales en formularios Windows Forms
-La configuración de seguridad de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] puede hacer que la aplicación se ejecute de manera diferente en un entorno de confianza parcial que en el equipo local. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] restringe el acceso a recursos locales críticos como el sistema de archivos, la red y API no administradas, entre otras cosas. La configuración de seguridad afectan a la posibilidad de llamar a la API de Windows de Microsoft u otras API que no se puede comprobar el sistema de seguridad. La seguridad afecta también a otros aspectos de la aplicación, incluido el acceso a archivos y datos y su impresión. Para más información sobre el acceso a archivos y datos en un entorno de confianza parcial, consulte [Acceso más seguro a archivos y datos en Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Para más información sobre cómo imprimir en un entorno de confianza parcial, consulte [Impresión más segura en Windows Forms](more-secure-printing-in-windows-forms.md).  
+Configuración de seguridad de .NET framework puede hacer que su aplicación ejecutar de forma diferente en un entorno de confianza parcial que en el equipo local. .NET Framework restringe el acceso a recursos locales críticos como el sistema de archivos, red y las API no administradas, entre otras cosas. La configuración de seguridad afectan a la posibilidad de llamar a la API de Windows de Microsoft u otras API que no se puede comprobar el sistema de seguridad. La seguridad afecta también a otros aspectos de la aplicación, incluido el acceso a archivos y datos y su impresión. Para más información sobre el acceso a archivos y datos en un entorno de confianza parcial, consulte [Acceso más seguro a archivos y datos en Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Para más información sobre cómo imprimir en un entorno de confianza parcial, consulte [Impresión más segura en Windows Forms](more-secure-printing-in-windows-forms.md).  
   
  Las secciones siguientes describen cómo trabajar con el Portapapeles, manipular ventanas y llamar a la API de Windows desde aplicaciones que se ejecutan en un entorno de confianza parcial.  
   

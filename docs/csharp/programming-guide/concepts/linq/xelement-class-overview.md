@@ -2,12 +2,12 @@
 title: Información general de la clase XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: 90f7d2f288ff628a24bfbe084a5175e4b2ab5f94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cddb36ac6401c20478a1254fe3d63afe5bd13099
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631859"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595760"
 ---
 # <a name="xelement-class-overview-c"></a>Información general de la clase XElement (C#)
 La clase <xref:System.Xml.Linq.XElement> es una de las clases fundamentales de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Representa a un elemento XML. Puede utilizar esta clase para crear elementos; cambiar el contenido del elemento; agregar, modificar o eliminar elementos secundarios; agregar atributos a un elemento; o serializar el contenido de un elemento en forma de texto. También puede operar con otras clases de <xref:System.Xml?displayProperty=nameWithType>, como son <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> y <xref:System.Xml.Xsl.XslCompiledTransform>.  
@@ -18,13 +18,13 @@ La clase <xref:System.Xml.Linq.XElement> es una de las clases fundamentales de [
 ### <a name="constructing-xml-trees"></a>Construir árboles XML  
  Es posible construir árboles XML de diferentes formas, entre las que se incluyen las siguientes:  
   
--   Puede construir un árbol XML mediante código. Para obtener más información, consulte [Crear árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
+- Puede construir un árbol XML mediante código. Para obtener más información, consulte [Crear árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
   
--   Puede analizar XML a partir de diferentes orígenes, incluyendo un <xref:System.IO.TextReader>, archivos de texto o direcciones web (URL). Para obtener más información, consulte [Parsing XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md) (Analizar XML [C#]).  
+- Puede analizar XML a partir de diferentes orígenes, incluyendo un <xref:System.IO.TextReader>, archivos de texto o direcciones web (URL). Para obtener más información, consulte [Parsing XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md) (Analizar XML [C#]).  
   
--   También puede utilizar un <xref:System.Xml.XmlReader> para rellenar el árbol. Para obtener más información, vea <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
+- También puede utilizar un <xref:System.Xml.XmlReader> para rellenar el árbol. Para obtener más información, vea <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
--   Si dispone de un módulo que pueda escribir contenidos en un <xref:System.Xml.XmlWriter>, puede utilizar el método <xref:System.Xml.Linq.XContainer.CreateWriter%2A> para crear un sistema de escritura, para pasar éste al módulo y para utilizar después el contenido que se haya escrito en <xref:System.Xml.XmlWriter> para rellenar el árbol XML.  
+- Si dispone de un módulo que pueda escribir contenidos en un <xref:System.Xml.XmlWriter>, puede utilizar el método <xref:System.Xml.Linq.XContainer.CreateWriter%2A> para crear un sistema de escritura, para pasar éste al módulo y para utilizar después el contenido que se haya escrito en <xref:System.Xml.XmlWriter> para rellenar el árbol XML.  
   
  No obstante, la forma más habitual de crear un árbol XML es la siguiente:  
   

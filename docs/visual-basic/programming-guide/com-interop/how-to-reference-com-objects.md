@@ -8,15 +8,15 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 8ff2a3a4e9249b324dac9b244cab68ae8f8e1cab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df234ecaf25243dbdf2d6552942ca86001d4a6fe
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624838"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592174"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Procedimiento Objetos de referencia COM desde Visual Basic
-En Visual Basic, agregar referencias a objetos COM que tienen bibliotecas de tipos requiere la creación de un ensamblado de interoperabilidad de la biblioteca COM. Las referencias a los miembros del objeto COM se enrutan al ensamblado de interoperabilidad y, a continuación, se reenvían al objeto COM real. Las respuestas desde el objeto COM se enrutan al ensamblado de interoperabilidad y se reenvían a su [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplicación.  
+En Visual Basic, agregar referencias a objetos COM que tienen bibliotecas de tipos requiere la creación de un ensamblado de interoperabilidad de la biblioteca COM. Las referencias a los miembros del objeto COM se enrutan al ensamblado de interoperabilidad y, a continuación, se reenvían al objeto COM real. Las respuestas desde el objeto COM se enrutan al ensamblado de interoperabilidad y reenvían a la aplicación de .NET Framework.  
   
  Puede hacer referencia a un objeto COM sin usar un ensamblado de interoperabilidad insertando la información de tipo para el objeto COM en un ensamblado. NET. Para incrustar información de tipo, establezca el `Embed Interop Types` propiedad `True` para la referencia al objeto COM. Si está compilando mediante el compilador de línea de comandos, use el `/link` opción para hacer referencia a la biblioteca COM. Para obtener más información, consulte [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md).  
   

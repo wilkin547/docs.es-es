@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1f6b98d7db510373f2729fab2a6e0ad993ea086
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938338"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591385"
 ---
 # <a name="string-basics-in-visual-basic"></a>Fundamentos de cadenas en Visual Basic
 El tipo de datos de `String` representa una serie de caracteres (y cada uno de ellos representa a su vez una instancia del tipo de datos `Char`). Este tema presenta los conceptos básicos de las cadenas en Visual Basic.  
@@ -50,7 +50,7 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Caracteres en cadenas  
- Una cadena puede considerarse como una serie de valores `Char` y el tipo `String` tiene funciones integradas que permiten realizar muchas manipulaciones en una cadena similares a las permitidas por las matrices. Como toda la matriz en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], son matrices de base cero. Puede hacer referencia a un carácter específico de una cadena con la propiedad `Chars`, que proporciona una forma de acceso a un carácter mediante la posición en la que este aparece en la cadena. Por ejemplo:  
+ Una cadena puede considerarse como una serie de valores `Char` y el tipo `String` tiene funciones integradas que permiten realizar muchas manipulaciones en una cadena similares a las permitidas por las matrices. Como toda la matriz en .NET Framework, estos son matrices de base cero. Puede hacer referencia a un carácter específico de una cadena con la propiedad `Chars`, que proporciona una forma de acceso a un carácter mediante la posición en la que este aparece en la cadena. Por ejemplo:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309230"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595785"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Tutorial: Escribir consultas en C# (LINQ)
 Este tutorial muestra las características del lenguaje C# que se usan para escribir expresiones de consulta de LINQ.  
@@ -41,17 +41,17 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
 ## <a name="create-an-in-memory-data-source"></a>Crear un origen de datos en memoria  
  El origen de datos de las consultas es una simple lista de objetos `Student`. Cada registro `Student` tiene un nombre, un apellido y una matriz de enteros que representa sus puntuaciones de las pruebas en la clase. Copie este código en el proyecto. Observe las siguientes características:  
   
--   La clase `Student` consta de propiedades implementadas automáticamente.  
+- La clase `Student` consta de propiedades implementadas automáticamente.  
   
--   Cada alumno de la lista se inicializa con un inicializador de objeto.  
+- Cada alumno de la lista se inicializa con un inicializador de objeto.  
   
--   La propia lista se inicializa con un inicializador de colección.  
+- La propia lista se inicializa con un inicializador de colección.  
   
  Toda la estructura de datos se inicializará y creará una instancia sin llamadas explícitas a ningún constructor ni acceso a miembro explícito. Para obtener más información sobre estas nuevas características, vea [Auto-Implemented Properties](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) (Propiedades implementadas automáticamente) y [Inicializadores de objeto y de colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
 #### <a name="to-add-the-data-source"></a>Para agregar el origen de datos  
   
--   Agregue la clase `Student` y la lista inicializada de alumnos a la clase `Program` del proyecto.  
+- Agregue la clase `Student` y la lista inicializada de alumnos a la clase `Program` del proyecto.  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
   
 #### <a name="to-create-a-simple-query"></a>Para crear una consulta simple  
   
--   En el método `Main` de la aplicación, cree una consulta simple que, cuando se ejecute, genere una lista de todos los alumnos cuya puntuación en la primera prueba haya sido superior a 90. Tenga en cuenta que, dado que se ha seleccionado todo el objeto `Student`, el tipo de la consulta es `IEnumerable<Student>`. Aunque el código podría usar tipos implícitos con la palabra clave [var](../../../../csharp/language-reference/keywords/var.md), se usan tipos explícitos para mostrar claramente los resultados. (Para obtener más información sobre `var`, vea [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) [Variables locales con tipo implícito]).  
+- En el método `Main` de la aplicación, cree una consulta simple que, cuando se ejecute, genere una lista de todos los alumnos cuya puntuación en la primera prueba haya sido superior a 90. Tenga en cuenta que, dado que se ha seleccionado todo el objeto `Student`, el tipo de la consulta es `IEnumerable<Student>`. Aunque el código podría usar tipos implícitos con la palabra clave [var](../../../../csharp/language-reference/keywords/var.md), se usan tipos explícitos para mostrar claramente los resultados. (Para obtener más información sobre `var`, vea [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) [Variables locales con tipo implícito]).  
   
      Tenga también en cuenta que la variable de rango de la consulta, `student`, actúa como referencia a cada `Student` del origen, lo que proporciona acceso a miembro para cada objeto.  
   
@@ -75,9 +75,9 @@ Este tutorial muestra las características del lenguaje C# que se usan para escr
   
 1. Escriba ahora el bucle `foreach` que hará que la consulta se ejecute. Tenga en cuenta los siguiente sobre el código:  
   
-    -   A cada elemento de la secuencia devuelta se accede mediante la variable de iteración del bucle `foreach`.  
+    - A cada elemento de la secuencia devuelta se accede mediante la variable de iteración del bucle `foreach`.  
   
-    -   El tipo de esta variables es `Student` y el tipo de la variable de consulta es compatible, `IEnumerable<Student>`.  
+    - El tipo de esta variables es `Student` y el tipo de la variable de consulta es compatible, `IEnumerable<Student>`.  
   
 2. Tras agregar este código, compile y ejecute la aplicación para ver los resultados en la ventana **Consola**.  
   

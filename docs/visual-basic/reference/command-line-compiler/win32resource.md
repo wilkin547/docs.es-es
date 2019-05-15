@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32resource compiler option [Visual Basic]
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
-ms.openlocfilehash: 9351e9f6bcb7660dac2c49667ca8db6d578eff7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8f9c9aac87fd71b61a5413386582ae660efd903
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774769"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593074"
 ---
 # <a name="-win32resource"></a>-win32resource
 Inserta un archivo de recursos de Win32 en el archivo de salida.  
@@ -34,7 +34,7 @@ Inserta un archivo de recursos de Win32 en el archivo de salida.
   
  Un recurso de Win32 puede contener la versión o información de mapa de bits (icono) que ayuda a identificar la aplicación en **Explorador de archivos**. Si no especifica `-win32resource`, el compilador genera información de versión basada en la versión del ensamblado. El `-win32resource` y `-win32icon` opciones son mutuamente excluyentes.  
   
- Consulte [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para hacer referencia a un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] archivo de recursos, o [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para adjuntar un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] archivo de recursos.  
+ Consulte [- linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) para hacer referencia a un archivo de recursos de .NET Framework, o [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) para adjuntar un archivo de recursos de .NET Framework.  
   
 > [!NOTE]
 >  El `-win32resource` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible solo cuando se compila desde la línea de comandos.  

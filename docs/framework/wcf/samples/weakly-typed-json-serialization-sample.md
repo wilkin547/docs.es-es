@@ -2,12 +2,12 @@
 title: Ejemplo de serialización JSON débilmente tipada
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006361"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589212"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Ejemplo de serialización JSON débilmente tipada
 Al serializar un tipo definido por el usuario en un formato de conexión determinado o deserializar un formato de conexión en un tipo definido por el usuario, el tipo definido por el usuario determinado debe estar disponible en el servicio y en el cliente. Normalmente, para lograr esto, se aplica el atributo <xref:System.Runtime.Serialization.DataContractAttribute> a estos tipos definidos por el usuario y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> se aplica a sus miembros. Este mecanismo también se aplica cuando se trabaja con objetos de JavaScript Object Notation (JSON), como se describe en el tema [Cómo: Serializar y deserializar datos JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -58,7 +58,7 @@ Al serializar un tipo definido por el usuario en un formato de conexión determi
   
  Esto puede ser embarazoso, sobre todo si el cliente tiene que administrar más de un tipo de objeto JSON.  
   
- El tipo `JsonObject` proporcionado por este ejemplo presenta una representación débilmente tipada del objeto JSON deserializado. `JsonObject` confía en la asignación natural entre los objetos JSON y diccionarios [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , y la asignación entre las matrices JSON y matrices de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . En el código siguiente se muestra el tipo `JsonObject` :  
+ El tipo `JsonObject` proporcionado por este ejemplo presenta una representación débilmente tipada del objeto JSON deserializado. `JsonObject` se basa en la asignación natural entre objetos JSON y diccionarios de .NET Framework y la asignación entre las matrices JSON y matrices de .NET Framework. En el código siguiente se muestra el tipo `JsonObject` :  
   
 ```  
 // Instantiation of JsonObject json omitted  

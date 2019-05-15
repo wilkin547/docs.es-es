@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327651"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593337"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>Tutorial: Cambiar el lugar en el que My.Application.Log escribe la información (Visual Basic)
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación. Este tutorial muestra cómo reemplazar la configuración predeterminada y hacer que el objeto `Log` escriba en otros agentes de escucha de registro.  
@@ -28,11 +28,11 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
      Si no hay ningún archivo app.config:  
   
-    1.  En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
+    1. En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
   
-    2.  En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
+    2. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
   
-    3.  Haga clic en **Agregar**.  
+    3. Haga clic en **Agregar**.  
   
 2. Busque la sección `<listeners>` , bajo la sección `<source>` con el atributo `name` el "DefaultSource", en la sección `<sources>` . La sección `<sources>` está en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
   
@@ -153,13 +153,13 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
   
      Algunos tipos válidos que puede usar son:  
   
-    -   Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, que escribe en un archivo de registro.  
+    - Un agente de escucha <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>, que escribe en un archivo de registro.  
   
-    -   Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, que escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData`.  
+    - Un agente de escucha <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>, que escribe información en el registro de eventos del equipo especificado por el parámetro `initializeData`.  
   
-    -   Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, que escriben en el archivo especificado en el parámetro `initializeData`.  
+    - Los agentes de escucha <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> y <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>, que escriben en el archivo especificado en el parámetro `initializeData`.  
   
-    -   Un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, que escribe en la consola de línea de comandos.  
+    - Un agente de escucha <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>, que escribe en la consola de línea de comandos.  
   
      Para obtener información sobre dónde escriben información otros tipos de agentes de escucha de registro, consulte la documentación de ese tipo.  
   

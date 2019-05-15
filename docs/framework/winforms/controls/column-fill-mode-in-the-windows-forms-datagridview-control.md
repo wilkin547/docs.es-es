@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: 344f9856c1f3b1483bfda6f36a7e025ff2e5c78d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593431"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590367"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Modo de relleno de columnas en el control DataGridView de formularios Windows Forms
 En el modo de relleno de columna, el control <xref:System.Windows.Forms.DataGridView> cambia el tamaño de sus columnas automáticamente para que rellenen el ancho del área de visualización disponible. El control no muestra la barra de desplazamiento horizontal excepto cuando es necesario que el ancho de cada columna sea igual o mayor que su valor de propiedad <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>.  
@@ -59,8 +59,6 @@ En el modo de relleno de columna, el control <xref:System.Windows.Forms.DataGrid
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
-  
-- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

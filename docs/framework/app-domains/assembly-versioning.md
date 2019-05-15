@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 920787c00a12a56de2766ec9ea104241a5722852
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305200"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593651"
 ---
 # <a name="assembly-versioning"></a>Versiones de los ensamblados
 La creación de versiones de ensamblados mediante Common Language Runtime se realiza en el nivel de ensamblado. La versión específica de un ensamblado y las versiones de los ensamblados dependientes se guardan en el manifiesto del ensamblado. La directiva de versiones predeterminada para el motor en tiempo de ejecución es que las aplicaciones se ejecuten sólo en las versiones con las que se compilaron y comprobaron, a menos que se reemplace con una directiva de versiones explícita en los archivos de configuración (el archivo de configuración de la aplicación, el archivo de directivas de la compañía de software y el archivo de configuración del administrador del equipo).  
@@ -42,9 +42,9 @@ La creación de versiones de ensamblados mediante Common Language Runtime se rea
 ## <a name="version-information"></a>Información de versión  
  Cada ensamblado tiene dos maneras distintas de expresar la información de versión:  
   
--   El número de versión del ensamblado, que, junto con el nombre del ensamblado y la información de referencia cultural, es parte de la identidad del ensamblado. El motor en tiempo de ejecución utiliza este número para imponer la directiva de versiones y juega un papel importante en el proceso de resolución de tipos en tiempo de ejecución.  
+- El número de versión del ensamblado, que, junto con el nombre del ensamblado y la información de referencia cultural, es parte de la identidad del ensamblado. El motor en tiempo de ejecución utiliza este número para imponer la directiva de versiones y juega un papel importante en el proceso de resolución de tipos en tiempo de ejecución.  
   
--   Una versión informativa, que es una cadena que representa información adicional sobre la versión que se incluye sólo con carácter informativo.  
+- Una versión informativa, que es una cadena que representa información adicional sobre la versión que se incluye sólo con carácter informativo.  
   
 ### <a name="assembly-version-number"></a>Número de versión del ensamblado  
  Cada ensamblado tiene un número de versión como parte de su identidad. Por tanto, el motor en tiempo de ejecución considera que son totalmente diferentes dos ensamblados que se diferencien por el número de versión. El número de versión se representa físicamente como una cadena de cuatro partes con el formato siguiente:  

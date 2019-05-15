@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04353361f8356b1d2b2aa3b930bb9b5ab88b9c0b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037770"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583688"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Procedimiento para ejecutar directamente consultas SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte las consultas que se escriben en consultas SQL parametrizadas (en formato de texto) y las envía al servidor SQL Server para su procesamiento.  
   
- SQL no puede ejecutar todos los métodos que podrían estar localmente disponibles para una aplicación. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta convertir estos métodos locales en operaciones y funciones equivalentes que estén disponibles en el entorno de SQL. La mayoría de los métodos y operadores de los tipos integrados de [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tienen comandos SQL que son equivalentes directos. Algunos se pueden generar a partir de las funciones que están disponibles. Aquellos que no se pueden generar, inician excepciones en tiempo de ejecución. Para obtener más información, consulte [asignación de tipos de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ SQL no puede ejecutar todos los métodos que podrían estar localmente disponibles para una aplicación. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] intenta convertir estos métodos locales en operaciones y funciones equivalentes que estén disponibles en el entorno de SQL. La mayoría de los métodos y operadores en los tipos integrados de .NET Framework tienen equivalentes directos en comandos SQL. Algunos se pueden generar a partir de las funciones que están disponibles. Aquellos que no se pueden generar, inician excepciones en tiempo de ejecución. Para obtener más información, consulte [asignación de tipos de CLR de SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
  Cuando una consulta [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no es suficiente para una tarea especializada, puede utilizar el método <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> para ejecutar una consulta SQL y después convertir el resultado de la consulta directamente en objetos.  
   

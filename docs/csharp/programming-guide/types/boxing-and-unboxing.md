@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5db3d759daec273a29dccfeff9879d0edcc9a269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835172"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595016"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Conversión boxing y unboxing (Guía de programación de C#)
 La conversión boxing es el proceso de convertir un [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) en el tipo `object` o en cualquier tipo de interfaz implementado por este tipo de valor. Cuando CLR aplica la conversión boxing a un tipo de valor, ajusta el valor dentro de una clase System.Object y lo almacena en el montón administrado. La conversión unboxing extrae el tipo de valor del objeto. La conversión boxing es implícita y la conversión unboxing es explícita. El concepto de conversión boxing y unboxing es la base de la vista unificada del sistema de tipos de C#, en el que un valor de cualquier tipo se puede tratar como objeto.  
@@ -63,9 +63,9 @@ La conversión boxing es el proceso de convertir un [tipo de valor](../../../csh
 ## <a name="unboxing"></a>Conversión unboxing  
  La conversión unboxing es una conversión explícita del tipo `object` en un [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) o de un tipo de interfaz en un tipo de valor que implementa la interfaz. Una operación de conversión unboxing consiste en lo siguiente:  
   
--   Comprobar la instancia de objeto para asegurarse de que se trata de un valor de conversión boxing del tipo de valor dado.  
+- Comprobar la instancia de objeto para asegurarse de que se trata de un valor de conversión boxing del tipo de valor dado.  
   
--   Copiar el valor de la instancia en la variable de tipo de valor.  
+- Copiar el valor de la instancia en la variable de tipo de valor.  
   
  Las siguientes instrucciones muestran las operaciones de conversión boxing y unboxing:  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>Secciones relacionadas  
  Para obtener más información:  
   
--   [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)  
+- [Tipos de valor](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>Vea también
 

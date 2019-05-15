@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data entry [Windows Forms], error handling
 - error handling [Windows Forms], data entry
 ms.assetid: 9004e72f-fdec-4264-a37d-2c99764efc13
-ms.openlocfilehash: 07c8cb2e3440d56ddf9f9baca11b658bf4f04394
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6297eaea93caea5d19af9740d2b5a1066507ff15
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624184"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592062"
 ---
 # <a name="how-to-handle-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Procedimiento para controlar los errores que se producen durante la entrada de datos en el control DataGridView de formularios Windows Forms
 En el ejemplo de código siguiente, se muestra cómo utilizar el control <xref:System.Windows.Forms.DataGridView> para informar de errores de entrada de datos al usuario.  
@@ -31,8 +31,6 @@ En el ejemplo de código siguiente, se muestra cómo utilizar el control <xref:S
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Data, System.Windows.Forms y System.XML.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Almacenar información confidencial, como una contraseña, en la cadena de conexión puede afectar a la seguridad de la aplicación. El uso de la autenticación de Windows (también conocida como seguridad integrada) es un modo más seguro de controlar el acceso a una base de datos. Para más información, consulte [Proteger la información de conexión](../../data/adonet/protecting-connection-information.md).  

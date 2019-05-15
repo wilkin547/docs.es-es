@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: f1c1a0abaeddadb44b40d56eb2f8a28e4b58f4f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 84f10540e7735ac1043e63eecda84161c10deeef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651767"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591723"
 ---
 # <a name="how-to-display-time-with-the-datetimepicker-control"></a>Procedimiento para mostrar la hora con el control DateTimePicker
 Si quiere la aplicación para permitir a los usuarios seleccionar una fecha y hora, y mostrar esa fecha y hora en el formato especificado, utilice el control <xref:System.Windows.Forms.DateTimePicker>. El siguiente procedimiento muestra cómo utilizar el control <xref:System.Windows.Forms.DateTimePicker> para mostrar la hora.  
@@ -41,8 +41,6 @@ Si quiere la aplicación para permitir a los usuarios seleccionar una fecha y ho
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

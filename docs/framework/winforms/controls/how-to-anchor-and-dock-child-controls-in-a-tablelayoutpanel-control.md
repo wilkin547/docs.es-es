@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 82d75559260292476d81e4440280efb46bfd86c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613018"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586174"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Procedimiento para delimitar y acoplar controles secundarios en un control TableLayoutPanel
 El control <xref:System.Windows.Forms.TableLayoutPanel> admite las propiedades <xref:System.Windows.Forms.Control.Anchor%2A> y <xref:System.Windows.Forms.Control.Dock%2A> en sus controles secundarios.  
@@ -81,8 +81,6 @@ El control <xref:System.Windows.Forms.TableLayoutPanel> admite las propiedades <
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

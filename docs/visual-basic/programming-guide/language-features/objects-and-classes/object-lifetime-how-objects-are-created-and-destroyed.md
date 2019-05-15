@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469704"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591545"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Duración de los objetos: Cómo los objetos se crean y destruyen (Visual Basic)
 Mediante el uso de la palabra clave `New` se crea una instancia de una clase, un objeto. A menudo, las tareas de inicialización deben realizarse en los objetos nuevos antes de utilizarlos. Las tareas de inicialización comunes incluyen abrir archivos, conectarse a bases de datos y leer los valores de las claves del registro. Visual Basic controla la inicialización de objetos nuevos mediante procedimientos denominados *constructores* (métodos especiales que permiten controlar la inicialización).  
@@ -140,7 +140,7 @@ End Sub
  Una clase derivada no debe reemplazar los métodos <xref:System.IDisposable.Dispose%2A> y `Finalize` de la clase base. Cuando se llama a dichos métodos desde una instancia de la clase derivada, la implementación de la clase base de los métodos llama al reemplazo de la clase derivada del método `Dispose(disposing)`.  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>Recolección de elementos no utilizados y el destructor Finalize  
- El [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] usa el *recolección de seguimiento de referencias* sistema para liberar periódicamente los recursos no utilizados. Visual Basic 6.0 y versiones anteriores utilizan un sistema diferente denominado *recuento de referencias* para administrar los recursos. Aunque ambos sistemas realizan la misma función automáticamente, existen algunas diferencias importantes.  
+ .NET Framework usa el *recolección de seguimiento de referencias* sistema para liberar periódicamente los recursos no utilizados. Visual Basic 6.0 y versiones anteriores utilizan un sistema diferente denominado *recuento de referencias* para administrar los recursos. Aunque ambos sistemas realizan la misma función automáticamente, existen algunas diferencias importantes.  
   
  CLR destruye periódicamente objetos cuando el sistema determina que ya no son necesarios. Los objetos se liberan más rápidamente cuando los recursos del sistema son escasos, y menos frecuentemente en caso contrario. El retraso que se produce entre el momento en que un objeto pierde su ámbito y el momento en que CLR lo libera conlleva que, a diferencia de lo que sucede con los objetos en Visual Basic 6.0 y versiones anteriores, no se puede determinar exactamente cuándo se destruirá el objeto. En esta situación, se dice que tiene los objetos *duración no determinista*. En la mayoría de los casos, la duración no determinista no cambia la manera de escribir las aplicaciones, siempre y cuando tenga en cuenta que el destructor `Finalize` puede no ejecutarse inmediatamente cuando un objeto pierde su ámbito.  
   

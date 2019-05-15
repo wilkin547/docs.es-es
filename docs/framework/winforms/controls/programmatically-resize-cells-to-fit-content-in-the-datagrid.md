@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], resizing cells
 - grids [Windows Forms], resizing cells to fit content
 ms.assetid: 63d770dc-b3f5-462b-901a-3125b2753792
-ms.openlocfilehash: 8c95d60ba36275ec4d0e263f97bc28a559c1f38e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e076d26f733716967996f7f809abf0b9f946ef5a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654455"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590496"
 ---
 # <a name="how-to-programmatically-resize-cells-to-fit-content-in-the-windows-forms-datagridview-control"></a>Procedimiento para cambiar mediante programación el tamaño de las celdas para ajustar el contenido en el control DataGridView de formularios Windows Forms
 Puede usar los métodos <xref:System.Windows.Forms.DataGridView> del control para cambiar el tamaño de las filas, columnas y encabezados para que muestren sus valores completos sin truncarlos. Puede usar estos métodos para cambiar el tamaño de los elementos <xref:System.Windows.Forms.DataGridView> cuando elija. También puede configurar el control para cambiar el tamaño de estos elementos automáticamente cada vez que cambie el contenido. Sin embargo, esto puede resultar poco eficiente si trabaja con grandes conjuntos de datos o si los datos cambian con frecuencia. Para obtener más información, consulte [opciones de ajuste de tamaño en el DataGridView Control de formularios de Windows](sizing-options-in-the-windows-forms-datagridview-control.md).  
@@ -34,8 +34,6 @@ Puede usar los métodos <xref:System.Windows.Forms.DataGridView> del control par
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

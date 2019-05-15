@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: a719b3f1cbd972e79d057730ac1d89e5d91d97e5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e7cf058ef5e6b007a39213aa0ca5748a3b77458a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664308"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590646"
 ---
 # <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>Tipo de parámetro '\<parametername >' no es conforme a CLS
 Un procedimiento está marcado como `<CLSCompliant(True)>` pero declara un parámetro con un tipo que está marcado como `<CLSCompliant(False)>`, no está marcado o no cumple los requisitos porque es un tipo no conforme.  
@@ -43,4 +43,4 @@ Un procedimiento está marcado como `<CLSCompliant(True)>` pero declara un pará
   
 - Si el procedimiento debe ser conforme a CLS, cambie el tipo de este parámetro para el tipo conforme a CLS más próximo. Por ejemplo, en lugar de `UInteger` , quizá pueda usar `Integer` si no necesita que el intervalo de valores esté por encima de 2.147.483.647. Si necesita el intervalo extendido, puede reemplazar `UInteger` por `Long`.  
   
-- Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos distintos que en [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Por ejemplo, `int` suele ser de 16 bits en otros entornos. Si se acepta un entero de 16 bits de esos componentes, declárelo como `Short` en lugar de `Integer` en el código administrado de Visual Basic.
+- Si trabaja con objetos de automatización o COM, tenga en cuenta que algunos tipos tienen anchos de datos diferente que en .NET Framework. Por ejemplo, `int` suele ser de 16 bits en otros entornos. Si se acepta un entero de 16 bits de esos componentes, declárelo como `Short` en lugar de `Integer` en el código administrado de Visual Basic.

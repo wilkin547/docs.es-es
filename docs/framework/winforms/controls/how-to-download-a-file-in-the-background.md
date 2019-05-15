@@ -14,12 +14,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 1d62bbac8550a5e632760e196463285e4c9a14ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ed7d5593a29726412f5ea75812cf5a6d800ee77a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651754"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591708"
 ---
 # <a name="how-to-download-a-file-in-the-background"></a>Procedimiento para descargar un archivo en segundo plano
 Descargar un archivo es una tarea común y, por lo general, resulta útil ejecutar esta operación que puede requerir mucho tiempo en un subproceso independiente. Use el componente <xref:System.ComponentModel.BackgroundWorker> para realizar esta tarea con muy poco código.  
@@ -59,8 +59,6 @@ Descargar un archivo es una tarea común y, por lo general, resulta útil ejecut
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System.Drawing, System.Windows.Forms y System.Xml.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="robust-programming"></a>Programación sólida  
  Compruebe siempre la propiedad <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> en su controlador de eventos <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> antes de intentar acceder a la propiedad <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> o a cualquier otro objeto afectado por el controlador de eventos <xref:System.ComponentModel.BackgroundWorker.DoWork>.  

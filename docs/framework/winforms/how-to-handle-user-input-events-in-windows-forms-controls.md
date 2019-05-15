@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, user input
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
-ms.openlocfilehash: cffcdbbaa988033352b08834e52d603fbebfa870
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ae230f22c929be39ea00eafe378c6910c4a9d35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591597"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592080"
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Procedimiento para controlar eventos de entrada del usuario en controles de formularios Windows Forms
 En este ejemplo, se muestra cómo controlar la mayoría de los eventos de teclado, mouse, foco y validación que pueden producirse en un control de Windows Forms. El cuadro de texto denominado `TextBoxInput` recibe los eventos cuando tiene foco y la información sobre cada evento se escribe en el cuadro de texto denominado `TextBoxOutput` en el orden en que se producen los eventos. La aplicación también incluye un conjunto de casillas que puede utilizarse para filtrar los eventos de los que se quiere dar parte.  
@@ -28,8 +28,6 @@ En este ejemplo, se muestra cómo controlar la mayoría de los eventos de teclad
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

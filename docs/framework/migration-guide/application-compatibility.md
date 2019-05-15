@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176259"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623790"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidad de aplicaciones en .NET Framework
 
@@ -42,11 +42,11 @@ Los diagnósticos de compatibilidad de .NET son analizadores de Roslyn que ayuda
 
 Cada problema incluye la siguiente información:
 
--   La descripción de los cambios con respecto a una versión anterior.
+- La descripción de los cambios con respecto a una versión anterior.
 
--   Cómo afecta el cambio a los clientes y si hay alguna solución alternativa disponible para mantener la compatibilidad entre versiones.
+- Cómo afecta el cambio a los clientes y si hay alguna solución alternativa disponible para mantener la compatibilidad entre versiones.
 
--   Una valoración de la importancia que tiene el cambio. Los problemas de compatibilidad de aplicaciones se dividen en las siguientes categorías:
+- Una valoración de la importancia que tiene el cambio. Los problemas de compatibilidad de aplicaciones se dividen en las siguientes categorías:
 
     |   |   |
     |---|---|
@@ -55,18 +55,18 @@ Cada problema incluye la siguiente información:
     |Caso avanzado|Un cambio que afecta a aplicaciones en situaciones muy concretas y poco frecuentes.|
     |Transparente|Un cambio que no tiene ningún efecto apreciable para el desarrollador o el usuario de la aplicación.|
 
--   La versión, que indica la primera aparición del cambio en .NET Framework. Algunos de los cambios se presentan en una versión determinada y se revierten en una versión posterior; que también se indica.
+- La versión, que indica la primera aparición del cambio en .NET Framework. Algunos de los cambios se presentan en una versión determinada y se revierten en una versión posterior; que también se indica.
 
--   El tipo de cambio:
+- El tipo de cambio:
 
     |   |   |
     |---|---|
     |Redestinación|El cambio afecta a aplicaciones que se vuelven a compilar para tener como destino una nueva versión de .NET Framework.|
     |Tiempo de ejecución|El cambio afecta a una aplicación existente que tiene como destino una versión anterior de .NET Framework, pero que se ejecuta en una versión posterior.|
 
--   Las API afectadas, si las hubiera.
+- Las API afectadas, si las hubiera.
 
--   Los identificadores de los diagnósticos disponibles.
+- Los identificadores de los diagnósticos disponibles.
 
 ## <a name="usage"></a>Uso
 Para comenzar, seleccione el tipo de cambio de compatibilidad a continuación:

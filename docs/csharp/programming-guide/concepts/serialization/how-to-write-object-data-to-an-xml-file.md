@@ -2,12 +2,12 @@
 title: Procedimiento para escribir datos de objeto en un archivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 064d7ed61921f3f700311a1b09ee77e0c9818d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4fdb496e3b015b2e3b46c9705ba1c05c20423f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554288"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595522"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Procedimiento para escribir datos de objeto en un archivo XML (C#)
 En este ejemplo se escribe el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -50,13 +50,13 @@ public class XMLWrite
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   La clase que se está serializando no tiene un constructor público sin parámetros.  
+- La clase que se está serializando no tiene un constructor público sin parámetros.  
   
--   El archivo ya existe y es de solo lectura (<xref:System.IO.IOException>).  
+- El archivo ya existe y es de solo lectura (<xref:System.IO.IOException>).  
   
--   La ruta de acceso del archivo es demasiado larga (<xref:System.IO.PathTooLongException>).  
+- La ruta de acceso del archivo es demasiado larga (<xref:System.IO.PathTooLongException>).  
   
--   El disco está lleno (<xref:System.IO.IOException>).  
+- El disco está lleno (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  En este ejemplo se crea un nuevo archivo, si este no existe aún. Si una aplicación necesita crear un archivo, precisará acceso `Create` para la carpeta. Si el archivo ya existe, la aplicación necesitará solo acceso `Write`, un privilegio menor. Siempre que sea posible, resulta más seguro crear el archivo durante la implementación y conceder solo acceso `Read` a un único archivo, en lugar de acceso `Create` para una carpeta.  

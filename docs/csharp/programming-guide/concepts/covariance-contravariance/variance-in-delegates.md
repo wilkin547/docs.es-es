@@ -2,12 +2,12 @@
 title: Varianza en delegados (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 75b1f94a3fc7a59393d6a114a2b5346dd0534297
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 835b19b191bd3cb193bf4ba12d689b962c8603ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657212"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598057"
 ---
 # <a name="variance-in-delegates-c"></a>Varianza en delegados (C#)
 En .NET Framework 3.5 se presentó por primera vez la compatibilidad con la varianza para hacer coincidir firmas de método con tipos de delegados en todos los delegados en C#. Esto significa que puede asignar a los delegados no solo métodos con firmas coincidentes, sino métodos que devuelven tipos más derivados (covarianza) o que aceptan parámetros con tipos menos derivados (contravarianza) que el especificado por el tipo de delegado. Esto incluye delegados genéricos y no genéricos.  
@@ -112,15 +112,15 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>Delegados genéricos con parámetros de tipo variante en .NET Framework  
  En .NET Framework 4 se presentó por primera vez la compatibilidad con la varianza para los parámetros de tipo genérico en varios delegados genéricos existentes:  
   
--   `Action` delega del espacio de nombres <xref:System>, por ejemplo, <xref:System.Action%601> y <xref:System.Action%602>  
+- `Action` delega del espacio de nombres <xref:System>, por ejemplo, <xref:System.Action%601> y <xref:System.Action%602>  
   
--   `Func` delega del espacio de nombres <xref:System>, por ejemplo, <xref:System.Func%601> y <xref:System.Func%602>  
+- `Func` delega del espacio de nombres <xref:System>, por ejemplo, <xref:System.Func%601> y <xref:System.Func%602>  
   
--   Delegado <xref:System.Predicate%601>.  
+- Delegado <xref:System.Predicate%601>.  
   
--   Delegado <xref:System.Comparison%601>.  
+- Delegado <xref:System.Comparison%601>.  
   
--   Delegado <xref:System.Converter%602>.  
+- Delegado <xref:System.Converter%602>.  
   
  Para obtener más información y ejemplos, vea [Using Variance for Func and Action Generic Delegates (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md) (Usar varianza para delegados genéricos Func y Action (C#)).  
   

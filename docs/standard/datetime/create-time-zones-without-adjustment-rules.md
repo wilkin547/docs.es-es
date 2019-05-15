@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6af8647-7893-4f29-95a9-d94c65a6e8dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3ffc7b6f1f7baec7ce6beb5a50b706ff78bfa1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff4cfe2b492b676c061043f018390844f1807440
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026554"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586397"
 ---
 # <a name="how-to-create-time-zones-without-adjustment-rules"></a>Procedimiento para crear zonas horarias sin reglas de ajuste
 
@@ -62,8 +62,6 @@ La cadena asignada a la <xref:System.TimeZoneInfo.DisplayName%2A> propiedad sigu
 ## <a name="compiling-the-code"></a>Compilación del código
 
 Para este ejemplo se necesita:
-
-* Que se agregarán al proyecto una referencia a System.Core.dll.
 
 * Que se importarán los espacios de nombres siguientes:
 

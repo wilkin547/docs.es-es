@@ -9,12 +9,12 @@ helpviewer_keywords:
 - menus [Windows Forms], setting margins
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
-ms.openlocfilehash: 5db4b3546b6c15af916d53b1a53c347174f1f30b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa099012fa77daacd1f428e64abd662ee1738f84
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643128"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586595"
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Procedimiento para configurar los márgenes de comprobación y de imagen de MenuStrip
 Puede personalizar un <xref:System.Windows.Forms.MenuStrip> estableciendo las propiedades <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> y <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> en diversas combinaciones.  
@@ -29,8 +29,6 @@ Puede personalizar un <xref:System.Windows.Forms.MenuStrip> estableciendo las pr
  Para este ejemplo se necesita:  
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

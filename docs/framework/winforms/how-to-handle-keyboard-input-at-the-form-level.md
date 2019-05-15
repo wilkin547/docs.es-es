@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, handling keyboard input
 - keyboards [Windows Forms], form-level input
 ms.assetid: d7f8b390-dc91-42d2-ae0f-2ffa388127ad
-ms.openlocfilehash: 8e346c5b69c507307d459f6246e26a6a96bb9e24
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c10852273eeb3caea01f448e4cbef571f20769bd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591295"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592048"
 ---
 # <a name="how-to-handle-keyboard-input-at-the-form-level"></a>Procedimiento para controlar la entrada de teclado en el formulario
 Windows Forms permite controlar los mensajes del teclado en el nivel de formulario, antes de que los mensajes lleguen a un control. En este tema se muestra cómo realizar esta tarea.  
@@ -40,8 +40,6 @@ Windows Forms permite controlar los mensajes del teclado en el nivel de formular
   
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.  
   
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
-
 ## <a name="see-also"></a>Vea también
 
 - [Entradas mediante teclado en una aplicación de Windows Forms](keyboard-input-in-a-windows-forms-application.md)

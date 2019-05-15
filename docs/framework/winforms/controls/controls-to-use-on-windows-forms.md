@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469520"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589041"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controles que se utilizan en formularios Windows Forms
 A continuación, se muestra una lista de controles y componentes por orden alfabético que se puede utilizar en formularios Windows Forms. Además de los controles de formularios Windows Forms cubiertos en esta sección, puede añadir ActiveX y controles personalizados a formularios Windows Forms. Si no encuentra aquí el control que necesita, también puede crear el suyo propio. Para obtener más información, consulte [Desarrollar controles de formularios Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md). Para obtener más información sobre cómo elegir el control que necesita, consulte [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Controles de Visual Basic se basan en las clases proporcionadas por el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+>  Controles de Visual Basic se basan en las clases proporcionadas por .NET Framework.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)  
- Enumera y describe los controles de formularios Windows Forms basándose en [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
+ Enumera y describe los controles de Windows Forms basados en .NET Framework.  
   
  [Controles compatibles con dibujos propietarios integrados](controls-with-built-in-owner-drawing-support.md)  
  Describe cómo modificar aspectos de la apariencia de un control que no están disponibles en las propiedades.  
@@ -168,7 +168,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  Permite al usuario cambiar el tamaño de un control acoplado.  
   
  [Splitter (control)](splitter-control-windows-forms.md)  
- Permite al usuario cambiar el tamaño de un control acoplado ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] versión 1.x).  
+ Permite al usuario cambiar el tamaño de un control acoplado (versión de .NET Framework 1.x).  
   
  [StatusBar (control)](statusbar-control-windows-forms.md)  
  Muestra información de estado relacionada con el control que está activado. Aunque el control <xref:System.Windows.Forms.StatusStrip> reemplaza y amplía el control <xref:System.Windows.Forms.StatusBar> de versiones anteriores, <xref:System.Windows.Forms.StatusBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, según sea el caso.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: 64992ed9-44af-4baf-b45f-863e6ab35711
-ms.openlocfilehash: 3e2c85486144a5009f08c7b6ecfd056c7cd86fcf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0edcc27968c55908cda0e881ed66f83323316711
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612008"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591304"
 ---
 # <a name="how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procedimiento para crear un formulario MDI con combinación de menús y controles ToolStrip
 El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> es compatible con aplicaciones de interfaces de múltiples documentos (MDI) y el control <xref:System.Windows.Forms.MenuStrip> admite la combinación de menús. Los formularios MDI también pueden ser compatibles con los controles <xref:System.Windows.Forms.ToolStrip>.  
@@ -34,8 +34,6 @@ El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> e
  Para este ejemplo de código se necesita:  
   
 - Referencias a los ensamblados System.Drawing y System.Windows.Forms.  
-  
- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 
