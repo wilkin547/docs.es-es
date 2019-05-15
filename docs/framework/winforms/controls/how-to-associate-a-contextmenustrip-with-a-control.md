@@ -10,41 +10,39 @@ helpviewer_keywords:
 - context menus [Windows Forms], associating with controls
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
-ms.openlocfilehash: 70617f73293c62cdf29ca47ee060e023b66cb454
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e1b2a49196d6da66d478a3d44eab64298cebe969
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64612799"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586609"
 ---
-# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a><span data-ttu-id="fb3fc-102">Procedimiento para asociar un objeto ContextMenuStrip con un control</span><span class="sxs-lookup"><span data-stu-id="fb3fc-102">How to: Associate a ContextMenuStrip with a Control</span></span>
-<span data-ttu-id="fb3fc-103">Después de crear los controles y menús contextuales, utilice los procedimientos siguientes para mostrar un menú contextual determinado cuando el usuario hace clic con el botón secundario del mouse en el control.</span><span class="sxs-lookup"><span data-stu-id="fb3fc-103">After creating your controls and shortcut menus, use the following procedures to display a given shortcut menu when the user right-clicks the control.</span></span> <span data-ttu-id="fb3fc-104">Estos procedimientos asocian un <xref:System.Windows.Forms.ContextMenuStrip> a un Windows Forms y a un control <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="fb3fc-104">These procedures associate a <xref:System.Windows.Forms.ContextMenuStrip> with a Windows Form and with a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
+# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a><span data-ttu-id="83cd5-102">Procedimiento para asociar un objeto ContextMenuStrip con un control</span><span class="sxs-lookup"><span data-stu-id="83cd5-102">How to: Associate a ContextMenuStrip with a Control</span></span>
+<span data-ttu-id="83cd5-103">Después de crear los controles y menús contextuales, utilice los procedimientos siguientes para mostrar un menú contextual determinado cuando el usuario hace clic con el botón secundario del mouse en el control.</span><span class="sxs-lookup"><span data-stu-id="83cd5-103">After creating your controls and shortcut menus, use the following procedures to display a given shortcut menu when the user right-clicks the control.</span></span> <span data-ttu-id="83cd5-104">Estos procedimientos asocian un <xref:System.Windows.Forms.ContextMenuStrip> a un Windows Forms y a un control <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="83cd5-104">These procedures associate a <xref:System.Windows.Forms.ContextMenuStrip> with a Windows Form and with a <xref:System.Windows.Forms.ToolStrip> control.</span></span>  
   
-### <a name="to-associate-a-contextmenustrip-with-a-windows-form"></a><span data-ttu-id="fb3fc-105">Para asociar un objeto ContextMenuStrip a Windows Forms</span><span class="sxs-lookup"><span data-stu-id="fb3fc-105">To associate a ContextMenuStrip with a Windows Form</span></span>  
+### <a name="to-associate-a-contextmenustrip-with-a-windows-form"></a><span data-ttu-id="83cd5-105">Para asociar un objeto ContextMenuStrip a Windows Forms</span><span class="sxs-lookup"><span data-stu-id="83cd5-105">To associate a ContextMenuStrip with a Windows Form</span></span>  
   
-1. <span data-ttu-id="fb3fc-106">Establezca la propiedad <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> al nombre del <xref:System.Windows.Forms.ContextMenuStrip> asociado.</span><span class="sxs-lookup"><span data-stu-id="fb3fc-106">Set the <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> property to the name of the associated <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+1. <span data-ttu-id="83cd5-106">Establezca la propiedad <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> al nombre del <xref:System.Windows.Forms.ContextMenuStrip> asociado.</span><span class="sxs-lookup"><span data-stu-id="83cd5-106">Set the <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> property to the name of the associated <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-### <a name="to-associate-a-contextmenustrip-with-a-toolstrip-control"></a><span data-ttu-id="fb3fc-107">Para asociar un objeto ContextMenuStrip a un control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="fb3fc-107">To associate a ContextMenuStrip with a ToolStrip control</span></span>  
+### <a name="to-associate-a-contextmenustrip-with-a-toolstrip-control"></a><span data-ttu-id="83cd5-107">Para asociar un objeto ContextMenuStrip a un control ToolStrip</span><span class="sxs-lookup"><span data-stu-id="83cd5-107">To associate a ContextMenuStrip with a ToolStrip control</span></span>  
   
-1. <span data-ttu-id="fb3fc-108">Establezca la propiedad <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> del control en el nombre del <xref:System.Windows.Forms.ContextMenuStrip> asociado.</span><span class="sxs-lookup"><span data-stu-id="fb3fc-108">Set the control's <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> property to the name of the associated <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
+1. <span data-ttu-id="83cd5-108">Establezca la propiedad <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> del control en el nombre del <xref:System.Windows.Forms.ContextMenuStrip> asociado.</span><span class="sxs-lookup"><span data-stu-id="83cd5-108">Set the control's <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> property to the name of the associated <xref:System.Windows.Forms.ContextMenuStrip>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fb3fc-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="fb3fc-109">Example</span></span>  
- <span data-ttu-id="fb3fc-110">En el ejemplo de código siguiente, se crea un Windows Forms y un control <xref:System.Windows.Forms.ToolStrip>, y se asocia un control <xref:System.Windows.Forms.ContextMenuStrip> diferente a cada uno de ellos.</span><span class="sxs-lookup"><span data-stu-id="fb3fc-110">The following code example creates a Windows Form and a <xref:System.Windows.Forms.ToolStrip>, and associates a different <xref:System.Windows.Forms.ContextMenuStrip> control with each of them.</span></span>  
+## <a name="example"></a><span data-ttu-id="83cd5-109">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="83cd5-109">Example</span></span>  
+ <span data-ttu-id="83cd5-110">En el ejemplo de código siguiente, se crea un Windows Forms y un control <xref:System.Windows.Forms.ToolStrip>, y se asocia un control <xref:System.Windows.Forms.ContextMenuStrip> diferente a cada uno de ellos.</span><span class="sxs-lookup"><span data-stu-id="83cd5-110">The following code example creates a Windows Form and a <xref:System.Windows.Forms.ToolStrip>, and associates a different <xref:System.Windows.Forms.ContextMenuStrip> control with each of them.</span></span>  
   
  [!code-csharp[System.Windows.Forms.ContextMenuStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ContextMenuStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ContextMenuStrip/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="fb3fc-111">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="fb3fc-111">Compiling the Code</span></span>  
- <span data-ttu-id="fb3fc-112">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="fb3fc-112">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="83cd5-111">Compilar el código</span><span class="sxs-lookup"><span data-stu-id="83cd5-111">Compiling the Code</span></span>  
+ <span data-ttu-id="83cd5-112">Para este ejemplo se necesita:</span><span class="sxs-lookup"><span data-stu-id="83cd5-112">This example requires:</span></span>  
   
-- <span data-ttu-id="fb3fc-113">Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="fb3fc-113">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="83cd5-113">Referencias a los ensamblados System, System.Data, System.Drawing y System.Windows.Forms.</span><span class="sxs-lookup"><span data-stu-id="83cd5-113">References to the System, System.Data, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="fb3fc-114">Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span><span class="sxs-lookup"><span data-stu-id="fb3fc-114">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="fb3fc-115">También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.</span><span class="sxs-lookup"><span data-stu-id="fb3fc-115">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="fb3fc-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="fb3fc-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="83cd5-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="83cd5-114">See also</span></span>
 
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
 - <xref:System.Windows.Forms.ToolStrip>
-- [<span data-ttu-id="fb3fc-117">Cómo: Agregar elementos de menú a ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="fb3fc-117">How to: Add Menu Items to a ContextMenuStrip</span></span>](how-to-add-menu-items-to-a-contextmenustrip.md)
-- [<span data-ttu-id="fb3fc-118">ContextMenuStrip (Control)</span><span class="sxs-lookup"><span data-stu-id="fb3fc-118">ContextMenuStrip Control</span></span>](contextmenustrip-control.md)
+- [<span data-ttu-id="83cd5-115">Cómo: Agregar elementos de menú a ContextMenuStrip</span><span class="sxs-lookup"><span data-stu-id="83cd5-115">How to: Add Menu Items to a ContextMenuStrip</span></span>](how-to-add-menu-items-to-a-contextmenustrip.md)
+- [<span data-ttu-id="83cd5-116">ContextMenuStrip (Control)</span><span class="sxs-lookup"><span data-stu-id="83cd5-116">ContextMenuStrip Control</span></span>](contextmenustrip-control.md)
