@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610415"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591962"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Cómo afecta la referencia cultural a las cadenas en Visual Basic
 Esta página de ayuda explica cómo Visual Basic usa la información de referencia cultural para realizar conversiones de cadenas y comparaciones.  
@@ -38,7 +38,7 @@ Esta página de ayuda explica cómo Visual Basic usa la información de referenc
 ## <a name="using-a-specific-culture"></a>Uso de una referencia cultural específica  
  Imagine que está desarrollando una aplicación que envía una fecha (con formato como una cadena) a un servicio Web. En este caso, la aplicación debe utilizar una referencia cultural específica para la conversión de cadena. Para ilustrar por qué, considere el resultado del uso de la fecha <xref:System.DateTime.ToString> método: Si la aplicación utiliza ese método para dar formato a la fecha del 4 de julio de 2005, devuelve "7/4/2005 12:00:00 AM" cuando se ejecuta con la referencia cultural inglés de Estados Unidos (en-US), pero devuelve "04.07.2005 00:00:00" cuando se ejecuta con la referencia cultural de alemán (de-DE).  
   
- Cuando necesite realizar una conversión de cadena en un formato de referencia cultural concreta, debe usar el `CultureInfo` clase que está integrado en el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Puede crear un nuevo `CultureInfo` objeto para una referencia cultural concreta, pasando el nombre de la referencia cultural a la <xref:System.Globalization.CultureInfo.%23ctor%2A> constructor. Se muestran los nombres de referencia cultural admitida en la <xref:System.Globalization.CultureInfo> página de Ayuda de la clase.  
+ Cuando necesite realizar una conversión de cadena en un formato de referencia cultural concreta, debe usar el `CultureInfo` clase que está integrado en .NET Framework. Puede crear un nuevo `CultureInfo` objeto para una referencia cultural concreta, pasando el nombre de la referencia cultural a la <xref:System.Globalization.CultureInfo.%23ctor%2A> constructor. Se muestran los nombres de referencia cultural admitida en la <xref:System.Globalization.CultureInfo> página de Ayuda de la clase.  
   
  Como alternativa, puede obtener una instancia de la *cultural* desde el <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> propiedad. La referencia cultural se basa en la configuración regional inglesa, pero hay algunas diferencias. Por ejemplo, la referencia cultural invariable especifica un reloj de 24 horas en lugar de un reloj de 12 horas.  
   
@@ -62,7 +62,7 @@ Esta página de ayuda explica cómo Visual Basic usa la información de referenc
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- También puede usar el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] asociado de la `StrComp` función, el <xref:System.String.Compare%2A?displayProperty=nameWithType> método. Se trata de un método estático de la clase base string sobrecargado. El ejemplo siguiente muestra cómo se usa este método:  
+ También puede usar el asociado de .NET Framework de la `StrComp` función, el <xref:System.String.Compare%2A?displayProperty=nameWithType> método. Se trata de un método estático de la clase base string sobrecargado. El ejemplo siguiente muestra cómo se usa este método:  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

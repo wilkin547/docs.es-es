@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 364d3924d9db2c85959c1e41011c6d659823774c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614827"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592206"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Tipos admitidos por el serializador de contrato de datos
 Windows Communication Foundation (WCF) utiliza el <xref:System.Runtime.Serialization.DataContractSerializer> como su motor de serialización predeterminado para convertir datos en XML y para convertir XML en datos. <xref:System.Runtime.Serialization.DataContractSerializer> está diseñado para serializar los tipos de *contrato de datos* . Sin embargo, admite muchos otros tipos, de los que se puede pensar que tienen un contrato de datos implícito. A continuación, se muestra una lista completa de los tipos que se pueden serializar:  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) utiliza el <xref:System.Runtime.Serializa
     > [!NOTE]
     >  A diferencia de otros tipos primitivos, <xref:System.DateTimeOffset> no es de un tipo conocido de forma predeterminada. Para obtener más información, consulte [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)).  
   
-- Tipos marcados con el atributo <xref:System.SerializableAttribute> . Muchos tipos incluidos en la biblioteca de clases base de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] se clasifican en esta categoría. <xref:System.Runtime.Serialization.DataContractSerializer> admite totalmente este modelo de programación de serialización que fue utilizado por la comunicación remota de .NET Framework, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, incluida la compatibilidad para la interfaz <xref:System.Runtime.Serialization.ISerializable> .  
+- Tipos marcados con el atributo <xref:System.SerializableAttribute> . Muchos tipos incluidos en la biblioteca de clases base de .NET Framework se dividen en esta categoría. <xref:System.Runtime.Serialization.DataContractSerializer> admite totalmente este modelo de programación de serialización que fue utilizado por la comunicación remota de .NET Framework, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>, incluida la compatibilidad para la interfaz <xref:System.Runtime.Serialization.ISerializable> .  
   
 - Tipos que representan XML sin formato o tipos que representan datos relacionales [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] . <xref:System.Xml.XmlElement> y la matriz de tipos <xref:System.Xml.XmlNode> se admiten como una manera de representar XML directamente. De manera adicional, se admiten los tipos que implementan la interfaz <xref:System.Xml.Serialization.IXmlSerializable> , incluido el atributo relacionado <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> y los tipos <xref:System.Xml.Linq.XDocument> y <xref:System.Xml.Linq.XElement> . El atributo [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> y <xref:System.Data.DataSet> , así como sus clases derivadas de tipo, implementan la interfaz <xref:System.Xml.Serialization.IXmlSerializable> y, por consiguiente, entran dentro de esta categoría. Para obtener más información, consulte [tipos XML y ADO.NET en contratos de datos](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md).  
   

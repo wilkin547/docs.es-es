@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 87a85511669e676f2943bf5f079b54e96b926490
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9503af53cd699405d14f4f92a1d962a59918f759
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979871"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608564"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Control de excepciones (Guía de programación de C#)
 Los programadores de C# usan un bloque [try](../../../csharp/language-reference/keywords/try-catch.md) para separar el código que podría verse afectado por una excepción. Los bloques [catch](../../../csharp/language-reference/keywords/try-catch.md) asociados se usan para controlar las excepciones resultantes. Los bloques [finally](../../../csharp/language-reference/keywords/try-finally.md) contienen código que se ejecuta independientemente de si se produce una excepción en el bloque `try`, como la liberación de recursos asignados en el bloque `try`. Los bloques `try` requieren uno o varios bloques `catch` asociados, un bloque `finally` o ambos.  
@@ -33,13 +33,13 @@ Los programadores de C# usan un bloque [try](../../../csharp/language-reference/
   
  Debe detectar excepciones cuando se cumplan las siguientes condiciones:  
   
--   Comprende bien el motivo por el que podría producirse la excepción y puede implementar una recuperación específica, por ejemplo, pedir al usuario que escriba un nuevo nombre de archivo cuando detecte un objeto <xref:System.IO.FileNotFoundException>.  
+- Comprende bien el motivo por el que podría producirse la excepción y puede implementar una recuperación específica, por ejemplo, pedir al usuario que escriba un nuevo nombre de archivo cuando detecte un objeto <xref:System.IO.FileNotFoundException>.  
   
--   Puede crear y producir una nueva excepción más específica.  
+- Puede crear y producir una nueva excepción más específica.  
   
      [!code-csharp[csProgGuideExceptions#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#9)]  
   
--   Quiere controlar parcialmente una excepción antes de pasarla para su control adicional. En el ejemplo siguiente, se usa un bloque `catch` para agregar una entrada a un registro de errores antes de volver a producir la excepción.  
+- Quiere controlar parcialmente una excepción antes de pasarla para su control adicional. En el ejemplo siguiente, se usa un bloque `catch` para agregar una entrada a un registro de errores antes de volver a producir la excepción.  
   
      [!code-csharp[csProgGuideExceptions#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#10)]  
   

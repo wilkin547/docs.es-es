@@ -5,33 +5,33 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
-ms.openlocfilehash: 1bf3eb97d633322f6bd04f8e975ae3fc8ec54329
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13ecd6c0d613199210610c1c094ae1bdabaa71a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651816"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608468"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>Diferencias entre plantillas de C++ y tipos genéricos de C# (Guía de programación de C#)
 Los tipos genéricos de C# y las plantillas de C++ son dos características de lenguaje que ofrecen compatibilidad con tipos parametrizados. Pero existen muchas diferencias entre ambos. En el nivel de sintaxis, los tipos genéricos de C# resultan un enfoque más sencillo que los tipos parametrizados sin la complejidad de las plantillas de C++. Además, C# no intenta ofrecer toda la funcionalidad que ofrecen las plantillas de C++. En el nivel de implementación, la principal diferencia es que las sustituciones de tipo genérico de C# se realizan en tiempo de ejecución y, por tanto, se conserva la información de tipo genérico para los objetos con instancias. Para obtener más información, vea [Generics in the Run Time](../../../csharp/programming-guide/generics/generics-in-the-run-time.md) (Genéricos en el tiempo de ejecución).  
   
  Estas son las principales diferencias entre plantillas de C++ y tipos genéricos de C#:  
   
--   Los tipos genéricos de C# no ofrecen tanta flexibilidad como las plantillas de C++. Por ejemplo, no es posible llamar a operadores aritméticos en una clase de tipos genéricos de C#, aunque es posible llamar a operadores definidos por el usuario.  
+- Los tipos genéricos de C# no ofrecen tanta flexibilidad como las plantillas de C++. Por ejemplo, no es posible llamar a operadores aritméticos en una clase de tipos genéricos de C#, aunque es posible llamar a operadores definidos por el usuario.  
   
--   C# no permite parámetros de plantilla sin tipo, como `template C<int i> {}`.  
+- C# no permite parámetros de plantilla sin tipo, como `template C<int i> {}`.  
   
--   C# no admite la especialización explícita; es decir, una implementación personalizada de una plantilla para un tipo específico.  
+- C# no admite la especialización explícita; es decir, una implementación personalizada de una plantilla para un tipo específico.  
   
--   C# no admite la especialización parcial: una implementación personalizada de un subconjunto de los argumentos de tipo.  
+- C# no admite la especialización parcial: una implementación personalizada de un subconjunto de los argumentos de tipo.  
   
--   C# no permite que el parámetro de tipo se use como clase base del tipo genérico.  
+- C# no permite que el parámetro de tipo se use como clase base del tipo genérico.  
   
--   C# no permite que los parámetros de tipo tengan tipos predeterminados.  
+- C# no permite que los parámetros de tipo tengan tipos predeterminados.  
   
--   En C#, un parámetro de tipo genérico no puede ser un tipo genérico, aunque se pueden usar tipos construidos como genéricos. C++ permite parámetros de plantilla.  
+- En C#, un parámetro de tipo genérico no puede ser un tipo genérico, aunque se pueden usar tipos construidos como genéricos. C++ permite parámetros de plantilla.  
   
--   C++ permite código que podría no ser válido para todos los parámetros de tipo en la plantilla, que luego busca el tipo específico que se usa como parámetro de tipo. C# requiere que el código de una clase se escriba de manera que funcione con cualquier tipo que cumpla las restricciones. Por ejemplo, en C++ es posible escribir una función que use los operadores aritméticos `+` y `-` en objetos del parámetro de tipo, lo que producirá un error en el momento de creación de instancias de la plantilla con un tipo que no admita estos operadores. C# no permite esto; las únicas construcciones de lenguaje permitidas son las que se pueden deducir de las restricciones.  
+- C++ permite código que podría no ser válido para todos los parámetros de tipo en la plantilla, que luego busca el tipo específico que se usa como parámetro de tipo. C# requiere que el código de una clase se escriba de manera que funcione con cualquier tipo que cumpla las restricciones. Por ejemplo, en C++ es posible escribir una función que use los operadores aritméticos `+` y `-` en objetos del parámetro de tipo, lo que producirá un error en el momento de creación de instancias de la plantilla con un tipo que no admita estos operadores. C# no permite esto; las únicas construcciones de lenguaje permitidas son las que se pueden deducir de las restricciones.  
   
 ## <a name="see-also"></a>Vea también
 
