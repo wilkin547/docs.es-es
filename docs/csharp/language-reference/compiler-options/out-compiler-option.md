@@ -8,64 +8,64 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331304"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593035"
 ---
-# <a name="-out-c-compiler-options"></a><span data-ttu-id="5c458-102">-out (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="5c458-102">-out (C# Compiler Options)</span></span>
-<span data-ttu-id="5c458-103">La opción **-out** especifica el nombre del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="5c458-103">The **-out** option specifies the name of the output file.</span></span>  
+# <a name="-out-c-compiler-options"></a><span data-ttu-id="d203b-102">-out (Opciones del compilador de C#)</span><span class="sxs-lookup"><span data-stu-id="d203b-102">-out (C# Compiler Options)</span></span>
+<span data-ttu-id="d203b-103">La opción **-out** especifica el nombre del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="d203b-103">The **-out** option specifies the name of the output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5c458-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5c458-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d203b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d203b-104">Syntax</span></span>  
   
 ```console  
 -out:filename  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="5c458-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="5c458-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="d203b-105">Argumentos</span><span class="sxs-lookup"><span data-stu-id="d203b-105">Arguments</span></span>  
  `filename`  
- <span data-ttu-id="5c458-106">El nombre del archivo de salida creado por el compilador.</span><span class="sxs-lookup"><span data-stu-id="5c458-106">The name of the output file created by the compiler.</span></span>  
+ <span data-ttu-id="d203b-106">El nombre del archivo de salida creado por el compilador.</span><span class="sxs-lookup"><span data-stu-id="d203b-106">The name of the output file created by the compiler.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5c458-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5c458-107">Remarks</span></span>  
- <span data-ttu-id="5c458-108">En la línea de comandos, es posible especificar varios archivos de salida de una compilación.</span><span class="sxs-lookup"><span data-stu-id="5c458-108">On the command line, it is possible to specify multiple output files for your compilation.</span></span> <span data-ttu-id="5c458-109">El compilador espera encontrar al menos un archivo de código fuente después de la opción **-out**.</span><span class="sxs-lookup"><span data-stu-id="5c458-109">The compiler expects to find one or more source code files following the **-out** option.</span></span> <span data-ttu-id="5c458-110">Posteriormente, todos los archivos de código fuente se compilarán en el archivo de salida especificado por la opción **-out**.</span><span class="sxs-lookup"><span data-stu-id="5c458-110">Then, all source code files will be compiled into the output file specified by that **-out** option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d203b-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d203b-107">Remarks</span></span>  
+ <span data-ttu-id="d203b-108">En la línea de comandos, es posible especificar varios archivos de salida de una compilación.</span><span class="sxs-lookup"><span data-stu-id="d203b-108">On the command line, it is possible to specify multiple output files for your compilation.</span></span> <span data-ttu-id="d203b-109">El compilador espera encontrar al menos un archivo de código fuente después de la opción **-out**.</span><span class="sxs-lookup"><span data-stu-id="d203b-109">The compiler expects to find one or more source code files following the **-out** option.</span></span> <span data-ttu-id="d203b-110">Posteriormente, todos los archivos de código fuente se compilarán en el archivo de salida especificado por la opción **-out**.</span><span class="sxs-lookup"><span data-stu-id="d203b-110">Then, all source code files will be compiled into the output file specified by that **-out** option.</span></span>  
   
- <span data-ttu-id="5c458-111">Hay que especificar el nombre completo y la extensión del archivo que se quiere crear.</span><span class="sxs-lookup"><span data-stu-id="5c458-111">Specify the full name and extension of the file you want to create.</span></span>  
+ <span data-ttu-id="d203b-111">Hay que especificar el nombre completo y la extensión del archivo que se quiere crear.</span><span class="sxs-lookup"><span data-stu-id="d203b-111">Specify the full name and extension of the file you want to create.</span></span>  
   
- <span data-ttu-id="5c458-112">Si no se especifica el nombre del archivo de salida:</span><span class="sxs-lookup"><span data-stu-id="5c458-112">If you do not specify the name of the output file:</span></span>  
+ <span data-ttu-id="d203b-112">Si no se especifica el nombre del archivo de salida:</span><span class="sxs-lookup"><span data-stu-id="d203b-112">If you do not specify the name of the output file:</span></span>  
   
--   <span data-ttu-id="5c458-113">Un archivo .exe toma el nombre del archivo de código fuente que contiene el método **Main**.</span><span class="sxs-lookup"><span data-stu-id="5c458-113">An .exe will take its name from the source code file that contains the **Main** method.</span></span>  
+- <span data-ttu-id="d203b-113">Un archivo .exe toma el nombre del archivo de código fuente que contiene el método **Main**.</span><span class="sxs-lookup"><span data-stu-id="d203b-113">An .exe will take its name from the source code file that contains the **Main** method.</span></span>  
   
--   <span data-ttu-id="5c458-114">Un archivo .dll o .netmodule toma el nombre del primer archivo de código fuente.</span><span class="sxs-lookup"><span data-stu-id="5c458-114">A .dll or .netmodule will take its name from the first source code file.</span></span>  
+- <span data-ttu-id="d203b-114">Un archivo .dll o .netmodule toma el nombre del primer archivo de código fuente.</span><span class="sxs-lookup"><span data-stu-id="d203b-114">A .dll or .netmodule will take its name from the first source code file.</span></span>  
   
- <span data-ttu-id="5c458-115">Un archivo de código fuente usado para compilar un archivo de salida no puede usarse para compilar otro archivo de este tipo en la misma compilación.</span><span class="sxs-lookup"><span data-stu-id="5c458-115">A source code file used to compile one output file cannot be used in the same compilation for the compilation of another output file.</span></span>  
+ <span data-ttu-id="d203b-115">Un archivo de código fuente usado para compilar un archivo de salida no puede usarse para compilar otro archivo de este tipo en la misma compilación.</span><span class="sxs-lookup"><span data-stu-id="d203b-115">A source code file used to compile one output file cannot be used in the same compilation for the compilation of another output file.</span></span>  
   
- <span data-ttu-id="5c458-116">Cuando se producen varios archivos de salida en una compilación de línea de comandos, recuerde que solo uno de los archivos de salida puede ser un ensamblado y que solo el primero que haya especificado (ya sea implícita o explícitamente con **-out**) puede ser el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="5c458-116">When producing multiple output files in a command-line compilation, keep in mind that only one of the output files can be an assembly and that only the first output file specified (implicitly or explicitly with **-out**) can be the assembly.</span></span>  
+ <span data-ttu-id="d203b-116">Cuando se producen varios archivos de salida en una compilación de línea de comandos, recuerde que solo uno de los archivos de salida puede ser un ensamblado y que solo el primero que haya especificado (ya sea implícita o explícitamente con **-out**) puede ser el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="d203b-116">When producing multiple output files in a command-line compilation, keep in mind that only one of the output files can be an assembly and that only the first output file specified (implicitly or explicitly with **-out**) can be the assembly.</span></span>  
   
- <span data-ttu-id="5c458-117">Todos los módulos que se produzcan como parte de una compilación se convierten en archivos asociados a cualquier ensamblado que también se haya producido en la compilación.</span><span class="sxs-lookup"><span data-stu-id="5c458-117">Any modules produced as part of a compilation become files associated with any assembly also produced in the compilation.</span></span> <span data-ttu-id="5c458-118">Use [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) para ver el manifiesto del ensamblado y los archivos asociados.</span><span class="sxs-lookup"><span data-stu-id="5c458-118">Use [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) to view the assembly manifest to see the associated files.</span></span>  
+ <span data-ttu-id="d203b-117">Todos los módulos que se produzcan como parte de una compilación se convierten en archivos asociados a cualquier ensamblado que también se haya producido en la compilación.</span><span class="sxs-lookup"><span data-stu-id="d203b-117">Any modules produced as part of a compilation become files associated with any assembly also produced in the compilation.</span></span> <span data-ttu-id="d203b-118">Use [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) para ver el manifiesto del ensamblado y los archivos asociados.</span><span class="sxs-lookup"><span data-stu-id="d203b-118">Use [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md) to view the assembly manifest to see the associated files.</span></span>  
   
- <span data-ttu-id="5c458-119">Es obligatorio usar la opción -out del compilador para que un archivo exe sea el destino de un ensamblado de confianza.</span><span class="sxs-lookup"><span data-stu-id="5c458-119">The -out compiler option is required in order for an exe to be the target of a friend assembly.</span></span> <span data-ttu-id="5c458-120">Para obtener más información, vea [Ensamblados de confianza](../../../standard/assembly/friend-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="5c458-120">For more information see [Friend Assemblies](../../../standard/assembly/friend-assemblies.md).</span></span>  
+ <span data-ttu-id="d203b-119">Es obligatorio usar la opción -out del compilador para que un archivo exe sea el destino de un ensamblado de confianza.</span><span class="sxs-lookup"><span data-stu-id="d203b-119">The -out compiler option is required in order for an exe to be the target of a friend assembly.</span></span> <span data-ttu-id="d203b-120">Para obtener más información, vea [Ensamblados de confianza](../../../standard/assembly/friend-assemblies.md).</span><span class="sxs-lookup"><span data-stu-id="d203b-120">For more information see [Friend Assemblies](../../../standard/assembly/friend-assemblies.md).</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="5c458-121">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="5c458-121">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d203b-121">Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d203b-121">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1. <span data-ttu-id="5c458-122">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="5c458-122">Open the project's **Properties** page.</span></span>  
+1. <span data-ttu-id="d203b-122">Abra la página **Propiedades** del proyecto.</span><span class="sxs-lookup"><span data-stu-id="d203b-122">Open the project's **Properties** page.</span></span>  
   
-2. <span data-ttu-id="5c458-123">Haga clic en la página de propiedades **Aplicación**.</span><span class="sxs-lookup"><span data-stu-id="5c458-123">Click the **Application** property page.</span></span>  
+2. <span data-ttu-id="d203b-123">Haga clic en la página de propiedades **Aplicación**.</span><span class="sxs-lookup"><span data-stu-id="d203b-123">Click the **Application** property page.</span></span>  
   
-3. <span data-ttu-id="5c458-124">Modifique la propiedad **Nombre del ensamblado**.</span><span class="sxs-lookup"><span data-stu-id="5c458-124">Modify the **Assembly name** property.</span></span>  
+3. <span data-ttu-id="d203b-124">Modifique la propiedad **Nombre del ensamblado**.</span><span class="sxs-lookup"><span data-stu-id="d203b-124">Modify the **Assembly name** property.</span></span>  
   
-     <span data-ttu-id="5c458-125">Para establecer esta opción del compilador mediante programación: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> es una propiedad de solo lectura que se determina a partir de una combinación del tipo de proyecto (ejecutable, biblioteca, etc.) y el nombre del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="5c458-125">To set this compiler option programmatically: the <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> is a read-only property, which is determined by a combination of the project type (exe, library, and so forth) and the assembly name.</span></span> <span data-ttu-id="5c458-126">Es necesario modificar una de estas propiedades o ambas para establecer el nombre del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="5c458-126">Modifying one or both of these properties will be necessary to set the output file name.</span></span>  
+     <span data-ttu-id="d203b-125">Para establecer esta opción del compilador mediante programación: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> es una propiedad de solo lectura que se determina a partir de una combinación del tipo de proyecto (ejecutable, biblioteca, etc.) y el nombre del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="d203b-125">To set this compiler option programmatically: the <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> is a read-only property, which is determined by a combination of the project type (exe, library, and so forth) and the assembly name.</span></span> <span data-ttu-id="d203b-126">Es necesario modificar una de estas propiedades o ambas para establecer el nombre del archivo de salida.</span><span class="sxs-lookup"><span data-stu-id="d203b-126">Modifying one or both of these properties will be necessary to set the output file name.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5c458-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5c458-127">Example</span></span>  
- <span data-ttu-id="5c458-128">Compile `t.cs` y cree el archivo de salida `t.exe`, así como compile `t2.cs` y cree el archivo de salida del módulo `mymodule.netmodule`:</span><span class="sxs-lookup"><span data-stu-id="5c458-128">Compile `t.cs` and create output file `t.exe`, as well as build `t2.cs` and create module output file `mymodule.netmodule`:</span></span>  
+## <a name="example"></a><span data-ttu-id="d203b-127">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d203b-127">Example</span></span>  
+ <span data-ttu-id="d203b-128">Compile `t.cs` y cree el archivo de salida `t.exe`, así como compile `t2.cs` y cree el archivo de salida del módulo `mymodule.netmodule`:</span><span class="sxs-lookup"><span data-stu-id="d203b-128">Compile `t.cs` and create output file `t.exe`, as well as build `t2.cs` and create module output file `mymodule.netmodule`:</span></span>  
   
 ```console  
 csc t.cs -out:mymodule.netmodule -target:module t2.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5c458-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="5c458-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d203b-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="d203b-129">See also</span></span>
 
-- [<span data-ttu-id="5c458-130">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="5c458-130">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="5c458-131">Ensamblados de confianza</span><span class="sxs-lookup"><span data-stu-id="5c458-131">Friend Assemblies</span></span>](../../../standard/assembly/friend-assemblies.md)
-- [<span data-ttu-id="5c458-132">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="5c458-132">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="d203b-130">Opciones del compilador de C#</span><span class="sxs-lookup"><span data-stu-id="d203b-130">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="d203b-131">Ensamblados de confianza</span><span class="sxs-lookup"><span data-stu-id="d203b-131">Friend Assemblies</span></span>](../../../standard/assembly/friend-assemblies.md)
+- [<span data-ttu-id="d203b-132">Administrar propiedades de soluciones y proyectos</span><span class="sxs-lookup"><span data-stu-id="d203b-132">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
