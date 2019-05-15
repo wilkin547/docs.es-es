@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674003"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664547"
 ---
 # <a name="blockingcollection-overview"></a>Información general sobre BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> es una clase de colección segura para subprocesos que proporciona las siguientes características:  
   
--   Una implementación del patrón productor-consumidor.  
+- Una implementación del patrón productor-consumidor.  
   
--   Agregar y quitar elementos en varios subprocesos de forma simultánea.  
+- Agregar y quitar elementos en varios subprocesos de forma simultánea.  
   
--   Capacidad máxima opcional.  
+- Capacidad máxima opcional.  
   
--   Operaciones de inserción y eliminación que se bloquean cuando la colección está vacía o completa.  
+- Operaciones de inserción y eliminación que se bloquean cuando la colección está vacía o completa.  
   
--   Inserción y eliminación de operaciones "try" que no se bloquean o que se bloquean en un período de tiempo especificado.  
+- Inserción y eliminación de operaciones "try" que no se bloquean o que se bloquean en un período de tiempo especificado.  
   
--   Encapsula cualquier tipo de colección que implementa <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.  
+- Encapsula cualquier tipo de colección que implementa <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.  
   
--   Cancelación con tokens de cancelación.  
+- Cancelación con tokens de cancelación.  
   
--   Dos tipos de enumeraciones con `foreach` (`For Each` en Visual Basic):  
+- Dos tipos de enumeraciones con `foreach` (`For Each` en Visual Basic):  
   
-    1.  Enumeración de solo lectura.  
+    1. Enumeración de solo lectura.  
   
-    2.  Enumeración que quita los elementos que se enumeran.  
+    2. Enumeración que quita los elementos que se enumeran.  
   
 ## <a name="bounding-and-blocking-support"></a>Compatibilidad con límites y bloqueos  
  <xref:System.Collections.Concurrent.BlockingCollection%601> admite límites y bloqueos. Los límites implican que puede establecer la capacidad máxima de la colección. Los límites son importantes en ciertos escenarios, porque le permiten controlar el tamaño máximo de la colección en memoria y evitan que los subprocesos de producción vayan demasiado por delante de los subprocesos de consumo.  

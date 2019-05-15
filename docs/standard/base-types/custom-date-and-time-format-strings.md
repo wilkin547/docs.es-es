@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345435"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634542"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora personalizado
 
@@ -348,11 +348,11 @@ En el ejemplo siguiente se incluye el especificador de formato personalizado "HH
 
 El especificador de formato personalizado "K" representa la información de zona horaria de un valor de fecha y hora. Cuando este formato se usa con valores <xref:System.DateTime>, el valor de la propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> define la cadena de resultado.
 
--   En la zona horaria local (un valor de propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> de <xref:System.DateTimeKind.Local?displayProperty=nameWithType>), este especificador es equivalente al especificador "zzz" y genera una cadena de resultado que contiene el desfase local con respecto a la hora universal coordinada (UTC); por ejemplo, "-07: 00".
+- En la zona horaria local (un valor de propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> de <xref:System.DateTimeKind.Local?displayProperty=nameWithType>), este especificador es equivalente al especificador "zzz" y genera una cadena de resultado que contiene el desfase local con respecto a la hora universal coordinada (UTC); por ejemplo, "-07: 00".
 
--   En una hora UTC (un valor de propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> de <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), la cadena de resultado incluye un carácter "Z" para representar una fecha UTC.
+- En una hora UTC (un valor de propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> de <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>), la cadena de resultado incluye un carácter "Z" para representar una fecha UTC.
 
--   En una hora de una zona horaria no especificada (una hora cuya propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> es igual a <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), el resultado es equivalente a <xref:System.String.Empty?displayProperty=nameWithType>.
+- En una hora de una zona horaria no especificada (una hora cuya propiedad <xref:System.DateTime.Kind%2A?displayProperty=nameWithType> es igual a <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>), el resultado es equivalente a <xref:System.String.Empty?displayProperty=nameWithType>.
 
 En los valores <xref:System.DateTimeOffset>, el especificador de formato "K" es equivalente al especificador de formato "zzz" y genera una cadena de resultado que contiene el desfase del valor <xref:System.DateTimeOffset> con respecto a la hora UTC.
 
@@ -699,5 +699,5 @@ La cadena de resultado generada por muchos de los especificadores de formato de 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [Aplicación de formato a tipos](../../../docs/standard/base-types/formatting-types.md)
-- [Cadenas con formato de fecha y hora estándar](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Ejemplo: Utilidad de formato de .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

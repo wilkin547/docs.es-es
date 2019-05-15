@@ -2,12 +2,12 @@
 title: Configuración automática de IPv6
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 4dc7a148364c9f96a0f6c68c8af71f7668e797b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c7f77bbdebe093b5e3bc706653ed203082d9c3f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170084"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647317"
 ---
 # <a name="ipv6-auto-configuration"></a>Configuración automática de IPv6
 Un objetivo importante para IPv6 es ser compatible con el nodo Plug and Play. Es decir, debería ser posible conectar un nodo en una red IPv6 y hacer que se configurase automáticamente sin intervención humana.  
@@ -15,9 +15,9 @@ Un objetivo importante para IPv6 es ser compatible con el nodo Plug and Play. Es
 ## <a name="type-of-auto-configuration"></a>Tipo de configuración automática  
  IPv6 es compatible con los siguientes tipos de configuración automática:  
   
--   **Configuración automática con estado**. Este tipo de configuración requiere cierto grado de intervención humana, ya que es necesario un servidor de Protocolo de configuración dinámica de host para IPv6 (DHCPv6) para la instalación y la administración de los nodos. El servidor DHCPv6 mantiene una lista de nodos a los que proporciona información de configuración. También mantiene información de estado para que el servidor sepa cuánto tiempo se usa cada dirección y cuándo podría estar disponible para su reasignación.  
+- **Configuración automática con estado**. Este tipo de configuración requiere cierto grado de intervención humana, ya que es necesario un servidor de Protocolo de configuración dinámica de host para IPv6 (DHCPv6) para la instalación y la administración de los nodos. El servidor DHCPv6 mantiene una lista de nodos a los que proporciona información de configuración. También mantiene información de estado para que el servidor sepa cuánto tiempo se usa cada dirección y cuándo podría estar disponible para su reasignación.  
   
--   **Configuración automática sin estado**. Este tipo de configuración es adecuada para organizaciones pequeñas y usuarios individuales. En este caso, cada host determina sus direcciones a partir del contenido de los anuncios de enrutador recibidos. El uso del estándar IEEE EUI-64 para definir la parte del identificador de red de la dirección permite dar por supuesto que la dirección de host del vínculo es exclusiva.  
+- **Configuración automática sin estado**. Este tipo de configuración es adecuada para organizaciones pequeñas y usuarios individuales. En este caso, cada host determina sus direcciones a partir del contenido de los anuncios de enrutador recibidos. El uso del estándar IEEE EUI-64 para definir la parte del identificador de red de la dirección permite dar por supuesto que la dirección de host del vínculo es exclusiva.  
   
  Independientemente de cómo se determine la dirección, el nodo debe comprobar que su dirección potencial es única para el vínculo local. Para ello, envía un mensaje de convocatoria de vecino a la dirección potencial. Si el nodo recibe respuesta, sabe que la dirección ya está en uso y debe establecer otra dirección.  
   

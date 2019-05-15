@@ -2,12 +2,12 @@
 title: Contenido válido de objetos XElement y XDocument
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: 064cd4a6a112a12e0af60732df376e72b294fabc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf8e1f1aab576fa7cccab83fb2194ae2a4e33288
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595258"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Contenido válido de objetos XElement y XDocument
 En este tema se describen los argumentos válidos que se pueden pasar a los constructores y los métodos que se usan para agregar contenido a elementos y documentos.  
@@ -17,35 +17,35 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
   
  Al agregar contenido simple, se pueden pasar varios tipos a este método. Entre los tipos válidos se incluyen los siguientes:  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   Cualquier tipo que implemente `Object.ToString`.  
+- Cualquier tipo que implemente `Object.ToString`.  
   
--   Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
+- Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
   
  Al agregar contenido complejo, se pueden pasar varios tipos a este método:  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
+- Cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.  
   
  Si un objeto implementa <xref:System.Collections.Generic.IEnumerable%601>, se enumera la colección del objeto y se agregan todos los elementos de la colección. Si la colección contiene objetos <xref:System.Xml.Linq.XNode> o <xref:System.Xml.Linq.XAttribute>, cada elemento de la colección se agrega por separado. Si la colección contiene texto (u objetos convertidos a texto), el texto de la colección se concatena y se agrega como un nodo de texto.  
   
@@ -62,15 +62,15 @@ En este tema se describen los argumentos válidos que se pueden pasar a los cons
   
  El contenido válido para un documento incluye lo siguiente:  
   
--   Cero o un objeto <xref:System.Xml.Linq.XDocumentType>. Los tipos de documento deben ir antes del elemento.  
+- Cero o un objeto <xref:System.Xml.Linq.XDocumentType>. Los tipos de documento deben ir antes del elemento.  
   
--   Cero o un elemento.  
+- Cero o un elemento.  
   
--   Cero o más comentarios.  
+- Cero o más comentarios.  
   
--   Cero o más instrucciones de procesamiento.  
+- Cero o más instrucciones de procesamiento.  
   
--   Cero o más nodos de texto que contengan solo espacios en blanco.  
+- Cero o más nodos de texto que contengan solo espacios en blanco.  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>Constructores y funciones que permiten agregar contenido  
  Los métodos siguientes permiten agregar contenido secundario a un objeto <xref:System.Xml.Linq.XElement> o a un objeto <xref:System.Xml.Linq.XDocument>:  

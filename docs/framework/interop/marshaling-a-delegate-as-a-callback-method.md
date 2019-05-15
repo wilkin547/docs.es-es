@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 145e6b8891735c904aa98a36ccfd27958bdf788d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124818"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648616"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Calcular las referencias de un delegado como un método de devolución de llamada
 En este ejemplo se muestra cómo pasar delegados a una función no administrada que espera recibir punteros de función. Un delegado es una clase que puede contener una referencia a un método y equivale a un puntero de función con seguridad de tipos o a una función de devolución de llamada.
@@ -26,13 +26,13 @@ En este ejemplo se muestra cómo pasar delegados a una función no administrada 
 
 En el ejemplo de devolución de llamada se usan las siguientes funciones no administradas, que se muestran con su declaración de función original:
 
--   `TestCallBack` exportada desde PinvokeLib.dll.
+- `TestCallBack` exportada desde PinvokeLib.dll.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` exportada desde PinvokeLib.dll.
+- `TestCallBack2` exportada desde PinvokeLib.dll.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

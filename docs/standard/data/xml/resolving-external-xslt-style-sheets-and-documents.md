@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31143e17eec097cc67dff0cfffeb628f8a0b2127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609465"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590081"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Resolver hojas de estilos XSLT y documentos externos
 Hay varios momentos a lo largo de una transformación en los cuales puede que necesite resolver recursos externos:  
@@ -20,11 +20,11 @@ Hay varios momentos a lo largo de una transformación en los cuales puede que ne
   
  Hay varios momentos a lo largo de una transformación en los cuales puede que necesite resolver recursos externos:  
   
--   Durante la operación <xref:System.Xml.Xsl.XslTransform.Load%2A> para localizar una hoja de estilos externa.  
+- Durante la operación <xref:System.Xml.Xsl.XslTransform.Load%2A> para localizar una hoja de estilos externa.  
   
--   Durante <xref:System.Xml.Xsl.XslTransform.Load%2A> para resolver cualquier elemento `<xsl:include>` o `<xsl:import>` que se encuentre en la hoja de estilos.  
+- Durante <xref:System.Xml.Xsl.XslTransform.Load%2A> para resolver cualquier elemento `<xsl:include>` o `<xsl:import>` que se encuentre en la hoja de estilos.  
   
--   Durante la operación <xref:System.Xml.Xsl.XslTransform.Transform%2A> para resolver las funciones `document()`.  
+- Durante la operación <xref:System.Xml.Xsl.XslTransform.Transform%2A> para resolver las funciones `document()`.  
   
 ## <a name="using-the-xmlresolver-class"></a>Utilizar la clase XmlResolver  
  Si se precisa autenticación para tener acceso a un recurso de red, utilice los métodos <xref:System.Xml.Xsl.XslTransform.Load%2A> que tengan un parámetro <xref:System.Xml.XmlResolver> para pasar el objeto <xref:System.Xml.XmlResolver> que tenga establecido el conjunto de propiedades de credenciales necesarias.  

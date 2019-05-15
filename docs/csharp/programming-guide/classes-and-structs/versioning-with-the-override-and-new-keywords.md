@@ -6,29 +6,29 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975867"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583128"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Control de versiones con las palabras clave Override y New (Guía de programación de C#)
 El lenguaje C# está diseñado para que las versiones entre clases [base](../../../csharp/language-reference/keywords/base.md) y derivadas de diferentes bibliotecas puedan evolucionar y mantener la compatibilidad con versiones anteriores. Esto significa, por ejemplo, que la introducción de un nuevo miembro en una [clase](../../../csharp/language-reference/keywords/class.md) base con el mismo nombre que un miembro de una clase derivada es totalmente compatible con C# y no lleva a un comportamiento inesperado. Además, implica que una clase debe declarar explícitamente si un método está pensado para reemplazar un método heredado o si se trata de un nuevo método que oculta un método heredado de nombre similar.  
   
  En C#, las clases derivadas pueden contener métodos con el mismo nombre que los métodos de clase base.  
   
--   El método de clase base debe definirse como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+- El método de clase base debe definirse como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
   
--   Si el método de la clase derivada no va precedido por las palabras clave [new](../../../csharp/language-reference/keywords/new.md) u [override](../../../csharp/language-reference/keywords/override.md), el compilador emite una advertencia y el método se comporta como si la palabra clave `new` estuviese presente.  
+- Si el método de la clase derivada no va precedido por las palabras clave [new](../../../csharp/language-reference/keywords/new.md) u [override](../../../csharp/language-reference/keywords/override.md), el compilador emite una advertencia y el método se comporta como si la palabra clave `new` estuviese presente.  
   
--   Si el método de la clase derivada va precedido de la palabra clave `new`, el método se define como independiente del método de la clase base.  
+- Si el método de la clase derivada va precedido de la palabra clave `new`, el método se define como independiente del método de la clase base.  
   
--   Si el método de la clase derivada va precedido de la palabra clave `override`, los objetos de la clase derivada llamarán a ese método y no al método de la clase base.  
+- Si el método de la clase derivada va precedido de la palabra clave `override`, los objetos de la clase derivada llamarán a ese método y no al método de la clase base.  
   
--   El método de clase base puede llamarse desde dentro de la clase derivada mediante la palabra clave `base`.  
+- El método de clase base puede llamarse desde dentro de la clase derivada mediante la palabra clave `base`.  
   
--   Las palabras clave `override`, `virtual` y `new` también pueden aplicarse a propiedades, indexadores y eventos.  
+- Las palabras clave `override`, `virtual` y `new` también pueden aplicarse a propiedades, indexadores y eventos.  
   
  De forma predeterminada, los métodos de C# no son virtuales. Si se declara un método como virtual, toda clase que hereda el método puede implementar su propia versión Para que un método sea virtual, se usa el modificador `virtual` en la declaración del método de la clase base. La clase derivada puede luego reemplazar el método base virtual mediante la palabra clave `override` u ocultar el método virtual en la clase base mediante la palabra clave `new`. Si no se especifican las palabras clave `override` o `new`, el compilador emite una advertencia y el método de la clase derivada oculta el método de la clase base.  
   

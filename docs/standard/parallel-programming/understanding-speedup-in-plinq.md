@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26128e5d707d3f331dc2b691f5a5f798bdf84c25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1905a61a1843427563ffcbad43ea6b2a4c161828
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322997"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654965"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Introducción a la velocidad en PLINQ
 El objetivo principal de PLINQ es acelerar la ejecución de consultas LINQ to Objects mediante la ejecución de los delegados de consulta en paralelo en equipos de varios núcleos. PLINQ funciona mejor cuando el procesamiento de cada elemento de una colección de origen es independiente, sin ningún estado compartido implicado entre los delegados individuales. Estas operaciones son comunes en LINQ to Objects y PLINQ y a menudo se denominan "*perfectamente paralelas*" porque se prestan fácilmente a la programación en varios subprocesos. Sin embargo, no todas las consultas constan de operaciones paralelas perfectas; en la mayoría de los casos, una consulta incluye algunos operadores que no se pueden paralelizar o que ralentizan la ejecución en paralelo. E incluso con las consultas que son perfectamente paralelas, PLINQ debe crear particiones del origen de datos y programar el trabajo en los subprocesos y generalmente tiene que combinar los resultados cuando finaliza la consulta. Todas estas operaciones aumentan el costo computacional de la paralelización; a estos costos derivados de agregar la paralelización se les denomina *sobrecarga*. Para lograr un rendimiento óptimo de una consulta PLINQ, el objetivo es maximizar las partes que son perfectamente paralelas y minimizar las partes que requieren sobrecarga. Este artículo proporciona información que le ayudará a escribir consultas PLINQ tan eficaces como sea posible mientras se siguen produciendo resultados correctos.  
@@ -74,15 +74,15 @@ El objetivo principal de PLINQ es acelerar la ejecución de consultas LINQ to Ob
   
  En la lista siguiente se describen las formas de consulta PLINQ que de forma predeterminada se ejecutarán en modo secuencial:  
   
--   Las consultas que contienen una instrucción Select, Where indexada, SelectMany indexada o una cláusula ElementAt después de un operador de ordenación o filtrado que ha quitado o reorganizado los índices originales.  
+- Las consultas que contienen una instrucción Select, Where indexada, SelectMany indexada o una cláusula ElementAt después de un operador de ordenación o filtrado que ha quitado o reorganizado los índices originales.  
   
--   Las consultas que contienen un operador Take, TakeWhile, Skip o SkipWhile y donde los índices de la secuencia de origen no están en el orden original.  
+- Las consultas que contienen un operador Take, TakeWhile, Skip o SkipWhile y donde los índices de la secuencia de origen no están en el orden original.  
   
--   Las consultas que contienen Zip o SequenceEquals, a menos que uno de los orígenes de datos tenga un índice ordenado inicialmente y el otro origen de datos sea indexable, es decir, una matriz o IList(T).  
+- Las consultas que contienen Zip o SequenceEquals, a menos que uno de los orígenes de datos tenga un índice ordenado inicialmente y el otro origen de datos sea indexable, es decir, una matriz o IList(T).  
   
--   Las consultas que contienen Concat, a menos que se aplique a los orígenes de datos indexables.  
+- Las consultas que contienen Concat, a menos que se aplique a los orígenes de datos indexables.  
   
--   Las consultas que contienen Reverse, a menos que se aplique a un origen de datos indexable.  
+- Las consultas que contienen Reverse, a menos que se aplique a un origen de datos indexable.  
   
 ## <a name="see-also"></a>Vea también
 
