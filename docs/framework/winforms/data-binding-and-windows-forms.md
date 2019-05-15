@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626851"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592310"
 ---
 # <a name="data-binding-and-windows-forms"></a>Enlace de datos y formularios Windows Forms
 Windows Forms permite enlazar no solo a orígenes de datos tradicionales, sino también a prácticamente cualquier estructura que contenga datos. Se puede enlazar a una matriz de valores que se calcula en tiempo de ejecución, se lee de un archivo o se deriva de los valores de otros controles.  
   
- Además, se puede enlazar cualquier propiedad de cualquier control al origen de datos. En el enlace de datos tradicional, habitualmente se enlaza la propiedad de presentación —por ejemplo, la propiedad <xref:System.Windows.Forms.Control.Text%2A> de un control <xref:System.Windows.Forms.TextBox>— al origen de datos. Con [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], también existe la opción de establecer otras propiedades mediante enlace. Puede usar el enlace para cualquiera de las siguientes tareas:  
+ Además, se puede enlazar cualquier propiedad de cualquier control al origen de datos. En el enlace de datos tradicional, habitualmente se enlaza la propiedad de presentación —por ejemplo, la propiedad <xref:System.Windows.Forms.Control.Text%2A> de un control <xref:System.Windows.Forms.TextBox>— al origen de datos. Con .NET Framework, también tiene la opción de establecer otras propiedades mediante enlace. Puede usar el enlace para cualquiera de las siguientes tareas:  
   
 - Establecer el gráfico de un control de imagen.  
   

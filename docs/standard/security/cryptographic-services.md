@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795309"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592739"
 ---
 # <a name="cryptographic-services"></a>servicios criptográficos
 
@@ -112,7 +112,7 @@ La desventaja del cifrado de clave secreta es que presupone que dos partes acuer
 
 Suponiendo que Alicia y Roberto es dos personas que desean comunicarse a través de un canal no seguro, es posible que usan cifrado de clave secreta como sigue: Alice y Bob acuerdan usar un algoritmo determinado (por ejemplo, AES) con una clave determinada y un IV. Alicia escribe un mensaje y crea una secuencia de red (quizás una con nombre canalización o red correo electrónico) en el que se va a enviar el mensaje. A continuación, cifra el texto utilizando la clave y el vector de inicialización y envía el mensaje cifrado y el vector de inicialización a Roberto a través de intranet. Roberto recibe el texto cifrado y lo descifra utilizando el vector de inicialización y la clave acordada anteriormente. Si se intercepta la transmisión, el interceptor no podrá recuperar el mensaje original porque no conoce la clave. En este caso, solo debe mantenerse en secreto la clave. En un ejemplo real, Alicia o Roberto genera una clave secreta y utiliza el cifrado (asimétrico) de clave pública para transferir la clave (simétrica) secreta a la otra parte. Para obtener más información sobre el cifrado de clave pública, vea la sección siguiente.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona las siguientes clases que implementan algoritmos de cifrado de clave secreta:
+.NET Framework proporciona las siguientes clases que implementan algoritmos de cifrado de clave secreta:
 
 - <xref:System.Security.Cryptography.AesManaged> (introducida en [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
 
@@ -154,7 +154,7 @@ En la lista siguiente se incluyen comparaciones entre algoritmos criptográficos
 
 - Los algoritmos de clave pública son muy lentos comparados con los de clave secreta y no están diseñados para cifrar grandes cantidades de datos. Son útiles solo para transferir cantidades muy pequeñas de información. Normalmente, el cifrado de clave pública se utiliza para cifrar la clave y el vector de inicialización que serán utilizados por un algoritmo de clave secreta. Después de transferir la clave y el vector de inicialización, el cifrado de clave secreta se utiliza para el resto de la sesión.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona las siguientes clases que implementan algoritmos de cifrado de clave pública:
+.NET Framework proporciona las siguientes clases que implementan algoritmos de cifrado de clave pública:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ Para utilizar criptografía de clave pública con el objeto de firmar digitalmen
 > [!NOTE]
 > Cualquiera puede comprobar una firma, ya que la clave pública del remitente es de dominio público y normalmente se incluye en el formato de firma digital. Este método no mantiene la confidencialidad del mensaje; para que sea secreto, también se debe cifrar.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona las siguientes clases que implementan algoritmos de firma digital:
+.NET Framework proporciona las siguientes clases que implementan algoritmos de firma digital:
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ Dos partes (Alicia y Roberto) podrían utilizar una función hash para asegurar 
 
 Ninguno de los métodos anteriores evitará que alguien lea los mensajes de Alicia, ya que se transmiten en texto simple. Para conseguir una seguridad total, normalmente se necesitarán firmas digitales (firma del mensaje) y mecanismos de cifrado.
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona las siguientes clases que implementan algoritmos hash:
+.NET Framework proporciona las siguientes clases que implementan algoritmos hash:
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -256,7 +256,7 @@ Ninguno de los métodos anteriores evitará que alguien lea los mensajes de Alic
 
 ## <a name="random-number-generation"></a>generación de números aleatorios
 
-La generación de números aleatorios es propia de muchas operaciones criptográficas. Por ejemplo, las claves criptográficas deben ser lo más aleatorias posible para que no se puedan reproducir. Los generadores de números aleatorios criptográficos deben generar resultados que, mediante cálculos, no se pueden predecir con una probabilidad mayor del cincuenta por ciento. Por tanto, cualquier método para predecir el siguiente bit del resultado no debe ser más eficaz que el cálculo aleatorio. Las clases de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] utilizan generadores de números aleatorios para crear claves criptográficas.
+La generación de números aleatorios es propia de muchas operaciones criptográficas. Por ejemplo, las claves criptográficas deben ser lo más aleatorias posible para que no se puedan reproducir. Los generadores de números aleatorios criptográficos deben generar resultados que, mediante cálculos, no se pueden predecir con una probabilidad mayor del cincuenta por ciento. Por tanto, cualquier método para predecir el siguiente bit del resultado no debe ser más eficaz que el cálculo aleatorio. Las clases de .NET Framework utilizan generadores de números aleatorios para generar las claves criptográficas.
 
 La clase <xref:System.Security.Cryptography.RNGCryptoServiceProvider> es una implementación de un algoritmo generador de números aleatorios.
 

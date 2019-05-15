@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213134"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616092"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
 La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows (WMI). La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  
@@ -75,19 +75,19 @@ WMIClass [options]
   
  Tenga en cuenta los comportamientos siguientes cuando se genera una clase WMI:  
   
--   Es posible que un método o una propiedad públicos estándar tengan el mismo nombre que un método o una propiedad existentes. Si esto sucede, la herramienta cambia el nombre del método o de la propiedad en la clase generada para evitar conflictos de nombres.  
+- Es posible que un método o una propiedad públicos estándar tengan el mismo nombre que un método o una propiedad existentes. Si esto sucede, la herramienta cambia el nombre del método o de la propiedad en la clase generada para evitar conflictos de nombres.  
   
--   Es posible que el nombre de un método o de una propiedad en una clase generada sea una palabra clave en el lenguaje de programación de destino. Si esto sucede, la herramienta cambia el nombre del método o de la propiedad en la clase generada para evitar conflictos de nombres.  
+- Es posible que el nombre de un método o de una propiedad en una clase generada sea una palabra clave en el lenguaje de programación de destino. Si esto sucede, la herramienta cambia el nombre del método o de la propiedad en la clase generada para evitar conflictos de nombres.  
   
--   En WMI, los calificadores son modificadores que contienen información para describir una clase, una instancia, una propiedad o un método. WMI usa calificadores estándar como **Read**, **Write** y **Key** para describir una propiedad en una clase generada. Por ejemplo, una propiedad que se modifica con un calificador **Read** se define únicamente con un descriptor de acceso **get** de propiedad en la clase generada. Como las propiedades marcadas con el calificador **Read** están diseñadas para ser de solo lectura, no se define ningún descriptor de acceso **set**.  
+- En WMI, los calificadores son modificadores que contienen información para describir una clase, una instancia, una propiedad o un método. WMI usa calificadores estándar como **Read**, **Write** y **Key** para describir una propiedad en una clase generada. Por ejemplo, una propiedad que se modifica con un calificador **Read** se define únicamente con un descriptor de acceso **get** de propiedad en la clase generada. Como las propiedades marcadas con el calificador **Read** están diseñadas para ser de solo lectura, no se define ningún descriptor de acceso **set**.  
   
--   Una propiedad numérica se puede modificar mediante los calificadores **Values** y **ValueMaps** para indicar que la propiedad solo se puede establecer en valores permisibles especificados. Con estos calificadores **Values** y **ValueMaps** se genera una enumeración y se asigna la propiedad a la enumeración.  
+- Una propiedad numérica se puede modificar mediante los calificadores **Values** y **ValueMaps** para indicar que la propiedad solo se puede establecer en valores permisibles especificados. Con estos calificadores **Values** y **ValueMaps** se genera una enumeración y se asigna la propiedad a la enumeración.  
   
--   WMI utiliza el término singleton para describir una clase que solo puede tener una instancia. Por tanto, el constructor predeterminado para una clase singleton inicializará la clase en la única instancia de la misma.  
+- WMI utiliza el término singleton para describir una clase que solo puede tener una instancia. Por tanto, el constructor predeterminado para una clase singleton inicializará la clase en la única instancia de la misma.  
   
--   Una clase WMI puede tener propiedades que sean objetos. Cuando se genera una clase fuertemente tipada para este tipo de clase WMI, se debe considerar la posibilidad de generar clases fuertemente tipadas para los tipos de las propiedades de objetos incrustados. Esto permitirá tener acceso a los objetos incrustados de un modo fuertemente tipado. Tenga en cuenta que existe la posibilidad de que el código generado no pueda detectar el tipo del objeto incrustado. En este caso, se creará un comentario en el código generado para informar al usuario de este punto. A continuación, se puede modificar el código generado para que el tipo de la propiedad corresponda a la otra clase generada.  
+- Una clase WMI puede tener propiedades que sean objetos. Cuando se genera una clase fuertemente tipada para este tipo de clase WMI, se debe considerar la posibilidad de generar clases fuertemente tipadas para los tipos de las propiedades de objetos incrustados. Esto permitirá tener acceso a los objetos incrustados de un modo fuertemente tipado. Tenga en cuenta que existe la posibilidad de que el código generado no pueda detectar el tipo del objeto incrustado. En este caso, se creará un comentario en el código generado para informar al usuario de este punto. A continuación, se puede modificar el código generado para que el tipo de la propiedad corresponda a la otra clase generada.  
   
--   En WMI, el valor de los datos del tipo de datos CIM_DATETIME puede representar una fecha y hora específicas o un intervalo de tiempo. Si el valor de los datos representa una fecha y hora, el tipo de datos de la clase generada es **DateTime**. Si el valor de los datos representa un intervalo de tiempo, el tipo de datos de la clase generada es **TimeSpan**.  
+- En WMI, el valor de los datos del tipo de datos CIM_DATETIME puede representar una fecha y hora específicas o un intervalo de tiempo. Si el valor de los datos representa una fecha y hora, el tipo de datos de la clase generada es **DateTime**. Si el valor de los datos representa un intervalo de tiempo, el tipo de datos de la clase generada es **TimeSpan**.  
   
  Otra posibilidad consiste en generar una clase fuertemente tipada utilizando la extensión de administración del explorador de servidores en Visual Studio .NET.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211783"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583465"
 ---
 # <a name="windows-forms-overview"></a>Información general sobre Windows Forms
 
@@ -22,7 +22,7 @@ La información general siguiente explica las ventajas de las aplicaciones smart
 
 ### <a name="build-rich-interactive-user-interfaces"></a>Crear interfaces de usuario completas, interactivas
 
- Windows Forms es una tecnología de smart client para [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], un conjunto de bibliotecas administradas que simplifican las tareas comunes de las aplicaciones, como leer y escribir en el sistema de archivos. Cuando se usa un entorno de desarrollo como Visual Studio, puede crear aplicaciones smart client de Windows Forms que muestran información, soliciten la entrada de los usuarios y se comunican con equipos remotos a través de una red.
+ Windows Forms es una tecnología de cliente inteligente para .NET Framework, un conjunto de bibliotecas administradas que simplifican tareas de aplicación comunes, como leer y escribir en el sistema de archivos. Cuando se usa un entorno de desarrollo como Visual Studio, puede crear aplicaciones smart client de Windows Forms que muestran información, soliciten la entrada de los usuarios y se comunican con equipos remotos a través de una red.
 
  En Windows Forms, un *formulario* es una superficie visual en la que se muestra información al usuario. Normalmente, las aplicaciones de Windows Forms se compilan mediante la adición de controles a los formularios y el desarrollo de respuestas a las acciones del usuario, como clics del mouse o presiones de teclas. Un *control* es un elemento de interfaz de usuario (UI) discreto que muestra datos o acepta la entrada de datos.
 
@@ -90,7 +90,7 @@ Para obtener una introducción completa a [!INCLUDE[ndptecclick](../../../includ
 
 ### <a name="other-controls-and-features"></a>Otros controles y características
 
-Hay muchas otras características en Windows Forms que simplifican y agilizan las tareas comunes de implementación, como la posibilidad de crear cuadros de diálogo, imprimir, agregar ayuda y documentación, y localizar la aplicación a varios idiomas. Además, Windows Forms se basa en el sólido sistema de seguridad de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Con este sistema, puede publicar aplicaciones más seguras para sus clientes.
+Hay muchas otras características en Windows Forms que simplifican y agilizan las tareas comunes de implementación, como la posibilidad de crear cuadros de diálogo, imprimir, agregar ayuda y documentación, y localizar la aplicación a varios idiomas. Además, Windows Forms se basa en el sólido sistema de seguridad de .NET Framework. Con este sistema, puede publicar aplicaciones más seguras para sus clientes.
 
 #### <a name="implement-other-controls-and-features"></a>Implementar otros controles y características
 

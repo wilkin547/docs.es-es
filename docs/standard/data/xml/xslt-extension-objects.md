@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2efe31ce8ece241bdfeb95687c5496c7ba0fd626
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320423"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615300"
 ---
 # <a name="xslt-extension-objects"></a>Objetos de extensión de XSLT
 Los objetos de extensión se utilizan para ampliar la funcionalidad de las hojas de estilos. La clase <xref:System.Xml.Xsl.XsltArgumentList> mantiene los objetos de extensión.  
   
  A continuación se enumeran las ventajas de utilizar un objeto de extensión en lugar de un script incrustado:  
   
--   Proporciona una mejor encapsulación y reutilización de clases.  
+- Proporciona una mejor encapsulación y reutilización de clases.  
   
--   Permite que las hojas de estilos sean más pequeñas y facilita su mantenimiento.  
+- Permite que las hojas de estilos sean más pequeñas y facilita su mantenimiento.  
   
  Los objetos de extensión XSLT se agregan al objeto <xref:System.Xml.Xsl.XsltArgumentList> con el método <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. En ese momento se asocian un nombre completo y un identificador URI de espacio de nombres con el objeto de extensión.  
   

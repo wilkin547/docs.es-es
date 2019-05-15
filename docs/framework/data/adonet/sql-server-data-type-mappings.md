@@ -2,17 +2,17 @@
 title: Asignaciones de tipos de datos de SQL Server
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664095"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583725"
 ---
 # <a name="sql-server-data-type-mappings"></a>Asignaciones de tipos de datos de SQL Server
 SQL Server y .NET Framework se basan en sistemas de tipos distintos. Por ejemplo, la estructura <xref:System.Decimal> de .NET Framework tiene una escala máxima de 28, mientras que los tipos de datos decimal y numérico de SQL Server tienen una escala máxima de 38. Para mantener la integridad de los datos al leer y escribir datos, <xref:System.Data.SqlClient.SqlDataReader> expone métodos de descriptores de acceso con tipo específicos de SQL Server que devuelven objetos de <xref:System.Data.SqlTypes> así como métodos de descriptores de acceso que devuelven tipos de .NET Framework. Los tipos de SQL Server y los de .NET Framework se representan también mediante enumeraciones en las clases <xref:System.Data.DbType> y <xref:System.Data.SqlDbType>, que puede usar al especificar los tipos de datos <xref:System.Data.SqlClient.SqlParameter>.  
   
- En la tabla siguiente se muestra el tipo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] deducido, las enumeraciones <xref:System.Data.DbType> y <xref:System.Data.SqlDbType> y los métodos de descriptor de acceso de <xref:System.Data.SqlClient.SqlDataReader>.  
+ En la tabla siguiente se muestra el tipo deducido de .NET Framework, el <xref:System.Data.DbType> y <xref:System.Data.SqlDbType> enumeraciones y los métodos de descriptor de acceso para el <xref:System.Data.SqlClient.SqlDataReader>.  
   
 |Tipo de motor de base de datos de SQL Server|Tipo de .NET Framework|Enumeración SqlDbType|Descriptor de acceso con tipo SqlDataReader SqlTypes|Enumeración DbType|Descriptor de acceso con tipo SqlDataReader DbType|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

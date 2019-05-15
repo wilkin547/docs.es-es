@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322414"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615229"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parámetros Stylesheet y objetos de extensión
 La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible Stylesheet Language for Transformations (XSLT) y objetos de extensión XSLT. Cuando se pasan al método <xref:System.Xml.Xsl.XslTransform.Transform%2A> se puede invocar a estos parámetros y objetos de extensión desde hojas de estilos.  
@@ -25,13 +25,13 @@ La clase <xref:System.Xml.Xsl.XsltArgumentList> contiene parámetros Extensible 
   
  A continuación se enumeran las ventajas de pasar un objeto en lugar de utilizar un script incrustado:  
   
--   Proporciona una mejor encapsulación y reutilización de clases.  
+- Proporciona una mejor encapsulación y reutilización de clases.  
   
--   Permite que las hojas de estilos sean más pequeñas y facilita su mantenimiento.  
+- Permite que las hojas de estilos sean más pequeñas y facilita su mantenimiento.  
   
--   Admite llamadas a métodos en clases que pertenecen a otros espacios de nombres distintos de los definidos dentro del conjunto de espacios de nombres admitidos por el sistema <xref:System>.  
+- Admite llamadas a métodos en clases que pertenecen a otros espacios de nombres distintos de los definidos dentro del conjunto de espacios de nombres admitidos por el sistema <xref:System>.  
   
--   Permite que se pasen fragmentos de árboles de resultados a la hoja de estilos con el uso de <xref:System.Xml.XPath.XPathNodeIterator>.  
+- Permite que se pasen fragmentos de árboles de resultados a la hoja de estilos con el uso de <xref:System.Xml.XPath.XPathNodeIterator>.  
   
 ## <a name="xslt-style-sheet-parameters"></a>Parámetros de XSLT de hoja de estilos  
  Los parámetros XSLT se agregan a <xref:System.Xml.Xsl.XsltArgumentList> mediante el método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>. En ese momento se asocian un nombre completo y un identificador de recursos de uniforme (URI) de espacio de nombres con el objeto del parámetro.  

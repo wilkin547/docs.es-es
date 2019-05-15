@@ -2,12 +2,12 @@
 title: Programación asincrónica en C#
 description: Información general sobre la compatibilidad con el lenguaje C# para la programación asincrónica mediante async, await, Task y Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 350ccdeeb31e318ca0c1a8158691f58bf5208efb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61668684"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064112"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>Modelo de programación asincrónica de tareas en C\#
 
@@ -22,7 +22,7 @@ Este es el objetivo de la sintaxis: habilitar código que se lea como una secuen
 1. Unte el pan con mantequilla y mermelada.
 1. Sirva un vaso de zumo de naranja.
 
-Si es un experto cocinero, lo más probable es que ejecute estas instrucciones **asincrónicamente**. Primero, calentará la sartén para los huevos e irá friendo el beicon. Después, pondrá el pan en la tostadora y empezará a freír los huevos. En cada paso del proceso, iniciará una tarea y volverá la atención a las tareas que tiene pendientes.
+Si tiene experiencia en la cocina, lo más probable es que ejecute estas instrucciones de forma **asincrónica**. Primero, calentará la sartén para los huevos e irá friendo el beicon. Después, pondrá el pan en la tostadora y empezará a freír los huevos. En cada paso del proceso, iniciará una tarea y volverá la atención a las tareas que tiene pendientes.
 
 La preparación del desayuno es un buen ejemplo de un trabajo asincrónico que no es paralelo. Una persona (o un subproceso) puede controlar todas estas tareas. Siguiendo con la analogía del desayuno, una persona puede preparar el desayuno asincrónicamente si comienza la tarea siguiente antes de que finalice la anterior. Los alimentos se cocinan tanto si una persona supervisa el proceso como si no. En cuanto se empieza a calentar la sartén para los huevos, se puede comenzar a freír el beicon. Una vez que el beicon se esté haciendo, se puede poner el pan en la tostadora.
 

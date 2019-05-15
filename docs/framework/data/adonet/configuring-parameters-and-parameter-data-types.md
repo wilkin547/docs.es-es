@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: e4414e33efb077e00e4b38e3e53d218ecd7343a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034559"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583825"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configurar parámetros y tipos de datos de parámetro
 
@@ -33,7 +33,7 @@ Cuando se agregan parámetros distintos de los parámetros de entrada, se debe p
 
 ## <a name="working-with-parameter-placeholders"></a>Trabajar con los marcadores de posición
 
-La sintaxis de los marcadores de posición de parámetros depende del origen de datos. Los proveedores de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] administran la asignación de nombres y la especificación de parámetros y de marcadores de posición de parámetros de forma diferente. Esta sintaxis se personaliza para un origen de datos específico, como se describe en la tabla siguiente.
+La sintaxis de los marcadores de posición de parámetros depende del origen de datos. Los proveedores de datos .NET Framework administran la asignación de nombres y la especificación de parámetros y marcadores de posición de parámetros de diferente forma. Esta sintaxis se personaliza para un origen de datos específico, como se describe en la tabla siguiente.
 
 |Proveedor de datos|Sintaxis de nomenclatura de parámetros|
 |-------------------|-----------------------------|
@@ -44,9 +44,9 @@ La sintaxis de los marcadores de posición de parámetros depende del origen de 
 
 ## <a name="specifying-parameter-data-types"></a>Especificar tipos de datos de parámetro
 
-El tipo de datos de un parámetro es específico del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] . Al especificar el tipo, el valor de `Parameter` se convierte en el tipo del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] antes de pasar el valor al origen de datos. Si lo desea, puede especificar el tipo de un objeto `Parameter` de forma genérica estableciendo la propiedad `DbType` del objeto `Parameter` en un <xref:System.Data.DbType>determinado.
+El tipo de datos de un parámetro es específico del proveedor de datos de .NET Framework. Especificar el tipo convierte el valor de la `Parameter` para el tipo de proveedor de datos de .NET Framework antes de pasar el valor al origen de datos. Si lo desea, puede especificar el tipo de un objeto `Parameter` de forma genérica estableciendo la propiedad `DbType` del objeto `Parameter` en un <xref:System.Data.DbType>determinado.
 
-El tipo del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] de un objeto `Parameter` se deduce del tipo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] del `Value` del objeto `Parameter` , o del `DbType` del objeto `Parameter` . En la siguiente tabla se muestra el tipo deducido de `Parameter` en función del objeto que se ha pasado como valor `Parameter` o del `DbType`especificado.
+El tipo de proveedor de datos de .NET Framework de un `Parameter` objeto se deriva del tipo de .NET Framework de la `Value` de la `Parameter` objeto, o desde el `DbType` de la `Parameter` objeto. En la siguiente tabla se muestra el tipo deducido de `Parameter` en función del objeto que se ha pasado como valor `Parameter` o del `DbType`especificado.
 
 |Tipo de .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|OracleType|
 |-------------------------|------------|---------------|---------------|--------------|----------------|
@@ -101,7 +101,7 @@ Los procedimientos almacenados ofrecen numerosas ventajas en el caso de aplicaci
 > [!NOTE]
 > Las instrucciones con parámetros se ejecutan en el servidor utilizando `sp_executesql,` ; esto permite volver a utilizar el plan de consultas. Los cursores o las variables locales del lote de `sp_executesql` no son visibles para el lote que llama a `sp_executesql`. Los cambios en el contexto de base de datos solo se mantienen hasta el final de la instrucción `sp_executesql` . Para obtener más información, consulte [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
 
-Cuando se usan parámetros con <xref:System.Data.SqlClient.SqlCommand> para ejecutar un procedimiento almacenado de SQL Server, los nombres de los parámetros agregados a la colección <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> deben coincidir con los nombres de los marcadores de parámetro del procedimiento almacenado. El proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para SQL Server no admite el uso del marcador de posición de signo de interrogación de cierre (?) para pasar parámetros a una instrucción SQL o a un procedimiento almacenado. Este proveedor trata los parámetros del procedimiento almacenado como parámetros con nombre y busca marcadores de parámetros coincidentes. Por ejemplo, el procedimiento almacenado `CustOrderHist` se define usando un parámetro denominado `@CustomerID`. Cuando el código ejecuta el procedimiento almacenado, también debe usar un parámetro denominado `@CustomerID`.
+Cuando se usan parámetros con <xref:System.Data.SqlClient.SqlCommand> para ejecutar un procedimiento almacenado de SQL Server, los nombres de los parámetros agregados a la colección <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> deben coincidir con los nombres de los marcadores de parámetro del procedimiento almacenado. El proveedor de datos de .NET Framework para SQL Server no es compatible con el marcador de posición de signo de interrogación (?) para pasar parámetros a una instrucción SQL o un procedimiento almacenado. Este proveedor trata los parámetros del procedimiento almacenado como parámetros con nombre y busca marcadores de parámetros coincidentes. Por ejemplo, el procedimiento almacenado `CustOrderHist` se define usando un parámetro denominado `@CustomerID`. Cuando el código ejecuta el procedimiento almacenado, también debe usar un parámetro denominado `@CustomerID`.
 
 ```sql
 CREATE PROCEDURE dbo.CustOrderHist @CustomerID varchar(5)
@@ -119,9 +119,9 @@ En este ejemplo se muestra cómo llamar a un procedimiento almacenado de SQL Ser
 
 ## <a name="using-parameters-with-an-oledbcommand-or-odbccommand"></a>Usar parámetros con OleDbCommand o con OdbcCommand
 
-Cuando se usan parámetros con <xref:System.Data.OleDb.OleDbCommand> o con <xref:System.Data.Odbc.OdbcCommand>, el orden de los parámetros agregados a la colección `Parameters` debe coincidir con el de los parámetros definidos en el procedimiento almacenado. El proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para OLE DB y el proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para ODBC consideran los parámetros de un procedimiento almacenado como marcadores de posición y aplican los valores de los parámetros en orden. Además, los parámetros de valores devueltos deben ser los primeros que se agreguen a la colección `Parameters` .
+Cuando se usan parámetros con <xref:System.Data.OleDb.OleDbCommand> o con <xref:System.Data.Odbc.OdbcCommand>, el orden de los parámetros agregados a la colección `Parameters` debe coincidir con el de los parámetros definidos en el procedimiento almacenado. El proveedor de datos de .NET Framework para OLE DB y el proveedor de datos de .NET Framework para ODBC consideran los parámetros de un procedimiento almacenado como marcadores de posición y aplican los valores de parámetros en orden. Además, los parámetros de valores devueltos deben ser los primeros que se agreguen a la colección `Parameters` .
 
-El proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para OLE DB y el proveedor de datos de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] para ODBC no admiten el uso de parámetros con nombre para pasar parámetros a una instrucción SQL o a un procedimiento almacenado. En este caso, se debe utilizar el marcador de posición de signo interrogación de cierre (?), como se muestra en el ejemplo siguiente.
+El proveedor de datos de .NET Framework para OLE DB y el proveedor de datos de .NET Framework para ODBC no admiten parámetros con nombre para pasar parámetros a una instrucción SQL o un procedimiento almacenado. En este caso, se debe utilizar el marcador de posición de signo interrogación de cierre (?), como se muestra en el ejemplo siguiente.
 
 ```sql
 SELECT * FROM Customers WHERE CustomerID = ?

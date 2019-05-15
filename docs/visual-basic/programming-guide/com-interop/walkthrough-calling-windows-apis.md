@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022407"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592712"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Tutorial: Llamar a las API de Windows (Visual Basic)
 API de Windows son bibliotecas de vínculos dinámicos (DLL) que forman parte del sistema operativo Windows. Usarlos para realizar tareas cuando resulta difícil escribir procedimientos equivalentes. Por ejemplo, Windows proporcionan una función denominada `FlashWindowEx` que permite que la barra de título de una aplicación alterne entre claro y oscuro.  
   
  La ventaja de usar las API de Windows en el código es que pueden ahorrar tiempo de desarrollo porque contienen docenas de funciones útiles que ya se han escrito y espera que se usará. La desventaja es que las API de Windows puede ser difíciles trabajar con e implacable cuando algo va mal.  
   
- Las API de Windows representan una categoría especial de interoperabilidad. Las API de Windows no utilizan código administrado, no tienen integradas las bibliotecas de tipos y utilizar tipos de datos que sean diferentes a los que se usan con Visual Studio. Debido a estas diferencias, y dado que las API de Windows no son objetos COM, la interoperabilidad con las API de Windows y el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] se realiza mediante la plataforma de invocación, o PInvoke. Invocación de plataforma es un servicio que permite código para llamar a funciones no administradas implementadas en archivos DLL administrado. Para obtener más información, consulte [consumir funciones de DLL no administradas](../../../framework/interop/consuming-unmanaged-dll-functions.md). Puede utilizar PInvoke en Visual Basic mediante el uso del `Declare` instrucción o aplicar el `DllImport` atributo a un procedimiento vacío.  
+ Las API de Windows representan una categoría especial de interoperabilidad. Las API de Windows no utilizan código administrado, no tienen integradas las bibliotecas de tipos y utilizar tipos de datos que sean diferentes a los que se usan con Visual Studio. Causa de estas diferencias y porque las API de Windows no son objetos COM, la interoperabilidad con las API de Windows y .NET Framework se realiza mediante la invocación de plataforma, o PInvoke. Invocación de plataforma es un servicio que permite código para llamar a funciones no administradas implementadas en archivos DLL administrado. Para obtener más información, consulte [consumir funciones de DLL no administradas](../../../framework/interop/consuming-unmanaged-dll-functions.md). Puede utilizar PInvoke en Visual Basic mediante el uso del `Declare` instrucción o aplicar el `DllImport` atributo a un procedimiento vacío.  
   
- Las llamadas de API de Windows eran una parte importante de Visual Basic de programación en el pasado, pero rara vez son necesarias con Visual Basic. NET. Siempre que sea posible, debe usar código administrado desde el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para realizar tareas, en lugar de llamadas de API de Windows. En este tutorial se proporciona información para aquellas situaciones en las que el uso las API de Windows es necesaria.  
+ Las llamadas de API de Windows eran una parte importante de Visual Basic de programación en el pasado, pero rara vez son necesarias con Visual Basic. NET. Siempre que sea posible, debe usar código administrado de .NET Framework para realizar tareas, en lugar de llamadas de API de Windows. En este tutorial se proporciona información para aquellas situaciones en las que el uso las API de Windows es necesaria.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

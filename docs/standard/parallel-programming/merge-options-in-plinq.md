@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06f772b8d26ec87519efdaae7b621f3fd2d321c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7255ef11bfdf74afa6ae2032b0c86c8c44dbfe7d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714742"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647725"
 ---
 # <a name="merge-options-in-plinq"></a>Opciones de fusión mediante combinación en PLINQ
 Cuando una consulta se ejecuta en paralelo, PLINQ crea particiones de la secuencia de origen para que varios subprocesos puedan funcionar en diferentes partes al mismo tiempo, por lo general en subprocesos independientes. Si los resultados se van a usar en un subproceso, por ejemplo, en un bucle `foreach` (`For Each` en Visual Basic), los resultados de cada subproceso deben volver a combinarse en una secuencia. El tipo de combinación que PLINQ realiza depende de los operadores que están presentes en la consulta. Por ejemplo, los operadores que imponen un nuevo orden de los resultados deben almacenar en búfer todos los elementos de todos los subprocesos. Desde la perspectiva del subproceso utilizado (que también es el del usuario de la aplicación), una consulta totalmente almacenada en búfer podría ejecutarse durante un período de tiempo considerable antes de generar su primer resultado. Otros operadores, de forma predeterminada, están parcialmente almacenados en búfer; producen sus resultados en lotes. Un operador, <xref:System.Linq.ParallelEnumerable.ForAll%2A>, no se almacena en búfer de forma predeterminada. Genera inmediatamente todos los elementos de todos los subprocesos.  
@@ -32,15 +32,15 @@ Cuando una consulta se ejecuta en paralelo, PLINQ crea particiones de la secuenc
 ## <a name="parallelmergeoptions"></a>ParallelMergeOptions  
  La enumeración <xref:System.Linq.ParallelMergeOptions> incluye las siguientes opciones que especifican, para las formas de consulta compatibles, cómo se produjo el resultado final de la consulta cuando se usan los resultados en un subproceso:  
   
--   `Not Buffered`  
+- `Not Buffered`  
   
      La opción <xref:System.Linq.ParallelMergeOptions.NotBuffered> hace que cada elemento procesado devuelva cada subproceso en cuanto se produzca. Este comportamiento es análogo a la salida "streaming". Si el operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> está presente en la consulta, `NotBuffered` conserva el orden de los elementos de origen. Aunque `NotBuffered` empieza a producir resultados en cuanto están disponibles, el tiempo total para generar todos los resultados puede ser más largo con respecto al uso de alguna de las demás opciones de combinación.  
   
--   `Auto Buffered`  
+- `Auto Buffered`  
   
      La opción <xref:System.Linq.ParallelMergeOptions.AutoBuffered> hace que la consulta recopile los elementos en un búfer y, a continuación, proporcionará periódicamente el contenido del búfer a la vez para el subproceso utilizado. Esto es análogo a producir los datos de origen en "fragmentos" en lugar de usar el comportamiento de "streaming" de `NotBuffered`. `AutoBuffered` puede tardar más que `NotBuffered` en habilitar el primer elemento en el subproceso utilizado. El tamaño del búfer y el comportamiento productivo exacto no se pueden configurar y pueden variar en función de varios factores relacionados con la consulta.  
   
--   `FullyBuffered`  
+- `FullyBuffered`  
   
      La opción <xref:System.Linq.ParallelMergeOptions.FullyBuffered> hace que el resultado de la consulta completa se almacene en búfer antes de que se produzca cualquiera de los elementos. Al usar esta opción, puede tardar más tiempo antes de que el primer elemento esté disponible en el subproceso utilizado, pero los resultados completos pueden producirse más rápido en comparación con el uso de otras opciones.  
   

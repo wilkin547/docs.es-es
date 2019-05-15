@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652116"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592230"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Información general de enlaces de Windows Communication Foundation
 Los enlaces son objetos que se usan para especificar los detalles de comunicación que son necesarias para conectarse al punto de conexión de un servicio de Windows Communication Foundation (WCF). Cada punto de conexión en un servicio WCF requiere un enlace esté bien especificado. En este tema se describe los tipos de datos de comunicación que definen los enlaces, los elementos de un enlace, qué enlaces están incluidos en WCF y cómo se puede especificar un enlace para un punto de conexión.  
@@ -36,9 +36,9 @@ Los enlaces son objetos que se usan para especificar los detalles de comunicaci�
   
 - <xref:System.ServiceModel.WSHttpBinding>: Un enlace interoperable adecuado para conectar a los puntos de conexión que cumplen con WS-* protocolos.  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para conectarse a otros extremos WCF en el mismo equipo.  
+- <xref:System.ServiceModel.NetNamedPipeBinding>: Usa .NET Framework para conectarse a otros extremos WCF en el mismo equipo.  
   
-- <xref:System.ServiceModel.NetMsmqBinding>: Usa el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para crear las conexiones de mensajes en cola con otros extremos WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>: Usos en .NET Framework para crear la cola de mensajes conexiones con otros extremos WCF.  
 
 - <xref:System.ServiceModel.NetTcpBinding>: Este enlace ofrece un mayor rendimiento respecto enlaces HTTP y es ideal para su uso en una red local.
   

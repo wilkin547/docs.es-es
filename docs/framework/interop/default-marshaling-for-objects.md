@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076165"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626331"
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithType> pueden exponerse a código no administrado como uno de los siguientes tipos:  
   
--   Una variante cuando el objeto es un parámetro.  
+- Una variante cuando el objeto es un parámetro.  
   
--   Una interfaz cuando el objeto es un campo de estructura.  
+- Una interfaz cuando el objeto es un campo de estructura.  
   
  Solo la interoperabilidad COM admite la serialización para tipos de objeto. El comportamiento predeterminado consiste en serializar los objetos en variantes de COM. Estas reglas se aplican solo al tipo **Object** y no se aplican a objetos fuertemente tipados que se derivan de la clase **Object**.  
   
@@ -120,11 +120,11 @@ struct ObjectHolder {
 ## <a name="marshaling-object-to-variant"></a>Serialización de Object en Variant  
  Cuando un objeto se serializa en una variante, el tipo de variante interno se determina en tiempo de ejecución, según las reglas siguientes:  
   
--   Si la referencia de objeto es NULL (**Nothing** en Visual Basic), el objeto se serializa en una variante del tipo **VT_EMPTY**.  
+- Si la referencia de objeto es NULL (**Nothing** en Visual Basic), el objeto se serializa en una variante del tipo **VT_EMPTY**.  
   
--   Si el objeto es una instancia de cualquier tipo enumerado en la tabla siguiente, el tipo de variante resultante se determina mediante las reglas integradas en el serializador y mostradas en la tabla.  
+- Si el objeto es una instancia de cualquier tipo enumerado en la tabla siguiente, el tipo de variante resultante se determina mediante las reglas integradas en el serializador y mostradas en la tabla.  
   
--   Otros objetos que necesiten controlar explícitamente el comportamiento de serialización pueden implementar la interfaz <xref:System.IConvertible>. En ese caso, el tipo de variante se determina por el código de tipo devuelto por el método <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>. En caso contrario, el objeto se serializa como una variante de tipo **VT_UNKNOWN**.  
+- Otros objetos que necesiten controlar explícitamente el comportamiento de serialización pueden implementar la interfaz <xref:System.IConvertible>. En ese caso, el tipo de variante se determina por el código de tipo devuelto por el método <xref:System.IConvertible.GetTypeCode%2A?displayProperty=nameWithType>. En caso contrario, el objeto se serializa como una variante de tipo **VT_UNKNOWN**.  
   
 ### <a name="marshaling-system-types-to-variant"></a>Serialización de tipos de sistema en Variant  
  En la tabla siguiente se muestran los tipos de objeto administrados y sus tipos de variante COM correspondientes. Estos tipos solo se convierten cuando la firma del método al que se llama es de tipo <xref:System.Object?displayProperty=nameWithType>.  
@@ -281,26 +281,26 @@ Variantes pasadas por valor y por referencia
   
  **Comportamiento predeterminado para la serialización de objetos y variantes por valor**  
   
--   Cuando se pasan objetos desde código administrado a COM, el contenido del objeto se copia en una nueva variante creada por el serializador mediante las reglas definidas en [Serialización de Object en Variant](#marshaling-object-to-variant). Los cambios realizados en la variante en el lado no administrado no se propagan al objeto original en la devolución de la llamada.  
+- Cuando se pasan objetos desde código administrado a COM, el contenido del objeto se copia en una nueva variante creada por el serializador mediante las reglas definidas en [Serialización de Object en Variant](#marshaling-object-to-variant). Los cambios realizados en la variante en el lado no administrado no se propagan al objeto original en la devolución de la llamada.  
   
--   Al pasar variantes de COM a código administrado, el contenido de la variante se copia en un objeto recién creado, con las reglas definidas en [Serialización de Variant en Object](#marshaling-variant-to-object). Los cambios realizados en el objeto en el lado no administrado no se propagan a la variante original en la devolución de la llamada.  
+- Al pasar variantes de COM a código administrado, el contenido de la variante se copia en un objeto recién creado, con las reglas definidas en [Serialización de Variant en Object](#marshaling-variant-to-object). Los cambios realizados en el objeto en el lado no administrado no se propagan a la variante original en la devolución de la llamada.  
   
  **Comportamiento predeterminado para la serialización de objetos y variantes por referencia**  
   
  Para propagar los cambios de vuelta al autor de la llamada, los parámetros deben pasarse por referencia. Por ejemplo, puede usar la palabra clave **ref** de C# (o **ByRef** en código administrado de Visual Basic) para pasar parámetros por referencia. En COM, los parámetros de referencia se pasan con un puntero como una **variante \***.  
   
--   Cuando se pasa un objeto a COM por referencia, el serializador crea una variante y copia el contenido de la referencia de objeto en la variante antes de que se realice la llamada. La variante se pasa a la función no administrada, donde el usuario tiene libertad para cambiar el contenido de la variante. En la devolución de la llamada, los cambios realizados en la variante en el lado no administrado se propagan al objeto original. Si el tipo de la variante difiere del tipo de la variante que se pasa a la llamada, los cambios se propagan a un objeto de un tipo diferente. Es decir, el tipo del objeto pasado en la llamada puede diferir del tipo del objeto devuelto de la llamada.  
+- Cuando se pasa un objeto a COM por referencia, el serializador crea una variante y copia el contenido de la referencia de objeto en la variante antes de que se realice la llamada. La variante se pasa a la función no administrada, donde el usuario tiene libertad para cambiar el contenido de la variante. En la devolución de la llamada, los cambios realizados en la variante en el lado no administrado se propagan al objeto original. Si el tipo de la variante difiere del tipo de la variante que se pasa a la llamada, los cambios se propagan a un objeto de un tipo diferente. Es decir, el tipo del objeto pasado en la llamada puede diferir del tipo del objeto devuelto de la llamada.  
   
--   Cuando se pasa una variante por referencia a código administrado, el serializador crea un objeto y copia el contenido de la variante en el objeto antes de que se realice la llamada. Se pasa una referencia al objeto a la función administrada, donde el usuario tiene libertad para cambiar el contenido del objeto. En la devolución de la llamada, los cambios realizados en el objeto al que se hace referencia se propagan a la variante original. Si el tipo del objeto difiere del tipo del objeto pasado en la llamada, el tipo de la variante original se cambia y el valor se propaga a la variante. Como antes, el tipo de la variante pasada en la llamada puede diferir del tipo de la variante devuelta de la llamada.  
+- Cuando se pasa una variante por referencia a código administrado, el serializador crea un objeto y copia el contenido de la variante en el objeto antes de que se realice la llamada. Se pasa una referencia al objeto a la función administrada, donde el usuario tiene libertad para cambiar el contenido del objeto. En la devolución de la llamada, los cambios realizados en el objeto al que se hace referencia se propagan a la variante original. Si el tipo del objeto difiere del tipo del objeto pasado en la llamada, el tipo de la variante original se cambia y el valor se propaga a la variante. Como antes, el tipo de la variante pasada en la llamada puede diferir del tipo de la variante devuelta de la llamada.  
   
  **Comportamiento predeterminado para serializar una variante con la marca VT_BYREF establecida**  
   
--   Una variante que se pasa a código administrado por valor puede tener la marca **VT_BYREF** establecida para indicar que la variante contiene una referencia en lugar de un valor. En este caso, la variante se sigue serializando en un objeto porque la variante se pasa por valor. El serializador desreferencia automáticamente el contenido de la variante y la copia en un objeto recién creado antes de realizar la llamada. Después, el objeto se pasa a la función administrada; pero en la devolución de la llamada, el objeto no se propaga a la variante original. Se perderán los cambios realizados en el objeto administrado.  
+- Una variante que se pasa a código administrado por valor puede tener la marca **VT_BYREF** establecida para indicar que la variante contiene una referencia en lugar de un valor. En este caso, la variante se sigue serializando en un objeto porque la variante se pasa por valor. El serializador desreferencia automáticamente el contenido de la variante y la copia en un objeto recién creado antes de realizar la llamada. Después, el objeto se pasa a la función administrada; pero en la devolución de la llamada, el objeto no se propaga a la variante original. Se perderán los cambios realizados en el objeto administrado.  
   
     > [!CAUTION]
     >  No hay ninguna manera de cambiar el valor de una variante pasada por valor, aunque la variante tenga establecida la marca **VT_BYREF**.  
   
--   Una variante que se pasa a código administrado por referencia también puede tener la marca **VT_BYREF** establecida para indicar que la variante contiene otra referencia. En ese caso, la variante se serializa en un objeto **ref** porque la variante se pasa por referencia. El serializador desreferencia automáticamente el contenido de la variante y la copia en un objeto recién creado antes de realizar la llamada. En la devolución de la llamada, el valor del objeto se propaga a la referencia dentro de la variante original solo si el objeto es del mismo tipo que el objeto que se pasa. Es decir, la propagación no cambia el tipo de una variante con la marca **VT_BYREF** establecida. Si el tipo del objeto se cambia durante la llamada, se inicia una excepción <xref:System.InvalidCastException> en la devolución de la llamada.  
+- Una variante que se pasa a código administrado por referencia también puede tener la marca **VT_BYREF** establecida para indicar que la variante contiene otra referencia. En ese caso, la variante se serializa en un objeto **ref** porque la variante se pasa por referencia. El serializador desreferencia automáticamente el contenido de la variante y la copia en un objeto recién creado antes de realizar la llamada. En la devolución de la llamada, el valor del objeto se propaga a la referencia dentro de la variante original solo si el objeto es del mismo tipo que el objeto que se pasa. Es decir, la propagación no cambia el tipo de una variante con la marca **VT_BYREF** establecida. Si el tipo del objeto se cambia durante la llamada, se inicia una excepción <xref:System.InvalidCastException> en la devolución de la llamada.  
   
  En la tabla siguiente se resumen las reglas de propagación para variantes y objetos.  
   

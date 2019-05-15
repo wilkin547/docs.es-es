@@ -2,23 +2,23 @@
 title: Habilitar un origen de datos para realizar consultas LINQ
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d7922c5dbe4f6185777dba4f33662eb2e4aee61
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515724"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597156"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Habilitar un origen de datos para realizar consultas LINQ
 Existen varias maneras de extender [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para permitir consultar cualquier origen de datos en el patrón de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. El origen de datos podría ser una estructura de datos, un servicio Web, un sistema de archivos o una base de datos, por nombrar algunos. El modelo de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] facilita a los clientes las consultas a un origen de datos para el que las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] están habilitadas, ya que la sintaxis y el modelo de la consulta no cambian. Las maneras en las que [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se puede extender a estos orígenes de datos son las siguientes:  
   
--   Implementar la interfaz <xref:System.Collections.Generic.IEnumerable%601> en un tipo para habilitar las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects para ese tipo.  
+- Implementar la interfaz <xref:System.Collections.Generic.IEnumerable%601> en un tipo para habilitar las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects para ese tipo.  
   
--   Crear métodos de operador de consulta estándar como <xref:System.Linq.Enumerable.Where%2A> y <xref:System.Linq.Enumerable.Select%2A> que extienden un tipo para habilitar las consultas personalizadas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para ese tipo.  
+- Crear métodos de operador de consulta estándar como <xref:System.Linq.Enumerable.Where%2A> y <xref:System.Linq.Enumerable.Select%2A> que extienden un tipo para habilitar las consultas personalizadas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para ese tipo.  
   
--   Crear un proveedor para el origen de datos que implementa la interfaz <xref:System.Linq.IQueryable%601>. Un proveedor que implementa esta interfaz recibe consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en forma de árboles de expresión, que puede ejecutar de una manera personalizada, por ejemplo, remotamente.  
+- Crear un proveedor para el origen de datos que implementa la interfaz <xref:System.Linq.IQueryable%601>. Un proveedor que implementa esta interfaz recibe consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en forma de árboles de expresión, que puede ejecutar de una manera personalizada, por ejemplo, remotamente.  
   
--   Crear un proveedor para el origen de datos que aproveche una tecnología de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existente. Este tipo de proveedor permitiría no sólo las consultas, sino también las operaciones de inserción, actualización y eliminación, así como la asignación para tipos definidos por el usuario.  
+- Crear un proveedor para el origen de datos que aproveche una tecnología de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existente. Este tipo de proveedor permitiría no sólo las consultas, sino también las operaciones de inserción, actualización y eliminación, así como la asignación para tipos definidos por el usuario.  
   
  En este tema se analizan estas opciones.  
   

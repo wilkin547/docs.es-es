@@ -8,27 +8,27 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 897f49dc783885728f7d7242482a2b42f3a114bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a81a0015ae046682e1afa40c1c8d272357839ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498078"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622781"
 ---
 # <a name="latency-modes"></a>Modos de latencia
 Para reclamar objetos, el recolector de elementos no utilizados debe detener todos los subprocesos en ejecución en una aplicación. En algunos casos, como cuando una aplicación recupera datos o muestra contenido, la recolección completa de elementos no utilizados puede producirse en un momento crítico y reducir el rendimiento. Puede ajustar la tendencia a la intrusión del recolector de elementos no utilizados estableciendo la propiedad <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> en uno de los valores de <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
   
  Latencia es el tiempo que el recolector de elementos no utilizados entra en su aplicación. Durante los períodos de latencia baja, el recolector de elementos no utilizados es más conservador y menos intrusivo en la reclamación de objetos. La enumeración <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> proporciona dos opciones de configuración de latencia baja:  
   
--   <xref:System.Runtime.GCLatencyMode.LowLatency> suprime las recolecciones de generación 2 y realiza solo las recolecciones de generación 0 y 1. Se puede usar solo durante breves períodos de tiempo. En períodos más largos, si la memoria del sistema está bajo presión, el recolector de elementos no utilizados activará una colección que puede pausar brevemente la aplicación e interrumpir una operación crítica en el tiempo. Esta opción está disponible solo para la recopilación de elementos no utilizados de estación de trabajo.  
+- <xref:System.Runtime.GCLatencyMode.LowLatency> suprime las recolecciones de generación 2 y realiza solo las recolecciones de generación 0 y 1. Se puede usar solo durante breves períodos de tiempo. En períodos más largos, si la memoria del sistema está bajo presión, el recolector de elementos no utilizados activará una colección que puede pausar brevemente la aplicación e interrumpir una operación crítica en el tiempo. Esta opción está disponible solo para la recopilación de elementos no utilizados de estación de trabajo.  
   
--   <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> suprime las recolecciones de generación 2 de primer plano y realiza solo las recolecciones de generación 0, 1 y las recolecciones de generación 2 de fondo. Se puede usar durante periodos más largos de tiempo y está disponible para la recolección de elementos utilizados de estación de trabajo y de servidor. Esta opción de configuración no se puede usar si la [recolección de elementos no utilizados simultánea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) está deshabilitada.  
+- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> suprime las recolecciones de generación 2 de primer plano y realiza solo las recolecciones de generación 0, 1 y las recolecciones de generación 2 de fondo. Se puede usar durante periodos más largos de tiempo y está disponible para la recolección de elementos utilizados de estación de trabajo y de servidor. Esta opción de configuración no se puede usar si la [recolección de elementos no utilizados simultánea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) está deshabilitada.  
   
  Durante los períodos de latencia baja, se suprimen las recolecciones de generación 2 a menos que ocurra lo siguiente:  
   
--   El sistema recibe una notificación de memoria insuficiente desde el sistema operativo.  
+- El sistema recibe una notificación de memoria insuficiente desde el sistema operativo.  
   
--   El código de aplicación induce una recolección mediante una llamada al método <xref:System.GC.Collect%2A?displayProperty=nameWithType> y especifica 2 en el parámetro `generation`.  
+- El código de aplicación induce una recolección mediante una llamada al método <xref:System.GC.Collect%2A?displayProperty=nameWithType> y especifica 2 en el parámetro `generation`.  
   
  En la tabla siguiente se enumeran los escenarios de aplicación en los que se usan los valores de <xref:System.Runtime.GCLatencyMode>.  
   
@@ -42,17 +42,17 @@ Para reclamar objetos, el recolector de elementos no utilizados debe detener tod
 ## <a name="guidelines-for-using-low-latency"></a>Directrices para usar una latencia baja  
  Cuando use el modo <xref:System.Runtime.GCLatencyMode.LowLatency>, tenga en cuenta las siguientes directrices:  
   
--   Haga que el período de tiempo de latencia baja sea lo más corto posible.  
+- Haga que el período de tiempo de latencia baja sea lo más corto posible.  
   
--   Evite asignar gran cantidad de memoria durante los períodos de latencia baja. Se pueden producir notificaciones de memoria insuficiente porque la recolección de elementos no utilizados reclama menos objetos.  
+- Evite asignar gran cantidad de memoria durante los períodos de latencia baja. Se pueden producir notificaciones de memoria insuficiente porque la recolección de elementos no utilizados reclama menos objetos.  
   
--   Mientras esté en modo de latencia baja, minimice el número de asignaciones que realiza, en particular las asignaciones en el montón de objetos grandes y de objetos anclados.  
+- Mientras esté en modo de latencia baja, minimice el número de asignaciones que realiza, en particular las asignaciones en el montón de objetos grandes y de objetos anclados.  
   
--   Tenga en cuenta los subprocesos que podrían estar realizando asignaciones. Como el valor de la propiedad <xref:System.Runtime.GCSettings.LatencyMode%2A> se aplica a todo el proceso, podría generar una <xref:System.OutOfMemoryException> en cualquier subproceso que pueda estar realizando asignaciones.  
+- Tenga en cuenta los subprocesos que podrían estar realizando asignaciones. Como el valor de la propiedad <xref:System.Runtime.GCSettings.LatencyMode%2A> se aplica a todo el proceso, podría generar una <xref:System.OutOfMemoryException> en cualquier subproceso que pueda estar realizando asignaciones.  
   
--   Encapsule el código de latencia baja en regiones de ejecución restringidas (para obtener más información, consulte [Regiones de ejecución restringidas](../../../docs/framework/performance/constrained-execution-regions.md)).  
+- Encapsule el código de latencia baja en regiones de ejecución restringidas (para obtener más información, consulte [Regiones de ejecución restringidas](../../../docs/framework/performance/constrained-execution-regions.md)).  
   
--   Para forzar las recolecciones de generación 2 durante un período de latencia baja, llame al método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
+- Para forzar las recolecciones de generación 2 durante un período de latencia baja, llame al método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

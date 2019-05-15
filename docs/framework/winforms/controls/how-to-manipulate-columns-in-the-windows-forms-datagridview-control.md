@@ -10,12 +10,12 @@ helpviewer_keywords:
 - columns [Windows Forms], manipulating
 - data grids [Windows Forms], manipulating columns
 ms.assetid: d8cfe6b3-bbab-4182-bec2-0517d9f1eaf6
-ms.openlocfilehash: 95d41093178c56c999ecfe515a380927513e715d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f964314b9fe2f4b1ca235f9e74ca80391a58105
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913723"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592334"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>Procedimiento para manipular columnas en el control DataGridView de formularios Windows Forms
 
@@ -32,8 +32,6 @@ En el ejemplo de código siguiente, se muestran las diversas maneras de manipula
 Para este ejemplo se necesita:
 
 - Referencias a los ensamblados System, System.Drawing y System.Windows.Forms.
-
-Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.
 
 ## <a name="see-also"></a>Vea también
 

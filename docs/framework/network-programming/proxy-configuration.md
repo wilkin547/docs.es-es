@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200550"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623057"
 ---
 # <a name="proxy-configuration"></a>Configuración de proxy
 Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy puede devolver un recurso solicitado de su caché o reenviar la solicitud al servidor donde reside el recurso. Los servidores proxy pueden mejorar el rendimiento de la red al reducir el número de solicitudes enviadas a servidores remotos. Los servidores proxy también pueden usarse para restringir el acceso a los recursos.  
@@ -45,11 +45,11 @@ Un servidor proxy controla las solicitudes de cliente de recursos. Un proxy pued
   
  Varias opciones controlan el funcionamiento de un proxy estático. Puede especificar los siguientes elementos:  
   
--   La dirección del proxy.  
+- La dirección del proxy.  
   
--   Si debe omitirse el proxy para direcciones locales.  
+- Si debe omitirse el proxy para direcciones locales.  
   
--   Si debe omitirse el proxy para un conjunto de direcciones.  
+- Si debe omitirse el proxy para un conjunto de direcciones.  
   
  En la siguiente tabla se muestran las opciones de configuración de un proxy estático.  
   

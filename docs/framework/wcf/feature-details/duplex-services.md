@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858044"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592751"
 ---
 # <a name="duplex-services"></a>Servicios dúplex
 
@@ -87,10 +87,10 @@ El siguiente ejemplo de código muestra cómo especificar la dirección de extre
 ```
 
 > [!WARNING]
-> El modelo dúplex no detecta automáticamente cuando un servicio o cliente cierra su canal. Por tanto, si un cliente finaliza inesperadamente, de forma predeterminada no se notificará al servicio. Los clientes y los servicios pueden implementar su propio protocolo para notificarse si así lo deciden.
+> El modelo dúplex no detecta automáticamente cuando un servicio o cliente cierra su canal. Por lo que si un cliente finaliza inesperadamente, de forma predeterminada el servicio no se notificará, o si un servicio termina de forma inesperada, no se notificará al cliente. Los clientes y los servicios pueden implementar su propio protocolo para notificarse si así lo deciden. Para obtener más información sobre el control de errores, vea [control de errores de WCF](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>Vea también
 
-- [Dúplex](../../../../docs/framework/wcf/samples/duplex.md)
-- [Especificación del comportamiento de tiempo de ejecución del cliente](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [Cómo: Crear un generador de canales y utilizarlo para crear y gestionar canales](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+- [Dúplex](../samples/duplex.md)
+- [Especificación del comportamiento de tiempo de ejecución del cliente](../specifying-client-run-time-behavior.md)
+- [Cómo: Crear un generador de canales y utilizarlo para crear y gestionar canales](how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

@@ -2,12 +2,12 @@
 title: Autenticación de Windows integrada con protección ampliada
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325727"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647404"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Autenticación de Windows integrada con protección ampliada
 Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> y clases relacionadas del espacio de nombres <xref:System.Net> y espacios de nombres relacionados controlan la autenticación integrada de Windows. Se ha agregado compatibilidad para que la protección ampliada mejore la seguridad.  
@@ -39,21 +39,21 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
   
  La información de enlace de servicio es una indicación de la intención del cliente de autenticarse en un punto de conexión de servicio determinado. Se comunica del cliente al servidor con las propiedades siguientes:  
   
--   El valor de SPN debe estar disponible para el servidor que realiza la autenticación de cliente en forma de texto no cifrado.  
+- El valor de SPN debe estar disponible para el servidor que realiza la autenticación de cliente en forma de texto no cifrado.  
   
--   El valor de SPN es público.  
+- El valor de SPN es público.  
   
--   El SPN se debe proteger criptográficamente durante el tránsito para que un ataque de tipo "Man in the middle" no pueda insertar, quitar o modificar su valor.  
+- El SPN se debe proteger criptográficamente durante el tránsito para que un ataque de tipo "Man in the middle" no pueda insertar, quitar o modificar su valor.  
   
  Un CBT es una propiedad del canal seguro exterior (por ejemplo, TLS) usado para relacionarlo (enlazarlo) con una conversación mediante un canal interno autenticado por el cliente. El CBT debe tener las propiedades siguientes (también definidas en la especificación RFC 5056 de IETF):  
   
--   Cuando existe un canal externo, el valor del CBT debe ser una propiedad que identifique el canal externo o el punto de conexión del servidor, al que lleguen por separado la parte de cliente y la parte de servidor de una conversación.  
+- Cuando existe un canal externo, el valor del CBT debe ser una propiedad que identifique el canal externo o el punto de conexión del servidor, al que lleguen por separado la parte de cliente y la parte de servidor de una conversación.  
   
--   El valor del CBT enviado por el cliente no debe poder verse afectado por un atacante.  
+- El valor del CBT enviado por el cliente no debe poder verse afectado por un atacante.  
   
--   No hay ninguna garantía de la confidencialidad del valor del CBT. Pero esto no significa que otro elemento diferente del servidor que realiza la autenticación pueda examinar siempre el valor de la información de enlace de servicio y de enlace de canal, ya que el protocolo que transporta el CBT podría llevar a cabo su cifrado.  
+- No hay ninguna garantía de la confidencialidad del valor del CBT. Pero esto no significa que otro elemento diferente del servidor que realiza la autenticación pueda examinar siempre el valor de la información de enlace de servicio y de enlace de canal, ya que el protocolo que transporta el CBT podría llevar a cabo su cifrado.  
   
--   La integridad del CBT se debe proteger criptográficamente durante el tránsito para que un atacante no pueda insertar, quitar o modificar su valor.  
+- La integridad del CBT se debe proteger criptográficamente durante el tránsito para que un atacante no pueda insertar, quitar o modificar su valor.  
   
  El enlace de canal lo lleva a cabo el cliente que realiza la transferencia del SPN y del CBT al servidor en un modo a prueba de manipulaciones. El servidor valida la información de enlace de canal según su directiva y rechaza los intentos de autenticación de los que no se considera el destino deseado. De esta manera, los dos canales se enlazan criptográficamente.  
   
@@ -72,37 +72,37 @@ Se han realizado mejoras que afectan al modo en que las clases <xref:System.Net.
   
  Una clase <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> que tiene los siguientes elementos:  
   
--   Una propiedad <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> que indica si el sistema operativo admite la autenticación integrada de Windows con la protección ampliada.  
+- Una propiedad <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> que indica si el sistema operativo admite la autenticación integrada de Windows con la protección ampliada.  
   
--   Valor <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> que indica cuándo debe exigirse la directiva de protección extendida.  
+- Valor <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> que indica cuándo debe exigirse la directiva de protección extendida.  
   
--   Un valor <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> que indica el escenario de implementación. Esto influye en la manera en que se comprueba la protección ampliada.  
+- Un valor <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> que indica el escenario de implementación. Esto influye en la manera en que se comprueba la protección ampliada.  
   
--   Una clase <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> opcional que contiene la lista personalizada de SPN que se usa para comparar con el SPN proporcionado por el cliente como destino previsto de la autenticación.  
+- Una clase <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> opcional que contiene la lista personalizada de SPN que se usa para comparar con el SPN proporcionado por el cliente como destino previsto de la autenticación.  
   
--   Una clase <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> opcional que contiene un enlace de canal personalizado para usarlo para la validación. Este escenario no es habitual.  
+- Una clase <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> opcional que contiene un enlace de canal personalizado para usarlo para la validación. Este escenario no es habitual.  
   
  El espacio de nombres <xref:System.Security.Authentication.ExtendedProtection.Configuration> proporciona compatibilidad con la configuración de la autenticación mediante la protección ampliada de las aplicaciones.  
   
  Se ha realizado una serie de cambios en las características para admitir la protección ampliada en el espacio de nombres <xref:System.Net> existente. Estos cambios incluyen:  
   
--   Una nueva clase <xref:System.Net.TransportContext> agregada al espacio de nombres <xref:System.Net> que representa un contexto de transporte.  
+- Una nueva clase <xref:System.Net.TransportContext> agregada al espacio de nombres <xref:System.Net> que representa un contexto de transporte.  
   
--   Nuevos métodos de sobrecarga <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> y <xref:System.Net.HttpWebRequest.GetRequestStream%2A> en la clase <xref:System.Net.HttpWebRequest> que permiten recuperar la clase <xref:System.Net.TransportContext> para admitir la protección ampliada para las aplicaciones cliente.  
+- Nuevos métodos de sobrecarga <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> y <xref:System.Net.HttpWebRequest.GetRequestStream%2A> en la clase <xref:System.Net.HttpWebRequest> que permiten recuperar la clase <xref:System.Net.TransportContext> para admitir la protección ampliada para las aplicaciones cliente.  
   
--   Adiciones a las clases <xref:System.Net.HttpListener> y <xref:System.Net.HttpListenerRequest> para admitir aplicaciones de servidor.  
+- Adiciones a las clases <xref:System.Net.HttpListener> y <xref:System.Net.HttpListenerRequest> para admitir aplicaciones de servidor.  
   
  Se ha realizado un cambio en las características para admitir la protección ampliada para las aplicaciones de cliente SMTP en el espacio de nombres <xref:System.Net.Mail> existente:  
   
--   Una propiedad <xref:System.Net.Mail.SmtpClient.TargetName%2A> en la clase <xref:System.Net.Mail.SmtpClient> que representa el SPN que se va a usar para la autenticación cuando se emplea la protección ampliada para aplicaciones de cliente SMTP.  
+- Una propiedad <xref:System.Net.Mail.SmtpClient.TargetName%2A> en la clase <xref:System.Net.Mail.SmtpClient> que representa el SPN que se va a usar para la autenticación cuando se emplea la protección ampliada para aplicaciones de cliente SMTP.  
   
  Se ha realizado una serie de cambios en las características para admitir la protección ampliada en el espacio de nombres <xref:System.Net.Security> existente. Estos cambios incluyen:  
   
--   Nuevos métodos de sobrecarga <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> y <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> en la clase <xref:System.Net.Security.NegotiateStream> que permiten pasar un CBT para admitir la protección ampliada para las aplicaciones cliente.  
+- Nuevos métodos de sobrecarga <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> y <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> en la clase <xref:System.Net.Security.NegotiateStream> que permiten pasar un CBT para admitir la protección ampliada para las aplicaciones cliente.  
   
--   Nuevos métodos de sobrecarga <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> y <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> en la clase <xref:System.Net.Security.NegotiateStream> que permiten pasar una clase <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> para admitir la protección ampliada para las aplicaciones de servidor.  
+- Nuevos métodos de sobrecarga <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> y <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> en la clase <xref:System.Net.Security.NegotiateStream> que permiten pasar una clase <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> para admitir la protección ampliada para las aplicaciones de servidor.  
   
--   Una nueva propiedad <xref:System.Net.Security.SslStream.TransportContext%2A> en la clase <xref:System.Net.Security.SslStream> para admitir la protección ampliada para las aplicaciones cliente y servidor.  
+- Una nueva propiedad <xref:System.Net.Security.SslStream.TransportContext%2A> en la clase <xref:System.Net.Security.SslStream> para admitir la protección ampliada para las aplicaciones cliente y servidor.  
   
  Se ha agregado una propiedad <xref:System.Net.Configuration.SmtpNetworkElement> para admitir la configuración de la protección ampliada para los clientes SMTP en el espacio de nombres <xref:System.Net.Security>.  
   

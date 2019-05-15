@@ -14,27 +14,27 @@ helpviewer_keywords:
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e32d2d4424d05b95af1eda400974da3293b8499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae5d27be18a57bfafe5bb9fcf9424d708d643e3b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622859"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpiar recursos no administrados
 En el caso de la mayoría de los objetos creados por la aplicación, puede usar el recolector de elementos no utilizados de .NET para administrar la memoria. No obstante, cuando se crean objetos que incluyen recursos no administrados, debe liberar explícitamente dichos recursos cuando termine de utilizarlos en la aplicación. Los tipos más comunes de recurso no administrado son objetos que contienen recursos del sistema operativo, como archivos, ventanas, conexiones de red o conexiones de bases de datos. Aunque el recolector de elementos no utilizados puede realizar el seguimiento de la duración de un objeto que encapsula un recurso no administrado, no conoce cómo liberar y limpiar el recurso no administrado.  
   
  Si sus tipos utilizan recursos no administrados, debe hacer lo siguiente:  
   
--   Implementar el [patrón Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). Para esto es necesario proporcionar una implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> a fin de habilitar la liberación de recursos no administrados de forma determinista. Un consumidor de su tipo llama a <xref:System.IDisposable.Dispose%2A> cuando el objeto (y los recursos que utiliza) ya no se necesita. El método <xref:System.IDisposable.Dispose%2A> libera inmediatamente los recursos no administrados.  
+- Implementar el [patrón Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md). Para esto es necesario proporcionar una implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> a fin de habilitar la liberación de recursos no administrados de forma determinista. Un consumidor de su tipo llama a <xref:System.IDisposable.Dispose%2A> cuando el objeto (y los recursos que utiliza) ya no se necesita. El método <xref:System.IDisposable.Dispose%2A> libera inmediatamente los recursos no administrados.  
   
--   Planifique la liberación de los recursos no administrados en el caso de que un consumidor de su tipo olvide llamar a <xref:System.IDisposable.Dispose%2A>. Existen dos modos para hacer esto:  
+- Planifique la liberación de los recursos no administrados en el caso de que un consumidor de su tipo olvide llamar a <xref:System.IDisposable.Dispose%2A>. Existen dos modos para hacer esto:  
   
-    -   Utilizar un controlador seguro para incluir el recurso no administrado. Esta es la técnica recomendada. Los controladores seguros se derivan de la clase <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> e incluyen un método <xref:System.Object.Finalize%2A> eficaz. Al usar un controlador seguro, simplemente se implementa la interfaz <xref:System.IDisposable> y se llama al método <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> del controlador seguro en la implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. El recolector de elementos no utilizados llama automáticamente al finalizador del controlador seguro si no se llama a su método <xref:System.IDisposable.Dispose%2A>.  
+    - Utilizar un controlador seguro para incluir el recurso no administrado. Esta es la técnica recomendada. Los controladores seguros se derivan de la clase <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> e incluyen un método <xref:System.Object.Finalize%2A> eficaz. Al usar un controlador seguro, simplemente se implementa la interfaz <xref:System.IDisposable> y se llama al método <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> del controlador seguro en la implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. El recolector de elementos no utilizados llama automáticamente al finalizador del controlador seguro si no se llama a su método <xref:System.IDisposable.Dispose%2A>.  
   
          -O bien-  
   
-    -   Invalide el método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La finalización habilita la liberación de forma no determinista de recursos no administrados cuando el consumidor de un tipo no llama a <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para deshacerse de ellos de forma determinista. Sin embargo, como la finalización del objeto puede ser una operación compleja y propensa a errores, se recomienda usar un controlador seguro en lugar de proporcionar su propio finalizador.  
+    - Invalide el método <xref:System.Object.Finalize%2A?displayProperty=nameWithType> . La finalización habilita la liberación de forma no determinista de recursos no administrados cuando el consumidor de un tipo no llama a <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para deshacerse de ellos de forma determinista. Sin embargo, como la finalización del objeto puede ser una operación compleja y propensa a errores, se recomienda usar un controlador seguro en lugar de proporcionar su propio finalizador.  
   
  Los consumidores de su tipo pueden entonces llamar a la implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> directamente para liberar la memoria que utilizan los recursos no administrados. Cuando se implementa correctamente un método <xref:System.IDisposable.Dispose%2A>, el método <xref:System.Object.Finalize%2A> del controlador seguro o su propia invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType> actúa como medida de seguridad para limpiar los recursos en caso de que no se llame al método <xref:System.IDisposable.Dispose%2A>.  
   

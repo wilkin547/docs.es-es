@@ -2,12 +2,12 @@
 title: Nubes PNRP
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6e7ec5d88e1053f33b86816fec739aae38cac18c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110050"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623029"
 ---
 # <a name="pnrp-clouds"></a>Nubes PNRP
 Una "nube" PNRP representa un conjunto de nodos que pueden comunicarse entre sí a través de la red. El término "nube" es sinónimo de "malla del mismo nivel" y "grafo punto a punto".  
@@ -18,9 +18,9 @@ Una "nube" PNRP representa un conjunto de nodos que pueden comunicarse entre sí
   
  PNRP usa tres "ámbitos" de nube, donde un ámbito es una agrupación de equipos que se pueden encontrar los unos a los otros:  
   
--   La nube global se corresponde con el ámbito de dirección IPv6 global y las direcciones globales y representa todos los equipos de Internet IPv6. Solo hay una nube global.  
+- La nube global se corresponde con el ámbito de dirección IPv6 global y las direcciones globales y representa todos los equipos de Internet IPv6. Solo hay una nube global.  
   
--   La nube local de vínculo se corresponde con el ámbito de dirección IPv6 local del vínculo y las direcciones locales del vínculo. Las nubes locales de vínculo están destinadas a un vínculo específico, que suele ser el mismo que la subred asociada localmente. Puede haber varias nubes locales de vínculo.  
+- La nube local de vínculo se corresponde con el ámbito de dirección IPv6 local del vínculo y las direcciones locales del vínculo. Las nubes locales de vínculo están destinadas a un vínculo específico, que suele ser el mismo que la subred asociada localmente. Puede haber varias nubes locales de vínculo.  
   
  La tercera nube, que es la nube específica del sitio, se corresponde con el ámbito de dirección IPv6 de sitio y las direcciones locales del sitio. Esta nube está en desuso, aunque todavía se admite en PNRP.  
   

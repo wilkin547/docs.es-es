@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968041"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644744"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -103,15 +103,15 @@ Esto nos lleva a la pregunta: **¿debería usar la sintaxis de consulta solament
 
 La respuesta a esta pregunta es **sí** si...
 
-*   el código base existente ya usa la sintaxis de consulta,
-*   necesita establecer el ámbito de las variables en las consultas debido a su complejidad,
-*   prefiere la sintaxis de consulta y esta no diverge de su código base.
+* el código base existente ya usa la sintaxis de consulta,
+* necesita establecer el ámbito de las variables en las consultas debido a su complejidad,
+* prefiere la sintaxis de consulta y esta no diverge de su código base.
 
 La respuesta a esta pregunta es **no** si...
 
-*   el código base existente ya usa la sintaxis de la API,
-*   no necesita establecer el ámbito de las variables en las consultas,
-*   prefiere la sintaxis de la API y esta no diverge de su código base.
+* el código base existente ya usa la sintaxis de la API,
+* no necesita establecer el ámbito de las variables en las consultas,
+* prefiere la sintaxis de la API y esta no diverge de su código base.
 
 ## <a name="essential-samples"></a>Ejemplos básicos
 
@@ -119,7 +119,7 @@ Para obtener una lista realmente completa de ejemplos de LINQ, visite [101 ejemp
 
 Lo siguiente es una demostración rápida de algunas de las piezas básicas de LINQ. No pretende ser exhaustivo, ya que LINQ ofrece considerablemente más funcionalidad que la que se muestra aquí.
 
-*   Las herramientas esenciales - `Where`, `Select`, y `Aggregate`:
+* Las herramientas esenciales - `Where`, `Select`, y `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   Reducción de una lista de listas:
+* Reducción de una lista de listas:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   Unión entre dos conjuntos (con un comparador personalizado):
+* Unión entre dos conjuntos (con un comparador personalizado):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   Intersección entre dos conjuntos:
+* Intersección entre dos conjuntos:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   Ordenación:
+* Ordenación:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   Por último, un ejemplo más avanzado: determinar si los valores de las propiedades de dos instancias del mismo tipo son iguales (tomado y modificado de [esta entrada de StackOverflow](https://stackoverflow.com/a/844855)):
+* Por último, un ejemplo más avanzado: determinar si los valores de las propiedades de dos instancias del mismo tipo son iguales (tomado y modificado de [esta entrada de StackOverflow](https://stackoverflow.com/a/844855)):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ Las tareas paralelizables vinculadas a la CPU que se pueden expresar fácilmente
 
 ## <a name="further-resources"></a>Recursos adicionales:
 
-*   [Ejemplos de LINQ 101](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/), un entorno de área de juegos y motor de consultas a bases de datos para C#/F#/VB
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un libro electrónico para aprender cómo se implementa LINQ to Objects
+* [Ejemplos de LINQ 101](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/), un entorno de área de juegos y motor de consultas a bases de datos para C#/F#/VB
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), un libro electrónico para aprender cómo se implementa LINQ to Objects
