@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: bca11c0c1828513077985aa11553ec5c0ad52a27
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 4886103f7f0246eaacd12c3f12d50a055e650959
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910787"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582671"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hospedar el servicio de datos (Data Services de WCF)
 Mediante el uso de WCF Data Services, puede crear un servicio que expone los datos como un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] fuentes de distribución. Este servicio de datos se define como una clase que hereda de <xref:System.Data.Services.DataService%601>. Esta clase proporciona la funcionalidad necesaria para procesar mensajes de solicitud, realizar actualizaciones en el origen de datos y generar mensajes de respuesta, tal como requiere OData. Sin embargo, no puede enlazar a un servicio de datos y se escuche en un socket de red para las solicitudes HTTP entrantes. Para esta funcionalidad necesaria, el servicio de datos se basa en un componente de hospedaje.
@@ -58,7 +58,7 @@ Cuando se usa el **Agregar nuevo elemento** cuadro de diálogo de Visual Studio 
  Dado que un servicio de datos se comporta como un servicio WCF, el servicio de datos se integra con [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y sigue el modelo de programación web de WCF. Para obtener más información, consulte [servicios WCF y ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md) y [modelo de programación de WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).
 
 ## <a name="self-hosted-wcf-services"></a>Servicios WCF autohospedados
- Dado que incorpora una implementación WCF, WCF Data Services admiten autohospedaje de un servicio de datos como un servicio WCF. Un servicio puede hospedarse a sí mismo en cualquier aplicación [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], como una aplicación de consola. La clase <xref:System.Data.Services.DataServiceHost>, que hereda de <xref:System.ServiceModel.Web.WebServiceHost>, se utiliza para crear instancias del servicio de datos en una dirección concreta.
+ Dado que incorpora una implementación WCF, WCF Data Services admiten autohospedaje de un servicio de datos como un servicio WCF. Un servicio puede hospedarse a sí mismo en cualquier aplicación de .NET Framework, como una aplicación de consola. La clase <xref:System.Data.Services.DataServiceHost>, que hereda de <xref:System.ServiceModel.Web.WebServiceHost>, se utiliza para crear instancias del servicio de datos en una dirección concreta.
 
  El autohospedaje se puede utilizar para el desarrollo y las pruebas porque facilita el despliegue y la solución de problemas del servicio. Sin embargo, este tipo de hospedaje no ofrece las características de administración y hospedaje avanzadas que proporciona [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] o Internet Information Services (IIS). Para obtener más información, consulte [hospedaje en una aplicación administrada](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md).
 

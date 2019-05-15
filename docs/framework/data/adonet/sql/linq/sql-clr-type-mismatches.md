@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876868"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582723"
 ---
 # <a name="sql-clr-type-mismatches"></a>Desajustes de tipos entre SQL y CLR
 
@@ -39,7 +39,7 @@ Los tipos siguientes no tienen equivalencias razonables.
   - **Intervalo de tiempo**. Este tipo representa la diferencia entre dos valores `DateTime` y no se corresponde con `timestamp` en SQL Server. El elemento <xref:System.TimeSpan?displayProperty=nameWithType> de CLR también se puede asignar al tipo de elemento `TIME` de SQL Server en algunos casos. La única finalidad del tipo de elemento `TIME` de SQL Server era representar valores positivos menores que 24 horas. El ámbito del elemento <xref:System.TimeSpan> de CLR es mucho más amplio.
 
   > [!NOTE]
-  > Específica de SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] tipos <xref:System.Data.SqlTypes> no están incluidos en esta comparación.
+  > Los tipos de SQL Server específica de .NET Framework en <xref:System.Data.SqlTypes> no están incluidos en esta comparación.
 
 - Discordancias de SQL Server:
 
@@ -167,7 +167,7 @@ Los operadores y las funciones que son esencialmente comparables presentan una s
 
   - Una conversión libre a `AND` / `OR` podría producir errores inesperados si los C# expresión basa en la evaluación del segundo operando se basa en el resultado de la evaluación del primer operando.
 
-- La función `Round()` tiene una semántica diferente en [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] y en T-SQL.
+- `Round()` función tiene una semántica diferente en .NET Framework y en T-SQL.
 
 - El índice de inicio de las cadenas es 0 en CLR, pero 1 en SQL. Por consiguiente, cualquier función que tenga un índice requiere la conversión del índice.
 
@@ -194,7 +194,7 @@ Los operadores y las funciones que son esencialmente comparables presentan una s
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL realiza un redondeo aritmético simétrico mientras que [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] utiliza el redondeo bancario. Para obtener información detallada, vea el artículo 196652 de Microsoft Knowledge Base.
+- SQL realiza un redondeo aritmético simétrico mientras que .NET Framework usa redondeo bancario. Para obtener información detallada, vea el artículo 196652 de Microsoft Knowledge Base.
 
 - De forma predeterminada, para las configuraciones regionales comunes, en las comparaciones de cadenas de caracteres no se hace distinción entre mayúsculas y minúsculas en SQL. En Visual Basic y en C#, se distingue entre mayúsculas y minúsculas. Por ejemplo, `s == "Food"` (`s = "Food"` en Visual Basic) y `s == "Food"` pueden producir resultados diferentes si `s` es `food`.
 

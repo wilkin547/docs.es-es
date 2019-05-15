@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874242"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582812"
 ---
 # <a name="runtime-profiling"></a>Generar perfiles en tiempo de ejecución
 La generación de perfiles es un método de recopilación de datos de rendimiento en cualquier escenario de desarrollo o implementación. Esta sección está dirigida a los desarrolladores y administradores del sistema que quieren recopilar información sobre el rendimiento de la aplicación.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Seguimiento del rendimiento mediante el Monitor de rendimiento (Perfmon.exe)  
- El Monitor de rendimiento es la herramienta más sencilla de usar para generar el perfil de su aplicación [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] . El Monitor de rendimiento representa gráficamente los datos encontrados en los contadores de rendimiento de .NET Framework que se instalan con common language runtime y el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Estos contadores se pueden usar para supervisar todo, desde la administración de la memoria hasta el rendimiento del compilador Just-In-Time (JIT). Le informan sobre los recursos que la aplicación usa, que es una medida indirecta del rendimiento de la aplicación. Use estos contadores para entender cómo funciona internamente su aplicación.  
+ El Monitor de rendimiento es la herramienta más fácil usar un perfil de la aplicación de .NET Framework. El Monitor de rendimiento representa gráficamente los datos encontrados en los contadores de rendimiento de .NET Framework que se instalan con common language runtime y el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]. Estos contadores se pueden usar para supervisar todo, desde la administración de la memoria hasta el rendimiento del compilador Just-In-Time (JIT). Le informan sobre los recursos que la aplicación usa, que es una medida indirecta del rendimiento de la aplicación. Use estos contadores para entender cómo funciona internamente su aplicación.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Para ejecutar Perfmon.exe en Windows Vista y versiones posteriores  
   
@@ -57,7 +57,7 @@ La generación de perfiles es un método de recopilación de datos de rendimient
 >  En sistemas en los que [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] está instalado, es posible que el Monitor de rendimiento no muestre datos para contadores de rendimiento en algunas categorías, como **Datos de .NET CLR** y **Redes de .NET CLR**, para las aplicaciones desarrolladas con [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]. Si este es el caso, puede configurar el Monitor de rendimiento para mostrar estos datos agregando el elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) al archivo de configuración de la aplicación.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Lectura y creación de contadores de rendimiento mediante programación  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ofrece clases que puede usar para obtener acceso mediante programación a la misma información de rendimiento que está disponible en la consola de rendimiento. También puede usar estas clases para crear contadores de rendimiento personalizados. En la tabla siguiente se describen algunas de las clases de supervisión de rendimiento que se ofrecen en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ .NET Framework proporciona clases que puede usar para tener acceso mediante programación a la misma información de rendimiento que está disponible en la consola de rendimiento. También puede usar estas clases para crear contadores de rendimiento personalizados. En la tabla siguiente se describe algunas de las clases que se proporcionan en .NET Framework de supervisión de rendimiento.  
   
 |Clase|Descripción|  
 |-----------|-----------------|  

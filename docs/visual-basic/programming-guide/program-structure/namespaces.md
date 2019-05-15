@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050464"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586301"
 ---
 # <a name="namespaces-in-visual-basic"></a>Espacios de nombres en Visual Basic
 Los espacios de nombres organizan los objetos definidos en un ensamblado. Los ensamblados pueden contener varios espacios de nombres, que a su vez pueden contener otros espacios de nombres. Los espacios de nombres evitan las ambigüedades y simplifican las referencias cuando se usan grupos de objetos grandes, como las bibliotecas de clases.  
   
- Por ejemplo, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] define la clase <xref:System.Windows.Forms.ListBox> en el espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> . En el siguiente fragmento de código se muestra cómo declarar una variable con el nombre completo de esta clase:  
+ Por ejemplo, .NET Framework define la <xref:System.Windows.Forms.ListBox> clase en el <xref:System.Windows.Forms?displayProperty=nameWithType> espacio de nombres. En el siguiente fragmento de código se muestra cómo declarar una variable con el nombre completo de esta clase:  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>Evitar conflictos de nombres  
- Los espacios de nombres de[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] tratan un problema que a veces se llama *contaminación de espacios de nombres*, en el que el desarrollador de una biblioteca de clases está obstaculizado por el uso de nombres similares en otra biblioteca. Estos conflictos con componentes existentes a veces se denominan *conflictos de nombres*.  
+ Los espacios de nombres de .NET framework tratan un problema que a veces denominado *contaminación del espacio de nombres*, en que el desarrollador de una biblioteca de clases está obstaculizado por el uso de nombres similares en otra biblioteca. Estos conflictos con componentes existentes a veces se denominan *conflictos de nombres*.  
   
- Por ejemplo, si crea una clase denominada `ListBox`, puede usarla en su proyecto sin ninguna calificación, Sin embargo, si desea usar el [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox> clase en el mismo proyecto, debe usar una referencia completa para que sea único. Si la referencia no es única, Visual Basic genera un error que indica que el nombre es ambiguo. En el ejemplo de código siguiente se muestra cómo declarar estos objetos:  
+ Por ejemplo, si crea una clase denominada `ListBox`, puede usarla en su proyecto sin ninguna calificación, Sin embargo, si desea usar .NET Framework <xref:System.Windows.Forms.ListBox> clase en el mismo proyecto, debe usar una referencia completa para que sea único. Si la referencia no es única, Visual Basic genera un error que indica que el nombre es ambiguo. En el ejemplo de código siguiente se muestra cómo declarar estos objetos:  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

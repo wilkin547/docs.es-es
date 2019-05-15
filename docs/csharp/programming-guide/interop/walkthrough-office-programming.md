@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328457"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608274"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 Visual Studio presenta características en C# y Visual Basic que mejoran la programación de Microsoft Office. Las características útiles de C# incluyen argumentos opcionales y con nombre, y devuelven valores de tipo `dynamic`. En la programación COM, puede omitir la palabra clave `ref` y obtener acceso a las propiedades indexadas. Las nuevas características de Visual Basic incluyen propiedades implementadas automáticamente, instrucciones de expresiones lambda e inicializadores de colección.
@@ -93,11 +93,11 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
      En este método se utilizan dos características de C# nuevas. Ambas características ya existen en Visual Basic.  
   
-    -   El método [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) tiene un *parámetro opcional* para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el ejemplo anterior no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - El método [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) tiene un *parámetro opcional* para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el ejemplo anterior no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Para obtener más información, vea [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   Las propiedades `Range` y `Offset` del objeto [Range](<xref:Microsoft.Office.Interop.Excel.Range>) usan la característica de *propiedades indizadas*. Esta característica permite utilizar estas propiedades de los tipos COM mediante la siguiente sintaxis típica de C#. Las propiedades indizadas también permiten utilizar la propiedad `Value` del objeto `Range`, eliminando la necesidad de utilizar la propiedad `Value2`. La propiedad `Value` está indizada, pero el índice es opcional. Los argumentos opcionales y las propiedades indizadas funcionan conjuntamente en el ejemplo siguiente.  
+    - Las propiedades `Range` y `Offset` del objeto [Range](<xref:Microsoft.Office.Interop.Excel.Range>) usan la característica de *propiedades indizadas*. Esta característica permite utilizar estas propiedades de los tipos COM mediante la siguiente sintaxis típica de C#. Las propiedades indizadas también permiten utilizar la propiedad `Value` del objeto `Range`, eliminando la necesidad de utilizar la propiedad `Value2`. La propiedad `Value` está indizada, pero el índice es opcional. Los argumentos opcionales y las propiedades indizadas funcionan conjuntamente en el ejemplo siguiente.  
   
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   

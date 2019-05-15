@@ -2,12 +2,12 @@
 title: Procedimiento para crear ensamblados de confianza firmados (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325207"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582982"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Procedimiento para crear ensamblados de confianza firmados (C#)
 En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados que tienen nombres seguros. Ambos ensamblados deben tener nombres seguros. Aunque los dos ensamblados de este ejemplo usan las mismas claves, es posible usar claves diferentes para dos ensamblados.  
@@ -18,15 +18,15 @@ En este ejemplo se muestra cómo usar ensamblados de confianza con ensamblados q
   
 2. Use la siguiente secuencia de comandos con la herramienta de nombre seguro para generar un archivo de claves y mostrar su clave pública. Para obtener más información, vea [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md).  
   
-    1.  Genere una clave de nombre seguro para este ejemplo y almacénela en el archivo FriendAssemblies.snk:  
+    1. Genere una clave de nombre seguro para este ejemplo y almacénela en el archivo FriendAssemblies.snk:  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  Extraiga la clave pública de FriendAssemblies.snk y colóquela en FriendAssemblies.publickey:  
+    2. Extraiga la clave pública de FriendAssemblies.snk y colóquela en FriendAssemblies.publickey:  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  Muestre la clave pública almacenada en el archivo FriendAssemblies.publickey:  
+    3. Muestre la clave pública almacenada en el archivo FriendAssemblies.publickey:  
   
          `sn -tp FriendAssemblies.publickey`  
   

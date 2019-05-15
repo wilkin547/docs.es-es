@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342467"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593326"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Tutorial: Crear agentes de escucha de registro personalizados (Visual Basic)
 En este tutorial se muestra cómo crear un agente de escucha de registro personalizado y configurarlo para escuchar la salida del objeto `My.Application.Log`.  
@@ -20,7 +20,7 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
 #### <a name="to-create-the-listener"></a>Para crear el agente de escucha  
   
--   En la aplicación, cree una clase denominada `SimpleListener` que herede de <xref:System.Diagnostics.TraceListener>.  
+- En la aplicación, cree una clase denominada `SimpleListener` que herede de <xref:System.Diagnostics.TraceListener>.  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>Para determinar el nombre seguro del agente de escucha  
   
--   En el código siguiente se muestra cómo determinar el nombre de tipo seguro para `SimpleListener`.  
+- En el código siguiente se muestra cómo determinar el nombre de tipo seguro para `SimpleListener`.  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ En este tutorial se muestra cómo crear un agente de escucha de registro persona
   
      Si hay un archivo app.config:  
   
-    1.  En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
+    1. En el menú **Proyecto** , elija **Agregar nuevo elemento**.  
   
-    2.  En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
+    2. En el cuadro de diálogo **Agregar nuevo elemento** , seleccione **Archivo de configuración de aplicación**.  
   
-    3.  Haga clic en **Agregar**.  
+    3. Haga clic en **Agregar**.  
   
 2. Busque la sección `<listeners>` , en la sección `<source>` con el atributo `name` el "DefaultSource", ubicada en la sección `<sources>` . La sección `<sources>` se encuentra en la sección `<system.diagnostics>` , en la sección de nivel superior `<configuration>` .  
   

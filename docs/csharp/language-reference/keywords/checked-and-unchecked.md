@@ -10,27 +10,27 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 12f65fe4b1dc710ff5c053073817dbd793c86082
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3378cffc1dcee7bb12705704e66b7fdd287105fb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511844"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592988"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked y Unchecked (Referencia de C#)
 Las instrucciones de C# se pueden ejecutar en un contexto comprobado o no comprobado. En un contexto no comprobado, el desbordamiento aritmético produce una excepción. En un contexto sin comprobar, se omite el desbordamiento aritmético y se produce un truncamiento del resultado al descartar los bits de orden superior que no caben en el tipo de destino.  
   
--   [checked](checked.md) Especifica un contexto comprobado.  
+- [checked](checked.md) Especifica un contexto comprobado.  
   
--   [unchecked](unchecked.md) Especifica un contexto no comprobado.  
+- [unchecked](unchecked.md) Especifica un contexto no comprobado.  
   
  Las siguientes operaciones se ven afectadas por la comprobación del desbordamiento:  
   
--   Expresiones que usan los siguientes operadores predefinidos en tipos integrales:  
+- Expresiones que usan los siguientes operadores predefinidos en tipos integrales:  
   
      `++`, `--`, `-` unario, `+`, `-`, `*`, `/`  
   
--   Conversiones numéricas explícitas entre tipos integrales o de `float` o `double` a un tipo integral.  
+- Conversiones numéricas explícitas entre tipos integrales o de `float` o `double` a un tipo integral.  
   
  Si no se especifica `checked` ni `unchecked`, el contexto predeterminado para expresiones no constantes (expresiones que se evalúan en tiempo de ejecución) se define por medio del valor de la opción del compilador [/checked](../compiler-options/checked-compiler-option.md). De forma predeterminada, el valor de esa opción se desactiva y se ejecutan operaciones aritméticas en un contexto sin comprobar. 
  

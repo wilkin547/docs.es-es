@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2713011d61b41dfa4d72a635c656c0c00cb42f8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643616"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607767"
 ---
 # <a name="creating-assemblies"></a>Crear ensamblados
 
@@ -24,23 +24,23 @@ Puede crear un ensamblado de varios archivos a partir de varios módulos de cód
 
 Existen varias opciones al agrupar módulos de código y recursos en ensamblados, en función de los factores siguientes:
 
--   Control de versiones
+- Control de versiones
 
      Agrupar módulos con la misma información de versión.
 
--   Implementación
+- Implementación
 
      Agrupar módulos de código y recursos compatibles con el modelo de implementación.
 
--   Reutilización
+- Reutilización
 
      Agrupar módulos si se pueden usar juntos lógicamente con el mismo fin. Por ejemplo, un ensamblado formado por tipos y clases que se usan con poca frecuencia para el mantenimiento de programas puede colocarse en el mismo ensamblado. Además, los tipos que está previsto compartir con varias aplicaciones deben agruparse en un ensamblado y el ensamblado debe firmarse con un nombre seguro.
 
--   Seguridad
+- Seguridad
 
      Agrupar módulos que contienen tipos que requieren los mismos permisos de seguridad.
 
--   Ámbito
+- Ámbito
 
      Agrupar módulos que contienen tipos cuya visibilidad se debe restringir al mismo ensamblado.
 

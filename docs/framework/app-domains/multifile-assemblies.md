@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bad63bbc8e221f306e5807f51fbbb8eb4761d0fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e00ec239fbe5d5963edd3a7656961556792c6324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599184"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593554"
 ---
 # <a name="multifile-assemblies"></a>Ensamblados de varios archivos
 
@@ -30,14 +30,14 @@ Por ejemplo, supongamos que tiene una aplicación que contiene dos módulos de c
 
 Hay varias razones por las que le puede interesar crear un ensamblado de varios archivos:
 
--   Para combinar módulos escritos en lenguajes diferentes. Esta es la razón más común para crear un ensamblado de varios archivos.
+- Para combinar módulos escritos en lenguajes diferentes. Esta es la razón más común para crear un ensamblado de varios archivos.
 
--   Para optimizar la descarga de una aplicación al colocar los tipos menos usados en un módulo que solo se descarga cuando es necesario.
+- Para optimizar la descarga de una aplicación al colocar los tipos menos usados en un módulo que solo se descarga cuando es necesario.
 
     > [!NOTE]
     > Si va a crear aplicaciones que se descargarán mediante la etiqueta `<object>` con Microsoft Internet Explorer, es importante que cree ensamblados de varios archivos. En este escenario, debe crear un archivo independiente de los módulos de código que solo contenga el manifiesto del ensamblado. Internet Explorer descarga primero el manifiesto del ensamblado y, después, crea subprocesos de trabajo para descargar los módulos o ensamblados adicionales necesarios. Mientras se descarga el archivo que contiene el manifiesto del ensamblado, Internet Explorer no responde a la entrada del usuario. Cuanto menor sea el archivo que contiene el manifiesto del ensamblado, menos tiempo estará sin responder Internet Explorer.
 
--   Para combinar módulos de código escritos por varios desarrolladores. Aunque cada desarrollador puede compilar cada módulo de código en un ensamblado, esto puede hacer que se expongan públicamente algunos tipos que no se exponen cuando todos los módulos se colocan en un ensamblado de varios archivos.
+- Para combinar módulos de código escritos por varios desarrolladores. Aunque cada desarrollador puede compilar cada módulo de código en un ensamblado, esto puede hacer que se expongan públicamente algunos tipos que no se exponen cuando todos los módulos se colocan en un ensamblado de varios archivos.
 
 Una vez creado el ensamblado, puede firmar el archivo que contiene el manifiesto del ensamblado (y, por tanto, el ensamblado), o bien puede asignarle al archivo (y al ensamblado) un nombre seguro y colocarlo en la caché global de ensamblados.
 

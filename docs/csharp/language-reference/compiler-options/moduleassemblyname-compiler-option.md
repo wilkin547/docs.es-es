@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e4768b598f6046ffb7a0ac014d8594eac40309f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361270"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593055"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (Opción del compilador de C#)
 Especifica un ensamblado con tipos no públicos a los que puede acceder un archivo .netmodule.  
@@ -31,11 +31,11 @@ Especifica un ensamblado con tipos no públicos a los que puede acceder un archi
 ## <a name="remarks"></a>Comentarios  
  Se debería usar **-moduleassemblyname** al compilar un .netmodule cuando se den las condiciones siguientes:  
   
--   .netmodule necesita tener acceso a los tipos no públicos de un ensamblado existente.  
+- .netmodule necesita tener acceso a los tipos no públicos de un ensamblado existente.  
   
--   Sabe el nombre del ensamblado en el que se compilará .netmodule.  
+- Sabe el nombre del ensamblado en el que se compilará .netmodule.  
   
--   El ensamblado existente ha concedido acceso de ensamblado de confianza al ensamblado en el que se compilará .netmodule.  
+- El ensamblado existente ha concedido acceso de ensamblado de confianza al ensamblado en el que se compilará .netmodule.  
   
  Para más información sobre cómo compilar .netmodule, vea [-target:module (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   

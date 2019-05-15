@@ -9,23 +9,23 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25594c55a5462c42611df7119dad37bd8a61cc2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd41051bd770d3579137aa158e70cef41aed49f8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149349"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607838"
 ---
 # <a name="assembly-contents"></a>Contenido de los ensamblados
 En general, un ensamblado estático está formado por cuatro elementos:  
   
--   El [manifiesto del ensamblado](../../../docs/framework/app-domains/assembly-manifest.md), que contiene los metadatos del ensamblado.  
+- El [manifiesto del ensamblado](../../../docs/framework/app-domains/assembly-manifest.md), que contiene los metadatos del ensamblado.  
   
--   Los metadatos de tipos.  
+- Los metadatos de tipos.  
   
--   El código de lenguaje intermedio de Microsoft (MSIL) que implementa los tipos.  
+- El código de lenguaje intermedio de Microsoft (MSIL) que implementa los tipos.  
   
--   Un conjunto de recursos.  
+- Un conjunto de recursos.  
   
  El manifiesto del ensamblado es el único elemento obligatorio, pero se necesitan o bien los tipos o bien los recursos para proporcionar al ensamblado una funcionalidad significativa.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 28253a46e8da48cfc2812d7f3fef1a2dd3d1cf87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202410"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599853"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Clases estáticas y sus miembros (Guía de programación de C#)
 Una clase [estática](../../../csharp/language-reference/keywords/static.md) es básicamente lo mismo que una clase no estática, con la diferencia de que no se pueden crear instancias de una clase estática. En otras palabras, no puede usar la palabra clave [new](../../../csharp/language-reference/keywords/new.md) para crear una variable del tipo de clase. Dado que no hay ninguna variable de instancia, para tener acceso a los miembros de una clase estática, debe usar el nombre de la clase. Por ejemplo, si tiene una clase estática denominada `UtilityClass` que tiene un método estático público denominado `MethodA`, llame al método tal como se muestra en el ejemplo siguiente:  
@@ -44,13 +44,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  La siguiente lista contiene las características principales de una clase estática:  
   
--   Solo contiene miembros estáticos.  
+- Solo contiene miembros estáticos.  
   
--   No se pueden crear instancias de ella.  
+- No se pueden crear instancias de ella.  
   
--   Está sellada.  
+- Está sellada.  
   
--   No puede contener [constructores de instancias](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
+- No puede contener [constructores de instancias](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
   
  Por lo tanto, crear una clase estática es básicamente lo mismo que crear una clase que contiene solo miembros estáticos y un constructor privado. Un constructor privado impide que se creen instancias de la clase. La ventaja de usar una clase estática es que el compilador puede comprobar que no se agregue accidentalmente ningún miembro de instancia. El compilador garantizará que no se creen instancias de esta clase.  
   

@@ -2,15 +2,15 @@
 title: Espacios de nombres (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 83991c21-60db-4af9-aca3-b416f6cae98e
-ms.openlocfilehash: bef2fa96ce090a600155d68ecc3daea55b675840
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7bcd7a72df8afbd598a15ccd9a259ed11b5b9ef7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760446"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583811"
 ---
 # <a name="namespaces-entity-sql"></a>Espacios de nombres (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduce espacios de nombres para evitar conflictos de nombres en los identificadores globales como los nombres de tipos, los conjuntos de entidades, las funciones, etcétera. La compatibilidad de espacio de nombres en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es similar a la compatibilidad de espacio de nombres en el [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)].  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] introduce espacios de nombres para evitar conflictos de nombres en los identificadores globales como los nombres de tipos, los conjuntos de entidades, las funciones, etcétera. La compatibilidad de espacio de nombres en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es similar a la compatibilidad de espacio de nombres en .NET Framework.  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona dos formas de cláusula USING: espacios de nombres completos, a los que se proporciona un alias más breve, y espacios no completos, según se ilustra en el ejemplo siguiente:  
   
@@ -30,7 +30,7 @@ WHERE p IS OF (NamespaceName.Employee)
 ```  
   
 ## <a name="differences-from-the-net-framework"></a>Diferencias con .NET Framework  
- En [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)], puede usar espacios de nombres parciales. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no permite esto.  
+ En .NET Framework, puede usar espacios de nombres parciales. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no permite esto.  
   
 ## <a name="adonet-usage"></a>Uso de ADO.NET  
  Las consultas se expresan a través de objetos <xref:System.Data.Common.DbCommand> de ADO.NET. Los objetos <xref:System.Data.Common.DbCommand> se pueden generar sobre los objetos <xref:System.Data.Common.DbConnection>. Los espacios de nombres también se pueden especificar como parte de los objetos <xref:System.Data.Common.DbCommand> y <xref:System.Data.Common.DbConnection>. Si [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se puede resolver un identificador dentro de la consulta, los espacios de nombres externos se sondean (en función reglas similares).  

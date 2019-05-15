@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f35725f5e1a08f2fcb1d6bc87765f50308c963f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566325"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615348"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Espacios de nombres y consultas XPath
 Las consultas XPath distinguen los espacios de nombres de un documento XML y pueden utilizar prefijos de espacio de nombres para calificar nombres de atributos y elementos. Al calificar los nombres de atributos y elementos con un prefijo de espacio de nombres, se limitan los nodos que devuelve la consulta XPath a únicamente aquellos nodos que pertenecen a un espacio de nombres específico.  
@@ -25,17 +25,17 @@ Las consultas XPath distinguen los espacios de nombres de un documento XML y pue
   
  El objeto <xref:System.Xml.XmlNamespaceManager> se puede utilizar en la consulta en cada una de las siguientes formas.  
   
--   El objeto <xref:System.Xml.XmlNamespaceManager> se asocia a un objeto <xref:System.Xml.XPath.XPathExpression> existente utilizando el método <xref:System.Xml.XPath.XPathExpression.SetContext%2A> del objeto <xref:System.Xml.XPath.XPathExpression>. También se puede compilar un nuevo objeto <xref:System.Xml.XPath.XPathExpression> utilizando el método <xref:System.Xml.XPath.XPathExpression.Compile%2A> estático que toma una cadena que representa la expresión XPath y un objeto <xref:System.Xml.XmlNamespaceManager> como parámetros y devuelve un nuevo objeto <xref:System.Xml.XPath.XPathExpression>.  
+- El objeto <xref:System.Xml.XmlNamespaceManager> se asocia a un objeto <xref:System.Xml.XPath.XPathExpression> existente utilizando el método <xref:System.Xml.XPath.XPathExpression.SetContext%2A> del objeto <xref:System.Xml.XPath.XPathExpression>. También se puede compilar un nuevo objeto <xref:System.Xml.XPath.XPathExpression> utilizando el método <xref:System.Xml.XPath.XPathExpression.Compile%2A> estático que toma una cadena que representa la expresión XPath y un objeto <xref:System.Xml.XmlNamespaceManager> como parámetros y devuelve un nuevo objeto <xref:System.Xml.XPath.XPathExpression>.  
   
--   El propio objeto <xref:System.Xml.XmlNamespaceManager> se pasa como parámetro a un método de la clase <xref:System.Xml.XPath.XPathNavigator> de aceptación junto con una cadena que representa la expresión XPath.  
+- El propio objeto <xref:System.Xml.XmlNamespaceManager> se pasa como parámetro a un método de la clase <xref:System.Xml.XPath.XPathNavigator> de aceptación junto con una cadena que representa la expresión XPath.  
   
  A continuación se enumeran los métodos de la clase <xref:System.Xml.XPath.XPathNavigator> que aceptan un objeto derivado de la interfaz <xref:System.Xml.IXmlNamespaceResolver> como parámetro.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>Espacio de nombres predeterminado  
  En el siguiente documento XML, se utiliza el espacio de nombres predeterminado con un prefijo vacío para declarar el espacio de nombres `http://www.contoso.com/books`.  

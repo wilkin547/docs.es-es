@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f2e2fd6f46a430424e6010adbe0662b5bd3db7ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121108"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622650"
 ---
 # <a name="weak-references"></a>Referencias parciales
 El recolector de elementos no utilizados no puede recopilar un objeto que está siendo usado por una aplicación mientras el código de aplicación pueda llegar a ese objeto. En este caso, se dice que la aplicación tiene una referencia segura al objeto.  
@@ -33,11 +33,11 @@ El recolector de elementos no utilizados no puede recopilar un objeto que está 
 ## <a name="short-and-long-weak-references"></a>Referencias débiles cortas y largas  
  Puede crear una referencia débil corta o una referencia débil larga:  
   
--   Short  
+- Short  
   
      El destino de una referencia débil corta se convierte en `null` cuando el objeto es reclamado por la recolección de elementos no utilizados. La referencia débil es, en sí, un objeto administrado y está sujeta a la recolección de elementos no utilizados igual que cualquier otro objeto administrado.  Una referencia débil corta es el constructor predeterminado para <xref:System.WeakReference>.  
   
--   Long  
+- Long  
   
      Una referencia débil larga se conserva después de que se llame al método <xref:System.Object.Finalize%2A> del objeto. Esto permite que el objeto se vuelva a crear, pero el estado del objeto sigue siendo imprevisible. Para usar una referencia larga, especifique `true` en el constructor <xref:System.WeakReference>.  
   

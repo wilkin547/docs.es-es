@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300702"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607680"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 
@@ -36,9 +36,9 @@ En el siguiente escenario se firma un ensamblado con un nombre seguro y después
 
 1. El ensamblado A se crea con un nombre seguro mediante uno de los métodos siguientes:
 
-    -   Usar un entorno de desarrollo que admita la creación de nombres seguros, como Visual Studio.
+    - Usar un entorno de desarrollo que admita la creación de nombres seguros, como Visual Studio.
 
-    -   Crear un par de claves criptográficas mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) y asignar ese par de claves al ensamblado con un compilador de línea de comandos o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). El Kit de desarrollo de Software (SDK) de Windows proporciona ambas utilidades Sn.exe y Al.exe.
+    - Crear un par de claves criptográficas mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) y asignar ese par de claves al ensamblado con un compilador de línea de comandos o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). El Kit de desarrollo de Software (SDK) de Windows proporciona ambas utilidades Sn.exe y Al.exe.
 
 2. El entorno de desarrollo o la herramienta firma el hash del archivo que contiene el manifiesto del ensamblado con la clave privada del programador. Esta firma digital se almacena en el archivo portable ejecutable (PE) que contiene el manifiesto del ensamblado A.
 
@@ -55,13 +55,13 @@ A partir de [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)]
 
 La característica de omisión se aplica a cualquier ensamblado que esté firmado con un nombre seguro y que:
 
--   tenga plena confianza sin evidencia <xref:System.Security.Policy.StrongName> (por ejemplo, con la evidencia de zona `MyComputer`);
+- tenga plena confianza sin evidencia <xref:System.Security.Policy.StrongName> (por ejemplo, con la evidencia de zona `MyComputer`);
 
--   se cargue en un <xref:System.AppDomain> de plena confianza;
+- se cargue en un <xref:System.AppDomain> de plena confianza;
 
--   se cargue desde una ubicación en la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> de ese <xref:System.AppDomain>;
+- se cargue desde una ubicación en la propiedad <xref:System.AppDomainSetup.ApplicationBase%2A> de ese <xref:System.AppDomain>;
 
--   no tenga firma retrasada.
+- no tenga firma retrasada.
 
 Esta característica puede deshabilitarse en aplicaciones concretas o en todo un equipo. Vea [Cómo: para deshabilitar la característica de omisión de nombres seguros](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md).
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: c761a4a866aed3f8d42b28cdc8a360cd4923a7fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616667"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586194"
 ---
 # <a name="caching-in-net-framework-applications"></a>Almacenamiento en caché en aplicaciones .NET Framework
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.  
@@ -19,7 +19,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
  .NET Framework proporciona la funcionalidad de almacenamiento en caché que puede usar para mejorar el rendimiento y la escalabilidad de las aplicaciones de cliente y servidor de Windows, incluido ASP.NET.  
   
 > [!NOTE]
->  En [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y versiones anteriores, ASP.NET proporciona una implementación de caché en memoria en el espacio de nombres <xref:System.Web.Caching>. En versiones anteriores de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], el almacenamiento en caché solo estaba disponible en el espacio de nombres <xref:System.Web> y, por tanto, exigía una dependencia en las clases de ASP.NET. En .NET Framework 4, el espacio de nombres <xref:System.Runtime.Caching> contiene API diseñadas para aplicaciones web y no web.  
+>  En [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y versiones anteriores, ASP.NET proporciona una implementación de caché en memoria en el espacio de nombres <xref:System.Web.Caching>. En versiones anteriores de .NET Framework, almacenamiento en caché sólo estaba disponible en el <xref:System.Web> espacio de nombres y, por tanto, exigía una dependencia en las clases de ASP.NET. En .NET Framework 4, el espacio de nombres <xref:System.Runtime.Caching> contiene API diseñadas para aplicaciones web y no web.  
   
 ## <a name="caching-data"></a>Almacenar datos en caché  
  Puede almacenar información en caché mediante clases del espacio de nombres <xref:System.Runtime.Caching>. Las clases de almacenamiento en caché de este espacio de nombres proporcionan las siguientes características:  

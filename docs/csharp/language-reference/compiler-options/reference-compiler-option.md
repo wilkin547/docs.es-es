@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679440"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593079"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Opciones del compilador de C#)
 La opción **-reference** hace que el compilador importe información de tipo [public](../../../csharp/language-reference/keywords/public.md) del archivo especificado al proyecto actual, lo que permite hacer referencia a metadatos de los archivos de ensamblado especificados.  
@@ -48,9 +48,9 @@ La opción **-reference** hace que el compilador importe información de tipo [p
   
  Si hace referencia a un ensamblado (ensamblado A) que hace referencia a otro ensamblado (ensamblado B), debe hacer referencia al ensamblado B si:  
   
--   Un tipo que se use del ensamblado A hereda de un tipo o implementa una interfaz del ensamblado B.  
+- Un tipo que se use del ensamblado A hereda de un tipo o implementa una interfaz del ensamblado B.  
   
--   Se invoca un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
+- Se invoca un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
  Use [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado. En el tema **-lib** también se describen los directorios en los que el compilador busca ensamblados.  
   
