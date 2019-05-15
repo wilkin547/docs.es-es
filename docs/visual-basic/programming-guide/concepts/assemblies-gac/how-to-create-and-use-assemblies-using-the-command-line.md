@@ -2,12 +2,12 @@
 title: Procedimiento Crear y usar ensamblados desde la línea de comandos (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: d58109dfbb03b752f4a46f895fa1093e4f37df71
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a30d4b3ea203a8b4d3ba621fc7b0310477ddf10d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624775"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592684"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Procedimiento Crear y usar ensamblados desde la línea de comandos (Visual Basic)
 Un ensamblado, o una biblioteca de vínculos dinámicos (DLL), se vincula al programa en tiempo de ejecución. Para ilustrar la creación y uso de una DLL, considere el siguiente escenario:  
@@ -97,25 +97,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
  Para ejecutar el programa, escriba el nombre del archivo EXE, seguido de dos números, de esta forma:  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>Compilar el código  
- Para generar el archivo `MathLibrary.DLL`, compile los dos archivos `Add` y `Mult` mediante la línea de comandos siguiente.  
-  
-```console  
-vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
-```  
-  
- El [-destino (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) opción del compilador indica al compilador que genere un archivo DLL en lugar de un archivo EXE. El [-out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) opción del compilador seguido por un nombre de archivo se usa para especificar el nombre del archivo DLL. De lo contrario, el compilador usa el primer archivo (`Add.vb`) como el nombre de la DLL.  
-  
- Para compilar el archivo ejecutable, `TestCode.exe`, use la siguiente línea de comandos:  
-  
-```console  
-vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
-```  
-  
- El **-out** opción del compilador indica al compilador que genere un archivo EXE y especifica el nombre del archivo de salida (`TestCode.exe`). Esta opción del compilador es opcional. El [-referencia (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opción del compilador especifica el archivo o archivos DLL que utiliza el programa.  
-  
- Para obtener más información sobre la compilación desde la línea de comandos, vea y [compilar desde la línea de comandos](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   
 ## <a name="see-also"></a>Vea también
 

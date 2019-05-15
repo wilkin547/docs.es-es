@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917961"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592802"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Referencias a elementos declarados (Visual Basic)
 Cuando el código hace referencia a un elemento declarado, el compilador de Visual Basic coincide con el nombre de la referencia a la declaración adecuada de ese nombre. Si se declara más de un elemento con el mismo nombre, puede controlar cuál de estos elementos es hacer referencia a *calificación* su nombre.  
@@ -152,7 +152,7 @@ End Module
 ## <a name="references-to-projects"></a>Referencias a proyectos  
  Para usar [pública](../../../../visual-basic/language-reference/modifiers/public.md) elementos definidos en otro proyecto, primero debe establecer un *referencia* del ese proyecto ensamblado o biblioteca de tipos. Para establecer una referencia, haga clic en **Agregar referencia** en el **proyecto** menú o use el [/Reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) opción del compilador de línea de comandos.  
   
- Por ejemplo, puede usar el modelo de objetos XML de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Si establece una referencia a la <xref:System.Xml> espacio de nombres, puede declarar y usar cualquiera de sus clases, como <xref:System.Xml.XmlDocument>. En el ejemplo siguiente se usa <xref:System.Xml.XmlDocument>.  
+ Por ejemplo, puede usar el modelo de objetos XML de .NET Framework. Si establece una referencia a la <xref:System.Xml> espacio de nombres, puede declarar y usar cualquiera de sus clases, como <xref:System.Xml.XmlDocument>. En el ejemplo siguiente se usa <xref:System.Xml.XmlDocument>.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  

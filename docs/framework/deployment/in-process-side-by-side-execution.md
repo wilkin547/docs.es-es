@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613993"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
@@ -22,19 +22,19 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] proporciona un enfoque nuevo para el hospedaje en paralelo que garantiza lo siguiente:  
   
--   La instalación de una nueva versión de .NET Framework no afecta a las aplicaciones existentes.  
+- La instalación de una nueva versión de .NET Framework no afecta a las aplicaciones existentes.  
   
--   Las aplicaciones se ejecutan con la versión de .NET Framework con la que se compilaron. No usan la nueva versión de .NET Framework a menos que se les indique expresamente que lo hagan. Aun así, es más fácil que las aplicaciones pasen a usar una nueva versión de .NET Framework.  
+- Las aplicaciones se ejecutan con la versión de .NET Framework con la que se compilaron. No usan la nueva versión de .NET Framework a menos que se les indique expresamente que lo hagan. Aun así, es más fácil que las aplicaciones pasen a usar una nueva versión de .NET Framework.  
   
 ## <a name="effects-on-users-and-developers"></a>Consecuencias para los usuarios y los desarrolladores  
   
--   **Usuarios finales y administradores del sistema**. Estos usuarios ahora pueden estar más seguros de que la instalación de una nueva versión del tiempo de ejecución, ya sea de forma independiente o con una aplicación, no afectará a sus equipos. Las aplicaciones existentes seguirán ejecutándose como antes.  
+- **Usuarios finales y administradores del sistema**. Estos usuarios ahora pueden estar más seguros de que la instalación de una nueva versión del tiempo de ejecución, ya sea de forma independiente o con una aplicación, no afectará a sus equipos. Las aplicaciones existentes seguirán ejecutándose como antes.  
   
--   **Desarrolladores de aplicaciones**. El hospedaje en paralelo prácticamente no afecta a los desarrolladores de aplicaciones. De forma predeterminada, las aplicaciones siempre se ejecutan en la versión de .NET Framework en la que se han compilado; esto no ha cambiado. Aun así, los desarrolladores pueden invalidar este comportamiento e indicarle a la aplicación que se ejecute en una versión más reciente de .NET Framework (vea el [escenario 2](#scenarios)).  
+- **Desarrolladores de aplicaciones**. El hospedaje en paralelo prácticamente no afecta a los desarrolladores de aplicaciones. De forma predeterminada, las aplicaciones siempre se ejecutan en la versión de .NET Framework en la que se han compilado; esto no ha cambiado. Aun así, los desarrolladores pueden invalidar este comportamiento e indicarle a la aplicación que se ejecute en una versión más reciente de .NET Framework (vea el [escenario 2](#scenarios)).  
   
--   **Desarrolladores de bibliotecas y consumidores**. El hospedaje en paralelo no resuelve los problemas de compatibilidad a los que se enfrentan los desarrolladores de bibliotecas. Una biblioteca cargada directamente por una aplicación, ya sea a través de una referencia directa o de una llamada a <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, sigue usando el tiempo de ejecución del <xref:System.AppDomain> en el que se carga. Debe probar las bibliotecas con todas las versiones de .NET Framework que quiera admitir. Si una aplicación se compila con el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pero incluye una biblioteca compilada con un tiempo de ejecución anterior, la biblioteca también usará el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Sin embargo, si tiene una aplicación compilada con un tiempo de ejecución anterior y una biblioteca compilada con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], debe forzar que la aplicación también use [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (vea el [escenario 3](#scenarios)).  
+- **Desarrolladores de bibliotecas y consumidores**. El hospedaje en paralelo no resuelve los problemas de compatibilidad a los que se enfrentan los desarrolladores de bibliotecas. Una biblioteca cargada directamente por una aplicación, ya sea a través de una referencia directa o de una llamada a <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, sigue usando el tiempo de ejecución del <xref:System.AppDomain> en el que se carga. Debe probar las bibliotecas con todas las versiones de .NET Framework que quiera admitir. Si una aplicación se compila con el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pero incluye una biblioteca compilada con un tiempo de ejecución anterior, la biblioteca también usará el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Sin embargo, si tiene una aplicación compilada con un tiempo de ejecución anterior y una biblioteca compilada con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], debe forzar que la aplicación también use [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (vea el [escenario 3](#scenarios)).  
   
--   **Desarrolladores de componentes COM administrados**. Antes, los componentes COM administrados se ejecutaban automáticamente con la versión más reciente del tiempo de ejecución instalada en el equipo. Ahora puede ejecutar los componentes COM con la versión del tiempo de ejecución en la que se han compilado.  
+- **Desarrolladores de componentes COM administrados**. Antes, los componentes COM administrados se ejecutaban automáticamente con la versión más reciente del tiempo de ejecución instalada en el equipo. Ahora puede ejecutar los componentes COM con la versión del tiempo de ejecución en la que se han compilado.  
   
      Como se muestra en la tabla siguiente, los componentes compilados con .NET Framework versión 1.1 pueden ejecutarse en paralelo con componentes de la versión 4, pero no pueden ejecutarse con componentes de las versiones 2.0, 3.0 o 3.5, ya que el hospedaje en paralelo no está disponible para estas versiones.  
   
@@ -50,13 +50,13 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Escenarios comunes de hospedaje en paralelo  
   
--   **Escenario 1:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework.  
+- **Escenario 1:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework.  
   
      Versiones de .NET Framework instaladas: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] y todas las demás versiones de .NET Framework usadas por los componentes COM.  
   
      Qué se debe hacer: en este escenario, no haga nada. Los componentes COM se ejecutarán con la versión de .NET Framework con la que se han registrado.  
   
--   **Escenario 2**: aplicación administrada compilada con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que preferiblemente debería ejecutarse con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], pero que se puede ejecutar en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] si la versión 2.0 no está presente.  
+- **Escenario 2**: aplicación administrada compilada con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que preferiblemente debería ejecutarse con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], pero que se puede ejecutar en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] si la versión 2.0 no está presente.  
   
      Versiones de .NET Framework instaladas: Una versión anterior de .NET Framework y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
@@ -71,7 +71,7 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
     </configuration>  
     ```  
   
--   **Escenario 3:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework que quiere ejecutar con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+- **Escenario 3:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework que quiere ejecutar con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   
      Versiones de .NET Framework instaladas: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
   

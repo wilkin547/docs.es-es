@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330449"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063050"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework y versiones fuera de banda
 
@@ -52,8 +52,6 @@ Las versiones OOB para componentes básicos de Common Language Runtime (CLR) se 
  Normalmente, un paquete de OOB tiene una o varias versiones preliminares y una versión estable. La licencia que acompaña a una versión preliminar no suele permitir la redistribución, pero permite probar un paquete y proporcionar comentarios. Los comentarios se incorporan en las actualizaciones realizadas en el paquete. NuGet se distribuye con una versión final como un paquete estable e incluye una licencia que permite redistribuir el paquete de NuGet con la aplicación. Microsoft admite los paquetes estables. Microsoft proporciona compatibilidad con IntelliSense y otros tipos de documentación (por ejemplo, entradas de blog y respuestas en foros) para todos los paquetes. Además, el código fuente puede estar disponible con algunos paquetes, pero no todos. Si quiere recibir anuncios relacionados con paquetes nuevos y actualizados, suscríbase al [Blog de .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
  Si quiere encontrar paquetes tanto de versiones preliminares como estables, elija **Incluir versión preliminar** en el Administrador de paquetes NuGet.
-
- Si quiere recibir notificaciones cuando se publiquen versiones de paquetes estables, suscríbase a [la fuente de .NET Framework](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/).
 
 ## <a name="see-also"></a>Vea también
 

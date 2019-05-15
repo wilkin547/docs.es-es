@@ -2,12 +2,12 @@
 title: Generador de EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9c75cd7589b1c5fb28112a22390acf90f46e465
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607676"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584593"
 ---
 # <a name="edm-generator-edmgenexe"></a>Generador de EDM (EdmGen.exe)
 
@@ -21,7 +21,7 @@ EdmGen.exe es una herramienta de línea de comandos utilizada para trabajar con 
 
 - Generar un archivo de código de C# o Visual Basic que contenga las vistas generadas previamente para un modelo existente. Para obtener más información, [Cómo: Generar previamente vistas para mejorar el rendimiento de las consultas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100)).
 
-La herramienta EdmGen.exe se instala en el directorio [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. En muchos casos, se encuentra en C:\windows\Microsoft.NET\Framework\v4.0. Para los sistemas de 64 bits, se encuentra en C:\windows\Microsoft.NET\Framework64\v4.0. También puede tener acceso a la herramienta EdmGen.exe desde el símbolo del sistema de Visual Studio (haga clic en **iniciar**, apunte a **todos los programas**, apunte a **Microsoft Visual Studio 2010**, apunte a **Visual Studio Tools**y, a continuación, haga clic en **símbolo del sistema de Visual Studio 2010**).
+La herramienta EdmGen.exe se instala en el directorio de .NET Framework. En muchos casos, se encuentra en C:\windows\Microsoft.NET\Framework\v4.0. Para los sistemas de 64 bits, se encuentra en C:\windows\Microsoft.NET\Framework64\v4.0. También puede tener acceso a la herramienta EdmGen.exe desde el símbolo del sistema de Visual Studio (haga clic en **iniciar**, apunte a **todos los programas**, apunte a **Microsoft Visual Studio 2010**, apunte a **Visual Studio Tools**y, a continuación, haga clic en **símbolo del sistema de Visual Studio 2010**).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -46,7 +46,7 @@ Cuando use la herramienta EdmGen.exe, deberá especificar uno de los modos sigui
 |Opción|Descripción|
 |------------|-----------------|
 |`/p[roject]:`\<string>|Especifica el nombre del proyecto que se usará. El nombre del proyecto se utiliza como valor predeterminado para la configuración del espacio de nombres, el nombre de los archivos de modelo y asignación, el nombre del archivo de origen del objeto y el nombre del archivo de código fuente de la generación de las vistas. El nombre del contenedor de entidades se establece en \<proyecto > contexto.|
-|`/prov[ider]:`\<string>|Nombre del proveedor de datos de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] que se va a utilizar para generar el archivo del modelo de almacenamiento (.ssdl). El proveedor predeterminado es el [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] proveedor de datos para SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
+|`/prov[ider]:`\<string>|Nombre del proveedor de datos .NET Framework que se va a utilizar para generar el archivo del modelo de almacenamiento (.ssdl). El proveedor predeterminado es el Proveedor de datos .NET Framework para SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|
 |`/c[onnectionstring]:`\<cadena de conexión >|Especifica la cadena que se utiliza para conectarse al origen de datos.|
 |`/incsdl:`\<file>|Especifica el archivo .csdl o un directorio donde se encuentran los archivos .csdl. Se puede especificar este argumento varias veces para poder especificar varios directorios o archivos .csdl. Especificar varios directorios puede ser útil para generar las clases (`/mode:EntityClassGeneration`) o las vistas (`/mode:ViewGeneration`) cuando el modelo conceptual se divide en varios archivos. Esto también puede ser útil si se desea validar varios modelos (`/mode:ValidateArtifacts`).|
 |`/refcsdl:`\<file>|Especifica el archivo .csdl adicional o los archivos que se usan para resolver las referencias en el archivo .csdl de origen. (El archivo .csdl de origen es el archivo que determina la opción `/incsdl`). El archivo `/refcsdl` contiene los tipos de los que el archivo .csdl de origen depende. Este argumento se puede especificar varias veces.|

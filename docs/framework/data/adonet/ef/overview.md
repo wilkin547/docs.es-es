@@ -2,18 +2,18 @@
 title: Información general sobre Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034057"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583837"
 ---
 # <a name="entity-framework-overview"></a>Introducción a Entity Framework
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es un conjunto de tecnologías de ADO.NET que permiten el desarrollo de aplicaciones de software orientadas a datos. Los arquitectos y programadores de aplicaciones orientadas a datos se han enfrentado a la necesidad de lograr dos objetivos muy diferentes. Deben modelar las entidades, las relaciones y la lógica de los problemas empresariales que resuelven, y también deben trabajar con los motores de datos que se usan para almacenar y recuperar los datos. Los datos pueden abarcar varios sistemas de almacenamiento, cada uno con sus propios protocolos; incluso las aplicaciones que funcionan con un único sistema de almacenamiento deben equilibrar los requisitos del sistema de almacenamiento con respecto a los requisitos de escribir un código de aplicación eficaz y fácil de mantener.
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permite a los programadores trabajar con datos en forma de objetos y propiedades específicos del dominio, por ejemplo, con clientes y direcciones de clientes, sin tener que pensar en las tablas de las bases de datos subyacentes y en las columnas en las que se almacenan estos datos. Con [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], los desarrolladores de software pueden trabajar en un nivel más alto de abstracción cuando tratan con datos, y puede crear y mantener aplicaciones orientadas a datos con menos código que en las aplicaciones tradicionales. Dado que el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es un componente de la [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)], [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplicaciones se pueden ejecutar en cualquier equipo en el que el [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] comenzando con la versión 3.5 SP1 está instalado.
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] permite a los programadores trabajar con datos en forma de objetos y propiedades específicos del dominio, por ejemplo, con clientes y direcciones de clientes, sin tener que pensar en las tablas de las bases de datos subyacentes y en las columnas en las que se almacenan estos datos. Con [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], los desarrolladores de software pueden trabajar en un nivel más alto de abstracción cuando tratan con datos, y puede crear y mantener aplicaciones orientadas a datos con menos código que en las aplicaciones tradicionales. Dado que el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es un componente de .NET Framework, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] las aplicaciones pueden ejecutarse en cualquier equipo donde está instalada .NET Framework a partir de la versión 3.5 SP1.
 
 ## <a name="give-life-to-models"></a>Dar vida a los modelos
  Un enfoque de diseño habitual para crear una aplicación o un servicio consiste en dividir la aplicación o el servicio en tres partes: un modelo de dominio, un modelo lógico y un modelo físico. El modelo de dominio define las entidades y relaciones del sistema que se está modelando. El modelo lógico de una base de datos relacional normaliza las entidades y relaciones en tablas con restricciones de claves externas. El modelo físico abarca las capacidades de un motor de datos determinado especificando los detalles del almacenamiento en forma de particiones e índices.

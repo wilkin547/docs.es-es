@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b529ccd8c5e0cf0563adf556a7d316372ac4d0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0dc05294ae762b4f896bb7f514df102c1f948fe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215045"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623407"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Herramienta de instalación de servicios de .NET)
 La herramienta Instalación de servicios de .NET realiza las siguientes acciones:  
   
--   Carga y registra un ensamblado.  
+- Carga y registra un ensamblado.  
   
--   Genera, registra e instala una biblioteca de tipos en una aplicación COM+ específica.  
+- Genera, registra e instala una biblioteca de tipos en una aplicación COM+ específica.  
   
--   Configura los servicios que se han agregado a la clase mediante programación.  
+- Configura los servicios que se han agregado a la clase mediante programación.  
   
  Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   

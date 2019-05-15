@@ -17,12 +17,12 @@ helpviewer_keywords:
 - minimum freshness policy
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
-ms.openlocfilehash: 0fb9b50fdbc0a1e11992baac684c5e2e8c081f5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4dc57ae05822a602b4647839da259ca8f469fb82
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129316"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613845"
 ---
 # <a name="time-based-cache-policies"></a>directivas de caché de duración definida
 Una directiva de caché de duración definida define la actualización de las entradas almacenadas en caché según la hora a la que se ha recuperado el recurso, los encabezados devueltos con este y la hora actual. Al establecer una directiva de caché de duración definida, puede usar la directiva de duración definida <xref:System.Net.Cache.HttpRequestCacheLevel.Default> o crear una directiva de duración definida personalizada. Al usar la directiva predeterminada de duración definida para los recursos obtenidos mediante el protocolo de transferencia de hipertexto (HTTP), el comportamiento de caché exacto viene determinado por los encabezados incluidos en la respuesta almacenada en caché y por los comportamientos especificados en las secciones 13 y 14 del RFC 2616, disponible en el sitio web de [Internet Engineering Task Force (IETF)](https://www.ietf.org/). Para obtener un ejemplo de código en el que se muestra cómo establecer la directiva predeterminada de duración definida para los recursos HTTP, vea [Cómo: Establecer la directiva predeterminada de duración definida para una aplicación](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Para obtener ejemplos de código que muestran cómo crear y usar directivas de caché, vea [Configurar el almacenamiento en caché de las aplicaciones de red](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -30,13 +30,13 @@ Una directiva de caché de duración definida define la actualización de las en
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>Criterios para determinar la actualización de las entradas en caché  
  Para personalizar una directiva de caché de duración definida, puede especificar que se apliquen uno o varios de los siguientes criterios para determinar la actualización de las entradas almacenadas en caché:  
   
--   Antigüedad máxima  
+- Antigüedad máxima  
   
--   Obsolescencia máxima  
+- Obsolescencia máxima  
   
--   Actualización mínima  
+- Actualización mínima  
   
--   Fecha de sincronización de caché  
+- Fecha de sincronización de caché  
   
 > [!NOTE]
 >  No se debe confundir el uso de la directiva predeterminada de caché de duración definida con la configuración de una directiva de caché predeterminada para la aplicación. La directiva predeterminada de duración definida es una directiva específica que se puede usar a nivel de solicitud o de aplicación. La directiva de caché predeterminada para la aplicación es una directiva (de duración definida o basada en la ubicación) que surte efecto cuando no hay ninguna directiva establecida en una solicitud. Para obtener más información sobre cómo configurar una directiva de caché predeterminada para la aplicación, vea <xref:System.Net.WebRequest.DefaultCachePolicy%2A>.  
@@ -57,9 +57,9 @@ Una directiva de caché de duración definida define la actualización de las en
   
  Los temas siguientes proporcionan información sobre los efectos de combinar los criterios de directiva de caché de duración definida:  
   
--   [Interacción de la directiva de caché, antigüedad máxima y obsolescencia máxima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+- [Interacción de la directiva de caché, antigüedad máxima y obsolescencia máxima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [Interacción de la directiva de caché, antigüedad máxima y actualización mínima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [Interacción de la directiva de caché, antigüedad máxima y actualización mínima](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Vea también
 

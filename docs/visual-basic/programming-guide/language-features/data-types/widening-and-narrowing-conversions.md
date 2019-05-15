@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600890"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586307"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>Conversiones de ampliación y de restricción (Visual Basic)
 Una consideración importante con una conversión de tipos es si el resultado de la conversión está dentro del intervalo del tipo de datos de destino.  
@@ -93,7 +93,7 @@ Una consideración importante con una conversión de tipos es si el resultado de
   
 - <xref:System.OverflowException> : (solo tipos enteros) si el valor convertido es demasiado grande para el tipo de destino  
   
- Si define una clase o estructura un [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) para que actúe como un operador de conversión a o desde esa clase o estructura, que `CType` puede producir cualquier excepción que considere adecuada. Además, que `CType` podría llamar a funciones de Visual Basic o [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] métodos, que a su vez pueden producir una variedad de excepciones.  
+ Si define una clase o estructura un [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) para que actúe como un operador de conversión a o desde esa clase o estructura, que `CType` puede producir cualquier excepción que considere adecuada. Además, que `CType` podría llamar a funciones de Visual Basic o métodos de .NET Framework, que a su vez pueden producir una variedad de excepciones.  
   
 ## <a name="changes-during-reference-type-conversions"></a>Cambios durante las conversiones de tipos de referencia  
  Una conversión de un *tipo de referencia* sólo copia el puntero al valor. El valor en sí no se copia ni modificarse de ninguna manera. Lo único que puede cambiar es el tipo de datos de la variable que contiene el puntero. En el ejemplo siguiente, se convierte el tipo de datos de la clase derivada a su clase base, pero no se modifica el objeto que ambas variables apuntan ahora a.  

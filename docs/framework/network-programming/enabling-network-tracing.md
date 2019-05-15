@@ -11,21 +11,21 @@ helpviewer_keywords:
 - logs, trace
 - destination for tracing output
 ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
-ms.openlocfilehash: 50ad01376f3de9cda26f6b00e2d32fc8d3dabdcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5145b013db1a86ef1b3128ab1c4495dddaaaf987
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169720"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624634"
 ---
 # <a name="enabling-network-tracing"></a>Habilitación del seguimiento de red
 El seguimiento de red proporciona acceso a información sobre las invocaciones de métodos y el tráfico de red generado por una aplicación administrada. Para habilitar el seguimiento de red en la aplicación tiene que realizar las tareas siguientes:  
   
--   Compilar el código con el seguimiento habilitado. Vea [Cómo: Compile Conditionally with Trace and Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) (Cómo: Compilar de forma condicional con Trace y Debug) para más información sobre los modificadores del compilador necesarios para habilitar el seguimiento.  
+- Compilar el código con el seguimiento habilitado. Vea [Cómo: Compile Conditionally with Trace and Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md) (Cómo: Compilar de forma condicional con Trace y Debug) para más información sobre los modificadores del compilador necesarios para habilitar el seguimiento.  
   
--   Especificar un destino para la salida del seguimiento.  
+- Especificar un destino para la salida del seguimiento.  
   
--   Configurar el comportamiento del seguimiento de red. Vea [Cómo: Configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) para obtener información detallada.  
+- Configurar el comportamiento del seguimiento de red. Vea [Cómo: Configurar el seguimiento de red](../../../docs/framework/network-programming/how-to-configure-network-tracing.md) para obtener información detallada.  
   
  Los destinos de seguimiento más comunes, que también se conocen como agentes de escucha de seguimiento, son el agente de escucha predeterminado y el archivo de registro.  
   

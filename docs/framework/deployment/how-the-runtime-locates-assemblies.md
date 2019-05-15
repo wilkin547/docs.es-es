@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342352"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613974"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -51,11 +51,11 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
   
 4. [Sondea el ensamblado](#step4) siguiendo estos siguientes pasos:  
   
-    1.  Si la directiva de configuración y edición no afecta a la referencia original y si la solicitud de enlace se creó usando el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> , el tiempo de ejecución comprueba las sugerencias de ubicación.  
+    1. Si la directiva de configuración y edición no afecta a la referencia original y si la solicitud de enlace se creó usando el método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> , el tiempo de ejecución comprueba las sugerencias de ubicación.  
   
-    2.  Si se encuentra un código base en los archivos de configuración, el tiempo de ejecución solo comprueba esta ubicación. Si se produce un error en este sondeo, el tiempo de ejecución determina que la solicitud de enlace produjo un error y no se llevan a cabo más sondeos.  
+    2. Si se encuentra un código base en los archivos de configuración, el tiempo de ejecución solo comprueba esta ubicación. Si se produce un error en este sondeo, el tiempo de ejecución determina que la solicitud de enlace produjo un error y no se llevan a cabo más sondeos.  
   
-    3.  Sondea el ensamblado mediante la heurística descrita en la [sección de sondeo](#step4). Si no se encuentra el ensamblado tras el sondeo, el tiempo de ejecución solicita a Windows Installer que proporcione un ensamblado. Esto actúa como una característica de instalación a petición.  
+    3. Sondea el ensamblado mediante la heurística descrita en la [sección de sondeo](#step4). Si no se encuentra el ensamblado tras el sondeo, el tiempo de ejecución solicita a Windows Installer que proporcione un ensamblado. Esto actúa como una característica de instalación a petición.  
   
         > [!NOTE]
         >  No se produce ninguna comprobación de versión en busca de ensamblados sin nombres seguros, y el tiempo de ejecución no protege la caché global de ensamblados para los ensamblados sin nombres seguros.  
@@ -64,11 +64,11 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
 ## <a name="step-1-examining-the-configuration-files"></a>Paso 1: Examen de los archivos de configuración  
  El comportamiento de enlace de ensamblados puede configurarse en niveles diferentes en función de tres archivos XML:  
   
--   Archivo de configuración de la aplicación.  
+- Archivo de configuración de la aplicación.  
   
--   Archivo de directiva de edición.  
+- Archivo de directiva de edición.  
   
--   Archivo de configuración del equipo.  
+- Archivo de configuración del equipo.  
   
  Estos archivos tienen la misma sintaxis y proporcionan información como las redirecciones de enlaces, la ubicación del código y los modos de enlace de ensamblados concretos. Cada archivo de configuración puede contener un [elemento \<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) que redirige el proceso de enlace. Los elementos secundarios del [elemento \<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) incluyen el [elemento \<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Los elementos secundarios del [elemento \<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) incluyen el [elemento \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), el [elemento \<bindingRedirect>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) y el [elemento \<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>Ubicar el ensamblado a través del sondeo  
  Si no hay ningún elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en el archivo de configuración de la aplicación, el tiempo de ejecución sondea el ensamblado usando cuatro criterios:  
   
--   Base de la aplicación, que es la ubicación raíz donde se ejecuta la aplicación.  
+- Base de la aplicación, que es la ubicación raíz donde se ejecuta la aplicación.  
   
--   Referencia cultural, que es el atributo de referencia cultural del ensamblado al que se hace referencia.  
+- Referencia cultural, que es el atributo de referencia cultural del ensamblado al que se hace referencia.  
   
--   Nombre, que es el nombre del ensamblado al que se hace referencia.  
+- Nombre, que es el nombre del ensamblado al que se hace referencia.  
   
--   Atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que es la lista definida por el usuario de subdirectorios bajo la ubicación raíz. Esta ubicación puede especificarse en el archivo de configuración de la aplicación y en el código administrado mediante la propiedad <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> para un dominio de aplicación. Cuando se especifica en código administrado, se sondea primero el código administrado `privatePath` , seguido de la ruta de acceso especificada en el archivo de configuración de la aplicación.  
+- Atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), que es la lista definida por el usuario de subdirectorios bajo la ubicación raíz. Esta ubicación puede especificarse en el archivo de configuración de la aplicación y en el código administrado mediante la propiedad <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> para un dominio de aplicación. Cuando se especifica en código administrado, se sondea primero el código administrado `privatePath` , seguido de la ruta de acceso especificada en el archivo de configuración de la aplicación.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Sondear los directorios de base de la aplicación y de referencia cultural  
  El tiempo de ejecución siempre empieza a sondear en la base de la aplicación, que puede ser una dirección URL o el directorio raíz de la aplicación en un equipo. Si el ensamblado al que se hace referencia no se encuentra en la base de la aplicación y si no se proporciona ninguna información de referencia cultural, el tiempo de ejecución busca cualquier subdirectorio con el nombre del ensamblado. Los directorios sondeados incluyen:  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>Ejemplos de sondeo  
  Dada la siguiente información:  
   
--   Nombre del ensamblado al que se hace referencia: myAssembly  
+- Nombre del ensamblado al que se hace referencia: myAssembly  
   
--   Directorio raíz de la aplicación: `http://www.code.microsoft.com`  
+- Directorio raíz de la aplicación: `http://www.code.microsoft.com`  
   
--   El elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) del archivo de configuración especifica: bin  
+- El elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) del archivo de configuración especifica: bin  
   
--   Referencia cultural: de  
+- Referencia cultural: de  
   
  El tiempo de ejecución sondea las direcciones URL siguientes:  
   

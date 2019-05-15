@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972427"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583555"
 ---
 # <a name="application-settings-overview"></a>Introducción a la configuración de la aplicación
 En este tema se describe cómo crear y almacenar los datos de configuración en nombre de la aplicación y sus usuarios.  
   
  La característica Configuración de la aplicación de Windows Forms facilita la creación, el almacenamiento y el mantenimiento de las preferencias personalizadas de usuarios y aplicaciones en el equipo cliente. Con Configuración de la aplicación de Windows Forms, no solo puede almacenar datos de las aplicaciones, como cadenas de conexión a bases de datos, sino también datos específicos de los usuarios, como las preferencias de la aplicación de un usuario. Con Visual Studio o código administrado personalizado, puede crear una nueva configuración, leerla y escribirla en el disco, enlazarla a propiedades de los formularios y validar los datos de configuración antes de cargarlos y guardarlos.  
   
- La característica Configuración de la aplicación permite a los desarrolladores guardar el estado en la aplicación con muy poco código personalizado, y sustituye a las propiedades dinámicas de las versiones anteriores de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Configuración de la aplicación ofrece muchas mejoras en comparación con las propiedades dinámicas, que son de solo lectura, se enlazan en tiempo de ejecución y requieren más programación personalizada. Las clases de las propiedades dinámicas se conservan en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], pero son solo clases contenedoras de las clases de Configuración de la aplicación.  
+ Configuración de la aplicación permite a los desarrolladores guardar el estado en su aplicación con muy poco código personalizado y es un sustituto para las propiedades dinámicas en versiones anteriores de .NET Framework. Configuración de la aplicación ofrece muchas mejoras en comparación con las propiedades dinámicas, que son de solo lectura, se enlazan en tiempo de ejecución y requieren más programación personalizada. Las clases de las propiedades dinámicas se conservan en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], pero son solo clases contenedoras de las clases de Configuración de la aplicación.  
   
 ## <a name="what-are-application-settings"></a>¿Qué es Configuración de la aplicación?  
  Las aplicaciones de Windows Forms, a menudo, requieren datos que son esenciales para ejecutar la aplicación, pero que no quiere incluir directamente en el código de la aplicación. Si la aplicación utiliza un servicio Web o un servidor de bases de datos, puede que le convenga almacenar esta información en un archivo independiente, para poder cambiarla en el futuro sin tener que volver a compilarla. De manera similar, puede que las aplicaciones necesiten almacenar datos específicos del usuario actual. La mayoría de las aplicaciones, por ejemplo, tienen preferencias del usuario con las que se personalizan la apariencia y el comportamiento de la aplicación.  
@@ -34,7 +34,7 @@ En este tema se describe cómo crear y almacenar los datos de configuración en 
  Los controles personalizados también pueden guardar su propia configuración implementando la interfaz <xref:System.Configuration.IPersistComponentSettings> , que expone el método <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> . El control <xref:System.Windows.Forms.ToolStrip> de Windows Forms implementa esta interfaz para guardar la posición de las barras de herramientas y los elementos de las barras de herramientas entre una sesión de la aplicación y otra. Para obtener más información acerca de los controles personalizados y la configuración de la aplicación, consulte [Application Settings for Custom Controls](application-settings-for-custom-controls.md).  
   
 ## <a name="limitations-of-application-settings"></a>Limitaciones de Configuración de la aplicación  
- No puede utilizar Configuración de la aplicación en una aplicación no administrada que hospede el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. La configuración no funciona en entornos como los complementos de Visual Studio, C++ para Microsoft Office, el hospedaje de controles en Internet Explorer o los complementos y proyectos de Microsoft Outlook.  
+ No se puede usar configuración de la aplicación en una aplicación no administrada que hospeda .NET Framework. La configuración no funciona en entornos como los complementos de Visual Studio, C++ para Microsoft Office, el hospedaje de controles en Internet Explorer o los complementos y proyectos de Microsoft Outlook.  
   
  Actualmente, no es posible enlazar a algunas propiedades en Windows Forms. El ejemplo más notable es la propiedad <xref:System.Windows.Forms.Form.ClientSize%2A> : si se enlaza a esta propiedad, puede producirse un comportamiento impredecible en tiempo de ejecución. Normalmente, puede solucionar estos problemas guardando y cargando estas opciones con programación.  
   

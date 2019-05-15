@@ -2,12 +2,12 @@
 title: Procedimiento Recuento de repeticiones de una palabra en una cadena (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bc367e46-f7cc-45f9-936f-754e661b7bb9
-ms.openlocfilehash: b3d34503e87aff1180dca4cb8233d668d35b0255
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2292b0b943eefb5e837256f273db73699de30a2d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051746"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593215"
 ---
 # <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Procedimiento Recuento de repeticiones de una palabra en una cadena (LINQ) (Visual Basic)
 En este ejemplo se muestra cómo usar una consulta LINQ para contar las apariciones de una palabra determinada en una cadena. Observe que para realizar el recuento, primero se llama al método <xref:System.String.Split%2A> para crear una matriz de palabras. Existe un costo de rendimiento en el método <xref:System.String.Split%2A>. Si la única operación de la cadena es para contar las palabras, debe considerar la posibilidad de usar en su lugar los métodos <xref:System.Text.RegularExpressions.Regex.Matches%2A> o <xref:System.String.IndexOf%2A>. Pero si el rendimiento no es un problema crítico, o si ya ha dividido la frase para realizar otros tipos de consultas, tiene sentido usar LINQ para además contar las palabras o frases.  
@@ -58,7 +58,7 @@ End Class
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Cree un proyecto que tenga como destino la versión 3.5 de .NET Framework, o bien una posterior, con una referencia a System.Core.dll y una instrucción `Imports` para el espacio de nombres System.Linq.  
+Cree un proyecto de aplicación de consola VB.NET, con un `Imports` instrucción del espacio de nombres System.Linq.
   
 ## <a name="see-also"></a>Vea también
 

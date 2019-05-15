@@ -8,25 +8,25 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db0493f437d2546302a10bf52aebf326ea8a694c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a6c2b755b87f6f01f08f54a2f2fc567868dbb55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345773"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626343"
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Exponer componentes de .NET Framework en COM
 Escribir un tipo .NET y consumirlo desde código no administrado son actividades distintas para los desarrolladores. En esta sección se describen varias sugerencias para escribir código administrado que interopere con clientes COM:  
   
--   [Habilitar tipos de .NET para la interoperación](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
+- [Habilitar tipos de .NET para la interoperación](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md).  
   
      Todos los tipos, métodos, propiedades, campos y eventos administrados que desee exponer a COM deben ser públicos. Los tipos deben tener un constructor predeterminado público, que es el único al que se puede llamar mediante COM.  
   
--   [Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md).  
+- [Aplicar atributos de interoperabilidad](../../../docs/framework/interop/applying-interop-attributes.md).  
   
      Los atributos personalizados de código administrado pueden mejorar la interoperabilidad de un componente.  
   
--   [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
+- [Empaquetar un ensamblado para COM](../../../docs/framework/interop/packaging-an-assembly-for-com.md).  
   
      Es posible que los programadores de COM requieran que resuma los pasos necesarios para hacer referencia a los ensamblados e implementarlos.  
   

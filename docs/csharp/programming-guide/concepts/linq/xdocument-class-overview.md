@@ -2,12 +2,12 @@
 title: Información general de la clase XDocument (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: e3ef7d66cb9759bd71e69c1a0db3614a02f785b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2b2e7490116cfd7ff3cff783a4a3a985a39d0a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604206"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595334"
 ---
 # <a name="xdocument-class-overview-c"></a>Información general de la clase XDocument (C#)
 En este tema se presenta la clase <xref:System.Xml.Linq.XDocument>.  
@@ -22,15 +22,15 @@ En este tema se presenta la clase <xref:System.Xml.Linq.XDocument>.
 ## <a name="components-of-xdocument"></a>Componentes de XDocument  
  Un objeto <xref:System.Xml.Linq.XDocument> puede contener los siguientes elementos:  
   
--   Un objeto <xref:System.Xml.Linq.XDeclaration>. <xref:System.Xml.Linq.XDeclaration> permite especificar las partes pertinentes de una declaración XML: la versión XML, la codificación del documento y si el documento XML es independiente.  
+- Un objeto <xref:System.Xml.Linq.XDeclaration>. <xref:System.Xml.Linq.XDeclaration> permite especificar las partes pertinentes de una declaración XML: la versión XML, la codificación del documento y si el documento XML es independiente.  
   
--   Un objeto <xref:System.Xml.Linq.XElement>. Es el nodo raíz del documento XML.  
+- Un objeto <xref:System.Xml.Linq.XElement>. Es el nodo raíz del documento XML.  
   
--   Cualquier número de objetos <xref:System.Xml.Linq.XProcessingInstruction>. Una instrucción de procesamiento comunica información a una aplicación que procesa el XML.  
+- Cualquier número de objetos <xref:System.Xml.Linq.XProcessingInstruction>. Una instrucción de procesamiento comunica información a una aplicación que procesa el XML.  
   
--   Cualquier número de objetos <xref:System.Xml.Linq.XComment>. Los comentarios serán del mismo nivel que el elemento raíz. El objeto <xref:System.Xml.Linq.XComment> no puede ser el primer argumento de la lista, ya que no es válido que el documento XML empiece con un comentario.  
+- Cualquier número de objetos <xref:System.Xml.Linq.XComment>. Los comentarios serán del mismo nivel que el elemento raíz. El objeto <xref:System.Xml.Linq.XComment> no puede ser el primer argumento de la lista, ya que no es válido que el documento XML empiece con un comentario.  
   
--   Un elemento <xref:System.Xml.Linq.XDocumentType> para el DTD.  
+- Un elemento <xref:System.Xml.Linq.XDocumentType> para el DTD.  
   
  Al serializar un objeto <xref:System.Xml.Linq.XDocument>, aunque `XDocument.Declaration` sea `null`, el resultado generará una declaración XML, siempre y cuando el redactor haya establecido `Writer.Settings.OmitXmlDeclaration` en `false` (valor predeterminado).  
   

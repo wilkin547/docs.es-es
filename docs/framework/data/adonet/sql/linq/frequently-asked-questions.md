@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657056"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583515"
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 Las siguientes secciones dan respuesta a algunos problemas comunes que podría encontrar al implementar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  P. ¿Está System.Data.Linq marcado para que el código de confianza parcial pueda utilizarlo?  
   
- R. Sí, el ensamblado System.Data.Linq.dll se encuentra entre los ensamblados de [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] marcados con el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Sin esta señal, los ensamblados incluidos en [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] están destinados para su uso en código de plena confianza.  
+ R. Sí, el ensamblado System.Data.Linq.dll se encuentra entre los ensamblados de .NET Framework marcados con el <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo. Sin este marcado, los ensamblados de .NET Framework están diseñados para su uso sólo por código de plena confianza.  
   
  El principal escenario de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para permitir parcialmente es permitir que los llamadores de confianza la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ensamblado necesario acceder desde las aplicaciones Web, donde el *confianza* configuración es Medium.  
   

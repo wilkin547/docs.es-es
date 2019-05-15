@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909279"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588839"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Resumen de tecnologías para el control DataGridView (formularios Windows Forms)
 En este tema se resume la información sobre el control `DataGridView` y las clases que admiten su uso.  
@@ -29,7 +29,7 @@ En este tema se resume la información sobre el control `DataGridView` y las cla
  `BindingSource`  
   
 ## <a name="background"></a>Fondo  
- Diseñadores de interfaz de usuario con frecuencia que sea necesario mostrar datos tabulares a los usuarios. El [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] proporciona varias maneras de mostrar datos en una tabla o una cuadrícula. El `DataGridView` control representa la evolución más reciente de esta tecnología para aplicaciones de Windows Forms.  
+ Diseñadores de interfaz de usuario con frecuencia que sea necesario mostrar datos tabulares a los usuarios. .NET Framework proporciona varias maneras de mostrar datos en una tabla o una cuadrícula. El `DataGridView` control representa la evolución más reciente de esta tecnología para aplicaciones de Windows Forms.  
   
  El `DataGridView` control puede mostrar las filas de datos desde un almacén de datos. Se admiten muchos tipos de almacenes de datos. El almacén de datos puede contener datos simples sin tipo, como una matriz unidimensional, o puede contener datos con tipo, como un <xref:System.Data.DataSet>. Para obtener más información, vea [Cómo: Enlazar datos a la Windows Forms DataGridView Control](how-to-bind-data-to-the-windows-forms-datagridview-control.md).  
   

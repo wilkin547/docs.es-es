@@ -1,15 +1,13 @@
 ---
 title: Implementar objetos de valor
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga los detalles y las opciones para implementar objetos de valor mediante las características nuevas de Entity Framework.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611385"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063062"
 ---
 # <a name="implement-value-objects"></a>Implementación de objetos de valor
 
@@ -324,7 +322,7 @@ public class Address
 - **Complex types and/or value objects** (Tipos u objetos de valor complejos). Descripción en el repositorio de GitHub de EF Core (pestaña Problemas) \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** Clase base de objeto de valor en eShopOnContainers.**  \
+- **ValueObject.cs.** Clase base de objeto de valor en eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **Clase Address.** Clase de objeto de valor de ejemplo en eShopOnContainers. \

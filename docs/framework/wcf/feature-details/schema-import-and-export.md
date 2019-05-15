@@ -9,17 +9,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 43b9ca115f3eeae7a28d8ed8a0642ad6e5439bd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a14ee9e5916133be3979650055cf3e57899a4cca
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603704"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591804"
 ---
 # <a name="schema-import-and-export"></a>Importación y exportación de esquemas
-Windows Communication Foundation (WCF) incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` traduce entre los objetos [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] y XML (en ambas direcciones). Además del propio serializador, WCF incluye mecanismos de exportación de esquema y de importación del esquema asociado. *Esquema* es una descripción formal, exacta y legible de la forma del XML que el serializador genera o que pueda tener acceso el deserializador. WCF usa el lenguaje de definición de esquema XML de World Wide Web Consortium (W3C) (XSD) como la representación del esquema, que es muy interoperable con numerosas plataformas de terceros.  
+Windows Communication Foundation (WCF) incluye un nuevo motor de serialización, el <xref:System.Runtime.Serialization.DataContractSerializer>. El `DataContractSerializer` traduce entre objetos de .NET Framework y XML (en ambas direcciones). Además del propio serializador, WCF incluye mecanismos de exportación de esquema y de importación del esquema asociado. *Esquema* es una descripción formal, exacta y legible de la forma del XML que el serializador genera o que pueda tener acceso el deserializador. WCF usa el lenguaje de definición de esquema XML de World Wide Web Consortium (W3C) (XSD) como la representación del esquema, que es muy interoperable con numerosas plataformas de terceros.  
   
- El componente de importación de esquema, <xref:System.Runtime.Serialization.XsdDataContractImporter>, toma un documento de esquema XSD y genera las clases [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (normalmente las clases de contrato de datos) de manera que los formularios serializados se corresponden con el esquema dado.  
+ El componente de importación de esquema, <xref:System.Runtime.Serialization.XsdDataContractImporter>, toma un documento de esquema XSD y genera clases de .NET Framework (normalmente las clases de contrato de datos) tal que los formularios serializados se corresponden con el esquema dado.  
   
  Por ejemplo, el fragmento de esquema siguiente:  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) incluye un nuevo motor de serialización,
   
  Para obtener más información, consulte [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Si un esquema no se ajusta a las reglas del contrato de datos, utilice un motor de serialización diferente. Por ejemplo, <xref:System.Xml.Serialization.XmlSerializer> utiliza su propio mecanismo de importación de esquema independiente. Además, hay un modo especial de importación en el que se expande el intervalo de esquema compatible. Para obtener más información, vea la sección acerca de cómo generar <xref:System.Xml.Serialization.IXmlSerializable> tipos [esquema de importación para generar clases](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
- `XsdDataContractExporter` admite cualquier tipo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] que pueda serializarse con `DataContractSerializer`. Para obtener más información, consulte [tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Tenga en cuenta que el esquema generado mediante `XsdDataContractExporter` son normalmente datos válidos que `XsdDataContractImporter` puede utilizar (a menos que se use <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> para personalizar el esquema).  
+ El `XsdDataContractExporter` admite los tipos de .NET Framework que se pueden serializar con el `DataContractSerializer`. Para obtener más información, consulte [tipos admitidos por el serializador de contratos de datos](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Tenga en cuenta que el esquema generado mediante `XsdDataContractExporter` son normalmente datos válidos que `XsdDataContractImporter` puede utilizar (a menos que se use <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> para personalizar el esquema).  
   
  Para obtener más información sobre el uso de la <xref:System.Runtime.Serialization.XsdDataContractImporter>, consulte [esquema de importación para generar clases](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   

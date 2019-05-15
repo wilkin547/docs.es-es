@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625369"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592663"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Procedimiento Crear un complemento que sea una interfaz de usuario
 En este ejemplo se muestra cómo crear un complemento que es un Windows Presentation Foundation (WPF) que se hospeda en una aplicación independiente de WPF.  
@@ -81,7 +81,7 @@ En este ejemplo se muestra cómo crear un complemento que es un Windows Presenta
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Implementación de la aplicación host  
- Con el adaptador del host y la vista host creados, la aplicación host puede utilizar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelo de complementos para abrir la canalización y adquirir una vista de host del complemento. Estos pasos se muestran en el código siguiente.  
+ Con el adaptador del host y la vista host creados, la aplicación host puede utilizar el modelo de complementos de .NET Framework para abrir la canalización y adquirir una vista de host del complemento. Estos pasos se muestran en el código siguiente.  
 
  La aplicación host utiliza código típico de modelo de complementos de .NET Framework para activar el complemento, lo que implícitamente devuelve la vista del host a la aplicación host. Posteriormente, la aplicación host muestra la vista de host (que es un <xref:System.Windows.Controls.UserControl>) desde un <xref:System.Windows.Controls.Grid>.  
   

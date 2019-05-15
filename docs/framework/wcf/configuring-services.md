@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608545"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593332"
 ---
 # <a name="configuring-wcf-services"></a>Configuración de servicios WCF
 
@@ -22,7 +22,7 @@ Cuando haya diseñado e implementado su contrato de servicios, usted está listo
  A partir de [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF incluye un nuevo modelo de configuración predeterminado que simplifica los requisitos de configuración de WCF. Si no proporciona ninguna configuración de WCF para un servicio determinado, el tiempo de ejecución configura automáticamente el servicio con los comportamientos, enlaces y puntos de conexión predeterminados.  
   
  [Configuración de servicios mediante archivos de configuración](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Un servicio de Windows Communication Foundation (WCF) es configurable utilizando el [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] tecnología de configuración. Normalmente, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar los datos, como las direcciones de punto de conexión (las direcciones reales utilizadas para comunicarse con el servicio) en una base equipo por equipo.  
+ Un servicio de Windows Communication Foundation (WCF) es configurable mediante la tecnología de la configuración de .NET Framework. Normalmente, los elementos XML se agregan al archivo Web.config para un sitio de Internet Information Services (IIS) que hospeda un servicio WCF. Los elementos le permiten cambiar los datos, como las direcciones de punto de conexión (las direcciones reales utilizadas para comunicarse con el servicio) en una base equipo por equipo.  
   
  [Enlaces](../../../docs/framework/wcf/bindings.md)  
  Además, WCF incluye varias configuraciones comunes proporcionadas por el sistema en forma de los enlaces que le permiten seleccionar rápidamente las características más básicas para la comunicación entre un cliente y servicio, como los transportes, seguridad y utilizan codificaciones de mensaje.  

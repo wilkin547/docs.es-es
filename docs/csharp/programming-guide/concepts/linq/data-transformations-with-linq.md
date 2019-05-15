@@ -10,23 +10,23 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5a0c4b0d672e3fd9cfe1528e16070cf1dcbabd69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326065"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597658"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] no solo sirve para la recuperación de datos. También es una herramienta eficaz para transformarlos. Mediante el uso de un consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], se puede usar una secuencia de origen como entrada y modificarla de muchas maneras para crear una nueva secuencia de salida. Por medio de ordenaciones y agrupaciones se puede modificar la propia secuencia sin modificar los elementos. Pero quizás la característica más eficaz de las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] es la capacidad para crear nuevos tipos. Esto se realiza en la cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md). Por ejemplo, puede realizar las tareas siguientes:  
   
--   Combinar varias secuencias de entrada en una sola secuencia de salida que tiene un tipo nuevo.  
+- Combinar varias secuencias de entrada en una sola secuencia de salida que tiene un tipo nuevo.  
   
--   Crear secuencias de salida cuyos elementos estén formados por una o varias propiedades de cada elemento de la secuencia de origen.  
+- Crear secuencias de salida cuyos elementos estén formados por una o varias propiedades de cada elemento de la secuencia de origen.  
   
--   Crear secuencias de salida cuyos elementos estén formados por los resultados de las operaciones realizadas en el origen de datos.  
+- Crear secuencias de salida cuyos elementos estén formados por los resultados de las operaciones realizadas en el origen de datos.  
   
--   Crear secuencias de salida en un formato diferente. Por ejemplo, se pueden transformar datos de filas de SQL o archivos de texto en XML.  
+- Crear secuencias de salida en un formato diferente. Por ejemplo, se pueden transformar datos de filas de SQL o archivos de texto en XML.  
   
  Estos son solo algunos ejemplos. Por supuesto, estas transformaciones pueden combinarse de diversas formas en la misma consulta. Además, se puede usar la secuencia de salida de una consulta como la secuencia de entrada para una nueva consulta.  
   

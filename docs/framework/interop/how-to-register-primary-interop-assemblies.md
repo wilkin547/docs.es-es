@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a394aea0e5f8081f2be3b91422e29a251cef918e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314755"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626252"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Procedimiento para registrar ensamblados de interoperabilidad primarios
 
@@ -28,9 +28,9 @@ Las clases solo se pueden serializar con la interoperabilidad COM y siempre se s
 
  Aunque no es necesario registrar los ensamblados de interoperabilidad primarios a menos que tenga pensado usar Visual Studio, registrarlos ofrece dos ventajas:
 
--   Un ensamblado de interoperabilidad primario registrado está marcado claramente bajo la clave del Registro de la biblioteca de tipos original. Registrarlo es la mejor manera de encontrar un ensamblado de interoperabilidad primario en el equipo.
+- Un ensamblado de interoperabilidad primario registrado está marcado claramente bajo la clave del Registro de la biblioteca de tipos original. Registrarlo es la mejor manera de encontrar un ensamblado de interoperabilidad primario en el equipo.
 
--   Puede evitar generar y usar un nuevo ensamblado de interoperabilidad accidentalmente si, en algún momento en el futuro, usa Visual Studio para hacer referencia a un tipo para el que tiene un ensamblado de interoperabilidad primario sin registrar.
+- Puede evitar generar y usar un nuevo ensamblado de interoperabilidad accidentalmente si, en algún momento en el futuro, usa Visual Studio para hacer referencia a un tipo para el que tiene un ensamblado de interoperabilidad primario sin registrar.
 
 Use la [herramienta Registro de ensamblados (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) para registrar un ensamblado de interoperabilidad primario.
 

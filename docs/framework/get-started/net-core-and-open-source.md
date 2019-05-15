@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5eeef28f9a1d81ffa6328bfa5f2a8ed5295b47aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2eecdee3448b59422a8c6c73fc85745b41c52b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163428"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626109"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core y código abierto
 En este tema se proporciona una breve descripción de .NET Core y se muestra cómo encontrar más información. Para encontrar la lista completa de temas de .NET Core, visite la [Guía de .NET Core](../../core/index.md).
@@ -22,28 +22,28 @@ En este tema se proporciona una breve descripción de .NET Core y se muestra có
   
  Estas son las principales características de .NET Core:  
   
--   **Multiplataforma**: .NET Core proporciona una funcionalidad clave para implementar las características de la aplicación que necesita y reutilizar este código independientemente del destino de la plataforma. En la actualidad es compatible con los tres sistemas operativos (SO) principales: Windows, Linux y macOS. Puede escribir aplicaciones y bibliotecas que se ejecutan sin modificaciones en todos los sistemas operativos compatibles. Para ver una lista de todos los sistemas operativos compatibles, visite [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) (Mapa de ruta de .NET Core).
+- **Multiplataforma**: .NET Core proporciona una funcionalidad clave para implementar las características de la aplicación que necesita y reutilizar este código independientemente del destino de la plataforma. En la actualidad es compatible con los tres sistemas operativos (SO) principales: Windows, Linux y macOS. Puede escribir aplicaciones y bibliotecas que se ejecutan sin modificaciones en todos los sistemas operativos compatibles. Para ver una lista de todos los sistemas operativos compatibles, visite [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) (Mapa de ruta de .NET Core).
   
--   **Código abierto**: .NET Core es uno de los muchos proyectos que administra [.NET Foundation](https://www.dotnetfoundation.org/) y está disponible en [GitHub](https://github.com/).  Al tratarse de un proyecto de código abierto, .NET Core favorece que el proceso de desarrollo sea más transparente y que exista una comunidad activa y comprometida.  
+- **Código abierto**: .NET Core es uno de los muchos proyectos que administra [.NET Foundation](https://www.dotnetfoundation.org/) y está disponible en [GitHub](https://github.com/).  Al tratarse de un proyecto de código abierto, .NET Core favorece que el proceso de desarrollo sea más transparente y que exista una comunidad activa y comprometida.  
   
--   **Desarrollo flexible**: hay dos modos principalmente para desarrollar una aplicación, implementación basada en marco e implementación autocontenida. Con la implementación basada en marco, solo se instalan su aplicación y las dependencias de terceros, y la aplicación requiere la presencia de una versión de .NET Core en todo el sistema.  Con la implementación autocontenida, la versión de .NET Core que se utiliza para compilar su aplicación también se implementa junto con la aplicación y las dependencias de terceros, y se puede ejecutar paralelamente con otras versiones.    Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../../core/deploying/index.md).
+- **Desarrollo flexible**: hay dos modos principalmente para desarrollar una aplicación, implementación basada en marco e implementación autocontenida. Con la implementación basada en marco, solo se instalan su aplicación y las dependencias de terceros, y la aplicación requiere la presencia de una versión de .NET Core en todo el sistema.  Con la implementación autocontenida, la versión de .NET Core que se utiliza para compilar su aplicación también se implementa junto con la aplicación y las dependencias de terceros, y se puede ejecutar paralelamente con otras versiones.    Para obtener más información, consulte el tema [Implementación de aplicaciones .NET Core](../../core/deploying/index.md).
 
--   **Modular**: .NET Core es modular, ya que se publica a través de NuGet en paquetes de ensamblado más reducidos. En lugar de un ensamblado grande que contiene la mayor parte de la funcionalidad básica, .NET Core está disponible como paquetes más pequeños centrados en las características. Esta característica nos permite un modelo de desarrollo más ágil y le permite optimizar su aplicación para incluir solo los paquetes de NuGet que necesita. Entre las ventajas de una menor superficie de aplicación se incluyen una mayor seguridad, mantenimiento reducido, rendimiento mejorado y menores costes en un modelo de suscripción ajustado a sus necesidades.  
+- **Modular**: .NET Core es modular, ya que se publica a través de NuGet en paquetes de ensamblado más reducidos. En lugar de un ensamblado grande que contiene la mayor parte de la funcionalidad básica, .NET Core está disponible como paquetes más pequeños centrados en las características. Esta característica nos permite un modelo de desarrollo más ágil y le permite optimizar su aplicación para incluir solo los paquetes de NuGet que necesita. Entre las ventajas de una menor superficie de aplicación se incluyen una mayor seguridad, mantenimiento reducido, rendimiento mejorado y menores costes en un modelo de suscripción ajustado a sus necesidades.  
   
 ## <a name="the-net-core-platform"></a>Plataforma .NET Core  
  La plataforma .NET Core está formada por varios componentes, entre los que se incluyen los compiladores administrados, el entorno en tiempo de ejecución, las bibliotecas de clases base y numerosos modelos de aplicaciones, como ASP.NET Core. Puede obtener más información sobre los diferentes componentes y colaborar visitando los siguientes repositorios de [GitHub](https://github.com/):  
   
--   [Núcleo de .NET](https://github.com/dotnet/core)  
+- [Núcleo de .NET](https://github.com/dotnet/core)  
   
--   [CoreFX: bibliotecas fundamentales de .NET Core](https://github.com/dotnet/corefx)  
+- [CoreFX: bibliotecas fundamentales de .NET Core](https://github.com/dotnet/corefx)  
   
--   [CoreCLR: .NET Core runtime](https://github.com/dotnet/coreclr)  
+- [CoreCLR: .NET Core runtime](https://github.com/dotnet/coreclr)  
   
--   [CLI: Herramientas de la interfaz de la línea de comandos de .NET Core](https://github.com/dotnet/cli)  
+- [CLI: Herramientas de la interfaz de la línea de comandos de .NET Core](https://github.com/dotnet/cli)  
   
--   [Roslyn: SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn)  
+- [Roslyn: SDK de .NET Compiler Platform](https://github.com/dotnet/roslyn)  
   
--   [ASP.NET Core](https://github.com/aspnet/home)  
+- [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Vea también
 

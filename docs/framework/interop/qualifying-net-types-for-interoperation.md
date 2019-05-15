@@ -11,37 +11,37 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cad67f52a4ca977606d7b5a307868ff129570e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097982"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648561"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Habilitar tipos de .NET para la interoperación
 Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga en cuenta los requisitos de interoperabilidad COM en tiempo de diseño. Los tipos administrados (clase, interfaz, estructura y enumeración) se integran fácilmente con los tipos COM si se cumplen las directrices siguientes:  
   
--   Las clases deben implementar interfaces de forma explícita.  
+- Las clases deben implementar interfaces de forma explícita.  
   
      Aunque la interoperabilidad COM proporciona un mecanismo para generar automáticamente una interfaz que contiene todos los miembros de la clase y los miembros de su clase base, es mucho mejor proporcionar interfaces explícitas. La interfaz generada automáticamente se denomina interfaz de clase. Para obtener instrucciones, consulte [Presentar la interfaz de clase](com-callable-wrapper.md#introducing-the-class-interface).  
   
      Puede usar Visual Basic, C# y C++ para incorporar las definiciones de interfaz en el código, en lugar de tener que usar el Lenguaje de definición de interfaz (IDL) o su equivalente. Para obtener información detallada de la sintaxis, vea la documentación del lenguaje.  
   
--   Los tipos administrados deben ser públicos.  
+- Los tipos administrados deben ser públicos.  
   
      Solo los tipos públicos de un ensamblado se registran y se exportan a la biblioteca de tipos. Como resultado, solo los tipos públicos son visibles para COM.  
   
      Los tipos administrados exponen características a otro código administrado que es posible que no se expongan a COM. Por ejemplo, los constructores con parámetros, los métodos estáticos y los campos de constante no se exponen a los clientes COM. Además, como el tiempo de ejecución serializa los datos dentro y fuera de un tipo, es posible que los datos se copien o se transformen.  
   
--   Los métodos, las propiedades, los campos y los eventos deben ser públicos.  
+- Los métodos, las propiedades, los campos y los eventos deben ser públicos.  
   
      Los miembros de tipos públicos también deben ser públicos si van a ser visibles para COM. La aplicación de <xref:System.Runtime.InteropServices.ComVisibleAttribute> permite restringir la visibilidad de un ensamblado, un tipo público o miembros públicos de un tipo público. De forma predeterminada, todos los tipos y miembros públicos son visibles.  
   
--   Los tipos deben tener un constructor público predeterminado para que se activen desde COM.  
+- Los tipos deben tener un constructor público predeterminado para que se activen desde COM.  
   
      Los tipos públicos administrados son visibles para COM. Pero sin un constructor público predeterminado (un constructor sin argumentos), los clientes COM no pueden crear el tipo. Los clientes COM todavía pueden usar el tipo si se activa por otros medios.  
   
--   Los tipos no pueden ser abstractos.  
+- Los tipos no pueden ser abstractos.  
   
      Ni los clientes COM ni los clientes .NET pueden crear tipos abstractos.  
   

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-ms.openlocfilehash: a2c45e45421f8b03f592bf6e1e53cad97a4ef9ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2cdcebd4e47996841ad58213d9c6252a6a3dd7b6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648271"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591843"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>Procedimiento para administrar manualmente gráficos almacenados en búfer
-Para escenarios más avanzados de almacenamiento en búfer doble, puede usar el [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] clases para implementar su propia lógica de almacenamiento en búfer doble. La clase responsable de asignar y administrar búferes de gráficos individuales es el <xref:System.Drawing.BufferedGraphicsContext> clase. Cada aplicación tiene su propio valor predeterminado <xref:System.Drawing.BufferedGraphicsContext> que administra todo el doble búfer predeterminado para esa aplicación. Puede recuperar una referencia a esta instancia mediante una llamada a la <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
+Para escenarios más avanzados de almacenamiento en búfer doble, puede usar las clases de .NET Framework para implementar su propia lógica de almacenamiento en búfer doble. La clase responsable de asignar y administrar búferes de gráficos individuales es el <xref:System.Drawing.BufferedGraphicsContext> clase. Cada aplicación tiene su propio valor predeterminado <xref:System.Drawing.BufferedGraphicsContext> que administra todo el doble búfer predeterminado para esa aplicación. Puede recuperar una referencia a esta instancia mediante una llamada a la <xref:System.Drawing.BufferedGraphicsManager.Current%2A>.  
   
 ### <a name="to-obtain-a-reference-to-the-default-bufferedgraphicscontext"></a>Para obtener una referencia a la clase BufferedGraphicsContext predeterminada  
   
