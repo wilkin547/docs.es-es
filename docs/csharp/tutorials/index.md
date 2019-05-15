@@ -2,16 +2,16 @@
 title: Tutoriales de C#
 description: Explore estos tutoriales de C# para obtener información sobre cómo compilar programas de C# y conocer las características de este lenguaje.
 ms.date: 10/25/2018
-ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755774"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557171"
 ---
 # <a name="c-tutorials"></a>Tutoriales de C#
 
-Le damos la bienvenida a los tutoriales de C#. Se empieza con lecciones interactivas que se pueden ejecutar en el explorador. Los tutoriales posteriores y los más avanzados le ayudan a trabajar con las herramientas de desarrollo de .NET para crear programas de C# en su máquina.
+Le damos la bienvenida a los tutoriales de C#. Se empieza con lecciones interactivas que se pueden ejecutar en el explorador. Los tutoriales posteriores y más avanzados facilitan el trabajo con las herramientas de desarrollo de .NET para crear programas C# en su máquina.
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriales interactivos de introducción a C#
 

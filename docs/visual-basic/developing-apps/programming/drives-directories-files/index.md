@@ -9,12 +9,12 @@ helpviewer_keywords:
 - files [Visual Basic], accessing
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
-ms.openlocfilehash: 0c9c1c787138595f725316a580acda9c5d4d43a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0e412f9b9ccb8d425aae1e3985e7492e452fd9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61676082"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593404"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Procesar unidades, directorios y archivos (Visual Basic)
 Se puede usar Visual Basic para procesar unidades, carpetas y archivos con el objeto `My.Computer.FileSystem`, que proporciona un mejor rendimiento y es más fácil de usar que los métodos tradicionales como las funciones `FileOpen` y `Write` (aunque siguen estando disponibles). En las secciones siguientes se describen estos métodos con detalle.  
@@ -27,7 +27,7 @@ Se puede usar Visual Basic para procesar unidades, carpetas y archivos con el ob
  Proporciona una visión general de los conceptos de E/S de archivos en .NET Framework, incluidas las secuencias, el almacenamiento aislado, eventos de archivo, atributos de archivo y acceso a archivos.  
   
  [Tutorial: Manipulación de archivos mediante métodos de .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- Muestra cómo usar [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] para manipular archivos y carpetas.  
+ Muestra cómo usar .NET Framework para manipular archivos y carpetas.  
   
  [Tutorial: Manipulación de archivos y directorios en Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  Muestra cómo usar el objeto `My.Computer.FileSystem` para manipular archivos y carpetas.  
