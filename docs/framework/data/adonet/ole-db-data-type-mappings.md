@@ -2,17 +2,17 @@
 title: Asignaciones de tipos de datos de OLE DB
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5c4b7264b9f8abb842fff3295d53ed8ab626671
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772065"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584519"
 ---
 # <a name="ole-db-data-type-mappings"></a>Asignaciones de tipos de datos de OLE DB
-En la siguiente tabla se muestra el tipo [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] deducido de los tipos de datos del proveedor de datos .NET Framework para ADO y OLE DB (<xref:System.Data.OleDb>). Los métodos de descriptor de acceso con tipo para el <xref:System.Data.OleDb.OleDbDataReader> también se muestran.  
+En la tabla siguiente se muestra el tipo inferido de .NET Framework para tipos de datos desde el proveedor de datos de .NET Framework para ADO y OLE DB (<xref:System.Data.OleDb>). Los métodos de descriptor de acceso con tipo para el <xref:System.Data.OleDb.OleDbDataReader> también se muestran.  
   
-|Tipo de ADO|Tipo de OLE DB|Tipo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|Descriptor de acceso con tipo de [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]|  
+|Tipo de ADO|Tipo de OLE DB|Tipo de .NET Framework|Descriptor de acceso de tipo de .NET framework|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  

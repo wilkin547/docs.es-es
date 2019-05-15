@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643938"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635530"
 ---
 # <a name="net-framework-guide"></a>Guía de .NET Framework
 
@@ -28,7 +28,7 @@ ms.locfileid: "61643938"
 
 Para obtener una introducción general a .NET Framework para usuarios y desarrolladores, vea [Introducción](./get-started/index.md). Para una introducción a la arquitectura y las características principales de .NET Framework, consulte la [información general](./get-started/overview.md).
 
-.NET Framework se puede usar con Docker y con [contenedores de Windows](/virtualization/windowscontainers/about/). Vea [Implementación de aplicaciones de .NET Framework con Docker](./docker/index.md) para obtener información sobre cómo ejecutar las aplicaciones en contenedores de Docker.
+.NET Framework se puede usar con Docker y con [contenedores de Windows](/virtualization/windowscontainers/about/).
 
 ## <a name="installation"></a>Instalación
 
@@ -51,9 +51,6 @@ Proporciona recursos y orientación sobre la instalación y la solución de prob
 
 * [Guía de migración](./migration-guide/index.md)  
 Proporciona recursos y una lista de cambios que debe tener en cuenta si migra la aplicación a una nueva versión de .NET Framework.
-
-* [Guía de .NET Framework en Docker](./docker/index.md)  
-Proporciona recursos para ejecutar aplicaciones de .NET Framework con Docker, mediante contenedores de Windows.
 
 * [Guía de desarrollo](./development-guide.md)  
 Proporciona una guía para todas las áreas y tareas tecnológicas principales para el desarrollo de aplicaciones, como la creación, configuración, depuración, seguridad e implementación de la aplicación, e información sobre programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.

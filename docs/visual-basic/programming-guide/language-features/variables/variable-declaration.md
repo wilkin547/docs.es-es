@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: a4c9ae12f2ec30d471c6e73af17567547e4dc421
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4706f306e8db252b35148f8e6a0f8c42122f5482
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598438"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583392"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaración de variable en Visual Basic
 Declare una variable para especificar su nombre y las características. La instrucción de declaración de variables es el [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Su ubicación y contenido determinan las características de la variable.  
@@ -48,7 +48,7 @@ Declare una variable para especificar su nombre y las características. La instr
   
 - Un tipo de objeto o clase, definida en la aplicación o en otra aplicación  
   
-- Un [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] clase, como <xref:System.Windows.Forms.Label> o <xref:System.Windows.Forms.TextBox>  
+- Clase de .NET Framework, como <xref:System.Windows.Forms.Label> o <xref:System.Windows.Forms.TextBox>  
   
 - Tipo de una interfaz, como <xref:System.IComparable> o <xref:System.IDisposable>  
   
