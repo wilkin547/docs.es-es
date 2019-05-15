@@ -2,12 +2,12 @@
 title: Control de mensajes dudosos
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 1a7ab0afa982508f07256f090a13692174b5fb0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1f01714d2b4587659682661c05b341d0f50254e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638423"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592854"
 ---
 # <a name="poison-message-handling"></a>Control de mensajes dudosos
 Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos de entrega a la aplicación. Esta situación se puede presentar cuando una aplicación basada en cola no puede procesar un mensaje debido a los errores. Para satisfacer la confiabilidad que exige, una aplicación en cola recibe los mensajes bajo una transacción. Anular la transacción en la que un mensaje en cola se recibió deja el mensaje en la cola para que el mensaje se vuelva a intentar con una nueva transacción. Si no se corrige el problema que produjo la anulación de la transacción, la aplicación receptora se puede atascar en una recepción de bucle y anulando el mismo mensaje hasta que supere el número máximo de intentos de entrega, y se produzca un mensaje dudoso.  
@@ -52,7 +52,7 @@ Un *mensaje dudoso* es un mensaje que ha superado el número máximo de intentos
   
  WCF proporciona dos enlaces en cola estándares:  
   
-- <xref:System.ServiceModel.NetMsmqBinding>. Un [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] enlace adecuado para realizar la comunicación basada en cola con otros extremos WCF.  
+- <xref:System.ServiceModel.NetMsmqBinding>. Un enlace conveniente para realizar la comunicación basada en cola con otros extremos WCF de .NET Framework.  
   
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Un enlace conveniente para comunicar con aplicaciones Message Queuing existentes.  
   

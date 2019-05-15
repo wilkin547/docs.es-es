@@ -4,12 +4,12 @@ description: Información sobre ejemplos y tutoriales de .NET Core, ASP.NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950857"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469464"
 ---
 # <a name="net-samples-and-tutorials"></a>Ejemplos y tutoriales de .NET
 
@@ -60,6 +60,10 @@ Este ejemplo muestra muchos de los problemas que pueden resolverse mediante el u
 **Ejemplos de LINQ**
 
 Esta serie de ejemplos muestra muchas de las características de Language Integrated Query (LINQ). El [ejemplo completo](https://github.com/dotnet/samples/tree/master/core/linq/csharp) está disponible en el repositorio dotnet/samples de GitHub.
+
+**Ejemplo de servidor COM administrado**
+
+En el ejemplo de [servidor COM](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) se muestra la creación de un servidor COM administrado y cómo se puede registrar globalmente.
 
 **Ejemplo de los PIA de Microsoft Office**
 
