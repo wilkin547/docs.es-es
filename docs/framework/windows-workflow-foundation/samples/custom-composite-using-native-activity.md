@@ -2,12 +2,12 @@
 title: Compuesto personalizado utilizando la actividad Native
 ms.date: 03/30/2017
 ms.assetid: ef9e739c-8a8a-4d11-9e25-cb42c62e3c76
-ms.openlocfilehash: 41a823ab00a2be0772a07b15d1292dbb4e8d1a6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c88a4a7794ef5f9e721669bc61402e97f6032da0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005212"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637604"
 ---
 # <a name="custom-composite-using-native-activity"></a>Compuesto personalizado utilizando la actividad Native
 En este ejemplo se muestra cómo escribir un objeto <xref:System.Activities.NativeActivity> que programa otros objetos <xref:System.Activities.Activity> para controlar el flujo de ejecución de un flujo de trabajo. En este ejemplo se utilizan dos flujos de control comunes, Sequence y While, para mostrar cómo hacerlo.
