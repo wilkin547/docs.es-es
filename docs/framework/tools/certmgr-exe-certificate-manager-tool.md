@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221106"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591568"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (Herramienta de administración de certificados)
 El administrador de certificados (Certmgr.exe) es una herramienta que administra certificados, listas de certificados de confianza (CTL) y listas de revocación de certificados (CRL).  
@@ -75,13 +75,13 @@ El administrador de certificados (Certmgr.exe) es una herramienta que administra
 ## <a name="remarks"></a>Comentarios  
  Certmgr.exe realiza las funciones básicas siguientes:  
   
--   Muestra certificados, listas CTL y listas CRL en la consola.  
+- Muestra certificados, listas CTL y listas CRL en la consola.  
   
--   Agrega certificados, listas CTL y listas CRL a un almacén de certificados.  
+- Agrega certificados, listas CTL y listas CRL a un almacén de certificados.  
   
--   Elimina certificados, listas CTL y listas CRL de un almacén de certificados.  
+- Elimina certificados, listas CTL y listas CRL de un almacén de certificados.  
   
--   Guarda en un archivo un certificado X.509, una lista CTL o una lista CRL procedente de un almacén de certificados.  
+- Guarda en un archivo un certificado X.509, una lista CTL o una lista CRL procedente de un almacén de certificados.  
   
  Certmgr.exe funciona con dos tipos de almacenes de certificados: **StoreFile** y almacén del sistema. No es necesario especificar el tipo de almacén de certificados; Certmgr.exe puede identificarlo y realizar las operaciones apropiadas.  
   

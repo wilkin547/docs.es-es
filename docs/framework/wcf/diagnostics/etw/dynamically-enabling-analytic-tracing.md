@@ -2,12 +2,12 @@
 title: Habilitar dinámicamente la traza analítica
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
-ms.openlocfilehash: fc157e6612a59640aef557b57e5e2dd9e91cb529
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 677a97cedc766393a113f64554ce498547d4a231
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584333"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592101"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>Habilitar dinámicamente la traza analítica
 Con las herramientas que se distribuyen con el sistema operativo Windows, puede habilitar o deshabilitar la traza de forma dinámica mediante el Seguimiento de eventos para Windows (ETW). Para todos los [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] servicios Windows Communication Foundation (WCF), traza analítica puede habilitarse y deshabilitarse de forma dinámica sin modificar el archivo Web.config de la aplicación o reiniciar el servicio. Esto permite que la aplicación que emite los eventos de traza siga sin más.  
@@ -31,11 +31,11 @@ Con las herramientas que se distribuyen con el sistema operativo Windows, puede 
 |`EndToEndMonitoring`|Eventos usados para admitir la traza de flujo de mensajes.|  
 |`Troubleshooting`|Eventos más granulares alrededor de los puntos de extensibilidad de WCF.|  
   
- El segundo grupo de palabras clave define qué componente de [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] emitió el evento.  
+ El segundo grupo de palabras clave define qué componente de .NET Framework genera el evento.  
   
 |Palabra clave|Descripción|  
 |-------------|-----------------|  
-|`UserEvents`|Eventos emitidos por el código de usuario y no [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)].|  
+|`UserEvents`|Eventos emitidos por el código de usuario y no de .NET Framework.|  
 |`ServiceModel`|Eventos emitidos por el tiempo de ejecución WCF.|  
 |`ServiceHost`|Eventos emitidos por el host de servicio.|  
 |`WCFMessageLogging`|Eventos de registro de mensajes WCF.|  

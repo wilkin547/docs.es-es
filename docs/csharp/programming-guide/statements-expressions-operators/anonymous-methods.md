@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 94e9f7133c9a78ece7df5bd10cfc27c79d0652c2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d7823611df5e02040fd8735e1fa6ea7841298836
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203018"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595051"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Métodos anónimos (Guía de programación de C#)
 En las versiones de C# anteriores a 2.0, la única manera de declarar un [delegado](../../../csharp/language-reference/keywords/delegate.md) era usar [métodos con nombre](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 introdujo los métodos anónimos y en C# 3.0 y versiones posteriores, las expresiones lambda reemplazan a los métodos anónimos como la manera preferida de escribir código en línea. En cambio, la información sobre los métodos anónimos de este tema también se aplica a las expresiones lambda. Existe un caso en el que un método anónimo proporciona funciones que no se encuentran en las expresiones lambda. Los métodos anónimos le permiten omitir la lista de parámetros. Esto significa que un método anónimo puede convertirse en delegados con una variedad de firmas. Esto no es posible con las expresiones lambda. Para obtener más información específica sobre las expresiones lambda, vea [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -49,9 +49,9 @@ En las versiones de C# anteriores a 2.0, la única manera de declarar un [delega
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestran dos maneras de crear instancias de un delegado:  
   
--   Asociar el delegado con un método anónimo.  
+- Asociar el delegado con un método anónimo.  
   
--   Asociar el delegado con un método con nombre (`DoWork`).  
+- Asociar el delegado con un método con nombre (`DoWork`).  
   
  En cada caso, se muestra un mensaje cuando se invoca al delegado.  
   

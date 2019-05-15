@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 633d378b2336b3ee166375a923252e0477e75127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591666"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Procedimiento para especificar el contexto de seguridad de los servicios
 De forma predeterminada, los servicios se ejecutan en un contexto de seguridad diferente al del usuario que ha iniciado sesión. Los servicios se ejecutan en el contexto de la cuenta del sistema predeterminado, llamada `LocalSystem`, que les da diferentes privilegios de acceso a los recursos del sistema que el usuario. Puede cambiar este comportamiento para especificar una cuenta de usuario diferente bajo la cual se debe ejecutar el servicio.  
   
  Se establece el contexto de seguridad mediante la manipulación de la propiedad <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> para el proceso dentro del cual se ejecuta el servicio. Esta propiedad le permite establecer el servicio en uno de los cuatro tipos de cuenta:  
   
--   `User`, lo que hace que el sistema solicite un nombre de usuario y una contraseña válidos cuando el servicio está instalado y se ejecuta en el contexto de una cuenta especificada por un único usuario en la red;  
+- `User`, lo que hace que el sistema solicite un nombre de usuario y una contraseña válidos cuando el servicio está instalado y se ejecuta en el contexto de una cuenta especificada por un único usuario en la red;  
   
--   `LocalService`, que se ejecuta en el contexto de una cuenta que actúa como usuario sin privilegios en el equipo local y presenta credenciales anónimas a cualquier servidor remoto;  
+- `LocalService`, que se ejecuta en el contexto de una cuenta que actúa como usuario sin privilegios en el equipo local y presenta credenciales anónimas a cualquier servidor remoto;  
   
--   `LocalSystem`, que se ejecuta en el contexto de una cuenta que proporciona amplios privilegios locales y presenta las credenciales del equipo a cualquier servidor remoto;  
+- `LocalSystem`, que se ejecuta en el contexto de una cuenta que proporciona amplios privilegios locales y presenta las credenciales del equipo a cualquier servidor remoto;  
   
--   Para otras tareas, considere la posibilidad de usar la cuenta `NetworkService`, que actúa como un usuario sin privilegios en el equipo local y presenta credenciales del equipo a cualquier servidor remoto.  
+- Para otras tareas, considere la posibilidad de usar la cuenta `NetworkService`, que actúa como un usuario sin privilegios en el equipo local y presenta credenciales del equipo a cualquier servidor remoto.  
   
  Para obtener más información, vea la enumeración <xref:System.ServiceProcess.ServiceAccount>.  
   

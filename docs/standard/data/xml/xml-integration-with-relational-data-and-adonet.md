@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831987"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589808"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integración de XML con datos relacionales y ADO.NET
 La clase **XmlDataDocument** se deriva de **XmlDocument**, y contiene datos XML. La ventaja que aporta la clase **XmlDataDocument** es que proporciona un puente entre los datos relacionales y jerárquicos. Se trata de una clase **XmlDocument** que puede enlazarse con otra **DataSet** para sincronizar cambios realizados en los datos incluidos en las dos clases. Una clase **XmlDocument** que está enlazada con otra **DataSet** permite a XML integrarse con datos relacionales, sin necesidad de que los datos estén representados ni en formato XML ni relacional. Se pueden hacer ambas cosas sin necesidad de restringirse a una única representación de los datos.  
   
  Las ventajas de tener los datos disponibles en dos vistas son las siguientes:  
   
--   La parte estructurada de un documento XML puede asignarse a un conjunto de datos y ser almacenada, indizada y buscada de forma eficaz.  
+- La parte estructurada de un documento XML puede asignarse a un conjunto de datos y ser almacenada, indizada y buscada de forma eficaz.  
   
--   Las transformaciones, validación y navegación en los datos XML que están almacenados de forma relacional se pueden realizar eficazmente mediante un modelo de cursor. En ocasiones, se puede realizar de forma más eficaz en estructuras relacionales que si el código XML está almacenado en un modelo **XmlDocument**.  
+- Las transformaciones, validación y navegación en los datos XML que están almacenados de forma relacional se pueden realizar eficazmente mediante un modelo de cursor. En ocasiones, se puede realizar de forma más eficaz en estructuras relacionales que si el código XML está almacenado en un modelo **XmlDocument**.  
   
--   La clase **DataSet** puede almacenar una parte del código XML. Es decir, se puede usar **XPath** o **XslTransform** para almacenar en una clase **DataSet** solo aquellos elementos y atributos que resulten de interés. A partir de aquí, se pueden realizar cambios en un subconjunto más pequeño y filtrado de datos y hacer que los cambios se propaguen a un conjunto mayor de datos en la clase **XmlDataDocument**.  
+- La clase **DataSet** puede almacenar una parte del código XML. Es decir, se puede usar **XPath** o **XslTransform** para almacenar en una clase **DataSet** solo aquellos elementos y atributos que resulten de interés. A partir de aquí, se pueden realizar cambios en un subconjunto más pequeño y filtrado de datos y hacer que los cambios se propaguen a un conjunto mayor de datos en la clase **XmlDataDocument**.  
   
  Asimismo, se puede ejecutar una transformación sobre los datos que se cargaron en **DataSet** a partir del servidor SQL Server. Otra opción es enlazar controles de WinForms y WebForms del estilo de las clases administradas de .NET Framework con una clase **DataSet** que se haya llenado a partir de un flujo de entrada.  
   

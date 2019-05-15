@@ -2,12 +2,12 @@
 title: Refactorizar en funciones puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497136"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596893"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactorizar en funciones puras (C#)
 
@@ -18,9 +18,9 @@ Un aspecto importante de las transformaciones funcionales puras es aprender cóm
   
  Tal como se indicó previamente en esta sección, una función pura tiene dos características útiles:  
   
--   No tiene efectos secundarios. La función no cambia variables o datos de ningún tipo fuera de la función.  
+- No tiene efectos secundarios. La función no cambia variables o datos de ningún tipo fuera de la función.  
   
--   Es coherente. Con el mismo conjunto de datos de entrada, siempre devolverá el mismo valor de salida.  
+- Es coherente. Con el mismo conjunto de datos de entrada, siempre devolverá el mismo valor de salida.  
   
  Una forma de realizar una transición a la programación funcional es refactorizar código existente para eliminar efectos secundarios innecesarios y dependencias externas. De esta forma puede crear versiones de función pura del código existente.  
   

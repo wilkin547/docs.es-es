@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e780ed7e841809f21130822babe55ad4935670
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 363410baea1706211acaa639f1704e91230723a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592734"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>Trabajar con ensamblados y la memoria caché global de ensamblados
 Si se piensa compartir un ensamblado entre varias aplicaciones, puede instalarlo en la caché global de ensamblados. Cada equipo tiene esta memoria caché de código donde se instala Common Language Runtime. La caché global de ensamblados almacena los ensamblados designados específicamente para ser compartidos por varias aplicaciones del equipo. Un ensamblado debe tener un nombre seguro para que se pueda instalar en la caché global de ensamblados.  
@@ -27,32 +27,32 @@ Si se piensa compartir un ensamblado entre varias aplicaciones, puede instalarlo
   
  Existen varias razones para instalar un ensamblado en la caché global de ensamblados:  
   
--   Ubicación compartida.  
+- Ubicación compartida.  
   
      Los ensamblados que van a usar las aplicaciones se pueden poner en la caché global de ensamblados. Por ejemplo, si todas las aplicaciones deben usar un ensamblado ubicado en la caché global de ensamblados, se puede agregar una instrucción de directiva de versión al archivo Machine.config que redirige las referencias al ensamblado.  
   
--   Seguridad de archivos.  
+- Seguridad de archivos.  
   
      Con frecuencia, los administradores protegen el directorio systemroot con una Lista de control de acceso (ACL) para controlar el acceso de escritura y ejecución. Puesto que la caché global de ensamblados está instalada en el directorio systemroot, hereda la lista (ACL) de dicho directorio. Es recomendable que sólo puedan eliminar archivos de la caché global de ensamblados los usuarios que tengan privilegios de administrador.  
   
--   Control de versiones en paralelo.  
+- Control de versiones en paralelo.  
   
      En la caché global de ensamblados se pueden guardar muchas copias de ensamblados con el mismo nombre pero con distinta información de versión.  
   
--   Ubicación de búsqueda adicional.  
+- Ubicación de búsqueda adicional.  
   
      Common Language Runtime busca en la caché global de ensamblados un ensamblado que coincida con la solicitud de ensamblado antes de buscar o utilizar la información de código base en un archivo de configuración.  
   
  Tenga en cuenta que hay escenarios en los que no deseará instalar un ensamblado en la memoria caché global de ensamblados. Si coloca uno de los ensamblados que componen una aplicación en la memoria caché global de ensamblados, ya no podrá replicar ni instalar la aplicación utilizando XCOPY para copiar el directorio de la aplicación. En este caso, debe mover también el ensamblado a la caché global de ensamblados.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Instalar un ensamblado en la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Cómo: Instalar un ensamblado en la caché global de ensamblados](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  Describe las formas de instalar un ensamblado en la caché global de ensamblados.  
   
- [Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
+ [Cómo: Consultar el contenido de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-view-the-contents-of-the-gac.md)  
  Explica cómo usar [Gacutil.exe (herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para ver el contenido de la caché global de ensamblados.  
   
- [Quitar un ensamblado de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+ [Cómo: Quitar un ensamblado de la memoria caché global de ensamblados](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  Explica cómo usar [Gacutil.exe (herramienta Caché global de ensamblados)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) para quitar un ensamblado de la caché global de ensamblados.  
   
  [Utilizar componentes con servicio junto con la memoria caché global de ensamblados](../../../docs/framework/app-domains/use-serviced-components-with-the-gac.md)  
@@ -65,7 +65,7 @@ Si se piensa compartir un ensamblado entre varias aplicaciones, puede instalarlo
  [Caché global de ensamblados](../../../docs/framework/app-domains/gac.md)  
  Describe la caché global de ensamblados.  
   
- [Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+ [Cómo: Ver el contenido de un ensamblado](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
  Explica cómo usar [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para ver la información del Lenguaje intermedio de Microsoft (MSIL) de un ensamblado.  
   
  [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  

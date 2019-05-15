@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30036df99559c67a3b11a5c651053dc644267bbb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315548"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592456"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedimiento para definir un tipo genérico con emisión de reflexión
 En este tema se muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo, y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.  
@@ -129,11 +129,11 @@ En este tema se muestra cómo crear un tipo genérico simple con dos parámetros
   
 ## <a name="compiling-the-code"></a>Compilar el código  
   
--   El código contiene las instrucciones `using` de C# (`Imports` en Visual Basic) necesarias para la compilación.  
+- El código contiene las instrucciones `using` de C# (`Imports` en Visual Basic) necesarias para la compilación.  
   
--   No se requiere ninguna referencia de ensamblado adicional.  
+- No se requiere ninguna referencia de ensamblado adicional.  
   
--   Compile el código en la línea de comandos mediante csc.exe, vbc.exe o cl.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
+- Compile el código en la línea de comandos mediante csc.exe, vbc.exe o cl.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
 ## <a name="see-also"></a>Vea también
 

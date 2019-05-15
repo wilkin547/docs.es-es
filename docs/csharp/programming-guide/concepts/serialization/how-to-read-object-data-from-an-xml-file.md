@@ -2,12 +2,12 @@
 title: Procedimiento para leer datos de objetos en un archivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 33e4395c2be421385948d256a989d06ac215c9c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2608c737744f5c0789c69147063f9ced0ffd6d9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583491"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595240"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Procedimiento para leer datos de objetos en un archivo XML (C#)
 En este ejemplo se leen los datos de objetos que se han escrito anteriormente en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -52,11 +52,11 @@ public void ReadXML()
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  
   
--   La clase que se está serializando no tiene un constructor público sin parámetros.  
+- La clase que se está serializando no tiene un constructor público sin parámetros.  
   
--   Los datos del archivo no representan los datos de la clase que se va a deserializar.  
+- Los datos del archivo no representan los datos de la clase que se va a deserializar.  
   
--   El archivo no existe (<xref:System.IO.IOException>).  
+- El archivo no existe (<xref:System.IO.IOException>).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Compruebe siempre las entradas y nunca deserialice datos de un origen que no sea de confianza. El objeto que se ha vuelto a crear se ejecuta en un equipo local con los permisos del código que lo ha deserializado. Compruebe todas las entradas antes de utilizar los datos en la aplicación.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
-ms.openlocfilehash: 2edaf8c823f228ecb50a256961fe78980826d7f2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ab6c5029518cbe5deb0f2c5a16c99992022d7a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203722"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595467"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>Usar excepciones (Guía de programación de C#)
 En C#, los errores del programa en tiempo de ejecución se propagan a través del programa mediante un mecanismo denominado excepciones. Las excepciones las inicia el código que encuentra un error y las detecta el código que puede corregir dicho error. Las excepciones puede iniciarlas .NET Framework Common Language Runtime o el código de un programa. Una vez iniciada, una excepción se propaga hasta la pila de llamadas hasta que encuentra una instrucción `catch` para la excepción. Las excepciones no detectadas se controlan mediante un controlador de excepciones que ofrece el sistema y muestra un cuadro de diálogo.  
@@ -38,11 +38,11 @@ En C#, los errores del programa en tiempo de ejecución se propagan a través de
   
  Si no se encuentra ningún bloque `catch` compatible en la pila de llamadas después de iniciar una excepción, sucede una de estas tres acciones:  
   
--   Si la excepción se encuentra en un finalizador, este se anula y, si procede, se llama al finalizador base.  
+- Si la excepción se encuentra en un finalizador, este se anula y, si procede, se llama al finalizador base.  
   
--   Si la pila de llamadas contiene un constructor estático o un inicializador de campo estático, se inicia una excepción <xref:System.TypeInitializationException>, y la excepción original se asigna a la propiedad <xref:System.Exception.InnerException%2A> de la nueva excepción.  
+- Si la pila de llamadas contiene un constructor estático o un inicializador de campo estático, se inicia una excepción <xref:System.TypeInitializationException>, y la excepción original se asigna a la propiedad <xref:System.Exception.InnerException%2A> de la nueva excepción.  
   
--   Si se llega al comienzo del subproceso, este finaliza.  
+- Si se llega al comienzo del subproceso, este finaliza.  
   
 ## <a name="see-also"></a>Vea también
 
