@@ -4,12 +4,12 @@
     - name: Búferes de tamaño fijo
       href: fixed-size-buffers.md
     - name: Tipos de puntero
-      href: pointer-types.md
       items:
+        - name: Información general
+          href: pointer-types.md
         - name: Conversiones de puntero
           href: pointer-conversions.md
         - name: Expresiones de puntero
-          href: pointer-expressions.md
           items:
             - name: Procedimiento para obtener el valor de una variable de puntero
               href: how-to-obtain-the-value-of-a-pointer-variable.md
@@ -20,7 +20,6 @@
             - name: Procedimiento para obtener acceso a un elemento de matriz con un puntero
               href: how-to-access-an-array-element-with-a-pointer.md
             - name: Manipulación de punteros
-              href: manipulating-pointers.md
               items:
                 - name: Procedimiento para aumentar y disminuir punteros
                   href: how-to-increment-and-decrement-pointers.md
