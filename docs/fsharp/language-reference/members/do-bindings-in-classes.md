@@ -2,12 +2,12 @@
 title: Enlaces do en clases
 description: Aprenda a usar un F# 'do' enlace en una definición de clase, que realiza acciones cuando se construye el objeto o cuando se usa el tipo por primera vez.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0ddf2b5ca458d0950c2e07bf2c37c205877e2173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c924c882974989436d8ea404ebee0a7ef3c54fd3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904597"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641798"
 ---
 # <a name="do-bindings-in-classes"></a>Enlaces do en clases
 

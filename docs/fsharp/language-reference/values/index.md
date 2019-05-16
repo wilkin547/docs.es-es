@@ -2,12 +2,12 @@
 title: Valores
 description: Obtenga información sobre cómo los valores de F# son cantidades que tienen un tipo específico.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5c1d4f1e59cbf092911d99a725654042bf3383b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902192"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641630"
 ---
 # <a name="values"></a>Valores
 

@@ -2,12 +2,12 @@
 title: Unidades de medida
 description: Obtenga información de punto flotante cómo y valores enteros con signo F# pueden tener asociados a las unidades de medida, que normalmente se utilizan para indicar la longitud, el volumen y masivo.
 ms.date: 05/16/2016
-ms.openlocfilehash: 935dbff3545f92736ce8c51de86a168429dc194f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982545"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641635"
 ---
 # <a name="units-of-measure"></a>Unidades de medida
 

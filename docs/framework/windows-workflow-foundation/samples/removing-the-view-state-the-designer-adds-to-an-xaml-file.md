@@ -2,12 +2,12 @@
 title: Quitar el estado de vista, el diseñador agrega a un archivo XAML - WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: 71a2aadeefd53b391f4589ed9dc32d9cd6e3183a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af57f838ea12d7199268988bf01baa0b61447650
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004944"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637859"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Quitar el estado de vista, el diseñador agrega a un archivo XAML
 

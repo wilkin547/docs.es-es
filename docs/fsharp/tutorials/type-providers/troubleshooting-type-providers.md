@@ -2,12 +2,12 @@
 title: Solución de problemas en proveedores de tipos
 description: Detectar posibles soluciones para los problemas que es más probable que encuentre al usar los tipos de proveedores en F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6c675720e0b7c306a2916c94d8096d2f09c0daca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968225"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645045"
 ---
 # <a name="troubleshooting-type-providers"></a>Solución de problemas en proveedores de tipos
 

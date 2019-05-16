@@ -2,12 +2,12 @@
 title: Descargar el paquete de validación del Registro de nombres de emisores
 ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
-ms.openlocfilehash: 833a0722fdd27df4e488ed7fac99444c6d9b8905
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5684844f1db33b075df099b3026d9d0c1061199f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940587"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631845"
 ---
 # <a name="download-the-validating-issuer-name-registry-package"></a>Descargue el paquete de registro de nombres de validación del emisor
 

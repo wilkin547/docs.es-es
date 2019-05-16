@@ -2,12 +2,12 @@
 title: 'Bucles: expresión while...do'
 description: Vea cómo el while... hacer expresión se utiliza para realizar la ejecución iterativa (bucle) mientras una condición de prueba especificada es true.
 ms.date: 05/16/2016
-ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5823ace27348ff4d4397a726bf2254f8fa0ee09b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904025"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641832"
 ---
 # <a name="loops-whiledo-expression"></a>Bucles: expresión while...do
 

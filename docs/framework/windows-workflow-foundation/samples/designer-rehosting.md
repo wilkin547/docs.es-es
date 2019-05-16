@@ -2,12 +2,12 @@
 title: Rehospedaje del diseñador
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 26878be2aec03f83c5ec0d65e415f75691601d0a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 360bf66b235d2cb4297f9bd69a3d7328706fb365
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588669"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635579"
 ---
 # <a name="designer-rehosting"></a>Rehospedaje del diseñador
 El rehospedaje del diseñador es un escenario común que hace referencia al hospedaje del lienzo de diseño de flujo de trabajo dentro de una aplicación personalizada. La aplicación de hospedaje con la que están familiarizados la mayoría de los usuarios es Visual Studio; sin embargo, hay varios escenarios donde puede resultar útil mostrar el diseñador de flujo de trabajo en una aplicación:  

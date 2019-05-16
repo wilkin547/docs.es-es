@@ -2,12 +2,12 @@
 title: Directivas de compilador
 description: Obtenga información sobre F# las directivas de preprocesador de lenguaje, directivas de compilación condicional, las directivas de línea y las directivas de compilador.
 ms.date: 12/10/2018
-ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b62fb930a3b0c55103d6b0edbe20ae056ba86bd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766108"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645485"
 ---
 # <a name="compiler-directives"></a>Directivas de compilador
 

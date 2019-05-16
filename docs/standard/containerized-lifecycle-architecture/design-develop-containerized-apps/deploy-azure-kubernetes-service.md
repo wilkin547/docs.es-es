@@ -1,15 +1,13 @@
 ---
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Obtenga información sobre cómo implementar una aplicación con Azure Kubernetes Service.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006556"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644635"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Implementación en Azure Kubernetes Service (AKS)
 
