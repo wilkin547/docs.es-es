@@ -2,12 +2,12 @@
 title: 'Excepciones: Función invalidArg'
 description: Obtenga información sobre cómo el F# 'invalidArg' función genera una excepción de argumento.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f0cbc9b7e805822544d6d54bc1fc69adf82967a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996890"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645493"
 ---
 # <a name="exceptions-the-invalidarg-function"></a>Excepciones: Función invalidArg
 
