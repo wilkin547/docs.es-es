@@ -1,1 +1,9 @@
-<span data-ttu-id="671c9-101">XPS</span><span class="sxs-lookup"><span data-stu-id="671c9-101">XPS</span></span>
+---
+ms.openlocfilehash: daa7635df675238bf2054da48cff433e735855f9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672315"
+---
+<span data-ttu-id="a3046-101">XPS</span><span class="sxs-lookup"><span data-stu-id="a3046-101">XPS</span></span>

@@ -1,1 +1,9 @@
-<span data-ttu-id="b7867-101">BMP</span><span class="sxs-lookup"><span data-stu-id="b7867-101">BMP</span></span>
+---
+ms.openlocfilehash: 6aa0c1f30ba09f81fb1b832c34a96a4dc524f7e7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671224"
+---
+<span data-ttu-id="3c479-101">BMP</span><span class="sxs-lookup"><span data-stu-id="3c479-101">BMP</span></span>

@@ -16,20 +16,20 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e42cf3440bef030f5c7bec71ed1b4b875b79a61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42bef9ab728af251b043e29af4cee9e5cb3f405d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000277"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636547"
 ---
-# <a name="qualifiersetput-function"></a><span data-ttu-id="55f6a-103">Función QualifierSet_Put</span><span class="sxs-lookup"><span data-stu-id="55f6a-103">QualifierSet_Put function</span></span>
+# <a name="qualifiersetput-function"></a><span data-ttu-id="f2f83-103">Función QualifierSet_Put</span><span class="sxs-lookup"><span data-stu-id="f2f83-103">QualifierSet_Put function</span></span>
 
-<span data-ttu-id="55f6a-104">Escribe el calificador y el valor con nombre.</span><span class="sxs-lookup"><span data-stu-id="55f6a-104">Writes the named qualifier and value.</span></span> <span data-ttu-id="55f6a-105">El nuevo calificador sobrescribe el valor anterior del mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="55f6a-105">The new qualifier overwrites the previous value of the same name.</span></span> <span data-ttu-id="55f6a-106">Si el calificador no existe, se crea.</span><span class="sxs-lookup"><span data-stu-id="55f6a-106">If the qualifier does not exist, it is created.</span></span>
+<span data-ttu-id="f2f83-104">Escribe el calificador y el valor con nombre.</span><span class="sxs-lookup"><span data-stu-id="f2f83-104">Writes the named qualifier and value.</span></span> <span data-ttu-id="f2f83-105">El nuevo calificador sobrescribe el valor anterior del mismo nombre.</span><span class="sxs-lookup"><span data-stu-id="f2f83-105">The new qualifier overwrites the previous value of the same name.</span></span> <span data-ttu-id="f2f83-106">Si el calificador no existe, se crea.</span><span class="sxs-lookup"><span data-stu-id="f2f83-106">If the qualifier does not exist, it is created.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
-## <a name="syntax"></a><span data-ttu-id="55f6a-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="55f6a-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="f2f83-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f2f83-107">Syntax</span></span>
 
 ```cpp
 HRESULT QualifierSet_Put (
@@ -41,55 +41,55 @@ HRESULT QualifierSet_Put (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="55f6a-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="55f6a-108">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="f2f83-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f2f83-108">Parameters</span></span>
 
 `vFunc`\
-<span data-ttu-id="55f6a-109">[in] Este parámetro se usa.</span><span class="sxs-lookup"><span data-stu-id="55f6a-109">[in] This parameter is unused.</span></span>
+<span data-ttu-id="f2f83-109">[in] Este parámetro se usa.</span><span class="sxs-lookup"><span data-stu-id="f2f83-109">[in] This parameter is unused.</span></span>
 
 `ptr`\
-<span data-ttu-id="55f6a-110">[in] Un puntero a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instancia.</span><span class="sxs-lookup"><span data-stu-id="55f6a-110">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
+<span data-ttu-id="f2f83-110">[in] Un puntero a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instancia.</span><span class="sxs-lookup"><span data-stu-id="f2f83-110">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
 `wszName`\
-<span data-ttu-id="55f6a-111">[in] El nombre del calificador que se va a escribir.</span><span class="sxs-lookup"><span data-stu-id="55f6a-111">[in] The name of the qualifier to write.</span></span>
+<span data-ttu-id="f2f83-111">[in] El nombre del calificador que se va a escribir.</span><span class="sxs-lookup"><span data-stu-id="f2f83-111">[in] The name of the qualifier to write.</span></span>
 
 `pVal`\
-<span data-ttu-id="55f6a-112">[in] Un puntero a una `VARIANT` que contiene el calificador a escribir.</span><span class="sxs-lookup"><span data-stu-id="55f6a-112">[in] A pointer to a valid `VARIANT` that contains the qualifier to write.</span></span> <span data-ttu-id="55f6a-113">Este parámetro no puede ser `null`.</span><span class="sxs-lookup"><span data-stu-id="55f6a-113">This parameter cannot be `null`.</span></span>
+<span data-ttu-id="f2f83-112">[in] Un puntero a una `VARIANT` que contiene el calificador a escribir.</span><span class="sxs-lookup"><span data-stu-id="f2f83-112">[in] A pointer to a valid `VARIANT` that contains the qualifier to write.</span></span> <span data-ttu-id="f2f83-113">Este parámetro no puede ser `null`.</span><span class="sxs-lookup"><span data-stu-id="f2f83-113">This parameter cannot be `null`.</span></span>
 
 `lFlavor`\
-<span data-ttu-id="55f6a-114">[in] Una de las constantes siguientes que define los tipos de calificador deseado para este calificador.</span><span class="sxs-lookup"><span data-stu-id="55f6a-114">[in] One of the following constants that defines the desired qualifier flavors for this qualifier.</span></span> <span data-ttu-id="55f6a-115">El valor predeterminado es `WBEM_FLAVOR_OVERRIDABLE` (0).</span><span class="sxs-lookup"><span data-stu-id="55f6a-115">The default value is `WBEM_FLAVOR_OVERRIDABLE` (0).</span></span>
+<span data-ttu-id="f2f83-114">[in] Una de las constantes siguientes que define los tipos de calificador deseado para este calificador.</span><span class="sxs-lookup"><span data-stu-id="f2f83-114">[in] One of the following constants that defines the desired qualifier flavors for this qualifier.</span></span> <span data-ttu-id="f2f83-115">El valor predeterminado es `WBEM_FLAVOR_OVERRIDABLE` (0).</span><span class="sxs-lookup"><span data-stu-id="f2f83-115">The default value is `WBEM_FLAVOR_OVERRIDABLE` (0).</span></span>
 
-|<span data-ttu-id="55f6a-116">Constante</span><span class="sxs-lookup"><span data-stu-id="55f6a-116">Constant</span></span>  |<span data-ttu-id="55f6a-117">Valor</span><span class="sxs-lookup"><span data-stu-id="55f6a-117">Value</span></span>  |<span data-ttu-id="55f6a-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="55f6a-118">Description</span></span>  |
+|<span data-ttu-id="f2f83-116">Constante</span><span class="sxs-lookup"><span data-stu-id="f2f83-116">Constant</span></span>  |<span data-ttu-id="f2f83-117">Valor</span><span class="sxs-lookup"><span data-stu-id="f2f83-117">Value</span></span>  |<span data-ttu-id="f2f83-118">Descripción</span><span class="sxs-lookup"><span data-stu-id="f2f83-118">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_OVERRIDABLE` | <span data-ttu-id="55f6a-119">0</span><span class="sxs-lookup"><span data-stu-id="55f6a-119">0</span></span> | <span data-ttu-id="55f6a-120">El calificador se puede invalidar en una clase derivada o una instancia.</span><span class="sxs-lookup"><span data-stu-id="55f6a-120">The qualifier can be overridden in a derived class or instance.</span></span> <span data-ttu-id="55f6a-121">**Este es el valor predeterminado.**</span><span class="sxs-lookup"><span data-stu-id="55f6a-121">**This is the default value.**</span></span> |
-| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | <span data-ttu-id="55f6a-122">1</span><span class="sxs-lookup"><span data-stu-id="55f6a-122">1</span></span> | <span data-ttu-id="55f6a-123">El calificador se propaga a las instancias.</span><span class="sxs-lookup"><span data-stu-id="55f6a-123">The qualifier is propagated to instances.</span></span> |
-| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | <span data-ttu-id="55f6a-124">2</span><span class="sxs-lookup"><span data-stu-id="55f6a-124">2</span></span> | <span data-ttu-id="55f6a-125">El calificador se propaga a las clases derivadas.</span><span class="sxs-lookup"><span data-stu-id="55f6a-125">The qualifier is propagated to derived classes.</span></span> |
-| `WBEM_FLAVOR_NOT_OVERRIDABLE` | <span data-ttu-id="55f6a-126">0x10</span><span class="sxs-lookup"><span data-stu-id="55f6a-126">0x10</span></span> | <span data-ttu-id="55f6a-127">El calificador no puede invalidarse en una clase o instancia derivada.</span><span class="sxs-lookup"><span data-stu-id="55f6a-127">The qualifier cannot be overridden in a derived class or instance.</span></span> |
-| `WBEM_FLAVOR_AMENDED` | <span data-ttu-id="55f6a-128">0x80</span><span class="sxs-lookup"><span data-stu-id="55f6a-128">0x80</span></span> | <span data-ttu-id="55f6a-129">El calificador está localizado.</span><span class="sxs-lookup"><span data-stu-id="55f6a-129">The qualifier is localized.</span></span> |
+| `WBEM_FLAVOR_OVERRIDABLE` | <span data-ttu-id="f2f83-119">0</span><span class="sxs-lookup"><span data-stu-id="f2f83-119">0</span></span> | <span data-ttu-id="f2f83-120">El calificador se puede invalidar en una clase derivada o una instancia.</span><span class="sxs-lookup"><span data-stu-id="f2f83-120">The qualifier can be overridden in a derived class or instance.</span></span> <span data-ttu-id="f2f83-121">**Este es el valor predeterminado.**</span><span class="sxs-lookup"><span data-stu-id="f2f83-121">**This is the default value.**</span></span> |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | <span data-ttu-id="f2f83-122">1</span><span class="sxs-lookup"><span data-stu-id="f2f83-122">1</span></span> | <span data-ttu-id="f2f83-123">El calificador se propaga a las instancias.</span><span class="sxs-lookup"><span data-stu-id="f2f83-123">The qualifier is propagated to instances.</span></span> |
+| `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | <span data-ttu-id="f2f83-124">2</span><span class="sxs-lookup"><span data-stu-id="f2f83-124">2</span></span> | <span data-ttu-id="f2f83-125">El calificador se propaga a las clases derivadas.</span><span class="sxs-lookup"><span data-stu-id="f2f83-125">The qualifier is propagated to derived classes.</span></span> |
+| `WBEM_FLAVOR_NOT_OVERRIDABLE` | <span data-ttu-id="f2f83-126">0x10</span><span class="sxs-lookup"><span data-stu-id="f2f83-126">0x10</span></span> | <span data-ttu-id="f2f83-127">El calificador no puede invalidarse en una clase o instancia derivada.</span><span class="sxs-lookup"><span data-stu-id="f2f83-127">The qualifier cannot be overridden in a derived class or instance.</span></span> |
+| `WBEM_FLAVOR_AMENDED` | <span data-ttu-id="f2f83-128">0x80</span><span class="sxs-lookup"><span data-stu-id="f2f83-128">0x80</span></span> | <span data-ttu-id="f2f83-129">El calificador está localizado.</span><span class="sxs-lookup"><span data-stu-id="f2f83-129">The qualifier is localized.</span></span> |
 
-## <a name="return-value"></a><span data-ttu-id="55f6a-130">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="55f6a-130">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="f2f83-130">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="f2f83-130">Return value</span></span>
 
-<span data-ttu-id="55f6a-131">Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:</span><span class="sxs-lookup"><span data-stu-id="55f6a-131">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="f2f83-131">Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:</span><span class="sxs-lookup"><span data-stu-id="f2f83-131">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="55f6a-132">Constante</span><span class="sxs-lookup"><span data-stu-id="55f6a-132">Constant</span></span>  |<span data-ttu-id="55f6a-133">Valor</span><span class="sxs-lookup"><span data-stu-id="55f6a-133">Value</span></span>  |<span data-ttu-id="55f6a-134">Descripción</span><span class="sxs-lookup"><span data-stu-id="55f6a-134">Description</span></span>  |
+|<span data-ttu-id="f2f83-132">Constante</span><span class="sxs-lookup"><span data-stu-id="f2f83-132">Constant</span></span>  |<span data-ttu-id="f2f83-133">Valor</span><span class="sxs-lookup"><span data-stu-id="f2f83-133">Value</span></span>  |<span data-ttu-id="f2f83-134">Descripción</span><span class="sxs-lookup"><span data-stu-id="f2f83-134">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | <span data-ttu-id="55f6a-135">0x8004101f</span><span class="sxs-lookup"><span data-stu-id="55f6a-135">0x8004101f</span></span> | <span data-ttu-id="55f6a-136">Se produjo un intento no válido para especificar el **clave** calificador en una propiedad que no puede ser una clave.</span><span class="sxs-lookup"><span data-stu-id="55f6a-136">There was an illegal attempt to specify the **Key** qualifier on a property that cannot be a key.</span></span> <span data-ttu-id="55f6a-137">Las claves se especifican om c; la definición de clase para un objeto y no se pueden modificar por instancia.</span><span class="sxs-lookup"><span data-stu-id="55f6a-137">The keys are specified om tje c;ass definition for an object and cannot be altered on a per-instance basis.</span></span> |
-| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="55f6a-138">0x80041008</span><span class="sxs-lookup"><span data-stu-id="55f6a-138">0x80041008</span></span> | <span data-ttu-id="55f6a-139">Un parámetro no es válido.</span><span class="sxs-lookup"><span data-stu-id="55f6a-139">A parameter is not valid.</span></span> |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | <span data-ttu-id="55f6a-140">0x80041029</span><span class="sxs-lookup"><span data-stu-id="55f6a-140">0x80041029</span></span> | <span data-ttu-id="55f6a-141">El `pVal` parámetro no es de un tipo de calificador válido.</span><span class="sxs-lookup"><span data-stu-id="55f6a-141">The `pVal` parameter is not of a legal qualifier type.</span></span> |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | <span data-ttu-id="55f6a-142">0x8004101a</span><span class="sxs-lookup"><span data-stu-id="55f6a-142">0x8004101a</span></span> | <span data-ttu-id="55f6a-143">No es posible llamar a la `QualifierSet_Put` invalida el método en el calificador porque el objeto propietario no permite.</span><span class="sxs-lookup"><span data-stu-id="55f6a-143">It is not possible to call the `QualifierSet_Put` method on the qualifier because the owning object does not permit overrides.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="55f6a-144">0</span><span class="sxs-lookup"><span data-stu-id="55f6a-144">0</span></span> | <span data-ttu-id="55f6a-145">La llamada de función fue correcta.</span><span class="sxs-lookup"><span data-stu-id="55f6a-145">The function call was successful.</span></span>  |
+| `WBEM_E_CANNOT_BE_KEY` | <span data-ttu-id="f2f83-135">0x8004101f</span><span class="sxs-lookup"><span data-stu-id="f2f83-135">0x8004101f</span></span> | <span data-ttu-id="f2f83-136">Se produjo un intento no válido para especificar el **clave** calificador en una propiedad que no puede ser una clave.</span><span class="sxs-lookup"><span data-stu-id="f2f83-136">There was an illegal attempt to specify the **Key** qualifier on a property that cannot be a key.</span></span> <span data-ttu-id="f2f83-137">Las claves se especifican om c; la definición de clase para un objeto y no se pueden modificar por instancia.</span><span class="sxs-lookup"><span data-stu-id="f2f83-137">The keys are specified om tje c;ass definition for an object and cannot be altered on a per-instance basis.</span></span> |
+| `WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="f2f83-138">0x80041008</span><span class="sxs-lookup"><span data-stu-id="f2f83-138">0x80041008</span></span> | <span data-ttu-id="f2f83-139">Un parámetro no es válido.</span><span class="sxs-lookup"><span data-stu-id="f2f83-139">A parameter is not valid.</span></span> |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | <span data-ttu-id="f2f83-140">0x80041029</span><span class="sxs-lookup"><span data-stu-id="f2f83-140">0x80041029</span></span> | <span data-ttu-id="f2f83-141">El `pVal` parámetro no es de un tipo de calificador válido.</span><span class="sxs-lookup"><span data-stu-id="f2f83-141">The `pVal` parameter is not of a legal qualifier type.</span></span> |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | <span data-ttu-id="f2f83-142">0x8004101a</span><span class="sxs-lookup"><span data-stu-id="f2f83-142">0x8004101a</span></span> | <span data-ttu-id="f2f83-143">No es posible llamar a la `QualifierSet_Put` invalida el método en el calificador porque el objeto propietario no permite.</span><span class="sxs-lookup"><span data-stu-id="f2f83-143">It is not possible to call the `QualifierSet_Put` method on the qualifier because the owning object does not permit overrides.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="f2f83-144">0</span><span class="sxs-lookup"><span data-stu-id="f2f83-144">0</span></span> | <span data-ttu-id="f2f83-145">La llamada de función fue correcta.</span><span class="sxs-lookup"><span data-stu-id="f2f83-145">The function call was successful.</span></span>  |
 
-## <a name="remarks"></a><span data-ttu-id="55f6a-146">Comentarios</span><span class="sxs-lookup"><span data-stu-id="55f6a-146">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f2f83-146">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f2f83-146">Remarks</span></span>
 
-<span data-ttu-id="55f6a-147">Esta función contiene una llamada a la [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) método.</span><span class="sxs-lookup"><span data-stu-id="55f6a-147">This function wraps a call to the [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) method.</span></span>
+<span data-ttu-id="f2f83-147">Esta función contiene una llamada a la [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) método.</span><span class="sxs-lookup"><span data-stu-id="f2f83-147">This function wraps a call to the [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="55f6a-148">Requisitos</span><span class="sxs-lookup"><span data-stu-id="55f6a-148">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="f2f83-148">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f2f83-148">Requirements</span></span>
 
-<span data-ttu-id="55f6a-149">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="55f6a-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="f2f83-149">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f2f83-149">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="55f6a-150">**Encabezado**: WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="55f6a-150">**Header:** WMINet_Utils.idl</span></span>
+<span data-ttu-id="f2f83-150">**Encabezado**: WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="f2f83-150">**Header:** WMINet_Utils.idl</span></span>
 
-<span data-ttu-id="55f6a-151">**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="55f6a-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
+<span data-ttu-id="f2f83-151">**Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f2f83-151">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="55f6a-152">Vea también</span><span class="sxs-lookup"><span data-stu-id="55f6a-152">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2f83-152">Vea también</span><span class="sxs-lookup"><span data-stu-id="f2f83-152">See also</span></span>
 
-- [<span data-ttu-id="55f6a-153">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="55f6a-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+- [<span data-ttu-id="f2f83-153">WMI y contadores de rendimiento (referencia de API no administrada)</span><span class="sxs-lookup"><span data-stu-id="f2f83-153">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

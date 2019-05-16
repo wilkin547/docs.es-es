@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 36d1a903d6b46df90602486ced8c87dbf9187d6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a439408e0b217b8d70feba8e60a7e93c76602358
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667094"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670686"
 ---
-<span data-ttu-id="bdb2f-101">Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="bdb2f-101">WCF Data Services</span></span>
+<span data-ttu-id="fdc37-101">Servicios de datos de WCF</span><span class="sxs-lookup"><span data-stu-id="fdc37-101">WCF Data Services</span></span>

@@ -1,1 +1,9 @@
-<span data-ttu-id="91de1-101">HTTP</span><span class="sxs-lookup"><span data-stu-id="91de1-101">HTTP</span></span>
+---
+ms.openlocfilehash: ce6c08b35376c82ce2fa8e951520bbfc9f221c57
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669902"
+---
+<span data-ttu-id="e4f7c-101">HTTP</span><span class="sxs-lookup"><span data-stu-id="e4f7c-101">HTTP</span></span>
