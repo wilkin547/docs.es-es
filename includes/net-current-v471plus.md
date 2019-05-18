@@ -1,1 +1,0 @@
-<span data-ttu-id="a50df-101">Disponible desde la versión 4.7.1</span><span class="sxs-lookup"><span data-stu-id="a50df-101">Available since 4.7.1</span></span>
