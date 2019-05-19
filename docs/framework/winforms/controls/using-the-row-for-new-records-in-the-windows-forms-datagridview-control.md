@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651534"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882433"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Utilizar la fila de nuevos registros en el control DataGridView de formularios Windows Forms
 Cuando se usa un <xref:System.Windows.Forms.DataGridView> para modificar los datos en la aplicación, a menudo desea ofrecer a los usuarios la capacidad de agregar nuevas filas de datos al almacén de datos. El <xref:System.Windows.Forms.DataGridView> control admite esta funcionalidad proporcionando una fila para los nuevos registros, siempre se muestra como la última fila. Se marca con un símbolo de asterisco (*) en el encabezado de fila. Las secciones siguientes tratan algunas de las cosas que debe considerar cuando se programa con la fila de nuevos registros habilitada.  
@@ -47,7 +47,7 @@ Cuando se usa un <xref:System.Windows.Forms.DataGridView> para modificar los dat
 ## <a name="sorting"></a>Ordenar  
  En el modo independiente, nuevos registros siempre se agregarán al final de la <xref:System.Windows.Forms.DataGridView> incluso si el usuario haya ordenado el contenido de la <xref:System.Windows.Forms.DataGridView>. El usuario tendrá que vuelva a aplicar el criterio de ordenación para ordenar la fila a la posición correcta. Este comportamiento es similar de la <xref:System.Windows.Forms.ListView> control.  
   
- En datos modos enlazados y virtuales, el comportamiento de inserción cuando se aplica un criterio de ordenación será depende de la implementación del modelo de datos. Para [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], la fila se ordena inmediatamente en la posición correcta.  
+ En datos modos enlazados y virtuales, el comportamiento de inserción cuando se aplica un criterio de ordenación será depende de la implementación del modelo de datos. En ADO.NET, la fila se ordena inmediatamente en la posición correcta.  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>Otras notas en la fila para los nuevos registros  
  No puede establecer el <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> propiedad de esta fila en `false`. Un <xref:System.InvalidOperationException> se produce si se intentara.  

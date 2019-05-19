@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 9fead8a5d54fba7232831bba349f27b7eed4657b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d343f7be3e26575ee9a1e9ccae9f17314db10ac5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583790"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882114"
 ---
 # <a name="net-framework-data-providers"></a>Proveedores de datos .NET Framework
 Un proveedor de datos de .NET Framework se usa para conectarse a una base de datos, ejecutar comandos y recuperar resultados. Esos resultados se procesan directamente, se colocan en un <xref:System.Data.DataSet> con el fin de que el usuario pueda verlos cuando los necesite, se combinan con datos de varios orígenes o se utilizan de forma remota entre niveles. Proveedores de datos .NET framework son ligeros, crean un nivel mínimo entre el origen de datos y el código, aumentar el rendimiento sin sacrificar funcionalidad.  
@@ -74,7 +74,7 @@ using System.Data.SqlClient;
 ## <a name="net-framework-data-provider-for-ole-db"></a>Proveedor de datos .NET Framework para OLE DB  
  El proveedor de datos de .NET Framework para OLE DB (OleDb) usa OLE DB nativo mediante la interoperabilidad COM para habilitar el acceso a datos. El proveedor de datos de .NET Framework para OLE DB admite tanto transacciones locales como distribuidas. Para las transacciones distribuidas, el proveedor de datos de .NET Framework para OLE DB, de forma predeterminada, automáticamente se da de alta en una transacción y obtiene los detalles de los servicios de componentes de Windows. Para obtener más información, consulte [transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
- En la siguiente tabla se muestran los proveedores probados con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ La siguiente tabla muestra los proveedores que se han probado con ADO.NET.  
   
 |Controlador|Proveedor|  
 |------------|--------------|  
@@ -83,11 +83,11 @@ using System.Data.SqlClient;
 |Microsoft.Jet.OLEDB.4.0|Proveedor OLE DB para Microsoft Jet|  
   
 > [!NOTE]
->  No se recomienda el uso de una base de datos de Access (Jet) como origen de datos de aplicaciones multiproceso, como las aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] . Si debe utilizar Jet como origen de datos para una aplicación [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] , ha de ser consciente de que las aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que se conectan a una base de datos Access pueden tener problemas de conexión.  
+>  No se recomienda usar una base de datos de Access (Jet) como origen de datos para aplicaciones multiproceso, como las aplicaciones ASP.NET. Si debe utilizar Jet como origen de datos para una aplicación ASP.NET, tenga en cuenta que las aplicaciones de ASP.NET para conectarse a una base de datos pueden tener problemas de conexión.  
   
  El proveedor de datos de .NET Framework para OLE DB no admite interfaces de la versión 2.5 de OLE DB. Los proveedores OLE DB que requieren compatibilidad con interfaces OLE DB 2.5 no funcionará correctamente con el proveedor de datos de .NET Framework para OLE DB. Entre ellos se incluye el proveedor Microsoft OLE DB para Exchange y el proveedor Microsoft OLE DB para la publicación en Internet.  
   
- El proveedor de datos de .NET Framework para OLE DB no funciona con el proveedor OLE DB para ODBC (MSDASQL). Para obtener acceso a un origen de datos ODBC mediante [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], utilice el proveedor de datos de .NET Framework para ODBC.  
+ El proveedor de datos de .NET Framework para OLE DB no funciona con el proveedor OLE DB para ODBC (MSDASQL). Para obtener acceso a un origen de datos ODBC mediante ADO.NET, utilice el proveedor de datos de .NET Framework para ODBC.  
   
  Proveedor de datos de .NET framework para OLE DB clases se encuentran en el <xref:System.Data.OleDb> espacio de nombres. En el siguiente ejemplo de código se muestra cómo puede incluir el espacio de nombres `System.Data.OleDb` en sus aplicaciones.  
   
@@ -102,7 +102,7 @@ using System.Data.OleDb;
 ## <a name="net-framework-data-provider-for-odbc"></a>Proveedor de datos .NET Framework para ODBC  
  El proveedor de datos de .NET Framework para ODBC (Odbc) utiliza el Administrador de controladores de ODBC (Nativos) para habilitar el acceso a datos. El proveedor de datos de ODBC admite tanto transacciones locales como transacciones distribuidas. En el caso de las transacciones distribuidas, el proveedor de datos OBDC se inscribe de forma predeterminada y automática en una transacción y obtiene los detalles a través de los servicios de componentes de Windows. Para obtener más información, consulte [transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md).  
   
- En la siguiente tabla se muestran los controladores ODBC que se han probado con [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ La siguiente tabla muestra los controladores ODBC que se han probado con ADO.NET.  
   
 |Controlador|  
 |------------|  

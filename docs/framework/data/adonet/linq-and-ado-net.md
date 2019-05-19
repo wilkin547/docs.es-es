@@ -2,12 +2,12 @@
 title: LINQ y ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 79d6c52656e545c07260f3a97b089c238a74db3c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583488"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878329"
 ---
 # <a name="linq-and-adonet"></a>LINQ y ADO.NET
 En la actualidad, muchos programadores empresariales deben usar dos (o más) lenguajes de programación: un lenguaje de alto nivel para las capas de presentación y lógica de negocios (por ejemplo, Visual C# o Visual Basic) y un lenguaje de consulta para interactuar con la base de datos (como [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Esto requiere que el programador tenga conocimientos de varios idiomas para ser efectivo y también causa discrepancias de idiomas en el entorno de desarrollo. Por ejemplo, una aplicación que utiliza API de acceso a datos para ejecutar una consulta en una base de datos especifica la consulta como un literal de cadena usando comillas. Esta cadena de consulta es ilegible y no se comprueba si contiene errores, tales como una sintaxis no válida o si existen las columnas o las filas a las que hace referencia. No hay ninguna comprobación de tipo de los parámetros de consulta y tampoco hay compatibilidad con `IntelliSense`.  
@@ -27,7 +27,7 @@ En la actualidad, muchos programadores empresariales deben usar dos (o más) len
  En las siguientes secciones se proporciona más información acerca de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] y [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- <xref:System.Data.DataSet> es un elemento fundamental del modelo de programación desconectada sobre el que se basa [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] y se usa ampliamente. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] permite a los programadores crear capacidades de consulta más complejas en <xref:System.Data.DataSet> utilizando el mismo mecanismo de formulación de consultas que está disponible para muchos otros orígenes de datos. Para más información, vea [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+ El <xref:System.Data.DataSet> es un elemento fundamental del modelo de programación desconectado que se basa en ADO.NET y se usa ampliamente. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] permite a los programadores crear capacidades de consulta más complejas en <xref:System.Data.DataSet> utilizando el mismo mecanismo de formulación de consultas que está disponible para muchos otros orígenes de datos. Para más información, vea [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] es una herramienta útil para programadores que no requieren la asignación a un modelo conceptual. Si utiliza [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], puede usar el modelo de programación de [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] directamente en un esquema de base de datos existente. [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] permite a los programadores generar clases de .NET Framework que representan datos. En lugar de la asignación a un modelo de datos conceptual, esas clases generadas se asignan directamente a tablas de bases de datos, vistas, procedimientos almacenados y funciones definidas por el usuario.  

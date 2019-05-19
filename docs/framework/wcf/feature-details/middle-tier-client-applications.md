@@ -2,18 +2,18 @@
 title: Aplicaciones cliente de nivel intermedio
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649440"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877470"
 ---
 # <a name="middle-tier-client-applications"></a>Aplicaciones cliente de nivel intermedio
 En este tema se describe varios problemas específicos de las aplicaciones de cliente de nivel intermedio que usan Windows Communication Foundation (WCF).  
   
 ## <a name="increasing-middle-tier-client-performance"></a>Aumentar el rendimiento del cliente de nivel intermedio  
- En comparación con las tecnologías de comunicación anteriores, como servicios Web mediante [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], la creación de una instancia de cliente WCF puede ser más compleja debido al conjunto completo de características de WCF. Por ejemplo, cuando se abre un objeto <xref:System.ServiceModel.ChannelFactory%601>, éste puede establecer una sesión segura con el servicio, un procedimiento que aumenta el tiempo de inicio de la instancia del cliente. Normalmente, estas características adicionales no afectan a las aplicaciones cliente en gran medida puesto que el cliente de WCF hace varias llamadas y, a continuación, se cierra.  
+ En comparación con las tecnologías de comunicación anteriores, como los servicios Web mediante ASP.NET, la creación de una instancia de cliente WCF puede ser más compleja debido al conjunto completo de características de WCF. Por ejemplo, cuando se abre un objeto <xref:System.ServiceModel.ChannelFactory%601>, éste puede establecer una sesión segura con el servicio, un procedimiento que aumenta el tiempo de inicio de la instancia del cliente. Normalmente, estas características adicionales no afectan a las aplicaciones cliente en gran medida puesto que el cliente de WCF hace varias llamadas y, a continuación, se cierra.  
   
  Las aplicaciones cliente de nivel intermedio, sin embargo, pueden crear rápidamente muchos objetos de cliente WCF y, como resultado, experimentar los requisitos de inicialización de una mayor. Existen dos enfoques principales para aumentar el rendimiento de aplicaciones de nivel intermedio durante la llamada a los servicios:  
   

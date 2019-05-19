@@ -2,12 +2,12 @@
 title: Novedades de Windows Workflow Foundation en .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671423"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876660"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novedades de Windows Workflow Foundation en .NET 4.5
 
@@ -118,7 +118,7 @@ En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], las variabl
 
 En la captura de pantalla siguiente se muestra el menú contextual del diseñador de variables y argumentos.
 
-![Variables y menú contextual del Diseñador de argumento](./media/designercontextmenu.png "DesignerContextMenu")
+![Menú contextual del diseñador de variables y argumentos](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> Función de rodear automáticamente con secuencia
 
@@ -126,11 +126,11 @@ Debido a que un flujo de trabajo o determinadas actividades de contenedor (como 
 
 La captura de pantalla siguiente muestra una actividad `WriteLine` en `Body` de `NoPersistScope`.
 
-![Auto&#45;rodear la ubicación de destino](./media/autosurround1.png "AutoSurround1")
+![Una actividad WriteLine en el cuerpo de una actividad NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 La captura de pantalla siguiente muestra la actividad `Sequence` creada automáticamente en `Body` cuando se coloca un segundo elemento `WriteLine` debajo del primero.
 
-![Actividad sequence creada automáticamente](./media/autosurround2.png "AutoSurround2")
+![Una secuencia creada automáticamente en el cuerpo de un NoPersistScope.](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> Modo panorámico
 
@@ -138,7 +138,7 @@ Para navegar con mayor facilidad en un flujo de trabajo grande en el diseñador,
 
 En la captura de pantalla siguiente se muestra el botón de panorámica que se encuentra en la esquina inferior derecha del diseñador de flujo de trabajo.
 
-![Botón de panorámica en el Diseñador de flujo de trabajo](./media/panbutton.png "PanButton")
+![El botón de panorámica resaltado en el Diseñador de flujo de trabajo.](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 El botón central del mouse o la barra espaciadora también se pueden usar para aplicar la panorámica al diseñador de flujo de trabajo.
 
@@ -154,7 +154,7 @@ Para que sea más fácil navegar en los flujos de trabajo jerárquicos, los comp
 
 Captura de pantalla siguiente del flujo de trabajo completada desde la [Tutorial de introducción](getting-started-tutorial.md) muestra la vista de esquema con un flujo de trabajo secuencial.
 
-![Vista en el Diseñador de flujo de trabajo esquema](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Captura de pantalla de vista de esquema con un flujo de trabajo secuencial en Visual Studio.](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> Expresiones de C#
 
@@ -174,17 +174,17 @@ En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], las conexio
 
 La captura de pantalla siguiente muestra los puntos de unión que se hacen visibles cuando se arrastra una actividad desde el cuadro de herramientas.
 
-![Nodo de inicio del diagrama de flujo que muestra los puntos de conexión automática](./media/autoconnect1.png "Autoconnect1")
+![Puntos de conexión automática de que se muestra el nodo de inicio de diagrama de flujo](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 Las actividades también se pueden arrastrar a las conexiones entre los nodos y estados de un diagrama de flujo para insertar automáticamente el nodo entre otros dos nodos. La captura de pantalla siguiente muestra la línea de conexión resaltada donde se pueden arrastrar y colocar actividades del cuadro de herramientas.
 
-![Auto&#45;insertar el identificador para colocar actividades](./media/autoinsert.png "Autoinsert")
+![Controlador de inserción automática para colocar actividades](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> Anotaciones de diseñador
 
 Para facilitar el desarrollo de flujos de trabajo de mayor tamaño, el diseñador admite ahora agregar anotaciones para ayudar a realizar el seguimiento del proceso de diseño. Se pueden agregar anotaciones a actividades, estados, nodos del diagrama de flujo, variables y argumentos. En la captura de pantalla siguiente se muestra el menú contextual usado para agregar anotaciones al diseñador.
 
-![Menú contextual de anotación](./media/annotationdialog.png "annotationdialog")
+![Captura de pantalla que muestra un menú para agregar anotaciones.](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>Estados de depuración
 
@@ -232,7 +232,7 @@ Los flujos de trabajo de máquina de estados se incluyeron como parte de .NET Fr
 
 Captura de pantalla siguiente muestra el flujo de trabajo de máquina de estado completado de la [Tutorial de introducción](getting-started-tutorial.md) paso [Cómo: Crear un flujo de trabajo de máquina de estados](how-to-create-a-state-machine-workflow.md).
 
-![Flujo de trabajo de máquina de Estados completado](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![Ilustración que muestra el flujo de trabajo de máquina de estado completado.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 Para obtener más información sobre la creación de flujos de trabajo de máquina de Estados, vea [flujos de trabajo de máquina de estados](state-machine-workflows.md).
 

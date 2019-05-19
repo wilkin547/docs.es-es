@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590788"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879146"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Conceptos básicos de las aplicaciones de Windows Forms (Visual Basic)
 Una parte importante de Visual Basic es la capacidad para crear aplicaciones de Windows Forms que se ejecutan localmente en los equipos de usuarios. Puede usar Visual Studio para crear la aplicación e interfaz de usuario con Windows Forms. Una aplicación de Windows Forms se basa en las clases desde el <xref:System.Windows.Forms> espacio de nombres.  
@@ -67,7 +67,7 @@ Una parte importante de Visual Basic es la capacidad para crear aplicaciones de 
 |En|Vea|  
 |--------|---------|  
 |Use el <xref:System.Windows.Forms.BindingSource> componente|[Cómo: Enlazar controles de Windows Forms con el componente BindingSource mediante el diseñador](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Trabajar con [!INCLUDE[vstecado](~/includes/vstecado-md.md)] orígenes de datos|[Cómo: Ordenar y filtrar datos ADO.NET con el Windows Forms BindingSource (componente)](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Trabajar con orígenes de datos ADO.NET|[Cómo: Ordenar y filtrar datos ADO.NET con el Windows Forms BindingSource (componente)](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Utilice la ventana de orígenes de datos|[Tutorial: Mostrar datos en un formulario de Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Implementar aplicaciones en equipos cliente  

@@ -2,12 +2,12 @@
 title: Seguridad de comportamiento
 ms.date: 03/30/2017
 ms.assetid: 19710ae3-f197-4d28-ba9d-52e465006819
-ms.openlocfilehash: f5fd9cdb5fa0a84a151bc00ba63f1f5e89530629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ecb7337876cf4fe85d84e7a73a82a7520ee37e5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955110"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880145"
 ---
 # <a name="behavior-security"></a>Seguridad de comportamiento
 En esta sección se incluyen ejemplos que muestran cómo configurar la seguridad para los comportamientos del servicio.  
@@ -17,7 +17,7 @@ En esta sección se incluyen ejemplos que muestran cómo configurar la seguridad
  Este ejemplo muestra cómo utilizar <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> para habilitar la auditoría de eventos de seguridad durante las operaciones de servicio.  
   
  [Proveedor de pertenencia y roles](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)  
- Este ejemplo muestra el modo en que un servicio puede utilizar los proveedores de pertenencia y roles de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autenticar y autorizar a los clientes.  
+ Este ejemplo muestra cómo un servicio puede utilizar los proveedores de roles y pertenencia a ASP.NET para autenticar y autorizar a los clientes.  
   
  [Autorización de acceso a operaciones de servicio](../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
  Este ejemplo muestra cómo usar el [ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) para habilitar el uso de la <xref:System.Security.Permissions.PrincipalPermissionAttribute> atributo para autorizar el acceso a operaciones de servicio.  

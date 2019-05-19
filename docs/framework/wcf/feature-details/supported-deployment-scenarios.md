@@ -2,12 +2,12 @@
 title: 'Escenarios de implementación compatibles: WCF'
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639134"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881059"
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 
@@ -27,7 +27,7 @@ Para obtener más información sobre las características admitidas en estos con
 
 ## <a name="partial-trust-on-the-server"></a>Confianza parcial en el servidor
 
-Muchos proveedores comerciales de servicios de hospedaje de aplicaciones web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] obligan a que las aplicaciones que se ejecutan en sus servidores se ejecuten en el conjunto de permisos Confianza media de [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] . Pueden ejecutar los servicios WCF en estos entornos suponiendo que usen el <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, o el <xref:System.ServiceModel.WSHttpBinding> con seguridad de nivel de transporte.
+Muchos proveedores comerciales de la aplicación Web de ASP.NET que hospeda servicios exigen que las aplicaciones que se ejecutan en sus servidores se ejecutan en el [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto de permisos de nivel de confianza medio. Pueden ejecutar los servicios WCF en estos entornos suponiendo que usen el <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, o el <xref:System.ServiceModel.WSHttpBinding> con seguridad de nivel de transporte.
 
 Servicios WCF que se ejecutan en entornos de hospedaje de confianza medio también pueden actuar como servicios de nivel intermedio mediante el envío de mensajes a otros servidores en respuesta a las solicitudes de cliente. Se admiten los escenarios de nivel medio en el servidor si el entorno de hospedaje ha concedido a la aplicación el <xref:System.Net.WebPermission> adecuado para realizar solicitudes salientes al servidor deseado.
 

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f0510b9e3f31686e22532f21989cb95905522286
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583803"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879896"
 ---
 # <a name="connection-string-builders"></a>Generadores de cadenas de conexión
-En versiones anteriores de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], comprobación de las cadenas de conexión con la cadena concatenada valores no se produjeron, por lo que en tiempo de ejecución genera una palabra clave incorrecta en el tiempo de compilación un <xref:System.ArgumentException>. Cada uno de los proveedores de datos de .NET Framework admite una sintaxis diferente para palabras clave de cadena de conexión, lo que dificultaba construir cadenas de conexión válidas si se realiza manualmente. Para solucionar este problema, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 incorporó nuevos generadores de cadenas de conexión para cada proveedor de datos de .NET Framework. Cada uno de los proveedores de datos incluye una clase creadora de cadenas de conexión fuertemente tipadas que hereda de <xref:System.Data.Common.DbConnectionStringBuilder>. En la tabla siguiente se enumera los proveedores de datos de .NET Framework y sus clases generadoras de cadenas de conexión asociada.  
+En versiones anteriores de ADO.NET, la comprobación de las cadenas de conexión con valores de cadena concatenadas de tiempo de compilación no se produjo, por lo que en tiempo de ejecución, una palabra clave incorrecta genera un <xref:System.ArgumentException>. Cada uno de los proveedores de datos de .NET Framework admite una sintaxis diferente para palabras clave de cadena de conexión, lo que dificultaba construir cadenas de conexión válidas si se realiza manualmente. Para solucionar este problema, ADO.NET 2.0 incorporó a nuevos generadores de cadenas de conexión para cada proveedor de datos de .NET Framework. Cada uno de los proveedores de datos incluye una clase creadora de cadenas de conexión fuertemente tipadas que hereda de <xref:System.Data.Common.DbConnectionStringBuilder>. En la tabla siguiente se enumera los proveedores de datos de .NET Framework y sus clases generadoras de cadenas de conexión asociada.  
   
 |Proveedor|Clase ConnectionStringBuilder|  
 |--------------|-----------------------------------|  

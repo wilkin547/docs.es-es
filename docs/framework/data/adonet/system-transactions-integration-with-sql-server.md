@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583501"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880591"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integración de System.Transactions con SQL Server
-.NET Framework versión 2.0 introdujo un nuevo marco de transacciones que se puede acceder a través de la <xref:System.Transactions> espacio de nombres. Este marco de trabajo expone las transacciones de manera que está totalmente integrado en .NET Framework, incluidos [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+.NET Framework versión 2.0 introdujo un nuevo marco de transacciones que se puede acceder a través de la <xref:System.Transactions> espacio de nombres. Este marco de trabajo expone las transacciones de manera que está totalmente integrado en .NET Framework, incluidas ADO.NET.  
   
- Además de las mejoras de programación, <xref:System.Transactions> y [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] pueden funcionar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
+ Además de las mejoras de programación, <xref:System.Transactions> y ADO.NET pueden trabajar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
   
- A partir de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> admite transacciones promocionadas al trabajar con SQL Server. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Las transacciones promocionadas son automáticas y no requieran ninguna intervención del programador.  
+ A partir de ADO.NET 2.0, <xref:System.Data.SqlClient> admite transacciones promocionadas al trabajar con SQL Server. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Las transacciones promocionadas son automáticas y no requieran ninguna intervención del programador.  
   
  Las transacciones promocionadas solo están disponibles cuando se usa el proveedor de datos de .NET Framework para SQL Server (`SqlClient`) con SQL Server.  
   

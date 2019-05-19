@@ -2,20 +2,20 @@
 title: Ejecución en paralelo en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583623"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877094"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Ejecución en paralelo en ADO.NET
 Ejecución en paralelo en .NET Framework es la capacidad de ejecutar una aplicación en un equipo que tiene varias versiones de .NET Framework instalada, utilizando exclusivamente la versión para el que se compiló la aplicación. Para obtener información detallada sobre la configuración de ejecución en paralelo, vea [ejecución Side-by-Side](../../../../docs/framework/deployment/side-by-side-execution.md).  
   
- Puede ejecutar una aplicación compilada con una versión de .NET Framework en una versión diferente de .NET Framework. Sin embargo, recomendamos que compile una versión de la aplicación para cada versión instalada de .NET Framework y ejecutarlas por separado. En cualquier caso, debe tener en cuenta los cambios entre las diferentes versiones de [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] que pueden afectar a la compatibilidad con versiones posteriores o anteriores de la aplicación.  
+ Puede ejecutar una aplicación compilada con una versión de .NET Framework en una versión diferente de .NET Framework. Sin embargo, recomendamos que compile una versión de la aplicación para cada versión instalada de .NET Framework y ejecutarlas por separado. En cualquier caso, debe ser consciente de los cambios en ADO.NET entre las versiones que pueden afectar a la compatibilidad con versiones posteriores o la compatibilidad con versiones anteriores de la aplicación.  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>Compatibilidad con versiones anteriores y posteriores  
- Compatibilidad con versiones posteriores significa que una aplicación se puede compilar con una versión anterior de .NET Framework, pero se podrá ejecutar correctamente en una versión posterior de .NET Framework. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] el código escrito para .NET Framework versión 1.1 es compatible con versiones posteriores.  
+ Compatibilidad con versiones posteriores significa que una aplicación se puede compilar con una versión anterior de .NET Framework, pero se podrá ejecutar correctamente en una versión posterior de .NET Framework. Código ADO.NET escrito para .NET Framework versión 1.1 es compatible con versiones posteriores.  
   
  Compatibilidad con versiones anteriores significa que una aplicación se compila una versión más reciente de .NET Framework, pero continúa ejecutándose en versiones anteriores de .NET Framework sin ninguna pérdida de funcionalidad. Por supuesto, esto no será el caso de las características incluidas en una nueva versión de .NET Framework.  
   
@@ -36,7 +36,7 @@ Ejecución en paralelo en .NET Framework es la capacidad de ejecutar una aplicac
   
  Sin embargo, a partir de la versión 2.0 de .NET Framework, todos los proveedores de datos de .NET Framework pueden usarse en zonas de confianza parcial. Además, se ha agregado una nueva característica de seguridad a los proveedores de datos de .NET Framework en la versión 1.1 de .NET Framework. Esta característica le permite restringir las cadenas de conexión que se pueden utilizar en una zona de seguridad determinada. Es posible también deshabilitar el uso de contraseñas en blanco para una zona de seguridad determinada. Para obtener más información, consulta [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md).  
   
- Dado que cada instalación de .NET Framework tiene un archivo Security.config independiente, no hay ningún problema de compatibilidad con la configuración de seguridad. Sin embargo, si la aplicación depende de las capacidades de seguridad adicionales [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] incluido en .NET Framework versión 1.1 y versiones posterior, no podrá distribuir la aplicación a un sistema de la versión 1.0.  
+ Dado que cada instalación de .NET Framework tiene un archivo Security.config independiente, no hay ningún problema de compatibilidad con la configuración de seguridad. Sin embargo, si la aplicación depende de las capacidades de seguridad adicionales de ADO.NET incluye en la versión de .NET Framework 1.1 y versiones posteriores, no podrá distribuir la aplicación a un sistema de la versión 1.0.  
   
 ## <a name="sqlcommand-execution"></a>Ejecución de SqlCommand  
  A partir de .NET Framework versión 1.1, la forma en que <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> ejecuta comandos en los datos de origen se ha cambiado.  

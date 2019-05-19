@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046637"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875586"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Administración de notificaciones y autorización con el modelo de identidad
 La autorización es el proceso de determinar qué entidades tienen permiso para cambiar, ver o tener acceso a un recurso informático. Por ejemplo, en una empresa, solo se puede permitir a los administradores el acceso a los archivos de sus empleados. Windows Communication Foundation (WCF) admite dos mecanismos para realizar el procesamiento de autorización. El primer mecanismo le permite controlar la autorización utilizando construcciones de Common Language Runtime (CLR). El segundo es un modelo basado en notificaciones conocido como el *modelo de identidad*. WCF usa el modelo de identidad para crear notificaciones de los mensajes entrantes. Las clases de modelo de identidad pueden ampliarse para admitir nuevos tipos de notificación para esquemas de autorización personalizada. En este tema se presenta información general de los conceptos de programación principales de la característica Modelo de identidad, así como una lista de las clases más importantes que la característica utiliza.  
@@ -90,11 +90,12 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
   
  La ilustración siguiente muestra un ejemplo de tres conjuntos de notificaciones donde un conjunto de notificaciones tiene, como su emisor, otro conjunto de notificaciones, que, a su vez, tiene el conjunto de notificaciones de sistema como su emisor. Por consiguiente, los conjuntos de notificaciones forman una jerarquía que puede ser profunda de manera arbitraria.  
   
- ![Administración de notificaciones y autorización](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![Conjuntos de notificaciones dentro de la jerarquía.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- Varios conjuntos de notificaciones pueden tener el mismo conjunto de notificaciones que emiten, tal y como se muestra en la siguiente ilustración.  
+ Varios conjuntos de notificaciones pueden tener el mismo notificaciones que emiten conjunto, como se muestra en la ilustración siguiente:
+ 
   
- ![Administración de notificaciones y autorización](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![Conjunto de notificaciones de varios conjuntos de notificaciones con la emisión de la misma.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  Con la excepción de un conjunto de notificaciones que sea su propio emisor, el modelo de identidad no ofrece ninguna compatibilidad a los conjuntos de notificaciones para formar un bucle. Por tanto, una situación donde el conjunto de notificaciones A está emitido por el conjunto de notificaciones B, que a su vez está emitido por el conjunto A, nunca podrá darse. Asimismo, el modelo de identidad no proporciona ninguna compatibilidad para que los conjuntos de notificaciones tengan varios emisores. Si dos o más emisores deben emitir un conjunto determinado de notificaciones, a continuación, deberá utilizar varios conjuntos de notificaciones, cada uno con las mismas notificaciones, pero con distintos emisores.  
   

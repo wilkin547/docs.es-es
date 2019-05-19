@@ -2,12 +2,12 @@
 title: Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8807506866ef0f5d73065958f1102460ebcc5e9f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669840"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876465"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presentó muchas características nuevas, incluidas varias mejoras en la experiencia de diseñador de flujo de trabajo. En este tema se detallan las características admitidas en el diseñador rehospedado y las que no se admiten.
@@ -37,25 +37,25 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
 
  En la captura de pantalla siguiente se muestra el menú contextual del diseñador de variables y argumentos.
 
- ![Variables y menú contextual del Diseñador de argumento](./media/designercontextmenu.png "DesignerContextMenu")
+ ![Menú contextual del diseñador de variables y argumentos](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Rodear de forma automática con secuencia
  Debido a que un flujo de trabajo o determinadas actividades de contenedor (como <xref:System.Activities.Statements.NoPersistScope>) solo pueden contener una única actividad de cuerpo, para agregar una segunda actividad el desarrollador tenía que eliminar la primera actividad, agregar una actividad <xref:System.Activities.Statements.Sequence> y, a continuación, agregar ambas actividades a la actividad de secuencia. A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], al agregar una segunda actividad a la superficie del diseñador, se creará una actividad `Sequence` automáticamente para incluir ambas actividades. Esta característica se admite en el diseñador rehospedado.
 
  La captura de pantalla siguiente muestra una actividad `WriteLine` en `Body` de `NoPersistScope`.
 
- ![Auto&#45;rodear la ubicación de destino](./media/autosurround1.png "AutoSurround1")
+ ![Una actividad WriteLine en el cuerpo de una actividad NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-write-line-activity.png)
 
  La captura de pantalla siguiente muestra la actividad `Sequence` creada automáticamente en `Body` cuando se coloca un segundo elemento `WriteLine` debajo del primero.
 
- ![Actividad sequence creada automáticamente](./media/autosurround2.png "AutoSurround2")
+ ![Una secuencia creada automáticamente en el cuerpo de un NoPersistScope.](./media/wf-features-in-the-rehosted-workflow-designer/auto-surround-sequence-activity.png)
 
 ### <a name="pan-mode"></a>Modo panorámico
  Para navegar con mayor facilidad en un flujo de trabajo grande en el diseñador, se puede habilitar el modo panorámico, lo que permite al desarrollador hacer clic y arrastrar para mover la parte visible del flujo de trabajo, en lugar de tener que usar las barras de desplazamiento. El botón para activar el modo panorámico está en la esquina inferior derecha del diseñador. Esta característica se admite en el diseñador rehospedado.
 
  En la captura de pantalla siguiente se muestra el botón de panorámica que se encuentra en la esquina inferior derecha del diseñador de flujo de trabajo.
 
- ![Botón de panorámica en el Diseñador de flujo de trabajo](./media/panbutton.png "PanButton")
+ ![El botón de panorámica resaltado en el Diseñador de flujo de trabajo.](./media/wf-features-in-the-rehosted-workflow-designer/pan-button-workflow-designer.png)
 
  El botón central del mouse o la barra espaciadora también se pueden usar para aplicar la panorámica al diseñador de flujo de trabajo.
 
@@ -69,7 +69,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
 
  Captura de pantalla siguiente del flujo de trabajo completada desde la [Tutorial de introducción](getting-started-tutorial.md) muestra la vista de esquema con un flujo de trabajo secuencial.
 
- ![Vista en el Diseñador de flujo de trabajo esquema](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+ ![Captura de pantalla de vista de esquema con un flujo de trabajo secuencial en Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Más control de la visibilidad de los elementos de barra y de encabezado de shell
  En un diseñador rehospedado, algunos de los controles estándar de la interfaz de usuario pueden no tener significado para un flujo de trabajo determinado y se pueden desactivar. En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], solo la barra de shell de la parte inferior del diseñador admite esta personalización. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la visibilidad de los elementos de encabezado de shell en la parte superior del diseñador puede ajustarse si se establece <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> con el valor adecuado de <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>.
@@ -79,18 +79,18 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
 
  La captura de pantalla siguiente muestra los puntos de unión que se hacen visibles cuando se arrastra una actividad desde el cuadro de herramientas.
 
- ![Nodo de inicio del diagrama de flujo que muestra los puntos de conexión automática](./media/autoconnect1.png "Autoconnect1")
+ ![Puntos de conexión automática de que se muestra el nodo de inicio de diagrama de flujo](./media/wf-features-in-the-rehosted-workflow-designer/auto-connect-points-start-node.png)
 
  Las actividades también se pueden arrastrar a las conexiones entre los nodos y estados de un diagrama de flujo para insertar automáticamente el nodo entre otros dos nodos. La captura de pantalla siguiente muestra la línea de conexión resaltada donde se pueden arrastrar y colocar actividades del cuadro de herramientas.
 
- ![Auto&#45;insertar el identificador para colocar actividades](./media/autoinsert.png "Autoinsert")
+ ![Controlador de inserción automática para colocar actividades](./media/wf-features-in-the-rehosted-workflow-designer/auto-insert-connecting-line.png)
 
  La conexión y la inserción automáticas se admiten en el diseñador rehospedado.
 
 ### <a name="designer-annotations"></a>Anotaciones del diseñador
  Para facilitar el desarrollo de flujos de trabajo de mayor tamaño, el diseñador admite ahora agregar anotaciones para ayudar a realizar el seguimiento del proceso de diseño. Se pueden agregar anotaciones a actividades, estados, nodos del diagrama de flujo, variables y argumentos. En la captura de pantalla siguiente se muestra el menú contextual usado para agregar anotaciones al diseñador.
 
- ![Menú contextual de anotación](./media/annotationdialog.png "annotationdialog")
+ ![Captura de pantalla que muestra el menú para agregar anotaciones.](./media/wf-features-in-the-rehosted-workflow-designer/designer-annotations-context-menu.png)
 
  Las anotaciones de diseñador se admiten en el diseñador rehospedado.
 
@@ -134,7 +134,7 @@ Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45
   
  Captura de pantalla siguiente muestra el flujo de trabajo de máquina de estado completado de la [Tutorial de introducción](getting-started-tutorial.md) paso [Cómo: Crear un flujo de trabajo de máquina de estados](how-to-create-a-state-machine-workflow.md).  
   
- ![Flujo de trabajo de máquina de Estados completado](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Ilustración que muestra el flujo de trabajo de máquina de estado completado.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Para obtener más información sobre la creación de flujos de trabajo de máquina de Estados, vea [flujos de trabajo de máquina de estados](state-machine-workflows.md). Los flujos de trabajo de máquina de estados se admiten en el diseñador rehospedado.  
   

@@ -2,17 +2,17 @@
 title: Proceso de compra corporativa
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665936"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876170"
 ---
 # <a name="corporate-purchase-process"></a>Proceso de compra corporativa
 En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.
 
- Este ejemplo incluye una aplicación cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite interactuar con el proceso como diferentes participantes (como el solicitante original o un proveedor en particular).
+ Este ejemplo contiene una aplicación de cliente ASP.NET que permite interactuar con el proceso como diferentes participantes (como el solicitante original o un proveedor en particular).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,7 +36,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 
 - Seguimiento
 
-- Hospedaje de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes (aplicaciones web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] y aplicaciones WinForms).
+- Hospedaje [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes (aplicaciones Web ASP.NET y aplicaciones de WinForms).
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
@@ -82,7 +82,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 |-------------|-----------------|  
 |Común|Los objetos entidad utilizados dentro del proceso (solicitud de propuesta, proveedor y propuesta del proveedor).|  
 |WfDefinition|La definición del proceso (como un programa [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) y el host (`PurchaseProcessHost`) utilizado por las aplicaciones cliente para crear y utilizar instancias del flujo de trabajo del proceso de compra.|  
-|WebClient|Una aplicación cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] que permite a los usuarios crear y participar en instancias del proceso de compra. Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.|  
+|WebClient|Una aplicación de cliente ASP.NET que permite a los usuarios crear y participar en instancias del proceso de compra. Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.|  
 |WinFormsClient|Una aplicación cliente de Windows Forms que permite a los usuarios crear y participar en instancias del proceso de compra. Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

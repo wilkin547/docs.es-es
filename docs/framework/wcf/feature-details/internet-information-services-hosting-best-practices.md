@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de hospedaje de Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972619"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878603"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedimientos recomendados de hospedaje de Internet Information Services
 En este tema se describe algunos procedimientos recomendados para hospedar servicios Windows Communication Foundation (WCF).  
@@ -40,7 +40,7 @@ En este tema se describe algunos procedimientos recomendados para hospedar servi
  Puede configurar los enlaces de sitio web de IIS utilizando el complemento de Microsoft Management Console (MMC).  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Los grupos de aplicaciones que se ejecutan en contextos de usuario diferentes sobrescriben los ensamblados desde otras cuentas en la carpeta temporal  
- Para asegurarse de que los grupos de aplicaciones que se ejecutan en diferentes contextos de usuario no pueden sobrescribir los ensamblados desde otras cuentas en la carpeta de archivos [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] temporales, utilice identidades diferentes y carpetas temporales para las aplicaciones diferentes. Por ejemplo, si tiene dos aplicaciones virtuales /Application1 y / Application2, puede crear dos grupos de aplicaciones, A y B, con dos identidades diferentes. El grupo de aplicaciones A se puede ejecutar bajo una identidad de usuario (user1), mientras que el grupo de aplicaciones B se puede ejecutar bajo otra identidad de usuario (user2) y configurar /Application1 para que use A y /Application2 para que use B.  
+ Para asegurarse de que los grupos de aplicaciones que se ejecutan en diferentes contextos de usuario no pueden sobrescribir los ensamblados desde otras cuentas en la carpeta archivos temporales de ASP.NET, utilice identidades diferentes y las carpetas temporales para las distintas aplicaciones. Por ejemplo, si tiene dos aplicaciones virtuales /Application1 y / Application2, puede crear dos grupos de aplicaciones, A y B, con dos identidades diferentes. El grupo de aplicaciones A se puede ejecutar bajo una identidad de usuario (user1), mientras que el grupo de aplicaciones B se puede ejecutar bajo otra identidad de usuario (user2) y configurar /Application1 para que use A y /Application2 para que use B.  
   
  En el archivo Web.config, puede configurar la carpeta temporal mediante \< system.web/compilation/@tempFolder>. Para/Application1, puede ser "c:\tempForUser1" y application2 puede ser "c:\tempForUser2". Conceda el permiso de escritura correspondiente a estas carpetas para las dos identidades.  
   

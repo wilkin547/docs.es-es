@@ -2,12 +2,12 @@
 title: Información general sobre ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607367"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877210"
 ---
 # <a name="adonet-overview"></a>Información general sobre ADO.NET
 ADO.NET proporciona acceso coherente a orígenes de datos como SQL Server y XML, así como a orígenes de datos expuestos mediante OLE DB y ODBC. Las aplicaciones de consumidor que comparten datos pueden utilizar ADO.NET para conectar a estos orígenes de datos y recuperar, controlar y actualizar los datos contenidos.  
@@ -46,7 +46,7 @@ ADO.NET proporciona acceso coherente a orígenes de datos como SQL Server y XML,
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Novedades de ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
- Presenta características nuevas en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
+ Presenta características nuevas en ADO.NET.  
   
  [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Describe algunas recomendaciones de codificación segura para utilizar ADO.NET.  

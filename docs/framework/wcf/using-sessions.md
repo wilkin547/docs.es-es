@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645155"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881471"
 ---
 # <a name="using-sessions"></a>Uso de sesiones
-En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* correlaciona un grupo de mensajes en una conversación. Las sesiones WCF son diferentes del objeto de sesión disponible en [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] admiten comportamientos diferentes aplicaciones y se controlan de maneras diferentes. En este tema se describe las características que habilitan las sesiones en WCF aplicaciones y cómo usarlas.  
+En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* correlaciona un grupo de mensajes en una conversación. Las sesiones WCF son diferentes del objeto de sesión disponible en las aplicaciones ASP.NET, admiten comportamientos diferentes y se controlan de maneras diferentes. En este tema se describe las características que habilitan las sesiones en WCF aplicaciones y cómo usarlas.  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Sesiones en aplicaciones de Windows Communication Foundation  
  Cuando un contrato de servicio especifica que requiere una sesión, ese contrato está especificando que todas las llamadas (es decir, los intercambios de mensajes subyacentes que admiten las llamadas) deben formar parte de la misma conversación. Si un contrato especifica que admite sesiones pero no requiere una, los clientes pueden conectarse y establecer o no una sesión. Si la sesión finaliza y se envía un mensaje se envía a través del mismo canal, se produce una excepción.  
@@ -30,13 +30,13 @@ En las aplicaciones de Windows Communication Foundation (WCF), un *sesión* corr
   
 - No hay ningún almacén de datos general asociado a una sesión WCF.  
   
- Si está familiarizado con el <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> clase [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplicaciones y la funcionalidad que proporciona, es posible que tenga en cuenta las siguientes diferencias entre ese tipo de sesión y las sesiones WCF:  
+ Si está familiarizado con el <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> clase en aplicaciones ASP.NET y la funcionalidad que proporciona, es posible que tenga en cuenta las siguientes diferencias entre ese tipo de sesión y las sesiones WCF:  
   
-- Las sesiones[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] siempre son iniciadas por servidor.  
+- Las sesiones ASP.NET siempre se inician por servidor.  
   
-- Las sesiones[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] están implícitamente desordenadas.  
+- Las sesiones ASP.NET están implícitamente desordenadas.  
   
-- Las sesiones[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] proporcionan un mecanismo del almacenamiento de datos general para todas las solicitudes.  
+- Las sesiones ASP.NET proporcionan un mecanismo de almacenamiento de datos general en todas las solicitudes.  
   
  Este tema describe:  
   

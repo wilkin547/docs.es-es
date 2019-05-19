@@ -2,15 +2,15 @@
 title: Números de punto flotante
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 209e53e41495603f4ad559a74bdc87033f6a92a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583674"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882043"
 ---
 # <a name="floating-point-numbers"></a>Números de punto flotante
-En este tema se describen algunos de los problemas que con frecuencia se encuentran los programadores al trabajar con números de punto flotante en [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Estos problemas se deben a la forma que los equipos almacenan números de punto flotante y no son específicos de un proveedor determinado, como <xref:System.Data.SqlClient> o <xref:System.Data.OracleClient>.  
+En este tema se describe algunos de los problemas que con frecuencia se encuentran los programadores al trabajar con números de punto flotante en ADO.NET. Estos problemas se deben a la forma que los equipos almacenan números de punto flotante y no son específicos de un proveedor determinado, como <xref:System.Data.SqlClient> o <xref:System.Data.OracleClient>.  
   
  En general, los números de punto flotante no tienen una representación binaria exacta. En realidad, el equipo almacena una aproximación del número. En diferentes momentos se pueden utilizar diferentes números de dígitos binarios para representar el número. Cuando un número de punto flotante se convierte de una representación a otra, los dígitos menos significativos de dicho número pueden variar ligeramente. Por lo general el cambio se produce cuando el número se convierte de un tipo a otro. La variación se produce si la conversión se realiza en una base de datos, entre tipos que representan valores de base de datos o entre tipos. Debido a estos cambios, los números que lógicamente deberían ser iguales pueden presentar cambios en sus dígitos menos significativos que hagan que muestren valores diferentes. La cantidad de dígitos de precisión en el número puede ser mayor o menor de la esperada. Cuando el formato del número cambia a cadena, puede que no muestre el valor esperado.  
   

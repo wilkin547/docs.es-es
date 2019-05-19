@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754077"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882341"
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfaces relacionadas con el enlace de datos
 
-Con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], puede crear varias estructuras de datos distintas para satisfacer las necesidades de enlace de la aplicación y los datos con los que trabaja. Es posible que quiera crear sus propias clases que proporcionen o consuman datos en Windows Forms. Estos objetos pueden ofrecer varios niveles de funcionalidad y complejidad, desde el enlace de datos básico hasta proporcionar compatibilidad en tiempo de diseño, comprobación de errores, notificación de cambios o incluso compatibilidad con la reversión estructurada de los cambios hechos en los datos.
+Con ADO.NET, puede crear muchas estructuras de datos diferentes para satisfacer las necesidades de enlace de la aplicación y los datos que está trabajando. Es posible que quiera crear sus propias clases que proporcionen o consuman datos en Windows Forms. Estos objetos pueden ofrecer varios niveles de funcionalidad y complejidad, desde el enlace de datos básico hasta proporcionar compatibilidad en tiempo de diseño, comprobación de errores, notificación de cambios o incluso compatibilidad con la reversión estructurada de los cambios hechos en los datos.
 
 ## <a name="consumers-of-data-binding-interfaces"></a>Consumidores de interfaces de enlace de datos
 
@@ -82,7 +82,7 @@ Las interfaces siguientes están diseñadas para ser usadas por los controles de
 
 - <xref:System.Collections.IEnumerable> Interfaz
 
-  Una clase que implementa el <xref:System.Collections.IEnumerable> normalmente consume interfaz [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Soporte técnico de Windows Forms para esta interfaz solo está disponible a través de la <xref:System.Windows.Forms.BindingSource> componente.
+  Una clase que implementa el <xref:System.Collections.IEnumerable> interfaz normalmente se consume por ASP.NET. Soporte técnico de Windows Forms para esta interfaz solo está disponible a través de la <xref:System.Windows.Forms.BindingSource> componente.
 
   > [!NOTE]
   > El <xref:System.Windows.Forms.BindingSource> componente copia todos <xref:System.Collections.IEnumerable> elementos en una lista independiente para fines de enlace.

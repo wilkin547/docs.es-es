@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650003"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876081"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>Procedimiento para crear un degradado lineal
 GDI + proporciona degradados lineales horizontales, verticales y diagonales. De forma predeterminada, el color de un degradado lineal cambia de manera uniforme. Sin embargo, puede personalizar un degradado lineal por lo que cambia el color de manera no uniforme.  
@@ -31,9 +31,9 @@ El <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructor re
   
  La siguiente ilustración muestra la línea, la elipse y el rectángulo. Tenga en cuenta que el degradado de color se repite a medida que aumenta la coordenada horizontal por encima de 200.  
   
- ![Degradado lineal](./media/cslineargradient1.png "cslineargradient1")  
+ ![Una línea, una elipse y un rectángulo rellenan con un degradado de color.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>Usar degradados lineales horizontales  
+## <a name="to-use-horizontal-linear-gradients"></a>Usar degradados lineales horizontales  
   
 - Pase el azul opaco opaco y rojo como el tercer y cuarto argumentos, respectivamente.  
   
@@ -56,9 +56,9 @@ El <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructor re
   
  La siguiente ilustración muestra la elipse resultante y el rectángulo.  
   
- ![Degradado lineal](./media/cslineargradient2.png "cslineargradient2")  
+ ![Un rectángulo y una elipse rellenan con un degradado de color horizontal.](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>Para personalizar degradados lineales  
+## <a name="to-customize-linear-gradients"></a>Para personalizar degradados lineales  
   
 - Pase el rojo opaco opaco y negro como el tercer y cuarto argumentos, respectivamente.  
   
@@ -71,9 +71,9 @@ El <xref:System.Drawing.Drawing2D.LinearGradientBrush.%23ctor%2A> constructor re
   
  La siguiente ilustración muestra la línea y la elipse. Tenga en cuenta que el color de la elipse cambia gradualmente conforme se desplaza por cualquier línea es parecida a la línea que atraviesa (0, 0) y (200, 100).  
   
- ![Degradado lineal](./media/cslineargradient3.png "cslineargradient3")  
+ ![Una línea y una elipse rellenan con un degradado diagonal de color.](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>Para crear degradados lineales diagonales  
+## <a name="to-create-diagonal-linear-gradients"></a>Para crear degradados lineales diagonales  
   
 - Pase el verde opaco opaco y azul como el tercer y cuarto argumentos, respectivamente.  
   

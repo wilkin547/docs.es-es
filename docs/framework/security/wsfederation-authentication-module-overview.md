@@ -3,12 +3,12 @@ title: Información general sobre el módulo de autenticación WSFederation
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bd6c7432f79894c9e31952b72f3426fc88f9d03
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586043"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877203"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Información general sobre el módulo de autenticación WSFederation
 Windows Identity Foundation (WIF) es compatible con la autenticación federada en aplicaciones ASP.NET a través del Módulo de autenticación de WS-Federation (WS-FAM). Este tema le ayudará a comprender cómo funciona la autenticación federada y cómo se utiliza.  
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) es compatible con la autenticación federada e
 6. El RP extrae las notificaciones del cliente del token de seguridad y toma una decisión de autorización.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Usar el módulo de autenticación federada con ASP.NET  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) es un módulo HTTP que le permite agregar la autenticación federada a una aplicación de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. La autenticación federada permite al STS controlar la lógica de autenticación y permite al usuario centrarse en la escritura de la lógica de negocios.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) es un módulo HTTP que le permite agregar autenticación federada a una aplicación ASP.NET. La autenticación federada permite al STS controlar la lógica de autenticación y permite al usuario centrarse en la escritura de la lógica de negocios.  
   
  Configure WS-FAM para especificar el STS al que deben redirigirse las solicitudes no autenticadas. WIF le permite autenticar a un usuario de dos maneras:  
   
@@ -41,10 +41,10 @@ Windows Identity Foundation (WIF) es compatible con la autenticación federada e
   
  En la redirección pasiva, toda la comunicación se lleva a cabo a través de la respuesta/redirección desde el cliente (normalmente, un explorador). Puede agregar el WS-FAM a la canalización HTTP de la aplicación, donde está a la espera de solicitudes de usuario no autenticadas y redirige a los usuarios al STS especificado.  
   
- El WS-FAM también genera varios eventos que le permiten personalizar su funcionalidad en una aplicación de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ El WS-FAM también genera varios eventos que le permiten personalizar su funcionalidad en una aplicación ASP.NET.  
   
 ### <a name="how-the-ws-fam-works"></a>Cómo funciona el WS-FAM  
- El WS-FAM se implementa en la clase <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. Normalmente, agrega el WS-FAM a la canalización HTTP de la aplicación RP de [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Cuando un usuario no autenticado intenta acceder a un recurso protegido, el RP devuelve una respuesta HTTP "401 Autorización denegada". El WS-FAM intercepta esta respuesta en lugar de permitir al cliente recibirla y, a continuación, redirige al usuario al STS especificado. El STS emite un token de seguridad, que el WS-FAM intercepta de nuevo. El WS-FAM utiliza el token para crear una instancia de <xref:System.Security.Claims.ClaimsPrincipal> para el usuario autenticado, lo que permite regulares mecanismos de autorización de .NET Framework funcionar.  
+ El WS-FAM se implementa en la clase <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>. Normalmente, el WS-FAM se agrega a la canalización HTTP de la aplicación de RP de ASP.NET. Cuando un usuario no autenticado intenta acceder a un recurso protegido, el RP devuelve una respuesta HTTP "401 Autorización denegada". El WS-FAM intercepta esta respuesta en lugar de permitir al cliente recibirla y, a continuación, redirige al usuario al STS especificado. El STS emite un token de seguridad, que el WS-FAM intercepta de nuevo. El WS-FAM utiliza el token para crear una instancia de <xref:System.Security.Claims.ClaimsPrincipal> para el usuario autenticado, lo que permite regulares mecanismos de autorización de .NET Framework funcionar.  
   
  Dado que el HTTP no tiene estado, necesitamos una manera de evitar repetir todo este proceso completo cada vez que el usuario trata de tener acceso a otro recurso protegido. Aquí es donde entra en juego el <xref:System.IdentityModel.Services.SessionAuthenticationModule>. Cuando el STS emite un token de seguridad para el usuario, <xref:System.IdentityModel.Services.SessionAuthenticationModule> también crea un token de seguridad de la sesión para el usuario y lo coloca en una cookie. En solicitudes posteriores, <xref:System.IdentityModel.Services.SessionAuthenticationModule> intercepta esta cookie y la utiliza para reconstruir la <xref:System.Security.Claims.ClaimsPrincipal> del usuario.  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) es compatible con la autenticación federada e
  ![Diagrama de control de tiempo de SAM que muestra el inicio de sesión con controles](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Eventos  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>, y su clase primaria, <xref:System.IdentityModel.Services.HttpModuleBase>, generan eventos en las diferentes fases de procesamiento de una solicitud HTTP. Puede controlar estos eventos en el archivo `global.asax` de la aplicación [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>, y su clase primaria, <xref:System.IdentityModel.Services.HttpModuleBase>, generan eventos en las diferentes fases de procesamiento de una solicitud HTTP. Puede controlar estos eventos en el `global.asax` archivo de la aplicación ASP.NET.  
   
 - La infraestructura de ASP.NET invoca el método <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> del módulo para inicializarlo.  
   

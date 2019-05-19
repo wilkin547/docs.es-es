@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651069"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882184"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Información de privacidad de Windows Communication Foundation
 Microsoft se compromete a proteger la privacidad de usuarios finales. Al compilar una aplicación mediante Windows Communication Foundation (WCF), versión 3.0, la aplicación puede afectar la privacidad de sus usuarios finales. Por ejemplo, su aplicación puede recoger explícitamente información de contacto del usuario o puede solicitar o enviar información a través de Internet a su sitio web. Si incrusta la tecnología de Microsoft en su aplicación, esa tecnología puede tener su propio comportamiento que podría afectar a la privacidad. WCF no envía ninguna información a Microsoft desde su aplicación a menos que usted o el usuario final elija enviarla.  
@@ -29,7 +29,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
  La capa de mensajería de WCF no escribe información personal en el equipo local. Sin embargo, podría propagar información personal en el nivel de la red si un programador del servicio ha creado un servicio que expone dicha información (por ejemplo, utilizando el nombre de una persona en un nombre de extremo o incluso información personal en el Lenguaje de descripción de servicios Web (WSDL) del extremo pero no requiero que los clientes utilicen http para tener acceso al WSDL). Además, si un programador ejecuta la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) herramienta contra un extremo que expone información personal, la salida podría contener esa información y el archivo de salida se escribe en el disco duro local.  
   
 ## <a name="hosting"></a>Hospedaje  
- La característica de hospedaje de WCF permite a las aplicaciones para iniciarse a petición o para habilitar el uso compartido de puertos entre varias aplicaciones. Una aplicación de WCF puede hospedarse en Internet Information Services (IIS), similar a [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ La característica de hospedaje de WCF permite a las aplicaciones para iniciarse a petición o para habilitar el uso compartido de puertos entre varias aplicaciones. Una aplicación de WCF puede hospedarse en Internet Information Services (IIS), similar a ASP.NET.  
   
  Al hospedarse, no se expone ninguna información específica sobre la red y no mantiene los datos en el equipo.  
   
@@ -47,7 +47,7 @@ Microsoft se compromete a proteger la privacidad de usuarios finales. Al compila
 |Datos|Almacenamiento|  
 |----------|-------------|  
 |Las credenciales de presentación, como el nombre de usuario, certificados X.509, tokens de Kerberos, y referencias a las credenciales.|Mecanismos de administración de credencial de Windows estándar como el almacén de certificados de Windows.|  
-|Información de pertenencia del usuario, como nombres de usuario y contraseñas.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] proveedores de pertenencia.|  
+|Información de pertenencia del usuario, como nombres de usuario y contraseñas.|Proveedores de pertenencia ASP.NET.|  
 |Información de identidad sobre el servicio utilizado para autenticar el servicio a los clientes.|La dirección del punto de conexión del servicio.|  
 |Información del agente de llamada.|Registros de auditoría.|  
   

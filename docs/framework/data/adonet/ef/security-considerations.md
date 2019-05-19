@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583482"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879932"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen consideraciones de seguridad que son específicas del desarrollo, implementación y ejecución de aplicaciones de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. También debe seguir las recomendaciones para crear aplicaciones seguras de .NET Framework. Para obtener más información, consulte [información general sobre seguridad](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -141,22 +141,23 @@ En este tema se describen consideraciones de seguridad que son específicas del 
  Obtenga acceso a los métodos y propiedades de un <xref:System.Data.Objects.ObjectContext> dentro de un bloque try-catch. La detección de excepciones evita que las excepciones no controladas expongan las entradas del <xref:System.Data.Objects.ObjectStateManager> o la información del modelo (tal como nombres de las tablas) a los usuarios de la aplicación.  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>Consideraciones de seguridad para las aplicaciones ASP.NET  
- Al trabajar con rutas de acceso en aplicaciones de [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)], se debería considerar lo siguiente.  
+
+Debe considerar lo siguiente cuando se trabaja con rutas de acceso en aplicaciones ASP.NET.  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>Compruebe si el host realiza comprobaciones de la ruta de acceso.  
- Cuando se utiliza la cadena de substitución `|DataDirectory|` (incluida entre barras verticales), [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] comprueba que la ruta de acceso resuelta se admite. Por ejemplo, ".." no se admite detrás de `DataDirectory`. El proceso que hospeda `~` realiza esa misma comprobación para resolver el operador de raíz de aplicación web ([!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]). IIS realiza esta comprobación; sin embargo, los hosts que no sean IIS pueden no comprobar que la ruta de acceso resuelta se admite. Debería conocer el comportamiento del host en el que implementa una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
+ Cuando el `|DataDirectory|` (entre barras verticales) se usa la cadena de sustitución, ADO.NET comprueba que la ruta de acceso resuelta se admite. Por ejemplo, ".." no se admite detrás de `DataDirectory`. Esa misma comprobación para resolver el operador de raíz de aplicación Web (`~`) se realiza mediante el proceso de hospedaje de ASP.NET. IIS realiza esta comprobación; sin embargo, los hosts que no sean IIS pueden no comprobar que la ruta de acceso resuelta se admite. Debería conocer el comportamiento del host en el que implementa una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>No haga suposiciones sobre los nombres de ruta resueltos.  
  Aunque los valores en los que se resuelven el operador raíz (`~`) y la cadena de sustitución `DataDirectory` deberían seguir siendo constantes durante la ejecución de la aplicación, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] no impide que el host los modifique.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Compruebe la longitud de la ruta de acceso antes de la implementación.  
- Antes de implementar una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], debería asegurarse de que los valores del operador de raíz (~) y la cadena de substitución `DataDirectory` no superan los límites de la longitud de la ruta de acceso del sistema operativo. Los proveedores de datos [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] no garantizan que la longitud de la ruta de acceso esté dentro de los límites válidos.  
+ Antes de implementar una aplicación de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], debería asegurarse de que los valores del operador de raíz (~) y la cadena de substitución `DataDirectory` no superan los límites de la longitud de la ruta de acceso del sistema operativo. Proveedores de datos ADO.NET no garantizan que la longitud de ruta de acceso está dentro de los límites válidos.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Consideraciones de seguridad de los metadatos de ADO.NET  
  Al generar y trabajar con los archivos de asignación y de modelo, se aplican las consideraciones de seguridad siguientes.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>No exponga información confidencial a través del registro.  
- Los componentes del servicio de metadatos de [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] no registran ninguna información personal. Si hay resultados que no se pueden devolver debido a las restricciones de acceso, los sistemas de administración de bases de datos y los sistemas de archivos no deberían devolver ningún resultado en lugar de generar una excepción que podría contener información confidencial.  
+Componentes del servicio de metadatos ADO.NET no registran ninguna información personal. Si hay resultados que no se pueden devolver debido a las restricciones de acceso, los sistemas de administración de bases de datos y los sistemas de archivos no deberían devolver ningún resultado en lugar de generar una excepción que podría contener información confidencial.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>No acepte objetos MetadataWorkspace de orígenes que no sean de confianza.  
  Las aplicaciones no deberían aceptar instancias de la clase <xref:System.Data.Metadata.Edm.MetadataWorkspace> de orígenes que no sean de confianza. En su lugar, debería construir y rellenar explícitamente un área de trabajo de este tipo de origen.  

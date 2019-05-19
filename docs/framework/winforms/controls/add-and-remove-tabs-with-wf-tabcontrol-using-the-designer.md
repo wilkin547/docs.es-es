@@ -8,12 +8,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: 10550416a75592133b69c2807f1da2cca25e8707
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 560bb35bf9685abbc40bc7b87a4490752c546ea4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665815"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880644"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Procedimiento para agregar y quitar fichas con el control TabControl de formularios Windows Forms mediante el diseñador
 Cuando coloca un <xref:System.Windows.Forms.TabControl> control en el formulario, contiene dos pestañas de forma predeterminada. Puede agregar o quitar fichas mediante el diseñador.  
@@ -29,7 +29,7 @@ Cuando coloca un <xref:System.Windows.Forms.TabControl> control en el formulario
   
      -o bien-  
   
-     En el **propiedades** ventana, haga clic en el **puntos suspensivos** botón (![de pantalla de VisualStudioEllipsesButton](../media/vbellipsesbutton.png "vbEllipsesButton")) junto a el <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad para abrir el **Editor de la colección TabPage**. Haga clic en el **agregar** o **quitar** botón.  
+     En el **propiedades** ventana, haga clic en el **puntos suspensivos** botón (![los puntos suspensivos (...) en la ventana Propiedades de Visual Studio.](./media/visual-studio-ellipsis-button.png)) junto a la <xref:System.Windows.Forms.TabControl.TabPages%2A> propiedad Para abrir el **Editor de la colección TabPage**. Haga clic en el **agregar** o **quitar** botón.  
   
 ## <a name="see-also"></a>Vea también
 

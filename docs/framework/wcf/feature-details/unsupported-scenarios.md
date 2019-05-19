@@ -2,12 +2,12 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637748"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878743"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 Por diversas razones, Windows Communication Foundation (WCF) no es compatible con algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por lo tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como nombre de usuario/contraseña y autenticación de HTTP/HTTPS integrada al ejecutar WCF en Windows XP Home Edition.  
@@ -36,7 +36,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
 >  Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por consiguiente, puede utilizarlo con la opción `Required` en [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Posible conflicto de ASP.NET  
- WCF y [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] puede habilitar o deshabilitar la suplantación. Cuando [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] hospeda una aplicación de WCF, puede producirse un conflicto entre WCF y [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] opciones de configuración. En el caso de conflicto, la configuración de WCF tiene prioridad, a menos que el <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propiedad está establecida en <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, en cuyo caso el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] prevalece la configuración de suplantación.  
+ WCF y ASP.NET pueden tanto habilitar o deshabilitar la suplantación. Cuando ASP.NET hospeda una aplicación de WCF, es posible que exista un conflicto entre las opciones de configuración de WCF y ASP.NET. En el caso de conflicto, la configuración de WCF tiene prioridad, a menos que el <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propiedad está establecida en <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, en cuyo caso la configuración de suplantación de ASP.NET tiene prioridad.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Se puede producir un error en las cargas de ensamblado si se utiliza la suplantación  
  Si el contexto suplantado no tiene los derechos de acceso para cargar un ensamblado y si es la primera vez Common Language Runtime (CLR) intenta cargar el ensamblado para ese AppDomain, el <xref:System.AppDomain> almacena en memoria caché el error. Los siguientes intentos de cargar ese ensamblado (o ensamblados) producirán un error, incluso después de revertir la suplantación e incluso si el contexto revertido tiene derechos de acceso para cargar el ensamblado. Esto se debe a que CLR no vuelve a intentar la carga una vez que el contexto del usuario ha cambiado. Debe reiniciar el dominio de la aplicación para recuperarse del error.  
@@ -75,13 +75,13 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Se produce un error en la seguridad del mensaje si se requiere el uso de suplantación de ASP.NET y compatibilidad de ASP.NET  
  WCF no admite la siguiente combinación de valores porque pueden impedir que se produzca la autenticación cliente:  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] La suplantación está habilitada. Esto se hace en el archivo Web.config estableciendo el `impersonate` atributo de la <`identity`> elemento para `true`.  
+- Suplantación de ASP.NET está habilitada. Esto se hace en el archivo Web.config estableciendo el `impersonate` atributo de la <`identity`> elemento para `true`.  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] modo de compatibilidad se habilita estableciendo el `aspNetCompatibilityEnabled` atributo de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
+- Modo de compatibilidad ASP.NET se habilita estableciendo el `aspNetCompatibilityEnabled` atributo de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
   
 - Se utiliza la seguridad de modo de mensaje.  
   
- El método rápido consiste en desactivar el modo de compatibilidad de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. O bien, si la [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se requiere el modo de compatibilidad, deshabilite el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] suplantación de características y utilice en su lugar la suplantación de proporcionado por WCF. Para obtener más información, consulte [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ La solución alternativa consiste en desactivar el modo de compatibilidad ASP.NET. O bien, si se requiere el modo de compatibilidad ASP.NET, deshabilite la característica de suplantación de ASP.NET y utilizar en su lugar la suplantación de proporcionado por WCF. Para obtener más información, consulte [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ## <a name="ipv6-literal-address-failure"></a>Error de dirección literal IPv6  
  Se produce un error en las solicitudes de seguridad cuando el cliente y el servicio están en el mismo equipo y se utilizan direcciones IPv6 literales para el servicio.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625813"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881104"
 ---
 # <a name="working-with-certificates"></a>Trabajar con certificados
 Para programar la seguridad de Windows Communication Foundation (WCF), los certificados digitales de X.509 se usan normalmente para autenticar clientes y servidores, cifrar y firmar mensajes digitalmente. En este tema se explican brevemente las características de los certificados digitales X.509 y cómo usarlos en WCF, y se incluyen vínculos a los temas en los que se explican estos conceptos en mayor profundidad o en los que se muestra cómo llevar a cabo tareas comunes mediante WCF y los certificados.  
@@ -29,7 +29,7 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
 ## <a name="certificate-stores"></a>Almacenes de certificados  
  Los certificados se encuentran en almacenes. Existen dos ubicaciones de almacenamiento principales que se dividen en subalmacenes. Si es el administrador en un equipo, puede ver ambos almacenes principales utilizando la herramienta de complemento MMC. Los usuarios que no sean administradores solo pueden ver el almacén del usuario actual.  
   
-- **El almacén del equipo local**. Este contiene los certificados a los que los procesos del equipo obtiene acceso, como [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Utilice esta ubicación para almacenar certificados que autentiquen el servidor a los clientes.  
+- **El almacén del equipo local**. Contiene los certificados de acceso a los procesos del equipo, como ASP.NET. Utilice esta ubicación para almacenar certificados que autentiquen el servidor a los clientes.  
   
 - **El almacén del usuario actual**. Las aplicaciones interactivas colocan aquí, por lo general, certificados para el usuario actual del equipo. Si está creando una aplicación cliente, es aquí donde normalmente colocará los certificados que autentiquen un usuario a un servicio.  
   
@@ -52,7 +52,7 @@ Para programar la seguridad de Windows Communication Foundation (WCF), los certi
 - Si el servicio o cliente es una aplicación que se ejecuta bajo una cuenta de usuario, use el almacén del **usuario actual**.  
   
 ### <a name="accessing-stores"></a>Obtención de acceso a almacenes  
- Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio alojado por Internet Information Services (IIS), el proceso [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se ejecuta bajo la cuenta [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso mediante la herramienta WinHttpCertConfig.exe, vea [Cómo: Crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obtener más información sobre cómo usar certificados de cliente con IIS, vea [Cómo llamar a un servicio web con un certificado de cliente para la autenticación en una aplicación web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
+ Los almacenes son protegidos por las listas de control de acceso (ACL), como las carpetas de un equipo. Al crear un servicio hospedado por Internet Information Services (IIS), el proceso de ASP.NET se ejecuta bajo la cuenta ASP.NET. Esa cuenta debe tener acceso al almacén que contiene los certificados que utiliza un servicio. Cada uno de los almacenes principales se encuentra protegido mediante una lista de acceso predeterminada, pero se pueden modificar las listas. Si crea un rol independiente para obtener acceso a un almacén, debe garantizar el permiso de acceso a ese rol. Para obtener información sobre cómo modificar la lista de acceso mediante la herramienta WinHttpCertConfig.exe, vea [Cómo: Crear certificados temporales para su uso durante el desarrollo](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Para obtener más información sobre cómo usar certificados de cliente con IIS, vea [Cómo llamar a un servicio web con un certificado de cliente para la autenticación en una aplicación web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Confianza de cadena y entidades de certificación  
  Los certificados se crean en una jerarquía en la que cada certificado individual se vincula a la CA que emite el certificado. Este vínculo va al certificado de la CA. De la entidad emisora de certificados, a continuación, vínculos a la entidad de certificación que emitió el certificado de CA original. Este proceso se repite hasta que se llegue al certificado de la CA raíz. Se confía intrínsecamente en el certificado de la CA raíz.  

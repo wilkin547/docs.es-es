@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645518"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877354"
 ---
 # <a name="securing-wcf-data-services"></a>Proteger WCF Data Services
 En este tema se describe las consideraciones de seguridad que son específicas para desarrollar, implementar y ejecutar aplicaciones y servicios de datos de WCF que Servicios de acceso que admiten Open Data Protocol (OData). También debe seguir las recomendaciones para crear aplicaciones seguras de .NET Framework.  
@@ -55,7 +55,7 @@ context.Credentials = _
  Cuando el servicio de datos necesite credenciales de inicio de sesión que no se puedan especificar mediante el uso de un objeto <xref:System.Net.NetworkCredential>, como un token basado en notificaciones o una cookie, debe establecer manualmente los encabezados en la solicitud HTTP, que suelen ser los encabezados `Authorization` y `Cookie`. Para obtener más información sobre este tipo de escenario de autenticación, consulte la entrada de blog [ OData y autenticación: parte 3: ClientSide Hooks](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/). Para obtener un ejemplo de cómo establecer los encabezados HTTP en un mensaje de solicitud, vea [Cómo: Establecer los encabezados en la solicitud de cliente](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md).  
   
 ## <a name="impersonation"></a>Suplantación  
- Por lo general, el servicio de datos accede a los recursos necesarios, como los archivos del servidor o de la base de datos, mediante el uso de las credenciales del proceso de trabajo que hospeda el servicio de datos. Al usar la suplantación, las aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] se pueden ejecutar con la identidad de Windows (cuenta de usuario) del usuario que realiza la solicitud. La suplantación se suele usar en aplicaciones que confían en IIS para autenticar al usuario y las credenciales de esta entidad de seguridad se usan para obtener acceso a los recursos necesarios. Para obtener más información, consulte [suplantación de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
+ Por lo general, el servicio de datos accede a los recursos necesarios, como los archivos del servidor o de la base de datos, mediante el uso de las credenciales del proceso de trabajo que hospeda el servicio de datos. Al usar la suplantación, las aplicaciones de ASP.NET pueden ejecutar con la identidad de Windows (cuenta de usuario) del usuario que realiza la solicitud. La suplantación se suele usar en aplicaciones que confían en IIS para autenticar al usuario y las credenciales de esta entidad de seguridad se usan para obtener acceso a los recursos necesarios. Para obtener más información, consulte [suplantación de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100)).  
   
 ## <a name="configuring-data-service-authorization"></a>Configurar la autorización del servicio de datos  
  La autorización es la concesión de acceso a los recursos de la aplicación a una entidad de seguridad o a un proceso que se identifique basándose en una autenticación correcta previa. Como regla general, solo debe conceder los derechos estrictamente necesarios a los usuarios del servicio de datos para realizar las operaciones que necesiten las aplicaciones cliente.  

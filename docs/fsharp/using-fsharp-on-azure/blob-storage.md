@@ -1,14 +1,14 @@
 ---
-title: Introducción a Azure Blob storage medianteF#
+title: Introducción a Azure Blob Storage mediante F#
 description: Store datos no estructurados en la nube con Azure Blob storage.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982519"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880047"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Introducción a Azure Blob storage mediante F\#
 
@@ -196,8 +196,8 @@ Para obtener más información, consulte [administración de la simultaneidad en
 
 Todos los blobs de Azure storage deben residir en un contenedor. El contenedor forma parte del nombre del blob. Por ejemplo, `mydata` es el nombre del contenedor de estos URI de blob de ejemplo:
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 Un nombre de contenedor debe ser un nombre DNS válido, que se ajuste a las reglas de nomenclatura siguientes:
 

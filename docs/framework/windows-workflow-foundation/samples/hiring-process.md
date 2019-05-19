@@ -2,12 +2,12 @@
 title: Proceso de contratación
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622482"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881899"
 ---
 # <a name="hiring-process"></a>Proceso de contratación
 Este ejemplo muestra cómo implementar un proceso de negocio mediante actividades de mensajería y dos flujos de trabajo hospedados como servicios de flujo de trabajo. Estos flujos de trabajo son parte de la infraestructura de TI de una compañía ficticia denominada Contoso, Inc.  
@@ -126,7 +126,7 @@ Este ejemplo muestra cómo implementar un proceso de negocio mediante actividade
 |Temporizadores duraderos|`ResumeRequestService` utiliza temporizadores duraderos para definir la duración de la publicación de vacante (una vez que expira el tiempo de espera, se cierra la publicación de vacante).|ResumeRequestService|  
 |Transacciones|<xref:System.Activities.Statements.TransactionScope> se utiliza para garantizar la coherencia de los datos dentro de la ejecución de varias actividades (cuando se recibe un nuevo curriculum vitae).|ResumeRequestService|  
 |Transacciones|El participante de persistencia personalizado (`HiringRequestPersistenceParticipant`) y el participante de seguimiento personalizado (`HistoryFileTrackingParticipant`) usan la misma transacción.|HiringRequestService|  
-|Utilizar [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|Los flujos de trabajo están accesibles desde dos aplicaciones [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].|InternalClient / CareersWebSite|  
+|Uso de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en aplicaciones ASP.NET.|Se tiene acceso a los flujos de trabajo de dos aplicaciones de ASP.NET.|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>Almacenamiento de datos  
  Los datos están almacenados en una base de datos de SQL Server llamada `ContosoHR` (el script para crear esta base de datos se encuentra en la carpeta `DbSetup` ). Las instancias del flujo de trabajo se almacenan en una base de datos de SQL Server llamada `InstanceStore` (los scripts para crear el almacén de instancias forman parte de la distribución de [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  

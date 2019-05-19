@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592589"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881268"
 ---
 # <a name="data-member-default-values"></a>Valores predeterminados de los miembros de datos
 En .NET Framework, los tipos tienen un concepto de *los valores predeterminados*. Por ejemplo, para cualquier tipo de referencia el valor predeterminado es `null`, y para un tipo entero es cero. En ocasiones es deseable omitir un miembro de datos de los datos serializados cuando está establecido en su valor predeterminado. Dado que el miembro tiene un valor predeterminado, no es necesario serializar un valor real; esto es una ventaja en cuanto al rendimiento.  
@@ -54,7 +54,7 @@ En .NET Framework, los tipos tienen un concepto de *los valores predeterminados*
   
 - El valor predeterminado real a utilizar no se encuentra en el esquema. Depende del punto de conexión receptor el interpretar correctamente un elemento que falta.  
   
- Al importar el esquema, el <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propiedad se establece automáticamente en `false` cada vez que la anotación específica de WCF que se ha mencionado anteriormente se ha detectado. También está establecido en `false` para los tipos de referencia que tengan la propiedad `nillable` establecida en `false` para admitir escenarios de interoperabilidad concretos que normalmente tienen lugar al utilizar los servicios web de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+ Al importar el esquema, el <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> propiedad se establece automáticamente en `false` cada vez que la anotación específica de WCF que se ha mencionado anteriormente se ha detectado. También se establece en `false` para tipos de referencia que tienen el `nillable` propiedad establecida en `false` para admitir escenarios de interoperabilidad concretos que se producen normalmente al consumir servicios Web de ASP.NET.  
   
 ## <a name="see-also"></a>Vea también
 

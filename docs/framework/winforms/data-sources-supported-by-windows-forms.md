@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6782261953fb5df94498deefb261407a2f0ba33a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626782"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882395"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Orígenes de datos compatibles con formularios Windows Forms
 Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprovechar las ventajas de los datos almacenados en bases de datos. Con el enlace de datos de Windows Forms, se puede acceder a datos de las bases de datos, así como datos de otras estructuras, como matrices y colecciones, siempre y cuando se cumplen ciertos requisitos mínimos.  
@@ -44,12 +44,12 @@ Tradicionalmente, el enlace de datos se han usado en las aplicaciones para aprov
  <xref:System.Collections.IEnumerable>  
  Controles de formularios Windows Forms se pueden enlazar a orígenes de datos que solo son compatibles con el <xref:System.Collections.IEnumerable> interfaz si se enlazan a través de un <xref:System.Windows.Forms.BindingSource> componente.  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] objetos de datos  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] Proporciona una serie de estructuras de datos adecuadas para el enlace. Varía en sofisticación y complejidad.  
+ Objetos de datos ADO.NET  
+ ADO.NET proporciona una serie de estructuras de datos adecuadas para el enlace. Varía en sofisticación y complejidad.  
   
 - <xref:System.Data.DataColumn>. Un <xref:System.Data.DataColumn> es el bloque de creación fundamental de un <xref:System.Data.DataTable>, ya que un número de columnas componen una tabla. Cada <xref:System.Data.DataColumn> tiene un <xref:System.Data.DataColumn.DataType%2A> propiedad que determina el tipo de datos que contiene la columna (por ejemplo, la marca de un automóvil en una tabla con descripciones de automóviles). Puede sencillo enlazar un control (como un <xref:System.Windows.Forms.TextBox> del control <xref:System.Windows.Forms.Control.Text%2A> propiedad) a una columna dentro de una tabla de datos.  
   
-- <xref:System.Data.DataTable>. Un <xref:System.Data.DataTable> es la representación de una tabla con filas y columnas, en [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Una tabla de datos contiene dos colecciones: <xref:System.Data.DataColumn>, que representa las columnas de datos en una tabla determinada (que en última instancia determina los tipos de datos que se pueden escribir en la tabla), y <xref:System.Data.DataRow>, que representa las filas de datos en una tabla determinada. Puede complejo enlazar un control a la información contenida en una tabla de datos (como el enlace de la <xref:System.Windows.Forms.DataGridView> control a una tabla de datos). Sin embargo, al enlazar a un <xref:System.Data.DataTable>, son un enlace realmente a la vista predeterminada de la tabla.  
+- <xref:System.Data.DataTable>. Un <xref:System.Data.DataTable> es la representación de una tabla con filas y columnas, en ADO.NET. Una tabla de datos contiene dos colecciones: <xref:System.Data.DataColumn>, que representa las columnas de datos en una tabla determinada (que en última instancia determina los tipos de datos que se pueden escribir en la tabla), y <xref:System.Data.DataRow>, que representa las filas de datos en una tabla determinada. Puede complejo enlazar un control a la información contenida en una tabla de datos (como el enlace de la <xref:System.Windows.Forms.DataGridView> control a una tabla de datos). Sin embargo, al enlazar a un <xref:System.Data.DataTable>, son un enlace realmente a la vista predeterminada de la tabla.  
   
 - <xref:System.Data.DataView>. Un <xref:System.Data.DataView> es una vista personalizada de una tabla de datos única que puede filtrar u ordenar. Una vista de datos es los datos usado por los controles de enlace complejo "instantánea". Puede crear un enlace sencillo o complejo enlazar a los datos dentro de una vista de datos, pero tenga en cuenta que va a enlazar a una "imagen" fija de los datos en lugar de un origen de datos limpio y actualizado.  
   

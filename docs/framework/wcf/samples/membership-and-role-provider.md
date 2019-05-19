@@ -2,15 +2,15 @@
 title: Proveedor de pertenencia y roles
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 73084bb766274d6eab497555e82e029f94be0359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c172402f95b137117941381fd4803b8b6e4a5d61
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638398"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876740"
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
-El ejemplo de proveedor de pertenencia y función muestra el modo en que un servicio puede utilizar los proveedores de pertenencia y función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] para autenticar y autorizar a los clientes.  
+El ejemplo de proveedor de pertenencia y rol muestra cómo un servicio puede utilizar los proveedores de roles y pertenencia a ASP.NET para autenticar y autorizar a los clientes.  
   
  En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
   
@@ -21,11 +21,11 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
   
 - Un cliente se puede autenticar utilizando la combinación de nombre de usuario y contraseña.  
   
-- El servidor puede validar las credenciales del cliente con el proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- El servidor puede validar las credenciales del cliente con el proveedor de pertenencia ASP.NET.  
   
 - El servidor se puede autenticar utilizando el certificado X.509 del servidor.  
   
-- El servidor puede asignar el cliente autenticado a un rol utilizando el proveedor de roles de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
+- El servidor puede asignar al cliente autenticado a un rol utilizando el proveedor de funciones ASP.NET.  
   
 - El servidor puede utilizar `PrincipalPermissionAttribute` para controlar el acceso a ciertos métodos expuestos por el servicio.  
   
@@ -69,7 +69,7 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
 </system.web>  
 ```  
   
- El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la autenticación de Windows de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario. El comportamiento especifica que se va a usar el certificado de servidor para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para el `SubjectName` como el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento de configuración. Además, el comportamiento especifica que el proveedor de pertenencia de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la autenticación de los pares nombre de usuario y contraseña, y que el proveedor de función de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] realiza la asignación de funciones mediante la especificación de los nombres definidos para los dos proveedores.  
+ El servicio expone un extremo único para comunicarse con el servicio, que se define utilizando el archivo de configuración Web.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un `wsHttpBinding` estándar, que usa la autenticación de Windows de forma predeterminada. Este ejemplo establece el `wsHttpBinding` estándar para utilizar la autenticación mediante el nombre de usuario. El comportamiento especifica que se va a usar el certificado de servidor para la autenticación del servicio. El certificado de servidor debe contener el mismo valor para el `SubjectName` como el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) elemento de configuración. Además, el comportamiento especifica que se realiza la autenticación de pares de nombre de usuario-contraseña por el proveedor de pertenencia ASP.NET y asignación de rol se realiza mediante el proveedor de roles ASP.NET especificando los nombres definidos para los dos proveedores.  
   
 ```xml  
 <system.serviceModel>  
@@ -123,10 +123,10 @@ El ejemplo de proveedor de pertenencia y función muestra el modo en que un serv
 2. Asegúrese de que ha configurado el [ASP.NET Application Services Database](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Si está ejecutando SQL Server Express Edition, su nombre de servidor es .\SQLEXPRESS. Se debería utilizar este servidor al configurar la base de datos de los servicios de aplicación de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], así como en la cadena de conexión de Web.config.  
+    >  Si está ejecutando SQL Server Express Edition, su nombre de servidor es .\SQLEXPRESS. Este servidor se debe usar al configurar el ASP.NET Application Services Database, así como en la cadena de conexión de Web.config.  
   
     > [!NOTE]
-    >  La cuenta de proceso de trabajo de [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] debe tener permisos en la base de datos que se crea en este paso. Use la utilidad sqlcmd o SQL Server Management Studio para ello.  
+    >  La cuenta de proceso de trabajo ASP.NET debe tener permisos en la base de datos que se crea en este paso. Use la utilidad sqlcmd o SQL Server Management Studio para ello.  
   
 3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, utilice las instrucciones siguientes.  
   

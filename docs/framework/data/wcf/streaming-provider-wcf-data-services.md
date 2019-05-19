@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875542"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877585"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Proveedores de transmisión por secuencias (WCF Data Services)
 
@@ -88,7 +88,7 @@ Para obtener información general sobre cómo crear un servicio de datos, vea [c
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Habilitar flujos binarios grandes en el entorno de hospedaje
 
-Al crear un servicio de datos en una aplicación web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], Windows Communication Foundation (WCF) se utiliza para proporcionar la implementación del protocolo HTTP. De forma predeterminada, WCF limita el tamaño de los mensajes HTTP a solo 65 kilobytes. Para poder transmitir datos binarios grandes por secuencias al servicio de datos y desde él, debe configurar también la aplicación web para habilitar archivos binarios grandes y utilizar secuencias para la transferencia. Para ello, en el elemento `<configuration />` del archivo Web.config de la aplicación agregue lo siguiente:
+Al crear un servicio de datos en una aplicación Web ASP.NET, Windows Communication Foundation (WCF) se utiliza para proporcionar la implementación del protocolo HTTP. De forma predeterminada, WCF limita el tamaño de los mensajes HTTP a solo 65 kilobytes. Para poder transmitir datos binarios grandes por secuencias al servicio de datos y desde él, debe configurar también la aplicación web para habilitar archivos binarios grandes y utilizar secuencias para la transferencia. Para ello, en el elemento `<configuration />` del archivo Web.config de la aplicación agregue lo siguiente:
 
 > [!NOTE]
 > Debe usar un <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> modo de transferencia para asegurarse de que los datos binarios en mensajes de solicitud y respuesta se transmite por secuencias y no almacena en búfer por WCF.
@@ -125,7 +125,7 @@ A continuación se enumeran algunas de las consideraciones que debe tener en cue
 
 - Cuando implemente los métodos <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> o <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, debe utilizar el objeto eTag y los valores Content-Type y que se proporcionan como parámetros de método. No establezca el objeto eTag ni los encabezados Content-Type en la implementación del proveedor <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
-- De forma predeterminada, el cliente envía secuencias binarias grandes mediante codificación de transferencia HTTP fragmentada. Dado que el [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server no admite este tipo de codificación, no se puede usar este servidor Web para hospedar un servicio de datos de transmisión por secuencias que debe aceptar secuencias binarias grandes. Para obtener más información sobre [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] servidor de desarrollo, consulte [servidores Web en Visual Studio para proyectos Web de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
+- De forma predeterminada, el cliente envía secuencias binarias grandes mediante codificación de transferencia HTTP fragmentada. Dado que el servidor de desarrollo de ASP.NET no admite este tipo de codificación, no puede usar este servidor Web para hospedar un servicio de datos de transmisión por secuencias que debe aceptar secuencias binarias grandes. Para obtener más información sobre el servidor de desarrollo de ASP.NET, vea [servidores Web en Visual Studio para proyectos Web de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120)).
 
 <a name="versioning"></a>
 
