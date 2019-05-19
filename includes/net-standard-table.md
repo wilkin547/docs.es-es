@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671863"
+---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
 | Núcleo de .NET                  | 1.0    | 1.0    | 1.0   | 1.0   | 1.0   | 1.0                | 1.0                | 2.0                 |
@@ -16,7 +24,7 @@
 - Las columnas representan las versiones de .NET Standard. Cada celda de encabezado es un vínculo a un documento que muestra qué API se han agregado en esa versión de .NET Standard.
 - Las filas representan las diferentes implementaciones de .NET.
 - El número de versión de cada celda indica la versión *mínima* de la implementación que necesitará para tener como destino dicha versión de .NET Standard.
-- Para ver una tabla interactiva, consulte [Versiones de .NET Standard](https://immo.landwerth.net/netstandard-versions/#).
+- Para ver una tabla interactiva, consulte [Versiones de .NET Standard](https://dotnet.microsoft.com/platform/dotnet-standard#versions).
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

@@ -2,12 +2,12 @@
 title: Comando dotnet list package
 description: El comando "dotnet list package" ofrece una opción práctica para mostrar las referencias de paquete de un proyecto o una solución.
 ms.date: 04/09/2019
-ms.openlocfilehash: bc38b94201f85ed4b22e11722ef5cabcb6fbf040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481577"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631763"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
