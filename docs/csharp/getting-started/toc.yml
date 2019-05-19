@@ -1,5 +1,6 @@
 - name: Introducción
-  href: index.md
   items:
+    - name: Cómo usar esta guía
+      href: index.md
     - name: 'Introducción al lenguaje C# y .NET Framework'
       href: introduction-to-the-csharp-language-and-the-net-framework.md
