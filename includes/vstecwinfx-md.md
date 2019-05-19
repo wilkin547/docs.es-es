@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ec77736cc7e23825770bdbe3c1060ed469cf8731
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fd371bf7774faffb6cbbc3e138035692673b06e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669433"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65878748"
 ---
-<span data-ttu-id="7f37d-101">WinFX</span><span class="sxs-lookup"><span data-stu-id="7f37d-101">WinFX</span></span>
+<span data-ttu-id="ae60f-101">WinFX</span><span class="sxs-lookup"><span data-stu-id="ae60f-101">WinFX</span></span>
