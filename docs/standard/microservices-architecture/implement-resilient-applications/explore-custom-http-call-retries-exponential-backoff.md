@@ -1,23 +1,21 @@
 ---
 title: Exploración de reintentos de llamada HTTP personalizados con retroceso exponencial
 description: Obtenga información sobre cómo podría implementar, desde el principio, los reintentos de llamada HTTP con retroceso exponencial para controlar posibles escenarios de error de HTTP.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 2b40b73a014faa87d4eb42192c72b5a9b6c8d4fa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362254"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644741"
 ---
-# <a name="explore-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="6a0f6-103">Exploración de reintentos de llamada HTTP personalizados con retroceso exponencial</span><span class="sxs-lookup"><span data-stu-id="6a0f6-103">Explore custom HTTP call retries with exponential backoff</span></span>
+# <a name="explore-custom-http-call-retries-with-exponential-backoff"></a><span data-ttu-id="d48ae-103">Exploración de reintentos de llamada HTTP personalizados con retroceso exponencial</span><span class="sxs-lookup"><span data-stu-id="d48ae-103">Explore custom HTTP call retries with exponential backoff</span></span>
 
-<span data-ttu-id="6a0f6-104">Para crear microservicios resistentes, debe controlar los posibles escenarios de error HTTP.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-104">To create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="6a0f6-105">Una manera de controlar esos errores, aunque no se recomienda, consiste en crear una implementación de reintentos propia con retroceso exponencial.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-105">One way of handling those failures, although not recommended, is to create your own implementation of retries with exponential backoff.</span></span>
+<span data-ttu-id="d48ae-104">Para crear microservicios resistentes, debe controlar los posibles escenarios de error HTTP.</span><span class="sxs-lookup"><span data-stu-id="d48ae-104">To create resilient microservices, you need to handle possible HTTP failure scenarios.</span></span> <span data-ttu-id="d48ae-105">Una manera de controlar esos errores, aunque no se recomienda, consiste en crear una implementación de reintentos propia con retroceso exponencial.</span><span class="sxs-lookup"><span data-stu-id="d48ae-105">One way of handling those failures, although not recommended, is to create your own implementation of retries with exponential backoff.</span></span>
 
-<span data-ttu-id="6a0f6-106">**Nota importante:** En esta sección se muestra cómo se puede crear código personalizado propio para implementar los reintentos de llamada HTTP.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-106">**Important note:** This section shows you how you could create your own custom code to implement HTTP call retries.</span></span> <span data-ttu-id="6a0f6-107">Pero no se recomienda hacerlo por su cuenta, sino usar mecanismos más eficaces y confiables, aunque más sencillos, como `HttpClientFactory` con Polly, disponible desde .NET Core 2.1.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-107">However, it isn't recommended to do it on your own but to use more powerful and reliable while simpler to use mechanisms, such as `HttpClientFactory` with Polly, available since .NET Core 2.1.</span></span> <span data-ttu-id="6a0f6-108">Esos enfoques recomendados se explican en las secciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-108">Those recommended approaches are explained in the next sections.</span></span>
+<span data-ttu-id="d48ae-106">**Nota importante:** En esta sección se muestra cómo se puede crear código personalizado propio para implementar los reintentos de llamada HTTP.</span><span class="sxs-lookup"><span data-stu-id="d48ae-106">**Important note:** This section shows you how you could create your own custom code to implement HTTP call retries.</span></span> <span data-ttu-id="d48ae-107">Pero no se recomienda hacerlo por su cuenta, sino usar mecanismos más eficaces y confiables, aunque más sencillos, como `HttpClientFactory` con Polly, disponible desde .NET Core 2.1.</span><span class="sxs-lookup"><span data-stu-id="d48ae-107">However, it isn't recommended to do it on your own but to use more powerful and reliable while simpler to use mechanisms, such as `HttpClientFactory` with Polly, available since .NET Core 2.1.</span></span> <span data-ttu-id="d48ae-108">Esos enfoques recomendados se explican en las secciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="d48ae-108">Those recommended approaches are explained in the next sections.</span></span>
 
-<span data-ttu-id="6a0f6-109">Como exploración inicial, podría implementar su propio código con una clase de utilidad para retroceso exponencial como [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), junto con código similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-109">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following.</span></span>
+<span data-ttu-id="d48ae-109">Como exploración inicial, podría implementar su propio código con una clase de utilidad para retroceso exponencial como [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), junto con código similar al siguiente.</span><span class="sxs-lookup"><span data-stu-id="d48ae-109">As an initial exploration, you could implement your own code with a utility class for exponential backoff as in [RetryWithExponentialBackoff.cs](https://gist.github.com/CESARDELATORRE/6d7f647b29e55fdc219ee1fd2babb260), plus code like the following.</span></span>
 
 ```csharp
 public sealed class RetryWithExponentialBackoff
@@ -90,7 +88,7 @@ public struct ExponentialBackoff
 }
 ```
 
-<span data-ttu-id="6a0f6-110">Usar este código en una aplicación de cliente C\# (otro microservicio de cliente API Web, una aplicación ASP.NET MVC o incluso una aplicación Xamarin C\#) es sencillo.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-110">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="6a0f6-111">En el ejemplo siguiente se muestra cómo hacerlo, mediante la clase HttpClient.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-111">The following example shows how, using the HttpClient class.</span></span>
+<span data-ttu-id="d48ae-110">Usar este código en una aplicación de cliente C\# (otro microservicio de cliente API Web, una aplicación ASP.NET MVC o incluso una aplicación Xamarin C\#) es sencillo.</span><span class="sxs-lookup"><span data-stu-id="d48ae-110">Using this code in a client C\# application (another Web API client microservice, an ASP.NET MVC application, or even a C\# Xamarin application) is straightforward.</span></span> <span data-ttu-id="d48ae-111">En el ejemplo siguiente se muestra cómo hacerlo, mediante la clase HttpClient.</span><span class="sxs-lookup"><span data-stu-id="d48ae-111">The following example shows how, using the HttpClient class.</span></span>
 
 ```csharp
 public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? type)
@@ -113,9 +111,9 @@ public async Task<Catalog> GetCatalogItems(int page,int take, int? brand, int? t
 }
 ```
 
-<span data-ttu-id="6a0f6-112">Recuerde que este código solo es adecuado como prueba de concepto.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-112">Remember that this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="6a0f6-113">En las secciones siguientes se explica cómo usar enfoques más sofisticados, aunque más sencillos, con HttpClientFactory.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-113">The next sections explain how to use more sophisticated approaches while simpler, by using HttpClientFactory.</span></span> <span data-ttu-id="6a0f6-114">HttpClientFactory está disponible desde .NET Core 2.1, con bibliotecas de resistencia de eficacia probada, como Polly.</span><span class="sxs-lookup"><span data-stu-id="6a0f6-114">HttpClientFactory is available since .NET Core 2.1, with proven resiliency libraries like Polly.</span></span>
+<span data-ttu-id="d48ae-112">Recuerde que este código solo es adecuado como prueba de concepto.</span><span class="sxs-lookup"><span data-stu-id="d48ae-112">Remember that this code is suitable only as a proof of concept.</span></span> <span data-ttu-id="d48ae-113">En las secciones siguientes se explica cómo usar enfoques más sofisticados, aunque más sencillos, con HttpClientFactory.</span><span class="sxs-lookup"><span data-stu-id="d48ae-113">The next sections explain how to use more sophisticated approaches while simpler, by using HttpClientFactory.</span></span> <span data-ttu-id="d48ae-114">HttpClientFactory está disponible desde .NET Core 2.1, con bibliotecas de resistencia de eficacia probada, como Polly.</span><span class="sxs-lookup"><span data-stu-id="d48ae-114">HttpClientFactory is available since .NET Core 2.1, with proven resiliency libraries like Polly.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="6a0f6-115">[Anterior](implement-resilient-entity-framework-core-sql-connections.md)
->[Siguiente](use-httpclientfactory-to-implement-resilient-http-requests.md)</span><span class="sxs-lookup"><span data-stu-id="6a0f6-115">[Previous](implement-resilient-entity-framework-core-sql-connections.md)
+><span data-ttu-id="d48ae-115">[Anterior](implement-resilient-entity-framework-core-sql-connections.md)
+>[Siguiente](use-httpclientfactory-to-implement-resilient-http-requests.md)</span><span class="sxs-lookup"><span data-stu-id="d48ae-115">[Previous](implement-resilient-entity-framework-core-sql-connections.md)
 [Next](use-httpclientfactory-to-implement-resilient-http-requests.md)</span></span>
