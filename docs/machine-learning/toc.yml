@@ -9,15 +9,15 @@
   items:
     - name: Información general
       href: tutorials/index.md
-    - name: Análisis de opinión (clasificación binaria)
+    - name: Análisis de sentimiento (clasificación binaria)
       href: tutorials/sentiment-analysis.md
-    - name: Clasificación de problemas (clasificación multiclase)
+    - name: Clasificación de incidencias de soporte técnico (clasificación multiclase)
       href: tutorials/github-issue-classification.md
     - name: Predicción de precios (regresión)
       href: tutorials/taxi-fare.md
-    - name: Flores de iris (agrupación en clústeres)
+    - name: Clasificación de flores de iris (agrupación en clústeres k-means)
       href: tutorials/iris-clustering.md
-    - name: Recomendación de película (recomendación)
+    - name: Recomendaciones de películas (factorización matricial)
       href: tutorials/movie-recommmendation.md
     - name: Clasificación de imágenes (transferencia de aprendizaje)
       href: tutorials/image-classification.md

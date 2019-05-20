@@ -9,6 +9,12 @@
   items:
     - name: Primeros pasos
       href: tutorials/get-started.md
+    - name: Implementación en Azure HDInsight
+      href: tutorials/hdinsight-deployment.md
+    - name: Implementación en AWS EMR Spark
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Implementación en Databricks
+      href: tutorials/databricks-deployment.md
 - name: Referencia
   items:
     - name: Referencia de API
