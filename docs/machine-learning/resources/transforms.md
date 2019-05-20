@@ -4,16 +4,16 @@ description: Explore los componentes de ingeniería de características que se a
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636552"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558012"
 ---
 # <a name="data-transformations"></a>Transformaciones de datos
 
-Las transformaciones de datos se usan para preparar datos para entrenar un modelo. Las transformaciones de esta guía devuelven clases que implementan la interfaz [IEstimator](xref:Microsoft.ML.IEstimator`1). Las transformaciones de datos se pueden encadenar juntas. Cada transformación espera y genera datos de tipos y formatos específicos, que se especifican en la documentación de referencia vinculada.
+Las transformaciones de datos se usan para preparar datos para entrenar un modelo. Las transformaciones de esta guía devuelven clases que implementan la interfaz [IEstimator](xref:Microsoft.ML.IEstimator%601). Las transformaciones de datos se pueden encadenar juntas. Cada transformación espera y genera datos de tipos y formatos específicos, que se especifican en la documentación de referencia vinculada.
 
 Algunas transformaciones de datos requieren datos de aprendizaje para calcular sus parámetros. Por ejemplo, el transformador <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcula el medio y la varianza de los datos de aprendizaje durante la operación `Fit()` y usa esos parámetros en la operación `Transform()`. 
 

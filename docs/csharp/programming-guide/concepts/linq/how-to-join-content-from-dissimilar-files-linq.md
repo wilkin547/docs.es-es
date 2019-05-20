@@ -2,12 +2,12 @@
 title: Procedimiento para combinar contenido de archivos no similares (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328821"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585767"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Procedimiento para combinar contenido de archivos no similares (LINQ) (C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>Compilación del código
-
-Cree y compile un proyecto cuyo destino sea una de las opciones siguientes:
-
-- Versión 3.5 de .NET Framework 5 con una referencia a System.Core.dll.
-- .NET Framework versión 4.0 o posterior.
-- .NET Core versión 1.0 o posterior.
-  
 ## <a name="see-also"></a>Vea también
 
 - [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

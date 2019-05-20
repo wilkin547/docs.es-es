@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: ebd0433efda43c65ea6d9494a8ec25e8263f5b43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2ca388d19c0e4e1b098076caa5baa0a83cc0dd4c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968132"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585881"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Procedimiento Crear un método nuevo para una enumeración (Guía de programación de C#)
 Puede usar métodos de extensión para agregar funcionalidad a un tipo de enumeración concreto.  
@@ -23,9 +23,6 @@ Puede usar métodos de extensión para agregar funcionalidad a un tipo de enumer
  [!code-csharp[csProgGuideExtensionMethods#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#2)]  
   
  Tenga en cuenta que la clase `Extensions` también contiene una variable estática que se actualiza dinámicamente y que el valor devuelto del método de extensión refleja el valor actual de esa variable. Esto demuestra que, en segundo plano, los métodos de extensión se invocan directamente en la clase estática en donde se definen.  
-  
-## <a name="compiling-the-code"></a>Compilar el código  
- Para ejecutar este código, cópielo y péguelo en un proyecto de aplicación de consola de Visual C# creado en Visual Studio. De forma predeterminada, este proyecto tiene como destino la versión 3.5 de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] y tiene una referencia a System.Core.dll y una directiva `using` para System.Linq. Si faltan alguno de estos requisitos del proyecto, se puede agregar manualmente.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,15 +1,13 @@
 ---
 title: Diseñar el nivel de aplicación de microservicios y la API web
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Una breve mención de los principios SOLID para diseñar el nivel de aplicación.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9177ac9a79afaea01f0ec21b0a64bad5a94e9966
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612243"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639507"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>Diseño del nivel de aplicación de microservicios y la API web
 

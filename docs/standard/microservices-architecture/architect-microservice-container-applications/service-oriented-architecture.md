@@ -1,15 +1,13 @@
 ---
 title: Arquitectura orientada a servicios
 description: Obtenga información sobre las diferencias fundamentales entre los microservicios y una arquitectura orientada a servicios (SOA).
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d19053d8296dbe75ac1e0ce037d6a713d9f5687c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148618"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640064"
 ---
 # <a name="service-oriented-architecture"></a>Arquitectura orientada a servicios
 

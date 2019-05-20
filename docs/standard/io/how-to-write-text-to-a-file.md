@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59b33c24c2821d0aef17f5feb67c1178810b939e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d2fb5a30e165b78fef797bf8bfe536b66cae9a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647782"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640759"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Procedimiento Escribir texto en un archivo
 En este tema se muestran diferentes maneras de escribir texto en un archivo para una aplicación .NET. 

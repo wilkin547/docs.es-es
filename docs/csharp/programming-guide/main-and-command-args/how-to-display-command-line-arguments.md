@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
-ms.openlocfilehash: b7018afa1272f4ae092863de6b7f9ef783001244
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c88219d03d40c814338a1b09ccd37cfc03c2d577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965597"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881011"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>Procedimiento Mostrar argumentos de la línea de comandos (Guía de programación de C#)
 A los argumentos proporcionados a un archivo ejecutable en la línea de comandos se puede tener acceso a través de un parámetro opcional de `Main`. Los argumentos se proporcionan en forma de una matriz de cadenas. Cada elemento de la matriz contiene un argumento. Se quita el espacio en blanco entre los argumentos. Por ejemplo, considere estas invocaciones de línea de comandos de un ejecutable ficticio:  
@@ -34,5 +34,4 @@ A los argumentos proporcionados a un archivo ejecutable en la línea de comandos
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Compilar la línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main() y argumentos de la línea de comandos](../../../csharp/programming-guide/main-and-command-args/index.md)
-- [Cómo: Obtener acceso a argumentos de la línea de comandos utilizando foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
 - [Valores devueltos de Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

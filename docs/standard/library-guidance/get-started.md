@@ -4,12 +4,12 @@ description: Introducción a la creación de bibliotecas de . NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 980f0edcee07688935f6d08f3ce1ed812159695e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204654"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640742"
 ---
 # <a name="get-started"></a>Primeros pasos
 
