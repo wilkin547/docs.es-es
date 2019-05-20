@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949869"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881357"
 ---
 # <a name="securing-services"></a>Seguridad de servicios
 Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de dos requisitos principales: seguridad y autorización de transferencia. (Un tercer requisito, la auditoría de eventos de seguridad, se describe en [auditoría](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Resumiendo, la seguridad de la transferencia incluye la autenticación (comprobar la identidad del servicio y del cliente), la confidencialidad (cifrado de mensajes) y la integridad (firma digital para detectar la modificación). La autorización es el control del acceso a los recursos, por ejemplo, permitiendo la lectura de un archivo solo a usuarios privilegiados. Uso de características de WCF, se implementan fácilmente los dos requisitos primarios.  
@@ -50,7 +50,7 @@ Seguridad de un servicio de Windows Communication Foundation (WCF) se compone de
  La seguridad en Internet se basa en los mismos requisitos que la seguridad en una intranet. Un servicio necesita presentar sus credenciales para demostrar su autenticidad, y los clientes necesitan demostrar su identidad al servicio. Una vez demostrada la identidad de un cliente, el servicio puede controlar qué tipo de acceso a los recursos posee el cliente. No obstante, debido a la naturaleza heterogénea de Internet, las credenciales presentadas difieren de las utilizadas en un dominio de Windows. Si bien un controlador de Kerberos administra la autenticación de usuarios en un dominio mediante vales para las credenciales, en Internet, los servicios y clientes confían en cualquiera de las distintas maneras de presentar credenciales. El objetivo de este tema, sin embargo, es presentar un enfoque común que le permite crear un servicio WCF que sea accesible en Internet.  
   
 ### <a name="using-iis-and-aspnet"></a>Utilización de IIS y ASP.NET  
- Los requisitos de seguridad de Internet, así como los mecanismos para resolver esos problemas, no son algo nuevo. IIS es el servidor de Web de Microsoft para Internet y tiene muchas características de seguridad que abordan esos problemas; Además, [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] incluye características de seguridad que pueden usar los servicios de WCF. Para poder aprovechar estas características de seguridad, hospedar un servicio WCF en IIS.  
+ Los requisitos de seguridad de Internet, así como los mecanismos para resolver esos problemas, no son algo nuevo. IIS es el servidor de Web de Microsoft para Internet y tiene muchas características de seguridad que abordan esos problemas; Además, ASP.NET incluye características de seguridad que pueden usar los servicios de WCF. Para poder aprovechar estas características de seguridad, hospedar un servicio WCF en IIS.  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>Utilización de la pertenencia a ASP.NET y los proveedores de funciones  
  ASP.NET incluye una pertenencia y un proveedor de funciones. El proveedor es una base de datos de pares de nombre de usuario/contraseña para la autenticación de autores de llamadas, que también permite especificar los privilegios de acceso de cada autor de llamada. Con WCF, puede usar fácilmente una pertenencia ya existente y el proveedor de funciones a través de configuración. Para obtener una aplicación de ejemplo que muestre esto, consulte el ejemplo [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) .  
