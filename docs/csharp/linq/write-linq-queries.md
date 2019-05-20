@@ -3,12 +3,12 @@ title: Escribir consultas LINQ en C#
 description: Obtenga información sobre cómo escribir consultas de LINQ en C#.
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: df77326b921d22d90cf90c12e9c0f472d808ed95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981340"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632870"
 ---
 # <a name="write-linq-queries-in-c"></a>Escribir consultas LINQ en C\#
 

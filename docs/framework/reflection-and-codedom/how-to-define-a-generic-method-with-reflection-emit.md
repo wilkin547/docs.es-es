@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591723"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586147"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Procedimiento para definir un tipo genérico con emisión de reflexión
 El primer procedimiento explica cómo crear un método genérico simple con dos parámetros de tipo y cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo.  
@@ -161,14 +161,6 @@ El primer procedimiento explica cómo crear un método genérico simple con dos 
   
  [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
  [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>Compilar el código  
-  
-- El código contiene las instrucciones `using` de C# (`Imports` en Visual Basic) necesarias para la compilación.  
-  
-- No se requiere ninguna referencia de ensamblado adicional.  
-  
-- Compile el código en la línea de comandos mediante csc.exe, vbc.exe o cl.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
 ## <a name="see-also"></a>Vea también
 

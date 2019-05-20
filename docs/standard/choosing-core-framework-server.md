@@ -4,12 +4,12 @@ description: Una guía sobre qué implementación de .NET debe tener en cuenta a
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678805"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641155"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Selección entre .NET Core y .NET Framework para aplicaciones de servidor
 
@@ -108,6 +108,6 @@ Algunas plataformas de terceros o de Microsoft no son compatibles con .NET Core.
 - [Marcos de trabajo de destino](frameworks.md)
 - [Guía de .NET Core](../core/index.md)
 - [Portabilidad de .NET Framework a .NET Core](../core/porting/index.md)
-- [Guía de .NET Framework en Docker](../framework/docker/index.md)
+- [Introducción a .NET y Docker](../core/docker/intro-net-docker.md)
 - [Introducción a los componentes de .NET](components.md)
 - [.NET Microservices. Architecture for Containerized .NET Applications](microservices-architecture/index.md) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor)

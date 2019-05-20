@@ -2,12 +2,12 @@
 title: Propiedades
 description: Obtenga información sobre las propiedades de C#, que incluyen características para la validación, valores calculados, evaluación diferida y notificaciones de cambio de propiedad.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956243"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878274"
 ---
 # <a name="properties"></a>Propiedades
 
@@ -140,7 +140,7 @@ Un último escenario donde se necesita escribir código en un descriptor de acce
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-El operador `?.` se denomina *operador condicional NULL*. Comprueba si existe una referencia nula antes de evaluar el lado derecho del operador. El resultado final es que si no hay ningún suscriptor para el evento `PropertyChanged`, no se ejecuta el código para generar el evento. En ese caso, se producirá una `NullReferenceException` sin esta comprobación. Para obtener más información, vea [`events`](delegates-events.md). En este ejemplo también se usa el nuevo operador `nameof` para convertir el símbolo de nombre de propiedad en su representación de texto.
+El operador `?.` se denomina *operador condicional NULL*. Comprueba si existe una referencia nula antes de evaluar el lado derecho del operador. El resultado final es que si no hay ningún suscriptor para el evento `PropertyChanged`, no se ejecuta el código para generar el evento. En ese caso, se producirá una `NullReferenceException` sin esta comprobación. Para obtener más información, vea [`events`](events-overview.md). En este ejemplo también se usa el nuevo operador `nameof` para convertir el símbolo de nombre de propiedad en su representación de texto.
 Con `nameof` se pueden reducir los errores en los que no se escribió correctamente el nombre de la propiedad.
 
 De nuevo, la implementación de <xref:System.ComponentModel.INotifyPropertyChanged> es un ejemplo de un caso en el que se puede escribir código en los descriptores de acceso para admitir los escenarios que se necesitan.

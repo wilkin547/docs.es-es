@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-ms.openlocfilehash: 9762b9e2487c30b81b7ef6ae22827b64e3cb02e2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d0ca4a0b2189ee652ad1d9c2b63690306a651df4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200356"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635078"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Cómo: Acceder a un miembro con un puntero (Guía de programación de C#)
 Para tener acceso a un miembro de un struct que se declara en un contexto no seguro, puede usar el operador de acceso a miembros, como se muestra en el ejemplo siguiente en el que `p` es un puntero a un [struct](../../../csharp/language-reference/keywords/struct.md) que contiene un miembro `x`.  
@@ -33,7 +33,6 @@ p -> x = 25; //member access operator ->
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Expresiones de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)
 - [Tipos de puntero](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipos](../../../csharp/language-reference/keywords/types.md)
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)

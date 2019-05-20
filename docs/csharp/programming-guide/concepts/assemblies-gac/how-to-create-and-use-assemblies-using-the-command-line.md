@@ -2,12 +2,12 @@
 title: Procedimiento para crear y usar ensamblados mediante la línea de comandos (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599865"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586027"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Procedimiento para crear y usar ensamblados mediante la línea de comandos (C#)
 Un ensamblado, o una biblioteca de vínculos dinámicos (DLL), se vincula al programa en tiempo de ejecución. Para ilustrar la creación y uso de una DLL, considere el siguiente escenario:  
@@ -102,25 +102,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
  Para ejecutar el programa, escriba el nombre del archivo EXE, seguido de dos números, de esta forma:  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>Compilar el código  
- Para generar el archivo `MathLibrary.DLL`, compile los dos archivos `Add` y `Mult` mediante la línea de comandos siguiente.  
-  
-```csharp  
-csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
-```  
-  
- La opción del compilador [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) indica al compilador que genere un archivo DLL en lugar de un archivo EXE. Se usa la opción del compilador [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) seguida de un nombre de archivo para especificar el nombre del archivo DLL. De lo contrario, el compilador usa el primer archivo (`Add.cs`) como el nombre de la DLL.  
-  
- Para compilar el archivo ejecutable, `TestCode.exe`, use la siguiente línea de comandos:  
-  
-```csharp  
-csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
-```  
-  
- La opción del compilador **/out** indica al compilador que genere un archivo EXE y especifica el nombre del archivo de salida (`TestCode.exe`). Esta opción del compilador es opcional. La opción del compilador [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) especifica el archivo o archivos DLL que usa este programa. Para obtener más información, vea [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
-  
- Para más información sobre la compilación desde la línea de comandos, vea [Compilación de línea de comandos con csc.exe](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).  
   
 ## <a name="see-also"></a>Vea también
 

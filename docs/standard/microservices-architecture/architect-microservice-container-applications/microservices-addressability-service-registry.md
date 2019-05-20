@@ -1,15 +1,13 @@
 ---
 title: Direccionabilidad de microservicios y el Registro del servicio
 description: Comprenda la función de los registros de imagen de contenedor en la arquitectura de microservicios.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ea25612417f5b0c23eca2a36b52db6f303a4bb45
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5b601f19b60a8e989977e7135138add7644bd7b6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612568"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639970"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Direccionabilidad de microservicios y el Registro del servicio
 

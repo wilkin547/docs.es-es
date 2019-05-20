@@ -1,15 +1,13 @@
 ---
 title: Exploración de reintentos de llamada HTTP personalizados con retroceso exponencial
 description: Obtenga información sobre cómo podría implementar, desde el principio, los reintentos de llamada HTTP con retroceso exponencial para controlar posibles escenarios de error de HTTP.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: fdbc09cddde34cb8897e1d5b105cb15c863b59ce
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 2b40b73a014faa87d4eb42192c72b5a9b6c8d4fa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362254"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644741"
 ---
 # <a name="explore-custom-http-call-retries-with-exponential-backoff"></a>Exploración de reintentos de llamada HTTP personalizados con retroceso exponencial
 
