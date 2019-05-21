@@ -2,12 +2,12 @@
 title: Interpretar códigos de error devueltos por wsatConfig.exe
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26e7c40cb105ad10dac3b13b73cb33bc4fa57d69
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928822"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959842"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretar códigos de error devueltos por wsatConfig.exe
 En este tema se hace una lista de todos los códigos de error generados por la utilidad de configuración de WS-AtomicTransaction (wsatConfig.exe) y acciones recomendadas que se van a tomar.  
@@ -35,9 +35,9 @@ En este tema se hace una lista de todos los códigos de error generados por la u
 |17|Error de configuración de http.sys. No puede desenlazar el certificado SSL del puerto anterior.|Utilice el código de error devuelto en el mensaje de error para realizar la asignación al error de sistema adecuado. Si es necesario, utilice httpcfg.exe o netsh.exe para quitar las reservas de puerto incorrectas.|  
 |18|Error de configuración de http.sys. No se puede enlazar el certificado especificado al puerto porque ya existe un enlace de SSL anterior.|Otra aplicación ya ha obtenido la propiedad del puerto concreto. Cambie la aplicación actual a un puerto diferente, desinstálela o vuelva a configurarla.|  
 |19|No se ha podido reiniciar MSDTC|Si es necesario, reinicie MSDTC de forma manual. Si el problema continúa, póngase en contacto con Microsoft.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] no está instalado en el equipo remoto o no está instalado correctamente.|Instale [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] en el equipo.|  
+|20|WinFX no está instalado en el equipo remoto o no está instalado correctamente.|Instalar WinFX en el equipo.|  
 |21|Se ha producido un error en la configuración remota porque la operación ha expirado.|La llamada para configurar WS-AT en el equipo remoto debería llevar mucho más tiempo que 90 segundos.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] no está instalado en el equipo remoto o no está instalado correctamente.|Instale [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] en el equipo.|  
+|22|WinFX no está instalado en el equipo remoto o no está instalado correctamente.|Instalar WinFX en el equipo.|  
 |23|Se ha producido un error en la configuración remota debido a una excepción en el equipo remoto.|Comprobar si hay elementos procesables en el mensaje de error|  
 |26|Se ha pasado un argumento no válido a WsatConfig.exe.|Compruebe si hay errores en la línea de comandos.|  
 |27|La opción de línea de comandos `-accounts` no es válida.|Corrija la opción de línea de comandos -`accounts` para especificar correctamente una cuenta de usuario.|  
@@ -52,10 +52,10 @@ En este tema se hace una lista de todos los códigos de error generados por la u
 |38|El proceso o el usuario no tienen los permisos necesarios para cambiar la configuración del firewall.|Ejecute WsatConfig.exe con una cuenta de usuario Administrador.|  
 |39|WsatConfig.exe ha encontrado un error actualizando la configuración del firewall.|Comprobar si hay elementos procesables en el mensaje de error.|  
 |40|WsatConfig.exe no puede dar acceso de lectura MSDTC al archivo de clave privada del certificado|Ejecute WsatConfig.exe con una cuenta de usuario Administrador.|  
-|41|O no se ha podido encontrar ninguna instalación de [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] o la versión encontrada no coincide con lo que la herramienta es capaz de configurar.|Asegurarse que se instala [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] correctamente y utilice sólo la herramienta WsatConfig.exe que vino con esa versión de [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] para configurar WS-AT.|  
+|41|No se encontró ninguna instalación de WinFX o encuentra la versión no coincide con lo que es capaz de configurar la herramienta.|Asegúrese de que WinFX está instalado correctamente y solo use la herramienta WsatConfig.exe que vino con esa versión de WinFX configurar WS-AT.|  
 |42|Se ha especificado un argumento más de una vez en la línea de comandos.|Especifique cada argumento sólo una vez al ejecutar WsatConfig.exe.|  
 |43|WsatConfig.exe no puede actualizar los valores WS-AT si WS-AT no está habilitado.|Especifique `-network:enable` como argumento de la línea de comandos adicional.|  
-|44|Falta una revisión necesaria y no se puede configurar WS-AT hasta que se instale la revisión.|Vea las notas de la versión [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] para obtener instrucciones sobre la instalación de la revisión necesaria.|  
+|44|Falta una revisión necesaria y no se puede configurar WS-AT hasta que se instale la revisión.|Consulte el WinFX notas para obtener instrucciones acerca de cómo instalar la revisión necesaria.|  
 |45|La opción de línea de comandos `-virtualServer` no es válida.|Corrija la opción de línea de comandos `-virtualServer` especificando el nombre de red del recurso del clúster en el se debe configurar.|  
 |46|Error inesperado al intentar iniciar la sesión de seguimiento ETW.|Utilice el código de error devuelto para realizar la asignación al error de sistema adecuado.|  
 |47|El proceso o el usuario no tiene los permisos necesarios para habilitar la sesión de seguimiento ETW.|Ejecute WsatConfig.exe con una cuenta de usuario Administrador.|  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 96607a1c744b928b340fe33c2b57a25a59f306dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 953df285d1a439cd8a1a95358915a7a50e98552a
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635267"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960110"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Procedimiento para instalar y configurar los componentes de activación de WFC
 En este tema se describe los pasos necesarios para configurar Windows Process Activation Service (también conocido como WAS) en [!INCLUDE[wv](../../../../includes/wv-md.md)] para hospedar servicios de Windows Communication Foundation (WCF) protocolos de red de servicios que no se comunican a través de HTTP. Las siguientes secciones describen los pasos para realizar esta configuración:  
@@ -28,7 +28,7 @@ En este tema se describe los pasos necesarios para configurar Windows Process Ac
   
 3. En el **tareas** menú, haga clic en **o desactivar las características de Windows Active**.  
   
-4. Encuentre el nodo [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], selecciónelo y, a continuación, expándalo.  
+4. Busque el nodo de WinFX, seleccione y, a continuación, expándala.  
   
 5. Seleccione el **componentes de activación no Http de WCF** cuadro y guardar la configuración.  
   

@@ -2,15 +2,15 @@
 title: Protección de las aplicaciones de canal del mismo nivel
 ms.date: 03/30/2017
 ms.assetid: d4a0311d-3f78-4525-9c4b-5c93c4492f28
-ms.openlocfilehash: 8fbad019270851a32d932c33d6fd401cea2b3515
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b52e0476ce6ac54a2e4a3a8cfceb112d662186b
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603320"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959888"
 ---
 # <a name="securing-peer-channel-applications"></a>Protección de las aplicaciones de canal del mismo nivel
-Como otros enlaces bajo [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], `NetPeerTcpBinding` tiene la seguridad habilitada de forma predeterminada y proporciona seguridad basada en mensaje y en transporte (o ambos). En este tema se tratan estos dos tipos de seguridad. La etiqueta de modo de seguridad especifica el tipo de seguridad en la especificación de enlace (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
+Como otros enlaces bajo el WinFX, `NetPeerTcpBinding` tiene seguridad habilitada de forma predeterminada y ofrece seguridad basada en mensajes y transporte (o ambos). En este tema se tratan estos dos tipos de seguridad. La etiqueta de modo de seguridad especifica el tipo de seguridad en la especificación de enlace (<xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>`Mode`).  
   
 ## <a name="transport-based-security"></a>Seguridad basada en el transporte.  
  El canal del mismo nivel admite dos tipos de credenciales de autenticación para proteger el transporte, y ambos requieren que se establezca la propiedad `ClientCredentialSettings.Peer` en el `ChannelFactory` asociado:  

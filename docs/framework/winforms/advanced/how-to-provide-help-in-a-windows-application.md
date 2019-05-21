@@ -8,16 +8,16 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 19bf6a8de3f9ddd5babd149747df87c54b456aeb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 2f9c0a9791db28cebd055ca446fdff16b9e276a4
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211361"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959612"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Procedimiento para proporcionar ayuda en una aplicación Windows
 
-Puede usar de la <xref:System.Windows.Forms.HelpProvider> componente para asociar los temas de ayuda dentro de un archivo de ayuda a controles específicos en los formularios de Windows. El archivo de ayuda puede ser HTML, HTMLHelp 1.x o superior.
+Puede hacer uso de la <xref:System.Windows.Forms.HelpProvider> componente para asociar los temas de ayuda dentro de un archivo de ayuda a controles específicos en los formularios de Windows. El archivo de ayuda puede ser HTML, HTMLHelp 1.x o superior.
 
 ## <a name="provide-help"></a>Proporcionar ayuda
 

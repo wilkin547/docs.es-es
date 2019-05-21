@@ -2,12 +2,12 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878743"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959956"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
 Por diversas razones, Windows Communication Foundation (WCF) no es compatible con algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por lo tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como nombre de usuario/contraseña y autenticación de HTTP/HTTPS integrada al ejecutar WCF en Windows XP Home Edition.  
@@ -50,7 +50,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
 ## <a name="cryptography"></a>Criptografía  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 compatible solo para usos de claves simétricas  
- WCF admite una variedad de cifrado y algoritmos de creación implícita de firma que se pueden especificar mediante el conjunto de algoritmos en los enlaces proporcionados por el sistema. Para mejorar la seguridad, WCF es compatible con los algoritmos del algoritmo de Hash seguro (SHA) 2, en concreto SHA-256, para crear valores hash de síntesis de firma. Esta versión admite SHA-256 solo para usos de clave simétrica, como las claves de Kerberos, y donde no se usa un certificado X.509 para firmar el mensaje. WCF no admite las firmas RSA (utilizadas en certificados X.509) mediante el hash SHA-256 debido a la falta de compatibilidad actual para RSA-SHA256 en la [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ WCF admite una variedad de cifrado y algoritmos de creación implícita de firma que se pueden especificar mediante el conjunto de algoritmos en los enlaces proporcionados por el sistema. Para mejorar la seguridad, WCF es compatible con los algoritmos del algoritmo de Hash seguro (SHA) 2, en concreto SHA-256, para crear valores hash de síntesis de firma. Esta versión admite SHA-256 solo para usos de clave simétrica, como las claves de Kerberos, y donde no se usa un certificado X.509 para firmar el mensaje. WCF no admite las firmas RSA (utilizadas en certificados X.509) mediante el hash SHA-256 debido a la falta de compatibilidad actual para RSA-SHA256 en la WinFX.  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>No se admiten hash SHA-256 conformes a FIPS  
  WCF no admite los hash de SHA-256 compatible con FIPS, por lo que WCF no admite los conjuntos de algoritmos que usan SHA-256 en sistemas donde se requiere el uso de algoritmos que cumplan FIPS.  

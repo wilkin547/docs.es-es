@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 88c4982d45c1a3c450afe0c199a1f8a376348262
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eaf38bad246b1f02449c1a3b99c7fb844c09a4bd
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655657"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959717"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Seguimiento y traza del flujo de trabajo
 El seguimiento de Windows Workflow es una característica de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] diseñada para proporcionar visibilidad en la ejecución del flujo de trabajo. Proporciona una infraestructura de seguimiento para realizar el seguimiento de la ejecución de una instancia de flujo de trabajo. La infraestructura de seguimiento de WF sirve para que un flujo de trabajo emita registros de forma transparente que reflejen eventos clave durante la ejecución. Esta funcionalidad está disponible de forma predeterminada para cualquier flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. No es necesario hacer ningún cambio en un flujo de trabajo de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] para que se produzca el seguimiento. Simplemente se trata de decidir cuántos datos de seguimiento desea recibir. Cuando una instancia de flujo de trabajo se inicia o se completa, se emiten registros de seguimiento de procesamiento. El seguimiento también puede extraer datos comerciales relevantes asociados a las variables de flujo de trabajo. Por ejemplo, si el flujo de trabajo representa en un sistema de procesamiento de pedidos, el id. de pedido se puede extraer junto con el objeto <xref:System.Activities.Tracking.TrackingRecord>. En general, al habilitar el seguimiento de WF se facilita el acceso a los datos de diagnóstico o analíticos empresariales desde la ejecución de un flujo de trabajo.  
   
- Estos componentes de seguimiento son equivalentes al servicio de seguimiento en [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]. En [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], se ha mejorado el rendimiento y se ha simplificado el modelo de programación para la característica de seguimiento de WF. El tiempo de ejecución de seguimiento sirve para que una instancia de flujo de trabajo emita eventos relacionados con el ciclo de vida y las actividades del flujo de trabajo, y los eventos personalizados.  
+ Estos componentes de seguimiento son equivalentes al servicio de seguimiento en WinFX. En [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], se ha mejorado el rendimiento y se ha simplificado el modelo de programación para la característica de seguimiento de WF. El tiempo de ejecución de seguimiento sirve para que una instancia de flujo de trabajo emita eventos relacionados con el ciclo de vida y las actividades del flujo de trabajo, y los eventos personalizados.  
   
  Windows Server App Fabric también proporciona la capacidad de supervisar la ejecución de WCF y los servicios de flujo de trabajo. Para obtener más información, consulte [supervisión de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273) y [supervisión de aplicaciones con Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201287)  
   

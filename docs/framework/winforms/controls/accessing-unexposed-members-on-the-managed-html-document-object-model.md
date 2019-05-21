@@ -8,15 +8,15 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 539ac998a557615c097c33cdd4207e99f396e81d
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011901"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959618"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Acceso a miembros no expuestos en el Modelo de objetos de documento HTML administrado
-Administrado HTML Document Object Model (DOM) contiene una clase denominada <xref:System.Windows.Forms.HtmlElement> que expone las propiedades, métodos y eventos que sean comunes a todos los elementos HTML. A veces, sin embargo, necesitará tener acceso a miembros que no exponen directamente a la interfaz administrada. En este tema se describen dos formas para tener acceso a miembros no expuestos, así como [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] y funciones de VBScript definidas dentro de una página Web.  
+Administrado HTML Document Object Model (DOM) contiene una clase denominada <xref:System.Windows.Forms.HtmlElement> que expone las propiedades, métodos y eventos que sean comunes a todos los elementos HTML. A veces, sin embargo, necesitará tener acceso a miembros que no exponen directamente a la interfaz administrada. En este tema se examina dos formas para tener acceso a miembros no expuestos, incluidas las funciones de JScript y VBScript definidas dentro de una página Web.  
   
 ## <a name="accessing-unexposed-members-through-managed-interfaces"></a>Acceso a miembros no expuestos a través de Interfaces administradas  
  <xref:System.Windows.Forms.HtmlDocument> y <xref:System.Windows.Forms.HtmlElement> proporcionan cuatro métodos que permiten el acceso a miembros no expuestos. En la tabla siguiente se muestra los tipos y sus métodos correspondientes.  
@@ -67,7 +67,7 @@ Administrado HTML Document Object Model (DOM) contiene una clase denominada <xre
  La manera más fácil de usar las interfaces COM es agregar una referencia a la biblioteca no administrada de DOM de HTML (MSHTML.dll) desde su aplicación, aunque esto no se admite. Para obtener más información, consulte [934368 del artículo de Knowledge Base](https://support.microsoft.com/kb/934368).  
   
 ## <a name="accessing-script-functions"></a>Obtener acceso a las funciones de Script  
- Una página HTML puede definir una o varias funciones mediante un lenguaje de scripting, como [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] o VBScript. Estas funciones se colocan dentro de un `SCRIPT` página en la página y se pueden ejecutar a petición o en respuesta a un evento en el DOM.  
+ Una página HTML puede definir una o varias funciones mediante el uso de un lenguaje de scripting como VBScript o JScript. Estas funciones se colocan dentro de un `SCRIPT` página en la página y se pueden ejecutar a petición o en respuesta a un evento en el DOM.  
   
  Puede llamar a cualquier funciones de secuencia de comandos que se definen en una página HTML mediante la <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> método. Si el método de script devuelve un elemento HTML, puede usar una conversión de tipos para convertir este resultado devuelto para un <xref:System.Windows.Forms.HtmlElement>. Para obtener información detallada y código de ejemplo, vea <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   

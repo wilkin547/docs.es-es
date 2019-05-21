@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: 1e42e2726b54464d479398c023c3e7caecf9b054
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df55b4fa107f3630cd259b755e0aaacdee4904ef
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753046"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960089"
 ---
 # <a name="elevation-of-privilege"></a>Elevación de privilegios
 *Elevación de privilegios* da como resultado de la concesión de permisos más allá de aquéllos concedidos inicialmente una autorización del atacante. Por ejemplo, un atacante con un conjunto de privilegios de permisos de "solo lectura" eleva de algún modo el conjunto para incluir la "lectura y escritura".  
@@ -21,7 +21,7 @@ ms.locfileid: "64753046"
  La clase <xref:System.IdentityModel.Tokens.SamlAssertion> comprueba la firma digital contenida dentro de un token de SAML y el <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> predeterminado necesita que los tokens de SAML estén firmados por un certificado X.509 que sea válido cuando el <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> de la clase <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> se establezca en <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust>. El modo `ChainTrust` solo no es suficiente para determinar si el emisor del token de SAML es de confianza. Los servicios que requieren un modelo de confianza más específico pueden usar directivas de autorización y cumplimiento para comprobar el emisor de los conjuntos de notificaciones producidos mediante la autenticación de tokens emitidos o usar los valores de validación X.509 en <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> para restringir el conjunto de certificados de firma permitidos. Para obtener más información, consulte [Administrar notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) y [federación y Tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Intercambio de identidad sin un contexto de seguridad  
- Lo siguiente solo se aplica a [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
+ Lo siguiente es aplicable únicamente a WinFX.  
   
  Cuando se establece una conexión entre un cliente y servidor, la identidad del cliente no cambia, excepto en una situación: una vez abierto el cliente de WCF, si se cumplen todas las condiciones siguientes:  
   

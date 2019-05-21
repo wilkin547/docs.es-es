@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 9341ff8bfb2aec4eb7274d444fca4497fa66f210
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875586"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960117"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Administración de notificaciones y autorización con el modelo de identidad
 La autorización es el proceso de determinar qué entidades tienen permiso para cambiar, ver o tener acceso a un recurso informático. Por ejemplo, en una empresa, solo se puede permitir a los administradores el acceso a los archivos de sus empleados. Windows Communication Foundation (WCF) admite dos mecanismos para realizar el procesamiento de autorización. El primer mecanismo le permite controlar la autorización utilizando construcciones de Common Language Runtime (CLR). El segundo es un modelo basado en notificaciones conocido como el *modelo de identidad*. WCF usa el modelo de identidad para crear notificaciones de los mensajes entrantes. Las clases de modelo de identidad pueden ampliarse para admitir nuevos tipos de notificación para esquemas de autorización personalizada. En este tema se presenta información general de los conceptos de programación principales de la característica Modelo de identidad, así como una lista de las clases más importantes que la característica utiliza.  
@@ -93,7 +93,6 @@ La autorización es el proceso de determinar qué entidades tienen permiso para 
  ![Conjuntos de notificaciones dentro de la jerarquía.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
  Varios conjuntos de notificaciones pueden tener el mismo notificaciones que emiten conjunto, como se muestra en la ilustración siguiente:
- 
   
  ![Conjunto de notificaciones de varios conjuntos de notificaciones con la emisión de la misma.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   

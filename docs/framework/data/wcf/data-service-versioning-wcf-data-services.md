@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a58f375821109c0ec5f2230ae330dc6a2caa102
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583588"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959494"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>Control de versiones del servicio de datos (Data Services de Microsoft WCF)
 El [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] le permite crear servicios de datos para que los clientes pueden tener acceso a datos como recursos usando URI que se basan en un modelo de datos. OData también admite la definición de operaciones de servicio. Después de la implementación inicial y de haber transcurrido potencialmente varias horas durante su duración, estos servicios de datos pueden necesitar ser cambiados debido a diversas razones, como cambios en las necesidades comerciales, requisitos de tecnología de la información o para resolver otros problemas. Al realizar cambios en un servicio de datos existente, debe considerar si va a definir una nueva versión de su servicio de datos y cómo minimizar mejor el impacto en las aplicaciones cliente existentes. En este tema se proporciona orientación sobre cuándo y cómo crear una nueva versión de un servicio de datos. También se describe cómo WCF Data Services administra el intercambio entre clientes y servicios de datos que admiten diferentes versiones del Protocolo OData.
@@ -60,12 +60,12 @@ El [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] le permite cr
 
  Cuando una aplicación utiliza las bibliotecas de cliente de WCF Data Services para tener acceso a un servicio de datos, las bibliotecas establecen automáticamente estos encabezados en los valores correctos, según la versión de OData y las características que se usan en la aplicación. De forma predeterminada, WCF Data Services usa la versión más antigua de protocolo que admite la operación solicitada.
 
- En la tabla siguiente se detalla las versiones de .NET Framework y [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] que incluyen compatibilidad con WCF Data Services para versiones específicas del Protocolo OData.
+ La tabla siguiente detalla las versiones de .NET Framework y Silverlight que incluyen WCF Data Services admiten para versiones específicas del Protocolo OData.
 
 |Versión de Protocolo OData|Compatibilidad introducida en…|
 |-----------------------------------------------------------------------------------|----------------------------|
-|Versión 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] versión 3|
-|Versión 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Una actualización de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Puede descargar e instalar la actualización desde el [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] versión 4|
+|Versión 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />-Silverlight versión 3|
+|Versión 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-Una actualización de [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] SP1. Puede descargar e instalar la actualización desde el [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Silverlight versión 4|
 |Versión 3|-Puede descargar e instalar una versión preliminar que admite la versión 3 de OData desde la [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Versiones de metadatos
