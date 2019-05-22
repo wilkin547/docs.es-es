@@ -27,7 +27,7 @@
           href: destroying-threads.md
         - name: Programación de subprocesos
           href: scheduling-threads.md
-        - name: Cancelación en subprocesos administrados
+        - name: Cancelación de subprocesos administrados
           href: cancellation-in-managed-threads.md
           items:
             - name: Cancelación de subprocesos de manera cooperativa
