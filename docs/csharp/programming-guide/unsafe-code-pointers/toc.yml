@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: Conversiones de puntero
           href: pointer-conversions.md
-        - name: Expresiones de puntero
-          items:
-            - name: Procedimiento para obtener el valor de una variable de puntero
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: Procedimiento para obtener la dirección de una variable
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: Procedimiento para obtener acceso a un miembro con un puntero
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: Procedimiento para obtener acceso a un elemento de matriz con un puntero
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: Manipulación de punteros
-              items:
-                - name: Procedimiento para aumentar y disminuir punteros
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: Operaciones aritméticas en punteros
-                  href: arithmetic-operations-on-pointers.md
-                - name: Comparación de punteros
-                  href: pointer-comparison.md
-        - name: Procedimiento para usar punteros para copiar una matriz de bytes
+        - name: Utilizar punteros para copiar una matriz de bytes
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79b31e61f4c7739a20765c9484db6a8cfd04b01b
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008959"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003771"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedimiento para crear un control con enlace simple en formularios Windows Forms
 Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de columna de una tabla de conjunto de datos en un control. Puede enlazar cualquier propiedad de un control de forma sencilla en un valor de datos.  
@@ -28,7 +28,7 @@ Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de
   
      Las propiedades enlazadas con más frecuencia se muestran bajo el **(DataBindings)** propiedad. Por ejemplo, en la mayoría de los controles, el **texto** propiedad está enlazada con más frecuencia.  
   
-4. Si la propiedad que desea enlazar no es una de las propiedades enlazadas con frecuencia, haga clic en el **puntos suspensivos** botón (![de pantalla de VisualStudioEllipsesButton](./media/vbellipsesbutton.png "vbEllipsesButton") ) en el **(avanzado)** cuadro para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo con una lista completa de propiedades para ese control.  
+4.  Si la propiedad que desea enlazar no es una de las propiedades enlazadas con frecuencia, haga clic en el **puntos suspensivos** botón (![los puntos suspensivos (...) en la ventana Propiedades de Visual Studio.](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) en el **() Opciones avanzadas)** cuadro para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo con una lista completa de propiedades para ese control.  
   
 5. Seleccione la propiedad que desea enlazar y haga clic en la flecha desplegable situada debajo **enlace**.  
   

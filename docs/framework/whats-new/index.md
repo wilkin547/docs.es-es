@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063866"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960018"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -1399,7 +1399,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 ## <a name="whats-new-in-net-2015"></a>Novedades de .NET 2015
 
-.NET 2015 presenta [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y .NET Core. Algunas características nuevas se aplican a ambos, y otras son específicas de [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] o [!INCLUDE[net_core](../../../includes/net-core-md.md)].
+.NET 2015 presenta [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y .NET Core. Algunas características nuevas se aplican a ambos, y otras son específicas de [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] o .NET Core.
 
 - **ASP.NET Core**
 
@@ -1747,11 +1747,11 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Compatibilidad para codificaciones de páginas de códigos**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] admite principalmente las codificaciones Unicode y, de forma predeterminada, proporciona compatibilidad limitada para las codificaciones de páginas de códigos. Puede agregar compatibilidad con codificaciones de páginas de códigos disponibles en .NET Framework pero que no se admiten en [!INCLUDE[net_core](../../../includes/net-core-md.md)] mediante el registro de las codificaciones de páginas de códigos con el método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     .NET Core admite principalmente las codificaciones Unicode y, de forma predeterminada, proporciona compatibilidad limitada para las codificaciones de páginas de códigos. Puede agregar compatibilidad con codificaciones de páginas de códigos disponibles en .NET Framework pero que no se admiten en .NET Core mediante el registro de las codificaciones de páginas de códigos con el método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
-     Las aplicaciones de Windows para Windows 10 que tienen como destino [!INCLUDE[net_core](../../../includes/net-core-md.md)] y están escritas en C# o Visual Basic pueden aprovechar una nueva tecnología que compila las aplicaciones en código nativo en lugar de IL. Generan aplicaciones que se caracterizan por un inicio y tiempos de ejecución más rápidos. Para obtener más información, consulte [Compilar aplicaciones con .NET Native](../net-native/index.md). Para obtener información general sobre .NET Native en la que se examina cómo difiere de la compilación JIT y de NGEN, y lo que eso conlleva para el código, vea [.NET Native y compilación](../net-native/net-native-and-compilation.md).
+     Las aplicaciones de Windows para Windows 10 que tienen como destino .NET Core y están escritas en C# o Visual Basic pueden aprovechar una nueva tecnología que compila las aplicaciones en código nativo en lugar de IL. Generan aplicaciones que se caracterizan por un inicio y tiempos de ejecución más rápidos. Para obtener más información, consulte [Compilar aplicaciones con .NET Native](../net-native/index.md). Para obtener información general sobre .NET Native en la que se examina cómo difiere de la compilación JIT y de NGEN, y lo que eso conlleva para el código, vea [.NET Native y compilación](../net-native/net-native-and-compilation.md).
 
      Las aplicaciones se compilan en código nativo de forma predeterminada cuando se compilan con Visual Studio 2015 o versiones posteriores. Para obtener más información, vea [Introducción a .NET Native](../net-native/getting-started-with-net-native.md).
 
