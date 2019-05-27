@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 81a293a6922a71f7428167c50aed064d7387a099
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bca12c1dd8c79a5ae17e4a9b7b75d3c7b302fb89
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236627"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875871"
 ---
-# <a name="unsafe-c-reference"></a><span data-ttu-id="90cbe-102">unsafe (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="90cbe-102">unsafe (C# Reference)</span></span>
+# <a name="unsafe-c-reference"></a><span data-ttu-id="9bf60-102">unsafe (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="9bf60-102">unsafe (C# Reference)</span></span>
 
-<span data-ttu-id="90cbe-103">La palabra clave `unsafe` denota un contexto no seguro, que es necesario para realizar cualquier operación que implique punteros.</span><span class="sxs-lookup"><span data-stu-id="90cbe-103">The `unsafe` keyword denotes an unsafe context, which is required for any operation involving pointers.</span></span> <span data-ttu-id="90cbe-104">Para obtener más información, vea [Unsafe Code and Pointers](../../programming-guide/unsafe-code-pointers/index.md) (Código no seguro y punteros [Guía de programación de C#]).</span><span class="sxs-lookup"><span data-stu-id="90cbe-104">For more information, see [Unsafe Code and Pointers](../../programming-guide/unsafe-code-pointers/index.md).</span></span>
+<span data-ttu-id="9bf60-103">La palabra clave `unsafe` denota un contexto no seguro, que es necesario para realizar cualquier operación que implique punteros.</span><span class="sxs-lookup"><span data-stu-id="9bf60-103">The `unsafe` keyword denotes an unsafe context, which is required for any operation involving pointers.</span></span> <span data-ttu-id="9bf60-104">Para obtener más información, vea [Unsafe Code and Pointers](../../programming-guide/unsafe-code-pointers/index.md) (Código no seguro y punteros [Guía de programación de C#]).</span><span class="sxs-lookup"><span data-stu-id="9bf60-104">For more information, see [Unsafe Code and Pointers](../../programming-guide/unsafe-code-pointers/index.md).</span></span>
 
-<span data-ttu-id="90cbe-105">Puede usar el codificador `unsafe` en la declaración de un tipo o miembro.</span><span class="sxs-lookup"><span data-stu-id="90cbe-105">You can use the `unsafe` modifier in the declaration of a type or a member.</span></span> <span data-ttu-id="90cbe-106">Por consiguiente, toda la extensión textual del tipo o miembro se considera un contexto no seguro.</span><span class="sxs-lookup"><span data-stu-id="90cbe-106">The entire textual extent of the type or member is therefore considered an unsafe context.</span></span> <span data-ttu-id="90cbe-107">Por ejemplo, el siguiente método se declara con el modificador `unsafe`:</span><span class="sxs-lookup"><span data-stu-id="90cbe-107">For example, the following is a method declared with the `unsafe` modifier:</span></span>
+<span data-ttu-id="9bf60-105">Puede usar el codificador `unsafe` en la declaración de un tipo o miembro.</span><span class="sxs-lookup"><span data-stu-id="9bf60-105">You can use the `unsafe` modifier in the declaration of a type or a member.</span></span> <span data-ttu-id="9bf60-106">Por consiguiente, toda la extensión textual del tipo o miembro se considera un contexto no seguro.</span><span class="sxs-lookup"><span data-stu-id="9bf60-106">The entire textual extent of the type or member is therefore considered an unsafe context.</span></span> <span data-ttu-id="9bf60-107">Por ejemplo, el siguiente método se declara con el modificador `unsafe`:</span><span class="sxs-lookup"><span data-stu-id="9bf60-107">For example, the following is a method declared with the `unsafe` modifier:</span></span>
 
 ```csharp
 unsafe static void FastCopy(byte[] src, byte[] dst, int count)
@@ -28,13 +28,13 @@ unsafe static void FastCopy(byte[] src, byte[] dst, int count)
 }
 ```
 
-<span data-ttu-id="90cbe-108">El ámbito del contexto no seguro se extiende desde la lista de parámetros hasta el final del método, por lo que también pueden usarse punteros en la lista de parámetros:</span><span class="sxs-lookup"><span data-stu-id="90cbe-108">The scope of the unsafe context extends from the parameter list to the end of the method, so pointers can also be used in the parameter list:</span></span>
+<span data-ttu-id="9bf60-108">El ámbito del contexto no seguro se extiende desde la lista de parámetros hasta el final del método, por lo que también pueden usarse punteros en la lista de parámetros:</span><span class="sxs-lookup"><span data-stu-id="9bf60-108">The scope of the unsafe context extends from the parameter list to the end of the method, so pointers can also be used in the parameter list:</span></span>
 
 ```csharp
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-<span data-ttu-id="90cbe-109">También puede usarse un bloque no seguro para habilitar el uso de código no seguro en el bloque.</span><span class="sxs-lookup"><span data-stu-id="90cbe-109">You can also use an unsafe block to enable the use of an unsafe code inside this block.</span></span> <span data-ttu-id="90cbe-110">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="90cbe-110">For example:</span></span>
+<span data-ttu-id="9bf60-109">También puede usarse un bloque no seguro para habilitar el uso de código no seguro en el bloque.</span><span class="sxs-lookup"><span data-stu-id="9bf60-109">You can also use an unsafe block to enable the use of an unsafe code inside this block.</span></span> <span data-ttu-id="9bf60-110">Por ejemplo:</span><span class="sxs-lookup"><span data-stu-id="9bf60-110">For example:</span></span>
 
 ```csharp
 unsafe
@@ -43,21 +43,21 @@ unsafe
 }
 ```
 
-<span data-ttu-id="90cbe-111">Para compilar código no seguro, debe especificar la opción [/unsafe](../compiler-options/unsafe-compiler-option.md) del compilador.</span><span class="sxs-lookup"><span data-stu-id="90cbe-111">To compile unsafe code, you must specify the [/unsafe](../compiler-options/unsafe-compiler-option.md) compiler option.</span></span> <span data-ttu-id="90cbe-112">Common Language Runtime no puede comprobar el código no seguro.</span><span class="sxs-lookup"><span data-stu-id="90cbe-112">Unsafe code is not verifiable by the common language runtime.</span></span>
+<span data-ttu-id="9bf60-111">Para compilar código no seguro, debe especificar la opción del compilador [`-unsafe`](../compiler-options/unsafe-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="9bf60-111">To compile unsafe code, you must specify the [`-unsafe`](../compiler-options/unsafe-compiler-option.md) compiler option.</span></span> <span data-ttu-id="9bf60-112">Common Language Runtime no puede comprobar el código no seguro.</span><span class="sxs-lookup"><span data-stu-id="9bf60-112">Unsafe code is not verifiable by the common language runtime.</span></span>
 
-## <a name="example"></a><span data-ttu-id="90cbe-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="90cbe-113">Example</span></span>
+## <a name="example"></a><span data-ttu-id="9bf60-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9bf60-113">Example</span></span>
 
 [!code-csharp[csrefKeywordsModifiers#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#22)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="90cbe-114">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="90cbe-114">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="9bf60-114">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="9bf60-114">C# language specification</span></span>
 
-<span data-ttu-id="90cbe-115">Para más información, vea la sección sobre [código no seguro](~/_csharplang/spec/unsafe-code.md) de la [Especificación del lenguaje C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="90cbe-115">For more information, see [Unsafe code](~/_csharplang/spec/unsafe-code.md) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="90cbe-116">La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.</span><span class="sxs-lookup"><span data-stu-id="90cbe-116">The language specification is the definitive source for C# syntax and usage.</span></span>
+<span data-ttu-id="9bf60-115">Para más información, vea la sección sobre [código no seguro](~/_csharplang/spec/unsafe-code.md) de la [Especificación del lenguaje C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="9bf60-115">For more information, see [Unsafe code](~/_csharplang/spec/unsafe-code.md) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="9bf60-116">La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.</span><span class="sxs-lookup"><span data-stu-id="9bf60-116">The language specification is the definitive source for C# syntax and usage.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="90cbe-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="90cbe-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9bf60-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="9bf60-117">See also</span></span>
 
-- [<span data-ttu-id="90cbe-118">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="90cbe-118">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="90cbe-119">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="90cbe-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="90cbe-120">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="90cbe-120">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="90cbe-121">fixed (instrucción)</span><span class="sxs-lookup"><span data-stu-id="90cbe-121">fixed Statement</span></span>](fixed-statement.md)
-- [<span data-ttu-id="90cbe-122">Código no seguro y punteros</span><span class="sxs-lookup"><span data-stu-id="90cbe-122">Unsafe Code and Pointers</span></span>](../../programming-guide/unsafe-code-pointers/index.md)
-- [<span data-ttu-id="90cbe-123">Búferes de tamaño fijo</span><span class="sxs-lookup"><span data-stu-id="90cbe-123">Fixed Size Buffers</span></span>](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [<span data-ttu-id="9bf60-118">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="9bf60-118">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="9bf60-119">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="9bf60-119">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9bf60-120">Palabras clave de C#</span><span class="sxs-lookup"><span data-stu-id="9bf60-120">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="9bf60-121">fixed (instrucción)</span><span class="sxs-lookup"><span data-stu-id="9bf60-121">fixed Statement</span></span>](fixed-statement.md)
+- [<span data-ttu-id="9bf60-122">Código no seguro y punteros</span><span class="sxs-lookup"><span data-stu-id="9bf60-122">Unsafe Code and Pointers</span></span>](../../programming-guide/unsafe-code-pointers/index.md)
+- [<span data-ttu-id="9bf60-123">Búferes de tamaño fijo</span><span class="sxs-lookup"><span data-stu-id="9bf60-123">Fixed Size Buffers</span></span>](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

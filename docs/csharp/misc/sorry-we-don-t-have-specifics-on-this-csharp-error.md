@@ -882,33 +882,33 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684061"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052755"
 ---
-# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="eb7c2-102">Lo sentimos, no tenemos detalles sobre este error de C#</span><span class="sxs-lookup"><span data-stu-id="eb7c2-102">Sorry, we don't have specifics on this C# error</span></span>
-<span data-ttu-id="eb7c2-103">Lo sentimos, pero no tenemos información específica sobre este error.</span><span class="sxs-lookup"><span data-stu-id="eb7c2-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="eb7c2-104">Puede buscar información en la web mediante el número y el texto del mensaje de error.</span><span class="sxs-lookup"><span data-stu-id="eb7c2-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="eb7c2-105">O bien, puede pedir a otros desarrolladores mediante uno de estos foros:</span><span class="sxs-lookup"><span data-stu-id="eb7c2-105">Or you can ask other developers using one of these forums:</span></span>  
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a><span data-ttu-id="1e753-102">Lo sentimos, no tenemos detalles sobre este error de C#</span><span class="sxs-lookup"><span data-stu-id="1e753-102">Sorry, we don't have specifics on this C# error</span></span>
+<span data-ttu-id="1e753-103">Lo sentimos, pero no tenemos información específica sobre este error.</span><span class="sxs-lookup"><span data-stu-id="1e753-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="1e753-104">Puede buscar información en la web mediante el número y el texto del mensaje de error.</span><span class="sxs-lookup"><span data-stu-id="1e753-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="1e753-105">O bien, puede pedir a otros desarrolladores mediante uno de estos foros:</span><span class="sxs-lookup"><span data-stu-id="1e753-105">Or you can ask other developers using one of these forums:</span></span>  
   
- [<span data-ttu-id="eb7c2-106">Lenguaje Visual C#</span><span class="sxs-lookup"><span data-stu-id="eb7c2-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- <span data-ttu-id="eb7c2-107">Proporciona un foro para preguntas y debate sobre del objeto Visual C# sintaxis del lenguaje y compilador.</span><span class="sxs-lookup"><span data-stu-id="eb7c2-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
+ [<span data-ttu-id="1e753-106">Lenguaje Visual C#</span><span class="sxs-lookup"><span data-stu-id="1e753-106">Visual C# Language</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
+ <span data-ttu-id="1e753-107">Proporciona un foro para preguntas y debate sobre del objeto Visual C# sintaxis del lenguaje y compilador.</span><span class="sxs-lookup"><span data-stu-id="1e753-107">Provides a forum for questions about and general discussions of the Visual C# language syntax and compiler.</span></span>  
   
- [<span data-ttu-id="eb7c2-108">IDE de Visual C#</span><span class="sxs-lookup"><span data-stu-id="eb7c2-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- <span data-ttu-id="eb7c2-109">Proporciona un foro para preguntas sobre cómo trabajar en el entorno de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="eb7c2-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
+ [<span data-ttu-id="1e753-108">IDE de Visual C#</span><span class="sxs-lookup"><span data-stu-id="1e753-108">Visual C# IDE</span></span>](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
+ <span data-ttu-id="1e753-109">Proporciona un foro para preguntas sobre cómo trabajar en el entorno de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="1e753-109">Provides a forum for questions about how to work in the Visual Studio environment.</span></span>  
   
- [<span data-ttu-id="eb7c2-110">Información general de Visual C#</span><span class="sxs-lookup"><span data-stu-id="eb7c2-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- <span data-ttu-id="eb7c2-111">Proporciona un foro para preguntas sobre y los problemas de Visual C# que no se debaten en otros foros.</span><span class="sxs-lookup"><span data-stu-id="eb7c2-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
+ [<span data-ttu-id="1e753-110">Información general de Visual C#</span><span class="sxs-lookup"><span data-stu-id="1e753-110">Visual C# General</span></span>](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
+ <span data-ttu-id="1e753-111">Proporciona un foro para preguntas sobre y los problemas de Visual C# que no se debaten en otros foros.</span><span class="sxs-lookup"><span data-stu-id="1e753-111">Provides a forum for questions about and issues with Visual C# that are not discussed in other forums.</span></span>  
   
- [<span data-ttu-id="eb7c2-112">Desbordamiento de pila</span><span class="sxs-lookup"><span data-stu-id="eb7c2-112">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
- <span data-ttu-id="eb7c2-113">Proporciona un foro para preguntas sobre y los problemas de Visual C#.</span><span class="sxs-lookup"><span data-stu-id="eb7c2-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
+ [<span data-ttu-id="1e753-112">Desbordamiento de pila</span><span class="sxs-lookup"><span data-stu-id="1e753-112">Stack Overflow</span></span>](https://stackoverflow.com/questions/tagged/c%23)  
+ <span data-ttu-id="1e753-113">Proporciona un foro para preguntas sobre y los problemas de Visual C#.</span><span class="sxs-lookup"><span data-stu-id="1e753-113">Provides a forum for questions about and issues with Visual C#.</span></span>  
   
- <span data-ttu-id="eb7c2-114">Vea también:</span><span class="sxs-lookup"><span data-stu-id="eb7c2-114">Also see:</span></span>  
- [<span data-ttu-id="eb7c2-115">Otros recursos para los programadores de Visual C#</span><span class="sxs-lookup"><span data-stu-id="eb7c2-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
+ <span data-ttu-id="1e753-114">Vea también:</span><span class="sxs-lookup"><span data-stu-id="1e753-114">Also see:</span></span>  
+ [<span data-ttu-id="1e753-115">Otros recursos para los programadores de Visual C#</span><span class="sxs-lookup"><span data-stu-id="1e753-115">Additional Resources for Visual C# Programmers</span></span>](../../csharp/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a><span data-ttu-id="eb7c2-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="eb7c2-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e753-116">Vea también</span><span class="sxs-lookup"><span data-stu-id="1e753-116">See also</span></span>
 
-- [<span data-ttu-id="eb7c2-117">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="eb7c2-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="eb7c2-118">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="eb7c2-118">C# Reference</span></span>](../../csharp/language-reference/index.md)
-- [<span data-ttu-id="eb7c2-119">Hable con nosotros</span><span class="sxs-lookup"><span data-stu-id="eb7c2-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+- [<span data-ttu-id="1e753-117">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="1e753-117">C# Programming Guide</span></span>](../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="1e753-118">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="1e753-118">C# Reference</span></span>](../../csharp/language-reference/index.md)
+- [<span data-ttu-id="1e753-119">Hable con nosotros</span><span class="sxs-lookup"><span data-stu-id="1e753-119">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)

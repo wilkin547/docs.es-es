@@ -1,79 +1,157 @@
 ---
-title: Inspección de los valores de datos intermedios durante el procesamiento de canalizaciones de ML.NET
+title: Inspección de los valores de datos intermedios durante el procesamiento de ML.NET
 description: Obtenga más información sobre cómo inspeccionar los valores reales de los datos intermedios durante el procesamiento de canalizaciones de aprendizaje de automático de ML.NET.
-ms.date: 03/05/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 362cb9351c3cb77b6aa67d59154854e882869ad9
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.date: 04/29/2019
+author: luisquintanilla
+ms.author: luquinta
+ms.custom: mvc, how-to
+ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843421"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063515"
 ---
-# <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a><span data-ttu-id="85a8e-103">Inspección de los valores de datos intermedios durante el procesamiento de canalizaciones de ML.NET</span><span class="sxs-lookup"><span data-stu-id="85a8e-103">Inspect intermediate data values during ML.NET pipeline processing</span></span>
+# <a name="inspect-intermediate-data-values-during-processing"></a><span data-ttu-id="713ce-103">Inspección de los valores de datos intermedios durante el procesamiento</span><span class="sxs-lookup"><span data-stu-id="713ce-103">Inspect intermediate data values during processing</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="85a8e-104">Este tema hace referencia a ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios.</span><span class="sxs-lookup"><span data-stu-id="85a8e-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="85a8e-105">Para obtener más información, visite [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="85a8e-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+<span data-ttu-id="713ce-104">Obtenga información sobre cómo inspeccionar valores durante los pasos de carga, procesamiento y entrenamiento en ML.NET.</span><span class="sxs-lookup"><span data-stu-id="713ce-104">Learn how to inspect values during loading, processing and training steps in ML.NET.</span></span>
 
-<span data-ttu-id="85a8e-106">Este tutorial y el ejemplo relacionado usan actualmente **ML.NET en su versión 0.10**.</span><span class="sxs-lookup"><span data-stu-id="85a8e-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="85a8e-107">Para obtener más información, consulte las notas de la versión en el [repositorio de GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="85a8e-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
-
-<span data-ttu-id="85a8e-108">Durante el experimento, le interesará observar y validar los resultados del procesamiento de datos en un momento dado.</span><span class="sxs-lookup"><span data-stu-id="85a8e-108">During the experiment, you may want to observe and validate the data processing results at a given point.</span></span> <span data-ttu-id="85a8e-109">No se trata de una tarea fácil, ya que las operaciones de ML.NET son diferidas y se construyen objetos que son "promesas" de datos.</span><span class="sxs-lookup"><span data-stu-id="85a8e-109">This isn't easy since ML.NET operations are lazy, constructing objects that are 'promises' of data.</span></span>
-
-<span data-ttu-id="85a8e-110">El método de extensión `GetColumn<T>` permite inspeccionar los datos intermedios.</span><span class="sxs-lookup"><span data-stu-id="85a8e-110">The `GetColumn<T>` extension method lets you inspect the intermediate data.</span></span> <span data-ttu-id="85a8e-111">Devuelve el contenido de una columna de datos como un elemento `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="85a8e-111">It returns the contents of one data column as an `IEnumerable`.</span></span>
-
-<span data-ttu-id="85a8e-112">En el ejemplo siguiente se muestra cómo usar el método de extensión `GetColumn<T>`:</span><span class="sxs-lookup"><span data-stu-id="85a8e-112">The following example shows how to use the `GetColumn<T>` extension method:</span></span>
-
-<span data-ttu-id="85a8e-113">[Archivo de ejemplo](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="85a8e-113">[Example file](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt):</span></span>
-
-<!-- markdownlint-disable MD010 -->
+<span data-ttu-id="713ce-105">Los datos como los representados a continuación, que se cargan en un [`IDataView`](xref:Microsoft.ML.IDataView), pueden inspeccionarse de varias maneras en ML.NET.</span><span class="sxs-lookup"><span data-stu-id="713ce-105">Data like the one represented below which is loaded into an [`IDataView`](xref:Microsoft.ML.IDataView) can be inspected in various ways in ML.NET.</span></span>
+ 
+```csharp
+HousingData[] housingData = new HousingData[]
+{
+    new HousingData
+    {
+        Size = 600f,
+        HistoricalPrices = new float[] { 100000f ,125000f ,122000f },
+        CurrentPrice = 170000f
+    },
+    new HousingData
+    {
+        Size = 1000f,
+        HistoricalPrices = new float[] { 200000f, 250000f, 230000f },
+        CurrentPrice = 225000f
+    },
+    new HousingData
+    {
+        Size = 1000f,
+        HistoricalPrices = new float[] { 126000f, 130000f, 200000f },
+        CurrentPrice = 195000f
+    },
+    new HousingData
+    {
+        Size = 850f,
+        HistoricalPrices = new float[] { 150000f,175000f,210000f },
+        CurrentPrice = 205000f
+    },
+    new HousingData
+    {
+        Size = 900f,
+        HistoricalPrices = new float[] { 155000f, 190000f, 220000f },
+        CurrentPrice = 210000f
+    },
+    new HousingData
+    {
+        Size = 550f,
+        HistoricalPrices = new float[] { 99000f, 98000f, 130000f },
+        CurrentPrice = 180000f
+    }
+};
 ```
-Label   Workclass   education   marital-status
-0   Private 11th    Never-married
-0   Private HS-grad Married-civ-spouse
-1   Local-gov   Assoc-acdm  Married-civ-spouse
-1   Private Some-college    Married-civ-spouse
 
-```
-<!-- markdownlint-enable MD010 -->
+## <a name="convert-idataview-to-ienumerable"></a><span data-ttu-id="713ce-106">Conversión de IDataView en IEnumerable</span><span class="sxs-lookup"><span data-stu-id="713ce-106">Convert IDataView to IEnumerable</span></span>
 
-<span data-ttu-id="85a8e-114">La clase se define de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="85a8e-114">Our class is defined as follows:</span></span>
+<span data-ttu-id="713ce-107">Una de las formas más rápidas de inspeccionar los valores de una clase [`IDataView`](xref:Microsoft.ML.IDataView) es convertirla en una clase [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601).</span><span class="sxs-lookup"><span data-stu-id="713ce-107">One of the quickest ways to inspect the values of an [`IDataView`](xref:Microsoft.ML.IDataView) is to convert it to an [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601).</span></span> <span data-ttu-id="713ce-108">Para convertir una clase [`IDataView`](xref:Microsoft.ML.IDataView) en [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), utilice el método [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*).</span><span class="sxs-lookup"><span data-stu-id="713ce-108">To convert an [`IDataView`](xref:Microsoft.ML.IDataView) to [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) use the [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) method.</span></span> 
+
+<span data-ttu-id="713ce-109">Para optimizar el rendimiento, establezca el valor de `reuseRowObject` en `true`.</span><span class="sxs-lookup"><span data-stu-id="713ce-109">To optimize performance, set the value of `reuseRowObject` to `true`.</span></span> <span data-ttu-id="713ce-110">De esta forma, se rellenará de forma diferida el mismo objeto con los datos de la fila actual a medida que se evalúa, en lugar de crear un nuevo objeto para cada fila del conjunto de datos.</span><span class="sxs-lookup"><span data-stu-id="713ce-110">Doing so will lazily populate the same object with the data of the current row as it's being evaluated as opposed to creating a new object for each row in the dataset.</span></span>
 
 ```csharp
-public class InspectedRow
+// Create an IEnumerable of HousingData objects from IDataView
+IEnumerable<HousingData> housingDataEnumerable =
+    mlContext.Data.CreateEnumerable<HousingData>(data, reuseRowObject: true);
+
+// Iterate over each row
+foreach (HousingData row in housingDataEnumerable)
 {
-    [LoadColumn(0)]
-    public bool IsOver50K { get; set; }
-    [LoadColumn(1)]
-    public string WorkClass { get; set; }
-    [LoadColumn(2)]
-    public string Education { get; set; }
-    [LoadColumn(3)]
-    public string MaritalStatus { get; set; }
+    // Do something (print out Size property) with current Housing Data object being evaluated
+    Console.WriteLine(row.Size);
 }
 ```
 
+<span data-ttu-id="713ce-111">Si solo necesita acceder a parte de los datos o a índices específicos, use [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) y establezca el valor del parámetro `reuseRowObject` en `false` para que se cree un objeto por cada una de las filas solicitadas del conjunto de datos.</span><span class="sxs-lookup"><span data-stu-id="713ce-111">If you only need access to a portion of the data or specific indices, use [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) and set the `reuseRowObject` parameter value to `false` so a new object is created for each of the requested rows in the dataset.</span></span> <span data-ttu-id="713ce-112">Después, convierta [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) en una matriz o lista.</span><span class="sxs-lookup"><span data-stu-id="713ce-112">Then, convert the [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) to an array or list.</span></span>
+
+> [!WARNING]
+> <span data-ttu-id="713ce-113">Al convertir el resultado de [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) en una matriz o lista, se cargarán todas las filas de [`IDataView`](xref:Microsoft.ML.IDataView) solicitadas en la memoria, lo que puede afectar al rendimiento.</span><span class="sxs-lookup"><span data-stu-id="713ce-113">Converting the result of [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) to an array or list will load all the requested [`IDataView`](xref:Microsoft.ML.IDataView) rows into memory which may affect performance.</span></span>
+
+<span data-ttu-id="713ce-114">Cuando se haya creado la colección, podrá realizar operaciones en los datos.</span><span class="sxs-lookup"><span data-stu-id="713ce-114">Once the collection has been created, you can perform operations on the data.</span></span> <span data-ttu-id="713ce-115">El siguiente fragmento de código toma las tres primeras filas del conjunto de datos y calcula el promedio de precio actual.</span><span class="sxs-lookup"><span data-stu-id="713ce-115">The code snippet below takes the first three rows in the dataset and calculates the average current price.</span></span>
+
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
-// as a catalog of available operations and as the source of randomness.
-var mlContext = new MLContext();
-
-// Read the data into a data view.
-var data = mlContext.Data.ReadFromTextFile<InspectedRow>(dataPath, hasHeader: true);
-
-// Start creating our processing pipeline. For now, let's just concatenate all the text columns
-// together into one.
-var pipeline = mlContext.Transforms.Concatenate("AllFeatures", "WorkClass", "Education", "MaritalStatus");
-
-// Fit our data pipeline and transform data with it.
-var transformedData = pipeline.Fit(data).Transform(data);
-
-// Extract the 'AllFeatures' column.
-// This will give the entire dataset: make sure to only take several row
-// in case the dataset is huge. The is similar to the static API, except
-// you have to specify the column name and type.
-var featureColumns =
-    transformedData
-        .GetColumn<string[]>(mlContext, "AllFeatures")
-        .Take(20)
+// Create an Array of HousingData objects from IDataView
+HousingData[] housingDataArray =
+    mlContext.Data.CreateEnumerable<HousingData>(data, reuseRowObject: false)
+        .Take(3)
         .ToArray();
+
+// Calculate Average CurrentPrice of First Three Elements
+HousingData firstRow = housingDataArray[0];
+HousingData secondRow = housingDataArray[1];
+HousingData thirdRow = housingDataArray[2];
+float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + thirdRow.CurrentPrice) / 3;
+``` 
+
+## <a name="inspect-values-in-a-single-column"></a><span data-ttu-id="713ce-116">Inspección de valores de una sola columna</span><span class="sxs-lookup"><span data-stu-id="713ce-116">Inspect values in a single column</span></span>
+
+<span data-ttu-id="713ce-117">En cualquier momento del proceso de compilación del modelo, se puede acceder a los valores de una sola columna de una [`IDataView`](xref:Microsoft.ML.IDataView) con el método [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*).</span><span class="sxs-lookup"><span data-stu-id="713ce-117">At any point in the model building process, values in a single column of an [`IDataView`](xref:Microsoft.ML.IDataView) can be accessed using the [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) method.</span></span> <span data-ttu-id="713ce-118">El método [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) devuelve todos los valores en una sola columna como una [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601).</span><span class="sxs-lookup"><span data-stu-id="713ce-118">The [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) method returns all of the values in a single column as an [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601).</span></span>
+
+```csharp
+IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 ```
+
+## <a name="inspect-idataview-values-one-row-at-a-time"></a><span data-ttu-id="713ce-119">Inspección de valores de IDataView fila por fila</span><span class="sxs-lookup"><span data-stu-id="713ce-119">Inspect IDataView values one row at a time</span></span>
+
+<span data-ttu-id="713ce-120">[`IDataView`](xref:Microsoft.ML.IDataView) se evalúa de forma diferida.</span><span class="sxs-lookup"><span data-stu-id="713ce-120">[`IDataView`](xref:Microsoft.ML.IDataView) is lazily evaluated.</span></span> <span data-ttu-id="713ce-121">Para recorrer en iteración las filas de una [`IDataView`](xref:Microsoft.ML.IDataView) sin convertirla en una [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) como se ha mostrado en las secciones anteriores de este documento, cree una clase [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) usando el método [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) y pasando la clase [DataViewSchema](xref:Microsoft.ML.DataViewSchema) de su [`IDataView`](xref:Microsoft.ML.IDataView) como parámetro.</span><span class="sxs-lookup"><span data-stu-id="713ce-121">To iterate over the rows of an [`IDataView`](xref:Microsoft.ML.IDataView) without converting to an [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) as demonstrated in previous sections of this document, create a [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) by using the [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) method and passing in the [DataViewSchema](xref:Microsoft.ML.DataViewSchema) of your [`IDataView`](xref:Microsoft.ML.IDataView) as a parameter.</span></span> <span data-ttu-id="713ce-122">Luego, para recorrer las filas en iteración, utilice el método de cursor [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) junto con delegados de [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) para extraer los valores correspondientes de cada una de las columnas.</span><span class="sxs-lookup"><span data-stu-id="713ce-122">Then, to iterate over rows, use the [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) cursor method along with [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) delegates to extract the respective values from each of the columns.</span></span>
+
+> [!IMPORTANT]
+> <span data-ttu-id="713ce-123">A efectos de rendimiento, los vectores en ML.NET utilizan [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) en lugar de los tipos de colección nativos (es decir, `Vector`,`float[]`).</span><span class="sxs-lookup"><span data-stu-id="713ce-123">For performance purposes, vectors in ML.NET use [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) instead of native collection types (that is, `Vector`,`float[]`).</span></span> 
+
+```csharp
+// Get DataViewSchema of IDataView
+DataViewSchema columns = data.Schema;
+
+// Create DataViewCursor
+using (DataViewRowCursor cursor = data.GetRowCursor(columns))
+{
+    // Define variables where extracted values will be stored to
+    float size = default;
+    VBuffer<float> historicalPrices = default;
+    float currentPrice = default;
+
+    // Define delegates for extracting values from columns
+    ValueGetter<float> sizeDelegate = cursor.GetGetter<float>(columns[0]);
+    ValueGetter<VBuffer<float>> historicalPriceDelegate = cursor.GetGetter<VBuffer<float>>(columns[1]);
+    ValueGetter<float> currentPriceDelegate = cursor.GetGetter<float>(columns[2]);
+    
+    // Iterate over each row
+    while (cursor.MoveNext())
+    {
+        //Get values from respective columns
+        sizeDelegate.Invoke(ref size);
+        historicalPriceDelegate.Invoke(ref historicalPrices);
+        currentPriceDelegate.Invoke(ref currentPrice);
+    }
+}
+```
+
+## <a name="preview-result-of-pre-processing-or-training-on-a-subset-of-the-data"></a><span data-ttu-id="713ce-124">Vista previa de los resultados de preprocesamiento o entrenamiento en un subconjunto de los datos</span><span class="sxs-lookup"><span data-stu-id="713ce-124">Preview result of pre-processing or training on a subset of the data</span></span>
+
+> [!WARNING]
+> <span data-ttu-id="713ce-125">No use `Preview` en código de producción porque está pensado para depuración y puede reducir el rendimiento.</span><span class="sxs-lookup"><span data-stu-id="713ce-125">Do not use `Preview` in production code because it is intended for debugging and may reduce performance.</span></span>
+
+<span data-ttu-id="713ce-126">El proceso de compilación de modelos es experimental e iterativo.</span><span class="sxs-lookup"><span data-stu-id="713ce-126">The model building process is experimental and iterative.</span></span> <span data-ttu-id="713ce-127">Para obtener una vista previa de los datos después del preprocesamiento o entrenamiento de un modelo de Machine Learning en un subconjunto de los datos, utilice el método [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) que devuelve una [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview).</span><span class="sxs-lookup"><span data-stu-id="713ce-127">To preview what data would look like after pre-processing or training a machine learning model on a subset of the data, use the [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) method which returns a [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview).</span></span> <span data-ttu-id="713ce-128">El resultado es un objeto con las propiedades `ColumnView` y `RowView` que son ambas una [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) y contienen los valores de una fila o columna en particular.</span><span class="sxs-lookup"><span data-stu-id="713ce-128">The result is an object with `ColumnView` and `RowView` properties which are both an [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) and contain the values in a particular column or row.</span></span> <span data-ttu-id="713ce-129">Especifique el número de filas a las que se aplicará la transformación con el parámetro `maxRows`.</span><span class="sxs-lookup"><span data-stu-id="713ce-129">Specify the number of rows to apply the transformation to with the `maxRows` parameter.</span></span>
+
+![Objeto de vista previa del depurador de datos](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
+
+<span data-ttu-id="713ce-131">El resultado de inspeccionar una [`IDataView`](xref:Microsoft.ML.IDataView) tendría un aspecto similar al siguiente:</span><span class="sxs-lookup"><span data-stu-id="713ce-131">The result of inspecting an [`IDataView`](xref:Microsoft.ML.IDataView) would look similar to the following:</span></span>
+
+![Vista de filas de vista previa del depurador de datos](./media/inspect-intermediate-data-ml-net/data-debugger-preview-02.png)
