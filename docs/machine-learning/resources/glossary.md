@@ -2,20 +2,17 @@
 title: Glosario de aprendizaje automático
 description: Un glosario de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063671"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557975"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
 La lista siguiente es una compilación de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
-
-> [!NOTE]
-> Esta documentación hace referencia a ML.NET, que se encuentra actualmente en versión preliminar. El material puede estar sujetos a cambios. Para obtener más información, vea [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="accuracy"></a>Exactitud
 
@@ -56,7 +53,7 @@ Los datos son esenciales en cualquier aplicación de aprendizaje automático. En
 
 ## <a name="estimator"></a>Estimador
 
-Clase de ML.NET que implementa la interfaz <xref:Microsoft.ML.IEstimator`1>.
+Clase de ML.NET que implementa la interfaz <xref:Microsoft.ML.IEstimator%601>.
 
 Se trata de una especificación de una transformación (tanto la transformación de la preparación de datos como la transformación de entrenamiento de modelos de aprendizaje automático). Los estimadores pueden encadenarse en una canalización de transformaciones. Los parámetros de un estimador o una canalización de estimadores se aprenden al llamar a <xref:Microsoft.ML.IEstimator`1.Fit*>. El resultado de <xref:Microsoft.ML.IEstimator`1.Fit*> es un [transformador](#transformer).
 

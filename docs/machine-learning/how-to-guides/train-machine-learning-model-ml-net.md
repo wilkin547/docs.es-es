@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2abb17aad6091cd6a5f0b6f82835011d01b40153
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 3a3f1f672ed078754162dc377cf5c239d206b715
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063638"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557851"
 ---
 # <a name="train-and-evaluate-a-model"></a>Entrenamiento y evaluación de un modelo
 
@@ -145,7 +145,7 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Extraer parámetros del modelo
 
-Una vez entrenado el modelo, extraiga el [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase`1) entrenado para su inspección o para volver a entrenarlo. Los parámetros [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) proporcionan los coeficientes aprendidos y de sesgo, o los pesos del modelo entrenado. 
+Una vez entrenado el modelo, extraiga el [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) entrenado para su inspección o para volver a entrenarlo. Los parámetros [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) proporcionan los coeficientes aprendidos y de sesgo, o los pesos del modelo entrenado. 
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;

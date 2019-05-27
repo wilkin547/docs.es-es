@@ -2,12 +2,12 @@
 title: Comando dotnet add package
 description: El comando “dotnet add package” constituye una opción práctica para agregar la referencia de un paquete de NuGet a un proyecto.
 ms.date: 04/24/2019
-ms.openlocfilehash: 79059e062368fc9c4b6b8cb31740fdf13ea2b9ca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07cb6cd8e7873def6f969a54c1f7b9a7325f9491
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751401"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632278"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
