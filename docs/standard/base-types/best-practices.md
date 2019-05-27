@@ -13,29 +13,29 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: 02847a813566c4675f7df2c88fa2e4e1f6138ecb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152817"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634715"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 <a name="top"></a> El motor de expresiones regulares de .NET es una herramienta eficaz y completa que procesa texto basándose en coincidencias de patrones en lugar de comparar y buscar coincidencias con texto literal. En la mayoría de los casos, realiza la coincidencia de modelos de manera rápida y eficaz. Sin embargo, en algunos casos, puede parecer que el motor de expresiones regulares es muy lento. En casos extremos, incluso puede parecer que deja de responder mientras procesa una entrada relativamente pequeña a lo largo de las horas o incluso los días.  
   
  En este tema se describen algunos de los procedimientos recomendados que los desarrolladores pueden adoptar para garantizar que sus expresiones regulares alcancen un rendimiento óptimo. Contiene las siguientes secciones:  
   
--   [Considerar el origen de entrada](#InputSource)  
+- [Considerar el origen de entrada](#InputSource)  
   
--   [Controlar la creación de instancias de objeto correctamente](#ObjectInstantiation)  
+- [Controlar la creación de instancias de objeto correctamente](#ObjectInstantiation)  
   
--   [Controlar el retroceso](#Backtracking)  
+- [Controlar el retroceso](#Backtracking)  
   
--   [Usar valores de tiempo de espera](#Timeouts)  
+- [Usar valores de tiempo de espera](#Timeouts)  
   
--   [Capturar solo cuando sea necesario](#Capture)  
+- [Capturar solo cuando sea necesario](#Capture)  
   
--   [Temas relacionados](#RelatedTopics)  
+- [Temas relacionados](#RelatedTopics)  
   
 <a name="InputSource"></a>   
 ## <a name="consider-the-input-source"></a>Considerar el origen de entrada  
@@ -45,16 +45,16 @@ ms.locfileid: "53152817"
   
  Para buscar coincidencias con datos de entrada sin restricciones, una expresión regular debe poder administrar eficazmente tres clases de texto:  
   
--   Texto que coincide con el patrón de expresión regular.  
+- Texto que coincide con el patrón de expresión regular.  
   
--   Texto que no coincide con el patrón de expresión regular.  
+- Texto que no coincide con el patrón de expresión regular.  
   
--   Texto que casi coincide con el patrón de expresión regular.  
+- Texto que casi coincide con el patrón de expresión regular.  
   
  El último tipo de texto es especialmente problemático para una expresión regular que se ha escrito para tratar datos de entrada restringidos. Si esa expresión regular también usa mucho [retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md), el motor de expresiones regulares puede dedicar una cantidad de tiempo excesiva (en algunos casos, muchas horas o días) procesando texto aparentemente inofensivo.  
   
 > [!WARNING]
->  En el ejemplo siguiente se utiliza una expresión regular que es propensa a un retroceso excesivo y que es probable que rechace direcciones de correo electrónico válidas. No debería utilizarse en una rutina de validación de correo electrónico. Si quiere una expresión regular que valide las direcciones de correo electrónico, consulte [Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+>  En el ejemplo siguiente se utiliza una expresión regular que es propensa a un retroceso excesivo y que es probable que rechace direcciones de correo electrónico válidas. No debería utilizarse en una rutina de validación de correo electrónico. Si desea que una expresión regular valide las direcciones de correo electrónico, vea [Procedimiento: Comprobación de que las cadenas están en un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
  Por ejemplo, considere una expresión regular de uso muy frecuente pero sumamente problemática para validar el alias de una dirección de correo electrónico. Se escribe la expresión regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` para procesar qué se considera una dirección de correo electrónico válida, que consta de un carácter alfanumérico seguido de cero o más caracteres que pueden ser alfanuméricos, puntos o guiones. La expresión regular debe finalizar con un carácter alfanumérico. Sin embargo, como se muestra en el ejemplo siguiente, aunque esta expresión regular trata la entrada válida fácilmente, su rendimiento es muy ineficaz cuando está procesando datos de entrada casi válidos.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "53152817"
   
  Para resolver este problema, puede hacer lo siguiente:  
   
--   A la hora de desarrollar un modelo, debe considerar cómo puede afectar el retroceso al rendimiento del motor de expresiones regulares, especialmente si la expresión regular está diseñada para procesar datos de entrada sin restricciones. Para obtener más información, consulte la sección [Controlar el retroceso](#Backtracking).  
+- A la hora de desarrollar un modelo, debe considerar cómo puede afectar el retroceso al rendimiento del motor de expresiones regulares, especialmente si la expresión regular está diseñada para procesar datos de entrada sin restricciones. Para obtener más información, consulte la sección [Controlar el retroceso](#Backtracking).  
   
--   Probar exhaustivamente la expresión regular usando datos de entrada no válidos y casi válidos, así como datos de entrada válidos. Para generar de forma aleatoria la entrada para una expresión regular determinada, puede usar [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/), que es una herramienta de exploración de expresiones regulares de Microsoft Research.  
+- Probar exhaustivamente la expresión regular usando datos de entrada no válidos y casi válidos, así como datos de entrada válidos. Para generar de forma aleatoria la entrada para una expresión regular determinada, puede usar [Rex](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/), que es una herramienta de exploración de expresiones regulares de Microsoft Research.  
   
  [Volver al principio](#top)  
   
@@ -78,17 +78,17 @@ ms.locfileid: "53152817"
  El núcleo del modelo de objetos de expresiones regulares de .NET es la clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, que representa el motor de expresiones regulares. A menudo, el mayor factor único que afecta al rendimiento de las expresiones regulares es la manera en que se emplea el motor de <xref:System.Text.RegularExpressions.Regex>. La definición de una expresión regular implica acoplar estrechamente el motor de expresiones regulares con un patrón de expresión regular. Ese proceso de acoplamiento, tanto si consiste en crear una instancia de un objeto <xref:System.Text.RegularExpressions.Regex> pasando a su constructor una expresión regular como en llamar a un método estático pasándole el patrón de expresión regular junto con la cadena que se va a analizar, es necesariamente costoso.  
   
 > [!NOTE]
->  Para obtener una explicación más detallada de las implicaciones sobre el rendimiento de usar expresiones regulares interpretadas y compiladas, vea el blog [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Optimización del rendimiento de expresiones regulares, parte II: ocuparse del retroceso) de BCL Team.  
+>  Para obtener una explicación más detallada de las implicaciones sobre el rendimiento de usar expresiones regulares interpretadas y compiladas, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)) en el blog del equipo de BCL.  
   
  Puede acoplar el motor de expresiones regulares con un determinado patrón de expresión regular y, a continuación, usar el motor para buscar coincidencias con texto de varias maneras:  
   
--   Puede llamar a un método estático de coincidencia de patrones como <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>. Para ello no es necesario crear instancias de un objeto de expresión regular.  
+- Puede llamar a un método estático de coincidencia de patrones como <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%29?displayProperty=nameWithType>. Para ello no es necesario crear instancias de un objeto de expresión regular.  
   
--   Puede crear instancias de un objeto <xref:System.Text.RegularExpressions.Regex> y llamar a una instancia de un método de coincidencia de modelos de una expresión regular interpretada. Este es el método predeterminado para enlazar el motor de expresiones regulares a un patrón de expresión regular. Se produce cuando se crea una instancia de un objeto <xref:System.Text.RegularExpressions.Regex> sin un argumento `options` que incluya la marca <xref:System.Text.RegularExpressions.RegexOptions.Compiled>.  
+- Puede crear instancias de un objeto <xref:System.Text.RegularExpressions.Regex> y llamar a una instancia de un método de coincidencia de modelos de una expresión regular interpretada. Este es el método predeterminado para enlazar el motor de expresiones regulares a un patrón de expresión regular. Se produce cuando se crea una instancia de un objeto <xref:System.Text.RegularExpressions.Regex> sin un argumento `options` que incluya la marca <xref:System.Text.RegularExpressions.RegexOptions.Compiled>.  
   
--   Puede crear instancias de un objeto <xref:System.Text.RegularExpressions.Regex> y llamar a una instancia de un método de coincidencia de modelos de una expresión regular compilada. Los objetos de expresiones regulares representan modelos compilados cuando se crea una instancia de un objeto <xref:System.Text.RegularExpressions.Regex> con un argumento `options` que incluye la marca <xref:System.Text.RegularExpressions.RegexOptions.Compiled>.  
+- Puede crear instancias de un objeto <xref:System.Text.RegularExpressions.Regex> y llamar a una instancia de un método de coincidencia de modelos de una expresión regular compilada. Los objetos de expresiones regulares representan modelos compilados cuando se crea una instancia de un objeto <xref:System.Text.RegularExpressions.Regex> con un argumento `options` que incluye la marca <xref:System.Text.RegularExpressions.RegexOptions.Compiled>.  
   
--   Puede crear un objeto <xref:System.Text.RegularExpressions.Regex> especial que esté acoplado estrechamente con un determinado patrón de expresión regular, compilarlo y guardarlo en un ensamblado independiente. Puede hacerlo llamando al método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>.  
+- Puede crear un objeto <xref:System.Text.RegularExpressions.Regex> especial que esté acoplado estrechamente con un determinado patrón de expresión regular, compilarlo y guardarlo en un ensamblado independiente. Puede hacerlo llamando al método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>.  
   
  La forma de llamar a los métodos de coincidencia de expresiones regulares puede tener un impacto significativo en la aplicación. En las próximas secciones se explica cómo usar llamadas a métodos estáticos, expresiones regulares interpretadas y expresiones regulares compiladas para mejorar el rendimiento de la aplicación.  
   
@@ -148,19 +148,19 @@ ms.locfileid: "53152817"
 |`[.?:;!]`|Buscar una coincidencia con un punto, un signo de interrogación, dos puntos, punto y coma o un signo de exclamación.|  
   
 ### <a name="regular-expressions-compiled-to-an-assembly"></a>Expresiones regulares: compiladas en un ensamblado  
- .NET también permite crear un ensamblado que contenga expresiones regulares compiladas. Esto lleva la merma de rendimiento de la compilación de la expresión regular del tiempo de ejecución al tiempo de diseño. Sin embargo, también implica cierto trabajo adicional: debe definir las expresiones regulares de antemano y compilarlas en un ensamblado. El compilador puede hacer referencia a este ensamblado al compilar código fuente que usa expresiones regulares del ensamblado. Cada expresión regular compilada del ensamblado está representada por una clase que se deriva de <xref:System.Text.RegularExpressions.Regex>.  
+ .NET también permite crear un ensamblado que contenga expresiones regulares compiladas. Esto lleva la merma de rendimiento de la compilación de la expresión regular del tiempo de ejecución al tiempo de diseño. Aunque también implica cierto trabajo adicional: Hay que definir las expresiones regulares de antemano y compilarlas en un ensamblado. El compilador puede hacer referencia a este ensamblado al compilar código fuente que usa expresiones regulares del ensamblado. Cada expresión regular compilada del ensamblado está representada por una clase que se deriva de <xref:System.Text.RegularExpressions.Regex>.  
   
  Para compilar expresiones regulares en un ensamblado, se llama al método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%28System.Text.RegularExpressions.RegexCompilationInfo%5B%5D%2CSystem.Reflection.AssemblyName%29?displayProperty=nameWithType> y se le pasa una matriz de objetos <xref:System.Text.RegularExpressions.RegexCompilationInfo> que representan las expresiones regulares que se van a compilar y un objeto <xref:System.Reflection.AssemblyName> que contiene información sobre el ensamblado que se va a crear.  
   
  Se recomienda compilar expresiones regulares en un ensamblado en las situaciones siguientes:  
   
--   Si es un desarrollador de componentes que desea crear una biblioteca de expresiones regulares reutilizables.  
+- Si es un desarrollador de componentes que desea crear una biblioteca de expresiones regulares reutilizables.  
   
--   Si espera que los métodos de coincidencia de modelos de la expresión regular se llamen un número indeterminado de veces, desde una o dos veces hasta miles o decenas de miles de veces. A diferencia de las expresiones regulares compiladas o interpretadas, las expresiones regulares que se compilan en ensamblados independientes proporcionan un rendimiento coherente independientemente del número de llamadas a métodos.  
+- Si espera que los métodos de coincidencia de modelos de la expresión regular se llamen un número indeterminado de veces, desde una o dos veces hasta miles o decenas de miles de veces. A diferencia de las expresiones regulares compiladas o interpretadas, las expresiones regulares que se compilan en ensamblados independientes proporcionan un rendimiento coherente independientemente del número de llamadas a métodos.  
   
  Si emplea expresiones regulares compiladas para optimizar el rendimiento, no debe usar la reflexión para crear el ensamblado, cargar el motor de expresiones regulares y ejecutar sus métodos de coincidencia con modelos. Para ello es necesario evitar la creación dinámica de expresiones regulares y especificar cualquier opción de coincidencia de modelos (como la coincidencia de modelos sin distinción entre mayúsculas y minúsculas) en el momento en que se crea el ensamblado. También debe separar el código que crea el ensamblado del código que usa la expresión regular.  
   
- En el ejemplo siguiente se muestra cómo crear un ensamblado que contiene una expresión regular compilada. Crea un ensamblado denominado `RegexLib.dll` con una única clase de expresión regular, `SentencePattern`, que contiene el patrón de expresión regular de coincidencia con frases usado en la sección [Expresiones regulares interpretadas frente a  expresiones regulares compiladas](#Interpreted).  
+ En el ejemplo siguiente se muestra cómo crear un ensamblado que contiene una expresión regular compilada. Crea un ensamblado denominado `RegexLib.dll` con una única clase de expresión regular, `SentencePattern`, que contiene el patrón de expresión regular de coincidencia con frases usado en la sección [Expresiones regulares interpretadas frente a expresiones regulares compiladas](#Interpreted).  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]  
@@ -177,7 +177,7 @@ ms.locfileid: "53152817"
  Normalmente, el motor de expresiones regulares usa la progresión lineal para desplazarse a través de una cadena de entrada y compararla con un patrón de expresión regular. Sin embargo, cuando en un patrón de expresión regular se usan cuantificadores indeterminados como `*`, `+` y`?`, el motor de expresiones regulares puede abandonar una parte de las coincidencias parciales correctas y volver a un estado guardado previamente para buscar una coincidencia correcta de todo el patron. Este proceso se denomina retroceso.  
   
 > [!NOTE]
->  Para obtener más información acerca del retroceso, consulte [Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) y [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para obtener una explicación detallada del retroceso, consulte [Optimizing Regular Expression Performance, Part II: Taking Charge of Backtracking](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) (Optimización del rendimiento de expresiones regulares, parte II: ocuparse del retroceso) en el blog de BCL Team.  
+>  Para obtener más información acerca del retroceso, consulte [Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) y [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para obtener una explicación detallada del retroceso, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)) en el blog del equipo de BCL.  
   
  La compatibilidad con el retroceso aporta a las expresiones regulares eficacia y flexibilidad. También deja la responsabilidad de controlar el funcionamiento del motor de expresiones regulares en manos de los desarrolladores de expresiones regulares. Puesto que los desarrolladores no suelen ser conscientes de esta responsabilidad, su uso incorrecto del retroceso o su dependencia de un retroceso excesivo suele desempeñar el rol más significativo en la degradación del rendimiento de las expresiones regulares. En un escenario de caso peor, el tiempo de ejecución puede duplicarse por cada carácter adicional de la cadena de entrada. De hecho, usando excesivamente el retroceso, es fácil crear el equivalente en programación de un bucle infinito si la entrada coincide casi con el patrón de expresiones regulares; el motor de expresiones regulares puede tardar horas o incluso días en procesar una cadena de entrada relativamente corta.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "53152817"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]  
   
- El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para obtener más información, consulta [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+ El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para obtener más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
 |Elemento del lenguaje|Descripción|  
 |----------------------|-----------------|  
@@ -237,11 +237,11 @@ ms.locfileid: "53152817"
   
  El intervalo de tiempo de espera de la expresión regular define el período de tiempo que el motor de expresiones regulares buscará una coincidencia única antes de que el tiempo se agote. El intervalo de tiempo de espera predeterminado es <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>, que significa que no se agotará el tiempo de la expresión regular. Puede invalidar este valor y definir un intervalo de tiempo de espera de la siguiente manera:  
   
--   Proporcionando un valor de tiempo de espera al crear una instancia del objeto <xref:System.Text.RegularExpressions.Regex> llamando al constructor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>.  
+- Proporcionando un valor de tiempo de espera al crear una instancia del objeto <xref:System.Text.RegularExpressions.Regex> llamando al constructor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>.  
   
--   Llamando a un método estático de coincidencia de patrones, como <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, que incluya un parámetro `matchTimeout`.  
+- Llamando a un método estático de coincidencia de patrones, como <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType>, que incluya un parámetro `matchTimeout`.  
   
--   Para las expresiones regulares compiladas que se crean mediante una llamada al método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>, llamando al constructor que tiene un parámetro de tipo <xref:System.TimeSpan>.  
+- Para las expresiones regulares compiladas que se crean mediante una llamada al método <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>, llamando al constructor que tiene un parámetro de tipo <xref:System.TimeSpan>.  
   
  Si ha definido un intervalo de tiempo de espera y no se encuentra ninguna coincidencia al final del intervalo, el método de expresiones regulares produce una excepción <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. En el controlador de excepciones, puede elegir reintentar la búsqueda de coincidencias con un intervalo de tiempo de espera más largo, abandonar el intento de búsqueda de coincidencias y asumir que no hay ninguna coincidencia o abandonar el intento de búsqueda de coincidencias y registrar la información de excepción para futuros análisis.  
   
@@ -281,13 +281,13 @@ ms.locfileid: "53152817"
   
  Puede deshabilitar las capturas de una de las maneras siguientes:  
   
--   Use el elemento de lenguaje `(?:subexpression)`. Este elemento impide la captura de subcadenas coincidentes en el grupo al que se aplica. No deshabilita las capturas de subcadenas en ningún grupo anidado.  
+- Use el elemento de lenguaje `(?:subexpression)`. Este elemento impide la captura de subcadenas coincidentes en el grupo al que se aplica. No deshabilita las capturas de subcadenas en ningún grupo anidado.  
   
--   Use la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Deshabilita todas las capturas sin nombre o implícitas en el patrón de expresión regular. Cuando se usa esta opción, solo se pueden capturar las subcadenas que coinciden con grupos con nombre definidos con el elemento de lenguaje `(?<name>subexpression)`. La marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> se puede pasar al parámetro `options` de un constructor de clase <xref:System.Text.RegularExpressions.Regex> o al parámetro `options` de un método coincidente estático <xref:System.Text.RegularExpressions.Regex>.  
+- Use la opción <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Deshabilita todas las capturas sin nombre o implícitas en el patrón de expresión regular. Cuando se usa esta opción, solo se pueden capturar las subcadenas que coinciden con grupos con nombre definidos con el elemento de lenguaje `(?<name>subexpression)`. La marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> se puede pasar al parámetro `options` de un constructor de clase <xref:System.Text.RegularExpressions.Regex> o al parámetro `options` de un método coincidente estático <xref:System.Text.RegularExpressions.Regex>.  
   
--   Use la opción `n` del elemento de lenguaje `(?imnsx)`. Esta opción deshabilita todas las capturas sin nombre o implícitas desde el punto del patrón de expresión regular en el que aparece el elemento. Las capturas se deshabilitan hasta el final del modelo o hasta que la opción `(-n)` habilita las capturas sin nombre o implícitas. Para obtener más información, consulta [Miscellaneous Constructs](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
+- Use la opción `n` del elemento de lenguaje `(?imnsx)`. Esta opción deshabilita todas las capturas sin nombre o implícitas desde el punto del patrón de expresión regular en el que aparece el elemento. Las capturas se deshabilitan hasta el final del modelo o hasta que la opción `(-n)` habilita las capturas sin nombre o implícitas. Para obtener más información, consulte [Construcciones misceláneas](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Use la opción `n` del elemento de lenguaje `(?imnsx:subexpression)`. Esta opción deshabilita todas las capturas sin nombre o implícitas en `subexpression`. Las capturas por grupos de captura anidados sin nombre o implícitos también se deshabilitan.  
+- Use la opción `n` del elemento de lenguaje `(?imnsx:subexpression)`. Esta opción deshabilita todas las capturas sin nombre o implícitas en `subexpression`. Las capturas por grupos de captura anidados sin nombre o implícitos también se deshabilitan.  
   
  [Volver al principio](#top)  
   

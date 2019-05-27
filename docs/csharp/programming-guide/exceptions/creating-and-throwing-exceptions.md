@@ -8,31 +8,31 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2a15fade1beb8f3da0d9b6f48a216dda81e669fd
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: e569742943e121faeae340512544956b674da083
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202696"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595352"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Crear y producir excepciones (Guía de programación de C#)
 Las excepciones se usan para indicar que se ha producido un error mientras se ejecutaba el programa. Se crean los objetos de excepción que describen un error y, luego, se *producen* con la palabra clave [throw](../../../csharp/language-reference/keywords/throw.md). Después, el tiempo de ejecución busca el controlador de excepciones más compatible.  
   
  Los programadores deberían producir excepciones cuando una o varias de las siguientes condiciones sean verdaderas:  
   
--   El método no puede finalizar su funcionalidad definida.  
+- El método no puede finalizar su funcionalidad definida.  
   
      Por ejemplo, si un parámetro de un método tiene un valor no válido:  
   
      [!code-csharp[csProgGuideExceptions#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#12)]  
   
--   Se realiza una llamada inadecuada a un objeto, en función del estado del objeto.  
+- Se realiza una llamada inadecuada a un objeto, en función del estado del objeto.  
   
      Un ejemplo podría ser intentar escribir en un archivo de solo lectura. En los casos en los que un estado de objeto no admite una operación, produzca una instancia de <xref:System.InvalidOperationException> o un objeto basado en una derivación de esta clase. Este es un ejemplo de un método que genera un objeto <xref:System.InvalidOperationException>:  
   
      [!code-csharp[csProgGuideExceptions#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#13)]  
   
--   Cuando un argumento de un método genera una excepción.  
+- Cuando un argumento de un método genera una excepción.  
   
      En este caso, se debe detectar la excepción original y se debe crear una instancia de <xref:System.ArgumentException>. La excepción original debe pasarse al constructor de <xref:System.ArgumentException> como el parámetro <xref:System.Exception.InnerException%2A>:  
   
@@ -47,16 +47,16 @@ Las excepciones se usan para indicar que se ha producido un error mientras se ej
 ## <a name="things-to-avoid-when-throwing-exceptions"></a>Aspectos que se deben evitar al producir excepciones  
  En la siguiente lista se identifican los procedimientos que se deben evitar al producir excepciones:  
   
--   Las excepciones no deben usarse para cambiar el flujo de un programa como parte de la ejecución normal. Las excepciones solo deben usarse para comunicar y controlar las condiciones de error.  
+- Las excepciones no deben usarse para cambiar el flujo de un programa como parte de la ejecución normal. Las excepciones solo deben usarse para comunicar y controlar las condiciones de error.  
   
--   Las excepciones no se deben devolver como un parámetro o valor devuelto en lugar de producirse.  
+- Las excepciones no se deben devolver como un parámetro o valor devuelto en lugar de producirse.  
   
--   No genere <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> o <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> de manera intencionada desde su propio código fuente.  
+- No genere <xref:System.Exception?displayProperty=nameWithType>, <xref:System.SystemException?displayProperty=nameWithType>, <xref:System.NullReferenceException?displayProperty=nameWithType> o <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> de manera intencionada desde su propio código fuente.  
   
--   No cree excepciones que se puedan producir en el modo de depuración, pero no en el modo de lanzamiento. Para identificar los errores en tiempo de ejecución durante la fase de desarrollo, use la aserción de depuración.  
+- No cree excepciones que se puedan producir en el modo de depuración, pero no en el modo de lanzamiento. Para identificar los errores en tiempo de ejecución durante la fase de desarrollo, use la aserción de depuración.  
   
 ## <a name="defining-exception-classes"></a>Definir clases de excepción  
- Los programas pueden producir una clase de excepción predefinida en el espacio de nombres <xref:System> (excepto en los casos indicados anteriormente) o crear sus propias clases de excepción mediante la derivación de <xref:System.Exception>. Las clases derivadas deben definir al menos cuatro constructores: un constructor predeterminado, uno que establezca la propiedad de mensaje y otro que establezca las propiedades <xref:System.Exception.Message%2A> y <xref:System.Exception.InnerException%2A>. El cuarto constructor se usa para serializar la excepción. Las nuevas clases de excepción deben ser serializables. Por ejemplo:  
+ Los programas pueden producir una clase de excepción predefinida en el espacio de nombres <xref:System> (excepto en los casos indicados anteriormente) o crear sus propias clases de excepción mediante la derivación de <xref:System.Exception>. Las clases derivadas deben definir al menos cuatro constructores: un constructor sin parámetros, uno que establezca la propiedad de mensaje y otro que establezca las propiedades <xref:System.Exception.Message%2A> y <xref:System.Exception.InnerException%2A>. El cuarto constructor se usa para serializar la excepción. Las nuevas clases de excepción deben ser serializables. Por ejemplo:  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   

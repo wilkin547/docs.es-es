@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188125"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628876"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizar el modelo asincrónico basado en tareas
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  Este enfoque de cancelación tiene varias ventajas:
 
--   Puede pasar el mismo token de cancelación a cualquier número de operaciones sincrónicas y asincrónicas.
+- Puede pasar el mismo token de cancelación a cualquier número de operaciones sincrónicas y asincrónicas.
 
--   La misma solicitud de cancelación puede extenderse a cualquier número de agentes de escucha.
+- La misma solicitud de cancelación puede extenderse a cualquier número de agentes de escucha.
 
--   El desarrollador de la API asincrónica tiene todo el control de si se puede solicitar la cancelación y cuándo puede surtir efecto.
+- El desarrollador de la API asincrónica tiene todo el control de si se puede solicitar la cancelación y cuándo puede surtir efecto.
 
--   El código que utiliza la API puede determinar de forma selectiva las llamadas asincrónicas que se propagarán las solicitudes de cancelación.
+- El código que utiliza la API puede determinar de forma selectiva las llamadas asincrónicas que se propagarán las solicitudes de cancelación.
 
 ## <a name="monitoring-progress"></a>Supervisar el progreso
  Algunos métodos asincrónicos exponen progreso a través de una interfaz de progreso pasada al método asincrónico.  Por ejemplo, considere una función que se descarga de manera asincrónica una cadena de texto y que genera las actualizaciones de progreso que incluyen el porcentaje de descarga que se ha completado hasta el momento.  Este método se puede utilizar en una aplicación de Windows Presentation Foundation (WPF) como sigue:
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  Puede usar el método <xref:System.Threading.Tasks.Task.WhenAny%2A> para esperar de manera asincrónica solo una de varias operaciones asincrónicas que se representan como tareas para completar.  Este método actúa en cuatro casos de uso principales:
 
--   Redundancia: realizar una operación varias veces y seleccionar la que se complete primero (por ejemplo, ponerse en contacto con varios servicios web de cotización bursátil que va a generar un único resultado y seleccionar la que se completa con más rapidez).
+- Redundancia:  Realizar una operación varias veces y seleccionar la que se complete primero (por ejemplo, ponerse en contacto con varios servicios web de cotización bursátil que generen un único resultado y seleccionar el que se complete más rápido).
 
--   Intercalación: iniciar varias operaciones y esperar que se completen todas, pero procesarlas a medida que se completan.
+- Intercalación:  Iniciar varias operaciones y esperar a que todas ellas se completen, pero procesarlas a medida que se completan.
 
--   Limitación: permitir que operaciones adicionales comiencen a medida que otras se completan.  Esto es una extensión del escenario de intercalación.
+- Limitación:  Permitir que comiencen otras operaciones a medida que otras se completan.  Esto es una extensión del escenario de intercalación.
 
--   Recursividad temprana: por ejemplo, una operación representada por la tarea t1 puede agruparse en una tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> con otra tarea t2, y puede esperar a la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A>. La tarea t2 podría representar un tiempo de espera o cancelación, o alguna otra señal que hace que la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> se complete antes de que finalice t1.
+- Salida anticipada:  Por ejemplo, una operación representada por la tarea t1 puede agruparse en una tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> con otra tarea t2 y se puede esperar en la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A>. La tarea t2 podría representar un tiempo de espera o cancelación, o alguna otra señal que hace que la tarea <xref:System.Threading.Tasks.Task.WhenAny%2A> se complete antes de que finalice t1.
 
 #### <a name="redundancy"></a>Redundancia
  Considere un caso en el que quiera tomar la decisión de comprar o no una acción.  Hay varios servicios web de recomendación bursátil en los que confía, pero según la carga diaria, cada servicio puede acabar ralentizándose en momentos diferentes.  Puede usar el método <xref:System.Threading.Tasks.Task.WhenAny%2A> para recibir una notificación cuando se complete cualquier operación:
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- Además, aunque una primera tarea se complete correctamente, las tareas subsiguientes pueden producir un error.  En este punto, tiene varias opciones para tratar las excepciones: puede esperar hasta que han completado todas las tareas iniciadas, en cuyo caso puede utilizar el método <xref:System.Threading.Tasks.Task.WhenAll%2A>, o bien puede decidir que todas las excepciones son importantes y se deben registrar.  Para ello, puede usar las continuaciones para recibir una notificación cuando se hayan completado las tareas de forma asincrónica:
+ Además, aunque una primera tarea se complete correctamente, las tareas subsiguientes pueden producir un error.  En este punto, tiene varias opciones para tratar las excepciones:  Puede esperar hasta que se hayan completado todas las tareas iniciadas, en cuyo caso puede utilizar el método <xref:System.Threading.Tasks.Task.WhenAll%2A>, o bien decidir que todas las excepciones son importantes y deben haber iniciado sesión.  Para ello, puede usar las continuaciones para recibir una notificación cuando se hayan completado las tareas de forma asincrónica:
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -837,6 +837,6 @@ private static void Produce(int data)
 
 ## <a name="see-also"></a>Vea también
 
-- [Modelo asincrónico basado en tareas [TAP]](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP])
 - [Implementar el modelo asincrónico basado en tareas](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
 - [Interoperabilidad con otros tipos y patrones asincrónicos](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

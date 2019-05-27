@@ -2,12 +2,12 @@
 title: Procedimiento para combinar y comparar colecciones de cadenas (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cdddf0aaac4264ae70c89590ef61e7b1bbf4cb9b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323751"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585950"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Procedimiento para combinar y comparar colecciones de cadenas (LINQ) (C#)
 En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
@@ -169,7 +169,7 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
+ Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.  
   
 ## <a name="see-also"></a>Vea también
 

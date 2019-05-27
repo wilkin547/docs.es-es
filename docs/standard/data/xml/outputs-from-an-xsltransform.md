@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b299f09f3dc47b5d136284d4d1d285f2e5aad5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f51a657135d9e22d960743b428057e13c1b23804
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970752"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590363"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Resultados de XslTransform
 Como las hojas de estilos pueden determinar el formato del resultado utilizando una instrucción `<xsl:output>` con el atributo `method`, en la tabla siguiente se describe cuál es el formato del resultado cuando se utiliza el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> para escribir el resultado, y el formato del resultado se declara como <xref:System.IO.Stream> o <xref:System.IO.TextWriter>.  
@@ -27,32 +27,32 @@ Como las hojas de estilos pueden determinar el formato del resultado utilizando 
 |method="text"|Texto|  
   
 > [!NOTE]
->  Nota: la instrucción `<xsl:output>` se ignora cuando el resultado del método <xref:System.Xml.Xsl.XslTransform.Transform%2A> es <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.  
+>  Nota: La instrucción `<xsl:output>` se ignora cuando el resultado del método <xref:System.Xml.Xsl.XslTransform.Transform%2A> es <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.  
   
  Los siguientes atributos son compatibles cuando el resultado del método <xref:System.Xml.Xsl.XslTransform.Transform%2A> es <xref:System.IO.Stream> o <xref:System.IO.TextWriter>:  
   
--   encoding*  
+- encoding*  
   
--   omit-xml-declaration  
+- omit-xml-declaration  
   
--   independiente  
+- independiente  
   
--   doctype-public  
+- doctype-public  
   
--   doctype-system  
+- doctype-system  
   
--   cdata-section-elements  
+- cdata-section-elements  
   
--   indent  
+- indent  
   
     > [!NOTE]
     >  *el atributo encoding se omite cuando el método <xref:System.Xml.Xsl.XslTransform.Transform%2A> envía su resultado a <xref:System.IO.TextWriter>. Se usa en su lugar la propiedad encoding de <xref:System.IO.TextWriter>.  
   
  El atributo siguiente se omite si el resultado del método <xref:System.Xml.Xsl.XslTransform.Transform%2A> es <xref:System.IO.Stream>:  
   
--   versión: la versión es siempre 1.0.  
+- versión: la versión es siempre 1.0.  
   
--   tipo de medio: el tipo de medio  
+- tipo de medio: el tipo de medio  
   
 ## <a name="escaping-special-characters"></a>Caracteres de escape especiales  
  La etiqueta `<xsl:text disable-output-escaping>` se utiliza para indicar si los caracteres especiales tienen que ser caracteres de escape en formato XML (por ejemplo, mediante `<&lt>` en lugar del símbolo `"<"`) o izquierda en el estado actual. El atributo `disable-output-escaping` se omite cuando se transforma en un objeto <xref:System.Xml.XmlReader> o<xref:System.Xml.XmlWriter> y no afecta a caracteres especiales.  

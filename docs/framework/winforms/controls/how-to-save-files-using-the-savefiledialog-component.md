@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 933e049f825bcc8f2afef914f810b52c1cf51245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 18d9b93b78d3ed588eafa48831448983ccd61fe8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638306"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053510"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>Procedimiento para guardar archivos mediante el componente SaveFileDialog
 El <xref:System.Windows.Forms.SaveFileDialog> componente permite a los usuarios examinar el sistema de archivos y seleccionar los archivos se guarden. El cuadro de diálogo devuelve la ruta de acceso y el nombre del archivo que el usuario seleccionó en el cuadro de diálogo. Sin embargo, debe escribir el código para escribir realmente los archivos en el disco.  
@@ -161,7 +161,7 @@ El <xref:System.Windows.Forms.SaveFileDialog> componente permite a los usuarios 
        }  
     ```  
   
-     (Visual C# y [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
+     (Visual C# y Visual C++) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.button2.Click += new System.EventHandler(this.button2_Click);  

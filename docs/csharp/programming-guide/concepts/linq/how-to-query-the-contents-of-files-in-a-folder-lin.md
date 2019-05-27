@@ -2,12 +2,12 @@
 title: Procedimiento para consultar el contenido de los archivos de texto de una carpeta (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 66e2a2d6ee2b8dd3be3e66f7277947b6d6f749a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1be896f257395cb1e70718ac55e3199da09d8961
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688162"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585836"
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>Procedimiento para consultar el contenido de los archivos de texto de una carpeta (LINQ) (C#)
 En este ejemplo se muestra cómo consultar todos los archivos en un árbol de directorios especificado, abrir cada archivo e inspeccionar su contenido. Este tipo de técnica puede usarse para crear índices o índices inversos del contenido de un árbol de directorios. En este ejemplo, se realiza una búsqueda de cadena simple. Pero los tipos más complejos de coincidencia de patrones se pueden realizar con una expresión regular. Para obtener más información, vea [Cómo: Combinar consultas LINQ con expresiones regulares (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md).  
@@ -71,7 +71,7 @@ class QueryContents
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Cree un proyecto destinado a .NET Framework versión 3.5 o posterior, con una referencia a System.Core.dll y directivas `using` para los espacios de nombres System.Linq y System.IO.  
+Cree un proyecto de aplicación de consola de C# con directivas `using` para los espacios de nombres System.Linq y System.IO.
   
 ## <a name="see-also"></a>Vea también
 

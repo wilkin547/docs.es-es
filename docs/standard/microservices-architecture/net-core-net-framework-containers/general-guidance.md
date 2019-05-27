@@ -1,15 +1,13 @@
 ---
 title: Orientación general
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Orientación general
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 6ff6170fd1cdd0c69ecc8729cc8199cceea43ffa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0981cb16d5aa2036391caba0cf6ad3ac5c44ed6f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128484"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644132"
 ---
 # <a name="general-guidance"></a>Orientación general
 
@@ -17,11 +15,11 @@ En esta sección se proporciona un resumen de cuándo es mejor elegir .NET Core 
 
 Se recomienda utilizar .NET Core con contenedores de Linux o Windows en la aplicación de servidor Docker en contenedor cuando:
 
--   Tenga necesidades multiplataforma. Por ejemplo, si quiere utilizar contenedores de Linux y Windows.
+- Tenga necesidades multiplataforma. Por ejemplo, si quiere utilizar contenedores de Linux y Windows.
 
--   La arquitectura de la aplicación esté basada en microservicios.
+- La arquitectura de la aplicación esté basada en microservicios.
 
--   Necesite iniciar contenedores rápidamente y quiera que una pequeña superficie por contenedor alcance una mejor densidad o más contenedores por unidad de hardware con el fin de reducir costos.
+- Necesite iniciar contenedores rápidamente y quiera que una pequeña superficie por contenedor alcance una mejor densidad o más contenedores por unidad de hardware con el fin de reducir costos.
 
 En resumen, al crear nuevas aplicaciones .NET en contenedores, debe optar por .NET Core como opción predeterminada, ya que esta opción presenta muchas ventajas y es la que mejor se adapta a la filosofía y al estilo de trabajo de los contenedores.
 
@@ -29,20 +27,20 @@ Otra ventaja adicional de usar .NET Core es que puede ejecutar versiones paralel
 
 Se recomienda utilizar .NET Framework en la aplicación de servidor Docker en contenedor cuando:
 
--   La aplicación ya utilice .NET Framework y dependa fuertemente de Windows.
+- La aplicación ya utilice .NET Framework y dependa fuertemente de Windows.
 
--   Tenga que usar API de Windows que no sean compatibles con .NET Core.
+- Tenga que usar API de Windows que no sean compatibles con .NET Core.
 
--   Necesite usar bibliotecas .NET de terceros o paquetes NuGet que no estén disponibles para .NET Core.
+- Necesite usar bibliotecas .NET de terceros o paquetes NuGet que no estén disponibles para .NET Core.
 
 Utilizar .NET Framework en Docker puede mejorar sus experiencias de implementación minimizando los problemas de implementación. Este [escenario de migración mediante lift-and-shift](https://aka.ms/liftandshiftwithcontainersebook) es importante para aplicaciones en contenedor heredadas que se desarrollaron originalmente con .NET Framework, como formularios web de ASP.NET, aplicaciones web MVC o servicios de WCF (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
--   **Libro electrónico: Modernize existing .NET Framework applications with Azure and Windows Containers** (Modernizar las aplicaciones .NET Framework existentes con contenedores de Azure y Windows)  
+- **eBook: Modernize existing .NET Framework applications with Azure and Windows Containers** (Libro electrónico: Modernización de las aplicaciones .NET Framework existentes con contenedores de Azure y de Windows)  
     https://aka.ms/liftandshiftwithcontainersebook
 
--   **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Aplicaciones de ejemplo: modernizar aplicaciones web de ASP.NET heredadas usando contenedores de Windows)  
+- **Sample apps: Modernization of legacy ASP.NET web apps by using Windows Containers** (Aplicaciones de ejemplo: Modernización de aplicaciones web de ASP.NET heredadas mediante contenedores de Windows)  
     https://aka.ms/eshopmodernizing
 
 >[!div class="step-by-step"]

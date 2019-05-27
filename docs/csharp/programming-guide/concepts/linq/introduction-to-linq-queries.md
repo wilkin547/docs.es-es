@@ -7,15 +7,15 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 4432270c8a1a9ad499f833bf8201ed3155bd7ce2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4276a1a7308e07b2dfb9cacb5670e97f6e2ca732
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333709"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879200"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introducción a las consultas LINQ (C#)
-Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consultas especializado. Con el tiempo se han desarrollado diferentes lenguajes para los distintos tipos de orígenes de datos, como SQL para las bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que deben admitir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifica esta situación al ofrecer un modelo coherente para trabajar con los datos de varios formatos y orígenes. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. Se usan los mismos modelos de codificación básicos para consultar y transformar los datos en documentos XML, bases de datos SQL, conjuntos de datos [!INCLUDE[vstecado](~/includes/vstecado-md.md)], colecciones de .NET y cualquier otro formato para el que está disponible un proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+Una *consulta* es una expresión que recupera datos de un origen de datos. Las consultas se suelen expresar en un lenguaje de consultas especializado. Con el tiempo se han desarrollado diferentes lenguajes para los distintos tipos de orígenes de datos, como SQL para las bases de datos relacionales y XQuery para XML. Por lo tanto, los programadores han tenido que aprender un lenguaje de consultas nuevo para cada tipo de origen de datos o formato de datos que deben admitir. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifica esta situación al ofrecer un modelo coherente para trabajar con los datos de varios formatos y orígenes. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] siempre se trabaja con objetos. Se usan los mismos patrones de codificación básicos para consultar y transformar datos de documentos XML, bases de datos SQL, conjuntos de datos de ADO.NET, colecciones de .NET y cualquier otro formato para el que haya disponible un proveedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
 ## <a name="three-parts-of-a-query-operation"></a>Las tres partes de una operación de consulta  
  Todas las operaciones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] constan de tres acciones distintas:  

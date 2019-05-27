@@ -3,12 +3,12 @@ title: 'Structs: Guía de C#'
 description: Obtenga información sobre el tipo struct y cómo se crea.
 ms.date: 10/12/2016
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 0db9ebca8a3b0be1d380128f7802e30a41c34a37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbaa7fcc26009fe3117784b411941d30af0ba3c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506984"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608019"
 ---
 # <a name="structs"></a>Estructuras
 Un *struct* es un tipo de valor. Cuando se crea un struct, la variable a la que se asigna el struct contiene los datos reales del struct. Cuando la estructura se asigna a una nueva variable, se copia. Por lo tanto, la nueva variable y la variable original contienen dos copias independientes de los mismos datos. Los cambios realizados en una copia no afectan a la otra copia.
@@ -35,21 +35,21 @@ Para obtener más información sobre los tipos de valor de .NET Framework, vea [
     
 Los structs comparten la mayoría de la sintaxis con las clases, aunque están más limitados que estas:  
   
--   Dentro de una declaración de struct, los campos no se pueden inicializar a menos que se declaren como `const` o `static`.  
+- Dentro de una declaración de struct, los campos no se pueden inicializar a menos que se declaren como `const` o `static`.  
   
--   Un struct no puede declarar un constructor predeterminado (un constructor sin parámetros) ni un finalizador.  
+- Un struct no puede declarar un constructor sin parámetros ni un finalizador.  
   
--   Los structs se copian en la asignación. Cuando se asigna un struct a una variable nueva, se copian todos los datos y las modificaciones que se realicen en la nueva copia no cambiarán los datos de la copia original. Es importante que lo recuerde al trabajar con colecciones de tipos de valor como Dictionary<string, myStruct>.  
+- Los structs se copian en la asignación. Cuando se asigna un struct a una variable nueva, se copian todos los datos y las modificaciones que se realicen en la nueva copia no cambiarán los datos de la copia original. Es importante que lo recuerde al trabajar con colecciones de tipos de valor como Dictionary<string, myStruct>.  
   
--   Los structs son tipos de valor y las clases son tipos de referencia.  
+- Los structs son tipos de valor y las clases son tipos de referencia.  
   
--   A diferencia de las clases, se pueden crear instancias de structs sin usar un operador `new`.  
+- A diferencia de las clases, se pueden crear instancias de structs sin usar un operador `new`.  
   
--   Los structs pueden declarar constructores que tengan parámetros.  
+- Los structs pueden declarar constructores que tengan parámetros.  
   
--   Así, un struct no puede heredar de otra clase o de otro struct, como tampoco puede ser la base de una clase. Todos los structs heredan directamente de <xref:System.ValueType>, que hereda de <xref:System.Object>.  
+- Así, un struct no puede heredar de otra clase o de otro struct, como tampoco puede ser la base de una clase. Todos los structs heredan directamente de <xref:System.ValueType>, que hereda de <xref:System.Object>.  
   
--   Un struct puede implementar interfaces.
+- Un struct puede implementar interfaces.
 
 ## <a name="literal-values"></a>Valores literales  
 En C#, los valores literales reciben un tipo del compilador. Puede especificar cómo debe escribirse un literal numérico; para ello, anexe una letra al final del número. Por ejemplo, para especificar que el valor 4.56 debe tratarse como un valor flotante, anexe "f" o "F" después del número: `4.56f`. Si no se anexa ninguna letra, el compilador inferirá el tipo `double` para el literal. Para obtener más información sobre los tipos que se pueden especificar con sufijos de letras, vea las páginas de referencia de los tipos individuales en [Tipos de valor](./language-reference/keywords/value-types.md).  

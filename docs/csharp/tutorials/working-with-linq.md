@@ -3,12 +3,12 @@ title: Trabajar con LINQ
 description: En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815593"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063214"
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -51,7 +51,7 @@ using System.Linq;
 
 Si estas tres líneas (instrucciones `using`) no se encuentran al principio del archivo, nuestro programa no se compilará.
 
-Ahora que tiene todas las referencias que necesitará, tenga en cuenta lo que constituye una baraja de cartas. Habitualmente, una baraja de cartas tiene cuatro palos y cada palo tiene trece valores. Normalmente, podría plantearse crear una clase `Card` directamente del archivo bat y rellenar manualmente una colección de objetos `Card`. Con LINQ, puede ser más conciso que de costumbre al tratar con la creación de una baraja de cartas. En lugar de crear una clase `Card`, puede crear dos secuencias que representen conjuntos y clasificaciones, respectivamente. Podrá crear un par sencillo de [*métodos iterator*](../iterators.md#enumeration-sources-with-iterator-methods) que generará las clasificaciones y palos como objetos <xref:System.Collections.Generic.IEnumerable%601> de cadenas:
+Ahora que tiene todas las referencias que necesitará, tenga en cuenta lo que constituye una baraja de cartas. Habitualmente, una baraja de cartas tiene cuatro palos y cada palo tiene trece valores. Normalmente, podría plantearse crear una clase `Card` directamente del archivo bat y rellenar manualmente una colección de objetos `Card`. Con LINQ, puede ser más conciso que de costumbre al tratar con la creación de una baraja de cartas. En lugar de crear una clase `Card`, puede crear dos secuencias para representar los palos y rangos, respectivamente. Podrá crear un par sencillo de [*métodos iterator*](../iterators.md#enumeration-sources-with-iterator-methods) que generará las clasificaciones y palos como objetos <xref:System.Collections.Generic.IEnumerable%601> de cadenas:
 
 ```csharp
 // Program.cs
@@ -340,9 +340,9 @@ Aparte de LINQ, ha aprendido algo sobre una técnica que los magos utilizan para
 
 Para más información sobre LINQ, vea:
 - [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-    - [Introducción a LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [Introducción a LINQ en C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [Operaciones básicas de consulta LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [Transformaciones de datos con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [Sintaxis de consultas y sintaxis de métodos en LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [Características de C# compatibles con LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [Introducción a LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [Introducción a LINQ en C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [Operaciones básicas de consulta LINQ (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [Transformaciones de datos con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [Sintaxis de consultas y sintaxis de métodos en LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [Características de C# compatibles con LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

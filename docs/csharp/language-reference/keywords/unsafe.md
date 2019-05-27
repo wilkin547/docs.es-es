@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 81a293a6922a71f7428167c50aed064d7387a099
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bca12c1dd8c79a5ae17e4a9b7b75d3c7b302fb89
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236627"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875871"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (Referencia de C#)
 
@@ -43,7 +43,7 @@ unsafe
 }
 ```
 
-Para compilar código no seguro, debe especificar la opción [/unsafe](../compiler-options/unsafe-compiler-option.md) del compilador. Common Language Runtime no puede comprobar el código no seguro.
+Para compilar código no seguro, debe especificar la opción del compilador [`-unsafe`](../compiler-options/unsafe-compiler-option.md). Common Language Runtime no puede comprobar el código no seguro.
 
 ## <a name="example"></a>Ejemplo
 

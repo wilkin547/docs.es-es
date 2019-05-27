@@ -1,15 +1,13 @@
 ---
 title: Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las nuevas opciones para usar IHostedService y BackgroundService para implementar tareas en segundo plano en microservicios de .NET Core.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: b262f5352f62e74ec184e2e00e8cff3aeecc2f64
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9203404c0b623570c2b089087b7ce5d676bba376
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613803"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062979"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 
@@ -96,7 +94,7 @@ namespace Microsoft.Extensions.Hosting
 
 Como puede imaginarse, es posible crear varias implementaciones de IHostedService y registrarlas en el método `ConfigureService()` en el contenedor de DI, tal y como se ha mostrado anteriormente. Todos los servicios hospedados se iniciarán y detendrán junto con la aplicación o microservicio.
 
-Los desarrolladores son responsables de controlar la acción de detención o los servicios cuando el host activa el método `StopAsync()`.
+Los desarrolladores son responsables de controlar la acción de detención o los servicios cuando el host activa el método `StopAsync()`.
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>Implementación de IHostedService con una clase de servicio hospedado personalizado que se deriva de la clase base BackgroundService
 

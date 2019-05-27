@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d11e16f58b6da24d7df0ccd97c1d54050004ae1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0b428e3d9612fdfdaaecec44f1c35c4f883c134
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664650"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052826"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadenas con formato numérico estándar
 
@@ -34,7 +34,7 @@ Las cadenas de formato numérico estándar se utilizan para dar formato a tipos 
 - `xx` es un entero opcional denominado *especificador de precisión*. El especificador de precisión está comprendido entre el 0 y el 99 y afecta al número de dígitos del resultado. Observe que el especificador de precisión controla el número de dígitos en la representación de cadena de un número. No redondea el número en sí. Para realizar una operación de redondeo, use el método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> o <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
     Cuando el *especificador de precisión* controla el número de dígitos fraccionarios de la cadena de resultado, esta refleja un número redondeado al resultado representable más cercano al resultado de precisión infinita. En el caso de que haya dos resultados representables igualmente cercanos:
-    - **En .NET Framework y .NET Core (hasta la versión 2.0)**, el runtime selecciona el resultado con el dígito menos significativo más elevado (es decir, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+    - **En .NET Framework y .NET Core (hasta la versión 2.0)** , el runtime selecciona el resultado con el dígito menos significativo más elevado (es decir, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
     - **En .NET Core 2.1 y versiones posteriores**, el runtime selecciona el resultado con un dígito menos significativo par (es decir, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>). 
 
     > [!NOTE]
@@ -117,7 +117,7 @@ Una cadena de formato numérico estándar se puede usar para definir el formato 
  En el ejemplo siguiente se da formato a un valor <xref:System.Double> con el especificador de formato de divisa.  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [Volver a la tabla](#table)  
@@ -161,7 +161,7 @@ Una cadena de formato numérico estándar se puede usar para definir el formato 
  En el ejemplo siguiente se da formato a un valor <xref:System.Double> con el especificador de formato exponencial.  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [Volver a la tabla](#table)  
@@ -183,7 +183,7 @@ Una cadena de formato numérico estándar se puede usar para definir el formato 
  En el ejemplo siguiente se da formato a un valor <xref:System.Double> e <xref:System.Int32> con el especificador de formato de punto fijo.  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [Volver a la tabla](#table)  
@@ -212,7 +212,7 @@ Una cadena de formato numérico estándar se puede usar para definir el formato 
  
 Tenga en cuenta que, cuando se usa con un valor <xref:System.Double>, el especificador de formato "G17" garantiza que el valor <xref:System.Double> original realice un recorrido de ida y vuelta correctamente. Esto se debe a que <xref:System.Double> es un número de punto flotante de doble precisión compatible con IEEE 754-2008 (`binary64`) que ofrece un máximo de 17 dígitos de precisión significativos. Se recomienda su uso en lugar del [especificador de formato "R"](#RFormatString), ya que, en algunos casos, "R" no logra realizar un recorrido de ida y vuelta correcto por los valores de números de punto flotante de doble precisión. Esto se ilustra en el siguiente ejemplo.
 
-[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
+[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs#GeneralFormatSpecifier)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
 Cuando se usa con un valor <xref:System.Single>, el especificador de formato "G9" garantiza que el valor <xref:System.Single> original realice un recorrido de ida y vuelta correctamente. Esto se debe a que <xref:System.Single> es un número de punto flotante de precisión sencilla compatible con IEEE 754-2008 (`binary32`) que ofrece hasta nueve dígitos de precisión significativos. Por motivos de rendimiento, se recomienda su uso en lugar del [especificador de formato "R"](#RFormatString).
@@ -228,7 +228,7 @@ Cuando se usa con un valor <xref:System.Single>, el especificador de formato "G9
  En el ejemplo siguiente se da formato a valores de punto flotante ordenados con el especificador de formato general.  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [Volver a la tabla](#table)  
@@ -251,7 +251,7 @@ Cuando se usa con un valor <xref:System.Single>, el especificador de formato "G9
  En el ejemplo siguiente se da formato a valores de punto flotante ordenados con el especificador de formato numérico.  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [Volver a la tabla](#table)  
@@ -276,7 +276,7 @@ Cuando se usa con un valor <xref:System.Single>, el especificador de formato "G9
  En el ejemplo siguiente se da formato a valores de punto flotante con el especificador de formato de porcentaje.  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [Volver a la tabla](#table)  
@@ -301,7 +301,7 @@ Para los valores <xref:System.Double>, el especificador de formato "R", en algun
  En el ejemplo siguiente se da formato a un valor <xref:System.Numerics.BigInteger> con el especificador de formato de ida y vuelta.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
- [!code-csharp-interactive[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
+ [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
@@ -309,7 +309,7 @@ Para los valores <xref:System.Double>, el especificador de formato "R", en algun
   
  Para solucionar el problema de los valores <xref:System.Double> con formato de cadena numérico estándar “R” que no hacen correctamente el viaje de ida y vuelta si se compilan con conmutadores `/platform:x64` o `/platform:anycpu` y se ejecutan en sistemas de 64 bits, puede dar formato a los valores <xref:System.Double> usando la cadena de formato numérico estándar “G17”. En el ejemplo siguiente se usa la cadena de formato "R" con un valor <xref:System.Double> que no realiza correctamente la operación de ida y vuelta, y usa también la cadena de formato "G17" para realizar correctamente la operación de ida y vuelta del valor original.  
   
- [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [Volver a la tabla](#table)  
@@ -356,7 +356,7 @@ Para los valores <xref:System.Double>, el especificador de formato "R", en algun
  
  En el ejemplo siguiente se da formato a un valor numérico integral y de punto flotante mediante la referencia cultural en-US y todos los especificadores de formato numérico estándar. En este ejemplo se usan dos tipos numéricos concretos (<xref:System.Double> y <xref:System.Int32>), pero se obtendrían resultados similares con cualquiera de los demás tipos base numéricos (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> y <xref:System.Single>).  
   
- [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
+ [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
 ## <a name="see-also"></a>Vea también

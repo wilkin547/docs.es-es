@@ -2,12 +2,12 @@
 title: Creación de un microservicio CRUD sencillo controlado por datos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre la creación de un microservicio CRUD sencillo (controlado por datos) en el contexto de una aplicación de microservicios.
 ms.date: 01/07/2019
-ms.openlocfilehash: 5dd7154fc81c7d0c3fb78bce662ea822f2392a10
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 53aba727c8dae35df8b34bc1558c0cc390fe2014
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644422"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053566"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Creación de un microservicio CRUD sencillo controlado por datos
 
@@ -321,7 +321,7 @@ Las razones principales para generar metadatos de Swagger para las API son las s
 
 - [AutoRest](https://github.com/Azure/AutoRest). Puede generar automáticamente clases de cliente de .NET para llamar a Swagger. Esta herramienta se puede utilizar desde la interfaz de la línea de comandos y también se integra con Visual Studio para que pueda utilizarse fácilmente desde la interfaz gráfica de usuario.
 
-- [Microsoft Flow](https://flow.microsoft.com/en-us/). También puede [utilizar e integrar la API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) automáticamente en un flujo de trabajo de Microsoft Flow de alto nivel, aunque no tenga conocimientos de programación.
+- [Microsoft Flow](https://flow.microsoft.com/). También puede [utilizar e integrar la API](https://flow.microsoft.com/blog/integrating-custom-api/) automáticamente en un flujo de trabajo de Microsoft Flow de alto nivel, aunque no tenga conocimientos de programación.
 
 - [Microsoft PowerApps](https://powerapps.microsoft.com/). Puede utilizar la API automáticamente desde [aplicaciones móviles PowerApps](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) creadas con [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/), aunque no tenga conocimientos de programación.
 

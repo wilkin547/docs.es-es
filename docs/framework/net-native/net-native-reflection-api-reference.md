@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d44df3d0869bb1822cf4f509ed3e8b6dc57c57b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 833d31c48220e2d2b5d07ee482325df090714329
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614892"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052418"
 ---
 # <a name="net-native-reflection-api-reference"></a>Referencia de la API de reflexión de .NET nativo
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] incluye tres nuevos tipos de excepción: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), y [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Tenga en cuenta lo siguiente acerca de los tres tipos de excepción:  
+.NET native incluye tres nuevos tipos de excepción: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), y [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) . Tenga en cuenta lo siguiente acerca de los tres tipos de excepción:  
   
  Estos tipos son solo para uso interno.  
- Estos tres tipos de excepción son para uso exclusivo de la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)] . Las excepciones se producen cuando la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)] detecta que faltan datos y no se puede continuar con la ejecución del programa.  
+ Estos tres tipos de excepción son para el uso de la cadena de herramientas .NET Native solo. Las excepciones se producen cuando la cadena de herramientas .NET Native detecta que faltan datos que no permiten que continúe la ejecución del programa.  
   
  No debe administrar estas excepciones en su código.  
  Estas excepciones indican que los metadatos necesarios para la aplicación no están presentes (las excepciones [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md) y [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) ) o que falta el código de implementación necesario para la aplicación (la excepción [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) ). Corrija estas condiciones de excepción mediante la modificación de un archivo de directivas de tiempo de ejecución (.rd.xml) para que el código de implementación o los metadatos necesarios estén disponibles en tiempo de ejecución. Para obtener más información, consulta [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md). Existen dos solucionadores de problemas que proporcionan las entradas adecuadas para el archivo de directivas de tiempo de ejecución que eliminará las excepciones [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) y [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) :  
@@ -25,10 +25,10 @@ ms.locfileid: "64614892"
 - [Solucionador de problemas de MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) para los métodos.  
   
 > [!NOTE]
->  Esta documentación hace referencia a tres tipos de excepciones que son exclusivos de [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Para obtener documentación de referencia para la API de reflexión de .NET Framework core, vea el <xref:System.Reflection>, <xref:System.Reflection.Context> y <xref:System.Reflection.Emit> espacios de nombres. Para la documentación de referencia de la API de interoperabilidad de .NET Framework, consulte <xref:System.Runtime.InteropServices>.  
+>  Esta referencia documenta los tres tipos de excepciones que son exclusivos de .NET Native. Para obtener documentación de referencia para la API de reflexión de .NET Framework core, vea el <xref:System.Reflection>, <xref:System.Reflection.Context> y <xref:System.Reflection.Emit> espacios de nombres. Para la documentación de referencia de la API de interoperabilidad de .NET Framework, consulte <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>Espacio de nombres System.Reflection  
- El espacio de nombres <xref:System.Reflection> contiene los tipos principales utilizados para la reflexión en .NET Framework. Para [!INCLUDE[net_native](../../../includes/net-native-md.md)], también incluye dos nuevos tipos de excepción:  
+ El espacio de nombres <xref:System.Reflection> contiene los tipos principales utilizados para la reflexión en .NET Framework. Para .NET Native, también incluye dos nuevos tipos de excepción:  
   
 |Clase|Descripción|  
 |-----------|-----------------|  
@@ -38,7 +38,7 @@ ms.locfileid: "64614892"
  Para obtener documentación sobre los otros tipos de este espacio de nombres, vea las páginas de referencia sobre <xref:System.Reflection> en la documentación de .NET Framework.  
   
 ## <a name="systemruntimecompilerservices-namespace"></a>Espacio de nombres System.Runtime.CompilerServices  
- El espacio de nombres <xref:System.Runtime.CompilerServices> incluye tipos que diseñan los compiladores de lenguaje para el usuario. Para [!INCLUDE[net_native](../../../includes/net-native-md.md)], también incluye un nuevo tipo de excepción:  
+ El espacio de nombres <xref:System.Runtime.CompilerServices> incluye tipos que diseñan los compiladores de lenguaje para el usuario. Para .NET Native, también incluye un nuevo tipo de excepción:  
   
 |Clase|Descripción|  
 |-----------|-----------------|  

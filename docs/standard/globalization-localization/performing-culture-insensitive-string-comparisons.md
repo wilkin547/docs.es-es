@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d20ce0f09309c84dcbeb016e0f17c37fe338dd9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053198"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales
 De manera predeterminada, el método <xref:System.String.Compare%2A?displayProperty=nameWithType> realiza comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas. Este método también incluye varias sobrecargas que proporcionan un parámetro `culture` que permite especificar la referencia cultural que se va a utilizar y un parámetro `comparisonType` que permite especificar las reglas de comparación que se van a usar. Al llamar a estos métodos en lugar de a la sobrecarga predeterminada, se quita cualquier ambigüedad sobre las reglas que se utilizan en una determinada llamada al método y se establece claramente si una determinada comparación tiene en cuenta o no la referencia cultural.  
@@ -39,7 +39,7 @@ De manera predeterminada, el método <xref:System.String.Compare%2A?displayPrope
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
 
-Puede descargar las [tablas de pesos de ordenación](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un conjunto de archivos de texto que contienen información sobre los pesos de caracteres que se usan en las operaciones de ordenación y comparación para los sistemas operativos Windows, además de la [tabla de elementos de intercalación Unicode predeterminada](https://www.unicode.org/Public/UCA/latest/allkeys.txt), que se trata de la tabla de pesos de ordenación para Linux y macOS.
+Puede descargar las [tablas de pesos de ordenación](https://www.microsoft.com/download/details.aspx?id=10921), un conjunto de archivos de texto que contienen información sobre los pesos de caracteres que se usan en las operaciones de ordenación y comparación para los sistemas operativos Windows, además de la [tabla de elementos de intercalación Unicode predeterminada](https://www.unicode.org/Public/UCA/latest/allkeys.txt), que se trata de la tabla de pesos de ordenación para Linux y macOS.
 
 ## <a name="see-also"></a>Vea también
 

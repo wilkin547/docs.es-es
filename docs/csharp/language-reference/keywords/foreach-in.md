@@ -1,6 +1,6 @@
 ---
 title: Instrucción foreach de C#
-ms.date: 06/29/2018
+ms.date: 05/17/2019
 f1_keywords:
 - foreach
 - foreach_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128627"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880537"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referencia de C#)
 
@@ -26,6 +26,8 @@ La instrucción `foreach` ejecuta una instrucción o un bloque de instrucciones 
 A partir de C# 7.3, si la propiedad `Current` del enumerador devuelve un [valor devuelto de referencia](ref.md#reference-return-values) (`ref T` donde `T` es el tipo del elemento de colección), se puede declarar la variable de iteración con el modificador `ref` o `ref readonly`.
 
 En cualquier punto del bloque de instrucciones `foreach`, se puede salir del bucle mediante la instrucción [break](break.md), o bien se puede ir a la siguiente iteración del bucle mediante la instrucción [continue](continue.md). También se puede salir de un bucle `foreach` mediante las instrucciones [goto](goto.md), [return](return.md) o [throw](throw.md).
+
+Si la instrucción `foreach` se aplica a `null`, se produce <xref:System.NullReferenceException>. Si la colección de origen de la instrucción `foreach` está vacía, el cuerpo del bucle `foreach` no se ejecuta y se omite.
 
 ## <a name="examples"></a>Ejemplos
 

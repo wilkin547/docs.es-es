@@ -2,12 +2,12 @@
 title: Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 description: Conozca los pasos para el "bucle exterior" del flujo de trabajo de DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 194786a90fc02801211c7614eb632392d67f0109
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641051"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195617"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Pasos del flujo de trabajo de DevOps de bucle externo para una aplicación de Docker
 
@@ -152,7 +152,7 @@ Veamos primero el escenario menos complejo: implementar en hosts de Docker simpl
 
 **Figura 5-6**. Implementación de contenedores de aplicación para el registro de los entornos de host de Docker simple
 
-Figura 5-7 destaca cómo pueden conectar los elementos de configuración de compilación para entornos de control de calidad y pruebas a través de servicios de Azure DevOps haciendo clic en Docker Compose en el cuadro de diálogo Agregar tarea. Sin embargo, al implementar en entornos de ensayo o producción, normalmente usaría las características de Release Management para administrar varios entornos (como el control de calidad, ensayo y producción). Si va a implementar en hosts de Docker único, que utiliza los servicios de Azure DevOps tarea "Docker Compose" (que está invocando el `docker-compose up` comando en segundo plano). Si va a implementar en Azure Container Service, utiliza la tarea de implementación de Docker, como se explica en la sección siguiente.
+Figura 5-7 destaca cómo pueden conectar los elementos de configuración de compilación para entornos de control de calidad y pruebas a través de servicios de Azure DevOps haciendo clic en Docker Compose en el cuadro de diálogo Agregar tarea. Sin embargo, al implementar en entornos de ensayo o producción, normalmente usaría las características de Release Management para administrar varios entornos (como el control de calidad, ensayo y producción). Si va a implementar en hosts de Docker único, que utiliza los servicios de Azure DevOps tarea "Docker Compose" (que está invocando el `docker-compose up` comando en segundo plano). Si va a implementar en Azure Kubernetes Service (AKS), utiliza la tarea de implementación de Docker, como se explica en la sección siguiente.
 
 ![Vista del explorador de agregar una tarea de Docker Compose.](./media/image7.png)
 
@@ -186,15 +186,15 @@ Desde un punto de vista de CD y servicios de Azure DevOps en concreto, puede eje
 
 Inicialmente, al implementar en ciertas clústeres u orquestadores, tradicionalmente usaría los scripts de implementación específicos y mecanismos por cada orquestador (es decir, Kubernetes y Service Fabric tienen mecanismos de implementación diferentes) en lugar de la más sencilla y fácil de usar `docker-compose` herramienta basada en el `docker-compose.yml` archivo de definición. Sin embargo, gracias a la tarea de Azure DevOps servicios de implementación de Docker, se muestra en la figura 5-10, ahora también puede implementar en los orquestadores compatibles si solo se usa el familiar `docker-compose.yml` archivo porque la herramienta realiza esa traducción de"" por usted (desde su `docker-compose.yml`archivo al formato necesario para el orquestador).
 
-![Vista de explorador del catálogo de tareas en Azure, DevOps, que muestra el Docker de la tarea de implementación.](./media/image10.png)
+![Vista de explorador del catálogo de tareas de DevOps de Azure, que muestra la implementación para la tarea de Kubernetes.](./media/add-deploy-to-kubernetes-task.png)
 
-**Figura 5-10**. Agregar la tarea de implementación de Docker al entorno de RM
+**Figura 5-10**. Adición de la implementación para tareas de Kubernetes a su entorno
 
-Figura 5-11 se muestra cómo puede modificar la tarea de implementación de Docker y especificar el tipo de destino (Azure Container Service DC/OS, en este caso), el archivo de Docker Compose y la conexión de registro de Docker (como Azure Container Registry o Docker Hub). Se trata de la tarea que recuperará las imágenes de Docker listos para usar personalizadas que desee implementar como contenedores en el clúster.
+Figura 5-11 se muestra cómo puede modificar la implementación para la tarea de Kubernetes con las secciones disponibles para la configuración. Se trata de la tarea que recuperará las imágenes de Docker listos para usar personalizadas que desee implementar como contenedores en el clúster.
 
-![Vista del explorador de Azure DevOps, implemente en la definición de tarea de orchestrator.](./media/image11.png)
+![Vista del explorador de Azure DevOps, implemente en la definición de tarea de Kubernetes.](./media/edit-deploy-to-kubernetes-task.png)
 
-**Figura 5-11**. Implementación de docker implementar tareas definición a Azure Container Service DC/OS
+**Figura 5-11**. Implementación de docker implementar tareas definición ACS DC/OS
 
 > [! INFORMACIÓN] para obtener más información acerca de la canalización de CD con Docker y servicios de DevOps de Azure, visite <https://azure.microsoft.com/services/devops/pipelines>
 

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324139"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469652"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedimiento para crear contenedores COM
 
 Puede crear contenedores del Modelo de objetos componentes (COM) mediante características de Visual Studio 2005 o las herramientas Tlbimp.exe y Regasm.exe de .NET Framework. Ambos métodos generan dos tipos de contenedores COM:
 
--   Un [contenedor RCW](../../../docs/framework/interop/runtime-callable-wrapper.md) desde una biblioteca de tipos para ejecutar un objeto COM en código administrado.
+- Un [contenedor RCW](../../../docs/framework/interop/runtime-callable-wrapper.md) desde una biblioteca de tipos para ejecutar un objeto COM en código administrado.
 
--   Un [contenedor CCW](../../../docs/framework/interop/com-callable-wrapper.md) con la configuración del Registro necesaria para ejecutar un objeto administrado en una aplicación nativa.
+- Un [contenedor CCW](../../../docs/framework/interop/com-callable-wrapper.md) con la configuración del Registro necesaria para ejecutar un objeto administrado en una aplicación nativa.
 
 En Visual Studio 2005, puede agregar el contenedor COM como una referencia al proyecto.
 
@@ -38,14 +38,14 @@ En Visual Studio 2005, puede agregar el contenedor COM como una referencia al pr
 
      En el **Explorador de soluciones**, tenga en cuenta que el componente COM se agrega a la carpeta Referencias del proyecto.
 
-Ahora puede escribir código para tener acceso al objeto COM. Puede comenzar declarando el objeto, por ejemplo con una instrucción `Imports` para [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] o una instrucción `Using` para [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].
+Ahora puede escribir código para tener acceso al objeto COM. Puede empezar por declarar el objeto, como, por ejemplo, con una instrucción `Imports` para Visual Basic o una instrucción `Using` para C#.
 
 > [!NOTE]
 > Si quiere programar componentes de Microsoft Office, instale primero los [ensamblados de interoperabilidad primarios de Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) desde el Centro de descarga de Microsoft. En el paso 4, seleccione la versión más reciente de la biblioteca de objetos disponible para el producto de Office que quiere, como la **biblioteca de objetos de Microsoft Word 11.0**.  
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Para crear un contenedor RCW mediante las herramientas de .NET Framework  
   
--   Ejecute la herramienta [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
+- Ejecute la herramienta [TlbImp.exe (Importador de la biblioteca de tipos)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md).  
   
  Esta herramienta crea un ensamblado que contiene los metadatos de tiempo de ejecución para los tipos definidos en la biblioteca de tipos original.  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307657"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755958"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relaciones entre tipos en operaciones de consulta LINQ (C#)
 Para escribir las consultas eficazmente, es necesario comprender cómo los tipos de las variables en una operación de consulta completa se relacionan entre sí. Si entiende estas relaciones comprenderá más fácilmente los ejemplos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y los ejemplos de código de la documentación. Además, entenderá lo que sucede en segundo plano cuando los tipos de las variables se declaran implícitamente mediante `var`.  
@@ -29,7 +29,7 @@ Para escribir las consultas eficazmente, es necesario comprender cómo los tipos
 ## <a name="queries-that-do-not-transform-the-source-data"></a>Consultas que no transforman los datos de origen  
  La ilustración siguiente muestra una operación de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects que no realiza ninguna transformación de los datos. El origen contiene una secuencia de cadenas y el resultado de la consulta también es una secuencia de cadenas.  
   
- ![Relación de tipos de datos en una consulta LINQ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![Diagrama que muestra a la relación de tipos de datos en una consulta LINQ.](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. El argumento de tipo del origen de datos determina el tipo de la variable de rango.  
   
@@ -40,7 +40,7 @@ Para escribir las consultas eficazmente, es necesario comprender cómo los tipos
 ## <a name="queries-that-transform-the-source-data"></a>Consultas que transforman los datos de origen  
  En la ilustración siguiente se muestra una operación de consulta [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] que realiza una transformación simple de los datos. La consulta usa una secuencia de objetos `Customer` como entrada y selecciona solo la propiedad `Name` en el resultado. Dado que `Name` es una cadena, la consulta genera una secuencia de cadenas como resultado.  
   
- ![Una consulta que transforma el tipo de datos](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![Diagrama que muestra una consulta que transforma el tipo de datos.](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. El argumento de tipo del origen de datos determina el tipo de la variable de rango.  
   
@@ -50,7 +50,7 @@ Para escribir las consultas eficazmente, es necesario comprender cómo los tipos
   
  En la ilustración siguiente se muestra una transformación un poco más compleja. La instrucción `select` devuelve un tipo anónimo que captura solo dos miembros del objeto `Customer` original.  
   
- ![Una consulta que transforma el tipo de datos](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![Diagrama que muestra una consulta más compleja que transforma el tipo de datos.](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. El argumento de tipo del origen de datos siempre es el tipo de la variable de rango de la consulta.  
   
@@ -61,7 +61,7 @@ Para escribir las consultas eficazmente, es necesario comprender cómo los tipos
 ## <a name="letting-the-compiler-infer-type-information"></a>Permitir que el compilador deduzca la información de tipo  
  Aunque debería comprender las relaciones de los tipos en una operación de consulta, tiene la opción de que el compilador le haga todo el trabajo. La palabra clave [var](../../../../csharp/language-reference/keywords/var.md) se puede usar para cualquier variable local en una operación de consulta. La ilustración siguiente es similar al ejemplo número 2 que se ha analizado anteriormente. En cambio, el compilador proporciona el tipo seguro de cada variable en la operación de consulta.  
   
- ![Flujo de tipos con asignación implícita de tipos ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![Diagrama que muestra el flujo de tipos implícitos.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Para obtener más información sobre `var`, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   

@@ -4,12 +4,12 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bfdbbc19bb9ed72bc50ebeeac114241ccd47c25
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857368"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053411"
 ---
 # <a name="configuring-http-and-https"></a>Configuración de HTTP y HTTPS
 
@@ -57,7 +57,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 Cuando se use la clase <xref:System.ServiceModel.WSDualHttpBinding>, la conexión de cliente utiliza valores predeterminados compatibles con reservas de espacio de nombres y el Firewall de Windows. Si elige personalizar la dirección base de cliente de una conexión dual, también debe configurar esta configuración de HTTP en el cliente para que coincida con la nueva dirección.
 
-La API HTTP Server tiene algunas opciones de configuración avanzadas que no están disponibles a través de HttpCfg. Estos valores se mantienen en el Registro y se aplican a todas las aplicaciones que se ejecutan en los sistemas que utilizan los API de servidor HTTP. Para obtener información sobre estas opciones, consulte [configuración del registro de Http.sys para IIS](https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows). La mayoría de los usuarios no necesita cambiar esta configuración.
+La API HTTP Server tiene algunas opciones de configuración avanzadas que no están disponibles a través de HttpCfg. Estos valores se mantienen en el Registro y se aplican a todas las aplicaciones que se ejecutan en los sistemas que utilizan los API de servidor HTTP. Para obtener información sobre estas opciones, consulte [configuración del registro de Http.sys para IIS](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows). La mayoría de los usuarios no necesita cambiar esta configuración.
 
 ## <a name="see-also"></a>Vea también
 

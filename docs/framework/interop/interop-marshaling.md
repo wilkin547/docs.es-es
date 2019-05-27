@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677219"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469717"
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 <a name="top"></a> La serialización de interoperabilidad rige cómo se pasan los datos en argumentos de método y valores devueltos entre la memoria administrada y la no administrada durante las llamadas. La serialización de interoperabilidad es una actividad en tiempo de ejecución realizada por el servicio de serialización de Common Language Runtime.  
@@ -24,23 +24,23 @@ ms.locfileid: "57677219"
   
  Esta información general contiene las siguientes secciones:  
   
--   [Modelos de invocación de plataforma e interoperabilidad COM](#platform_invoke_and_com_interop_models)  
+- [Modelos de invocación de plataforma e interoperabilidad COM](#platform_invoke_and_com_interop_models)  
   
--   [Serialización y contenedores COM](#marshaling_and_com_apartments)  
+- [Serialización y contenedores COM](#marshaling_and_com_apartments)  
   
--   [Serialización de llamadas remotas](#marshaling_remote_calls)  
+- [Serialización de llamadas remotas](#marshaling_remote_calls)  
   
--   [Temas relacionados](#related_topics)  
+- [Temas relacionados](#related_topics)  
   
--   [Referencia](#reference)  
+- [Referencia](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Modelos de invocación de plataforma e interoperabilidad COM  
  Common Language Runtime proporciona dos mecanismos para interoperar con código no administrado:  
   
--   Invocación de plataforma, que permite al código administrado llamar a funciones exportadas desde una biblioteca no administrada.  
+- Invocación de plataforma, que permite al código administrado llamar a funciones exportadas desde una biblioteca no administrada.  
   
--   Interoperabilidad COM, que permite al código administrado interactuar con modelos de objetos componentes (COM) a través de interfaces.  
+- Interoperabilidad COM, que permite al código administrado interactuar con modelos de objetos componentes (COM) a través de interfaces.  
   
  Tanto la invocación de plataforma como la interoperabilidad COM usan serialización de interoperabilidad para mover con precisión los argumentos de método desde el llamador al destinatario y viceversa, si es necesario. Como se muestra en la siguiente ilustración, una llamada al método de invocación de plataforma fluye desde el código administrado al no administrado y nunca en sentido contrario, excepto cuando hay [funciones de devolución de llamada](callback-functions.md) implicadas. Aunque las llamadas de invocación de plataforma solo pueden realizarse desde código administrado a código no administrado, los datos pueden fluir en ambas direcciones como parámetros de entrada o salida. Las llamadas a métodos de interoperabilidad COM pueden fluir en ambas direcciones.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "57677219"
  Si planea exportar un servidor administrado, tenga en cuenta que el cliente COM determina el apartamento del servidor. Un servidor administrado llamado por un cliente COM inicializado en un MTA debe garantizar la seguridad de subprocesos.  
   
 ### <a name="managed-clients-and-com-servers"></a>Clientes administrados y servidores COM  
- La configuración predeterminada para apartamentos de cliente administrado es MTA; sin embargo, el tipo de aplicación del cliente .NET puede cambiar la configuración predeterminada. Por ejemplo, una configuración de apartamento de cliente [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] es STA. Puede usar <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, la propiedad <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> o la propiedad <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> para examinar y cambiar la configuración de apartamento de un cliente administrado.  
+ La configuración predeterminada para apartamentos de cliente administrado es MTA; sin embargo, el tipo de aplicación del cliente .NET puede cambiar la configuración predeterminada. Por ejemplo, una configuración de apartamento cliente de Visual Basic es STA. Puede usar <xref:System.STAThreadAttribute?displayProperty=nameWithType>, <xref:System.MTAThreadAttribute?displayProperty=nameWithType>, la propiedad <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType> o la propiedad <xref:System.Web.UI.Page.AspCompatMode%2A?displayProperty=nameWithType> para examinar y cambiar la configuración de apartamento de un cliente administrado.  
   
  El autor del componente establece la afinidad del subproceso de un servidor COM. En la tabla siguiente se muestran las combinaciones de configuraciones de apartamentos para clientes .NET y servidores COM. También se muestran los requisitos de serialización resultantes para las combinaciones.  
   
@@ -86,9 +86,9 @@ ms.locfileid: "57677219"
   
  Para una serialización entre apartamentos, puede hacer lo siguiente:  
   
--   Aceptar la sobrecarga que supone la serialización entre apartamentos, que solo es apreciable cuando hay muchas llamadas que cruzan el límite. Debe registrar la biblioteca de tipos del componente COM para que las llamadas crucen correctamente el límite del apartamento.  
+- Aceptar la sobrecarga que supone la serialización entre apartamentos, que solo es apreciable cuando hay muchas llamadas que cruzan el límite. Debe registrar la biblioteca de tipos del componente COM para que las llamadas crucen correctamente el límite del apartamento.  
   
--   Establecer el subproceso de cliente en STA o MTA para alterar el subproceso principal. Por ejemplo, si el cliente de C# llama a muchos componentes COM de STA, puede evitar la serialización entre apartamentos si establece el subproceso principal en STA.  
+- Establecer el subproceso de cliente en STA o MTA para alterar el subproceso principal. Por ejemplo, si el cliente de C# llama a muchos componentes COM de STA, puede evitar la serialización entre apartamentos si establece el subproceso principal en STA.  
   
     > [!NOTE]
     >  Una vez que se establece el subproceso de un cliente C# en STA, las llamadas a componentes COM de MTA requerirán la serialización entre apartamentos.  
@@ -101,9 +101,9 @@ ms.locfileid: "57677219"
 ## <a name="marshaling-remote-calls"></a>Serialización de llamadas remotas  
  Al igual que con la serialización entre apartamentos, la serialización de COM participa en todas las llamadas entre código administrado y no administrado siempre que los objetos residan en procesos independientes. Por ejemplo:  
   
--   Un cliente COM que invoca a un servidor administrado en un host remoto usa COM distribuido (DCOM).  
+- Un cliente COM que invoca a un servidor administrado en un host remoto usa COM distribuido (DCOM).  
   
--   Un cliente administrado que invoca a un servidor COM en un host remoto usa DCOM.  
+- Un cliente administrado que invoca a un servidor COM en un host remoto usa DCOM.  
   
  En la ilustración siguiente se muestra cómo la serialización de interoperabilidad y la serialización de COM proporcionan canales de comunicación a través de procesos y límites de hosts.  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57677219"
   
  En esta ilustración:  
   
--   Un cliente no administrado obtiene una referencia a un objeto COM de un objeto administrado que obtiene esta referencia de un host remoto. El mecanismo de comunicación remota es DCOM.  
+- Un cliente no administrado obtiene una referencia a un objeto COM de un objeto administrado que obtiene esta referencia de un host remoto. El mecanismo de comunicación remota es DCOM.  
   
--   Un cliente administrado obtiene una referencia a un objeto administrado de un objeto COM que obtiene esta referencia de un host remoto. El mecanismo de comunicación remota es DCOM.  
+- Un cliente administrado obtiene una referencia a un objeto administrado de un objeto COM que obtiene esta referencia de un host remoto. El mecanismo de comunicación remota es DCOM.  
   
     > [!NOTE]
     >  La biblioteca de tipos exportada del servidor administrado debe estar registrada.  

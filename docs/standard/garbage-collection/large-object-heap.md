@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ebe856b3ed904b13201c6d59752a8a00f4060d5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677188"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753953"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Montón de objetos grandes en sistemas Windows
 
@@ -154,9 +154,9 @@ Estos contadores de rendimiento suelen ser un buen punto de partida para investi
 
    Muestra el tamaño actual en bytes (espacio libre incluido) del montón de objetos grandes. Este contador se actualiza al final de una recolección de elementos no utilizados, no durante cada asignación.
 
-Una forma habitual de examinar los contadores de rendimiento es a través del Monitor de rendimiento (perfmon.exe). Use "Agregar contadores" para agregar los contadores de interés relativos a los procesos que le preocupen. Puede guardar los datos de contador de rendimiento en un archivo de registro, como muestra la figura 4.
+Una forma habitual de examinar los contadores de rendimiento es a través del Monitor de rendimiento (perfmon.exe). Use "Agregar contadores" para agregar los contadores de interés relativos a los procesos que le preocupen. Puede guardar los datos de contador de rendimiento en un archivo de registro, tal y como muestra la figura 4.
 
-![Figura 4: Agregar contadores de rendimiento.](media/loh/perfcounter.png)\
+![Captura de pantalla que muestra cómo agregar contadores de rendimiento.](media/large-object-heap/add-performance-counter.png)
 Figura 4: Montón de objetos grandes después de una recolección de elementos no utilizados de generación 2
 
 Los contadores de rendimiento también se pueden consultar mediante programación. Muchas personas los recolectan de esta forma como parte de su proceso rutinario de pruebas. Al detectar contadores con valores que no son normales, usan otros medios para obtener más detalles que ayuden en la investigación.
@@ -184,7 +184,8 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 El resultado es similar al siguiente:
 
-![Figura 5: Examinar eventos ETW con PerfView](media/loh/perfview.png) Figura 5: Eventos ETW con PerfView
+![Captura de pantalla que muestra los eventos ETW en PerfView.](media/large-object-heap/event-tracing-windows-perfview.png)
+Figura 5: Eventos ETW con PerfView
 
 Como se puede ver, todas las recolecciones de elementos no utilizados pertenecen a la generación 2 y todas ellas se han activado por medio de AllocLarge, lo que significa que esta recolección de elementos no utilizados se ha activado a raíz de la asignación de un objeto grande. Sabemos que estas asignaciones son temporales porque la columna **LOH Survival Rate %** (% de tasa de supervivencia del montón de objetos grandes) muestra 1%.
 
@@ -196,7 +197,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 recopila un evento AllocationTick que se activa aproximadamente con cada asignación con un volumen de 100 000. Dicho de otro modo, se activa un evento cada vez que se asigna un objeto grande. Así, puede consultar una de las vistas de asignación del montón de recolección de elementos no utilizados, en las que se muestran las pilas de llamadas que han asignado objetos grandes:
 
-![Figura 6: Vista de asignación del montón de recolección de elementos no utilizados](media/loh/perfview2.png)\
+![Captura de pantalla que muestra una vista de recolector de elementos no utilizados del montón.](media/large-object-heap/garbage-collector-heap.png)
 Figura 6: Vista de asignación del montón de recolección de elementos no utilizados
 
 Como se puede ver, se trata de una prueba muy sencilla que simplemente asigna objetos grandes desde el método `Main`.

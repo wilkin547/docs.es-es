@@ -882,23 +882,23 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684061"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052755"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>Lo sentimos, no tenemos detalles sobre este error de C#
 Lo sentimos, pero no tenemos información específica sobre este error. Puede buscar información en la web mediante el número y el texto del mensaje de error. O bien, puede pedir a otros desarrolladores mediante uno de estos foros:  
   
- [Lenguaje Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ [Lenguaje Visual C#](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
  Proporciona un foro para preguntas y debate sobre del objeto Visual C# sintaxis del lenguaje y compilador.  
   
- [IDE de Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ [IDE de Visual C#](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
  Proporciona un foro para preguntas sobre cómo trabajar en el entorno de Visual Studio.  
   
- [Información general de Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ [Información general de Visual C#](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
  Proporciona un foro para preguntas sobre y los problemas de Visual C# que no se debaten en otros foros.  
   
  [Desbordamiento de pila](https://stackoverflow.com/questions/tagged/c%23)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634240"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590473"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Procedimiento para definir y usar proveedores de formato numérico personalizado
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ofrece un amplio control sobre la representación de cadena de valores numéricos. Admite las siguientes características para personalizar el formato de los valores numéricos:  
+.NET Framework ofrece un amplio control sobre la representación de cadena de valores numéricos. Admite las siguientes características para personalizar el formato de los valores numéricos:  
   
 - Cadenas con formato numérico estándar, que proporcionan un conjunto predefinido de formatos para convertir números en su representación de cadena. Se pueden usar con cualquier método de formato numérico, como <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>, que tiene un parámetro `format`. Para obtener detalles, vea [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64634240"
   
 - Objetos personalizados <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo>, que definen los símbolos y los modelos de formato que se usan para mostrar las representaciones de cadena de valores numéricos. Se pueden usar con cualquier método de formato numérico, como <xref:System.Int32.ToString%2A>, que tiene un parámetro `provider`. Normalmente, el parámetro `provider` se usa para especificar el formato específico de la referencia cultural.  
   
- En algunos casos (por ejemplo, cuando una aplicación debe mostrar un número de cuenta con formato, un número de identificación o un código postal) estas tres técnicas no resultan apropiadas. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] también permite definir un objeto de formato que no es ni un objeto <xref:System.Globalization.CultureInfo> ni un objeto <xref:System.Globalization.NumberFormatInfo> para determinar cómo se aplica formato a un valor numérico. En este tema se proporcionan instrucciones paso a paso para implementar este tipo de objeto y se ofrece un ejemplo que da formato a números de teléfono.  
+ En algunos casos (por ejemplo, cuando una aplicación debe mostrar un número de cuenta con formato, un número de identificación o un código postal) estas tres técnicas no resultan apropiadas. .NET Framework también permite definir un objeto de formato que no es ni un objeto <xref:System.Globalization.CultureInfo> ni <xref:System.Globalization.NumberFormatInfo> para determinar cómo se aplica formato a un valor numérico. En este tema se proporcionan instrucciones paso a paso para implementar este tipo de objeto y se ofrece un ejemplo que da formato a números de teléfono.  
   
 ### <a name="to-define-a-custom-format-provider"></a>Para definir un proveedor de formato personalizado  
   
@@ -87,9 +87,6 @@ ms.locfileid: "64634240"
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
  En el caso de este ejemplo, el método que implementa <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> está diseñado para que actúe como un método de devolución de llamada para el método <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>. Por lo tanto, examina el parámetro `formatProvider` para determinar si contiene una referencia al objeto `TelephoneFormatter` actual. Pero también se puede llamar al método directamente desde el código. En ese caso, puede usar el parámetro `formatProvider` para proporcionar un objeto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo> que aporte información de formato específica de la referencia cultural.  
-  
-## <a name="compiling-the-code"></a>Compilar el código  
- Compile el código de la línea de comandos mediante csc.exe o vb.exe. Para compilar el código en Visual Studio, póngalo en una plantilla de proyecto de aplicación de consola.  
   
 ## <a name="see-also"></a>Vea también
 

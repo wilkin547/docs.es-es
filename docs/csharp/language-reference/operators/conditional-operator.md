@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a40dd4addfaf8a505cf334876192f0b2ccf66a09
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672399"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452403"
 ---
 # <a name="-operator-c-reference"></a>?: Operador (Referencia de C#)
 
@@ -43,10 +43,12 @@ se evalúa como
 a ? b : (c ? d : e)
 ```
 
-Un método mnemotécnico y útil que puede usar para recordar cómo evalúa este operador es con la pregunta siguiente: 
-```
+Un recurso mnemotécnico que se puede usar para recordar cómo evalúa este operador es preguntar:
+
+```text
 is this condition true ? yes : no
 ```
+
 Con la parte "?" del operador que actúa como signo de interrogación para la instrucción anterior y el consiguiente actúa como respuesta lógica a esta pregunta.
 
 En el siguiente ejemplo se muestra el uso del operador condicional:
@@ -93,6 +95,6 @@ Para más información, vea la sección sobre [operadores condicionales](~/_csha
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
 - [Instrucción if-else](../keywords/if-else.md)
-- [Operadores ?. y ?[]](null-conditional-operators.md)
+- [Operadores ?. y ?[]](member-access-operators.md#null-conditional-operators--and-)
 - [Operador !](null-coalescing-operator.md)
 - [ref (palabra clave)](../keywords/ref.md)

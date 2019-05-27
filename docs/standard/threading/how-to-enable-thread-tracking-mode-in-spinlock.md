@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Habilitar el modo de seguimiento de subproceso en el bloqueo SpinLock'
+title: Procedimiento Habilitar el modo de seguimiento de subprocesos en el bloqueo SpinLock
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3b9671c10889287bc22d64df1fb5c3a2984bd55
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 111ab87ca419217f425eb5d4bc9b52f5f30f0237
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195285"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644845"
 ---
-# <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Cómo: Habilitar el modo de seguimiento de subproceso en el bloqueo SpinLock
+# <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>Procedimiento Habilitar el modo de seguimiento de subprocesos en el bloqueo SpinLock
 <xref:System.Threading.SpinLock?displayProperty=nameWithType> es un bloqueo de exclusión mutua de bajo nivel que se puede usar para escenarios que tienen tiempos de espera muy cortos. <xref:System.Threading.SpinLock> no es reentrante. Una vez que el subproceso activa el bloqueo, debe desactivarlo correctamente para volver a entrar. Por lo general, cualquier intento de reentrada en el bloqueo produciría un interbloqueo, y los interbloqueos pueden ser muy difíciles de depurar. Como ayuda para el desarrollo, <xref:System.Threading.SpinLock?displayProperty=nameWithType> admite un modo de seguimiento de subprocesos que provoca la emisión de una excepción cuando un subproceso intenta reentrar en un bloqueo que ya tenía. Esto le permite que localizar con mayor facilidad el punto en el que el bloqueo no se cerró correctamente. Puede activar el modo de seguimiento de subprocesos mediante el uso del constructor <xref:System.Threading.SpinLock> que toma un valor booleano de entrada y pasando un argumento de `true`. Después de completar las fases de desarrollo y pruebas, desactive el modo de seguimiento de subprocesos para mejorar el rendimiento.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra el modo de seguimiento de subprocesos. Las líneas que salen correctamente del bloqueo están comentadas para simular un error de código que genera uno de los siguientes resultados:  
   
--   Se produce una excepción si <xref:System.Threading.SpinLock> se creó mediante un argumento de `true` (`True` en Visual Basic).  
+- Se produce una excepción si <xref:System.Threading.SpinLock> se creó mediante un argumento de `true` (`True` en Visual Basic).  
   
--   Se produce un interbloqueo si <xref:System.Threading.SpinLock> se creó mediante un argumento de `false` (`False` en Visual Basic).  
+- Se produce un interbloqueo si <xref:System.Threading.SpinLock> se creó mediante un argumento de `false` (`False` en Visual Basic).  
   
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77740f86265db86c998af25e6e9ed4c20a7014e6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835751"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589890"
 ---
 # <a name="commonly-used-collection-types"></a>Tipos de colección utilizados normalmente
 Los tipos de colecciones son las variaciones comunes de las colecciones de datos, como tablas hash, colas, pilas, bolsas, diccionarios y listas.  
@@ -36,10 +36,10 @@ Los tipos de colecciones son las variaciones comunes de las colecciones de datos
   
 |Title|Descripción|  
 |-----------|-----------------|  
-|[Colecciones y estructuras de datos](../../../docs/standard/collections/index.md)|Describe los diversos tipos de colecciones disponibles en [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], como pilas, colas, listas, matrices y diccionarios.|  
+|[Colecciones y estructuras de datos](../../../docs/standard/collections/index.md)|Describe los diversos tipos de colecciones disponibles en .NET Framework, incluidas las pilas, colas, listas, matrices y diccionarios.|  
 |[Tipos de las colecciones Hashtable y Dictionary](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Describe las características de los tipos de diccionario basado en hash genéricos y no genéricos.|  
 |[Tipos de colecciones ordenadas](../../../docs/standard/collections/sorted-collection-types.md)|Describe las clases que proporcionan funcionalidad de ordenación para las listas y los conjuntos.|  
-|[Genéricos](../../../docs/standard/generics/index.md)|Describe la característica de genéricos, incluidos colecciones, delegados e interfaces genéricos proporcionados por [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Proporciona vínculos a la documentación de características para C#, Visual Basic y Visual C++, así como a tecnologías de apoyo como la reflexión.|  
+|[Genéricos](../../../docs/standard/generics/index.md)|Describe la característica de genéricos, incluidas las colecciones, los delegados y las interfaces genéricos proporcionados por .NET Framework. Proporciona vínculos a la documentación de características para C#, Visual Basic y Visual C++, así como a tecnologías de apoyo como la reflexión.|  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Collections?displayProperty=nameWithType>  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5a0c4b0d672e3fd9cfe1528e16070cf1dcbabd69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41542b663930ba92d47e62151e913429b690054d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597658"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879121"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] no solo sirve para la recuperación de datos. También es una herramienta eficaz para transformarlos. Mediante el uso de un consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], se puede usar una secuencia de origen como entrada y modificarla de muchas maneras para crear una nueva secuencia de salida. Por medio de ordenaciones y agrupaciones se puede modificar la propia secuencia sin modificar los elementos. Pero quizás la característica más eficaz de las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] es la capacidad para crear nuevos tipos. Esto se realiza en la cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md). Por ejemplo, puede realizar las tareas siguientes:  
@@ -61,7 +61,7 @@ ms.locfileid: "64597658"
  Para obtener más información, vea [Inicializadores de objeto y de colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) y [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>Transformar objetos en memoria en XML  
- Las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] facilitan la transformación de datos entre las estructuras de datos en memoria, bases de datos SQL, conjuntos de datos de [!INCLUDE[vstecado](~/includes/vstecado-md.md)] y documentos o secuencias de XML. En el siguiente ejemplo se transforman objetos de una estructura de datos en memoria en elementos XML.  
+ Las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] facilitan la transformación de datos entre estructuras de datos en memoria, bases de datos SQL, conjuntos de datos de ADO.NET y documentos o secuencias de XML. En el siguiente ejemplo se transforman objetos de una estructura de datos en memoria en elementos XML.  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   

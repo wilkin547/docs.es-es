@@ -5,11 +5,11 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
 ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "49400555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909965"
 ---
 # <a name="dependencies"></a>Dependencias
 
@@ -58,11 +58,11 @@ Los límites de versión superiores provocarán que NuGet genere un error si hay
 
 ![Conflicto de dependencias de rombo](./media/dependencies/diamond-dependency-conflict.png "Diamond dependency conflict")
 
-**NO** tenga referencias de paquetes NuGet sin versión mínima.
+**❌ NO** tenga referencias de paquetes NuGet sin versión mínima.
 
-**EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
+**❌ EVITE** las referencias de paquetes NuGet que requieren una versión exacta.
 
-**EVITE** las referencias de paquetes NuGet con un límite superior de versión.
+**❌ EVITE** las referencias de paquetes NuGet con un límite superior de versión.
 
 ## <a name="nuget-shared-source-packages"></a>Paquetes NuGet de código fuente compartido
 
@@ -88,11 +88,11 @@ Los paquetes de código fuente compartido tienen algunas limitaciones. Solo `Pac
 
 > Esta opción indica a NuGet que el paquete solamente se debe usar en tiempo de desarrollo y no se debe exponer como una dependencia pública.
 
-**NO** tenga tipos de paquete de código fuente compartido en la API pública.
+**❌ NO** tenga tipos de paquete de código fuente compartido en la API pública.
 
 > Los tipos de código fuente compartido se compilan en el ensamblado de referencia y no se pueden intercambiar entre límites de ensamblado. Por ejemplo, un tipo `IRepository` de código fuente compartido en un proyecto es un tipo independiente del mismo `IRepository` de código fuente compartido en otro proyecto. Los tipos de paquetes de código fuente compartido deben tener una visibilidad `internal`.
 
-**NO** publique paquetes de código fuente compartido en NuGet.org.
+**❌ NO** publique paquetes de código fuente compartido en NuGet.org.
 
 > Los paquetes de código fuente compartido contienen código fuente y solo los pueden usar los proyectos con el mismo tipo de lenguaje. Por ejemplo, una aplicación de F# no puede usar el paquete de código fuente compartido de C#.
 >

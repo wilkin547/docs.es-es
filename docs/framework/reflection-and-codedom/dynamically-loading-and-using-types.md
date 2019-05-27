@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51e34d8eed40481de47dfd217392e95a11a412d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145124"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469677"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Cargar y utilizar tipos dinámicamente
-La reflexión proporciona la infraestructura que los compiladores de lenguaje como [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] y JScript usan para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] permite usar el enlace en tiempo de ejecución en el código; el compilador de Visual Basic llama a un método del asistente que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método del asistente hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  
+La reflexión facilita la infraestructura que utilizan los compiladores de lenguaje para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. Visual Basic le permite usar el enlace en tiempo de ejecución implícito en el código; el compilador de Visual Basic llama a un método auxiliar que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método del asistente hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  
   
  En el ejemplo siguiente, el compilador de Visual Basic usa implícitamente la reflexión para llamar a un método en un objeto cuyo tipo se desconoce en tiempo de compilación. Una clase **HelloWorld** tiene un método **PrintHello** que imprime "Hello World" de forma concatenada con texto que se pasa al método **PrintHello**. El método **PrintHello** llamado en este ejemplo es en realidad <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>; el código de Visual Basic permite invocar el método **PrintHello** como si se conociera el tipo del objeto (helloObj) en tiempo de compilación (enlace anticipado), y no en tiempo de ejecución (enlace en tiempo de ejecución).  
   

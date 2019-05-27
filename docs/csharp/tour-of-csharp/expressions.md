@@ -1,14 +1,14 @@
 ---
 title: 'Expresiones de C#: un paseo por el lenguaje C#'
-description: Las expresiones, los operandos y los operadores son bloques de construcción del lenguaje C#.
-ms.date: 11/06/2016
+description: Las expresiones, los operandos y los operadores son bloques de creación del lenguaje C#.
+ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480760"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753650"
 ---
 # <a name="expressions"></a>Expresiones
 
@@ -23,73 +23,11 @@ Cuando un operando se encuentra entre dos operadores con la misma precedencia, l
 
 La precedencia y la asociatividad pueden controlarse mediante paréntesis. Por ejemplo, `x + y * z` primero multiplica `y` por `z` y luego suma el resultado a `x`, pero `(x + y) * z` primero suma `x` y `y` y luego multiplica el resultado por `z`.
 
-La mayoría de los operadores se pueden *sobrecargar*. La sobrecarga de operador permite la especificación de implementaciones de operadores definidas por el usuario para operaciones donde uno o ambos operandos son de un tipo de struct o una clase definidos por el usuario.
+La mayoría de los operadores se pueden [*sobrecargar*](../language-reference/keywords/operator.md). La sobrecarga de operador permite la especificación de implementaciones de operadores definidas por el usuario para operaciones donde uno o ambos operandos son de un tipo de struct o una clase definidos por el usuario.
 
-A continuación se resumen los operadores de C#, con las categorías de operador en orden de precedencia de mayor a menor. Los operadores de la misma categoría tienen la misma precedencia. En cada categoría, hay una lista de expresiones de esa categoría junto con la descripción de ese tipo de expresión.
+C# ofrece una serie de operadores para realizar operaciones [aritméticas](../language-reference/operators/arithmetic-operators.md), [lógicas](../language-reference/operators/boolean-logical-operators.md), [de desplazamiento y bit a bit](../language-reference/operators/bitwise-and-shift-operators.md), además de comparaciones de [igualdad](../language-reference/operators/equality-operators.md) y de [orden](../language-reference/operators/comparison-operators.md).
 
-* Principal
-  - `x.m`: Acceso a miembros
-  - `x(...)`: Invocación de método y delegado
-  - `x[...]`: Acceso a matriz e indizador
-  - `x++`: Postincremento
-  - `x--`: Postdecremento
-  - `new T(...)`: Creación de objetos y delegados
-  - `new T(...){...}`: creación de objetos con inicializador
-  - `new {...}`:  inicializador de objetos anónimos
-  - `new T[...]`: creación de matriz
-  - `typeof(T)`: obtener el objeto <xref:System.Type> para `T`
-  - `checked(x)`: Evaluar expresión en contexto comprobado
-  - `unchecked(x)`: Evaluar expresión en contexto no comprobado
-  - `default(T)`: obtener valor predeterminado de tipo `T`
-  - `delegate {...}`: Función anónima (método anónimo)
-* Unario
-  - `+x`: identidad
-  - `-x`: Negación
-  - `!x`: Negación lógica
-  - `~x`: Negación bit a bit
-  - `++x`: Preincremento
-  - `--x`: Predecremento
-  - `(T)x`: convertir explícitamente `x` en el tipo `T`
-  - `await x`: esperar asincrónicamente a que finalice `x`
-* Multiplicativo
-  - `x * y`: Multiplicación
-  - `x / y`: División
-  - `x % y`: Resto
-* Aditivo
-  - `x + y`: Suma, concatenación de cadenas, combinación de delegados
-  - `x – y`: Resta, eliminación de delegados
-* Shift
-  - `x << y`: Desplazamiento a la izquierda
-  - `x >> y`: Desplazamiento a la derecha
-* Comprobación de tipos y relacional
-  - `x < y`: Menor que
-  - `x > y`: Mayor que
-  - `x <= y`: Menor o igual que
-  - `x >= y`: Mayor o igual que
-  - `x is T`: volver a ejecutar `true` si `x` es una `T`, de lo contrario `false`
-  - `x as T`: volver a ejecutar `x` con tipo `T`, o `null` si `x` no es una `T`
-* Igualdad
-  - `x == y`: Igual
-  - `x != y`: No igual
-* AND lógico
-  - `x & y`: AND bit a bit entero, AND lógico booleano
-* XOR lógico
-  - `x ^ y`: XOR bit a bit entero, XOR lógico booleano
-* OR lógico
-  - `x | y`: OR bit a bit entero, OR lógico booleano
-* AND condicional
-  - `x && y`: evalúa `y` solo si `x` no es `false`
-* OR condicional
-  - `x || y`: evalúa `y` solo si `x` no es `true`
-* Uso combinado de NULL
-  - `x ?? y`: se evalúa como `y` si `x` es NULL, de lo contrario, como `x`
-* Condicional
-  - `x ? y : z`: se evalúa como `y` si `x` es `true` o `z` si `x` es `false`
-* Asignación o función anónima
-  - `x = y`: Asignación
-  - `x op= y`: asignación compuesta; los operadores admitidos son
-    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-  - `(T x) => y`: Función anónima (expresión lambda)
+Para obtener la lista completa de los operadores de C# ordenados por nivel de prioridad, vea [Operadores de C#](../language-reference/operators/index.md).
 
 > [!div class="step-by-step"]
 > [Anterior](types-and-variables.md)

@@ -4,12 +4,12 @@ description: Información general sobre la herramienta dotnet-svcutil de WCF de 
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612828"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063289"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Herramienta dotnet-svcutil de WCF para .NET Core
 
@@ -53,55 +53,56 @@ Desde una ventana de comandos de Windows, Mac OS o Linux, siga estos pasos:
 
 1. Cree un directorio denominado _HelloSvcutil_ para el proyecto y hágalo su directorio actual, como en el ejemplo siguiente:
 
-```console
-mkdir HelloSvcutil
-cd HelloSvcutil
-```
+    ```console
+    mkdir HelloSvcutil
+    cd HelloSvcutil
+    ```
 
 2. Cree un nuevo proyecto web de C# en ese directorio mediante el comando [`dotnet new`](../tools/dotnet-new.md) del modo siguiente:
 
-```console
-dotnet new web
-```
+    ```console
+    dotnet new web
+    ```
 
-3. Instale el paquete NuGet [`dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) como una herramienta de la CLI:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+3. Instale el [paquete NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) como herramienta CLI:  <!-- markdownlint-disable MD023 -->
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet tool install --global dotnet-svcutil
-```
+    ```console
+    dotnet tool install --global dotnet-svcutil
+    ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-Abra el archivo de proyecto `HelloSvcutil.csproj` en su editor, edite el elemento `Project` y agregue el [paquete NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) como referencia de la herramienta CLI, usando el siguiente código:
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    Abra el archivo de proyecto `HelloSvcutil.csproj` en su editor, edite el elemento `Project` y agregue el [paquete NuGet `dotnet-svcutil`](https://nuget.org/packages/dotnet-svcutil) como referencia de la herramienta CLI, usando el siguiente código:
 
-```xml
-<ItemGroup>
-  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
-</ItemGroup>
-```
+    ```xml
+    <ItemGroup>
+      <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
+    </ItemGroup>
+    ```
 
-Restaure el paquete _dotnet-svcutil_ mediante el comando [`dotnet restore`](../tools/dotnet-restore.md) de la siguiente manera:
+    Restaure el paquete _dotnet-svcutil_ mediante el comando [`dotnet restore`](../tools/dotnet-restore.md) de la siguiente manera:
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
----
+    ---
 
 4. Ejecute el comando _dotnet-svcutil_ para generar el archivo de referencia del servicio web de la siguiente manera:
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet-svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    ```console
+    dotnet-svcutil http://contoso.com/SayHello.svc
+    ```
 
-```console
-dotnet svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
----
+    ```console
+    dotnet svcutil http://contoso.com/SayHello.svc
+    ```
+
+    ---
 
 El archivo generado se guarda como _HelloSvcutil/ServiceReference1/Reference.cs_. La herramienta _dotnet_svcutil_ también agrega al proyecto los paquetes de WCF adecuados que necesita el código de proxy como referencias del paquete.
 
@@ -109,43 +110,43 @@ El archivo generado se guarda como _HelloSvcutil/ServiceReference1/Reference.cs_
 
 1. Restaure los paquetes de WCF mediante el comando [`dotnet restore`](../tools/dotnet-restore.md) como sigue:
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
 2. Busque el nombre de la clase de cliente y la operación que quiera usar. `Reference.cs` contendrá una clase que se hereda de `System.ServiceModel.ClientBase`, con métodos que pueden usarse para llamar a las operaciones del servicio. En este ejemplo, quiere llamar a la operación _Hello_ del servicio _SayHello_. `ServiceReference.SayHelloClient` es el nombre de la clase de cliente, y tiene un método llamado `HelloAsync` que se puede usar para llamar a la operación.
 
 3. Abra el archivo `Startup.cs` en el editor y agregue una instrucción using al espacio de nombres de la referencia de servicio en la parte superior:
 
-```csharp
-using ServiceReference;
-```
+    ```csharp
+    using ServiceReference;
+    ```
 
- 4. Edite el método `Configure` para invocar el servicio web. Para ello, cree una instancia de la clase que se hereda de `ClientBase` y llame al método en el objeto de cliente:
+4. Edite el método `Configure` para invocar el servicio web. Para ello, cree una instancia de la clase que se hereda de `ClientBase` y llame al método en el objeto de cliente:
 
-```csharp
-public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-{
-    if (env.IsDevelopment())
+    ```csharp
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-        app.UseDeveloperExceptionPage();
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+
+        app.Run(async (context) =>
+        {
+            var client = new SayHelloClient();
+            var response = await client.HelloAsync();
+            await context.Response.WriteAsync(response);
+        });
     }
 
-    app.Run(async (context) =>
-    {
-        var client = new SayHelloClient();
-        var response = await client.HelloAsync();
-        await context.Response.WriteAsync(response);
-    });
-}
-
-```
+    ```
 
 5. Ejecute la aplicación con el comando [`dotnet run`](../tools/dotnet-run.md) como sigue:
 
-```console
-dotnet run
-```
+    ```console
+    dotnet run
+    ```
 
 6. Vaya a la dirección URL indicada en la consola (por ejemplo, `http://localhost:5000`) en el explorador web.
 

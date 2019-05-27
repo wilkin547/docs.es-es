@@ -3,12 +3,12 @@ title: Escritura de código C# seguro y eficaz
 description: Las mejoras aplicadas recientemente al lenguaje C# permiten escribir código seguro verificable que anteriormente se hubiera asociado a código no seguro.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: d363e357d3749bb2014456c0064c4de7dd7f1acb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411570"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753887"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escritura de código C# seguro y eficaz
 
@@ -180,6 +180,8 @@ En lugar de ello, si en el cálculo de distancia se usa un valor struct inmutabl
 [!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 El compilador genera un código más eficaz cuando se llama a los miembros de un valor `readonly struct`: La referencia `this`, en lugar de una copia del receptor, es siempre un parámetro `in` pasado por referencia al método del miembro. Esta optimización ahorra procesos de copia cuando se utiliza `readonly struct` como argumento `in`.
+
+No se debe pasar un tipo de valor que acepta valores NULL como argumento `in`. El tipo <xref:System.Nullable%601> no se declara como una estructura de solo lectura. Eso significa que el compilador debe generar copias defensivas de cualquier argumento de tipo de valor que acepta valores NULL pasado a un método con el modificador `in` en la declaración de parámetros.
 
 Puede consultar un programa de ejemplo en el que se muestran las diferencias de rendimiento usando [Benchmark.net](https://www.nuget.org/packages/BenchmarkDotNet/) en el [repositorio de muestras](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark) de GitHub. Compara la transmisión de un valor struct mutable por valor y por referencia con la transmisión de un valor struct inmutable por valor y por referencia. El uso de un valor struct inmutable y de la transmisión por referencia es un proceso más rápido.
 

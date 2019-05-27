@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647090"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591286"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Tutorial: Filtrar el resultado de My.Application.Log (Visual Basic)
 En este tutorial se muestra cómo cambiar el filtrado del registro predeterminado para el objeto `My.Application.Log`, para controlar qué información se pasa desde el objeto `Log` a los agentes de escucha y qué información escriben estos. Puede cambiar el comportamiento del registro incluso después de generar la aplicación, porque la información de configuración se almacena en el archivo de configuración de la aplicación.  
@@ -135,7 +135,7 @@ En este tutorial se muestra cómo cambiar el filtrado del registro predeterminad
 9. Cambie el valor del atributo `value` de nuevo a "Information".  
   
     > [!NOTE]
-    >  La configuración del modificador `DefaultSwitch` solo controla `My.Application.Log`. No cambia el comportamiento de las clases [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Diagnostics.Trace?displayProperty=nameWithType> y <xref:System.Diagnostics.Debug?displayProperty=nameWithType>.  
+    >  La configuración del modificador `DefaultSwitch` solo controla `My.Application.Log`. No cambia el comportamiento de las clases <xref:System.Diagnostics.Trace?displayProperty=nameWithType> y <xref:System.Diagnostics.Debug?displayProperty=nameWithType> de .NET Framework.  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>Filtrado individual para los agentes de escucha de My.Application.Log  
  En el ejemplo anterior se muestra cómo cambiar el filtrado para todos los resultados de `My.Application.Log`. En este ejemplo se muestra cómo filtrar un agente de escucha de registro individual. De manera predeterminada, una aplicación tiene dos agentes de escucha que escriben en el archivo de registro y de salida de la depuración de la aplicación.  

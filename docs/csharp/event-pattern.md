@@ -3,12 +3,12 @@ title: Patrón de eventos estándar de .NET
 description: Obtenga información sobre los patrones de eventos de .NET y cómo crear orígenes de eventos estándar, y suscribir y procesar eventos estándar en su código.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201253"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062972"
 ---
 # <a name="standard-net-event-patterns"></a>Patrón de eventos estándar de .NET
 
@@ -55,7 +55,7 @@ La manera más sencilla de agregar un evento a la clase es declarar ese evento c
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-Parece que se está declarando un campo público, lo que podría parecer una práctica orientada a objetos incorrecta. Quiere proteger el acceso a los datos a través de propiedades o métodos. Aunque esto pueda parecer una práctica incorrecta, el código generado por el compilador crea contenedores para que solo se pueda tener acceso a los objetos de evento de forma segura. Las únicas operaciones disponibles en un evento con aspecto de campo son las de agregar controlador:
+Parece que se está declarando un campo público, lo que podría parecer una práctica orientada a objetos incorrecta. Quiere proteger el acceso a los datos a través de propiedades o métodos. Aunque esto puede parecer una mala práctica, el código generado por el compilador crea contenedores para que solo se pueda acceder de forma segura a los objetos de evento. Las únicas operaciones disponibles en un evento con aspecto de campo son las de agregar controlador:
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 

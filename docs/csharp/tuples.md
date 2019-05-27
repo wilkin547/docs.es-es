@@ -3,12 +3,12 @@ title: 'Tipos de tupla: Guía de C#'
 description: Más información sobre tipos de tupla con nombre y sin nombre en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971416"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882060"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C#
 
@@ -109,7 +109,7 @@ Por último, las tuplas pueden contener tuplas anidadas. La igualdad de tupla co
 
 [!code-csharp-interactive[NestedTuples](../../samples/snippets/csharp/tuples/tuples/program.cs#SnippetNestedTuples "Tuples may contain nested tuples that participate in tuple equality.")]
 
-Es un error de tiempo de compilación comparar la igualdad (o desigualdad) de dos tuplas cuando tienen formas diferentes. El compilador no intentará ninguna deconstrucción de tuplas anidadas para compararlas.
+Es un error de tiempo de compilación comparar la igualdad (o desigualdad) de dos tuplas cuando tienen formas diferentes. El compilador no intenta ninguna deconstrucción de tuplas anidadas para compararlas.
 
 ## <a name="assignment-and-tuples"></a>Asignación y tuplas
 

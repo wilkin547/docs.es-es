@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676827"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583060"
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 
@@ -54,21 +54,21 @@ En el ejemplo siguiente se muestra este patrón. En este ejemplo, la clase `Time
 
 En algunos casos, los descriptores de acceso de propiedad `get` y `set` simplemente asignan un valor a un campo de respaldo o recuperan un valor de él sin incluir ninguna lógica adicional. Mediante las propiedades implementadas automáticamente, puede simplificar el código y conseguir que el compilador de C# le proporcione el campo de respaldo de forma transparente. 
 
-Si una propiedad tiene un descriptor de acceso `get` y `set`, ambos deben ser implementados automáticamente. Una propiedad implementada automáticamente se define mediante las palabras clave `get` y `set` sin proporcionar ninguna implementación. El ejemplo siguiente repite el anterior, salvo que `Name` y `Price` son propiedades implementadas automáticamente. Observe que en el ejemplo también se quita el constructor parametrizado, por lo que los objetos `SaleItem` ahora se inicializan con una llamada al constructor predeterminado y un [inicializador de objeto](object-and-collection-initializers.md).
+Si una propiedad tiene un descriptor de acceso `get` y `set`, ambos deben ser implementados automáticamente. Una propiedad implementada automáticamente se define mediante las palabras clave `get` y `set` sin proporcionar ninguna implementación. El ejemplo siguiente repite el anterior, salvo que `Name` y `Price` son propiedades implementadas automáticamente. Tenga en cuenta que en el ejemplo también se quita el constructor parametrizado, por lo que los objetos `SaleItem` ahora se inicializan con una llamada al constructor sin parámetros y un [inicializador de objeto](object-and-collection-initializers.md).
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>Secciones relacionadas  
   
--   [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [Propiedades de interfaz](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Propiedades de interfaz](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [Comparación entre propiedades e indizadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Comparación entre propiedades e indizadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [Restringir la accesibilidad del descriptor de acceso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Restringir la accesibilidad del descriptor de acceso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 

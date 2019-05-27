@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592443"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585902"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emisión de código en escenarios que no son de plena confianza
 La emisión de reflexión usa el mismo conjunto de API con confianza completa o parcial, pero algunas características requieren permisos especiales en entornos de confianza parcial. Además, la emisión de reflexión tiene una característica, los métodos dinámicos hospedados de forma anónima, diseñada para su uso en entornos de confianza parcial y por ensamblados transparentes en seguridad.  
@@ -77,12 +77,12 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     El último parámetro de la sobrecarga del método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> permite especificar un conjunto de ensamblados a los que se concederá plena confianza, en lugar del conjunto de permisos concedidos del dominio de aplicación. No es necesario especificar los ensamblados de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] que la aplicación usa, porque esos ensamblados están en la caché global de ensamblados. Los ensamblados que están en la caché global de ensamblados siempre son de plena confianza. Puede usar este parámetro para especificar ensamblados con nombre seguro que no están en la caché global de ensamblados.  
+     El último parámetro de la sobrecarga del método <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> permite especificar un conjunto de ensamblados a los que se concederá plena confianza, en lugar del conjunto de permisos concedidos del dominio de aplicación. No es necesario especificar los ensamblados de .NET Framework que la aplicación usa, porque esos ensamblados están en la caché global de ensamblados. Los ensamblados que están en la caché global de ensamblados siempre son de plena confianza. Puede usar este parámetro para especificar ensamblados con nombre seguro que no están en la caché global de ensamblados.  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>Agregar RestrictedMemberAccess a dominios en recintos de seguridad  
  Las aplicaciones host pueden permitir que los métodos dinámicos hospedados de forma anónima tengan acceso a los datos privados de ensamblados con niveles de confianza igual o menor que el nivel de confianza del ensamblado que emite el código. Para habilitar esta capacidad restringida para omitir las comprobaciones de visibilidad Just-In-Time (JIT), la aplicación host agrega un objeto <xref:System.Security.Permissions.ReflectionPermission> con el marcador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> (RMA) al conjunto de permisos concedidos.  
   
- Por ejemplo, un host podría conceder a aplicaciones de Internet permisos de Internet más RMA, de manera que una aplicación de Internet pueda emitir código que tiene acceso a los datos privados de sus propios ensamblados. Debido a que el acceso se limita a los ensamblados con una confianza igual o menor, una aplicación de Internet no puede tener acceso a los miembros de ensamblados de plena confianza, como los ensamblados de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ Por ejemplo, un host podría conceder a aplicaciones de Internet permisos de Internet más RMA, de manera que una aplicación de Internet pueda emitir código que tiene acceso a los datos privados de sus propios ensamblados. Debido a que el acceso se limita a los ensamblados con una confianza igual o menor, una aplicación de Internet no puede acceder a los miembros de ensamblados de plena confianza, como los ensamblados de .NET Framework.  
   
 > [!NOTE]
 >  Para evitar la elevación de privilegios, la información de pila del ensamblado emisor se incluye al construir los métodos dinámicos hospedados de forma anónima. Cuando se invoca el método, se comprueba la información de la pila. Así, un método dinámico hospedado de forma anónima que se invoca desde código de plena confianza seguirá limitado al nivel de confianza del ensamblado emisor.  
@@ -169,7 +169,7 @@ La emisión de reflexión usa el mismo conjunto de API con confianza completa o 
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     La restricción es que el método dinámico hospedado de forma anónima sólo puede tener acceso a los datos privados de ensamblados con niveles de confianza iguales o menores que el nivel de confianza del ensamblado emisor. Por ejemplo, si el método dinámico se ejecuta con confianza en Internet, puede tener acceso a los datos privados de otros ensamblados que también se ejecutan con confianza en Internet, pero no puede tener acceso a los datos privados de ensamblados de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Los ensamblados de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] están instalados en la memoria caché global de ensamblados y son siempre de plena confianza.  
+     La restricción es que el método dinámico hospedado de forma anónima sólo puede tener acceso a los datos privados de ensamblados con niveles de confianza iguales o menores que el nivel de confianza del ensamblado emisor. Por ejemplo, si el método dinámico se ejecuta con confianza en Internet, puede acceder a los datos privados de otros ensamblados que también se ejecutan con confianza en Internet, pero no puede acceder a los datos privados de ensamblados de .NET Framework. Los ensamblados de .NET Framework están instalados en la caché global de ensamblados y son siempre de plena confianza.  
   
      Los métodos dinámicos hospedados de forma anónima pueden usar esta capacidad restringida para omitir las comprobaciones de visibilidad JIT sólo si la aplicación host concede <xref:System.Security.Permissions.ReflectionPermission> con el marcador <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>. La petición de este permiso se realiza al invocar el método.  
   

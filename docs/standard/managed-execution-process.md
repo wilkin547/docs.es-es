@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647718"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593454"
 ---
 # <a name="managed-execution-process"></a>proceso de ejecución administrada
 <a name="introduction"></a> El proceso de ejecución administrada incluye los pasos siguientes, que se describen en detalle más adelante en este tema:  
@@ -56,7 +56,7 @@ ms.locfileid: "64647718"
   
 <a name="compiling_msil_to_native_code"></a>   
 ## <a name="compiling-msil-to-native-code"></a>Compilar MSIL a código nativo  
- Para poder ejecutar el lenguaje intermedio de Microsoft (MSIL), primero debe compilarse a código nativo con Common Language Runtime para la arquitectura del equipo de destino. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona dos mecanismos para realizar esta conversión:  
+ Para poder ejecutar el lenguaje intermedio de Microsoft (MSIL), primero debe compilarse a código nativo con Common Language Runtime para la arquitectura del equipo de destino. .NET Framework proporciona dos mecanismos para realizar esta conversión:  
   
 - Un compilador Just-In-Time (JIT) de .NET Framework.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc4d8fdc39153f227e8344ea1da52a0dba2688d0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579345"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634419"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 El motor de expresiones regulares de .NET Framework es un buscador de coincidencias de expresiones regulares con retroceso que incorpora un motor NFA (autómata finito no determinista) tradicional, como el que usa Perl, Python, Emacs y Tcl. Esto lo distingue de los motores DFA (autómatas finitos deterministas) de expresiones regulares puras, más rápidos pero más limitados, como los de awk, egrep o lex. Esto también lo distingue de los NFA POSIX, estandarizados pero más lentos. En la sección siguiente se describen los tres tipos de motores de expresiones regulares y se explica por qué las expresiones regulares de .NET Framework se implementan mediante un motor NFA tradicional.  
@@ -38,14 +38,14 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
  Otras características del motor de expresiones regulares de .NET Framework son las siguientes:  
   
--   Cuantificadores diferidos: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`. Estas construcciones le indican al motor de retroceso que busque primero el número mínimo de repeticiones. En cambio, los cuantificadores expansivos normales intentan buscar primero el número máximo de repeticiones. En el siguiente ejemplo se ilustra la diferencia entre ambos. Una expresión regular coincide con una oración que termina con un número, y hay un grupo de capturas diseñado para extraer ese número. La expresión regular `.+(\d+)\.` incluye el cuantificador expansivo `.+`, lo que hace que el motor de expresiones regulares capture solo el último dígito del número. En cambio, la expresión regular `.+?(\d+)\.` incluye el cuantificador diferido `.+?`, lo que hace que el motor de expresiones regulares capture el número entero.  
+- Cuantificadores diferidos: `??`, `*?`, `+?`, `{`*n*`,`*m*`}?`. Estas construcciones le indican al motor de retroceso que busque primero el número mínimo de repeticiones. En cambio, los cuantificadores expansivos normales intentan buscar primero el número máximo de repeticiones. En el siguiente ejemplo se ilustra la diferencia entre ambos. Una expresión regular coincide con una oración que termina con un número, y hay un grupo de capturas diseñado para extraer ese número. La expresión regular `.+(\d+)\.` incluye el cuantificador expansivo `.+`, lo que hace que el motor de expresiones regulares capture solo el último dígito del número. En cambio, la expresión regular `.+?(\d+)\.` incluye el cuantificador diferido `.+?`, lo que hace que el motor de expresiones regulares capture el número entero.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
      Las versiones expansiva y diferida de esta expresión regular se definen como se muestra en la tabla siguiente.  
   
-    |Modelo|Description|  
+    |Modelo|Descripción|  
     |-------------|-----------------|  
     |`.+` (cuantificador expansivo)|Buscar al menos una repetición de cualquier carácter. Esto hace que el motor de expresiones regulares busque una coincidencia con la cadena completa y, después, retroceda según sea necesario para coincidir con el resto del patrón.|  
     |`.+?` (cuantificador diferido)|Coincide con al menos una repetición de cualquier carácter, pero el menor número posible.|  
@@ -54,14 +54,14 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
      Para más información sobre los cuantificadores diferidos, vea [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
   
--   Búsqueda anticipada positiva: `(?=`*subexpresión*`)`. Esta característica permite que el motor de retroceso vuelva a la misma posición en el texto después de encontrar una coincidencia con una subexpresión. Es útil para buscar en todo el texto mediante la comprobación de varios patrones que empiezan en la misma posición. Además, permite al motor comprobar que una subcadena existe al final de la coincidencia sin incluir la subcadena en el texto coincidente. En el ejemplo siguiente se usa la búsqueda anticipada positiva para extraer las palabras de una oración que no van seguidas de símbolos de puntuación.  
+- Búsqueda anticipada positiva: `(?=`*subexpresión*`)`. Esta característica permite que el motor de retroceso vuelva a la misma posición en el texto después de encontrar una coincidencia con una subexpresión. Es útil para buscar en todo el texto mediante la comprobación de varios patrones que empiezan en la misma posición. Además, permite al motor comprobar que una subcadena existe al final de la coincidencia sin incluir la subcadena en el texto coincidente. En el ejemplo siguiente se usa la búsqueda anticipada positiva para extraer las palabras de una oración que no van seguidas de símbolos de puntuación.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead1.cs#2)]
      [!code-vb[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead1.vb#2)]  
   
      La expresión regular `\b[A-Z]+\b(?=\P{P})` se define como se muestra en la tabla siguiente.  
   
-    |Modelo|Description|  
+    |Modelo|Descripción|  
     |-------------|-----------------|  
     |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
     |`[A-Z]+`|Coincide con cualquier carácter alfabético una o más veces. Como se llama al método <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>, la comparación no distingue mayúsculas de minúsculas.|  
@@ -70,14 +70,14 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
      Para obtener más información sobre las aserciones de búsqueda anticipada positiva, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
--   Búsqueda anticipada negativa: `(?!`*subexpresión*`)`. Esta característica permite coincidir con una expresión solo si no se produce una coincidencia con una subexpresión. Esto es especialmente eficaz para restringir una búsqueda, ya que a menudo resulta más sencillo proporcionar una expresión para un caso que se debe eliminar, en lugar de una expresión para los casos que se deben incluir. Por ejemplo, es difícil escribir una expresión para buscar palabras que no comienzan por "non". En el ejemplo siguiente se usa la búsqueda anticipada negativa para excluirlas.  
+- Búsqueda anticipada negativa: `(?!`*subexpresión*`)`. Esta característica permite coincidir con una expresión solo si no se produce una coincidencia con una subexpresión. Esto es especialmente eficaz para restringir una búsqueda, ya que a menudo resulta más sencillo proporcionar una expresión para un caso que se debe eliminar, en lugar de una expresión para los casos que se deben incluir. Por ejemplo, es difícil escribir una expresión para buscar palabras que no comienzan por "non". En el ejemplo siguiente se usa la búsqueda anticipada negativa para excluirlas.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]  
   
      El patrón de expresión regular `\b(?!non)\w+\b` se define como se muestra en la tabla siguiente.  
   
-    |Modelo|Description|  
+    |Modelo|Descripción|  
     |-------------|-----------------|  
     |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
     |`(?!non)`|Buscar hacia delante para asegurarse de que la cadena actual no empieza por "non". Si lo hace, se produce un error de coincidencia.|  
@@ -86,14 +86,14 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
      Para obtener más información sobre las aserciones de búsqueda anticipada negativa, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
--   Evaluación condicional: `(?(`*expresión*`)`*sí*`|`*no*`)` y `(?(`*nombre*`)`*sí*`|`*no*`)`, donde *expresión* es una subexpresión que debe coincidir, *nombre* es el nombre de un grupo de capturas, *sí* es la cadena que debe coincidir si *expresión* coincide o *nombre* es un grupo capturado válido y no vacío, y *no* es la subexpresión que debe coincidir si *expresión* no coincide o si *nombre* no es un grupo capturado válido y no vacío. Esta característica permite al motor buscar mediante más de un patrón alternativo, según el resultado de una búsqueda de coincidencia de subexpresión anterior o el resultado de una aserción de ancho cero. Esto posibilita una forma más eficaz de referencia inversa que permite, por ejemplo, coincidir con una subexpresión en función de si se produjo una coincidiencia con una subexpresión anterior. La expresión regular del ejemplo siguiente coincide con párrafos que están pensados tanto para un uso público como interno. Los párrafos destinados únicamente al uso interno empiezan con una etiqueta `<PRIVATE>`. El patrón de expresión regular `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` usa la evaluación condicional para asignar el contenido de los párrafos pensados para el uso público y para el uso interno a grupos de capturas independientes. Después, estos párrafos se pueden tratar de forma diferente.  
+- Evaluación condicional: `(?(`*expresión*`)`*sí*`|`*no*`)` y `(?(`*nombre*`)`*sí*`|`*no*`)`, donde *expresión* es una subexpresión que debe coincidir, *nombre* es el nombre de un grupo de capturas, *sí* es la cadena que debe coincidir si *expresión* coincide o *nombre* es un grupo capturado válido y no vacío, y *no* es la subexpresión que debe coincidir si *expresión* no coincide o si *nombre* no es un grupo capturado válido y no vacío. Esta característica permite al motor buscar mediante más de un patrón alternativo, según el resultado de una búsqueda de coincidencia de subexpresión anterior o el resultado de una aserción de ancho cero. Esto posibilita una forma más eficaz de referencia inversa que permite, por ejemplo, coincidir con una subexpresión en función de si se produjo una coincidiencia con una subexpresión anterior. La expresión regular del ejemplo siguiente coincide con párrafos que están pensados tanto para un uso público como interno. Los párrafos destinados únicamente al uso interno empiezan con una etiqueta `<PRIVATE>`. El patrón de expresión regular `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` usa la evaluación condicional para asignar el contenido de los párrafos pensados para el uso público y para el uso interno a grupos de capturas independientes. Después, estos párrafos se pueden tratar de forma diferente.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]  
   
      El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-    |Modelo|Description|  
+    |Modelo|Descripción|  
     |-------------|-----------------|  
     |`^`|Inicia la búsqueda de coincidencias al principio de una línea.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Coincide con cero o una repetición de la cadena `<PRIVATE>` seguida de un carácter de espacio en blanco. Asigna la coincidencia a un grupo de capturas denominado `Pvt`.|  
@@ -103,9 +103,9 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
      Para obtener más información sobre la evaluación condicional, consulte [Construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
   
--   Definiciones de grupos de compensación: `(?<`*nombre1*`-`*nombre2*`>` *subexpresión*`)`. Esta característica permite al motor de expresiones regulares realizar un seguimiento de construcciones anidadas como paréntesis o corchetes de apertura y cierre. Para ver un ejemplo, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+- Definiciones de grupos de compensación: `(?<`*nombre1*`-`*nombre2*`>` *subexpresión*`)`. Esta característica permite al motor de expresiones regulares realizar un seguimiento de construcciones anidadas como paréntesis o corchetes de apertura y cierre. Para ver un ejemplo, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
--   Subexpresiones sin retroceso (denominadas también subexpresiones expansivas): `(?>`*subexpresión*`)`. Esta característica permite al motor de retroceso garantizar que una subexpresión coincida solo con la primera coincidencia encontrada para dicha subexpresión, como si la expresión se ejecutara independientemente de la expresión que la contiene. Si no usa esta construcción, el retroceso en las búsquedas en la expresión más grande puede cambiar el comportamiento de una subexpresión. Por ejemplo, la expresión regular `(a+)\w` coincide con uno o más caracteres "a", junto con un carácter de palabra que sigue a la secuencia de caracteres "a", y asigna la secuencia de caracteres "a" al primer grupo de capturas. Pero si el último carácter de la cadena de entrada es también una "a", coincide con el elemento del lenguaje `\w` y no se incluye en el grupo capturado.  
+- Subexpresiones sin retroceso (denominadas también subexpresiones expansivas): `(?>`*subexpresión*`)`. Esta característica permite al motor de retroceso garantizar que una subexpresión coincida solo con la primera coincidencia encontrada para dicha subexpresión, como si la expresión se ejecutara independientemente de la expresión que la contiene. Si no usa esta construcción, el retroceso en las búsquedas en la expresión más grande puede cambiar el comportamiento de una subexpresión. Por ejemplo, la expresión regular `(a+)\w` coincide con uno o más caracteres "a", junto con un carácter de palabra que sigue a la secuencia de caracteres "a", y asigna la secuencia de caracteres "a" al primer grupo de capturas. Pero si el último carácter de la cadena de entrada es también una "a", coincide con el elemento del lenguaje `\w` y no se incluye en el grupo capturado.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]  
@@ -117,25 +117,25 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
      Para obtener más información sobre las subexpresiones sin retroceso, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
--   La búsqueda de coincidencias de derecha a izquierda se especifica al proporcionar la opción <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> a un constructor de clase <xref:System.Text.RegularExpressions.Regex> o a un método coincidente de instancia estática. Esta característica es útil al realizar búsquedas de derecha a izquierda en lugar de izquierda a derecha, o en los casos en los que es más eficaz iniciar una búsqueda de coincidencias en la parte derecha del patrón, en lugar de la izquierda. Como se muestra en el ejemplo siguiente, el uso de la búsqueda de coincidencias de derecha a izquierda puede cambiar el comportamiento de los cuantificadores expansivos. En el ejemplo se realizan dos búsquedas de una oración que termina con un número. La búsqueda de izquierda a derecha que usa el cuantificador expansivo `+` coincide con uno de los seis dígitos de la oración, mientras que la búsqueda de derecha a izquierda coincide con los seis dígitos. Para obtener una descripción del patrón de expresión regular, consulte el ejemplo que ilustra los cuantificadores diferidos anteriormente en esta sección.  
+- La búsqueda de coincidencias de derecha a izquierda se especifica al proporcionar la opción <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> a un constructor de clase <xref:System.Text.RegularExpressions.Regex> o a un método coincidente de instancia estática. Esta característica es útil al realizar búsquedas de derecha a izquierda en lugar de izquierda a derecha, o en los casos en los que es más eficaz iniciar una búsqueda de coincidencias en la parte derecha del patrón, en lugar de la izquierda. Como se muestra en el ejemplo siguiente, el uso de la búsqueda de coincidencias de derecha a izquierda puede cambiar el comportamiento de los cuantificadores expansivos. En el ejemplo se realizan dos búsquedas de una oración que termina con un número. La búsqueda de izquierda a derecha que usa el cuantificador expansivo `+` coincide con uno de los seis dígitos de la oración, mientras que la búsqueda de derecha a izquierda coincide con los seis dígitos. Para obtener una descripción del patrón de expresión regular, consulte el ejemplo que ilustra los cuantificadores diferidos anteriormente en esta sección.  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/rtl1.cs#6)]
      [!code-vb[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/rtl1.vb#6)]  
   
      Para obtener más información sobre la búsqueda de coincidencias de derecha a izquierda, consulte [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
--   Búsqueda tardía positiva y negativa: `(?<=`*subexpresión*`)` para la búsqueda tardía positiva y `(?<!`*subexpresión*`)` para la búsqueda tardía negativa. Esta característica es parecida a la búsqueda anticipada, que se describe anteriormente en este tema. Dado que el motor de expresiones regulares permite una búsqueda de coincidencias completa de derecha a izquierda, las expresiones regulares permiten búsquedas tardías sin restricciones. La búsqueda tardía positiva y negativa también se puede usar para evitar anidar los cuantificadores cuando la subexpresión anidada es un superconjunto de una expresión exterior. Las expresiones regulares con cuantificadores anidados suelen ofrecer un rendimiento bajo. Por ejemplo, en el ejemplo siguiente se comprueba que una cadena empieza y acaba con un carácter alfanumérico y que cualquier otro carácter de la cadena es de un subconjunto más grande. Forma una parte de la expresión regular usada para validar direcciones de correo electrónico. Para obtener más información, consulte [Cómo: Comprobar si las cadenas tienen un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+- Búsqueda tardía positiva y negativa: `(?<=`*subexpresión*`)` para la búsqueda tardía positiva y `(?<!`*subexpresión*`)` para la búsqueda tardía negativa. Esta característica es parecida a la búsqueda anticipada, que se describe anteriormente en este tema. Dado que el motor de expresiones regulares permite una búsqueda de coincidencias completa de derecha a izquierda, las expresiones regulares permiten búsquedas tardías sin restricciones. La búsqueda tardía positiva y negativa también se puede usar para evitar anidar los cuantificadores cuando la subexpresión anidada es un superconjunto de una expresión exterior. Las expresiones regulares con cuantificadores anidados suelen ofrecer un rendimiento bajo. Por ejemplo, en el ejemplo siguiente se comprueba que una cadena empieza y acaba con un carácter alfanumérico y que cualquier otro carácter de la cadena es de un subconjunto más grande. Forma parte de la expresión regular usada para validar direcciones de correo electrónico. Para obtener más información, vea [Procedimiento: Comprobación de que las cadenas están en un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
      La expresión regular `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` se define como se muestra en la siguiente tabla.  
   
-    |Modelo|Description|  
+    |Modelo|Descripción|  
     |-------------|-----------------|  
     |`^`|Empieza la búsqueda de coincidencias en el principio de la cadena.|  
     |`[A-Z0-9]`|Coincide con cualquier carácter numérico o alfanumérico. (La comparación no distingue mayúsculas de minúsculas).|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Coincide con cero o más repeticiones de cualquier carácter de palabra o de cualquiera de los caracteres siguientes: -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, o ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
     |`(?<=[A-Z0-9])`|Realiza una búsqueda tardía en el carácter anterior, que debe ser numérico o alfanumérico. (La comparación no distingue mayúsculas de minúsculas).|  
     |`$`|Finalizar la búsqueda al final de la cadena.|  
   
@@ -143,7 +143,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Description|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |[Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Proporciona información sobre la manera en que el retroceso de expresiones regulares se bifurca para buscar coincidencias alternativas.|  
 |[Compilar y reutilizar](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Proporciona información sobre cómo compilar y reutilizar expresiones regulares para aumentar el rendimiento.|  

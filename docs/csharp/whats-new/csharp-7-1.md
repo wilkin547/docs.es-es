@@ -2,12 +2,12 @@
 title: Novedades de C# 7.1
 description: Información general sobre las nuevas características en C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480968"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881551"
 ---
 # <a name="whats-new-in-c-71"></a>Novedades de C# 7.1
 
@@ -26,7 +26,7 @@ Las nuevas características de lenguaje de esta versión son las siguientes:
 * [Coincidencia de patrones en parámetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
   - Puede usar expresiones de coincidencia de patrones en variables cuyo tipo es un parámetro de tipo genérico.
 
-Por último, el compilador tiene dos opciones, `/refout` y `/refonly`, que controlan la [generación de ensamblados de referencia](#reference-assembly-generation).
+Por último, el compilador tiene dos opciones, `-refout` y `-refonly`, que controlan la [generación de ensamblados de referencia](#reference-assembly-generation).
 
 Para usar las características más recientes en una versión secundaria, tendrá que [configurar la versión del idioma de compilador](../language-reference/configure-language-version.md) y seleccionar la versión.
 
@@ -109,5 +109,5 @@ A partir de C# 7.1, la expresión de patrón para `is` y el patrón de tipo `sw
 
 ## <a name="reference-assembly-generation"></a>Generación de ensamblados de referencia
 
-Existen dos nuevas opciones del compilador con las que se generan *ensamblados solo de referencia*: [/refout](../language-reference/compiler-options/refout-compiler-option.md) y [/refonly](../language-reference/compiler-options/refonly-compiler-option.md).
+Existen dos nuevas opciones del compilador con las que se generan *ensamblados solo de referencia*: [-refout](../language-reference/compiler-options/refout-compiler-option.md) y [-refonly](../language-reference/compiler-options/refonly-compiler-option.md).
 En los artículos de los vínculos se explican estas opciones y los ensamblados de referencia de manera más pormenorizada.

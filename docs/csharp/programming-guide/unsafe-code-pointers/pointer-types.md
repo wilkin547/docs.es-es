@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724049"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880328"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de puntero (Guía de programación de C#)
 
@@ -75,28 +75,26 @@ En la tabla siguiente se muestran los operadores e instrucciones que pueden func
 
 |Operador/Instrucción|Usar|
 |-------------------------|---------|
-|*|Realiza el direccionamiento indirecto del puntero.|
-|->|Obtiene acceso a un miembro de un struct a través de un puntero.|
-|[]|Indiza un puntero.|
+|`*`|Realiza el direccionamiento indirecto del puntero.|
+|`->`|Obtiene acceso a un miembro de un struct a través de un puntero.|
+|`[]`|Indiza un puntero.|
 |`&`|Obtiene la dirección de una variable.|
-|++ y --|Incrementa y disminuye los punteros.|
-|+ y -|Realiza aritmética con punteros.|
-|==, !=, \<, >, \<= y >=|Compara los punteros.|
-|`stackalloc`|Asigna memoria en la pila.|
-|Instrucción `fixed`|Fija provisionalmente una variable para que pueda encontrarse su dirección.|
+|`++` y `--`|Incrementa y disminuye los punteros.|
+|`+` y `-`|Realiza aritmética con punteros.|
+|`==`, `!=`, `<`, `>`, `<=` y `>=`|Compara los punteros.|
+|[`stackalloc` operator](../../language-reference/keywords/stackalloc.md)|Asigna memoria en la pila.|
+|[Instrucción `fixed`](../../language-reference/keywords/fixed-statement.md)|Fija provisionalmente una variable para que pueda encontrarse su dirección.|
+
+Para obtener más información sobre los operadores relacionados con el puntero, vea [Operadores relacionados con el puntero](../../language-reference/operators/pointer-related-operators.md).
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para obtener más información, vea la sección [Tipos de puntero](~/_csharplang/spec/unsafe-code.md#pointer-types) de [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
 - [Código no seguro y punteros](index.md)
 - [Conversiones de puntero](pointer-conversions.md)
-- [Expresiones de puntero](pointer-expressions.md)
 - [Tipos](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [fixed (instrucción)](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [Conversión boxing y conversión unboxing](../types/boxing-and-unboxing.md)

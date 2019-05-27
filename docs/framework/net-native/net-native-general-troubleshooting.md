@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6bc5697e20c21d988afe6017d05e0e4de53d40d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca0f093e85a5ac983266ba34f78021d6af6018c0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614915"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052033"
 ---
 # <a name="net-native-general-troubleshooting"></a>Solución de problemas generales de .NET Native
-En este tema se describe cómo solucionar posibles problemas que pueden surgir al desarrollar de aplicaciones con [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+Este tema describe cómo solucionar posibles problemas que pueden surgir al desarrollar aplicaciones con .NET Native.  
   
 - **Problema:** La ventana de salida de compilación no está bien actualizada.  
   
@@ -20,17 +20,17 @@ En este tema se describe cómo solucionar posibles problemas que pueden surgir a
   
 - **Problema:** Tiempo de compilación comercial de la aplicación para ARM ha aumentado.  
   
-     **Solución:** Al implementar una aplicación en el dispositivo ARM, la [!INCLUDE[net_native](../../../includes/net-native-md.md)] se invoca la infraestructura. Esta compilación realiza un gran número de optimizaciones, además de garantizar que no sigan funcionando semánticas no estáticas como, por ejemplo, la reflexión. Asimismo, la parte de .NET Framework que la aplicación usa está vinculada estáticamente para lograr un rendimiento óptimo y debe compilarse también en código nativo. Este es el motivo por el que la compilación tarda más tiempo.  
+     **Solución:** Al implementar una aplicación en el dispositivo ARM, se invoca la infraestructura de .NET Native. Esta compilación realiza un gran número de optimizaciones, además de garantizar que no sigan funcionando semánticas no estáticas como, por ejemplo, la reflexión. Asimismo, la parte de .NET Framework que la aplicación usa está vinculada estáticamente para lograr un rendimiento óptimo y debe compilarse también en código nativo. Este es el motivo por el que la compilación tarda más tiempo.  
   
      Sin embargo, los tiempos de compilación siguen estando dentro un minuto de compilación estándar para la mayoría de las aplicaciones en un equipo de desarrollo estándar.  Normalmente, ya se tardan varios minutos solamente para generar imágenes nativas para .NET Framework en un equipo de desarrollo estándar.  Los tiempos de compilación de las aplicaciones suelen ser de un minuto o dos incluso cuando se han implementado todas las optimizaciones para mejorar el código generado e incluyendo .NET Framework.  
   
      Seguimos trabajando para mejorar el rendimiento de compilación investigando la compilación multiproceso y otras optimizaciones.  
   
-- **Problema:** No sabe si la aplicación se compiló usando [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+- **Problema:** No sabe si la aplicación se ha compilado con .NET Native.  
   
-     **Solución:** Si el [!INCLUDE[net_native](../../../includes/net-native-md.md)] se invoca el compilador, observará que el tiempo de compilación ya y Administrador de tareas muestra varios [!INCLUDE[net_native](../../../includes/net-native-md.md)] procesos del componente, como ILC.exe y nutc_driver.exe.  
+     **Solución:** Si se invoca el compilador de .NET Native, observará más tiempo de compilación y el Administrador de tareas mostrará varios procesos del componente .NET Native, como ILC.exe y nutc_driver.exe.  
   
-     Cuando termine de compilar el proyecto correctamente con [!INCLUDE[net_native](../../../includes/net-native-md.md)], verá la salida en obj\\*config*\ *arch*\\*projectname*.ilc\out.  El contenido del paquete nativo final se encuentra en bin\\*arch*\\*config*\AppX. Si ha implementado la aplicación, el contenido del paquete nativo final está en \bin\\*arch*\\*config*\AppX.  
+     Después de crear correctamente el proyecto con .NET Native, encontrará la salida en obj\\*config*\ *arch*\\*projectname*. ilc\out.  El contenido del paquete nativo final se encuentra en bin\\*arch*\\*config*\AppX. Si ha implementado la aplicación, el contenido del paquete nativo final está en \bin\\*arch*\\*config*\AppX.  
   
 - **Problema:** Su aplicación compilada con .NET Native produce excepciones en tiempo de ejecución (normalmente [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) o [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) excepciones) que no produce cuando se compila sin. NET nativo.  
   

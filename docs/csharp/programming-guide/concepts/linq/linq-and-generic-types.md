@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332702"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584399"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ y tipos genéricos (C#)
-Las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se basan en tipos genéricos, introducidos en la versión 2.0 de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. No es necesario tener conocimientos avanzados de genéricos para poder empezar a escribir consultas, aunque debería entender dos conceptos básicos:  
+Las consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] se basan en tipos genéricos incorporados en la versión 2.0 de .NET Framework. No es necesario tener conocimientos avanzados de genéricos para poder empezar a escribir consultas, aunque debería entender dos conceptos básicos:  
   
 1. Al crear una instancia de una clase de colección genérica como <xref:System.Collections.Generic.List%601>, reemplace la "T" por el tipo de objetos que contendrá la lista. Por ejemplo, una lista de cadenas se expresa como `List<string>` y una lista de objetos `Customer` se expresa como `List<Customer>`. Las listas genéricas están fuertemente tipadas y ofrecen muchas ventajas respecto a las colecciones que almacenan sus elementos como <xref:System.Object>. Si intenta agregar un `Customer` a una `List<string>`, se producirá un error en tiempo de compilación. Usar colecciones genéricas es fácil porque no es necesario efectuar ninguna conversión de tipos en tiempo de ejecución.  
   
