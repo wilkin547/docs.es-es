@@ -1,0 +1,41 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Documentación de ML.NET
+metadata:
+  document_id: na
+  title: 'Documentación de ML.NET: tutoriales y referencia de la API'
+  meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
+  ms.topic: landing-page
+  ms.date: 04/18/2019
+  ms.author: cgronlun
+  author: cjgronlund
+abstract:
+  description: 'Aprenda cómo usar ML.NET, un marco de Machine Learning gratuito, de código abierto y multiplataforma que permite compilar soluciones de Machine Learning personalizadas e integrarlas en las aplicaciones .NET. Los tutoriales, ejemplos de código, referencia de API y otra documentación le muestran cómo.'
+sections:
+  - title: Primeros pasos
+    items:
+      - type: paragraph
+        text: 'Para obtener información sobre cómo se crea un aplicación de aprendizaje automático con ML.NET, lea <a href="/dotnet/machine-learning/how-does-mldotnet-work">Novedades en ML.NET y cómo funciona</a>. También puede empezar agregando el paquete de NuGet <b>Microsoft.ML</b> a la aplicación.'
+  - title: Tutoriales detallados
+    items:
+      - type: paragraph
+        text: 'Aprenda a crear soluciones comunes con ML.NET:'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">Análisis de sentimiento mediante la clasificación binaria</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">Clasificación de problemas de GitHub mediante la clasificación multiclase</a></li>
+          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">Predicción de tarifas de taxi de Nueva York mediante regresión</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Clasificación de flores por características mediante el uso de clústeres</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">Creación de recomendaciones de películas con factorización matricial</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Creación de un clasificador de imágenes personalizado con TensorFlow</a>
+  - title: Referencia y recursos
+    items:
+      - type: paragraph
+        text: 'La API de ML.NET tiene dos conjuntos de paquetes: componentes de la versión y componentes de vista previa. La API de la versión contiene componentes para el control de datos, algoritmos de clasificación binaria, clasificación multiclase, regresión, detección de anomalías y clasificación, ahorro y carga del modelo, y mucho más. La API de la versión preliminar contiene el control de modelos ONNX y TensorFlow, algoritmos para la recomendación de tareas y componentes para procesar datos de serie temporal.'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/?view=ml-dotnet">API de ML.NET</a>
+          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">API de versión preliminar de ML.NET</a>
+          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">Ejemplos de ML.NET: C# y F#</a>'

@@ -1,23 +1,23 @@
 ---
-title: Cómo cargar archivos mediante FTP
+title: Procedimiento para cargar archivos mediante FTP
 description: En este artículo se muestra cómo cargar un archivo a un servidor FTP.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-ms.openlocfilehash: a1f067462361bb123c9d61a1d099c900a6641d6b
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028206"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632809"
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="b4800-103">Cómo cargar archivos mediante FTP</span><span class="sxs-lookup"><span data-stu-id="b4800-103">How to: Upload files with FTP</span></span>
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="847da-103">Procedimiento para cargar archivos mediante FTP</span><span class="sxs-lookup"><span data-stu-id="847da-103">How to: Upload files with FTP</span></span>
 
-<span data-ttu-id="b4800-104">En este ejemplo se muestra cómo cargar un archivo en un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="b4800-104">This sample shows how to upload a file to an FTP server.</span></span>
+<span data-ttu-id="847da-104">En este ejemplo se muestra cómo cargar un archivo en un servidor FTP.</span><span class="sxs-lookup"><span data-stu-id="847da-104">This sample shows how to upload a file to an FTP server.</span></span>
 
-## <a name="example"></a><span data-ttu-id="b4800-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b4800-105">Example</span></span>
+## <a name="example"></a><span data-ttu-id="847da-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="847da-105">Example</span></span>
 
 ```csharp
 using System;
