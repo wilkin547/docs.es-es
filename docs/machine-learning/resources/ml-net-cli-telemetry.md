@@ -4,12 +4,12 @@ description: Descubra las características de telemetría de la CLI de ML.NET qu
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 36f4af48615e2e3247f8e21343d0a00519ba1c0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645023"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053573"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Recopilación de telemetría mediante la CLI de ML.NET
 
@@ -75,5 +75,5 @@ Al ejecutar por primera vez un [comando de la CLI de ML.NET](../reference/ml-net
 ## <a name="see-also"></a>Vea también
 - [Referencia de la CLI de ML.NET](../reference/ml-net-cli-reference.md)
 - [Términos de licencia del software de Microsoft: biblioteca de Microsoft .NET](https://aka.ms/dotnet-core-eula)
-- [Privacidad en Microsoft](https://www.microsoft.com/en-us/trustcenter/privacy/)
-- [Declaración de privacidad de Microsoft](https://privacy.microsoft.com/en-us/privacystatement)
+- [Privacidad en Microsoft](https://www.microsoft.com/trustcenter/privacy/)
+- [Declaración de privacidad de Microsoft](https://privacy.microsoft.com/privacystatement)
