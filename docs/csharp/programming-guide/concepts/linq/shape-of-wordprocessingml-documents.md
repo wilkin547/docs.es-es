@@ -2,12 +2,12 @@
 title: Forma de documentos WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 4c034950006b7ce09ad03e4579cc298f0b2dd218
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f91e324e14e7cb3bb3912ebfab78daba71d5aae8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739250"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052229"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>Forma de documentos WordprocessingML (C#)
 En este tema se presenta la forma XML de un documento WordprocessingML.  
@@ -92,7 +92,7 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
  [Información general de WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
  [Anatomía de un archivo WordProcessingML](http://officeopenxml.com/anatomyofOOXML.php)  
  [Introducción a WordprocessingML](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Office 2003: página de descarga de esquemas de referencia XML](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
+ [Office 2003: página de descarga de esquemas de referencia XML](https://www.microsoft.com/download/details.aspx?id=101)  
   
 ## <a name="see-also"></a>Vea también
 

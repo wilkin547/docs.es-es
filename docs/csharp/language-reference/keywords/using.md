@@ -8,18 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 07563d32b176832966ab50942cda2b0b26b80e44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: efde313c0a1dabee45de4fd7d580a3aff5139928
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137974"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633814"
 ---
 # <a name="using-c-reference"></a>using (Referencia de C#)
 
 La palabra clave `using` tiene tres usos principales:
-- La [instrucción using](using-statement.md) define un ámbito al final del cual se eliminará un objeto. 
-- La [directiva](using-directive.md) using crea un alias para un espacio de nombres o importa tipos definidos en otros espacios de nombres. 
+
+- La [instrucción using](using-statement.md) define un ámbito al final del cual se eliminará un objeto.
+- La [directiva using](using-directive.md) crea un alias para un espacio de nombres o importa tipos definidos en otros espacios de nombres.
 - La [directiva estática using](using-static.md) importa los miembros de una sola clase.
 
 ## <a name="see-also"></a>Vea también

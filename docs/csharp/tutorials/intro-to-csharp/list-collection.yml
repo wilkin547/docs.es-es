@@ -9,16 +9,16 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: 8ee13ec60f0504982c33ecc61940b731d320d2de
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029494"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65880564"
 items:
 - durationInMinutes: 1
   content: >
-    En este tutorial se enseña a usar C# de forma interactiva, con el uso del explorador para escribir código de C# y ver los resultados de la compilación y ejecución del código. Contiene una serie de lecciones en las que se crean, modifican y exploran colecciones y matrices.
+    En este tutorial se enseña a usar C# de forma interactiva, con el uso del explorador para escribir código de C# y ver los resultados de la compilación y ejecución del código. Contiene una serie de lecciones en las que se crean, modifican y examinan colecciones y matrices.
 - title: Creación de listas
   durationInMinutes: 2
   content: >
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    Hasta ahora, solo ha creado una lista de cadenas, ha agregado tres nombres a dicha lista y ha impreso los nombres en MAYÚSCULA. Los conceptos aplicados ya se han aprendido en los tutoriales anteriores para recorrer en bucle la lista.
+    Ha creado una lista de cadenas, ha agregado tres nombres a esa lista y ha impreso los nombres en MAYÚSCULA. Los conceptos aplicados ya se han aprendido en los tutoriales anteriores para recorrer en bucle la lista.
 
 
     El código para mostrar los nombres usa la característica [interpolación de cadenas](../../language-reference/tokens/interpolated.md). Si un valor de `string` va precedido del carácter `$`, significa que puede insertar código de C# en la declaración de cadena. La cadena real reemplaza a ese código de C# con el valor que genera. En este ejemplo, reemplaza `{name.ToUpper()}` con cada nombre, convertido a mayúsculas, porque se llama al método <xref:System.String.ToUpper%2A?displayProperty=nameWithType>.
@@ -56,7 +56,7 @@ items:
     La colección creada usa el tipo <xref:System.Collections.Generic.List%601>. Este tipo almacena las secuencias de elementos. Especifique el tipo de los elementos entre corchetes angulares.
 
 
-    Un aspecto importante de este tipo <xref:System.Collections.Generic.List%601> es que se puede aumentar o reducir, lo que permite agregar o quitar elementos. Agregue el código siguiente debajo del código que ya haya escrito:
+    Un aspecto importante de este tipo <xref:System.Collections.Generic.List%601> es que se puede aumentar o reducir, lo que permite agregar o quitar elementos. Puede ver los resultados si modifica el contenido una vez mostrado. Agregue el código siguiente debajo del código que ya ha escrito (debajo del bucle que imprime el contenido):
 
 
     ```csharp
@@ -78,7 +78,7 @@ items:
     ```
 
 
-    Se han agregado dos nombres más al final de la lista. También se ha quitado uno.
+    Se han agregado dos nombres más al final de la lista. También se ha quitado uno. La salida de este bloque de código muestra el contenido inicial y luego imprime una línea en blanco y el nuevo contenido.
 
 
     <xref:System.Collections.Generic.List%601> también permite hacer referencia a elementos individuales a través del **índice**. Puede acceder a los elementos con los tokens `[` y `]`. Agregue el código siguiente debajo del que ya haya escrito y pruébelo:
@@ -112,7 +112,7 @@ items:
 - title: Búsqueda y orden en las listas
   durationInMinutes: 5
   content: >
-    En los ejemplos se usan listas relativamente pequeñas, pero las aplicaciones a menudo pueden crear listas que contengan muchos más elementos, en ocasiones, con una numeración que engloba millares. Para encontrar elementos en estas colecciones más grandes, debe buscar diferentes elementos en la lista. El método <xref:System.Collections.Generic.List%601.IndexOf%2A> busca un elemento y devuelve su índice. Pruebe esto para ver cómo funciona.  Agregue el código siguiente debajo del que ha escrito hasta ahora:
+    En los ejemplos se usan listas relativamente pequeñas, pero las aplicaciones a menudo pueden crear listas que contengan muchos más elementos, en ocasiones, con una numeración que engloba millares. Para encontrar elementos en estas colecciones más grandes, debe buscar diferentes elementos en la lista. El método <xref:System.Collections.Generic.List%601.IndexOf%2A> busca un elemento y devuelve su índice. Pruébelo para ver cómo funciona.  Agregue el código siguiente debajo del que ha escrito hasta ahora:
 
 
     ```csharp
@@ -162,7 +162,7 @@ items:
     ```
 
 
-    Se crea una lista de enteros y se definen los dos primeros enteros con el valor 1. Son los dos primeros valores de una *sucesión de Fibonacci*, una secuencia de números. Cada número sucesivo de Fibonacci se obtiene con la suma de los dos números anteriores. Agregue este código:
+    Se crea una lista de enteros y se definen los dos primeros enteros con el valor 1. La *secuencia Fibonacci*, una secuencia de números, empieza con dos 1. Cada número sucesivo de Fibonacci se obtiene con la suma de los dos números anteriores. Agregue este código:
 
 
     ```csharp
@@ -230,7 +230,7 @@ items:
     Ha completado el tutorial interactivo de la lista. Se trata de la introducción final al tutorial interactivo de C#. Puede visitar el [sitio .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) para descargar el SDK de .NET Core, crear un proyecto en el equipo y seguir programando. El paso "Mantenimiento del aprendizaje" le lleva de vuelta a estos tutoriales.
 
 
-    Puede obtener más información sobre las [colecciones de .NET](../../../standard/collections/index.md) en los temas siguientes:
+    Puede obtener más información sobre las [colecciones de .NET](../../../standard/collections/index.md) en los siguientes artículos:
 
     - [Selección de un tipo de colección](../../../standard/collections/selecting-a-collection-class.md)
 

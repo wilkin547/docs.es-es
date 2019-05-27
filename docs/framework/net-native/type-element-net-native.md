@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033130"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051994"
 ---
 # <a name="type-element-net-native"></a>\<Tipo > elemento (.NET Native)
 Aplica la directiva de tiempo de ejecución a un tipo determinado, como una clase o estructura.  
@@ -102,7 +102,7 @@ Aplica la directiva de tiempo de ejecución a un tipo determinado, como una clas
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- Debido a que los metadatos de la clase <xref:System.Collections.Generic.List%601> no se incluyen automáticamente en la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)], en el ejemplo no se puede mostrar la información del miembro solicitada en tiempo de ejecución. Para proporcionar los metadatos necesarios, agregue el elemento `<Type>` siguiente al archivo de directivas en tiempo de ejecución. Tenga en cuenta que, dado que se ha proporcionado un elemento primario [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md), no es necesario proporcionar un nombre de tipo completo en el elemento `<Type>`.  
+ Dado que los metadatos para el <xref:System.Collections.Generic.List%601> clase no se incluye automáticamente por la cadena de herramientas .NET Native, se produce un error en el ejemplo mostrar la información del miembro solicitada en tiempo de ejecución. Para proporcionar los metadatos necesarios, agregue el elemento `<Type>` siguiente al archivo de directivas en tiempo de ejecución. Tenga en cuenta que, dado que se ha proporcionado un elemento primario [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md), no es necesario proporcionar un nombre de tipo completo en el elemento `<Type>`.  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ Aplica la directiva de tiempo de ejecución a un tipo determinado, como una clas
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- Como los metadatos del objeto <xref:System.String> no están disponibles, la llamada al método <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> genera una excepción <xref:System.NullReferenceException> en tiempo de ejecución cuando se compila con la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Para eliminar la excepción y proporcionar los metadatos necesarios, agregue el siguiente elemento `<Type>` al archivo de directivas en tiempo de ejecución:  
+ Porque los metadatos de la <xref:System.String> objeto no está disponible, la llamada a la <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> método inicie una excepción un <xref:System.NullReferenceException> excepción al ejecutarse por tiempo cuando se compila con la cadena de herramientas .NET Native. Para eliminar la excepción y proporcionar los metadatos necesarios, agregue el siguiente elemento `<Type>` al archivo de directivas en tiempo de ejecución:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  

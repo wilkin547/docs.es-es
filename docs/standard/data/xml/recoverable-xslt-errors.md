@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202990"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590054"
 ---
 # <a name="recoverable-xslt-errors"></a>Errores XSLT recuperables
 La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C incluye áreas en las que el proveedor de las implementaciones puede decidir cómo controlar una situación. Estas áreas se consideran comportamientos discrecionales. Por ejemplo, en la sección 7.3 Creación de instrucciones de procesamiento, la recomendación 1.0 de XSLT dice que el hecho de que al crear instancias del contenido de `xsl:processing-instruction` se creen nodos que no sean de texto, es un error. Para algunos problemas, la recomendación 1.0 de XSLT indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.  
@@ -18,11 +18,11 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
 ## <a name="discretionary-behaviors"></a>Comportamientos discrecionales  
  En la siguiente tabla se enumeran cada uno de los comportamientos discrecionales que permite la recomendación 1.0 de XSLT y cómo controla estos comportamientos la clase <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
--   "Recuperar" indica que la clase <xref:System.Xml.Xsl.XslCompiledTransform> se recuperará de este error. El evento <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> se puede utilizar para notificar cualquier evento desde el procesador XSLT.  
+- "Recuperar" indica que la clase <xref:System.Xml.Xsl.XslCompiledTransform> se recuperará de este error. El evento <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> se puede utilizar para notificar cualquier evento desde el procesador XSLT.  
   
--   El error indica que se inicia una excepción para esta situación.  
+- El error indica que se inicia una excepción para esta situación.  
   
--   Puede encontrar las referencias de la sección en la [recomendación de transformaciones XSL (XSLT) versión 1.0 del W3C](https://www.w3.org/TR/xslt) y en las [erratas de especificaciones de las transformaciones XSL (XSLT) versión 1.0 del W3C](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+- Puede encontrar las referencias de la sección en la [recomendación de transformaciones XSL (XSLT) versión 1.0 del W3C](https://www.w3.org/TR/xslt) y en las [erratas de especificaciones de las transformaciones XSL (XSLT) versión 1.0 del W3C](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condición XSLT|Sección|Comportamiento de XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  
@@ -37,7 +37,7 @@ La recomendación de la versión 1.0 de las transformaciones XLT (XSLT) del W3C 
 |Se crean nodos que no son nodos de texto durante la creación de instancias del contenido del atributo `xsl:attribute`.|7.1.3|Error*|  
 |El atributo `name` de un `xsl:processing-instruction` no produce un NCName y un destino de instrucción de procesamiento.|7.3|Error*|  
 |Las instancias del contenido de `xsl:processing-instruction` crean nodos que no son de texto.|7.3|Error*|  
-|El resultado de la creación de instancias del contenido de `xsl:processing-instruction` contiene la cadena "?>".|7.3|Recuperar|  
+|El resultado de la creación de instancias del contenido de `xsl:processing-instruction` contiene la cadena "?>"|7.3|Recuperar|  
 |El resultado de la creación de instancias del contenido de `xsl:processing-instruction` contiene la cadena "--" o finaliza con "-".|7.4|Recuperar|  
 |El resultado de la creación de instancias del contenido de `xsl:comment` crea nodos que no son de texto.|7.4|Error*|  
 |La plantilla de un elemento de enlace de variables devuelve un nodo de atributo o un nodo de espacio de nombres.|11.2|Error*|  

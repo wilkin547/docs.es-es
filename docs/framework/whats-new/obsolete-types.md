@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663443"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959932"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
 <a name="introduction"></a> En las tablas de este artículo se muestran los tipos que están obsoletos en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] organizados por ensamblados. Utilice los vínculos siguientes para ver una lista de tipos obsoletos y las alternativas recomendadas en cada ensamblado. Dado que estos tipos están en desuso, todos sus miembros también lo están. Para obtener una lista de miembros obsoletos adicionales de la biblioteca de clases de .NET Framework, vea [Miembros obsoletos](obsolete-members.md).
@@ -512,8 +512,8 @@ ms.locfileid: "64663443"
 
 |Tipo|Mensaje|
 |----------|-------------|
-|<xref:System.Activities.Statements.Interop>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los tipos de Workflow 4.0 de <xref:System.Activities>\*.|
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los tipos de Workflow 4.0 de <xref:System.Activities>\*.|
+|<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los tipos de Workflow 4.0 de <xref:System.Activities>\*.|
+|<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br />Los tipos de Workflow Foundation 3.0 están desusados. En su lugar, use los tipos de Workflow 4.0 de <xref:System.Activities>\*.|
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Configuration>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.DebugEngine> excepto <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|

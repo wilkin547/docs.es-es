@@ -2,12 +2,12 @@
 title: Introducción a la plataforma y las herramientas de Microsoft para aplicaciones en contenedor
 description: Familiarícese con las ofertas de Microsoft para admitir el ciclo de vida de las aplicaciones de Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 9e7e821370b98fbda9af0ea69c13eaeab2f35acf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644906"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195597"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introducción a la plataforma de Microsoft y herramientas para aplicaciones en contenedor
 
@@ -27,8 +27,8 @@ En la tabla 3-1 se muestra que la intención de las operaciones de DevOps de Mic
 
 | administrador de flujos de trabajo | Tecnologías de Microsoft | Aplicaciones de terceros: acoplables a Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Plataforma para aplicaciones de Docker   | • Microsoft Visual Studio y Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • Cualquier editor de código (por ejemplo, Sublime)<br /> • Cualquier lenguaje (Node.js, Java, Go, etc.)<br /> • Cualquier orquestrator y programador<br /> • Cualquier registro de Docker<br /> |
-| DevOps para aplicaciones de Docker     | • Los servicios de azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Centro de datos de Docker local, Docker Swarm, Mesos DC/OS, Kubernetes, etc.<br /> |
+| Plataforma para aplicaciones de Docker   | • Microsoft Visual Studio y Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • Cualquier editor de código (por ejemplo, Sublime)<br /> • Cualquier lenguaje (Node.js, Java, Go, etc.)<br /> • Cualquier orquestrator y programador<br /> • Cualquier registro de Docker<br /> |
+| DevOps para aplicaciones de Docker     | • Los servicios de azure DevOps<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Centro de datos de Docker local, Docker Swarm, Mesos DC/OS, Kubernetes, etc.<br /> |
 | Administración y supervisión  | Supervisar azure • | • Marathon, Chronos, etc.<br />|
 
 La plataforma y las herramientas de Microsoft para aplicaciones de Docker en contenedor, como se define en la tabla 3-1, constan de los siguientes componentes:
@@ -37,7 +37,7 @@ La plataforma y las herramientas de Microsoft para aplicaciones de Docker en con
 
 - **DevOps para aplicaciones de Docker** pueden usar los desarrolladores que crean aplicaciones de Docker [servicios de Azure DevOps](https://azure.microsoft.com/services/devops/) o cualquier otro producto de terceros, como Jenkins, para elaborar un ciclo de vida de aplicaciones automatizadas completas Management (ALM).
 
-  Con los servicios de Azure DevOps, los desarrolladores pueden crear centrada en el contenedor de control de DevOps para un proceso rápido e iterativo que abarque el código fuente desde cualquier lugar (Git de Azure DevOps Services, GitHub, cualquier repositorio Git remoto o Subversion), integración continua (CI) , pruebas unitarias internas, las pruebas de integración entre Multi-Container o servicio, entrega continua (CD) y la administración de versiones (RM). Los desarrolladores también pueden automatizar las versiones de las aplicaciones de Docker en Azure Container Service, desde entornos de desarrollo a almacenamiento provisional y producción.
+  Con los servicios de Azure DevOps, los desarrolladores pueden crear centrada en el contenedor de control de DevOps para un proceso rápido e iterativo que abarque el código fuente desde cualquier lugar (Git de Azure DevOps Services, GitHub, cualquier repositorio Git remoto o Subversion), integración continua (CI) , pruebas unitarias internas, las pruebas de integración entre Multi-Container o servicio, entrega continua (CD) y la administración de versiones (RM). Los desarrolladores también pueden automatizar sus versiones de aplicación de Docker en Azure Kubernetes Service (AKS), desde el desarrollo a entornos de ensayo y producción.
 
 - **Administración y supervisión** TI puede administrar y supervisar las aplicaciones de producción y los servicios de varias maneras, la integración de ambas perspectivas en una experiencia consolidada.
 

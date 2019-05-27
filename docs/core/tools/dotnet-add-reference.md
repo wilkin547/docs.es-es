@@ -1,17 +1,21 @@
 ---
 title: Comando dotnet-add reference
 description: El comando dotnet add reference constituye una opción práctica para agregar referencias entre proyectos.
-ms.date: 12/04/2018
-ms.openlocfilehash: 8df9fa3c9469f74b27a9cb8120936f03532b016c
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 04/24/2019
+ms.openlocfilehash: e90f95527d4f14c7851ccd8d30201daaaaefa2ae
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169775"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631941"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
+**Este artículo se aplica a: ✓** SDK de .NET Core 1.x y versiones posteriores
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>nombre
 

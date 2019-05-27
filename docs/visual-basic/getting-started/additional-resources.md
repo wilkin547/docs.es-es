@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: b54c48fb7869fb3d308e238366f8e8b91368320a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: febfe0ae0a3e478109b338b228d0bc306bf56454
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052784"
 ---
 # <a name="additional-resources"></a>Recursos adicionales
 
@@ -23,40 +23,40 @@ En los siguientes sitios web encontrará orientación y respuestas a algunos pro
 
 ### <a name="on-the-web"></a>En la Web
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |[Diseño del lenguaje Visual Basic .NET](https://github.com/dotnet/vblang)|Repositorio oficial en GitHub para el diseño del lenguaje Visual Basic .NET.|
 |[Blog del equipo de Microsoft Visual Basic](https://devblogs.microsoft.com/vbteam/)|Permite acceder al blog del equipo de Visual Basic.|
 
 ### <a name="code-samples"></a>Ejemplos de código
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |[Galería de códigos](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|Descargue y comparta aplicaciones de ejemplo y otros recursos con la comunidad de desarrolladores.|
 |[Ejemplos de documentación de Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Contiene los ejemplos que se usan en la documentación de Visual Basic y de .NET.|
 
 ### <a name="forums"></a>Foros
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
-|[Foros de Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|Se describen problemas generales de Visual Basic.|
+|[Foros de Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|Se describen problemas generales de Visual Basic.|
 
 ### <a name="videos-and-webcasts"></a>Vídeos y webcasts
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|Proporciona una comunidad continua a través de vídeos, Wikis y foros.|
 
-### <a name="support"></a>Compatibilidad
+### <a name="support"></a>Soporte técnico
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |[Soporte técnico de Microsoft](https://support.microsoft.com)|Proporciona acceso a los artículos de Knowledge Base (KB), a descargas y actualizaciones, a difusiones web sobre soporte técnico y a otros servicios.|
 |[Preguntas sobre Visual Studio](https://developercommunity.visualstudio.com)|Permite informar de errores o proporcionar sugerencias a Microsoft sobre .NET y Visual Studio. También puede notificar un error seleccionando **Ayuda** > **Enviar comentarios** > **Notificar un problema** en Visual Studio.|
 
 ## <a name="third-party-resources"></a>Recursos de terceros
 
-|Término|de esquema JSON|
+|Término|Definición|
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Proporciona un foro para hablar sobre Visual Basic, .NET y mucho más.|
 |[vbCity](http://vbcity.com/)|Un sitio de la comunidad para que los usuarios obtengan información y formulen preguntas sobre Visual Basic y .NET.|

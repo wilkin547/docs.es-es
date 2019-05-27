@@ -1,15 +1,13 @@
 ---
 title: Contenedores, imágenes y registros de Docker
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Contenedores, imágenes y registros de Docker
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: f10d7d03bbf88ed8f7a89a5d3919a39b3c124ae0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 520f8d4d54f1fdd227ff9a1e88660b62e75f927f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130239"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639908"
 ---
 # <a name="docker-containers-images-and-registries"></a>Contenedores, imágenes y registros de Docker
 
@@ -21,7 +19,7 @@ Los desarrolladores deben almacenar las imágenes en un registro, que actúa com
 
 En la figura 2-4 se muestra cómo se relacionan las imágenes y los registros de Docker con otros componentes. También se muestran las diversas ofertas de registro de los proveedores.
 
-![Taxonomía básica en Docker: el registro es como una estantería donde las imágenes se almacenan y están disponibles para extraerlas para crear contenedores, a fin de ejecutar servicios o aplicaciones web. Hay registros de Docker privados a nivel local y en la nube pública. Docker Hub es que un registro público mantenido por Docker; junto con Docker Trusted Registry, una solución a nivel empresarial, Azure ofrece Azure Container Registry. AWS, Google y otros también tienen registros de contenedor.](./media/image5.PNG)
+![Taxonomía básica en Docker: el registro es como una estantería donde las imágenes se almacenan y están disponibles para extraerlas con el fin de compilar contenedores que ejecuten servicios o aplicaciones web. Hay registros de Docker privados a nivel local y en la nube pública. Docker Hub es que un registro público mantenido por Docker; junto con Docker Trusted Registry, una solución a nivel empresarial, Azure ofrece Azure Container Registry. AWS, Google y otros también tienen registros de contenedor.](./media/image5.PNG)
 
 **Figura 2-4**. Taxonomía de términos de Docker y conceptos
 
@@ -29,9 +27,9 @@ Colocar imágenes en un registro le permite almacenar fragmentos de la aplicaci�
 
 Los registros de imágenes privados, ya sean hospedados localmente o en la nube, se recomiendan cuando:
 
--   Las imágenes no deben compartirse públicamente por motivos de confidencialidad.
+- Las imágenes no deben compartirse públicamente por motivos de confidencialidad.
 
--   Quiere tener una latencia de red mínima entre las imágenes y el entorno de implementación elegido. Por ejemplo, si el entorno de producción es la nube de Azure, probablemente quiera almacenar las imágenes en [Azure Container Registry](https://azure.microsoft.com/services/container-registry/), para que la latencia de red sea mínima. De forma similar, si el entorno de producción es local, puede tener un registro de confianza de Docker local disponible dentro de la misma red local.
+- Quiere tener una latencia de red mínima entre las imágenes y el entorno de implementación elegido. Por ejemplo, si el entorno de producción es la nube de Azure, probablemente quiera almacenar las imágenes en [Azure Container Registry](https://azure.microsoft.com/services/container-registry/), para que la latencia de red sea mínima. De forma similar, si el entorno de producción es local, puede tener un registro de confianza de Docker local disponible dentro de la misma red local.
 
 >[!div class="step-by-step"]
 >[Anterior](docker-terminology.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591016"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052292"
 ---
 # <a name="events-overview-windows-forms"></a>Información general sobre eventos (Formularios Windows Forms)
 Un evento es una acción a la que puede responder o que puede "controlar" en el código. Los eventos se pueden generar por una acción del usuario, como hacer clic con el mouse o presionar una tecla, por código de programa o por el sistema.
@@ -29,7 +29,7 @@ Un evento es una acción a la que puede responder o que puede "controlar" en el 
  Para obtener información acerca de cómo generar y consumir un evento, vea [eventos](../../standard/events/index.md).
 
 ## <a name="delegates-and-their-role"></a>Delegados y sus roles
- Los delegados son clases que se usan habitualmente dentro de .NET Framework para crear mecanismos de control de eventos. A grandes rasgos, los delegados son como punteros de función, que se usan habitualmente en [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] y en otros lenguajes orientados a objetos. Sin embargo, a diferencia de los punteros de función, los delegados están orientados a objetos, proporcionan seguridad de tipos y son seguros. Además, mientras que un puntero de función solo contiene una referencia a una función determinada, un delegado consta de una referencia a un objeto y de referencias a uno o varios métodos dentro del objeto.
+ Los delegados son clases que se usan habitualmente dentro de .NET Framework para crear mecanismos de control de eventos. Equivalen aproximadamente a punteros de función, frecuente en Visual C++ y otros lenguajes orientados a objetos. Sin embargo, a diferencia de los punteros de función, los delegados están orientados a objetos, proporcionan seguridad de tipos y son seguros. Además, mientras que un puntero de función solo contiene una referencia a una función determinada, un delegado consta de una referencia a un objeto y de referencias a uno o varios métodos dentro del objeto.
 
  Este modelo de eventos utiliza *delegados* para enlazar eventos a los métodos que se usan para controlarlos. El delegado permite especificar un método de controlador para registrar otras clases para la notificación de eventos. Cuando el evento se produce, el delegado llama al método enlazado. Para obtener más información sobre cómo definir delegados, vea [eventos](../../standard/events/index.md).
 

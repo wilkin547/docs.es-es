@@ -1,30 +1,39 @@
 ---
 title: Información general sobre el SDK de .NET Core
 description: Obtenga información sobre el SDK de .NET Core, que es un conjunto de bibliotecas y herramientas utilizadas para crear proyectos .NET Core.
-ms.date: 06/20/2016
+ms.date: 05/13/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: f23140166ada0c39d4267a4fd2ba5187b6c13c83
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: f56d7238eaaaa677db38430358ce94890632469e
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169324"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959233"
 ---
 # <a name="net-core-sdk-overview"></a>Información general sobre el SDK de .NET Core
 
-El kit de desarrollo de software (SDK) de .NET Core es un conjunto de bibliotecas y herramientas que permiten a los desarrolladores crear aplicaciones y bibliotecas de .NET Core. Este es el paquete que es más probable que adquieran los desarrolladores. 
+El kit de desarrollo de software (SDK) de .NET Core es un conjunto de bibliotecas y herramientas que permiten a los desarrolladores crear aplicaciones y bibliotecas de .NET Core. Contiene los siguientes componentes que se usan para compilar y ejecutar aplicaciones:
 
-Incluye los componentes siguientes:
-
-1. Las herramientas de línea de comandos de .NET Core que se usan para compilar aplicaciones.
-2. .NET Core (bibliotecas y entorno de ejecución) que permiten compilar y ejecutar las aplicaciones.
-3. El controlador `dotnet` para ejecutar los [comandos de la CLI](tools/index.md), así como también ejecutar aplicaciones.
+- Herramientas de la CLI de .NET Core.
+- Bibliotecas y runtime de .NET Core.
+- [Controlador](/tools/index.md#driver) `dotnet`.
 
 ## <a name="acquiring-the-net-core-sdk"></a>Adquisición del SDK de .NET Core
-Del mismo modo que ocurre con todas las herramientas, lo primero que debe hacer es instalar las herramientas en su máquina. Según el escenario, puede usar los instaladores nativos para instalar el SDK, o bien puede usar el script de shell de instalación.
 
-Los instaladores nativos están pensados principalmente para las máquinas de los desarrolladores. El SDK se distribuye mediante el uso del mecanismo de instalación nativo de cada plataforma compatible, por ejemplo, los paquetes DEB en Ubuntu o los conjuntos de MSI en Windows. Estos instaladores instalarán y configurarán el entorno según sea necesario para que el usuario use el SDK inmediatamente después de la instalación. Sin embargo, también se necesitan privilegios administrativos en la máquina. Puede ver las instrucciones de instalación en la [Guía de instalación de .NET Core](https://aka.ms/dotnetcoregs).
+Del mismo modo que ocurre con todas las herramientas, lo primero que debe hacer es instalar las herramientas en su máquina. Según el escenario, puede instalar el SDK mediante uno de los métodos siguientes:
 
-Por otro lado, los scripts de instalación no requieren privilegios administrativos. Sin embargo, tampoco instalan ningún requisito previo en la máquina; debe instalarlos todos manualmente. Los scripts están pensados principalmente para configurar servidores de compilación o cuando desee instalar las herramientas sin privilegios de administración (tenga en cuenta la salvedad con respecto a los requisitos previos que ya se mencionó). Puede encontrar más información en el [tema de referencia sobre los scripts de instalación](tools/dotnet-install-script.md). Si le interesa saber cómo configurar el SDK en el servidor de compilación de integración continua, consulte el documento sobre el [SDK con servidores de integración continua](tools/using-ci-with-cli.md).
+- Los instaladores nativos.
+- El script de shell de instalación.
 
-De forma predeterminada, el SDK se instalará "en paralelo". Esto significa que pueden coexistir varias versiones de las herramientas de la CLI en un momento dado en una sola máquina. El uso de la versión correcta se explica en detalle en la [sección de controladores](tools/index.md#driver) del tema sobre las herramientas de línea de comandos de .NET Core.
+Los instaladores nativos están pensados principalmente para las máquinas de los desarrolladores. El SDK se distribuye mediante el mecanismo de instalación nativo de cada plataforma compatible, como los paquetes DEB en Ubuntu o los conjuntos de MSI en Windows. Estos instaladores instalan y configuran el entorno según sea necesario para que el usuario use el SDK inmediatamente después de la instalación. Sin embargo, también se necesitan privilegios administrativos en la máquina. Puede encontrar el SDK para instalar en la página de [descargas de .NET](https://dotnet.microsoft.com/download).
+
+Por el contrario, los scripts de instalación no requieren privilegios administrativos, aunque tampoco instalan ningún requisito previo en el equipo; debe instalarlos todos manualmente el usuario. Los scripts están pensados principalmente para configurar servidores de compilación o cuando desee instalar las herramientas sin privilegios de administración (tenga en cuenta la salvedad con respecto a los requisitos previos que ya se mencionó). Puede encontrar más información en el artículo [referencia de scripts de dotnet-install](tools/dotnet-install-script.md). Si está interesado en cómo configurar el SDK en el servidor de compilación de CI, vea el artículo [Uso de .NET Core SDK y herramientas de integración continua (CI)](tools/using-ci-with-cli.md).
+
+De forma predeterminada, el SDK se instala en paralelo (SxS), lo que significa que varias versiones de las herramientas de la CLI pueden coexistir en un único equipo en cualquier momento. La forma en que se detecta la versión al ejecutar los comandos de la CLI se explica más detalladamente en el artículo [Selección de la versión de .NET Core que se va a usar](/versions/selection.md).
+
+## <a name="see-also"></a>Vea también
+
+- [CLI de .NET Core](tools/index.md)
+- [Introducción a la creación de versiones de .NET Core](/versions/index.md)
+- [Cómo quitar los componentes .NET Core Runtime y SDK](versions/remove-runtime-sdk-versions.md)
+- [Selección de la versión de .NET Core que se va a usar](/versions/selection.md)

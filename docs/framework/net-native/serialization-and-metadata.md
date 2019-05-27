@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650314"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052377"
 ---
 # <a name="serialization-and-metadata"></a>Serialización y metadatos
 Si la aplicación serializa y deserializa objetos, es posible que deba agregar entradas al archivo de directivas en tiempo de ejecución (.rd.xml) para asegurarse de que los metadatos necesarios están presentes en tiempo de ejecución. Existen dos categorías de serializadores y cada una requiere un tratamiento distinto en el archivo de directivas en tiempo de ejecución:  
@@ -39,10 +39,10 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- El compilador de [!INCLUDE[net_native](../../../includes/net-native-md.md)] controlará automáticamente este código.  
+ El compilador de .NET Native controlará automáticamente este código.  
   
 ### <a name="typeof-used-outside-the-constructor"></a>typeof usado fuera del constructor  
- Si llama a un constructor de estas clases de serialización y usa la palabra clave [typeof](~/docs/csharp/language-reference/keywords/typeof.md) de C# fuera de la expresión proporcionada al parámetro <xref:System.Type> del constructor, como en el código siguiente, el compilador de [!INCLUDE[net_native](../../../includes/net-native-md.md)] no puede resolver el tipo:  
+ Si llama a un constructor de estas clases de serialización y usa el C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) palabra clave fuera de la expresión proporcionada para el constructor <xref:System.Type> parámetro, como se muestra en el código siguiente, el compilador de .NET Native no resolver el tipo:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -52,7 +52,7 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- Del mismo modo, si llama a un constructor como <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> y proporciona una matriz de objetos <xref:System.Type> adicionales para serializar, como en el código siguiente, el compilador de [!INCLUDE[net_native](../../../includes/net-native-md.md)] no puede resolver estos tipos.  
+ De forma similar, si se llama a un constructor como <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> y proporcionar una matriz de adicionales <xref:System.Type> objetos que se va a serializar, como en el código siguiente, el compilador de .NET Native no puede resolver estos tipos.  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

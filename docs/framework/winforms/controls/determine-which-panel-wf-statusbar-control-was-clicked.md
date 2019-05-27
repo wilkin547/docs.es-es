@@ -13,12 +13,12 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: 1c28f8eaba5c35f762d6fc57ebbddbbb71769c81
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a659de62965d17e965eee2f750337a08ae1801e0
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972320"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053721"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>Procedimiento para determinar en qué panel del control StatusBar de formularios Windows Forms se hizo clic
 > [!IMPORTANT]
@@ -31,7 +31,7 @@ ms.locfileid: "61972320"
   
 ### <a name="to-determine-which-panel-was-clicked"></a>Para determinar qué panel se hizo clic  
   
-1. En el <xref:System.Windows.Forms.StatusBar.PanelClick> controlador de eventos, use un `Select Case` (en Visual Basic) o `switch case` (Visual C# o [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) instrucción para determinar qué panel se hizo clic examinando el índice del panel con clic en los argumentos del evento.  
+1. En el <xref:System.Windows.Forms.StatusBar.PanelClick> controlador de eventos, use un `Select Case` (en Visual Basic) o `switch case` (Visual C# o Visual C++) instrucción para determinar qué panel se hizo clic examinando el índice del panel con clic en los argumentos del evento.  
   
      El siguiente ejemplo de código requiere la presencia, en el formulario, de un <xref:System.Windows.Forms.StatusBar> control, `StatusBar1`y dos <xref:System.Windows.Forms.StatusBarPanel> objetos, `StatusBarPanel1` y `StatusBarPanel2`.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61972320"
        }  
     ```  
   
-     (Visual C#, [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
+     (Visual C#, Visual C++) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   

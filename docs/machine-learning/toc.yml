@@ -14,7 +14,7 @@
     - name: Clasificación de incidencias de soporte técnico (clasificación multiclase)
       href: tutorials/github-issue-classification.md
     - name: Predicción de precios (regresión)
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: Clasificación de flores de iris (agrupación en clústeres k-means)
       href: tutorials/iris-clustering.md
     - name: Recomendaciones de películas (factorización matricial)

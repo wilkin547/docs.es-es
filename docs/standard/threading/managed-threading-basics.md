@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644819"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960360"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
 
@@ -45,9 +45,6 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
   
  [Almacenamiento local para el subproceso: Campos estáticos relacionados con subprocesos y ranuras de datos](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  Se describen los mecanismos de almacenamiento relacionados con subprocesos.  
-  
- [Cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- Se describe cómo se pueden cancelar las operaciones asincrónicas o las operaciones sincrónicas de larga ejecución con un token de cancelación.  
   
 ## <a name="reference"></a>Referencia
 

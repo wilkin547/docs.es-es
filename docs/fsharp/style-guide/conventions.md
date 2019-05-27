@@ -1,15 +1,15 @@
 ---
-title: F#las convenciones de codificación
+title: Convenciones de código de F#
 description: Obtenga información acerca de las directrices generales y expresiones al escribir F# código.
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902140"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052798"
 ---
-# <a name="f-coding-conventions"></a>F#las convenciones de codificación
+# <a name="f-coding-conventions"></a>Convenciones de código de F#
 
 Las siguientes convenciones se formulan de la experiencia de trabajar con grandes F# códigos base. El [cinco principios del buen F# código](index.md#five-principles-of-good-f-code) constituyen el fundamento de cada recomendación. Están relacionadas con la [ F# pautas de diseño de componentes](component-design-guidelines.md), pero son aplicables a cualquier F# de código, no solo los componentes, como las bibliotecas.
 
@@ -611,7 +611,7 @@ Dado que no hay ninguna necesidad de una clase al interactuar con la API de cód
 
 ## <a name="type-abbreviations"></a>Abreviaturas de tipo
 
-[Abreviaturas de tipo](../language-reference/type-abbreviations.md) son una manera cómoda de asignar una etiqueta a otro tipo, como una firma de función o un tipo más complejo. Por ejemplo, el siguiente alias asigna una etiqueta a qué hace falta para definir un cálculo con [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), una biblioteca de aprendizaje profundo:
+[Abreviaturas de tipo](../language-reference/type-abbreviations.md) son una manera cómoda de asignar una etiqueta a otro tipo, como una firma de función o un tipo más complejo. Por ejemplo, el siguiente alias asigna una etiqueta a qué hace falta para definir un cálculo con [CNTK](https://docs.microsoft.com/cognitive-toolkit/), una biblioteca de aprendizaje profundo:
 
 ```fsharp
 open CNTK

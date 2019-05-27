@@ -4,12 +4,12 @@ description: Conozca los procedimientos recomendados para interactuar con compon
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196663"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063084"
 ---
 # <a name="native-interoperability-best-practices"></a>Procedimientos recomendados de interoperabilidad nativa
 
@@ -33,7 +33,7 @@ La guía de esta sección se aplica a todos los escenarios de interoperabilidad.
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  Mantener el valor predeterminado  | Cuando se establece explícitamente en false, los valores devueltos de HRESULT con errores se convierten en excepciones (y el valor devuelto en la definición se convierte en NULL).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | Depende de la API  | Establezca este valor en true si la API utiliza GetLastError y use Marshal.GetLastWin32Error para obtener el valor. Si la API establece una condición que indica que tiene un error, obtenga el error antes de realizar otras llamadas para evitar que accidentalmente se sobrescriba.|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, que vuelve al comportamiento `CharSet.Ansi`  | Usar explícitamente `CharSet.Unicode` o `CharSet.Ansi` cuando haya cadenas o caracteres en la definición | Esto especifica el comportamiento de serialización de cadenas y lo que hace `ExactSpelling` cuando `false`. Tenga en cuenta que `CharSet.Ansi` es realmente UTF8 en Unix. _La mayoría de las veces_ Windows utiliza Unicode, mientras que Unix usa UTF8. Obtenga más información en la [documentación de juegos de caracteres](./charset.md). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, que vuelve al comportamiento `CharSet.Ansi`  | Usar explícitamente `CharSet.Unicode` o `CharSet.Ansi` cuando haya cadenas o caracteres en la definición | Esto especifica el comportamiento de serialización de cadenas y lo que `ExactSpelling` hace cuando es `false`. Tenga en cuenta que `CharSet.Ansi` es realmente UTF8 en Unix. _La mayoría de las veces_ Windows utiliza Unicode, mientras que Unix usa UTF8. Obtenga más información en la [documentación de juegos de caracteres](./charset.md). |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Establezca este valor en true y obtenga una ventaja de rendimiento ligero, ya que el entorno de ejecución no busca nombres de función alternativos con un sufijo "A" o "W" en función del valor de la configuración de `CharSet` ("A" para `CharSet.Ansi` y "W" para `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Parámetros de cadena
@@ -61,7 +61,7 @@ Si *usa* `StringBuilder`, un último problema es que la capacidad **no** incluye
 
 **✔️ PLANTÉESE** usar `char[]` desde `ArrayPool`.
 
-Para obtener más información sobre la serialización cadenas, vea [Cálculo de referencias predeterminado para cadenas](../../framework/interop/default-marshaling-for-strings.md) y [Personalización de la serialización de campos de cadena](customize-parameter-marshalling.md#customizing-string-parameters).
+Para obtener más información sobre la serialización cadenas, vea [Cálculo de referencias predeterminado para cadenas](../../framework/interop/default-marshaling-for-strings.md) y [Personalización de la serialización de campos de cadena](customize-parameter-marshaling.md#customizing-string-parameters).
 
 > __Específico de Windows__  
 > Para las cadenas `[Out]`, CLR utilizará `CoTaskMemFree` de forma predeterminada para liberar las cadenas o `SysStringFree` para las cadenas que están marcadas como `UnmanagedType.BSTR`.  
@@ -73,7 +73,7 @@ Para obtener más información sobre la serialización cadenas, vea [Cálculo de
 
 ## <a name="boolean-parameters-and-fields"></a>Parámetros y campos booleanos
 
-Los valores booleanos se desordenan fácilmente. De forma predeterminada, .NET `bool` se serializa en un valor `BOOL` de Windows de 4 bytes. Sin embargo, los tipos `_Bool` y `bool` en C y C++ tienen un *solo* byte. De este modo, puede ser complicado realizar un seguimiento de los errores porque la mitad del valor devuelto se descarta, con lo que *posiblemente* se modifica el resultado. Para obtener más información sobre la serialización de valores `bool` de .NET en tipos `bool` de C o C++, consulte la documentación sobre [cómo personalizar la serialización de campos booleanos](customize-struct-marshalling.md#customizing-boolean-field-marshalling).
+Los valores booleanos se desordenan fácilmente. De forma predeterminada, .NET `bool` se serializa en un valor `BOOL` de Windows de 4 bytes. Sin embargo, los tipos `_Bool` y `bool` en C y C++ tienen un *solo* byte. De este modo, puede ser complicado realizar un seguimiento de los errores porque la mitad del valor devuelto se descarta, con lo que *posiblemente* se modifica el resultado. Para obtener más información sobre la serialización de valores `bool` de .NET en tipos `bool` de C o C++, vea la documentación sobre [cómo personalizar la serialización de campos booleanos](customize-struct-marshaling.md#customizing-boolean-field-marshaling).
 
 ## <a name="guids"></a>GUID
 
@@ -126,7 +126,7 @@ Puede ver si un tipo puede transferirse en bloque de bits al intentar crear un c
 Para obtener más información, consulte:
 
 - [Tipos que pueden o que no pueden transferirse en bloque de bits](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [Serialización de tipos](type-marshalling.md)
+- [Serialización de tipos](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>Forma de mantener activos los objetos administrados
 
@@ -210,7 +210,7 @@ Un tipo `PVOID` de Windows que es un tipo `void*` de C se pueden serializar como
 
 Las estructuras administradas se crean en la pila y no se quitan hasta que el método se devuelve. Por definición, se anclan (la recolección de elementos no utilizados no las mueve). Puede simplemente tomar la dirección en bloques de código no seguros si el código nativo no utilizará el puntero más allá del final del método actual.
 
-Las estructuras de bits/bytes son mucho más eficaces, ya que simplemente puede utilizarlas directamente la capa de serialización. Trate de crear estructuras que pueden transferirse en bloque de bits (por ejemplo, evite `bool`). Para obtener más información, consulte la sección [Tipos que pueden transferirse en bloque de bits](#blittable-types).
+Las estructuras que pueden transferirse en bloque de bits son mucho más eficaces, ya que solo puede utilizarlas directamente la capa de serialización. Trate de crear estructuras que pueden transferirse en bloque de bits (por ejemplo, evite `bool`). Para obtener más información, consulte la sección [Tipos que pueden transferirse en bloque de bits](#blittable-types).
 
 *Si* la estructura se puede transferir en bloque de bits, use `sizeof()` en lugar de `Marshal.SizeOf<MyStruct>()` para mejorar el rendimiento. Como se mencionó anteriormente, puede validar que el tipo se pueda transferir en bloques de bits al intentar crear un controlador `GCHandle` anclado. Si el tipo no es una cadena o no puede transferirse en bloque de bits, `GCHandle.Alloc` producirá una excepción `ArgumentException`.
 
@@ -245,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-Sin embargo, existen los búferes fijos tienen algunas trampas. Los búferes fijos de tipos que no pueden transferirse en bloques de bits no se serializarán correctamente, por lo que la matriz en contexto debe expandirse a varios campos individuales. Además, en .NET Framework y .NET Core antes de la versión 3.0, si una estructura que contiene un campo de búfer fijo se anida dentro de una estructura que no puede transferirse en bloque de bits, el campo de búfer fijo no se serializará correctamente al código nativo.
+Sin embargo, existen los búferes fijos tienen algunas trampas. Los búferes fijos de tipos que no pueden transferirse en bloques de bits no se serializarán correctamente, por lo que la matriz en contexto debe expandirse a varios campos individuales. Además, en .NET Framework y .NET Core antes de la versión 3.0, si una estructura que contiene un campo de búfer fijo se anida dentro de una estructura que no puede transferirse en bloque de bits, el campo de búfer fijo no se serializará correctamente al código nativo.

@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702951"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653928"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL y la programación asincrónica tradicional de .NET Framework
 .NET Framework proporciona los siguientes dos modelos estándar para realizar las operaciones asincrónicas enlazadas a E/S y enlazadas a cálculos:  
   
--   Modelo de programación asincrónica (APM), en el que las operaciones asincrónicas se representan mediante un par de métodos Begin/End como <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> y <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
+- Modelo de programación asincrónica (APM), en el que las operaciones asincrónicas se representan mediante un par de métodos Begin/End como <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> y <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>.  
   
--   Modelo asincrónico basado en eventos (EAP) en el que las operaciones asincrónicas se representan mediante un par método-evento que se denomina *OperationName*Async y *OperationName*Completed; por ejemplo, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> y <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (EAP apareció por primera vez en .NET Framework versión 2.0).  
+- Modelo asincrónico basado en eventos (EAP) en el que las operaciones asincrónicas se representan mediante un par método-evento que se denomina *OperationName*Async y *OperationName*Completed; por ejemplo, <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> y <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>. (EAP apareció por primera vez en .NET Framework versión 2.0).  
   
  La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) se puede usar de varias maneras junto con cualquiera de los modelos asincrónicos. Puede exponer las operaciones de APM y EAP como tareas a los consumidores de la biblioteca o puede exponer los modelos de APM, pero usar objetos de tarea para implementarlos internamente. En ambos escenarios, al usar los objetos de tarea, puede simplificar el código y aprovechar la siguiente funcionalidad útil:  
   
--   Registre las devoluciones de llamada, en el formulario de continuaciones de la tarea, en cualquier momento después de que se haya iniciado la tarea.  
+- Registre las devoluciones de llamada, en el formulario de continuaciones de la tarea, en cualquier momento después de que se haya iniciado la tarea.  
   
--   Coordine varias operaciones que se ejecutan en respuesta a un método `Begin_`, mediante los métodos <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>, <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A> o <xref:System.Threading.Tasks.Task.WaitAny%2A>.  
+- Coordine varias operaciones que se ejecutan en respuesta a un método `Begin_`, mediante los métodos <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>, <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A>, <xref:System.Threading.Tasks.Task.WaitAll%2A> o <xref:System.Threading.Tasks.Task.WaitAny%2A>.  
   
--   Encapsule las operaciones asincrónicas enlazadas a E/S y enlazadas a cálculos en el mismo objeto de tarea.  
+- Encapsule las operaciones asincrónicas enlazadas a E/S y enlazadas a cálculos en el mismo objeto de tarea.  
   
--   Supervise el estado del objeto de tarea.  
+- Supervise el estado del objeto de tarea.  
   
--   Calcule las referencias del estado una operación para un objeto de tarea mediante <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
+- Serialice las referencias del estado una operación para un objeto de tarea mediante <xref:System.Threading.Tasks.TaskCompletionSource%601>.  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>Ajustar las operaciones de APM en una tarea  
  Las clases <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> y <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> proporcionan varias sobrecargas de los métodos<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> y<xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType>que permiten encapsular un par de métodos Begin/End en una instancia <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Las diversas sobrecargas hospedan cualquier par de métodos de Begin/End que tenga entre cero y tres parámetros de entrada.  
@@ -50,13 +50,13 @@ ms.locfileid: "46702951"
   
  El primer parámetro es un delegado <xref:System.Func%606> que coincide con la signatura del método <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>. El segundo parámetro es un delegado <xref:System.Func%602> que toma una interfaz <xref:System.IAsyncResult> y devuelve `TResult`. Dado que <xref:System.IO.FileStream.EndRead%2A> devuelve un entero, el compilador deduce el tipo de `TResult` como <xref:System.Int32> y el tipo de la tarea como <xref:System.Threading.Tasks.Task>. Los últimos cuatro parámetros son idénticos a los del método <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>:  
   
--   Búfer donde se van a almacenar los datos de archivo.  
+- Búfer donde se van a almacenar los datos de archivo.  
   
--   Desplazamiento en el búfer donde deben comenzar a escribirse los datos.  
+- Desplazamiento en el búfer donde deben comenzar a escribirse los datos.  
   
--   Cantidad máxima de datos que se van a leer del archivo.  
+- Cantidad máxima de datos que se van a leer del archivo.  
   
--   Un objeto opcional que almacena los datos de estado definidos por el usuario que se van a pasar a la devolución de llamada.  
+- Un objeto opcional que almacena los datos de estado definidos por el usuario que se van a pasar a la devolución de llamada.  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>Usar ContinueWith para la funcionalidad de devolución de llamada  
  Si necesita obtener acceso a los datos del archivo, en contraposición a solo el número de bytes, el método <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> no es suficiente. En su ligar, use <xref:System.Threading.Tasks.Task>, cuya propiedad `Result` contiene los datos de archivo. Puede hacer si agrega una continuación a la tarea original. La continuación realiza el trabajo que normalmente realizaría el delegado <xref:System.AsyncCallback>. Se invoca cuando se completa el antecedente y se ha rellenado el búfer de datos. (El objeto <xref:System.IO.FileStream> se debería cerrar antes de devolver un valor).  
@@ -104,7 +104,7 @@ ms.locfileid: "46702951"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- Para obtener un ejemplo más completo, que incluye control de excepciones adicional y muestra cómo llamar al método desde el código de cliente, vea [Cómo: Encapsular modelos de EAP en una tarea](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
+ Para obtener un ejemplo más completo, en donde se incluye control de excepciones adicional y se muestra cómo llamar al método desde código de cliente, vea [Procedimiento: Encapsulado de patrones de EAP en una tarea](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md).  
   
  Recuerde que TaskCompletionSource iniciará cualquier tarea creada por <xref:System.Threading.Tasks.TaskCompletionSource%601> y, por consiguiente, el código de usuario no debería llamar al método Start en esa tarea.  
   

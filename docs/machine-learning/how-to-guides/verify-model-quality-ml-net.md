@@ -1,16 +1,16 @@
 ---
-title: 'Cálculo de métricas para evaluar la calidad del modelo de Machine Learning: ML.NET'
+title: Cálculo de métricas para evaluar la calidad del modelo de aprendizaje automático
 description: Obtenga más información sobre cómo calcular las métricas para evaluar y comprobar la calidad del modelo de Machine Learning con ML.NET.
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ad71f7da6981ac370e60725f88d3c70b1d5c5237
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 2c7749205b862a42f42b857972057c441ab84364
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679221"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641095"
 ---
-# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality---mlnet"></a>Cálculo de métricas para evaluar la calidad del modelo de Machine Learning: ML.NET
+# <a name="calculate-metrics-to-evaluate-machine-learning-model-quality"></a>Cálculo de métricas para evaluar la calidad del modelo de aprendizaje automático 
 
 > [!NOTE]
 > Este tema hace referencia a ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. Para obtener más información, visite [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).

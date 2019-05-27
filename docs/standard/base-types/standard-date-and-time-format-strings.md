@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532203"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664638"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 Una cadena de formato de fecha y hora estándar usa un único especificador de formato para definir la representación de texto de un valor de fecha y hora. Cualquier cadena con formato de fecha y hora que contenga más de un carácter, incluido un espacio en blanco, se interpreta como una cadena con formato de fecha y hora personalizado; para obtener más información, consulte [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una cadena de formato estándar o personalizado se puede usar de dos maneras:  
   
--   Para definir la cadena resultante una operación de formato.  
+- Para definir la cadena resultante una operación de formato.  
   
--   Para definir la representación de texto de un valor de fecha y hora que se puede convertir en un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> mediante una operación de análisis.  
+- Para definir la representación de texto de un valor de fecha y hora que se puede convertir en un valor <xref:System.DateTime> o <xref:System.DateTimeOffset> mediante una operación de análisis.  
 
 > [!TIP]
 >  Puede descargar la [Utilidad de formato](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), que es una aplicación que permite aplicar cadenas de formato a valores numéricos o de fecha y hora, y que muestra la cadena de resultado.  
@@ -63,17 +63,17 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
   
  Si una cadena con formato estándar en una operación de formato se asigna a una cadena con formato personalizado de una referencia cultural específica, la aplicación puede definir la referencia cultural concreta cuyas cadenas con formato personalizado se usan de uno de los modos siguientes:  
   
--   Puede utilizar la referencia cultural predeterminada (o la actual). En el ejemplo siguiente se muestra una fecha con el formato de fecha abreviado de la referencia cultural. En este caso, la referencia cultural actual es en-US.  
+- Puede utilizar la referencia cultural predeterminada (o la actual). En el ejemplo siguiente se muestra una fecha con el formato de fecha abreviado de la referencia cultural. En este caso, la referencia cultural actual es en-US.  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   Puede pasar un objeto <xref:System.Globalization.CultureInfo> que represente la referencia cultural cuyo formato se va a usar a un método que tenga un parámetro <xref:System.IFormatProvider>. En el ejemplo siguiente se muestra una fecha con el formato de fecha abreviado de la referencia cultural pt-BR.  
+- Puede pasar un objeto <xref:System.Globalization.CultureInfo> que represente la referencia cultural cuyo formato se va a usar a un método que tenga un parámetro <xref:System.IFormatProvider>. En el ejemplo siguiente se muestra una fecha con el formato de fecha abreviado de la referencia cultural pt-BR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   Puede pasar un objeto <xref:System.Globalization.DateTimeFormatInfo> que proporcione información sobre el formato a un método que tenga un parámetro <xref:System.IFormatProvider>. En el ejemplo siguiente se muestra una fecha con el formato de fecha abreviado de un objeto <xref:System.Globalization.DateTimeFormatInfo> en la referencia cultural hr-HR.  
+- Puede pasar un objeto <xref:System.Globalization.DateTimeFormatInfo> que proporcione información sobre el formato a un método que tenga un parámetro <xref:System.IFormatProvider>. En el ejemplo siguiente se muestra una fecha con el formato de fecha abreviado de un objeto <xref:System.Globalization.DateTimeFormatInfo> en la referencia cultural hr-HR.  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -249,17 +249,17 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
   
  El especificador de formato estándar "O" u "o" (y la cadena de formato personalizado "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK") aprovecha los tres modos en que se representa la información de zona horaria en ISO 8601 para conservar la propiedad <xref:System.DateTime.Kind%2A> de valores <xref:System.DateTime>:  
   
--   El componente de zona horaria de valores de fecha y hora <xref:System.DateTimeKind.Local?displayProperty=nameWithType> es un desfase con respecto a la hora UTC (por ejemplo, +01:00, -07:00). Todos los valores <xref:System.DateTimeOffset> también se representan en este formato.  
+- El componente de zona horaria de valores de fecha y hora <xref:System.DateTimeKind.Local?displayProperty=nameWithType> es un desfase con respecto a la hora UTC (por ejemplo, +01:00, -07:00). Todos los valores <xref:System.DateTimeOffset> también se representan en este formato.  
   
--   El componente de zona horaria de valores de fecha y hora <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> usa "Z" (que es un desfase cero) para representar la hora UTC.  
+- El componente de zona horaria de valores de fecha y hora <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> usa "Z" (que es un desfase cero) para representar la hora UTC.  
   
--   Los valores de fecha y hora <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> no tienen información de zona horaria.  
+- Los valores de fecha y hora <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> no tienen información de zona horaria.  
   
  Dado que el especificador de formato estándar "O" u "o" se ajusta a un estándar internacional, la operación de formato o análisis que utiliza el especificador siempre usa la referencia cultural de todos los idiomas y el calendario gregoriano.  
   
  Las cadenas que se pasan a los métodos `Parse`, `TryParse`, `ParseExact` y `TryParseExact` de <xref:System.DateTime> y <xref:System.DateTimeOffset> se pueden analizar con el especificador de formato "O" u "o" si están en uno de estos formatos. En el caso de objetos <xref:System.DateTime>, la sobrecarga de análisis a la que llama también debe incluir un parámetro `styles` con un valor de <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>. Observe que si llama a un método de análisis con la cadena de formato personalizado que se corresponde con el especificador de formato "O" u "o", no obtendrá los mismos resultados que "O" u "o". Esto se debe a que los métodos de análisis que usan una cadena de formato personalizado no pueden analizar la representación de cadena de aquellos valores de fecha y hora que carecen de un componente de zona horaria o que usan "Z" para indicar la hora UTC.  
   
- En el ejemplo siguiente se utiliza el especificador de formato "o" para mostrar una serie de valores <xref:System.DateTime> y <xref:System.DateTimeOffset> en un sistema de la zona horaria del Pacífico de EE. UU.  
+ En el ejemplo siguiente se utiliza el especificador de formato "o" para mostrar una serie de valores <xref:System.DateTime> y un valor <xref:System.DateTimeOffset> en un sistema de la zona horaria del Pacífico de EE. UU.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
@@ -285,7 +285,7 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
   
  Aunque la norma RFC 1123 expresa una hora según la hora universal coordinada (hora UTC), la operación de formato no modifica el valor del objeto <xref:System.DateTime> al que se está dando formato. Por consiguiente, debe convertir el valor <xref:System.DateTime> en una hora UTC llamando al método <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> antes de realizar la operación de formato. En cambio, los valores <xref:System.DateTimeOffset> realizan esta conversión automáticamente; no es necesario llamar al método <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> antes de la operación de formato.  
   
- En el ejemplo siguiente se utiliza el especificador de formato "r" para mostrar un valor <xref:System.DateTime> y <xref:System.DateTimeOffset> en un sistema de la zona horaria del Pacífico de EE. UU.  
+ En el ejemplo siguiente se utiliza el especificador de formato "r" para mostrar un <xref:System.DateTime> y un valor <xref:System.DateTimeOffset> en un sistema de la zona horaria del Pacífico de EE. UU.  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5af942b5e7576c13ff7be8d11c0009fd0c4f7462
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634177"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882468"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Procedimiento para convertir en números datos numéricos proporcionados por el usuario en controles web
 Dado que una página web puede mostrarse en cualquier lugar del mundo, los usuarios pueden proporcionar datos numéricos en un control <xref:System.Web.UI.WebControls.TextBox> en un número casi ilimitado de formatos. Como resultado, es muy importante determinar la configuración regional y la referencia cultural del usuario de la página web. Al analizar las entradas del usuario, puede aplicar las convenciones de formato definidas por la configuración regional y la referencia cultural del usuario.  
@@ -58,7 +58,7 @@ Dado que una página web puede mostrarse en cualquier lugar del mundo, los usuar
  El código puede llamar al método `Parse` o `TryParse` del tipo numérico al que se convertirá la entrada del usuario. Puede que se necesiten llamadas repetidas a un método de análisis para una única operación de análisis. Como resultado, el método `TryParse` es mejor, porque devuelve `false` si se produce algún error con la operación de análisis. En cambio, controlar las excepciones repetidas que el método `Parse` puede ocasionar puede ser una propuesta muy costosa en una aplicación web.  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Para compilar el código, cópielo en una página de código subyacente [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], para que reemplace todo el código existente. La página web [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] debe contener los siguientes controles:  
+ Para compilar el código, cópielo en una página de código subyacente de ASP.NET para que reemplace a todo el código existente. La página web de ASP.NET debe contener los siguientes controles:  
   
 - Un control <xref:System.Web.UI.WebControls.Label>, al que no se hace referencia en el código. Establezca su propiedad <xref:System.Web.UI.WebControls.TextBox.Text%2A> en "Enter a Number:".  
   
@@ -66,7 +66,7 @@ Dado que una página web puede mostrarse en cualquier lugar del mundo, los usuar
   
 - Control <xref:System.Web.UI.WebControls.Button> denominado `OKButton`. Establezca la propiedad <xref:System.Web.UI.WebControls.Button.Text%2A> en "OK".  
   
- Cambie el nombre de la clase `NumericUserInput` por el nombre de la clase definido por el atributo `Inherits` de la directiva `Page` de la página [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]. Cambie el nombre de la referencia de objeto `NumericInput` por el nombre definido por el atributo `id` de la etiqueta `form` de la página [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)].  
+ Cambie el nombre de la clase `NumericUserInput` por el nombre de la clase definido por el atributo `Inherits` de la directiva `Page` de la página ASP.NET. Cambie el nombre de la referencia de objeto `NumericInput` por el nombre definido por el atributo `id` de la etiqueta `form` de la página ASP.NET.  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  Para evitar que un usuario inserte el script en la secuencia HTML, la entrada del usuario nunca debe devolverse directamente en la respuesta del servidor. En su lugar, debe codificarse con el método <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  

@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427284"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754377"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -321,7 +321,7 @@ Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la
 
 Los rangos e índices proporcionan una sintaxis concisa para especificar subrangos en una matriz, <xref:System.Span%601>, o <xref:System.ReadOnlySpan%601>.
 
-Puede especificar un índice **desde el final**. Para especificar **desde el final**, puede usar el operador `^`. Está familiarizado con `array[2]` lo que significa el elemento "2 desde el principio". Ahora, `array[^2]` significa el elemento "2 desde el final". El índice `^0` significa "el final" o el índice que sigue al último elemento.
+Puede especificar un índice **desde el final** utilizando el carácter `^` antes del índice. La indexación desde el final se inicia con la regla que `0..^0` especifica el intervalo completo. Para enumerar toda una matriz, empiece *en el primer elemento* y continúe hasta *rebasar el último elemento*. Piense en el comportamiento del método `MoveNext` en un enumerador: devuelve false cuando la enumeración rebasa el último elemento. El índice `^0` significa "el final", `array[array.Length]`, o el índice que sigue al último elemento. Está familiarizado con `array[2]` lo que significa el elemento "2 desde el principio". Ahora, `array[^2]` significa el elemento "2 desde el final". 
 
 Puede especificar un **rango** con el **operador de rango**: `..`. Por ejemplo, `0..^0` especifica el rango completo de la matriz: 0 desde el principio hasta, pero sin incluir 0 desde el final. Cualquier operando puede usar "desde el principio" o "desde el final". Además, se puede omitir cualquier operando. Los valores predeterminados son `0` para el índice de inicio y `^0` para el índice de final.
 
@@ -340,7 +340,7 @@ var words = new string[]
     "the",      // 6                   ^3
     "lazy",     // 7                   ^2
     "dog"       // 8                   ^1
-};
+};              // 9 (or words.Length) ^0
 ```
 
 El índice de cada elemento refuerza el concepto de "desde el inicio" y "desde el final", y que los rangos son exclusivos del final del rango. El "inicio" de toda la matriz es el primer elemento. El "final" de toda la matriz es *pasado* el último elemento.
@@ -383,3 +383,5 @@ El rango se puede usar luego dentro de los caracteres `[` y `]`:
 ```csharp
 var text = words[phrase];
 ```
+
+Puede explorar más información acerca de los índices y los intervalos en el tutorial sobre [índices e intervalos](../tutorials/ranges-indexes.md).

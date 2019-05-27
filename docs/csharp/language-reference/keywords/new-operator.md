@@ -5,12 +5,12 @@ ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce3d39c42dc35ca3038fc38edd9327e9b96fb20f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239857"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633418"
 ---
 # <a name="new-operator-c-reference"></a>Operador new (Referencia de C#)
 
@@ -27,7 +27,7 @@ var query = from cust in customers
             select new { Name = cust.Name, Address = cust.PrimaryAddress };
 ```
 
-El operador `new` también se usa para invocar el constructor predeterminado para tipos de valor. Por ejemplo:
+El operador `new` también se usa para invocar al constructor sin parámetros para tipos de valor. Por ejemplo:
 
 ```csharp
 int i = new int();
@@ -41,7 +41,7 @@ int i = 0;
 
 Para obtener una lista completa de valores predeterminados, vea [Tabla de valores predeterminados](default-values-table.md).
 
-Recuerde que es un error declarar un constructor predeterminado para una [struct](struct.md), ya que cada tipo de valor tiene implícitamente un constructor predeterminado público. Es posible declarar constructores parametrizados en un tipo struct para establecer sus valores iniciales, pero esto solo es necesario si se requieren valores distintos de los predeterminados.
+Recuerde que es un error declarar un constructor sin parámetros para un [struct](struct.md), ya que cada tipo de valor tiene implícitamente un constructor sin parámetros público. Es posible declarar constructores parametrizados en un tipo struct para establecer sus valores iniciales, pero esto solo es necesario si se requieren valores distintos de los predeterminados.
 
 Los objetos de tipo de valor, como las estructuras, y los objetos de tipo de referencia, como las clases, se destruyen automáticamente, pero los objetos de tipo de valor se destruyen junto al contexto que los contiene. En el caso de los objetos de tipo de referencia, los destruye el recolector de elementos no utilizados en un momento no especificado después de que se haya quitado la última referencia a ellos. Para los tipos que contienen recursos como identificadores de archivos o conexiones de red, lo recomendable es llevar a cabo una limpieza determinista para asegurarse de que los recursos que contienen se liberan tan pronto como sea posible. Para obtener más información, vea [Instrucción using](using-statement.md).
 

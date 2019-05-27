@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427323"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880579"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos booleanos (referencia de C#)
 
@@ -47,7 +47,7 @@ Los operandos siguientes realizan operaciones lógicas con los operandos [bool](
 - Operadores binarios [`&` (AND lógico)](#logical-and-operator-), [`|` (OR lógico)](#logical-or-operator-) y [`^` (OR exclusivo lógico)](#logical-exclusive-or-operator-). Esos operadores siempre evalúan ambos operandos.
 - Operadores binarios [`&&` (AND lógico condicional)](#conditional-logical-and-operator-) y [`||` (OR lógico condicional)](#conditional-logical-or-operator-). Esos operadores evalúan el segundo operando solo si es necesario.
 
-Para los operandos de tipos [de datos enteros](../keywords/integral-types-table.md), los operadores `&`, `|` y `^` realizan operaciones lógicas bit a bit.
+En el caso de los operandos de tipo [entero](../keywords/integral-types-table.md), los operadores `&`, `|` y `^` realizan operaciones lógicas bit a bit. Para obtener más información, vea [Operadores de desplazamiento y bit a bit](bitwise-and-shift-operators.md).
 
 ## <a name="logical-negation-operator-"></a>Operador de negación lógico !
 
@@ -67,7 +67,7 @@ En el ejemplo siguiente, el segundo operando del operador `&` es una llamada de 
 
 El [operador AND lógico condicional](#conditional-logical-and-operator-) `&&` también calcula el operador AND lógico de sus operandos, pero no evalúa el segundo operando si el primero se evalúa como `false`.
 
-En el caso de los operandos de tipos de datos enteros, el operador `&` calcula el operador [AND lógico bit a bit](and-operator.md#integer-logical-bitwise-and-operator) de sus operandos. El operador `&` unario es el [operador address-of](and-operator.md#unary-address-of-operator).
+En el caso de los operandos de tipo entero, el operador `&` calcula el [AND lógico bit a bit](bitwise-and-shift-operators.md#logical-and-operator-) de sus operandos. El operador `&` unario es el [operador address-of](pointer-related-operators.md#address-of-operator-).
 
 ## <a name="logical-exclusive-or-operator-"></a>Operador IR exclusivo lógico ^
 
@@ -75,7 +75,7 @@ El operador `^` calcula el operador OR exclusivo lógica, también conocido como
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-En el caso de los operandos de tipos de datos enteros, el operador `^` calcula el operador [OR exclusivo lógico bit a bit](xor-operator.md) de sus operandos.
+En el caso de los operandos de tipo entero, el operador `^` calcula el [OR exclusivo lógico bit a bit](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) de sus operandos.
 
 ## <a name="logical-or-operator-"></a>Operador lógico OR |
 
@@ -89,7 +89,7 @@ En el ejemplo siguiente, el segundo operando del operador `|` es una llamada de 
 
 El [operador OR lógico condicional](#conditional-logical-or-operator-) `||` también calcula el operador OR lógico de sus operandos, pero no evalúa el segundo operando si el primero se evalúa como `true`.
 
-En el caso de los operados de tipos de datos enteros, el operador `|` calcula el operador [OR lógico bit a bit](or-operator.md) de sus operandos.
+En el caso de los operandos de tipo entero, el operador `|` calcula el [OR lógico bit a bit](bitwise-and-shift-operators.md#logical-or-operator-) de sus operandos.
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>Operador AND lógico condicional &amp;&amp;
 
@@ -187,9 +187,11 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 - [Operador de negación lógico](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [Operadores lógicos](~/_csharplang/spec/expressions.md#logical-operators)
 - [Operadores lógicos condicionales](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [Asignación compuesta](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
+- [Operadores de desplazamiento y bit a bit](bitwise-and-shift-operators.md)

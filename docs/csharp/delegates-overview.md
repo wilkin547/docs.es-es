@@ -3,16 +3,14 @@ title: Introducción a los delegados
 description: Obtenga información sobre los delegados en este tema de introducción que presenta los conceptos básicos y explica los objetivos del diseño del lenguaje para los delegados.
 ms.date: 06/20/2016
 ms.assetid: 59b61d77-84e5-457b-8da5-fb5f24ca6ed6
-ms.openlocfilehash: d42d9d10aeaa153f12933fa3a59e58719f7741e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43cdf9345f0bae9d5c4d0e6a31d80bc269c37fec
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212192"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879030"
 ---
 # <a name="introduction-to-delegates"></a>Introducción a los delegados
-
-[Anterior](delegates-events.md)
 
 Los delegados proporcionan un mecanismo de *enlace en tiempo de ejecución* en .NET. Un enlace en tiempo de ejecución significa que se crea un algoritmo en el que el llamador también proporciona al menos un método que implementa parte del algoritmo.
 
@@ -32,11 +30,11 @@ Los diseñadores de lenguaje enumeraron varios objetivos para la característica
 
 El equipo aspiraba a crear una construcción de lenguaje común que pudiera usarse para cualquier algoritmo de enlace en tiempo de ejecución. Esto permite a los desarrolladores aprender un concepto y usarlo en muchos problemas de software diferentes.
 
-En segundo lugar, el equipo quería que se admitiesen llamadas a métodos únicos y multidifusión. (Los delegados de multidifusión son aquellos en los que se han encadenado varios métodos. Verá ejemplos [más adelante en esta serie](delegate-class.md)). 
+En segundo lugar, el equipo quería que se admitiesen llamadas a métodos únicos y multidifusión. Los delegados de multidifusión son delegados que encadenan varias llamadas a métodos. Se verán ejemplos [más adelante en esta serie](delegate-class.md). 
 
 El equipo quería que los delegados admitiesen la misma seguridad de tipos que los desarrolladores esperan de todas las construcciones C#. 
 
-Por último, el equipo reconocía que un patrón de eventos es un patrón específico en el que los delegados (o cualquier algoritmo de enlace en tiempo de ejecución) resultan muy útiles. El equipo quería garantizar que el código de los delegados proporcionase una base para el patrón de eventos de .NET.
+Por último, el equipo reconocía que un patrón de eventos es un patrón específico en el que los delegados, o cualquier algoritmo de enlace en tiempo de ejecución, resultan muy útiles. El equipo quería garantizar que el código de los delegados proporcionase una base para el patrón de eventos de .NET.
 
 El resultado de todo ese trabajo fue la compatibilidad con los delegados y los eventos en C# y .NET. Los artículos restantes de esta sección tratarán sobre las características del lenguaje, la compatibilidad con bibliotecas y las expresiones comunes que se usan al trabajar con los delegados.
 

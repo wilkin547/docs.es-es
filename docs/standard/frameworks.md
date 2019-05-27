@@ -3,15 +3,15 @@ title: Versiones de .NET Framework de destino
 description: Obtenga información sobre las plataforma de destino para las aplicaciones y bibliotecas de .NET Core.
 author: richlander
 ms.author: mairaw
-ms.date: 12/03/2018
+ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2721266c90e183616a907803ff209258956a37b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727409"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641473"
 ---
 # <a name="target-frameworks"></a>Versiones de .NET Framework de destino
 
@@ -29,21 +29,21 @@ Para plataformas de destino basadas en paquetes (por ejemplo, .NET Standard y .N
 
 En la tabla siguiente, se definen las plataformas de destino más usadas, cómo se hace referencia a ellas y la versión de [.NET Standard](~/docs/standard/net-standard.md) que implementan. Estas versiones de plataformas de destino son las últimas versiones estables. No se muestran las versiones preliminares. Un moniker de la plataforma de destino (TFM) es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET.
 
-| Plataforma de destino      | Latest <br/> Versión estable | Moniker de la plataforma de destino (TFM) | Implementado <br/> Versión de .NET Standard |
+| Versión de .NET Framework de destino      | Latest <br/> Versión estable | Moniker de la plataforma de destino (TFM) | Implementado <br/> Versión de .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
 | .NET Standard         | 2.0                         | netstandard2.0                 | N/D                                     |
 | Núcleo de .NET             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
-| .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
+| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>Versiones compatibles de las plataformas de destino
 
 Normalmente, un TFM hace referencia a una plataforma de destino. En la tabla siguiente, se muestran las plataformas de destino compatibles con el SDK de .NET Core y el cliente de NuGet. Los equivalentes se muestran entre corchetes. Por ejemplo, `win81` es un TFM equivalente a `netcore451`.
 
-| Plataforma de destino           | TFM |
+| Versión de .NET Framework de destino           | TFM |
 | -------------------------- | --- |
 | .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | Núcleo de .NET                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Tienda Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |

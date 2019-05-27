@@ -4,12 +4,12 @@ description: En este tutorial obtendrá información sobre cómo incluir una apl
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: fcbac0e0d17d2481d42e715a7f2790586e31d085
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553841"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051815"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Incluir una aplicación de .NET Core en un contenedor
 
@@ -410,5 +410,6 @@ Use el comando `docker images` para ver una lista de las imágenes instaladas.
 ## <a name="next-steps"></a>Pasos siguientes
 
 * [Consulte el tutorial de ASP.NET Core para los microservicios](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro).
-* [Revise los servicios de Azure que admiten contenedores](https://azure.microsoft.com/en-us/overview/containers/).
+* [Revise los servicios de Azure que admiten contenedores](https://azure.microsoft.com/overview/containers/).
 * [Lea sobre los comandos de Dockerfile](https://docs.docker.com/engine/reference/builder/).
+* [Explorar las herramientas de contenedor para Visual Studio](/visualstudio/containers/overview)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591512"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585986"
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 La reflexión proporciona la capacidad de obtener información sobre tipos y miembros, así como de obtener acceso a miembros (es decir, para llamar a métodos y constructores, obtener y establecer valores de propiedades, agregar y quitar controladores de eventos etc.). No hay restricciones en el uso de la reflexión para obtener información sobre tipos y miembros. Todo el código puede usar la reflexión para realizar las siguientes tareas:  
@@ -88,7 +88,7 @@ La reflexión proporciona la capacidad de obtener información sobre tipos y mie
   
 - En ensamblado A puede usar la reflexión para obtener acceso a los miembros privados del ensamblado B, ya que el conjunto de permisos del ensamblado B no incluye los permisos que no se han concedido al A.  
   
-- El ensamblado A no puede usar la reflexión para tener acceso a los miembros privados de ensamblados de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], como mscorlib.dll, ya que mscorlib.dll es de plena confianza y, por tanto, tiene permisos que no se han concedido al ensamblado A. Cuando la seguridad de acceso del código recorre la pila en tiempo de ejecución, se produce una <xref:System.MemberAccessException>.  
+- El ensamblado A no puede usar la reflexión para acceder a los miembros privados de ensamblados de .NET Framework, como mscorlib.dll, ya que mscorlib.dll es de plena confianza y, por tanto, tiene permisos que no se han concedido al ensamblado A. Cuando la seguridad de acceso del código recorre la pila en tiempo de ejecución, se produce una <xref:System.MemberAccessException>.  
   
 ## <a name="serialization"></a>Serialización  
  Para la serialización, <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> proporciona la capacidad de obtener y establecer miembros de tipos serializables, independientemente de la accesibilidad. Este permiso permite al código descubrir y cambiar el estado privado de una instancia. (Además de tener concedidos los permisos adecuados, el tipo debe estar [marcado](../../../docs/standard/attributes/applying-attributes.md) como serializable en los metadatos).  
@@ -100,7 +100,7 @@ La reflexión proporciona la capacidad de obtener información sobre tipos y mie
   
 - A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], el código transparente no puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad.  
   
-- La marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> se introduce en [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] requieren la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> en el código que usa la reflexión para obtener acceso a miembros no públicos. Se trata de un permiso que nunca debe concederse al código de confianza parcial.  
+- La marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> se introduce en [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Las versiones anteriores de .NET Framework requieren la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> en el código que usa la reflexión para acceder a miembros no públicos. Se trata de un permiso que nunca debe concederse al código de confianza parcial.  
   
 - A partir de [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], el uso de la reflexión para obtener información sobre tipos y miembros no públicos no requiere ningún permiso. En versiones anteriores, se requiere <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   

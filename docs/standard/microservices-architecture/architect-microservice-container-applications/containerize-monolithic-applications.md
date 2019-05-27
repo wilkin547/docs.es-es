@@ -1,15 +1,13 @@
 ---
 title: Incluir en un contenedor aplicaciones monolíticas
 description: Incluir en un contenedor aplicaciones monolíticas, aunque no obtenga todos los beneficios de la arquitectura de microservicios, tiene ventajas importantes de implementación que se pueden entregar inmediatamente.
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130922"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640808"
 ---
 # <a name="containerizing-monolithic-applications"></a>Incluir en un contenedor aplicaciones monolíticas
 
@@ -35,7 +33,7 @@ Desde una perspectiva de la infraestructura, cada servidor puede ejecutar muchas
 
 ![Un host puede ejecutar varias aplicaciones monolíticas, cada una de ellas en un contenedor independiente.](./media/image2.png)
 
-**Figura 4-2**. Enfoque monolítico: el host ejecuta varias aplicaciones, cada aplicación se ejecuta como un contenedor
+**Figura 4-2**. Aplicación monolítica: el host ejecuta varias aplicaciones, y cada una se ejecuta como un contenedor.
 
 Las aplicaciones monolíticas en Microsoft Azure se pueden implementar con máquinas virtuales dedicadas para cada instancia. Además, con los [conjuntos de escalado de máquinas virtuales de Azure](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/), las máquinas virtuales se pueden escalar fácilmente. [Azure App Service](https://azure.microsoft.com/services/app-service/) también puede ejecutar aplicaciones monolíticas y escalar fácilmente instancias sin necesidad de administrar las máquinas virtuales. Además, desde 2016, Azure App Services puede ejecutar instancias únicas de contenedores de Docker, lo que simplifica la implementación.
 

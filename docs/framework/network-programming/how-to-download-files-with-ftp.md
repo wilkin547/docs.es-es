@@ -1,19 +1,19 @@
 ---
-title: Cómo descargar archivos mediante FTP
+title: Procedimiento para descargar archivos mediante FTP
 description: En este artículo se muestra cómo descargar un archivo de un servidor FTP.
 ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
-ms.openlocfilehash: 4e000aa149a9a02e6f12e9b184d9c43a065b673f
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: a0941d42de71029be9aab2fdbc69f8434fb73e2d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028310"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632984"
 ---
-# <a name="how-to-download-files-with-ftp"></a>Cómo descargar archivos mediante FTP
+# <a name="how-to-download-files-with-ftp"></a>Procedimiento para descargar archivos mediante FTP
 
 En este ejemplo se muestra cómo descargar un archivo de un servidor FTP.
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906326"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052452"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)
 
@@ -405,7 +405,7 @@ Aplicar la directiva `Serialize` a un campo implica los siguientes cambios de di
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>El efecto de las directivas XmlSerializer, DataContractSerializer y DataContractJsonSerializer
 
-A diferencia de la directiva `Serialize`, que está destinada a los serializadores basados en reflexión, las directivas <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> y <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> se utilizan para habilitar un conjunto de serializadores conocidos por la cadena de herramientas de [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Estos serializadores no se implementan mediante reflexión, pero el conjunto de tipos que se pueden serializar en tiempo de ejecución se determina de manera similar a los tipos que admiten reflexión.
+A diferencia de la `Serialize` directiva, que está destinado a los serializadores basados en reflexión, el <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer>, y <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> las directivas que se usan para habilitar un conjunto de serializadores que se sabe que la cadena de herramientas .NET Native. Estos serializadores no se implementan mediante reflexión, pero el conjunto de tipos que se pueden serializar en tiempo de ejecución se determina de manera similar a los tipos que admiten reflexión.
 
 Aplicar una de estas directivas a un tipo permite la serialización del tipo con el serializador correspondiente. Además, los tipos que el motor de serialización puede determinar de forma estática que necesitan serialización también se podrán serializar.
 

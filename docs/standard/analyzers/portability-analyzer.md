@@ -1,15 +1,15 @@
 ---
 title: Analizador de portabilidad de .NET | .NET
 description: Obtenga información sobre cómo usar la herramienta Analizador de portabilidad de .NET para evaluar la portabilidad de su código entre las diferentes implementaciones de .NET, incluidos .NET Core, .NET Standard, UWP y Xamarin.
-ms.date: 07/26/2017
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: bd92e39a7b53e2807aff687f6dfbf71be34a506d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7de6aa72b2d30c3e54d2ddf9a2d951688571d654
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717653"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063434"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -19,28 +19,28 @@ ms.locfileid: "57717653"
 
 * [.NET Core](../../core/index.md): tiene un diseño modular, emplea el modo en paralelo y tiene como destino escenarios multiplataforma. El modo en paralelo permite adoptar nuevas versiones de .NET Core sin que ello afecte a otras aplicaciones.
 * [ASP.NET Core](/aspnet/core): es un marco web moderno basado en .NET Core, por lo que ofrece a los desarrolladores las mismas ventajas.
-* [Plataforma universal de Windows](https://devblogs.microsoft.com/dotnet/net-native-performance/): mejora el rendimiento de las aplicaciones de la Tienda Windows que se ejecutan en máquinas ARM y x64 mediante la compilación estática de .NET Native. 
+* [Plataforma universal de Windows](/uwp): mejora el rendimiento de las aplicaciones de la Tienda Windows que se ejecutan en máquinas ARM y x64 mediante la compilación estática de .NET Native. 
 * .NET Core + extensiones de plataforma: incluye las API de .NET Core además de otras API del ecosistema de .NET, como WCF, ASP.NET Core, FSharp y Azure.
 * .NET Standard + extensiones de plataforma: incluye las API de .NET Standard además de otro ecosistema de .NET, como WCF, ASP.NET Core, FSharp y Azure.
 
-## <a name="how-to-use-portability-analyzer"></a>Cómo usar el Analizador de portabilidad
+## <a name="how-to-use-the-portability-analyzer"></a>Cómo usar el Analizador de portabilidad
 
-Para empezar a usar el Analizador de portabilidad. de NET, primero debe descargar e instalar la extensión desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Funciona en Visual Studio 2015 y Visual Studio 2017. Puede configurarlo en Visual Studio en **Analizar** > **Portability Analyzer Settings** (Configuración del Analizador de portabilidad) y seleccionar las plataformas de destino.
+Para empezar a usar el Analizador de portabilidad. de NET, primero debe descargar e instalar la extensión desde [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer). Funciona en Visual Studio 2017 y versiones posteriores. Puede configurarlo en Visual Studio en **Analizar** > **Portability Analyzer Settings** (Configuración del Analizador de portabilidad) y seleccionar las plataformas de destino.
 
 ![Captura de pantalla de la portabilidad](./media/portability-analyzer/portability-screenshot.png)
 
 Para analizar todo el proyecto, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). También puede ir al menú **Analizar** y seleccionar **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). Desde allí, seleccione el ejecutable o .dll del proyecto.
 
-![Explorador de soluciones de portabilidad](./media/portability-analyzer/portability-solution-explorer.png)
+![Analizador de portabilidad desde el Explorador de soluciones](./media/portability-analyzer/portability-solution-explorer.png)
 
-Después de ejecutar el análisis, verá un informe de portabilidad de .NET. Solo aparecen en la lista los tipos que no son compatibles con una plataforma de destino. Puede revisar las recomendaciones en la pestaña **Mensajes** de la **Lista de errores**. También puede saltar a áreas problemáticas directamente desde la pestaña **Mensajes**.
+Después de ejecutar el análisis, verá un informe de portabilidad de .NET. Solo aparecen en la lista los tipos que no son compatibles con una plataforma de destino. Puede revisar las recomendaciones en la pestaña **Mensajes** de la **Lista de errores**. También puede saltar a áreas problemáticas directamente desde la pestaña **Mensajes**.
 
 ![Informe de portabilidad](./media/portability-analyzer/portability-report.png)
 
-¿No quiere usar Visual Studio? También puede usar el Analizador de portabilidad desde el símbolo del sistema. Simplemente descargue la [API del Analizador de portabilidad](https://www.microsoft.com/download/details.aspx?id=42678).
+Si no desea usar Visual Studio, puede usar el Analizador de portabilidad desde el símbolo del sistema. Simplemente descargue el Analizador de portabilidad de API desde el repositorio [Microsoft/dotnet-apiport](https://github.com/Microsoft/dotnet-apiport/releases).
 
-*   Escriba el comando siguiente para analizar el directorio actual: `\...\ApiPort.exe analyze -f .`
-*   Para analizar una lista específica de archivos .dll, escriba el comando siguiente: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+* Escriba el comando siguiente para analizar el directorio actual: `\...\ApiPort.exe analyze -f .`
+* Para analizar una lista específica de archivos .dll, escriba el comando siguiente: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
 El informe de portabilidad de .NET se guarda como un archivo *.xlsx* de Excel en el directorio actual. La pestaña **Detalles** del libro de Excel contiene más información.
 

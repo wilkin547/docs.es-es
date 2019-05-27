@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921789"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053148"
 ---
 # <a name="wpf-community-feedback"></a>Comentarios de la Comunidad WPF
 
@@ -24,7 +24,7 @@ Microsoft ofrece una amplia gama de recursos de la Comunidad para que pueda cono
 
 ## <a name="forums"></a>Foros
 
-El [foro de WPF](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=wpf) es el recurso principal de la Comunidad para debatir y resolver problemas. Los foros facilitan el debate y la resolución de problemas al ofrecer un conjunto completo de características de compatibilidad que incluyen:
+El [foro de WPF](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf) es el recurso principal de la Comunidad para debatir y resolver problemas. Los foros facilitan el debate y la resolución de problemas al ofrecer un conjunto completo de características de compatibilidad que incluyen:
 
 - Búsqueda.
 - Seguimiento de debates.

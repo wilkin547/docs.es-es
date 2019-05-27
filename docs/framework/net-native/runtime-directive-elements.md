@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3fe5848c-ecd7-4136-970b-8e48d250bde6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf692ff93a575858d1d1a89346611cb9c5957b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb3ad0d39d47297b7d26a5c28cfbbc269ce99e44
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867048"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052413"
 ---
 # <a name="runtime-directive-elements"></a>Elementos de directivas en tiempo de ejecución
 El formato del archivo de directivas de tiempo de ejecución (rd.xml) es compatible con los siguientes elementos de directiva de tiempo de ejecución. Vea [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml)) para obtener una representación jerárquica.  
@@ -24,7 +24,7 @@ El formato del archivo de directivas de tiempo de ejecución (rd.xml) es compati
  Si la directiva [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) que contiene es un atributo, aplica la directiva en tiempo de ejecución a los elementos de código a los que se les aplica dicho atributo.  
   
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)  
- Elemento raíz de cada archivo de directivas de tiempo de ejecución para [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Sus elementos secundarios son [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) y [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
+ El elemento raíz en cada archivo de directivas en tiempo de ejecución de .NET Native. Sus elementos secundarios son [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) y [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).  
   
  [\<Event>](../../../docs/framework/net-native/event-element-net-native.md)  
  Aplica la directiva de tiempo de ejecución a un evento. Se trata de un elemento secundario de los elementos [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) y [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
