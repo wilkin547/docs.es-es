@@ -3,16 +3,16 @@ title: Actualización segura de la interfaz con miembros de la predeterminada en
 description: En este tutorial avanzado se describe cómo agregar de forma segura nuevas capacidades a las definiciones de la interfaz existente sin que ello interrumpa todas las clases y estructuras que implementan esa interfaz.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452917"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877917"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>Tutorial: Actualización de la interfaz con miembros de la predeterminada en C# 8
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Actualización de interfaces con miembros de interfaz predeterminados en C# 8.0
 
-A partir de C# 8 en .NET Core 3.0, puede definir una implementación cuando se declara un miembro de una interfaz. El escenario más común es agregar de forma segura a miembros a una interfaz ya publicada y utilizada por clientes incontables.
+A partir de C# 8.0 en .NET Core 3.0, puede definir una implementación cuando declare un miembro de una interfaz. El escenario más común es agregar de forma segura a miembros a una interfaz ya publicada y utilizada por clientes incontables.
 
 En este tutorial aprenderá lo siguiente:
 
@@ -23,7 +23,7 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de versión preliminar de C# 8.0. El compilador de la versión preliminar de C# 8 está disponible a partir de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o el [SDK de la versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente. Los miembros de la interfaz predeterminada están disponibles a partir de la versión preliminar 4 de .NET Core 3.0.
+Deberá configurar la máquina para ejecutar .NET Core, incluido el compilador de versión preliminar de C# 8.0. El compilador en versión preliminar de C# 8.0 está disponible a partir de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) o el [SDK de la versión preliminar de .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) más reciente. Los miembros de la interfaz predeterminada están disponibles a partir de la versión preliminar 4 de .NET Core 3.0.
 
 ## <a name="scenario-overview"></a>Información general del escenario
 

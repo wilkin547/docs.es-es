@@ -3,12 +3,12 @@ title: Explorar los intervalos de datos con índices y rangos
 description: En este tutorial avanzado se explica cómo explorar datos con índices e intervalos para examinar los segmentos de un conjunto de datos secuencial.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 64fae4581e265d4f70b8356d5c651b4fdaca3fe9
-ms.sourcegitcommit: dd3b897feb5c4ac39732bb165848e37a344b0765
+ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2019
-ms.locfileid: "64431499"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557183"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
@@ -23,9 +23,13 @@ En este tutorial aprenderá lo siguiente:
 
 ## <a name="language-support-for-indices-and-ranges"></a>Compatibilidad con idiomas para los índices y los rangos
 
-Puede especificar un índice **desde el final** mediante el carácter `^` antes del índice. La indexación desde el final se inicia con la regla que `0..^0` especifica el intervalo completo. Para enumerar toda una matriz, empiece *en el primer elemento* y continúe hasta *rebasar el último elemento*. Piense en el comportamiento del método `MoveNext` en un enumerador: devuelve false cuando la enumeración rebasa el último elemento. El índice `^0` significa "el final", `array[array.Length]`, o el índice que sigue al último elemento. Está familiarizado con `array[2]` lo que significa el elemento "2 desde el principio". Ahora, `array[^2]` significa el elemento "2 desde el final". 
+Esta compatibilidad con idiomas se basa en dos nuevos tipos y dos nuevos operadores.
+- <xref:System.Index?displayProperty=nameWithType> representa un índice en una secuencia.
+- El operador `^`, que especifica que un índice es relativo al final de una secuencia.
+- <xref:System.Range?displayProperty=nameWithType> representa un subrango de una secuencia.
+- El operador de rango (`..`), que especifica el inicio y el fin de un intervalo como sus operandos.
 
-Puede especificar un **rango** con el **operador de rango**: `..`. Por ejemplo, `0..^0` especifica el rango completo de la matriz: 0 desde el principio hasta, pero sin incluir 0 desde el final. Cualquier operando puede usar "desde el principio" o "desde el final". Además, se puede omitir cualquier operando. Los valores predeterminados son `0` para el índice de inicio y `^0` para el índice de final.
+Comencemos con las reglas de los índices. Considere un elemento `sequence` de matriz. El índice `0` es igual que `sequence[0]`. El índice `^0` es igual que `sequence[sequence.Length]`. Tenga en cuenta que `sequence[^0]` produce una excepción, al igual que `sequence[sequence.Length]`. Para cualquier número `n`, el índice `^n` es igual que `sequence[sequence.Length - n]`.
 
 ```csharp-interactive
 string[] words = new string[]
@@ -43,11 +47,11 @@ string[] words = new string[]
 };              // 9 (or words.Length) ^0
 ```
 
-El índice de cada elemento refuerza el concepto de "desde el inicio" y "desde el final", y que los rangos son exclusivos del final del rango. El "inicio" de toda la matriz es el primer elemento. El "final" de toda la matriz es *pasado* el último elemento.
-
 Puede recuperar la última palabra con el índice `^1`. Agregue el código siguiente a la inicialización:
 
 [!code-csharp[LastIndex](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_LastIndex)]
+
+Un rango especifica el *inicio* y el *final* de un intervalo. Los rangos son excluyentes, lo que significa que el *final* no se incluye en el intervalo. El rango `[0..^0]` representa todo el intervalo, al igual que `[0..sequence.Length]` representa todo el intervalo. 
 
 El siguiente código crea un subrango con las palabras "quick", "brown" y "fox". Va de `words[1]` a `words[3]`. El elemento `words[4]` no se encuentra en el intervalo. Agregue el código siguiente al mismo método. Cópielo y péguelo en la parte inferior de la ventana interactiva.
 
@@ -64,11 +68,6 @@ En los ejemplos siguientes se crean rangos con final abierto para el inicio, el 
 También puede declarar rangos o índices como variables. La variable se puede usar luego dentro de los caracteres `[` y `]`:
 
 [!code-csharp[IndexRangeTypes](~/samples/csharp/tutorials/RangesIndexes/IndicesAndRanges.cs#IndicesAndRanges_RangeIndexTypes)]
-
-Los ejemplos anteriores muestran dos decisiones de diseño que requieren mayor explicación:
-
-- Los intervalos son *exclusivos*, lo que significa que el elemento en el último índice no está en el intervalo.
-- El índice `^0` es *el final* de la colección, no *el último elemento* en la colección.
 
 El ejemplo siguiente muestra muchos de los motivos para esas opciones. Modifique `x`, `y` y `z` para probar diferentes combinaciones. Al experimentar, use valores donde `x` sea menor que `y` y `y` sea menor que `z` para las combinaciones válidas. Agregue el código siguiente a un nuevo método. Pruebe diferentes combinaciones:
 

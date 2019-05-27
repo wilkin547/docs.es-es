@@ -24,14 +24,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 921d69e3deb7e5bb5115eb723727462839af9b6b
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: a76c2855196b229918ee0a6a7d2a4dc66d87d059
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452897"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881043"
 ---
-# <a name="member-access-operators"></a>Operadores de acceso a miembros
+# <a name="member-access-operators-c-reference"></a>Operadores de acceso a miembros (referencia de C#)
 
 Puede usar los siguientes operadores cuando tiene acceso a un miembro de tipo:
 
@@ -88,7 +88,7 @@ Para más información sobre los indizadores, consulte [Indizadores](../../progr
 
 ### <a name="other-usages-of-"></a>Otros usos de []
 
-Para obtener información sobre el acceso a elemento de puntero, consulte [Cómo: Obtener acceso a un elemento de matriz con un puntero](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md).
+Para información sobre el acceso de los elementos de puntero, consulte la sección [Operador de acceso de elemento de puntero](pointer-related-operators.md#pointer-element-access-operator-) del artículo [Operadores relacionados con el puntero](pointer-related-operators.md).
 
 También usa los corchetes para especificar [atributos](../../programming-guide/concepts/attributes/index.md):
 

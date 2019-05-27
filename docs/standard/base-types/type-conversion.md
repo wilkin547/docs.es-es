@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea32efaad24f171b7d5ebfa457834b35edbddf4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 519b92cd24d75dd8e98fc28dbce3701c521a041d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664610"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593522"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Conversión de tipos en .NET Framework
 <a name="top"></a> Cada valor tiene un tipo asociado, que define los atributos como la cantidad de espacio asignado al valor, el intervalo de valores posibles que puede tener y los miembros que ofrece. Muchos valores se pueden expresar como más de un tipo. Por ejemplo, el valor 4 se puede expresar como un entero o como un valor de punto flotante. La conversión de tipo crea un valor en un nuevo tipo que es equivalente al valor de un tipo antiguo, pero no conserva necesariamente la identidad (o valor exacto) del objeto original.  
@@ -46,7 +46,7 @@ ms.locfileid: "64664610"
   
 - Conversión de un objeto de interfaz al tipo original que implementa esa interfaz.  En C#, esta conversión requiere un operador de conversión. En Visual Basic, requiere el operador `CType` si `Option Strict` está activado.  
   
- Además de estas conversiones automáticas, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona varias características que admiten la conversión de tipos personalizada. Entre ellas se incluyen las siguientes:  
+ Además de estas conversiones automáticas, .NET Framework proporciona varias características que admiten la conversión de tipos personalizada. Entre ellas se incluyen las siguientes:  
   
 - El operador `Implicit`, que define las conversiones de ampliación disponibles entre los tipos. Para obtener más información, consulte la sección [Conversión implícita con el operador Implicit](#implicit_conversion_with_the_implicit_operator).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "64664610"
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> es mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> es mayor que <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
- Para administrar estas conversiones de restricción, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] permite que los tipos definan un operador `Explicit`. A continuación, los compiladores de lenguaje individuales pueden implementar este operador usando su propia sintaxis o se puede llamar a un miembro de la clase <xref:System.Convert> para realizar la conversión. (Para obtener más información sobre la clase <xref:System.Convert>, vea [Clase Convert](#Convert) más adelante en este tema). En el ejemplo siguiente se muestra el uso de las características de lenguaje para administrar la conversión explícita de estos valores enteros, que potencialmente están fuera del intervalo, a valores <xref:System.Int32>.  
+ Para administrar estas conversiones de restricción, .NET Framework permite que los tipos definan un operador `Explicit`. A continuación, los compiladores de lenguaje individuales pueden implementar este operador usando su propia sintaxis o se puede llamar a un miembro de la clase <xref:System.Convert> para realizar la conversión. (Para obtener más información sobre la clase <xref:System.Convert>, vea [Clase Convert](#Convert) más adelante en este tema). En el ejemplo siguiente se muestra el uso de las características de lenguaje para administrar la conversión explícita de estos valores enteros, que potencialmente están fuera del intervalo, a valores <xref:System.Int32>.  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -127,7 +127,7 @@ ms.locfileid: "64664610"
   
 <a name="the_iconvertible_interface"></a>   
 ## <a name="the-iconvertible-interface"></a>La interfaz IConvertible  
- Para admitir la conversión de cualquier tipo en un tipo base de Common Language Runtime, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona la interfaz <xref:System.IConvertible>. El tipo que se está implementando debe proporcionar lo siguiente:  
+ Para admitir la conversión de cualquier tipo en un tipo base de Common Language Runtime, .NET Framework proporciona la interfaz <xref:System.IConvertible>. El tipo que se está implementando debe proporcionar lo siguiente:  
   
 - Un método que devuelva el objeto <xref:System.TypeCode> del tipo que se está implementando.  
   
@@ -143,9 +143,9 @@ ms.locfileid: "64664610"
  El requisito de llamar al método de conversión en su interfaz, en lugar de en el tipo que se está implementando, hace que las implementaciones de interfaz explícitas resulten relativamente costosas. En su lugar, se recomienda llamar al miembro adecuado de la clase <xref:System.Convert> para convertir entre los tipos base de Common Language Runtime. Para obtener más información, consulte la próxima sección, [Clase Convert](#Convert).  
   
 > [!NOTE]
->  Además de la interfaz <xref:System.IConvertible> y la clase <xref:System.Convert> proporcionadas por [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], los lenguajes individuales también pueden proporcionar maneras de realizar las conversiones. Por ejemplo, C# utiliza operadores de conversión, mientras que Visual Basic utiliza funciones de conversión implementadas por el compilador como `CType`, `CInt` y `DirectCast`.  
+>  Además de la interfaz <xref:System.IConvertible> y la clase <xref:System.Convert> proporcionadas por .NET Framework, cada lenguaje puede proporcionar también maneras de realizar conversiones. Por ejemplo, C# utiliza operadores de conversión, mientras que Visual Basic utiliza funciones de conversión implementadas por el compilador como `CType`, `CInt` y `DirectCast`.  
   
- En su mayor parte, la interfaz <xref:System.IConvertible> está diseñada para admitir la conversión entre los tipos base de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Sin embargo, la interfaz también puede implementarse por un tipo personalizado con el fin de admitir la conversión de ese tipo a otros tipos personalizados. Para obtener más información, consulte la sección [Conversiones personalizadas con el método ChangeType](#ChangeType) más adelante en este tema.  
+ En su mayor parte, la interfaz <xref:System.IConvertible> está diseñada para admitir la conversión entre los tipos base de .NET Framework. Sin embargo, la interfaz también puede implementarse por un tipo personalizado con el fin de admitir la conversión de ese tipo a otros tipos personalizados. Para obtener más información, consulte la sección [Conversiones personalizadas con el método ChangeType](#ChangeType) más adelante en este tema.  
   
  [Volver al principio](#top)  
   

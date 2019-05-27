@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a58211226b93c8fde9fa4240e04a245fb83a00d0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7058e7857c03a2fc82a3d978ef7c8066a9e272bc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629035"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589657"
 ---
 # <a name="dataflow-task-parallel-library"></a>Flujo de datos (biblioteca TPL)
 <a name="top"></a> La biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) proporciona componentes de flujo de datos que ayudan a aumentar la solidez de aplicaciones habilitadas para simultaneidad. Se conoce colectivamente a estos componentes de flujo de datos como *biblioteca TDF (biblioteca de TPL Dataflow)* pero nos referiremos descriptivamente a ella como "biblioteca de flujos de datos TPL". Este modelo de flujo de datos promueve una programación basada en actores mediante el paso de mensajes en proceso para tareas de canalización y de flujo de datos de grano grueso. Los componentes de flujo de datos se basan en los tipos y la infraestructura de programación de la biblioteca TPL y se integran con la compatibilidad de los lenguajes C#, Visual Basic y F# para proporcionar programación asincrónica. Estos componentes de flujo de datos son útiles cuando se tienen varias operaciones que deben comunicarse entre sí de forma asincrónica, o cuando se desea procesar datos a medida que estén disponibles. Por ejemplo, piense en una aplicación que procesa datos de imagen de una cámara web. Con el modelo de flujo de datos, la aplicación puede procesar fotogramas de imagen a medida que estén disponibles. Si la aplicación mejora fotogramas de imagen, por ejemplo, corrigiendo la luz o reduciendo ojos rojos, puede crear una *canalización* de los componentes de flujo de datos. Cada fase de la canalización puede utilizar más funcionalidad de paralelismo de grano grueso, como la funcionalidad proporcionada por la biblioteca TPL, para transformar la imagen.  
@@ -282,4 +282,4 @@ ms.locfileid: "64629035"
 |[Cómo: Especificación de un Programador de tareas en un bloque de flujo de datos](../../../docs/standard/parallel-programming/how-to-specify-a-task-scheduler-in-a-dataflow-block.md)|Muestra cómo asociar un programador de tareas específico cuando se usa flujo de datos en la aplicación.|  
 |[Tutorial: Uso de BatchBlock y BatchedJoinBlock para mejorar la eficacia](../../../docs/standard/parallel-programming/walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md)|Describe cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> para mejorar la eficacia de las operaciones de inserción de la base de datos y cómo utilizar la clase <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> para capturar los resultados y cualquier excepción que se produzca mientras el programa lee de una base de datos.|  
 |[Tutorial: Creación de tipos de bloques de flujo de datos personalizados](../../../docs/standard/parallel-programming/walkthrough-creating-a-custom-dataflow-block-type.md)|Muestra dos maneras de crear un tipo de bloque de flujo de datos que implementa un comportamiento personalizado.|  
-|[Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Presenta la biblioteca TPL, una biblioteca que simplifica la programación paralela y simultánea en aplicaciones de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].|
+|[Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Presenta la biblioteca TPL, una biblioteca que simplifica la programación paralela y simultánea en aplicaciones de .NET Framework.|

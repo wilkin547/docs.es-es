@@ -1,18 +1,20 @@
 ---
 title: 'Novedades de C# 8.0: Guía de C#'
-description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 2.
+description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754377"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557146"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
-Hay muchas mejoras en el lenguaje C# que ya se pueden probar en la versión preliminar 2. Las nuevas características agregadas en la versión preliminar 2 son:
+Hay muchas mejoras en el lenguaje C# que ya se pueden probar. 
 
+- [Miembros de solo lectura](#readonly-members)
+- [Miembros de interfaz predeterminados](#default-interface-members)
 - [Mejoras de coincidencia de patrones](#more-patterns-in-more-places):
   * [Expresiones switch](#switch-expressions)
   * [Patrones de propiedades](#property-patterns)
@@ -21,17 +23,67 @@ Hay muchas mejoras en el lenguaje C# que ya se pueden probar en la versión prel
 - [Declaraciones using](#using-declarations)
 - [Funciones locales estáticas](#static-local-functions)
 - [Estructuras ref descartables](#disposable-ref-structs)
-
-Las siguientes características del lenguaje aparecieron primero en la versión preliminar 1 de C# 8.0:
-
 - [Tipos de referencia que aceptan valores null](#nullable-reference-types)
 - [Secuencias asincrónicas](#asynchronous-streams)
 - [Índices y rangos](#indices-and-ranges)
 
 > [!NOTE]
-> Este artículo se actualizó por última vez para la versión preliminar 2 de C# 8.0.
+> Este artículo se actualizó por última vez para la versión preliminar 5 de C# 8.0.
 
 En el resto de este artículo se describen brevemente estas características. Cuando hay disponibles artículos detallados, se proporcionan vínculos a esos tutoriales e introducciones.
+
+## <a name="readonly-members"></a>Miembros de solo lectura
+
+Puede aplicar el modificador `readonly` a cualquier miembro de un struct. Indica que el miembro no modifica el estado. Resulta más pormenorizado que aplicar el modificador `readonly` a una declaración `struct`.  Tenga en cuenta el siguiente struct mutable:
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+Al igual que la mayoría de los structs, el método `ToString()` no modifica el estado. Para indicar eso, podría agregar el modificador `readonly` a la declaración de `ToString()`:
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+El cambio anterior genera una advertencia del compilador, porque `ToString` accede a la propiedad `Distance`, que no está marcada como `readonly`:
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+El compilador le advierte cuando es necesario crear una copia defensiva.  La propiedad `Distance` no cambia el estado, por lo que puede corregir esta advertencia si agrega el modificador `readonly` a la declaración:
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+Tenga en cuenta que el modificador `readonly` es necesario en una propiedad de solo lectura. El compilador no supone que los descriptores de acceso `get` no modifiquen el estado; debe declarar `readonly` explícitamente. El compilador aplica la regla de que los miembros `readonly` no modifican el estado. El siguiente método no se compilará a menos que quite el modificador `readonly`:
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+Esta característica permite especificar la intención del diseño para que el compilador pueda aplicarla, y realizar optimizaciones basadas en dicha intención.
+
+## <a name="default-interface-members"></a>Miembros de interfaz predeterminados
+
+Ahora puede agregar miembros a interfaces y proporcionar una implementación de esos miembros. Esta característica del lenguaje permite que los creadores de API agreguen métodos a una interfaz en versiones posteriores sin interrumpir la compatibilidad binaria o de origen con implementaciones existentes de dicha interfaz. Las implementaciones existentes *heredan* la implementación predeterminada. Esta característica también permite que C# interopere con las API que tienen como destino Android o Swift, que admiten características similares. Los miembros de interfaz predeterminados también permiten escenarios similares a una característica del lenguaje de "rasgos".
+
+Los miembros de interfaz predeterminados afectan a muchos escenarios y elementos del lenguaje. Nuestro primer tutorial abarca la [actualización de una interfaz con implementaciones predeterminadas](../tutorials/default-interface-members-versions.md). Otros tutoriales y actualizaciones de referencia se incorporarán a tiempo en la versión general.
 
 ## <a name="more-patterns-in-more-places"></a>Más patrones en más lugares
 
@@ -321,9 +373,15 @@ Puede probar secuencias asincrónicas por su cuenta en nuestro tutorial sobre la
 
 Los rangos e índices proporcionan una sintaxis concisa para especificar subrangos en una matriz, <xref:System.Span%601>, o <xref:System.ReadOnlySpan%601>.
 
-Puede especificar un índice **desde el final** utilizando el carácter `^` antes del índice. La indexación desde el final se inicia con la regla que `0..^0` especifica el intervalo completo. Para enumerar toda una matriz, empiece *en el primer elemento* y continúe hasta *rebasar el último elemento*. Piense en el comportamiento del método `MoveNext` en un enumerador: devuelve false cuando la enumeración rebasa el último elemento. El índice `^0` significa "el final", `array[array.Length]`, o el índice que sigue al último elemento. Está familiarizado con `array[2]` lo que significa el elemento "2 desde el principio". Ahora, `array[^2]` significa el elemento "2 desde el final". 
+Esta compatibilidad con idiomas se basa en dos nuevos tipos y dos nuevos operadores.
+- <xref:System.Index?displayProperty=nameWithType> representa un índice en una secuencia.
+- El operador `^`, que especifica que un índice es relativo al final de la secuencia.
+- <xref:System.Range?displayProperty=nameWithType> representa un subrango de una secuencia.
+- El operador de rango (`..`), que especifica el inicio y el final de un intervalo como sus operandos.
 
-Puede especificar un **rango** con el **operador de rango**: `..`. Por ejemplo, `0..^0` especifica el rango completo de la matriz: 0 desde el principio hasta, pero sin incluir 0 desde el final. Cualquier operando puede usar "desde el principio" o "desde el final". Además, se puede omitir cualquier operando. Los valores predeterminados son `0` para el índice de inicio y `^0` para el índice de final.
+Comencemos con las reglas de índices. Considere un elemento `sequence` de matriz. El índice `0` es igual que `sequence[0]`. El índice `^0` es igual que `sequence[sequence.Length]`. Tenga en cuenta que `sequence[^0]` produce una excepción, al igual que `sequence[sequence.Length]`. Para cualquier número `n`, el índice `^n` es igual que `sequence.Length - n`.
+
+Un rango especifica el *inicio* y el *final* de un intervalo. Los rangos son excluyentes, lo que significa que el *final* no se incluye en el intervalo. El rango `[0..^0]` representa todo el intervalo, al igual que `[0..sequence.Length]` representa todo el intervalo. 
 
 Veamos algunos ejemplos. Tenga en cuenta la siguiente matriz, anotada con su índice desde el principio y desde el final:
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-El índice de cada elemento refuerza el concepto de "desde el inicio" y "desde el final", y que los rangos son exclusivos del final del rango. El "inicio" de toda la matriz es el primer elemento. El "final" de toda la matriz es *pasado* el último elemento.
 
 Puede recuperar la última palabra con el índice `^1`:
 

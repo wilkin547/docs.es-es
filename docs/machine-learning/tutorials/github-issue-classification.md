@@ -1,17 +1,17 @@
 ---
-title: 'Clasificación de problemas de GitHub: clasificación multiclase'
+title: 'Tutorial: Clasificación de incidencias de soporte técnico (clasificación multiclase)'
 description: Descubra cómo usar ML.NET en un escenario de clasificación multiclase para clasificar los problemas de GitHub y asignarlos a un área determinada.
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: a4122d0cdfe6531275fabf94743882a82f2a13c1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063531"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195586"
 ---
-# <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutorial: Uso de ML.NET en un escenario de clasificación multiclase para clasificar problemas de GitHub
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Clasificación multiclase de incidencias de soporte técnico con ML.NET
 
 Este tutorial de ejemplo ilustra el uso de ML.NET para crear un clasificador de problemas de GitHub para entrenar un modelo que clasifica y predice la etiqueta de área para un problema de GitHub a través de una aplicación de consola de .NET Core con C# en Visual Studio.
 
@@ -242,7 +242,7 @@ Devuelva el modelo al final del método `BuildAndTrainModel`.
 Ahora que ha creado y entrenado el modelo, debe evaluarlo con otro conjunto de datos para el control de calidad y la validación. En el método `Evaluate`, el modelo creado en `BuildAndTrainModel` se pasa para ser evaluado. Cree el método `Evaluate`, justo después de `BuildAndTrainModel`, como en el código siguiente:
 
 ```csharp
-public static void Evaluate()
+public static void Evaluate(DataViewSchema trainingDataViewSchema)
 {
 
 }
