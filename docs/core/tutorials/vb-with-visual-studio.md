@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32e2acedb0f837703fb716c45887672494f8d40f
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612685"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959267"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilación de una aplicación "Hola mundo" de Visual Basic con el SDK de .NET Core en Visual Studio 2017
 
@@ -28,7 +28,7 @@ Para obtener más información, vea [Requisitos previos para .NET Core en Window
 
 Comience creando una aplicación de consola "Hola mundo" sencilla. Siga estos pasos:
 
-1. Inicie Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo *Nuevo proyecto*\*, seleccione el nodo **Visual Basic** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "Hola mundo". Seleccione el botón **Aceptar**.
+1. Inicie Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo *Nuevo proyecto*\*, seleccione el nodo **Visual Basic** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)** . En el cuadro de texto **Nombre**, escriba "Hola mundo". Seleccione el botón **Aceptar**.
 
    ![Cuadro de diálogo Nuevo proyecto con la aplicación de consola seleccionada](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
@@ -63,7 +63,7 @@ Mejore su aplicación para pedir su nombre al usuario y mostrarlo junto con la f
 
    [!code-vb[GettingStarted#1](../../../samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-   Este código reemplaza las instrucciones <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> y <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> existentes.
+   Este código reemplaza el contenido del método `Main`.
 
    ![Archivo del programa Visual Studio con el método Main actualizado](./media/vb-with-visual-studio/visual-basic-code-window.png)
 

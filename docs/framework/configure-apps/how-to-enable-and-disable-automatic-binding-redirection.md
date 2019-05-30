@@ -5,20 +5,20 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
-ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b6c9c3508c53e8a68a3f7e1cb12b6b6c95600e7b
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880138"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380101"
 ---
 # <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>Procedimiento para habilitar y deshabilitar redireccionamiento de enlaces automático
 
-Al compilar aplicaciones en Visual Studio que tienen como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] y versiones posteriores, redirecciones de enlace se pueden agregar automáticamente al archivo de configuración de la aplicación para invalidar la unificación de ensamblados. Las redirecciones de enlace se agregan si la aplicación o sus componentes hacen referencia a más de una versión del mismo ensamblado, incluso si se especifican manualmente las redirecciones de enlace en el archivo de configuración de la aplicación. La característica de redirección de enlace automática afecta a las aplicaciones de escritorio y aplicaciones web que tienen como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o una versión posterior, aunque el comportamiento es ligeramente diferente para una aplicación web. Puede habilitar la redirección de enlace automática si tiene aplicaciones existentes destinadas a versiones anteriores de .NET Framework o puede deshabilitar esta característica si desea crear manualmente las redirecciones de enlace.
+Al compilar aplicaciones en Visual Studio que tienen como destino .NET Framework 4.5.1 y versiones posteriores, se pueden agregar automáticamente las redirecciones de enlace al archivo de configuración de la aplicación para invalidar la unificación de ensamblados. Las redirecciones de enlace se agregan si la aplicación o sus componentes hacen referencia a más de una versión del mismo ensamblado, incluso si se especifican manualmente las redirecciones de enlace en el archivo de configuración de la aplicación. La característica de redirección de enlace automática afecta a las aplicaciones de escritorio y aplicaciones web que tienen como destino .NET Framework 4.5.1 o una versión posterior, aunque el comportamiento es ligeramente diferente para una aplicación web. Puede habilitar la redirección de enlace automática si tiene aplicaciones existentes destinadas a versiones anteriores de .NET Framework o puede deshabilitar esta característica si desea crear manualmente las redirecciones de enlace.
 
 ## <a name="disable-automatic-binding-redirects-in-desktop-apps"></a>Deshabilitar las redirecciones de enlace automáticas en aplicaciones de escritorio
 
-Redirecciones de enlace automáticas están habilitadas de forma predeterminada para las aplicaciones de escritorio de Windows que tienen como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] y versiones posteriores. Las redirecciones de enlace se agregan a la configuración de salida (**app.config**) cuando se compila la aplicación de archivo y anular la unificación de ensamblados que en caso contrario, es posible que tienen lugar. El origen **app.config** no se modifica el archivo. Puede deshabilitar esta característica si modifica el archivo de proyecto para la aplicación o anulando la selección de una casilla en las propiedades del proyecto en Visual Studio.
+Redirecciones de enlace automáticas están habilitadas de forma predeterminada para las aplicaciones de escritorio de Windows que tienen como destino .NET Framework 4.5.1 y versiones posteriores. Las redirecciones de enlace se agregan a la configuración de salida (**app.config**) cuando se compila la aplicación de archivo y anular la unificación de ensamblados que en caso contrario, es posible que tienen lugar. El origen **app.config** no se modifica el archivo. Puede deshabilitar esta característica si modifica el archivo de proyecto para la aplicación o anulando la selección de una casilla en las propiedades del proyecto en Visual Studio.
 
 ### <a name="disable-through-project-properties"></a>Deshabilitar a través de las propiedades del proyecto
 
@@ -35,7 +35,7 @@ Si tiene Visual Studio 2017 versión 15.7 o posterior, puede deshabilitar fácil
 1. Abra el archivo de proyecto para editarlo mediante uno de los métodos siguientes:
 
    - En Visual Studio, seleccione el proyecto en **el Explorador de soluciones**y, a continuación, elija **Abrir carpeta en el Explorador de archivos** en el menú contextual. En el Explorador de archivos, busque el archivo de proyecto (.csproj o .vbproj) y ábralo en el Bloc de notas.
-   - En Visual Studio, en **el Explorador de soluciones**, haga clic en el proyecto y elija **descargar el proyecto**. Haga clic en el proyecto descargado nuevo y, a continuación, elija **editar [nombredelproyecto.csproj]**.
+   - En Visual Studio, en **el Explorador de soluciones**, haga clic en el proyecto y elija **descargar el proyecto**. Haga clic en el proyecto descargado nuevo y, a continuación, elija **editar [nombredelproyecto.csproj]** .
 
 2. En el archivo de proyecto, busque la siguiente entrada de propiedad:
 
@@ -56,7 +56,7 @@ Puede habilitar las redirecciones de enlace automáticas en las aplicaciones exi
 1. Abra el archivo de proyecto para editarlo mediante uno de los métodos siguientes:
 
    - En Visual Studio, seleccione el proyecto en **el Explorador de soluciones**y, a continuación, elija **Abrir carpeta en el Explorador de archivos** en el menú contextual. En el Explorador de archivos, busque el archivo de proyecto (.csproj o .vbproj) y ábralo en el Bloc de notas.
-   - En Visual Studio, en **el Explorador de soluciones**, haga clic en el proyecto y elija **descargar el proyecto**. Haga clic en el proyecto descargado nuevo y, a continuación, elija **editar [nombredelproyecto.csproj]**.
+   - En Visual Studio, en **el Explorador de soluciones**, haga clic en el proyecto y elija **descargar el proyecto**. Haga clic en el proyecto descargado nuevo y, a continuación, elija **editar [nombredelproyecto.csproj]** .
 
 2. Agregue el siguiente elemento en el primer grupo de propiedades de configuración (bajo la \<PropertyGroup > etiqueta):
 

@@ -2,12 +2,12 @@
 title: Tipos de referencia que aceptan valores NULL
 description: En este artículo se proporciona información general sobre los tipos de referencia que aceptan valores NULL, una novedad de C# 8. Conocerá cómo esta característica proporciona protección contra excepciones de referencia NULL, tanto para proyectos nuevos como para los existentes.
 ms.date: 02/19/2019
-ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ac19cbba0e078af34801231145ee339d6e42a42b
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725030"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195917"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referencia que aceptan valores NULL
 
@@ -58,7 +58,7 @@ La nulabilidad de un tipo en una declaración de variable se controla mediante e
 
 Los contextos que aceptan valores NULL permiten un control preciso sobre cómo interpreta el compilador las variables de tipos de referencia. El **contexto de anotación que acepta valores NULL** de cualquier línea de código es `enabled` o `disabled`. Puede considerar que el compilador anterior al de C# 8 compilaba todo el código en un contexto que acepta valores NULL `disabled`: Cualquier tipo de referencia puede ser NULL. El **contexto de advertencia que acepta valores NULL** puede configurarse como `enabled`, `disabled` o `safeonly`. Este contexto especifica las advertencias que genera el compilador usando el análisis de flujos.
 
-Tanto el contexto de anotación que acepta valores NULL como el contexto de advertencia que acepta valores NULL pueden establecerse para un proyecto con el elemento `NullableContextOptions` del archivo `csproj`. Este elemento configura la forma en la que el compilador interpreta la nulabilidad de los tipos y las advertencias que se generan. Estos son los valores válidos:
+Tanto el contexto de anotación que acepta valores NULL como el contexto de advertencia que acepta valores NULL pueden establecerse para un proyecto con el elemento `Nullable` del archivo `csproj`. Este elemento configura la forma en la que el compilador interpreta la nulabilidad de los tipos y las advertencias que se generan. Estos son los valores válidos:
 
 - `enable`: el contexto de anotación que acepta valores NULL es **enabled**. El contexto de advertencia que acepta valores NULL es **enabled**.
   - Las variables de un tipo de referencia, como `string`, no aceptan valores NULL.  Todas las advertencias de nulabilidad están habilitadas.
@@ -70,6 +70,9 @@ Tanto el contexto de anotación que acepta valores NULL como el contexto de adve
   - Las variables de un tipo de referencia son inconscientes. Todas las advertencias de nulabilidad están habilitadas.
 - `safeonlywarnings`: el contexto de anotación que acepta valores NULL es **disabled**. El contexto de advertencia que acepta valores NULL es **safeonly**.
   - Las variables de un tipo de referencia son inconscientes. Todas las advertencias de nulabilidad de seguridad están habilitadas.
+
+> [!IMPORTANT]
+> El elemento `Nullable` se denominaba anteriormente `NullableContextOptions`. El cambio de nombre incluido con Visual Studio 2019, 16.2 p1. .NET Core SDK 3.0.100-preview5-011568 no tiene este cambio. Si usa la CLI de .NET Core, deberá usar `NullableContextOptions` hasta que esté disponible la siguiente versión preliminar.
 
 También puede usar directivas para establecer los mismos contextos en cualquier lugar del proyecto:
 

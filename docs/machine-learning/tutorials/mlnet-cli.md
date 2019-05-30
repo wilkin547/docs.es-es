@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: feddafdd6becd676f4d18aa94bdfae50f02abc6e
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557957"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053644"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Generación automática de un clasificador binario mediante la CLI
 
@@ -75,7 +75,7 @@ Vamos a usar un conjunto de datos existente utilizado para un escenario de "aná
     Ya está listo para empezar a usar la CLI en este escenario de "análisis de sentimiento".
 
     > [!NOTE]
-    > Al finalizar este tutorial, también puede probar con sus propios conjuntos de datos, siempre que estén listos para usarse en cualquiera de las tareas de ML compatibles actualmente con la versión preliminar de la CLI de ML.NET, que son *"Clasificación binaria", "Clasificación multiclase" y "Regresión"*).
+    > Al finalizar este tutorial, también puede probar con sus propios conjuntos de datos, siempre que estén listos para usarse en cualquiera de las tareas de ML compatibles actualmente con la versión preliminar de la CLI de ML.NET, que son *"Clasificación binaria", "Clasificación multiclase" y "Regresión"* ).
 
 ## <a name="run-the-mlnet-auto-train-command"></a>Ejecutar el comando "mlnet auto-train"
 
@@ -85,10 +85,10 @@ Vamos a usar un conjunto de datos existente utilizado para un escenario de "aná
     > mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
-    Este comando ejecuta el **comando `mlnet auto-train`**:
+    Este comando ejecuta el **comando `mlnet auto-train`** :
     - para una **tarea de ML** de tipo **`binary-classification`**
     - usa el **archivo del conjunto de datos `yelp_labelled.txt`** como conjunto de datos de entrenamiento y pruebas (internamente la CLI utilizará la validación cruzada o lo dividirá en dos conjuntos de datos: uno para el entrenamiento y otro para las pruebas)
-    - donde la **columna de objetivo/destino** que desea predecir (comúnmente denominada **"etiqueta"**) es la **columna con el índice 1** (que es la segunda columna, ya que el índice es de base cero)
+    - donde la **columna de objetivo/destino** que desea predecir (comúnmente denominada **"etiqueta"** ) es la **columna con el índice 1** (que es la segunda columna, ya que el índice es de base cero)
     - **no usa un encabezado de archivo** con nombres de columna, puesto que este archivo de conjunto de datos concreto no tiene un encabezado
     - el **tiempo de exploración dirigida** para el experimento es de **10 segundos**
 
@@ -142,12 +142,12 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
 
     ![Solución de VS generada por la CLI](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - La **biblioteca de clases** generada que contiene el modelo serializado de ML y las clases de datos son algo que puede usar directamente en la aplicación del usuario final, incluso haciendo referencia directamente a esa biblioteca de clases (o moviendo el código, como desee).
+    - La **biblioteca de clases** generada que contiene el modelo serializado de ML (archivo .zip) y las clases de datos (modelo de datos) es algo que puede usar directamente en la aplicación del usuario final, incluso haciendo referencia directamente a esa biblioteca de clases (o moviendo el código, como desee).
     - La **aplicación de consola** generada contiene un código de ejecución que debe revisar. Después, normalmente reutiliza el "código de puntuación" (el código que ejecuta el modelo de ML para realizar predicciones) moviendo ese código sencillo (unas cuantas líneas) a la aplicación del usuario final en la que quiere realizar las predicciones. 
 
-1. Abra los archivos de clase **Observation.cs** y **Prediction.cs** en el proyecto de la biblioteca de clases. Verá que estas clases son "clases de datos" o clases POCO que se usan para almacenar datos. Se trata de "código reutilizable", pero resulta útil generarlo si el conjunto de datos tiene decenas o incluso centenares de columnas. 
-    - La clase `SampleObservation` se usa al leer los datos del conjunto de datos. 
-    - La clase `SamplePrediction` o cuando
+1. Abra los archivos de clase **ModelInput.cs** y **ModelOutput.cs** en el proyecto de la biblioteca de clases. Verá que estas clases son "clases de datos" o clases POCO que se usan para almacenar datos. Se trata de "código reutilizable", pero resulta útil generarlo si el conjunto de datos tiene decenas o incluso centenares de columnas. 
+    - La clase `ModelInput` se usa al leer los datos del conjunto de datos. 
+    - La clase `ModelOutput` se utiliza para obtener el resultado de la predicción (datos de predicción).
 
 1. Abra el archivo Program.cs y explore el código. En unas cuantas líneas, podrá ejecutar el modelo y realizar una predicción de ejemplo.
 
@@ -160,13 +160,13 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -174,18 +174,18 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
 
 - La primera línea de código crea simplemente un objeto `MLContext` necesario cada vez que se ejecuta el código de ML.NET. 
 
-- La segunda línea de código está comentada porque no es necesario entrenar el modelo debido a que la herramienta de la CLI ya lo ha entrenado y guardado en el archivo ZIP serializado del modelo. Pero si desea ver *"cómo la CLI entrenó el modelo"*, puede quitar la marca del comentario en esa línea y ejecutar o depurar el código de aprendizaje para ese modelo particular de ML.
+- La segunda línea de código está comentada porque no es necesario entrenar el modelo debido a que la herramienta de la CLI ya lo ha entrenado y guardado en el archivo ZIP serializado del modelo. Pero si desea ver *"cómo la CLI entrenó el modelo"* , puede quitar la marca del comentario en esa línea y ejecutar o depurar el código de aprendizaje para ese modelo particular de ML.
 
 - En la tercera línea de código, cargue el modelo desde el archivo ZIP del modelo serializado con la API `mlContext.Model.Load()` proporcionando la ruta de acceso al archivo ZIP de ese modelo.
 
-- En la cuarta línea de código, cree el objeto `PredictionEngine` con la API `mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()`. Necesitará el objeto `PredictionEngine` cada vez que desee realizar una predicción dirigida a una única muestra de datos (en este caso, un fragmento único de texto para su opinión).
+- En la cuarta línea de código, cree el objeto `PredictionEngine` con la API `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)`. Necesitará el objeto `PredictionEngine` cada vez que desee realizar una predicción dirigida a una única muestra de datos (en este caso, un fragmento único de texto para su opinión).
 
 - La quinta línea de código es donde creará esos *datos de ejemplo únicos* que se usarán para la predicción mediante una llamada a la función `CreateSingleDataSample()`. Dado que la herramienta de la CLI no sabe qué tipo de datos de ejemplo se usarán, dentro de esa función se carga la primera fila del conjunto de datos. Sin embargo, en este caso también puede crear sus propios datos "codificados de forma rígida", en lugar de la implementación actual de la función `CreateSingleDataSample()` mediante la actualización de este código más sencillo implementando esa función:
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ Esos recursos enumerados se explican en los pasos siguientes del tutorial.
 
 Puede usar un "código de puntuación del modelo de ML" similar para ejecutar el modelo en la aplicación del usuario final y realizar predicciones. 
 
-Por ejemplo, podría mover directamente ese código a cualquier aplicación de escritorio de Windows como **WPP** y **WinForms** y ejecutar el modelo de la misma manera que se realizó en la aplicación de consola.
+Por ejemplo, podría mover directamente ese código a cualquier aplicación de escritorio de Windows como **WPF** y **WinForms** y ejecutar el modelo de la misma manera que se realizó en la aplicación de consola.
 
 Sin embargo, la forma de implementar esas líneas de código para ejecutar un modelo de ML debe optimizarse (es decir, copie en caché el archivo .zip del modelo y cárguelo una vez) y debe tener objetos singleton en lugar de crearlos en cada solicitud, especialmente si la aplicación debe ser escalable como una aplicación web o un servicio distribuido, tal como se explica en la sección siguiente.
 
@@ -242,7 +242,7 @@ Dicho "código de modelo de entrenamiento" se genera actualmente en la clase per
 
 Más importante aún, para este escenario en particular (modelo de análisis de sentimiento) también puede comparar dicho código de entrenamiento generado con el código que se explica en el tutorial siguiente:
 
-- Comparación: [Tutorial: Uso de ML.NET en un escenario de clasificación binaria de análisis de sentimiento](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis).
+- Comparación: [Tutorial: Uso de ML.NET en un escenario de clasificación binaria de análisis de sentimiento](sentiment-analysis.md).
 
 Resulta interesante comparar el algoritmo elegido y la configuración de canalización en el tutorial con el código generado por la herramienta de la CLI. Según cuánto tiempo dedique a iterar y buscar modelos mejores, el algoritmo elegido podría ser diferente, junto con su configuración de canalización e hiperparámetros determinados.
 

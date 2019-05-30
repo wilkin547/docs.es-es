@@ -3,12 +3,12 @@ title: Sobre .NET Core
 description: Obtenga información sobre .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296412"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003759"
 ---
 # <a name="about-net-core"></a>Sobre .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "59296412"
 - **Multiplataforma:** se ejecuta en los [sistemas operativos](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS y Linux.
 - **Coherente entre arquitecturas:** el código se ejecuta con el mismo comportamiento en varias arquitecturas, como x64, x86 y ARM.
 - **Herramientas de línea de comandos:**  incluye herramientas de línea de comandos sencillas que se pueden usar para el desarrollo local y en escenarios de integración continua.
-- **Implementación flexible:** se puede incluir en la aplicación o se puede instalar de forma paralela a nivel de usuario o de equipo. Se puede usar con [contenedores de Docker](docker/index.md).
+- **Implementación flexible:** Se pueden incluir en la aplicación o se pueden instalar de forma paralela (instalaciones a nivel de usuario o de sistema). Se puede usar con [contenedores de Docker](docker/index.md).
 - **Compatible:** .NET Core es compatible con .NET Framework, Xamarin y Mono, mediante [.NET Standard](../standard/net-standard.md).
 - **Código abierto:** la plataforma .NET Core es de código abierto, con licencias de MIT y Apache 2. .NET Core es un proyecto de [.NET Foundation](https://dotnetfoundation.org/).
 - **Compatible con Microsoft:** .NET Core incluye compatibilidad con Microsoft, como se indica en [.NET Core Support](https://www.microsoft.com/net/core/support/) (Compatibilidad de .NET Core).
@@ -61,7 +61,7 @@ Estos componentes se distribuyen de las formas siguientes:
 - [Runtime de ASP.NET Core](https://www.microsoft.com/net/download/dotnet-core/2.1): incluye el runtime y las bibliotecas de la plataforma de ASP.NET Core y .NET Core.
 - [SDK de .NET Core](https://www.microsoft.com/net/download/dotnet-core/2.1): incluye las herramientas de CLI de .NET, el runtime de ASP.NET Core y el runtime y la plataforma de .NET Core.
 
-### <a name="open-source"></a>Código abierto
+### <a name="open-source"></a>Código Abierto
 
 [.NET Core](https://github.com/dotnet/core) es código abierto ([licencia MIT](https://github.com/dotnet/core/blob/master/LICENSE.TXT)) y fue presentado a [.NET Foundation](https://dotnetfoundation.org) por Microsoft en 2014. Ahora es uno de los proyectos más activos de .NET Foundation. Todos los individuos y organizaciones pueden adoptarlo libremente, con cualquier fin: personal, académico o comercial. Varias empresas usan .NET Core como parte de aplicaciones, herramientas, nuevas plataformas y servicios de hospedaje. Algunas de estas empresas realizan contribuciones significativas a .NET Core en GitHub y proporcionan una guía sobre la dirección del producto como parte del [Technical Steering Group de .NET Foundation](https://dotnetfoundation.org/blog/tsg-welcome).
 
@@ -102,6 +102,8 @@ Las principales diferencias entre .NET Core y .NET Framework son:
 - **Código abierto**: .NET Core es código abierto, mientras que un [subconjunto de .NET Framework de solo lectura](https://github.com/microsoft/referencesource) es código abierto.
 
 Aunque .NET Core es única y tiene diferencias significativas con .NET Framework y otras implementaciones de .NET, permite compartir código fácilmente entre estas implementaciones mediante técnicas de uso compartido de origen o binarias.
+
+Debido a que .NET Core admite la instalación en paralelo y el entorno de ejecución es completamente independiente de .NET Framework, puede instalarse en máquinas con .NET Framework instalado sin ningún problema.
 
 ### <a name="comparison-with-mono"></a>Comparación con Mono
 

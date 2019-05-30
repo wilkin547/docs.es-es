@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd904ba03fd5c652b1e5e5c7f763dab2b80e517
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636654"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380359"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences (Método)
 
@@ -82,7 +82,7 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Comentarios
 
-Un generador de perfiles para el [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] o versiones posteriores implementa la [ICorProfilerCallback5](icorprofilercallback5-interface.md) interfaz y registra las dependencias especificadas por el `ConditionalWeakTableElementReferences` método. `ICorProfilerCallback5` proporciona el conjunto completo de las dependencias entre los objetos activos representados por `ConditionalWeakTable` entradas. Estas dependencias y el miembro de campo referencias especificadas por el [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) método habilitar un generador de perfiles administrado generar el gráfico de objeto completo de objetos activos.
+Un generador de perfiles para el .NET Framework 4.5 o versiones posteriores implementa la [ICorProfilerCallback5](icorprofilercallback5-interface.md) interfaz y registra las dependencias especificadas por el `ConditionalWeakTableElementReferences` método. `ICorProfilerCallback5` proporciona el conjunto completo de las dependencias entre los objetos activos representados por `ConditionalWeakTable` entradas. Estas dependencias y el miembro de campo referencias especificadas por el [ICorProfilerCallback:: ObjectReferences](icorprofilercallback-objectreferences-method.md) método habilitar un generador de perfiles administrado generar el gráfico de objeto completo de objetos activos.
 
 ## <a name="requirements"></a>Requisitos
 

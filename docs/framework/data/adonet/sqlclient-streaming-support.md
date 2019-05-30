@@ -2,16 +2,16 @@
 title: Compatibilidad de transmisión de datos de SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698452"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379992"
 ---
 # <a name="sqlclient-streaming-support"></a>Compatibilidad de transmisión de datos de SqlClient
 
-Compatibilidad entre SQL Server y una aplicación de streaming (nuevo en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) es compatible con los datos no estructurados en el servidor (archivos de documentos, imágenes y multimedia). Una base de datos de SQL Server puede almacenar objetos binarios grandes (BLOB), pero al recuperar los BLOBS puede usar una gran cantidad de memoria.
+Compatibilidad entre SQL Server y una aplicación (nueva en .NET Framework 4.5) de transmisión por secuencias es compatible con los datos no estructurados en el servidor (archivos de documentos, imágenes y multimedia). Una base de datos de SQL Server puede almacenar objetos binarios grandes (BLOB), pero al recuperar los BLOBS puede usar una gran cantidad de memoria.
 
 Streaming de soporte técnico del servidor de SQL Server simplifica escribir aplicaciones que transmitir datos, sin tener que cargar totalmente los datos en memoria, lo que resulta en menos excepciones de desbordamiento de memoria.
 
@@ -101,9 +101,9 @@ El ejemplo muestra cómo hacer lo siguiente:
 
 - Evitar bloquear un subproceso de interfaz de usuario al proporcionar una manera asincrónica para recuperar archivos grandes.
 
-- Transferir un archivo de texto grande de SQL Server en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transferir un archivo de texto grande de SQL Server en .NET Framework 4.5.
 
-- Transferir un archivo XML grande de SQL Server en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transferir un archivo XML grande de SQL Server en .NET Framework 4.5.
 
 - Recuperar datos de SQL Server.
 
@@ -323,9 +323,9 @@ GO
 
 El ejemplo muestra cómo hacer lo siguiente:
 
-- Transferir un BLOB grande a SQL Server en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transferir un BLOB grande a SQL Server en .NET Framework 4.5.
 
-- Transferir un archivo de texto grande a SQL Server en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+- Transferir un archivo de texto grande a SQL Server en .NET Framework 4.5.
 
 - Usar la nueva característica asincrónica para transferir un BLOB grande.
 

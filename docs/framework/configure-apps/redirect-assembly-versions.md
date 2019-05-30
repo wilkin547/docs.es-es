@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
-ms.openlocfilehash: 68169063c9cf152942ff8a7757a1b3d97886002a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa7c0c22d070ec12cb67252dee7dca02c5160b9e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034572"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380088"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirigir versiones de ensamblado
 
@@ -23,7 +23,7 @@ Puede redirigir referencias de enlace en tiempo de compilación a los ensamblado
 ## <a name="assembly-unification-and-default-binding"></a>Unificación de ensamblados y enlace predeterminado
  Los enlaces de ensamblados de .NET Framework a veces se redirigen a través de un proceso denominado *unificación de ensamblados*. .NET Framework consta de una versión de Common Language Runtime y casi dos docenas de ensamblados de .NET Framework que componen la biblioteca de tipos. El runtime trata estos ensamblados de .NET Framework como una sola unidad. De manera predeterminada, cuando se inicia una aplicación, todas las referencias a tipos en código ejecutado por el runtime se dirigen a ensamblados de .NET Framework que tienen el mismo número de versión que el runtime que se carga en un proceso. Las redirecciones que se producen con este modelo son el comportamiento predeterminado para el motor en tiempo de ejecución.
 
- Por ejemplo, si la aplicación hace referencia a tipos en el espacio de nombres System.XML y se creó con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], contiene referencias estáticas al ensamblado de System.XML que se suministra con la versión 4.5 del runtime. Si quiere redirigir la referencia de enlace para que señale al ensamblado de System.XML que se suministra con .NET Framework 4, puede colocar la información de redirección en el archivo de configuración de la aplicación. Una redirección de enlace en un archivo de configuración para un ensamblado de .NET Framework unificado cancela la unificación para ese ensamblado.
+ Por ejemplo, si las referencias de la aplicación escribe en el espacio de nombres System.XML y se creó mediante el uso de .NET Framework 4.5, contiene referencias estáticas al ensamblado de System.XML que se incluye con la versión 4.5 del runtime. Si quiere redirigir la referencia de enlace para que señale al ensamblado de System.XML que se suministra con .NET Framework 4, puede colocar la información de redirección en el archivo de configuración de la aplicación. Una redirección de enlace en un archivo de configuración para un ensamblado de .NET Framework unificado cancela la unificación para ese ensamblado.
 
  Además, puede que quiera redirigir manualmente el enlace de ensamblados para ensamblados de terceros si hay varias versiones disponibles.
 
@@ -55,7 +55,7 @@ Puede redirigir referencias de enlace en tiempo de compilación a los ensamblado
 
 ### <a name="relying-on-automatic-binding-redirection"></a>Confiar en una redirección de enlace automática
 
-Cuando crea una aplicación de escritorio de Visual Studio, que tiene como destino el [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] o una versión posterior, la aplicación utiliza la redirección de enlace automático. Esto significa que, si dos componentes hacen referencia a versiones diferentes del mismo ensamblado con nombre seguro, el motor de tiempo de ejecución agrega automáticamente una redirección de enlace a la versión más reciente del ensamblado en el archivo de configuración (app.config) de la aplicación de salida. Esta redirección invalida la unificación de ensamblados que, de lo contrario, puede tener lugar. El archivo app.config de origen no se modifica. Por ejemplo, supongamos que la aplicación hace referencia directamente a un componente de .NET Framework fuera de banda pero que usa una biblioteca de terceros destinada una versión anterior del mismo componente. Al compilar la aplicación, se modifica el archivo de configuración de la aplicación de salida para que incluya una redirección de enlace a la versión más reciente del componente. Si crea una aplicación web, recibirá una advertencia de compilación relacionada con el conflicto de enlace que, a su vez, le ofrece la opción de agregar la redirección de enlace necesaria para el archivo de configuración web de origen.
+Al crear una aplicación de escritorio de Visual Studio que tiene como destino .NET Framework 4.5.1 o una versión posterior, la aplicación utiliza la redirección de enlace automático. Esto significa que, si dos componentes hacen referencia a versiones diferentes del mismo ensamblado con nombre seguro, el motor de tiempo de ejecución agrega automáticamente una redirección de enlace a la versión más reciente del ensamblado en el archivo de configuración (app.config) de la aplicación de salida. Esta redirección invalida la unificación de ensamblados que, de lo contrario, puede tener lugar. El archivo app.config de origen no se modifica. Por ejemplo, supongamos que la aplicación hace referencia directamente a un componente de .NET Framework fuera de banda pero que usa una biblioteca de terceros destinada una versión anterior del mismo componente. Al compilar la aplicación, se modifica el archivo de configuración de la aplicación de salida para que incluya una redirección de enlace a la versión más reciente del componente. Si crea una aplicación web, recibirá una advertencia de compilación relacionada con el conflicto de enlace que, a su vez, le ofrece la opción de agregar la redirección de enlace necesaria para el archivo de configuración web de origen.
 
 Si agrega manualmente las redirecciones de enlace al archivo app.config de origen, en tiempo de compilación, Visual Studio intenta unificar los ensamblados en función de las redirecciones de enlace que se ha agregado. Por ejemplo, supongamos que inserta la siguiente redirección de enlace para un ensamblado:
 

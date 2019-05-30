@@ -2,20 +2,20 @@
 title: Programación asincrónica
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2698ffabb1f4d7c25f8d889c549c27b668647d62
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584496"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380069"
 ---
 # <a name="asynchronous-programming"></a>Programación asincrónica
 
-En este tema explica la compatibilidad con programación asincrónica en el proveedor de datos de .NET Framework para SQL Server (SqlClient) incluidas las mejoras realizadas para admitir la funcionalidad de programación asincrónica que se introdujo en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+En este tema explica la compatibilidad con programación asincrónica en el proveedor de datos de .NET Framework para SQL Server (SqlClient) incluidas las mejoras realizadas para admitir la funcionalidad de programación asincrónica que se introdujo en .NET Framework 4.5.
 
 ## <a name="legacy-asynchronous-programming"></a>Programación asincrónica heredada
 
-Antes de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], la programación asincrónica con SqlClient se realizaba con los siguientes métodos y la propiedad de conexión `Asynchronous Processing=true`:
+Antes de .NET Framework 4.5, la programación asincrónica con SqlClient se realizaba con los siguientes métodos y `Asynchronous Processing=true` propiedad de conexión:
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,16 +23,16 @@ Antes de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], la programaci�
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-Esta funcionalidad permanece en SqlClient en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Esta funcionalidad permanece en SqlClient en .NET Framework 4.5.
 
 > [!TIP]
-> A partir de la [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], ya no necesitan estos métodos heredados `Asynchronous Processing=true` en la cadena de conexión.
+> A partir de .NET Framework 4.5, ya no necesitan estos métodos heredados `Asynchronous Processing=true` en la cadena de conexión.
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Características de programación asincrónica agregadas en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>Características de programación asincrónica agregadas en .NET Framework 4.5
 
 La nueva característica de programación asincrónica proporciona una técnica sencilla para crear código asincrónico.
 
-Para obtener más información sobre la característica de programación asincrónica que se presentó en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], vea:
+Para obtener más información acerca de la característica de programación asincrónica que se introdujo en .NET Framework 4.5, vea:
 
 - [Programación asincrónica en C#](../../../csharp/async.md)
 
@@ -53,7 +53,7 @@ El modificador `async` especifica que un método es asincrónico. Al llamar a un
 
 Al llamar a un método `async` no se asigna ningún subproceso adicional. Puede usar el subproceso existente de finalización de E/S momentáneamente al final.
 
-Los métodos siguientes se agregaron en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] para admitir la programación asincrónica:
+Se agregaron los siguientes métodos de .NET Framework 4.5 para admitir la programación asincrónica:
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674316"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300671"
 ---
 # <a name="remove-element-for-configsections"></a>\<Quitar > (elemento) para \<configSections >
 
 Quita una sección predefinida o un grupo de sección.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,7 +40,7 @@ Quita una sección predefinida o un grupo de sección.
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene las declaraciones de espacio de nombres y la sección de configuración. |
+| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene las declaraciones de espacio de nombres y la sección de configuración. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
@@ -54,7 +54,7 @@ Puede usar el  **\<quitar >** elemento para quitar las secciones y grupos de la 
 
 El ejemplo siguiente muestra cómo usar el  **\<quitar >** elemento en un archivo de configuración de aplicación para quitar una sección definida anteriormente en el archivo de configuración del equipo.
 
-El siguiente código de archivo de configuración del equipo declara la sección  **\<sampleSection >**:
+El siguiente código de archivo de configuración del equipo declara la sección  **\<sampleSection >** :
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ El siguiente código de archivo de configuración del equipo declara la sección
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación se quita la  **\<sampleSection >** sección. Después de la eliminación, la aplicación no puede recuperar la configuración de  **\<sampleSection >**.
+El siguiente código de archivo de configuración de la aplicación se quita la  **\<sampleSection >** sección. Después de la eliminación, la aplicación no puede recuperar la configuración de  **\<sampleSection >** .
 
 ```xml
 <!-- Application configuration file -->

@@ -2,15 +2,15 @@
 title: Expresiones de C#
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7e29c4cacf97c729a07fa8d234e7c12006418027
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882083"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378412"
 ---
 # <a name="c-expressions"></a>Expresiones de C#
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], expresiones de C# se admiten en Windows Workflow Foundation (WF). Nuevos proyectos de flujo de trabajo de C# crean en Visual Studio 2012 que tienen como destino [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usar expresiones de C# y proyectos de flujo de trabajo de Visual Basic usan expresiones de Visual Basic. Los proyectos de flujo de trabajo existentes de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] que usan expresiones de Visual Basic se pueden migrar a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] independientemente del lenguaje del proyecto y son compatibles. En este tema se proporciona información general sobre las expresiones de C# en [!INCLUDE[wf1](../../../includes/wf1-md.md)].
+A partir de .NET Framework 4.5, C# las expresiones se admiten en Windows Workflow Foundation (WF). Nuevo C# proyectos de flujo de trabajo creados en Visual Studio 2012 que tienen como destino .NET Framework 4.5 uso C# expresiones y los proyectos de flujo de trabajo de Visual Basic usan expresiones de Visual Basic. Los proyectos de flujo de trabajo existentes de [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] que usan expresiones de Visual Basic se pueden migrar a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] independientemente del lenguaje del proyecto y son compatibles. En este tema se proporciona información general sobre las expresiones de C# en [!INCLUDE[wf1](../../../includes/wf1-md.md)].
 
 ## <a name="using-c-expressions-in-workflows"></a>Uso de expresiones de C# en los flujos de trabajo
 
@@ -29,7 +29,7 @@ A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], expresiones de
 - [Uso de expresiones de C# en servicios de flujo de trabajo XAMLX](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> Usar expresiones de C# en el Diseñador de flujo de trabajo
- A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], expresiones de C# se admiten en Windows Workflow Foundation (WF). Proyectos de flujo de trabajo de C# creados en Visual Studio 2012 que tienen como destino [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] utilice expresiones de C#, mientras que los proyectos de flujo de trabajo de Visual Basic usan expresiones de Visual Basic. Para especificar la expresión de C# deseada, escríbala en el cuadro con la etiqueta **escriba una expresión de C#**. Esta etiqueta se muestra en la ventana de propiedades cuando se selecciona la actividad en el diseñador o en la actividad en el diseñador de flujo de trabajo. En el ejemplo siguiente, se incluyen dos actividades `WriteLine` en un `Sequence` dentro de `NoPersistScope`.
+ A partir de .NET Framework 4.5, C# las expresiones se admiten en Windows Workflow Foundation (WF). C#proyectos de flujo de trabajo creados en Visual Studio 2012 que tienen como destino .NET Framework 4.5 uso C# expresiones, mientras que los proyectos de flujo de trabajo de Visual Basic usan expresiones de Visual Basic. Para especificar la expresión de C# deseada, escríbala en el cuadro con la etiqueta **escriba una expresión de C#** . Esta etiqueta se muestra en la ventana de propiedades cuando se selecciona la actividad en el diseñador o en la actividad en el diseñador de flujo de trabajo. En el ejemplo siguiente, se incluyen dos actividades `WriteLine` en un `Sequence` dentro de `NoPersistScope`.
 
  ![Captura de pantalla que muestra una actividad de secuencia creadas automáticamente.](./media/csharp-expressions/auto-surround-sequence-activity.png)
 

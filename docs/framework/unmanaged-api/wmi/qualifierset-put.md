@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bef9ab728af251b043e29af4cee9e5cb3f405d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636547"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377868"
 ---
 # <a name="qualifiersetput-function"></a>Función QualifierSet_Put
 
@@ -72,7 +72,7 @@ Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* 
 
 |Constante  |Valor  |Descripción  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Se produjo un intento no válido para especificar el **clave** calificador en una propiedad que no puede ser una clave. Las claves se especifican om c; la definición de clase para un objeto y no se pueden modificar por instancia. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Se produjo un intento no válido para especificar el **clave** calificador en una propiedad que no puede ser una clave. Las claves se especifican en la definición de clase para un objeto y no se pueden modificar por instancia. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | El `pVal` parámetro no es de un tipo de calificador válido. |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | No es posible llamar a la `QualifierSet_Put` invalida el método en el calificador porque el objeto propietario no permite. |

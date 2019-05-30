@@ -2,20 +2,20 @@
 title: Novedades de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877429"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379982"
 ---
 # <a name="whats-new-in-adonet"></a>Novedades de ADO.NET
 
-Las siguientes características son nuevas en ADO.NET en el [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].
+Las siguientes características son nuevas en ADO.NET en .NET Framework 4.5.
 
 ## <a name="sqlclient-data-provider"></a>Proveedor de datos SqlClient
 
-Las siguientes características son nuevas en el proveedor de datos de .NET Framework para SQL Server en [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+Las siguientes características son nuevas en el proveedor de datos de .NET Framework para SQL Server en .NET Framework 4.5:
 
 - Las palabras clave de cadena de conexión ConnectRetryCount y ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) permiten controlar la característica de resistencia de conexión inactiva.
 
@@ -51,7 +51,7 @@ Las siguientes características son nuevas en el proveedor de datos de .NET Fram
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] agrega las API que permiten nuevos escenarios al trabajar con Entity Framework 5.0. Para obtener más información sobre las mejoras y características que se agregaron a Entity Framework 5.0, consulte los temas siguientes: [¿Qué novedades](https://go.microsoft.com/fwlink/?LinkID=251106) y [versiones de Entity Framework y control de versiones](https://go.microsoft.com/fwlink/?LinkId=234899).
+.NET Framework 4.5 agrega las API que permiten nuevos escenarios cuando se trabaja con Entity Framework 5.0. Para obtener más información sobre las mejoras y características que se agregaron a Entity Framework 5.0, consulte los temas siguientes: [¿Qué novedades](https://go.microsoft.com/fwlink/?LinkID=251106) y [versiones de Entity Framework y control de versiones](https://go.microsoft.com/fwlink/?LinkId=234899).
 
 ## <a name="see-also"></a>Vea también
 

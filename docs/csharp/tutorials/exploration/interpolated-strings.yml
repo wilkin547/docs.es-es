@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 5490176d91a6ed900471e33af6adce1fa3e62d8f
-  ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+  ms.openlocfilehash: 70d63f460ad2e67fe60cd8d5130e8ff22889d8be
+  ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/04/2019
-  ms.locfileid: "58921393"
+  ms.lasthandoff: 05/24/2019
+  ms.locfileid: "66195948"
 items:
 - durationInMinutes: 2
   content: >
@@ -34,16 +34,16 @@ items:
     ```
 
 
-    Al ejecutar el código, **Salida** muestra una cadena que incluye su nombre en el saludo. El argumento de cadena de la llamada al método <xref:System.Console.WriteLine%2A> es una *cadena interpolada*. Es un tipo de plantilla que permite construir una sola cadena (denominada *cadena de resultado*) a partir de una cadena que incluye código incrustado. Las cadenas interpoladas son especialmente útiles para insertar valores en una cadena o para concatenar (unir entre sí) varias cadenas.
+    Al ejecutar el código, **Salida** muestra una cadena que incluye su nombre en el saludo. El argumento de cadena de la llamada al método <xref:System.Console.WriteLine%2A> es una *expresión de cadena interpolada*. Es un tipo de plantilla que permite construir una sola cadena (denominada *cadena de resultado*) a partir de una cadena que incluye código incrustado. Las expresiones de cadena interpoladas son especialmente útiles para insertar valores en una cadena o para concatenar (unir entre sí) varias cadenas.
 
 
-    El ejemplo anterior contiene los dos elementos que debe tener toda cadena interpolada:
+    El ejemplo anterior contiene los dos elementos que debe tener toda expresión de cadena interpolada:
 
 
     - Un literal de cadena que empieza con el carácter `$` antes del carácter de comillas de apertura. No puede haber ningún espacio entre el símbolo `$` y el carácter de comillas. (Si quiere ver qué ocurre si incluye uno, inserte un espacio después del carácter `$` en la ventana interactiva y ejecute el código actualizado. El compilador de C# muestra el error: "Carácter no esperado '$'").
 
 
-    - Una o varias *expresiones interpoladas*. Una expresión interpolada se indica mediante una llave de apertura y de cierre (`{` y `}`). Puede colocar cualquier expresión de C# que devuelva un valor (incluido `null`) dentro de las llaves.
+    - Una o varias *expresiones de interpolación*. Una expresión de interpolación se indica mediante una llave de apertura y de cierre (`{` y `}`). Puede colocar cualquier expresión de C# que devuelva un valor (incluido `null`) dentro de las llaves.
 
 
     Probemos algunos ejemplos más de interpolación de cadenas con otros tipos de datos.
@@ -54,58 +54,8 @@ items:
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
 - title: Incluir diferentes tipos de datos
   durationInMinutes: 5
-  content: >
-    En el paso anterior, se ha usado una interpolación de cadena para insertar una cadena dentro de otra. Pero el resultado de una expresión interpolada puede ser cualquier tipo de datos. Vamos a incluir valores de distintos tipos de datos en una cadena interpolada.
-
-
-    En el ejemplo siguiente, en primer lugar se define un tipo de datos de [clase](../../programming-guide/classes-and-structs/classes.md) `Vegetable` que tiene una [propiedad ](../../properties.md) `Name` y un [método](../../methods.md) `ToString` que [reemplaza](../../language-reference/keywords/override.md) el comportamiento del método <xref:System.Object.ToString?displayProperty=nameWithType>. El [`public`modificador de acceso](../../language-reference/keywords/public.md) pone ese método a disposición de cualquier código de cliente para obtener la representación de la cadena de una instancia de `Vegetable`. En el ejemplo, el método `Vegetable.ToString` devuelve el valor de la propiedad `Name` que se inicializa en el [constructor](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`: `Vegetable(string name) => Name = name;`. Luego se crea una instancia de la clase `Vegetable` denominada `item` al usar la [palabra clave `new`](../../language-reference/keywords/new-operator.md) y al proporcionar un parámetro de nombre para el constructor `Vegetable`. Por último, se incluye esa instancia en una cadena interpolada que también contiene un valor <xref:System.DateTime>, un valor <xref:System.Decimal> y un valor de [enumeración](../../programming-guide/enumeration-types.md) `Unit`. Ejecute el código siguiente en la ventana interactiva:
-
-
-    ```csharp
-
-    public class Vegetable
-
-    {
-       public Vegetable(string name) => Name = name;
-
-       public string Name { get; }
-
-       public override string ToString() => Name;
-    }
-
-
-    public enum Unit { item, kilogram, gram, dozen };
-
-
-    var item = new Vegetable("eggplant");
-
-    var date = DateTime.Now;
-
-    var price = 1.99m;
-
-    var unit = Unit.item;
-
-    Console.WriteLine($"On {date}, the price of {item} was {price} per {unit}.");
-
-    ```
-
-
-    Observe que la expresión interpolada `item` de la cadena interpolada se resuelve en el texto "eggplant" en la cadena de resultado. Esto se debe a que, cuando el tipo del resultado de la expresión no es una cadena, el resultado se resuelve en una cadena de la siguiente manera:
-
-
-    - Si la expresión interpolada se evalúa en `null`, se usa una cadena vacía ("", o <xref:System.String.Empty?displayProperty=nameWithType>).
-
-
-    - Si la expresión interpolada no se evalúa en `null`, se suele llamar al método `ToString` del tipo de resultado. Puede probar esto mediante la actualización de la implementación del método `Vegetable.ToString`. Podría incluso no implementar el método `ToString`, puesto que cada tipo de datos tiene alguna implementación de este método. Para probar esto, comente la definición del método `Vegetable.ToString` del ejemplo (para ello, coloque delante un símbolo de comentario `//`). En el resultado, la cadena "eggplant" se reemplaza por el nombre de tipo completo (el espacio de nombres definido por REPL de C# junto con el nombre de tipo), que es el comportamiento predeterminado del método <xref:System.Object.ToString?displayProperty=nameWithType>. El comportamiento predeterminado del método `ToString` para un valor de enumeración es devolver la representación de cadena del valor.
-
-
-    En el resultado de este ejemplo, la fecha es demasiado precisa (el precio de "eggplant" no varía por segundos) y el valor del precio no indica una unidad de moneda. En el paso siguiente se aprende a corregir esos problemas al controlar el formato de representaciones de cadena de los resultados de la expresión.
-
-
-    > [!NOTE]
-
-    > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
-- title: Controlar el formato de expresiones interpoladas
+  content: "En el paso anterior, se ha usado una interpolación de cadena para insertar una cadena dentro de otra. Sin embargo, cada expresión de interpolación que forma parte de una expresión de cadena interpolada puede ser de cualquier tipo de datos. Vamos a incluir valores de distintas expresiones de tipos de datos en una cadena interpolada.\n\nEn el siguiente ejemplo, primero definimos una [tupla](../../tuples.md) que tiene `Name`, `Price` y `perPackage` miembros. Ejecute el código siguiente en la ventana interactiva:\n\n```csharp\nvar item = (Name: \"eggplant\", Price: 1.99m, perPackage: 3);\nvar date = DateTime.Now;\nConsole.WriteLine($\"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.\");\n```\n\nObserve que la expresión de interpolación `item.Price` de la cadena interpolada se resuelve en el texto \"1.99\" en la cadena de resultado. Esto se debe a que, cuando el tipo del resultado de la expresión no es una cadena, el resultado se resuelve en una cadena de la siguiente manera:\n\n- Si la expresión de interpolación se evalúa en `null`, se usa una cadena vacía (\"\", o <xref:System.String.Empty?displayProperty=nameWithType>).\n\n- Si la expresión de interpolación no se evalúa en `null`, se suele llamar al método `ToString` de la expresión de resultado. \n\nEn el resultado de este ejemplo, la fecha es demasiado precisa (el precio de \"eggplant\" no varía por segundos) y el valor del precio no indica una unidad de moneda. En el paso siguiente se aprende a corregir esos problemas al controlar el formato de representaciones de cadena de los resultados de la expresión.\n\n> [!NOTE]\n> Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Control del formato de las expresiones de interpolación
   durationInMinutes: 5
   content: >
     En el paso anterior se han insertado en la cadena de resultado dos cadenas con formato incorrecto. Una era un valor de fecha y hora en la que solo la fecha era apropiada. La segunda era un precio que no indicaba su unidad de moneda. Ambos problemas se podían solucionar fácilmente. La interpolación de cadena permite especificar *cadenas de formato* que controlan el formato de tipos específicos. Modifique la llamada a `Console.WriteLine` del ejemplo anterior para incluir las cadenas de formato para las expresiones de fecha y precio, como se muestra en la siguiente línea:
@@ -113,12 +63,12 @@ items:
 
     ```csharp
 
-    Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
+    Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price} per {item.perPackage} items");
 
     ```
 
 
-    Especifique una cadena de formato al colocar después de la expresión interpolada dos puntos (":") y la cadena de formato. "d" es una [cadena de formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa el formato de fecha corta. "C2" es una [cadena de formato numérica estándar](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa un número como un valor de moneda con dos dígitos después del separador decimal.
+    Especifique una cadena de formato al colocar dos puntos (":") después de la expresión de interpolación y la cadena de formato. "d" es una [cadena de formato de fecha y hora estándar](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier) que representa el formato de fecha corta. "C2" es una [cadena de formato numérica estándar](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier) que representa un número como un valor de moneda con dos dígitos después del separador decimal.
 
 
     Una serie de tipos de las bibliotecas de .NET admiten un conjunto predefinido de cadenas de formato. Esto incluye todos los tipos numéricos y los tipos de fecha y hora. Para obtener una lista completa de los tipos que admiten cadenas de formato, vea [Dar formato a cadenas y tipos de biblioteca de clase .NET](../../../standard/base-types/formatting-types.md#stringRef) en el artículo [Aplicar formato a tipos de .NET](../../../standard/base-types/formatting-types.md).
@@ -133,10 +83,10 @@ items:
     > [!NOTE]
 
     > Esta experiencia de codificación en línea se encuentra disponible actualmente en versión preliminar. Si tiene problemas, notifíquelos [en el repositorio de dotnet/try](https://github.com/dotnet/try/issues).
-- title: Controlar el ancho de campo y la alineación de expresiones interpoladas
+- title: Control el ancho de campo y la alineación de expresiones de interpolación
   durationInMinutes: 6
   content: >
-    Normalmente, cuando el resultado de una expresión interpolada tiene formato de cadena, esa cadena se incluye en una cadena de resultado sin espacios iniciales ni finales. Especialmente cuando se trabaja con un conjunto de datos, el poder controlar el ancho de un campo y la alineación del texto ayuda a generar una salida más legible. Para ver esto, ejecute el siguiente código:
+    Normalmente, cuando el resultado de una expresión de cadena interpolada tiene formato de cadena, esa cadena se incluye en una cadena de resultado sin espacios iniciales ni finales. Especialmente cuando se trabaja con un conjunto de datos, poder controlar el ancho de un campo y la alineación del texto ayuda a generar una salida más legible. Para ver esto, ejecute el siguiente código:
 
 
     ```csharp
@@ -155,13 +105,13 @@ items:
     ```
 
 
-    Los nombres de elemento están alineados a la izquierda y sus cantidades están alineadas a la derecha. Para especificar la alineación, se agrega una coma (",") después de una expresión interpolada y se designa el ancho de campo *mínimo*. Si el valor especificado es un número positivo, el campo se alinea a la derecha. Si es un número negativo, el campo se alinea a la izquierda.
+    Los nombres de elemento están alineados a la izquierda y sus cantidades están alineadas a la derecha. Para especificar la alineación, se agrega una coma (",") después de una expresión de interpolación y se designa el ancho de campo *mínimo*. Si el valor especificado es un número positivo, el campo se alinea a la derecha. Si es un número negativo, el campo se alinea a la izquierda.
 
 
     Pruebe a quitar los signos negativos del código `{"Item",-25}` e `{item.Key,-25}` y vuelva a ejecutar el ejemplo. En esta ocasión, los nombres de elemento se alinean a la derecha.
 
 
-    Puede combinar un especificador de alineación y una cadena de formato en una única expresión interpolada. Para ello, especifique primero la alineación, seguida de dos puntos y la cadena de formato. Pruebe el siguiente código que muestra tres cadenas con formato con anchos de campo definidos:
+    Puede combinar un especificador de alineación y una cadena de formato en una única expresión de interpolación. Para ello, especifique primero la alineación, seguida de dos puntos y la cadena de formato. Pruebe el siguiente código que muestra tres cadenas con formato con anchos de campo definidos:
 
 
     ```csharp

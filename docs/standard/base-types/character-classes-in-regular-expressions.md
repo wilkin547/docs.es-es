@@ -15,15 +15,16 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634710"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053002"
 ---
-# <a name="character-classes-in-regular-expressions"></a>Clases de carácter en expresiones regulares
-<a name="Top"></a> Una clase de caracteres define un conjunto de caracteres, cualquiera de los cuales puede estar en una cadena de entrada para que se produzca una coincidencia. El lenguaje de expresiones regulares de .NET admite las siguientes clases de caracteres:  
+# <a name="character-classes-in-regular-expressions"></a>Clases de caracteres en expresiones regulares
+
+Una clase de caracteres define un conjunto de caracteres, cualquiera de los cuales puede estar en una cadena de entrada para que se produzca una coincidencia. El lenguaje de expresiones regulares de .NET admite las siguientes clases de caracteres:  
   
 - Grupos de caracteres positivos. Un carácter de la cadena de entrada debe coincidir con uno de los caracteres del conjunto especificado. Para obtener más información, consulte [Grupo de caracteres positivos](#PositiveGroup).  
   
@@ -107,15 +108,13 @@ ms.locfileid: "64634710"
 |`\w*`|Buscar una coincidencia con cero o más caracteres alfabéticos.|  
 |`\b`|Coincide con un límite de palabras.|  
   
- [Volver al principio](#Top)  
-  
 <a name="NegativeGroup"></a>   
 ## <a name="negative-character-group-"></a>Grupo de caracteres negativos: [^]  
  Un grupo de caracteres negativos especifica una lista de caracteres que no deben aparecer en una cadena de entrada para que se produzca una coincidencia. Los caracteres de la lista se pueden especificar individualmente, como un intervalo o de ambas formas.  
   
  La sintaxis para especificar la lista de caracteres individuales es la siguiente:  
   
- [*^grupo_caracteres*]  
+ [ *^grupo_caracteres*]  
   
  donde *grupo_caracteres* es una lista de cada uno de los caracteres que no pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o clases de caracteres.  
   
@@ -154,8 +153,6 @@ ms.locfileid: "64634710"
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
 |`\b`|Finaliza en un límite de palabras.|  
   
- [Volver al principio](#Top)  
-  
 <a name="AnyCharacter"></a>   
 ## <a name="any-character-"></a>Cualquier carácter: .  
  El carácter de punto (.) coincide con cualquier carácter excepto con `\n` (carácter de nueva línea, \u000A), con los dos requisitos siguientes:  
@@ -177,8 +174,6 @@ ms.locfileid: "64634710"
   
 > [!NOTE]
 >  Dado que coincide con cualquier carácter, el elemento del lenguaje `.` se utiliza a menudo con un cuantificador no expansivo si un patrón de expresión regular intenta coincidir varias veces con cualquier carácter. Para obtener más información, consulte [Cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md).  
-  
- [Volver al principio](#Top)  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>Categoría Unicode o bloque Unicode: \p{}  
@@ -209,8 +204,6 @@ ms.locfileid: "64634710"
 |`(\s)?`|Busca coincidencias con cero o un carácter de espacio en blanco.|  
 |`(\p{IsBasicLatin}+(\s)?)+`|Coincide una o varias veces con el patrón de uno varios caracteres latinos básicos seguidos de cero o un carácter de espacio en blanco.|  
   
- [Volver al principio](#Top)  
-  
 <a name="NegativeCategoryOrBlock"></a>   
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>Categoría Unicode o bloque Unicode negativo: \P{}  
  El estándar Unicode asigna una categoría general a cada carácter. Por ejemplo, un carácter concreto puede ser una letra mayúscula (representada por la categoría `Lu`), un dígito decimal (categoría `Nd`), un símbolo matemático (categoría `Sm`) o un separador de párrafos (categoría `Zl`). Determinados juegos de caracteres del estándar Unicode también ocupan un intervalo o bloque específico de puntos de código consecutivos. Por ejemplo, el juego de caracteres latinos básico se encuentra desde \u0000 hasta \u007F, mientras que el juego de caracteres árabes se encuentra desde \u0600 hasta \u06FF.  
@@ -227,8 +220,6 @@ ms.locfileid: "64634710"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
  El patrón de expresión regular `(\P{Sc})+` coincide con uno o varios caracteres que no son símbolos de divisa; quita eficazmente cualquier símbolo de divisa de la cadena de resultado.  
-  
- [Volver al principio](#Top)  
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>Carácter de palabra: \w  
@@ -260,10 +251,8 @@ ms.locfileid: "64634710"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
   
- [Volver al principio](#Top)  
-  
 <a name="NonWordCharacter"></a>   
-## <a name="non-word-character-w"></a>Carácter que no se usa en las palabras: \W  
+## <a name="non-word-character-w"></a>Carácter que no se usa para formar palabras: \W  
  `\W` coincide con cualquier carácter que no sea de palabra. El elemento del lenguaje \W es equivalente a la clase de caracteres siguiente:  
   
 ```  
@@ -301,11 +290,9 @@ ms.locfileid: "64634710"
   
  Dado que el objeto <xref:System.Text.RegularExpressions.Group> del segundo grupo de captura contiene solo un carácter que no se usa para formar palabras, el ejemplo recupera todos los caracteres que no se usan para formar palabras capturados del objeto <xref:System.Text.RegularExpressions.CaptureCollection> que devuelve la propiedad <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
- [Volver al principio](#Top)  
-  
 <a name="WhitespaceCharacter"></a>   
-## <a name="white-space-character-s"></a>Carácter de espacio en blanco: \s  
- `\s` coincide con cualquier carácter que sea un espacio en blanco. Equivale a las secuencias de escape y las categorías Unicode que figuran en la tabla siguiente.  
+## <a name="whitespace-character-s"></a>Carácter de espacio en blanco: \s  
+ `\s` coincide con cualquier carácter de espacio en blanco. Equivale a las secuencias de escape y las categorías Unicode que figuran en la tabla siguiente.  
   
 |Categoría|Descripción|  
 |--------------|-----------------|  
@@ -332,10 +319,8 @@ ms.locfileid: "64634710"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [Volver al principio](#Top)  
-  
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-white-space-character-s"></a>Carácter que no sea un espacio en blanco: \S  
+## <a name="non-whitespace-character-s"></a>Carácter que no sea un espacio en blanco: \S  
  `\S` coincide con cualquier carácter que no sea un espacio en blanco. Equivale al patrón de expresión regular `[^\f\n\r\t\v\x85\p{Z}]` o es lo contrario del patrón de expresión regular equivalente a `\s`, que coincide con los caracteres de espacio en blanco. Para más información, consulte [Carácter de espacio en blanco: \s](#WhitespaceCharacter).  
   
  Si se especifica un comportamiento conforme a ECMAScript, `\S` es equivalente a `[^ \f\n\r\t\v]`. Para obtener información sobre las expresiones regulares ECMAScript, consulte la sección "Comportamiento de la búsqueda de coincidencias de ECMAScript" en [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
@@ -350,8 +335,6 @@ ms.locfileid: "64634710"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
-  
- [Volver al principio](#Top)  
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>Carácter de dígito decimal: \d  
@@ -375,8 +358,6 @@ ms.locfileid: "64634710"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [Volver al principio](#Top)  
-  
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>Carácter que no sea un dígito: \D  
  `\D` coincide con cualquier carácter que no sea un dígito. Equivale al patrón de expresión regular `\P{Nd}`.  
@@ -395,8 +376,6 @@ ms.locfileid: "64634710"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
-  
- [Volver al principio](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Categorías generales Unicode compatibles  
@@ -447,11 +426,10 @@ ms.locfileid: "64634710"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [Volver al principio](#Top)  
-  
 <a name="SupportedNamedBlocks"></a>   
-## <a name="supported-named-blocks"></a>Bloques con nombre compatibles  
- .NET proporciona los bloques con nombre que se muestran en la tabla siguiente. El conjunto de bloques con nombre compatibles está basado en Unicode 4.0 y Perl 5.6.  
+## <a name="supported-named-blocks"></a>Bloques con nombre compatibles
+
+.NET proporciona los bloques con nombre que se muestran en la tabla siguiente. El conjunto de bloques con nombre compatibles está basado en Unicode 4.0 y Perl 5.6. Para una expresión regular que utiliza bloques con nombre, consulte la sección [Categoría Unicode o bloque Unicode: \\p{}](#unicode-category-or-unicode-block-p).  
   
 |Intervalo de puntos de código|Nombre del bloque|  
 |----------------------|----------------|  
@@ -560,8 +538,6 @@ ms.locfileid: "64634710"
 |FE70 - FEFF|`IsArabicPresentationForms-B`|  
 |FF00 - FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 - FFFF|`IsSpecials`|  
-  
- [Volver al principio](#Top)  
   
 <a name="CharacterClassSubtraction"></a>   
 ## <a name="character-class-subtraction-basegroup---excludedgroup"></a>Sustracción de clases de caracteres: [grupo_base - [grupo_excluido]]  

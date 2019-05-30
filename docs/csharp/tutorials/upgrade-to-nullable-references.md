@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427297"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195844"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migración del código existente con tipos de referencia que admiten valores NULL
 
@@ -49,8 +49,11 @@ La actualización de la versión de idioma selecciona C# 8.0, pero no habilita l
 Un buen paso es activar el contexto de anotación que admite valores NULL y ver cuántas advertencias se generan. Agregue el siguiente elemento a ambos archivos csproj de la solución, directamente bajo el elemento `LangVersion`:
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> El elemento `Nullable` se denominaba anteriormente `NullableContextOptions`. El cambio de nombre incluido con Visual Studio 2019, 16.2 p1. .NET Core SDK 3.0.100-preview5-011568 no tiene este cambio. Si usa la CLI de .NET Core, deberá usar `NullableContextOptions` hasta que esté disponible la siguiente versión preliminar.
 
 Realice una compilación de prueba y observe la lista de advertencias. En esta pequeña aplicación, el compilador genera cinco advertencias, por lo que es probable que dejara el contexto de anotación que admite valores NULL habilitado y empezara a corregir las advertencias para todo el proyecto.
 
@@ -58,7 +61,7 @@ Esa estrategia solo funciona para los proyectos más pequeños. Para los proyect
 
 ## <a name="warnings-help-discover-original-design-intent"></a>Las advertencias ayudan a detectar la intención del diseño original
 
-Hay dos clases que generan varias advertencias. Empiece con la clase `NewsStoryViewModel`. Quite el elemento `NullableContextOptions` de ambos archivos csproj de forma que pueda limitar el ámbito de las advertencias para las secciones de código con las que está trabajando. Abra el archivo *NewsStoryViewModel.cs* y agregue las siguientes directivas para habilitar el contexto de anotación que admite valores NULL para `NewsStoryViewModel` y restáurelo siguiendo esa definición de clase:
+Hay dos clases que generan varias advertencias. Empiece con la clase `NewsStoryViewModel`. Quite el elemento `Nullable` de ambos archivos csproj de forma que pueda limitar el ámbito de las advertencias para las secciones de código con las que está trabajando. Abra el archivo *NewsStoryViewModel.cs* y agregue las siguientes directivas para habilitar el contexto de anotación que admite valores NULL para `NewsStoryViewModel` y restáurelo siguiendo esa definición de clase:
 
 ```csharp
 #nullable enable

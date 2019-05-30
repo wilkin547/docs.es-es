@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 85c1d398c1aabbb73d5ae34186775e2c63666cfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a868632d6868e6a82c4fa135444279b8ef4dc7af
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309451"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301414"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Procedimiento para agregar o quitar controles de una colección en tiempo de ejecución
 Tareas comunes de desarrollo de aplicaciones son agregar controles a y quitar controles de un control contenedor en los formularios (como el <xref:System.Windows.Forms.Panel> o <xref:System.Windows.Forms.GroupBox> control, o incluso el propio formulario). En tiempo de diseño, los controles se pueden arrastrar directamente al panel o grupo de cuadro. En tiempo de ejecución, estos controles mantienen una colección `Controls`, que realiza un seguimiento de los controles que se colocan en ellos.  
@@ -66,7 +66,7 @@ Tareas comunes de desarrollo de aplicaciones son agregar controles a y quitar co
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>Para quitar controles de una colección mediante programación  
   
-1. Quite el controlador de eventos del evento. En Visual Basic, utilice el [RemoveHandler (instrucción)](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) palabra clave; en Visual C#, utilice el [= operador (C# referencia)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md).  
+1. Quite el controlador de eventos del evento. En Visual Basic, utilice el [RemoveHandler (instrucción)](~/docs/visual-basic/language-reference/statements/removehandler-statement.md) palabra clave; en C#, utilice el [= (operador)](~/docs/csharp/language-reference/operators/subtraction-operator.md).  
   
 2. Utilice el método `Remove` para eliminar el control deseado de la colección `Controls` del panel.  
   

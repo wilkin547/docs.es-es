@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416a00eb6966a9c5f83427182d9a12c4bbb20810
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592651"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377886"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > elemento
 Especifica si las excepciones de tareas no controladas deben finalizar un proceso en ejecución.  
@@ -63,9 +63,9 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
   
  En el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], de manera predeterminada, si un <xref:System.Threading.Tasks.Task> que tiene un inadvertido excepción es la recolección, finalizador inicia una excepción y termina el proceso. La terminación del proceso viene determinada por el tiempo de finalización y de recolección de elementos.  
   
- Para facilitar a los desarrolladores escribir código asincrónico basado en tareas, el [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] cambia este comportamiento predeterminado para las excepciones no observadas. Excepciones inadvertidas provocan que el <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> evento, pero de forma predeterminada, el proceso no finaliza. En su lugar, se omite la excepción después de que se genera el evento, independientemente de si un controlador de eventos observa la excepción.  
+ Para facilitar a los desarrolladores escribir código asincrónico basado en tareas, .NET Framework 4.5 cambia este comportamiento predeterminado para las excepciones no observadas. Excepciones inadvertidas provocan que el <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> evento, pero de forma predeterminada, el proceso no finaliza. En su lugar, se omite la excepción después de que se genera el evento, independientemente de si un controlador de eventos observa la excepción.  
   
- En el [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], puede usar el [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) en un archivo de configuración para habilitar la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportamiento de producir una excepción.  
+ En .NET Framework 4.5, puede usar el [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) en un archivo de configuración para habilitar la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportamiento de producir una excepción.  
   
  También puede especificar el comportamiento de excepción en una de las maneras siguientes:  
   

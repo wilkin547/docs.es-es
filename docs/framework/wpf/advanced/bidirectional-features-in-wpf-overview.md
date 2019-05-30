@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a991a841182438dca4ef0a4067d333180f4f60
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655485"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380175"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Información general sobre características bidireccionales en WPF
 A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene muchas características que admiten el desarrollo rápido de contenido bidireccional, por ejemplo, combinados de izquierda a derecha y de derecha a izquierda datos en el mismo documento. Al mismo tiempo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] crea una excelente experiencia para los usuarios que requieren características bidireccionales, como el árabe y hebreo hablando a los usuarios.  
@@ -178,7 +178,7 @@ A diferencia de cualquier otra plataforma de desarrollo, [!INCLUDE[TLA2#tla_winc
   
  **Substitution**:  
   
- Esta propiedad especifica el tipo de sustitución de números que se va a realizar. Puede tomar uno de los siguientes <xref:System.Windows.Media.NumberSubstitutionMethod> valores de enumeración.  
+ Esta propiedad especifica el tipo de sustitución de números que se va a realizar. Puede tomar uno de los siguientes <xref:System.Windows.Media.NumberSubstitutionMethod> valores de enumeración:  
   
 - <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: El método de sustitución se determina según la referencia cultural de número <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> propiedad. Este es el valor predeterminado.  
   

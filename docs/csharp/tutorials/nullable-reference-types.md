@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296152"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195834"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL
 
@@ -36,15 +36,18 @@ El código que escriba para este ejemplo expresa dicha intención y el compilado
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>Creación de la aplicación y habilitación de los tipos de referencia que aceptan valores NULL
 
-Cree una aplicación de consola en Visual Studio o desde la línea de comandos mediante `dotnet new console`. Asigne a la aplicación el nombre `NullableIntroduction`. Una vez que haya creado la aplicación, deberá habilitar las características beta de C# 8. Abra el archivo `csproj` y agregue un elemento `LangVersion` al elemento `PropertyGroup`. Debe optar por recibir la característica de **tipos de referencia que aceptan valores NULL**, incluso en proyectos de C# 8. El motivo es que, una vez que la característica está activada, las declaraciones de variables de referencia existentes se convierten en **tipos de referencia que no aceptan valores NULL**. Aunque esa decisión lo ayudará a detectar problemas donde el código existente puede no tener comprobaciones de valores NULL adecuadas, es posible que no se refleje con precisión la intención del diseño original. Para activar la característica, se establece el elemento `NullableContextOptions` en `enable`:
+Cree una aplicación de consola en Visual Studio o desde la línea de comandos mediante `dotnet new console`. Asigne a la aplicación el nombre `NullableIntroduction`. Una vez que haya creado la aplicación, deberá habilitar las características beta de C# 8. Abra el archivo `csproj` y agregue un elemento `LangVersion` al elemento `PropertyGroup`. Debe optar por recibir la característica de **tipos de referencia que aceptan valores NULL**, incluso en proyectos de C# 8. El motivo es que, una vez que la característica está activada, las declaraciones de variables de referencia existentes se convierten en **tipos de referencia que no aceptan valores NULL**. Aunque esa decisión lo ayudará a detectar problemas donde el código existente puede no tener comprobaciones de valores NULL adecuadas, es posible que no se refleje con precisión la intención del diseño original. Para activar la característica, se establece el elemento `Nullable` en `enable`:
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> El elemento `Nullable` se denominaba anteriormente `NullableContextOptions`. El cambio de nombre incluido con Visual Studio 2019, 16.2 p1. .NET Core SDK 3.0.100-preview5-011568 no tiene este cambio. Si usa la CLI de .NET Core, deberá usar `NullableContextOptions` hasta que esté disponible la siguiente versión preliminar.
+
 > [!NOTE]
-> Cuando C# 8 se publique (no en modo de versión preliminar), el elemento `NullableContextOptions` se agregará mediante nuevas plantillas de proyecto. Hasta entonces, deberá agregarlo manualmente.
+> Cuando C# 8 se publique (no en modo de versión preliminar), el elemento `Nullable` se agregará mediante nuevas plantillas de proyecto. Hasta entonces, deberá agregarlo manualmente.
 
 ### <a name="design-the-types-for-the-application"></a>Diseño de los tipos para la aplicación
 

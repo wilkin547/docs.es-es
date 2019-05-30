@@ -2,15 +2,15 @@
 title: Procedimiento para crear un servicio de flujo de trabajo que consuma un contrato de servicio existente
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82c9ccc21600ae0b9ff8c514a51ec9b97f8f1d37
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945579"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378131"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>Procedimiento para crear un servicio de flujo de trabajo que consuma un contrato de servicio existente
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] presenta una mejor integración entre los servicios web y los flujos de trabajo en forma de desarrollo de flujo de trabajo de contrato primero. La herramienta de desarrollo de flujo de trabajo de contrato primero permite diseñar el contrato en Code First. La herramienta después genera automáticamente una plantilla de actividad en el cuadro de herramientas para las operaciones del contrato.  
+.NET framework 4.5 cuenta con una mejor integración entre los servicios web y flujos de trabajo en forma de desarrollo de flujo de trabajo de contrato primero. La herramienta de desarrollo de flujo de trabajo de contrato primero permite diseñar el contrato en Code First. La herramienta después genera automáticamente una plantilla de actividad en el cuadro de herramientas para las operaciones del contrato.  
   
 > [!NOTE]
 >  Este tema proporciona instrucciones paso a paso sobre cómo crear un servicio de flujo de trabajo de contrato primero. Para obtener más información sobre el desarrollo de servicio de flujo de trabajo de contrato primero, consulte [desarrollo de servicio de flujo de trabajo de contrato primero](contract-first-workflow-service-development.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "61945579"
   
 ### <a name="importing-the-service-contract"></a>Importar el contrato de servicio  
   
-1. Haga clic en el proyecto en **el Explorador de soluciones** y seleccione **importar contrato de servicio**. En  **\<proyecto actual >**, abra todos los subnodos y seleccione **IBookService**. Haga clic en **Aceptar**.  
+1. Haga clic en el proyecto en **el Explorador de soluciones** y seleccione **importar contrato de servicio**. En  **\<proyecto actual >** , abra todos los subnodos y seleccione **IBookService**. Haga clic en **Aceptar**.  
   
 2. Verá un cuadro de diálogo que avisa de que la operación se ha completado correctamente y de que las actividades generadas aparecerán en el cuadro de herramientas tras haber compilado el proyecto. Haga clic en **Aceptar**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61945579"
   
 4. En **el Explorador de soluciones**, abra Service1.xamlx. El servicio de flujo de trabajo aparecerá en el diseñador.  
   
-5. Seleccione el **secuencia** actividad. En la ventana Propiedades, haga clic en el **...** botón en el **ImplementedContract** propiedad. En el **Editor de la colección de tipo** ventana que aparece, haga clic en el **tipo** lista desplegable y seleccione el **buscar tipos...** entrada. En el **examinar y seleccionar un tipo .NET** cuadro de diálogo, en  **\<proyecto actual >**, abra todos los subnodos y seleccione **IBookService**. Haga clic en **Aceptar**. En el **Editor de la colección de tipo** cuadro de diálogo, haga clic en **Aceptar**.  
+5. Seleccione el **secuencia** actividad. En la ventana Propiedades, haga clic en el **...** botón en el **ImplementedContract** propiedad. En el **Editor de la colección de tipo** ventana que aparece, haga clic en el **tipo** lista desplegable y seleccione el **buscar tipos...** entrada. En el **examinar y seleccionar un tipo .NET** cuadro de diálogo, en  **\<proyecto actual >** , abra todos los subnodos y seleccione **IBookService**. Haga clic en **Aceptar**. En el **Editor de la colección de tipo** cuadro de diálogo, haga clic en **Aceptar**.  
   
 6. Seleccione y elimine el **ReceiveRequest** y **SendResponse** actividades.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583542"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052732"
 ---
 # <a name="net-framework-development-guide"></a>Guía de desarrollo para .NET Framework
 En esta sección se explica cómo crear, configurar, depurar, proteger e implementar aplicaciones de .NET Framework. Esta sección contiene también información sobre diversas áreas tecnológicas, como programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.  
@@ -48,7 +48,7 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  Explica cómo puede utilizar archivos de configuración para cambiar valores sin tener que volver a compilar las aplicaciones de .NET Framework.  
   
  [Compilar aplicaciones con .NET Native](../../docs/framework/net-native/index.md)  
- Explica cómo usar la tecnología de precompilación de [!INCLUDE[net_native](../../includes/net-native-md.md)] para compilar e implementar aplicaciones de la Tienda Windows. [!INCLUDE[net_native](../../includes/net-native-md.md)] compila aplicaciones escritas en código administrado (C#) y que destinan .NET Framework a código nativo.  
+ Explica cómo usar la tecnología de precompilación de .NET Native para compilar e implementar aplicaciones de la Tienda Windows. .NET Native compila aplicaciones escritas en código administrado (C#) y que destinan .NET Framework a código nativo.  
   
  [Seguridad](../../docs/standard/security/index.md)  
  Proporciona información sobre las clases y servicios en .NET Framework que proporcionan un desarrollo seguro para aplicaciones.  

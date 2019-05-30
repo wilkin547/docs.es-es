@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15f3aa8d2cd7c21fa2b77660cd668d211f8376a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d23a12ff92202ace69cb80ff59d6afcb5d8f8243
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690623"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960378"
 ---
 # <a name="using-threads-and-threading"></a>Uso de subprocesos y subprocesamiento
 
@@ -32,7 +32,7 @@ Un subproceso se crea mediante la creación de una instancia de la clase <xref:S
 
 Para terminar la ejecución de un subproceso, use el método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Ese método genera una excepción <xref:System.Threading.ThreadAbortException> en el subproceso en el que se invoca. Para obtener más información, vea [Destruir subprocesos](destroying-threads.md).
 
-A partir de .NET Framework 4, se puede usar <xref:System.Threading.CancellationToken?displayProperty=nameWithType> para cancelar un subproceso de forma cooperativa. Para obtener más información, vea [Cancelar subprocesos de manera cooperativa](canceling-threads-cooperatively.md).
+A partir de .NET Framework 4, se puede usar <xref:System.Threading.CancellationToken?displayProperty=nameWithType> para cancelar un subproceso de forma cooperativa. Para más información, consulte [Cancelación de subprocesos administrados](cancellation-in-managed-threads.md).
 
 Use el método <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> para hacer que el subproceso que realiza la llamada espere a la finalización del subproceso en el que se invoca el método.
 
