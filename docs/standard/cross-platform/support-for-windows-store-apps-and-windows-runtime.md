@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664336"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378293"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] admite varios escenarios de desarrollo de software con [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Estos escenarios se clasifican en tres categorías:
+.NET Framework 4.5 admite una serie de escenarios de desarrollo de software con el [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Estos escenarios se clasifican en tres categorías:
 
 - Desarrollar [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplicaciones con los controles XAML, como se describe en [aplicaciones Guía básica para Windows Store usando C# o Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10)), [cómo tos (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10)), y [información general de aplicaciones de .NET para Windows Store ](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ ms.locfileid: "64664336"
 - Los tipos del componente se pueden derivar de los tipos de [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Los controles pueden derivarse de los tipos de controles primitivos del <xref:Windows.UI.Xaml.Controls.Primitives> espacio de nombres o de varios controles, como <xref:Windows.UI.Xaml.Controls.Button>.
 
     > [!IMPORTANT]
-    >  A partir de [!INCLUDE[win8](../../../includes/win8-md.md)] y de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], todos los tipos públicos de un componente administrado de [!INCLUDE[wrt](../../../includes/wrt-md.md)] deben ser sealed. Un tipo de otro componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)] no puede derivarse de ellos. Si se desea proporcionar un comportamiento polimórfico a un componente, puede crear una interfaz e implementarla en los tipos polimórficos.
+    >  A partir de [!INCLUDE[win8](../../../includes/win8-md.md)] y .NET Framework 4.5, todos los tipos públicos de tipo administrado [!INCLUDE[wrt](../../../includes/wrt-md.md)] componente debe estar sellado. Un tipo de otro componente de [!INCLUDE[wrt](../../../includes/wrt-md.md)] no puede derivarse de ellos. Si se desea proporcionar un comportamiento polimórfico a un componente, puede crear una interfaz e implementarla en los tipos polimórficos.
 
 - Todos los parámetros y tipos devueltos de los tipos públicos del componente deben ser tipos de [!INCLUDE[wrt](../../../includes/wrt-md.md)] (incluidos los tipos de [!INCLUDE[wrt](../../../includes/wrt-md.md)] definidos por el componente).
 
