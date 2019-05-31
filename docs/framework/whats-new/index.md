@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d064e2377e39f673d47ce497ebd6c96e9f3c1cd0
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251069"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378549"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -1200,7 +1200,7 @@ En .NET Framework 4.6.2, Windows Workflow Foundation se ha mejorado en las área
 
 **Compatibilidad con expresiones de C# e IntelliSense en el Diseñador de WF rehospedado**
 
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF admite expresiones de C# en el diseñador de Visual Studio y en los flujos de trabajo de código. El Diseñador de flujo de trabajo rehospedado es una característica clave de WF que permite que el Diseñador de flujo de trabajo esté en una aplicación fuera de Visual Studio (por ejemplo, en WPF).  Windows Workflow Foundation permite admitir expresiones de C# e IntelliSense en el Diseñador de flujo de trabajo rehospedado. Para obtener más información, consulte el [blog de Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
+A partir de .NET Framework 4.5, WF admite expresiones de C# en el diseñador de Visual Studio y en los flujos de trabajo de código. El Diseñador de flujo de trabajo rehospedado es una característica clave de WF que permite que el Diseñador de flujo de trabajo esté en una aplicación fuera de Visual Studio (por ejemplo, en WPF).  Windows Workflow Foundation permite admitir expresiones de C# e IntelliSense en el Diseñador de flujo de trabajo rehospedado. Para obtener más información, consulte el [blog de Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` En las versiones de .NET Framework anteriores a .NET Framework 4.6.2, IntelliSense del Diseñador de WF se interrumpe cuando un cliente vuelve a compilar un proyecto de flujo de trabajo desde Visual Studio. Aunque la compilación del proyecto es correcta, los tipos de flujo de trabajo no se encuentran en el diseñador y en la ventana **Lista de errores** aparecen advertencias de IntelliSense que indican los tipos de flujo de trabajo que faltan. .NET Framework 4.6.2 soluciona este problema y hace que IntelliSense esté disponible.
 
@@ -1399,7 +1399,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 ## <a name="whats-new-in-net-2015"></a>Novedades de .NET 2015
 
-.NET 2015 presenta [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y .NET Core. Algunas características nuevas se aplican a ambos, y otras son específicas de [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] o .NET Core.
+.NET 2015 presenta .NET Framework 4.6 y .NET Core. Algunas características nuevas se aplican a ambos, y otras son específicas de .NET Framework 4.6 o .NET Core.
 
 - **ASP.NET Core**
 
@@ -1417,7 +1417,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     - **El enlace de modelos admite los métodos de devolución de tareas**
 
-         ASP.NET agregó en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] la característica Enlace de modelos, que habilita un enfoque extensible y centrado en el código en las operaciones de datos basadas en CRUD de las páginas de formularios Web Forms y los controles de usuario. Ahora el sistema Enlace de modelos es compatible con los métodos de enlace de modelos que devuelven <xref:System.Threading.Tasks.Task>. Esta característica permite que los desarrolladores de formularios Web Forms aprovechen las ventajas que presenta la escalabilidad de la asincronía con la facilidad del sistema de enlace de datos al usar las versiones más recientes de ORM, incluido Entity Framework.
+         ASP.NET agregó en .NET Framework 4.5 la característica Enlace de modelos, que habilita un enfoque extensible y centrado en el código en las operaciones de datos basadas en CRUD de las páginas de formularios Web Forms y los controles de usuario. Ahora el sistema Enlace de modelos es compatible con los métodos de enlace de modelos que devuelven <xref:System.Threading.Tasks.Task>. Esta característica permite que los desarrolladores de formularios Web Forms aprovechen las ventajas que presenta la escalabilidad de la asincronía con la facilidad del sistema de enlace de datos al usar las versiones más recientes de ORM, incluido Entity Framework.
 
          El enlace de modelos asincrónicos se controla con la opción de configuración `aspnet:EnableAsyncModelBinding`.
 
@@ -1427,7 +1427,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
         </appSettings>
         ```
 
-         En las aplicaciones que tienen como destino [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], el valor predeterminado es `true`. En las aplicaciones que se ejecutan en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] y que tienen como destino una versión anterior de .NET Framework, el valor predeterminado es `false`. Se puede habilitar estableciendo la opción de configuración en `true`.
+         En las aplicaciones que tienen como destino .NET Framework 4.6, el valor predeterminado es `true`. En las aplicaciones que se ejecutan en .NET Framework 4.6 y que tienen como destino una versión anterior de .NET Framework, el valor predeterminado es `false`. Se puede habilitar estableciendo la opción de configuración en `true`.
 
     - **Compatibilidad con HTTP/2 (Windows 10)**
 
@@ -1452,7 +1452,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     - **Algoritmos hash de cadena aleatoria**
 
-         En .NET Framework 4.5, se introdujo un [algoritmo hash de cadena aleatorio](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). pero no era compatible con ASP.NET porque algunas características de ASP.NET dependían de un código hash estable. En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ya se admiten los algoritmos hash de cadena aleatoria. Para habilitar esta característica, use la opción de configuración `aspnet:UseRandomizedStringHashAlgorithm`.
+         En .NET Framework 4.5, se introdujo un [algoritmo hash de cadena aleatorio](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md). pero no era compatible con ASP.NET porque algunas características de ASP.NET dependían de un código hash estable. En .NET Framework 4.6 ya se admiten los algoritmos hash de cadena aleatoria. Para habilitar esta característica, use la opción de configuración `aspnet:UseRandomizedStringHashAlgorithm`.
 
         ```xml
         <appSettings>
@@ -1476,7 +1476,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Cambios en la biblioteca de clases base**
 
-     Se agregaron muchas nuevas API a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para habilitar escenarios clave. Incluyen los siguientes cambios y adiciones:
+     Se agregaron muchas nuevas API a .NET Framework 4.6 para habilitar escenarios clave. Incluyen los siguientes cambios y adiciones:
 
     - **Implementaciones de IReadOnlyCollection\<T>**
 
@@ -1592,7 +1592,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     - **Cambios en el modelo asincrónico basado en tareas (TAP)**
 
-         Para las aplicaciones que tienen como destino [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], los objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> heredan la referencia cultural y la referencia cultural de interfaz de usuario del subproceso que realiza la llamada. No se ve afectado el comportamiento de las aplicaciones que tienen como destino las versiones anteriores de .NET Framework o que no especifican una versión concreta de .NET Framework. Para obtener más información, vea la sección "Referencia cultural y operaciones asincrónicas basadas en tareas" del tema sobre la clase <xref:System.Globalization.CultureInfo>.
+         Para las aplicaciones que tienen como destino .NET Framework 4.6, los objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601> heredan la referencia cultural y la referencia cultural de interfaz de usuario del subproceso que realiza la llamada. No se ve afectado el comportamiento de las aplicaciones que tienen como destino las versiones anteriores de .NET Framework o que no especifican una versión concreta de .NET Framework. Para obtener más información, vea la sección "Referencia cultural y operaciones asincrónicas basadas en tareas" del tema sobre la clase <xref:System.Globalization.CultureInfo>.
 
          La clase <xref:System.Threading.AsyncLocal%601?displayProperty=nameWithType> le permite representar datos de ambiente locales de un flujo de control asincrónico determinado, por ejemplo, un método `async`. Se puede usar para conservar los datos en todos los subprocesos. También puede definir un método de devolución de llamada que se le notifique al cambiar los datos de ambiente, ya sea porque se ha cambiado la propiedad <xref:System.Threading.AsyncLocal%601.Value%2A?displayProperty=nameWithType> de forma explícita o porque el subproceso ha encontrado una transición de contexto.
 
@@ -1624,7 +1624,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     - **Mejoras en el HDPI**
 
-         Se ha mejorado la compatibilidad con HDPI en WPF en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Se han hecho cambios en el redondeo del diseño para reducir las instancias de recorte en los controles que contienen bordes. De forma predeterminada, esta característica solo está habilitada si se establece <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en .NET 4.6.  Las aplicaciones que tienen como destino versiones anteriores de .NET Framework y que se ejecutan en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] pueden participar en el nuevo comportamiento agregando la siguiente línea a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo app.config:
+         Se mejoró la compatibilidad con HDPI en WPF en .NET Framework 4.6. Se han hecho cambios en el redondeo del diseño para reducir las instancias de recorte en los controles que contienen bordes. De forma predeterminada, esta característica solo está habilitada si se establece <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en .NET 4.6.  Las aplicaciones que tienen como destino versiones anteriores de .NET Framework y que se ejecutan en .NET Framework 4.6 pueden participar en el nuevo comportamiento agregando la siguiente línea a la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo app.config:
 
         ```xml
         <AppContextSwitchOverrides
@@ -1642,11 +1642,11 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     - **Mejor si es táctil**
 
-         Los informes de los clientes en [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) acerca del comportamiento impredecible de la función táctil se han tratado en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Ahora, el umbral de doble punteo de las aplicaciones de WPF y de la Tienda Windows es el mismo en Windows 8.1 y versiones superiores.
+         Los informes de los clientes en [Connect](https://connect.microsoft.com/VisualStudio/feedback/details/903760/) acerca del comportamiento impredecible de la función táctil se han tratado en .NET Framework 4.6. Ahora, el umbral de doble punteo de las aplicaciones de WPF y de la Tienda Windows es el mismo en Windows 8.1 y versiones superiores.
 
     - **Compatibilidad con las ventanas secundarias transparentes**
 
-         En [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], WPF admite las ventanas secundarias transparentes en Windows 8.1 y versiones superiores, de manera que puede crear ventanas secundarias transparentes y no rectangulares en las ventanas de nivel superior. Puede habilitar esta característica estableciendo la propiedad <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> en `true`.
+         En .NET Framework 4.6, WPF admite las ventanas secundarias transparentes en Windows 8.1 y versiones superiores, de manera que puede crear ventanas secundarias transparentes y no rectangulares en las ventanas de nivel superior. Puede habilitar esta característica estableciendo la propiedad <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> en `true`.
 
 - **Windows Communication Foundation (WCF)**
 
@@ -1719,7 +1719,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
          Windows 10 incluye un nuevo algoritmo de red de alta escalabilidad que optimiza los recursos del equipo con la reutilización de los puertos locales para las conexiones TCP salientes. .NET Framework 4.6 admite este algoritmo, lo que permite que las aplicaciones .NET aprovechen el nuevo comportamiento. En versiones anteriores de Windows había un límite de conexiones simultáneas artificial (normalmente de 16.384, el tamaño predeterminado del intervalo de puertos dinámicos) y esto podía limitar la escalabilidad de un servicio provocando el agotamiento de puertos durante la carga.
 
-         Se han agregado dos API nuevas a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para permitir la reutilización de puertos, lo que elimina de forma eficaz el límite de 64 K de las conexiones simultáneas:
+         Se agregaron dos API nuevas a .NET Framework 4.6 para permitir la reutilización de puertos, lo que elimina de forma eficaz el límite de 64 K de las conexiones simultáneas:
 
         - El valor de enumeración <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType>.
 
@@ -1735,7 +1735,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Cambio de tamaño en controles de Windows Forms**
 
-     Esta característica se amplió en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] para incluir los tipos <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> y <xref:System.Windows.Forms.ToolStripSplitButton> y el rectángulo especificado por la propiedad <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> que se usa al dibujar un <xref:System.Drawing.Design.UITypeEditor>.
+     Esta característica se amplió en .NET Framework 4.6 para incluir los tipos <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> y <xref:System.Windows.Forms.ToolStripSplitButton> y el rectángulo especificado por la propiedad <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A> que se usa al dibujar un <xref:System.Drawing.Design.UITypeEditor>.
 
      Esta característica es opcional. Para habilitarla, establezca el elemento `EnableWindowsFormsHighDpiAutoResizing` en `true` en el archivo de configuración de la aplicación (app.config):
 
@@ -1864,7 +1864,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 Las nuevas características y mejoras realizadas en las clases base en .NET Framework 4.5.1 son:
 
-- Redirección automática de enlace de ensamblados. A partir de Visual Studio 2013, cuando se compila una aplicación cuyo destino es [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], se pueden agregar al archivo de configuración de la aplicación redirecciones de enlace si la aplicación o sus componentes hacen referencia a varias versiones del mismo ensamblado. Esta característica también se puede habilitar en proyectos que tienen como destino versiones anteriores de .NET Framework. Para obtener más información, vea [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Redirección automática de enlace de ensamblados. A partir de Visual Studio 2013, cuando se compila una aplicación cuyo destino es .NET Framework 4.5.1, se pueden agregar al archivo de configuración de la aplicación redirecciones de enlace si la aplicación o sus componentes hacen referencia a varias versiones del mismo ensamblado. Esta característica también se puede habilitar en proyectos que tienen como destino versiones anteriores de .NET Framework. Para obtener más información, vea [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Capacidad de recopilar información de diagnóstico para ayudar a los desarrolladores a mejorar el rendimiento de las aplicaciones de servidor y en la nube. Para obtener más información, vea los métodos <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> y <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> de la clase <xref:System.Diagnostics.Tracing.EventSource>.
 
@@ -1912,7 +1912,7 @@ Para descubrir las nuevas características de ASP.NET 4.5.1, vea [ASP.NET and We
 
 - Compatibilidad con matrices mayores de 2 gigabytes (GB) en plataformas de 64 bits. Esta característica se puede habilitar en el archivo de configuración de la aplicación. Consulte el elemento [\<gcAllowVeryLargeObjects>](../configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md), donde también se indican otras restricciones de tamaño de objeto y de tamaño de matriz.
 
-- Mayor rendimiento a través de la recolección de elementos no utilizados en segundo plano en el caso de los servidores. Cuando se usa la recolección de elementos no utilizados de los servidores en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se habilita automáticamente la recolección de elementos no utilizados en segundo plano. Vea la sección sobre la recolección de elementos no utilizados en segundo plano de los servidores del tema [Fundamentals of Garbage Collection](../../standard/garbage-collection/fundamentals.md) (Fundamentos de la recolección de elementos no utilizados).
+- Mayor rendimiento a través de la recolección de elementos no utilizados en segundo plano en el caso de los servidores. Cuando se usa la recolección de elementos no utilizados de los servidores en .NET Framework 4.5, se habilita automáticamente la recolección de elementos no utilizados en segundo plano. Vea la sección sobre la recolección de elementos no utilizados en segundo plano de los servidores del tema [Fundamentals of Garbage Collection](../../standard/garbage-collection/fundamentals.md) (Fundamentos de la recolección de elementos no utilizados).
 
 - Compilación Just-in-time (JIT) en segundo plano, que se encuentra disponible opcionalmente en los procesadores de varios núcleos para mejorar el rendimiento de la aplicación. Vea <xref:System.Runtime.ProfileOptimization>.
 
@@ -1940,7 +1940,7 @@ Para descubrir las nuevas características de ASP.NET 4.5.1, vea [ASP.NET and We
 
 ### <a name="managed-extensibility-framework-mef"></a>Managed Extensibility Framework (MEF)
 
-En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Managed Extensibility Framework (MEF) cuenta con las siguientes características nuevas:
+En .NET Framework 4.5, Managed Extensibility Framework (MEF) cuenta con las siguientes características nuevas:
 
 - Compatibilidad con los tipos genéricos.
 
@@ -1954,13 +1954,13 @@ Para obtener más información, vea [Managed Extensibility Framework (MEF)](../m
 
 ### <a name="asynchronous-file-operations"></a>Operaciones de archivo asincrónicas
 
-En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se agregaron nuevas características asincrónicas a los lenguajes C# y Visual Basic. Estas características agregan un modelo basado en tareas para realizar operaciones asincrónicas. Para utilizar este nuevo modelo, use los métodos asincrónicos de las clases de E/S. Vea [E/S de archivos asincrónica](../../standard/io/asynchronous-file-i-o.md).
+En .NET Framework 4.5, se agregaron nuevas características asincrónicas a los lenguajes C# y Visual Basic. Estas características agregan un modelo basado en tareas para realizar operaciones asincrónicas. Para utilizar este nuevo modelo, use los métodos asincrónicos de las clases de E/S. Vea [E/S de archivos asincrónica](../../standard/io/asynchronous-file-i-o.md).
 
 <a name="tools" />
 
 ### <a name="tools"></a>Herramientas
 
-En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], el generador de archivos de recursos (Resgen.exe) permite crear un archivo .resw para su uso en aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] desde un archivo .resources incrustado en un ensamblado de .NET Framework. Para obtener más información, vea [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md) (Resgen.exe [generador de archivos de recursos]).
+En .NET Framework 4.5, el generador de archivos de recursos (Resgen.exe) permite crear un archivo .resw para su uso en aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] desde un archivo .resources incrustado en un ensamblado de .NET Framework. Para obtener más información, vea [Resgen.exe (Resource File Generator)](../tools/resgen-exe-resource-file-generator.md) (Resgen.exe [generador de archivos de recursos]).
 
 La optimización guiada por perfiles administrados (Mpgo.exe) permite mejorar el tiempo de inicio de la aplicación, la utilización de la memoria (el tamaño del espacio de trabajo) y el rendimiento mediante la optimización de los ensamblados de imagen nativos. La herramienta de línea de comandos genera datos de perfil para los ensamblados nativos de aplicación de la imagen. Vean [Mpgo.exe (Managed Profile Guided Optimization Tool)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) (Mpgo.exe [herramienta de optimización guiada por perfiles administrados]). A partir de Visual Studio 2013, puede usar Mpgo.exe para optimizar las aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], así como las de escritorio.
 
@@ -1968,7 +1968,7 @@ La optimización guiada por perfiles administrados (Mpgo.exe) permite mejorar el
 
 ### <a name="parallel-computing"></a>Informática en paralelo
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] cuenta con varias características y mejoras nuevas para el procesamiento informático en paralelo. Entre estas se incluyen un rendimiento mejorado, mayor control, mejor compatibilidad con la programación asincrónica, una nueva biblioteca de flujo de datos y mejor compatibilidad para la depuración y el análisis de rendimiento en paralelo. Vea la entrada [What’s New for Parallelism in .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) (Novedades de paralelismo en .NET 4.5) de la sección sobre Programación en paralelo del blog sobre .NET.
+.NET Framework 4.5 cuenta con varias características y mejoras nuevas para el procesamiento informático en paralelo. Entre estas se incluyen un rendimiento mejorado, mayor control, mejor compatibilidad con la programación asincrónica, una nueva biblioteca de flujo de datos y mejor compatibilidad para la depuración y el análisis de rendimiento en paralelo. Vea la entrada [What’s New for Parallelism in .NET 4.5](https://go.microsoft.com/fwlink/?LinkId=235061) (Novedades de paralelismo en .NET 4.5) de la sección sobre Programación en paralelo del blog sobre .NET.
 
 <a name="web" />
 
@@ -1982,11 +1982,11 @@ ASP.NET 4.5 y 4.5.1 incorporan el enlace de modelos de formularios Web Forms, co
 
 ### <a name="networking-a-namenetworking-"></a>Redes <a name="networking" />
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proporciona una nueva interfaz de programación para aplicaciones HTTP. Para obtener más información, vea los nuevos espacios de nombres <xref:System.Net.Http?displayProperty=nameWithType> y <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
+.NET Framework 4.5 proporciona una nueva interfaz de programación para aplicaciones HTTP. Para obtener más información, vea los nuevos espacios de nombres <xref:System.Net.Http?displayProperty=nameWithType> y <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
 También se incluye compatibilidad con una nueva interfaz de programación para aceptar e interactuar con una conexión WebSocket mediante el objeto <xref:System.Net.HttpListener> existente y las clases relacionadas. Para obtener más información, vea el nuevo espacio de nombres <xref:System.Net.WebSockets> y la clase <xref:System.Net.HttpListener>.
 
-Además, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] incluye las siguientes mejoras de red:
+Además, .NET Framework 4.5 incluye las siguientes mejoras de red:
 
 - Compatibilidad de URI conforme a RFC. Para obtener más información, vea <xref:System.Uri> y las clases relacionadas.
 
@@ -2002,7 +2002,7 @@ Además, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] incluye las siguie
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Presentation Foundation (WPF) contiene cambios y mejoras en las áreas siguientes:
+En .NET Framework 4.5, Windows Presentation Foundation (WPF) contiene cambios y mejoras en las áreas siguientes:
 
 - El nuevo control <xref:System.Windows.Controls.Ribbon.Ribbon>, que permite implementar una interfaz de usuario en forma de cinta que incluye una barra de herramientas de acceso rápido, un menú de aplicación y pestañas.
 
@@ -2026,7 +2026,7 @@ En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Windows Presentation Fo
 
 ### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se han agregado las características siguientes para facilitar la creación y el mantenimiento de aplicaciones de Windows Communication Foundation (WCF):
+En .NET Framework 4.5, se han agregado las características siguientes para facilitar la creación y el mantenimiento de aplicaciones de Windows Communication Foundation (WCF):
 
 - Simplificación de los archivos de configuración generados.
 
@@ -2068,9 +2068,9 @@ Para obtener más información, vea [Novedades de Windows Communication Foundati
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-Se han agregado varias características nuevas a Windows Workflow Foundation (WF) en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], incluidas las siguientes:
+Se agregaron varias características nuevas a Windows Workflow Foundation (WF) en .NET Framework 4.5, incluidas las siguientes:
 
-- Flujos de trabajo de máquina de estados, que se incluyeron por primera vez como parte de .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se actualizaron para [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] con objeto de incluir:
+- Flujos de trabajo de máquina de estados, que se incluyeron por primera vez como parte de .NET Framework 4.0.1 ([.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)). Esta actualización incluía varias clases y actividades nuevas que permitían a los desarrolladores crear flujos de trabajo de máquina de estados. Estas clases y actividades se actualizaron para .NET Framework 4.5 con el objeto de incluir:
 
     - Capacidad de establecer puntos de interrupción en estados
 
@@ -2122,7 +2122,7 @@ Se han agregado varias características nuevas a Windows Workflow Foundation (WF
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-Las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] o 4.5.1 está disponible para compilar aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](https://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
+Las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] están diseñadas para factores de forma específicos y aprovechan la eficacia del sistema operativo Windows. Un subconjunto de .NET Framework 4.5 o 4.5.1 está disponible para compilar aplicaciones de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para Windows mediante C# o Visual Basic. Este subconjunto se denomina [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] y se explica en una [introducción](https://go.microsoft.com/fwlink/?LinkId=228491) del Centro de desarrollo de Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Bibliotecas de clases portables <a name="portable" />
 
