@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863654"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424057"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>Procedimiento Sobrecargar un procedimiento que toma parámetros opcionales (Visual Basic)
 Si un procedimiento tiene uno o varios [opcional](../../../../visual-basic/language-reference/modifiers/optional.md) parámetros, no se puede definir una versión sobrecargada que coincida con alguno de sus sobrecargas implícitas. Para obtener más información, vea "Implícita sobrecargas para parámetros opcionales" en [consideraciones en sobrecarga de procedimientos](./considerations-in-overloading-procedures.md).  
@@ -51,7 +51,7 @@ Si un procedimiento tiene uno o varios [opcional](../../../../visual-basic/langu
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>Sobrecargar un procedimiento que toma más de un parámetro opcional  
   
-1. Determine qué combinaciones de argumentos opcionales proporcionados son aceptables para la lógica del procedimiento. Si un parámetro opcional que depende de otro, podría surgir una combinación inaceptable. Por ejemplo, si un parámetro acepta el nombre del cónyuge y otro acepta la edad del cónyuge, una combinación de argumentos que proporcione la edad pero omita el nombre no es aceptable.  
+1. Determine qué combinaciones de argumentos opcionales proporcionados son aceptables para la lógica del procedimiento. Si un parámetro opcional que depende de otro, podría surgir una combinación inaceptable. Por ejemplo, si un parámetro acepta el nombre de una persona y otro acepta la edad de la persona, una combinación de argumentos que proporcione la edad pero omita el nombre no es aceptable.  
   
 2. Para cada combinación aceptable de argumentos opcionales proporcionados, escribir un `Sub` o `Function` instrucción de declaración que define la lista de parámetros correspondientes. No utilice el `Optional` palabra clave.  
   

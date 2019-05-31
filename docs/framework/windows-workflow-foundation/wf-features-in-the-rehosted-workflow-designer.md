@@ -2,12 +2,12 @@
 title: Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380150"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423967"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Compatibilidad para las nuevas características de Workflow Foundation 4.5 en el diseñador de flujo de trabajo rehospedado
 Windows Workflow Foundation (WF) en .NET Framework 4.5 introdujo muchas características nuevas, incluidas varias mejoras en la experiencia de diseñador de flujo de trabajo. En este tema se detallan las características admitidas en el diseñador rehospedado y las que no se admiten.
@@ -106,7 +106,7 @@ Windows Workflow Foundation (WF) en .NET Framework 4.5 introdujo muchas caracter
 >  La validación en tiempo de compilación no se admite en el diseñador rehospedado.  
   
 ### <a name="design-time-background-validation"></a>Validación en segundo plano en tiempo de diseño  
- En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], los flujos de trabajo se validaban como un proceso en primer plano, lo que podría hacer que la interfaz de usuario no respondiera durante un proceso de validación complejo o largo. La validación del flujo de trabajo ahora tiene lugar en un subproceso de fondo, para no bloquear la interfaz de usuario.  
+ En [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], flujos de trabajo se validaban como un proceso en primer plano, que potencialmente podría bloquear la interfaz de usuario durante los procesos de validación complejo o largo. La validación del flujo de trabajo ahora tiene lugar en un subproceso de fondo, para no bloquear la interfaz de usuario.  
   
  La validación en segundo plano en tiempo de diseño se admite en el diseñador rehospedado.  
   

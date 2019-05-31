@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 1988ebd8c5f46346babe212962b617d30d765385
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 60421d6ba634bd7b4107f1c9998fbbe158417c83
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211533"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423839"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Tutorial: Implementar un formulario que usa una operación en segundo plano
 
-Si tiene una operación que tarda mucho tiempo en completarse, y no desea la interfaz de usuario (UI) deje de responder o "bloquee", puede usar el <xref:System.ComponentModel.BackgroundWorker> clase para ejecutar la operación en otro subproceso.
+Si tiene una operación que tarda mucho tiempo en completarse, y no desea que la interfaz de usuario (UI) deje de responder o para bloquear, puede usar el <xref:System.ComponentModel.BackgroundWorker> clase para ejecutar la operación en otro subproceso.
 
 En este tutorial se muestra cómo utilizar el <xref:System.ComponentModel.BackgroundWorker> clase para realizar cálculos laboriosos "en"segundo plano, mientras que la interfaz de usuario sigue respondiendo.  Cuando haya terminado, tendrá una aplicación que calcula de forma asincrónica los números de Fibonacci. Aunque se puede tardar un tiempo considerable en calcular un número de Fibonacci elevado, el subproceso de interfaz de usuario principal no se interrumpirá por este retraso, y el formulario seguirá respondiendo durante el cálculo.
 

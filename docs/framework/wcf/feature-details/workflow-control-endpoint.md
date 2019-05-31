@@ -2,18 +2,18 @@
 title: Extremo de control de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929719"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424026"
 ---
 # <a name="workflow-control-endpoint"></a>Extremo de control de flujo de trabajo
 El punto de conexión de control de flujo de trabajo permite a los desarrolladores llamar a las operaciones de control para controlar de forma remota instancias de flujo de trabajo hospedadas mediante <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Esta característica se puede utilizar para realizar operaciones de control mediante programación como la suspensión, la reanudación y la finalización.  
   
 > [!WARNING]
->  Si usa el punto de conexión de control de flujo de trabajo dentro de una transacción y el flujo de trabajo que se controla contiene una actividad <xref:System.Activities.Statements.Persist>, la instancia de flujo de trabajo no responderá hasta que se agote el tiempo de espera de la transacción.  
+>  Si utiliza el punto de conexión de control de flujo de trabajo dentro de una transacción y controla el flujo de trabajo contienen un <xref:System.Activities.Statements.Persist> actividad, la instancia de flujo de trabajo se bloqueará hasta que se agote el tiempo.  
   
 ## <a name="workflow-instance-management"></a>Administración de instancias de flujo de trabajo  
  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] define un nuevo contrato llamado <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. Este contrato define una serie de operaciones de control que le permiten controlar de forma remota instancias de flujo de trabajo hospedadas por <xref:System.ServiceModel.Activities.WorkflowServiceHost>. <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> es un extremo estándar que proporciona una implementación del contrato de <xref:System.ServiceModel.Activities.IWorkflowInstanceManagement>. <xref:System.ServiceModel.Activities.WorkflowControlClient> es una clase que se usa para enviar operaciones de control a <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>.  
