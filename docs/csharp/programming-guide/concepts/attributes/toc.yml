@@ -3,9 +3,8 @@
   items:
     - name: Creación de atributos personalizados
       href: creating-custom-attributes.md
-      items:
-        - name: AttributeUsage
-          href: attributeusage.md
+    - name: AttributeUsage
+      href: attributeusage.md
     - name: Acceso a atributos mediante reflexión
       href: accessing-attributes-by-using-reflection.md
     - name: Procedimiento para crear una unión de C-C++ mediante atributos

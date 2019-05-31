@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 893ac7bbfcfe159787789238c3142f34ac7ecf35
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452715"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423294"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espacios de nombres (Guía de programación de C#)
 
@@ -53,6 +53,5 @@ Los espacios de nombres tienen las propiedades siguientes:
 - [Cómo: Utilizar el alias del espacio de nombres global](how-to-use-the-global-namespace-alias.md)
 - [Cómo: Utilizar el espacio de nombres My](how-to-use-the-my-namespace.md)
 - [Nombres de identificador](../inside-a-program/identifier-names.md)
-- [Palabras clave del espacio de nombres](../../language-reference/keywords/namespace-keywords.md)
 - [using (directiva)](../../language-reference/keywords/using-directive.md)
 - [:: !](../../language-reference/operators/namespace-alias-qualifer.md)
