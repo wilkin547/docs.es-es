@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c08125d6-56cc-4b23-b482-813ff85dc630
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2a51b9fb485da605effbad0e81b8baf5e05e382a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91983a0910b272e621783f0fdb68242ddbd20f03
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675096"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456174"
 ---
 # <a name="userandomizedstringhashalgorithm-element"></a>\<UseRandomizedStringHashAlgorithm > elemento
 Determina si common language runtime calcula los códigos hash para cadenas en una por cada dominio de aplicación.  
@@ -58,7 +58,7 @@ Determina si common language runtime calcula los códigos hash para cadenas en u
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, el <xref:System.StringComparer> clase y el <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método usa un solo algoritmo hash que genera un código hash coherente entre dominios de aplicación. Esto es equivalente a establecer el `enabled` atributo de la `<UseRandomizedStringHashAlgorithm>` elemento `0`. Este es el algoritmo hash utilizado en el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)].  
+ De forma predeterminada, el <xref:System.StringComparer> clase y el <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método usa un solo algoritmo hash que genera un código hash coherente entre dominios de aplicación. Esto es equivalente a establecer el `enabled` atributo de la `<UseRandomizedStringHashAlgorithm>` elemento `0`. Se trata de un algoritmo hash utilizado en .NET Framework 4.  
   
  El <xref:System.StringComparer> clase y el <xref:System.String.GetHashCode%2A?displayProperty=nameWithType> método también puede usar un algoritmo hash diferente que calcula códigos hash en una por cada dominio de aplicación. Como resultado, los códigos hash para cadenas equivalentes variarán entre dominios de aplicación. Se trata de una característica opcional; para aprovechar las ventajas de la misma, debe establecer el `enabled` atributo de la `<UseRandomizedStringHashAlgorithm>` elemento `1`.  
   

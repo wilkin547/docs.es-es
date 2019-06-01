@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591209"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457518"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Tutorial: Almacenar en caché datos de la aplicación en una aplicación de WPF
 El almacenamiento en caché permite almacenar datos en memoria para un acceso rápido. Cuando se vuelve a acceder a los datos, las aplicaciones pueden obtenerlos de la memoria caché en lugar de recuperarlos de la fuente original. Esto puede mejorar el rendimiento y la escalabilidad. Además, el almacenamiento en caché permite que los datos estén disponibles cuando el origen de datos no está disponible temporalmente.
@@ -22,7 +22,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
  .NET Framework proporciona clases que le permiten usar el almacenamiento en caché en aplicaciones de .NET Framework. Estas clases se encuentran en el <xref:System.Runtime.Caching> espacio de nombres.
 
 > [!NOTE]
->  El <xref:System.Runtime.Caching> espacio de nombres es nuevo en el [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. Hace que este espacio de nombres de almacenamiento en caché está disponible para todas las aplicaciones de .NET Framework. En versiones anteriores de .NET Framework, almacenamiento en caché sólo estaba disponible en el <xref:System.Web> espacio de nombres y, por tanto, exigía una dependencia en las clases de ASP.NET.
+>  El <xref:System.Runtime.Caching> espacio de nombres es nuevo en .NET Framework 4. Hace que este espacio de nombres de almacenamiento en caché está disponible para todas las aplicaciones de .NET Framework. En versiones anteriores de .NET Framework, almacenamiento en caché sólo estaba disponible en el <xref:System.Web> espacio de nombres y, por tanto, exigía una dependencia en las clases de ASP.NET.
 
  En este tutorial se muestra cómo usar la funcionalidad de almacenamiento en caché está disponible en .NET Framework como parte de un [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicación. En el tutorial, almacenar en caché el contenido de un archivo de texto.
 
@@ -30,7 +30,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 - Crear un proyecto de aplicación de WPF.
 
-- Agregar una referencia a la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].
+- Agregar una referencia a .NET Framework 4.
 
 - Inicializando una memoria caché.
 
@@ -62,12 +62,12 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
      Aparecerá el cuadro de diálogo **Nuevo proyecto**.
 
-3. En **plantillas instaladas**, seleccione el lenguaje de programación que desea utilizar (**Visual Basic** o **Visual C#**).
+3. En **plantillas instaladas**, seleccione el lenguaje de programación que desea utilizar (**Visual Basic** o **Visual C#** ).
 
 4. En el **nuevo proyecto** cuadro de diálogo, seleccione **aplicación WPF**.
 
     > [!NOTE]
-    >  Si no ve el **aplicación WPF** plantilla, asegúrese de que se usa como destino una versión de .NET Framework que admite WPF. En el **nuevo proyecto** cuadro de diálogo, seleccione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] en la lista.
+    >  Si no ve el **aplicación WPF** plantilla, asegúrese de que se usa como destino una versión de .NET Framework que admite WPF. En el **nuevo proyecto** cuadro de diálogo, seleccione .NET Framework 4 en la lista.
 
 5. En el **nombre** texto, escriba un nombre para el proyecto. Por ejemplo, puede escribir **WPFCaching**.
 
@@ -78,7 +78,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
      Se abre el Diseñador de WPF en **diseño** ver y muestra el archivo MainWindow.xaml. Visual Studio crea el **mi proyecto** carpeta, el archivo Application.xaml y el archivo MainWindow.xaml.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Destinadas a .NET Framework y agregar una referencia a los ensamblados de almacenamiento en caché
- De forma predeterminada, el destino de las aplicaciones de WPF la [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar el <xref:System.Runtime.Caching> espacio de nombres en una aplicación WPF, la aplicación debe tener como destino el [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (no el [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) y debe incluir una referencia al espacio de nombres.
+ De forma predeterminada, el destino de las aplicaciones de WPF la [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar el <xref:System.Runtime.Caching> espacio de nombres en una aplicación de WPF, la aplicación debe tener como destino .NET Framework 4 (no el [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) y debe incluir una referencia al espacio de nombres.
 
  Por lo tanto, el siguiente paso es cambiar el destino de .NET Framework y agregar una referencia a la <xref:System.Runtime.Caching> espacio de nombres.
 
@@ -97,7 +97,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
      El **configuración de compilador avanzada** se muestra el cuadro de diálogo.
 
-4. En el **.NET framework de destino (todas las configuraciones)** lista, seleccione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (No seleccione [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. En el **.NET framework de destino (todas las configuraciones)** , seleccione .NET Framework 4. (No seleccione [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
 5. Haga clic en **Aceptar**.
 
@@ -121,7 +121,7 @@ El almacenamiento en caché permite almacenar datos en memoria para un acceso r�
 
 2. Haga clic en la pestaña **Aplicación** .
 
-3. En el **.NET framework de destino** lista, seleccione [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (No seleccione **.NET Framework 4 Client Profile**.)
+3. En el **.NET framework de destino** , seleccione .NET Framework 4. (No seleccione **.NET Framework 4 Client Profile**.)
 
 4. Agregue una referencia al ensamblado de almacenamiento en caché siguiendo estos pasos:
 

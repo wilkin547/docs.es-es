@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868750"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456503"
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
 
@@ -59,14 +59,14 @@ El atributo <xref:System.Security.SecurityRulesAttribute> de nivel de ensamblado
 
 Los niveles son los siguientes:
 
-- Nivel 2 (<xref:System.Security.SecurityRuleSet.Level2>): las reglas de transparencia de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+- Nivel 2 (<xref:System.Security.SecurityRuleSet.Level2>): las reglas de transparencia de .NET Framework 4.
 
 - Nivel 1 (<xref:System.Security.SecurityRuleSet.Level1>): las reglas de transparencia de .NET Framework 2.0.
 
 La diferencia principal entre los dos niveles de transparencia es que el nivel 1 no exige el cumplimiento de las reglas de transparencia en las llamadas hechas desde fuera del ensamblado y se usa únicamente por razones de compatibilidad.
 
 > [!IMPORTANT]
-> Debe especificar la transparencia de nivel 1 solo para la compatibilidad; es decir, especifique el nivel 1 únicamente para el código que se desarrolló con .NET Framework 3.5 o versiones anteriores que usa el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o que no usa el modelo de transparencia. Por ejemplo, use la transparencia de nivel 1 para ensamblados de .NET Framework 2.0 que permiten llamadas de llamadores de confianza parcial (APTCA). En el caso del código que se desarrolló para [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], use siempre la transparencia de nivel 2.
+> Debe especificar la transparencia de nivel 1 solo para la compatibilidad; es decir, especifique el nivel 1 únicamente para el código que se desarrolló con .NET Framework 3.5 o versiones anteriores que usa el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o que no usa el modelo de transparencia. Por ejemplo, use la transparencia de nivel 1 para ensamblados de .NET Framework 2.0 que permiten llamadas de llamadores de confianza parcial (APTCA). Para el código que se desarrolló para .NET Framework 4, use siempre la transparencia de nivel 2.
 
 ### <a name="level-2-transparency"></a>Transparencia de nivel 2
 
@@ -114,7 +114,7 @@ El modelo de transparencia de nivel 1 tiene las siguientes limitaciones:
 
 ## <a name="transparency-enforcement"></a>Cumplimiento de la transparencia
 
-Las reglas de transparencia no se aplican hasta que se calcula la transparencia. En ese momento, se genera una <xref:System.InvalidOperationException> si se infringe una regla de transparencia. El momento en que se calcula la transparencia depende de varios factores y no se puede predecir. Se calcula lo más tarde posible. En [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], el cálculo de transparencia de nivel de ensamblado se produce antes de que en .NET Framework 2.0. La única garantía es que el cálculo de transparencia se producirá cuando sea necesario. Esto es similar a cómo el compilador Just-In-Time (JIT) puede cambiar el punto cuando se compila un método y se detectan errores en ese método. El cálculo de transparencia es invisible si el código no tiene errores de transparencia.
+Las reglas de transparencia no se aplican hasta que se calcula la transparencia. En ese momento, se genera una <xref:System.InvalidOperationException> si se infringe una regla de transparencia. El momento en que se calcula la transparencia depende de varios factores y no se puede predecir. Se calcula lo más tarde posible. En .NET Framework 4, el cálculo de transparencia de nivel de ensamblado se produce antes de que en .NET Framework 2.0. La única garantía es que el cálculo de transparencia se producirá cuando sea necesario. Esto es similar a cómo el compilador Just-In-Time (JIT) puede cambiar el punto cuando se compila un método y se detectan errores en ese método. El cálculo de transparencia es invisible si el código no tiene errores de transparencia.
 
 ## <a name="see-also"></a>Vea también
 

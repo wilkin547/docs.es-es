@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 548f7de2753ef0c30aa787f4c879af87987bfbde
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0486e9faf70e7d5d147cfef996edcdaa8846963
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621515"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456295"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > elemento (configuración Web)
 Especifica la configuración que se usa ASP.NET para administrar el comportamiento de todo el proceso cuando se ejecuta una aplicación ASP.NET en el modo integrado en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o una versión posterior.  
@@ -59,7 +59,7 @@ Especifica la configuración que se usa ASP.NET para administrar el comportamien
 > [!IMPORTANT]
 >  Si ejecuta [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] en [!INCLUDE[win7](../../../../../includes/win7-md.md)], puede configurar un archivo aspnet.config diferente para cada grupo de aplicaciones. Esto le permite adaptar el rendimiento de los subprocesos para cada grupo de aplicaciones.  
   
- Para el `maxConcurrentRequestsPerCPU` establecimiento, el valor predeterminado de "5000" la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] eficazmente desactiva la limitación de solicitudes controlada por ASP.NET, a menos que realmente tenga 5000 o más solicitudes por CPU. El valor predeterminado depende de en su lugar, el grupo de subprocesos CLR administrar automáticamente la simultaneidad por CPU. Las aplicaciones que hacen un uso extensivo de procesamiento de solicitudes asincrónicas, o que tienen muchas solicitudes de ejecución prolongada bloqueadas en E/S de red, se beneficiarán de la mayor límite predeterminado de la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]. Establecer `maxConcurrentRequestsPerCPU` a cero, se desactivará el uso de subprocesos administrados para procesar las solicitudes ASP.NET. Cuando una aplicación se ejecuta en un grupo de aplicaciones de IIS, las solicitudes permanecen en el subproceso de E/S de IIS y, por tanto, simultaneidad está limitada por la configuración de subprocesos IIS.  
+ Para el `maxConcurrentRequestsPerCPU` establecimiento, el valor predeterminado de "5000" en .NET Framework 4 eficazmente desactiva la limitación de solicitudes que se controla mediante ASP.NET, a menos que realmente tenga 5000 o más solicitudes por CPU. El valor predeterminado depende de en su lugar, el grupo de subprocesos CLR administrar automáticamente la simultaneidad por CPU. Las aplicaciones que hacen un uso extensivo de procesamiento de solicitudes asincrónicas, o que tienen muchas solicitudes de ejecución prolongada bloqueadas en E/S de red, se beneficiarán de la mayor límite predeterminado de .NET Framework 4. Establecer `maxConcurrentRequestsPerCPU` a cero, se desactivará el uso de subprocesos administrados para procesar las solicitudes ASP.NET. Cuando una aplicación se ejecuta en un grupo de aplicaciones de IIS, las solicitudes permanecen en el subproceso de E/S de IIS y, por tanto, simultaneidad está limitada por la configuración de subprocesos IIS.  
   
  El `requestQueueLimit` configuración funciona del mismo modo que el `requestQueueLimit` atributo de la [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) elemento, que se establece en los archivos Web.config para aplicaciones ASP.NET. Sin embargo, el `requestQueueLimit` invalida la configuración en un archivo aspnet.config el `requestQueueLimit` en un archivo Web.config. En otras palabras, si se establecen ambos atributos (de forma predeterminada, esto es true), el `requestQueueLimit` configuración en el archivo aspnet.config tiene prioridad.  
   

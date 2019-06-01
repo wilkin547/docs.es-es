@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: cc55809ecaffa4cab4fa4336f9f7f5c06debde2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634234"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456217"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > elemento
 
@@ -22,7 +22,7 @@ Especifica qué versión de common language runtime y, opcionalmente, la aplicac
 
 [\<configuration>](../configuration-element.md)  
 &nbsp;&nbsp;[\<startup>](../startup/startup-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;**\<supportedRuntime>**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<supportedRuntime>**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -51,7 +51,7 @@ En el caso de aplicaciones que admiten versiones del runtime de .NET Framework 1
 Si el  **\<supportedRuntime >** elemento con el `sku` atributo está presente en el archivo de configuración y la versión de .NET Framework instalada es inferior, a continuación, en la versión admitida especificada, la aplicación no se ejecuta y en su lugar mostrará un mensaje preguntándole si desea instalar la versión admitida. En caso contrario, la aplicación intenta ejecutarse en cualquier versión instalada, pero puede tener un comportamiento inesperado si no es totalmente compatible con esa versión. (Las diferencias de compatibilidad entre versiones de .NET Framework, vea [compatibilidad de aplicaciones en .NET Framework](https://docs.microsoft.com/dotnet/framework/migration-guide/application-compatibility).) Por lo tanto, se recomienda que incluya este elemento en el archivo de configuración de diagnósticos de errores más fácil. (El archivo de configuración generado automáticamente por Visual Studio al crear un nuevo proyecto ya contiene lo).
   
 > [!NOTE]
-> Si la aplicación usa rutas de acceso de activación heredada, como la [CorBindToRuntimeEx (función)](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), y desea que esas rutas de acceso para activar la versión 4 de CLR en lugar de una versión anterior, o si la aplicación se compila con la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]pero tiene una dependencia en un ensamblado de modo mixto generado con una versión anterior de .NET Framework, no es suficiente especificar el [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] en la lista de los runtimes compatibles. Además, en el [ \<Inicio > elemento](../startup/startup-element.md) en el archivo de configuración, debe establecer el `useLegacyV2RuntimeActivationPolicy` atributo `true`. Sin embargo, establecer este atributo en `true` significa que todos los componentes compilados con versiones anteriores de .NET Framework se ejecutan utilizando [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] en lugar de los runtimes con los que se compilaron.
+> Si la aplicación usa rutas de acceso de activación heredada, como la [CorBindToRuntimeEx (función)](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), y desea que esas rutas de acceso para activar la versión 4 de CLR en lugar de una versión anterior, o si la aplicación se compila con .NET Framework 4, pero tiene una dependencia en un ensamblado de modo mixto generado con una versión anterior de .NET Framework, no es suficiente especificar .NET Framework 4 en la lista de los runtimes compatibles. Además, en el [ \<Inicio > elemento](../startup/startup-element.md) en el archivo de configuración, debe establecer el `useLegacyV2RuntimeActivationPolicy` atributo `true`. Sin embargo, al establecer este atributo `true` significa que todos los componentes compilados con versiones anteriores de .NET Framework se ejecutan mediante .NET Framework 4 en lugar de los tiempos de ejecución que se compilaron.
 
 Se recomienda probar las aplicaciones con todas las versiones de .NET Framework en las que puedan ejecutarse.
 

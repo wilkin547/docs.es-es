@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666052"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457229"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurar un entorno de generación de perfiles
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666052"
  Para generar el perfil de una aplicación CLR, debe establecer las variables de entorno COR_PROFILER y COR_ENABLE_PROFILING antes de ejecutar la aplicación. También debe asegurarse de que se haya registrado la DLL del generador de perfiles.  
   
 > [!NOTE]
->  A partir de [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], los generadores de perfiles no tienen que registrarse.  
+>  A partir de .NET Framework 4, los generadores de perfiles no debe estar registrado.  
   
 > [!NOTE]
->  Para usar los generadores de perfiles de .NET Framework versiones 2.0, 3.0 y 3.5 en el [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] y versiones posteriores, debe establecer la variable de entorno COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
+>  Para usar los generadores de perfiles de las versiones 2.0, 3.0 y 3.5 de .NET Framework en .NET Framework 4 y versiones posteriores, debe establecer la variable de entorno COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
   
 ## <a name="environment-variable-scope"></a>Ámbito de la variable de entorno  
  La forma de establecer las variables de entorno COR_PROFILER y COR_ENABLE_PROFILING determina su ámbito de influencia. Puede establecer estas variables una de las siguientes maneras:  

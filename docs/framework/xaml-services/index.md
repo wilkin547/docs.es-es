@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663236"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457401"
 ---
 # <a name="xaml-services"></a>Servicios XAML
-En este tema se describe las funcionalidades de un conjunto de tecnologías servicios conocidos como XAML de .NET Framework. La mayoría de los servicios y las API descritas se encuentran en el ensamblado System.Xaml, que es un ensamblado que se introdujo con la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] conjunto de ensamblados de .NET core. Los servicios incluyen lectores y escritores, clases de esquema y la compatibilidad con el esquema, fábricas, atribución de clases, compatibilidad intrínseca con el lenguaje XAML y otras características del lenguaje XAML.  
+En este tema se describe las funcionalidades de un conjunto de tecnologías servicios conocidos como XAML de .NET Framework. La mayoría de los servicios y las API descritas se encuentran en el ensamblado System.Xaml, que es un ensamblado que se introdujo con el conjunto de .NET Framework 4 de los ensamblados de .NET core. Los servicios incluyen lectores y escritores, clases de esquema y la compatibilidad con el esquema, fábricas, atribución de clases, compatibilidad intrínseca con el lenguaje XAML y otras características del lenguaje XAML.  
   
 ## <a name="about-this-documentation"></a>Acerca de esta documentación  
  Documentación conceptual para los servicios XAML de .NET Framework se da por supuesto que tiene experiencia previa con el lenguaje XAML y cómo es posible que se aplican a un marco concreto, por ejemplo [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] o Windows Workflow Foundation o una característica de tecnología específica área, por ejemplo la personalización de compilación las características en <xref:Microsoft.Build.Framework.XamlTypes>. Esta documentación no intenta explicar los conceptos básicos de XAML como un lenguaje de marcado, terminología de sintaxis XAML u otro material introductorio. En su lugar, esta documentación se centra en específicamente con los servicios XAML de .NET Framework que están habilitadas en la biblioteca de ensamblado System.Xaml. La mayoría de estas API son para escenarios de integración de lenguaje XAML y extensibilidad. Esto podría incluir cualquiera de las siguientes acciones:  

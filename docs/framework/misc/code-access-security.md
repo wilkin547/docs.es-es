@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c8508b4ba7d6ac6e25fdcc70fb8162b8908e8fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592861"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456658"
 ---
 # <a name="code-access-security"></a>Seguridad de acceso del código
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -67,7 +67,7 @@ Recorrido de la pila de seguridad
 |Título|Descripción|  
 |-----------|-----------------|  
 |[Code Access Security Basics](../../../docs/framework/misc/code-access-security-basics.md) (Conceptos básicos sobre la seguridad de acceso del código)|Describe la seguridad de acceso del código y sus usos más comunes.|  
-|[Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Describe el modelo de transparencia de seguridad de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].|  
+|[Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|Describe el modelo de transparencia de seguridad en .NET Framework 4.|  
 |[Utilizar bibliotecas de código que no es de plena confianza](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|Describe cómo habilitar bibliotecas para usarlas con código no administrado y cómo usar las bibliotecas desde el código no administrado.|  
 |[Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md)|Proporciona información general sobre muchos de los términos y conceptos clave que se usan en el sistema de seguridad de .NET Framework.|  
 |[Seguridad basada en roles](../../../docs/standard/security/role-based-security.md)|Describe cómo incorporar la seguridad basada en roles.|  

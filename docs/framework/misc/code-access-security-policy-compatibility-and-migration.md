@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868919"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456640"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidad con la directiva de seguridad de acceso del código y migración
 
@@ -22,7 +22,7 @@ La parte de la directiva de seguridad de acceso del código (CAS) se ha quedado 
 
 Para los errores y advertencias:
 
-- [Migrar](#migration) a la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] reemplazos para las llamadas obsoletas.
+- [Migrar](#migration) a los reemplazos de .NET Framework 4 para las llamadas obsoletas.
 
    \- o -
 
@@ -114,7 +114,7 @@ Excepción de tiempo de ejecución:
 
 ### <a name="determining-an-assemblys-trust-level"></a>Determinar el nivel de confianza de un ensamblado
 
-La directiva CAS suele usarse para determinar el nivel de confianza o el conjunto de permisos concedidos a un ensamblado o dominio de aplicación. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone las siguientes propiedades útiles que no necesitan resolver la directiva de seguridad:
+La directiva CAS suele usarse para determinar el nivel de confianza o el conjunto de permisos concedidos a un ensamblado o dominio de aplicación. .NET Framework 4 expone las siguientes propiedades útiles que no es necesario para resolver la directiva de seguridad:
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ La directiva CAS suele usarse para determinar el nivel de confianza o el conjunt
 
 ### <a name="application-domain-sandboxing"></a>Espacio aislado del dominio de aplicación
 
-El método <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> suele usarse para hospedar en un espacio aislado los ensamblados de un dominio de aplicación. El [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] expone miembros que no es necesario usar <xref:System.Security.Policy.PolicyLevel> para este propósito. Para obtener más información, vea [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
+El método <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> suele usarse para hospedar en un espacio aislado los ensamblados de un dominio de aplicación. .NET Framework 4 expone miembros que no es necesario usar <xref:System.Security.Policy.PolicyLevel> para este propósito. Para obtener más información, vea [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md).
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>Determinar el conjunto de permisos seguro o razonable para código de confianza parcial
 
-Los hosts suelen necesitar determinar los permisos adecuados para el código hospedado en espacio aislado. Antes de la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], la directiva CAS proporcionaba una manera de hacerlo con el <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> método. Como reemplazo, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] proporciona el <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> método, que devuelve un conjunto para la evidencia proporcionada de permisos estándar y seguro.
+Los hosts suelen necesitar determinar los permisos adecuados para el código hospedado en espacio aislado. Antes de .NET Framework 4, la directiva CAS proporcionaba una manera de hacerlo con el <xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType> método. Como reemplazo, .NET Framework 4 proporciona los <xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType> método, que devuelve un conjunto para la evidencia proporcionada de permisos estándar y seguro.
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>Escenarios sin espacio aislado: Sobrecargas para cargas de ensamblado
 
-La razón para usar una sobrecarga de carga de ensamblado puede ser usar parámetros que de otra forma no están disponibles, en lugar de hospedar el ensamblado en un espacio aislado. A partir de la [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], las sobrecargas de carga de ensamblado que no requieren un <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> objeto como parámetro, por ejemplo, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, habilitar este escenario.
+La razón para usar una sobrecarga de carga de ensamblado puede ser usar parámetros que de otra forma no están disponibles, en lugar de hospedar el ensamblado en un espacio aislado. A partir de .NET Framework 4, cargar el ensamblado sobrecargas que no requieren un <xref:System.Security.Policy.Evidence?displayProperty=nameWithType> objeto como parámetro, por ejemplo, <xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>, habilitar este escenario.
 
 Si quiere hospedar un ensamblado en un espacio aislado, use la sobrecarga <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType>.
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca0c1b466f5a89730c72f32321394ccfc6d9c7a2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954107"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457362"
 ---
 # <a name="generics-in-xaml"></a>Elementos genéricos en XAML
 Los servicios de XAML de .NET Framework implementados en System.Xaml proporciona compatibilidad para utilizar tipos genéricos de CLR. Esta compatibilidad incluye especificar las restricciones de los genéricos como un argumento de tipo y exigir la restricción llamando adecuado `Add` método para casos de colección genéricos. En este tema se describe aspectos del uso y que hacen referencia a tipos genéricos en XAML.  
@@ -38,7 +38,7 @@ Los servicios de XAML de .NET Framework implementados en System.Xaml proporciona
   
  Posibles soluciones para admitir los usos de genéricos incluyen definir una extensión de marcado personalizada que puede devolver tipos genéricos o proporcionar un ajuste de la definición que se deriva de un tipo genérico pero aplana la restricción en su propia definición de clase genérica de la clase.  
   
- En WPF y de destino [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], puede usar las características de XAML 2009 junto con `x:TypeArguments`, pero solo para XAML flexible (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009.  
+ En WPF y destinada a .NET Framework 4, puede usar las características de XAML 2009 junto con `x:TypeArguments`, pero solo para XAML flexible (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009.  
   
  Flujos de trabajo personalizados en Windows Workflow Foundation para [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] no admiten el uso XAML genérico.  
   

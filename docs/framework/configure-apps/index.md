@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583644"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456204"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurar aplicaciones con archivos de configuración
 .NET Framework, a través de archivos de configuración, proporciona a los programadores y administradores control y flexibilidad sobre la manera en que se ejecutan las aplicaciones. Los archivos de configuración son archivos XML que se pueden cambiar según sea necesario. Un administrador puede controlar a qué recursos protegidos puede tener acceso una aplicación, qué versiones de ensamblados utilizará la aplicación y dónde se ubican las aplicaciones y los objetos remotos. Los programadores pueden colocar valores en archivos de configuración, con lo que no es necesario volver a compilar una aplicación cada vez que cambia un valor. En esta sección se describe lo que se puede configurar y por qué es útil configurar una aplicación.  
@@ -54,7 +54,7 @@ ms.locfileid: "64583644"
 ## <a name="machine-configuration-files"></a>Archivos de configuración del equipo  
  El archivo de configuración del equipo, Machine.config, contiene valores que afectan a todo un equipo. Este archivo se encuentra en el directorio %*ruta de instalación en tiempo de ejecución*%\Config. Machine.config contiene valores de configuración para el enlace de ensamblados en todo el equipo, [canales de comunicación remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) integrados y ASP.NET.  
   
- El sistema de configuración busca primero el [elemento **\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/index.md) en el archivo de configuración del equipo y en otras secciones de configuración que pueda definir un desarrollador. Después, busca en el archivo de configuración de la aplicación. Para que el archivo de configuración del equipo sea siempre manejable, es mejor ubicar estos valores en el archivo de configuración de la aplicación. Sin embargo, si se ubican los valores en el archivo de configuración del equipo, el sistema puede ser más fácil de mantener. Por ejemplo, si se tiene un componente de terceros que utilizan las aplicaciones de cliente y servidor, es más fácil poner los valores de ese componente en un lugar. En este caso, el archivo de configuración del equipo es el lugar adecuado para los valores, para no tener los mismos valores en dos archivos.  
+ El sistema de configuración busca primero el [elemento **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/index.md) en el archivo de configuración del equipo y en otras secciones de configuración que pueda definir un desarrollador. Después, busca en el archivo de configuración de la aplicación. Para que el archivo de configuración del equipo sea siempre manejable, es mejor ubicar estos valores en el archivo de configuración de la aplicación. Sin embargo, si se ubican los valores en el archivo de configuración del equipo, el sistema puede ser más fácil de mantener. Por ejemplo, si se tiene un componente de terceros que utilizan las aplicaciones de cliente y servidor, es más fácil poner los valores de ese componente en un lugar. En este caso, el archivo de configuración del equipo es el lugar adecuado para los valores, para no tener los mismos valores en dos archivos.  
   
 > [!NOTE]
 >  Si se implementa una aplicación mediante XCOPY, no se copiarán los valores en el archivo de configuración del equipo.  
@@ -90,7 +90,7 @@ ms.locfileid: "64583644"
  Los archivos de configuración de seguridad contienen información sobre la jerarquía de grupos de código y conjuntos de permisos asociados a un nivel de directiva. Se recomienda encarecidamente usar la [herramienta de la directiva de seguridad de acceso a código (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) para modificar la directiva de seguridad y garantizar que los cambios de directiva no dañen los archivos de configuración de seguridad.  
   
 > [!NOTE]
->  A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], los archivos de configuración de seguridad solo están presentes si se ha modificado la directiva de seguridad.  
+>  A partir de .NET Framework 4, los archivos de configuración de seguridad solo están presentes si se cambió la directiva de seguridad.  
   
  Los archivos de configuración de seguridad están en las ubicaciones siguientes:  
   

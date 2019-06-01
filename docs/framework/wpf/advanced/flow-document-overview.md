@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 082f5bf9f8cdd8e5f44aa74e7b34e03637b5c579
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b74ab89837592de2de6cfa43d9efb1ed0f63d69
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663365"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457447"
 ---
 # <a name="flow-document-overview"></a>Información general sobre documentos dinámicos
 Los documentos dinámicos están diseñados para optimizar su visualización y legibilidad. En lugar de establecer un diseño predefinido, los documentos dinámicos ajustan y redistribuyen dinámicamente su contenido basándose en variables en tiempo de ejecución, como el tamaño de la ventana, la resolución del dispositivo y las preferencias opcionales del usuario. Además, los documentos dinámicos ofrecen características de documento avanzadas, como paginación y columnas. En este tema se proporciona información general sobre los documentos dinámicos y cómo crearlos.  
@@ -152,7 +152,7 @@ Los documentos dinámicos están diseñados para optimizar su visualización y l
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **Nota:**  A partir de la [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)], <xref:System.Windows.Documents.Run.Text%2A> propiedad de la <xref:System.Windows.Documents.Run> objeto es una propiedad de dependencia. Puede enlazar el <xref:System.Windows.Documents.Run.Text%2A> propiedad a datos de origen, como un <xref:System.Windows.Controls.TextBlock>. El <xref:System.Windows.Documents.Run.Text%2A> propiedad totalmente compatible con el enlace unidireccional. El <xref:System.Windows.Documents.Run.Text%2A> propiedad también es compatible con un enlace bidireccional, excepto <xref:System.Windows.Controls.RichTextBox>. Para obtener un ejemplo, consulte <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
+ **Nota:**  A partir de .NET Framework 4, el <xref:System.Windows.Documents.Run.Text%2A> propiedad de la <xref:System.Windows.Documents.Run> objeto es una propiedad de dependencia. Puede enlazar el <xref:System.Windows.Documents.Run.Text%2A> propiedad a datos de origen, como un <xref:System.Windows.Controls.TextBlock>. El <xref:System.Windows.Documents.Run.Text%2A> propiedad totalmente compatible con el enlace unidireccional. El <xref:System.Windows.Documents.Run.Text%2A> propiedad también es compatible con un enlace bidireccional, excepto <xref:System.Windows.Controls.RichTextBox>. Para obtener un ejemplo, consulte <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>.  
   
  **Span**  
   
