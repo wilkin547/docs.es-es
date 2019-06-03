@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: fae0cedfe8bf675dceb9cb9d5835d923cae8b4ab
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bd8c52cd798496a4df3086411dfe3be6241fbff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235636"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422349"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabla de tipos integrados (Referencia de C#)
 
@@ -66,7 +66,6 @@ Console.WriteLine(doubleType.FullName);
 - [Referencia de C#](../../../csharp/language-reference/index.md)
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Palabras clave de C#](index.md)
-- [Tablas de referencia para tipos](reference-tables-for-types.md)
 - [Tipos de valor](value-types.md)
 - [Tipos de referencia](reference-types.md)
 - [Tabla de valores predeterminados](default-values-table.md)

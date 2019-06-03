@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: de14541be0e1247b99d6f000a69544b5f601ef8f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6dcab8e546ef12ebec5f8b57c66458172fc6f5d0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753776"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422328"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Tabla de tipos de punto flotante (Referencia de C#)
 
@@ -30,7 +30,6 @@ La siguiente tabla muestra la precisión y el intervalo aproximado para los tipo
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
-- [Tablas de referencia para tipos](reference-tables-for-types.md)
 - [Tabla de tipos enteros](integral-types-table.md)
 - [Tabla de valores predeterminados](default-values-table.md)
 - [Tabla de formatos de presentación para valores numéricos](formatting-numeric-results-table.md)

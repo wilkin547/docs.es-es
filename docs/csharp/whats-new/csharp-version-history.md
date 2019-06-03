@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303367"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423236"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -45,7 +45,6 @@ Las principales características de C# 1.0 incluían lo siguiente:
 - [Expresiones](../programming-guide/statements-expressions-operators/expressions.md)
 - [Instrucciones](../programming-guide/statements-expressions-operators/statements.md)
 - [Atributos](../programming-guide/concepts/attributes/index.md)
-- [Literales](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>Versión 1.2 de C#
 
@@ -174,4 +173,4 @@ Todas estas características ofrecen capacidades nuevas e interesantes para los 
 
 Pero C# se está usando cada vez más. .NET Core ahora tiene como destino cualquier sistema operativo y tiene puesta la mirada en la nube y la portabilidad.  Por supuesto, esas nuevas capacidades ocupan las ideas y el tiempo de los diseñadores de lenguaje, además de ofrecer nuevas características.
 
-_Artículo_ [_publicado originalmente en el blog de NDepend_](https://blog.ndepend.com/c-versions-look-language-history/)_, por cortesía de Erik Dietrich y Patrick Smacchia._
+_Artículo_ [_publicado originalmente en el blog de NDepend_](https://blog.ndepend.com/c-versions-look-language-history/) _, por cortesía de Erik Dietrich y Patrick Smacchia._

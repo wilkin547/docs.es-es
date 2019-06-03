@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6911ff96ca847f554e9b615aba6ab83a212efee
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c4536a5caa789712227bfd637d65cfc4c22adf80
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125998"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422693"
 ---
 # <a name="throw-c-reference"></a>throw (Referencia de C#)
 
@@ -75,5 +75,4 @@ A partir de C# 7.0, se puede usar `throw` como una expresión y como una instruc
 - [try-catch](try-catch.md)
 - [Instrucciones try, catch y throw en C++](try-catch.md)
 - [Palabras clave de C#](index.md)
-- [Instrucciones para el control de excepciones](exception-handling-statements.md)
 - [Cómo: Iniciar excepciones explícitamente](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

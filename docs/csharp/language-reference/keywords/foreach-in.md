@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3fbaacb96be2714aaff49679836e5d2d4a3783da
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880537"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422474"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (Referencia de C#)
 
@@ -54,6 +54,5 @@ Para más información, vea la sección sobre la [instrucción foreach](~/_cshar
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
-- [Instrucciones de iteración](iteration-statements.md)
 - [Utilizar foreach con matrices](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [for (Instrucción)](for.md)
