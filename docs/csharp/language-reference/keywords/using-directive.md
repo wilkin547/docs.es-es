@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 3e8daf24929339e31cda81a726ec11fdcffc687a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 072af9850f792cb6d7322724f2adbc978465dc84
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029507"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421745"
 ---
 # <a name="using-directive-c-reference"></a>using (Directiva, Referencia de C# Reference)
 
@@ -30,7 +30,7 @@ La directiva `using` tiene tres usos:
 
     Para obtener más información, vea [using static (Directiva)](using-static.md).
 
-- Para crear un alias para un espacio de nombre o un tipo. Esto se conoce como *alias using (Directiva)*.
+- Para crear un alias para un espacio de nombre o un tipo. Esto se conoce como *alias using (Directiva)* .
 
     ```csharp
     using Project = PC.MyCompany.Project;
@@ -102,6 +102,5 @@ Para obtener más información, vea la sección [Directivas using](~/_csharplang
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Utilizar espacios de nombres](../../programming-guide/namespaces/using-namespaces.md)
 - [Palabras clave de C#](index.md)
-- [Palabras clave del espacio de nombres](namespace-keywords.md)
 - [Espacios de nombres](../../programming-guide/namespaces/index.md)
 - [using (instrucción)](using-statement.md)

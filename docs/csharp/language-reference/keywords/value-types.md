@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: af3eab1c2453f37aa5bd881dc9804d7504c89298
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632925"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422122"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -108,6 +108,5 @@ Para información sobre cómo aplicar formato al resultado de los tipos numéric
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
 - [Tipos](types.md)
-- [Tablas de referencia para tipos](reference-tables-for-types.md)
 - [Tipos de referencia](reference-types.md)
 - [Nullable types](../../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])
