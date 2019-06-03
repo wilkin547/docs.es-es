@@ -5,37 +5,38 @@
       href: statements.md
     - name: Expresiones
       href: expressions.md
-      items:
-        - name: Miembros con forma de expresión
-          href: expression-bodied-members.md
+    - name: Miembros con forma de expresión
+      href: expression-bodied-members.md
     - name: Operadores
       href: operators.md
     - name: Funciones anónimas
-      href: anonymous-functions.md
       items:
+        - name: Información general
+          href: anonymous-functions.md
         - name: Expresiones lambda
           href: lambda-expressions.md
-          items:
-            - name: Procedimiento para usar expresiones lambda en una consulta
-              href: how-to-use-lambda-expressions-in-a-query.md
-            - name: Procedimiento para usar expresiones lambda fuera de LINQ
-              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: Procedimiento para usar expresiones lambda en una consulta
+          href: how-to-use-lambda-expressions-in-a-query.md
+        - name: Procedimiento para usar expresiones lambda fuera de LINQ
+          href: how-to-use-lambda-expressions-outside-linq.md
         - name: Métodos anónimos
           href: anonymous-methods.md
     - name: Operadores sobrecargables
       href: overloadable-operators.md
     - name: Operadores de conversión
-      href: conversion-operators.md
       items:
+        - name: Información general de conversiones
+          href: conversion-operators.md
         - name: Uso de operadores de conversión
           href: using-conversion-operators.md
         - name: Procedimiento para implementar conversiones definidas por el usuario entre estructuras
           href: how-to-implement-user-defined-conversions-between-structs.md
     - name: Expresiones de valor predeterminado
       href: default-value-expressions.md
-    - name: Comparaciones de igualdad
-      href: equality-comparisons.md
+    - name: Igualdad y comparaciones de igualdad
       items:
+        - name: Comparaciones de igualdad
+          href: equality-comparisons.md
         - name: Procedimiento para definir la igualdad de valores para un tipo
           href: how-to-define-value-equality-for-a-type.md
         - name: Procedimiento para probar la igualdad de referencia (identidad)

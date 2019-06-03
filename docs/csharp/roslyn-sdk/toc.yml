@@ -1,6 +1,8 @@
 - name: SDK de .NET Compiler Platform (API de Roslyn)
   href: index.md
   items:
+    - name: Información general
+      href: index.md
     - name: Descripción del modelo de API de compilador
       href: compiler-api-model.md
     - name: Trabajar con sintaxis

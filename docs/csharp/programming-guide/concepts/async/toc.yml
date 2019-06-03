@@ -13,9 +13,10 @@
       href: async-return-types.md
     - name: Flujo de control en programas asincrónicos
       href: control-flow-in-async-programs.md
-    - name: Ajustar una aplicación asincrónica
-      href: fine-tuning-your-async-application.md
+    - name: Cancelación de tareas y procesamiento de tareas completadas
       items:
+        - name: Información general
+          href: fine-tuning-your-async-application.md
         - name: Cancelar una tarea asincrónica o una lista de tareas
           href: cancel-an-async-task-or-a-list-of-tasks.md
         - name: Cancelar tareas asincrónicas tras un período de tiempo
