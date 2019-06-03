@@ -3,13 +3,13 @@ title: Tecnologías de .NET Framework no disponibles en .NET Core
 description: Más información sobre las tecnologías de .NET Framework no disponibles en .NET Core
 author: cartermp
 ms.author: mairaw
-ms.date: 12/07/2018
-ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.date: 04/30/2019
+ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185810"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456091"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologías de .NET Framework no disponibles en .NET Core
 
@@ -42,6 +42,10 @@ Use los límites de seguridad que proporciona el sistema operativo, como la virt
 De forma similar a lo que ocurre con la seguridad de acceso al código, la transparencia de seguridad separa el código de espacios aislados del código crítico de seguridad de manera declarativa, pero [ya no se admite como un límite de seguridad](~/docs/framework/misc/security-transparent-code.md). Silverlight usa mucho esta característica. 
 
 Use los límites de seguridad que proporciona el sistema operativo, como visualización, contenedores o cuentas de usuario para ejecutar procesos con el menor conjunto de privilegios.
+
+## <a name="systementerpriseservices"></a>System.EnterpriseServices
+
+System.EnterpiseServices (COM+) no es compatible con .NET Core.
 
 >[!div class="step-by-step"]
 >[Siguiente](third-party-deps.md)
