@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: f30974e020545a69ad20c03bc05ac6a28f289b01
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf40d0963c29209d4e8f7e4850f0c99b6702a6bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780255"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487626"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Objeto Transaction y operaciones de copia masiva
 Las operaciones de copia masiva se pueden realizar como operaciones aisladas o como parte de una transacción en varios pasos. Esta última opción permite realizar más de una operación de copia masiva en la misma transacción, así como otras operaciones de base de datos (como inserciones, actualizaciones y eliminaciones) y, al mismo tiempo, seguir teniendo la posibilidad de confirmar o revertir la transacción entera.  
@@ -25,7 +25,7 @@ Las operaciones de copia masiva se pueden realizar como operaciones aisladas o c
  La operación de copia masiva se ejecuta con la propiedad <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> establecida en 10. Cuando la operación encuentra la fila no válida, se produce una excepción. En este primer ejemplo, la operación de copia masiva es sin transacción. Todos los lotes copiados hasta el punto del error se confirman, el lote que contiene la clave duplicada se revierte y la operación de copia masiva se detiene antes de procesar el resto de los lotes.  
   
 > [!NOTE]
->  En este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [configuración de ejemplo de copia masiva](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Este código se proporciona para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido para usar un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrucción para copiar los datos.  
+>  En este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [configuración de ejemplo de copia masiva](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Este código se proporciona para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar Transact-SQL`INSERT … SELECT` instrucción para copiar los datos.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ Las operaciones de copia masiva se pueden realizar como operaciones aisladas o c
  La siguiente aplicación de consola es similar a la del ejemplo anterior, pero con una diferencia: en este ejemplo, la operación de copia masiva administra sus propias transacciones. Todos los lotes copiados hasta el punto del error se confirman, el lote que contiene la clave duplicada se revierte y la operación de copia masiva se detiene antes de procesar el resto de los lotes.  
   
 > [!IMPORTANT]
->  En este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [configuración de ejemplo de copia masiva](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Este código se proporciona para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido para usar un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrucción para copiar los datos.  
+>  En este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [configuración de ejemplo de copia masiva](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Este código se proporciona para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar Transact-SQL`INSERT … SELECT` instrucción para copiar los datos.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,7 +54,7 @@ Las operaciones de copia masiva se pueden realizar como operaciones aisladas o c
  La siguiente aplicación de consola es similar a la primera (sin transacción), pero con una diferencia: en este ejemplo, la operación de copia masiva se incluye en una transacción externa más grande. Cuando se produce la infracción de la clave principal, toda la transacción se revierte y no se agrega ninguna fila a la tabla de destino.  
   
 > [!IMPORTANT]
->  En este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [configuración de ejemplo de copia masiva](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Este código se proporciona para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido para usar un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instrucción para copiar los datos.  
+>  En este ejemplo no se ejecutará a menos que haya creado las tablas de trabajo como se describe en [configuración de ejemplo de copia masiva](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Este código se proporciona para mostrar la sintaxis para usar **SqlBulkCopy** solo. Si las tablas de origen y destino se encuentran en la misma instancia de SQL Server, es más fácil y rápido usar Transact-SQL`INSERT … SELECT` instrucción para copiar los datos.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  

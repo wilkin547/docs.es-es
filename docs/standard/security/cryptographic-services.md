@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592739"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490952"
 ---
 # <a name="cryptographic-services"></a>servicios criptográficos
 
@@ -39,7 +39,7 @@ ms.locfileid: "65592739"
 
 En .NET Framework, las clases del espacio de nombres <xref:System.Security.Cryptography?displayProperty=nameWithType> se ocupan de administrar muchos de los detalles de criptografía. Algunas son contenedores de la interfaz de programación de aplicaciones criptográficas (CryptoAPI) no administrada de Microsoft, mientras que otras son meramente implementaciones administradas. No necesita ser un experto en criptografía para utilizar estas clases. Cuando crea una nueva instancia de una de las clases de algoritmos de cifrado, se generan automáticamente claves para facilitar el uso y las propiedades predeterminadas son lo más seguras posible.
 
-En esta información general, se proporciona una sinopsis de los métodos y las prácticas de cifrado compatibles con .NET Framework, incluida la compatibilidad con los manifiestos de ClickOnce, Suite B y Cryptography Next Generation (CNG) que se introdujo en [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].
+Este tema proporciona una sinopsis de los métodos de cifrado y prácticas compatibles con .NET Framework, incluidos los manifiestos de ClickOnce, Suite B y soporte técnico de Cryptography Next Generation (CNG) que se introdujo en .NET Framework 3.5.
 
 Esta información general contiene las siguientes secciones:
 
@@ -114,7 +114,7 @@ Suponiendo que Alicia y Roberto es dos personas que desean comunicarse a través
 
 .NET Framework proporciona las siguientes clases que implementan algoritmos de cifrado de clave secreta:
 
-- <xref:System.Security.Cryptography.AesManaged> (introducida en [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).
+- <xref:System.Security.Cryptography.AesManaged> (introducida en .NET Framework 3.5).
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 

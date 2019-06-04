@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 79264687b3a031fcf02ce65a907c7f21e216fbc9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41f29673622fa7918238dd014b97ee3cf0766257
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622760"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486210"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments (Directiva)
 Pasa restringir los argumentos de un elemento genérico para el constructor del tipo genérico de tipo.  
@@ -79,7 +79,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 <my:BusinessObject x:TypeArguments="x:String,x:Int32"/>  
 ```  
   
- En WPF y cuando el destino es [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar las características de XAML 2009 junto con `x:TypeArguments` pero solo para XAML flexible (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009. Si se necesita compilación de marcado el XAML, debe funcionar en las restricciones que se indican en la sección "XAML 2006 y WPF genérica XAML usos".  
+ En WPF y cuando el destino es .NET Framework 4, puede usar las características de XAML 2009 junto con `x:TypeArguments` pero solo para XAML flexible (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009. Si se necesita compilación de marcado el XAML, debe funcionar en las restricciones que se indican en la sección "XAML 2006 y WPF genérica XAML usos".  
   
 ## <a name="see-also"></a>Vea también
 

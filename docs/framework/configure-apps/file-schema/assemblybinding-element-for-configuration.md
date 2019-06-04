@@ -18,8 +18,8 @@ ms.locfileid: "61674836"
 
 Especifica la directiva de enlace del ensamblado en el nivel de configuración.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; **\<assemblyBinding>**
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -39,13 +39,13 @@ Especifica la directiva de enlace del ensamblado en el nivel de configuración.
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework. |
 
 ## <a name="child-element"></a>Elemento secundario
 
 |     | Descripción |
 | --- | ----------- |
-| [**\<linkedConfiguration>**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Especifica un archivo de configuración para incluirlo. |
+| [ **\<linkedConfiguration>** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | Especifica un archivo de configuración para incluirlo. |
 
 ## <a name="remarks"></a>Comentarios
 

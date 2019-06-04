@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8062ab151efc6175aa68cb0563cd2ad042ee9cd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef308b624525c3a139c892e6118a24d6adb6e14a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628021"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490461"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>puntero a la función FLockClrVersionCallback
 Señala una función que las llamadas de runtime (CLR) de lenguaje común para indicar que la inicialización se ha iniciado o completado.  
   
- Este puntero de función ha quedado obsoleto en la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Este puntero de función ha quedado obsoleto en .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   

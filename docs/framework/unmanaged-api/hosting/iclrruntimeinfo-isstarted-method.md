@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 432de909e1b8166f6d8923889382d9408fb6c62d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457382"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490263"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted (Método)
 Indica si se ha iniciado el tiempo de ejecución (es decir, si la [ICLRRuntimeHost::](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) se ha llamado y se ha realizado correctamente).  
@@ -46,7 +46,7 @@ HRESULT IsStarted(
 |HRESULT|Descripción|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|E_NOTIMPL|La versión de common language runtime (CLR) es anterior a la versión de CLR en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].|  
+|E_NOTIMPL|La versión de common language runtime (CLR) es anterior a la versión de CLR en .NET Framework 4.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este método no funciona con las versiones CLR anteriores a la versión de CLR en .NET Framework 4.  

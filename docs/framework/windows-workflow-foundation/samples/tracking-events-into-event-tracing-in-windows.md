@@ -2,12 +2,12 @@
 title: Seguimiento de eventos en Seguimiento de eventos para Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3afc04fec996f4e24eb6e5ad771886480cd9cb9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004814"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491045"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Seguimiento de eventos en Seguimiento de eventos para Windows
 Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de trabajo de Windows Workflow Foundation (WF) y emitir los eventos de seguimiento en seguimiento de eventos para Windows (ETW). Para emitir registros de seguimiento de flujo de trabajo en ETW, el ejemplo utiliza el participante de seguimiento de ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).
@@ -47,7 +47,7 @@ Este ejemplo muestra cómo habilitar el seguimiento en un servicio de flujo de t
 
      De forma predeterminada, el servicio está escuchando en el puerto 53797 (http://localhost:53797/SampleWorkflowService.xamlx).
 
-4. Mediante [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], abra el cliente de prueba de WCF.
+4. Mediante el Explorador de archivos, abra al cliente de prueba WCF.
 
      El cliente de prueba WCF (WcfTestClient.exe) se encuentra en la \<carpeta de instalación de Visual Studio 2010 > \Common7\IDE\ carpeta.
 

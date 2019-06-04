@@ -2,12 +2,12 @@
 title: Referencia de símbolos y operadores
 description: Obtenga información sobre los símbolos y operadores que se usan en el F# lenguaje de programación.
 ms.date: 02/11/2019
-ms.openlocfilehash: 11a02792dc949b0a7a0a6e7bb59786c489b3aa9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982749"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490808"
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
@@ -127,6 +127,7 @@ En la siguiente tabla se muestra, de menor a mayor, el orden de precedencia de o
 |`let`|No asociativo|
 |`function`, `fun`, `match`, `try`|No asociativo|
 |`if`|No asociativo|
+|`not`|Derecho|
 |`->`|Derecho|
 |`:=`|Derecho|
 |`,`|No asociativo|

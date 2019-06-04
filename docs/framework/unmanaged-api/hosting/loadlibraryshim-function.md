@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457049"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490225"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim (Función)
 Carga la versión especificada de un archivo DLL que se incluye en el paquete redistribuible de .NET Framework.  
   
- Esta función está en desuso en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Use la [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) método en su lugar.  
+ Esta función está desusada en .NET Framework 4. Use la [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) método en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   

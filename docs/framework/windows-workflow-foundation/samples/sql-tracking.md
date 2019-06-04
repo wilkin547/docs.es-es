@@ -2,12 +2,12 @@
 title: Seguimiento de SQL
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b69336e9a6fd0d3cf91c2a187412638d08490eea
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785923"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491087"
 ---
 # <a name="sql-tracking"></a>Seguimiento de SQL
 Este ejemplo muestra cómo escribir un participante de seguimiento SQL personalizado, que escribe registros de seguimiento en una base de datos SQL. Windows Workflow Foundation (WF) proporciona el flujo de trabajo de seguimiento para ganar visibilidad en la ejecución de una instancia de flujo de trabajo. El tiempo de ejecución de seguimiento emite registros de seguimiento de flujo de trabajo durante la ejecución del flujo de trabajo. Para obtener más información acerca del seguimiento de flujo de trabajo, consulte [seguimiento y traza del flujo de trabajo](../workflow-tracking-and-tracing.md).
@@ -35,7 +35,7 @@ Este ejemplo muestra cómo escribir un participante de seguimiento SQL personali
   
      Un ejemplo de la dirección WSDL de servicio local es `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8. Al usar [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], ejecute el cliente de prueba de WCF (WcfTestClient.exe). Se encuentra en el directorio Microsoft Visual Studio 10.0\Common7\IDE.  
+8. Mediante el Explorador de archivos, ejecute al cliente de prueba WCF (WcfTestClient.exe). Se encuentra en el directorio Microsoft Visual Studio 10.0\Common7\IDE.  
   
 9. En el cliente de prueba WCF, haga clic en el **archivo** menú y seleccione **Agregar servicio**. Pegue la dirección del servicio local en el cuadro de texto. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
