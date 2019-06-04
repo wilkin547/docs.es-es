@@ -2,12 +2,12 @@
 title: Autenticación en SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877458"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490099"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticación en SQL Server
 SQL Server admite dos modos de autenticación, el modo de autenticación de Windows y el modo mixto.  
@@ -46,7 +46,7 @@ SQL Server admite dos modos de autenticación, el modo de autenticación de Wind
 - Aplicaciones de Internet, como ASP.NET.  
   
 > [!NOTE]
->  La especificación de la autenticación de Windows no deshabilita los inicios de sesión de SQL Server. Utilice el ALTER LOGIN DISABLE [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrucción para deshabilitar los inicios de sesión de SQL Server con privilegios elevados.  
+>  La especificación de la autenticación de Windows no deshabilita los inicios de sesión de SQL Server. Para deshabilitar los inicios de sesión de SQL Server de privilegios elevados, use la sentencia ALTER LOGIN DISABLE de Transact-SQL.  
   
 ## <a name="login-types"></a>Tipos de inicios de sesión  
  SQL Server admite tres tipos de inicios de sesión:  

@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98940c075a01de2ebe061b6dff53917247fc5193
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780450"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489913"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Determina si un elemento `String` de caracteres específico coincide con un patrón especificado.  
@@ -49,7 +49,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 > [!NOTE]
 >  El operador LIKE y la cláusula ESCAPE de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] no se pueden aplicar a los valores `System.DateTime` o `System.Guid`.  
   
- LIKE admite operaciones de búsqueda de coincidencias de patrón ASCII y Unicode. Cuando todos los parámetros son caracteres ASCII, se realiza la operación de búsqueda de coincidencias de patrón ASCII. Si uno o más argumentos son Unicode, todos los argumentos se convierten a Unicode y se realiza la operación de búsqueda de coincidencias de patrón Unicode. Cuando se utiliza Unicode con LIKE, los espacios en blanco al final son significativos; sin embargo, no lo son para los datos que no son Unicode. La sintaxis de cadena de patrón de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es el mismo que el de [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)].  
+ LIKE admite operaciones de búsqueda de coincidencias de patrón ASCII y Unicode. Cuando todos los parámetros son caracteres ASCII, se realiza la operación de búsqueda de coincidencias de patrón ASCII. Si uno o más argumentos son Unicode, todos los argumentos se convierten a Unicode y se realiza la operación de búsqueda de coincidencias de patrón Unicode. Cuando se utiliza Unicode con LIKE, los espacios en blanco al final son significativos; sin embargo, no lo son para los datos que no son Unicode. La sintaxis de cadena de patrón de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] es el mismo que el de Transact-SQL.  
   
  Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en el elemento `string` de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena de caracteres. Cuando se utiliza con caracteres comodín, el operador LIKE es más flexible que los operadores de comparación de cadenas = y !=.  
   

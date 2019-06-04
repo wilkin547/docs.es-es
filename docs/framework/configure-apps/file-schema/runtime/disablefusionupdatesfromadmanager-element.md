@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704913"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487666"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > elemento
 Especifica si el comportamiento predeterminado, que consiste en permitir el host en tiempo de ejecución para invalidar los valores de configuración de un dominio de aplicación, está deshabilitado.  
@@ -40,7 +40,7 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|0|No deshabilite la capacidad de invalidar la configuración de fusión. Este es el comportamiento predeterminado, empezando por el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|0|No deshabilite la capacidad de invalidar la configuración de fusión. Este es el comportamiento predeterminado, a partir de .NET Framework 4.|  
 |1|Deshabilitar la capacidad de invalidar la configuración de fusión. Esto revierte el comportamiento de versiones anteriores de .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -54,7 +54,7 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- A partir de la [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], el comportamiento predeterminado es permitir la <xref:System.AppDomainManager> objeto invaliden los valores de configuración mediante el <xref:System.AppDomainSetup.ConfigurationFile%2A> propiedad o el <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método de la <xref:System.AppDomainSetup> objeto que se pasa a la implementación de la <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método en la subclase de <xref:System.AppDomainManager>. Para el dominio de aplicación predeterminado, la configuración que cambia invalida la configuración que se ha especificado por el archivo de configuración de la aplicación. Para otros dominios de aplicación, invalidan los valores de configuración que se pasaron a la <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método.  
+ A partir de .NET Framework 4, el comportamiento predeterminado es permitir la <xref:System.AppDomainManager> objeto invaliden los valores de configuración mediante el <xref:System.AppDomainSetup.ConfigurationFile%2A> propiedad o el <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método de la <xref:System.AppDomainSetup> objeto que se pasa a la implementación de la <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método en la subclase de <xref:System.AppDomainManager>. Para el dominio de aplicación predeterminado, la configuración que cambia invalida la configuración que se ha especificado por el archivo de configuración de la aplicación. Para otros dominios de aplicación, invalidan los valores de configuración que se pasaron a la <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método.  
   
  Puede pasar nueva información de configuración, o pasar un valor null (`Nothing` en Visual Basic) para eliminar información de configuración que se pasó.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596636"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487896"
 ---
 # <a name="securing-wrapper-code"></a>Insertar en el repositorio código de contenedor
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596636"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md) se produce en tiempo de compilación just-in-time (JIT) y comprueba sólo el llamador inmediato. Esta comprobación de seguridad no comprueba el llamador del llamador. Una vez que se supera esta comprobación, no hay ninguna seguridad adicional posterior independientemente de las veces que el llamador pueda llamar. Sin embargo, tampoco hay protección contra los ataques por señuelo. Con **LinkDemand**, cualquier código que pasa la prueba y puede hacer referencia al código potencialmente puede romper la seguridad al permitir que el código malintencionado llamar mediante el código autorizado. Por lo tanto, no use **LinkDemand** a menos que se puedan evitar completamente todos los posibles puntos débiles.  
   
     > [!NOTE]
-    >  En el [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], las peticiones de vínculo se han reemplazado por la <xref:System.Security.SecurityCriticalAttribute> atributo <xref:System.Security.SecurityRuleSet.Level2> ensamblados. El <xref:System.Security.SecurityCriticalAttribute> es equivalente a una petición de vínculo de plena confianza; sin embargo, también afecta a las reglas de herencia. Para obtener más información sobre este cambio, consulte [código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    >  En .NET Framework 4, las peticiones de vínculo se han reemplazado por la <xref:System.Security.SecurityCriticalAttribute> atributo <xref:System.Security.SecurityRuleSet.Level2> ensamblados. El <xref:System.Security.SecurityCriticalAttribute> es equivalente a una petición de vínculo de plena confianza; sin embargo, también afecta a las reglas de herencia. Para obtener más información sobre este cambio, consulte [código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
  Las precauciones adicionales necesarias cuando se usa **LinkDemand** deben programarse por separado; el sistema de seguridad puede ayudar con la aplicación. Cualquier error abre una vulnerabilidad en la seguridad. Todo código autorizado que use su código debe hacerse responsable de implementar seguridad adicional mediante lo siguiente:  
   

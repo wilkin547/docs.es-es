@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456390"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489410"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > elemento
 Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.  
@@ -40,7 +40,7 @@ Especifica si el runtime corrige automáticamente las declaraciones de invocaci�
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|`0`|El runtime usa la arquitectura que se introdujo en interoperativo más rápido el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], que no se detecta y declaraciones de invocación de plataforma incorrectas de corrección. Este es el valor predeterminado.|  
+|`0`|El runtime usa la arquitectura que se introdujo en .NET Framework 4, no detecta de serialización de interoperabilidad más rápido y declaraciones de invocación de plataforma incorrectas de corrección. Este es el valor predeterminado.|  
 |`1`|El runtime usa transiciones más lentas que detectan y corrigen incorrecta de la plataforma de declaraciones de invocación.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  

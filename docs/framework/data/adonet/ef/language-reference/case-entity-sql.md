@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607198"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489501"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 Evalúa un conjunto de expresiones `Boolean` para determinar el resultado.  
@@ -41,7 +41,7 @@ END
  Devuelve el tipo de prioridad más alto del conjunto de tipos de `result_expression` y de la expresión `else_result_expression`opcional.  
   
 ## <a name="remarks"></a>Comentarios  
- La expresión case de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se parece a la de [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] . Puede usar la expresión case para efectuar una serie de pruebas condicionales que permitan determinar qué expresión dará el resultado apropiado. Este formato de expresión case se aplica a una serie de una o varias expresiones `Boolean` para determinar la que produce el resultado correcto.  
+ El [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresión case es similar a la expresión case de Transact-SQL. Puede usar la expresión case para efectuar una serie de pruebas condicionales que permitan determinar qué expresión dará el resultado apropiado. Este formato de expresión case se aplica a una serie de una o varias expresiones `Boolean` para determinar la que produce el resultado correcto.  
   
  La función CASE evalúa la `Boolean_expression` de cada cláusula WHEN en el orden especificado, y devuelve la `result_expression` de la primera `Boolean_expression` que se evalúa como `true`. Las expresiones restantes no se evalúan. Si ninguna `Boolean_expression` se evalúa como `true`, el motor de base de datos devuelve la `else_result_expression` si se especifica una cláusula ELSE, o un valor Null en otro caso.  
   

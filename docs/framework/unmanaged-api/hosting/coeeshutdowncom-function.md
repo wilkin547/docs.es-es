@@ -20,15 +20,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a28b9d6e41d0572d423576f5b4024a60a70216c
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0d2b82bc056acd2e620461081b5f8c9d45fc152c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456868"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490646"
 ---
 # <a name="coeeshutdowncom-function"></a>CoEEShutDownCOM (Función)
-Obliga a common language runtime (CLR) para liberar todos los punteros de interfaz que tiene en los contenedores RCW (RCW). Esto tiene el efecto de liberar todas las cachés RCW. Esta función global está en desuso en el [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. En su lugar, use el punto de entrada para un tiempo de ejecución específico.  
+Obliga a common language runtime (CLR) para liberar todos los punteros de interfaz que tiene en los contenedores RCW (RCW). Esto tiene el efecto de liberar todas las cachés RCW. Esta función global está en desuso en .NET Framework 4. En su lugar, use el punto de entrada para un tiempo de ejecución específico.  
   
 ## <a name="syntax"></a>Sintaxis  
   

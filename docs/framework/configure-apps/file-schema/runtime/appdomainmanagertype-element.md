@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aa13d26ac11ed624caa4c9704325f2d604418bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19cd74f0e2550ec91cb56e70cf34a03bd84fc60e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705056"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487742"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > elemento
 Especifica el tipo que sirve de administrador de dominios de aplicación para el dominio de aplicación predeterminado.  
@@ -58,7 +58,7 @@ Especifica el tipo que sirve de administrador de dominios de aplicación para el
   
  El formato del tipo y espacio de nombres es el mismo formato que se usa para el <xref:System.Type.FullName%2A?displayProperty=nameWithType> propiedad.  
   
- Este elemento de configuración solo está disponible en el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] y versiones posteriores.  
+ Este elemento de configuración está disponible solo en .NET Framework 4 y versiones posteriores.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo especificar que el Administrador de dominio de aplicación para el dominio de aplicación predeterminado de un proceso es el `MyMgr` escriba en el `AdMgrExample` ensamblado.  

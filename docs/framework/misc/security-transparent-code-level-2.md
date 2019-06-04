@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456568"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487833"
 ---
 # <a name="security-transparent-code-level-2"></a>Código transparente en seguridad, nivel 2
 
@@ -22,7 +22,7 @@ ms.locfileid: "66456568"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-La transparencia de nivel 2 se introdujo en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Los tres principios de este modelo son código transparente, código crítico para la seguridad y disponible desde código transparente, y código crítico para la seguridad.
+Transparencia de nivel 2 se introdujo en .NET Framework 4. Los tres principios de este modelo son código transparente, código crítico para la seguridad y disponible desde código transparente, y código crítico para la seguridad.
 
 - El código transparente, incluido el código que se ejecuta como de plena confianza, solo puede llamar a otro código transparente o a código crítico para la seguridad y disponible desde código transparente. Solo puede realizar acciones permitidas por el conjunto de permisos de confianza parcial del dominio (si existe). El código transparente no puede hacer lo siguiente:
 

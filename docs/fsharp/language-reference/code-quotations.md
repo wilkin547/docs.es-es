@@ -2,12 +2,12 @@
 title: Expresiones de código delimitadas
 description: Obtenga información sobre F# expresiones de código delimitadas, una característica del lenguaje que le permite generar y trabajar con F# expresiones de código mediante programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: 464df5e3fafa683c93fd5fb6e94d24c229903491
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5523d54a271ad1c53c6de85f37f261e0ecf6cced
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642000"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490795"
 ---
 # <a name="code-quotations"></a>Expresiones de código delimitadas
 
@@ -39,9 +39,7 @@ Pero las expresiones siguientes son válidas.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-Para usar expresiones de código delimitadas, debe agregar una declaración de importación (mediante el uso de la `open` palabra clave) que se abre el [Microsoft.FSharp.Quotations](https://msdn.microsoft.com/library/e9ce8a3a-e00c-4190-bad5-cce52ee089b2) espacio de nombres.
-
-El F# PowerPack proporciona compatibilidad para evaluar y ejecutar F# objetos de expresión.
+Para evalutate F# presupuestos, debe usar el [ F# comillas evaluador](https://github.com/fsprojects/FSharp.Quotations.Evaluator). Proporciona soporte técnico para evaluar y ejecutar F# objetos de expresión.
 
 ## <a name="expr-type"></a>Tipo expr
 

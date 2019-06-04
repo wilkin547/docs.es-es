@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c7c56e39-a700-44f5-b94e-411bfce339d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fe1dfbd62a6967ae51031fa12f80e9c5563dc44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff8c91680a0c3049fa9bc2f7e9c1bf3f654a19b9
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704926"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487771"
 ---
 # <a name="appdomainmanagerassembly-element"></a>\<appDomainManagerAssembly > elemento
 Especifica el ensamblado que proporciona el administrador de dominios de aplicación para el dominio de aplicación predeterminado en el proceso.  
@@ -58,7 +58,7 @@ Especifica el ensamblado que proporciona el administrador de dominios de aplicac
   
  Para el formato del nombre para mostrar del ensamblado, vea el <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> propiedad.  
   
- Este elemento de configuración solo está disponible en el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] y versiones posteriores.  
+ Este elemento de configuración está disponible solo en .NET Framework 4 y versiones posteriores.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo especificar que el Administrador de dominio de aplicación para el dominio de aplicación predeterminado de un proceso es el `MyMgr` escriba en el `AdMgrExample` ensamblado.  

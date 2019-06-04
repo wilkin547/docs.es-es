@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 5165f3ec1ef41e3fb0dd053c112610183197108a
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dca5830a73d0f4374302862e7ccdffdf9dc48cb2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877444"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490108"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Agrupación de conexiones de SQL Server (ADO.NET)
 La conexión a un servidor de bases de datos suele constar de varios pasos que requieren mucho tiempo. Se debe establecer un canal físico, como un socket o una canalización con nombre, debe tener lugar el protocolo de enlace con el servidor, se debe analizar la información de la cadena de conexión, el servidor debe autenticar la conexión, se deben ejecutar comprobaciones para la inscripción en la transacción actual, etc.  
@@ -99,7 +99,7 @@ Para obtener más información acerca de los eventos asociados con la apertura y
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Fragmentación de grupos debido a muchas bases de datos  
  Muchos proveedores de acceso a Internet hospedan varios sitios web en un único servidor. Puede que utilicen una sola base de datos para confirmar un inicio de sesión de autenticación de formularios y luego abran una conexión a una base de datos específica para ese usuario o grupo de usuarios. La conexión a la base de datos de autenticación es agrupada y utilizada por todo el mundo. Sin embargo, hay un grupo independiente de conexiones con cada base de datos, lo que implica un aumento del número de conexiones con el servidor.  
   
- Este es también un efecto secundario del diseño de la aplicación. Existe, sin embargo, una forma relativamente sencilla de evitarlo sin comprometer la seguridad cuando se establece conexión con SQL Server. En lugar de realizar una conexión a una base de datos diferente para cada usuario o grupo, realice una conexión a la misma base de datos en el servidor y, a continuación, ejecute la instrucción USE de [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para cambiar a la base de datos deseada. En el siguiente fragmento de código se muestra la creación de una conexión inicial con la base de datos `master` y el cambio a la base de datos deseada especificada en la variable de cadena `databaseName`.  
+ Este es también un efecto secundario del diseño de la aplicación. Existe, sin embargo, una forma relativamente sencilla de evitarlo sin comprometer la seguridad cuando se establece conexión con SQL Server. En lugar de realizar una conexión a una base de datos diferente por cada usuario o grupo, realice una conexión a la misma base de datos en el servidor y, a continuación, ejecute la instrucción USE de Transact-SQL para cambiar a la base de datos deseada. En el siguiente fragmento de código se muestra la creación de una conexión inicial con la base de datos `master` y el cambio a la base de datos deseada especificada en la variable de cadena `databaseName`.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  

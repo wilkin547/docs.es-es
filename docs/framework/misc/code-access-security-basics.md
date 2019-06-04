@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868776"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488030"
 ---
 # <a name="code-access-security-basics"></a>Conceptos básicos sobre la seguridad de acceso del código
 
@@ -32,7 +32,7 @@ Debe estar familiarizado con los siguientes conceptos de seguridad de acceso del
 
 - **Bibliotecas de clases seguras**: Una biblioteca de clases seguras usa peticiones de seguridad para asegurarse de que los llamadores de la biblioteca tienen permiso para acceder a los recursos que expone la biblioteca. Por ejemplo, una biblioteca de clases segura podría tener un método para crear archivos que requiera que los llamadores tengan permisos para crear archivos. .NET Framework consta de bibliotecas de clases seguras. Debe tener en cuenta los permisos necesarios para el acceso a cualquier biblioteca que use el código. Para obtener más información, consulte el [usando bibliotecas de clases seguras](#secure_library) sección más adelante en este tema.
 
-- **El código transparente**: A partir de la [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], además de identificar los permisos específicos, también debe determinar si el código debe ejecutarse como transparente en seguridad. El código transparente en seguridad no puede llamar a tipos o miembros que se identifican como críticos para la seguridad. Esta regla se aplica a las aplicaciones de plena confianza y a las de confianza parcial. Para obtener más información, consulte [código transparente en seguridad](../../../docs/framework/misc/security-transparent-code.md).
+- **El código transparente**: A partir de .NET Framework 4, además de identificar los permisos específicos, también debe determinar si el código debe ejecutarse como transparente en seguridad. El código transparente en seguridad no puede llamar a tipos o miembros que se identifican como críticos para la seguridad. Esta regla se aplica a las aplicaciones de plena confianza y a las de confianza parcial. Para obtener más información, consulte [código transparente en seguridad](../../../docs/framework/misc/security-transparent-code.md).
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ Seguridad de acceso del código no elimina la posibilidad de que se produzcan er
 Sintaxis de seguridad declarativa usa [atributos](../../../docs/standard/attributes/index.md) para colocar la información de seguridad en el [metadatos](../../../docs/standard/metadata-and-self-describing-components.md) del código. Los atributos se pueden colocar en el nivel de ensamblado, clase o miembro para indicar el tipo de solicitud, petición o invalidación que desea usar. Las solicitudes se usan en aplicaciones destinadas a Common Language Runtime para informar al sistema de seguridad de runtime sobre los permisos que la aplicación necesita o no desea. Las peticiones e invalidaciones se usan en las bibliotecas para ayudar a proteger los recursos de los llamadores o para invalidar el comportamiento de seguridad predeterminado.
 
 > [!NOTE]
-> En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]se introdujeron cambios importantes tanto en el modelo de seguridad de .NET Framework como en la terminología. Para obtener más información sobre estos cambios, consulte [cambios de seguridad](../../../docs/framework/security/security-changes.md).
+> En .NET Framework 4, ha habido cambios importantes en el modelo de seguridad de .NET Framework y la terminología. Para obtener más información sobre estos cambios, consulte [cambios de seguridad](../../../docs/framework/security/security-changes.md).
 
 Para usar llamadas de seguridad declarativas, debe inicializar los datos de estado del objeto de permiso para que represente la forma concreta del permiso necesario. Cada permiso integrado tiene un atributo al que se pasa una enumeración <xref:System.Security.Permissions.SecurityAction> para describir el tipo de operación de seguridad que se desea realizar. Sin embargo, los permisos también aceptan parámetros propios exclusivos.
 

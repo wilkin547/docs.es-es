@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6d858ef4c2f70c55b0a36e845f90d9a8e08f5e2d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586983"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487825"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Utilizar bibliotecas de código que no es de plena confianza
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
->  En este tema trata el comportamiento de los ensamblados con nombre seguro y solo se aplica a [nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md) ensamblados. [Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md) ensamblados en el [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o versiones posteriores no se ven afectados por los nombres seguros. Para obtener más información sobre los cambios en el sistema de seguridad, consulte [cambios de seguridad](../../../docs/framework/security/security-changes.md).  
+>  En este tema trata el comportamiento de los ensamblados con nombre seguro y solo se aplica a [nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md) ensamblados. [Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md) ensamblados en .NET Framework 4 o posterior no se ven afectados por los nombres seguros. Para obtener más información sobre los cambios en el sistema de seguridad, consulte [cambios de seguridad](../../../docs/framework/security/security-changes.md).  
   
  Las aplicaciones que reciben menos de la plena confianza de su host o espacio aislado no pueden llamar a las bibliotecas administradas compartidas a menos que el escritor de la biblioteca se lo permita específicamente mediante el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Por lo tanto, los escritores de aplicaciones deben tener en cuenta que habrá algunas bibliotecas que no estarán a su disposición desde un contexto de confianza parcial. De forma predeterminada, todo el código que se ejecuta en confianza parcial [sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) y no está en la lista de ensamblados de plena confianza es de confianza parcial. Si no espera que el código se ejecute desde un contexto de confianza parcial o que lo llame un código de confianza parcial, no tiene que preocuparse de la información de esta sección. Sin embargo, si escribe un código que debe interactuar con un código de confianza parcial o que debe funcionar desde un contexto de confianza parcial, debe considerar los siguientes factores:  
   

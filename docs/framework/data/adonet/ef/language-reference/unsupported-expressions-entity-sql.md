@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
 dev_langs:
 - sql
-ms.openlocfilehash: a47ff46ca99a84500bc5dfecc19bb31652e9b4b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af0e00f470584883b6a65b63f2650c1c359b404c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034078"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489860"
 ---
 # <a name="unsupported-expressions"></a>Expresiones no admitidas
 
-En este tema se describen las expresiones de [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] que no se admiten en [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Para obtener más información, consulte [cómo Entity SQL difiere de Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md).
+En este tema se describe las expresiones de Transact-SQL que no se admiten en [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Para obtener más información, consulte [cómo Entity SQL difiere de Transact-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md).
 
 ## <a name="quantified-predicates"></a>Predicados cuantificados
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] permite construcciones con el formato siguiente:
+Transact-SQL permite construcciones con el formato siguiente:
 
 ```sql
 sal > all (select salary from employees)
@@ -33,7 +33,7 @@ exists(select 0 from employees as e where sal > e.salary)
 
 ## <a name="-operator"></a>* (operador)
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] admite el uso del operador * en la cláusula SELECT para indicar que todas las columnas se deberían proyectar fuera. Esto no se admite en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].
+Transact-SQL admite el uso de la * operador en la cláusula SELECT para indicar que todas las columnas se deberían proyectar fuera. Esto no se admite en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].
 
 ## <a name="see-also"></a>Vea también
 

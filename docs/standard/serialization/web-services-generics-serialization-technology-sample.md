@@ -2,12 +2,12 @@
 title: Ejemplo de Web Services Generics Serialization Technology
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 6549dc1c3d428a5fb74fe0212549ef3f3f6510d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4aa9c21fa2bafce16e93a5d2479b17946dba41b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018059"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490760"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Ejemplo de Web Services Generics Serialization Technology
 [Descargar ejemplo](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -32,7 +32,7 @@ ms.locfileid: "62018059"
 > [!NOTE]
 >  Los siguientes pasos son obligatorios para generar el ejemplo.  
   
-1. Abra [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)] y navegue hasta el subdirectorio \CS.  
+1. Abra el Explorador de archivos y navegue hasta el subdirectorio \CS.  
   
 2. Haga clic con el botón secundario en el icono del subdirectorio GenericsService y seleccione **Compartir y seguridad**.  
   

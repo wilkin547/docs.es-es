@@ -9,12 +9,12 @@ helpviewer_keywords:
 - supportedRuntime element
 - <supportedRuntime> element
 ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
-ms.openlocfilehash: c6bf4c6b262bc9066277a683d5eda67ada6f4d08
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 90bdd5b8c5fdebe2c5d7ec580975dc63144b2401
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456217"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489302"
 ---
 # <a name="supportedruntime-element"></a>\<supportedRuntime > elemento
 
@@ -34,7 +34,7 @@ Especifica qué versión de common language runtime y, opcionalmente, la aplicac
 
 |Atributo|Descripción|
 |---------------|-----------------|
-|**version**|Atributo opcional.<br /><br /> Un valor de cadena que especifica la versión de Common Language Runtime (CLR) que es compatible con esta aplicación. Para los valores válidos de la `version` atributo, vea el [valores "runtime version"](#version) sección. **Nota:**  A través de .NET Framework 3.5, el "*en tiempo de ejecución versión*" valor adopta la forma *principales*. *menores*. *compilar*. A partir de [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], solo se requieren los números de versión principal y secundaria "(es decir, "v4.0" en lugar de "v4.0.30319"). Se recomienda la cadena más corta.|
+|**version**|Atributo opcional.<br /><br /> Un valor de cadena que especifica la versión de Common Language Runtime (CLR) que es compatible con esta aplicación. Para los valores válidos de la `version` atributo, vea el [valores "runtime version"](#version) sección. **Nota:**  A través de .NET Framework 3.5, el "*en tiempo de ejecución versión*" valor adopta la forma *principales*. *menores*. *compilar*. Comenzar con .NET Framework 4, solo se necesitan los números de versión principal y secundaria (es decir, "v4.0" en lugar de "v4.0.30319"). Se recomienda la cadena más corta.|
 |**sku**|Atributo opcional.<br /><br /> Valor de cadena que especifica la referencia de almacén (SKU), que a su vez especifica qué versión de .NET Framework es compatible con esta aplicación.<br /><br /> A partir de .NET Framework 4.0, se recomienda el uso del atributo `sku`.  Cuando está presente, indica la versión de .NET Framework que la aplicación tiene como destino.<br /><br /> Para los valores válidos del atributo de sku, consulte el [valores "sku id"](#sku) sección.|
 
 ## <a name="remarks"></a>Comentarios

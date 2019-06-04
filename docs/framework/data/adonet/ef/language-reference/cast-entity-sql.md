@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 36bf627c7dfabdcf4bbc279bec8f3933f7aafb2a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631650"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489950"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Convierte una expresión de un tipo de datos a otro.  
@@ -29,7 +29,7 @@ CAST ( expression AS data_type )
  Devuelve el mismo valor que `data_type`.  
   
 ## <a name="remarks"></a>Comentarios  
- La expresión de conversión tiene una semántica similar a la expresión CONVERT de [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] . La expresión de conversión se utiliza para convertir un valor de un tipo en un valor de otro tipo.  
+ La expresión de conversión tiene una semántica similar a la expresión CONVERT de Transact-SQL. La expresión de conversión se utiliza para convertir un valor de un tipo en un valor de otro tipo.  
   
 ```  
 CAST( e as T )  

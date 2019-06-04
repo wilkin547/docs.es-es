@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3055ac73f15329015f532f42c1f922eab38828cb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985639"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490309"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess (Función)
 Obtiene el número de versión de common language runtime (CLR) que está asociado con el identificador de proceso especificado.  
   
- Esta función está en desuso en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Esta función está desusada en .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   

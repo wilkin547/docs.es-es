@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38adde3cd51a96f0e15ed5a0c539e088f2d3b480
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31e2a075f9202439cd62c81a06528b20c4971656
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701637"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489337"
 ---
 # <a name="timespanlegacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode > elemento
 Determina si el runtime conserva el comportamiento heredado para dar formato a las operaciones con <xref:System.TimeSpan?displayProperty=nameWithType> valores.  
@@ -58,7 +58,7 @@ Determina si el runtime conserva el comportamiento heredado para dar formato a l
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- A partir de la [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], <xref:System.TimeSpan?displayProperty=nameWithType> estructura implementa el <xref:System.IFormattable> interfaz y admite operaciones con cadenas de formato estándar y personalizadas de formato. Si un método de análisis encuentra un especificador de formato no compatible o una cadena de formato, produce un <xref:System.FormatException>.  
+ A partir de .NET Framework 4, el <xref:System.TimeSpan?displayProperty=nameWithType> estructura implementa el <xref:System.IFormattable> interfaz y admite operaciones con cadenas de formato estándar y personalizadas de formato. Si un método de análisis encuentra un especificador de formato no compatible o una cadena de formato, produce un <xref:System.FormatException>.  
   
  En versiones anteriores de .NET Framework, el <xref:System.TimeSpan> estructura no implementó <xref:System.IFormattable> y no eran compatibles con las cadenas de formato. Sin embargo, muchos desarrolladores erróneamente supusieron que <xref:System.TimeSpan> eran compatibles con un conjunto de cadenas de formato y se usaron en [las operaciones de formato compuesto](../../../../../docs/standard/base-types/composite-formatting.md) con métodos como <xref:System.String.Format%2A?displayProperty=nameWithType>. Normalmente, si un tipo implementa <xref:System.IFormattable> y admite cadenas de formato, las llamadas a métodos de formato con un formato no admitido cadenas suele producen un <xref:System.FormatException>. Sin embargo, dado que <xref:System.TimeSpan> no implementó <xref:System.IFormattable>, el tiempo de ejecución omite la cadena de formato y se llama en su lugar el <xref:System.TimeSpan.ToString?displayProperty=nameWithType> método. Esto significa que, aunque las cadenas de formato no tenían ningún efecto en la operación de formato, su presencia no se ha producido un <xref:System.FormatException>.  
   
@@ -76,13 +76,13 @@ Determina si el runtime conserva el comportamiento heredado para dar formato a l
 12:30:45  
 ```  
   
- Esto difiere notablemente de la salida, si ejecuta el ejemplo en el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o una versión posterior:  
+ Esto difiere notablemente la salida si ejecuta el ejemplo en el .NET Framework 4 o una versión posterior:  
   
 ```  
 Invalid Format  
 ```  
   
- Sin embargo, si agrega el siguiente archivo de configuración para el ejemplo del directorio y, a continuación, ejecutar el ejemplo en el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] o una versión posterior, el resultado es idéntico al producido por el ejemplo, cuando se ejecuta [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Sin embargo, si agrega el siguiente archivo de configuración para el directorio de ejemplo y, a continuación, ejecute el ejemplo en el .NET Framework 4 o una versión posterior, el resultado es idéntico al producido por el ejemplo, cuando se ejecuta [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
   
 ```xml  
 <?xml version ="1.0"?>  

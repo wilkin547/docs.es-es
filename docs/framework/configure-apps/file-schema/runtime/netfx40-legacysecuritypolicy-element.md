@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 868c5f0742fa4dc963539fd70414752092156c64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456471"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489423"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > elemento
 Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.  
@@ -55,11 +55,11 @@ Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- En la versión de .NET Framework 3.5 y versiones anteriores, la directiva CAS siempre está en efecto. En el [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], debe estar habilitada la directiva CAS.  
+ En la versión de .NET Framework 3.5 y versiones anteriores, la directiva CAS siempre está en efecto. En .NET Framework 4, debe habilitarse la directiva CAS.  
   
  La directiva CAS es específico de la versión. Deben volver a especificar las directivas personalizadas de las entidades de certificación que existen en versiones anteriores de .NET Framework en .NET Framework 4.  
   
- Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento a una [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] no afecta al ensamblado [código transparente en seguridad](../../../../../docs/framework/misc/security-transparent-code.md); las reglas de transparencia se siguen aplican.  
+ Aplicar el `<NetFx40_LegacySecurityPolicy>` no afecta al elemento a un ensamblado de .NET Framework 4 [código transparente en seguridad](../../../../../docs/framework/misc/security-transparent-code.md); las reglas de transparencia se siguen aplican.  
   
 > [!IMPORTANT]
 >  Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento puede producir reducciones de rendimiento importantes para los ensamblados de imagen nativa creados por el [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que no están instalados en el [caché global de ensamblados ](../../../../../docs/framework/app-domains/gac.md). La degradación del rendimiento se debe a la imposibilidad de que el tiempo de ejecución para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que sus carga los ensamblados como just-in-time.  

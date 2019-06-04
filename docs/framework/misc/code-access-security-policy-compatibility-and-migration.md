@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456640"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487971"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidad con la directiva de seguridad de acceso del código y migración
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-La parte de la directiva de seguridad de acceso del código (CAS) se ha quedado obsoleta en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Como resultado, puede encontrar advertencias de compilación y excepciones en tiempo de ejecución si llama a los tipos obsoletos de la directiva y miembros [explícitamente](#explicit_use) o [implícitamente](#implicit_use) (a través de otros tipos y miembros).
+La parte de la directiva de seguridad de acceso del código (CAS) se ha quedado obsoleta en .NET Framework 4. Como resultado, puede encontrar advertencias de compilación y excepciones en tiempo de ejecución si llama a los tipos obsoletos de la directiva y miembros [explícitamente](#explicit_use) o [implícitamente](#implicit_use) (a través de otros tipos y miembros).
 
 Para los errores y advertencias:
 

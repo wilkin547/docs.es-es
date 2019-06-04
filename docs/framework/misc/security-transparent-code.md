@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456503"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487849"
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456503"
 En la seguridad participan tres partes interrelacionadas: espacio aislado, permisos y cumplimiento. Espacio aislado se refiere a la práctica de crear dominios aislados, donde una parte del código se trata como un código de plena confianza y la otra se restringe al conjunto de permisos concedidos al espacio aislado. El código de aplicación que se ejecuta en el conjunto de permisos del espacio aislado se considera transparente, es decir, no puede realizar operaciones que puedan afectar a la seguridad. El conjunto de permisos del espacio aislado se determina mediante evidencia (clase <xref:System.Security.Policy.Evidence>). La evidencia identifica los permisos específicos que los espacios aislados requieren y los tipos de espacios aislados que se pueden crear. El cumplimiento se refiere a permitir que el código transparente tan solo se ejecute dentro su conjunto de permisos.
 
 > [!IMPORTANT]
-> La directiva de seguridad era un elemento clave en las versiones anteriores de .NET Framework, A partir de la [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], directiva de seguridad está obsoleta. La eliminación de la directiva de seguridad es independiente de la transparencia de seguridad. Para obtener información acerca de los efectos de este cambio, consulte [migración y compatibilidad con la directiva de seguridad de acceso de código](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> La directiva de seguridad era un elemento clave en las versiones anteriores de .NET Framework, A partir de .NET Framework 4, la directiva de seguridad está obsoleta. La eliminación de la directiva de seguridad es independiente de la transparencia de seguridad. Para obtener información acerca de los efectos de este cambio, consulte [migración y compatibilidad con la directiva de seguridad de acceso de código](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
 
 En este tema se describe el modelo de transparencia con más detalle. Contiene las siguientes secciones:
 
@@ -70,7 +70,7 @@ La diferencia principal entre los dos niveles de transparencia es que el nivel 1
 
 ### <a name="level-2-transparency"></a>Transparencia de nivel 2
 
-La transparencia de nivel 2 se introdujo en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Los tres principios de este modelo son código transparente, código crítico para la seguridad y disponible desde código transparente, y código crítico para la seguridad.
+Transparencia de nivel 2 se introdujo en .NET Framework 4. Los tres principios de este modelo son código transparente, código crítico para la seguridad y disponible desde código transparente, y código crítico para la seguridad.
 
 - El código transparente, independientemente de los permisos que se le conceden (incluida la plena confianza), solo puede llamar a otro código transparente o a código crítico para la seguridad y disponible desde código transparente. Si el código es de confianza parcial, solo puede realizar acciones permitidas por el conjunto de permisos del dominio. El código transparente no puede hacer lo siguiente:
 

@@ -2,12 +2,12 @@
 title: Traza de datos en ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583781"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489527"
 ---
 # <a name="data-tracing-in-adonet"></a>Traza de datos en ADO.NET
 
@@ -41,7 +41,7 @@ Puede obtener el identificador de la conexión de cliente mediante programación
 
 ADO.NET también envía un identificador de actividad específico del subproceso El identificador de actividad se captura en las sesiones de eventos extendidos si se inician las sesiones con la opción TRACK_CAUSALITY habilitada. Para los problemas de rendimiento con una conexión activa, puede obtener el identificador de actividad del seguimiento de acceso a datos del cliente (campo `ActivityID`) y después buscar el identificador de actividad en la salida de los eventos extendidos. El identificador de actividad de los eventos extendidos es un GUID de 16 bytes (no es igual que el GUID del identificador de la conexión de cliente) anexado con un número de secuencia de cuatro bytes. El número de secuencia representa el orden de una solicitud dentro de un subproceso e indica el orden relativo del lote y las instrucciones RPC para el subproceso. `ActivityID` se envía actualmente opcionalmente para instrucciones por lotes de SQL y solicitudes RPC cuando el seguimiento de acceso a datos está habilitado y el decimoctavo bit de la palabra de configuración de seguimiento de acceso a datos está activado.
 
-A continuación se muestra un ejemplo que usa [!INCLUDE[tsql](../../../../includes/tsql-md.md)] para iniciar una sesión de eventos extendidos que se almacenará en un búfer de anillo y registrará el identificador de actividad enviado desde un cliente en RPC y operaciones por lotes.
+El siguiente es un ejemplo que usa Transact-SQL para iniciar una sesión de eventos extendidos que se almacenarán en un búfer de anillo y registrará el Id. de actividad enviado desde un cliente en operaciones RPC y por lotes.
 
 ```sql
 create event session MySession on server

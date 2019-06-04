@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698166"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489634"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess (Método)
 Obtiene el ICorDebugProcess (interfaz) que corresponde a un módulo de runtime (CLR) de lenguaje común cargado en el proceso.  
@@ -78,7 +78,7 @@ HRESULT OpenVirtualProcess(
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|El [ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md) devolución de llamada devuelve un error o no proporciona un identificador válido.|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` no implementa las interfaces de destino de datos necesarios para esta versión del tiempo de ejecución.|  
 |CORDBG_E_NOT_CLR|El módulo indicado no es un módulo CLR. Este resultado HRESULT también se devuelve cuando un módulo CLR no se puede detectar porque se ha dañado la memoria, el módulo no está disponible o la versión de CLR es posterior a la versión de correcciones de compatibilidad.|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Esta versión en tiempo de ejecución no es compatible con este modelo de depuración. Actualmente, el modelo de depuración no es compatible con versiones de CLR antes de la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. El `pwszVersion` parámetro de salida sigue establecido en el valor correcto después de este error.|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|Esta versión en tiempo de ejecución no es compatible con este modelo de depuración. Actualmente, el modelo de depuración no es compatible con versiones de CLR antes de .NET Framework 4. El `pwszVersion` parámetro de salida sigue establecido en el valor correcto después de este error.|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|La versión de CLR es mayor que la versión de notificaciones para admitir este depurador. El `pwszVersion` parámetro de salida sigue establecido en el valor correcto después de este error.|  
 |E_NO_INTERFACE|El `riidProcess` interfaz no está disponible.|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|El `CLR_DEBUGGING_VERSION` estructura no tiene un valor reconocido para `wStructVersion`. El único valor aceptado en este momento es 0.|  
