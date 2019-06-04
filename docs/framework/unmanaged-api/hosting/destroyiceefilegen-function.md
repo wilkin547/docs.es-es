@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37ff40e1c009b8e1e0509a4a3333d5a2a70bbfd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: daf674c0340998c0fd518e0f1af721bbe9ff653c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906365"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490473"
 ---
-# <a name="destroyiceefilegen-function"></a><span data-ttu-id="10890-102">DestroyICeeFileGen (Función)</span><span class="sxs-lookup"><span data-stu-id="10890-102">DestroyICeeFileGen Function</span></span>
-<span data-ttu-id="10890-103">Destruye un [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="10890-103">Destroys an [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) object.</span></span>  
+# <a name="destroyiceefilegen-function"></a><span data-ttu-id="3f668-102">DestroyICeeFileGen (Función)</span><span class="sxs-lookup"><span data-stu-id="3f668-102">DestroyICeeFileGen Function</span></span>
+<span data-ttu-id="3f668-103">Destruye un [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) objeto.</span><span class="sxs-lookup"><span data-stu-id="3f668-103">Destroys an [ICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md) object.</span></span>  
   
- <span data-ttu-id="10890-104">Esta función está en desuso en [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="10890-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="3f668-104">Esta función está desusada en .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="3f668-104">This function has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10890-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="10890-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3f668-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="3f668-105">Syntax</span></span>  
   
 ```  
 HRESULT DestroyICeeFileGen (  
@@ -38,25 +38,25 @@ HRESULT DestroyICeeFileGen (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="10890-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="10890-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3f668-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="3f668-106">Parameters</span></span>  
  `ceeFileGen`  
- <span data-ttu-id="10890-107">[in] La `ICeeFileGen` objeto que se va a destruir.</span><span class="sxs-lookup"><span data-stu-id="10890-107">[in] The `ICeeFileGen` object to destroy.</span></span>  
+ <span data-ttu-id="3f668-107">[in] La `ICeeFileGen` objeto que se va a destruir.</span><span class="sxs-lookup"><span data-stu-id="3f668-107">[in] The `ICeeFileGen` object to destroy.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="10890-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="10890-108">Return Value</span></span>  
- <span data-ttu-id="10890-109">Este método devuelve códigos de error COM estándar.</span><span class="sxs-lookup"><span data-stu-id="10890-109">This method returns standard COM error codes.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3f668-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="3f668-108">Return Value</span></span>  
+ <span data-ttu-id="3f668-109">Este método devuelve códigos de error COM estándar.</span><span class="sxs-lookup"><span data-stu-id="3f668-109">This method returns standard COM error codes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="10890-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="10890-110">Remarks</span></span>  
- <span data-ttu-id="10890-111">`DestroyICeeFileGen` destruye el `ICeeFileGen` objeto creado por el [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) función.</span><span class="sxs-lookup"><span data-stu-id="10890-111">`DestroyICeeFileGen` destroys the `ICeeFileGen` object created by the [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3f668-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="3f668-110">Remarks</span></span>  
+ <span data-ttu-id="3f668-111">`DestroyICeeFileGen` destruye el `ICeeFileGen` objeto creado por el [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) función.</span><span class="sxs-lookup"><span data-stu-id="3f668-111">`DestroyICeeFileGen` destroys the `ICeeFileGen` object created by the [CreateICeeFileGen](../../../../docs/framework/unmanaged-api/hosting/createiceefilegen-function.md) function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10890-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="10890-112">Requirements</span></span>  
- <span data-ttu-id="10890-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10890-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3f668-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3f668-112">Requirements</span></span>  
+ <span data-ttu-id="3f668-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3f668-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10890-114">**Encabezado**: ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="10890-114">**Header:** ICeeFileGen.h</span></span>  
+ <span data-ttu-id="3f668-114">**Encabezado**: ICeeFileGen.h</span><span class="sxs-lookup"><span data-stu-id="3f668-114">**Header:** ICeeFileGen.h</span></span>  
   
- <span data-ttu-id="10890-115">**Biblioteca:** MSCorPE.dll</span><span class="sxs-lookup"><span data-stu-id="10890-115">**Library:** MSCorPE.dll</span></span>  
+ <span data-ttu-id="3f668-115">**Biblioteca:** MSCorPE.dll</span><span class="sxs-lookup"><span data-stu-id="3f668-115">**Library:** MSCorPE.dll</span></span>  
   
- <span data-ttu-id="10890-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10890-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3f668-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3f668-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10890-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="10890-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3f668-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="3f668-117">See also</span></span>
 
-- [<span data-ttu-id="10890-118">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="10890-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="3f668-118">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="3f668-118">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
