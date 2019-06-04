@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2ce6dd1210eef94e77b5d6a2d58a35cf971e6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59565b28991f6d61ff2c6c77540eace92461aa89
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765263"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490171"
 ---
-# <a name="lpoverlappedcompletionroutine-function-pointer"></a><span data-ttu-id="4c29c-102">puntero a la función LPOVERLAPPED_COMPLETION_ROUTINE</span><span class="sxs-lookup"><span data-stu-id="4c29c-102">LPOVERLAPPED_COMPLETION_ROUTINE Function Pointer</span></span>
-<span data-ttu-id="4c29c-103">Señala a una función que notifica al host cuándo una superpuesta (es decir, asincrónica) se ha completado la E/S en un dispositivo.</span><span class="sxs-lookup"><span data-stu-id="4c29c-103">Points to a function that notifies the host when an overlapped (that is, asynchronous) I/O to a device has completed.</span></span>  
+# <a name="lpoverlappedcompletionroutine-function-pointer"></a><span data-ttu-id="43b30-102">puntero a la función LPOVERLAPPED_COMPLETION_ROUTINE</span><span class="sxs-lookup"><span data-stu-id="43b30-102">LPOVERLAPPED_COMPLETION_ROUTINE Function Pointer</span></span>
+<span data-ttu-id="43b30-103">Señala a una función que notifica al host cuándo una superpuesta (es decir, asincrónica) se ha completado la E/S en un dispositivo.</span><span class="sxs-lookup"><span data-stu-id="43b30-103">Points to a function that notifies the host when an overlapped (that is, asynchronous) I/O to a device has completed.</span></span>  
   
- <span data-ttu-id="4c29c-104">Este puntero de función ha quedado obsoleto en la [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4c29c-104">This function pointer has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="43b30-104">Este puntero de función ha quedado obsoleto en .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="43b30-104">This function pointer has been deprecated in the .NET Framework 4.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4c29c-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4c29c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43b30-105">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="43b30-105">Syntax</span></span>  
   
 ```  
 typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (  
@@ -38,30 +38,30 @@ typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4c29c-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4c29c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="43b30-106">Parámetros</span><span class="sxs-lookup"><span data-stu-id="43b30-106">Parameters</span></span>  
  `dwErrorCode`  
- <span data-ttu-id="4c29c-107">[in] Un valor que es un código de error si el dispositivo se ha cerrado; en caso contrario, este valor es cero.</span><span class="sxs-lookup"><span data-stu-id="4c29c-107">[in] A value that is an error code if the device has been closed; otherwise, this value is zero.</span></span>  
+ <span data-ttu-id="43b30-107">[in] Un valor que es un código de error si el dispositivo se ha cerrado; en caso contrario, este valor es cero.</span><span class="sxs-lookup"><span data-stu-id="43b30-107">[in] A value that is an error code if the device has been closed; otherwise, this value is zero.</span></span>  
   
- <span data-ttu-id="4c29c-108">Cerrar un dispositivo hace que todas las pendientes de E/S en el dispositivo para completarse inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="4c29c-108">Closing a device causes all pending I/O to the device to be completed immediately.</span></span>  
+ <span data-ttu-id="43b30-108">Cerrar un dispositivo hace que todas las pendientes de E/S en el dispositivo para completarse inmediatamente.</span><span class="sxs-lookup"><span data-stu-id="43b30-108">Closing a device causes all pending I/O to the device to be completed immediately.</span></span>  
   
  `dwNumberOfBytesTransfered`  
- <span data-ttu-id="4c29c-109">[in] El número de bytes transferidos por la operación de E/S.</span><span class="sxs-lookup"><span data-stu-id="4c29c-109">[in] The number of bytes transferred by the I/O operation.</span></span>  
+ <span data-ttu-id="43b30-109">[in] El número de bytes transferidos por la operación de E/S.</span><span class="sxs-lookup"><span data-stu-id="43b30-109">[in] The number of bytes transferred by the I/O operation.</span></span>  
   
  `lpOverlapped`  
- <span data-ttu-id="4c29c-110">[in] Un puntero a una estructura que contiene información que se utilizará para completar la solicitud de E/S.</span><span class="sxs-lookup"><span data-stu-id="4c29c-110">[in] A pointer to a structure that contains information to be used to complete the I/O request.</span></span>  
+ <span data-ttu-id="43b30-110">[in] Un puntero a una estructura que contiene información que se utilizará para completar la solicitud de E/S.</span><span class="sxs-lookup"><span data-stu-id="43b30-110">[in] A pointer to a structure that contains information to be used to complete the I/O request.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4c29c-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4c29c-111">Remarks</span></span>  
- <span data-ttu-id="4c29c-112">La función a la que `LPOVERLAPPED_COMPLETION_ROUTINE` puntos es una función de devolución de llamada y debe ser implementada por el sistema de escritura de la aplicación de hospedaje.</span><span class="sxs-lookup"><span data-stu-id="4c29c-112">The function to which `LPOVERLAPPED_COMPLETION_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="4c29c-113">La función de devolución de llamada permite al host procesar la solicitud de E/S completada.</span><span class="sxs-lookup"><span data-stu-id="4c29c-113">The callback function allows the host to process the completed I/O request.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43b30-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="43b30-111">Remarks</span></span>  
+ <span data-ttu-id="43b30-112">La función a la que `LPOVERLAPPED_COMPLETION_ROUTINE` puntos es una función de devolución de llamada y debe ser implementada por el sistema de escritura de la aplicación de hospedaje.</span><span class="sxs-lookup"><span data-stu-id="43b30-112">The function to which `LPOVERLAPPED_COMPLETION_ROUTINE` points is a callback function and must be implemented by the writer of the hosting application.</span></span> <span data-ttu-id="43b30-113">La función de devolución de llamada permite al host procesar la solicitud de E/S completada.</span><span class="sxs-lookup"><span data-stu-id="43b30-113">The callback function allows the host to process the completed I/O request.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4c29c-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4c29c-114">Requirements</span></span>  
- <span data-ttu-id="4c29c-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4c29c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43b30-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="43b30-114">Requirements</span></span>  
+ <span data-ttu-id="43b30-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43b30-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4c29c-116">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4c29c-116">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="43b30-116">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="43b30-116">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4c29c-117">**Biblioteca:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="4c29c-117">**Library:** MSCorWks.dll</span></span>  
+ <span data-ttu-id="43b30-117">**Biblioteca:** MSCorWks.dll</span><span class="sxs-lookup"><span data-stu-id="43b30-117">**Library:** MSCorWks.dll</span></span>  
   
- <span data-ttu-id="4c29c-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4c29c-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="43b30-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43b30-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4c29c-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="4c29c-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43b30-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="43b30-119">See also</span></span>
 
-- [<span data-ttu-id="4c29c-120">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="4c29c-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="43b30-120">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="43b30-120">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
