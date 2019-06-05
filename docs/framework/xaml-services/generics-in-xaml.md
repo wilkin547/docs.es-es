@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: ca0c1b466f5a89730c72f32321394ccfc6d9c7a2
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6ca7986513d1a6cbe160ca1a0af6699c323aac7e
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457362"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690641"
 ---
 # <a name="generics-in-xaml"></a>Elementos genéricos en XAML
 Los servicios de XAML de .NET Framework implementados en System.Xaml proporciona compatibilidad para utilizar tipos genéricos de CLR. Esta compatibilidad incluye especificar las restricciones de los genéricos como un argumento de tipo y exigir la restricción llamando adecuado `Add` método para casos de colección genéricos. En este tema se describe aspectos del uso y que hacen referencia a tipos genéricos en XAML.  
@@ -40,7 +40,7 @@ Los servicios de XAML de .NET Framework implementados en System.Xaml proporciona
   
  En WPF y destinada a .NET Framework 4, puede usar las características de XAML 2009 junto con `x:TypeArguments`, pero solo para XAML flexible (XAML que no está compilado por marcado). XAML compilado por marcado para WPF y el formulario BAML de XAML no admiten de momento las palabras clave y características de XAML 2009.  
   
- Flujos de trabajo personalizados en Windows Workflow Foundation para [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] no admiten el uso XAML genérico.  
+ Flujos de trabajo personalizados en Windows Workflow Foundation para .NET Framework 3.5 no admiten el uso XAML genérico.  
   
 ## <a name="see-also"></a>Vea también
 

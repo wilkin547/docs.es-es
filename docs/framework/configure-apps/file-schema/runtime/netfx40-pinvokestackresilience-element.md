@@ -7,75 +7,81 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 318473d2913d62404c58b9d3681800ae22a9ecbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489410"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689852"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > elemento
-Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.  
-  
- \<configuration>  
-\<runtime>  
-<NetFx40_PInvokeStackResilience>  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```xml  
-<NetFx40_PInvokeStackResilience  enabled="1|0"/>  
-```  
-  
-## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
-  
-### <a name="attributes"></a>Atributos  
-  
-|Atributo|Descripción|  
-|---------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si el tiempo de ejecución detecta incorrecta de la plataforma las declaraciones de invocación y corrige automáticamente la pila en tiempo de ejecución en plataformas de 32 bits.|  
-  
-## <a name="enabled-attribute"></a>Atributo enabled  
-  
-|Valor|Descripción|  
-|-----------|-----------------|  
-|`0`|El runtime usa la arquitectura que se introdujo en .NET Framework 4, no detecta de serialización de interoperabilidad más rápido y declaraciones de invocación de plataforma incorrectas de corrección. Este es el valor predeterminado.|  
-|`1`|El runtime usa transiciones más lentas que detectan y corrigen incorrecta de la plataforma de declaraciones de invocación.|  
-  
-### <a name="child-elements"></a>Elementos secundarios  
- Ninguno.  
-  
-### <a name="parent-elements"></a>Elementos primarios  
-  
-|Elemento|Descripción|  
-|-------------|-----------------|  
-|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
-  
-## <a name="remarks"></a>Comentarios  
- Este elemento le permite intercambiar más rápido la serialización de interoperabilidad para las declaraciones de invocación de tiempo de ejecución Resista la plataforma incorrecta.  
-  
- A partir de .NET Framework 4, una arquitectura de cálculo de referencias de interoperabilidad simplificada proporciona una mejora significativa del rendimiento de las transiciones de código administrado a código no administrado. En versiones anteriores de .NET Framework, la plataforma incorrecta cálculo de referencias de capa detectado invocar declaraciones en las plataformas de 32 bits y automáticamente se ha corregido la pila. La nueva arquitectura de cálculo de referencias elimina este paso. Como resultado, transiciones son muy rápidas, pero la declaración de invocación de una plataforma incorrecta puede producir un error de programa.  
-  
- Para que sea fácil de detectar declaraciones incorrectas durante el desarrollo, se ha mejorado la experiencia de depuración de Visual Studio. El [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Asistente para la depuración administrada (MDA) notifica a las declaraciones de plataforma incorrectas de invocación cuando se ejecuta la aplicación con el depurador adjunto.  
-  
- Para abordar escenarios donde la aplicación usa componentes que no se puede volver a compilar, y que dispone de invocación de plataforma incorrectas declaraciones, puede usar el `NetFx40_PInvokeStackResilience` elemento. Al agregar este elemento al archivo de configuración de la aplicación con `enabled="1"` incluye un modo de compatibilidad con el comportamiento de las versiones anteriores de .NET Framework, a costa de transiciones más lentas. Los ensamblados que se han compilado con versiones anteriores de .NET Framework se suscriben automáticamente en este modo de compatibilidad y no es necesario este elemento.  
-  
-## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede usar solo en el archivo de configuración de la aplicación.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se muestra cómo para participar en una mayor resistencia contra incorrecta de invocación de plataforma declaraciones para una aplicación, a costa de transiciones más lentas entre código administrado y.  
-  
-```xml  
-<configuration>  
-   <runtime>  
-      <NetFx40_PInvokeStackResilience enabled="1"/>  
-   </runtime>  
-</configuration>  
-```  
-  
+
+Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.
+
+\<configuration>\
+\<runtime>\
+\<NetFx40_PInvokeStackResilience>
+
+## <a name="syntax"></a>Sintaxis
+
+```xml
+<NetFx40_PInvokeStackResilience  enabled="1|0"/>
+```
+
+## <a name="attributes-and-elements"></a>Atributos y elementos
+
+En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.
+
+### <a name="attributes"></a>Atributos
+
+|Atributo|Descripción|
+|---------------|-----------------|
+|`enabled`|Atributo necesario.<br /><br /> Especifica si el tiempo de ejecución detecta incorrecta de la plataforma las declaraciones de invocación y corrige automáticamente la pila en tiempo de ejecución en plataformas de 32 bits.|
+
+## <a name="enabled-attribute"></a>Atributo enabled
+
+|Valor|Descripción|
+|-----------|-----------------|
+|`0`|El runtime usa la arquitectura que se introdujo en .NET Framework 4, no detecta de serialización de interoperabilidad más rápido y declaraciones de invocación de plataforma incorrectas de corrección. Este es el valor predeterminado.|
+|`1`|El runtime usa transiciones más lentas que detectan y corrigen incorrecta de la plataforma de declaraciones de invocación.|
+
+### <a name="child-elements"></a>Elementos secundarios
+
+Ninguno.
+
+### <a name="parent-elements"></a>Elementos primarios
+
+|Elemento|Descripción|
+|-------------|-----------------|
+|`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
+|`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|
+
+## <a name="remarks"></a>Comentarios
+
+Este elemento le permite intercambiar más rápido la serialización de interoperabilidad para las declaraciones de invocación de tiempo de ejecución Resista la plataforma incorrecta.
+
+A partir de .NET Framework 4, una arquitectura de cálculo de referencias de interoperabilidad simplificada proporciona una mejora significativa del rendimiento de las transiciones de código administrado a código no administrado. En versiones anteriores de .NET Framework, la plataforma incorrecta cálculo de referencias de capa detectado invocar declaraciones en las plataformas de 32 bits y automáticamente se ha corregido la pila. La nueva arquitectura de cálculo de referencias elimina este paso. Como resultado, transiciones son muy rápidas, pero la declaración de invocación de una plataforma incorrecta puede producir un error de programa.
+
+Para que sea fácil de detectar declaraciones incorrectas durante el desarrollo, se ha mejorado la experiencia de depuración de Visual Studio. El [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) Asistente para la depuración administrada (MDA) notifica a las declaraciones de plataforma incorrectas de invocación cuando se ejecuta la aplicación con el depurador adjunto.
+
+Para abordar escenarios donde la aplicación usa componentes que no se puede volver a compilar, y que dispone de invocación de plataforma incorrectas declaraciones, puede usar el `NetFx40_PInvokeStackResilience` elemento. Al agregar este elemento al archivo de configuración de la aplicación con `enabled="1"` incluye un modo de compatibilidad con el comportamiento de las versiones anteriores de .NET Framework, a costa de transiciones más lentas. Los ensamblados que se han compilado con versiones anteriores de .NET Framework se suscriben automáticamente en este modo de compatibilidad y no es necesario este elemento.
+
+## <a name="configuration-file"></a>Archivo de configuración
+
+Este elemento se puede usar solo en el archivo de configuración de la aplicación.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo siguiente se muestra cómo para participar en una mayor resistencia contra incorrecta de invocación de plataforma declaraciones para una aplicación, a costa de transiciones más lentas entre código administrado y.
+
+```xml
+<configuration>
+   <runtime>
+      <NetFx40_PInvokeStackResilience enabled="1"/>
+   </runtime>
+</configuration>
+```
+
 ## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

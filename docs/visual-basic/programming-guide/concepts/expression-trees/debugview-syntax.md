@@ -1,6 +1,6 @@
 ---
 title: Sintaxis utilizada por la propiedad DebugView (Visual Basic)
-description: Describe la sintaxis especial utilizada por la propiedad DebugView para producir una representación de cadena de árboles de expresión
+description: Describe la sintaxis especial usada por la propiedad DebugView para producir una representación de cadena de árboles de expresión
 author: zspitz
 ms.author: wiwagn
 ms.date: 05/22/2019
@@ -8,18 +8,18 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: 1b2a1164f02208cc7578820d8f8ed3bc145fb5b8
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: ae2c75607f7b9cdc40fc5c163ce533f0472ab454
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196535"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689539"
 ---
-# <a name="debugview-syntax"></a>Sintaxis de `DebugView` 
+# <a name="debugview-syntax"></a>Sintaxis de `DebugView`
 
-El `DebugView` propiedad (disponible solo al depurar) proporciona una representación de cadena de árboles de expresión. La mayoría de la sintaxis es bastante fácil de entender; los casos especiales se describen en las secciones siguientes.
+La propiedad `DebugView` (disponible solo durante la depuración) proporciona una representación de cadenas de árboles de expresión. La mayor parte de la sintaxis es bastante sencilla de entender; los casos especiales se describen en las siguientes secciones.
 
-Cada ejemplo va seguido de un bloque de comentario que contiene el `DebugView`. 
+Cada ejemplo va seguido de un bloque de comentario que contiene el `DebugView`.
 
 ## <a name="parameterexpression"></a>ParameterExpression
 
@@ -47,13 +47,13 @@ Para los objetos <xref:System.Linq.Expressions.ConstantExpression?displayPropert
 
 Para algunos tipos numéricos, se agrega un sufijo para el valor:
 
-| Tipo | Palabra clave | Sufijo |  
+| Tipo | Palabra clave | Sufijo |
 |--|--|--|
 | <xref:System.UInt32> | [UInteger](../../../language-reference/data-types/uinteger-data-type.md) | U |
 | <xref:System.Int64> | [Long](../../../language-reference/data-types/long-data-type.md) | L |
 | <xref:System.UInt64> | [ULong](../../../language-reference/data-types/ulong-data-type.md) | UL |
 | <xref:System.Double> | [Double](../../../language-reference/data-types/double-data-type.md) | D |
-| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F | 
+| <xref:System.Single> | [Single](../../../language-reference/data-types/single-data-type.md) | F |
 | <xref:System.Decimal> | [Decimal](../../../language-reference/data-types/decimal-data-type.md) | M |
 
 ### <a name="examples"></a>Ejemplos
@@ -74,7 +74,7 @@ Dim expr As ConstantExpression = Expression.Constant(num)
 
 ## <a name="blockexpression"></a>BlockExpression
 
-Si el tipo de un <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> objeto difiere del tipo de la última expresión del bloque, se muestra el tipo dentro de corchetes angulares (`<` y `>`). De otro modo, el tipo del objeto <xref:System.Linq.Expressions.BlockExpression> no se muestra.
+Si el tipo de un objeto <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> difiere del tipo de la última expresión del bloque, el tipo se muestra entre corchetes angulares (`<` y `>`). De otro modo, el tipo del objeto <xref:System.Linq.Expressions.BlockExpression> no se muestra.
 
 ### <a name="examples"></a>Ejemplos
 
@@ -87,7 +87,7 @@ Dim block As BlockExpression = Expression.Block(Expression.Constant("test"))
 '
 
 Dim block As BlockExpression = Expression.Block(
-    GetType(Object), 
+    GetType(Object),
     Expression.Constant("test")
 )
 '
@@ -154,7 +154,7 @@ Dim label1 As BlockExpression = Expression.Block(
 
 Dim target As LabelTarget = Expression.Label()
 Dim block As BlockExpression = Expression.Block(
-    Expression.Goto(target), 
+    Expression.Goto(target),
     Expression.Label(target)
 )
 '
@@ -168,7 +168,7 @@ Dim block As BlockExpression = Expression.Block(
 
 ## <a name="checked-operators"></a>Operadores activados
 
-Operadores activados se muestran con el `#` símbolo delante del operador. Por ejemplo, el operador de adición activado se muestra como `#+`.
+Los operadores activados se muestran con el símbolo `#` delante del operador. Por ejemplo, el operador de adición activado se muestra como `#+`.
 
 ### <a name="examples"></a>Ejemplos
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6aef46db47f881d6a15cc1e58d46219a80194b0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b426eaaa2dab4d54ea4c82483c079428f3bfac57
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456447"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689911"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > elemento
 Especifica que el runtime debe usar criterios de ordenación heredados al realizar comparaciones de cadenas.  
@@ -44,7 +44,7 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|4096|El identificador de configuración regional que representa un criterio de ordenación alternativo. En este caso, 4096 representa el criterio de ordenación de [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] y versiones anteriores.|  
+|4096|El identificador de configuración regional que representa un criterio de ordenación alternativo. En este caso, 4096 representa el criterio de ordenación del .NET Framework 3.5 y versiones anteriores.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -57,7 +57,7 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- Ya que realizan operaciones de mayúsculas y minúsculas, ordenación y comparación de cadenas por la <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> clase en .NET Framework 4 cumple el estándar Unicode 5.1, los resultados de los métodos de comparación de cadenas como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> pueden diferir de versiones anteriores de .NET Framework. Si la aplicación depende de un comportamiento heredado, puede restaurar las reglas de comparación y ordenación de cadenas usadas en [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] y versiones anteriores incluyendo el elemento `<CompatSortNLSVersion>` en el archivo de configuración de la aplicación.  
+ Ya que realizan operaciones de mayúsculas y minúsculas, ordenación y comparación de cadenas por la <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> clase en .NET Framework 4 cumple el estándar Unicode 5.1, los resultados de los métodos de comparación de cadenas como <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> y <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> pueden diferir de versiones anteriores de .NET Framework. Si la aplicación depende del comportamiento heredado, puede restaurar la comparación de cadenas y ordenar las reglas se usan en .NET Framework 3.5 y versiones anteriores incluyendo el `<CompatSortNLSVersion>` elemento en el archivo de configuración de la aplicación.  
   
 > [!IMPORTANT]
 >  La restauración de reglas de comparación y ordenación de cadenas heredadas también requiere que la biblioteca de vínculos dinámicos sort00001000.dll esté disponible en el sistema local.  
@@ -76,13 +76,13 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
 sta follows a in the sort order.  
 ```  
   
- Este es completamente diferente del resultado que se muestra al ejecutar el ejemplo en [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Esto es completamente diferente de la salida que se muestra al ejecutar el ejemplo en .NET Framework 3.5.  
   
 ```  
 sta equals a in the sort order.  
 ```  
   
- Sin embargo, si agrega el siguiente archivo de configuración para el directorio de ejemplo y, a continuación, ejecutar el ejemplo en .NET Framework 4, el resultado es idéntico al producido por el ejemplo, cuando se ejecuta el [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)].  
+ Sin embargo, si agrega el siguiente archivo de configuración para el directorio de ejemplo y, a continuación, ejecutar el ejemplo en .NET Framework 4, el resultado es idéntico al producido por el ejemplo, cuando se ejecuta en .NET Framework 3.5.  
   
 ```xml  
 <?xml version ="1.0"?>  
