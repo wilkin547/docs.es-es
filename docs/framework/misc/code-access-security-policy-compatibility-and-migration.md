@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487971"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690282"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Compatibilidad con la directiva de seguridad de acceso del código y migración
 
@@ -26,7 +26,7 @@ Para los errores y advertencias:
 
    \- o -
 
-- Mediante el [elemento de configuración < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) para participar en el comportamiento de la directiva CAS heredado.
+- Mediante el [ \<NetFx40_LegacySecurityPolicy > elemento de configuración](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) para participar en el comportamiento de la directiva CAS heredado.
 
 Este tema contiene las siguientes secciones:
 
@@ -142,7 +142,7 @@ Si quiere hospedar un ensamblado en un espacio aislado, use la sobrecarga <xref:
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>Compatibilidad: Con la opción de directiva CAS heredada
 
-El [elemento de configuración < NetFx40_LegacySecurityPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) le permite especificar que un proceso o la biblioteca usa la directiva CAS heredada. Cuando se habilita este elemento, las sobrecargas de directiva y de evidencia funcionarán igual que en versiones anteriores de Framework.
+El [ \<NetFx40_LegacySecurityPolicy > elemento de configuración](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) le permite especificar que un proceso o la biblioteca usa la directiva CAS heredada. Cuando se habilita este elemento, las sobrecargas de directiva y de evidencia funcionarán igual que en versiones anteriores de Framework.
 
 > [!NOTE]
 > El comportamiento de la directiva CAS es específico de cada versión del tiempo de ejecución y por lo tanto, modificar la directiva CAS para una versión del tiempo de ejecución no afecta a la directiva CAS de otra versión.
