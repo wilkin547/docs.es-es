@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: ee94d7bf52f3fb2ea534cdb2f44d0be2cc8699eb
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7245b14ff2f765c1cfe96a2d49aec34eff7e8a17
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689417"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722569"
 ---
 # <a name="xclass-directive"></a>x:Class (Directiva)
 Configura la compilación de marcado XAML para unirse a las clases parciales entre el marcado y código subyacente. La clase parcial del código se define en un archivo de código independiente en un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] lenguaje, mientras que la clase parcial de marcado se suelen crear mediante generación de código durante la compilación de XAML.  
@@ -52,7 +52,7 @@ Configura la compilación de marcado XAML para unirse a las clases parciales ent
  En un cierto nivel de arquitectura, el significado de `x:Class` no está definida en los servicios XAML de .NET Framework. Esto es porque los servicios XAML de .NET Framework no especifica el modelo de programación por qué XAML marcado y código de respaldo están conectados. Usos adicionales de la `x:Class` directiva podría implementarse mediante marcos concretos que usan modelos de programación o modelos de aplicación para definir cómo conectar el marcado XAML y código subyacente basado en CLR. Cada marco de trabajo puede tener sus propias acciones de compilación que permiten algunos componentes específicos que deben incluirse en el entorno de compilación o comportamiento. Dentro de un marco, las acciones de compilación también pueden variar dependiendo del lenguaje específico de CLR que se usa para el código subyacente.  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>x: Class en el modelo de programación de WPF  
- En las aplicaciones de WPF y el modelo de aplicación WPF, `x:Class` se pueden declarar como un atributo para cualquier elemento que es la raíz de un archivo XAML y se está compilando (donde se incluye el XAML en un proyecto de aplicación de WPF con `Page` acción de compilación), o para el < C4 > <xref:System.Windows.Application>  raíz en la definición de aplicación de una aplicación de WPF compilada. Declarar `x:Class` en un elemento que no sea una raíz de la página o la raíz de la aplicación, o en un archivo de WPF XAML que no se compila, se produce un error de tiempo de compilación en el [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] y el compilador XAML de WPF de .NET Framework 3.5. Para obtener información sobre otros aspectos de `x:Class` control en WPF, vea [código subyacente y XAML en WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md).  
+ En las aplicaciones de WPF y el modelo de aplicación WPF, `x:Class` se pueden declarar como un atributo para cualquier elemento que es la raíz de un archivo XAML y se está compilando (donde se incluye el XAML en un proyecto de aplicación de WPF con `Page` acción de compilación), o para el < C4 > <xref:System.Windows.Application>  raíz en la definición de aplicación de una aplicación de WPF compilada. Declarar `x:Class` en un elemento que no sea una raíz de la página o la raíz de la aplicación, o en un archivo de WPF XAML que no se compila, se produce un error de tiempo de compilación en el compilador de .NET Framework 3.0 y XAML de WPF de .NET Framework 3.5. Para obtener información sobre otros aspectos de `x:Class` control en WPF, vea [código subyacente y XAML en WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md).  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>x: Class para Windows Workflow Foundation  
  Para Windows Workflow Foundation, `x:Class` nombra la clase de una actividad personalizada compuesta completamente en XAML o nombres de la clase parcial de la página XAML para un diseñador de actividad con código subyacente.  
