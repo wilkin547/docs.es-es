@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409931"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300638"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programación asincrónica basada en tareas
 
@@ -113,21 +113,21 @@ Las opciones pueden combinarse con una operación **OR**. En el ejemplo siguient
 
 ## <a name="tasks-threads-and-culture"></a>Tareas, subprocesos y referencia cultural
 
-Cada subproceso tiene asociada una referencia cultural asociada y una interfaz de usuario de referencia cultural, que está definida por las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>, respectivamente. La referencia cultural de un subproceso se usa en operaciones como dar formato, analizar, ordenar y comparar cadenas. La referencia cultural de la interfaz de usuario de un subproceso se usa en la búsqueda de recursos. Por lo general, a menos que especifique una referencia cultural predeterminada para todos los subprocesos de un dominio de aplicación usando las propiedades <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>, la referencia cultural del sistema define la referencia cultural predeterminada y la referencia cultural de la interfaz de usuario de un subproceso. Si establece explícitamente la referencia cultural de un subproceso e inicia un nuevo subproceso, el nuevo subproceso no hereda la referencia cultural del subproceso que realiza la llamada; en su lugar, su referencia cultural es la referencia cultural predeterminada del sistema. El modelo de programación basado en tareas para las aplicaciones destinadas a versiones de .NET Framework anteriores a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] siguen este procedimiento.
+Cada subproceso tiene asociada una referencia cultural asociada y una interfaz de usuario de referencia cultural, que está definida por las propiedades <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>, respectivamente. La referencia cultural de un subproceso se usa en operaciones como dar formato, analizar, ordenar y comparar cadenas. La referencia cultural de la interfaz de usuario de un subproceso se usa en la búsqueda de recursos. Por lo general, a menos que especifique una referencia cultural predeterminada para todos los subprocesos de un dominio de aplicación usando las propiedades <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> y <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType>, la referencia cultural del sistema define la referencia cultural predeterminada y la referencia cultural de la interfaz de usuario de un subproceso. Si establece explícitamente la referencia cultural de un subproceso e inicia un nuevo subproceso, el nuevo subproceso no hereda la referencia cultural del subproceso que realiza la llamada; en su lugar, su referencia cultural es la referencia cultural predeterminada del sistema. El modelo de programación basado en tareas para las aplicaciones destinadas a versiones de .NET Framework anteriores a .NET Framework 4.6 siguen este procedimiento.
 
 > [!IMPORTANT]
-> Tenga en cuenta que la referencia cultural del subproceso que realiza la llamada como parte del contexto de una tarea se aplica a las aplicaciones *destinadas* a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], no a las que *se ejecutan* en [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]. Puede elegir como destino una versión determinada de .NET Framework al crear el proyecto en Visual Studio seleccionado esta versión en la lista desplegable situada en la parte superior del cuadro de diálogo **Nuevo proyecto** o fuera de Visual Studio puede usar el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute>. Para las aplicaciones destinadas a versiones de .NET Framework anteriores a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] o que no están destinadas a una versión específica de .NET Framework, la referencia cultural de la tarea sigue estando determinada por la referencia cultural del subproceso en el que se ejecuta.
+> Tenga en cuenta que la referencia cultural del subproceso que realiza la llamada como parte del contexto de una tarea se aplica a las aplicaciones *destinadas* a .NET Framework 4.6, no a las que *se ejecutan* en .NET Framework 4.6. Puede elegir como destino una versión determinada de .NET Framework al crear el proyecto en Visual Studio seleccionado esta versión en la lista desplegable situada en la parte superior del cuadro de diálogo **Nuevo proyecto** o fuera de Visual Studio puede usar el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute>. Para las aplicaciones destinadas a versiones de .NET Framework anteriores a .NET Framework 4.6 o que no están destinadas a una versión específica de .NET Framework, la referencia cultural del subproceso en el que se ejecuta sigue determinando la referencia cultural de la tarea.
 
-A partir de las aplicaciones destinadas a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], cada tarea hereda la referencia cultural del subproceso que realiza la llamada, aunque la tarea se ejecute de forma asincrónica en un subproceso del grupo de subprocesos.
+A partir de las aplicaciones destinadas a .NET Framework 4.6, cada tarea hereda la referencia cultural del subproceso que realiza la llamada, aunque la tarea se ejecute de forma asincrónica en un subproceso del grupo de subprocesos.
 
-Esto se muestra en el ejemplo siguiente. Usa el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> para elegir [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] como destino y cambia la referencia cultural actual de la aplicación a Francés (Francia) o, si Francés (Francia) es la referencia cultural actual, a Inglés (Estados Unidos). Después, invoca un delegado llamado `formatDelegate` que devuelve algunos números con el formato de valores de moneda de la nueva referencia cultural. Tenga en cuenta si el delegado se ejecuta como una tarea tanto de forma sincrónica como asincrónica, devuelve el resultado esperado porque la tarea asincrónica hereda la referencia cultural del subproceso que realiza la llamada.
+Esto se muestra en el ejemplo siguiente. Usa el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> para elegir .NET Framework 4.6 como destino y cambia la referencia cultural actual de la aplicación a francés (Francia) o, si francés (Francia) es la referencia cultural actual, a inglés (Estados Unidos). Después, invoca un delegado llamado `formatDelegate` que devuelve algunos números con el formato de valores de moneda de la nueva referencia cultural. Tenga en cuenta si el delegado se ejecuta como una tarea tanto de forma sincrónica como asincrónica, devuelve el resultado esperado porque la tarea asincrónica hereda la referencia cultural del subproceso que realiza la llamada.
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
 Si utiliza Visual Studio, puede omitir el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> y seleccionar en su lugar .NET Framework 4.6 como destino al crear el proyecto en el cuadro de diálogo **Nuevo proyecto**.
 
-Para que el resultado refleje el comportamiento de las aplicaciones destinadas a versiones de .NET Framework anteriores a [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], quite el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> del código fuente. La salida reflejará las convenciones de formato de la referencia cultural predeterminada del sistema, no la referencia cultural del subproceso que realiza la llamada.
+Para que la salida refleje el comportamiento de las aplicaciones destinadas a versiones de .NET Framework anteriores a .NET Framework 4.6, quite el atributo <xref:System.Runtime.Versioning.TargetFrameworkAttribute> del código fuente. La salida reflejará las convenciones de formato de la referencia cultural predeterminada del sistema, no la referencia cultural del subproceso que realiza la llamada.
 
 Para obtener más información sobre las tareas asincrónicas y la referencia cultural, consulte la sección "Referencia cultural y operaciones asincrónicas basadas en tareas" en el tema <xref:System.Globalization.CultureInfo>.
 
@@ -222,11 +222,11 @@ Mediante el método <xref:System.Threading.Tasks.Task.FromResult%2A?displayPrope
 
 Cuando una tarea produce una o más excepciones, las excepciones se encapsulan en una excepción <xref:System.AggregateException>. Esa excepción se propaga de nuevo al subproceso que se combina con la tarea, que normalmente es el subproceso que está esperando a que la tarea termine o al subproceso que tiene acceso a la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A>. Este comportamiento sirve para aplicar la directiva de .NET Framework por la que, de manera predeterminada, todas las excepciones no controladas deben terminar el proceso. El código de llamada puede controlar las excepciones con cualquiera de los siguientes elementos del bloque `try`/`catch`:
 
-- El método <xref:System.Threading.Tasks.Task.Wait%2A> 
+- El método <xref:System.Threading.Tasks.Task.Wait%2A>
 
-- El método <xref:System.Threading.Tasks.Task.WaitAll%2A> 
+- El método <xref:System.Threading.Tasks.Task.WaitAll%2A>
 
-- El método <xref:System.Threading.Tasks.Task.WaitAny%2A> 
+- El método <xref:System.Threading.Tasks.Task.WaitAny%2A>
 
 - La propiedad <xref:System.Threading.Tasks.Task%601.Result%2A>
 

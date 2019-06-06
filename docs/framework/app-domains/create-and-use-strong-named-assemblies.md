@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607680"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377878"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 
@@ -71,7 +71,7 @@ Esta característica puede deshabilitarse en aplicaciones concretas o en todo un
 |-----------|-----------------|
 |[Cómo: Creación de un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Describe cómo crear un par de claves criptográficas para firmar un ensamblado.|
 |[Cómo: Firma de un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Describe cómo crear un ensamblado con nombre seguro.|
-|[Nombres seguros mejorados](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Describe las mejoras en nombres seguros en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|
+|[Nombres seguros mejorados](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Describe las mejoras en nombres seguros en .NET Framework 4.5.|
 |[Cómo: Hacer referencia a un ensamblado con nombre seguro](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Describe cómo hacer referencia a tipos o recursos en un ensamblado con nombre seguro en tiempo de compilación o tiempo de ejecución.|
 |[Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Describe cómo deshabilitar la característica que omite la validación de firmas de nombre seguro. Esta característica puede deshabilitarse para todas las aplicaciones o para aplicaciones específicas.|
 |[Creación de ensamblados](../../../docs/framework/app-domains/create-assemblies.md)|Proporciona información general sobre los ensamblados de archivos individuales y múltiples archivos.|

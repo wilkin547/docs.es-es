@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492595"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378578"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
 
@@ -58,7 +58,7 @@ ilasm [options] filename [[options]filename...]
 |**/include:** `includePath`|Establece una ruta de acceso para buscar los archivos incluidos con `#include`.|
 |**/itanium**|Especifica Intel Itanium como procesador de destino.<br /><br /> Si no se especifican los bits de la imagen, el valor predeterminado es **/pe64**.|
 |**/key:** `keyFile`|Compila `filename` con una firma segura mediante la clave privada contenida en `keyFile`.|
-|**/key:** @`keySource`|Compila `filename` con una firma segura mediante la clave privada generada en `keySource`.|
+|**/key:**  @`keySource`|Compila `filename` con una firma segura mediante la clave privada generada en `keySource`.|
 |**/listing**|Genera un archivo del lista en la salida estándar. Si se omite esta opción, no se genera ningún archivo de lista.<br /><br /> Este parámetro no es compatible con .NET Framework 2.0 o posterior.|
 |**/mdv:** `versionString`|Establece la cadena de versión de metadatos.|
 |**/msv:** `major`.`minor`|Establece la versión del flujo de metadatos, donde `major` y `minor` son valores enteros.|
@@ -108,7 +108,7 @@ Para obtener más información sobre la gramática de IL, vea el archivo asmpars
 
 ## <a name="version-information"></a>Información de versión
 
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se puede asociar un atributo personalizado a una implementación de interfaz mediante código similar al siguiente:
+A partir de .NET Framework 4.5, se puede asociar un atributo personalizado a una implementación de interfaz mediante código similar al siguiente:
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se puede asoci
       …
 ```
 
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se puede especificar un objeto binario grande (BLOB) de cálculo de referencias arbitrario mediante su representación binaria sin formato, como se muestra en el código siguiente:
+A partir de .NET Framework 4.5, se puede especificar un objeto binario grande (BLOB) de serialización arbitraria mediante su representación binaria sin formato, tal como se muestra en el código siguiente:
 
 ```
 .method public hidebysig abstract virtual

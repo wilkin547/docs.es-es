@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585986"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457295"
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 La reflexión proporciona la capacidad de obtener información sobre tipos y miembros, así como de obtener acceso a miembros (es decir, para llamar a métodos y constructores, obtener y establecer valores de propiedades, agregar y quitar controladores de eventos etc.). No hay restricciones en el uso de la reflexión para obtener información sobre tipos y miembros. Todo el código puede usar la reflexión para realizar las siguientes tareas:  
@@ -58,10 +58,10 @@ La reflexión proporciona la capacidad de obtener información sobre tipos y mie
   
  El código de aplicación que se ejecuta desde la línea de comandos se ejecuta con plena confianza. Siempre y cuando no esté marcado como transparente, puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad. Cuando se ejecuta el mismo código con confianza parcial (por ejemplo, en un dominio de aplicación en el espacio aislado), el nivel de confianza del ensamblado determina si puede acceder a código crítico para la seguridad: si el ensamblado tiene un nombre seguro y se instala en la caché global de ensamblados, es un ensamblado de confianza y puede llamar a miembros críticos para la seguridad. Si no es de confianza, se vuelve transparente aunque no esté marcado como tal y no tiene acceso a los miembros críticos para la seguridad.  
   
- Para obtener más información sobre el modelo de seguridad en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vea [Security Changes](../../../docs/framework/security/security-changes.md) (Cambios de seguridad).  
+ Para obtener más información sobre el modelo de seguridad en .NET Framework 4, consulte [Cambios en la seguridad](../../../docs/framework/security/security-changes.md).  
   
 ## <a name="reflection-and-transparency"></a>Reflexión y transparencia  
- A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], Common Language Runtime determina el nivel de transparencia de un tipo o miembro de varios factores, como el nivel de confianza del ensamblado y el nivel de confianza del dominio de aplicación. La reflexión proporciona las propiedades <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A> y <xref:System.Type.IsSecurityTransparent%2A> para que pueda detectar el nivel de transparencia de un tipo. En la tabla siguiente se muestran las combinaciones válidas de estas propiedades.  
+ A partir de .NET Framework 4, Common Language Runtime determina el nivel de transparencia de un tipo o miembro de varios factores, como el nivel de confianza del ensamblado y el nivel de confianza del dominio de aplicación. La reflexión proporciona las propiedades <xref:System.Type.IsSecurityCritical%2A>, <xref:System.Type.IsSecuritySafeCritical%2A> y <xref:System.Type.IsSecurityTransparent%2A> para que pueda detectar el nivel de transparencia de un tipo. En la tabla siguiente se muestran las combinaciones válidas de estas propiedades.  
   
 |Nivel de seguridad|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
 |--------------------|------------------------|----------------------------|---------------------------|  

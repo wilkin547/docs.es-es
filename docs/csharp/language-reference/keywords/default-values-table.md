@@ -6,18 +6,18 @@ ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
-- default constructor [C#]
+- parameterless constructor [C#]
 - defaults [C#]
 - value types [C#], initializing
 - variables [C#], value types
-- constructors [C#], default constructor
-- types [C#], default constructor return values
-ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+- constructors [C#], parameterless constructor
+- types [C#], parameterless constructor return values
+ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237043"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422036"
 ---
 # <a name="default-values-table-c-reference"></a>Tabla de valores predeterminados (Referencia de C#)
 
@@ -57,7 +57,7 @@ A partir de C# 7.1, se puede usar el [literal `default`](../../programming-guide
 int a = default;
 ```
 
-También se puede usar el constructor predeterminado o el constructor predeterminado implícito para generar el valor predeterminado de un tipo de valor, como se muestra en el ejemplo siguiente. Para obtener más información sobre los constructores, vea el artículo [Constructores](../../programming-guide/classes-and-structs/constructors.md).
+También se puede usar el constructor sin parámetros o el constructor sin parámetros implícito para generar el valor predeterminado de un tipo de valor, como se muestra en el ejemplo siguiente. Para obtener más información sobre los constructores, vea el artículo [Constructores](../../programming-guide/classes-and-structs/constructors.md).
 
 ```csharp
 int a = new int();
@@ -70,7 +70,6 @@ El valor predeterminado de cualquier [tipo de referencia](reference-types.md) es
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Palabras clave de C#](index.md)
-- [Tablas de referencia para tipos](reference-tables-for-types.md)
 - [Tipos de valor](value-types.md)
 - [Tabla de tipos de valor](value-types-table.md)
 - [Tabla de tipos integrados](built-in-types-table.md)

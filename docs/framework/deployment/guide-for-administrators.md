@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4710f299c97a6ef8039314243ca481db51c2bb52
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 793012b21ae6a3a597efaea23a6d3b6d1db58562
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614087"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379956"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guía de implementación de .NET Framework para administradores
 
-Este artículo paso a paso describe cómo un administrador del sistema puede implementar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte [Requisitos del sistema](../../../docs/framework/get-started/system-requirements.md).
+En este artículo paso a paso se describe cómo puede implementar un administrador del sistema .NET Framework 4.5 y sus dependencias del sistema en una red mediante Microsoft System Center Configuration Manager. En este artículo se supone que todos los equipos cliente de destino cumplen los requisitos mínimos para .NET Framework. Para obtener una lista de los requisitos de software y hardware para instalar .NET Framework 4.5, consulte [Requisitos de sistema](../../../docs/framework/get-started/system-requirements.md).
 
 > [!NOTE]
-> El software al que se hace referencia en este documento, a título enunciativo y en ningún caso limitativo, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager y Active Directory, está sujeto a los términos y condiciones de la licencia. En estas instrucciones se asume que los usuarios con la licencia apropiada del software han leído y aceptado dichos términos y condiciones. Estas instrucciones no anulan ninguno de los términos y condiciones de dichos contratos de licencia.
+> El software al que se hace referencia en este documento, a título enunciativo y en ningún caso limitativo, .NET Framework 4.5, System Center Configuration Manager y Active Directory, está sujeto a los términos y condiciones de licencia. En estas instrucciones se asume que los usuarios con la licencia apropiada del software han leído y aceptado dichos términos y condiciones. Estas instrucciones no anulan ninguno de los términos y condiciones de dichos contratos de licencia.
 >
 > Para obtener información sobre el soporte técnico de .NET Framework, consulte [Directiva de ciclo de vida de soporte técnico de Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) en el sitio web de soporte técnico de Microsoft.
 
@@ -55,7 +55,7 @@ Una vez implementada la infraestructura de apoyo, se utiliza System Center 2012 
 
 ## <a name="deploying-the-net-framework"></a>Implementación de .NET Framework
 
-Puede usar System Center 2012 Configuration Manager para implementar una instalación silenciosa de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], donde los usuarios no interactúan con el proceso de instalación. Siga estos pasos:
+Se puede usar System Center 2012 Configuration Manager para implementar una instalación silenciosa de .NET Framework 4.5, donde los usuarios no interactúan con el proceso de instalación. Siga estos pasos:
 
 1. [Cree una colección](#creating_a_collection).
 
@@ -135,7 +135,7 @@ En la tabla siguiente se describen las opciones de la línea de comandos especif
 |------------|-----------------|
 |**/q**|Establece el modo silencioso. No se requiere proporcionar ningún dato y no se muestra ningún resultado.|
 |**/norestart**|Evita que el programa de instalación se reinicie automáticamente. Si usa esta opción, Configuration Manager debe controlar el reinicio del equipo.|
-|**/chainingpackage** *NombrePaquete*|Especifica el nombre del paquete que realiza el encadenamiento. Esta información se notifica con otra información de sesión de instalación para los usuarios que se hayan registrado en el [Programa para la mejora de la experiencia del usuario (CEIP) de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=248244). Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Chaining Product"**.|
+|**/chainingpackage** *NombrePaquete*|Especifica el nombre del paquete que realiza el encadenamiento. Esta información se notifica con otra información de sesión de instalación para los usuarios que se hayan registrado en el [Programa para la mejora de la experiencia del usuario (CEIP) de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=248244). Si el nombre del paquete incluye espacios, use comillas dobles como delimitadores; por ejemplo: **/chainingpackage "Chaining Product"** .|
 
 Mediante estos pasos se crea un paquete denominado .NET Framework 4.5. El programa implementa una instalación silenciosa de .NET Framework 4.5. En una instalación silenciosa, los usuarios no interactúan con el proceso de instalación y la aplicación de encadenamiento tiene que capturar el código devuelto y controlar el reinicio; vea [Getting Progress Information from an Installation Package (Obtener información de progreso de un paquete de instalación)](https://go.microsoft.com/fwlink/?LinkId=179606).
 
@@ -202,7 +202,7 @@ El paquete se implementará ahora en la colección de destino y se iniciará la 
 
 ## <a name="resources"></a>Recursos
 
-Para obtener más información sobre la infraestructura para probar la implementación del paquete redistribuible de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consulte los siguientes recursos.
+Para obtener más información sobre la infraestructura para probar la implementación del paquete redistribuible de .NET Framework 4.5, consulte los siguientes recursos.
 
 **Active Directory, DNS, DHCP:**
 
@@ -249,7 +249,7 @@ Puede usar la [herramienta de recopilación de registros](https://www.microsoft.
 
 ### <a name="return-codes"></a>Códigos de retorno
 
-En la siguiente tabla se muestra una lista de los códigos devueltos más comunes del programa de instalación redistribuible de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Los códigos devueltos son los mismos para todas las versiones del instalador.
+En la siguiente tabla se muestra una lista de los códigos devueltos más habituales del programa de instalación redistribuible de .NET Framework 4.5. Los códigos devueltos son los mismos para todas las versiones del instalador.
 
 Para obtener vínculos a información detallada, vea la sección siguiente, [Descargar códigos de error](#additional_error_codes).
 

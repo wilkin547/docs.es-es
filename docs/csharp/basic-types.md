@@ -3,12 +3,12 @@ title: 'Tipos básicos: Guía de C#'
 description: Obtenga información sobre los tipos principales (valores numéricos, cadenas y objeto) en todos los programas de C#
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508051"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422101"
 ---
 # <a name="types-variables-and-values"></a>Tipos, variables y valores
 
@@ -47,13 +47,13 @@ Los tipos de parámetros de método y valores devueltos se especifican en la fir
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-Tras declarar una variable, no se puede volver a declarar con un nuevo tipo y no se le puede asignar un valor que no sea compatible con su tipo declarado. Por ejemplo, no puede declarar un valor [int](language-reference/keywords/int.md) y, luego, asignarle un valor booleano de [true](language-reference/keywords/true.md). En cambio, los valores se pueden convertir en otros tipos, por ejemplo, cuando se asignan a variables nuevas o se pasan como argumentos de método. El compilador realiza automáticamente una *conversión de tipo* que no da lugar a una pérdida de datos. Una conversión que pueda dar lugar a la pérdida de datos requiere un valor *cast* en el código fuente.
+Tras declarar una variable, no se puede volver a declarar con un nuevo tipo y no se le puede asignar un valor que no sea compatible con su tipo declarado. Por ejemplo, no puede declarar un valor [int](language-reference/keywords/int.md) y, luego, asignarle un valor booleano de [true](language-reference/keywords/true-literal.md). En cambio, los valores se pueden convertir en otros tipos, por ejemplo, cuando se asignan a variables nuevas o se pasan como argumentos de método. El compilador realiza automáticamente una *conversión de tipo* que no da lugar a una pérdida de datos. Una conversión que pueda dar lugar a la pérdida de datos requiere un valor *cast* en el código fuente.
 
 Para obtener más información, consulte [Conversiones de tipos](programming-guide/types/casting-and-type-conversions.md).
 
 ## <a name="built-in-types"></a>Tipos integrados
 
-C# proporciona un conjunto estándar de tipos numéricos integrados para representar números enteros, valores de punto flotante, expresiones booleanas, caracteres de texto, valores decimales y otros tipos de datos. También hay tipos **string** y **object** integrados. Están disponibles para su uso en cualquier programa de C#. Para más información sobre los tipos integrados, vea [Tablas de referencia para tipos](language-reference/keywords/reference-tables-for-types.md).  
+C# proporciona un conjunto estándar de tipos numéricos integrados para representar números enteros, valores de punto flotante, expresiones booleanas, caracteres de texto, valores decimales y otros tipos de datos. También hay tipos **string** y **object** integrados. Están disponibles para su uso en cualquier programa de C#. Para obtener más información sobre los tipos integrados, consulte [Tablas de referencia para tipo integrados](language-reference/keywords/built-in-types-table.md).  
   
 ## <a name="custom-types"></a>Tipos personalizados
 

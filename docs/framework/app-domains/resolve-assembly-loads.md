@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c40e2150bf56540fc95281f07bd14c60e138abc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607668"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456774"
 ---
 # <a name="resolving-assembly-loads"></a>resolver cargas de ensamblado
 .NET Framework proporciona el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicaciones que requieren un mayor control sobre la carga de ensamblados. Al controlar este evento, la aplicación puede cargar un ensamblado en el contexto de carga desde fuera de las rutas de acceso de sondeo normales, seleccionar qué versión de ensamblado cargar, emitir un ensamblado dinámico y devolverlo, etc. En este tema se proporcionan instrucciones para controlar el evento <xref:System.AppDomain.AssemblyResolve>.  
@@ -72,7 +72,7 @@ ms.locfileid: "64607668"
  La regla principal que debe observar para controlar el evento <xref:System.AppDomain.AssemblyResolve> es que no debe intentar devolver un ensamblado que no reconozca. Cuando se escribe el controlador, debe saber qué ensamblados pueden hacer que se produzca el evento. El controlador debe devolver NULL para otros ensamblados.  
   
 > [!IMPORTANT]
->  A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], se desencadena el evento <xref:System.AppDomain.AssemblyResolve> para los ensamblados satélite. Este cambio afecta a los controladores de eventos escritos para versiones anteriores de .NET Framework si intentan resolver todas las solicitudes de carga del ensamblado. Los controladores de eventos que omiten los ensamblados que no reconocen no se ven afectados por este cambio: devuelven NULL y se siguen los mecanismos normales de reserva.  
+>  A partir de .NET Framework 4, se genera el evento <xref:System.AppDomain.AssemblyResolve> para los ensamblados satélite. Este cambio afecta a los controladores de eventos escritos para versiones anteriores de .NET Framework si intentan resolver todas las solicitudes de carga del ensamblado. Los controladores de eventos que omiten los ensamblados que no reconocen no se ven afectados por este cambio: devuelven NULL y se siguen los mecanismos normales de reserva.  
   
  Al cargar un ensamblado, el controlador de eventos no debe usar las sobrecargas del método <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> que pueden hacer que se produzca el evento <xref:System.AppDomain.AssemblyResolve> de forma recursiva, ya que esto puede provocar un desbordamiento de pila. (Vea la lista proporcionada anteriormente en este tema). Esto ocurre incluso si proporciona el control de excepciones para la solicitud de carga, porque no se produce ninguna excepción hasta que se hayan devuelto todos los controladores de eventos. Así pues, el código siguiente produce un desbordamiento de pila si no se encuentra `MyAssembly`:  
   

@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4f51cf554c60a2ff8ed319faa95397d2a0bb48b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01bd548bbafda34202705dda3dda148aae941e2b
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623947"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251100"
 ---
 # <a name="mitigation-pool-blocking-period"></a>Mitigación: período de bloqueo del grupo
 El período de bloqueo del grupo de conexiones se quito de las conexiones a bases de datos SQL de Azure.  
   
 ## <a name="additional-description"></a>Descripción adicional  
- En [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] y versiones anteriores, cuando una aplicación encuentra un error de conexión transitorio al conectarse a una base de datos, no es posible reintentar rápidamente la conexión, porque el grupo de conexiones almacena el error en caché y vuelve a generarlo entre 5 segundos y 1 minuto. Para más información, consulte [Agrupaciones de conexiones de SQL Server (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md). Este comportamiento causa problemas en las conexiones a bases de datos SQL de Azure, las que habitualmente presentan errores transitorios de los que se recuperan dentro de unos pocos segundos. La característica de bloqueo del grupo de conexiones significa que la aplicación no se puede conectar a la base de datos durante un período prolongado, incluso si la base de datos está disponible. Este comportamiento es problemático especialmente para las aplicaciones web que se conectan a las bases de datos SQL de Azure y que necesitan presentarse dentro de unos segundos.  
+ En .NET Framework 4.6.1 y versiones anteriores, cuando una aplicación encuentra un error de conexión transitorio al conectarse a una base de datos, no es posible reintentar rápidamente la conexión, porque el grupo de conexiones almacena el error en la caché y vuelve a generarlo entre 5 segundos y 1 minuto. Para obtener más información, consulte [Agrupaciones de conexiones de SQL Server (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md). Este comportamiento causa problemas en las conexiones a bases de datos SQL de Azure, las que habitualmente presentan errores transitorios de los que se recuperan dentro de unos pocos segundos. La característica de bloqueo del grupo de conexiones significa que la aplicación no se puede conectar a la base de datos durante un período prolongado, incluso si la base de datos está disponible. Este comportamiento es problemático especialmente para las aplicaciones web que se conectan a las bases de datos SQL de Azure y que necesitan presentarse dentro de unos segundos.  
   
- A partir de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], para las solicitudes de apertura de conexión a bases de datos SQL de Azure conocidas (*.database.windows.net, \*.database.chinacloudapi.cn, \*.database.usgovcloudapi.net, \*.database.cloudapi.de), los errores al abrir las conexiones no se almacenan en caché. Para todos los otros intentos de conexión, se sigue aplicando el período de bloqueo del grupo de conexiones.  
+ A partir de .NET Framework 4.6.2, para las solicitudes de apertura de conexión a bases de datos SQL de Azure conocidas (*.database.windows.net, \*.database.chinacloudapi.cn, \*.database.usgovcloudapi.net, \*.database.cloudapi.de), los errores de apertura de conexión no se almacenan en la caché. Para todos los otros intentos de conexión, se sigue aplicando el período de bloqueo del grupo de conexiones.  
   
 ## <a name="impact"></a>Impacto  
  Este cambio permite que el intento de abrir una conexión a las bases de datos SQL de Azure se reintente de inmediato, lo que mejora el rendimiento de las aplicaciones habilitadas para la nube.  

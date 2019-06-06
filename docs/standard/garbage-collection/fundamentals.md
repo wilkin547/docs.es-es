@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615154"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457437"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Fundamentos de la recolección de elementos no utilizados
 <a name="top"></a> En el Common Language Runtime (CLR), el recolector de elementos no utilizados actúa como administrador de memoria automático. Proporciona las siguientes ventajas:  
@@ -149,7 +149,7 @@ ms.locfileid: "64615154"
   
      Debido a que las recolecciones de la generación 2 pueden ocupar varios segmentos, los objetos que se promueven a la generación 2 se pueden mover a un segmento anterior. Los supervivientes de las generaciones 1 y 2 se pueden mover a un segmento diferente, porque se promueven a la generación 2.  
   
-     Normalmente, el montón de objetos grandes no se compacta, porque al copiar objetos grandes se reduce el rendimiento. Sin embargo, a partir de [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], puede utilizar la propiedad <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> para compactar el montón de objetos grandes a petición.  
+     Normalmente, el montón de objetos grandes no se compacta, porque al copiar objetos grandes se reduce el rendimiento. Sin embargo, a partir de .NET Framework 4.5.1, se puede utilizar la propiedad <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> para compactar el montón de objetos grandes a petición.  
   
  El recolector de elementos no utilizados utiliza la siguiente información para determinar si los objetos están activos:  
   
@@ -253,7 +253,7 @@ Recolección de elementos no utilizados simultánea
  En la recolección de elementos no utilizados en segundo plano, las generaciones efímeras (0 y 1) se recolectan según sea necesario mientras la recolección de la generación 2 está en curso. No existe ningún valor para la recolección de elementos no utilizados en segundo plano; se habilita automáticamente con la recolección simultánea de elementos no utilizados. La recolección de elementos no utilizados en segundo plano reemplaza la recolección simultánea de elementos no utilizados. Como sucede con la recolección simultánea de elementos no utilizados, la recolección de elementos no utilizados en segundo plano se realiza en un subproceso dedicado y solamente es aplicable a las recolecciones de la generación 2.  
   
 > [!NOTE]
->  La recolección de elementos no utilizados en segundo plano únicamente está disponible en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] y versiones posteriores. En [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], solo se admite para la recolección de elementos no utilizados de la estación de trabajo. A partir de .NET Framework 4.5, la recolección de elementos no utilizados en segundo plano está disponible para estaciones de trabajo y servidores.  
+>  La recolección de elementos no utilizados en segundo plano únicamente está disponible en .NET Framework 4 y versiones posteriores. En .NET Framework 4, solo se admite para la recolección de elementos no utilizados de la estación de trabajo. A partir de .NET Framework 4.5, la recolección de elementos no utilizados en segundo plano está disponible para estaciones de trabajo y servidores.  
   
  Una recolección de las generaciones efímeras durante una recolección de elementos no utilizados en segundo plano se denomina recolección de elementos no utilizados en primer plano. Cuando se producen recolecciones de elementos no utilizados en primer plano, se suspenden todos los subprocesos administrados.  
   

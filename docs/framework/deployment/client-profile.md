@@ -11,21 +11,21 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8373ed288ff3e8e3f7992729e57b366a4c0043a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 86058eb288b54a4bc316900f165ec61e4d05eb1f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126755"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457284"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
-El perfil de cliente .NET es un subconjunto de .NET Framework que se proporcionaba con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] y versiones anteriores, optimizado para las aplicaciones cliente. .NET Framework es una plataforma de desarrollo para Windows, Windows Phone y Microsoft Azure que proporciona un entorno de ejecución de aplicaciones administrado y la biblioteca de clases .NET Framework. En [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] y las versiones anteriores se proporcionaban dos opciones de implementación: .NET Framework completo y Client Profile. Client Profile permitía una implementación más rápida y el uso de paquetes de instalación de aplicaciones más pequeños que en la versión completa de .NET Framework.  
+El perfil de cliente .NET es un subconjunto de .NET Framework que se proporcionaba con .NET Framework 4 y versiones anteriores, optimizado para las aplicaciones cliente. .NET Framework es una plataforma de desarrollo para Windows, Windows Phone y Microsoft Azure que proporciona un entorno de ejecución de aplicaciones administrado y la biblioteca de clases .NET Framework. En .NET Framework 4 y versiones anteriores se proporcionaban dos opciones de implementación: .NET Framework completo y Client Profile. Client Profile permitía una implementación más rápida y el uso de paquetes de instalación de aplicaciones más pequeños que en la versión completa de .NET Framework.  
   
- A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Client Profile se ha cancelado y solo está disponible el paquete redistribuible completo. Las optimizaciones que ofrece [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], como un tamaño de descarga más pequeño y una implementación más rápida, han eliminado la necesidad de un paquete de implementación independiente. El paquete redistribuible único agiliza el proceso de instalación y simplifica las opciones de implementación de la aplicación.  
+ A partir de .NET Framework 4.5, Client Profile se ha cancelado y solo está disponible el paquete redistribuible completo. Las optimizaciones que ofrece .NET Framework 4.5, como un tamaño de descarga más pequeño y una implementación más rápida, han eliminado la necesidad de un paquete de implementación independiente. El paquete redistribuible único agiliza el proceso de instalación y simplifica las opciones de implementación de la aplicación.  
   
  Pero si la aplicación de destino es .NET Framework 4 o 3.5 y quiere obtener más información sobre Client Profile y cuándo usarlo, vea [.NET Framework Client Profile](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) en la documentación de .NET Framework 4.  
   
- Al instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4 Client Profile se actualiza a la versión completa de .NET Framework. Para obtener información sobre cómo instalar [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], vea [Install the .NET Framework for developers](../../../docs/framework/install/guide-for-developers.md) (Instalar .NET Framework para desarrolladores).  
+ Al instalar .NET Framework 4.5, .NET Framework 4 Client Profile se actualiza a la versión completa de .NET Framework. Para obtener información sobre cómo instalar .NET Framework 4.5, consulte [Instalar .NET Framework para desarrolladores](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>Vea también
 

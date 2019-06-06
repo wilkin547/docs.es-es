@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613993"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457264"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
   
 ## <a name="background"></a>Fondo  
- .NET Framework siempre ha proporcionado hospedaje en paralelo para aplicaciones de código administrado, pero antes de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], no proporcionaba esta funcionalidad para los componentes COM administrados. Anteriormente, los componentes COM administrados que se cargaban en un proceso se ejecutaban con la versión del tiempo de ejecución que ya se había cargado o con la última versión instalada de .NET Framework. Si esta versión no era compatible con el componente COM, se producía un error en el componente.  
+ .NET Framework siempre ha proporcionado hospedaje en paralelo para aplicaciones de código administrado, pero antes de .NET Framework 4, no proporcionaba esta funcionalidad para los componentes COM administrados. Anteriormente, los componentes COM administrados que se cargaban en un proceso se ejecutaban con la versión del tiempo de ejecución que ya se había cargado o con la última versión instalada de .NET Framework. Si esta versión no era compatible con el componente COM, se producía un error en el componente.  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] proporciona un enfoque nuevo para el hospedaje en paralelo que garantiza lo siguiente:  
+ .NET Framework 4 proporciona un enfoque nuevo para el hospedaje en paralelo que garantiza lo siguiente:  
   
 - La instalación de una nueva versión de .NET Framework no afecta a las aplicaciones existentes.  
   
@@ -32,7 +32,7 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
   
 - **Desarrolladores de aplicaciones**. El hospedaje en paralelo prácticamente no afecta a los desarrolladores de aplicaciones. De forma predeterminada, las aplicaciones siempre se ejecutan en la versión de .NET Framework en la que se han compilado; esto no ha cambiado. Aun así, los desarrolladores pueden invalidar este comportamiento e indicarle a la aplicación que se ejecute en una versión más reciente de .NET Framework (vea el [escenario 2](#scenarios)).  
   
-- **Desarrolladores de bibliotecas y consumidores**. El hospedaje en paralelo no resuelve los problemas de compatibilidad a los que se enfrentan los desarrolladores de bibliotecas. Una biblioteca cargada directamente por una aplicación, ya sea a través de una referencia directa o de una llamada a <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, sigue usando el tiempo de ejecución del <xref:System.AppDomain> en el que se carga. Debe probar las bibliotecas con todas las versiones de .NET Framework que quiera admitir. Si una aplicación se compila con el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] pero incluye una biblioteca compilada con un tiempo de ejecución anterior, la biblioteca también usará el tiempo de ejecución de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Sin embargo, si tiene una aplicación compilada con un tiempo de ejecución anterior y una biblioteca compilada con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], debe forzar que la aplicación también use [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] (vea el [escenario 3](#scenarios)).  
+- **Desarrolladores de bibliotecas y consumidores**. El hospedaje en paralelo no resuelve los problemas de compatibilidad a los que se enfrentan los desarrolladores de bibliotecas. Una biblioteca cargada directamente por una aplicación, ya sea a través de una referencia directa o de una llamada a <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, sigue usando el tiempo de ejecución del <xref:System.AppDomain> en el que se carga. Debe probar las bibliotecas con todas las versiones de .NET Framework que quiera admitir. Si una aplicación se compila con el entorno de ejecución de .NET Framework 4, pero incluye una biblioteca compilada con otro anterior, la biblioteca también usará el entorno de ejecución de .NET Framework 4. Sin embargo, si se tiene una aplicación compilada con un entorno de ejecución anterior y una biblioteca compilada con .NET Framework 4, se debe forzar a que la aplicación también use .NET Framework 4 (consulte el [escenario 3](#scenarios)).  
   
 - **Desarrolladores de componentes COM administrados**. Antes, los componentes COM administrados se ejecutaban automáticamente con la versión más reciente del tiempo de ejecución instalada en el equipo. Ahora puede ejecutar los componentes COM con la versión del tiempo de ejecución en la que se han compilado.  
   
@@ -52,13 +52,13 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
   
 - **Escenario 1:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework.  
   
-     Versiones de .NET Framework instaladas: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] y todas las demás versiones de .NET Framework usadas por los componentes COM.  
+     Versiones de .NET Framework instaladas: .NET Framework 4 y todas las demás versiones de .NET Framework que usan los componentes COM.  
   
      Qué se debe hacer: en este escenario, no haga nada. Los componentes COM se ejecutarán con la versión de .NET Framework con la que se han registrado.  
   
-- **Escenario 2**: aplicación administrada compilada con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que preferiblemente debería ejecutarse con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], pero que se puede ejecutar en [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] si la versión 2.0 no está presente.  
+- **Escenario 2**: aplicación administrada compilada con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que preferiblemente debería ejecutarse con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], pero que se puede ejecutar en .NET Framework 4 si la versión 2.0 no está presente.  
   
-     Versiones de .NET Framework instaladas: Una versión anterior de .NET Framework y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Versiones de .NET Framework instaladas: Versión anterior de .NET Framework y .NET Framework 4.  
   
      Qué se debe hacer: en el [archivo de configuración de la aplicación](../../../docs/framework/configure-apps/index.md) que está en el directorio de la aplicación, use el [elemento \<startup>](../../../docs/framework/configure-apps/file-schema/startup/startup-element.md) y el [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) establecidos de esta forma:  
   
@@ -71,9 +71,9 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
     </configuration>  
     ```  
   
-- **Escenario 3:** aplicación nativa en la que se usan componentes COM compilados con versiones anteriores de .NET Framework que quiere ejecutar con [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+- **Escenario 3:** aplicación nativa que usa componentes COM compilados con versiones anteriores de .NET Framework que quiere ejecutar con .NET Framework 4.  
   
-     Versiones de .NET Framework instaladas: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+     Versiones de .NET Framework instaladas: .NET Framework 4.  
   
      Qué se debe hacer: en el archivo de configuración de la aplicación en el directorio de la aplicación, use el elemento `<startup>` con el atributo `useLegacyV2RuntimeActivationPolicy` establecido en `true` y el elemento `<supportedRuntime>` establecido de esta forma:  
   

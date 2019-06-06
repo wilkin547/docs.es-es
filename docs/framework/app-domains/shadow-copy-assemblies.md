@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00dc191d53d01d33a5dce3ed2d012942e2672dae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 51bf359ea6ba4e5b45827928a50a095a7960a68f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607525"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456707"
 ---
 # <a name="shadow-copying-assemblies"></a>Copias sombra de ensamblados
 Las instantáneas permiten que los ensamblados que se usan en un dominio de aplicación se actualicen sin descargar el dominio de aplicación. Esto es especialmente útil para las aplicaciones que tienen que estar disponibles continuamente, como los sitios de ASP.NET.  
@@ -67,9 +67,9 @@ Las instantáneas permiten que los ensamblados que se usan en un dominio de apli
   
 <a name="StartupPerformance"></a>   
 ## <a name="startup-performance"></a>Rendimiento de inicio  
- Cuando se inicia un dominio de aplicación que utiliza instantáneas, hay un retraso mientras las instantáneas del directorio de aplicación se copian al directorio de instantáneas, o se comprueba si ya están en esa ubicación. Antes de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], todos los ensamblados se copiaban a un directorio temporal. Cada ensamblado se abría para comprobar el nombre del ensamblado y el nombre seguro se validaba. Se comprobaba cada ensamblado para saber si se actualizó más recientemente que la copia del directorio de instantáneas. Si es así, se copiaba al directorio de instantáneas. Por último, se descartaban las copias temporales.  
+ Cuando se inicia un dominio de aplicación que utiliza instantáneas, hay un retraso mientras las instantáneas del directorio de aplicación se copian al directorio de instantáneas, o se comprueba si ya están en esa ubicación. Antes de .NET Framework 4, todos los ensamblados se copiaban en un directorio temporal. Cada ensamblado se abría para comprobar el nombre del ensamblado y el nombre seguro se validaba. Se comprobaba cada ensamblado para saber si se actualizó más recientemente que la copia del directorio de instantáneas. Si es así, se copiaba al directorio de instantáneas. Por último, se descartaban las copias temporales.  
   
- A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], el comportamiento de inicio predeterminado consiste en comparar directamente la fecha y la hora de cada archivo de ensamblado del directorio de aplicación con la fecha y la hora de la copia situada en el directorio de instantáneas. Si el ensamblado se ha actualizado, se copiará con el mismo procedimiento que en las versiones anteriores de .NET Framework. Si no, se cargará la copia del directorio de instantáneas.  
+ A partir de .NET Framework 4, el comportamiento de inicio predeterminado consiste en comparar directamente la fecha y la hora de cada archivo de ensamblado del directorio de aplicación con la fecha y la hora de la copia situada en el directorio de instantáneas. Si el ensamblado se ha actualizado, se copiará con el mismo procedimiento que en las versiones anteriores de .NET Framework. Si no, se cargará la copia del directorio de instantáneas.  
   
  La mejora del rendimiento resultante es mayor en las aplicaciones en las que los ensamblados no cambian con frecuencia y, normalmente, los cambios se producen en un pequeño subconjunto de ensamblados. Si la mayoría de los ensamblados de una aplicación cambia con frecuencia, el nuevo comportamiento predeterminado puede provocar una regresión del rendimiento. Puede restaurar el comportamiento de inicio de las versiones anteriores de .NET Framework. Para ello, agregue el [elemento \<shadowCopyVerifyByTimestamp&gt;](../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) al archivo de configuración, con `enabled="false"`.  
   

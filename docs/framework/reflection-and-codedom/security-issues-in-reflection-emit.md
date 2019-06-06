@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586126"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457308"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de seguridad en la emisión de la reflexión
 .NET Framework proporciona tres maneras para emitir Lenguaje Intermedio de Microsoft (MSIL), cada una con sus propios problemas de seguridad:  
@@ -78,7 +78,7 @@ ms.locfileid: "65586126"
   
  Como con cualquier otro código emitido, la ejecución del método dinámico requiere los permisos exigidos por los métodos que usa el método dinámico.  
   
- El ensamblado de sistema que hospeda los métodos dinámicos hospedados de forma anónima usa el modelo de transparencia <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, que es el que se utilizaba en .NET Framework antes de la versión [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
+ El ensamblado de sistema que hospeda los métodos dinámicos hospedados de forma anónima usa el modelo de transparencia <xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType>, que es el que se utilizaba en .NET Framework antes de la versión .NET Framework 4.  
   
  Para obtener más información, vea la clase <xref:System.Reflection.Emit.DynamicMethod>.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "65586126"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Información de versión  
- A partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], se elimina la directiva de seguridad de todo el equipo y la transparencia en seguridad se convierte en el mecanismo de cumplimiento predeterminado. Vea [Security Changes](../../../docs/framework/security/security-changes.md) (Cambios de seguridad).  
+ A partir de .NET Framework 4, se elimina la directiva de seguridad de todo el equipo y la transparencia en seguridad se convierte en el mecanismo de cumplimiento predeterminado. Vea [Security Changes](../../../docs/framework/security/security-changes.md) (Cambios de seguridad).  
   
  A partir de [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], ya no es obligatorio usar <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> al emitir ensamblados y métodos dinámicos. Esta marca es necesaria en todas las versiones anteriores de .NET Framework.  
   

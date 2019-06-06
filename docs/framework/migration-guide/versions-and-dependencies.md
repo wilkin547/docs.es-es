@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d45ed4f9bfb2c59bf2c01b373e919255c17e41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592870"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378669"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versiones y dependencias de .NET Framework
 Cada versión de .NET Framework contiene Common Language Runtime (CLR), las bibliotecas de clases base y otras bibliotecas administradas. En este tema se describen las características principales de cada versión de .NET Framework, se proporciona información sobre las versiones de CLR subyacentes y los entornos de desarrollo asociados, y se identifican las versiones que instala el sistema operativo Windows.  
@@ -56,7 +56,7 @@ Cada versión de .NET Framework contiene Common Language Runtime (CLR), las bibl
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Destino y ejecución de aplicaciones de .NET Framework para la versión 4.5 y versiones posterior  
  .NET Framework 4.5 es una actualización en contexto que reemplaza a .NET Framework 4 en el equipo. Igualmente, .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 y 4.8 son actualizaciones en contexto de .NET Framework 4.5, lo que significa que usan la misma versión de runtime. Sin embargo, las versiones del ensamblado están actualizadas e incluyen nuevos tipos y miembros. Después de instalar una de estas actualizaciones, las aplicaciones de .NET Framework 4, .NET Framework 4.5, .NET Framework 4.6 o .NET Framework 4.7 deberían seguir ejecutándose sin que haya que volver a compilarlas. Sin embargo, esto no es aplicable a la inversa. No se recomienda ejecutar aplicaciones destinadas a una versión posterior de .NET Framework en versiones anteriores de este. Por ejemplo, no se recomienda ejecutar una aplicación destinada a .NET Framework 4.6 en .NET Framework 4.5. Se aplican las directrices siguientes:  
   
-- En Visual Studio, puede elegir .NET Framework 4.5 como marco de destino en un proyecto (se establece la propiedad <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType>) para compilar el proyecto como un ensamblado o ejecutable de .NET Framework 4.5. Este ensamblado o ejecutable puede usarse luego en cualquier equipo que tenga instalado [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 o 4.8.  
+- En Visual Studio, puede elegir .NET Framework 4.5 como marco de destino en un proyecto (se establece la propiedad <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType>) para compilar el proyecto como un ensamblado o ejecutable de .NET Framework 4.5. Este ensamblado o ejecutable puede usarse luego en cualquier equipo que tenga instalado .NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 o 4.8.  
   
 - En Visual Studio, puede elegir .NET Framework 4.5.1 como marco de destino en un proyecto (se establece la propiedad <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType>) para compilar el proyecto como un ensamblado o ejecutable de .NET Framework 4.5.1. Este ensamblado o ejecutable debe ejecutarse solo en equipos que tengan instalado .NET Framework 4.5.1 o una versión posterior. Un archivo ejecutable que tenga como destino .NET Framework 4.5.1 no podrá ejecutarse en un equipo que solo tenga instalada una versión anterior de .NET Framework, como .NET Framework 4.5, y se le pedirá al usuario que instale .NET Framework 4.5.1. Además, no se debe llamar a los ensamblados de .NET Framework 4.5.1 desde una aplicación que tenga como destino una versión anterior de .NET Framework, como .NET Framework 4.5.  
   
@@ -74,9 +74,9 @@ Las versiones 2.0, 3.0 y 3.5 de .NET Framework están compiladas con la misma v
   
 - Si no está familiarizado con .NET Framework, consulte la [introducción](../../../docs/framework/get-started/overview.md) a los principales conceptos y características.  
   
-- Consulte las nuevas características y mejoras de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus versiones secundarias en [Novedades de .NET Framework](../../../docs/framework/whats-new/index.md).  
+- Consulte las nuevas características y mejoras de .NET Framework 4.5 y sus versiones secundarias en [Novedades de .NET Framework](../../../docs/framework/whats-new/index.md).  
   
-- Para más información sobre cómo migrar una aplicación desde .NET Framework 4 a [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y sus versiones secundarias, consulte la [guía de migración](index.md).  
+- Para obtener más información sobre cómo migrar una aplicación desde .NET Framework 4 hasta .NET Framework 4.5 y sus versiones secundarias, consulte la [guía de migración](index.md).  
   
 - Para obtener información sobre cómo determinar qué versiones o actualizaciones están instaladas en un equipo, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](how-to-determine-which-versions-are-installed.md) y [Cómo: Determinar qué actualizaciones de .NET Framework están instaladas](how-to-determine-which-net-framework-updates-are-installed.md).  
   

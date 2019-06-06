@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053002"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250887"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Clases de caracteres en expresiones regulares
 
@@ -51,16 +51,18 @@ Una clase de caracteres define un conjunto de caracteres, cualquiera de los cual
  .NET admite expresiones de sustracción de clases de caracteres, que permiten definir un conjunto de caracteres como el resultado de excluir una clase de caracteres de otra clase de caracteres. Para obtener más información, consulte [Sustracción de clases de caracteres](#CharacterClassSubtraction).  
   
 > [!NOTE]
->  Las clases que coinciden con los caracteres por categoría, como [\w](#WordCharacter) para que coincidan con caracteres alfabéticos o [\p{}](#CategoryOrBlock) para que coincidan con una categoría Unicode, que se basan en la clase <xref:System.Globalization.CharUnicodeInfo> para proporcionar información sobre las categorías de caracteres.  A partir de [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], las categorías de caracteres se basan en [el estándar Unicode, versión 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a través de [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], se basan en [el estándar Unicode, versión 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
+>  Las clases que coinciden con los caracteres por categoría, como [\w](#WordCharacter) para que coincidan con caracteres alfabéticos o [\p{}](#CategoryOrBlock) para que coincidan con una categoría Unicode, que se basan en la clase <xref:System.Globalization.CharUnicodeInfo> para proporcionar información sobre las categorías de caracteres.  A partir de .NET Framework 4.6.2, las categorías de caracteres se basan en [el estándar Unicode, versión 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/). En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] a través de .NET Framework 4.6.1, se basan en el [estándar Unicode, versión 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/).  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>Grupo de caracteres positivos: [ ]  
  Un grupo de caracteres positivos especifica una lista de caracteres cualquiera de los cuales puede aparecer en una cadena de entrada para que se produzca una coincidencia. Los caracteres de la lista se pueden especificar individualmente, como un intervalo o de ambas formas.  
   
  La sintaxis para especificar la lista de caracteres individuales es la siguiente:  
-  
- [*grupo_caracteres*]  
-  
+
+```  
+[*character_group*]  
+```
+
  donde *grupo_caracteres* es una lista de cada uno de los caracteres que pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o clases de caracteres.  
   
  La sintaxis para especificar un intervalo de caracteres es la siguiente:  
@@ -69,9 +71,12 @@ Una clase de caracteres define un conjunto de caracteres, cualquiera de los cual
 [firstCharacter-lastCharacter]  
 ```  
   
- donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacter* es el carácter final del intervalo. Un intervalo de caracteres es una serie contigua de caracteres que se define especificando el primer carácter de la serie, un guion (-) y, a continuación, el último carácter de la serie. Dos caracteres son contiguos si tienen puntos de código Unicode adyacentes.  
-  
- En la tabla siguiente se recogen algunos de los patrones de expresiones regulares comunes que contienen clases de caracteres positivos.  
+ donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacter* es el carácter final del intervalo. Un intervalo de caracteres es una serie contigua de caracteres que se define especificando el primer carácter de la serie, un guion (-) y, a continuación, el último carácter de la serie. Dos caracteres son contiguos si tienen puntos de código Unicode adyacentes. *firstCharacter* debe ser el carácter con el punto de código inferior y *lastCharacter* debe ser el carácter con el punto de código superior.
+
+> [!NOTE]
+> Dado que un grupo de caracteres positivos puede incluir un conjunto de caracteres y un rango de caracteres, un carácter de guión (`-`) siempre se interpreta como el separador de rango, a menos que sea el primer carácter del grupo o el último.
+
+En la tabla siguiente se recogen algunos de los patrones de expresiones regulares comunes que contienen clases de caracteres positivos.  
   
 |Modelo|Descripción|  
 |-------------|-----------------|  
@@ -112,17 +117,24 @@ Una clase de caracteres define un conjunto de caracteres, cualquiera de los cual
 ## <a name="negative-character-group-"></a>Grupo de caracteres negativos: [^]  
  Un grupo de caracteres negativos especifica una lista de caracteres que no deben aparecer en una cadena de entrada para que se produzca una coincidencia. Los caracteres de la lista se pueden especificar individualmente, como un intervalo o de ambas formas.  
   
- La sintaxis para especificar la lista de caracteres individuales es la siguiente:  
-  
- [ *^grupo_caracteres*]  
-  
+La sintaxis para especificar la lista de caracteres individuales es la siguiente:  
+
+```
+[*^character_group*]  
+```
+
  donde *grupo_caracteres* es una lista de cada uno de los caracteres que no pueden aparecer en la cadena de entrada para que se produzca una coincidencia. *grupo_caracteres* puede estar formado por cualquier combinación de uno o varios caracteres literales, [caracteres de escape](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md) o clases de caracteres.  
   
  La sintaxis para especificar un intervalo de caracteres es la siguiente:  
-  
- [^*firstCharacter*-*lastCharacter*]  
-  
- donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacter* es el carácter final del intervalo. Un intervalo de caracteres es una serie contigua de caracteres que se define especificando el primer carácter de la serie, un guion (-) y, a continuación, el último carácter de la serie. Dos caracteres son contiguos si tienen puntos de código Unicode adyacentes.  
+
+```
+[^*firstCharacter*-*lastCharacter*]  
+```
+
+donde *firstCharacter* es el carácter que comienza el intervalo y *lastCharacter* es el carácter final del intervalo. Un intervalo de caracteres es una serie contigua de caracteres que se define especificando el primer carácter de la serie, un guion (-) y, a continuación, el último carácter de la serie. Dos caracteres son contiguos si tienen puntos de código Unicode adyacentes. *firstCharacter* debe ser el carácter con el punto de código inferior y *lastCharacter* debe ser el carácter con el punto de código superior.
+
+> [!NOTE]
+> Dado que un grupo de caracteres negativos puede incluir un conjunto de caracteres y un rango de caracteres, un carácter de guión (`-`) siempre se interpreta como el separador de rango, a menos que sea el primer carácter del grupo o el último.
   
  Es posible concatenar dos o más intervalos de caracteres. Por ejemplo, para especificar el intervalo de dígitos decimales del "0" al "9", el intervalo de letras minúsculas de la "a" a la "f" y el intervalo de letras mayúsculas de la "A" a la "F", utilice `[0-9a-fA-F]`.  
   

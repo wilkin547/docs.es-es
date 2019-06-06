@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a491b0efd38ed7ff37c8c704b6646dddede5efb3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881597"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379921"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5
-El instalador de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] usa el [Administrador de reinicio](https://go.microsoft.com/fwlink/?LinkId=231425) para evitar reinicios del sistema durante la instalación, siempre que sea posible. Si el programa de instalación de la aplicación instala .NET Framework, este puede comunicarse con el Administrador de reinicio para aprovechar esta característica. Para obtener más información, vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+El instalador de .NET Framework 4.5 usa el [Administrador de reinicio](https://go.microsoft.com/fwlink/?LinkId=231425) para evitar reinicios del sistema durante la instalación, siempre que sea posible. Si el programa de instalación de la aplicación instala .NET Framework, este puede comunicarse con el Administrador de reinicio para aprovechar esta característica. Para obtener más información, vea [Cómo: Obtener el progreso del instalador de .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Razones para reiniciar  
- La instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] requiere un reinicio del sistema si una aplicación de .NET Framework 4 está en uso durante la instalación. Esto es debido a que [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] reemplaza los archivos de .NET Framework 4 y requiere que esos archivos estén disponibles durante la instalación. En muchos casos, el reinicio se puede impedir de forma preventiva detectando y cerrando las aplicaciones de .NET framework 4 que están en uso. Sin embargo, algunas aplicaciones del sistema no se deben cerrar. En estos casos, no puede evitarse el reinicio.  
+ La instalación de .NET Framework 4.5 requiere un reinicio del sistema si una aplicación de .NET Framework 4 está en uso durante la instalación. Esto se debe a que .NET Framework 4.5 reemplaza los archivos de .NET Framework 4 y requiere que dichos archivos estén disponibles durante la instalación. En muchos casos, el reinicio se puede impedir de forma preventiva detectando y cerrando las aplicaciones de .NET framework 4 que están en uso. Sin embargo, algunas aplicaciones del sistema no se deben cerrar. En estos casos, no puede evitarse el reinicio.  
   
 ## <a name="end-user-experience"></a>Experiencia de usuario final  
- Un usuario final que realice una instalación completa de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] tiene la oportunidad de evitar el reinicio del sistema si el instalador detecta que hay aplicaciones de .NET Framework 4 en uso. Un mensaje enumera todas las aplicaciones de .NET Framework 4 en ejecución y proporciona la opción de cerrarlas antes de la instalación. Si el usuario lo confirma, el instalador cierra estas aplicaciones y se evita el reinicio del sistema. Si el usuario no responde al mensaje dentro de un período de tiempo determinado, la instalación continúa sin cerrar ninguna aplicación.  
+ Un usuario final que realice una instalación completa de .NET Framework 4.5 tiene la oportunidad de evitar el reinicio del sistema si el instalador detecta que hay aplicaciones de .NET Framework 4 en uso. Un mensaje enumera todas las aplicaciones de .NET Framework 4 en ejecución y proporciona la opción de cerrarlas antes de la instalación. Si el usuario lo confirma, el instalador cierra estas aplicaciones y se evita el reinicio del sistema. Si el usuario no responde al mensaje dentro de un período de tiempo determinado, la instalación continúa sin cerrar ninguna aplicación.  
   
  Si el Administrador de reinicio detecta una situación que requiera un reinicio del sistema aun cuando las aplicaciones en ejecución estén cerradas, el mensaje no se muestra.  
   

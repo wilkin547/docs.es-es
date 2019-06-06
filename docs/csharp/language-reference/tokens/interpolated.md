@@ -13,16 +13,16 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210429"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250997"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas (Referencia de C#)
 
-El carácter especial `$` identifica un literal de cadena como una *cadena interpolada*. Una cadena interpolada es un literal de cadena que contiene *expresiones interpoladas*. Cuando una cadena interpolada se resuelve en una cadena de resultado, los elementos con expresiones interpoladas se reemplazan por las representaciones de cadena de los resultados de la expresión. Esta característica está disponible en C# 6 y versiones posteriores del lenguaje.
+El carácter especial `$` identifica un literal de cadena como una *cadena interpolada*. Una cadena interpolada es un literal de cadena que puede contener *expresiones de interpolación*. Cuando una cadena interpolada se resuelve en una cadena de resultado, los elementos con expresiones de interpolación se reemplazan por las representaciones de cadena de los resultados de la expresión. Esta característica está disponible en C# 6 y versiones posteriores del lenguaje.
 
 La interpolación de cadenas proporciona una sintaxis más legible y cómoda de crear cadenas con formato que si se usa la característica de [formato compuesto de cadena](../../../standard/base-types/composite-formatting.md). En este ejemplo se usan ambas características para producir el mismo resultado:
 
@@ -32,18 +32,18 @@ La interpolación de cadenas proporciona una sintaxis más legible y cómoda de 
 
 Para distinguir un literal de cadena como una cadena interpolada, antepóngale el símbolo `$`. No puede haber ningún espacio en blanco entre el carácter `$` y el carácter `"` que inicia un literal de cadena. Si hay alguno, se producirá un error en tiempo de compilación.
 
-La estructura de un elemento con una expresión interpolada es como se muestra aquí:
+La estructura de un elemento con una expresión de interpolación es como se muestra aquí:
 
 ```
-{<interpolatedExpression>[,<alignment>][:<formatString>]}
+{<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Los elementos entre corchetes son opcionales. En esta tabla se describe cada elemento:
 
 |Elemento|Descripción|
 |-------------|-----------------|
-|`interpolatedExpression`|Expresión que genera un resultado al que se va a aplicar formato. La representación de cadena del resultado de `null` es <xref:System.String.Empty?displayProperty=nameWithType>.|
-|`alignment`|La expresión constante cuyo valor define el número mínimo de caracteres en la representación de cadena del resultado de la expresión interpolada. Si es positivo, la representación de cadena está alineada a la derecha; si es negativo, está alineada a la izquierda. Para más información, vea [Alignment (Componente)](../../../standard/base-types/composite-formatting.md#alignment-component).|
+|`interpolationExpression`|Expresión que genera un resultado al que se va a aplicar formato. La representación de cadena del resultado de `null` es <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`alignment`|La expresión constante cuyo valor define el número mínimo de caracteres en la representación de cadena del resultado de la expresión de interpolación. Si es positivo, la representación de cadena está alineada a la derecha; si es negativo, está alineada a la izquierda. Para más información, vea [Alignment (Componente)](../../../standard/base-types/composite-formatting.md#alignment-component).|
 |`formatString`|Cadena de formato compatible con el tipo de resultado de la expresión. Para más información, vea [Format String (Componente)](../../../standard/base-types/composite-formatting.md#format-string-component).|
 
 En el ejemplo siguiente, se usan componentes opcionales de formato que se han descrito anteriormente:
@@ -54,9 +54,9 @@ En el ejemplo siguiente, se usan componentes opcionales de formato que se han de
 
 Para incluir una llave ("{" o "}") en el texto generado por una cadena interpolada, use dos llaves ("{{" o "}}"). Para más información, vea [Llaves de escape](../../../standard/base-types/composite-formatting.md#escaping-braces).
 
-Como los dos puntos (":") tienen un significado especial en un elemento de expresión interpolada, para poder usar un [operador condicional](../operators/conditional-operator.md) en una expresión interpolada, incluya esa expresión entre paréntesis.
+Como los dos puntos (":") tienen un significado especial en un elemento de expresión de interpolación, para poder usar un [operador condicional](../operators/conditional-operator.md) en una expresión de interpolación, incluya esa expresión entre paréntesis.
 
-En este ejemplo, se muestra cómo incluir una llave en una cadena de resultado y cómo usar un operador condicional en una expresión interpolada:
+En este ejemplo, se muestra cómo incluir una llave en una cadena de resultado y cómo usar un operador condicional en una expresión de interpolación:
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
@@ -69,7 +69,7 @@ Las cadenas interpoladas textuales comienzan por el carácter `$`, seguido del c
 
 Hay tres conversiones implícitas de una cadena interpolada:
 
-1. Conversión de una cadena interpolada a una instancia de <xref:System.String>, que es el resultado de la resolución de cadenas interpoladas con elementos de expresión interpolada que se reemplazan con las representaciones de cadena con formato correcto de sus resultados. Esta conversión usa la referencia cultural actual.
+1. Conversión de una cadena interpolada a una instancia de <xref:System.String>, que es el resultado de la resolución de cadenas interpoladas con elementos de expresión de interpolación que se reemplazan con las representaciones de cadena con formato correcto de sus resultados. Esta conversión usa la referencia cultural actual.
 
 1. Conversión de una cadena interpolada a una instancia <xref:System.FormattableString> que representa una cadena de formato compuesto junto con los resultados de expresión a los que se va a aplicar formato. Esto permite crear varias cadenas de resultado con contenido específico de la referencia cultural de una sola instancia de <xref:System.FormattableString>. Para ello, llame a uno de estos métodos:
 

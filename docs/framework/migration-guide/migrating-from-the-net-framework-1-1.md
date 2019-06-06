@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c683ce454e4db36367cb097371427d27dc4c555
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c43e17edf5795874d8b92db659f07e8f6ec3c30a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636340"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457248"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>Migración desde .NET Framework 1.1
 
@@ -62,10 +62,10 @@ Para valorar el impacto que los posibles cambios importantes podrían tener en s
 
 - En[Cambios en .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkID=186989) se indican los cambios entre [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)].
 
-- En[Problemas de migración de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) se indican los cambios entre [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+- En [Incidencias de migración de .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md) se indican los cambios entre [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] y .NET Framework 4.
 
 ## <a name="obsolete-types-and-members"></a>Tipos y miembros obsoletos
 
 El impacto de los tipos y miembros desusados es ligeramente distinto en las aplicaciones redestinadas que en las aplicaciones compiladas de nuevo. El uso de tipos y miembros obsoletos no afectará a la aplicación redestinada a menos que el tipo o miembro obsoleto se haya quitado físicamente del ensamblado. Cuando se vuelve a compilar una aplicación que utiliza tipos y miembros obsoletos, normalmente se produce una advertencia del compilador y no un error del compilador. Sin embargo, en algunos casos, se genera un error del compilador y el código que usa el tipo o miembro obsoleto no se compila correctamente. En este caso, debe volver a escribir el código fuente que llama al tipo o miembro obsoleto antes de volver a compilar la aplicación. Para obtener más información sobre los tipos y miembros obsoletos, vea [Lo obsoleto en la biblioteca de clases de .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md).
 
-Para valorar el impacto de los tipos y miembros en desuso desde la publicación de [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], vea [Lo obsoleto en la biblioteca de clases de .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md). Consulte las listas de tipos y miembros obsoletos de [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].
+Para valorar el impacto de los tipos y miembros en desuso desde la publicación de [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], vea [Lo obsoleto en la biblioteca de clases de .NET Framework](../../../docs/framework/whats-new/whats-obsolete.md). Consulte las listas de tipos y miembros obsoletos de [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)], [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] y .NET Framework 4.

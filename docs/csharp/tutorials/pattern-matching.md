@@ -3,12 +3,12 @@ title: Uso de las características de coincidencia de patrones para ampliar los 
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 5fdd65fdb96cce05f15872969bbdd401095b59e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769247"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378080"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 
@@ -35,7 +35,7 @@ El diseño clásico orientado a objetos llamaría a la creación de tipos en la 
 
 En este tutorial, creará y explorará una aplicación que toma datos entrantes de varios orígenes externos para un solo escenario. Verá cómo la **coincidencia de patrones** proporciona una forma eficaz de consumir y procesar esos datos de maneras que no formaban parte del sistema original.
 
-Considere un área metropolitana importante que usa peajes y precios estipulados para las horas de mayor actividad para administrar el tráfico. Puede escribir una aplicación que calcule los peajes de un vehículo en función de su tipo. Mejoras posteriores incorporan precios basados en la cantidad de ocupantes del vehículo. Otras mejoras agregan precios según la hora y el día de la semana.
+Considere un área metropolitana importante que usa peajes y precios estipulados para las horas de mayor actividad con el fin de administrar el tráfico. Puede escribir una aplicación que calcule los peajes de un vehículo en función de su tipo. Mejoras posteriores incorporan precios basados en la cantidad de ocupantes del vehículo. Otras mejoras agregan precios según la hora y el día de la semana.
 
 Desde esa descripción breve, puede haber esbozado rápidamente una jerarquía de objetos para modelar este sistema. Sin embargo, los datos provienen de varios orígenes, como otros sistemas de administración de registros de vehículos. Estos sistemas ofrecen distintas clases para modelar esos datos y no se tiene un modelo de objetos único que puede usar. En este tutorial, usará estas clases simplificadas para modelar los datos del vehículo desde dichos sistemas externos, tal como se muestra en el código siguiente:
 

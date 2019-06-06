@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750428"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379931"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Procedimiento para obtener el progreso del instalador de .NET Framework 4.5
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] es un runtime redistribuible. Si desarrolla aplicaciones para esta versión de .NET Framework, puede incluir (encadenar) el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] como un requisito previo para la instalación de su aplicación. Para presentar al usuario una experiencia de instalación personalizada o unificada, tal vez desee iniciar silenciosamente el proceso de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y realizar su seguimiento mientras se muestra el progreso de la instalación de la aplicación. Para habilitar el seguimiento silencioso, el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] (que se puede observar) define un protocolo mediante el uso de un segmento de E/S (MMIO) asignado a la memoria para comunicarse con el programa de instalación (el proceso observador o encadenador). Este protocolo proporciona al encadenador una manera de obtener información de progreso, conseguir resultados detallados, responder a mensajes y cancelar el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+.NET Framework 4.5 es un entorno de ejecución redistribuible. Si desarrolla aplicaciones para esta versión de .NET Framework, puede incluir (encadenar) el programa de instalación de .NET Framework 4.5 como un requisito previo para la instalación de su aplicación. Para presentar al usuario una experiencia de instalación personalizada o unificada, tal vez quiera iniciar silenciosamente el proceso de instalación de .NET Framework 4.5 y realizar su seguimiento mientras se muestra el progreso de la instalación de la aplicación. Con el fin de habilitar el seguimiento silencioso, el programa de instalación de .NET Framework 4.5 (que se puede observar) define un protocolo mediante el uso de un segmento de E/S asignado a la memoria (MMIO) para comunicarse con el programa de instalación (el proceso observador o encadenador). Este protocolo proporciona al encadenador una manera de obtener información de progreso, conseguir resultados detallados, responder a mensajes y cancelar el programa de instalación de .NET Framework 4.5.
 
-- **Invocación**. Para llamar al programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y recibir información sobre el progreso de la sección MMIO, el programa de instalación debe hacer lo siguiente:
+- **Invocación**. Para llamar al programa de instalación de .NET Framework 4.5 y recibir información sobre el progreso de la sección MMIO, el programa de instalación debe hacer lo siguiente:
 
-    1. Llamar al programa redistribuible de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]:
+    1. Llamar al programa redistribuible de .NET Framework 4.5:
 
         ```
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
@@ -36,9 +36,9 @@ ms.locfileid: "64750428"
 
         Sustituya esos nombres por nombres que sean únicos en su programa de instalación.
 
-    2. Leer la sección MMIO. En [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], las operaciones de descarga e instalación son simultáneas: es posible que una parte de .NET Framework se esté instalando mientras la otra se descarga. Por tanto, el progreso se devuelve (es decir, se escribe) en la sección MMIO como dos números (`m_downloadSoFar` y `m_installSoFar`) que van subiendo desde 0 hasta 255. Cuando se escribe 255 y .NET Framework se cierra, la instalación se completa.
+    2. Leer la sección MMIO. En .NET Framework 4.5, las operaciones de descarga e instalación son simultáneas: es posible que una parte de .NET Framework se esté instalando mientras la otra se descarga. Por tanto, el progreso se devuelve (es decir, se escribe) en la sección MMIO como dos números (`m_downloadSoFar` y `m_installSoFar`) que van subiendo desde 0 hasta 255. Cuando se escribe 255 y .NET Framework se cierra, la instalación se completa.
 
-- **Códigos de salida**. Los códigos de salida siguientes que proceden del comando que llama al programa redistribuible de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] indican si la instalación se ha realizado correctamente o no:
+- **Códigos de salida**. Los códigos de salida siguientes que proceden del comando que llama al programa redistribuible de .NET Framework 4.5 indican si la instalación se ha realizado correctamente o no:
 
   - 0: la instalación se completó correctamente.
 
@@ -52,7 +52,7 @@ ms.locfileid: "64750428"
 
 ## <a name="chainer-sample"></a>Ejemplo de encadenador
 
-El ejemplo de encadenador inicia de forma silenciosa el programa de instalación de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y realiza un seguimiento de este mientras se muestra el progreso. Este ejemplo es similar al ejemplo de encadenador proporcionado para .NET Framework 4. Sin embargo, también puede evitar reinicios del sistema procesando el cuadro de mensaje para cerrar las aplicaciones de .NET Framework 4. Para más información sobre este cuadro de mensaje, vea [Reducing System Restarts During .NET Framework 4.5 Installations](../../../docs/framework/deployment/reducing-system-restarts.md) (Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5). Puede usar este ejemplo con el programa de instalación de .NET Framework 4; en ese caso, el mensaje simplemente no se envía.
+El ejemplo de Chainer inicia de forma silenciosa el programa de instalación de .NET Framework 4.5 y realiza un seguimiento de este mientras se muestra el progreso. Este ejemplo es similar al ejemplo de encadenador proporcionado para .NET Framework 4. Sin embargo, también puede evitar reinicios del sistema procesando el cuadro de mensaje para cerrar las aplicaciones de .NET Framework 4. Para más información sobre este cuadro de mensaje, vea [Reducing System Restarts During .NET Framework 4.5 Installations](../../../docs/framework/deployment/reducing-system-restarts.md) (Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5). Puede usar este ejemplo con el programa de instalación de .NET Framework 4; en ese caso, el mensaje simplemente no se envía.
 
 > [!WARNING]
 > Debe ejecutar el ejemplo como administrador.
@@ -63,7 +63,7 @@ En las secciones siguientes se describen los archivos importantes de este ejempl
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- El archivo MMIOChainer.h (vea el [código completo](https://go.microsoft.com/fwlink/?LinkId=231369)) contiene la definición de la estructura de datos y la clase base de la que debería derivarse la clase del encadenador. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] amplía la estructura de datos MMIO para controlar los datos que necesita el instalador de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Los cambios en la estructura MMIO son compatible con versiones anteriores, por lo que un encadenador de .NET Framework 4 puede trabajar con el programa de instalación de .NET Framework 4.5 sin necesidad de volver a compilar. Sin embargo, este escenario no es compatible con la característica para reducir los reinicios del sistema.
+- El archivo MMIOChainer.h (vea el [código completo](https://go.microsoft.com/fwlink/?LinkId=231369)) contiene la definición de la estructura de datos y la clase base de la que debería derivarse la clase del encadenador. .NET Framework 4.5 amplía la estructura de datos MMIO para controlar los datos que necesita su instalador. Los cambios en la estructura MMIO son compatible con versiones anteriores, por lo que un encadenador de .NET Framework 4 puede trabajar con el programa de instalación de .NET Framework 4.5 sin necesidad de volver a compilar. Sin embargo, este escenario no es compatible con la característica para reducir los reinicios del sistema.
 
     Un campo de versión proporciona un medio de identificar las revisiones para la estructura y el formato de mensajes. El programa de instalación de .NET Framework determina la versión de la interfaz del encadenador llamando a la función `VirtualQuery` para averiguar el tamaño de la asignación del archivo. Si el tamaño es lo suficientemente grande para acomodar el campo de versión, el programa de instalación de .NET Framework utiliza el valor especificado. Si la asignación del archivo es demasiado pequeña para contener un campo de versión, que es lo que sucede con .NET Framework 4, el proceso de instalación asume que es la versión 0 (4). Si el encadenador no admite la versión del mensaje que el programa de instalación de .NET Framework desea enviar, este asume que la respuesta es ignorar.
 
@@ -96,7 +96,7 @@ En las secciones siguientes se describen los archivos importantes de este ejempl
         };
     ```
 
-- La estructura de datos `MmioDataStructure` no debe utilizarse directamente; use la clase `MmioChainer` en su lugar para implementar el encadenador. Derive a partir de la clase `MmioChainer` para encadenar el paquete redistribuible de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].
+- La estructura de datos `MmioDataStructure` no debe utilizarse directamente; use la clase `MmioChainer` en su lugar para implementar el encadenador. Realice una derivación a partir de la clase `MmioChainer` para encadenar el paquete redistribuible de .NET Framework 4.5.
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
@@ -151,7 +151,7 @@ En las secciones siguientes se describen los archivos importantes de este ejempl
     }
     ```
 
-- Antes de iniciar la instalación, el encadenador comprueba si [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ya está instalado mediante una llamada a `IsNetFx4Present`:
+- Antes de iniciar la instalación, el encadenador comprueba si .NET Framework 4.5 ya está instalado mediante una llamada a `IsNetFx4Present`:
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -307,7 +307,7 @@ En las secciones siguientes se describen los archivos importantes de este ejempl
     ```
 
     > [!IMPORTANT]
-    > El programa redistribuible de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] normalmente escribe muchos mensajes de progreso y un solo mensaje que indica la finalización del proceso (en el lado del encadenador). También realiza lecturas asincrónicas en busca de registros `Abort`. Si recibe un registro `Abort`, se cancela la instalación y se escribe un registro de finalización usando E_ABORT como datos después que la instalación se ha anulado y las operaciones de instalación se han revertido.
+    > El programa redistribuible de .NET Framework 4.5 normalmente escribe muchos mensajes de progreso y un solo mensaje que indica la finalización del proceso (en el lado del encadenador). También realiza lecturas asincrónicas en busca de registros `Abort`. Si recibe un registro `Abort`, se cancela la instalación y se escribe un registro de finalización usando E_ABORT como datos después que la instalación se ha anulado y las operaciones de instalación se han revertido.
 
 Un servidor normal crea un nombre de archivo MMIO aleatorio, crea el archivo (tal y como se muestra en el ejemplo de código anterior, en `Server::CreateSection`) e inicia el programa redistribuible usando el método `CreateProcess` y pasando el nombre de la canalización con la opción `-pipe someFileSectionName`. El servidor debe implementar los métodos `OnProgress`, `Send` y `Finished` con código específico de la interfaz de usuario de la aplicación.
 

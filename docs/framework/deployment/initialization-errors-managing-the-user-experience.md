@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2abbe121879e5f47fbce9a82d2afbf52cbef4ba9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 28e9aab575876d425112c08b59b9cfc44a8c09a7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636631"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379949"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Errores de inicialización de .NET Framework: Administración de la experiencia del usuario
 
@@ -75,21 +75,21 @@ CLR incluye un conjunto de hosts para diversos escenarios, y todos ellos muestra
 |--------------|-----------------|--------------------------|------------------------------------|
 |Host EXE administrado|Inicia archivos EXE administrados.|Se muestra en caso de que falte una versión de .NET Framework|No|
 |Host COM administrado|Carga los componentes COM administrados en un proceso.|Se muestra en caso de que falte una versión de .NET Framework|Sí, estableciendo la marca SEM_FAILCRITICALERRORS|
-|Host de ClickOnce|Inicia aplicaciones ClickOnce.|Se muestra en caso de que falte una versión de .NET Framework, a partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|No|
-|Host de XBAP|Inicia aplicaciones WPF XBAP.|Se muestra en caso de que falte una versión de .NET Framework, a partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]|No|
+|Host de ClickOnce|Inicia aplicaciones ClickOnce.|Se muestra en caso de que falte una versión de .NET Framework, a partir de .NET Framework 4.5.|No|
+|Host de XBAP|Inicia aplicaciones WPF XBAP.|Se muestra en caso de que falte una versión de .NET Framework, a partir de .NET Framework 4.5.|No|
 
 ## <a name="windows-8-behavior-and-ui"></a>Comportamiento e interfaz de usuario de Windows 8
 
-El sistema de activación de CLR proporciona el mismo comportamiento e interfaz de usuario en [!INCLUDE[win8](../../../includes/win8-md.md)] que en otras versiones del sistema operativo Windows, excepto cuando tiene problemas el cargar CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] incluye [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], que usa CLR 4.5. Sin embargo, [!INCLUDE[win8](../../../includes/win8-md.md)] no incluye .NET Framework 2.0, 3.0, o 3.5, los cuales utilizan CLR 2.0. Como resultado, las aplicaciones que dependen de CLR 2.0 no se ejecutan en [!INCLUDE[win8](../../../includes/win8-md.md)] de forma predeterminada. En su lugar, muestran el siguiente cuadro de diálogo que permite a los usuarios instalar .NET Framework 3.5. Los usuarios también pueden habilitar .NET Framework 3.5 en el Panel de control. Ambas opciones se describen en el artículo [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md) (Instalar .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8).
+El sistema de activación de CLR proporciona el mismo comportamiento e interfaz de usuario en [!INCLUDE[win8](../../../includes/win8-md.md)] que en otras versiones del sistema operativo Windows, excepto cuando tiene problemas el cargar CLR 2.0. [!INCLUDE[win8](../../../includes/win8-md.md)] incluye .NET Framework 4.5, que usa CLR 4.5. Sin embargo, [!INCLUDE[win8](../../../includes/win8-md.md)] no incluye .NET Framework 2.0, 3.0, o 3.5, los cuales utilizan CLR 2.0. Como resultado, las aplicaciones que dependen de CLR 2.0 no se ejecutan en [!INCLUDE[win8](../../../includes/win8-md.md)] de forma predeterminada. En su lugar, muestran el siguiente cuadro de diálogo que permite a los usuarios instalar .NET Framework 3.5. Los usuarios también pueden habilitar .NET Framework 3.5 en el Panel de control. Ambas opciones se describen en el artículo [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md) (Instalar .NET Framework 3.5 en Windows 10, Windows 8.1 y Windows 8).
 
 ![Cuadro de diálogo para instalar 3.5 en Windows 8](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "Símbolo del sistema para instalar .NET Framework 3.5 a petición")
 
 > [!NOTE]
-> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] reemplaza a .NET Framework 4 (CLR 4) en el equipo del usuario. Por consiguiente, las aplicaciones .NET Framework 4 se ejecutan perfectamente, sin mostrar este cuadro de diálogo, en [!INCLUDE[win8](../../../includes/win8-md.md)].
+> .NET Framework 4.5 reemplaza a .NET Framework 4 (CLR 4) en el equipo del usuario. Por consiguiente, las aplicaciones .NET Framework 4 se ejecutan perfectamente, sin mostrar este cuadro de diálogo, en [!INCLUDE[win8](../../../includes/win8-md.md)].
 
 Cuando se instala .NET Framework 3.5, los usuarios pueden ejecutar las aplicaciones que dependen de .NET Framework 2.0, 3.0, 3.5 en sus equipos [!INCLUDE[win8](../../../includes/win8-md.md)]. También pueden ejecutar las aplicaciones de .NET Framework 1.0 y 1.1, siempre que dichas aplicaciones no estén explícitamente configuradas para ejecutarse solo en .NET Framework 1.0 o 1.1. Vea [Migración desde .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md).
 
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], el registro de activación de CLR se ha mejorado e incluye las entradas de registro que guardan cuándo y por qué aparece el mensaje de error de inicialización. Para obtener más información, vea [Cómo: Depuración de problemas de activación de CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
+A partir de .NET Framework 4.5, el registro de activación de CLR se ha mejorado e incluye las entradas de registro que guardan cuándo y por qué aparece el mensaje de error de inicialización. Para obtener más información, vea [Cómo: Depuración de problemas de activación de CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).
 
 ## <a name="see-also"></a>Vea también
 

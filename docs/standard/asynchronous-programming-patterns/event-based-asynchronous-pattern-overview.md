@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: f923ca42e67c76f8b4296089953fada65b645f4f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64629008"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423870"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Información general sobre el modelo asincrónico basado en eventos
 Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen respondiendo a la interacción del usuario, a menudo exigen un diseño que utiliza varios subprocesos. El espacio de nombres <xref:System.Threading> proporciona todas las herramientas necesarias para crear aplicaciones multiproceso de gran rendimiento, pero, para usar estas herramientas de forma eficaz, es necesario atesorar una gran experiencia en ingeniería de software multiproceso. Para aplicaciones multiproceso relativamente simples, el componente <xref:System.ComponentModel.BackgroundWorker> ofrece una solución sencilla. Para aplicaciones asincrónicas más sofisticadas, considere la opción de implementar una clase que se adhiera al modelo asincrónico basado en eventos.  
@@ -32,13 +32,13 @@ Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen r
   
 - Ejecutar varias operaciones simultáneamente y recibir una notificación cuando finalice cada una de ellas.  
   
-- Esperar a que los recursos estén disponibles sin detener la aplicación, es decir, sin que se quede «colgada».  
+- Esperar a que los recursos estén disponibles sin detener la aplicación, es decir, sin que se quede "bloqueada".  
   
 - Comunicarse con operaciones asincrónicas pendientes mediante el modelo conocido de eventos y delegados. Para obtener más información sobre el uso de controladores de eventos y delegados, vea [Eventos](../../../docs/standard/events/index.md).  
   
  Una clase que admita el modelo asincrónico basado en eventos tendrá uno o varios métodos denominados _NombreDeMétodo_**Async**. Estos métodos pueden reflejar versiones sincrónicas, que desempeñan la misma operación en el subproceso actual. La clase también puede tener un evento _NombreDeMétodo_**Completed** y un método _NombreDeMétodo_**AsyncCancel** (o simplemente **CancelAsync**).  
   
- <xref:System.Windows.Forms.PictureBox> es un componente que admite el modelo asincrónico basado en eventos. Puede descargar una imagen sincrónicamente mediante una llamada a su método <xref:System.Windows.Forms.PictureBox.Load%2A>, pero si la imagen es grande o si la conexión de red es lenta, la aplicación se detendrá («quedará colgada») hasta que la operación finalice y la llamada a <xref:System.Windows.Forms.PictureBox.Load%2A> responda.  
+ <xref:System.Windows.Forms.PictureBox> es un componente que admite el modelo asincrónico basado en eventos. Se puede descargar una imagen sincrónicamente mediante una llamada a su método <xref:System.Windows.Forms.PictureBox.Load%2A>, pero si la imagen es grande o si la conexión de red es lenta, la aplicación dejará de responder hasta que la operación finalice y la llamada a <xref:System.Windows.Forms.PictureBox.Load%2A> responda.  
   
  Si quiere que la aplicación siga ejecutándose mientras se carga la imagen, puede llamar al método <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> y controlar el evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>, al igual que haría con cualquier otro evento. Cuando llame al método <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>, la aplicación seguirá ejecutándose mientras se realiza la descarga en un subproceso aparte («en segundo plano»). Cuando la operación de carga de la imagen finalice, se llamará al controlador de eventos; este puede examinar el parámetro <xref:System.ComponentModel.AsyncCompletedEventArgs> para determinar si la descarga se completó correctamente.  
   

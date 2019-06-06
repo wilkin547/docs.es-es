@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517543"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378571"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -53,7 +53,7 @@ Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y
 |**/linenum**|Incluye referencias a líneas de código fuente originales.|
 |**/nobar**|Suprime la ventana emergente del indicador de progreso del desensamblado.|
 |**/noca**|Suprime la salida de atributos personalizados.|
-|**/project**|Muestra los metadatos en la forma en que aparecen en el código administrado, no de la forma en que aparecen en el [!INCLUDE[wrt](../../../includes/wrt-md.md)] nativo. Si `PEfilename` no es un archivo de metadatos de Windows (*.winmd*), esta opción no tiene ningún efecto. Consulte [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Muestra los metadatos en la forma en que aparecen en el código administrado, no de la forma en que aparecen en el [!INCLUDE[wrt](../../../includes/wrt-md.md)] nativo. Si `PEfilename` no es un archivo de metadatos de Windows ( *.winmd*), esta opción no tiene ningún efecto. Consulte [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Desensambla únicamente tipos y miembros públicos. Equivale a **/visibility:PUB**.|
 |**/quoteallnames**|Incluye todos los nombres entre comillas simples.|
 |**/raweh**|Muestra sin formato las cláusulas de control de excepciones.|
@@ -69,7 +69,7 @@ Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* pa
 |**/classlist**|Incluye una lista de las clases definidas en el módulo.|
 |**/forward**|Usa la declaración de clase de envío.|
 |**/headers**|Incluye información de encabezados de archivos en la salida.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Desensambla los elementos siguientes dependiendo del argumento proporcionado:<br /><br /> -   Desensambla el elemento `class` especificado.<br />-   Desensambla el elemento `member` de `class`.<br />-   Desensambla el elemento `member` de `class` con la firma especificada `sig`. El formato de `sig` es:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** En las versiones 1.0 y 1.1 de .NET Framework, `sig` debe ir seguido de un paréntesis de cierre: `(sig)`. A partir de .NET Framework 2.0, el paréntesis de cierre se debe omitir: `(sig`.|
+|**/item:** `class`[ **::** `member`[`(sig`]]|Desensambla los elementos siguientes dependiendo del argumento proporcionado:<br /><br /> -   Desensambla el elemento `class` especificado.<br />-   Desensambla el elemento `member` de `class`.<br />-   Desensambla el elemento `member` de `class` con la firma especificada `sig`. El formato de `sig` es:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Nota** En las versiones 1.0 y 1.1 de .NET Framework, `sig` debe ir seguido de un paréntesis de cierre: `(sig)`. A partir de .NET Framework 2.0, el paréntesis de cierre se debe omitir: `(sig`.|
 |**/noil**|Suprime la salida de código del ensamblado de IL.|
 |**/stats**|Incluye estadísticas en la imagen.|
 |**/typelist**|Genera la lista completa de tipos para mantener el orden de tipos en una acción de ida y vuelta.|
@@ -111,7 +111,7 @@ Puede ejecutar *Ildasm.exe* en un archivo .exe o *.dll* para determinar si está
 
 ## <a name="version-information"></a>Información de versión
 
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* controla un objeto binario grande (BLOB) de serialización desconocido mediante la presentación del contenido binario sin formato. Por ejemplo, el código siguiente muestra cómo se muestra un BLOB de cálculo de referencias generado por un programa de C#:
+A partir de .NET Framework 4.5, *Ildasm.exe* controla un objeto binario grande (BLOB) de serialización desconocido mediante la presentación del contenido binario sin formato. Por ejemplo, el código siguiente muestra cómo se muestra un BLOB de cálculo de referencias generado por un programa de C#:
 
 ```csharp
 public void Test([MarshalAs((short)70)] int test) { }
@@ -122,7 +122,7 @@ public void Test([MarshalAs((short)70)] int test) { }
 .method public hidebysig instance void Test(int32  marshal({ 46 }) test) cil managed
 ```
 
-A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], *Ildasm.exe* muestra atributos que se aplican a las implementaciones de interfaz, como se muestra en el siguiente fragmento de salida de *Ildasm.exe*:
+A partir de .NET Framework 4.5, *Ildasm.exe* muestra atributos que se aplican a las implementaciones de interfaz, tal como se muestra en el siguiente fragmento de salida de *Ildasm.exe*:
 
 ```
 .class public auto ansi beforefieldinit MyClass

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623792"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377655"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Modelo asincrónico basado en tareas (TAP)
 El patrón asincrónico basado en tareas (TAP) se basa en los tipos <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> del espacio de nombres <xref:System.Threading.Tasks?displayProperty=nameWithType>, que se usan para representar operaciones asincrónicas arbitrarias. TAP es el patrón asincrónico de diseño recomendado para los nuevos desarrollos.  
@@ -95,7 +95,7 @@ TAP usa un solo método para representar el inicio y la finalización de una ope
  Si las implementaciones de TAP proporcionan sobrecargas que aceptan un parámetro `progress`, deben permitir que el argumento sea `null`, en cuyo caso no se notifica ningún progreso. Las implementaciones de TAP deben notificar el progreso al objeto <xref:System.Progress%601> sincrónicamente, lo cual permite al método asincrónico proporcionar rápidamente el progreso y hacer que el consumidor de este determine cómo y dónde es mejor controlar la información. Por ejemplo, la instancia de progreso puede optar por hacerse con las devoluciones de llamada y generar eventos en un contexto capturado de sincronización.  
   
 ## <a name="iprogresst-implementations"></a>Implementaciones de IProgress\<T>  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] proporciona una única implementación de <xref:System.IProgress%601>: <xref:System.Progress%601>. La clase <xref:System.Progress%601> se declara de la forma siguiente:  
+ .NET Framework 4.5 proporciona una única implementación de <xref:System.IProgress%601>: <xref:System.Progress%601>. La clase <xref:System.Progress%601> se declara de la forma siguiente:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  

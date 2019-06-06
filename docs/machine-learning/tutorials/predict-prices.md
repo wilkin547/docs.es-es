@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 05/09/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: f216c8aac37a28d5cd998ba2e406af4cfc4be686
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 40f70b6d89bf19ae0b20cb00d56e9f7dceb48f61
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882763"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377786"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>Tutorial: Predicción de precios mediante regresión con ML.NET
 
@@ -153,11 +153,15 @@ Anexe la tarea de aprendizaje automático [FastTreeRegressionTrainer](xref:Micro
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
-Ajuste el modelo a la `dataview` de aprendizaje y devuelva el modelo entrenado al agregar la siguiente línea de código en el método `Train()`:
+Ajuste el modelo a la `dataview` de entrenamiento y devuelva el modelo entrenado agregando la siguiente línea de código en el método `Train()`:
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#11 "Train the model")]
 
 El método [Fit()](xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) entrena el modelo al transformar el conjunto de datos y aplicar el aprendizaje.
+
+Devuelva el modelo entrenado con la siguiente línea de código en el método `Train()`:
+
+[!code-csharp[ReturnModel](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#12 "Return the model")]
 
 ## <a name="evaluate-the-model"></a>Evaluar el modelo
 
@@ -248,7 +252,7 @@ En este tutorial se utiliza un viaje de prueba en esta clase. Más adelante, pue
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
-Luego prediga el importe del servicio según una sola instancia de los datos de carreras de taxi y pásela a `PredictionEngine` al agregar esto como siguientes líneas de código en el método `TestSinglePrediction()`:
+Luego, prediga el importe del servicio según una instancia única de los datos de carreras de taxi y páselo a la clase `PredictionEngine` agregando lo siguiente como próximas líneas de código en el método `TestSinglePrediction()`:
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 

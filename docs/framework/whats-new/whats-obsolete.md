@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ca7bf5ad4b4d145f484f46ee46220a58f326333
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7db411e9ef38adb42c8df2059d166d1fa4184f95
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635592"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378374"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Lo obsoleto en la biblioteca de clases de .NET Framework
 
@@ -43,7 +43,7 @@ Al actualizar y volver a compilar el código existente, el uso de un tipo o miem
 
 - Revise la documentación para que esta área de tecnología determine cómo responder al desuso.
 
-Puede decidir no volver a compilar un código existente con una versión posterior de .NET Framework. En su lugar, puede especificar la versión de .NET Framework con la que se ejecuta el código compilado existente. Por ejemplo, suponga que tiene una aplicación denominada app1.exe que se compiló con [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], pero desea que la aplicación se ejecute con [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Para ello, siga estos pasos:
+Puede decidir no volver a compilar un código existente con una versión posterior de .NET Framework. En su lugar, puede especificar la versión de .NET Framework con la que se ejecuta el código compilado existente. Por ejemplo, supongamos que tiene una aplicación llamada app1.exe compilada con [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], pero quiere que la aplicación se ejecute con .NET Framework 4.5. Para ello, siga estos pasos:
 
 1. Cree un archivo de configuración para el ejecutable principal y denomínelo *appName*.exe.config, donde *appName* es el nombre del ejecutable de la aplicación. Para la aplicación denominada app1.exe en nuestro ejemplo, va a crear un archivo de configuración denominado app1.exe.config.
 

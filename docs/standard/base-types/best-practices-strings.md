@@ -1,7 +1,7 @@
 ---
 title: Procedimientos recomendados para el uso de cadenas en .NET
 description: Obtenga información sobre cómo usar cadenas de forma eficaz en aplicaciones .NET.
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052992"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250817"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
 <a name="top"></a> .NET proporciona una gran compatibilidad para desarrollar aplicaciones localizadas y globalizadas, y simplifica la aplicación de las convenciones de la referencia cultural actual o de una referencia cultural concreta al realizar operaciones comunes como ordenar y mostrar cadenas. Pero ordenar o comparar cadenas no es siempre una operación dependiente de la referencia cultural. Por ejemplo, las cadenas usadas internamente por una aplicación normalmente se deben administrar de forma idéntica en todas las referencias culturales. Cuando los datos de cadenas independientes de la referencia cultural (como etiquetas XML, etiquetas HTML, nombres de usuario, rutas de acceso de archivos y nombres de objetos del sistema) se interpretan como si fueran dependientes de la referencia cultural, el código de aplicación puede estar sujeto a errores imperceptibles, un rendimiento inadecuado y, en algunos casos, a problemas de seguridad.  
@@ -69,7 +69,7 @@ ms.locfileid: "66052992"
   
 - Use los métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> y <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para ordenar cadenas, no para comprobar la igualdad.  
   
-- Use el formato dependiente de la referencia cultural para mostrar datos que no son de cadena, como números y fechas, en una interfaz de usuario. Use el formato con la referencia cultural de todos los idiomas para conservar datos que no son de cadena en forma de cadena.  
+- Use el formato dependiente de la referencia cultural para mostrar datos que no son de cadena, como números y fechas, en una interfaz de usuario. Use el formato con la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture) para conservar datos que no son de cadena en forma de cadena.  
   
  Evite lo siguiente cuando use cadenas:  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052992"
 > [!NOTE]
 > Puede descargar las [tablas de pesos de ordenación](https://www.microsoft.com/download/details.aspx?id=10921), un conjunto de archivos de texto que contienen información sobre los pesos de caracteres que se usan en las operaciones de ordenación y comparación para los sistemas operativos Windows, además de la [tabla de elementos de intercalación Unicode predeterminada](https://www.unicode.org/Public/UCA/latest/allkeys.txt), que es la última versión de la tabla de pesos de ordenación para Linux y macOS. La versión específica de la tabla de pesos de ordenación en Linux y macOS depende de la versión de las bibliotecas de [componentes internacionales de Unicode](http://site.icu-project.org/) instaladas en el sistema. Para más información sobre las versiones de los componentes internacionales de Unicode y las versiones de Unicode que implementan, vea la información sobre la [descarga de componentes internacionales de Unicode](http://site.icu-project.org/download).
 
- Sin embargo, la evaluación de dos cadenas para comprobar su igualdad o su criterio de ordenación no produce ningún resultado correcto único; el resultado depende de los criterios empleados para comparar las cadenas. En especial, las comparaciones de cadenas que son ordinales o que se basan en las convenciones de ordenación y uso de mayúsculas y minúsculas de la referencia cultural actual o de la referencia cultural de todos los idiomas (una referencia cultural válida para la configuración regional basada en el idioma inglés) pueden producir resultados diferentes.  
+ Sin embargo, la evaluación de dos cadenas para comprobar su igualdad o su criterio de ordenación no produce ningún resultado correcto único; el resultado depende de los criterios empleados para comparar las cadenas. En especial, las comparaciones de cadenas que son ordinales o que se basan en las convenciones de ordenación y uso de mayúsculas y minúsculas de la referencia cultural actual o de la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture) (una referencia cultural válida para la configuración regional basada en el idioma inglés) pueden producir resultados diferentes.  
 
 Además, las comparaciones de cadenas mediante las diferentes versiones de .NET o con .NET en distintos sistemas operativos o versiones de sistema operativo pueden devolver resultados diferentes. Para más información, vea [Las cadenas y el estándar Unicode](xref:System.String#Unicode). 
 
@@ -348,10 +348,36 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
  [Volver al principio](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>Mostrar y conservar datos con formato  
- Cuando muestre a los usuarios datos que no sean de cadena, como números, y fechas y horas, asígneles formato mediante la configuración de la referencia cultural del usuario. De forma predeterminada, el método <xref:System.String.Format%2A?displayProperty=nameWithType> y los métodos `ToString` de los tipos numéricos y los tipos de fecha y hora, usan la referencia cultural del subproceso actual para las operaciones de formato. Para especificar explícitamente que el método de formato debe usar la referencia cultural actual, puede llamar a una sobrecarga de un método de formato que tenga un parámetro `provider` , como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, y pasarle la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> .  
-  
- Puede conservar datos que no son de cadena como datos binarios o como datos con formato. Si decide guardarlos como datos con formato, debe llamar a una sobrecarga del método de formato que incluya un parámetro `provider` y pasarle la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . La referencia cultural de todos los idiomas proporciona un formato coherente para los datos con formato que es independiente de la referencia cultural y del equipo. En cambio, si se conservan datos a los que se aplica formato con referencias culturales distintas de la referencia cultural de todos los idiomas, se presentan varias limitaciones:  
+## <a name="displaying-and-persisting-formatted-data"></a>Mostrar y conservar datos con formato
+
+Cuando muestre a los usuarios datos que no sean de cadena, como números, y fechas y horas, asígneles formato mediante la configuración de la referencia cultural del usuario. De forma predeterminada, los siguientes elementos usan la referencia cultural del subproceso actual al dar formato a las operaciones:
+
+- Cadenas interpoladas compatibles con los compiladores [C#](../../csharp/language-reference/tokens/interpolated.md) y [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+- Operaciones de concatenación de cadenas que usan los operadores de concatenación [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) o [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ), o que llaman al método <xref:System.String.Concat%2A?displayProperty=nameWithType> directamente.
+
+- El método <xref:System.String.Format%2A?displayProperty=nameWithType> .
+
+- Métodos `ToString` de los tipos numéricos y tipos de fecha y hora.
+
+Para especificar explícitamente que se debe dar formato a una cadena mediante las convenciones de una referencia cultural nombrada o la [referencia cultural invariable](xref:System.Globalization.CultureInfo.InvariantCulture), se puede hacer lo siguiente:
+
+- Cuando se usen los métodos <xref:System.String.Format%2A?displayProperty=nameWithType> y `ToString`, llame a una sobrecarga que tenga un parámetro `provider`, como <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> o <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, y pásela a la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, a una instancia <xref:System.Globalization.CultureInfo> que represente la referencia cultural que se quiera o a la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType>.  
+
+- Para la concatenación de cadenas, no permita que el compilador realice ninguna de las conversiones implícitas. En su lugar, realice una conversión explícita mediante una llamada a una sobrecarga `ToString` que tenga un parámetro `provider`. Por ejemplo, el compilador utiliza implícitamente la referencia cultural actual cuando convierte un valor <xref:System.Double> en una cadena en el código de C# siguiente:
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  En su lugar, se puede especificar explícitamente la referencia cultural cuyas convenciones de formato se usan en la conversión mediante una llamada al método <xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType>, tal como hace el código de C# siguiente:
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- Para la interpolación de cadenas, en lugar de asignar una cadena interpolada a una instancia <xref:System.String>, asígnela a un elemento <xref:System.FormattableString>. Después, se puede llamar al método <xref:System.FormattableString.ToString?displayProperty=nameWithType> para generar una cadena de resultado que refleje las convenciones de la referencia cultural actual, o bien puede llamar al método <xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> para generar una cadena de resultado que refleje las convenciones de la referencia cultural especificada. También se puede pasar la cadena que admite formato al método estático <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> con el fin de generar una cadena de resultado que refleje las convenciones de la referencia cultural invariable. En el ejemplo siguiente se muestra este enfoque. (La salida del ejemplo refleja una referencia cultural actual de en-US).
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+Puede conservar datos que no son de cadena como datos binarios o como datos con formato. Si decide guardarlos como datos con formato, debe llamar a una sobrecarga del método de formato que incluya un parámetro `provider` y pasarle la propiedad <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> . La referencia cultural de todos los idiomas proporciona un formato coherente para los datos con formato que es independiente de la referencia cultural y del equipo. En cambio, si se conservan datos a los que se aplica formato con referencias culturales distintas de la referencia cultural de todos los idiomas, se presentan varias limitaciones:  
   
 - Es probable que los datos no puedan usarse si se recuperan en un sistema que tiene una referencia cultural distinta, o si el usuario del sistema actual cambia la referencia cultural actual e intenta recuperar los datos.  
   
@@ -366,7 +392,7 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
   
  Sin embargo, si reemplaza la propiedad <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> por <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> en las llamadas a <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> y a <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, los datos persistentes de fecha y hora se restauran correctamente, como muestra el resultado siguiente.  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

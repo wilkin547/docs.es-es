@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959932"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457055"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
-<a name="introduction"></a> En las tablas de este artículo se muestran los tipos que están obsoletos en [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] y [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] organizados por ensamblados. Utilice los vínculos siguientes para ver una lista de tipos obsoletos y las alternativas recomendadas en cada ensamblado. Dado que estos tipos están en desuso, todos sus miembros también lo están. Para obtener una lista de miembros obsoletos adicionales de la biblioteca de clases de .NET Framework, vea [Miembros obsoletos](obsolete-members.md).
+<a name="introduction"></a> En las tablas de este artículo se enumeran los tipos que están obsoletos en .NET Framework 4.5 y .NET Framework 4.6, organizados por ensamblado. Utilice los vínculos siguientes para ver una lista de tipos obsoletos y las alternativas recomendadas en cada ensamblado. Dado que estos tipos están en desuso, todos sus miembros también lo están. Para obtener una lista de miembros obsoletos adicionales de la biblioteca de clases de .NET Framework, vea [Miembros obsoletos](obsolete-members.md).
 
 - [Tipos obsoletos en ensamblados del sistema](#obsolete_types_in_system_assemblies)
 
@@ -588,7 +588,7 @@ ms.locfileid: "65959932"
 
 <a name="IEHost"></a>
 ### <a name="assembly-iehostdll-and-ieexecexe"></a>Ensamblado: IEHost.dll e IEExec.exe
- Se han quitado de .NET Framework los ensamblados IEHost.dll e IEExec.exe. Todos sus tipos y sus miembros están obsoletos y no se admiten a partir de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Estos ensamblados se utilizaban para hospedar los controles de Windows Forms y ejecutar las aplicaciones ejecutables en Internet Explorer. Entre las alternativas recomendadas se incluye ClickOnce, aplicaciones de explorador XAML (XBAP) y Microsoft Silverlight.
+ Se han quitado de .NET Framework los ensamblados IEHost.dll e IEExec.exe. Todos sus tipos y miembros están obsoletos y no se admiten a partir de .NET Framework 4. Estos ensamblados se utilizaban para hospedar los controles de Windows Forms y ejecutar las aplicaciones ejecutables en Internet Explorer. Entre las alternativas recomendadas se incluye ClickOnce, aplicaciones de explorador XAML (XBAP) y Microsoft Silverlight.
 
  [Volver al principio](#introduction)
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620699"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423785"
 ---
 # <a name="net-regular-expressions"></a>Expresiones regulares de .NET
 Las expresiones regulares proporcionan un método eficaz y flexible para procesar texto. La notación extensiva de búsqueda de patrones coincidentes de las expresiones regulares permite analizar rápidamente grandes cantidades de texto para buscar patrones de caracteres específicos; para validar un texto con el fin de asegurar que se corresponde con un patrón predefinido (por ejemplo, una dirección de correo electrónico); para extraer, editar, reemplazar o eliminar subcadenas de texto; y para agregar las cadenas extraídas a una colección con el fin de generar un informe. Para muchas aplicaciones que usan cadenas o analizan grandes bloques de texto, las expresiones regulares son una herramienta indispensable.  
@@ -97,7 +97,7 @@ Las expresiones regulares proporcionan un método eficaz y flexible para procesa
   
 |||  
 |-|-|  
-|`\$`|Buscar una sola aparición del símbolo de dólar ($) en la cadena de entrada. La cadena del patrón de expresión regular incluye una barra diagonal inversa para indicar que el símbolo de dólar debe interpretarse literalmente en lugar de interpretarse como un delimitador de la expresión regular. (Si solo apareciese el símbolo $, esto indicaría que el motor de expresiones regulares debe intentar comenzar su búsqueda de coincidencias al final de una cadena.) Para asegurarse de que el símbolo de divisa de la referencia cultural actual no se interprete erróneamente como un símbolo de expresión regular, en el ejemplo se llama al método <xref:System.Text.RegularExpressions.Regex.Escape%2A> como escape de caracteres.|  
+|`\$`|Busque una sola aparición del símbolo de dólar (`$`) en la cadena de entrada. La cadena del patrón de expresión regular incluye una barra diagonal inversa para indicar que el símbolo de dólar debe interpretarse literalmente en lugar de interpretarse como un delimitador de la expresión regular. (Si solo apareciese el símbolo `$`, esto indicaría que el motor de expresión regular debe intentar comenzar su búsqueda de coincidencias al final de una cadena). Para asegurarse de que el símbolo de divisa de la referencia cultural actual no se interprete erróneamente como un símbolo de expresión regular, en el ejemplo se llama al método <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> como escape de caracteres.|  
 |`\s*`|Buscar cero o más apariciones de un carácter de espacio en blanco.|  
 |`[-+]?`|Buscar cero o una aparición de un signo positivo o un signo negativo.|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|Los paréntesis externos alrededor de esta expresión la definen como un grupo de captura o una subexpresión. Si se encuentra una coincidencia, la información sobre esta parte de la cadena coincidente se puede recuperar del segundo objeto <xref:System.Text.RegularExpressions.Group> en el objeto <xref:System.Text.RegularExpressions.GroupCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. (El primer elemento de la colección representa la coincidencia completa.)|  

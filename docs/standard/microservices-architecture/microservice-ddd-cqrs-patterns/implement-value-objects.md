@@ -2,12 +2,12 @@
 title: Implementar objetos de valor
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga los detalles y las opciones para implementar objetos de valor mediante las características nuevas de Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644290"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423740"
 ---
 # <a name="implement-value-objects"></a>Implementación de objetos de valor
 
@@ -21,7 +21,7 @@ En la figura 7-13 se muestra el objeto de valor Address en el agregado Order.
 
 **Figura 7-13**. Objeto de valor Dirección en el agregado Pedido
 
-Como se muestra en la figura 7-13, una entidad suele constar de varios atributos. Por ejemplo, la entidad `Order` se puede modelar como una entidad con una identidad y puede estar formada internamente por un conjunto de atributos, como OrderId, OrderDate, OrderItems, etc. Pero la dirección, que es un valor complejo formado por el país, la calle, la ciudad, etc., y que no tiene ninguna identidad en este dominio, se debe modelar y tratar como un objeto de valor.
+Como se muestra en la figura 7-13, una entidad suele constar de varios atributos. Por ejemplo, la entidad `Order` se puede modelar como una entidad con una identidad y puede estar formada internamente por un conjunto de atributos, como OrderId, OrderDate, OrderItems, etc. Pero la dirección, que es un valor complejo formado por el país o región, la calle, la ciudad, etc., y que no tiene ninguna identidad en este dominio, se debe modelar y tratar como un objeto de valor.
 
 ## <a name="important-characteristics-of-value-objects"></a>Características importantes de los objetos de valor
 

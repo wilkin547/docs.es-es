@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623339"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378464"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Generador de archivos de recursos)
 El Generador de archivos de recursos (Resgen.exe) convierte archivos de texto (.txt o .restext) y archivos recursos basados en XML (.resx) en archivos binarios de Common Language Runtime (.resources) que se pueden incrustar en un archivo ejecutable binario o en un ensamblado satélite. (Vea [Creating Resource Files](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) (Crear archivos de recursos)).  
@@ -73,7 +73,7 @@ resgen filename.extension [outputDirectory]
   
 |Parámetro o modificador|Descripción|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *symbol2*,...]|A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], se admite la compilación condicional en archivos de recursos basados en texto (.txt o .restext). Si *symbol* corresponde a un símbolo incluido en el archivo de texto de entrada de una construcción `#ifdef`, el recurso de cadena asociado se incluye en el archivo .resources. Si el archivo de texto de entrada incluye una instrucción `#if !` con un símbolo que no se ha definido mediante el modificador `/define`, el recurso de cadena asociado se incluye en el archivo de recursos.<br /><br /> `/define` se omite si se usa con archivos de que no son de texto. Lo símbolos distinguen entre mayúsculas y minúsculas.<br /><br /> Para obtener más información sobre esta opción, vea [Compilar recursos de manera condicional](#Conditional) más adelante en este tema.|  
+|`/define:` *symbol1*[, *symbol2*,...]|A partir de .NET Framework 4.5, se admite la compilación condicional en archivos de recursos basados en texto (.txt o .restext). Si *symbol* corresponde a un símbolo incluido en el archivo de texto de entrada de una construcción `#ifdef`, el recurso de cadena asociado se incluye en el archivo .resources. Si el archivo de texto de entrada incluye una instrucción `#if !` con un símbolo que no se ha definido mediante el modificador `/define`, el recurso de cadena asociado se incluye en el archivo de recursos.<br /><br /> `/define` se omite si se usa con archivos de que no son de texto. Lo símbolos distinguen entre mayúsculas y minúsculas.<br /><br /> Para obtener más información sobre esta opción, vea [Compilar recursos de manera condicional](#Conditional) más adelante en este tema.|  
 |`useSourcePath`|Especifica que el directorio actual del archivo de entrada se usará para resolver las rutas de acceso relativas.|  
 |`/compile`|Permite especificar varios archivos .resx o de texto para convertirlos en varios archivos .resources en una única operación masiva. Si no especifica esta opción, solo podrá especificar un argumento de archivo de entrada. Los archivos de salida se denominan *filename*.resources.<br /><br /> Esta opción no se puede combinar con la opción `/str:`.<br /><br /> Para obtener más información sobre esta opción, vea [Compilar o convertir varios archivos](#Multiple) más adelante en este tema.|  
 |`/r:` `assembly`|Hace referencia a los metadatos de los archivos de ensamblado especificados. Se usa al convertir los archivos .resx y permite que Resgen.exe serialice o deserialice los recursos de objeto. Se parece a las opciones `/reference:` o `/r:` de los compiladores de C# y Visual Basic.|  
@@ -244,7 +244,7 @@ resgen MyApp.exe Win8Resources
   
 <a name="Conditional"></a>   
 ### <a name="conditionally-compiling-resources"></a>Compilar recursos de manera condicional  
- A partir de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], Resgen.exe admite la compilación condicional de recursos de cadena en archivos de texto (.txt y .restext). Esto permite usar un único archivo de recursos basado en texto en varias configuraciones de compilación.  
+ A partir de .NET Framework 4.5, Resgen.exe admite la compilación condicional de recursos de cadena en archivos de texto (.txt y .restext). Esto permite usar un único archivo de recursos basado en texto en varias configuraciones de compilación.  
   
  En un archivo .txt o .restext, use la construcción `#ifdef`…`#endif` para incluir un recurso en el archivo .resources binario si se ha definido un símbolo, y use la construcción `#if !`... `#endif` para incluir un recurso si no se ha definido ningún símbolo. En tiempo de compilación, los símbolos se definen mediante la opción `/define:` seguida de una lista de símbolos delimitados por comas. La comparación distingue entre mayúsculas y minúsculas. El formato de mayúsculas y minúsculas definido en `/define` debe coincidir con el de los archivos de texto que se van a compilar.  
   
