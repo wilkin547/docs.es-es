@@ -2,12 +2,12 @@
 title: Levantar y mover aplicaciones .NET existentes a Azure IaaS (infraestructura de nube-Ready)
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure.
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643709"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758865"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Levantar y mover aplicaciones .NET existentes a Azure IaaS (infraestructura de nube-Ready)
 
@@ -39,7 +39,7 @@ Las secciones siguientes describen las aplicaciones optimizadas para la nube que
 
 Si su objetivo es mover aplicaciones existentes a la nube, en primer lugar, identifique las aplicaciones existentes que no requieran una modificación sustancial para ejecutarse en Azure App Service. Estas aplicaciones deben ser los primeros candidatos para optimizada para la nube. 
 
-A continuación, para las aplicaciones que aún no se puede mover a contenedores de Windows y PaaS como App Service u orquestadores como Azure Service Fabric, migrarlas máquinas virtuales sin formato simple (IaaS). 
+A continuación, para las aplicaciones que aún no se puede mover a contenedores de Windows y PaaS como App Service u orquestadores como servicio de Kubernetes de Azure, migrarlas máquinas virtuales sin formato simple (IaaS). 
 
 Sin embargo, tenga en cuenta que correctamente configurar, proteger y mantener las máquinas virtuales requieren mucho más tiempo y experiencia en TI en comparación con el uso de los servicios de PaaS en Azure. Si está pensando en Azure Virtual Machines, asegúrese de tener en cuenta el esfuerzo de mantenimiento continuado necesario para aplicar revisiones, actualizar y administrar su entorno de máquina virtual. Azure Virtual Machines es IaaS.
 

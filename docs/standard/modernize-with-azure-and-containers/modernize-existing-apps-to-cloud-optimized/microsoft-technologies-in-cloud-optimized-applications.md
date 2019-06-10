@@ -2,12 +2,12 @@
 title: Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639026"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758636"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Tecnologías de Microsoft en aplicaciones optimizadas para la nube
 
@@ -17,7 +17,7 @@ En la lista siguiente describe las herramientas, tecnologías y soluciones que s
 
 - **En tiempo de ejecución**: Esta capa proporciona el entorno para ejecutar la aplicación. Si usa contenedores, esta capa normalmente se basa en [Docker Engine](https://docs.docker.com/engine/), ejecutándose en hosts de Linux o en hosts de Windows. ([Contenedores Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/) se admite a partir de Windows Server 2016. Contenedores de Windows es la mejor opción para las aplicaciones existentes de .NET Framework que se ejecutan en Windows).
 
-- **Administra la nube**: Al elegir una opción en la nube administrado, puede evitar el gasto y la complejidad de administrar y admitir las revisiones de sistema operativo subyacentes de infraestructura, las máquinas virtuales y configuración de red. Si opta por migrar mediante el uso de IaaS, usted es responsable de todas estas tareas y para los costos asociados. En una opción en la nube administrado, administrar solo las aplicaciones y servicios que desarrolla. Normalmente, el proveedor de servicios en la nube administra todo lo demás. Ejemplos de servicios en la nube administrado de Azure [Azure SQL Database](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure Storage](https://azure.microsoft.com/services/storage/), [-Azure Database for MySQL](https://azure.microsoft.com/services/mysql/), [-Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)y administra los servicios de proceso como [escalado de máquinas virtuales establece](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/), [Azure App Service](https://azure.microsoft.com/services/app-service/), y [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/).
+- **Administra la nube**: Al elegir una opción en la nube administrado, puede evitar el gasto y la complejidad de administrar y admitir las revisiones de sistema operativo subyacentes de infraestructura, las máquinas virtuales y configuración de red. Si opta por migrar mediante el uso de IaaS, usted es responsable de todas estas tareas y para los costos asociados. En una opción en la nube administrado, administrar solo las aplicaciones y servicios que desarrolla. Normalmente, el proveedor de servicios en la nube administra todo lo demás. Ejemplos de servicios en la nube administrado de Azure [Azure SQL Database](https://azure.microsoft.com/services/sql-database), [Azure Redis Cache](https://azure.microsoft.com/services/cache/), [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/), [Azure Storage](https://azure.microsoft.com/services/storage/), [-Azure Database for MySQL](https://azure.microsoft.com/services/mysql/), [-Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/), [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)y administra los servicios de proceso como [escalado de máquinas virtuales establece](https://azure.microsoft.com/services/virtual-machine-scale-sets/), [Azure App Service](https://azure.microsoft.com/services/app-service/), y [Azure Kubernetes Service](https://azure.microsoft.com/services/container-service/).
 
 - **Desarrollo de aplicaciones**: Puede elegir entre muchos lenguajes al compilar aplicaciones que se ejecutan en contenedores. Esta guía se centra en [.NET](https://www.microsoft.com/net), sin embargo, puede desarrollar aplicaciones basadas en contenedor mediante el uso de otros lenguajes, como Node.js, Python, Java/Spring o ir.
 
@@ -27,7 +27,7 @@ En la lista siguiente describe las herramientas, tecnologías y soluciones que s
 
 - **Ciclo de vida de aplicación**: [Servicios de Azure DevOps](https://azure.microsoft.com/services/devops/) y otras herramientas como Jenkins, son servidores de automatización integradas que le ayudarán a implementar canalizaciones de CI/CD, incluida la administración de versión.
 
-Las secciones siguientes de este capítulo y los tutoriales relacionados, se centran específicamente en los detalles acerca de la capa en tiempo de ejecución (contenedores de Windows). La guía describe los modos de implementación de máquinas virtuales de los contenedores de Windows en Windows Server 2016 (y versiones posteriores) y Azure Container Instances. También se tratan más avanzadas plataformas PaaS como Azure App Service y orchestrator como Azure Service Fabric y Azure Kubernetes Service.
+Las secciones siguientes de este capítulo y los tutoriales relacionados, se centran específicamente en los detalles acerca de la capa en tiempo de ejecución (contenedores de Windows). La guía describe los modos de implementación de máquinas virtuales de los contenedores de Windows en Windows Server 2016 (y versiones posteriores) y Azure Container Instances. También se tratan más avanzadas plataformas PaaS como Azure App Service y orchestrator como Azure Kubernetes Service.
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>Las aplicaciones monolíticas *puede* estar optimizada para la nube
 

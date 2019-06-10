@@ -2,12 +2,12 @@
 title: Razones para modernizar las aplicaciones .NET existentes a las aplicaciones optimizadas para la nube
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Razones para modernizar las aplicaciones .NET existentes a las aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639058"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758748"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes a las aplicaciones optimizadas para la nube
 
@@ -27,7 +27,7 @@ La aplicación está optimizada para la nube si can en la aplicación autónoma 
 
 La clave es *agilidad*. No se puede distribuir con agilidad, a menos que reduzca al mínimo absoluto cualquier implementación de producción problemas y problemas del entorno de desarrollo y pruebas. Contenedores (en concreto, Docker, como un estándar de facto) y los servicios administrados se diseñaron específicamente para este propósito.
 
-Para lograr la agilidad, también necesita procesos automatizados de DevOps que se basan en las canalizaciones de CI/CD que liberan a plataformas escalables en la nube. Las plataformas de CI/CD (como Azure DevOps Services o Jenkins) que implementa en una plataforma de nube escalable y resistente (por ejemplo, Azure App Service, Azure Service Fabric o Azure Kubernetes Service) son tecnologías clave para lograr la agilidad en la nube.
+Para lograr la agilidad, también necesita procesos automatizados de DevOps que se basan en las canalizaciones de CI/CD que liberan a plataformas escalables en la nube. Las plataformas de CI/CD (como Azure DevOps Services o Jenkins) que implementa en una plataforma de nube escalable y resistente (como Azure App Service o Azure Kubernetes Service) son tecnologías clave para lograr la agilidad en la nube.
 
 La lista siguiente describe los principios principales o prácticas para las aplicaciones optimizadas para la nube. Tenga en cuenta que puede adoptar todas o solo algunos de estos principios en un enfoque incremental o progresivo:
 

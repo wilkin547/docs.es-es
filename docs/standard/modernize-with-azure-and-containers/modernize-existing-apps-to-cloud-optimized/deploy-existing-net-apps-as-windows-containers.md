@@ -2,12 +2,12 @@
 title: Implementación de aplicaciones .NET existentes como contenedores de Windows
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | Implementar aplicaciones .NET existentes como contenedores de Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643753"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758835"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows
 
@@ -153,7 +153,6 @@ Los productos en Azure contenedores auxiliares que están a la vez que coloca m�
 
 - **Azure App Service**
 - **Azure Kubernetes Service (AKS y ACS)**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 A continuación, Azure Container Registry es un registro de contenedor escalable alto hospedado en Azure que puede usar en todos los productos anteriores al registrar e implementar las imágenes de contenedor personalizado.
