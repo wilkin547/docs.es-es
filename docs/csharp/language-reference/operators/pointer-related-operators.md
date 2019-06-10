@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 012e4fe9b8ee49f3b6b7240ac4ccb21dba70a8a9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758104"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados con el puntero (Referencia de C#)
 
@@ -46,11 +46,11 @@ Para obtener información sobre los tipos de punteros, vea [Tipos de puntero](..
 
 El operador unario `&` devuelve la dirección de su operando:
 
-[!code-csharp[address of local](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
 El operando del operador `&` debe ser una variable fija. Las variables *fijas* son las que residen en ubicaciones de almacenamiento que no se ven afectadas por el funcionamiento del [recolector de elementos no utilizados](../../../standard/garbage-collection/index.md). En el ejemplo anterior, la variable local `number` es una variable fija, ya que reside en la pila. Las variables que residen en ubicaciones de almacenamiento que pueden verse afectadas por el recolector de elementos no utilizados (por ejemplo, reubicadas) se denominan variables *móviles*. Los campos de objeto y los elementos de matriz son ejemplos de variables móviles. Puede obtener la dirección de una variable móvil si la "fija" o "ancla" con la instrucción [fixed](../keywords/fixed-statement.md). La dirección obtenida solo es válida mientras dure el bloque de instrucciones `fixed`. En el ejemplo siguiente se muestra cómo usar la instrucción `fixed` y el operador `&`:
 
-[!code-csharp[address of fixed](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
 No se puede obtener la dirección de una constante o un valor.
 
@@ -62,7 +62,7 @@ El operador binario `&` calcula el [AND lógico](boolean-logical-operators.md#lo
 
 El operador unario de direccionamiento indirecto del puntero `*` obtiene la variable a la que apunta su operando. También se conoce como operador de desreferencia. El operando del operador `*` debe ser un tipo de puntero.
 
-[!code-csharp[pointer indirection](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](~/samples/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
 
 No se puede aplicar el operador `*` a una expresión de tipo `void*`.
 
@@ -84,7 +84,7 @@ es equivalente a
 
 En el siguiente ejemplo se muestra el uso del operador `->`:
 
-[!code-csharp[pointer member access](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](~/samples/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
 
 No se puede aplicar el operador `->` a una expresión de tipo `void*`.
 
@@ -94,7 +94,7 @@ En el caso de una expresión `p` de un tipo de puntero, un acceso de elemento de
 
 En el ejemplo siguiente se muestra cómo acceder a los elementos de matriz con un puntero y el operador `[]`:
 
-[!code-csharp[pointer element access](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
 En el ejemplo se usa el [operador `stackalloc`](../keywords/stackalloc.md) para asignar un bloque de memoria en la pila.
 
@@ -128,7 +128,7 @@ El [operador `sizeof`](../keywords/sizeof.md) obtiene el tamaño de un tipo en b
 
 En el siguiente ejemplo se muestra el uso del operador `+` con un puntero:
 
-[!code-csharp[pointer addition](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>Resta de puntero
 
@@ -136,7 +136,7 @@ En el caso de dos punteros `p1` y `p2` de tipo `T*`, la expresión `p1 - p2` gen
 
 El ejemplo siguiente muestra la resta de puntero:
 
-[!code-csharp[pointer subtraction](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](~/samples/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>Incremento y decremento de puntero
 
@@ -146,7 +146,7 @@ Ambos operadores se admiten con dos formatos: postfijo (`p++` y `p--`) y prefijo
 
 El ejemplo siguiente muestra el comportamiento de los operadores de incremento postfijo y prefijo:
 
-[!code-csharp[pointer increment](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](~/samples/csharp/language-reference/operators/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>Operadores de comparación de puntero
 

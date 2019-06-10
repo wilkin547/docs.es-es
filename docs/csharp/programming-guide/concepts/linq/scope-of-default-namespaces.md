@@ -2,12 +2,12 @@
 title: Ámbito del espacio de nombres predeterminado de C#
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: d60f489f616a413e25bf5cd427bd467852a97c7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2eee1b0c79f585710962d8e84fe584bca6b8228b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379450"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483605"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>Ámbito del espacio de nombres predeterminado de C\#
 Los espacios de nombres predeterminados del árbol XML no se encuentran en el ámbito de las consultas. Si tiene código XML en un espacio de nombres predeterminado, debe declarar una variable <xref:System.Xml.Linq.XNamespace> y combinarla con el nombre local para convertirla en un nombre completo que se usará en la consulta.  
@@ -90,4 +90,4 @@ End of result set
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
