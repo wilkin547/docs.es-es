@@ -2,12 +2,12 @@
 title: Procedimiento para rellenar un árbol XML desde el sistema de archivos (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: 664994dad75871a5b70f2c132df67d1658808c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705815"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485174"
 ---
 # <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Procedimiento para rellenar un árbol XML desde el sistema de archivos (C#)
 Una aplicación habitual y útil de los árboles XML es un almacén de datos de nombres y valores jerárquicos. Puede rellenar un árbol XML con datos jerárquicos y, a continuación, consultarlo, transformarlo y, si es necesario, serializarlo. En este escenario de uso, gran parte de la semántica específica XML (por ejemplo, el comportamiento de los espacios en blanco y los espacios de nombres) no es importante. En su lugar, usará el árbol XML como una base de datos jerárquica, pequeña y en memoria, de usuario único.  
@@ -115,7 +115,3 @@ class Program
 ------  
 Total File Size:59089  
 ```  
-  
-## <a name="see-also"></a>Vea también
-
-- [Técnicas de consulta avanzadas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

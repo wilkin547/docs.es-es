@@ -2,12 +2,12 @@
 title: Procedimiento para combinar dos colecciones (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
-ms.openlocfilehash: fb158427afd59caea5eecdad29fa0a68686f6381
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 893966f3b803b92efbc89a65870623f10195c85f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543661"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485379"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>Procedimiento para combinar dos colecciones (LINQ to XML) (C#)
 A veces, un elemento o atributo de un documento XML puede hacer referencia a otro elemento o atributo. Por ejemplo, el documento XML [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) contiene una lista de clientes y una lista de pedidos. Cada elemento `Customer` contiene un atributo `CustomerID`. Cada elemento `Order` contiene un elemento `CustomerID`. El elemento `CustomerID` de cada pedido hace referencia al atributo `CustomerID` de un cliente.  
@@ -123,7 +123,3 @@ Attempting to validate, custOrdDoc validated
   </Order>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>Vea también
-
-- [Técnicas de consulta avanzadas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

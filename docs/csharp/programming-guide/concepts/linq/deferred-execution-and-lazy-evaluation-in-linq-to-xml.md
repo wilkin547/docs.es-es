@@ -2,12 +2,12 @@
 title: Ejecución aplazada y evaluación diferida en LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 940885d6499bd2730c0bd4a5e15a490a9e85deab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597429"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487566"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Ejecución aplazada y evaluación diferida en LINQ to XML (C#)
 Las operaciones de consulta y de eje a menudo se implementan para usar la ejecución aplazada. Este tema describe los requisitos y las ventajas de la ejecución aplazada, y algunas consideraciones acerca de la implementación.  
@@ -35,7 +35,7 @@ Las operaciones de consulta y de eje a menudo se implementan para usar la ejecuc
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Encadenar cadenas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [Tutorial: Encadenar cadenas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
 - [Conceptos y terminología (transformación funcional) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
 - [Aggregation Operations (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md) (Operaciones de agregación [C#])
 - [yield](../../../../csharp/language-reference/keywords/yield.md)

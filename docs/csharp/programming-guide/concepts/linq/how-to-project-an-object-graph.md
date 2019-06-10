@@ -2,12 +2,12 @@
 title: Procedimiento para proyectar un gráfico de objetos (C#)
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 3b0b4ab7d30d24902bde8c5010a3df6b63f3ac3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 759db3800b02ee3f6e263b4d43374a9160703b2f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545178"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486575"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>Procedimiento para proyectar un gráfico de objetos (C#)
 En este tema se ilustra cómo proyectar o rellenar un gráfico de objetos de XML.  
@@ -259,4 +259,3 @@ ShipDate: 5/21/1999
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
-- [Proyecciones y transformaciones (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

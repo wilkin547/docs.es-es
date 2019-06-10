@@ -2,12 +2,12 @@
 title: Consultas compiladas estáticamente (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 3bf558fe-0705-479d-86d4-00188f5fcf9c
-ms.openlocfilehash: 543c49f8cd95dce5a4fd510984233b3b64e5164e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee5d5fbc9bf2aa90635e75c5c8cbf52b16e3f349
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595385"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483465"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-c"></a>Consultas compiladas estáticamente (LINQ to XML) (C#)
 Una de las ventajas de rendimiento más importantes de LINQ to XML, a diferencia de <xref:System.Xml.XmlDocument>, es que las consultas LINQ to XML se compilan estáticamente, mientras que las consultas XPath deben interpretarse durante la ejecución. Esta característica está incorporada en LINQ to XML, de modo que no tiene que efectuar pasos adicionales para aprovecharla, pero resulta útil comprender la distinción a la hora de elegir entre las dos tecnologías. Este tema explica la diferencia.  
@@ -93,6 +93,3 @@ reader.Close();
   
  Esto es bastante más que el trabajo realizado por la consulta LINQ to XML correspondiente. La diferencia de rendimiento específica varía para distintos tipos de consultas, pero en general las consultas LINQ to XML efectúan menos operaciones y, por lo tanto, se ejecutan mejor, que si se evalúan las expresiones XPath con <xref:System.Xml.XmlDocument>.  
   
-## <a name="see-also"></a>Vea también
-
-- [Rendimiento (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

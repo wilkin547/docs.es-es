@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar párrafos de un documento de Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: 192f04e9862b9cb901494f0a09744d3f9f289399
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b0919b7c5c40444587a18c0087109af8172ebb1
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688277"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486462"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>Procedimiento para recuperar párrafos de un documento de Office Open XML (C#)
 Este tema presenta un ejemplo que abre un documento XML abierto de Office y recupera una colección de todos los párrafos del documento.  
@@ -19,7 +19,7 @@ Este tema presenta un ejemplo que abre un documento XML abierto de Office y recu
   
  El ejemplo usa un método de extensión denominado `StringConcatenate`, también proporcionado.  
   
- Para ver un tutorial en el que se explica cómo funciona este ejemplo, consulte [Transformaciones funcionales puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md).  
+ Para ver un tutorial en el que se explica cómo funciona este ejemplo, consulte [Transformaciones funcionales puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -182,7 +182,3 @@ StyleName:Normal >This example produces the following output:<
 StyleName:Normal ><  
 StyleName:Code >Hello World<  
 ```  
-  
-## <a name="see-also"></a>Vea también
-
-- [Técnicas de consulta avanzadas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

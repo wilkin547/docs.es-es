@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: d0b35bec3bbc30f411a705220c468fa8961b83cb
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186031"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722541"
 ---
 # <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
 
@@ -49,7 +49,7 @@ Para más información, vea [Variables locales con asignación implícita de tip
 Los inicializadores de objeto y colección permiten inicializar objetos sin llamar explícitamente a un constructor para el objeto. Los inicializadores normalmente se usan en expresiones de consulta cuando proyectan los datos de origen en un nuevo tipo de datos. Suponiendo que hay una clase denominada `Customer` con las propiedades públicas `Name` y `Phone`, el inicializador de objeto se puede usar como en el código siguiente:
 
 ```csharp
-Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
+var cust = new Customer { Name = "Mike", Phone = "555-1212" };
 ```
 
 Continuando con nuestra clase `Customer`, suponga que hay un origen de datos denominado `IncomingOrders` y que para cada pedido con un `OrderSize` grande, nos gustaría crear un nuevo `Customer` basado en ese orden. Se pueden ejecutar una consulta LINQ en este origen de datos y usar la inicialización de objetos para rellenar una colección:

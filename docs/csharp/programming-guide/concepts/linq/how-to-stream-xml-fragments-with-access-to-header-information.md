@@ -2,12 +2,12 @@
 title: Procedimiento para hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)
 ms.date: 07/20/2015
 ms.assetid: 7f242770-b0c7-418d-894b-643215e1f8aa
-ms.openlocfilehash: a7e590dcc70dcdb4ea7d5681d623c63f194e0d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ecf20134c0d5897418c7667908f80511a962871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655574"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484843"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a>Procedimiento para hacer streaming de fragmentos XML con acceso a la información del encabezado (C#)
 A veces debe leer arbitrariamente los archivos XML grandes y escribir la aplicación para que la superficie de memoria de esta sea predecible. Si intenta rellenar un árbol XML con un archivo XML de gran tamaño, su utilización de memoria será proporcional al tamaño del archivo (es decir, excesivo). Por consiguiente, debe utilizar en su lugar una técnica de transmisión por secuencias.  
@@ -166,6 +166,3 @@ static void Main(string[] args)
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también
-
-- [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

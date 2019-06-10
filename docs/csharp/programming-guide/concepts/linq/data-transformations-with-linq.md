@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 41542b663930ba92d47e62151e913429b690054d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d7073fe35d58c9c538afa52911a5555b0002bfcf
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879121"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486272"
 ---
 # <a name="data-transformations-with-linq-c"></a>Transformaciones de datos con LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] no solo sirve para la recuperación de datos. También es una herramienta eficaz para transformarlos. Mediante el uso de un consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], se puede usar una secuencia de origen como entrada y modificarla de muchas maneras para crear una nueva secuencia de salida. Por medio de ordenaciones y agrupaciones se puede modificar la propia secuencia sin modificar los elementos. Pero quizás la característica más eficaz de las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] es la capacidad para crear nuevos tipos. Esto se realiza en la cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md). Por ejemplo, puede realizar las tareas siguientes:  
@@ -102,6 +102,6 @@ ms.locfileid: "65879121"
 - [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
-- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
 - [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [select (cláusula)](../../../../csharp/language-reference/keywords/select-clause.md)

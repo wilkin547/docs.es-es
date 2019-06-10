@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar un único atributo (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 2bf42333d7a0b3e34cc0a636b68659b8c45d1d83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cfab2cbb80eb330a5fd745871eb272cca0b37798
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738188"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486441"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>Procedimiento para recuperar un único atributo (LINQ to XML) (C#)
 Este tema explica cómo recuperar un atributo concreto de un elemento, proporcionando el nombre del atributo. Esto puede resultar útil para escribir expresiones de consulta mediante las cuales encontrar un elemento que contiene un atributo en particular.  
@@ -71,7 +71,7 @@ work
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona operadores de conversión explícita para la clase <xref:System.Xml.Linq.XAttribute> a `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` y `GUID?`.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra el mismo código para un atributo que se encuentre en un espacio de nombres. Para obtener más información, vea [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) (Trabajar con espacios de nombres XML [C#]).  
+ El siguiente ejemplo muestra el mismo código para un atributo que se encuentre en un espacio de nombres. Para obtener más información, vea [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) (Trabajar con espacios de nombres XML [C#]).  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -99,4 +99,4 @@ work
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md) (Ejes de LINQ to XML [C#])
+- [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md) (Ejes de LINQ to XML [C#])

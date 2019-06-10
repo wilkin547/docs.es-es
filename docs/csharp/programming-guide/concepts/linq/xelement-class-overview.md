@@ -2,25 +2,24 @@
 title: Información general de la clase XElement (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: cddb36ac6401c20478a1254fe3d63afe5bd13099
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 815b7b6523afe7106fcdcbe242d667c5ad6aa56e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595760"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487011"
 ---
 # <a name="xelement-class-overview-c"></a>Información general de la clase XElement (C#)
 La clase <xref:System.Xml.Linq.XElement> es una de las clases fundamentales de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Representa a un elemento XML. Puede utilizar esta clase para crear elementos; cambiar el contenido del elemento; agregar, modificar o eliminar elementos secundarios; agregar atributos a un elemento; o serializar el contenido de un elemento en forma de texto. También puede operar con otras clases de <xref:System.Xml?displayProperty=nameWithType>, como son <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> y <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
-## <a name="xelement-functionality"></a>Funcionalidad de XElement  
- Este tema describe la funcionalidad que ofrece la clase <xref:System.Xml.Linq.XElement>.  
+Este tema describe la funcionalidad que ofrece la clase <xref:System.Xml.Linq.XElement>.  
   
-### <a name="constructing-xml-trees"></a>Construir árboles XML  
+## <a name="constructing-xml-trees"></a>Construir árboles XML  
  Es posible construir árboles XML de diferentes formas, entre las que se incluyen las siguientes:  
   
-- Puede construir un árbol XML mediante código. Para obtener más información, consulte [Crear árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).  
+- Puede construir un árbol XML mediante código. Para obtener más información, consulte [Crear árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).  
   
-- Puede analizar XML a partir de diferentes orígenes, incluyendo un <xref:System.IO.TextReader>, archivos de texto o direcciones web (URL). Para obtener más información, consulte [Parsing XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md) (Analizar XML [C#]).  
+- Puede analizar XML a partir de diferentes orígenes, incluyendo un <xref:System.IO.TextReader>, archivos de texto o direcciones web (URL). Para obtener más información, consulte [Parsing XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md) (Analizar XML [C#]).  
   
 - También puede utilizar un <xref:System.Xml.XmlReader> para rellenar el árbol. Para obtener más información, vea <xref:System.Xml.Linq.XNode.ReadFrom%2A>.  
   
@@ -76,26 +75,26 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-### <a name="serializing-xml-trees"></a>Serializar árboles XML  
+## <a name="serializing-xml-trees"></a>Serializar árboles XML  
  Puede serializar un árbol XML en un <xref:System.IO.File>, un <xref:System.IO.TextWriter> o en un <xref:System.Xml.XmlWriter>.  
   
- Para obtener más información, consulte [Serializar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md).  
+ Para obtener más información, consulte [Serializar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
   
-### <a name="retrieving-xml-data-via-axis-methods"></a>Recuperar datos XML mediante los métodos de los ejes  
+## <a name="retrieving-xml-data-via-axis-methods"></a>Recuperar datos XML mediante los métodos de los ejes  
  Puede utilizar los métodos de los ejes para recuperar atributos, elementos secundarios, elementos descendientes y elementos antecesores. Las consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] utilizan los métodos de los ejes y proporcionan numerosos mecanismos, flexibles y potentes, para recorrer y procesar árboles XML.  
   
- Para obtener más información, consulte [Ejes de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md).  
+ Para obtener más información, consulte [Ejes de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md).  
   
-### <a name="querying-xml-trees"></a>Consultar árboles XML  
+## <a name="querying-xml-trees"></a>Consultar árboles XML  
  Puede escribir consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que extraigan datos de un árbol XML.  
   
- Para obtener más información, consulte [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md).  
+ Para obtener más información, consulte [Consultar árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md).  
   
-### <a name="modifying-xml-trees"></a>Modificar árboles XML  
+## <a name="modifying-xml-trees"></a>Modificar árboles XML  
  Puede modificar un elemento de diferentes maneras, incluyendo el cambiar su contenido o sus atributos. También puede eliminar un elemento dependiente de un elemento primario.  
   
- Para obtener más información, consulte [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md).  
+ Para obtener más información, consulte [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la programación de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [Información general sobre la programación de LINQ to XML (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

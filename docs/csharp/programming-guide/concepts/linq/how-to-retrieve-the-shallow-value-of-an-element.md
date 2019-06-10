@@ -2,12 +2,12 @@
 title: Procedimiento para recuperar el valor superficial de un elemento (C#)
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 593fe1c22664f1e4e8322cb8816e58f4721c5bf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 570f9837d04352fb291f0b79f85fb9d7f68ff09d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672849"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485038"
 ---
 # <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Procedimiento para recuperar el valor superficial de un elemento (C#)
 Este tema muestra cómo obtener el valor superficial de un elemento. El valor superficial es el valor del elemento específico solamente, en oposición al valor profundo, que incluye los valores de todos los elementos descendientes concatenados en una sola cadena.  
@@ -81,4 +81,4 @@ Column  Name="Name"         =Customer.Name
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md) (Ejes de LINQ to XML [C#])
+- [LINQ to XML Axes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md) (Ejes de LINQ to XML [C#])

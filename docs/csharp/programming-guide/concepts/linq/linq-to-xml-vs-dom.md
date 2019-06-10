@@ -2,12 +2,12 @@
 title: LINQ to XML frente a DOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: 6ab775cc259fd3a337358bca2da6055d7b1ea6bd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3cd6edf9e950611d4e0ed205b89c7c7b073955c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596967"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484323"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML frente a DOM (C#)
 En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  
@@ -75,7 +75,7 @@ XElement contacts =
   
  Tenga en cuenta que si se aplica la sangría al código para crear el árbol XML, se mostrará la estructura XML subyacente.  
   
- Para obtener más información, vea [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md) (Crear árboles XML (C#))  
+ Para obtener más información, vea [Creating XML Trees (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) (Crear árboles XML (C#))  
   
 ## <a name="working-directly-with-xml-elements"></a>Trabajar directamente con elementos XML  
  La programación con XML suele centrarse en elementos XML y quizás en los atributos. En [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se puede trabajar directamente con atributos y elementos XML. Por ejemplo, puede realizar lo siguiente:  
@@ -100,7 +100,7 @@ doc.AppendChild(name);
  Cuando se utiliza LINQ to XML, se usa la clase <xref:System.Xml.Linq.XDocument> solamente si se desea agregar un comentario o una instrucción de procesamiento en el nivel de raíz del documento.  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>Control simplificado de nombres y espacios de nombres  
- Controlar nombres, espacios de nombres y prefijos de espacios de nombres suele ser una parte compleja de la programación XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica los nombres y los espacios de nombres al eliminar el requisito de tener que tratar con prefijos de espacios de nombres. Si lo desea, puede controlar los prefijos de espacios de nombres. Pero si decide no controlar explícitamente los prefijos de espacios de nombres, durante la serialización [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] asignará prefijos de espacios de nombres si son necesarios, o serializará con espacios de nombres predeterminados si no lo son. Si se usan espacios de nombres predeterminados, no habrá prefijos de espacios de nombres en el documento resultante. Para obtener más información, vea [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Controlar nombres, espacios de nombres y prefijos de espacios de nombres suele ser una parte compleja de la programación XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica los nombres y los espacios de nombres al eliminar el requisito de tener que tratar con prefijos de espacios de nombres. Si lo desea, puede controlar los prefijos de espacios de nombres. Pero si decide no controlar explícitamente los prefijos de espacios de nombres, durante la serialización [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] asignará prefijos de espacios de nombres si son necesarios, o serializará con espacios de nombres predeterminados si no lo son. Si se usan espacios de nombres predeterminados, no habrá prefijos de espacios de nombres en el documento resultante. Para obtener más información, vea [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md).  
   
  Otro problema de DOM consiste en que no permite cambiar el nombre de un nodo. Por el contrario, hay que crear un nuevo nodo y copiar en él todos los nodos secundarios, por lo que se pierde la identidad del nodo original. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] evita este problema al permitir que se establezca la propiedad <xref:System.Xml.Linq.XName> en un nodo.  
   
@@ -133,4 +133,4 @@ doc.AppendChild(name);
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

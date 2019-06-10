@@ -2,12 +2,12 @@
 title: Suscripción a eventos
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Obtenga más información sobre los detalles de la publicación y la suscripción a eventos de integración.
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639713"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722676"
 ---
 # <a name="subscribing-to-events"></a>Suscripción a eventos
 
@@ -322,7 +322,7 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Forked eShopOnContainers using NServiceBus (Particular Software)** \ (Bifurcación de eShopOnContainers mediante NServiceBus [Particular Software])
+- **Forked eShopOnContainers using NServiceBus (Particular Software)**  \ (Bifurcación de eShopOnContainers mediante NServiceBus [Particular Software])
     <https://go.particular.net/eShopOnContainers>
 
 - **Event Driven Messaging** \ (Mensajería controlada por eventos)
@@ -378,12 +378,6 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 
 - **Reliability Guide** (RabbitMQ documentation) \ (Guía de confiabilidad [documentación de RabbitMQ])
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Azure Service Bus. Mensajería asincrónica: Detección de duplicados** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **Reliability Guide** (RabbitMQ documentation) \ (Guía de confiabilidad [documentación de RabbitMQ])
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [Anterior](rabbitmq-event-bus-development-test-environment.md)

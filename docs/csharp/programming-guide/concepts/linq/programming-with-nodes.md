@@ -2,12 +2,12 @@
 title: Programar con nodos (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 0924d7b1d25a33635cc5140ca32622658b10fa0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7229b03e1bbb4f7cd861cb946307867b87234a21
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730183"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487304"
 ---
 # <a name="programming-with-nodes-c"></a>Programar con nodos (C#)
 Los desarrolladores de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] que deben escribir programar como un editor de XML, un sistema de transformación o un sistema de escritura de informes a menudo deben escribir programas que funcionan en un nivel de granularidad más fino que los elementos y los atributos. A menudo deben trabajar en el nivel del nodo, manipulando nodos de texto, procesando instrucciones y comentarios. En este tema se proporcionan algunos detalles acerca de la programación en el nivel del nodo.  
@@ -172,6 +172,3 @@ Console.WriteLine(doc.Nodes().Count());
 1  
 ```  
   
-## <a name="see-also"></a>Vea también
-
-- [Programación avanzada de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

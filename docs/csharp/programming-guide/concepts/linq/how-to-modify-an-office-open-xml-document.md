@@ -2,12 +2,12 @@
 title: Procedimiento para modificar un documento de Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 467d489c-2b1b-453b-a757-8ac180e82a96
-ms.openlocfilehash: 6770e661c90f9eee432933edafb28a615991775e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6edd31ff2a22e32c979e1a6a548b212406cbf5
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556030"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486652"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-c"></a>Procedimiento para modificar un documento de Office Open XML (C#)
 En este tema se presenta un ejemplo que abre un documento XML abierto de Office, lo modifica y lo guarda.  
@@ -147,6 +147,3 @@ class Program
 New first paragraph: >PARSING WORDPROCESSINGML WITH LINQ TO XML<  
 ```  
   
-## <a name="see-also"></a>Vea también
-
-- [Técnicas de consulta avanzadas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

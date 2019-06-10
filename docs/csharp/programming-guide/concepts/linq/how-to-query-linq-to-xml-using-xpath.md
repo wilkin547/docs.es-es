@@ -2,12 +2,12 @@
 title: Procedimiento para consultar LINQ to XML mediante XPath (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: a3e9cb29b9ba027cfc70eeb0cd163b24834dff83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 639d9ba8af9ae663bc245028cf4bf57f318d397d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564112"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485181"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Procedimiento para consultar LINQ to XML mediante XPath (C#)
 Este tema presenta los métodos de extensión que permiten consultar un árbol XML con XPath. Para obtener información detallada acerca del uso de estos métodos de extensión, vea <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  
@@ -39,6 +39,3 @@ foreach (XElement el in list)
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>Vea también
-
-- [Técnicas de consulta avanzadas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

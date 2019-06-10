@@ -8,25 +8,25 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: de82a738430cdd37c4905a5ae7da5faeb46f00a4
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: bc3fc579ed8031d818241f41ac728ef7e5be0b99
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196371"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690115"
 ---
 # <a name="debugview-syntax"></a>Sintaxis de `DebugView`
 
 La propiedad `DebugView` (disponible solo durante la depuración) proporciona una representación de cadenas de árboles de expresión. La mayor parte de la sintaxis es bastante sencilla de entender; los casos especiales se describen en las siguientes secciones.
 
-Cada ejemplo va seguido de un comentario del bloque, que contiene `DebugView`. 
+Cada ejemplo va seguido de un comentario del bloque, que contiene `DebugView`.
 
-## <a name="parameterexpression"></a>ParameterExpression 
+## <a name="parameterexpression"></a>ParameterExpression
 
 los nombres de variable <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> se muestran con un símbolo `$` al principio.
-  
+
 Si un parámetro no tiene un nombre, se le asigna un nombre generado automáticamente, como `$var1` o `$var2`.
-  
+
 ### <a name="examples"></a>Ejemplos
 
 ```csharp
@@ -41,31 +41,31 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 */
 ```
 
-## <a name="constantexpression"></a>ConstantExpression  
+## <a name="constantexpression"></a>ConstantExpression
 
-Para los objetos <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> que representan valores enteros, cadenas y `null`, se muestra el valor de la constante.  
-  
-Para los tipos numéricos que tienen sufijos estándar como literales de C#, el sufijo se agrega al valor. En la tabla siguiente se muestran los sufijos asociados a varios tipos numéricos.  
+Para los objetos <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> que representan valores enteros, cadenas y `null`, se muestra el valor de la constante.
 
-| Tipo | Palabra clave | Sufijo |  
-|--|--|--|  
-| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |  
-| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |  
-| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |  
-| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |  
-| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |  
-| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |  
-  
-### <a name="examples"></a>Ejemplos  
+Para los tipos numéricos que tienen sufijos estándar como literales de C#, el sufijo se agrega al valor. En la tabla siguiente se muestran los sufijos asociados a varios tipos numéricos.
+
+| Tipo | Palabra clave | Sufijo |
+|--|--|--|
+| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |
+| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |
+| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |
+| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |
+| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |
+| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |
+
+### <a name="examples"></a>Ejemplos
 
 ```csharp
-int num = 10; 
+int num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10
 */
 
-double num = 10; 
+double num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10D
@@ -73,10 +73,10 @@ ConstantExpression expr = Expression.Constant(num);
 ```
 
 ## <a name="blockexpression"></a>BlockExpression
- 
-Si el tipo de un objeto <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> difiere del tipo de la última expresión del bloque, el tipo se muestra entre corchetes angulares (`<` y `>`). De otro modo, el tipo del objeto <xref:System.Linq.Expressions.BlockExpression> no se muestra.  
-  
-### <a name="examples"></a>Ejemplos  
+
+Si el tipo de un objeto <xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> difiere del tipo de la última expresión del bloque, el tipo se muestra entre corchetes angulares (`<` y `>`). De otro modo, el tipo del objeto <xref:System.Linq.Expressions.BlockExpression> no se muestra.
+
+### <a name="examples"></a>Ejemplos
 
 ```csharp
 BlockExpression block = Expression.Block(Expression.Constant("test"));
@@ -97,9 +97,9 @@ BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("t
 ## <a name="lambdaexpression"></a>LambdaExpression
 
 Los objetos <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> se muestran junto con sus tipos delegados.
-  
+
 Si una expresión lambda no tiene un nombre, se le asigna un nombre generado automáticamente, como `#Lambda1` o `#Lambda2`.
-  
+
 ### <a name="examples"></a>Ejemplos
 
 ```csharp
@@ -117,15 +117,15 @@ LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), 
     }
 */
 ```
-  
+
 ## <a name="labelexpression"></a>LabelExpression
 
 Si especifica un valor predeterminado para el objeto <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType>, este valor se muestra antes del objeto <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType>.
-  
+
 El token `.Label` indica el inicio de la etiqueta. El token `.LabelTarget` indica el destino al que se va a saltar.
-  
+
 Si una etiqueta no tiene un nombre, se le asigna un nombre generado automáticamente, como `#Label1` o `#Label2`.
-  
+
 ### <a name="examples"></a>Ejemplos
 
 ```csharp
@@ -156,12 +156,12 @@ BlockExpression block = Expression.Block(
     }
 */
 ```
-  
-## <a name="checked-operators"></a>Operadores activados  
 
-Los operadores activados se muestran con el símbolo `#` delante del operador. Por ejemplo, el operador de adición activado se muestra como `#+`.  
-  
-### <a name="examples"></a>Ejemplos  
+## <a name="checked-operators"></a>Operadores activados
+
+Los operadores activados se muestran con el símbolo `#` delante del operador. Por ejemplo, el operador de adición activado se muestra como `#+`.
+
+### <a name="examples"></a>Ejemplos
 
 ```csharp
 Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));

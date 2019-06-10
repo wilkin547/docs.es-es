@@ -2,12 +2,12 @@
 title: Procedimiento para buscar elementos relacionados (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4260012899527662638a037fa4616a7a0d6f875
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843344"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486743"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Procedimiento para buscar elementos relacionados (XPath-LINQ to XML) (C#)
 Este tema muestra cómo obtener un elemento seleccionando en un atributo al que hace referencia el valor de otro elemento.  
@@ -83,7 +83,4 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
-  
-## <a name="see-also"></a>Vea también
-
-- [LINQ to XML para usuarios de XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ 

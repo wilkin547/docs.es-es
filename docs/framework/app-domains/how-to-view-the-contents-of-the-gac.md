@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c7d197ea7178abf991247e5ecca02c2b8e94713
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c319c5f7c9bb808b2ce7ee10178722287e456339
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634371"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486428"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>Procedimiento para consultar el contenido de la caché global de ensamblados
 
@@ -39,7 +39,7 @@ gacutil /l
 ```
 
 > [!NOTE]
-> En versiones anteriores de .NET Framework, la extensión [Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) del shell de Windows permitía ver la caché global de ensamblados en el Explorador de archivos. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Shfusion.dll está obsoleto.
+> En versiones anteriores de .NET Framework, la extensión [Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) del shell de Windows permitía ver la caché global de ensamblados en el Explorador de archivos. A partir de .NET Framework 4, Shfusion.dll está obsoleto.
 
 ## <a name="see-also"></a>Vea también
 

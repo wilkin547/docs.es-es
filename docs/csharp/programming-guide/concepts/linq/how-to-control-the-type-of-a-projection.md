@@ -2,12 +2,12 @@
 title: Procedimiento para controlar el tipo de una proyección (C#)
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: 020e847545d62709da091a9645d39f8fd0a5ce25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f60934d6dcac5d2c0fa46409a773d8cdc8b6a2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561028"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487443"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Procedimiento para controlar el tipo de una proyección (C#)
 La proyección es el proceso de tomar un conjunto de datos, filtrarlo, cambiar su forma e incluso cambiar su tipo. La mayoría de las expresiones de consulta realizan proyecciones. La mayor parte de las expresiones de consulta de esta sección se evalúan como <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, aunque puede controlar el tipo de proyección para crear colecciones de otros tipos. En este tema se explica cómo hacerlo.  
@@ -72,4 +72,3 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [Proyecciones y transformaciones (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

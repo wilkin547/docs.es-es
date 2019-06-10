@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755958"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483400"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relaciones entre tipos en operaciones de consulta LINQ (C#)
 Para escribir las consultas eficazmente, es necesario comprender cómo los tipos de las variables en una operación de consulta completa se relacionan entre sí. Si entiende estas relaciones comprenderá más fácilmente los ejemplos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y los ejemplos de código de la documentación. Además, entenderá lo que sucede en segundo plano cuando los tipos de las variables se declaran implícitamente mediante `var`.  
@@ -64,7 +64,3 @@ Para escribir las consultas eficazmente, es necesario comprender cómo los tipos
  ![Diagrama que muestra el flujo de tipos implícitos.](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  Para obtener más información sobre `var`, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
-  
-## <a name="see-also"></a>Vea también
-
-- [Introducción a LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

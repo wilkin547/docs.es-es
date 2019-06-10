@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654047"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484101"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintaxis de consultas y sintaxis de métodos en LINQ (C#)
 La mayoría de las consultas de la documentación introductoria de Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) se escribe con la sintaxis de consulta declarativa de LINQ. Pero la sintaxis de consulta debe traducirse en llamadas de método para .NET Common Language Runtime (CLR) al compilar el código. Estas llamadas de método invocan los operadores de consulta estándar, que tienen nombres tales como `Where`, `Select`, `GroupBy`, `Join`, `Max` y `Average`. Puede llamarlas directamente con la sintaxis de método en lugar de la sintaxis de consulta.  
@@ -41,7 +41,3 @@ La mayoría de las consultas de la documentación introductoria de Language Inte
   
 ## <a name="composability-of-queries"></a>Capacidad de composición de consultas  
  En el ejemplo de código anterior, tenga en cuenta que el método `OrderBy` se invoca mediante el operador de punto en la llamada a `Where`. `Where` crea una secuencia filtrada y, luego, `Orderby` actúa en dicha secuencia ordenándola. Dado que las consultas devuelven un `IEnumerable`, redáctelas con la sintaxis de método encadenando las llamadas de método. Es lo que el compilador hace en segundo plano cuando se escriben consultas con la sintaxis de consulta. Y dado que una variable de consulta no almacena los resultados de la consulta, puede modificarla o usarla como base para una nueva consulta en cualquier momento, incluso después de que se haya ejecutado.  
-  
-## <a name="see-also"></a>Vea también
-
-- [Introducción a LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

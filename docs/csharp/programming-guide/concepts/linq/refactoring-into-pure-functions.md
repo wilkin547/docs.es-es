@@ -2,12 +2,12 @@
 title: Refactorizar en funciones puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0ddf3eb937f0ff9ee6b0ce289d73be7640499ba4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596893"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483990"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>Refactorizar en funciones puras (C#)
 
@@ -24,7 +24,7 @@ Un aspecto importante de las transformaciones funcionales puras es aprender cóm
   
  Una forma de realizar una transición a la programación funcional es refactorizar código existente para eliminar efectos secundarios innecesarios y dependencias externas. De esta forma puede crear versiones de función pura del código existente.  
   
- En este tema se trata qué es una función pura y qué no es. En [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md) se muestra cómo manipular un documento de WordprocessingML y se incluyen dos ejemplos de cómo refactorizar mediante una función pura.  
+ En este tema se trata qué es una función pura y qué no es. En [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) se muestra cómo manipular un documento de WordprocessingML y se incluyen dos ejemplos de cómo refactorizar mediante una función pura.  
   
 ## <a name="eliminating-side-effects-and-external-dependencies"></a>Eliminar efectos secundarios y dependencias externas  
  Los siguientes ejemplos contraponen dos funciones no puras y una función pura.  

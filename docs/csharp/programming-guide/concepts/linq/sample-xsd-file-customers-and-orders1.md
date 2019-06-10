@@ -2,12 +2,12 @@
 title: 'Archivo XSD de muestra: Clientes y pedidos1'
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: 9738070ce1b8bf5c0bf8ed4ba75e8d1a248efd53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59b5d116d1e89267ba36066e2de644dee0bf514c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524629"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487214"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Archivo XSD de muestra: Clientes y pedidos
 El siguiente archivo XSD se usa en numerosos ejemplos de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Este archivo contiene una definición de esquema para el [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). El esquema usa las características `xs:key` y `xs:keyref` de XSD para establecer que el atributo `CustomerID` del elemento `Customer` es una clave, y para establecer una relación entre el elemento `CustomerID` de cada elemento `Order` y el atributo `CustomerID` de cada elemento `Customer`.  
@@ -92,7 +92,4 @@ El siguiente archivo XSD se usa en numerosos ejemplos de la documentación de [!
   </xs:complexType>  
 </xs:schema>  
 ```  
-  
-## <a name="see-also"></a>Vea también
-
-- [Documentos XML de ejemplo (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+ 

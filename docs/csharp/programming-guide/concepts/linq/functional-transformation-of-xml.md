@@ -2,12 +2,12 @@
 title: Transformación funcional de XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 237a96e3cc1a2e2cb231b23954613f6a0ad0761c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1325644873db29b2c40901ded3eb254b3a31073
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596653"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485961"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Transformación funcional de XML (C#)
 Este tema trata acerca de la aproximación enfocada a la transformación funcional pura para modificar documentos XML, comparándola con la aproximación basada en procedimientos.  
@@ -26,7 +26,7 @@ Este tema trata acerca de la aproximación enfocada a la transformación funcion
 ### <a name="xml-functional-transformational-technologies"></a>Tecnologías de transformación funcional de XML  
  Microsoft ofrece dos tecnologías de transformación funcional que se pueden usar con documentos XML: XSLT y LINQ to XML. XSLT se proporciona a través del espacio de nombres administrado <xref:System.Xml.Xsl> y de la implementación nativa COM de MSXML. Aunque XSLT es una tecnología robusta para manipular documentos XML, requiere experiencia en un campo muy especializado, el lenguaje XSLT y sus API de apoyo.  
   
- LINQ to XML proporciona las herramientas necesarias para programar potentes transformaciones funcionales puras mediante expresiones, utilizando código C# o Visual Basic. Por ejemplo, muchos de los ejemplos incluidos en la documentación de LINQ to XML utilizan una aproximación funcional pura. Además, en el [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md), se usa LINQ to XML con un enfoque funcional para manipular la información de un documento de Microsoft Word.  
+ LINQ to XML proporciona las herramientas necesarias para programar potentes transformaciones funcionales puras mediante expresiones, utilizando código C# o Visual Basic. Por ejemplo, muchos de los ejemplos incluidos en la documentación de LINQ to XML utilizan una aproximación funcional pura. Además, en el [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md), se usa LINQ to XML con un enfoque funcional para manipular la información de un documento de Microsoft Word.  
   
  Para obtener una comparación más completa entre LINQ to XML y otras tecnologías XML de Microsoft, vea [LINQ to XML vs. Other XML Technologies](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md) (LINQ to XML frente a otras tecnologías XML).  
   
@@ -35,5 +35,5 @@ Este tema trata acerca de la aproximación enfocada a la transformación funcion
 ## <a name="see-also"></a>Vea también
 
 - [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
-- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
 - [LINQ to XML frente a otras tecnologías XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

@@ -2,15 +2,19 @@
 title: Introducción a las transformaciones funcionales puras (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 63b7a69baeb42c82fb1c94d08cee17519330025c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9d187e9ee6750d8ad09e197839d107c3c79e4ed
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501809"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484492"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introducción a las transformaciones funcionales puras (C#)
 Esta sección ofrece una introducción a las transformaciones funcionales, incluyendo los conceptos subyacentes y los constructores del lenguaje que las hacen posible. Realiza una comparación entre las metodologías de programación de orientación a objetos y de transformación funcional, incluyendo consejos acerca de cómo llevar a cabo la transición a ésta última. Aunque es posible utiliza las transformaciones funcionales en numerosos escenarios, aquí utilizaremos la transformación XML como un ejemplo concreto.  
+  
+ En [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) se proporcionan una serie de ejemplos, cada uno basado en el anterior. Esos ejemplos demuestran el enfoque de transformación funcional pura para manipular XML. Este tutorial presupone un conocimiento práctico de C#. En este tutorial no se proporciona la semántica detallada de las construcciones del lenguaje, pero se proporcionan vínculos a documentación del lenguaje según corresponda.  
+  
+ También se asume un conocimiento práctico de los conceptos básicos de informática básica y XML, incluyendo espacios de nombres XML.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -22,6 +26,3 @@ Esta sección ofrece una introducción a las transformaciones funcionales, inclu
 |[Aplicabilidad de la transformación funcional (C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|Describe los escenarios típicos donde se realizan transformaciones funcionales.|  
 |[Transformación funcional de XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Describe las transformaciones funcionales en el contexto de los árboles XML de transformación.|  
   
-## <a name="see-also"></a>Vea también
-
-- [Transformaciones funcionales puras de XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

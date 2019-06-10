@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 3ac3479de0bd3c95256741a8b3075f2e5786b65c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d94552d9a1acfdd63b9694810e724c4347e615e7
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300097"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758280"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos booleanos (referencia de C#)
 
@@ -53,7 +53,7 @@ En el caso de los operandos de tipo [entero](../keywords/integral-types-table.md
 
 El operador `!` calcula la negación lógica de su operando. Es decir, genera `true`, si el operando se evalúa como `false`, y `false`, si el operando se evalúa como `true`:
 
-[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Negation)]
+[!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
 ## <a name="logical-and-operator-amp"></a>Operador AND lógico &amp;
 
@@ -63,7 +63,7 @@ El operador `&` evalúa ambos, incluso aunque el primero se evalúe como `false`
 
 En el ejemplo siguiente, el segundo operando del operador `&` es una llamada de método, que se realiza independientemente del valor del primer operando:
 
-[!code-csharp-interactive[logical AND](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#And)]
+[!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
 El [operador AND lógico condicional](#conditional-logical-and-operator-) `&&` también calcula el operador AND lógico de sus operandos, pero no evalúa el segundo operando si el primero se evalúa como `false`.
 
@@ -73,7 +73,7 @@ En el caso de los operandos de tipo entero, el operador `&` calcula el [AND lóg
 
 El operador `^` calcula el operador OR exclusivo lógica, también conocido como el operador XOR lógico, de sus operandos. El resultado de `x ^ y` es `true` si `x` se evalúa como `true` y `y` se evalúa como `false` o `x` se evalúa como `false` y `y` se evalúa como `true`. De lo contrario, el resultado es `false`. Es decir, para los operandos `bool`, el operador `^` calcula el mismo resultado como el [operador de desigualdad](equality-operators.md#inequality-operator-) `!=`.
 
-[!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
+[!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
 
 En el caso de los operandos de tipo entero, el operador `^` calcula el [OR exclusivo lógico bit a bit](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) de sus operandos.
 
@@ -85,7 +85,7 @@ El operador `|` evalúa ambos, incluso aunque el primero se evalúe como `true`,
 
 En el ejemplo siguiente, el segundo operando del operador `|` es una llamada de método, que se realiza independientemente del valor del primer operando:
 
-[!code-csharp-interactive[logical OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Or)]
+[!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
 El [operador OR lógico condicional](#conditional-logical-or-operator-) `||` también calcula el operador OR lógico de sus operandos, pero no evalúa el segundo operando si el primero se evalúa como `true`.
 
@@ -97,7 +97,7 @@ El operador AND lógico condicional `&&`, también denominado operador AND lógi
 
 En el ejemplo siguiente, el segundo operando del operador `&&` es una llamada de método, que no se realiza si el primer operando se evalúa como `false`:
 
-[!code-csharp-interactive[conditional logical AND](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#ConditionalAnd)]
+[!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
 El [operador AND lógico](#logical-and-operator-) `&` también calcula el operador AND lógico de sus operandos, pero siempre evalúa ambos operandos.
 
@@ -107,7 +107,7 @@ El operador OR lógico condicional `||`, también denominado operador OR lógico
 
 En el ejemplo siguiente, el segundo operando del operador `||` es una llamada de método, que no se realiza si el primer operando se evalúa como `true`:
 
-[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#ConditionalOr)]
+[!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 
 El [operador OR lógico](#logical-or-operator-) `|` también calcula el operador OR lógico de sus operandos, pero siempre evalúa ambos operandos.
 
@@ -131,7 +131,7 @@ El comportamiento de esos operadores difiere del comportamiento típico del oper
 
 También puede usar los operadores `!` y `^` con los operandos `bool?`, como se muestra en el ejemplo siguiente:
 
-[!code-csharp-interactive[lifted negation and xor](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#WithNullableBoolean)]
+[!code-csharp-interactive[lifted negation and xor](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
 Los operadores lógicos condicionales `&&` y `||` no admiten los operandos `bool?`.
 
@@ -153,7 +153,7 @@ salvo que `x` solo se evalúa una vez.
 
 Los operadores `&`, `|` y `^` admiten la asignación compuesta, como se muestra en el ejemplo siguiente:
 
-[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#CompoundAssignment)]
 
 Los operadores lógicos condicionales `&&` y `||` no admiten la asignación compuesta.
 
@@ -170,7 +170,7 @@ En la lista siguiente se ordenan los operadores lógicos desde la prioridad más
 
 Use los paréntesis, `()`, para cambiar el orden de evaluación impuesto por la prioridad de los operadores:
 
-[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
 
 Para obtener la lista completa de los operadores de C# ordenados por nivel de prioridad, vea [Operadores de C#](index.md).
 

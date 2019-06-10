@@ -2,12 +2,12 @@
 title: Recuperar los párrafos y sus estilos (C#)
 ms.date: 07/20/2015
 ms.assetid: c2f767f8-57b1-4b4b-af04-89ffb1f7067d
-ms.openlocfilehash: 693c61e9cbf9e2027864da8d1c26e0a1af66094d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9edbaaf004018a26b84539d1e8ab133af5dca934
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702423"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483886"
 ---
 # <a name="retrieving-the-paragraphs-and-their-styles-c"></a>Recuperar los párrafos y sus estilos (C#)
 En este ejemplo, se escribe una consulta que recupera los nodos de párrafo de un documento WordprocessingML. También identifica el estilo de cada uno de los párrafos.  
@@ -134,4 +134,4 @@ StyleName:Code
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)

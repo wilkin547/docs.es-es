@@ -2,12 +2,12 @@
 title: Procedimiento para depurar conjuntos de resultados de consulta vacíos (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba82e37ef4f57c78e7ba66676ba90312c2a9400f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357916"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485769"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Procedimiento para depurar conjuntos de resultados de consulta vacíos (C#)
 Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  
@@ -16,7 +16,7 @@ Uno de los problemas más habituales al consultar árboles XML es que si el árb
   
  El segundo conjunto de ejemplos muestra las correcciones necesarias para que pueda consultar el código XML en un espacio de nombres.  
   
- Para obtener más información, vea [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) (Trabajar con espacios de nombres XML [C#]).  
+ Para obtener más información, vea [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md) (Trabajar con espacios de nombres XML [C#]).  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo muestra la creación de XML en un espacio de nombres, y una consulta que devuelve un conjunto de resultados vacío.  
@@ -81,7 +81,3 @@ Result set follows:
 3  
 End of result set  
 ```  
-  
-## <a name="see-also"></a>Vea también
-
-- [Consultas básicas (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

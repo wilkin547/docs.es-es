@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 6e6ace55e7557e940970675c99ec4db87c124f1d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4c075cedb3cf479f53409f3b0acf4463fc3d7a03
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633886"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758216"
 ---
 # <a name="-operator-c-reference"></a>Operador => (Referencia de C#)
 
@@ -25,15 +25,15 @@ En las [expresiones lambda](../../programming-guide/statements-expressions-opera
 
 En el ejemplo siguiente se usa la característica [LINQ](../../programming-guide/concepts/linq/index.md) con sintaxis de método para demostrar el uso de las expresiones lambda:
 
-[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
 Las variables de entrada de las expresiones lambda están fuertemente tipadas en tiempo de compilación. Cuando el compilador puede deducir los tipos de las variables de entrada, como en el ejemplo anterior, las declaraciones de tipos se pueden omitir. Si tiene que especificar el tipo de las variables de entrada, debe hacerlo para cada variable, como se muestra en el ejemplo siguiente:
 
-[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
 En el ejemplo siguiente se muestra cómo definir una expresión lambda sin variables de entrada:
 
-[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
 Para obtener más información, vea [Expresiones lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md).
 

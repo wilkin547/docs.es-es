@@ -2,12 +2,12 @@
 title: Mantener pares nombre/valor (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b04b0f1-af64-42eb-8737-83f8861b5915
-ms.openlocfilehash: 4577ff032eaf25e519e687a0eea969bf76ca3540
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 06fe6932b6eb0ff470367ccf6471da6937ec7746
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596952"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484271"
 ---
 # <a name="maintaining-namevalue-pairs-c"></a>Mantener pares nombre/valor (C#)
 Son muchas las aplicaciones que necesitan mantener información que se almacena mejor en forma de pares de nombre/valor. Esta información podría contener datos sobre configuración o valores globales. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] incluye métodos que facilitan la operación de mantener un conjunto de pares nombre/valor. Puede almacenar la información como atributos o como un conjunto de elementos secundarios.  
@@ -122,4 +122,4 @@ Console.WriteLine(root);
 
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
-- [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+- [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)

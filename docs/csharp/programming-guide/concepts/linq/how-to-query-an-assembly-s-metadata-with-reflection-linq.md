@@ -2,14 +2,17 @@
 title: Procedimiento Consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 1e8aa8652470240d63ac950d43e5b41e8b3ef1ca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 52b961c5a016754964285221e252965ff89efd26
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584421"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485228"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>Procedimiento Consultar los metadatos de un ensamblado con reflexión (LINQ) (C#)
+
+Las API de reflexión de la biblioteca de clases de .NET Framework se pueden usar para examinar los metadatos de un ensamblado .NET y para crear colecciones de tipos, escribir miembros, parámetros etc. que se encuentren en ese ensamblado. Dado que estas colecciones admiten la interfaz genérica `IEnumerable`, se pueden consultar mediante LINQ.  
+  
 En el ejemplo siguiente se muestra cómo se puede usar LINQ con reflexión para recuperar metadatos concretos sobre métodos que coinciden con un criterio de búsqueda especificado. En este caso, la consulta encontrará los nombres de todos los métodos del ensamblado que devuelven tipos enumerables, como matrices.  
   
 ## <a name="example"></a>Ejemplo  

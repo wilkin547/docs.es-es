@@ -2,12 +2,12 @@
 title: Procedimiento para hacer streaming de fragmentos XML desde un objeto XmlReader (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 0c34b9aeb5cda61c13045487dee6ab15e55314e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6937a7160c83def3238c8d2fe3e2b83c996396fd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693998"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484914"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Procedimiento para hacer streaming de fragmentos XML desde un objeto XmlReader (C#)
 Cuando deba procesar archivos XML grandes quizás no sea factible cargar la totalidad del árbol XML en memoria. En este tema se muestra cómo transmitir por secuencias fragmentos usando <xref:System.Xml.XmlReader>.  
@@ -82,6 +82,3 @@ ccc
   
  En este ejemplo el documento de origen es muy pequeño. No obstante, aunque hubiera millones de elementos `Child`, este ejemplo seguiría teniendo una superficie de memoria pequeña.  
   
-## <a name="see-also"></a>Vea también
-
-- [Analizar XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

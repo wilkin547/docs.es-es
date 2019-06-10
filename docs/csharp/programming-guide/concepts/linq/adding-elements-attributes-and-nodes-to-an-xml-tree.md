@@ -2,12 +2,12 @@
 title: Agregar elementos, atributos y nodos a un árbol XML (C#)
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 87b63df1011af9594ff44bed6385f9d82dee08a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fee03dd2ba0818778afb3447e8930a2c2567b067
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585882"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486241"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>Agregar elementos, atributos y nodos a un árbol XML (C#)
 Puede agregar contenidos (elementos, atributos, comentarios, instrucciones de procesamiento, texto y bloques CDATA) a un árbol XML existente.  
@@ -77,6 +77,3 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>Vea también
-
-- [Modificar árboles XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
