@@ -13,12 +13,12 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c804a0a751969377c292613fdae8cc19b266ffa9
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592668"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834060"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Acceso más seguro a archivos y datos en formularios Windows Forms
 .NET Framework usa permisos para ayudar a proteger los recursos y datos. Los lugares donde puede leer o escribir datos la aplicación dependen de los permisos concedidos a esa aplicación. Si la aplicación se ejecuta en un entorno de confianza parcial, puede que no tenga acceso a los datos o que deba cambiar la forma de acceder a los datos.  
@@ -26,7 +26,7 @@ ms.locfileid: "65592668"
  Si se encuentra con una restricción de seguridad, tiene dos opciones: declarar el permiso (si se concedió a la aplicación) o utilizar una versión de la característica escrita para funcionar en confianza parcial. Las secciones siguientes describen cómo trabajar con el acceso a archivos, a bases de datos y al Registro desde las aplicaciones que se ejecutan en un entorno de confianza parcial.  
   
 > [!NOTE]
->  De forma predeterminada, las herramientas que generan implementaciones de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] hacen que estas implementaciones soliciten plena confianza en los equipos donde se ejecutan. Si decide que quiere obtener las ventajas de seguridad añadida de que se ejecutan en confianza parcial, debe cambiar este comportamiento predeterminado en Visual Studio o en uno de los [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] herramientas (Mage.exe o MageUI.exe). Para obtener más información acerca de la seguridad de Windows Forms y cómo determinar el nivel de confianza adecuado para su aplicación, consulte [seguridad en Windows Forms Overview](security-in-windows-forms-overview.md).  
+>  De forma predeterminada, las herramientas que generan implementaciones de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] hacen que estas implementaciones soliciten plena confianza en los equipos donde se ejecutan. Si decide que quiere obtener las ventajas de seguridad añadida de que se ejecutan en confianza parcial, debe cambiar este comportamiento predeterminado en Visual Studio o una de las herramientas del Kit de desarrollo de Software (SDK) de Windows (Mage.exe o MageUI.exe). Para obtener más información acerca de la seguridad de Windows Forms y cómo determinar el nivel de confianza adecuado para su aplicación, consulte [seguridad en Windows Forms Overview](security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Acceso a archivos  
  La <xref:System.Security.Permissions.FileIOPermission> clase controla el acceso archivos y carpetas en .NET Framework. De forma predeterminada, el sistema de seguridad no concede <xref:System.Security.Permissions.FileIOPermission> a los entornos de confianza parcial, como las zonas de Internet y de la intranet local. Sin embargo, una aplicación que requiera acceso a los archivos puede funcionar en estos entornos si usted modifica el diseño de la aplicación o utiliza otros métodos para acceder a los archivos. De forma predeterminada, a la zona de la intranet local se le concede el derecho a acceder a su sitio y a su directorio, para conectarse a su sitio de origen, y a leer desde su directorio de instalación. De forma predeterminada, a la zona de Internet solo se le concede el derecho a conectarse a su sitio de origen.  

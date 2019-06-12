@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0821b4a680db4822cea1787edb095309e6333cbf
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631828"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690170"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (Extensión de depuración de SOS)
 
@@ -68,11 +68,11 @@ La extensión de depuración de SOS (SOS.dll) ayuda a depurar programas administ
 |**HeapStat** [ **-inclUnrooted** &#124; **-iu**]|Muestra los tamaños de generación de cada montón y el espacio total disponible en cada generación de cada montón. Si se especifica la opción -**inclUnrooted**, el informe incluye información sobre los objetos administrados del montón de recolección de elementos no utilizados que ya no tienen raíz.|
 |**HistClear**|Libera los recursos usados por la familia de comandos `Hist`.<br /><br /> Generalmente, no tiene que llamar explícitamente a `HistClear`, puesto que cada comando `HistInit` limpia los recursos anteriores.|
 |**HistInit**|Inicializa las estructuras SOS del registro de esfuerzo guardado en el código que se está depurando.|
-|**HistObj** *<obj_address>*|Examina todos los registros de reubicación del registro de esfuerzo y muestra la cadena de reubicaciones de recolección de elementos no utilizados que pueden haber conducido a la dirección que se ha pasado como argumento.|
-|**HistObjFind**  *<obj_address>*|Muestra todas las entradas de registro que hacen referencia a un objeto en la dirección especificada.|
+|**HistObj** *\<obj_address>*|Examina todos los registros de reubicación del registro de esfuerzo y muestra la cadena de reubicaciones de recolección de elementos no utilizados que pueden haber conducido a la dirección que se ha pasado como argumento.|
+|**HistObjFind**  *\<obj_address>*|Muestra todas las entradas de registro que hacen referencia a un objeto en la dirección especificada.|
 |**HistRoot** *\<raíz>*|Muestra información relacionada con las promociones y las reubicaciones de la raíz especificada.<br /><br /> El valor de raíz se puede usar para realizar el seguimiento del movimiento de un objeto a través de las recolecciones de elementos no utilizados.|
 |**IP2MD** \<*dirección del código*>|Muestra la estructura `MethodDesc` en la dirección especificada en el código compilado JIT.|
-|`ListNearObj` (`lno`) *<obj_address>*|Muestra los objetos anteriores y posteriores a la dirección especificada. El comando busca en el montón de recolección de elementos no utilizados la dirección que parece un principio válido de un objeto administrado (basándose en una tabla de métodos válida) y el objeto que sigue a la dirección del argumento.|
+|`ListNearObj` (`lno`) *\<obj_address>*|Muestra los objetos anteriores y posteriores a la dirección especificada. El comando busca en el montón de recolección de elementos no utilizados la dirección que parece un principio válido de un objeto administrado (basándose en una tabla de métodos válida) y el objeto que sigue a la dirección del argumento.|
 |**MinidumpMode** [**0**] [**1**]|Evita que se ejecuten comandos no seguros al usar un minivolcado.<br /><br /> Pase **0** para deshabilitar esta característica o **1** para habilitarla. De forma predeterminada, el valor **MinidumpMode** se establece en **0**.<br /><br /> Los minivolcados creados con el comando **.dump /m** o **.dump** tienen datos limitados específicos de CLR y permiten ejecutar correctamente un único subconjunto de comandos de SOS. Algunos comandos pueden producir errores inesperados porque no se hayan asignado, o solo se hayan asignado parcialmente, áreas de memoria necesarias. Esta opción le impide ejecutar comandos no seguros en minivolcados.|
 |**Name2EE** \<*nombre del módulo*> \<*tipo o nombre del método*><br /><br /> o bien<br /><br /> **Name2EE** \<*nombre del módulo*> **!** \<*tipo o nombre del método*>|Muestra la estructura `MethodTable` y la estructura `EEClass` para el tipo o método especificado del módulo especificado.<br /><br /> El módulo especificado se debe cargar en el proceso.<br /><br /> Para obtener el nombre de tipo correcto, examine el módulo mediante [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md). También puede pasar `*` como parámetro de nombre de módulo para buscar en todos los módulos administrados cargados. El parámetro *nombre del módulo* también puede ser el nombre del depurador de un módulo, como `mscorlib` o `image00400000`.<br /><br /> Este comando admite la sintaxis del depurador de Windows <`module`>`!`<`type`>. El nombre del tipo debe ser completo.|
 |**ObjSize** [\<*dirección del objeto*>] &#124; [ **-aggregate**] [ **-stat**]|Muestra el tamaño del objeto especificado. Si no especifica ningún parámetro, el comando **ObjSize** muestra el tamaño de todos los objetos encontrados en subprocesos administrados, muestra todos los identificadores del recolector de elementos no utilizados del proceso, y suma el tamaño de todos los objetos a los que señalan esos identificadores. El comando **ObjSize** incluye el tamaño de todos los objetos secundarios y del objeto primario.<br /><br /> La opción **-aggregate** se puede usar junto con el argumento **-stat** para obtener una vista detallada de los tipos que todavía disponen de raíz. Mediante el uso de **!dumpheap -stat** y **!objsize -aggregate -stat**, puede determinar qué objetos han dejado de tener raíz y diagnosticar diversos problemas de memoria.|

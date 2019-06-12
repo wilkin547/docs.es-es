@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: d536d141d1ac7126c5a3339f75ba374d3e071806
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 286ec3c67e296eb49776e0f2882954c75c53eed8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591402"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833987"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Información general sobre las aplicaciones de explorador XAML de WPF
 <a name="introduction"></a>
@@ -182,7 +182,7 @@ ms.locfileid: "64591402"
 ## <a name="xbap-start-time-performance-considerations"></a>Consideraciones sobre el rendimiento de tiempo de inicio de XBAP  
  Un aspecto importante del rendimiento de la aplicación XBAP es el tiempo de inicio. Si una aplicación XBAP es la primera aplicación WPF en cargarse, el tiempo de *inicio en frío* puede ser de diez segundos o más. Esto se debe a que WPF representa la página de progreso, y tanto CLR como WPF se deben iniciar en frío para mostrar la aplicación.  
   
- A partir de [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], se reduce el tiempo de inicio en frío de XBAP al mostrar una página de progreso no administrada en una fase temprana del ciclo de implementación. La página de progreso aparece casi inmediatamente después de iniciarse la aplicación, porque se muestra con código hospedado de forma nativa y se representa en HTML.  
+ A partir de .NET Framework 3.5 SP1, se reduce el tiempo de inicio en frío XBAP al mostrar una página de progreso no administrada al principio del ciclo de implementación. La página de progreso aparece casi inmediatamente después de iniciarse la aplicación, porque se muestra con código hospedado de forma nativa y se representa en HTML.  
   
  Además, simultaneidad mejorada de la secuencia de descarga de ClickOnce mejora la hora de inicio en un diez por ciento. Después de ClickOnce, descarga y valida los manifiestos, se inicia la descarga de aplicación y la barra de progreso empieza a actualizar.  
   

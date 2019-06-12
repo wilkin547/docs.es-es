@@ -2,12 +2,12 @@
 title: Instrucciones de formato de código de F#
 description: Obtenga información sobre las directrices para dar formato a F# código.
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816184"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833902"
 ---
 # <a name="f-code-formatting-guidelines"></a>Instrucciones de formato de código de F#
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Use la sintaxis de prefijo para los genéricos (`Foo<T>`) con preferencia a la sintaxis de postfijo (`T Foo`)
 
-F#hereda tanto el estilo de aprendizaje automático de postfijo de asignación de nombres de tipos genéricos (por ejemplo, `int list`), así como el prefijo de estilo .NET (por ejemplo, `list<int>`). Se prefiere el estilo. NET, excepto los cuatro tipos específicos:
+F#hereda tanto el estilo de aprendizaje automático de postfijo de asignación de nombres de tipos genéricos (por ejemplo, `int list`), así como el prefijo de estilo .NET (por ejemplo, `list<int>`). Se prefiere el estilo. NET, excepto los cinco tipos específicos:
 
 1. Para F# listas, utilice la forma de postfijo: `int list` lugar `list<int>`.
 2. Para F# opciones, utilice la forma de postfijo: `int option` lugar `option<int>`.
-3. Para F# matrices, use el nombre sintáctico `int[]` lugar `int array` o `array<int>`.
-4. Para las celdas de referencia, utilice `int ref` lugar `ref<int>` o `Ref<int>`.
+3. Para F# opciones de valor, utilice la forma de postfijo: `int voption` lugar `voption<int>`.
+4. Para F# matrices, use el nombre sintáctico `int[]` lugar `int array` o `array<int>`.
+5. Para las celdas de referencia, utilice `int ref` lugar `ref<int>` o `Ref<int>`.
 
 Para los demás tipos, use el formato de prefijo.
 

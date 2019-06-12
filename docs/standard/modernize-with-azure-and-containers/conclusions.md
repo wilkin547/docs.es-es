@@ -2,12 +2,12 @@
 title: Conclusiones
 description: Modernizar aplicaciones .NET existentes con contenedores de Windows y la nube de Azure | conclusiones
 ms.date: 10/26/2017
-ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758878"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833940"
 ---
 # <a name="conclusions"></a>Conclusiones
 
@@ -15,7 +15,7 @@ ms.locfileid: "66758878"
 
 - Un contenedor de Docker se está convirtiendo en la unidad de implementación estándar para cualquier aplicación o servicio basados en servidor.
 
-- Para entornos de producción, debe usar un orquestador (como Kubernetes) para hospedar aplicaciones de basadas en contenedores de Windows escalables.
+- Para entornos de producción, debe usar un orquestador (como Kubernetes) para hospedar aplicaciones de basadas en contenedores escalables.
 
 - Máquinas virtuales de Azure que hospeda los contenedores son una forma rápida y sencilla para crear entornos de desarrollo y pruebas pequeños en la nube.
 

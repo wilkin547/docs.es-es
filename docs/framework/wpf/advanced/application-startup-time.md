@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689332"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832700"
 ---
 # <a name="application-startup-time"></a>Tiempo de inicio de una aplicación
 La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar en gran medida. En este tema se describen varias técnicas para reducir el tiempo de inicio percibido y real de una aplicación de Windows Presentation Foundation (WPF).  
@@ -24,7 +24,7 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
  El inicio en caliente se produce cuando la mayoría de las páginas correspondientes a los principales componentes de Common Language Runtime (CLR) ya están cargadas en la memoria; esto ahorra tiempo de acceso a disco, que consume recursos. Por este motivo, una aplicación administrada se inicia más rápido cuando se ejecuta por segunda vez.  
   
 ## <a name="implement-a-splash-screen"></a>Implementación de una pantalla de presentación  
- En aquellos casos en que se produce un retraso significativo e inevitable desde que se inicia la aplicación hasta que se muestra la primera interfaz de usuario, es conveniente optimizar el tiempo de inicio percibido utilizando una *pantalla de presentación*. Este planteamiento consiste en mostrar una imagen casi inmediatamente en cuanto el usuario inicia la aplicación. Cuando la aplicación está lista para mostrar su primera IU, la pantalla de presentación se desvanece. A partir de la [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], puede usar el <xref:System.Windows.SplashScreen> clase para implementar una pantalla de presentación. Para más información, consulte [Cómo: Agregar una pantalla de presentación a una aplicación WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
+ En aquellos casos en que se produce un retraso significativo e inevitable desde que se inicia la aplicación hasta que se muestra la primera interfaz de usuario, es conveniente optimizar el tiempo de inicio percibido utilizando una *pantalla de presentación*. Este planteamiento consiste en mostrar una imagen casi inmediatamente en cuanto el usuario inicia la aplicación. Cuando la aplicación está lista para mostrar su primera IU, la pantalla de presentación se desvanece. A partir de .NET Framework 3.5 SP1, puede usar el <xref:System.Windows.SplashScreen> clase para implementar una pantalla de presentación. Para más información, consulte [Cómo: Agregar una pantalla de presentación a una aplicación WPF](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md).  
   
  También puede implementar su propia pantalla de presentación utilizando los gráficos nativos de Win32. Muestre su implementación antes de la <xref:System.Windows.Application.Run%2A> se llama al método.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: e018048df70470e349f06ac80e7a597cd742dac5
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 39f4548bfe9e505c1369a0de8262560070fd6221
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690519"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833914"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>Complementos de Firefox para la implementación de aplicaciones .NET
 Habilitar Windows Presentation Foundation (WPF) complemento para Firefox y el Asistente de .NET Framework para Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)], sueltos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]y las aplicaciones ClickOnce para que funcione con el explorador Mozilla Firefox.  
@@ -25,13 +25,13 @@ Habilitar Windows Presentation Foundation (WPF) complemento para Firefox y el As
  .NET Framework 4 no incluye el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] complemento para Firefox. Sin embargo, si están instalados tanto el .NET Framework 3.5 y .NET Framework 4, el complemento WPF para Firefox se instala con .NET Framework 3.5. Por lo tanto, las aplicaciones de .NET Framework 4 se ejecutarán porque el Host de WPF se cargará la versión correcta de framework. Para obtener más información, consulte [WPF Host (PresentationHost.exe)](wpf-host-presentationhost-exe.md).  
   
 ## <a name="net-framework-assistant-for-firefox"></a>Asistente de .NET Framework para Firefox  
- El Asistente de .NET Framework para Firefox permite que las aplicaciones independientes de ClickOnce para ejecutarse desde el explorador Firefox. El Asistente de .NET Framework para Firefox funciona exactamente igual cuando se instala antes y después el explorador Firefox. Cuando se inicia el explorador Firefox y [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)] está instalado, Firefox busca e instala el Asistente de .NET Framework para Firefox. Los usuarios pueden configurar el Asistente de .NET Framework para Firefox hacer lo siguiente:  
+ El Asistente de .NET Framework para Firefox permite que las aplicaciones independientes de ClickOnce para ejecutarse desde el explorador Firefox. El Asistente de .NET Framework para Firefox funciona exactamente igual cuando se instala antes y después el explorador Firefox. Cuando se inicia el explorador Firefox y .NET Framework 3.5 SP1 está instalado, Firefox busca e instala el Asistente de .NET Framework para Firefox. Los usuarios pueden configurar el Asistente de .NET Framework para Firefox hacer lo siguiente:  
   
 - Preguntar antes de ejecutar la aplicación ClickOnce.  
   
 - Informe todas las versiones instaladas de .NET Framework o solo la versión más reciente.  
   
- El Asistente de .NET Framework para Firefox se incluye con el [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]. Para obtener información acerca de cómo quitar el Asistente de .NET Framework para Firefox, consulte [cómo quitar el Asistente de .NET Framework para Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
+ El Asistente de .NET Framework para Firefox se incluye con .NET Framework 3.5 SP1. Para obtener información acerca de cómo quitar el Asistente de .NET Framework para Firefox, consulte [cómo quitar el Asistente de .NET Framework para Firefox](https://go.microsoft.com/fwlink/?LinkId=177944).  
   
 ## <a name="see-also"></a>Vea también
 
