@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ecde6ca8d3a95e356c5b1389ba95c4ad72b68d45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c2332b7371ec4ac7b5cfc0681466536d49bb7be
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623902"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026078"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>Instrucción For Each...Next (Visual Basic)
 Repite un grupo de instrucciones para cada elemento de una colección.  
@@ -49,7 +49,7 @@ Next [ element ]
 |Término|Definición|  
 |---|---|  
 |`element`|Necesario en el `For Each` instrucción. Opcional en el `Next` instrucción. Variable. Se utiliza para recorrer en iteración los elementos de la colección.|  
-|`datatype`|Es necesario si `element` ya no está declarado. Tipo de datos de `element`.|  
+|`datatype`|Opcional si [ `Option Infer` ](option-infer-statement.md) está activada (valor predeterminado) o `element` ya está declarado; requerida si `Option Infer` está desactivado y `element` ya no está declarado. Tipo de datos de `element`.|  
 |`group`|Obligatorio. Una variable con un tipo que es un tipo de colección o el objeto. Hace referencia a la colección en el que el `statements` a repetirse.|  
 |`statements`|Opcional. Una o varias instrucciones entre `For Each` y `Next` que se ejecutan en cada elemento de `group`.|  
 |`Continue For`|Opcional. Transfiere el control al principio de la `For Each` bucle.|  
@@ -113,8 +113,8 @@ Next [ element ]
  Cuando un `For Each`...`Next` instrucción se ejecuta, Visual Basic se evalúa como la colección de solo una vez, antes de que comience el bucle. Si cambia el bloque de instrucciones `element` o `group`, estos cambios no afectan a la iteración del bucle.  
   
  Cuando todos los elementos de la colección se ha asignado correctamente a `element`, `For Each` bucle se detiene y el control pasa a la instrucción que sigue la `Next` instrucción.  
-  
- Si `element` aún no se ha declarado fuera de este bucle, se debe declarar en el `For Each` instrucción. Se puede declarar el tipo de `element` explícitamente mediante una `As` instrucción, o bien puede basarse en la inferencia de tipos para asignar el tipo. En cualquier caso, el ámbito de `element` es el cuerpo del bucle. Sin embargo, no puede declarar `element` fuera y dentro del bucle.  
+ 
+Si [Option Infer](option-infer-statement.md) está en (su valor predeterminado), el compilador de Visual Basic puede deducir el tipo de datos de `element`. Si está desactivada y `element` aún no se ha declarado fuera del bucle, se debe declarar en el `For Each` instrucción. Para declarar el tipo de datos de `element` explícitamente, utilice un `As` cláusula. A menos que el tipo de datos del elemento está definido fuera del `For Each`... `Next` construcción, su ámbito es el cuerpo del bucle. Tenga en cuenta que no puede declarar `element` fuera y dentro del bucle.
   
  Opcionalmente, puede especificar `element` en el `Next` instrucción. Esto mejora la legibilidad del programa, especialmente si ha anidado `For Each` bucles. Debe especificar la misma variable que aparecerá en las correspondientes `For Each` instrucción.  
   
@@ -124,7 +124,7 @@ Next [ element ]
   
  Si el código depende de recorrido de una colección en un orden determinado, un `For Each`... `Next` bucle no es la mejor opción, a menos que conozca las características del objeto enumerador que expone la colección. No se determina el orden del recorrido por Visual Basic, sino por la <xref:System.Collections.IEnumerator.MoveNext%2A> método del objeto enumerador. Por lo tanto, es posible que no pueda predecir qué elemento de la colección es el primero que se devolverán en `element`, o que es el siguiente que se devuelve después de un elemento determinado. Puede conseguir resultados más confiables con una estructura de bucle diferente, como `For`... `Next` o `Do`... `Loop`.  
   
- Tipo de datos de `element` será tal que el tipo de datos de los elementos de `group` se pueden convertir a él.  
+El tiempo de ejecución debe ser capaz de convertir los elementos de `group` a `element`. El [`Option Strict`] instrucción controla si se permiten las conversiones de restricción y ampliación (`Option Strict` está desactivado, su valor predeterminado), o si se permiten solo las conversiones de ampliación (`Option Strict` está activado). Para obtener más información, consulte [conversiones de restricción](#narrowing-conversions).
   
  Tipo de datos de `group` debe ser un tipo de referencia que hace referencia a una colección o una matriz que es enumerable. Normalmente, esto significa que `group` hace referencia a un objeto que implementa el <xref:System.Collections.IEnumerable> interfaz de la `System.Collections` espacio de nombres o el <xref:System.Collections.Generic.IEnumerable%601> interfaz de la `System.Collections.Generic` espacio de nombres. `System.Collections.IEnumerable` define el <xref:System.Collections.IEnumerable.GetEnumerator%2A> método, que devuelve un objeto enumerador para la colección. El objeto de enumerador implementa el `System.Collections.IEnumerator` interfaz de la `System.Collections` espacio de nombres y expone el <xref:System.Collections.IEnumerator.Current%2A> propiedad y el <xref:System.Collections.IEnumerator.Reset%2A> y <xref:System.Collections.IEnumerator.MoveNext%2A> métodos. Visual Basic utiliza estos para recorrer la colección.  
   

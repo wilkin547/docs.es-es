@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d939063aaefb00d4db3de604df0dbd1b2175bf95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff589285d81a3febf887bba976b62a9ae4a573c8
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698426"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025947"
 ---
 # <a name="debugging-interfaces"></a>Interfaces para depuración
 En esta sección se describen las interfaces no administradas que controlan la depuración de un programa que se ejecuta en Common Language Runtime (CLR).  
@@ -53,7 +53,7 @@ En esta sección se describen las interfaces no administradas que controlan la d
  Proporciona métodos para trabajar con matrices, punteros, punteros a función y tipos ByRef. Esta interfaz es una extensión de la interfaz `ICorDebugAppDomain`.  
   
  [ICorDebugAppDomain3 (interfaz)](icordebugappdomain3-interface.md)\
- Proporciona métodos para trabajar con tipos [!INCLUDE[wrt](../../../../includes/wrt-md.md)] en un dominio de aplicación. Esta interfaz es una extensión de las interfaces `ICorDebugAppDomain` e `ICorDebugAppDomain2`.  
+ Proporciona métodos para trabajar con los tipos en tiempo de ejecución de Windows en un dominio de aplicación. Esta interfaz es una extensión de las interfaces `ICorDebugAppDomain` e `ICorDebugAppDomain2`.  
   
  [ICorDebugAppDomain4 (interfaz)](icordebugappdomain4-interface.md)\
  Extiende lógicamente la [ICorDebugAppDomain](icordebugappdomain-interface.md) interfaz para obtener un objeto administrado desde un contenedor CCW.  

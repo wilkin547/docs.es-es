@@ -2,16 +2,16 @@
 title: 'Escenarios de implementación compatibles: WCF'
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881059"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025626"
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 
-El subconjunto de las características de Windows Communication Foundation (WCF) que puede usar en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, pero no todos, escenarios de uso de WCF. En el servidor, WCF cumple los requisitos de escala de Internet compartido los proveedores de hospedaje que ejecutan aplicaciones de terceros en el [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto por motivos de seguridad de permisos de nivel de confianza medio. En el cliente, la compatibilidad de confianza parcial de WCF está diseñado para cumplir los requisitos de tecnologías de implementación como [la implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]de tecnología de aplicación de explorador XAML, lo que permite la conexión directa y segura implementación de aplicaciones de escritorio de sitios de confianza.
+El subconjunto de las características de Windows Communication Foundation (WCF) que puede usar en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, pero no todos, escenarios de uso de WCF. En el servidor, WCF cumple los requisitos de los proveedores de hospedaje compartidos que ejecutan aplicaciones de terceros en el permiso de confianza medio de ASP.NET 2.0 establecidos por razones de seguridad de la escala de Internet. En el cliente, la compatibilidad de confianza parcial de WCF está diseñado para cumplir los requisitos de tecnologías de implementación como [la implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]de tecnología de aplicación de explorador XAML, lo que permite la conexión directa y segura implementación de aplicaciones de escritorio de sitios de confianza.
 
 ## <a name="minimum-permission-requirements"></a>Requisitos mínimos de permiso
 
@@ -27,7 +27,7 @@ Para obtener más información sobre las características admitidas en estos con
 
 ## <a name="partial-trust-on-the-server"></a>Confianza parcial en el servidor
 
-Muchos proveedores comerciales de la aplicación Web de ASP.NET que hospeda servicios exigen que las aplicaciones que se ejecutan en sus servidores se ejecutan en el [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] conjunto de permisos de nivel de confianza medio. Pueden ejecutar los servicios WCF en estos entornos suponiendo que usen el <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, o el <xref:System.ServiceModel.WSHttpBinding> con seguridad de nivel de transporte.
+Muchos proveedores comerciales de la aplicación Web de ASP.NET que hospeda servicios exigen que ejecutan aplicaciones que se ejecutan en sus servidores en el conjunto de permisos de confianza medio de ASP.NET 2.0. Pueden ejecutar los servicios WCF en estos entornos suponiendo que usen el <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WebHttpBinding>, o el <xref:System.ServiceModel.WSHttpBinding> con seguridad de nivel de transporte.
 
 Servicios WCF que se ejecutan en entornos de hospedaje de confianza medio también pueden actuar como servicios de nivel intermedio mediante el envío de mensajes a otros servidores en respuesta a las solicitudes de cliente. Se admiten los escenarios de nivel medio en el servidor si el entorno de hospedaje ha concedido a la aplicación el <xref:System.Net.WebPermission> adecuado para realizar solicitudes salientes al servidor deseado.
 

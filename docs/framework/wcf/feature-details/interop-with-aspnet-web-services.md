@@ -2,17 +2,17 @@
 title: Interoperabilidad con servicios web ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f2f1a8fd2bf34ff61784f2dcb88c0669585da573
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875546"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026018"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>Interoperabilidad con servicios web ASP.NET
 Se puede lograr la interoperabilidad entre los servicios Web ASP.NET y servicios Web de Windows Communication Foundation (WCF) asegurándose de que los servicios implementados usen ambas tecnologías se ajustan a WS-I Basic Profile 1.1 especificación. Servicios Web ASP.NET que cumplen con WS-I Basic Profile 1.1 son interoperables con clientes WCF mediante un enlace proporcionado por el sistema WCF, <xref:System.ServiceModel.BasicHttpBinding>.  
   
- Utilice la opción de [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] de agregar los atributos <xref:System.Web.Services.WebService> y <xref:System.Web.Services.WebMethodAttribute> a una interfaz en lugar de a una clase y escribir una clase para implementar la interfaz, como se muestra en el siguiente código de ejemplo.  
+ Usar ASP.NET 2.0 opción de agregar el <xref:System.Web.Services.WebService> y <xref:System.Web.Services.WebMethodAttribute> atributos a una interfaz en lugar de a una clase y escribir una clase para implementar la interfaz, como se muestra en el siguiente código de ejemplo.  
   
 ```  
 [WebService]  

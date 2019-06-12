@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50db519410b9513725c3dc10637421ba8bb37ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45a4b5c2a65ae7e4c01ffc3977875e598d076557
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698373"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025932"
 ---
 # <a name="debugging-structures"></a>Estructuras de depuración
 
@@ -60,7 +60,7 @@ En esta sección se describen las estructuras no administradas que utiliza la AP
 
  [CorDebugExceptionObjectStackFrame (estructura)](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md) representa información de un objeto de excepción del marco de pila.
 
- [CorDebugGuidToTypeMapping (estructura)](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) Maps un [!INCLUDE[wrt](../../../../includes/wrt-md.md)] GUID correspondiente [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) objeto.
+ [CorDebugGuidToTypeMapping (estructura)](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md) asigna un GUID en tiempo de ejecución de Windows a sus correspondientes [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) objeto.
 
  [Estructura DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) define el contenedor para una solicitud de dirección del módulo.
 

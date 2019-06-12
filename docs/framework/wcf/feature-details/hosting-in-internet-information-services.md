@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877504"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025752"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedaje en Internet Information Services
 Es una opción para hospedar servicios Windows Communication Foundation (WCF) dentro de una aplicación de Internet Information Services (IIS). Este modelo de hospedaje es similar al modelo utilizado por ASP.NET y servicios Web de ASP.NET Web services (ASMX).  
@@ -34,7 +34,7 @@ Es una opción para hospedar servicios Windows Communication Foundation (WCF) de
   
 - Como ASP.NET, servicios WCF hospedados en ASP.NET pueden aprovechar el modelo de hospedaje de ASP.NET compartido donde varias aplicaciones residen en un proceso de trabajo común para escalabilidad y densidad mejorada de los servidores.  
   
-- Servicios WCF hospedados en IIS usan el mismo modelo de compilación dinámica como [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)], que simplifica el desarrollo e implementación de servicios hospedados.  
+- Servicios WCF hospedados en IIS usan el mismo modelo de compilación dinámica como ASP.NET 2.0, lo que simplifica el desarrollo e implementación de servicios hospedados.  
   
  La hora de decidir hospedar los servicios de WCF en IIS, es importante recordar que IIS 5.1 y [!INCLUDE[iis601](../../../../includes/iis601-md.md)] se limitan a la comunicación HTTP. Para obtener más información acerca de cómo elegir un entorno de hospedaje, vea [servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md).  
   

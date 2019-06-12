@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055022"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025577"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Recursos de aplicación para bibliotecas destinadas a varias plataformas
 Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) tipo para asegurarse de que se pueden tener acceso a recursos en las bibliotecas de clases desde varias plataformas de proyecto. Este tipo de proyecto está disponible en Visual Studio 2012 y tiene como destino el subconjunto portable de la biblioteca de clases de .NET Framework. Mediante la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] se garantiza que se pueda obtener acceso a la biblioteca desde las aplicaciones de escritorio, aplicaciones Silverlight, aplicaciones Windows Phone y aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
@@ -35,7 +35,7 @@ Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard
 
  El proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluye los cuatro miembros de <xref:System.Resources.ResourceManager> que se enumeran en la tabla siguiente. Estos constructores y métodos permiten crear una instancia de un objeto <xref:System.Resources.ResourceManager> y recuperar recursos de cadena.
 
-|Miembro`ResourceManager` |Descripción|
+|Miembro`ResourceManager`|Descripción|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Crea una instancia de <xref:System.Resources.ResourceManager> para obtener acceso al archivo de recursos con nombre que se encuentra en el ensamblado especificado.|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Crea una instancia de <xref:System.Resources.ResourceManager> que corresponde al tipo especificado.|
@@ -47,9 +47,9 @@ Puede usar .NET Framework [biblioteca de clases Portable](../../../docs/standard
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>Aplicaciones de la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] y la Tienda Windows
  Los proyectos de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] almacenan recursos en archivos .resx que, a continuación, se compilan en archivos .resources y se incrustan en el ensamblado principal o en los ensamblados satélite en tiempo de compilación. Por otro lado, las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] requieren que los recursos se almacenen en archivos .resw, que se compilan en un archivo de índice de recursos del paquete (PRI) único. Sin embargo, a pesar de los formatos de archivo incompatibles, la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] funcionará en una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
- Para usar la biblioteca de clases desde una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], agregue una referencia a esta en el proyecto de aplicación de la Tienda Windows. Visual Studio extraerá los recursos del ensamblado de forma transparente a un archivo .resw y lo usará para generar un archivo PRI desde el que [!INCLUDE[wrt](../../../includes/wrt-md.md)] puede extraer recursos. En tiempo de ejecución, [!INCLUDE[wrt](../../../includes/wrt-md.md)] ejecuta el código en la [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], pero recupera los recursos de la Biblioteca de clases portable desde el archivo PRI.
+ Para usar la biblioteca de clases desde una aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], agregue una referencia a esta en el proyecto de aplicación de la Tienda Windows. Visual Studio extraerá los recursos del ensamblado en un archivo .resw y usarlo para generar un archivo PRI desde el que el tiempo de ejecución de Windows puede extraer los recursos de forma transparente. En tiempo de ejecución, el tiempo de ejecución de Windows se ejecuta el código en su [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], pero recupera los recursos de la biblioteca de clases Portable desde el archivo PRI.
 
- Si el proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluye recursos localizados, se usa el modelo de concentrador y radio para implementarlos como se haría con una biblioteca en una aplicación de escritorio. Para consumir el archivo de recursos principal y cualquier archivo de recursos localizado en la aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], se agrega una referencia al ensamblado principal. En tiempo de compilación, Visual Studio extrae los recursos del archivo de recursos principal y de cualquier archivo de recursos localizado en archivos .resw independientes. A continuación, compila los archivos .resw en un único archivo PRI al que [!INCLUDE[wrt](../../../includes/wrt-md.md)] obtiene acceso en tiempo de ejecución.
+ Si el proyecto de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] incluye recursos localizados, se usa el modelo de concentrador y radio para implementarlos como se haría con una biblioteca en una aplicación de escritorio. Para consumir el archivo de recursos principal y cualquier archivo de recursos localizado en la aplicación de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], se agrega una referencia al ensamblado principal. En tiempo de compilación, Visual Studio extrae los recursos del archivo de recursos principal y de cualquier archivo de recursos localizado en archivos .resw independientes. A continuación, se compila los archivos .resw en un único archivo PRI que tiene acceso el tiempo de ejecución de Windows en tiempo de ejecución.
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>Ejemplo: No localizado [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]
