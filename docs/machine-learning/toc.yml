@@ -17,8 +17,8 @@
       href: tutorials/predict-prices.md
     - name: Clasificación de flores de iris (agrupación en clústeres k-means)
       href: tutorials/iris-clustering.md
-    - name: Recomendaciones de películas (factorización matricial)
-      href: tutorials/movie-recommmendation.md
+    - name: Películas recomendadas (factorización matricial)
+      href: tutorials/movie-recommendation.md
     - name: Clasificación de imágenes (transferencia de aprendizaje)
       href: tutorials/image-classification.md
     - name: Análisis de ventas de productos (detección de anomalías)

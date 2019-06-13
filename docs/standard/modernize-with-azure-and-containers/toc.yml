@@ -24,8 +24,6 @@
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
         - name: Cuándo se deben implementar contenedores de Windows en Windows Container Instances (ACI)
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
-        - name: Cuándo se deben implementar contenedores de Windows en Service Fabric
-          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
         - name: Cuándo se deben implementar contenedores de Windows en Azure Container Service (ACS-Kubernetes)
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
         - name: Elección de plataformas de procesos de Azure para aplicaciones basadas en contenedores
