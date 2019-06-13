@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f3e8533bf7400566304ddb0fdd9d8e5a9b4280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 2ee08e9ca243ac086a0b75892bf9258246e8fd7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456139"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490665"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nombres seguros (Referencia de la API no administrada)
 La API de nombres seguros permite a los clientes administrar la firma de ensamblados con nombre seguro.  
@@ -23,7 +23,7 @@ La API de nombres seguros permite a los clientes administrar la firma de ensambl
 ## <a name="in-this-section"></a>En esta sección  
   
 > [!NOTE]
->  Todas estas funciones han quedado en desuso a partir de la versión [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Para ver las alternativas sugeridas, consulte la interfaz [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
+>  Todas estas funciones han quedado en desuso a partir de .NET Framework 4. Para ver las alternativas sugeridas, consulte la interfaz [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
   
  [GetHashFromAssemblyFile (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto. Ha quedado en desuso a partir de .NET Framework 4.  

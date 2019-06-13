@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0b4639402ee99d215edb3fb28ababe6f750fb353
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0bc333a828a9d18cd5ad98af42a91c1d53c2569b
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457075"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816212"
 ---
 # <a name="thread-safe-collections"></a>Colecciones seguras para subprocesos
 .NET Framework 4 introduce el espacio de nombres <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que incluye varias clases de colección que son a la vez seguras para subprocesos y escalables. Varios subprocesos pueden agregar o quitar elementos de estas colecciones sin ningún riesgo y de un modo eficaz, sin requerir una sincronización adicional en código de usuario. Al escribir un código nuevo, utilice las clases de colección simultáneas siempre que varios subprocesos se vayan a escribir en la colección de forma simultánea. Si solo está leyendo en una colección compartida, puede utilizar las clases en el espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Recomendamos no utilizar clases de colección 1.0 a menos que estén destinadas a .NET Framework 1.1. o un runtime de una versión anterior.  
@@ -22,7 +22,7 @@ ms.locfileid: "66457075"
   
  Las clases de colección introducidas en .NET Framework 2.0 se encuentran en el espacio de nombres <xref:System.Collections.Generic?displayProperty=nameWithType>. Éstas incluyen <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602>, etc. Estas clases proporcionan una seguridad de tipos y un rendimiento mejorados comparados con las clases de .NET Framework 1.0. Sin embargo, las clases de colección de .NET Framework 2.0 no proporcionan ninguna sincronización de subprocesos; el código de usuario debe proporcionar toda la sincronización cuando se agregan o quitan elementos en varios subprocesos simultáneamente.  
   
- Se recomiendan las clases de colección simultáneas en .NET Framework 4 porque proporcionan no solo la seguridad de tipos de las clases de colección de .NET Framework 2.0, sino también una seguridad de subprocesos más eficaz y completa que las colecciones de [!INCLUDE[net_v10_short](../../../../includes/net-v10-short-md.md)].  
+ Se recomiendan las clases de colección simultáneas en .NET Framework 4 porque proporcionan no solo la seguridad de tipos de las clases de colección de .NET Framework 2.0, sino también una seguridad de subprocesos más eficaz y completa que las colecciones de .NET Framework 1.0.  
   
 ## <a name="fine-grained-locking-and-lock-free-mechanisms"></a>Mecanismos de bloqueo específico y sin bloqueos  
  Algunos de los tipos de colección simultáneos utilizan mecanismos de sincronización ligeros como <xref:System.Threading.SpinLock>, <xref:System.Threading.SpinWait>, <xref:System.Threading.SemaphoreSlim> y <xref:System.Threading.CountdownEvent>, que son nuevos en .NET Framework 4. Estos tipos de sincronización utilizan normalmente *giro de ocupado* durante breves períodos antes de colocar el subproceso en un verdadero estado de espera. Cuando se prevé que los tiempos de espera sean muy cortos, el giro es técnicamente menos costoso que la espera, que implica una costosa transición del kernel. Para las clases de colección que utilizan el giro, esta eficacia significa que se pueden agregar y quitar varios subprocesos con una tasa muy alta. Para más información sobre la comparación del giro y el bloque, consulte [SpinLock](../../../../docs/standard/threading/spinlock.md) y [SpinWait](../../../../docs/standard/threading/spinwait.md).  

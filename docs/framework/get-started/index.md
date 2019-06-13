@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4c9e85b2a884f6f348d801a27b7f362bd0236b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16e20214981bb5c0f96b26f34be99026aac19266
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644054"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690187"
 ---
 # <a name="get-started-with-the-net-framework"></a>Introducción a .NET Framework
 
@@ -53,7 +53,7 @@ En general, no debería desinstalar ninguna versión de .NET Framework instalada
 
 - Si una aplicación que usa depende de una versión específica de .NET Framework, podría dañarse al quitarla.
 
-- Algunas versiones de .NET Framework son actualizaciones locales de versiones anteriores. Por ejemplo, [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] es una actualización local de la versión 2.0, mientras que .NET Framework 4.8 lo es de las versiones 4 a 4.7.2. Para más información, consulte [Versiones y dependencias de .NET Framework](../migration-guide/versions-and-dependencies.md).
+- Algunas versiones de .NET Framework son actualizaciones locales de versiones anteriores. Por ejemplo, .NET Framework 3.5 es una actualización local de la versión 2.0, mientras que .NET Framework 4.8 lo es de las versiones 4 a 4.7.2. Para más información, consulte [Versiones y dependencias de .NET Framework](../migration-guide/versions-and-dependencies.md).
 
 En versiones de Windows anteriores a Windows 8, si decide quitar .NET Framework, use siempre la opción **Programas y características** del Panel de control para desinstalarlo. No quite nunca una versión de .NET Framework manualmente. En Windows 8 y versiones posteriores, .NET Framework es un componente del sistema operativo y no se puede desinstalar de forma independiente.
 
