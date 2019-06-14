@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063284"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834043"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Instrucciones de uso de Memory\<T> y Span\<T>
 
@@ -138,7 +138,7 @@ De hecho, si se combinan esta regla y la 1, podemos hacerlo incluso mejor y rees
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-El método `DisplayBufferToConsole` ahora funciona con prácticamente cualquier tipo de búfer imaginable: `T[]`, almacenamiento asignable con [stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) y así sucesivamente. Incluso puede pasar una clase <xref:System.String> directamente.
+El método `DisplayBufferToConsole` ahora funciona con prácticamente cualquier tipo de búfer imaginable: `T[]`, almacenamiento asignable con [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) y así sucesivamente. Incluso puede pasar una clase <xref:System.String> directamente.
 
 **Regla 3: Si el método acepta Memory\<T> y devuelve `void`, no debe usar la instancia de Memory\<T> después de que se devuelva el método.**
 
