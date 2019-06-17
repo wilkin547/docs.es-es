@@ -1,27 +1,27 @@
 ---
 title: Puntos clave
-description: Revise los puntos clave para la guía.
+description: Revise los puntos clave de la guía.
 ms.date: 02/15/2019
 ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644706"
 ---
 # <a name="key-takeaways"></a>Puntos clave
 
-- Soluciones basadas en contenedores ofrecen importantes ventajas de ahorro de costos porque los contenedores de solucionan problemas de implementación causados por errores de dependencia en entornos de producción, lo que mejora las operaciones de DevOps y producción de forma significativa.
+- Las soluciones basadas en contenedores ofrecen importantes ventajas de ahorro de costos porque los contenedores resuelven los problemas de implementación causados por los errores de dependencia en los entornos de producción, por lo que se mejoran considerablemente las operaciones de producción y de DevOps.
 
-- Docker se está convirtiendo en el estándar de facto del sector de contenedor y es compatible con los proveedores más importantes de los ecosistemas Linux y Windows, incluido Microsoft. En el futuro, Docker estará omnipresente en todos los centros de datos en la nube o locales.
+- Docker se está convirtiendo en el estándar de facto del sector de los contenedores y es compatible con los proveedores más importantes de los ecosistemas Linux y Windows, incluido Microsoft. En el futuro, Docker estará omnipresente en todos los centros de datos en la nube o locales.
 
 - Un contenedor de Docker se está convirtiendo en la unidad de implementación estándar para cualquier aplicación o servicio basados en servidor.
 
-- Los orquestadores de docker, como las que se proporcionan en Azure Kubernetes Service (AKS) y Azure Service Fabric son fundamentales e indispensables para cualquier aplicación basada en microservicios o varios contenedores que tiene necesidades importantes de complejidad y escalabilidad.
+- Los orquestadores de Docker, como los que se proporcionan en Azure Kubernetes Service (AKS) y Azure Service Fabric, son fundamentales e indispensables para cualquier aplicación de varios contenedores o basada en microservicios con importantes requisitos de complejidad y escalabilidad.
 
-- Un entorno de DevOps-to-end que admite la integración continua/implementación continua y se conecta a los entornos de producción de Docker puede proporcionar agilidad y, finalmente, mejorar el tiempo de comercialización de las aplicaciones.
+- Un entorno de DevOps de un extremo a otro compatible con la integración continua/implementación continua y que se conecte a entornos de Docker en producción proporciona agilidad y, en última instancia, mejora el tiempo de comercialización de las aplicaciones.
 
-- Servicios de Azure DevOps simplifica en gran medida el entorno de DevOps mediante la implementación en entornos de Docker desde sus canalizaciones de CI/CD. Esta instrucción se aplica a los entornos de Docker sencillos como en cuanto a microservicio avanzada y orquestadores de contenedor basados en Azure.
+- Azure DevOps Services simplifica en gran medida el entorno de DevOps mediante la implementación en entornos de Docker desde las canalizaciones de CI/CD. Esto es cierto tanto en los entornos de Docker sencillos como en orquestadores de contenedores y microservicios avanzados basados en Azure.
 
 >[!div class="step-by-step"]
 >[Anterior](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

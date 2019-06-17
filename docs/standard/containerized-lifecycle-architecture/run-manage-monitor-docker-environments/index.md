@@ -3,21 +3,21 @@ title: Ejecución, administración y supervisión de entornos de producción de 
 description: Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft
 ms.date: 02/15/2019
 ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644871"
 ---
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Ejecución, administración y supervisión de entornos de producción de Docker
 
-Visión: Deben ejecutar con alta disponibilidad y escalabilidad; las aplicaciones empresariales Las operaciones de TI deben ser capaz de administrar y supervisar los entornos y las propias aplicaciones.
+Visión: Las aplicaciones empresariales deben ejecutarse con alta disponibilidad y escalabilidad; las operaciones de TI necesitan tener la capacidad de administrar y supervisar los entornos y las aplicaciones propias.
 
 Este último pilar del ciclo de vida de las aplicaciones de Docker en contenedor se centra en cómo ejecutar, administrar y supervisar las aplicaciones en entornos de producción de alta disponibilidad y escalables.
 
-La manera de ejecutar sus aplicaciones en contenedores en producción (plataforma y arquitectura de tecnologías de infraestructura) es relacionados con mucho y se basa en las plataformas de desarrollo y arquitectura elegidas que se describe en el capítulo 1 de este libro electrónico.
+La forma de ejecutar las aplicaciones en contenedor en entornos de producción (tecnologías de plataforma y arquitectura de la infraestructura) está estrechamente relacionada con las plataformas de desarrollo y la arquitectura elegidas analizadas en el capítulo 1 de este libro electrónico y se basa en ellas.
 
-Este capítulo analizan productos y tecnologías de Microsoft específicos y otros proveedores que puede usar para ejecutar con eficacia escalable, de alta disponibilidad distribuyen aplicaciones, además de cómo se puede administrarlos y supervisarlos desde la perspectiva de TI.
+En este capítulo se analizan productos y tecnologías específicos de Microsoft y otros proveedores que puede usar para ejecutar con eficacia aplicaciones distribuidas escalables y de alta disponibilidad, así como para administrarlas y supervisarlas desde la perspectiva de TI.
 
 >[!div class="step-by-step"]
 >[Anterior](../docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)
