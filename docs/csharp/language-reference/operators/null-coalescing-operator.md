@@ -1,45 +1,66 @@
 ---
 title: '?? operador: Referencia de C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 06/07/2019
 f1_keywords:
 - ??_CSharpKeyword
 helpviewer_keywords:
-- coalesce operator [C#]
+- null-coalescing operator [C#]
 - ?? operator [C#]
-- conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: e1e981f9ec6a87f6e7de1900008520cde8e46095
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633947"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816008"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="9db64-103">??</span><span class="sxs-lookup"><span data-stu-id="9db64-103">??</span></span> <span data-ttu-id="9db64-104">operator (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="9db64-104">operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="14ddc-103">??</span><span class="sxs-lookup"><span data-stu-id="14ddc-103">??</span></span> <span data-ttu-id="14ddc-104">operator (Referencia de C#)</span><span class="sxs-lookup"><span data-stu-id="14ddc-104">operator (C# Reference)</span></span>
 
-<span data-ttu-id="9db64-105">Al operador `??` se le llama el operador de uso combinado de NULL.</span><span class="sxs-lookup"><span data-stu-id="9db64-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="9db64-106">Dicho operador devuelve el operando izquierdo si no es NULL; de lo contrario, devuelve el operando derecho.</span><span class="sxs-lookup"><span data-stu-id="9db64-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>
+<span data-ttu-id="14ddc-105">El operador de uso combinado de NULL `??` devuelve el valor del operando izquierdo si no es `null`; en caso contrario, evalúa el operando derecho y devuelve su resultado.</span><span class="sxs-lookup"><span data-stu-id="14ddc-105">The null-coalescing operator `??` returns the value of its left-hand operand if it isn't `null`; otherwise, it evaluates the right-hand operand and returns its result.</span></span> <span data-ttu-id="14ddc-106">El operador `??` no evalúa su operando derecho si el operando izquierdo se evalúa como no NULL.</span><span class="sxs-lookup"><span data-stu-id="14ddc-106">The `??` operator doesn't evaluate its right-hand operand if the left-hand operand evaluates to non-null.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="9db64-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9db64-107">Remarks</span></span>
+<span data-ttu-id="14ddc-107">El operador de uso combinado de NULL es asociativo a la derecha, es decir, una expresión de la forma.</span><span class="sxs-lookup"><span data-stu-id="14ddc-107">The null-coalescing operator is right-associative, that is, an expression of the form</span></span>
 
-<span data-ttu-id="9db64-108">Un tipo que acepta valores NULL puede representar un valor del dominio del tipo, o el valor puede no estar definido (en cuyo caso el valor es NULL).</span><span class="sxs-lookup"><span data-stu-id="9db64-108">A nullable type can represent a value from the type’s domain, or the value can be undefined (in which case the value is null).</span></span> <span data-ttu-id="9db64-109">Se puede usar la expresividad sintáctica del operador `??` para devolver un valor apropiado (el operando derecho) cuando el operando izquierdo tenga un tipo que acepta valores NULL cuyo valor sea NULL.</span><span class="sxs-lookup"><span data-stu-id="9db64-109">You can use the `??` operator’s syntactic expressiveness to return an appropriate value (the right hand operand) when the left operand has a nullable type whose value is null.</span></span> <span data-ttu-id="9db64-110">Si se intenta asignar un tipo de valor que acepta valores NULL a otro que no sin usar el operador `??`, se generará un error en tiempo de compilación.</span><span class="sxs-lookup"><span data-stu-id="9db64-110">If you try to assign a nullable value type to a non-nullable value type without using the `??` operator, you will generate a compile-time error.</span></span> <span data-ttu-id="9db64-111">Si se usa una conversión y el tipo de valor que acepta valores NULL no está definido actualmente, se producirá una excepción `InvalidOperationException`.</span><span class="sxs-lookup"><span data-stu-id="9db64-111">If you use a cast, and the nullable value type is currently undefined, an `InvalidOperationException` exception will be thrown.</span></span>
+```csharp
+a ?? b ?? c
+```
 
-<span data-ttu-id="9db64-112">Para más información, vea [Tipos que aceptan valores NULL](../../programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="9db64-112">For more information, see [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
+<span data-ttu-id="14ddc-108">se evalúa como</span><span class="sxs-lookup"><span data-stu-id="14ddc-108">is evaluated as</span></span>
 
-<span data-ttu-id="9db64-113">El resultado de un</span><span class="sxs-lookup"><span data-stu-id="9db64-113">The result of a ??</span></span> <span data-ttu-id="9db64-114">operador ?? no se considera una constante, incluso si sus dos argumentos son constantes.</span><span class="sxs-lookup"><span data-stu-id="9db64-114">operator is not considered to be a constant even if both its arguments are constants.</span></span>
+```csharp
+a ?? (b ?? c)
+```
 
-## <a name="example"></a><span data-ttu-id="9db64-115">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9db64-115">Example</span></span>
+<span data-ttu-id="14ddc-109">El operador `??` puede resultar útil en los siguientes escenarios:</span><span class="sxs-lookup"><span data-stu-id="14ddc-109">The `??` operator can be useful in the following scenarios:</span></span>
 
-[!code-csharp[csRefOperators#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#53)]
+- <span data-ttu-id="14ddc-110">En expresiones con los [operadores no condicionales ? y ?[]](member-access-operators.md#null-conditional-operators--and-), puede usar el operador de uso combinado de NULL para proporcionar una expresión alternativa para evaluar en caso de que el resultado de la expresión con la operación condicional NULL sea `null`:</span><span class="sxs-lookup"><span data-stu-id="14ddc-110">In expressions with the [null-conditional operators ?. and ?[]](member-access-operators.md#null-conditional-operators--and-), you can use the null-coalescing operator to provide an alternative expression to evaluate in case the result of the expression with null-conditional operations is `null`:</span></span>
 
-## <a name="c-language-specification"></a><span data-ttu-id="9db64-116">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="9db64-116">C# language specification</span></span>
+  [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-<span data-ttu-id="9db64-117">Para obtener más información, vea la sección [El operador de uso combinado de NULL](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) de la [Especificación del lenguaje C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="9db64-117">For more information, see [The null coalescing operator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) in the [C# Language Specification](../language-specification/index.md).</span></span> <span data-ttu-id="9db64-118">La especificación del lenguaje es la fuente definitiva de la sintaxis y el uso de C#.</span><span class="sxs-lookup"><span data-stu-id="9db64-118">The language specification is the definitive source for C# syntax and usage.</span></span>
+- <span data-ttu-id="14ddc-111">Cuando trabaja con [tipos de valor que aceptan valores NULL](../../programming-guide/nullable-types/index.md) y necesita proporcionar un valor de un tipo de valor subyacente, use el operador de uso combinado de NULL para especificar el valor para proporcionar en caso de que un valor de tipo que acepta valores NULL sea `null`:</span><span class="sxs-lookup"><span data-stu-id="14ddc-111">When you work with [nullable value types](../../programming-guide/nullable-types/index.md) and need to provide a value of an underlying value type, use the null-coalescing operator to specify the value to provide in case a nullable type value is `null`:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="9db64-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="9db64-119">See also</span></span>
+  [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
-- [<span data-ttu-id="9db64-120">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="9db64-120">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="9db64-121">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="9db64-121">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="9db64-122">Operadores de C#</span><span class="sxs-lookup"><span data-stu-id="9db64-122">C# operators</span></span>](index.md)
-- [<span data-ttu-id="9db64-123">Tipos que aceptan valores NULL</span><span class="sxs-lookup"><span data-stu-id="9db64-123">Nullable Types</span></span>](../../programming-guide/nullable-types/index.md)
-- [<span data-ttu-id="9db64-124">¿Qué significa exactamente "elevado"?</span><span class="sxs-lookup"><span data-stu-id="9db64-124">What Exactly Does 'Lifted' mean?</span></span>](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+  <span data-ttu-id="14ddc-112">Use el método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> si el valor que se va usar cuando un valor de tipo que acepta valores NULL es `null` debe ser el valor predeterminado del tipo de valor subyacente.</span><span class="sxs-lookup"><span data-stu-id="14ddc-112">Use the <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> method if the value to be used when a nullable type value is `null` should be the default value of the underlying value type.</span></span>
+
+- <span data-ttu-id="14ddc-113">A partir de C# 7.0, puede usar una [expresión `throw`](../keywords/throw.md#the-throw-expression) como el operando derecho del operador de uso combinado de NULL para hacer el código de comprobación de argumentos más conciso:</span><span class="sxs-lookup"><span data-stu-id="14ddc-113">Starting with C# 7.0, you can use a [`throw` expression](../keywords/throw.md#the-throw-expression) as the right-hand operand of the null-coalescing operator to make the argument-checking code more concise:</span></span>
+
+  [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
+
+  <span data-ttu-id="14ddc-114">El ejemplo anterior también muestra cómo usar [miembros con forma de expresión](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) para definir una propiedad.</span><span class="sxs-lookup"><span data-stu-id="14ddc-114">The preceding example also demonstrates how to use [expression-bodied members](../../programming-guide/statements-expressions-operators/expression-bodied-members.md) to define a property.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="14ddc-115">Posibilidad de sobrecarga del operador</span><span class="sxs-lookup"><span data-stu-id="14ddc-115">Operator overloadability</span></span>
+
+<span data-ttu-id="14ddc-116">El operador de uso combinado de NULL no se puede sobrecargar.</span><span class="sxs-lookup"><span data-stu-id="14ddc-116">The null-coalescing operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="14ddc-117">Especificación del lenguaje C#</span><span class="sxs-lookup"><span data-stu-id="14ddc-117">C# language specification</span></span>
+
+<span data-ttu-id="14ddc-118">Para obtener más información, vea la sección [El operador de uso combinado de NULL](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).</span><span class="sxs-lookup"><span data-stu-id="14ddc-118">For more information, see [The null coalescing operator](~/_csharplang/spec/expressions.md#the-null-coalescing-operator) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="14ddc-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="14ddc-119">See also</span></span>
+
+- [<span data-ttu-id="14ddc-120">Referencia de C#</span><span class="sxs-lookup"><span data-stu-id="14ddc-120">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="14ddc-121">Guía de programación de C#</span><span class="sxs-lookup"><span data-stu-id="14ddc-121">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="14ddc-122">Operadores de C#</span><span class="sxs-lookup"><span data-stu-id="14ddc-122">C# operators</span></span>](index.md)
+- <span data-ttu-id="14ddc-123">[Operadores ?. y ?[]](member-access-operators.md#null-conditional-operators--and-)</span><span class="sxs-lookup"><span data-stu-id="14ddc-123">[?. and ?[] operators](member-access-operators.md#null-conditional-operators--and-)</span></span>
+- [<span data-ttu-id="14ddc-124">Operador ?:</span><span class="sxs-lookup"><span data-stu-id="14ddc-124">?: operator</span></span>](conditional-operator.md)
