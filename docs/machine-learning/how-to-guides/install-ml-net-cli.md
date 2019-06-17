@@ -3,12 +3,12 @@ title: Cómo instalar la herramienta de la interfaz de la línea de comandos (CL
 description: Instalar e instalación de la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557858"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832932"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Cómo instalar la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET
 
@@ -34,7 +34,7 @@ La CLI de ML.NET se instala como cualquier otra herramienta global de dotnet. Us
 En el ejemplo siguiente se muestra cómo instalar la CLI de ML.NET en la ubicación de la fuente de NuGet predeterminada:
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 Si la herramienta no se puede instalar (es decir, si no está disponible con la fuente de NuGet predeterminada), se muestran mensajes de error. Verifique que se comprueban las fuentes que esperaba.
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 Para confirmar que la instalación se realizó correctamente, escriba el comando siguiente:
 
 ```console
-> mlnet
+mlnet
 ```
 
 Debería ver la Ayuda de los comandos disponibles para la herramienta de mlnet, como el comando "auto-train".
@@ -59,13 +59,13 @@ Debería ver la Ayuda de los comandos disponibles para la herramienta de mlnet, 
 Si está intentando instalar una versión preliminar o una versión específica de la herramienta, puede especificar el [marco](../../standard/frameworks.md) con el formato siguiente:
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 También puede comprobar si el paquete está instalado correctamente. Para ello, escriba el comando siguiente:
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>Desinstalar el paquete de la CLI
@@ -73,7 +73,7 @@ También puede comprobar si el paquete está instalado correctamente. Para ello,
 Escriba el siguiente comando para desinstalar el paquete de la máquina local:
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>Actualizar el paquete de la CLI
@@ -81,7 +81,7 @@ Escriba el siguiente comando para desinstalar el paquete de la máquina local:
 Escriba el siguiente comando para actualizar l paquete de la máquina local:
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>Configure las sugerencias de la CLI (finalización automática basada en tabulación)
@@ -101,7 +101,7 @@ En el equipo donde desea habilitar la finalización, deberá hacer dos cosas.
 1. Instale la herramienta global `dotnet-suggest` mediante la ejecución del comando siguiente:
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. Agregue el script de correcciones de compatibilidad (shim) adecuado a su perfil de shell. Es posible que deba crear un archivo de perfil de shell. El script de correcciones de compatibilidad (shim) reenvía las solicitudes de finalización desde el shell a la herramienta `dotnet-suggest`, que delega a la aplicación basada en `System.CommandLine` adecuada.
@@ -111,7 +111,7 @@ En el equipo donde desea habilitar la finalización, deberá hacer dos cosas.
     * Para PowerShell, agregue el contenido del [dotnet-suggest-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) al perfil de PowerShell. Puede encontrar la ruta de acceso prevista para el perfil de PowerShell ejecutando el comando siguiente en la consola:
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (Para otros shells, [busque](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) o abra una [incidencia](https://github.com/dotnet/System.CommandLine/issues).)

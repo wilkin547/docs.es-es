@@ -4,12 +4,12 @@ description: En este tutorial se muestra cómo crear una aplicación de consola 
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: e145e65e22c955bd547b67de545b883fb0fb3bc2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 674dc2d12cb8f65753730e187e13fc5e522ff6b3
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593418"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135703"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Análisis de opinión de los comentarios del sitio web con clasificación binaria de ML.NET
 
@@ -46,7 +46,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 ## <a name="prepare-your-data"></a>Preparar los datos
 
 > [!NOTE]
-> Los conjuntos de datos de este tutorial proceden de "From Group to Individual Labels using Deep Features", Kotzias et. al,. KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. and Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
+> Los conjuntos de datos de este tutorial proceden de "From Group to Individual Labels using Deep Features", Kotzias et. al,. KDD 2015, and hosted at the UCI Machine Learning Repository - Dua, D. and Karra Taniskidou, E. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml ]. Irvine, CA: University of California, School of Information and Computer Science.
 
 1. Descargue el [archivo ZIP de conjunto de datos de frases con etiqueta de opinión de UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) y descomprímalo.
 
@@ -276,13 +276,13 @@ Use el siguiente código para mostrar las métricas:
 
     [!code-csharp[CallUseModelWithSingleItem](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CallUseModelWithSingleItem "Call the UseModelWithSingleItem method")]
 
-3. Agregue el código siguiente como primera línea en el método `Predict()`:
+3. Agregue el código siguiente como primera línea en el método `UseModelWithSingleItem()`:
 
     [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
 
     [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) es una API de conveniencia, que le permite pasar datos y luego realizar una predicción en una única instancia de datos.
 
-4. Agregue un comentario para probar la predicción del modelo entrenado en el método `Predict()` mediante la creación de una instancia de `SentimentData`:
+4. Agregue un comentario para probar la predicción del modelo entrenado en el método `UseModelWithSingleItem()` mediante la creación de una instancia de `SentimentData`:
 
     [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
 
