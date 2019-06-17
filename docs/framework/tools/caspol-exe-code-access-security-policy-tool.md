@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2a0e8d95595d663585639c47be34262f7452e94
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457411"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489679"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)
 La herramienta de la directiva de seguridad de acceso del código (CAS), o herramienta Caspol.exe, permite a los usuarios y administradores modificar las directivas de seguridad correspondientes a los niveles de equipo, usuario y empresa.  
   
 > [!IMPORTANT]
->  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Caspol.exe no afecta a la directiva CAS, a menos que el [elemento \<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Las configuraciones mostradas o modificadas por CasPol.exe solo afectarán a las aplicaciones que opten por usar la directiva CAS. Para más información, consulte [Cambios de seguridad](../../../docs/framework/security/security-changes.md).  
+>  A partir de .NET Framework 4, Caspol.exe no afecta a la directiva CAS, a menos que el elemento [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Las configuraciones mostradas o modificadas por CasPol.exe solo afectarán a las aplicaciones que opten por usar la directiva CAS. Para más información, consulte [Cambios de seguridad](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
 >  Los equipos de 64 bits incluyen las versiones de 64 bits y de 32 bits de la directiva de seguridad. Para asegurarse de que los cambios en la directiva se aplican a las aplicaciones de 32 bits y 64 bits, ejecute las dos versiones de Caspol.exe, la 32 bits y la de 64 bits.  
@@ -86,7 +86,7 @@ caspol [options]
 |**-allcode**|Especifica todo el código. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Especifica el directorio de la aplicación. Si especifica **–appdir** como condición de pertenencia, la evidencia de dirección URL del código se compara con la evidencia de directorio de aplicación de dicho código. Si ambos valores de evidencia coinciden, se cumple la condición de pertenencia. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
 |**-custom**  *xmlfile*|Agrega una condición de pertenencia personalizada. El argumento *xmlfile* obligatorio especifica el archivo .xml que contiene la serialización en formato XML de la condición de pertenencia personalizada.|  
-|**-hash** *hashAlg* { **-hex** *hashValue* &#124; **-file** *archivo_ensamblado* }|Especifica el código que tiene el hash de ensamblado especificado. Para usar un hash como condición de pertenencia de grupo de código, debe especificar el valor hash o el archivo de ensamblado. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *archivo_ensamblado* }|Especifica el código que tiene el hash de ensamblado especificado. Para usar un hash como condición de pertenencia de grupo de código, debe especificar el valor hash o el archivo de ensamblado. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica el código que tiene el editor de software especificado, indicado por un archivo de certificado, una firma en un archivo o la representación hexadecimal de un certificado X509. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Especifica el código que tiene el sitio de origen especificado. Por ejemplo:<br /><br /> `-site** www.proseware.com`<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica el código que tiene un nombre seguro determinado, que se indica por el nombre de archivo, el nombre de ensamblado en forma de cadena y la versión del ensamblado con el formato *major*.*minor*.*build*.*revision*. Por ejemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  

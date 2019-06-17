@@ -2,12 +2,12 @@
 title: Incluir en un contenedor aplicaciones monolíticas
 description: Incluir en un contenedor aplicaciones monolíticas, aunque no obtenga todos los beneficios de la arquitectura de microservicios, tiene ventajas importantes de implementación que se pueden entregar inmediatamente.
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640808"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690547"
 ---
 # <a name="containerizing-monolithic-applications"></a>Incluir en un contenedor aplicaciones monolíticas
 
@@ -63,9 +63,9 @@ Tanto si quiere obtener la validación de un contenedor implementado en Azure o 
 
 **Figura 4-4**. Publicar una aplicación de contenedor único en Azure App Service desde Visual Studio
 
-Sin Docker, si necesitaba otras capacidades, marcos o dependencias que no fueran compatibles con Azure App Service, tenía que esperar a que el equipo de Azure actualizara esas dependencias en App Service. O tenía que cambiar a otros servicios como Azure Service Fabric, Azure Cloud Services o incluso máquinas virtuales, en que tenía más control y podía instalar un componente o un marco necesario para la aplicación.
+Sin Docker, si necesitaba otras capacidades, marcos o dependencias que no fueran compatibles con Azure App Service, tenía que esperar a que el equipo de Azure actualizara esas dependencias en App Service. O tenía que cambiar a otros servicios como Azure Cloud Services o máquinas virtuales, en que tenía más control y podía instalar un componente o un marco necesario para la aplicación.
 
-La compatibilidad con contenedores de Visual Studio 2017 le ofrece la capacidad de incluir todo lo que quiera en el entorno de aplicación, tal como se muestra en la figura 4-4. Puesto que la está ejecutando en un contenedor, si agrega una dependencia a la aplicación, puede incluir la dependencia en Dockerfile o la imagen de Docker.
+La compatibilidad con contenedores de Visual Studio 2017 y posteriores le ofrece la capacidad de incluir todo lo que quiera en el entorno de aplicación, tal como se muestra en la figura 4-4. Puesto que la está ejecutando en un contenedor, si agrega una dependencia a la aplicación, puede incluir la dependencia en Dockerfile o la imagen de Docker.
 
 Como también se muestra en la figura 4-4, el flujo de publicación inserta una imagen a través de un registro de contenedor. Puede ser Azure Container Registry (un registro cercano a las implementaciones en Azure y protegido por las cuentas y los grupos de Azure Active Directory) o cualquier otro registro de Docker, como Docker Hub o un registro local.
 

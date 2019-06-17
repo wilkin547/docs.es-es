@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9ec21a21ce3c81c2d29d2edf353a098489c9026
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 137aeaab4e63adbb81c0f3d90718def10f906e6a
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219755"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489238"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Equivalencia de tipos y tipos de interoperabilidad incrustados
 
-A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Common Language Runtime admite la incrustación de información de tipos COM directamente en ensamblados administrados, en lugar de exigir a los ensamblados administrados obtener información de tipos COM de ensamblados de interoperabilidad. Dado que la información de tipos incrustada solo incluye los tipos y miembros que realmente usa un ensamblado administrado, dos ensamblados administrados pueden tener vistas muy diferentes del mismo tipo COM. Cada ensamblado administrado tiene un objeto <xref:System.Type> diferente para representar su vista del tipo COM. Common Language Runtime admite la equivalencia de tipos entre estas distintas vistas de interfaces, estructuras, enumeraciones y delegados.
+A partir de .NET Framework 4, Common Language Runtime admite la incrustación de información de tipos COM directamente en ensamblados administrados, en lugar de exigir a los ensamblados administrados obtener información de tipos COM de ensamblados de interoperabilidad. Dado que la información de tipos incrustada solo incluye los tipos y miembros que realmente usa un ensamblado administrado, dos ensamblados administrados pueden tener vistas muy diferentes del mismo tipo COM. Cada ensamblado administrado tiene un objeto <xref:System.Type> diferente para representar su vista del tipo COM. Common Language Runtime admite la equivalencia de tipos entre estas distintas vistas de interfaces, estructuras, enumeraciones y delegados.
 
 La equivalencia de tipos significa que un objeto COM que se pasa de un ensamblado administrado a otro se puede convertir al tipo administrado adecuado en el ensamblado receptor.
 

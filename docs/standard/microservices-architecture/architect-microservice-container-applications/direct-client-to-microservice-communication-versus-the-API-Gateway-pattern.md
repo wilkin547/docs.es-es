@@ -2,12 +2,12 @@
 title: Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 433ad8bc8204a9a57b8b494040a9de6c533bcca8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641409"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690363"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -146,7 +146,7 @@ En esta guía y en la aplicación de ejemplo de referencia (eShopOnContainers), 
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) es una puerta de enlace de API ligera, recomendada para enfoques más simples. Ocelot es una puerta de enlace de API de código abierto basada en .NET Core especialmente diseñada para la arquitectura de microservicios que necesitan puntos de entrada unificados en su sistema. Es ligera, rápida, escalable y proporciona enrutamiento y autenticación, entre muchas otras características.
 
-La razón principal para elegir Ocelot para la [aplicación de referencia eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) es porque es una puerta de enlace de API ligera de .NET Core que se puede implementar en el mismo entorno de implementación de aplicaciones en el que se implementan los microservicios y contenedores, como Docker Host, Kubernetes, Service Fabric, etc. Y puesto que se basa en .NET Core, es multiplataforma, así que la puede implementar en Linux o Windows.
+La razón principal para elegir Ocelot para la [aplicación de referencia eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) es porque es una puerta de enlace de API ligera de .NET Core que se puede implementar en el mismo entorno de implementación de aplicaciones en el que se implementan los microservicios y contenedores, como Docker Host, Kubernetes, etc. Y puesto que se basa en .NET Core, es multiplataforma, así que la puede implementar en Linux o Windows.
 
 Los diagramas anteriores que muestran puertas de enlace de API personalizadas que se ejecutan en contenedores son precisamente la forma en que también puede ejecutar Ocelot en una aplicación basada en contenedor y microservicio.
 
@@ -182,7 +182,7 @@ Después de las secciones iniciales de explicación de arquitectura y patrones, 
 - **Azure API Management** \
   <https://azure.microsoft.com/services/api-management/>
 
-- **Udi Dahan. Service Oriented Composition (Composición orientada a servicios)**  \
+- **Udi Dahan. Service Oriented Composition (Composición orientada a servicios) ** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 - **Clemens Vasters. Messaging and Microservices at GOTO 2016 (vídeo)** \ (Mensajería y microservicios en GOTO 2016; vídeo)

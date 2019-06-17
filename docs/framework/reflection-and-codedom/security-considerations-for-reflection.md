@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457295"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816132"
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 La reflexión proporciona la capacidad de obtener información sobre tipos y miembros, así como de obtener acceso a miembros (es decir, para llamar a métodos y constructores, obtener y establecer valores de propiedades, agregar y quitar controladores de eventos etc.). No hay restricciones en el uso de la reflexión para obtener información sobre tipos y miembros. Todo el código puede usar la reflexión para realizar las siguientes tareas:  
@@ -26,7 +26,7 @@ La reflexión proporciona la capacidad de obtener información sobre tipos y mie
   
 - Enumerar y examinar los ensamblados y módulos.  
   
- Por el contrario, el uso de la reflexión para obtener acceso a miembros está sujeto a restricciones. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], solo el código de confianza puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad. Además, solo el código de confianza puede usar la reflexión para obtener acceso a miembros no públicos a los que no tendría acceso directo el código compilado. Por último, el código que usa la reflexión para tener acceso a un miembro crítico para la seguridad debe tener los permisos que exija el miembro crítico para la seguridad, al igual que con el código compilado.  
+ Por el contrario, el uso de la reflexión para obtener acceso a miembros está sujeto a restricciones. A partir de .NET Framework 4, solo el código de confianza puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad. Además, solo el código de confianza puede usar la reflexión para obtener acceso a miembros no públicos a los que no tendría acceso directo el código compilado. Por último, el código que usa la reflexión para tener acceso a un miembro crítico para la seguridad debe tener los permisos que exija el miembro crítico para la seguridad, al igual que con el código compilado.  
   
  En función de los permisos necesarios, el código puede usar la reflexión para realizar los siguientes tipos de acceso:  
   
@@ -42,13 +42,13 @@ La reflexión proporciona la capacidad de obtener información sobre tipos y mie
   
  Por ejemplo, el código que se ejecuta en un dominio de aplicación en espacio aislado se limita al acceso descrito en esta lista, a menos que el dominio de aplicación conceda permisos adicionales.  
   
- A partir de [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)], si se intenta tener acceso a los miembros que no suelen estar accesibles, se genera una petición para el conjunto de permisos del objeto de destino más <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>. El código que se ejecuta con plena confianza (por ejemplo, el código de una aplicación que se inicia desde la línea de comandos) siempre puede satisfacer estos permisos. (Esto está sujeto a las limitaciones de acceso a miembros críticos para la seguridad, como se describe más adelante en este artículo).  
+ A partir de .NET Framework 2.0 Service Pack 1, si se intenta tener acceso a los miembros que no suelen estar accesibles, se genera una petición para el conjunto de permisos del objeto de destino más <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>. El código que se ejecuta con plena confianza (por ejemplo, el código de una aplicación que se inicia desde la línea de comandos) siempre puede satisfacer estos permisos. (Esto está sujeto a las limitaciones de acceso a miembros críticos para la seguridad, como se describe más adelante en este artículo).  
   
  Si quiere, un dominio de aplicación en espacio aislado puede conceder <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>, tal como se describe en la sección [Acceso a miembros que suelen ser inaccesibles](#accessingNormallyInaccessible), más adelante en este artículo.  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>Acceso a miembros críticos para la seguridad  
- Un miembro es crítico para la seguridad si tiene el <xref:System.Security.SecurityCriticalAttribute>, si pertenece a un tipo que tiene el <xref:System.Security.SecurityCriticalAttribute>, o si se encuentra en un ensamblado crítico para la seguridad. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], las reglas para tener acceso a los miembros críticos para la seguridad son los siguientes:  
+ Un miembro es crítico para la seguridad si tiene el <xref:System.Security.SecurityCriticalAttribute>, si pertenece a un tipo que tiene el <xref:System.Security.SecurityCriticalAttribute>, o si se encuentra en un ensamblado crítico para la seguridad. A partir de .NET Framework 4, las reglas para tener acceso a los miembros críticos para la seguridad son los siguientes:  
   
 - El código transparente no puede usar la reflexión para tener acceso a miembros críticos para la seguridad, incluso si el código es de plena confianza. Se produce un <xref:System.MethodAccessException>, <xref:System.FieldAccessException> o <xref:System.TypeAccessException>.  
   
@@ -98,9 +98,9 @@ La reflexión proporciona la capacidad de obtener información sobre tipos y mie
   
 ## <a name="version-information"></a>Información de versión  
   
-- A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], el código transparente no puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad.  
+- A partir de .NET Framework 4, el código transparente no puede usar la reflexión para obtener acceso a los miembros críticos para la seguridad.  
   
-- La marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> se introduce en [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)]. Las versiones anteriores de .NET Framework requieren la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> en el código que usa la reflexión para acceder a miembros no públicos. Se trata de un permiso que nunca debe concederse al código de confianza parcial.  
+- La marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> se introdujo en .NET Framework 2.0 Service Pack 1. Las versiones anteriores de .NET Framework requieren la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> en el código que usa la reflexión para acceder a miembros no públicos. Se trata de un permiso que nunca debe concederse al código de confianza parcial.  
   
 - A partir de [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], el uso de la reflexión para obtener información sobre tipos y miembros no públicos no requiere ningún permiso. En versiones anteriores, se requiere <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   

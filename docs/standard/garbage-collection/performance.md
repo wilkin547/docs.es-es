@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456804"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489583"
 ---
 # <a name="garbage-collection-and-performance"></a>Recolección de elementos no utilizados y rendimiento
 <a name="top"></a> En este tema se describen problemas relacionados con la recolección de elementos no utilizados y el uso de memoria. Se tratan problemas relativos al montón administrado y se explica cómo minimizar el efecto de la recolección de elementos no utilizados en las aplicaciones. Cada problema contiene vínculos a procedimientos que puede emplear para investigar los problemas.  
@@ -44,7 +44,7 @@ ms.locfileid: "66456804"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de recolección de elementos no utilizados  
- El seguimiento de eventos para Windows (ETW) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], los [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico. Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:  
+ El seguimiento de eventos para Windows (ETW) es un sistema de traza que complementa la compatibilidad con generación de perfiles y depuración proporcionada por .NET Framework. A partir de .NET Framework 4, los [eventos ETW de recolección de elementos no utilizados](../../../docs/framework/performance/garbage-collection-etw-events.md) capturan información útil para analizar el montón administrado desde un punto de vista estadístico. Por ejemplo, el evento `GCStart_V1`, que se genera cuando está a punto de producirse una recolección de elementos no utilizados, proporciona la siguiente información:  
   
 - La generación de objetos que se recolecta.  
   

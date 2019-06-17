@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585902"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690314"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Tutorial: Emisión de código en escenarios que no son de plena confianza
 La emisión de reflexión usa el mismo conjunto de API con confianza completa o parcial, pero algunas características requieren permisos especiales en entornos de confianza parcial. Además, la emisión de reflexión tiene una característica, los métodos dinámicos hospedados de forma anónima, diseñada para su uso en entornos de confianza parcial y por ensamblados transparentes en seguridad.  
   
 > [!NOTE]
->  Antes de [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)], la emisión de código requería <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Este permiso está incluido de forma predeterminada en los conjuntos de permisos con nombre `FullTrust` e `Intranet`, pero no en el conjunto de permisos `Internet`. Por tanto, se podría usar una biblioteca de confianza parcial solo si tuviera el atributo <xref:System.Security.SecurityCriticalAttribute> y también se ejecutara un método <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Estas bibliotecas requieren una revisión cuidadosa de la seguridad porque los errores de codificación pueden provocar vulnerabilidades de seguridad. [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] permite emitir código en escenarios de confianza parcial sin emitir ninguna petición de seguridad, porque la generación de código no es en sí una operación que requiera privilegios. Es decir, el código generado no tiene más permisos que el ensamblado que lo emite. Esto permite que las bibliotecas que emiten código sean transparentes en seguridad y quita la necesidad de validar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, de manera que escribir una biblioteca segura no requiere este tipo de revisión exhaustiva de la seguridad.  
+>  Antes de .NET Framework 3.5, la emisión de código requería <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>. Este permiso está incluido de forma predeterminada en los conjuntos de permisos con nombre `FullTrust` e `Intranet`, pero no en el conjunto de permisos `Internet`. Por tanto, se podría usar una biblioteca de confianza parcial solo si tuviera el atributo <xref:System.Security.SecurityCriticalAttribute> y también se ejecutara un método <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Estas bibliotecas requieren una revisión cuidadosa de la seguridad porque los errores de codificación pueden provocar vulnerabilidades de seguridad. .NET Framework 3.5 permite emitir código en escenarios de confianza parcial sin emitir ninguna petición de seguridad, porque la generación de código no es en sí una operación que requiera privilegios. Es decir, el código generado no tiene más permisos que el ensamblado que lo emite. Esto permite que las bibliotecas que emiten código sean transparentes en seguridad y quita la necesidad de validar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, de manera que escribir una biblioteca segura no requiere este tipo de revisión exhaustiva de la seguridad.  
   
  En este tutorial se muestran las tareas siguientes:  
   

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41a88b7a9197a19a131cbda078297a96acdabfb
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 39ca7ca02c2bb1050653daf1b53450533cc950dd
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457494"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490971"
 ---
 # <a name="introduction-to-plinq"></a>Introducción a PLINQ
 
 ## <a name="what-is-a-parallel-query"></a>¿Qué es una consulta en paralelo?
 
-Language Integrated Query (LINQ) apareció por primera vez en [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Ofrece un modelo unificado para consultar cualquier origen de datos <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> en un modo con seguridad de tipos. LINQ to Objects es el nombre de las consultas LINQ que se ejecutan en colecciones en memoria, como <xref:System.Collections.Generic.List%601> y matrices. En este artículo, se da por echo que posee un conocimiento básico de LINQ. Para obtener más información, vea [Language Integrated Query (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) o [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).
+Language Integrated Query (LINQ) apareció por primera vez en .NET Framework 3.5. Ofrece un modelo unificado para consultar cualquier origen de datos <xref:System.Collections.IEnumerable?displayProperty=nameWithType> o <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> en un modo con seguridad de tipos. LINQ to Objects es el nombre de las consultas LINQ que se ejecutan en colecciones en memoria, como <xref:System.Collections.Generic.List%601> y matrices. En este artículo, se da por echo que posee un conocimiento básico de LINQ. Para obtener más información, vea [Language Integrated Query (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md) o [Language Integrated Query (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md).
 
 Parallel LINQ (PLINQ) es una implementación en paralelo del modelo LINQ. En muchos sentidos, una consulta PLINQ se parece a una consulta LINQ to Objects no en paralelo. Las consultas PLINQ, al igual que las consultas [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] en secuencia, funcionan en cualquier origen de datos <xref:System.Collections.IEnumerable> o <xref:System.Collections.Generic.IEnumerable%601> en memoria y tienen ejecución aplazada, lo que significa que no se empiezan a ejecutar hasta que se enumera la consulta. La principal diferencia es que PLINQ intenta usar completamente todos los procesadores del sistema. Para ello, crea particiones del origen de datos en segmentos y, luego, ejecuta la consulta en cada segmento en subprocesos de trabajo independientes en paralelo en varios procesadores. En muchos casos, la ejecución en paralelo significa que la consulta se ejecuta considerablemente más rápido.
 
@@ -36,7 +36,7 @@ En el resto del artículo se ofrece información general de las principales clas
 
 La clase <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> expone casi toda la funcionalidad de PLINQ. Junto con el resto de los tipos de espacios de nombres <xref:System.Linq?displayProperty=nameWithType>, se compilan en el ensamblado System.Core.dll. Los proyectos C# y Visual Basic predeterminados en Visual Studio hacen referencia al ensamblado e importan el espacio de nombres.
 
-<xref:System.Linq.ParallelEnumerable> incluye implementaciones de todos los operadores de consulta estándar que LINQ to Objects admite, a pesar de que no intenta ejecutar en paralelo cada uno de ellos. Si no está familiarizado con [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], vea los artículos sobre [introducción a LINQ (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md) e [introducción a LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
+<xref:System.Linq.ParallelEnumerable> incluye implementaciones de todos los operadores de consulta estándar que LINQ to Objects admite, a pesar de que no intenta ejecutar en paralelo cada uno de ellos. Si no está familiarizado con [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], vea los artículos sobre [introducción a LINQ (C#)](../../csharp/programming-guide/concepts/linq/index.md) e [introducción a LINQ (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md).
 
 Además de los operadores de consulta estándar, la clase <xref:System.Linq.ParallelEnumerable> contiene un conjunto de métodos que permiten comportamientos específicos de la ejecución en paralelo. Estos métodos específicos de PLINQ se muestran en la tabla siguiente.
 

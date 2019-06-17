@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700616"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833498"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Búferes de tamaño fijo (Guía de programación de C#)
 
@@ -40,7 +40,7 @@ En el ejemplo anterior se muestra cómo acceder a campos `fixed` sin anclar, lo 
 Otra matriz de tamaño fijo común es la matriz [bool](../../language-reference/keywords/bool.md). Los elementos de una matriz `bool` siempre tienen un byte de tamaño. Las matrices `bool` no son adecuadas para crear matrices de bits o búferes.
 
 > [!NOTE]
-> Con excepción de la memoria creada con [stackalloc](../../language-reference/keywords/stackalloc.md), el compilador de C# y Common Language Runtime (CLR) no realizan ninguna comprobación de saturación del búfer de seguridad. Como sucede con todo código no seguro, se ha de tener precaución.
+> Con excepción de la memoria creada con [stackalloc](../../language-reference/operators/stackalloc.md), el compilador de C# y Common Language Runtime (CLR) no realizan ninguna comprobación de saturación del búfer de seguridad. Como sucede con todo código no seguro, se ha de tener precaución.
 
 Los búferes no seguros son diferentes de las matrices normales en los siguientes puntos:
 

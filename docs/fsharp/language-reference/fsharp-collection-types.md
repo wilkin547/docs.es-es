@@ -2,12 +2,12 @@
 title: Tipos de colección F#
 description: Obtenga información sobre F# tipos de colección y cómo se diferencian de los tipos de colección en .NET Framework.
 ms.date: 05/16/2016
-ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b370d850deaacc961dff9515ffa8c20634af4ed6
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996819"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041723"
 ---
 # <a name="f-collection-types"></a>Tipos de colección F#
 
@@ -83,6 +83,7 @@ Esta sección comparan las funciones que están disponibles en F# tipos de colec
 |iteri|O(N)|O(N)|O(N)|-|-|Aplica la función especificada a cada elemento de la colección. El entero que se pasa a la función indica el índice del elemento.|
 |iteri2|O(N)|O(N)|-|-|-|Aplica la función especificada a un par de elementos que se extraen de los índices correspondientes de dos matrices. El entero que se pasa a la función indica el índice de los elementos. Las dos matrices deben tener la misma longitud.|
 |iter2|O(N)|O(N)|O(N)|-|-|Aplica la función especificada a un par de elementos que se extraen de los índices correspondientes de dos matrices. Las dos matrices deben tener la misma longitud.|
+|last|O(1)|O(N)|O(N)|-|-|Devuelve el último elemento de la colección aplicable.|
 |longitud|O(1)|O(N)|O(N)|-|-|Devuelve el número de elementos de la colección.|
 |map|O(N)|O(N)|O(1)|-|-|Compila una colección cuyos elementos son el resultado de aplicar la función especificada a cada elemento de la matriz.|
 |map2|O(N)|O(N)|O(1)|-|-|Compila una colección cuyos elementos son el resultado de aplicar la función especificada a los elementos correspondientes de las dos colecciones en pares. Las dos matrices de entrada deben tener la misma longitud.|
@@ -140,7 +141,7 @@ Esta sección comparan las funciones que están disponibles en F# tipos de colec
 |unzip|O(N)|O(N)|O(N)|-|-|Divide una lista de pares en dos listas.|
 |unzip3|O(N)|O(N)|O(N)|-|-|Divide una lista de triples en tres listas.|
 |división de particiones|-|-|O(N)|-|-|Devuelve una secuencia que genera ventanas deslizantes de que contiene los elementos que se extraen de la secuencia de entrada. Cada ventana se devuelve como una matriz nueva.|
-|ZIP|O(N)|O(N)|O(N)|-|-|Combina las dos colecciones en una lista de pares. Las dos listas deben tener la misma longitud.|
+|zip|O(N)|O(N)|O(N)|-|-|Combina las dos colecciones en una lista de pares. Las dos listas deben tener la misma longitud.|
 |zip3|O(N)|O(N)|O(N)|-|-|Combina las tres colecciones en una lista de triples. Las listas deben tener la misma longitud.|
 
 ## <a name="see-also"></a>Vea también

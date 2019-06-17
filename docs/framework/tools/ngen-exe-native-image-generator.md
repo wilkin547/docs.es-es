@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457419"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489668"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 
 El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el rendimiento de las aplicaciones administradas. Ngen.exe crea imágenes nativas, que son archivos que contienen código máquina compilado específicamente para un procesador, e instala estas imágenes en la memoria caché de imágenes nativas del equipo local. El runtime puede usar imágenes nativas de la memoria caché en lugar de usar el compilador Just-In-Time (JIT) para compilar el ensamblado original.
 
-Cambios en Ngen.exe en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]:
+Cambios en Ngen.exe en .NET Framework 4:
 
 - Ahora, Ngen.exe compila los ensamblados con plena confianza y ya no se evalúa la directiva de seguridad de acceso del código (CAS).
 
@@ -77,7 +77,7 @@ En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ve
 |Acción|Descripción|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Genera imágenes nativas para un ensamblado y sus dependencias e instala las imágenes en la memoria caché de imágenes nativas.<br /><br /> Si se especifica `/queue`, la acción se pone en la cola del servicio de imágenes nativas. La prioridad predeterminada es 3. Consulte la tabla [Niveles de prioridad](#PriorityTable).|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina las imágenes nativas de un ensamblado y sus dependencias de la memoria caché de imágenes nativas.<br /><br /> Para desinstalar una imagen y sus dependencias, use los mismos argumentos de la línea de comandos que usó para instalar la imagen. **Nota:**  A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], ya no se admite la acción `uninstall` *.|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Elimina las imágenes nativas de un ensamblado y sus dependencias de la memoria caché de imágenes nativas.<br /><br /> Para desinstalar una imagen y sus dependencias, use los mismos argumentos de la línea de comandos que usó para instalar la imagen. **Nota:**  A partir de .NET Framework 4:, ya no se admite la acción `uninstall` *.|
 |`update` [`/queue`]|Actualiza las imágenes nativas que han dejado de ser válidas.<br /><br /> Si se especifica `/queue`, las actualizaciones se ponen en la cola del servicio de imágenes nativas. Las actualizaciones siempre se programan con una prioridad de 3, por lo que se ejecutan cuando el equipo se encuentra inactivo.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Muestra el estado de las imágenes nativas para un ensamblado y sus dependencias.<br /><br /> Si no se proporciona ningún argumento, se muestra todo el contenido de la memoria caché de imágenes nativas.|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> o bien<br /><br /> `eqi` [1&#124;2&#124;3]|Ejecuta los trabajos de compilación en cola.<br /><br /> Si se especifica una prioridad, se ejecutan los trabajos de compilación con una prioridad mayor o igual a la especificada. Si no se especifica ninguna prioridad, se ejecutan todos los trabajos de compilación en cola.|
@@ -137,7 +137,7 @@ En la tabla siguiente se muestra la sintaxis de cada acción (`action`). Para ve
 Para ejecutar Ngen.exe, es necesario disponer de privilegios administrativos.
 
 > [!CAUTION]
-> No ejecute Ngen.exe en ensamblados que no son de plena confianza. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], Ngen.exe compila los ensamblados con plena confianza y ya no se evalúa la directiva de seguridad de acceso del código (CAS).
+> No ejecute Ngen.exe en ensamblados que no son de plena confianza. A partir de .NET Framework 4, Ngen.exe compila los ensamblados con plena confianza y ya no se evalúa la directiva de seguridad de acceso del código (CAS).
 
 A partir de .NET Framework 4, las imágenes nativas que se generan con Ngen.exe ya no se pueden cargar en las aplicaciones que se están ejecutando con confianza parcial. En su lugar, se invoca el compilador Just-In-Time (JIT).
 

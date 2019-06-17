@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01c82f2867097b98b04727592cf72c29712075ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b553ec62cf493b94b87079cddd3ec3d1d60daf9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664529"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491011"
 ---
 # <a name="when-to-use-generic-collections"></a>Cuándo utilizar colecciones genéricas
 Generalmente se recomienda usar colecciones genéricas, ya que se obtiene la ventaja inmediata de la seguridad de tipos sin necesidad de derivar de un tipo de colección base ni de implementar miembros específicos de tipo. Los tipos de colección genéricos también suelen funcionan mejor que los correspondientes tipos de colección no genéricos (y mejor que los tipos que se derivan de los tipos de colección base no genéricos) cuando los elementos de la colección son tipos de valor; esto se debe a que con los genéricos no es necesario realizar una conversión boxing de los elementos.  
   
- En programas destinados a [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] o una versión posterior, utilice las clases de colección genérica en el espacio de nombres <xref:System.Collections.Concurrent> cuando varios subprocesos puedan agregar o quitar elementos de la colección al mismo tiempo.  
+ En programas destinados a .NET Framework 4 o una versión posterior, utilice las clases de colección genérica en el espacio de nombres <xref:System.Collections.Concurrent> cuando varios subprocesos puedan agregar o quitar elementos de la colección al mismo tiempo.  
   
  Los siguientes tipos genéricos corresponden a los tipos de colección existentes:  
   

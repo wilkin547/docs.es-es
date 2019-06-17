@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457264"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816053"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
-A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
+A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
   
 ## <a name="background"></a>Fondo  
  .NET Framework siempre ha proporcionado hospedaje en paralelo para aplicaciones de código administrado, pero antes de .NET Framework 4, no proporcionaba esta funcionalidad para los componentes COM administrados. Anteriormente, los componentes COM administrados que se cargaban en un proceso se ejecutaban con la versión del tiempo de ejecución que ya se había cargado o con la última versión instalada de .NET Framework. Si esta versión no era compatible con el componente COM, se producía un error en el componente.  
@@ -56,7 +56,7 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
   
      Qué se debe hacer: en este escenario, no haga nada. Los componentes COM se ejecutarán con la versión de .NET Framework con la que se han registrado.  
   
-- **Escenario 2**: aplicación administrada compilada con [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] que preferiblemente debería ejecutarse con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], pero que se puede ejecutar en .NET Framework 4 si la versión 2.0 no está presente.  
+- **Escenario 2**: aplicación administrada compilada con .NET Framework 2.0  SP1 que preferiblemente debería ejecutarse con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], pero que se puede ejecutar en .NET Framework 4 si la versión 2.0 no está presente.  
   
      Versiones de .NET Framework instaladas: Versión anterior de .NET Framework y .NET Framework 4.  
   
@@ -88,7 +88,7 @@ A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], pued
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra un host COM no administrado que está ejecutando un componente COM administrado mediante la versión de .NET Framework que el componente debe usar de acuerdo con su compilación.  
   
- Para ejecutar el ejemplo que se muestra a continuación, compile y registre el siguiente componente COM administrado con [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Para registrar el componente, en el menú **Proyecto**, haga clic en **Propiedades**, en la pestaña **Compilar** y, después, active la casilla **Registrar para interoperabilidad COM**.  
+ Para ejecutar el ejemplo que se muestra a continuación, compile y registre el siguiente componente COM administrado con .NET Framework 3.5. Para registrar el componente, en el menú **Proyecto**, haga clic en **Propiedades**, en la pestaña **Compilar** y, después, active la casilla **Registrar para interoperabilidad COM**.  
   
 ```csharp
 using System;  

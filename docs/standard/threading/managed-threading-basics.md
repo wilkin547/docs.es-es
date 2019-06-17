@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: a47946ab8eb26045e641c44642bfe7a026269f3d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960360"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486344"
 ---
 # <a name="managed-threading-basics"></a>Principios básicos del subprocesamiento administrado
 
@@ -24,7 +24,7 @@ Los cinco primeros temas de esta sección están diseñados para ayudarle a dete
  En el resto de los temas de esta sección se tratan cuestiones más avanzadas, incluida la interacción del subproceso administrado con el sistema operativo Windows.  
   
 > [!NOTE]
->  En [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la biblioteca TPL y PLINQ proporcionan API para el paralelismo de tareas y datos en programas multiproceso. Para más información, consulte [Parallel Programming](../../../docs/standard/parallel-programming/index.md) (Programación en paralelo).  
+>  En .NET Framework 4, la biblioteca TPL y PLINQ proporcionan API para el paralelismo de tareas y datos en programas multiproceso. Para más información, consulte [Parallel Programming](../../../docs/standard/parallel-programming/index.md) (Programación en paralelo).  
   
 ## <a name="in-this-section"></a>En esta sección
 

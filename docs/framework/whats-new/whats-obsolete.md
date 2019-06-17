@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7db411e9ef38adb42c8df2059d166d1fa4184f95
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 810f49581d4cb28987ea41237645f75c50388084
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378374"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690479"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Lo obsoleto en la biblioteca de clases de .NET Framework
 
@@ -43,7 +43,7 @@ Al actualizar y volver a compilar el código existente, el uso de un tipo o miem
 
 - Revise la documentación para que esta área de tecnología determine cómo responder al desuso.
 
-Puede decidir no volver a compilar un código existente con una versión posterior de .NET Framework. En su lugar, puede especificar la versión de .NET Framework con la que se ejecuta el código compilado existente. Por ejemplo, supongamos que tiene una aplicación llamada app1.exe compilada con [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)], pero quiere que la aplicación se ejecute con .NET Framework 4.5. Para ello, siga estos pasos:
+Puede decidir no volver a compilar un código existente con una versión posterior de .NET Framework. En su lugar, puede especificar la versión de .NET Framework con la que se ejecuta el código compilado existente. Por ejemplo, supongamos que tiene una aplicación llamada app1.exe compilada con .NET Framework 3.5, pero quiere que la aplicación se ejecute con .NET Framework 4.5. Para ello, siga estos pasos:
 
 1. Cree un archivo de configuración para el ejecutable principal y denomínelo *appName*.exe.config, donde *appName* es el nombre del ejecutable de la aplicación. Para la aplicación denominada app1.exe en nuestro ejemplo, va a crear un archivo de configuración denominado app1.exe.config.
 

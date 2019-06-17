@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195574"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690661"
 ---
 # <a name="best-practices-for-exceptions"></a>Procedimientos recomendados para excepciones
 
@@ -56,7 +56,7 @@ Una clase puede proporcionar métodos o propiedades que permiten evitar realizar
 
 Otro modo de evitar excepciones es devolver un valor NULL (o el valor predeterminado) para los casos de errores muy frecuentes en lugar de iniciar una excepción. Un caso de error muy común se puede considerar como un flujo de control normal. Al devolver un valor NULL en estos casos, se minimiza el impacto en el rendimiento de una aplicación.
 
-Para los tipos de valores, el uso de valores NULL<T> o de valores predeterminados como indicador de error es algo a tener en cuenta para la aplicación en particular. Al utilizar `Nullable<Guid>`, `default` se convierte en `null` en lugar de `Guid.Empty`. Algunas veces, agregar `Nullable<T>` puede aclarar cuando un valor está presente o ausente. Otras veces, agregar `Nullable<T>` puede crear casos adicionales para comprobar que no son necesarios, y solo sirven para crear posibles orígenes de errores. 
+Para los tipos de valores, el uso de `Nullable<T>` o de valores predeterminados como indicador de error es algo que se debe tener en cuenta para la aplicación en particular. Al utilizar `Nullable<Guid>`, `default` se convierte en `null` en lugar de `Guid.Empty`. Algunas veces, agregar `Nullable<T>` puede aclarar cuando un valor está presente o ausente. Otras veces, agregar `Nullable<T>` puede crear casos adicionales para comprobar que no son necesarios, y solo sirven para crear posibles orígenes de errores. 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Iniciar excepciones en lugar de devolver un código de error
 

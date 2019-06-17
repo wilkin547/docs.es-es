@@ -3,12 +3,12 @@ title: Escritura de código C# seguro y eficaz
 description: Las mejoras aplicadas recientemente al lenguaje C# permiten escribir código seguro verificable que anteriormente se hubiera asociado a código no seguro.
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753887"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832943"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escritura de código C# seguro y eficaz
 
@@ -189,7 +189,7 @@ Puede consultar un programa de ejemplo en el que se muestran las diferencias de 
 
 Una característica de lenguaje relacionada es la capacidad de declarar un tipo de valor que debe limitarse a un solo marco de pila. Esta restricción permite al compilador aplicar una serie de optimizaciones. La principal motivación para esta característica era <xref:System.Span%601> y las estructuras relacionadas. Conseguirá mejoras en el rendimiento a partir de estas optimizaciones usando las API de .NET nuevas y actualizadas que utilizan el tipo <xref:System.Span%601>.
 
-Puede tener requisitos similares al trabajar con memoria creada mediante [`stackalloc`](language-reference/keywords/stackalloc.md) o al usar memoria de las API de interoperabilidad. Puede definir sus propios tipos de `ref struct` para esas necesidades.
+Puede tener requisitos similares al trabajar con memoria creada mediante [`stackalloc`](language-reference/operators/stackalloc.md) o al usar memoria de las API de interoperabilidad. Puede definir sus propios tipos de `ref struct` para esas necesidades.
 
 ## <a name="readonly-ref-struct-type"></a>Tipo de `readonly ref struct`
 

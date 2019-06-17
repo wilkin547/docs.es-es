@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed4533c934120c3400ddba68e65bc82aabc9370
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456774"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486976"
 ---
 # <a name="resolving-assembly-loads"></a>resolver cargas de ensamblado
 .NET Framework proporciona el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicaciones que requieren un mayor control sobre la carga de ensamblados. Al controlar este evento, la aplicación puede cargar un ensamblado en el contexto de carga desde fuera de las rutas de acceso de sondeo normales, seleccionar qué versión de ensamblado cargar, emitir un ensamblado dinámico y devolverlo, etc. En este tema se proporcionan instrucciones para controlar el evento <xref:System.AppDomain.AssemblyResolve>.  
@@ -52,7 +52,7 @@ ms.locfileid: "66456774"
 > [!NOTE]
 >  El controlador debe cargar el ensamblado en el contexto de origen de carga, en el contexto de carga o sin contexto. Si el controlador carga el ensamblado en el contexto de solo reflexión mediante el método <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, se produce un error en el intento de carga que ha provocado el evento <xref:System.AppDomain.AssemblyResolve>.  
   
- El controlador de eventos se encarga de devolver un ensamblado adecuado. El controlador puede analizar el nombre para mostrar del ensamblado solicitado. Para ello, pasa el valor de propiedad <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> al constructor <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], el controlador puede usar la propiedad <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> para determinar si la solicitud actual es una dependencia de otro ensamblado. Esta información puede ayudar a identificar un ensamblado que cumplirá la dependencia.  
+ El controlador de eventos se encarga de devolver un ensamblado adecuado. El controlador puede analizar el nombre para mostrar del ensamblado solicitado. Para ello, pasa el valor de propiedad <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> al constructor <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. A partir de .NET Framework 4, el controlador puede usar la propiedad <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> para determinar si la solicitud actual es una dependencia de otro ensamblado. Esta información puede ayudar a identificar un ensamblado que cumplirá la dependencia.  
   
  El controlador de eventos puede devolver una versión del ensamblado diferente de la versión solicitada.  
   

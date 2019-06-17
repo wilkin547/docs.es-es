@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3183f8434dd8a6bc8182e2257d0ab3c7e7c014c4
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880328"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833438"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de puntero (Guía de programación de C#)
 
@@ -45,7 +45,7 @@ Un puntero no puede señalar a una referencia ni a un [struct](../../language-re
 
 El valor de la variable de puntero de tipo `myType*` es la dirección de una variable de tipo `myType`. A continuación se muestran ejemplos de declaraciones de tipos de puntero:
 
-|Ejemplo|Descripción|
+|Ejemplo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`int* p`|`p` es un puntero a un entero.|
 |`int** p`|`p` es un puntero a un puntero a un entero.|
@@ -82,7 +82,7 @@ En la tabla siguiente se muestran los operadores e instrucciones que pueden func
 |`++` y `--`|Incrementa y disminuye los punteros.|
 |`+` y `-`|Realiza aritmética con punteros.|
 |`==`, `!=`, `<`, `>`, `<=` y `>=`|Compara los punteros.|
-|[`stackalloc` operator](../../language-reference/keywords/stackalloc.md)|Asigna memoria en la pila.|
+|[`stackalloc` operator](../../language-reference/operators/stackalloc.md)|Asigna memoria en la pila.|
 |[Instrucción `fixed`](../../language-reference/keywords/fixed-statement.md)|Fija provisionalmente una variable para que pueda encontrarse su dirección.|
 
 Para obtener más información sobre los operadores relacionados con el puntero, vea [Operadores relacionados con el puntero](../../language-reference/operators/pointer-related-operators.md).

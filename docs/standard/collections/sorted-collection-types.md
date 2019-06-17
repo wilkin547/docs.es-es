@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2b8866d3a1922988518dfe2857c98d4725cc464
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 96841d23da342fdb4da6c7d53420d6c3319f75c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664556"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491023"
 ---
 # <a name="sorted-collection-types"></a>Tipos de colecciones ordenadas
 La clase <xref:System.Collections.SortedList?displayProperty=nameWithType>, la clase genérica <xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> y la clase genérica <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> son similares a la clase <xref:System.Collections.Hashtable> y a la clase genérica <xref:System.Collections.Generic.Dictionary%602> en que implementan la interfaz <xref:System.Collections.IDictionary>, pero mantienen sus elementos en el criterio de ordenación mediante la clave, y no tienen la inserción O(1) y la característica de recuperación de las tablas hash. Las tres clases tienen varias características en común:  
@@ -46,7 +46,7 @@ La clase <xref:System.Collections.SortedList?displayProperty=nameWithType>, la c
 > [!NOTE]
 >  Para los valores que contienen sus propias claves (por ejemplo, registros de empleados que contienen un número de id. de empleado), puede derivar de la clase genérica <xref:System.Collections.ObjectModel.KeyedCollection%602> para crear una colección con clave que tenga algunas características de lista y algunas características de diccionario.  
   
- A partir de [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la clase <xref:System.Collections.Generic.SortedSet%601> proporciona un árbol que mantiene los datos ordenados después de las inserciones, eliminaciones y búsquedas. Esta clase y la clase <xref:System.Collections.Generic.HashSet%601> implementan la interfaz <xref:System.Collections.Generic.ISet%601>.  
+ A partir de .NET Framework 4, la clase <xref:System.Collections.Generic.SortedSet%601> proporciona un árbol que mantiene los datos ordenados después de las inserciones, eliminaciones y búsquedas. Esta clase y la clase <xref:System.Collections.Generic.HashSet%601> implementan la interfaz <xref:System.Collections.Generic.ISet%601>.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca809c28e7d55d7b899809c2fd514c073dd73054
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543178"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490991"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Cuándo usar una colección segura para subprocesos
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] presenta cinco nuevos tipos de colección que están especialmente diseñadas para admitir operaciones multiproceso de agregar y quitar. Para obtener seguridad para los subprocesos, estos nuevos tipos usan diversas clases de mecanismos de sincronización eficientes con bloqueo y sin bloqueo. La sincronización agrega sobrecarga a las operaciones. La cantidad de sobrecarga depende del tipo de sincronización que se use, el tipo de operaciones que se realicen y otros factores, como el número de subprocesos que intentan obtener acceso simultáneamente a la colección.  
+.NET Framework 4 presenta cinco nuevos tipos de colección que están especialmente diseñadas para admitir operaciones multiproceso de agregar y quitar. Para obtener seguridad para los subprocesos, estos nuevos tipos usan diversas clases de mecanismos de sincronización eficientes con bloqueo y sin bloqueo. La sincronización agrega sobrecarga a las operaciones. La cantidad de sobrecarga depende del tipo de sincronización que se use, el tipo de operaciones que se realicen y otros factores, como el número de subprocesos que intentan obtener acceso simultáneamente a la colección.  
   
  En algunos escenarios, la sobrecarga de la sincronización es insignificante y permite que el tipo multiproceso funcione mucho más rápido y aumente de tamaño mucho mejor que su equivalente no seguro para subprocesos cuando está protegido por un bloqueo externo. En otros escenarios, la sobrecarga puede hacer que el tipo seguro para subprocesos funcione y aumente de tamaño más o menos igual o incluso más lentamente que la versión del tipo no segura para subprocesos bloqueada externamente.  
   

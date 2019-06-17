@@ -2,15 +2,17 @@
 title: Información general de LINQ to XML (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 2394151d855d75b418616d9fa1a6f69b08cdef86
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a9435027a7487af96227fdc7a0eae6f511d82b23
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585740"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484351"
 ---
 # <a name="linq-to-xml-overview-c"></a>Información general de LINQ to XML (C#)
 
+LINQ to XML proporciona una interfaz de programación XML en memoria que aprovecha .NET Language-Integrated Query (LINQ) Framework. LINQ to XML utiliza las características de .NET y es comparable a una actualizada y rediseñada interfaz de programación XML para el Modelo de objetos de documento (DOM). 
+ 
 XML se ha adoptado ampliamente como un modo de dar formato a datos en diversos contextos. Por ejemplo, puede encontrar XML en la web, en archivos de configuración, en archivos de Microsoft Office Word y en bases de datos.
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] es un método actualizado y rediseñado para la programación con XML. Proporciona capacidades de modificación de documento en memoria de Document Object Model (DOM), y es compatible con expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Aunque estas expresiones de consulta difieren sintácticamente de XPath, proporcionan una funcionalidad similar.
@@ -114,9 +116,11 @@ new XElement("Contacts",
 );
 ```
 
-Para obtener más información, consulte [Crear árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md).
+Para obtener más información, consulte [Crear árboles XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md).
 
 ## <a name="see-also"></a>Vea también
 
+- [Referencia (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/reference-linq-to-xml.md)
+- [LINQ to XML frente a DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML frente a otras tecnologías XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
 - <xref:System.Xml.Linq>
-- [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

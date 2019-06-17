@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f25ffb16fa5feb382bb42c737440317cfb777b1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b996b60a08a55b1d8e86878974be4887ea2684f8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666318"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490822"
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> es un primitivo de sincronización que desbloquea los subprocesos de espera después de haber sido señalado un número de veces determinado. <xref:System.Threading.CountdownEvent> está diseñado para escenarios en los que de lo contrario se tendría que usar <xref:System.Threading.ManualResetEvent> o <xref:System.Threading.ManualResetEventSlim> y disminuir manualmente una variable antes de señalar el evento. Por ejemplo, en un escenario de bifurcación/combinación, puede crear simplemente una clase <xref:System.Threading.CountdownEvent> que tiene un recuento de señal de 5 y, a continuación, iniciar cinco elementos de trabajo del grupo de subprocesos y realizar cada llamada <xref:System.Threading.CountdownEvent.Signal%2A> del elemento de trabajo cuando se completa. Cada llamada a <xref:System.Threading.CountdownEvent.Signal%2A> disminuye el recuento de señales en 1. En el subproceso principal, la llamada a <xref:System.Threading.CountdownEvent.Wait%2A> se bloqueará hasta que el recuento de señales sea cero.  
@@ -40,7 +40,7 @@ ms.locfileid: "64666318"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>CountdownEvent con cancelación  
- En el ejemplo siguiente se muestra cómo cancelar la operación de espera en <xref:System.Threading.CountdownEvent> utilizando un token de cancelación. El patrón básico sigue el modelo de cancelación unificada, que se introdujo en [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
+ En el ejemplo siguiente se muestra cómo cancelar la operación de espera en <xref:System.Threading.CountdownEvent> utilizando un token de cancelación. El patrón básico sigue el modelo de cancelación unificada, que se introdujo en .NET Framework 4. Para más información, consulte el tema sobre la [cancelación en subprocesos administrados](../../../docs/standard/threading/cancellation-in-managed-threads.md).  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  

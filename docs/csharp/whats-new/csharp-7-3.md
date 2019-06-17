@@ -2,12 +2,12 @@
 title: Novedades de C# 7.3
 description: Información general sobre las nuevas características en C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58028676"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832708"
 ---
 # <a name="whats-new-in-c-73"></a>Novedades de C# 7.3
 
@@ -112,7 +112,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-Para más información, vea el artículo sobre la [instrucción `stackalloc`](../language-reference/keywords/stackalloc.md) en la referencia del lenguaje.
+Para obtener más información, vea el artículo [Operador `stackalloc`](../language-reference/operators/stackalloc.md).
 
 ### <a name="more-types-support-the-fixed-statement"></a>Hay más tipos compatibles con la instrucción `fixed`
 

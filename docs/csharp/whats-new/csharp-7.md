@@ -3,12 +3,12 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753060"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815972"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
@@ -222,7 +222,7 @@ Cambiar un método a un miembro con cuerpo de expresión es un [cambio compatibl
 
 ## <a name="throw-expressions"></a>Expresiones throw
 
-En C#, `throw` siempre ha sido una instrucción. Como `throw` es una instrucción, no una expresión, había construcciones de C# en las que no se podía usar. Incluyen expresiones condicionales, expresiones de fusión nulas y algunas expresiones lambda. La incorporación de miembros con forma de expresión agrega más ubicaciones donde las expresiones `throw` resultarían útiles. Para que pueda escribir cualquiera de estas construcciones, C# 7.0 presenta las *expresiones throw*.
+En C#, `throw` siempre ha sido una instrucción. Como `throw` es una instrucción, no una expresión, había construcciones de C# en las que no se podía usar. Incluyen expresiones condicionales, expresiones de fusión nulas y algunas expresiones lambda. La incorporación de miembros con forma de expresión agrega más ubicaciones donde las expresiones `throw` resultarían útiles. Para que pueda escribir cualquiera de estas construcciones, C# 7.0 presenta las [*expresiones throw*](../language-reference/keywords/throw.md#the-throw-expression).
 
 Esta adición facilita la escritura de código más basado en expresiones. No se necesitan instrucciones adicionales para la comprobación de errores.
 

@@ -2,12 +2,12 @@
 title: Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 description: Descubra las opciones para orquestar microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad de las posibilidades de espacios de desarrollo de Azure durante el desarrollo del ciclo de vida de aplicación de Kubernetes.
 ms.date: 09/20/2018
-ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 76fa68cee41f8d1f34ec399c346f457efae57151
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196037"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815844"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orquestación de microservicios y aplicaciones de varios contenedores para una alta escalabilidad y disponibilidad
 
@@ -27,7 +27,7 @@ Para ir más allá de la administración de contenedores individuales o aplicaci
 
 Desde el punto de vista de la arquitectura y el desarrollo, si está compilando grandes aplicaciones empresariales basadas en microservicios, es importante familiarizarse con las siguientes plataformas y productos que admiten escenarios avanzados:
 
-**Clústeres y orquestadores**. Cuando se necesita escalar horizontalmente las aplicaciones a varios hosts de Docker, como con una aplicación grande basada en microservicios, es fundamental poder administrar todos los hosts como un solo clúster mediante la abstracción de la complejidad de la plataforma subyacente. Eso es lo que proporcionan los clústeres de contenedor y los orquestadores. Azure Service Fabric y Kubernetes son ejemplos de orquestadores. Kubernetes está disponible en Azure a través de Azure Kubernetes Service.
+**Clústeres y orquestadores**. Cuando se necesita escalar horizontalmente las aplicaciones a varios hosts de Docker, como con una aplicación grande basada en microservicios, es fundamental poder administrar todos los hosts como un solo clúster mediante la abstracción de la complejidad de la plataforma subyacente. Eso es lo que proporcionan los clústeres de contenedor y los orquestadores. Kubernetes es un ejemplo de orquestador, y está disponible en Azure a través de Azure Kubernetes Service.
 
 **Programadores**. *Programar* significa tener la capacidad de que un administrador inicie los contenedores de un clúster, y de proporcionar también una interfaz de usuario. Un programador de clúster tiene varias responsabilidades: usar eficazmente los recursos del clúster, establecer las restricciones definidas por el usuario, equilibrar eficazmente la carga de los contenedores entre los distintos nodos o hosts, ser resistente a los errores y proporcionar un alto grado de disponibilidad.
 
@@ -51,31 +51,9 @@ Los conceptos de un clúster y un programador están estrechamente relacionados,
 
 > [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) es un servicio administrado de orquestación de contenedores de Kubernetes en Azure que simplifica la administración, implementación y operaciones del clúster de Kubernetes.
 
-### <a name="azure-service-fabric"></a>Azure Service Fabric
-
-![Logotipo de Azure Service Fabric](./media/image27.png)
-
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) es una plataforma de microservicios de Microsoft para crear aplicaciones. Es un [orquestador](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) de servicios y crea clústeres de máquinas. Service Fabric puede implementar servicios como contenedores o procesos estándar. Puede incluso combinar servicios en procesos con servicios en contenedores dentro de la misma aplicación y el mismo clúster.
->
-> Los clústeres de *Service Fabric* pueden implementarse en Azure, de forma local o en cualquier nube. Con todo, la implementación se simplifica en Azure con un enfoque administrado.
->
-> *Service Fabric* proporciona [modelos de programación de Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) prescriptivos adicionales y opcionales como [servicios con estado](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) y [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
->
-> *Service Fabric* está más desarrollado en Windows (con años de evolución en Windows) que en Linux.
->
-> Tanto los contenedores de Linux como los de Windows son compatibles con Service Fabric desde 2017.
-
-### <a name="azure-service-fabric-mesh"></a>Azure Service Fabric Mesh
-
-![Logotipo de Azure Service Fabric Mesh](./media/image35.png)
-
-> [*Azure Service Fabric Mesh*](https://docs.microsoft.com/azure/service-fabric-mesh/service-fabric-mesh-overview) ofrece el mismo nivel de fiabilidad, rendimiento crítico y escala que Service Fabric, pero ofrece una plataforma totalmente administrada y sin servidor. No es necesario administrar un clúster, las máquinas virtuales, el almacenamiento o la configuración de red. Puede centrarse en el desarrollo de la aplicación.
->
-> *Service Fabric Mesh* admite contenedores de Windows y Linux, lo que permite desarrollar con cualquier lenguaje de programación y marco de trabajo que elija.
-
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Uso de orquestadores basados en contenedor en Microsoft Azure
 
-Existen varios proveedores de nube que ofrecen compatibilidad con contenedores de Docker más compatibilidad con la orquestación y los clústeres de Docker, como Microsoft Azure, Amazon EC2 Container Service y Google Container Engine. Microsoft Azure proporciona compatibilidad con orquestador y clúster de Docker a través de Azure Kubernetes Service (AKS), Azure Service Fabric y Azure Service Fabric Mesh.
+Existen varios proveedores de nube que ofrecen compatibilidad con contenedores de Docker más compatibilidad con la orquestación y los clústeres de Docker, como Microsoft Azure, Amazon EC2 Container Service y Google Container Engine. Microsoft Azure proporciona compatibilidad con orquestador y clúster de Docker a través de Azure Kubernetes Service (AKS).
 
 ## <a name="using-azure-kubernetes-service"></a>Uso de Azure Kubernetes Service
 
@@ -145,7 +123,7 @@ Para obtener más información, vea el artículo sobre [Desarrollo en equipo con
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Guía de inicio rápido: Implementación de un clúster de Azure Kubernetes Service (AKS)**  \
+- **Guía de inicio rápido: Implementación de un clúster de Azure Kubernetes Service (AKS)** \
   <https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal>
 
 - **Azure Dev Spaces** \
@@ -156,4 +134,4 @@ Para obtener más información, vea el artículo sobre [Desarrollo en equipo con
 
 >[!div class="step-by-step"]
 >[Anterior](resilient-high-availability-microservices.md)
->[Siguiente](using-azure-service-fabric.md)
+>[Siguiente](../docker-application-development-process/index.md)

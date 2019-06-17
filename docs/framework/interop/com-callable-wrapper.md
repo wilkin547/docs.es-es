@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a658a9f706a53697b341463b443c5145a727b4b9
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613257"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758252"
 ---
 # <a name="com-callable-wrapper"></a>Contenedor CCW
 
@@ -186,7 +186,7 @@ Una interfaz dual generada automáticamente puede ser apropiada en algunos casos
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Asegúrese de que todas las notificaciones de eventos COM están enlazadas tardíamente.
 
-De forma predeterminada, la información de tipos COM se inserta directamente en los ensamblados administrados, lo que elimina la necesidad de ensamblados de interoperabilidad primarios (PIA). Sin embargo, una de las limitaciones de la información de tipo insertada es que no admite la entrega de notifications de eventos COM mediante llamadas enlazadas tempranamente vtable, sino que solo admite llamadas `IDispatch::Invoke` enlazadas tardíamente.
+De forma predeterminada, la información de tipos COM se inserta directamente en los ensamblados administrados, lo que elimina la necesidad de ensamblados de interoperabilidad primarios (PIA). Sin embargo, una de las limitaciones de la información de tipo insertada es que no admite la entrega de notificaciones de eventos COM mediante llamadas enlazadas tempranamente vtable, sino que solo admite llamadas `IDispatch::Invoke` enlazadas tardíamente.
 
 Si la aplicación requiere las llamadas enlazadas tempranamente a los métodos de interfaz de eventos COM, puede establecer la propiedad **Incrustar tipos de interoperabilidad** en Visual Studio en `true` o incluir el siguiente elemento en el archivo de proyecto:
 
