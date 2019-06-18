@@ -2,12 +2,12 @@
 title: Procedimiento para crear un diseñador de actividad personalizado
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c6d2ae695a04c85ade6ae4da0b812f4043fa2f6
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945657"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170666"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procedimiento para crear un diseñador de actividad personalizado
 
@@ -17,7 +17,7 @@ Por lo general, los diseñadores de actividad personalizados heredan de <xref:Sy
 
 <xref:System.Activities.Presentation.ActivityDesigner> usa dos controles del asistente, <xref:System.Activities.Presentation.WorkflowItemPresenter> y <xref:System.Activities.Presentation.WorkflowItemsPresenter>, para facilitar el desarrollo de diseñadores de actividad personalizados. Administran funciones comunes como arrastrar y colocar elementos secundarios, además de la eliminación, selección y adición de esos elementos secundarios. El <xref:System.Activities.Presentation.WorkflowItemPresenter> permite un único elemento secundario de elemento de la interfaz de usuario dentro de, que proporciona la "zona de colocación", mientras el <xref:System.Activities.Presentation.WorkflowItemsPresenter> puede proporcionar compatibilidad con varios elementos de interfaz de usuario, incluida funcionalidad adicional como la ordenación, mover, eliminar y adición de elementos secundarios.
 
-El otro elemento importante que se debe destacar en la implementación de un diseñador de actividad personalizado está relacionado con la forma en que las ediciones visuales se enlazan mediante el enlace de datos de [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] a la instancia almacenada en memoria de lo que se está editando en el diseñador. Esto se lleva a cabo mediante el árbol de elementos de modelo, que también es responsable de la habilitación de la notificación de cambios y del seguimiento de eventos como los cambios en los estados.
+El otro elemento importante de la historia que se debe destacar en la implementación de un diseñador de actividad personalizada refiere a la manera en que las ediciones visuales se enlazan mediante enlace de datos WPF a la instancia almacenada en memoria de lo que se está editando en el diseñador. Esto se lleva a cabo mediante el árbol de elementos de modelo, que también es responsable de la habilitación de la notificación de cambios y del seguimiento de eventos como los cambios en los estados.
 
 En este tema se describen dos procedimientos.
 

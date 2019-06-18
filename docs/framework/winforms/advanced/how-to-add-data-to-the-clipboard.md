@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004476"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169950"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>Procedimiento para agregar datos al Portapapeles
 La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la función de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como un repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir datos desde una aplicación a otra.  
@@ -24,7 +24,7 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
   
  Para agregar datos al Portapapeles en uno o varios formatos, utilice el <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> método. Puede pasar cualquier objeto a este método, pero para agregar datos en varios formatos, debe agregar primero los datos a un objeto independiente diseñado para trabajar con varios formatos. Normalmente, agregará los datos a un <xref:System.Windows.Forms.DataObject>, pero puede usar cualquier tipo que implementa el <xref:System.Windows.Forms.IDataObject> interfaz.  
   
- En [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], puede agregar datos directamente en el Portapapeles con nuevos métodos diseñados para facilitar las tareas básicas del Portapapeles. Utilice estos métodos cuando se trabaja con datos en un único formato común, como texto.  
+ En .NET Framework 2.0, puede agregar datos directamente en el Portapapeles con nuevos métodos diseñados para facilitar las tareas básicas del Portapapeles. Utilice estos métodos cuando se trabaja con datos en un único formato común, como texto.  
   
 > [!NOTE]
 >  Todas las aplicaciones basadas en Windows comparten el Portapapeles. Por lo tanto, el contenido está sujeta a cambios cuando se cambia a otra aplicación.  
@@ -35,14 +35,14 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>Para agregar datos al Portapapeles en un solo formato común  
   
-1. Use la <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, o <xref:System.Windows.Forms.Clipboard.SetText%2A> método. Estos métodos solo están disponibles en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Use la <xref:System.Windows.Forms.Clipboard.SetAudio%2A>, <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>, <xref:System.Windows.Forms.Clipboard.SetImage%2A>, o <xref:System.Windows.Forms.Clipboard.SetText%2A> método. Estos métodos solo están disponibles en .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>Para agregar datos al Portapapeles en un formato personalizado  
   
-1. Use el <xref:System.Windows.Forms.Clipboard.SetData%2A> método con un nombre de formato personalizado. Este método solo está disponible en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)].  
+1. Use el <xref:System.Windows.Forms.Clipboard.SetData%2A> método con un nombre de formato personalizado. Este método solo está disponible en .NET Framework 2.0.  
   
      También puede usar nombres de formato predefinidos con el <xref:System.Windows.Forms.Clipboard.SetData%2A> método. Para obtener más información, consulta <xref:System.Windows.Forms.DataFormats>.  
   

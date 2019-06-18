@@ -2,12 +2,12 @@
 title: Usar un editor de expresiones personalizado
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 9d73134c3f17fad618d26f335d89fdab2d99dbdf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7bbd855595bc67f0e2837afd4876ac3690cac776
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650917"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169968"
 ---
 # <a name="using-a-custom-expression-editor"></a>Usar un editor de expresiones personalizado
 Se puede implementar un editor de expresiones personalizado para proporcionar una experiencia de edición de expresiones más sencilla o más enriquecida. Existen varios escenarios en los que se podría desear utilizar un editor de expresiones personalizado:  
@@ -222,7 +222,7 @@ namespace MyExpressionEditorService
 ```  
   
 ### <a name="publishing-a-custom-expression-editor-in-a-wpf-project"></a>Publicar un editor de expresiones personalizado en un proyecto WPF  
- A continuación se incluye el código que muestra cómo hospedar en otro host un diseñador de una aplicación de [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] y cómo crear y publicar el servicio `MyEditorService`. Antes de usar este código, agregue una referencia al proyecto de biblioteca MyExpressionEditorService desde el proyecto que contiene la aplicación avalon2.  
+ Este es el código que muestra cómo hospedar el diseñador en una aplicación WPF en y cómo crear y publicar el `MyEditorService` service. Antes de usar este código, agregue una referencia al proyecto de biblioteca MyExpressionEditorService desde el proyecto que contiene la aplicación avalon2.  
   
 ```  
 using System.Windows;  

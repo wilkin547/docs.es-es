@@ -2,16 +2,16 @@
 title: 'Escenarios de implementación compatibles: WCF'
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 2da55176cbfe618b332f2df210e3e1c0516b17ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025626"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170050"
 ---
 # <a name="supported-deployment-scenarios"></a>Escenarios de implementación admitidos
 
-El subconjunto de las características de Windows Communication Foundation (WCF) que puede usar en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, pero no todos, escenarios de uso de WCF. En el servidor, WCF cumple los requisitos de los proveedores de hospedaje compartidos que ejecutan aplicaciones de terceros en el permiso de confianza medio de ASP.NET 2.0 establecidos por razones de seguridad de la escala de Internet. En el cliente, la compatibilidad de confianza parcial de WCF está diseñado para cumplir los requisitos de tecnologías de implementación como [la implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]de tecnología de aplicación de explorador XAML, lo que permite la conexión directa y segura implementación de aplicaciones de escritorio de sitios de confianza.
+El subconjunto de las características de Windows Communication Foundation (WCF) que puede usar en aplicaciones de confianza parcial está diseñado para cumplir los requisitos de algunos, pero no todos, escenarios de uso de WCF. En el servidor, WCF cumple los requisitos de los proveedores de hospedaje compartidos que ejecutan aplicaciones de terceros en el permiso de confianza medio de ASP.NET 2.0 establecidos por razones de seguridad de la escala de Internet. En el cliente, la compatibilidad de confianza parcial de WCF está diseñado para cumplir los requisitos de tecnologías de implementación como [la implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o tecnología de aplicación de explorador XAML de WPF, que permiten una implementación perfecta y segura de aplicaciones de escritorio de sitios de confianza.
 
 ## <a name="minimum-permission-requirements"></a>Requisitos mínimos de permiso
 
@@ -39,7 +39,7 @@ Para obtener más información, vea [Cómo: Uso de confianza media en ASP.NET 2.
 
 ## <a name="partial-trust-on-the-client"></a>Confianza parcial en el cliente
 
-Se deben tomar ciertas precauciones de seguridad al descargar y ejecutar código desde sitios de Internet que no sean de confianza. Las tecnologías de [ClickOnce Deployment](/visualstudio/deployment/clickonce-security-and-deployment) y de la aplicación de explorador XAML (XBAP) [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]hacen uso de la confianza parcial para conceder permisos limitados (zona de Internet) al código que no sea de confianza.
+Se deben tomar ciertas precauciones de seguridad al descargar y ejecutar código desde sitios de Internet que no sean de confianza. Ambos [la implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) y aprovechar la tecnología la aplicación de explorador de XAML de WPF (XBAP) uso de la confianza parcial para conceder permisos limitados (zona de Internet) al código no seguro.
 
 Se puede usar WCF para comunicarse con servidores remotos desde dentro de aplicaciones de confianza parcial implementadas mediante [la implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) o XBAP. Incluye el conjunto de permisos de zona de Internet <xref:System.Net.WebPermission> para el host de origen, que permite a estas aplicaciones comunicarse con su servidor de origen mediante cualquiera de los enlaces WCF admitidos se describen en [Partial Trust Feature Compatibility ](partial-trust-feature-compatibility.md).
 

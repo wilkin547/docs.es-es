@@ -2,17 +2,17 @@
 title: 'Tarea 2: Hospedar el diseñador de flujo de trabajo'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665283"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169996"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarea 2: Hospedar el diseñador de flujo de trabajo
 Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] en una aplicación de Windows Presentation Foundation (WPF).  
   
- El procedimiento se configura el **cuadrícula** control que contiene el diseñador, se crea mediante programación una instancia de la <xref:System.Activities.Presentation.WorkflowDesigner> que contiene el valor predeterminado es <xref:System.Activities.Statements.Sequence> actividad, registra los metadatos del diseñador para proporcionar compatibilidad con el diseñador para las actividades integradas en todos los hosts y el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] en el [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] aplicación.  
+ El procedimiento se configura el **cuadrícula** control que contiene el diseñador, se crea mediante programación una instancia de la <xref:System.Activities.Presentation.WorkflowDesigner> que contiene el valor predeterminado es <xref:System.Activities.Statements.Sequence> actividad, registra los metadatos del diseñador para proporcionar compatibilidad con el diseñador para las actividades integradas en todos los hosts y el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] en la aplicación de WPF.  
   
 ### <a name="to-host-the-workflow-designer"></a>Para hospedar el diseñador de flujo de trabajo  
   
@@ -22,7 +22,7 @@ Este tema describe el procedimiento para hospedar una instancia de la [!INCLUDE[
   
 3. Establezca el nombre de la cuadrícula seleccionando el **cuadrícula** panel en el diseñador (haga clic en el cuadro de la **MainWindow**) y configuración de la **nombre** propiedad en la parte superior de la  **Propiedades** ventana en "grid1".  
   
-4. En el **propiedades** ventana, haga clic en el botón de puntos suspensivos (**...** ) junto a la `ColumnDefinitions` propiedad para abrir el **Editor de la colección** cuadro de diálogo.  
+4. En el **propiedades** ventana, haga clic en el botón de puntos suspensivos ( **...** ) junto a la `ColumnDefinitions` propiedad para abrir el **Editor de la colección** cuadro de diálogo.  
   
 5. En el **Editor de la colección** cuadro de diálogo, haga clic en el **agregar** tres veces para insertar tres columnas en el diseño de botón. La primera columna contendrá el **cuadro de herramientas**, la segunda columna va a hospedar el [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], y la tercera columna se utilizará para el inspector de propiedad.  
   

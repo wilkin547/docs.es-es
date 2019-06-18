@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5e70b9c16c3af46b72ea8f8745806c7ebf849e2f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583555"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169982"
 ---
 # <a name="application-settings-overview"></a>Introducción a la configuración de la aplicación
 En este tema se describe cómo crear y almacenar los datos de configuración en nombre de la aplicación y sus usuarios.  
   
  La característica Configuración de la aplicación de Windows Forms facilita la creación, el almacenamiento y el mantenimiento de las preferencias personalizadas de usuarios y aplicaciones en el equipo cliente. Con Configuración de la aplicación de Windows Forms, no solo puede almacenar datos de las aplicaciones, como cadenas de conexión a bases de datos, sino también datos específicos de los usuarios, como las preferencias de la aplicación de un usuario. Con Visual Studio o código administrado personalizado, puede crear una nueva configuración, leerla y escribirla en el disco, enlazarla a propiedades de los formularios y validar los datos de configuración antes de cargarlos y guardarlos.  
   
- Configuración de la aplicación permite a los desarrolladores guardar el estado en su aplicación con muy poco código personalizado y es un sustituto para las propiedades dinámicas en versiones anteriores de .NET Framework. Configuración de la aplicación ofrece muchas mejoras en comparación con las propiedades dinámicas, que son de solo lectura, se enlazan en tiempo de ejecución y requieren más programación personalizada. Las clases de las propiedades dinámicas se conservan en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)], pero son solo clases contenedoras de las clases de Configuración de la aplicación.  
+ Configuración de la aplicación permite a los desarrolladores guardar el estado en su aplicación con muy poco código personalizado y es un sustituto para las propiedades dinámicas en versiones anteriores de .NET Framework. Configuración de la aplicación ofrece muchas mejoras en comparación con las propiedades dinámicas, que son de solo lectura, se enlazan en tiempo de ejecución y requieren más programación personalizada. Las clases de propiedad dinámica que se han conservado en .NET Framework 2.0, pero son solo clases contenedoras de las clases de configuración de la aplicación.  
   
 ## <a name="what-are-application-settings"></a>¿Qué es Configuración de la aplicación?  
  Las aplicaciones de Windows Forms, a menudo, requieren datos que son esenciales para ejecutar la aplicación, pero que no quiere incluir directamente en el código de la aplicación. Si la aplicación utiliza un servicio Web o un servidor de bases de datos, puede que le convenga almacenar esta información en un archivo independiente, para poder cambiarla en el futuro sin tener que volver a compilarla. De manera similar, puede que las aplicaciones necesiten almacenar datos específicos del usuario actual. La mayoría de las aplicaciones, por ejemplo, tienen preferencias del usuario con las que se personalizan la apariencia y el comportamiento de la aplicación.  

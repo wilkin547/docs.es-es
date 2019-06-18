@@ -2,12 +2,12 @@
 title: Programar el árbol de elementos de modelo
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59c1f0c3722d6e68a9f629504f5012377dbacc5f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004975"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170071"
 ---
 # <a name="programming-model-item-tree"></a>Programar el árbol de elementos de modelo
 Este ejemplo muestra cómo navegar por la <xref:System.Activities.Presentation.Model.ModelItem> árbol mediante enlace de datos declarativo de la vista de árbol de Windows Presentation Foundation (WPF).
@@ -33,7 +33,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 2. Compile la solución seleccionando **compilar solución** desde el **compilar** menú.
 
-3. Presione F5 para ejecutar la aplicación. A continuación se muestra el formulario de [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
+3. Presione F5 para ejecutar la aplicación. A continuación, se muestra el formulario WPF.
 
 4. Haga clic en el **cargar WF** botón para cargar el <xref:System.Activities.Presentation.Model.ModelItem> y enlazarlo a la vista de árbol.
 
