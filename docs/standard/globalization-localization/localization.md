@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbe7a2c4e920021c925a13ae8873124bfdb6fd67
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 79ec24d16b43bd8e1312b3425e618adf163edd24
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441949"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834020"
 ---
 # <a name="localization"></a>Localización
 
@@ -31,7 +31,7 @@ Una aplicación que está lista para la localización se divide en dos bloques c
 
 Para cada versión localizada de la aplicación, agregue un nuevo ensamblado satélite que contenga el bloque de la interfaz de usuario localizada traducida en el idioma apropiado para la referencia cultural de destino. El bloque de código de todas las referencias culturales debe permanecer igual. La combinación de una versión localizada del bloque de interfaz de usuario con el bloque de código produce una versión localizada de la aplicación.
 
-El [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] proporciona el Editor de recursos de Windows Forms (Winres.exe) que permite localizar rápidamente formularios Windows Forms para las referencias culturales de destino. Para obtener información sobre el uso de esta herramienta, vea [Winres.exe (Editor de recursos de Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
+El Kit de desarrollo de software (SDK) de Windows proporciona el Editor de recursos de Windows Forms (Winres.exe), que permite localizar rápidamente formularios Windows Forms para referencias culturales de destino. Para obtener información sobre el uso de esta herramienta, vea [Winres.exe (Editor de recursos de Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).
 
 ## <a name="see-also"></a>Vea también
 

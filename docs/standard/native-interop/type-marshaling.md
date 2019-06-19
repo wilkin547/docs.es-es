@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo .NET serializa los tipos en una re
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065968"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041786"
 ---
 # <a name="type-marshaling"></a>Serialización de tipos
 
@@ -79,6 +79,20 @@ Algunos tipos solo pueden serializarse como parámetros y no como campos. Estas 
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 Si estos valores predeterminados no hacen exactamente lo que desea, puede personalizar cómo serializar los parámetros. El artículo sobre [serialización de parámetros](customize-parameter-marshaling.md) explica cómo personalizar la forma en que se serializan los diferentes tipos de parámetro.
+
+## <a name="default-marshaling-in-com-scenarios"></a>Serialización predeterminada en escenarios de COM
+
+Cuando se llama a métodos en objetos COM en .NET, el runtime de .NET cambia las reglas de serialización predeterminadas para que coincidan con la semántica común de COM. En la tabla siguiente se enumeran las reglas que usan los runtime de .NET en escenarios de COM:
+
+| Tipo de .NET | Tipo nativo (llamadas a métodos COM) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| Tipos delegados | `_Delegate*` en .NET Framework. No permitido en .NET Core. |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| Matriz de .NET | `SAFEARRAY`                   |
+| `string[]` | `SAFEARRAY` de `BSTR`        |
 
 ## <a name="marshaling-classes-and-structs"></a>Serializar clases y estructuras
 

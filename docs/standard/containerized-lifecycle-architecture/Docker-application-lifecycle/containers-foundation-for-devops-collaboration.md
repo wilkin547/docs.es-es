@@ -1,95 +1,95 @@
 ---
 title: Contenedores como base para la colaboración de DevOps
-description: Comprender la función clave de contenedores para agilizar DevOps.
+description: Descripción del papel clave de los contenedores en la optimización de DevOps.
 ms.date: 02/15/2019
 ms.openlocfilehash: 37faf00f270414df363f36894317f31f81a2937e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641310"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Contenedores como base para la colaboración de DevOps
 
-Por la propia naturaleza de la tecnología de Docker y contenedores, los desarrolladores pueden compartir su software y las dependencias fácilmente con las operaciones de TI y los entornos de producción mientras se elimina la típica excusa "funciona en mi equipo". Contenedores de resolución los conflictos de aplicaciones entre distintos entornos. Indirectamente, contenedores y Docker reunir a los desarrolladores y las operaciones de TI más cerca, lo que facilita a colaborar de forma eficaz. Adoptar el flujo de trabajo de contenedor proporciona a muchos clientes con la continuidad se ha buscado pero antes tenía que implementar a través de la configuración más compleja de versión y crear canalizaciones de DevOps. Los contenedores simplifican las canalizaciones de compilación o prueba e implementación de DevOps.
+Gracias a la naturaleza intrínseca de la tecnología de Docker y los contenedores, los desarrolladores pueden compartir el software y las dependencias fácilmente con los equipos de operaciones de TI y los entornos de producción, lo que pone fin a la típica excusa de "funciona en mi equipo". Los contenedores solucionan los conflictos de las aplicaciones entre distintos entornos. De manera indirecta, los contenedores y Docker acercan todavía más a los desarrolladores y los equipos de operaciones de TI, lo que les permite colaborar de forma eficaz. Al adoptar el flujo de trabajo de contenedor, muchos clientes tienen acceso a la continuidad de DevOps que tanto ansiaban y que antes debían implementar a través de una configuración más compleja de las canalizaciones de versión y compilación. Los contenedores simplifican las canalizaciones de compilación, prueba e implementación de DevOps.
 
-![Docker le ayuda a construir puentes entre desarrolladores y arquitectos en la carga de trabajo de desarrollo y diseño y las operaciones de TI en la carga de trabajo de ejecución y supervisión y administración](./media/image1.png)
+![Docker ayuda a tender puentes entre, por un lado, los desarrolladores y los arquitectos en la carga de trabajo de desarrollo y diseño y, por otro, los equipos de operaciones de TI en la carga de trabajo de ejecución, supervisión y administración.](./media/image1.png)
 
-**Figura 2-1.** Cargas de trabajo principales por "roles" en el ciclo de vida de aplicaciones en contenedores de Docker
+**Figura 2-1.** Cargas de trabajo principales por "roles" en el ciclo de vida de aplicaciones en contenedor de Docker.
 
-Con contenedores de Docker, los desarrolladores propios lo que está dentro del contenedor (aplicación y servicio y las dependencias entre componentes y marcos de trabajo) y cómo los contenedores y servicios se comportan como una aplicación compuesta por una colección de servicios. Las interdependencias de los diversos contenedores se definen en un `docker-compose.yml` archivo o lo que podría llamarse una *manifiesto de implementación*. Mientras tanto, los equipos de operaciones de TI (administración y los profesionales de TI) pueden centrarse en la administración de entornos de producción; infraestructura; escalabilidad; supervisión; y, en última instancia, lo que garantiza que las aplicaciones están ofreciendo correctamente para los usuarios finales, sin tener que conocer el contenido de los diversos contenedores. Por lo tanto, el nombre "container," recordando la analogía de contenedores de transporte del mundo real. Por lo tanto, los propietarios de contenido de un contenedor necesitan no se refieren a cómo se va a enviar el contenedor y los transportes de empresa de trasvase de registros un contenedor de su punto de origen a su destino sin saber ni preocuparse sobre el contenido. De forma similar, los desarrolladores pueden crear y poseer el contenido dentro de un contenedor de Docker sin necesidad de preocuparse de los mecanismos de "transport".
+Con los contenedores de Docker, los desarrolladores controlan lo que está dentro del contenedor (la aplicación y el servicio, así como las dependencias de los marcos y los componentes) y la manera en que los contenedores y los servicios se comportan juntos como una aplicación compuesta por una colección de servicios. Las interdependencias de los diversos contenedores se definen en un archivo `docker-compose.yml`, o lo que podría llamarse *manifiesto de implementación*. Mientras tanto, los equipos de operaciones de TI (profesionales de TI y administración) pueden centrarse en la gestión de los entornos de producción, la infraestructura, la escalabilidad, la supervisión y, en última instancia, la verificación de que las aplicaciones ofrecen un servicio adecuado a los usuarios finales, sin necesidad de conocer el contenido de los diversos contenedores. A esto se debe el término "contenedor," como analogía con los contenedores de transporte del mundo real. Los propietarios del contenido de un contenedor no necesitan preocuparse por cómo se enviará el contenedor y la empresa de transporte envía el contenedor desde el punto de origen al destino sin conocer el contenido ni preocuparse por él. De forma similar, los desarrolladores pueden crear y poseer el contenido de un contenedor de Docker sin necesidad de preocuparse por los mecanismos de "transporte".
 
-En el pilar del lado izquierdo de la figura 2-1, los desarrolladores escribirán y ejecutan código localmente en contenedores de Docker mediante el uso de Docker para Windows o Mac. Definen el entorno operativo para el código mediante el uso de un Dockerfile que especifica el sistema operativo básico para ejecutar, así como los pasos de compilación para compilar su código en una imagen de Docker. Los desarrolladores definen cómo una o más imágenes pueden interoperar con los mencionados anteriormente `docker-compose.yml` manifiesto de implementación del archivo. Medida que se completa su desarrollo local, inserte su código de la aplicación además de los archivos de configuración de Docker en el repositorio de código de su elección (es decir, el repositorio de Git).
+En el bloque de la izquierda de la figura 2-1, los desarrolladores escriben y ejecutan código localmente en contenedores de Docker mediante Docker para Windows o Mac. Definen el entorno operativo para el código a través de un archivo Dockerfile que especifica el sistema operativo básico que se va a ejecutar, así como los pasos de compilación para compilar el código en una imagen de Docker. Los desarrolladores definen cómo interactuarán una o varias imágenes mediante el manifiesto de implementación del archivo `docker-compose.yml` mencionado anteriormente. A medida que completan el desarrollo local, insertan el código de la aplicación y los archivos de configuración de Docker en el repositorio de código de su elección (es decir, el repositorio GIT).
 
-El pilar de DevOps define las canalizaciones de integración (CI) de compilación – Continuous mediante el Dockerfile que se proporciona en el repositorio de código. El sistema de CI extrae las imágenes del contenedor base desde el registro de Docker seleccionado y compila las imágenes de Docker personalizadas para la aplicación. Las imágenes, a continuación, se validan e insertadas en el registro de Docker que se usa para las implementaciones en varios entornos.
+El bloque de DevOps define las canalizaciones de compilación e integración continua (CI) mediante el archivo Dockerfile que se proporciona en el repositorio de código. El sistema de CI extrae las imágenes del contenedor base del registro de Docker seleccionado y compila las imágenes de Docker personalizadas para la aplicación. Después, las imágenes se validan y se insertan en el registro de Docker que se usa para las implementaciones en varios entornos.
 
-En el pilar de la derecha, las operaciones de administración de equipos implementan aplicaciones e infraestructura en producción al supervisar el entorno y las aplicaciones para que pueden proporcionar comentarios e información al equipo de desarrollo acerca de cómo podría ser la aplicación mejorado. Las aplicaciones de contenedor normalmente se ejecutan en producción con orquestadores de contenedor.
+En el bloque de la derecha, los equipos de operaciones administran la infraestructura y las aplicaciones implementadas en producción al mismo tiempo que supervisan el entorno y las aplicaciones, de modo que puedan proporcionar comentarios e información al equipo de desarrollo sobre la manera en que podría mejorarse la aplicación. Las aplicaciones de contenedor suelen ejecutarse en producción a través de orquestadores de contenedores.
 
-Los dos equipos son colaborar a través de una plataforma fundamental (contenedores de Docker) que proporciona una separación de intereses como un contrato, al tiempo que mejora en gran medida la colaboración de los dos equipos en el ciclo de vida de la aplicación. Los desarrolladores poseen el contenido del contenedor, su entorno operativo y las interdependencias de contenedor, mientras que los equipos de operaciones tomar las imágenes compiladas junto con el manifiesto y se ejecutan en su sistema de orquestación.
+Los dos equipos colaboran mediante una plataforma fundamental (contenedores de Docker) que proporciona una "separación de intereses" de forma contractual, al tiempo que mejora en gran medida la colaboración de los dos equipos en el ciclo de vida de la aplicación. Los desarrolladores poseen el contenido del contenedor, su entorno operativo y las interdependencias del contenedor, mientras que los equipos de operaciones toman las imágenes compiladas junto con el manifiesto y las ejecutan en su sistema de orquestación.
 
-## <a name="challenges-in-application-life-cycle-when-using-docker"></a>Ciclo de desafíos en la vida de la aplicación al usar Docker.
+## <a name="challenges-in-application-life-cycle-when-using-docker"></a>Desafíos en el ciclo de vida de la aplicación al usar Docker
 
-Hay muchas razones que aumentarán el número de aplicaciones en contenedores en los próximos años, y uno de estos motivos es que la creación de aplicaciones basadas en microservicios.
+Hay muchas razones que aumentarán el número de aplicaciones en contenedores en los próximos años; una de ellas es la creación de aplicaciones basadas en microservicios.
 
-Durante los últimos 15 años, el uso de servicios web ha sido la base de miles de aplicaciones, y probablemente, después de unos pocos años, buscaremos la misma situación con aplicaciones basadas en microservicios que se ejecutan en contenedores de Docker.
+Durante los últimos 15 años, el uso de servicios web ha sido la base de miles de aplicaciones y, probablemente, dentro de unos años experimentaremos lo mismo con aplicaciones basadas en microservicios que se ejecutan en contenedores de Docker.
 
-También merece la pena mencionar que también puede usar contenedores de Docker para las aplicaciones monolíticas y todavía obtendrá la mayoría de las ventajas de Docker. Los contenedores no concentran en microservicios únicamente.
+Además, merece la pena mencionar que también se pueden usar contenedores de Docker para aplicaciones monolíticas y disfrutar de la mayoría de las ventajas de Docker. Los contenedores no se centran únicamente en los microservicios.
 
-El uso de Docker inclusión en contenedores y microservicios causas nuevos desafíos en el proceso de desarrollo de su organización y por lo tanto, necesita una estrategia sólida para mantener muchos contenedores y microservicios que se ejecutan en sistemas de producción. Finalmente, las aplicaciones empresariales tendrá cientos o miles de contenedores y las instancias que se ejecutan en producción.
+El uso de los microservicios y la inclusión en contenedores de Docker plantea nuevos desafíos en el proceso de desarrollo de las organizaciones. Por lo tanto, se necesita una estrategia sólida para mantener en ejecución muchos contenedores y microservicios en sistemas de producción. A la larga, las aplicaciones empresariales tendrán cientos e incluso miles de contenedores o instancias que se ejecutan en producción.
 
-Estos desafíos de creación las nuevas demandas al usar herramientas de DevOps, por lo que tendrá que definir nuevos procesos en sus actividades de DevOps y encuentre respuestas para este tipo de preguntas:
+Estos desafíos generan nuevas demandas al usar herramientas de DevOps, por lo que tendrá que definir nuevos procesos en las actividades de DevOps y encontrar una respuesta a preguntas de este tipo:
 
-- ¿Qué herramientas puedo usar para el desarrollo de CI/CD, administración y operaciones?
+- ¿Qué herramientas puedo usar para el desarrollo, la CI/CD, la administración y las operaciones?
 
-- ¿Cómo mi empresa puede administrar los errores en los contenedores cuando se ejecuta en producción?
+- ¿Cómo puede mi empresa administrar los errores de los contenedores cuando se ejecutan en producción?
 
-- ¿Cómo se pueden cambiar partes de nuestro software en producción con el mínimo tiempo de inactividad?
+- ¿Cómo se pueden cambiar elementos de software en producción con un tiempo mínimo de inactividad?
 
-- ¿Cómo es posible escalar y cómo podemos supervisa nuestro sistema de producción?
+- ¿Cómo se puede escalar y supervisar el sistema de producción?
 
-- ¿Cómo podemos incluimos pruebas e implementación de contenedores en nuestra canalización de versiones?
+- ¿Cómo se pueden incluir las pruebas y la implementación de contenedores en la canalización de versión?
 
-- ¿Cómo podemos usar herramientas y plataformas de código abierto para contenedores en Microsoft Azure?
+- ¿Cómo se pueden usar las herramientas y plataformas de código abierto para contenedores en Microsoft Azure?
 
-Si puede responder a todas esas preguntas, estará mejor preparado para mover las aplicaciones (aplicaciones nuevas o existentes) para contenedores de Docker. 
+Si puede responder a todas esas preguntas, estará mejor preparado para mover las aplicaciones (nuevas o existentes) a contenedores de Docker. 
 
-## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Introducción a un genérico flujo de trabajo ciclo de vida-to-end Docker aplicación
+## <a name="introduction-to-a-generic-end-to-end-docker-application-life-cycle-workflow"></a>Introducción a un flujo de trabajo genérico de ciclo de vida de aplicaciones de Docker de un extremo a otro
 
-Figura 2-2 presenta un flujo de trabajo más detallada para un ciclo de vida de aplicaciones de Docker, centrándose en esta instancia en activos y actividades específicas de DevOps.
+En la figura 2-2 se muestra un flujo de trabajo más detallado del ciclo de vida de aplicaciones de Docker, centrado en este caso en actividades y activos de DevOps específicos.
 
-![Este diagrama muestra el "bucle exterior" de DevOps. Cuando se inserta código en el repositorio, una canalización de CI se inicia, a continuación, comienza la canalización de CD, donde se implementa la aplicación. Las métricas recopiladas desde las aplicaciones implementadas se alimentan en la carga de trabajo de desarrollo, donde se produce el "bucle interno", por lo que los equipos de desarrollo tienen datos reales para responder a necesidades empresariales y de usuario.](./media/image2.png)
+![En el diagrama puede verse el "bucle externo" de DevOps. Cuando se inserta código en el repositorio, se inicia una canalización de CI y, después, comienza la canalización de CD, donde se implementa la aplicación. Las métricas recopiladas de las aplicaciones implementadas se envían a la carga de trabajo de desarrollo, donde se produce el "bucle interno", a fin de que los equipos de desarrollo tengan datos reales para responder a las necesidades del usuario y de la organización.](./media/image2.png)
 
-**Figura 2-2.** Flujo de trabajo de alto nivel para el ciclo de vida de la aplicación en contenedores de Docker
+**Figura 2-2.** Flujo de trabajo de alto nivel para el ciclo de vida de aplicaciones en contenedor de Docker
 
-Todo comienza con el desarrollador, que comienza a escribir código en el flujo de trabajo de bucle interno. El escenario de bucle interno es donde los desarrolladores definen todo lo que ocurre antes de insertar código en el repositorio de código (por ejemplo, un sistema de control de código fuente como Git). Una vez confirmado, los desencadenadores de repositorio integración continua (CI) y el resto del flujo de trabajo.
+Todo comienza con el desarrollador, que empieza a escribir código en el flujo de trabajo del bucle interno. La fase de bucle interno es donde los desarrolladores definen todo lo que ocurre antes de insertar código en el repositorio de código (por ejemplo, un sistema de control de código fuente, como GIT). Una vez confirmado, el repositorio desencadena la integración continua (CI) y el resto del flujo de trabajo.
 
-El bucle interno básicamente consta de los pasos típicos, como "código", "run", "test","y"Depurar", además de los pasos adicionales necesarios justo antes de ejecutar la aplicación localmente. Se trata de un proceso del desarrollador para ejecutar y probar la aplicación como un contenedor de Docker. El flujo de trabajo de bucle interno se explican en las secciones siguientes.
+El bucle interno básicamente consta de los pasos típicos, como "programación", "ejecución", "prueba" y "depuración", además de los pasos adicionales necesarios justo antes de ejecutar la aplicación localmente. Este es el proceso del desarrollador para ejecutar y probar la aplicación como contenedor de Docker. El flujo de trabajo del bucle interno se explicará en las secciones siguientes.
 
-Dar un paso atrás para observar el flujo de trabajo end-to-end, el flujo de trabajo de DevOps es más que una tecnología o un conjunto de herramientas: es una actitud que requiere la evolución de referencia cultural. Su personas, procesos y las herramientas adecuadas para realizar su ciclo de vida de aplicación más rápido y más predecible. Las empresas que adoptan un flujo de trabajo en contenedores normalmente reestructuración sus organizaciones para representar las personas y procesos que coinciden con el flujo de trabajo en contenedores.
+Si observamos en su conjunto el flujo de trabajo de un extremo a otro, nos daremos cuenta de que el flujo de trabajo de DevOps es más que una tecnología o un conjunto de herramientas: es una actitud que requiere una evolución cultural. Lo integran personas, procesos y herramientas adecuadas que hacen que el ciclo de vida de la aplicación sea más rápido y predecible. Las empresas que adoptan un flujo de trabajo en contenedores suelen reestructurar su organización para que represente a personas y procesos que coincidan con el flujo de trabajo en contenedores.
 
-Practicar DevOps puede ayudar a los equipos a responder con mayor rapidez conjuntamente presiones competitivas reemplazando los procesos manuales propensos a errores con la automatización, lo que resulta en rastreabilidad mejorada y flujos de trabajo repetibles. Las organizaciones también pueden administrar entornos de manera más eficaz y darse cuenta de ahorro de costos con una combinación de servidores locales y recursos en la nube, así como herramientas estrechamente integradas.
+La práctica con DevOps puede ayudar a los equipos a responder juntos con mayor rapidez ante presiones competitivas, al reemplazar por la automatización los procesos manuales propensos a errores, lo que conlleva una rastreabilidad mejorada y flujos de trabajo repetibles. Las organizaciones también pueden administrar los entornos de manera más eficaz y ahorrar costes gracias a una combinación de recursos locales y en la nube, así como herramientas estrechamente integradas.
 
-Al implementar el flujo de trabajo de DevOps para aplicaciones de Docker, verá que las tecnologías de Docker están presentes en casi cada etapa del flujo de trabajo, desde el cuadro de desarrollo mientras trabaja en el bucle interno (código, ejecutar, depurar), la fase de compilación-test-CI y, Por último, la implementación de esos contenedores a los entornos de ensayo y producción.
+Al implementar el flujo de trabajo de DevOps para aplicaciones de Docker, verá que las tecnologías de Docker están presentes en prácticamente todas las etapas del flujo de trabajo, desde el cuadro de desarrollo, durante el trabajo en el bucle interno (programación, ejecución y depuración), en la fase de compilación, prueba y CI y, por último, en la implementación de los contenedores en los entornos de ensayo y producción.
 
-Mejora de prácticas de calidad ayuda a identificar los defectos al principio del ciclo de desarrollo, lo que reduce el costo de corregirlos. Con la inclusión del entorno y dependencias en la imagen y adoptar una filosofía de la implementación de la misma imagen en varios entornos, promover una disciplina de extraer las configuraciones específicas del entorno que las implementaciones sean más confiables.
+La mejora de las prácticas de calidad ayuda a identificar los defectos al principio del ciclo de desarrollo, lo que reduce el coste que supone corregirlos. Al incluir el entorno y las dependencias en la imagen y adoptar la filosofía de implementar la misma imagen en varios entornos, se fomenta la disciplina de extraer las configuraciones específicas del entorno, lo cual conlleva implementaciones más fiables.
 
-Datos enriquecidos obtenidos a través de la instrumentación efectivo (supervisión y diagnóstico) proporcionan una visión de los problemas de rendimiento y el comportamiento de usuario para guiar las inversiones y las prioridades de futuras.
+Los datos enriquecidos que se obtienen a través de la instrumentación efectiva (supervisión y diagnóstico) permiten comprender mejor los problemas de rendimiento y el comportamiento del usuario, algo que resulta muy útil como orientación para las prioridades e inversiones futuras.
 
-DevOps debe considerarse un viaje, no un destino. Debe implementarse incrementalmente a través de los proyectos adecuadamente con ámbito desde el que puede demostrar éxito, aprender y desarrollar.
+DevOps debe considerarse un viaje, no un destino. Debe implementarse de forma incremental a través de proyectos con un ámbito adecuado con los que se pueda demostrar su éxito, aprender y evolucionar.
 
-## <a name="benefits-of-devops-for-containerized-applications"></a>Ventajas de DevOps para aplicaciones en contenedor
+## <a name="benefits-of-devops-for-containerized-applications"></a>Ventajas de DevOps para las aplicaciones en contenedor
 
-Estas son algunas de las ventajas más importantes proporcionadas por un flujo de trabajo de DevOps sólida:
+Estas son algunas de las ventajas más importantes que proporciona un flujo de trabajo sólido de DevOps:
 
-- Entregar software de mayor calidad con más rapidez y con un mejor cumplimiento.
+- Entregar software de mayor calidad con más rapidez y un mejor cumplimiento.
 
-- Unidad ajustes y la mejora continua anteriormente y más económica.
+- Impulsar la mejora y los ajustes continuos en fases más tempranas y de forma más económica.
 
-- Aumentar la transparencia y colaboración entre las partes interesadas implicadas en la entrega y el software operativo.
+- Aumentar la transparencia y la colaboración entre las partes interesadas que participan en la entrega y el funcionamiento del software.
 
-- Controlar los costos y utilizar recursos aprovisionados de forma más eficaz mientras se minimizan los riesgos de seguridad.
+- Controlar los costes y usar recursos aprovisionados de forma más eficaz mientras se minimizan los riesgos de seguridad.
 
-- Plug and play bien con muchos de sus inversiones existentes de DevOps, incluidas las inversiones en código abierto.
+- Conectarse y funcionar automáticamente con muchas de las inversiones existentes de DevOps, incluidas las inversiones en código abierto.
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)

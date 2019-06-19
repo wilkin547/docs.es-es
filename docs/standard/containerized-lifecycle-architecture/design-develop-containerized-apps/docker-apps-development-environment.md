@@ -1,41 +1,41 @@
 ---
 title: Entorno de desarrollo para aplicaciones de Docker
-description: Familiarícese con las opciones de herramienta de desarrollo más importantes que admiten el ciclo de vida de desarrollo de Docker.
+description: Familiarícese con las opciones de herramientas de desarrollo más importantes que son compatibles con el ciclo de vida de desarrollo de Docker.
 ms.date: 02/15/2019
 ms.openlocfilehash: 0f71ffa5e6870f45908e4def6577120a17ec744c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641421"
 ---
 # <a name="development-environment-for-docker-apps"></a>Entorno de desarrollo para aplicaciones de Docker
 
 ## <a name="development-tools-choices-ide-or-editor"></a>Opciones de herramientas de desarrollo: IDE o editor
 
-Sin importar si lo prefiere, un IDE eficaz y completo o un editor ligero y ágil, Microsoft le puede ayudar en cuanto a desarrollar aplicaciones de Docker.
+Con independencia de que prefiera un IDE eficaz y completo, o un editor ligero y ágil, Microsoft le puede ayudar en el desarrollo de aplicaciones de Docker.
 
-### <a name="visual-studio-code-and-docker-cli-cross-platform-tools-for-mac-linux-and-windows"></a>Visual Studio Code y CLI de Docker (Herramientas multiplataforma para Mac, Linux y Windows)
+### <a name="visual-studio-code-and-docker-cli-cross-platform-tools-for-mac-linux-and-windows"></a>Visual Studio Code y la CLI de Docker (herramientas multiplataforma para Mac, Linux y Windows)
 
-Si prefiere un editor ligero y multiplataforma que admiten cualquier lenguaje de desarrollo, puede usar Visual Studio Code y CLI de Docker. Estos productos proporcionan una experiencia sencilla y sólida que es fundamental para optimizar el flujo de trabajo de desarrollador. Al instalar "Docker para Mac" o "Docker para Windows" (entorno de desarrollo), los desarrolladores de Docker pueden utilizar una sola CLI de Docker para crear aplicaciones para Windows o Linux (entorno de tiempo de ejecución). Además, Visual Studio Code admite extensiones para Docker con IntelliSense para Dockerfiles y tareas de acceso directo ejecutar comandos de Docker desde el editor.
+Si prefiere un editor ligero y multiplataforma que admita cualquier lenguaje de programación, puede usar Visual Studio Code y la CLI de Docker. Estos productos proporcionan una experiencia sencilla y sólida que es fundamental para agilizar el flujo de trabajo del desarrollador. Al instalar "Docker para Mac" o "Docker para Windows" (entorno de desarrollo), los desarrolladores de Docker pueden usar una sola CLI de Docker para compilar aplicaciones para Windows o Linux (entorno de tiempo de ejecución). Además, Visual Studio Code admite extensiones para Docker con IntelliSense para archivos Dockerfile y tareas de acceso directo para ejecutar comandos de Docker desde el editor.
 
 > [!NOTE]
 >
-> Para descargar el código de Visual Studio, vaya a <https://code.visualstudio.com/download>.
+> Para descargar Visual Studio Code, vaya a <https://code.visualstudio.com/download>.
 >
 > Para descargar Docker para Mac y Windows, vaya a <https://www.docker.com/products/docker>.
 
-### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Visual Studio con las herramientas de Docker (máquina de desarrollo de Windows)
+### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Visual Studio con herramientas de Docker (equipo de desarrollo de Windows)
 
-Se recomienda usar Visual Studio 2017 (o posterior) con las herramientas integradas de Docker habilitado. Con Visual Studio, puede desarrollar, ejecutar y validar sus aplicaciones directamente en el entorno de Docker elegido. Presione F5 para depurar la aplicación (único contenedor o varios contenedores) directamente en un host de Docker, o presione Ctrl + F5 para editar y actualizar la aplicación sin tener que recompilar el contenedor. Es la opción más sencilla y más eficaces para desarrolladores de Windows crear contenedores de Docker para Linux o Windows.
+Se recomienda usar Visual Studio 2017 (o versiones posteriores) con las herramientas de Docker integradas habilitadas. Con Visual Studio, puede desarrollar, ejecutar y validar las aplicaciones directamente en el entorno de Docker seleccionado. Presione F5 para depurar la aplicación (de un solo contenedor o de varios contenedores) directamente en un host de Docker, o bien presione CTRL+F5 para editar y actualizar la aplicación sin tener que volver a compilar el contenedor. Esta es la opción más sencilla y más eficaz para los desarrolladores de Windows que crean contenedores de Docker para Linux o Windows.
 
-### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio para Mac (máquina de desarrollo de Mac)
+### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio para Mac (equipo de desarrollo de Mac)
 
-Puede usar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) al desarrollar aplicaciones basadas en Docker. Visual Studio para Mac ofrece un IDE más rico en comparación con el código de Visual Studio para Mac.
+Puede usar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) al desarrollar aplicaciones basadas en Docker. Visual Studio para Mac ofrece un IDE más completo en comparación con Visual Studio Code para Mac.
 
-## <a name="language-and-framework-choices"></a>Opciones de idioma y marco de trabajo
+## <a name="language-and-framework-choices"></a>Opciones de lenguaje y marco
 
-Puede desarrollar aplicaciones de Docker con herramientas de Microsoft con los lenguajes más modernos. La siguiente es una lista inicial, pero no está limitado a él:
+Puede desarrollar aplicaciones de Docker mediante el uso de herramientas de Microsoft con los lenguajes más modernos. A continuación se muestra una lista inicial, aunque no está limitado a ella:
 
 - .NET Core y ASP.NET Core
 - Node.js

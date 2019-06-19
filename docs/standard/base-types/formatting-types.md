@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac253e5ff294360fff89e9746ca3038b4e1ee75c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751101"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026035"
 ---
 # <a name="formatting-types-in-net"></a>Aplicar formato a tipos en .NET
 
@@ -123,7 +123,7 @@ Cada tipo derivado de <xref:System.Object?displayProperty=nameWithType> hereda a
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> A partir de [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] incluye una interfaz <xref:Windows.Foundation.IStringable> con un solo método, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), que ofrece compatibilidad con el formato predeterminado. Sin embargo, es recomendable que los tipos administrados no implementen la interfaz `IStringable` . Para obtener más información, consulte la sección “ [!INCLUDE[wrt](../../../includes/wrt-md.md)] y la interfaz `IStringable` ” en la página de referencia de <xref:System.Object.ToString%2A?displayProperty=nameWithType> .
+> A partir de [!INCLUDE[win81](../../../includes/win81-md.md)], Windows Runtime incluye una interfaz <xref:Windows.Foundation.IStringable> con un solo método, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), que ofrece compatibilidad con el formato predeterminado. Sin embargo, es recomendable que los tipos administrados no implementen la interfaz `IStringable` . Para obtener más información, vea la sección "Windows Runtime y la interfaz `IStringable`" de la página de referencia <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
 
 Puesto que todos los tipos distintos de las interfaces se derivan de <xref:System.Object>, esta funcionalidad se proporciona automáticamente a sus clases o estructuras personalizadas. Si bien, la funcionalidad que ofrece el método `ToString` predeterminado es limitada: Aunque identifica el tipo, no proporciona ninguna información sobre una instancia del tipo. Para proporcionar una representación de cadena de un objeto que proporciona información sobre ese objeto, debe invalidar el método `ToString` .
 

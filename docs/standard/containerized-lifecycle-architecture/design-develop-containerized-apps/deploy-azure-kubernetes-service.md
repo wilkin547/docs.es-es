@@ -3,80 +3,80 @@ title: Orquestación de microservicios y aplicaciones de varios contenedores par
 description: Obtenga información sobre cómo implementar una aplicación con Azure Kubernetes Service.
 ms.date: 02/15/2019
 ms.openlocfilehash: 88e76b4b0a3686f4227a6aee1b7fbd2bfe55fdcc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644635"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>Implementación en Azure Kubernetes Service (AKS)
 
-Puede interactuar con AKS mediante el sistema operativo de cliente preferida, aquí se muestra cómo hacerlo con Microsoft Windows y una versión incrustada de Ubuntu Linux en Windows, mediante comandos de Bash.
+Puede interactuar con AKS con su sistema operativo cliente preferido. Aquí le mostraremos cómo hacerlo con Microsoft Windows y una versión insertada de Ubuntu Linux en Windows, mediante el uso de comandos de Bash.
 
-Requisitos previos para tener antes de usar AKS son:
+Estos son los requisitos previos para el uso de AKS:
 
-- Equipo de desarrollo de Linux o Mac
-- Equipo de desarrollo de Windows
-  - Modo de programador habilitado en Windows
+- Máquina de desarrollo Linux o Mac
+- Máquina de desarrollo Windows
+  - Modo de desarrollador habilitado en Windows
   - Subsistema de Windows para Linux
 - CLI de Azure instalada en [Windows, Mac o Linux](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)
 
 > [!NOTE]
-> Para obtener información completa sobre:
+> Aquí encontrará información completa sobre los siguientes temas:
 >
 > CLI de Azure: <https://docs.microsoft.com/cli/azure/index?view=azure-cli-latest>
 >
-> Subsistema de Windows para Linux: <https://docs.microsoft.com/windows/wsl/about>
+> Subsistema Windows para Linux: <https://docs.microsoft.com/windows/wsl/about>
 
-## <a name="create-the-aks-environment-in-azure"></a>Crear el entorno de AKS en Azure
+## <a name="create-the-aks-environment-in-azure"></a>Creación del entorno de AKS en Azure
 
-Hay varias maneras de crear el entorno de AKS. Puede realizarse mediante comandos de CLI de Azure o mediante el portal de Azure.
+Existen varias formas de crear el entorno de AKS. Puede hacerlo mediante comandos de la CLI de Azure o a través de Azure Portal.
 
-Aquí, puede explorar algunos ejemplos de uso de la CLI de Azure para crear el clúster y el portal de Azure para revisar los resultados. También deberá tener Kubectl y Docker en el equipo de desarrollo.  
+Aquí puede explorar algunos ejemplos sobre el uso de la CLI de Azure para crear el clúster y de Azure Portal para revisar los resultados. También deberá tener Kubectl y Docker en el equipo de desarrollo.  
 
-## <a name="create-the-aks-cluster"></a>Crear el clúster de AKS
+## <a name="create-the-aks-cluster"></a>Creación del clúster de AKS
 
-Crear el clúster AKS con este comando:
+Cree el clúster de AKS con este comando:
 
 ```console
 az aks create --resource-group MSSampleResourceGroup --name MSSampleClusterK801 --agent-count 1 --generate-ssh-keys --location westus2
 ```
 
-Cuando finalice el trabajo de creación, puede ver el AKS creado en el portal de Azure:
+Cuando finalice el trabajo de creación, puede verlo creado en Azure Portal:
 
-El grupo de recursos:
+Grupo de recursos:
 
-![Vista de explorador del grupo de recursos de AKS de Azure.](media/aks-resource-group-view.png)
+![Vista del explorador del grupo de recursos de Azure AKS.](media/aks-resource-group-view.png)
 
-**Figura 4-17**. Vista de grupo de recursos de AKS desde Azure.
+**Figura 4-17**. Vista de grupo de recursos de AKS en Azure.
 
-El clúster de AKS:
+Clúster de AKS:
 
-![Vista del explorador de un grupo de recursos AKS.](media/aks-cluster-view.png)
+![Vista del explorador de un grupo de recursos de AKS.](media/aks-cluster-view.png)
 
-**Figura 4-18**. Vista AKS desde Azure.
+**Figura 4-18**. Vista de AKS en Azure.
 
 También puede ver el nodo creado mediante `Azure-CLI` y `Kubectl`.
 
-En primer lugar, al obtener las credenciales:
+En primer lugar, obtenga las credenciales:
 
 ```console
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
 ```
 
-![Salida del comando anterior en la consola: Combinado "MsSampleK8Cluster como el contexto actual en /root/.kube/config.](media/get-credentials-command-result.png)
+![Salida de la consola del comando anterior: Merged "MSSampleK8Cluster" as current context in /root/.kube/config](media/get-credentials-command-result.png)
 
-**Figura 4-19**. `aks get-credentials` resultado del comando.
+**Figura 4-19**. Resultado del comando `aks get-credentials`.
 
-Y, a continuación, obtener los nodos de Kubectl:
+Después, obtenga los nodos de Kubectl:
 
 ```console
 kubectl get nodes
 ```
 
-![Salida antes del comando en la consola: Lista de nodos con estado, la antigüedad (tiempo de ejecución) y versión](media/kubectl-get-nodes-command-result.png)
+![Salida de la consola del comando anterior: Lista de nodos con estado, antigüedad (tiempo de ejecución) y versión](media/kubectl-get-nodes-command-result.png)
 
-**Figura 4-20**. `kubectl get nodes` resultado del comando.
+**Figura 4-20**. Resultado del comando `kubectl get nodes`.
 
 >[!div class="step-by-step"]
 >[Anterior](orchestrate-high-scalability-availability.md)
