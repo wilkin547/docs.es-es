@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649768"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268168"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opciones del compilador de Visual Basic, por categoría
 El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. La siguiente es una lista de las opciones del compilador de línea de comandos de Visual Basic ordenadas por categoría funcional.  
@@ -33,13 +33,13 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Especifica dónde se alinean las secciones del archivo de salida.|  
 |[-optimize](../../../visual-basic/reference/command-line-compiler/optimize.md)|Habilita o deshabilita las optimizaciones.|  
   
-## <a name="output-files"></a>Archivos de salida  
+## <a name="output-files"></a>archivos de salida  
   
 |Opción|Finalidad|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Procesa los comentarios de documentación generando un archivo XML.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Hace que el compilador genere un ensamblado cuyo contenido binario es idéntico en todas las compilaciones si las entradas son idénticas.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.md)].|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador para .NET Compact Framework de destino.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Especifica un directorio de salida.|  
 |[/refonly](refonly-compiler-option.md)|Genera solo un ensamblado de referencia.|
 |[/refout](refout-compiler-option.md)|Especifica la ruta de acceso de salida de un ensamblado de referencia.|

@@ -2,18 +2,18 @@
 title: Arquitectura de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877249"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267969"
 ---
 # <a name="adonet-architecture"></a>Arquitectura de ADO.NET
 Tradicionalmente, el procesamiento de datos ha dependido principalmente de un modelo de dos niveles basado en una conexión. A medida que aumenta el uso que hace el procesamiento de datos de arquitecturas de varios niveles, los programadores están pasando a un enfoque sin conexión con el fin de proporcionar una mejor escalabilidad a sus aplicaciones.  
   
 ## <a name="adonet-components"></a>Componentes de ADO.NET  
- Los dos componentes principales de [!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] para obtener acceso y manipular los datos son los proveedores de datos de .NET Framework y el <xref:System.Data.DataSet>.  
+ Los dos componentes principales de ADO.NET para obtener acceso y manipular datos son los proveedores de datos de .NET Framework y el <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>Proveedores de datos .NET Framework  
  Los proveedores de datos .NET Framework son componentes diseñados explícitamente para la manipulación de datos y el acceso rápido a datos de solo lectura y solo avance. El objeto `Connection` proporciona conectividad a un origen de datos. El objeto `Command` permite tener acceso a comandos de base de datos para devolver datos, modificar datos, ejecutar procedimientos almacenados y enviar o recuperar información sobre parámetros. `DataReader` proporciona un flujo de datos de alto rendimiento desde el origen de datos. Por último, el objeto `DataAdapter` proporciona el puente entre el objeto `DataSet` y el origen de datos. `DataAdapter` utiliza objetos `Command` para ejecutar comandos SQL en el origen de datos tanto para cargar `DataSet` con datos y reconciliar en el origen de datos los cambios aplicados a los datos incluidos en el `DataSet`. Para obtener más información, consulte [proveedores de datos de .NET Framework](../../../../docs/framework/data/adonet/data-providers.md) y [recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  

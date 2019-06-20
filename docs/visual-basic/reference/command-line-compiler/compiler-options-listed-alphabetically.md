@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d8b3eef0afd780b4a6568e8c067296d2243087
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649821"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268192"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opciones del compilador de Visual Basic alfabético
 El compilador de línea de comandos de Visual Basic se proporciona como una alternativa a la compilación de programas desde el entorno de desarrollo integrado (IDE) de Visual Studio. La siguiente es una lista de las opciones del compilador de línea de comandos de Visual Basic ordenadas alfabéticamente.  
@@ -45,7 +45,7 @@ El compilador de línea de comandos de Visual Basic se proporciona como una alte
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Especifica la clase que contiene el `Sub Main` procedimiento para usar en el inicio.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Especifica el nombre del ensamblado del que un módulo formará parte.|  
 |`-modulename:<string>`|Especifica el nombre del módulo de origen.|  
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador con destino en [!INCLUDE[Compact](~/includes/compact-md.md)].|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Establece el compilador para .NET Compact Framework de destino.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|No compila con Vbc.rsp.|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|Suprime la información de titular del compilador.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|Hace que el compilador no haga referencia a las bibliotecas estándar.|  

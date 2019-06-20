@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636966"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268087"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Ajuste automático de escala en Windows Forms
 
@@ -48,7 +48,7 @@ Aunque este mecanismo era suficiente para la mayoría de los propósitos, sufrí
 
 - No es compatible con los administradores de diseño más recientes introducidos con la versión 2.0, .NET Framework, como <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel>.
 
-- No admitía el escalado automático basado directamente en la resolución de pantalla necesaria para ser compatible con [!INCLUDE[compact](../../../includes/compact-md.md)].
+- No se admitía el escalado automático basado directamente en la resolución de pantalla que se necesita para obtener compatibilidad con .NET Compact Framework.
 
 Aunque este mecanismo se conserva en la versión 2.0 de .NET Framework para mantener la compatibilidad con versiones anteriores, se ha sustituido por el mecanismo de escalado más sólido que se describe a continuación. En consecuencia, <xref:System.Windows.Forms.Form.AutoScale%2A>, <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>, <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> y determinadas sobrecargas <xref:System.Windows.Forms.Control.Scale%2A> están marcadas como obsoletas.
 
@@ -63,7 +63,7 @@ Aunque este mecanismo se conserva en la versión 2.0 de .NET Framework para mant
 
 - La clase <xref:System.Windows.Forms.Control> también tiene varios miembros nuevos que le permiten participar en el escalado y admitir escalado mixto en el mismo formulario. Concretamente, los miembros <xref:System.Windows.Forms.Control.Scale%2A>, <xref:System.Windows.Forms.Control.ScaleChildren%2A> y <xref:System.Windows.Forms.Control.GetScaledBounds%2A> admiten el escalado.
 
-- Se ha agregado soporte de escalado basado en la resolución de pantalla para complementar el soporte de fuentes del sistema, tal como se define en la enumeración <xref:System.Windows.Forms.AutoScaleMode>. Este modo es compatible con el escalado automático admitido por el [!INCLUDE[compact](../../../includes/compact-md.md)], lo que permite una migración de aplicaciones más sencilla.
+- Se ha agregado soporte de escalado basado en la resolución de pantalla para complementar el soporte de fuentes del sistema, tal como se define en la enumeración <xref:System.Windows.Forms.AutoScaleMode>. Este modo es compatible con escalado automático admitido por la habilitación de la migración sea más fácil de aplicación .NET Compact Framework.
 
 - Se ha agregado compatibilidad con administradores de diseño como <xref:System.Windows.Forms.FlowLayoutPanel> y <xref:System.Windows.Forms.TableLayoutPanel> a la implementación del escalado automático.
 

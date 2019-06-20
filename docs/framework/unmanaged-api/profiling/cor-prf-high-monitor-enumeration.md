@@ -4,12 +4,12 @@ ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e365dff7c56ddca1d05f2e16605078ef46e4e2af
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: b29fc50e4bda23053c239292956f9b2cd0c628a3
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66251157"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268070"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR (Enumeración)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -18,16 +18,23 @@ ms.locfileid: "66251157"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```
 typedef enum {  
     COR_PRF_HIGH_MONITOR_NONE                     = 0x00000000,  
     COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES          = 0x00000001,  
-    COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED        = 0x00000002,     
-    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS = 0x00000004,    
+    COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED        = 0x00000002,
+    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS = 0x00000004,
+    COR_PRF_HIGH_DISABLE_TIERED_COMPILATION       = 0x00000008,
+    COR_PRF_HIGH_BASIC_GC                         = 0x00000010,
+    COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS         = 0x00000020,
+    COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED    = 0x00000040,
     COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE            = 0,  
     COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH           = COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED | 
-                                                    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS,  
-    COR_PRF_HIGH_MONITOR_IMMUTABLE                = 0  
+                                                    COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS |
+                                                    COR_PRF_HIGH_BASIC_GC |
+                                                    COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS |
+                                                    COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED,  
+    COR_PRF_HIGH_MONITOR_IMMUTABLE                = COR_PRF_HIGH_DISABLE_TIERED_COMPILATION  
 } COR_PRF_HIGH_MONITOR;  
 ```  
   
@@ -38,7 +45,11 @@ typedef enum {
 |`COR_PRF_HIGH_MONITOR_NONE`|No se establecen marcas.|  
 |`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Los controles de la [icorprofilercallback6:: Getassemblyreference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) devolución de llamada para agregar referencias de ensamblado durante el rastreo de cierre de referencias de ensamblado CLR.|  
 |`COR_PRF_HIGH_IN_MEMORY_SYMBOLS_UPDATED`|Los controles de la [ICorProfilerCallback7::ModuleInMemorySymbolsUpdated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md) devolución de llamada para las actualizaciones de la secuencia de símbolos asociada a un módulo en memoria.|  
-|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Los controles de la [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) devolución de llamada para indicar cuando un método dinámico ha sido elementos no utilizados se recopilan y se descargan. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|   
+|`COR_PRF_HIGH_MONITOR_DYNAMIC_FUNCTION_UNLOADS`|Los controles de la [ICorProfilerCallback9::DynamicMethodUnloaded](icorprofilercallback9-dynamicmethodunloaded-method.md) devolución de llamada para indicar cuando un método dinámico ha sido elementos no utilizados se recopilan y se descargan. <br/> [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]|
+|`COR_PRF_HIGH_DISABLE_TIERED_COMPILATION`|.NET core 3.0 y versiones posteriores: Deshabilita [en capas compilación](../../../core/whats-new/dotnet-core-3-0.md) para los generadores de perfiles.|
+|`COR_PRF_HIGH_BASIC_GC`|.NET core 3.0 y versiones posteriores: Proporciona una ligera en comparación con opción de generación de perfiles de GC [ `COR_PRF_MONITOR_GC` ](cor-prf-monitor-enumeration.md). Solo controla la [GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md), [GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md), y [GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md) devoluciones de llamada. A diferencia de la `COR_PRF_MONITOR_GC` marca, `COR_PRF_HIGH_BASIC_GC` no deshabilitar la recolección de elementos no utilizados simultánea.|
+|`COR_PRF_HIGH_MONITOR_GC_MOVED_OBJECTS`|.NET core 3.0 y versiones posteriores: Habilita la [MovedReferences](icorprofilercallback-movedreferences-method.md) y [MovedReferences2](icorprofilercallback4-movedreferences2-method.md) devoluciones de llamada para solo GC con compactación.|
+|`COR_PRF_HIGH_MONITOR_LARGEOBJECT_ALLOCATED`|.NET core 3.0 y versiones posteriores: Similar a [ `COR_PRF_MONITOR_OBJECT_ALLOCATED` ](cor-prf-monitor-enumeration.md), pero se proporciona información sobre las asignaciones de objetos para el gran montón de objetos (LOH) solo.|
 |`COR_PRF_HIGH_REQUIRE_PROFILE_IMAGE`|Representa todas las marcas `COR_PRF_HIGH_MONITOR` que requieren imágenes mejoradas para el perfil. Se corresponde con el `COR_PRF_REQUIRE_PROFILE_IMAGE` marca en el [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeración.|  
 |`COR_PRF_HIGH_ALLOWABLE_AFTER_ATTACH`|Representa todas las marcas `COR_PRF_HIGH_MONITOR` que se pueden establecer después de que el generador de perfiles se asocie a una aplicación en ejecución.|  
 |`COR_PRF_HIGH_MONITOR_IMMUTABLE`|Representa todas las marcas `COR_PRF_HIGH_MONITOR` que se pueden establecer solo durante la inicialización. Al intentar cambiar cualquiera de estas marcas en otro lugar se genera un valor `HRESULT` que indica error.|  

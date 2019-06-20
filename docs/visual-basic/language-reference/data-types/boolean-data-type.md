@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 03497136ec53d89ac944fdd90301a4c590be326a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622536"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268255"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean (Tipo de datos, Visual Basic)
 Contiene valores que solo pueden ser `True` o `False`. Las palabras clave `True` y `False` corresponden a los dos Estados de `Boolean` variables.  
@@ -45,7 +45,7 @@ Contiene valores que solo pueden ser `True` o `False`. Las palabras clave `True`
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, `runningVB` es un `Boolean` variable, que almacena un sí/no.  
   
-```  
+```vb  
 Dim runningVB As Boolean  
 ' Check to see if program is running on Visual Basic engine.  
 If scriptEngine = "VB" Then  
