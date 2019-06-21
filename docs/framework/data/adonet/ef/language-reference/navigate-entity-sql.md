@@ -2,12 +2,12 @@
 title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: 993c07b824d30c89773c5cfea90c7c194c6b3869
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ce88cecf210d8b3cf541fe7e870e19a59e344ec
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760420"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307335"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 
@@ -35,7 +35,7 @@ Si la cardinalidad del extremo final es 1, el valor devuelto será `Ref<T>`. Si 
 
 ## <a name="remarks"></a>Comentarios
 
-Las relaciones son estructuras de primera clase en [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM). Se pueden establecer relaciones entre dos o más tipos de entidad y los usuarios pueden navegar en la relación de un extremo (entidad) al otro. `from` y `to` son condicionalmente opcionales cuando no hay ambigüedad en la resolución de nombres dentro de la relación.
+Las relaciones son estructuras de primera clase en el Entity Data Model (EDM). Se pueden establecer relaciones entre dos o más tipos de entidad y los usuarios pueden navegar en la relación de un extremo (entidad) al otro. `from` y `to` son condicionalmente opcionales cuando no hay ambigüedad en la resolución de nombres dentro de la relación.
 
 NAVIGATE es válido en espacios O y C.
 

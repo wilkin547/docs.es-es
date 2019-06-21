@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: f35c1387d54fdc02cb421af477671a5a75939c57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36f0d50994593d1d575a836dfbd04e8c63a21204
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626392"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306276"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personalización de fuentes (Data Services de WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usa el [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] para exponer datos como una fuente. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] admite los formatos Atom y JavaScript Object Notation (JSON) para las fuentes de datos. Cuando se usa una fuente Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] proporciona un método estándar para serializar los datos, como entidades y relaciones en un formato XML que puede incluirse en el cuerpo del mensaje HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] define una asignación de entidad-propiedad predeterminada entre los datos que se encuentra en las entidades y elementos Atom. Para obtener más información, consulte [OData: Formato Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -42,7 +42,7 @@ ms.locfileid: "64626392"
  Para obtener más información, vea [Cómo: Personalizar fuentes con el proveedor de Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Dado que Entity Designer no admite las extensiones al modelo de datos, debe modificar manualmente el archivo XML que contiene el modelo de datos. Para obtener más información sobre el archivo .edmx generado por el [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] tools, vea [información general sobre el archivo (Entity Framework) .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).  
+>  Dado que Entity Designer no admite las extensiones al modelo de datos, debe modificar manualmente el archivo XML que contiene el modelo de datos. Para obtener más información sobre el archivo .edmx generado por las herramientas de Entity Data Model, vea [información general sobre el archivo (Entity Framework) .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).  
   
 ### <a name="custom-feed-attributes"></a>Atributos de fuentes personalizadas  
  En la tabla siguiente se muestran los atributos XML que personalizan fuentes y que puede agregar al lenguaje de definición de esquemas conceptuales (CSDL) que define el modelo de datos. Estos atributos son equivalentes a las propiedades de la clase <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> usada con el proveedor de reflexión.  

@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489838"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307300"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen consideraciones de seguridad que son específicas del desarrollo, implementación y ejecución de aplicaciones de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. También debe seguir las recomendaciones para crear aplicaciones seguras de .NET Framework. Para obtener más información, consulte [información general sobre seguridad](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -86,7 +86,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
  El nombre invariable del proveedor se puede modificar en app.config. La aplicación cliente debe asumir la responsabilidad del acceso al proveedor subyacente a través del modelo de fábrica de proveedor estándar utilizando un nombre seguro.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Restrinja los permisos a los archivos de asignación y de modelo.  
- Un administrador debe restringir el acceso de escritura a los archivos de asignación y de modelo (.edmx, .csdl, .ssdl y .msl) únicamente a los usuarios que modifican el modelo o las asignaciones. El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sólo requiere acceso de lectura a estos archivos en tiempo de ejecución. Un administrador debería restringir también el acceso al nivel de objetos y a los archivos para ver código fuente precompilados que generan las herramientas del [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)].  
+ Un administrador debe restringir el acceso de escritura a los archivos de asignación y de modelo (.edmx, .csdl, .ssdl y .msl) únicamente a los usuarios que modifican el modelo o las asignaciones. El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sólo requiere acceso de lectura a estos archivos en tiempo de ejecución. También un administrador debe restringir el acceso a nivel de objetos y archivos de código fuente de vista previamente compilado que se generan mediante las herramientas de Entity Data Model.  
   
 ## <a name="security-considerations-for-queries"></a>Consideraciones de seguridad para las consultas  
  Se deben tener en cuenta las consideraciones de seguridad siguientes cuando se consulta un modelo conceptual. Estas consideraciones se aplican a las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] que usan EntityClient y en las consultas de objetos que usan LINQ, los métodos del generador de consultas o [!INCLUDE[esql](../../../../../includes/esql-md.md)].  

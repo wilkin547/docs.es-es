@@ -4,22 +4,24 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: f046341b1b02c3552ecf8db7d38d2a0c7bc74fba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052377"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306368"
 ---
 # <a name="serialization-and-metadata"></a>Serialización y metadatos
+
 Si la aplicación serializa y deserializa objetos, es posible que deba agregar entradas al archivo de directivas en tiempo de ejecución (.rd.xml) para asegurarse de que los metadatos necesarios están presentes en tiempo de ejecución. Existen dos categorías de serializadores y cada una requiere un tratamiento distinto en el archivo de directivas en tiempo de ejecución:  
   
 - Serializadores de terceros basados en la reflexión. Estos requieren modificaciones en el archivo de directivas en tiempo de ejecución y se describen en la sección siguiente.  
   
 - Serializadores no basados en reflexión que se encuentran en la biblioteca de clases de. NET Framework. Estos pueden exigir modificaciones en el archivo de directivas en tiempo de ejecución, y se explican en la sección [Serializadores de Microsoft](#Microsoft).  
   
-<a name="ThirdParty"></a>   
-## <a name="third-party-serializers"></a>Serializadores de terceros  
+<a name="ThirdParty"></a>
+## <a name="third-party-serializers"></a>Serializadores de terceros
+
  Los serializadores de terceros, entre los que está Newtonsoft.JSON, normalmente están basados en reflexión. Dado un objeto binario grande (BLOB) de datos serializados, los campos de los datos se asignan a un tipo concreto mediante la búsqueda por nombre de los campos del tipo de destino. Como mínimo, el empleo de estas bibliotecas produce excepciones [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) para cada objeto <xref:System.Type> que se intenta serializar o deserializar en una colección `List<Type>`.  
   
  La forma más sencilla de solucionar los problemas causados por la falta de metadatos para estos serializadores es recopilar los tipos que se utilizarán en la serialización en un único espacio de nombres (como `App.Models`) y aplicar una directiva de metadatos `Serialize`:  
@@ -30,19 +32,22 @@ Si la aplicación serializa y deserializa objetos, es posible que deba agregar e
   
  Para más información sobre la sintaxis usada en el ejemplo, vea [Elemento \<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md).  
   
-<a name="Microsoft"></a>   
-## <a name="microsoft-serializers"></a>Serializadores de Microsoft  
+<a name="Microsoft"></a>
+## <a name="microsoft-serializers"></a>Serializadores de Microsoft
+
  Aunque las clases <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> y <xref:System.Xml.Serialization.XmlSerializer> no se basan en la reflexión, necesitan generar código en función del objeto que se va a serializar o deserializar. Los constructores sobrecargados de cada serializador incluyen un parámetro <xref:System.Type> que especifica el tipo que se va a serializar o deserializar. La forma de especificar ese tipo en el código define la acción que se debe realizar, como se explica en las dos secciones siguientes.  
   
-### <a name="typeof-used-in-the-constructor"></a>typeof utilizado en el constructor  
- Si llama a un constructor de estas clases de serialización e incluye la palabra clave [typeof](~/docs/csharp/language-reference/keywords/typeof.md) de C# en la llamada al método, **no tiene que hacer nada más**. Por ejemplo, en cada una de las siguientes llamadas a un constructor de clase de serialización, la palabra clave `typeof` se utiliza como parte de la expresión que se pasa al constructor.  
+### <a name="typeof-used-in-the-constructor"></a>typeof utilizado en el constructor
+
+ Si llama a un constructor de estas clases de serialización e incluye el C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) operador en la llamada al método, **no es necesario realizar ningún trabajo adicional**. Por ejemplo, en cada una de las siguientes llamadas a un constructor de clase de serialización, la palabra clave `typeof` se utiliza como parte de la expresión que se pasa al constructor.  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
  El compilador de .NET Native controlará automáticamente este código.  
   
-### <a name="typeof-used-outside-the-constructor"></a>typeof usado fuera del constructor  
- Si llama a un constructor de estas clases de serialización y usa el C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) palabra clave fuera de la expresión proporcionada para el constructor <xref:System.Type> parámetro, como se muestra en el código siguiente, el compilador de .NET Native no resolver el tipo:  
+### <a name="typeof-used-outside-the-constructor"></a>typeof usado fuera del constructor
+
+ Si llama a un constructor de estas clases de serialización y usa el C# [typeof](~/docs/csharp/language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) operador fuera de la expresión proporcionada para el constructor <xref:System.Type> parámetro, como se muestra en el código siguiente, el compilador de .NET Native no se puede resolver el tipo:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   

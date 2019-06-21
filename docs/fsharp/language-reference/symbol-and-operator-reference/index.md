@@ -2,12 +2,12 @@
 title: Referencia de símbolos y operadores
 description: Obtenga información sobre los símbolos y operadores que se usan en el F# lenguaje de programación.
 ms.date: 02/11/2019
-ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490808"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306182"
 ---
 # <a name="symbol-and-operator-reference"></a>Referencia de símbolos y operadores
 
@@ -47,7 +47,7 @@ En la siguiente tabla se describen los símbolos utilizados en el lenguaje F#, s
 |`+?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Suma los lados izquierdo y derecho, si el lado derecho es un tipo que acepta valores NULL.<br /></li></ul>|
 |`,`|[Tuplas](../tuples.md)|<ul><li>Separa los elementos de una tupla o los parámetros de tipo.<br /></li></ul>|
 |`-`|[Operadores aritméticos](arithmetic-operators.md)|<ul><li>Si se utiliza como un operador binario, resta el lado derecho del lado izquierdo.<br /></li><li>Si se utiliza como un operador unario, realiza una operación de negación.<br /></li></ul>|
-|`-`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Resta el lado derecho del lado izquierdo, si el lado derecho es un tipo que acepta valores NULL.<br /></li></ul>|
+|`-?`|[Operadores que aceptan valores NULL](nullable-operators.md)|<ul><li>Resta el lado derecho del lado izquierdo, si el lado derecho es un tipo que acepta valores NULL.<br /></li></ul>|
 |`->`|[Funciones](../functions/index.md)<br /><br />[Expresiones de coincidencia](../match-expressions.md)|<ul><li>En tipos de función, delimita los argumentos y valores devueltos.<br /></li><li>Genera una expresión (en expresiones de secuencia); equivalente a la palabra clave `yield`.<br /></li><li>Utilizado en expresiones de coincidencia.<br /></li></ul>|
 |`.`|[Miembros](../members/index.md)<br /><br />[Tipos primitivos](../primitive-types.md)|<ul><li>Tiene acceso a un miembro y separa los nombres individuales de un nombre completo.<br /></li><li>Especifica un separador decimal en números de punto flotante.<br /></li></ul>|
 |`..`|[Bucles: `for...in` Expresión](../loops-for-in-expression.md)|<ul><li>Especifica un intervalo.<br /></li></ul>|

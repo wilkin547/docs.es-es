@@ -2,12 +2,12 @@
 title: Terminología de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877484"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306341"
 ---
 # <a name="entity-framework-terminology"></a>Terminología de Entity Framework
 En este tema se define los términos que se hace referencia con frecuencia en [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentación. Se proporcionan vínculos a temas importantes donde hay información adicional.  
@@ -27,7 +27,7 @@ En este tema se define los términos que se hace referencia con frecuencia en [!
 |simultaneidad|Proceso que permite a varios usuarios tener acceso y cambiar los mismos datos al mismo tiempo. De forma predeterminada, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] implementa un modelo de simultaneidad optimista.|  
 |dirección|Hace referencia a la naturaleza asimétrica de algunas asociaciones. La dirección se especifica con los atributos `FromRole` y `ToRole` de un elemento `NavigationProperty` o `ReferentialConstraint` en un esquema.<br /><br /> Para obtener más información, consulte [elemento NavigationProperty (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl) y [propiedad de navegación](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |carga diligente|El proceso de carga de un conjunto específico de objetos relacionados junto con los objetos que se solicitaron explícitamente en la consulta.|  
-|.edmx (archivo)|Archivo XML que contiene el modelo conceptual (en CSDL), el modelo de almacenamiento (en SSDL) y las asignaciones entre ellos (en MSL). El archivo .edmx se crea mediante las herramientas de [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]. Para obtener más información, consulte [información general del archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
+|.edmx (archivo)|Archivo XML que contiene el modelo conceptual (en CSDL), el modelo de almacenamiento (en SSDL) y las asignaciones entre ellos (en MSL). El archivo .edmx se crea mediante las herramientas de Entity Data Model. Para obtener más información, consulte [información general del archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).|  
 |end|Entidad participante en una asociación.<br /><br /> Para obtener más información, consulte [elemento End (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl) y [extremo de asociación](../../../../../docs/framework/data/adonet/association-end.md).|  
 |entidad|Concepto en el dominio de una aplicación partir del que se define un tipo de datos.<br /><br /> Para obtener más información, consulte [elemento EntityType (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl) y [tipo de entidad](../../../../../docs/framework/data/adonet/entity-type.md).|  
 |EntityClient|Un proveedor de datos ADO.NET, independiente del almacenamiento que contiene las clases como `EntityConnection`, `EntityCommand`, y `EntityDataReader`. Funciona con [!INCLUDE[esql](../../../../../includes/esql-md.md)] y se conecta a los proveedores de datos ADO.NET específicos almacenamiento, como `SqlClient`.<br /><br /> Para obtener más información, consulte [proveedor de EntityClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
