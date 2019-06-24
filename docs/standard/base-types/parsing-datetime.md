@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208129"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268173"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizar cadenas de fecha y hora en .NET
 
@@ -65,14 +65,14 @@ En el ejemplo siguiente se muestra el uso del método <xref:System.DateTime.Pars
 
 Además, puede definir explícitamente la referencia cultural cuyas convenciones de formato se utilizan cuando se analiza una cadena. Especifique uno de los objetos <xref:System.Globalization.DateTimeFormatInfo> estándar devueltos por la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>. En el ejemplo siguiente se usa un proveedor de formato para analizar una cadena en alemán como valor <xref:System.DateTime>. Crea un objeto <xref:System.Globalization.CultureInfo> que representa la referencia cultural `de-DE`. El objeto `CultureInfo` garantiza el análisis correcto de esta cadena concreta. Esto impide cualquier opción que se encuentre en <xref:System.Threading.Thread.CurrentCulture> de <xref:System.Threading.Thread.CurrentThread>.  
   
-[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+[!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
 Pero, aunque puede usar sobrecargas del método <xref:System.DateTime.Parse%2A> para especificar proveedores de formato personalizados, el método no admite el análisis de formatos no estándar. Para analizar una fecha y hora expresadas en un formato no estándar, use en su lugar el método <xref:System.DateTime.ParseExact%2A>.  
 
 <a name="styles-example"></a>En el ejemplo siguiente se usa la enumeración <xref:System.Globalization.DateTimeStyles> para especificar que no debe agregarse la información de fecha y hora actual al valor <xref:System.DateTime> en los campos no especificados.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
  
 ## <a name="parseexact"></a>ParseExact
@@ -81,7 +81,7 @@ Si se ajusta a uno de los patrones de cadena especificados, el método <xref:Sys
 
 En el ejemplo siguiente, se pasa al método <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> un objeto de cadena para que lo analice, seguido de un especificador de formato y luego de un objeto <xref:System.Globalization.CultureInfo>. Este método <xref:System.DateTime.ParseExact%2A> solo puede analizar cadenas que sigan el patrón de fecha larga en la referencia cultural `en-US`.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
 Cada sobrecarga de los métodos <xref:System.DateTime.Parse%2A> y <xref:System.DateTime.ParseExact%2A> tiene también un parámetro <xref:System.IFormatProvider> que proporciona información específica de la referencia cultural sobre el formato de la cadena. Este objeto <xref:System.IFormatProvider> es un objeto <xref:System.Globalization.CultureInfo> que representa una referencia cultural estándar o un objeto <xref:System.Globalization.DateTimeFormatInfo> devuelto por la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> usa también una cadena o un argumento de matriz de cadena adicional que define uno o más formatos de fecha y hora personalizados.  

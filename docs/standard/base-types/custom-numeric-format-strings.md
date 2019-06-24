@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab06c2d87de9483d7a3e9eb810f4be1f3278ddc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634522"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268219"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
@@ -36,7 +36,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
   
 <a name="table"></a> En la tabla siguiente se describen los especificadores de formato numérico personalizado y se muestran las salidas de ejemplo generadas por cada especificador de formato. Vea la sección [Notas](#NotesCustomFormatting) para obtener información adicional sobre cómo usar las cadenas de formato numérico personalizado y la sección [Ejemplo](#example) para ver una ilustración completa de su uso.  
   
-|Especificador de formato|nombre|Descripción|Ejemplos|  
+|Especificador de formato|nombre|DESCRIPCIÓN|Ejemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"0"|Marcador de posición cero|Reemplaza el cero con el dígito correspondiente si hay alguno presente; de lo contrario, el cero aparece en la cadena de resultado.<br /><br /> Más información: [Especificador personalizado "0"](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0.45678 ("0.00", fr-FR) -> 0,46|  
 |"#"|Marcador de posición de dígito.|Reemplaza el símbolo "#" por el dígito correspondiente si hay alguno presente; de lo contrario, no aparece ningún dígito en la cadena de resultado.<br /><br /> Tenga en cuenta que no se mostrará ningún dígito en la cadena de resultado si el dígito que se encuentra en la cadena de entrada es un 0 no significativo. Por ejemplo, 0003 ("####") -> 3.<br /><br /> Más información: [Especificador personalizado "#"](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#.##", fr-FR) -> ,46|  
@@ -85,7 +85,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  Para devolver una cadena de resultado en la que los dígitos que faltan o los ceros iniciales se reemplazan por espacios, use la [característica de formato compuesto](../../../docs/standard/base-types/composite-formatting.md) y especifique un ancho de campo, como se muestra en el ejemplo siguiente.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Volver a la tabla](#table)  
@@ -189,7 +189,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
 ## <a name="the--section-separator"></a>Separador de sección ";"  
  El punto y coma (;) es un especificador de formato condicional que aplica distinto formato a un número dependiendo de si su valor es positivo, negativo o cero. Para generar este comportamiento, una cadena de formato personalizado puede contener hasta tres secciones separadas por signos de punto y coma. Estas secciones se describen en la siguiente tabla.  
   
-|Número de secciones|Descripción|  
+|Número de secciones|DESCRIPCIÓN|  
 |------------------------|-----------------|  
 |Una sección|La cadena de formato se aplica a todos los valores.|  
 |Dos secciones|La primera sección se aplica a valores positivos y ceros, y la segunda, sólo a valores negativos.<br /><br /> Si el número al que se va a dar formato es negativo, pero se convierte en cero después de redondearlo según el formato de la segunda sección, se da formato al cero resultante según la primera sección.|  

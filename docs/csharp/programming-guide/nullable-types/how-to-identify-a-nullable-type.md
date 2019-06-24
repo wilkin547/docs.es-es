@@ -6,12 +6,12 @@ ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: 33169315f8bef45aba52f0696d4acac031584817
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73017b8f4c4c046b428d5270a2ef0241c565b07d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582635"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307043"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Procedimiento Identificar tipos que aceptan valores NULL (Guía de programación de C#)
 
@@ -19,7 +19,7 @@ El ejemplo siguiente muestra cómo determinar si una instancia <xref:System.Type
 
 [!code-csharp-interactive[whether Type is nullable](../../../../samples/snippets/csharp/programming-guide/nullable-types/IdentifyNullableType.cs#1)]
 
-Como se muestra en el ejemplo, se usa el operador [typeof](../../language-reference/keywords/typeof.md) para crear un objeto <xref:System.Type?displayProperty=nameWithType>.  
+Como se muestra en el ejemplo, se usa el operador [typeof](../../language-reference/operators/type-testing-and-conversion-operators.md#typeof-operator) para crear un objeto <xref:System.Type?displayProperty=nameWithType>.  
   
 Si quiere determinar si una instancia es de un tipo que acepta valores NULL, no use el método <xref:System.Object.GetType%2A?displayProperty=nameWithType> para obtener una instancia de <xref:System.Type> para probarla con el código anterior. Cuando se llama al método <xref:System.Object.GetType%2A?displayProperty=nameWithType> en una instancia de un tipo que acepta valores NULL, [se aplica la conversión boxing](using-nullable-types.md#boxing-and-unboxing) a la instancia para convertirla en <xref:System.Object>. Como la conversión boxing de una instancia que no es NULL de un tipo que acepta valores NULL equivale la conversión boxing de un valor del tipo subyacente, <xref:System.Object.GetType%2A> devuelve un objeto <xref:System.Type> que representa el tipo subyacente de un tipo que acepta valores NULL:
 

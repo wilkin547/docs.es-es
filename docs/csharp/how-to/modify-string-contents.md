@@ -3,12 +3,12 @@ title: 'Procedimiento para modificar el contenido de cadenas: Guía de C#'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664032"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267761"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Procedimiento para modificar el contenido de cadenas en C\#
 
@@ -67,7 +67,7 @@ En el siguiente ejemplo se muestra cómo reemplazar un conjunto de caracteres en
 Con el código **unsafe** puede modificar una cadena "en contexto" después de haberla creado. Con este código se anulan muchas de las características de .NET diseñadas para minimizar ciertos tipos de errores en el código. Es necesario su uso para modificar una cadena en contexto porque la clase de cadena se diseña como un tipo **inmutable**. Una vez se haya creado, el valor no cambia. El código no seguro evita esta propiedad mediante el acceso y la modificación de la memoria que usa una `string` sin usar los métodos `string` normales.
 En el ejemplo siguiente se indican estas extrañas situaciones en las que quiere modificar una cadena en contexto con código no seguro. En este ejemplo se muestra cómo usar la palabra clave `fixed`. Con la palabra clave `fixed` se evita que el recolector de elementos no utilizados (GC) mueva los objetos de cadenas en memoria mientras que el código accede a la memoria mediante el puntero no seguro. También muestra un posible efecto secundario de operaciones no seguras en cadenas que se obtienen de la manera en que el compilador de C# almacena cadenas (internos) internamente. En general, no debe usar esta técnica a no ser que sea absolutamente necesario. Puede obtener más información en los artículos sobre [unsafe](../language-reference/keywords/unsafe.md) y [fixed](../language-reference/keywords/fixed-statement.md). En la referencia a la API para <xref:System.String.Intern%2A> se incluye información sobre el internamiento de cadenas.
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 Eche un vistazo al código de nuestro [repositorio de GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings) y pruebe estos ejemplos. O bien, puede descargar los ejemplos [como un archivo ZIP](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
