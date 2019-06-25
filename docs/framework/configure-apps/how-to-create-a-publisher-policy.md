@@ -89,7 +89,7 @@ Los proveedores de ensamblados pueden indicar que las aplicaciones deben usar un
   
 1. En el símbolo del sistema, escriba el siguiente comando:  
   
-     **gacutil /i***publisherPolicyAssemblyFile*  
+     **gacutil /i** *publisherPolicyAssemblyFile*  
   
      El comando siguiente agrega `policy.1.0.myAssembly.dll` a la caché global de ensamblados.  
   

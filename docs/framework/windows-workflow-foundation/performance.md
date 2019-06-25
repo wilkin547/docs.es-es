@@ -2,12 +2,12 @@
 title: Rendimiento de Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 51cd5b248789c85ab06073f1bb41a83e5f97c139
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592537"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348536"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Rendimiento de Windows Workflow Foundation
 
@@ -31,7 +31,7 @@ ms.locfileid: "65592537"
 ### <a name="wf-runtime"></a>Runtime de WF
  El núcleo del runtime de [!INCLUDE[wf1](../../../includes/wf1-md.md)] lo constituye un programador asincrónico que controla la ejecución de las actividades en un flujo de trabajo. Proporciona un entorno de ejecución predecible y de gran rendimiento para las actividades. El entorno tiene un contrato bien definido en materia de ejecución, continuación, realización, cancelación y control de excepciones, así como un modelo de subprocesos predecible.
 
- En comparación con WF3, el runtime de WF4 tiene un programador más eficaz. Aprovecha el mismo grupo de subprocesos de E/S que se usa para WCF, que es muy eficaz en la ejecución de los elementos de trabajo por lotes. La cola del programador interno de elemento de trabajo se ha optimizado para la mayoría de los patrones de uso comunes. El runtime de WF4 también administra los estados de ejecución de forma muy simple con una lógica de sincronización y control de eventos mínima, mientras que WF3 depende de una invocación y registro complejos de eventos.
+ En comparación con WF3, el runtime de WF4 tiene un programador más eficaz. Aprovecha el mismo grupo de subprocesos de E/S que se usa para WCF, que es muy eficaz en la ejecución de los elementos de trabajo por lotes. La cola del programador interno de elemento de trabajo se ha optimizado para la mayoría de los patrones de uso comunes. El runtime de WF4 también administra los Estados de ejecución de una manera muy ligera con la sincronización mínimo y de control lógica, mientras que WF3 depende de invocación para realizar la sincronización compleja para las transiciones de estado y el registro de eventos exhaustiva de eventos.
 
 ### <a name="data-storage-and-flow"></a>Almacenamiento y flujo de datos
  En WF3, los datos asociados a una actividad se modelan mediante propiedades de dependencia implementadas por el tipo <xref:System.Windows.DependencyProperty>. El patrón de propiedad de dependencia se introdujo en Windows Presentation Foundation (WPF). En general, este patrón es muy flexible para admitir un enlace de datos fácil y otras características de interfaz de usuario. Sin embargo, el patrón requiere que las propiedades se definan como campos estáticos en la definición de flujo de trabajo. El establecimiento o la obtención de los valores de propiedad por parte del runtime de [!INCLUDE[wf1](../../../includes/wf1-md.md)] suponen una lógica de búsqueda compleja.
@@ -43,7 +43,7 @@ ms.locfileid: "65592537"
 ### <a name="control-flow"></a>Flujo de control
  Como en cualquier lenguaje de programación, [!INCLUDE[wf1](../../../includes/wf1-md.md)] proporciona compatibilidad con los flujos de control para las definiciones de flujo de trabajo introduciendo un conjunto de actividades de flujo de control para la creación de secuencias, bucles, bifurcaciones y otros patrones. En WF3, cuando se necesita volver a ejecutar la misma actividad, se crea un nuevo elemento <xref:System.Workflow.ComponentModel.ActivityExecutionContext> y la actividad se clona mediante una lógica de serialización y deserialización compleja basada en <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>. Normalmente, el rendimiento de los flujos de control reiterativos es mucho más lento que la ejecución de una secuencia de actividades.
 
- WF4 trata este aspecto de forma bastante diferente. Toma la plantilla de actividad, crea un nuevo objeto ActivityInstance y lo agrega a la cola del programador. Este proceso completo solamente implica la creación explícita de objetos y es muy simple.
+ WF4 trata este aspecto de forma bastante diferente. Toma la plantilla de actividad, crea un nuevo objeto ActivityInstance y lo agrega a la cola del programador. Todo este proceso sólo implica la creación explícita de objetos y es muy ligero.
 
 ### <a name="asynchronous-programming"></a>Programación asincrónica
  Las aplicaciones tienen normalmente mejores niveles de rendimiento y escalabilidad con la programación asincrónica de operaciones de bloqueo de ejecución prolongada, como las operaciones de computación distribuidas o de E/S. WF4 proporciona compatibilidad asincrónica a través de los tipos de actividad base <xref:System.Activities.AsyncCodeActivity> y <xref:System.Activities.AsyncCodeActivity%601>. El runtime entiende las actividades asincrónicas de forma nativa y, por lo tanto, puede colocar automáticamente la instancia en una zona sin persistencia mientras el trabajo asincrónico está pendiente. Las actividades personalizadas pueden derivar de estos tipos para realizar el trabajo asincrónico sin retener el subproceso de programador de flujo de trabajo ni bloquear las actividades que puedan ejecutarse en paralelo.

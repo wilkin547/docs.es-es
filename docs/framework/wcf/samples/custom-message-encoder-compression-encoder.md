@@ -2,12 +2,12 @@
 title: 'Codificador de mensajes personalizado: codificador de compresión'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 32ca96987a86c04c227f8bb0d680f647898dfccf
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878459"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348427"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Codificador de mensajes personalizado: codificador de compresión
 Este ejemplo muestra cómo implementar un codificador personalizado mediante la plataforma de Windows Communication Foundation (WCF).  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  Aunque esto puede ser suficiente para la mayoría de escenarios de usuario, ser compatible con una configuración de archivo es fundamental si se hospeda en web un servicio. Para admitir el escenario hospedado en web, debe desarrollar un controlador de configuración personalizado para permitir que se configure un elemento de enlace personalizado en un archivo.  
   
- Puede crear un controlador de configuración para el elemento de enlace encima del sistema de configuración que proporciona [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]. El controlador de configuración para el elemento de enlace debe derivar de la clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Se usa la propiedad `BindingElementType` para informar al sistema de configuración del tipo de elemento de enlace que se va a crear para esta sección. Todos los aspectos de `BindingElement` que se pueden establecer se deberían exponer como propiedades en la clase derivada <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. <xref:System.Configuration.ConfigurationPropertyAttribute> se utiliza para ayudar a asignar los atributos de elemento de configuración a las propiedades y a definir valores predeterminados si faltan los atributos. Después de cargar y aplicar los valores de configuración a las propiedades, se llama al método <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>, que convierte las propiedades en una instancia concreta de un elemento de enlace. El método <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A> se usa para convertir las propiedades de la clase derivada <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> en los valores que se van a definir en el elemento de enlace creado recientemente.  
+ Puede crear un controlador de configuración para el elemento de enlace encima del sistema de configuración. El controlador de configuración para el elemento de enlace debe derivar de la clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. El <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.BindingElementType?displayProperty=nameWithType> informa al sistema de configuración del tipo de elemento de enlace para crear en esta sección. Todos los aspectos de `BindingElement` que se pueden establecer se deberían exponer como propiedades en la clase derivada <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. El <xref:System.Configuration.ConfigurationPropertyAttribute> ayuda en la asignación de los atributos del elemento de configuración a las propiedades y establecer valores predeterminados si faltan los atributos. Después de cargar y aplicar los valores de configuración a las propiedades, se llama al método <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A?displayProperty=nameWithType>, que convierte las propiedades en una instancia concreta de un elemento de enlace. El <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A?displayProperty=nameWithType> método se utiliza para convertir las propiedades de la <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> clase derivada en los valores que se establecerá en el elemento de enlace recién creado.  
   
  En el siguiente código de ejemplo muestra la implementación de `GZipMessageEncodingElement`.  
   

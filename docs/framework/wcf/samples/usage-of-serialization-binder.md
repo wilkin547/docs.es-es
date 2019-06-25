@@ -2,12 +2,12 @@
 title: Uso del enlazador de serialización
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 677decebcf444fed95311bd02acf8a96e0a4eca9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 10900950b935b484053fe8e37263f0dfc25eba99
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591778"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348456"
 ---
 # <a name="usage-of-serialization-binder"></a>Uso del enlazador de serialización
 Este ejemplo muestra cómo utilizar <xref:System.Runtime.Serialization.SerializationBinder> para cambiar la versión de un tipo genérico cuando se serializa.  
@@ -18,7 +18,7 @@ Este ejemplo muestra cómo utilizar <xref:System.Runtime.Serialization.Serializa
 ## <a name="discussion"></a>Discusión  
  Este ejemplo muestra cómo dos entidades que son destinatarios diferentes versiones de puede .NET Framework comunicarse utilizando el formateador binario y el enlazador de serialización.  
   
- El desarrollo de este ejemplo se ha realizado con .NET Remoting. El ejemplo está compuesto de un servidor para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], que implementa un contrato con tipos genéricos, y dos clientes diferentes, uno para [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] y otro para [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
+En este ejemplo se desarrolló con .NET Remoting. Consta de un servidor para [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)], que implementa un contrato con tipos genéricos y dos clientes diferentes, destino .NET Framework 2.0 y otro para [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
   
  El servidor asocia un objeto <xref:System.Runtime.Serialization.SerializationBinder> al formateador binario para poder cambiar la versión de los tipos de acuerdo con la serialización, de modo que ambos clientes puedan deserializar esos tipos correctamente.  
   

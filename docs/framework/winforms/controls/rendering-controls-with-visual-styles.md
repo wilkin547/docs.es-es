@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592606"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348485"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Representar controles con estilos visuales
 .NET Framework proporciona compatibilidad para representar controles y otros usuarios de Windows elementos de interfaz (IU) con estilos visuales en los sistemas operativos que los respaldan. En este tema se describe los distintos niveles de compatibilidad de .NET Framework para representar controles y otros elementos de interfaz de usuario con el estilo visual actual del sistema operativo.  
@@ -23,7 +23,7 @@ ms.locfileid: "65592606"
 ## <a name="rendering-classes-for-common-controls"></a>Clases de representación de los controles comunes  
  La representación de un control hace referencia al hecho de dibujar la interfaz de usuario de un control. El espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> proporciona la clase <xref:System.Windows.Forms.ControlPaint> para representar algunos controles comunes de Windows Forms, aunque esta clase dibuja controles en el estilo clásico de Windows, lo que puede dificultar la tarea de mantener una experiencia de IU coherente al dibujar controles personalizados en aplicaciones que tienen habilitados estilos visuales.  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] incluye las clases del espacio de nombres <xref:System.Windows.Forms?displayProperty=nameWithType> que representan las partes y los estados de los controles comunes con los estilos visuales. Cada una de estas clases incluye métodos `static` para dibujar el control o las partes del control en un estado particular con el estilo visual actual del sistema operativo.  
+ .NET Framework 2.0 incluye las clases en el <xref:System.Windows.Forms?displayProperty=nameWithType> espacio de nombres que representan las partes y los Estados de los controles comunes con estilos visuales. Cada una de estas clases incluye métodos `static` para dibujar el control o las partes del control en un estado particular con el estilo visual actual del sistema operativo.  
   
  Algunas de estas clases están diseñadas para dibujar el control relacionado tanto si los estilos visuales están disponibles como si no lo están. Si los estilos visuales están habilitados, los miembros de clase dibujarán el control relacionado con estilos visuales. Si no lo están, los miembros de clase dibujarán el control en el estilo clásico de Windows. Estas clases incluyen:  
   

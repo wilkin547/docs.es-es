@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169901"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348213"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Procedimiento para recuperar datos del Portapapeles
 La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede usar para interactuar con la función de Portapapeles del sistema operativo Windows. Muchas aplicaciones utilizan el Portapapeles como un repositorio temporal para los datos. Por ejemplo, procesadores de textos utilizan el Portapapeles durante las operaciones de cortar y pegar. El Portapapeles también es útil para transferir información desde una aplicación a otra.  
@@ -22,7 +22,7 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
   
  Para determinar si el Portapapeles contiene datos en un formato determinado, utilice uno de los `Contains` *formato* métodos o <xref:System.Windows.Forms.Clipboard.GetData%2A> método. Para recuperar datos desde el Portapapeles, utilice uno de los `Get` *formato* métodos o <xref:System.Windows.Forms.Clipboard.GetData%2A> método. Estos métodos son nuevos en .NET Framework 2.0.  
   
- Acceso a los datos del Portapapeles con versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)], utilice el <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> método y llamar a los métodos de devuelto <xref:System.Windows.Forms.IDataObject>. Para determinar si un formato determinado está disponible en el objeto devuelto, por ejemplo, llamar a la <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> método.  
+ Para obtener acceso a datos desde el Portapapeles con versiones anteriores a .NET Framework 2.0, utilice la <xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType> método y llamar a los métodos de devuelto <xref:System.Windows.Forms.IDataObject>. Para determinar si un formato determinado está disponible en el objeto devuelto, por ejemplo, llamar a la <xref:System.Windows.Forms.IDataObject.GetDataPresent%2A> método.  
   
 > [!NOTE]
 >  Todas las aplicaciones basadas en Windows comparten el Portapapeles del sistema. Por lo tanto, el contenido está sujeta a cambios cuando se cambia a otra aplicación.  
@@ -49,7 +49,7 @@ La <xref:System.Windows.Forms.Clipboard> clase proporciona métodos que puede us
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>Para recuperar datos del Portapapeles en varios formatos  
   
-1. Utilice el método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Debe usar este método para recuperar datos del Portapapeles en las versiones anteriores a [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)].  
+1. Utilice el método <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>. Debe usar este método para recuperar datos del Portapapeles en versiones anteriores a .NET Framework 2.0.  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

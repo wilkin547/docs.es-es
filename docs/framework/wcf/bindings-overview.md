@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592230"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348195"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Información general de enlaces de Windows Communication Foundation
 Los enlaces son objetos que se usan para especificar los detalles de comunicación que son necesarias para conectarse al punto de conexión de un servicio de Windows Communication Foundation (WCF). Cada punto de conexión en un servicio WCF requiere un enlace esté bien especificado. En este tema se describe los tipos de datos de comunicación que definen los enlaces, los elementos de un enlace, qué enlaces están incluidos en WCF y cómo se puede especificar un enlace para un punto de conexión.  
   
 ## <a name="what-a-binding-defines"></a>Qué define un enlace  
- La información de un enlace puede ser muy básica o muy compleja. El enlace más básico especifica solo el protocolo de transporte (como HTTP) que se debe utilizar para conectar al extremo. En términos más generales, la información que contiene un enlace sobre cómo conectarse a un extremo queda incluida en una de las siguientes categorías.  
+ La información de un enlace puede ser muy básica o muy compleja. El enlace más básico especifica solo el protocolo de transporte (como HTTP) que se debe utilizar para conectar al extremo. Por lo general, la información que contiene un enlace sobre cómo conectarse a un punto de conexión queda incluida en una de las siguientes categorías:  
   
- Protocolos  
+ **Protocolos**  
  Determina el mecanismo de seguridad utilizado: función de la mensajería de confianza o configuración de flujo de contexto de transacción.  
   
- Codificación  
+ **Codificación**  
  Determina la codificación del mensaje (por ejemplo, texto o binario).  
   
- Transporte  
+ **Transporte**  
  Determina el protocolo de transporte subyacente que se utilizará (por ejemplo, TCP o HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Los elementos de un enlace  

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
-ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce2097568349ad376540163f5fe05d6a3e5b0643
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054580"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348025"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Procedimiento Crear una forma mediante un objeto StreamGeometry
-<xref:System.Windows.Media.StreamGeometry> es la alternativa ligera a <xref:System.Windows.Media.PathGeometry> para crear formas geométricas. Use un <xref:System.Windows.Media.StreamGeometry> cuando necesite describir una geometría compleja pero no desea la sobrecarga de admitir el enlace de datos, animaciones ni modificaciones. Por ejemplo, debido a su eficacia, la <xref:System.Windows.Media.StreamGeometry> clase es una buena elección para describir adornos.  
+<xref:System.Windows.Media.StreamGeometry> es una alternativa ligera a <xref:System.Windows.Media.PathGeometry> para crear formas geométricas. Use un <xref:System.Windows.Media.StreamGeometry> cuando necesite describir una geometría compleja pero no desea la sobrecarga de admitir el enlace de datos, animaciones ni modificaciones. Por ejemplo, debido a su eficacia, la <xref:System.Windows.Media.StreamGeometry> clase es una buena elección para describir adornos.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa la sintaxis de atributo para crear un triangular <xref:System.Windows.Media.StreamGeometry> en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  

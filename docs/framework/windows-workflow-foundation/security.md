@@ -2,12 +2,12 @@
 title: Seguridad
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
-ms.openlocfilehash: d82ad52dd24dbfcb66887693563b08c995baa63a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cbfb82c2db329725d3445e1a88b54e01d5813f36
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619490"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348400"
 ---
 # <a name="security"></a>Seguridad
 El almacén de instancias de flujo de trabajo de SQL usa los siguientes roles de seguridad de base de datos para garantizar el acceso a la información de estado de las instancias en la base de datos de persistencia.  
@@ -16,7 +16,7 @@ El almacén de instancias de flujo de trabajo de SQL usa los siguientes roles de
   
 - **System.Activities.DurableInstancing.InstanceStoreObservers**. Este rol tiene acceso de solo lectura a las vistas públicas.  
   
-- **System.Activities.DurableInstancing.WorkflowActivationUsers**. Este rol posee derechos de ejecución a procedimientos almacenados que están involucrados en el proceso de activación de instancias. Para obtener más información acerca de la activación de instancias, consulte [activación de instancias](instance-activation.md). La cuenta de usuario con la que se ejecuta un host genérico (como el Servicio de administración de flujos de trabajo de [!INCLUDE[dublin](../../../includes/dublin-md.md)]) debe agregarse a este rol de la base de datos.  
+- **System.Activities.DurableInstancing.WorkflowActivationUsers**. Este rol posee derechos de ejecución a procedimientos almacenados que están involucrados en el proceso de activación de instancias. Para obtener más información acerca de la activación de instancias, consulte [activación de instancias](instance-activation.md). La cuenta de usuario que se ejecuta un host genérico (por ejemplo, el servicio de administración de flujo de trabajo de las características de hospedaje de Windows Server AppFabric) debe agregarse a este rol de base de datos.  
   
  Para obtener más información sobre la seguridad para almacenes de persistencia con Windows Server App Fabric, consulte [configuración de seguridad para almacenes de persistencia en App Fabric](https://go.microsoft.com/fwlink/?LinkId=201208)  
   
