@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para comprobar si las cadenas tienen un formato de correo electrónico válido
+title: 'Procedimientos para: para comprobar si las cadenas tienen un formato de correo electrónico válido'
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -21,13 +21,13 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/24/2019
 ms.locfileid: "65589526"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedimiento para comprobar si las cadenas tienen un formato de correo electrónico válido
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedimientos para: para comprobar si las cadenas tienen un formato de correo electrónico válido
 En el ejemplo siguiente se usa una expresión regular para comprobar que una cadena tiene un formato de correo electrónico válido.  
 
 ## <a name="example"></a>Ejemplo  
@@ -35,7 +35,7 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
   
  Para comprobar que la dirección de correo electrónico es válida, el método `IsValidEmail` llama al método <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> con el patrón de expresión regular `(@)(.+)$` para separar el nombre de dominio de la dirección de correo electrónico. El tercer parámetro es un delegado <xref:System.Text.RegularExpressions.MatchEvaluator> que representa el método que procesa y reemplaza el texto coincidente. El patrón de expresión regular se interpreta de esta manera:  
   
-|Modelo|Descripción|  
+|Patrón|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`(@)`|Buscar el carácter @. Este es el primer grupo de captura.|  
 |`(.+)`|Buscar una coincidencia con una o más apariciones de cualquier carácter. Este es el segundo grupo de captura.|  
@@ -52,15 +52,15 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
   
  En este ejemplo, el patrón de expresión regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` se interpreta como se muestra en la tabla siguiente. Observe que la expresión regular se compila mediante la marca <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .  
   
-|Modelo|Descripción|  
+|Patrón|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Comenzar la búsqueda de coincidencia al principio de la cadena.|  
 |`(?(")`|Determinar si el primer carácter es una comilla. `(?(")` es el principio de una construcción de alternancia.|  
 |`(?("")("".+?(?<!\\)""@)`|Si el primer carácter es un signo de comillas, buscar unas comillas iniciales seguidas de al menos un carácter cualquiera, seguido a su vez de unas comillas finales. Las comillas finales no pueden ir precedidas de un carácter de barra diagonal inversa (\\). `(?<!` es el principio de una aserción de búsqueda anticipada negativa de ancho cero. La cadena debe concluir con una arroba (@).|  
 |<code>&#124;(([0-9a-z]</code>|Si el primer carácter no es un signo de comillas, buscar cualquier carácter alfabético de la a a la z o de la A a la Z (la comparación distingue entre mayúsculas y minúsculas) o cualquier carácter numérico del 0 al 9.|  
 |`(\.(?!\.))`|Si el carácter siguiente es un punto, determinar que coincide. Si no lo es, buscar más adelante en el siguiente carácter y probar si coincide. `(?!\.)` es una aserción de búsqueda anticipada negativa de ancho igual a cero que evita que aparezcan dos puntos consecutivos en la parte local de una dirección de correo electrónico.|  
-|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Si el carácter siguiente no es un punto, busque la coincidencia de cualquier carácter de palabra o uno de los siguientes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
-|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Busque la coincidencia con el modelo de alternancia (un punto seguido de algo que no sea un punto, o uno de varios caracteres) cero o más veces.|  
+|<code>&#124;[-!#\$%&'\*\+/=\?\^\`{}&#124;~\w]</code>|Si el carácter siguiente no es un punto, buscar cualquier carácter de palabra coincidente o uno de los siguientes caracteres: -!#$%'*+=?^\`{}&#124;~.|  
+|<code>((\.(?!\.))&#124;[-!#\$%'\*\+/=\?\^\`{}&#124;~\w])*</code>|Buscar el modelo de alternancia (un punto seguido de algo que no sea un punto, o uno de varios caracteres) cero o más veces.|  
 |`@`|Buscar el carácter @.|  
 |`(?<=[0-9a-z])`|Continuar buscando si el carácter que precede al carácter @ es uno de la A a la Z, de la a a la z o del 0 al 9. La construcción `(?<=[0-9a-z])` define una aserción de búsqueda tardía positiva de ancho igual a cero.|  
 |`(?(\[)`|Comprobar si el carácter que va detrás de @ es un corchete de apertura.|  
