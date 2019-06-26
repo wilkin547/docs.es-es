@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: f9acadcb594005d7c7eadffcddad3649a3aefc29
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025752"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402188"
 ---
 # <a name="hosting-in-internet-information-services"></a>Hospedaje en Internet Information Services
 Es una opción para hospedar servicios Windows Communication Foundation (WCF) dentro de una aplicación de Internet Information Services (IIS). Este modelo de hospedaje es similar al modelo utilizado por ASP.NET y servicios Web de ASP.NET Web services (ASMX).  
@@ -19,9 +19,9 @@ Es una opción para hospedar servicios Windows Communication Foundation (WCF) de
   
 - IIS 5.1 en [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)]. Este entorno es útil para el diseño y desarrollo de aplicaciones hospedadas por IIS que se implementarán más adelante en un sistema operativo de servidor como [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
-- [!INCLUDE[iis601](../../../../includes/iis601-md.md)] en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] proporciona un modelo de procesamiento avanzado que ofrece una mejor escalabilidad, confiabilidad y aislamiento de aplicaciones. Este entorno es adecuado para la implementación de producción de servicios WCF que utilizan comunicación HTTP de forma exclusiva.  
+- IIS 6.0 en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. IIS 6.0 proporciona un modelo de proceso avanzado que ofrece una mejor escalabilidad, confiabilidad y aislamiento de la aplicación. Este entorno es adecuado para la implementación de producción de servicios WCF que utilizan comunicación HTTP de forma exclusiva.  
   
-- IIS 7.0 en [!INCLUDE[wv](../../../../includes/wv-md.md)] y [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. IIS 7.0 proporciona el mismo modelo de procesamiento avanzado que [!INCLUDE[iis601](../../../../includes/iis601-md.md)], pero utiliza Windows Process Activation Service (WAS) para permitir la activación y comunicación por red a través de protocolos que no sean HTTP. Este entorno es adecuado para el desarrollo de servicios WCF que se comunican a través de cualquier protocolo de red compatible con WCF (incluidos HTTP, net.tcp, net.pipe y net.msmq). Para obtener más información acerca de WAS, vea [hospedaje en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
+- IIS 7.0 en [!INCLUDE[wv](../../../../includes/wv-md.md)] y [!INCLUDE[lserver](../../../../includes/lserver-md.md)]. IIS 7.0 proporciona el mismo modelo de proceso avanzado que IIS 6.0, pero usa el servicio de activación de procesos de Windows (WAS) para permitir la activación y comunicación de red a través de protocolos que no sean HTTP. Este entorno es adecuado para el desarrollo de servicios WCF que se comunican a través de cualquier protocolo de red compatible con WCF (incluidos HTTP, net.tcp, net.pipe y net.msmq). Para obtener más información acerca de WAS, vea [hospedaje en Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).  
   
 - [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) funciona con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] y el servicio de activación de proceso Windows (WAS) para proporcionar un entorno para servicios NET4 WCF y WF de hospedaje de aplicaciones enriquecido. Estas ventajas incluyen la administración del ciclo de vida de los procesos, el reciclaje de procesos, el hospedaje compartido, la protección rápida ante los errores, los procesos huérfanos, la activación a petición y la supervisión del estado de mantenimiento. Para obtener información detallada, consulte [AppFabric Hosting Features](https://go.microsoft.com/fwlink/?LinkId=196494) y [conceptos de hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).  
   
@@ -36,7 +36,7 @@ Es una opción para hospedar servicios Windows Communication Foundation (WCF) de
   
 - Servicios WCF hospedados en IIS usan el mismo modelo de compilación dinámica como ASP.NET 2.0, lo que simplifica el desarrollo e implementación de servicios hospedados.  
   
- La hora de decidir hospedar los servicios de WCF en IIS, es importante recordar que IIS 5.1 y [!INCLUDE[iis601](../../../../includes/iis601-md.md)] se limitan a la comunicación HTTP. Para obtener más información acerca de cómo elegir un entorno de hospedaje, vea [servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md).  
+ La hora de decidir hospedar los servicios de WCF en IIS, es importante recordar que IIS 5.1 e IIS 6.0 se limitan a la comunicación HTTP. Para obtener más información acerca de cómo elegir un entorno de hospedaje, vea [servicios de hospedaje](../../../../docs/framework/wcf/hosting-services.md).  
   
 ## <a name="deploying-an-iis-hosted-wcf-service"></a>Implementación de un servicio WCF hospedado por IIS  
  Desarrollar e implementar un servicio WCF hospedado por IIS consta de las siguientes tareas:  

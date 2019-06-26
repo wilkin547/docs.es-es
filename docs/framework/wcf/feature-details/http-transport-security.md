@@ -2,12 +2,12 @@
 title: Seguridad de transporte HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: ab099302df93ce7d01c2730df88240265411bc8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587672"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402305"
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en Windows Communication Foundation (WCF).  
@@ -35,7 +35,7 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
   
 - Si va a crear una aplicación autohospedada de WCF, puede enlazar un certificado SSL a la dirección mediante la herramienta HttpCfg.exe.  
   
-### <a name="using-iis-for-transport-security"></a>Utilizar IIS para seguridad de transporte   
+### <a name="using-iis-for-transport-security"></a>Utilizar IIS para seguridad de transporte  
   
 #### <a name="iis-70"></a>IIS 7.0  
  Para configurar [!INCLUDE[iisver](../../../../includes/iisver-md.md)] como un host seguro (utilizando SSL), consulte [IIS 7.0 Beta: Configuración de Sockets seguros capa en IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
@@ -43,9 +43,9 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
  Para configurar certificados para su uso con [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: Configuración de certificados de servidor en IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 #### <a name="iis-60"></a>IIS 6,0  
- Para configurar [!INCLUDE[iis601](../../../../includes/iis601-md.md)] como un host seguro (utilizando SSL), consulte [capa de Sockets seguros](https://go.microsoft.com/fwlink/?LinkId=88601).  
+ Para configurar IIS 6.0 como un host seguro (utilizando SSL), consulte [capa de Sockets seguros](https://go.microsoft.com/fwlink/?LinkId=88601).  
   
- Para configurar certificados para su uso con [!INCLUDE[iis601](../../../../includes/iis601-md.md)], consulte [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602).  
+ Para configurar certificados para su uso con IIS 6.0, consulte [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602).  
   
 ### <a name="using-httpcfg-for-ssl"></a>Utilizar HttpCfg para SSL  
  Si va a crear una aplicación WCF autohospedada, descargue la herramienta HttpCfg.exe, disponible en el [sitio de Windows XP Service Pack 2 Support Tools](https://go.microsoft.com/fwlink/?LinkId=29002).  

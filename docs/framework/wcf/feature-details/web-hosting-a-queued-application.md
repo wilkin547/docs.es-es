@@ -2,15 +2,15 @@
 title: Alojamiento web de una aplicación en cola
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8584f78b6b31bc95e088b424122a9cf77a17f27
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126027"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402278"
 ---
 # <a name="web-hosting-a-queued-application"></a>Alojamiento web de una aplicación en cola
-El servicio de activación de procesos de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen aplicaciones que hospedar servicios de Windows Communication Foundation (WCF). El modelo de procesamiento WAS generaliza el modelo de procesamiento [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para el servidor HTTP quitando la dependencia en HTTP. Esto permite a los servicios WCF usar HTTP y protocolos no HTTP, como net.msmq y msmq.formatname, en un entorno de hospedaje que admite la activación basada en mensajes y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
+El servicio de activación de procesos de Windows (WAS) administra la activación y duración de los procesos de trabajo que contienen aplicaciones que hospedar servicios de Windows Communication Foundation (WCF). El modelo de proceso WAS generaliza el modelo de proceso de IIS 6.0 para el servidor HTTP quitando la dependencia de HTTP. Esto permite a los servicios WCF usar HTTP y protocolos no HTTP, como net.msmq y msmq.formatname, en un entorno de hospedaje que admite la activación basada en mensajes y ofrece la posibilidad de hospedar un gran número de aplicaciones en un equipo determinado.  
   
  WAS incluye un servicio de activación de Message Queuing (MSMQ) que activa una aplicación en cola cuando hay uno o más mensajes en una de las colas que la aplicación usa. El servicio de activación MSMQ es un servicio NT que se inicia automáticamente de forma predeterminada.  
   

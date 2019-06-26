@@ -2,12 +2,12 @@
 title: Procedimientos recomendados de hospedaje de Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bb60330aeedfe4b16a2a53d644e79a4a16636afa
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878603"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402433"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Procedimientos recomendados de hospedaje de Internet Information Services
 En este tema se describe algunos procedimientos recomendados para hospedar servicios Windows Communication Foundation (WCF).  
@@ -16,7 +16,7 @@ En este tema se describe algunos procedimientos recomendados para hospedar servi
  Implementación de WCF service como un archivo DLL que se implementa en el directorio \bin de una aplicación Web permite que reutilizar el servicio fuera del modelo de aplicación Web, por ejemplo, en un entorno de prueba que no tenga implementado Internet Information Services (IIS).  
   
 ## <a name="service-hosts-in-iis-hosted-applications"></a>Hosts de servicio de aplicaciones hospedadas en IIS  
- No utilice las API de autohospedaje imperativo para crear nuevos hosts de servicio que realicen escuchas en transportes de red no admitidos nativamente por el entorno de hospedaje de IIS (por ejemplo, [!INCLUDE[iis601](../../../../includes/iis601-md.md)] para hospedar servicios TCP, porque la comunicación TCP no se admite de manera nativa en [!INCLUDE[iis601](../../../../includes/iis601-md.md)]). Éste enfoque no se recomienda. Los hosts de servicio creados de manera imperativa no se conocen dentro del entorno de hospedaje de IIS. El punto crítico es que el procesamiento realizado por servicios creados imperativamente no se tiene en cuenta por parte de IIS cuando determina si el grupo de aplicaciones de hospedaje está inactivo. El resultado es que las aplicaciones que tienen hosts de servicio creados de esta manera imperativa tienen un entorno de hospedaje de IIS que elimina de manera agresiva los procesos de host de IIS.  
+ No use la API de autohospedaje imperativas para crear nuevos hosts de servicio que escuchan en los transportes de red no admitidos nativamente por el entorno de hospedaje de IIS (por ejemplo, IIS 6.0 para TCP de host de servicios, porque la comunicación TCP no se admite de forma nativa en IIS 6.0). Éste enfoque no se recomienda. Los hosts de servicio creados de manera imperativa no se conocen dentro del entorno de hospedaje de IIS. El punto crítico es que el procesamiento realizado por servicios creados imperativamente no se tiene en cuenta por parte de IIS cuando determina si el grupo de aplicaciones de hospedaje está inactivo. El resultado es que las aplicaciones que tienen hosts de servicio creados de esta manera imperativa tienen un entorno de hospedaje de IIS que elimina de manera agresiva los procesos de host de IIS.  
   
 ## <a name="uris-and-iis-hosted-endpoints"></a>URI y extremos hospedados en IIS  
  Los puntos de conexión para un servicio hospedado en IIS se deberían configurar utilizando Identificadores uniformes de recursos relativos (URI), no direcciones absolutas. Esto garantiza que la dirección de punto de conexión cae dentro del conjunto de direcciones URI que pertenecen a la aplicación de hospedaje y asegura que la activación basada en mensaje ocurre tal y como se esperaba.  
