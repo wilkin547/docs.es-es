@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678509"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398124"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -24,7 +24,7 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Tenga en cuenta que no se usa el operador [new](../../../csharp/language-reference/keywords/new-operator.md) para crear un objeto de cadena, salvo cuando se inicialice la cadena con una matriz de caracteres.  
+ Tenga en cuenta que no se usa el operador [new](../../../csharp/language-reference/operators/new-operator.md) para crear un objeto de cadena, salvo cuando se inicialice la cadena con una matriz de caracteres.  
   
  Inicialice una cadena con el valor constante <xref:System.String.Empty> para crear un objeto <xref:System.String> cuya cadena tenga longitud cero. La representación literal de la cadena de una cadena de longitud cero es "". Mediante la inicialización de las cadenas con el valor <xref:System.String.Empty> en lugar de [null](../../../csharp/language-reference/keywords/null.md), puede reducir las posibilidades de que se produzca una excepción <xref:System.NullReferenceException>. Use el método estático <xref:System.String.IsNullOrEmpty%28System.String%29> para comprobar el valor de una cadena antes de intentar obtener acceso a ella.  
   
@@ -126,7 +126,7 @@ string s = String.Empty;
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Tema|Descripción|  
+|Tema|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Cómo: Modificar el contenido de cadenas](../../how-to/modify-string-contents.md)|Muestra técnicas para transformar cadenas y modificar el contenido de estas.|  
 |[Cómo: Comparar cadenas](../../how-to/compare-strings.md)|Muestra cómo realizar comparaciones ordinales y culturales específicas de las cadenas.|  
