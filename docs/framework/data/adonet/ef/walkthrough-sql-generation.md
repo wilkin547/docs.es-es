@@ -2,12 +2,12 @@
 title: 'Tutorial: Generación de SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690350"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422774"
 ---
 # <a name="walkthrough-sql-generation"></a>Tutorial: Generación de SQL
 
@@ -128,7 +128,7 @@ La entrada derecha se procesa de la misma manera que la entrada izquierda. El es
 
 ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-A continuación, se inserta "false" en la pila de IsParentAJoin y se procesa la condición de combinación Var(Extent1).CategoryID == Var(Extent2).CategoryID. Var (extent1) se resuelve como \<symbol_Extent1 > después de una búsqueda en la tabla de símbolos. Dado que la instancia se resuelve como un símbolo simple, como resultado del procesamiento Var(Extent1). Id. de categoría, un objeto SqlBuilder con \<symbol1 >. " Se devuelve el CategoryID". De igual forma se procesa el otro lado de la comparación. El resultado de la visita de la condición de combinación se anexa a la cláusula FROM de SelectStatement1 y el valor "false" se extrae de la pila de IsParentAJoin.
+A continuación, se inserta "false" en la pila de IsParentAJoin y se procesa la condición de combinación Var(Extent1).CategoryID == Var(Extent2).CategoryID. Se resuelve en var(Extent1) \<symbol_Extent1 > después de una búsqueda en la tabla de símbolos. Dado que la instancia se resuelve como un símbolo simple, como resultado del procesamiento Var(Extent1). Id. de categoría, un objeto SqlBuilder con \<symbol1 >. " Se devuelve el CategoryID". De igual forma se procesa el otro lado de la comparación. El resultado de la visita de la condición de combinación se anexa a la cláusula FROM de SelectStatement1 y el valor "false" se extrae de la pila de IsParentAJoin.
 
 Con esto, Join1 se ha procesado completamente y se ha extraído un ámbito de la tabla de símbolos.
 

@@ -2,19 +2,20 @@
 title: Validador de certificado X.509
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: b5ad4b4e75a66be1b8708474fd65c421de978b07
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 628e4e12e1eafb6101503a59e3393777f9c30989
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606060"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424624"
 ---
 # <a name="x509-certificate-validator"></a>Validador de certificado X.509
+
 Este ejemplo muestra cómo implementar un validador de certificado X.509 personalizado. Esto es útil en casos donde ninguno de los modos de validación de certificado X.509 integrado es adecuado para los requisitos de la aplicación. Este ejemplo muestra un servicio que tiene un validador personalizado que acepta certificados emitidos por sí mismos. El cliente utiliza un certificado para autenticar al servicio.
 
- Nota: Como cualquiera puede construir un certificado emitido automáticamente el validador personalizado utilizado por el servicio es menos seguro que el comportamiento predeterminado proporcionado por el ChainTrust X509CertificateValidationMode. Las implicaciones de seguridad que conlleva deberían considerarse cuidadosamente antes de utilizar esta lógica de validación en el código de producción.
+Nota: Como cualquiera puede construir un certificado emitido automáticamente el validador personalizado utilizado por el servicio es menos seguro que el comportamiento predeterminado proporcionado por el ChainTrust X509CertificateValidationMode. Las implicaciones de seguridad que conlleva deberían considerarse cuidadosamente antes de utilizar esta lógica de validación en el código de producción.
 
- En resumen, este ejemplo muestra cómo:
+En resumen, este ejemplo muestra cómo:
 
 - El cliente se puede autenticar utilizando un certificado X.509.
 
@@ -22,7 +23,7 @@ Este ejemplo muestra cómo implementar un validador de certificado X.509 persona
 
 - El servidor se autentica utilizando el certificado X.509 del servidor.
 
- El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que usa de forma predeterminada `WSSecurity` y autenticación de certificados de cliente. El comportamiento del servicio especifica el modo Personalizado para validar los certificados X.509 junto con el tipo de la clase de validador. El comportamiento también especifica el certificado del servidor mediante el elemento serviceCertificate. El certificado de servidor debe contener el mismo valor para el `SubjectName` como el `findValue` en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+El servicio expone un punto de conexión único para comunicarse con el servicio, definido mediante el archivo de configuración App.config. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un estándar `wsHttpBinding` que usa de forma predeterminada `WSSecurity` y autenticación de certificados de cliente. El comportamiento del servicio especifica el modo Personalizado para validar los certificados X.509 junto con el tipo de la clase de validador. El comportamiento también especifica el certificado del servidor mediante el elemento serviceCertificate. El certificado de servidor debe contener el mismo valor para el `SubjectName` como el `findValue` en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
   <system.serviceModel>
@@ -94,7 +95,7 @@ Este ejemplo muestra cómo implementar un validador de certificado X.509 persona
       </system.serviceModel>
 ```
 
- La configuración de punto de conexión de cliente está compuesta por un nombre de configuración, una dirección absoluta para el punto de conexión de servicio, el enlace y el contrato. El enlace del cliente se configura con el modo adecuado y el `clientCredentialType` del mensaje.
+La configuración de punto de conexión de cliente está compuesta por un nombre de configuración, una dirección absoluta para el punto de conexión de servicio, el enlace y el contrato. El enlace del cliente se configura con el modo adecuado y el `clientCredentialType` del mensaje.
 
 ```xml
 <system.serviceModel>
@@ -147,7 +148,7 @@ Este ejemplo muestra cómo implementar un validador de certificado X.509 persona
   </system.serviceModel>
 ```
 
- La implementación del cliente establece el certificado de cliente que utilizar.
+La implementación del cliente establece el certificado de cliente que utilizar.
 
 ```csharp
 // Create a client with Certificate endpoint configuration
@@ -198,7 +199,7 @@ catch (Exception e)
 }
 ```
 
- Este ejemplo utiliza un X509CertificateValidator personalizado para validar los certificados. El ejemplo implementa CustomX509CertificateValidator, derivado de <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Consulte la documentación sobre <xref:System.IdentityModel.Selectors.X509CertificateValidator> para obtener más información. Este ejemplo de validador personalizado determinado implementa el método Validate para aceptar cualquier certificado X.509 que se emita por sí mismo tal y como se muestra en el código siguiente.
+Este ejemplo utiliza un X509CertificateValidator personalizado para validar los certificados. El ejemplo implementa CustomX509CertificateValidator, derivado de <xref:System.IdentityModel.Selectors.X509CertificateValidator>. Consulte la documentación sobre <xref:System.IdentityModel.Selectors.X509CertificateValidator> para obtener más información. Este ejemplo de validador personalizado determinado implementa el método Validate para aceptar cualquier certificado X.509 que se emita por sí mismo tal y como se muestra en el código siguiente.
 
 ```csharp
 public class CustomX509CertificateValidator : X509CertificateValidator
@@ -247,12 +248,13 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 </behaviors>
 ```
 
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. El cliente debería llamar correctamente a todos los métodos. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
+Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. El cliente debería llamar correctamente a todos los métodos. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
 
 ## <a name="setup-batch-file"></a>Instalar el archivo por lotes
- El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.
 
- A continuación, se proporciona información general breve de las diferentes secciones de los archivos por lotes para que se puedan modificar para su ejecución en la configuración adecuada:
+El archivo por lotes Setup.bat incluido con este ejemplo permite configurar el servidor con los certificados pertinentes para ejecutar una aplicación autohospedada que requiera seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.
+
+A continuación, se proporciona información general breve de las diferentes secciones de los archivos por lotes para que se puedan modificar para su ejecución en la configuración adecuada:
 
 - Crear el certificado de servidor:
 
@@ -311,47 +313,47 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 1. Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012 abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!IMPORTANT]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. El conjunto de variables de entorno de ruta de acceso en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
-  
-2. Inicie Service.exe desde \service\bin.  
-  
-3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
-  
-4. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
-  
-#### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
-  
-1. Cree un directorio en el equipo del servicio.  
-  
-2. Copie los archivos de programa de servicio desde \service\bin en el directorio virtual del equipo del servicio. Copie también los archivos Setup.bat, Cleanup.bat, GetComputerName.vbs e ImportClientCert.bat en el equipo de servicio.  
-  
-3. Cree un directorio en el equipo cliente para los archivos binarios del cliente.  
-  
-4. Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
-  
-5. En el servidor, ejecute `setup.bat service` en una línea de comandos para desarrolladores de Visual Studio abierto con privilegios de administrador. Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado de servicio a un archivo denominado Service.cer.  
-  
-6. Edite Service.exe.config para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo. Cambiar también el nombre del equipo en el \<servicio > /\<baseAddresses > elemento desde el host local al nombre completo de su equipo de servicio.  
-  
-7. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
-  
-8. En el cliente, ejecute `setup.bat client` en una línea de comandos para desarrolladores de Visual Studio abierto con privilegios de administrador. Al ejecutar `setup.bat`con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.  
-  
-9. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.  
-  
-10. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.  
-  
-11. En el cliente, ejecute ImportServiceCert.bat en un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.  
-  
-12. En el servidor, ejecute ImportClientCert.bat en un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador. De esta forma se importa el certificado del cliente desde el archivo Client.cer al almacén LocalMachine - TrustedPeople.  
-  
-13. En el equipo servidor, inicie Service.exe desde la ventana de símbolo del sistema.  
-  
-14. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
-  
-#### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
-  
-1. Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Esto quita los certificados de cliente y servidor del almacén de certificados.  
-  
+    > El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. El conjunto de variables de entorno de ruta de acceso en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.
+
+2. Inicie Service.exe desde \service\bin.
+
+3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.
+
+4. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+
+#### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos
+
+1. Cree un directorio en el equipo del servicio.
+
+2. Copie los archivos de programa de servicio desde \service\bin en el directorio virtual del equipo del servicio. Copie también los archivos Setup.bat, Cleanup.bat, GetComputerName.vbs e ImportClientCert.bat en el equipo de servicio.
+
+3. Cree un directorio en el equipo cliente para los archivos binarios del cliente.
+
+4. Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.
+
+5. En el servidor, ejecute `setup.bat service` en una línea de comandos para desarrolladores de Visual Studio abierto con privilegios de administrador. Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo del equipo y exporta el certificado de servicio a un archivo denominado Service.cer.
+
+6. Edite Service.exe.config para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo del equipo. Cambiar también el nombre del equipo en el \<servicio > /\<baseAddresses > elemento desde el host local al nombre completo de su equipo de servicio.
+
+7. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.
+
+8. En el cliente, ejecute `setup.bat client` en una línea de comandos para desarrolladores de Visual Studio abierto con privilegios de administrador. Al ejecutar `setup.bat`con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.
+
+9. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.
+
+10. Copie el archivo Client.cer del directorio del cliente en el directorio del servicio en el servidor.
+
+11. En el cliente, ejecute ImportServiceCert.bat en un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador. Así se importa el certificado del servicio del archivo Service.cer en el almacén CurrentUser - TrustedPeople.
+
+12. En el servidor, ejecute ImportClientCert.bat en un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador. De esta forma se importa el certificado del cliente desde el archivo Client.cer al almacén LocalMachine - TrustedPeople.
+
+13. En el equipo servidor, inicie Service.exe desde la ventana de símbolo del sistema.
+
+14. En el equipo cliente, inicie Client.exe desde una ventana de símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+
+#### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo
+
+1. Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo. Esto quita los certificados de cliente y servidor del almacén de certificados.
+
 > [!NOTE]
->  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado los ejemplos de Windows Communication Foundation (WCF) que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

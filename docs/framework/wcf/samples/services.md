@@ -2,12 +2,12 @@
 title: 'Ejemplos: WCF Services'
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 4531e72711d17c57bb4e365b458f0b35d6b42577
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9c4c6c0083a685f2f85b01ed3a5bed377708dd13
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637596"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425467"
 ---
 # <a name="services"></a>Servicios
 
@@ -30,7 +30,7 @@ Muestra la seguridad de servicio WCF.
 - [Configuración simplificada de los servicios de WCF](simplified-configuration-for-wcf-services.md)\
 Muestra cómo implementar y configurar un servicio típico y el cliente con WCF.
 
-- [Uso de extremos estándar](usage-of-standard-endpoints.md)\
+- [Uso de puntos de conexión estándar](usage-of-standard-endpoints.md)\
 Muestra cómo utilizar los extremos estándar en archivos de configuración de servicio.
 
 - [Directiva de protección extendida](extended-protection-policy.md)\

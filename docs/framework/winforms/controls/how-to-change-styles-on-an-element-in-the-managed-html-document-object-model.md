@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728bc77db959e25fe31d2ff37288b2359dca852e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608403"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424589"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Procedimiento para cambiar los estilos de un elemento en Document Object Model HTML administrado
 
@@ -22,11 +22,11 @@ Puede usar los estilos en HTML para controlar la apariencia de un documento y su
 
 Este es un `DIV` con una cadena de estilo que establece la fuente en Arial y todo el texto en negrita:
 
-`<DIV style="font-face:arial;font-weight:bold;">`
-
-`Hello, world!`
-
-`</DIV>`
+```html
+<DIV style="font-face:arial;font-weight:bold;">
+Hello, world!
+</DIV>
+```
 
 El problema de manipular estilos utilizando el <xref:System.Windows.Forms.HtmlElement.Style%2A> propiedad es que puede resultar complicado para agregar y quitar la configuración de estilo individuales de la cadena. Por ejemplo, convertiría en un procedimiento complejo para representar el texto en cursiva anterior siempre que el usuario coloca el cursor sobre la `DIV`y tomar cursiva desactivada cuando el cursor abandona el `DIV`. Tiempo podría ser un problema si necesita manipular un gran número de estilos de esta manera.
 
@@ -63,19 +63,20 @@ El procedimiento siguiente contiene código que puede usar para manipular fácil
 6. Agregue el código siguiente al archivo de código del proyecto.
 
     > [!IMPORTANT]
-    >  Asegúrese de que el `webBrowser1_DocumentCompleted` controlador de eventos está configurado como un agente de escucha para el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos. En Visual Studio, haga doble clic en el <xref:System.Windows.Forms.WebBrowser> control; en un editor de texto, configure el agente de escucha mediante programación.  
-  
+    > Asegúrese de que el `webBrowser1_DocumentCompleted` controlador de eventos está configurado como un agente de escucha para el <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> eventos. En Visual Studio, haga doble clic en el <xref:System.Windows.Forms.WebBrowser> control; en un editor de texto, configure el agente de escucha mediante programación.
+
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
-  
-7. Ejecute el proyecto. Ejecute el cursor sobre la primera `DIV` para observar los efectos del código.  
-  
-## <a name="example"></a>Ejemplo  
- El ejemplo de código siguiente muestra el código completo para el `StyleGenerator` admite clase, que analiza un valor de estilo existente, agregar, cambiar y quitar los estilos y devuelve un nuevo valor de estilo con los cambios solicitados.  
-  
- [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
- [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
-  
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
+
+7. Ejecute el proyecto. Ejecute el cursor sobre la primera `DIV` para observar los efectos del código.
+
+## <a name="example"></a>Ejemplo
+
+El ejemplo de código siguiente muestra el código completo para el `StyleGenerator` admite clase, que analiza un valor de estilo existente, agregar, cambiar y quitar los estilos y devuelve un nuevo valor de estilo con los cambios solicitados.
+
+[!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+[!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.HtmlElement>

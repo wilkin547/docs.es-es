@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a7db79185d4445c68adda214d10be6d31f6ed9e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402423"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425113"
 ---
 # <a name="what-is-windows-communication-foundation"></a>¿Qué es Windows Communication Foundation?
 Windows Communication Foundation (WCF) es un marco para crear aplicaciones orientadas a servicios. Con WCF, puede enviar datos como mensajes asincrónicos de un extremo de servicio a otro. Un extremo de servicio puede formar parte de un servicio disponible continuamente hospedado por IIS, o puede ser un servicio hospedado en una aplicación. Un extremo puede ser un cliente de un servicio que solicita datos de un extremo de servicio. Los mensajes pueden ser tan simples como un carácter o una palabra que se envía como XML, o tan complejos como una secuencia de datos binarios. A continuación se indican unos cuantos escenarios de ejemplo:
@@ -72,7 +72,7 @@ WCF incluye el siguiente conjunto de características. Para obtener más informa
 
 - **Transacciones**
 
-     WCF también admite transacciones mediante uno de los tres modelos de transacción: WS-Atomic, las API en el <xref:System.Transactions> espacio de nombres y el Coordinador de transacciones distribuidas de Microsoft. Para obtener más información acerca de la transacción de soporte técnico en WCF vea [transacciones](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
+     WCF también admite transacciones mediante uno de los tres modelos de transacción: WS-AtomicTransactions, las API en el <xref:System.Transactions> espacio de nombres y el Coordinador de transacciones distribuidas de Microsoft. Para obtener más información acerca de la transacción de soporte técnico en WCF vea [transacciones](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md).
 
 - **Compatibilidad con AJAX y REST**
 

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63dc9ee81c98a23f01948a142018369eca7210b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ace1ecaebe076be3576304ce0a3cc72e119c96d2
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598095"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421892"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed (Método)
 Notifica al generador de perfiles que se está destruyendo un vtable de interoperabilidad COM.  
@@ -40,7 +40,7 @@ HRESULT COMClassicVTableDestroyed(
 ```  
   
 ## <a name="parameters"></a>Parámetros  
- `wrappedClasId`  
+ `wrappedClassId`  
  [in] El identificador de la clase para el que se creó esta tabla virtual.  
   
  `implementedIID`  

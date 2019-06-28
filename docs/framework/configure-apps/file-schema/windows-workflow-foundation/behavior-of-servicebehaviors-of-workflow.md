@@ -3,12 +3,12 @@ title: <behavior> de <serviceBehaviors> de flujo de trabajo
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a4b718a-1b40-4957-935a-f6122819ab3c
-ms.openlocfilehash: 09bd54f4a7d56dc1215b1acd36ff131ba4cba12c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99f98cba96ed924069ee14e1459e073ca88cd2b0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790317"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422981"
 ---
 # <a name="behavior-of-servicebehaviors-of-workflow"></a>\<comportamiento > de \<serviceBehaviors > de flujo de trabajo
 El **comportamiento** elemento contiene una colección de valores para el comportamiento de un servicio. Indiza cada comportamiento su **nombre**. Servicios pueden vincularse a cada comportamiento a través de este nombre mediante el **behaviorConfiguration** atributo de la [ \<punto de conexión >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) elemento. De esta forma, los extremos pueden compartir configuraciones de comportamientos comunes sin volver a definir la configuración.  
@@ -36,7 +36,7 @@ El **comportamiento** elemento contiene una colección de valores para el compor
                            maxItemsInCache="Integer" />
         </sendMessageChannelCache>
         <sqlWorkflowInstanceStore connectionStringName="String" 
-                                  honstLockRenewalPeriod="TimeSpan" 
+                                  hostLockRenewalPeriod="TimeSpan" 
                                   instanceCompletionAction="DeleteNothing/DeleteAll" 
                                   instanceEncodingAction="None/GZip" 
                                   instanceLockedExceptionAction="NoRetry/BasicRetry/AggressiveRetry" 

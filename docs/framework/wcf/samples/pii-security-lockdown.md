@@ -2,12 +2,12 @@
 title: Bloqueo de seguridad PII
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 18095845db094f0911578816e6bacdb7f3776156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83c100459ca5cf522b9040a807008e66e1a5c9d8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664786"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425420"
 ---
 # <a name="pii-security-lockdown"></a>Bloqueo de seguridad PII
 Este ejemplo muestra cómo controlar varias características relacionadas con la seguridad de un servicio de Windows Communication Foundation (WCF) mediante:  
@@ -37,7 +37,7 @@ Este ejemplo muestra cómo controlar varias características relacionadas con la
  Este ejemplo muestra cómo controlar el registro de información de identificación personal conocida (PII) en los registros de seguimiento y mensajes, como el nombre de usuario y contraseña. De forma predeterminada, el registro de PII conocida está deshabilitado, sin embargo en ciertas situaciones el registro de PII puede ser importante para depurar una aplicación. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). Además, este ejemplo utiliza traza y registro de mensajes. Para obtener más información, consulte el [seguimiento y registro de mensajes](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) ejemplo.  
   
 ## <a name="encrypting-configuration-file-elements"></a>Cifrar los elementos de configuración  
- Para los propósitos de seguridad en un entorno de hospedaje en web compartido, puede ser deseable cifrar ciertos elementos de configuración, como cadenas de conexión a bases de datos que pueden contener información confidencial. Un elemento de configuración se puede cifrar con la herramienta aspnet_regiis.exe situada en la carpeta de .NET Framework; por ejemplo, %WINDIR%\Micrsoft.NET\Framework\v4.0.20728.  
+ Para los propósitos de seguridad en un entorno de hospedaje en web compartido, puede ser deseable cifrar ciertos elementos de configuración, como cadenas de conexión a bases de datos que pueden contener información confidencial. Un elemento de configuración se puede cifrar mediante la herramienta aspnet_regiis.exe se encuentra en la carpeta de .NET Framework, por ejemplo, % WINDIR%\Microsoft.NET\Framework\v4.0.20728.  
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>Para cifrar los valores de la sección appSettings de Web.config para el ejemplo  
   

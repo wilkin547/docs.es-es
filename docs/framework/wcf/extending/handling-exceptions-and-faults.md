@@ -2,12 +2,12 @@
 title: Administración de excepciones y errores
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: f2042bac30ee84530c0da9c30193919dfb99a608
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e99ef5721791af229c68a958e4840a0703d34ac9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654999"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424942"
 ---
 # <a name="handling-exceptions-and-faults"></a>Administración de excepciones y errores
 Las excepciones se utilizan para comunicar localmente los errores dentro del servicio o la implementación del cliente. Los errores, por otro lado, se utilizan para comunicar los errores en los límites del servicio, como del servidor al cliente o viceversa. Además de los errores, los canales de transporte utilizan a menudo mecanismos específicos del transporte para comunicar los errores del nivel de transporte. Por ejemplo, el transporte HTTP utiliza códigos de estado como 404 para comunicar una dirección URL del extremo no existente (no hay ningún extremo para devolver un error). Este documento se compone de tres secciones que proporcionan una guía a los autores del canal personalizado. La primera sección proporciona una guía sobre cuándo y cómo definir y producir las excepciones. La segunda sección proporciona una guía sobre la generación y utilización de errores. La tercera sección explica cómo proporcionar información de seguimiento para ayudar al usuario de su canal personalizado a solucionar problemas de las aplicaciones en ejecución.  
@@ -286,7 +286,7 @@ public override bool OnTryCreateException(
  Para las condiciones de error concretas que tienen escenarios de recuperación distintos, considere definir una clase derivada de `ProtocolException`.  
   
 ### <a name="mustunderstand-processing"></a>Procesamiento de MustUnderstand  
- SOAP define un error general para señalar que el receptor no entendió un encabezado necesario. Este error se conoce como el error `mustUnderstand`. En WCF, canales personalizados nunca generan `mustUnderstand` errores. En su lugar, el distribuidor WCF, que se encuentra en la parte superior de la pila de comunicación de WCF, comprueba que todos los encabezados marcados como MustUndestand = true se entendieron por la pila subyacente. Si alguno se entendió, se genera un error `mustUnderstand` en ese punto. (El usuario puede decidir desactivar este procesamiento `mustUnderstand` y hacer que la aplicación reciba todos los encabezados de mensajes. En ese caso la aplicación es responsable de realizar el procesamiento de `mustUnderstand`.) El error generado incluye un encabezado NotUnderstood que contiene los nombres de todos los encabezados con MustUnderstand=true que no se entendieron.  
+ SOAP define un error general para señalar que el receptor no entendió un encabezado necesario. Este error se conoce como el error `mustUnderstand`. En WCF, canales personalizados nunca generan `mustUnderstand` errores. En su lugar, el distribuidor WCF, que se encuentra en la parte superior de la pila de comunicación de WCF, comprueba que todos los encabezados que se han marcado como MustUnderstand = true se entendieron por la pila subyacente. Si alguno se entendió, se genera un error `mustUnderstand` en ese punto. (El usuario puede decidir desactivar este procesamiento `mustUnderstand` y hacer que la aplicación reciba todos los encabezados de mensajes. En ese caso la aplicación es responsable de realizar el procesamiento de `mustUnderstand`.) El error generado incluye un encabezado NotUnderstood que contiene los nombres de todos los encabezados con MustUnderstand=true que no se entendieron.  
   
  Si su canal de protocolo envía un encabezado personalizado con MustUnderstand=true y recibe un error `mustUnderstand`, debe deducir si ese error se debe al encabezado enviado. Hay dos miembros en la clase `MessageFault` que son útiles para esto:  
   

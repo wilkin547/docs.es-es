@@ -3,12 +3,12 @@ title: Modelo de identidad basado en notificaciones
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 8560c7fd1969cfed6e43e2982fb69313c45c9405
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b7cafa727251c28b79615a37adce4effe6885392
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650459"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422408"
 ---
 # <a name="claims-based-identity-model"></a>Modelo de identidad basado en notificaciones
 Al compilar aplicaciones para notificaciones, la identidad del usuario se representa en la aplicación como un conjunto de notificaciones. Una notificación podría ser el nombre del usuario, otra podría ser una dirección de correo electrónico. La idea es que se configure un sistema de identidad externo para proporcionar a la aplicación la información que necesita sobre el usuario con cada solicitud realizada, junto con la garantía criptográfica de que los datos de identidad recibidos proceden de una fuente de confianza.  
@@ -58,7 +58,7 @@ Al compilar aplicaciones para notificaciones, la identidad del usuario se repres
  Cuando se compila una aplicación basada en las notificaciones, se está compilando una aplicación de usuario de confianza (RP). Entre los sinónimos de RP se incluyen "aplicación para notificaciones" y "aplicación basada en notificaciones". Tanto las aplicaciones web como los servicios Web pueden ser de este tipo. Una aplicación de usuario de confianza usa los tokens emitidos por un STS y extrae las notificaciones de los tokens para usarlas en tareas relacionadas con la identidad. WIF ofrece funcionalidades para ayudar a compilar aplicaciones de usuario de confianza.  
   
 ### <a name="standards"></a>Estándares  
- Para que haya interoperabilidad, en el escenario anterior se usan varios estándares WS-*. La directiva se recupera usando WS-MetadataExchange, mientras que la propia directiva se estructura según la especificación WS-Policy. El STS expone los extremos que implementan la especificación WS-Trust, que describe cómo solicitar y recibir tokens de seguridad. En la actualidad, la mayoría de los STS emiten tokens con lenguaje de marcado de aserción de seguridad (SAML) como formato. El lenguaje SAML es un vocabulario XML reconocido del sector que se puede usar para representar las notificaciones de forma interoperable. Asimismo, en una situación multiplataforma, este permite comunicarse con un STS o una plataforma completamente distinta y lograr un inicio de sesión único en todas las aplicaciones, independientemente de la plataforma.  
+ Para que haya interoperabilidad, en el escenario anterior se usan varios estándares WS-*. La directiva se recupera usando WS-MetadataExchange, mientras que la propia directiva se estructura según la especificación WS-Policy. El STS expone los extremos que implementan la especificación WS-Trust, que describe cómo solicitar y recibir tokens de seguridad. La mayoría de los STS hoy emiten tokens con formato con el lenguaje de marcado de aserción de seguridad (SAML). El lenguaje SAML es un vocabulario XML reconocido del sector que se puede usar para representar las notificaciones de forma interoperable. Asimismo, en una situación multiplataforma, este permite comunicarse con un STS o una plataforma completamente distinta y lograr un inicio de sesión único en todas las aplicaciones, independientemente de la plataforma.  
   
 ### <a name="browser-based-applications"></a>Aplicaciones basadas en el explorador  
  Los clientes inteligentes no son los únicos que pueden usar el modelo de identidad basado en notificaciones. Las aplicaciones basadas en el explorador (también conocidas como clientes pasivos) también pueden usarlo. En el escenario siguiente se describe su funcionamiento.  

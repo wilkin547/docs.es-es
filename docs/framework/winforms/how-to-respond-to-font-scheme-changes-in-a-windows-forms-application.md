@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 6aad851770fb886de5d5c00b544ac6eac2857e42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fd7f99b35730cf867bfad5da24bc3f223e9a0f8
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801860"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425333"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Procedimiento para responder a los cambios de las combinaciones de fuentes en una aplicación de formularios Windows Forms
 En los sistemas operativos Windows, un usuario puede cambiar la configuración de fuente de todo el sistema para que la fuente predeterminada aparezca mayor o menor. Cambiar esta configuración de fuente es fundamental para los usuarios que son personas con discapacidad visual y requieren un tipo mayor leer el texto en sus pantallas. Puede ajustar la aplicación de Windows Forms para reaccionar a estos cambios aumentando o reduciendo el tamaño del formulario y todo el texto cada vez que cambia el esquema de la fuente. Si desea que el formulario para adaptarse dinámicamente a cambios en los tamaños de fuente, puede agregar código al formulario.  
@@ -62,7 +62,7 @@ En los sistemas operativos Windows, un usuario puede cambiar la configuración d
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
- El constructor de este ejemplo de código contiene una llamada a `InitializeComponent`, que se define al crear un nuevo proyecto de Windows Forms en Visual Studio. Si va a compilar la aplicación en la línea de comandos, quite esta línea de código.  
+ El constructor en este ejemplo de código contiene una llamada a `InitializeComponent`, que se define al crear un nuevo proyecto de Windows Forms en Visual Studio. Si va a compilar la aplicación en la línea de comandos, quite esta línea de código.  
   
 ## <a name="see-also"></a>Vea también
 

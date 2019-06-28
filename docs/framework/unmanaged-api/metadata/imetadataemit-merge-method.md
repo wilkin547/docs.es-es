@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 179cfc5c0725934e21d7b89a2f8d4c934b049f78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 65dbfd526110be5b9b3348fb677fbde7301e4038
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106060"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424658"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge (Método)
 Agrega el ámbito importado especificado a la lista de ámbitos que se combinarán.  
@@ -44,7 +44,7 @@ HRESULT Merge (
  `pIMap`  
  [in] Un puntero a un [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md) objeto que especifica el token volver a asignar.  
   
- `pHandleer`  
+ `pHandler`  
  [in] Un puntero a un [IUnknown](/cpp/atl/iunknown) objeto que especifica los errores.  
   
 ## <a name="remarks"></a>Comentarios  

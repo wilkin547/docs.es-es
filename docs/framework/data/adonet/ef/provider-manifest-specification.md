@@ -2,12 +2,12 @@
 title: Especificación del manifiesto del proveedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641166"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422715"
 ---
 # <a name="provider-manifest-specification"></a>Especificación del manifiesto del proveedor
 En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.  
@@ -83,9 +83,9 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
  El cargador Metadatos de almacenamiento (StoreItemCollection) carga el manifiesto de proveedor, bien mediante una conexión al almacén de datos o utilizando un token de manifiesto del proveedor.  
   
 #### <a name="using-a-data-store-connection"></a>Utilizar una conexión al almacén de datos  
- Cuando esté disponible la conexión al almacén de datos, llame a DbProvderServices.GetProviderManifestToken para devolver el token que se pasa al método GetProviderManifest, que devuelve DbProviderManifest. Este método se delega a la implementación del proveedor de GetDbProviderManifestToken.  
+ Cuando la conexión de almacén de datos está disponible, llame a <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> para devolver el token que se pasa a la <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> método, que devuelve <xref:System.Data.Common.DbProviderManifest>. Este método delega a la implementación del proveedor de `GetDbProviderManifestToken`.  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  

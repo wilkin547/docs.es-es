@@ -3,12 +3,12 @@ title: Autorización basada en notificaciones con WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650448"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422364"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Autorización basada en notificaciones con WIF
 En una aplicación de usuario de confianza, la autorización determina los recursos a los que una identidad autenticada puede tener acceso y las operaciones que puede realizar en estos. Una autorización incorrecta o débil da lugar a la revelación de información y a la alteración de los datos. En este tema se describen distintos enfoques para implementar la autorización para aplicaciones web y servicios Web ASP.NET compatibles con notificaciones mediante Windows Identity Foundation (WIF) y un servicio de token de seguridad (STS), por ejemplo, el Servicio de control de acceso (ACS) de Microsoft Azure.  
@@ -23,18 +23,18 @@ En una aplicación de usuario de confianza, la autorización determina los recur
  El control de acceso basado en roles (RBAC) es un enfoque de autorización en el cual una aplicación basada en roles de usuario administra y aplica los permisos de usuario. Si un usuario tiene un rol necesario para realizar una acción, se concede el acceso; de lo contrario, se deniega.  
   
 ### <a name="iprincipalisinrole-method"></a>Método IPrincipal.IsInRole  
- Para implementar el enfoque RBAC en las aplicaciones para notificaciones, use el método **IsInRole()** de la interfaz **IPrincipal**, de la misma forma en que lo haría en aplicaciones no compatibles con notificaciones. Existen varias formas de usar el método **IsInRole()**:  
+ Para implementar el enfoque RBAC en aplicaciones para notificaciones, use el **IsInRole()** método en el **IPrincipal** interfaz, como haría en aplicaciones no compatibles con notificaciones. Existen varias formas de usar el método **IsInRole()** :  
   
-- Al llamar explícitamente a **IPrincipal.IsInRole("Administrator")**. En este enfoque, el resultado es un valor booleano. Úselo en las instrucciones condicionales. Se puede usar arbitrariamente en cualquier parte del código.  
+- Al llamar explícitamente a **IPrincipal.IsInRole("Administrator")** . En este enfoque, el resultado es un valor booleano. Úselo en las instrucciones condicionales. Se puede usar arbitrariamente en cualquier parte del código.  
   
-- Mediante la petición de seguridad **PrincipalPermission.Demand()**. En este enfoque, se produce una excepción en caso de que la petición no se cumpla. Esta debe ajustarse a la estrategia de control de excepciones. La generación de excepciones es mucho más costosa desde el punto de vista del rendimiento que la devolución del valor booleano. Se puede usar en cualquier parte del código.  
+- Mediante la petición de seguridad **PrincipalPermission.Demand()** . En este enfoque, se produce una excepción en caso de que la petición no se cumpla. Esta debe ajustarse a la estrategia de control de excepciones. La generación de excepciones es mucho más costosa desde el punto de vista del rendimiento que la devolución del valor booleano. Se puede usar en cualquier parte del código.  
   
-- Al usar los atributos declarativos **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]**. Este enfoque se denomina declarativo porque se usa para representar métodos. No se puede usar en bloques de código dentro de implementaciones de método. Se produce una excepción en caso de que no se cumpla la petición. Debe asegurarse de que se ajuste a la estrategia de control de excepciones.  
+- Al usar los atributos declarativos **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]** . Este enfoque se denomina declarativo porque se usa para representar métodos. No se puede usar en bloques de código dentro de implementaciones de método. Se produce una excepción en caso de que no se cumpla la petición. Debe asegurarse de que se ajuste a la estrategia de control de excepciones.  
   
 - Al usar la autorización para URL, mediante la sección **\<authorization>** de **web.config**. Este enfoque resulta conveniente al administrar la autorización en un nivel de dirección URL. Es el nivel más amplio de todos los mencionados anteriormente. La ventaja de este enfoque es que los cambios se realizan en el archivo de configuración, lo que significa que el código no debe compilarse para beneficiarse del cambio.  
   
 ### <a name="expressing-roles-as-claims"></a>Expresar roles como notificaciones  
- Cuando se llama al método **IsInRole()**, se comprueba si el usuario actual tiene ese rol. En las aplicaciones para notificaciones, el rol se expresa mediante un tipo de notificación de rol que debe estar disponible en el token. El tipo de notificación de rol se expresa mediante el URI siguiente:  
+ Cuando se llama al método **IsInRole()** , se comprueba si el usuario actual tiene ese rol. En las aplicaciones para notificaciones, el rol se expresa mediante un tipo de notificación de rol que debe estar disponible en el token. El tipo de notificación de rol se expresa mediante el URI siguiente:  
   
  `http://schemas.microsoft.com/ws/2008/06/identity/claims/role`
   
