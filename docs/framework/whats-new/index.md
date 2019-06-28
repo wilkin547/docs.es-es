@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9c9072c5565cf322bbf6a913255542fb46cb93
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: b7284975d717bdecc4127e09fe04163e8fd0d243
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378549"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424763"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -354,7 +354,7 @@ La compatibilidad para la descompresión mediante las API de Windows está habil
 
 **API de colección adicionales**
 
-En .NET Framework 4.7.2 se agregan varias API nuevas a los tipos <xref:System.Collections.Generic.SortedSet%601> y <xref:System.Collections.Generic.HashSet%601>. Se incluyen los siguientes:
+En .NET Framework 4.7.2 se agregan varias API nuevas a los tipos <xref:System.Collections.Generic.SortedSet%601> y <xref:System.Collections.Generic.HashSet%601>. Entre ellas se incluyen las siguientes:
 
 - Los métodos `TryGetValue`, que amplían el patrón de try que se usa en otros tipos de colección a estos dos tipos. Los métodos son:
 
@@ -442,7 +442,7 @@ Se puede agregar SameSite para las cookies <xref:System.Web.Security.FormsAuthen
 
 **Implementación de propiedades de HttpClientHandler**
 
-En .NET Framework 4.7.1 se agregaron ocho propiedades a la clase <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType>. Pero dos de ellas iniciaban una excepción <xref:System.PlatformNotSupportedException>. En .NET Framework 4.7.2 ahora se proporciona una implementación para estas propiedades. Las propiedades son las siguientes:
+En .NET Framework 4.7.1 se agregaron ocho propiedades a la clase <xref:System.Net.Http.HttpClientHandler?displayProperty=nameWithType>. Pero dos de ellas iniciaban una excepción <xref:System.PlatformNotSupportedException>. En .NET Framework 4.7.2 ahora se proporciona una implementación para estas propiedades. Las propiedades son:
 
 - <xref:System.Net.Http.HttpClientHandler.CheckCertificateRevocationList>
 - <xref:System.Net.Http.HttpClientHandler.SslProtocols>
@@ -563,7 +563,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 ```
 
 ```vb
-Public Class StaticResourceResolvedEvcentArgs : Inherits EventArgs
+Public Class StaticResourceResolvedEventArgs : Inherits EventArgs
    Public ReadOnly Property TargetObject As Object
    Public ReadOnly Property TargetProperty As Object
    Public ReadOnly Property ResourceDictionary As ResourceDictionary
@@ -845,7 +845,7 @@ End Class
 
 A continuación, puede crear un archivo de recursos DataAnnotation.Localization.fr.resx cuya clave sea la cadena del mensaje de error y cuyo valor sea el mensaje de error localizado. El archivo debe encontrarse en la carpeta `App.LocalResources`. Por ejemplo, a continuación se muestra la clave y su valor en un mensaje de error localizado en idioma francés (fr):
 
-| nombre                                 | Valor                                     |
+| NOMBRE                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | La clasificación debe estar entre 1 y 10. | La note doit être comprise entre 1 et 10. |
 
@@ -959,7 +959,7 @@ End Function
 
 Para solucionarlo en .NET Framework 4.6.2, se han agregado los tres métodos siguientes a la clase base <xref:System.Security.Cryptography.ECDiffieHellman> para manifestar con mayor claridad estas rutinas KDF y sus entradas:
 
-|Método ECDiffieHellman|Descripción|
+|Método ECDiffieHellman|DESCRIPCIÓN|
 |----------------------------|-----------------|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva el material de clave mediante la fórmula<br /><br /> HASH(secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HASH(secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> donde *x* es el resultado calculado del algoritmo de Diffie-Hellman de curva elíptica.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Deriva el material de clave mediante la fórmula<br /><br /> HMAC(hmacKey, secretPrepend &#124;&#124; *x* &#124;&#124; secretAppend)<br /><br /> HMAC(hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> donde *x* es el resultado calculado del algoritmo de Diffie-Hellman de curva elíptica.|
@@ -1182,7 +1182,7 @@ En versiones anteriores de .NET Framework, las aplicaciones WPF no pueden optar 
 
 Para admitir la reciente proliferación de entornos con valores altos o híbridos de PPP para las aplicaciones WPF, WPF en .NET Framework 4.6.2 habilita el reconocimiento de monitor. Consulte [los ejemplos y la guía para desarrolladores](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI) en GitHub para obtener más información sobre cómo activar el reconocimiento de PPP por monitor en la aplicación WPF.
 
-En versiones anteriores de .NET Framework, las aplicaciones WPF tienen habilitado el reconocimiento de PPP del sistema. En otras palabras, el sistema operativo escala la interfaz de usuario de la aplicación según corresponda, en función del valor de PPP del monitor en el que se representa la aplicación. ,
+En versiones anteriores de .NET Framework, las aplicaciones WPF tienen habilitado el reconocimiento de PPP del sistema. En otras palabras, el sistema operativo escala la interfaz de usuario de la aplicación según corresponda, en función del valor de PPP del monitor en el que se representa la aplicación. .
 
 Para aplicaciones que se ejecutan en .NET Framework 4.6.2, puede deshabilitar los cambios de PPP por monitor en las aplicaciones WPF. Para ello, agregue una instrucción de configuración en la sección [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) del archivo de configuración de la aplicación de la siguiente manera:
 
@@ -1703,7 +1703,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
      Si el valor del elemento `FilterResumeTimeoutInSeconds` es distinto de cero, hay marcadores no de protocolo y el intervalo de tiempo de espera expira, se produce un error en la operación con un mensaje de tiempo de espera.
 
-- **Transacciones**
+- **Transactions**
 
      Ahora puede incluir el identificador de transacción distribuida para la transacción que provocó que se produjera una excepción derivada de <xref:System.Transactions.TransactionException>. Para ello, agregue la siguiente clave a la sección `appSettings` del archivo app.config:
 
@@ -1747,7 +1747,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 - **Compatibilidad para codificaciones de páginas de códigos**
 
-     .NET Core admite principalmente las codificaciones Unicode y, de forma predeterminada, proporciona compatibilidad limitada para las codificaciones de páginas de códigos. Puede agregar compatibilidad con codificaciones de páginas de códigos disponibles en .NET Framework pero que no se admiten en .NET Core mediante el registro de las codificaciones de páginas de códigos con el método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para obtener más información, vea <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
+     .NET Core admite principalmente las codificaciones Unicode y, de forma predeterminada, proporciona compatibilidad limitada para las codificaciones de páginas de códigos. Puede agregar compatibilidad con codificaciones de páginas de códigos disponibles en .NET Framework pero que no se admiten en .NET Core mediante el registro de las codificaciones de páginas de códigos con el método <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>. Para más información, consulte <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
 - **.NET Native**
 
@@ -1832,7 +1832,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
     ```vb
     <System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name:="FullTrust")>
-    public Function PromoteAndEnlistDurable(GresourceManagerIdentifier As Guid,
+    public Function PromoteAndEnlistDurable(resourceManagerIdentifier As Guid,
                                             promotableNotification As IPromotableSinglePhaseNotification,
                                             enlistmentNotification As ISinglePhaseNotification,
                                             enlistmentOptions As EnlistmentOptions) As Enlistment
@@ -1864,7 +1864,7 @@ Con los archivos PDB de NGen, NGen puede crear un archivo PDB que contenga la as
 
 Las nuevas características y mejoras realizadas en las clases base en .NET Framework 4.5.1 son:
 
-- Redirección automática de enlace de ensamblados. A partir de Visual Studio 2013, cuando se compila una aplicación cuyo destino es .NET Framework 4.5.1, se pueden agregar al archivo de configuración de la aplicación redirecciones de enlace si la aplicación o sus componentes hacen referencia a varias versiones del mismo ensamblado. Esta característica también se puede habilitar en proyectos que tienen como destino versiones anteriores de .NET Framework. Para obtener más información, vea [Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Redirección automática de enlace de ensamblados. A partir de Visual Studio 2013, cuando se compila una aplicación cuyo destino es .NET Framework 4.5.1, se pueden agregar al archivo de configuración de la aplicación redirecciones de enlace si la aplicación o sus componentes hacen referencia a varias versiones del mismo ensamblado. Esta característica también se puede habilitar en proyectos que tienen como destino versiones anteriores de .NET Framework. Para obtener más información, consulte [Instrucciones: Habilitar y deshabilitar redireccionamiento de enlaces automático](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Capacidad de recopilar información de diagnóstico para ayudar a los desarrolladores a mejorar el rendimiento de las aplicaciones de servidor y en la nube. Para obtener más información, vea los métodos <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> y <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> de la clase <xref:System.Diagnostics.Tracing.EventSource>.
 
@@ -1974,7 +1974,7 @@ La optimización guiada por perfiles administrados (Mpgo.exe) permite mejorar el
 
 ### <a name="web"></a>Web
 
-ASP.NET 4.5 y 4.5.1 incorporan el enlace de modelos de formularios Web Forms, compatibilidad con WebSocket, controladores asincrónicos, mejoras de rendimiento y muchas otras características. Para obtener más información, vea los siguientes recursos:
+ASP.NET 4.5 y 4.5.1 incorporan el enlace de modelos de formularios Web Forms, compatibilidad con WebSocket, controladores asincrónicos, mejoras de rendimiento y muchas otras características. Para obtener más información, consulte los siguientes recursos:
 
 - [ASP.NET 4.5 y Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
