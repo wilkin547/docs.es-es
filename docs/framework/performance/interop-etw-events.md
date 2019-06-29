@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38db390b8fad9cd36dacf33f9647b0272eddc4a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c52c9bf37e67e4d26867d2b3754945e86e2bf609
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616409"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422424"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidad
 <a name="top"></a> Los eventos de interoperabilidad capturan información sobre el almacenamiento en caché y la generación de código auxiliar del lenguaje intermedio (MSIL) de Microsoft.  
@@ -43,7 +43,7 @@ ms.locfileid: "64616409"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt16|Identificador del módulo.|  
 |StubMethodID|win:UInt64|Identificador del método de código auxiliar.|  
-|StubFlags|win:UInt64|Marcas para el código auxiliar:<br /><br /> 0x1 - Interoperabilidad inversa.<br /><br /> 0x2 - Interoperabilidad COM.<br /><br /> 0x4 - Código auxiliar generado por NGen.exe.<br /><br /> 0x8 - Delegado.<br /><br /> 0x10 - Argumento variable.<br /><br /> 0x20 - Destinatario no administrado.|  
+|StubFlags|win:UInt64|Marcas para el código auxiliar:<br /><br /> 0x1 - Interoperabilidad inversa.<br /><br /> 0x2 - Interoperabilidad COM.<br /><br /> 0x4 - Código auxiliar generado por NGen.exe.<br /><br /> 0x8 - Delegado.<br /><br /> 0 x 10 - argumento variable.<br /><br /> 0x20 - Destinatario no administrado.|  
 |ManagedInteropMethodToken|win:UInt32|Token del método de interoperabilidad administrado.|  
 |ManagedInteropMethodNameSpace|win:UnicodeString|Espacio de nombres del método de interoperabilidad administrado.|  
 |ManagedInteropMethodName|win:UnicodeString|Nombre del método de interoperabilidad administrado.|  

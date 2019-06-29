@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775848"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422828"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms Agregar elemento de configuración
 
@@ -43,7 +43,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Indica si los controles delimitados se escalan en un único paso. "true" para deshabilitar solo pasa escalado; en caso contrario, false. Consulte la sección "Solo pasar escalado" en el [comentarios](#remarks) para obtener más información. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Indica si una aplicación tiene reconocimiento de PPP. Establezca la clave para "PerMonitorV2" para admitir el reconocimiento de PPP; en caso contrario, establézcalo en "false". Reconocimiento de PPP es una característica opcional; para aprovechar las ventajas de la compatibilidad con PPP elevado de Windows Forms, debe establecer su valor a "PerMonitorV2". Consulte la [comentarios](#remarks) sección para obtener más información. |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.CheckedListBox> control aprovecha las ventajas de adaptación y diseño de las mejoras introducidas en .NET Framework 4.7. "true" para dejar de participar en las mejoras de diseño y caling; en caso contrario, "false". |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.CheckedListBox> control aprovecha las ventajas de adaptación y diseño de las mejoras introducidas en .NET Framework 4.7. "true" para dejar de participar en las mejoras de diseño y ajuste de escala; en caso contrario, "false". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Indica si el <xref:System.Windows.Forms.DataGridView> controlar adaptación y diseño de las mejoras introducidas en .NET Framework 4.7. "true" para dejar de participar en el reconocimiento de PPP; "false" en caso contrario. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" para optar por recibir los mensajes relacionados con los cambios; de ajuste de PPP "false" en caso contrario. Consulte la [comentarios](#remarks) sección para obtener más información. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Indica si una aplicación de Windows Forms cambia automáticamente de tamaño debido a cambios de escala de PPP. "true" para habilitar el cambio de tamaño automático; en caso contrario, false. |

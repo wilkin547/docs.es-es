@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: efb7f5b8e63742471123a0e0a38cebe605f3696f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba2ee070b7d03efc830058014aa445bb1a3d4329
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724049"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422265"
 ---
 # <a name="cordebugthreadstate-enumeration"></a>CorDebugThreadState (Enumeración)
 Especifica el estado de un subproceso de depuración.  
@@ -50,7 +50,7 @@ typedef enum CorDebugThreadState {
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDegug.h  
+ **Encabezado**: CorDebug.idl, CorDebug.h  
   
  **Biblioteca:** CorGuids.lib  
   
