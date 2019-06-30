@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612009"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402208"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Prueba de una biblioteca de .NET Standard con .NET Core en Visual Studio 2017
 
@@ -26,7 +26,7 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. En el **Explorador de soluciones**, abra el menú contextual del nodo de solución **ClassLibraryProjects** y seleccione **Agregar** > **Nuevo proyecto**.
 
-1. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **Visual C#**. Después seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Proyecto de prueba MSTest (.NET Core)**. En el cuadro de texto **Nombre**, escriba "StringLibraryTest" como nombre del proyecto. Seleccione **Aceptar** para crear el proyecto de prueba unitaria.
+1. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **Visual C#** . Después seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Proyecto de prueba MSTest (.NET Core)** . En el cuadro de texto **Nombre**, escriba "StringLibraryTest" como nombre del proyecto. Seleccione **Aceptar** para crear el proyecto de prueba unitaria.
 
    ![Cuadro de diálogo Agregar nuevo proyecto en el que se muestra el proyecto de prueba unitaria: C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
@@ -55,7 +55,7 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. En el **Explorador de soluciones**, abra el menú contextual del nodo de solución **ClassLibraryProjects** y seleccione **Agregar** > **Nuevo proyecto**.
 
-1. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **Visual Basic**. Después seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Proyecto de prueba MSTest (.NET Core)**. En el cuadro de texto **Nombre**, escriba "StringLibraryTest" como nombre del proyecto. Seleccione **Aceptar** para crear el proyecto de prueba unitaria.
+1. En el cuadro de diálogo **Agregar nuevo proyecto**, seleccione el nodo **Visual Basic**. Después seleccione el nodo **.NET Core** seguido por la plantilla del proyecto **Proyecto de prueba MSTest (.NET Core)** . En el cuadro de texto **Nombre**, escriba "StringLibraryTest" como nombre del proyecto. Seleccione **Aceptar** para crear el proyecto de prueba unitaria.
 
    ![Cuadro de diálogo Agregar nuevo proyecto en el que se muestra el proyecto de prueba unitaria: Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
@@ -68,7 +68,7 @@ Para crear el proyecto de prueba unitaria, haga lo siguiente:
 
    El código fuente creado por la plantilla de prueba unitaria hace lo siguiente:
 
-   * Importa el espacio de nombres [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType>, que contiene los tipos usados para la prueba unitaria.
+   * Importa el espacio de nombres de <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, que contiene los tipos utilizados para las pruebas unitarias.
 
    * Aplica el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> a la clase `UnitTest1`. Cada método de prueba en una clase de prueba etiquetada con el atributo <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> se ejecuta automáticamente cuando se ejecute la prueba unitaria.
 
