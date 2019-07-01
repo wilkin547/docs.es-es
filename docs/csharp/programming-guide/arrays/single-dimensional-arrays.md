@@ -6,12 +6,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 719e4463806c9c7e8b5407f2494c3b548ffa43e8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d221cb9071a2c58f9d7068d5a43dd3a750ba716b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200785"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398556"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Matrices unidimensionales (Guía de programación de C#)
 
@@ -19,7 +19,7 @@ Puede declarar una matriz unidimensional de cinco enteros tal y como se muestra 
   
  [!code-csharp[csProgGuideArrays#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#4)]  
   
- Esta matriz contiene los elementos de `array[0]` a `array[4]`. El operador [new](../../../csharp/language-reference/keywords/new.md) se usa para crear la matriz e inicializar los elementos de matriz con sus valores predeterminados. En este ejemplo, todos los elementos de matriz se inicializan en cero.  
+ Esta matriz contiene los elementos de `array[0]` a `array[4]`. El operador [new](../../../csharp/language-reference/operators/new-operator.md) se usa para crear la matriz e inicializar los elementos de matriz con sus valores predeterminados. En este ejemplo, todos los elementos de matriz se inicializan en cero.  
   
  Una matriz que almacena elementos de cadena se puede declarar de la misma forma. Por ejemplo:  
   

@@ -6,17 +6,18 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 165793155aabac23245b352959be3188b0a5a6e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7d8bdc5ceef5d82e4bc7e13ee932985cae6c2c10
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971174"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398551"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>Tipos anónimos (Guía de programación de C#)
+
 Los tipos anónimos son una manera cómoda de encapsular un conjunto de propiedades de solo lectura en un único objeto sin tener que definir primero un tipo explícitamente. El compilador genera el nombre del tipo y no está disponible en el nivel de código fuente. El compilador deduce el tipo de cada propiedad.  
   
- Para crear tipos anónimos, use el operador [new](../../../csharp/language-reference/keywords/new.md) con un inicializador de objeto. Para obtener más información sobre los inicializadores de objeto, vea [Inicializadores de objeto y colección (Guía de programación de C#)](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
+ Para crear tipos anónimos, use el operador [new](../../../csharp/language-reference/operators/new-operator.md) con un inicializador de objeto. Para obtener más información sobre los inicializadores de objeto, vea [Inicializadores de objeto y colección (Guía de programación de C#)](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
   
  En el ejemplo siguiente se muestra un tipo anónimo que se inicializa con dos propiedades llamadas `Amount` y `Message`.  
   

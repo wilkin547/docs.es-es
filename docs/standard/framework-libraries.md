@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615174"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425534"
 ---
 # <a name="framework-libraries"></a>Bibliotecas de Framework
 
@@ -28,11 +28,11 @@ La BCL proporciona los tipos más fundamentales y la funcionalidad de la utilida
 .NET incluye un conjunto de tipos primitivos, que se usan (en distintos grados) en todos los programas. Estos tipos contienen datos, como números, cadenas, bytes y objetos arbitrarios. El lenguaje C# incluye palabras clave para estos tipos. A continuación se muestra un conjunto de ejemplo de estos tipos, con las palabras clave de C# correspondientes.
 
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): la clase base fundamental en el sistema de tipos de CLR. Es la raíz de la jerarquía de tipos.
-* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)): tipo entero con signo de 16 bits. También existe el valor <xref:System.UInt16> sin signo.
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)): tipo entero con signo de 32 bits. También existe el valor [UInt32](../csharp/language-reference/keywords/uint.md) sin firmar.
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)): tipo entero con signo de 16 bits. También existe el valor <xref:System.UInt16> sin signo.
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)): tipo entero con signo de 32 bits. También existe el valor [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) sin firmar.
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)): tipo de punto flotante de 32 bits.
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)): tipo decimal de 128 bits.
-* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)): entero sin signo de 8 bits que representa un byte de memoria.
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)): entero sin signo de 8 bits que representa un byte de memoria.
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): tipo booleano que representa `true` o `false`.
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): tipo numérico de 16 bits que representa un carácter Unicode.
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): representa una serie de caracteres. Diferente de `char[]`, pero permite la indexación en cada `char` individual en `string`.

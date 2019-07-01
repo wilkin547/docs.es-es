@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481462"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424121"
 ---
 # <a name="switch-c-reference"></a>switch (referencia de C#)
 
@@ -46,7 +46,7 @@ En C# 6 y versiones anteriores, la expresión de coincidencia debe ser una expr
 - Un [carácter](char.md).
 - Una [cadena](string.md).
 - Un [booleano](bool.md).
-- Un valor entero, como [int](int.md) o [long](long.md).
+- Un valor entero, como [int](../builtin-types/integral-numeric-types.md) o [long](../builtin-types/integral-numeric-types.md).
 - Un valor [enum](enum.md).
 
 A partir de C# 7.0, la expresión de coincidencia puede ser cualquier expresión que no sea nula.
@@ -121,7 +121,7 @@ El patrón de constante comprueba si la expresión de coincidencia es igual a un
 donde *constant* es el valor que se va a comprobar. *constant* puede ser cualquiera de las expresiones de constante siguientes:
 
 - Un literal [booleano](bool.md), ya sea `true` o `false`.
-- Cualquier constante entera, como [int](int.md), [long](long.md) o [byte](byte.md).
+- Cualquier constante entera, como [int](../builtin-types/integral-numeric-types.md), [long](../builtin-types/integral-numeric-types.md) o [byte](../builtin-types/integral-numeric-types.md).
 - El nombre de una variable `const` declarada.
 - Una constante de enumeración.
 - Un literal de [carácter](char.md).
