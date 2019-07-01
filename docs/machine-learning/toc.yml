@@ -80,6 +80,14 @@
   items:
     - name: Información general
       href: automl-overview.md
+    - name: Generador de modelos
+      items:
+        - name: ¿Qué es el generador de modelos?
+          href: automate-training-with-model-builder.md
+        - name: Instalación de un generador de modelos
+          href: how-to-guides/install-model-builder.md
+        - name: Predicción de los precios con el generador de modelos
+          href: tutorials/predict-prices-with-model-builder.md
     - name: CLI de ML.NET
       items:
         - name: Instalación de la CLI
