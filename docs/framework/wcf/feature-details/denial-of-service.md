@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423886"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486936"
 ---
 # <a name="denial-of-service"></a>Denegación de servicio
 La denegación de servicio se produce cuando un sistema está sobrecargado de tal manera que no se pueden procesar los mensajes, o se procesan muy lentamente.  
@@ -67,7 +67,7 @@ La denegación de servicio se produce cuando un sistema está sobrecargado de ta
  En el poco probable caso de que un certificado X.509 contenga varios nombres de asunto alternativos, y que usted autorice el uso del nombre de asunto alternativo, puede que se produzca un error en la autorización.  
   
 ## <a name="protect-configuration-files-with-acls"></a>Proteger los archivos de configuración con ACL  
- Puede especificar demandas necesarias y opcionales en código y archivos de configuración para los tokens emitidos [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Esto tiene como resultado que se emitan elementos correspondientes en mensajes `RequestSecurityToken` que se envían al servicio de token de seguridad. Un atacante puede modificar código o configuración para eliminar demandas necesarias u opcionales, pudiendo ganar así la posibilidad de que el servicio de token de seguridad emita un token que no permite el acceso al servicio especificado.  
+ Puede especificar demandas necesarias y opcionales en los archivos de código y la configuración para los tokens emitido de CardSpace. Esto tiene como resultado que se emitan elementos correspondientes en mensajes `RequestSecurityToken` que se envían al servicio de token de seguridad. Un atacante puede modificar código o configuración para eliminar demandas necesarias u opcionales, pudiendo ganar así la posibilidad de que el servicio de token de seguridad emita un token que no permite el acceso al servicio especificado.  
   
  Para mitigar: Requerir acceso al equipo para modificar el archivo de configuración. Use listas de control de acceso (ACL) de archivo para proteger los archivos de configuración. WCF requiere que el código se esté en el directorio de la aplicación o la caché global de ensamblados antes de que este código se pueda cargar desde la configuración. Utilice ACL del directorio para proteger los directorios.  
   

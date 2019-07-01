@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626973"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486859"
 ---
 # <a name="distributed-application-security"></a>Seguridad distribuida de aplicaciones
 Seguridad de Windows Communication Foundation (WCF) se divide en tres áreas funcionales principales: seguridad, control de acceso y auditoría de transferencia. La seguridad de transferencia proporciona integridad, confidencialidad y autenticación. La seguridad de transferencia la proporciona uno de los siguientes elementos: seguridad de transporte, seguridad de mensajes o `TransportWithMessageCredential`.  
@@ -80,7 +80,7 @@ Seguridad de Windows Communication Foundation (WCF) se divide en tres áreas fun
 |Windows|Permite a los intercambios de mensajes SOAP ocurrir bajo el contexto autenticado de una credencial de Windows. Utiliza el mecanismo de negociación de SSPI para escoger entre el protocolo Kerberos o NTLM como servicio de autenticación.|  
 |Nombre de usuario|Permite al servicio requerir que el cliente se autentique con una credencial de nombre de usuario. Tenga en cuenta que WCF no permite ninguna operación criptográfica con el nombre de usuario, como generar una firma o cifrado de datos. Por lo tanto, WCF impone que el transporte sea seguro al usar las credenciales de nombre de usuario.|  
 |Certificado|Permite al servicio exigir la autenticación del cliente mediante un certificado.|  
-|[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|Permite al servicio que requiera la autenticación del cliente mediante un [!INCLUDE[infocard](../../../../includes/infocard-md.md)].|  
+|CardSpace|Permite al servicio exigir que el cliente se autentique utilizando un CardSpace.|  
   
 ### <a name="programming-credentials"></a>Programación de credenciales  
  Para cada uno de los tipos de credencial de cliente, el modelo de programación de WCF permite especificar los valores de credenciales y validadores de credenciales mediante el uso de comportamientos de servicio y comportamientos del canal.  

@@ -2,12 +2,12 @@
 title: Excepciones de IdentityModel
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998522"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486668"
 ---
 # <a name="identitymodel-exceptions"></a>Excepciones de IdentityModel
 En este tema se enumeran todas las excepciones generadas por IdentityModel.  
@@ -100,11 +100,11 @@ En este tema se enumeran todas las excepciones generadas por IdentityModel.
 |SAMLAssertionMissingMajorVersionAttributeOnRead|La MajorVersion para la SamlAssertion que se está leyendo falta o es de longitud 0.|  
 |SamlAttributeClaimRightShouldBePossessProperty|Este constructor SamlAttribute requiere que el derecho de la demanda tenga el valor System.IdentityModel.Claims.Rights.PossessProperty.|  
 |AuthorizationPolicyEvaluated|Se evalúa la directiva con el id. concreto.|  
-|SAMLUnableToLoadCondtions|El \<SAML: Conditions > no se pudo cargar el elemento.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|El \<SAML: Conditions > no se pudo cargar el elemento.|  
 |AESKeyLengthNotSupported|La clave de bits concreta no se admite. Solo se admiten claves de 128, 192 y 256 bits.|  
 |UserNameCannotBeEmpty|El nombre de usuario no puede estar vacío.|  
 |AlgorithmAndPublicKeyMisMatch|El algoritmo especificado y la clave pública no coinciden.|  
-|SAMLUnableToLoadCondtion|El \<SAML: Conditions > no se pudo cargar el elemento.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|El \<SAML: Conditions > no se pudo cargar el elemento.|  
 |SamlAssertionMissingSigningCredentials|Las SigningCredentials no se han establecido en la SamlAssertion. Se deben firmar las SamlAssertions, establezca un SigningCredentials válido en la SamlAssertion para continuar.|  
 |SspiPayloadNotEncrypted|Los datos binarios no se cifraron con el contexto de seguridad de SSPI.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|La SamlAuthorizationDecisionStatement que se lee no contiene ninguna SamlAction.|  

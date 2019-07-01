@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832700"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487185"
 ---
 # <a name="application-startup-time"></a>Tiempo de inicio de una aplicación
 La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar en gran medida. En este tema se describen varias técnicas para reducir el tiempo de inicio percibido y real de una aplicación de Windows Presentation Foundation (WPF).  
@@ -65,7 +65,7 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
  La presencia simultánea de módulos JIT y Ngen pueden ejercer el efecto más negativo. La causa es que hay que cargar mscorjit.dll y, cuando el compilador JIT está trabajando con el código, es preciso tener acceso a gran cantidad de páginas de las imágenes de Ngen mientras el compilador JIT lee los metadatos de los ensamblados.  
   
 ### <a name="ngen-and-clickonce"></a>Ngen y ClickOnce  
- La manera en que está previsto implementar la aplicación también puede marcar la diferencia en cuanto al tiempo de carga. La implementación de aplicaciones de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] no admite Ngen. Si decide utilizar Ngen.exe para su aplicación, tendrá que utilizar otro mecanismo de implementación, como Windows Installer.  
+ La manera en que está previsto implementar la aplicación también puede marcar la diferencia en cuanto al tiempo de carga. Implementación de aplicación ClickOnce no admite Ngen. Si decide utilizar Ngen.exe para su aplicación, tendrá que utilizar otro mecanismo de implementación, como Windows Installer.  
   
  Para obtener más información, vea el artículo sobre [Ngen.exe (generador de imágenes nativas)](../../tools/ngen-exe-native-image-generator.md).  
   
@@ -112,9 +112,9 @@ La cantidad de tiempo necesaria para iniciar una aplicación de WPF puede variar
  Si debe utilizar el <xref:System.Xml.Serialization.XmlSerializer> (clase), puede lograr un mejor rendimiento generando previamente el ensamblado de serialización.  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>Configuración de ClickOnce para que compruebe las actualizaciones después del inicio  
- Si la aplicación utiliza [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], evite el acceso de red durante el inicio configurando [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] de modo que compruebe si hay actualizaciones en el sitio de implementación después de que se haya iniciado la aplicación.  
+ Si usa su aplicación ClickOnce, evite el acceso de red durante el inicio mediante la configuración de ClickOnce para comprobar el sitio de implementación para las actualizaciones una vez iniciada la aplicación.  
   
- Si utiliza el modelo de aplicación de explorador XAML (XBAP), tenga presente que [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] comprueba si hay actualizaciones en el sitio de implementación aunque la XBAP ya esté en la memoria caché de [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)]. Para obtener más información, consulta [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Si usa el modelo de aplicación (XBAP) del explorador XAML, tenga en cuenta que ClickOnce comprueba el sitio de implementación para las actualizaciones, aunque la XBAP ya esté en la caché de ClickOnce. Para obtener más información, consulta [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>Configuración del servicio PresentationFontCache para que se inicie automáticamente  
  La primera aplicación de WPF que se ejecuta después de un reinicio es el servicio PresentationFontCache. El servicio almacena en memoria caché las fuentes del sistema y mejora el acceso a las fuentes, así como el rendimiento global. Iniciar el servicio consume recursos; por ello, en algunos entornos controlados puede ser conveniente configurarlo de modo que se inicie automáticamente al reiniciarse el sistema.  

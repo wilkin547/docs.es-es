@@ -2,12 +2,12 @@
 title: Seguridad de transporte HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402305"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487017"
 ---
 # <a name="http-transport-security"></a>Seguridad de transporte HTTP
 Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros (SSL) proporciona la seguridad. SSL se utiliza mucho en Internet para autenticar un servicio a un cliente y proporcionar la confidencialidad (cifrado) al canal. En este tema se explica cómo funciona SSL y cómo se implementa en Windows Communication Foundation (WCF).  
@@ -38,9 +38,9 @@ Al utilizar HTTP como transporte, una implementación de Capa de sockets seguros
 ### <a name="using-iis-for-transport-security"></a>Utilizar IIS para seguridad de transporte  
   
 #### <a name="iis-70"></a>IIS 7.0  
- Para configurar [!INCLUDE[iisver](../../../../includes/iisver-md.md)] como un host seguro (utilizando SSL), consulte [IIS 7.0 Beta: Configuración de Sockets seguros capa en IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88600).  
+ Para configurar IIS 7.0 como un host seguro (utilizando SSL), consulte [capa de Sockets seguros en IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10)).  
   
- Para configurar certificados para su uso con [!INCLUDE[iisver](../../../../includes/iisver-md.md)], consulte [IIS 7.0 Beta: Configuración de certificados de servidor en IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
+Para configurar certificados para su uso con IIS 7.0, consulte [configurar certificados de servidor en IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10)).  
   
 #### <a name="iis-60"></a>IIS 6,0  
  Para configurar IIS 6.0 como un host seguro (utilizando SSL), consulte [capa de Sockets seguros](https://go.microsoft.com/fwlink/?LinkId=88601).  

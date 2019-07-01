@@ -2,12 +2,12 @@
 title: Implementación de un servicio WFC hospedado en Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402296"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486927"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implementación de un servicio WFC hospedado en Internet Information Services
 
@@ -103,7 +103,7 @@ Siempre debe utilizar direcciones de extremo relativas para los extremos de serv
 
 ### <a name="available-transports"></a>Transportes disponibles
 
-Servicios WCF alojados en IIS 5.1 y 6.0 de IIS está limitados a usar la comunicación basada en HTTP. En estas plataformas de IIS, configurar un servicio hospedado para utilizar un enlace no HTTP genera un error durante la activación del servicio. Para [!INCLUDE[iisver](../../../../includes/iisver-md.md)], entre los transportes admitidos se incluyen HTTP, Net.TCP, Net.Pipe, Net.MSMQ y msmq.formatname para la compatibilidad con versiones anteriores con respecto a aplicaciones MSMQ existentes.
+Servicios WCF alojados en IIS 5.1 y 6.0 de IIS está limitados a usar la comunicación basada en HTTP. En estas plataformas de IIS, configurar un servicio hospedado para utilizar un enlace no HTTP genera un error durante la activación del servicio. Para IIS 7.0, los transportes admitidos incluyen HTTP, Net.TCP, Net.Pipe, Net.MSMQ y msmq.formatname para hacia atrás compatibilidad con aplicaciones MSMQ existentes.
 
 ### <a name="http-transport-security"></a>Seguridad de transporte HTTP
 

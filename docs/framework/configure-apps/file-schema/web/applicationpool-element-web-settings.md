@@ -5,18 +5,18 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832720"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486729"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > elemento (configuración Web)
-Especifica la configuración que se usa ASP.NET para administrar el comportamiento de todo el proceso cuando se ejecuta una aplicación ASP.NET en el modo integrado en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o una versión posterior.  
+Especifica opciones de configuración que se usan ASP.NET para administrar el comportamiento de todo el proceso cuando se está ejecutando en modo integrado de una aplicación ASP.NET en IIS 7.0 o una versión posterior.  
   
 > [!IMPORTANT]
->  Este elemento y la característica admite solo funcionan si la aplicación ASP.NET se hospeda en [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o versiones posteriores.  
+>  Este elemento y la característica admite solo funcionan si la aplicación ASP.NET se hospeda en IIS 7.0 o versiones posteriores.  
   
  \<configuration>  
 \<System.Web > elemento (configuración Web)  
@@ -52,12 +52,12 @@ Especifica la configuración que se usa ASP.NET para administrar el comportamien
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|Contiene información sobre cómo ASP.NET interactúa con una aplicación host.|  
   
 ## <a name="remarks"></a>Comentarios  
- Al ejecutar [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] o una versión posterior en el modo integrado, esta combinación de elemento le permite configurar cómo ASP.NET administra las solicitudes de subprocesos y las colas cuando la aplicación se hospeda en un grupo de aplicaciones de IIS. Si se ejecuta IIS 6 o ejecutar [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] en modo clásico o en modo ISAPI, estas opciones se omiten.  
+ Cuando se ejecuta en modo integrado de IIS 7.0 o una versión posterior, esta combinación de elementos permite configurar cómo ASP.NET administra las solicitudes de subprocesos y las colas cuando la aplicación se hospeda en un grupo de aplicaciones de IIS. Si se ejecuta IIS 6 o ejecute IIS 7.0 en modo clásico o en modo ISAPI, estas opciones se omiten.  
   
  El `applicationPool` configuración se aplica a todos los grupos de aplicaciones que se ejecutan en una versión concreta de .NET Framework. La configuración se encuentra en un archivo aspnet.config. Hay una versión de este archivo para las versiones 2.0 y 4.0 de .NET Framework. (Las versiones 3.0 y 3.5 de .NET Framework comparten el archivo aspnet.config con la versión 2.0).  
   
 > [!IMPORTANT]
->  Si ejecuta [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] en [!INCLUDE[win7](../../../../../includes/win7-md.md)], puede configurar un archivo aspnet.config diferente para cada grupo de aplicaciones. Esto le permite adaptar el rendimiento de los subprocesos para cada grupo de aplicaciones.  
+>  Si se ejecuta IIS 7.0 en [!INCLUDE[win7](../../../../../includes/win7-md.md)], puede configurar un archivo aspnet.config diferente para cada grupo de aplicaciones. Esto le permite adaptar el rendimiento de los subprocesos para cada grupo de aplicaciones.  
   
  Para el `maxConcurrentRequestsPerCPU` establecimiento, el valor predeterminado de "5000" en .NET Framework 4 eficazmente desactiva la limitación de solicitudes que se controla mediante ASP.NET, a menos que realmente tenga 5000 o más solicitudes por CPU. El valor predeterminado depende de en su lugar, el grupo de subprocesos CLR administrar automáticamente la simultaneidad por CPU. Las aplicaciones que hacen un uso extensivo de procesamiento de solicitudes asincrónicas, o que tienen muchas solicitudes de ejecución prolongada bloqueadas en E/S de red, se beneficiarán de la mayor límite predeterminado de .NET Framework 4. Establecer `maxConcurrentRequestsPerCPU` a cero, se desactivará el uso de subprocesos administrados para procesar las solicitudes ASP.NET. Cuando una aplicación se ejecuta en un grupo de aplicaciones de IIS, las solicitudes permanecen en el subproceso de E/S de IIS y, por tanto, simultaneidad está limitada por la configuración de subprocesos IIS.  
   
@@ -66,9 +66,9 @@ Especifica la configuración que se usa ASP.NET para administrar el comportamien
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente muestra cómo configurar el comportamiento de todo el proceso ASP.NET en el archivo aspnet.config en las siguientes circunstancias:  
   
-- La aplicación se hospeda en un [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] grupo de aplicaciones.  
+- La aplicación se hospeda en un grupo de aplicaciones de IIS 7.0.  
   
-- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] se está ejecutando en el modo integrado.  
+- IIS 7.0 se está ejecutando en el modo integrado.  
   
 - La aplicación utiliza .NET Framework 3.5 SP1 o una versión posterior.  
   

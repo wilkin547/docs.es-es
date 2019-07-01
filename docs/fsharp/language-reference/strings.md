@@ -1,13 +1,13 @@
 ---
 title: Cadenas
 description: Obtenga información sobre cómo el F# tipo 'string' representa texto inmutable como una secuencia de caracteres Unicode.
-ms.date: 05/16/2016
-ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/28/2019
+ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642080"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487769"
 ---
 # <a name="strings"></a>Cadenas
 
@@ -29,7 +29,7 @@ Literales de cadena se delimitan mediante el carácter de comillas dobles ("). E
 |Barra diagonal inversa|`\\`|
 |Comillas|`\"`|
 |Apóstrofo|`\'`|
-|Carácter Unicode|`\uXXXX` o `\UXXXX` (donde `X` indica un dígito hexadecimal)|
+|Carácter Unicode|`\uXXXX` (UTF-16) o `\U00XXXXXX` (UTF-32) (donde `X` indica un dígito hexadecimal)|
 
 Si va precedido por el símbolo @, el literal es una cadena textual. Esto significa que se omiten las secuencias de escape, excepto en que dos caracteres de comilla se interpretan como caracteres de una comilla simple.
 

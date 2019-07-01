@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348468"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487260"
 ---
 # <a name="security-in-windows-forms-overview"></a>Información general sobre la seguridad en formularios Windows Forms
 
@@ -21,7 +21,7 @@ Antes de la versión de .NET Framework, todo el código que se ejecuta en el equ
 
 .NET Framework introduce una infraestructura denominada seguridad de acceso del código que le permite diferenciar los permisos o derechos, que tiene el código de los derechos que tiene el usuario. De forma predeterminada, el código procedente de Internet y de la intranet solo se puede ejecutar en lo que se conoce como confianza parcial. La confianza parcial somete una aplicación a una serie de restricciones: entre otras cosas, la aplicación tiene restringido el acceso al disco duro local y no puede ejecutar código no administrado. .NET Framework controla los recursos que el código puede tener acceso a basándose en la identidad de ese código: su procedencia, si tiene un [Strong-Named Assemblies](../app-domains/strong-named-assemblies.md), si está firmado con un certificado y así sucesivamente.
 
-La tecnología de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], que se usa para implementar aplicaciones de Windows Forms, facilita el desarrollo de aplicaciones que se ejecutan en confianza parcial, en plena confianza o en confianza parcial con permisos elevados. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] proporciona características como la elevación de permisos y la implementación de aplicaciones de confianza para que la aplicación pueda solicitar la plena confianza o permisos elevados del usuario local de manera responsable.
+La tecnología ClickOnce, que se usa para implementar aplicaciones de Windows Forms, facilita el desarrollo de aplicaciones que se ejecutan en confianza parcial, en plena confianza o en confianza parcial con permisos elevados. ClickOnce ofrece características como la elevación de permisos y la implementación de aplicaciones de confianza para que la aplicación puede solicitar la plena confianza o permisos elevados del usuario local de manera responsable.
 
 ## <a name="understanding-security-in-the-net-framework"></a>Descripción de la seguridad en .NET Framework
 
@@ -34,7 +34,7 @@ Si el usuario ejecuta un archivo ejecutable de Windows Forms directamente desde 
 >
 > Los permisos predeterminados que se conceden en cada uno de estos conjuntos de permisos se enumeran en el tema que trata de la [directiva de seguridad predeterminada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100)). Según los permisos que reciba la aplicación, se ejecuta correctamente o genera una excepción de seguridad.
 >
-> Muchas aplicaciones de Windows Forms se implementan mediante [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]. Las herramientas usadas para generar una implementación [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tienen valores predeterminados de seguridad diferentes a los tratados anteriormente. Para obtener más información, vea la explicación siguiente.
+> Se implementará muchas aplicaciones de Windows Forms con ClickOnce. Las herramientas utilizadas para generar una implementación de ClickOnce tienen valores predeterminados de seguridad diferentes a los tratados anteriormente. Para obtener más información, vea la explicación siguiente.
 
 Los permisos reales concedidos a la aplicación pueden ser diferentes de los valores predeterminados, puesto que se puede modificar la directiva de seguridad; esto significa que la aplicación puede tener permisos en un equipo, pero no en otro.
 
@@ -64,9 +64,9 @@ Los temas siguientes describen características de seguridad adicionales de Wind
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Implementación de una aplicación con los permisos adecuados
 
-La forma más común de implementar una aplicación de Windows Forms en un equipo cliente es con [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], una tecnología de implementación que describe todos los componentes necesarios para que la aplicación se ejecute. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] usa archivos XML denominados manifiestos para describir los ensamblados y los archivos que componen la aplicación, así como los permisos que requiere la aplicación.
+Es la forma más común de implementar una aplicación de Windows Forms en un equipo cliente con ClickOnce, una tecnología de implementación que describe todos los componentes de que la aplicación necesita para ejecutarse. ClickOnce usa archivos XML denominados manifiestos para describir los ensamblados y archivos que componen la aplicación y también los permisos de la aplicación requiere.
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] tiene dos tecnologías para solicitar permisos elevados en un equipo cliente. Ambas tecnologías se basan en el uso de certificados de Authenticode. Los certificados sirven para que los usuarios tengan la seguridad de que la aplicación procede de un origen de confianza.
+ClickOnce tiene dos tecnologías para solicitar permisos elevados en un equipo cliente. Ambas tecnologías se basan en el uso de certificados de Authenticode. Los certificados sirven para que los usuarios tengan la seguridad de que la aplicación procede de un origen de confianza.
 
 En la tabla siguiente se describen estas tecnologías.
 
@@ -77,9 +77,9 @@ En la tabla siguiente se describen estas tecnologías.
 
 La tecnología elegida dependerá de su entorno de implementación. Para más información, consulte el artículo [Elegir una estrategia de implementación de ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-De forma predeterminada, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] las aplicaciones implementadas mediante Visual Studio o las herramientas de .NET Framework SDK (Mage.exe y MageUI.exe) configuradas para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con Visual Studio o la herramienta MageUI.exe de SDK de .NET Framework, al configurar la implementación. Para obtener más información sobre cómo usar MageUI.exe, consulte el tutorial: Implementar una aplicación ClickOnce desde la línea de comandos.  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+De forma predeterminada, las aplicaciones ClickOnce implementadas mediante Visual Studio o las herramientas de .NET Framework SDK (Mage.exe y MageUI.exe) se configuran para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con Visual Studio o la herramienta MageUI.exe de SDK de .NET Framework, al configurar la implementación. Para obtener más información sobre cómo usar MageUI.exe, consulte el tutorial: Implementar una aplicación ClickOnce desde la línea de comandos.  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
-Para más información acerca de los aspectos de seguridad de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] y la elevación de permisos, consulte [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Para más información sobre la implementación de aplicaciones de confianza, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).
+Para obtener más información acerca de los aspectos de seguridad de ClickOnce y la elevación de permisos, consulte [proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Para más información sobre la implementación de aplicaciones de confianza, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Probar la aplicación
 

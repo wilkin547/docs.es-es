@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047820"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487105"
 ---
 # <a name="how-to-create-a-federated-client"></a>Procedimiento para crear un cliente federado
 En Windows Communication Foundation (WCF), creando un cliente para un *servicio federado* consta de tres pasos principales:  
@@ -39,7 +39,7 @@ En Windows Communication Foundation (WCF), creando un cliente para un *servicio 
   
 4. Examine cualquier adicionales [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) dentro del out <`alternativeIssuedTokenParameters`> elemento. Al utilizar la herramienta Svcutil.exe para generar la configuración de un servicio federado, si el servicio federado o cualquier servicio de tokens de seguridad intermedio no especifican una dirección de emisor, sino que especifican una dirección de metadatos para un servicio de tokens de seguridad que expone varios puntos de conexión, el archivo de configuración resultante hace referencia al primer punto de conexión. Puntos de conexión adicionales se encuentran en el archivo de configuración como comentada <`alternativeIssuedTokenParameters`> elementos.  
   
-     Determine si uno de estos <`issuedTokenParameters`> es preferible al que ya está presente en la configuración. Por ejemplo, el cliente puede preferir autenticar a un servicio de tokens de seguridad utilizando un token [!INCLUDE[infocard](../../../../includes/infocard-md.md)] de Windows en lugar de mediante un par de nombre de usuario y contraseña.  
+     Determine si uno de estos <`issuedTokenParameters`> es preferible al que ya está presente en la configuración. Por ejemplo, el cliente puede preferir autenticar a un servicio de token de seguridad utilizando un token de Windows CardSpace en lugar de un par de nombre y contraseña de usuario.  
   
     > [!NOTE]
     >  Un servicio de tokens de seguridad intermedio puede dirigir el cliente a un servicio de tokens de seguridad incorrecto si se deben atravesar varios servicios de tokens de seguridad antes de comunicarse con el servicio. Por lo tanto, asegúrese de que el punto de conexión para el servicio de token de seguridad en el [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) es el servicio de token de seguridad esperado y no un servicio de token de seguridad desconocido.  

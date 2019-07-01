@@ -2,12 +2,12 @@
 title: Modelo de objetos de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2401a8a051ed4dcd386c7794a2197672709ea423
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648409"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487691"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Modelo de objetos de programación web HTTP de WCF
 El modelo de programación de WEB HTTP de WCF permite a los programadores exponer servicios Web de Windows Communication Foundation (WCF) a través de solicitudes HTTP básicas sin necesidad de SOAP. El modelo de programación de WEB HTTP de WCF se basa en el modelo de extensibilidad WCF existente. Define las clases siguientes:  
@@ -97,7 +97,7 @@ El modelo de programación de WEB HTTP de WCF permite a los programadores expone
  El modelo de programación de WEB HTTP de WCF no utiliza mensajes basados en SOAP y, por tanto, no admite WS-* protocolos. No obstante, puede exponer el mismo contrato en dos extremos diferentes, uno que use SOAP y otro que no lo haga. Vea [Cómo: Exponer un contrato a clientes Web y SOAP](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md) para obtener un ejemplo.  
   
 ## <a name="security"></a>Seguridad  
- Dado que el modelo de programación de WEB HTTP de WCF no admite WS-* protocolos es la única manera de proteger un servicio Web basado en el modelo de programación de WEB HTTP de WCF exponer el servicio mediante SSL. Para obtener más información acerca de cómo configurar SSL con [!INCLUDE[iisver](../../../../includes/iisver-md.md)] vea [cómo implementar SSL en IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
+ Dado que el modelo de programación de WEB HTTP de WCF no admite WS-* protocolos es la única manera de proteger un servicio Web basado en el modelo de programación de WEB HTTP de WCF exponer el servicio mediante SSL. Para obtener más información acerca de cómo configurar SSL con IIS 7.0, vea [cómo implementar SSL en IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  
   
 ## <a name="see-also"></a>Vea también
 

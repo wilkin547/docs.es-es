@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 4200918057a32d077dbc44f48057f8e886d87a44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624505"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487096"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>Procedimiento para configurar las credenciales en un servicio de federación
 En Windows Communication Foundation (WCF), crear un servicio federado consta de los siguientes procedimientos principales:  
@@ -28,7 +28,7 @@ En Windows Communication Foundation (WCF), crear un servicio federado consta de 
   
 1. Utilice la propiedad <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> de la clase <xref:System.ServiceModel.Description.ServiceCredentials> para devolver una referencia a una instancia <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>. Se obtiene acceso a la propiedad desde la propiedad <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> de la clase <xref:System.ServiceModel.ServiceHostBase>.  
   
-2. Establezca la propiedad <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> en `true` si los tokens emitidos automáticamente como las tarjetas [!INCLUDE[infocard](../../../../includes/infocard-md.md)] se van a autenticar. De manera predeterminada, es `false`.  
+2. Establecer el <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> propiedad `true` si tokens emitidos automáticamente como tarjetas CardSpace serán autenticados. De manera predeterminada, es `false`.  
   
 3. Rellene la colección devuelta por la propiedad <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> con instancias de la clase <xref:System.Security.Cryptography.X509Certificates.X509Certificate2>. Cada instancia representa un emisor desde el que el servicio autenticará los tokens.  
   
@@ -47,7 +47,7 @@ En Windows Communication Foundation (WCF), crear un servicio federado consta de 
   
 1. Crear un `<issuedTokenAuthentication>` como elemento secundario de un <`serviceCredentials`> elemento.  
   
-2. Establecer el `allowUntrustedRsaIssuers` atributo de la `<issuedTokenAuthentication>` elemento `true` si autentica un token emitido automáticamente, como un [!INCLUDE[infocard](../../../../includes/infocard-md.md)] tarjeta.  
+2. Establecer el `allowUntrustedRsaIssuers` atributo de la `<issuedTokenAuthentication>` elemento `true` si autentica un token emitido automáticamente, como una tarjeta CardSpace.  
   
 3. Cree un elemento `<knownCertificates>` como elemento secundario del elemento de `<issuedTokenAuthentication>`.  
   

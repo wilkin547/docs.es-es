@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: db7ca2690fc7b76d3e843a4ed51ef356890ab9eb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b1a0a07876e9cc111e8c5eef56f208d7bf2cb49f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402403"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487697"
 ---
 # <a name="hosting-services"></a>Servicios de hospedaje
 Para activarse, se debe hospedar un servicio dentro de un entorno de tiempo en ejecución que lo crea y controla su contexto y duración. Servicios de Windows Communication Foundation (WCF) están diseñados para ejecutarse en cualquier proceso de Windows que admita código administrado.  
@@ -34,7 +34,7 @@ Para activarse, se debe hospedar un servicio dentro de un entorno de tiempo en e
  Observe que los servicios hospedados por IIS sólo pueden utilizar transporte HTTP. Su implementación en IIS 5.1 ha introducido algunas limitaciones en [!INCLUDE[wxp](../../../includes/wxp-md.md)]. La activación basada en mensajes para un servicio WCF que proporciona IIS 5.1 en [!INCLUDE[wxp](../../../includes/wxp-md.md)] bloquea cualquier otro servicio WCF autohospedado en el mismo equipo desde que se usa el puerto 80 para comunicarse. Pueden ejecutar los servicios WCF en el mismo proceso o grupo de trabajo de AppDomain o aplicación que otras aplicaciones cuando se hospeda en IIS 6.0 en [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Pero, dado que WCF e IIS 6.0 usan la pila HTTP de modo kernel (HTTP.sys), IIS 6.0 puede compartir el puerto 80 con otros servicios WCF autohospedados que se ejecutan en el mismo equipo, a diferencia de IIS 5.1.  
   
 #### <a name="windows-process-activation-service-was"></a>Servicio de activación de procesos de Windows (WAS)  
- Windows Process Activación Servicio (WAS) es el nuevo mecanismo de activación de procesos del [!INCLUDE[lserver](../../../includes/lserver-md.md)] , que también está disponible en [!INCLUDE[wv](../../../includes/wv-md.md)]. Conserva el familiar modelo de proceso de IIS 6.0 (grupos de aplicaciones y activación de procesos basada en mensajes) y el hospedaje de características (como protección rápida contra errores, seguimiento de estado y reciclaje), pero quita la dependencia de HTTP de la activación arquitectura. [!INCLUDE[iisver](../../../includes/iisver-md.md)] usa WAS para lograr la activación mediante mensajes sobre HTTP. Componentes WCF adicionales también se añaden a WAS para proporcionar la activación basada en mensajes a través de otros protocolos que WCF admite, como TCP, MSMQ y canalizaciones con nombre. Esto permite a las aplicaciones que utilizan protocolos de comunicación utilizar las características de IIS, como el reciclaje de procesos, la protección rápida frente a errores y el sistema de configuración común que sólo estaban disponibles para las aplicaciones basadas en HTTP.  
+ Windows Process Activación Servicio (WAS) es el nuevo mecanismo de activación de procesos del [!INCLUDE[lserver](../../../includes/lserver-md.md)] , que también está disponible en [!INCLUDE[wv](../../../includes/wv-md.md)]. Conserva el familiar modelo de proceso de IIS 6.0 (grupos de aplicaciones y activación de procesos basada en mensajes) y el hospedaje de características (como protección rápida contra errores, seguimiento de estado y reciclaje), pero quita la dependencia de HTTP de la activación arquitectura. IIS 7.0 usa WAS para lograr la activación basada en mensajes a través de HTTP. Componentes WCF adicionales también se añaden a WAS para proporcionar la activación basada en mensajes a través de otros protocolos que WCF admite, como TCP, MSMQ y canalizaciones con nombre. Esto permite a las aplicaciones que utilizan protocolos de comunicación utilizar las características de IIS, como el reciclaje de procesos, la protección rápida frente a errores y el sistema de configuración común que sólo estaban disponibles para las aplicaciones basadas en HTTP.  
   
  Esta opción de hospedaje requiere que se configure correctamente WAS, pero no requiere que se escriba ningún código de hospedaje como parte de la aplicación. Para obtener más información sobre cómo configurar el hospedaje de WAS, vea [Cómo: Hospedar un servicio WCF en WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
