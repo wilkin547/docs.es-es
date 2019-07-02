@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025138"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401464"
 ---
 # <a name="c-operators-c-reference"></a>Operadores de C# (referencia de C#)
 
@@ -51,9 +51,9 @@ Estos son los operadores de precedencia más alta.
 
 [x--](arithmetic-operators.md#decrement-operator---): decremento de postfijo. Devuelve el valor de x; a continuación, actualiza la ubicación de almacenamiento con el valor de x que es uno menos (normalmente resta el entero 1).
 
-[new](../keywords/new-operator.md): creación de instancias de tipo.
+[new](new-operator.md): creación de instancias de tipo.
 
-[typeof](../keywords/typeof.md): devuelve el objeto <xref:System.Type> que representa el operando.
+[typeof](type-testing-and-conversion-operators.md#typeof-operator): devuelve el objeto <xref:System.Type> que representa el operando.
 
 [checked](../keywords/checked.md): habilita la comprobación de desbordamiento para operaciones con enteros.
 
@@ -87,7 +87,7 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 [--x](arithmetic-operators.md#decrement-operator---): decremento de prefijo. Devuelve el valor de x después de actualizar la ubicación de almacenamiento con el valor de x que es uno menos (normalmente resta el entero 1).
 
-[(T)x](invocation-operator.md): conversión de tipos.
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-): conversión de tipos.
 
 [await](../keywords/await.md): espera una `Task`.
 
@@ -137,9 +137,9 @@ Estos operadores tienen mayor precedencia que los de la sección siguiente y men
 
 [x >= y](comparison-operators.md#greater-than-or-equal-operator-): mayor o igual que.
 
-[is](../keywords/is.md): compatibilidad de tipos. Devuelve true si el operando izquierdo evaluado se puede convertir al tipo especificado en el operando derecho (un tipo estático).
+[is](type-testing-and-conversion-operators.md#is-operator): compatibilidad de tipos. Devuelve `true` si el operando izquierdo evaluado se puede convertir al tipo especificado en el operando derecho.
 
-[as](../keywords/as.md): conversión de tipos. Devuelve el operando izquierdo convertido al tipo especificado por el operando derecho (un tipo estático), pero `as` devuelve `null` donde `(T)x` produciría una excepción.
+[as](type-testing-and-conversion-operators.md#as-operator): conversión de tipos. Devuelve el operando izquierdo convertido al tipo especificado por el operando derecho, pero `as` devuelve `null` donde `(T)x` iniciaría una excepción.
 
 ## <a name="equality-operators"></a>Operadores de igualdad
 
@@ -171,13 +171,13 @@ Este operador tiene mayor precedencia que el de la sección siguiente y menor qu
 
 Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-): AND lógico. Si el primer operando se evalúa como false, C# no evalúa el segundo operando.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-): AND lógico. Si `x` se evalúa como `false`, `y` no se evalúa.
 
 ## <a name="conditional-or-operator"></a>Operador condicional OR
 
 Este operador tiene mayor precedencia que el de la sección siguiente y menor que el de la anterior.
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-): OR lógico. Si el primer operando se evalúa como true, C# no evalúa el segundo operando.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-): OR lógico. Si `x` se evalúa como `true`, `y` no se evalúa.
 
 ## <a name="null-coalescing-operator"></a>Operador de uso combinado de null
 
