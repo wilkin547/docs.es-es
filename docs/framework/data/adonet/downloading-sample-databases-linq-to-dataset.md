@@ -2,15 +2,15 @@
 title: Descargar bases de datos de ejemplo (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: 1ef5a5ceac6a7f819551f6221b63197786ab4f09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 340ccd1e0e2d415fe60721775bd39acf9db00f85
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606904"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504499"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Descargar bases de datos de ejemplo (LINQ to DataSet)
-Los ejemplos y tutoriales en la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentación usa la base de datos de ejemplo AdventureWorks. Puede descargar este producto de forma gratuita del sitio de descarga de Microsoft. Los ejemplos y los tutoriales de la documentación de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] usan SQL Server como almacén de datos. SQL Server Express Edition, que está disponible de forma gratuita, también se puede usar como almacén de datos en lugar de SQL Server.  
+Los ejemplos y tutoriales de LINQ to DataSet documentación usan la base de datos de ejemplo AdventureWorks. Puede descargar este producto de forma gratuita del sitio de descarga de Microsoft. Los ejemplos y tutoriales de LINQ to DataSet documentación usan SQL Server como almacén de datos. SQL Server Express Edition, que está disponible de forma gratuita, también se puede usar como almacén de datos en lugar de SQL Server.  
   
 ## <a name="downloading-and-installing-the-adventureworks-database"></a>Descargar e instalar la base de datos de AdventureWorks  
   
@@ -63,7 +63,7 @@ Los ejemplos y tutoriales en la [!INCLUDE[linq_dataset](../../../../includes/lin
      Si ha instalado esos archivos en una unidad o en un directorio diferente, debe revisar las rutas de acceso correctamente antes de ejecutar el procedimiento almacenado `sp_attach_db`.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Descargar SQL Server Express Edition  
- Los ejemplos y tutoriales en la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sección usar SQL Server 2005 como almacén de datos, pero se puede modificar para usar SQL Server Express Edition, en su lugar. SQL Server Express Edition está disponible gratuitamente y puede redistribuirse con aplicaciones. Si utiliza Visual Studio, SQL Server Express Edition se incluye en las ediciones Pro y superiores.  
+ Los ejemplos y tutoriales de LINQ to DataSet sección usan SQL Server 2005 como almacén de datos, pero se pueden modificar para usar SQL Server Express Edition, en su lugar. SQL Server Express Edition está disponible gratuitamente y puede redistribuirse con aplicaciones. Si utiliza Visual Studio, SQL Server Express Edition se incluye en las ediciones Pro y superiores.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Para descargar e instalar SQL Server Express Edition  
   

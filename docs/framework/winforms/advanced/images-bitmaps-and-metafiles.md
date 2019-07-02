@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003943"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505700"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>Imágenes, mapas de bits y metarchivos
 La clase `Image` es una clase base abstracta que proporciona métodos para trabajar con imágenes de trama (mapas de bits) e imágenes vectoriales (metarchivos). Las clases `Bitmap` y <xref:System.Drawing.Imaging.Metafile> se heredan de la clase `Image`. La clase `Bitmap` amplía las capacidades de la clase `Image` al proporcionar métodos adicionales para cargar, guardar y manipular imágenes de trama. La clase <xref:System.Drawing.Imaging.Metafile> amplía las capacidades de la clase `Image` al proporcionar métodos adicionales para grabar y examinar imágenes vectoriales.  
@@ -22,7 +22,7 @@ La clase `Image` es una clase base abstracta que proporciona métodos para traba
  Describe los distintos formatos de imagen.  
   
  [Metarchivos en GDI+](metafiles-in-gdi.md)  
- Describe la compatibilidad de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] con metarchivos.  
+ Explica la compatibilidad con GDI + metarchivos.  
   
  [Dibujar, colocar y clonar imágenes en GDI+](drawing-positioning-and-cloning-images-in-gdi.md)  
  Describe los métodos para dibujar imágenes de trama y vectoriales con código administrado.  

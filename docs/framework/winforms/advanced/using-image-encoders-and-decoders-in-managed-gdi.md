@@ -5,17 +5,17 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: e56bc20eb55d694d19b25d9e94e5c9d9e3952628
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8cd66f3ce3da462867da9e23c38b3f6d877c058c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666445"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505092"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>Usar codificadores y descodificadores de imagen en la interfaz GDI+ administrada
-El <xref:System.Drawing> espacio de nombres proporciona la <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> clases para almacenar y manipular imágenes. Mediante el uso de codificadores de imagen en [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], puede escribir imágenes de la memoria en el disco. Mediante el uso de los descodificadores de imagen en [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], puede cargar imágenes desde el disco en la memoria. Un codificador convierte los datos en un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> objeto en un formato de archivo de disco designado. Un descodificador convierte los datos en un archivo de disco al formato requerido por el <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> objetos.  
+El <xref:System.Drawing> espacio de nombres proporciona la <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> clases para almacenar y manipular imágenes. Mediante el uso de codificadores de imágenes en GDI +, puede escribir imágenes de la memoria en el disco. Mediante el uso de descodificadores de imágenes en GDI +, puede cargar imágenes desde el disco en la memoria. Un codificador convierte los datos en un <xref:System.Drawing.Image> o <xref:System.Drawing.Bitmap> objeto en un formato de archivo de disco designado. Un descodificador convierte los datos en un archivo de disco al formato requerido por el <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> objetos.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] tiene integrados codificadores y descodificadores que admiten los siguientes tipos de archivo:  
+ GDI + tiene integrados codificadores y descodificadores que admiten los siguientes tipos de archivo:  
   
 - BMP  
   
@@ -27,7 +27,7 @@ El <xref:System.Drawing> espacio de nombres proporciona la <xref:System.Drawing.
   
 - TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] También tiene descodificadores integrados que admiten los siguientes tipos de archivo:  
+ GDI + también tiene descodificadores integrados que admiten los siguientes tipos de archivo:  
   
 - WMF  
   

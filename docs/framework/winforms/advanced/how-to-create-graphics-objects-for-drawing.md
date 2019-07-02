@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643357"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505506"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Procedimiento para crear objetos gráficos para dibujar
-Antes de poder dibujar líneas y formas, representar texto o mostrar y manipular imágenes con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], deberá crear un <xref:System.Drawing.Graphics> objeto. El <xref:System.Drawing.Graphics> objeto representa un [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] superficie de dibujo, y es el objeto que se usa para crear imágenes gráficas.  
+Antes de que puede dibujar líneas y formas, representar texto o mostrar y manipular imágenes con GDI +, deberá crear un <xref:System.Drawing.Graphics> objeto. La <xref:System.Drawing.Graphics> objeto representa una superficie de dibujo de GDI + y es el objeto que se usa para crear imágenes gráficas.  
   
  Trabajar con gráficos, hay dos pasos:  
   

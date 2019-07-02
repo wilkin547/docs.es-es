@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063721"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505810"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Procedimiento para usar una matriz de colores para transformar un color único
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona el <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> clases para almacenar y manipular imágenes. <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> objetos almacenan el color de cada píxel como un número de 32 bits: 8 bits para cada color rojo, verde, azul y alfa. Cada uno de los cuatro componentes es un número comprendido entre 0 y 255, donde 0 representa ninguna intensidad y que representa la intensidad máxima de 255. El componente alfa especifica la transparencia del color: 0 es completamente transparente y 255 es completamente opaco.  
+GDI + proporciona el <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> clases para almacenar y manipular imágenes. <xref:System.Drawing.Image> y <xref:System.Drawing.Bitmap> objetos almacenan el color de cada píxel como un número de 32 bits: 8 bits para cada color rojo, verde, azul y alfa. Cada uno de los cuatro componentes es un número comprendido entre 0 y 255, donde 0 representa ninguna intensidad y que representa la intensidad máxima de 255. El componente alfa especifica la transparencia del color: 0 es completamente transparente y 255 es completamente opaco.  
   
  Un vector de color es una tupla de 4 del formulario (rojo, verde, azul, alfa). Por ejemplo, el vector de color (0, 255, 0, 255) representa un color opaco que no tenga ningún rojo o azul, verde intensidad máxima.  
   
- Otra convención para representar los colores utiliza el número 1 de máxima intensidad. Mediante esta convención, el color que se describe en el párrafo anterior podría representarse mediante el vector (0, 1, 0, 1). [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utiliza la convención 1 como intensidad total cuando realiza las transformaciones de color.  
+ Otra convención para representar los colores utiliza el número 1 de máxima intensidad. Mediante esta convención, el color que se describe en el párrafo anterior podría representarse mediante el vector (0, 1, 0, 1). GDI + utiliza la convención 1 como intensidad total cuando realiza las transformaciones de color.  
   
  Puede aplicar transformaciones lineales (rotación, escala y similares) a los vectores de color multiplicando los vectores de color por una matriz de 4 x 4. Sin embargo, no se puede utilizar una matriz de 4 x 4 para realizar una conversión (no lineal). Si agrega una quinta coordenada ficticia (por ejemplo, el número 1) a cada uno de los vectores de color, puede usar una matriz de 5 × 5 para aplicar cualquier combinación de conversiones y transformaciones lineales. Una transformación que consta de una transformación lineal seguida de una traducción se denomina una transformación afín.  
   

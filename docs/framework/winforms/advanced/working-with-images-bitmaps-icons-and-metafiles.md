@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c778018a2d78fbec67a3bf41b5cbaa8e4bfb606
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011923"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504857"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>Trabajar con imágenes, mapas de bits, iconos y metarchivos
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona la clase `Bitmap` para trabajar con imágenes de trama y la clase `Metafile` para trabajar con imágenes vectoriales. Las clases `Bitmap` y `Metafile` heredan de la clase `Image`.  
+GDI + proporciona el `Bitmap` clase para trabajar con imágenes de trama y `Metafile` clase para trabajar con imágenes vectoriales. Las clases `Bitmap` y `Metafile` heredan de la clase `Image`.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Cómo: Dibujar un mapa de bits existente en la pantalla](how-to-draw-an-existing-bitmap-to-the-screen.md)  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766173"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505040"
 ---
 # <a name="using-managed-graphics-classes"></a>Utilizar clases gráficas administradas
-Los temas siguientes describen cómo usar el [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API en el marco de trabajo de la clase administrada.  
+Los temas siguientes describen cómo usar la API de GDI + en el marco de trabajo de la clase administrada.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción a la programación de gráficos](getting-started-with-graphics-programming.md)  
- Describe cómo realizar tareas básicas con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Describe cómo realizar tareas básicas con GDI +.  
   
  [Utilizar lápiz para dibujar líneas y formas](using-a-pen-to-draw-lines-and-shapes.md)  
  Muestra cómo construir un lápiz y utilizarlo para dibujar una serie de líneas y formas.  

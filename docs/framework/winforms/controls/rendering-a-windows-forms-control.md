@@ -10,21 +10,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614673"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506181"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Representar un control de formularios Windows Forms
-Representación se refiere al proceso de creación de una representación visual en pantalla de un usuario. Windows Forms utiliza [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (la nueva biblioteca de gráficos de Windows) para la representación. Las clases administradas que proporcionan acceso a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] están en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres y sus subespacios de nombres.  
+Representación se refiere al proceso de creación de una representación visual en pantalla de un usuario. Formularios de Windows usa GDI (la nueva biblioteca de gráficos de Windows) para la representación. Las clases administradas que proporcionan acceso a GDI están en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres y sus subespacios de nombres.  
   
  Los siguientes elementos son necesarios en la representación del control:  
   
 - La funcionalidad de dibujo proporcionada por la clase base <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
-- Los elementos fundamentales de la [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] biblioteca de gráficos.  
+- Los elementos fundamentales de la biblioteca de gráficos GDI.  
   
 - La geometría de la región de dibujo.  
   
@@ -61,7 +61,7 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> es una clase administrada que encapsula la funcionalidad de dibujo, como se describe en la discusión de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] más adelante en este tema. El <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> es una instancia de la <xref:System.Drawing.Rectangle> estructurar y define el área disponible en el que puede dibujar un control. Un desarrollador del control se puede calcular el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> utilizando el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedad de un control, como se describe en la descripción de geometría más adelante en este tema.  
+ <xref:System.Drawing.Graphics> es una clase administrada que encapsula la funcionalidad de dibujo, como se describe en la descripción de GDI más adelante en este tema. El <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> es una instancia de la <xref:System.Drawing.Rectangle> estructurar y define el área disponible en el que puede dibujar un control. Un desarrollador del control se puede calcular el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> utilizando el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedad de un control, como se describe en la descripción de geometría más adelante en este tema.  
   
  Un control debe proporcionar lógica de representación al reemplazar el <xref:System.Windows.Forms.Control.OnPaint%2A> método que hereda de <xref:System.Windows.Forms.Control>. <xref:System.Windows.Forms.Control.OnPaint%2A> Obtiene acceso a un objeto graphics y un rectángulo que se va a dibujar a través de la <xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A> y <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedades de la <xref:System.Windows.Forms.PaintEventArgs> instancia pasa a él.  
   
@@ -93,7 +93,7 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  Mientras <xref:System.Windows.Forms.Control.OnPaintBackground%2A> tiene una nomenclatura similar de eventos y acepta los mismos argumentos que el `OnPaint` método <xref:System.Windows.Forms.Control.OnPaintBackground%2A> no es un método de evento es true. No hay ningún `PaintBackground` eventos y <xref:System.Windows.Forms.Control.OnPaintBackground%2A> no invoca delegados de eventos. Cuando se reemplaza el <xref:System.Windows.Forms.Control.OnPaintBackground%2A> método, una clase derivada no es necesaria para invocar el <xref:System.Windows.Forms.Control.OnPaintBackground%2A> método de su clase base.  
   
 ## <a name="gdi-basics"></a>Conceptos básicos GDI +  
- La <xref:System.Drawing.Graphics> clase proporciona métodos para dibujar varias formas como círculos, triángulos, elipses y arcos, así como métodos para mostrar texto. El <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres y sus subespacios de nombres contienen clases que encapsulan elementos gráficos, como formas (círculos, rectángulos, arcos y otros), los colores, fuentes, pinceles y así sucesivamente. Para obtener más información acerca de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], consulte [Using Managed Graphics Classes](../advanced/using-managed-graphics-classes.md). Las operaciones básicas de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] también se describen en la [Cómo: Crear un Control de Windows Forms que muestre el progreso](how-to-create-a-windows-forms-control-that-shows-progress.md).  
+ La <xref:System.Drawing.Graphics> clase proporciona métodos para dibujar varias formas como círculos, triángulos, elipses y arcos, así como métodos para mostrar texto. El <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres y sus subespacios de nombres contienen clases que encapsulan elementos gráficos, como formas (círculos, rectángulos, arcos y otros), los colores, fuentes, pinceles y así sucesivamente. Para obtener más información acerca de GDI, vea [Using Managed Graphics Classes](../advanced/using-managed-graphics-classes.md). También se describen los aspectos básicos de GDI en el [Cómo: Crear un Control de Windows Forms que muestre el progreso](how-to-create-a-windows-forms-control-that-shows-progress.md).  
   
 ## <a name="geometry-of-the-drawing-region"></a>Geometría de la región de dibujo  
  El <xref:System.Windows.Forms.Control.ClientRectangle%2A> propiedad de un control especifica la región rectangular disponible para el control en la pantalla del usuario, mientras que el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedad de <xref:System.Windows.Forms.PaintEventArgs> especifica el área que se pinta realmente. (Recuerde que la pintura se realiza en el <xref:System.Windows.Forms.Control.Paint> método eventos que tome un <xref:System.Windows.Forms.PaintEventArgs> instancia como su argumento). Un control que necesite pintar sólo una parte de su área disponible, como sucede cuando una pequeña sección de cambios de presentación del control. En estos casos, un desarrollador del control debe calcular el rectángulo real en a dibujar y lo trasladará al <xref:System.Windows.Forms.Control.Invalidate%2A>. Las versiones sobrecargadas de <xref:System.Windows.Forms.Control.Invalidate%2A> que toman un <xref:System.Drawing.Rectangle> o <xref:System.Drawing.Region> como argumento, usar ese argumento para generar el <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> propiedad de <xref:System.Windows.Forms.PaintEventArgs>.  

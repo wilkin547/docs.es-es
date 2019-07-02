@@ -2,12 +2,12 @@
 title: Programación asincrónica con Async y Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 030ef4549bc820cab66d33fa81c205158c09fff9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026099"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505958"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programación asincrónica con Async y Await (Visual Basic)
 
@@ -39,7 +39,7 @@ El enfoque basado en asincrónico agrega el equivalente de una transmisión auto
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a> Los métodos asincrónicos son más fáciles de escribir
 
-Las palabras clave [Async](../../../../visual-basic/language-reference/modifiers/async.md) y [Await](../../../../visual-basic/language-reference/modifiers/async.md) en Visual Basic son fundamentales en la programación asincrónica. Con esas dos palabras clave, se pueden utilizar los recursos en .NET Framework o en Windows Runtime para crear un método asincrónico casi tan fácilmente como se crea un método sincrónico. Los métodos asincrónicos que se definen utilizando `Async` y `Await` se denominan métodos asincrónicos.
+Las palabras clave [Async](../../../../visual-basic/language-reference/modifiers/async.md) y [Await](../../../../visual-basic/language-reference/operators/await-operator.md) en Visual Basic son fundamentales en la programación asincrónica. Con esas dos palabras clave, se pueden utilizar los recursos en .NET Framework o en Windows Runtime para crear un método asincrónico casi tan fácilmente como se crea un método sincrónico. Los métodos asincrónicos que se definen utilizando `Async` y `Await` se denominan métodos asincrónicos.
 
 En el ejemplo siguiente se muestra un método asincrónico. Casi todo el código deberá ser totalmente familiar. Los comentarios informan sobre las características que se agregan para crear la asincronía.
 

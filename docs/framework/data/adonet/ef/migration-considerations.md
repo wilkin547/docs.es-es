@@ -2,12 +2,12 @@
 title: Consideraciones de migración (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 0fafa786805a14d9adc3523a5eb876e7e5b0e9c5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f0b8e4918844da08ab48525836878b6a21230891
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489870"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504516"
 ---
 # <a name="migration-considerations-entity-framework"></a>Consideraciones de migración (Entity Framework)
 ADO.NET Entity Framework proporciona varias ventajas a una aplicación existente. Una de las más importantes es la capacidad de utilizar el modelo conceptual para separar las estructuras de datos que usa la aplicación del esquema en el origen de datos. De esta forma se pueden realizar más adelante y con facilidad cambios en el modelo de almacenamiento o en el propio origen de datos sin realizar los cambios correspondientes en la aplicación. Para obtener más información acerca de las ventajas de utilizar el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], consulte [Introducción a Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) y [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -66,7 +66,7 @@ ADO.NET Entity Framework proporciona varias ventajas a una aplicación existente
 
   El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proporciona muchas de las mismas funcionalidades que ofrece un objeto DataSet, incluida la persistencia en memoria, seguimiento de cambios, el enlace de datos y serialización de objetos como datos XML. Para obtener más información, consulte [trabajar con objetos](../../../../../docs/framework/data/adonet/ef/working-with-objects.md).  
   
-  Si el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] no proporciona la funcionalidad de DataSet que necesita la aplicación, todavía puede sacar partido de las ventajas de las consultas LINQ utilizando [!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]. Para más información, vea [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
+  Si el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] no proporciona la funcionalidad de DataSet que necesita la aplicación, todavía puede sacar partido de las ventajas de las consultas LINQ utilizando LINQ to DataSet. Para más información, vea [LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>Consideraciones para las aplicaciones que enlazan datos a los controles  
  .NET Framework le permite encapsular los datos en un origen de datos, como un conjunto de datos o un control de origen de datos ASP.NET y, a continuación, enlazar elementos de la interfaz de usuario a esos controles de datos. La lista siguiente describe las consideraciones del enlace de los controles a los datos de Entity Framework.  

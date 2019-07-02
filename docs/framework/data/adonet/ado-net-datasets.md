@@ -2,12 +2,12 @@
 title: Objetos DataSet de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: da6fb7bbe82e37787615518fa74a0d84bf95758f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877225"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504273"
 ---
 # <a name="adonet-datasets"></a>Objetos DataSet de ADO.NET
 La <xref:System.Data.DataSet> objeto desconectado, es esencial para admitir escenarios de datos con ADO.NET distribuidos. El **DataSet** es una representación residente en memoria de datos que proporciona un modelo de programación relacional coherente independientemente del origen de datos. Se puede utilizar con muchos y distintos orígenes de datos, con datos XML o para administrar datos locales de la aplicación. El **DataSet** representa un conjunto completo de datos, incluidas las tablas relacionadas, restricciones y relaciones entre las tablas. La siguiente ilustración muestra el **DataSet** modelo de objetos.  
@@ -41,7 +41,7 @@ Modelo de objetos DataSet
  El **DataSet**, **DataTable**, y **DataColumn** todos tienen un **ExtendedProperties** propiedad. **Las propiedades extendidas** es un **PropertyCollection** donde puede colocar información personalizada, como la instrucción SELECT que se usó para generar el conjunto de resultados, o la hora cuando se generan los datos. El **ExtendedProperties** colección se mantiene con la información de esquema para el **DataSet**.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] proporciona capacidades LINQ (Language Integrated Query) para datos desconectados almacenados en DataSet. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] usa estándar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sintaxis y proporciona comprobación de sintaxis en tiempo de compilación, tipos estáticos y compatibilidad con IntelliSense cuando se usa el IDE de Visual Studio.  
+ LINQ to DataSet proporciona capacidades language-integrated Query para datos desconectados almacenados en un conjunto de datos. LINQ to DataSet utiliza estándar [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] sintaxis y proporciona comprobación de sintaxis en tiempo de compilación, tipos estáticos y compatibilidad con IntelliSense cuando se usa el IDE de Visual Studio.  
   
  Para más información, vea [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
   

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871c5cb3cd9356f677633acb04fe82021a9787c5
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961114"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506137"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Suavizado de contorno con líneas y curvas
-Cuando usas [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar una línea, se proporcionan el punto de partida y el punto final de la línea, pero no tendrá que proporcionar toda la información sobre los píxeles individuales en la línea. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funciona junto con el software de controlador de vídeo para determinar qué píxeles se activará para mostrar la línea en un dispositivo de presentación determinado.  
+Cuando se utiliza GDI + para dibujar una línea, proporcionar los puntos inicial y el punto final de la línea, pero no tendrá que proporcionar toda la información sobre los píxeles individuales en la línea. GDI + funciona junto con el software de controlador de vídeo para determinar qué píxeles se activará para mostrar la línea en un dispositivo de presentación determinado.  
   
 ## <a name="aliasing"></a>Creación de alias  
  Considere la posibilidad de la línea recta de color rojo que va desde el punto (4, 2) al punto (16, 10). Suponga que el sistema de coordenadas tiene su origen en la esquina superior izquierda y que la unidad de medida es el píxel. También se supone que el eje x apunta hacia la derecha y el eje y apunta hacia abajo. La siguiente ilustración muestra una vista ampliada de la línea roja dibujada en un fondo de varios colores.  

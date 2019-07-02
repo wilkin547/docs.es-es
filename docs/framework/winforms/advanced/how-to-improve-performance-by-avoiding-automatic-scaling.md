@@ -10,24 +10,24 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd1a1545dce33de1ce11938db8495ebf311dadda
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724074"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506206"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Procedimiento para mejorar el rendimiento evitando el ajuste de tamaño automático
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede escalar automáticamente una imagen como dibujar, lo que reduciría el rendimiento. Como alternativa, puede controlar la escala de la imagen pasando las dimensiones del rectángulo de destino para el <xref:System.Drawing.Graphics.DrawImage%2A> método.  
+GDI + puede escalar automáticamente una imagen como dibujar, lo que reduciría el rendimiento. Como alternativa, puede controlar la escala de la imagen pasando las dimensiones del rectángulo de destino para el <xref:System.Drawing.Graphics.DrawImage%2A> método.  
   
  Por ejemplo, la llamada siguiente a la <xref:System.Drawing.Graphics.DrawImage%2A> método especifica una esquina superior izquierda de (50, 30) pero no especifica un rectángulo de destino.  
   
  [!code-csharp[System.Drawing.WorkingWithImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.WorkingWithImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#31)]  
   
- Aunque esta es la versión más sencilla de la <xref:System.Drawing.Graphics.DrawImage%2A> método en cuanto al número de argumentos necesarios, no es necesariamente el más eficaz. Si usa la resolución [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] (normalmente 96 puntos por pulgada) es diferente de la resolución almacenada en el <xref:System.Drawing.Image> objeto, el <xref:System.Drawing.Graphics.DrawImage%2A> método escala la imagen. Por ejemplo, suponga un <xref:System.Drawing.Image> objeto tiene un ancho de 216 píxeles y un valor almacenado resolución horizontal de 72 puntos por pulgada. Como 216/72 es 3, <xref:System.Drawing.Graphics.DrawImage%2A> escala la imagen para que tenga un ancho de 3 pulgadas con una resolución de 96 puntos por pulgada. Es decir, <xref:System.Drawing.Graphics.DrawImage%2A> mostrará una imagen que tiene un ancho de 96 x 3 = 288 píxeles.  
+ Aunque esta es la versión más sencilla de la <xref:System.Drawing.Graphics.DrawImage%2A> método en cuanto al número de argumentos necesarios, no es necesariamente el más eficaz. Si la resolución utilizada por GDI + (normalmente 96 puntos por pulgada) es diferente de la resolución almacenada en el <xref:System.Drawing.Image> objeto, el <xref:System.Drawing.Graphics.DrawImage%2A> método escala la imagen. Por ejemplo, suponga un <xref:System.Drawing.Image> objeto tiene un ancho de 216 píxeles y un valor almacenado resolución horizontal de 72 puntos por pulgada. Como 216/72 es 3, <xref:System.Drawing.Graphics.DrawImage%2A> escala la imagen para que tenga un ancho de 3 pulgadas con una resolución de 96 puntos por pulgada. Es decir, <xref:System.Drawing.Graphics.DrawImage%2A> mostrará una imagen que tiene un ancho de 96 x 3 = 288 píxeles.  
   
- Incluso si difiere la resolución de pantalla de 96 puntos por pulgada, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] probablemente escala la imagen como si tratara de la resolución de pantalla de 96 puntos por pulgada. Eso es porque una [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> objeto está asociado con un contexto de dispositivo y cuándo [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] consultas el contexto de dispositivo para la resolución de pantalla, el resultado suele ser 96, independientemente de la resolución de pantalla real. Puede evitar el escalado automático mediante la especificación de rectángulo de destino en el <xref:System.Drawing.Graphics.DrawImage%2A> método.  
+ Incluso si difiere la resolución de pantalla de 96 puntos por pulgada, GDI + ajustará probablemente la imagen como si tratara de la resolución de pantalla de 96 puntos por pulgada. Eso es porque GDI + <xref:System.Drawing.Graphics> objeto está asociado con un contexto de dispositivo, y cuando GDI + consulta en el contexto de dispositivo para la resolución de pantalla, el resultado suele ser 96, independientemente de la resolución de pantalla real. Puede evitar el escalado automático mediante la especificación de rectángulo de destino en el <xref:System.Drawing.Graphics.DrawImage%2A> método.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente dibuja la misma imagen dos veces. En el primer caso, no se especifican el ancho y alto del rectángulo de destino y la imagen se escala automáticamente. En el segundo caso, el ancho y alto (medido en píxeles) del rectángulo de destino se especifican para ser igual que el ancho y alto de la imagen original. La siguiente ilustración muestra la imagen representada dos veces:  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 6078f2418219dad193d1a49a704334046c33b082
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3d5b79e82185c044314ff8807b86835ef6a87c45
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582592"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505910"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>Procedimiento para dibujar texto con GDI
-Con el <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método en el <xref:System.Windows.Forms.TextRenderer> (clase), puede tener acceso a [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] funcionalidad para dibujar texto en un formulario o control. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] representación de texto normalmente ofrece un mejor rendimiento y a medida que más precisa del texto [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+Con el <xref:System.Windows.Forms.TextRenderer.DrawText%2A> método en el <xref:System.Windows.Forms.TextRenderer> (clase), puede tener acceso a funcionalidad GDI para dibujar texto en un formulario o control. Representación de texto GDI normalmente ofrece un mejor rendimiento y la medida de GDI + más precisa del texto.  
   
 > [!NOTE]
 >  El <xref:System.Windows.Forms.TextRenderer.DrawText%2A> métodos de la <xref:System.Windows.Forms.TextRenderer> clase no se admiten para la impresión. Al imprimir, use siempre la <xref:System.Drawing.Graphics.DrawString%2A> métodos de la <xref:System.Drawing.Graphics> clase.  

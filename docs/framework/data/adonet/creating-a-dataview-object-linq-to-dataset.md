@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd39b40864703b6bb24c2cc6590787562f3f4f98
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583540"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504154"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Crear un objeto DataView (LINQ to DataSet)
-Existen dos maneras de crear <xref:System.Data.DataView> en el contexto de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Se puede crear <xref:System.Data.DataView> a partir de una consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] en <xref:System.Data.DataTable> o a partir de <xref:System.Data.DataTable> con o sin tipo. En ambos casos, se crea el <xref:System.Data.DataView> mediante uno de los <xref:System.Data.DataTableExtensions.AsDataView%2A> ; los métodos de extensión <xref:System.Data.DataView> no es puede construir directamente en el [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] contexto.  
+Hay dos maneras de crear un <xref:System.Data.DataView> en el contexto del conjunto de datos de LINQ. Puede crear un <xref:System.Data.DataView> desde una consulta LINQ to DataSet a través de un <xref:System.Data.DataTable>, o bien puede crear un tipo o sin tipo <xref:System.Data.DataTable>. En ambos casos, se crea el <xref:System.Data.DataView> mediante uno de los <xref:System.Data.DataTableExtensions.AsDataView%2A> ; los métodos de extensión <xref:System.Data.DataView> no es puede construir directamente en el contexto del conjunto de datos de LINQ.  
   
  Cuando se ha creado <xref:System.Data.DataView>, puede enlazarlo con un control de la interfaz de usuario en una aplicación de Windows Forms o en una aplicación ASP.NET, o cambiar la configuración de filtro y ordenación.  
   
@@ -22,7 +22,7 @@ Existen dos maneras de crear <xref:System.Data.DataView> en el contexto de [!INC
  Para obtener más información sobre el filtrado y ordenación con <xref:System.Data.DataView>, consulte [filtrar con DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) y [ordenar con DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>Crear DataView desde una consulta LINQ to DataSet  
- Un objeto <xref:System.Data.DataView> puede crearse a partir de los resultados de una consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], en la que los resultados son una proyección de objetos <xref:System.Data.DataRow>. El objeto <xref:System.Data.DataView> que se acaba de crear hereda la información de filtrado y ordenación de la consulta a partir de la cual se creó.  
+ Un <xref:System.Data.DataView> se puede crear objeto de los resultados de LINQ a consultas de conjunto de datos, donde los resultados son una proyección de <xref:System.Data.DataRow> objetos. El objeto <xref:System.Data.DataView> que se acaba de crear hereda la información de filtrado y ordenación de la consulta a partir de la cual se creó.  
   
 > [!NOTE]
 >  En la mayor parte de los casos, las expresiones utilizadas en el filtrado y la ordenación no deben tener efectos secundarios y deben ser deterministas. Además, las expresiones no deben tener ninguna lógica que dependa de un número de conjunto de ejecuciones, ya que las operaciones de filtrado y ordenación se pueden ejecutar un número ilimitado de veces.  
@@ -45,18 +45,18 @@ Existen dos maneras de crear <xref:System.Data.DataView> en el contexto de [!INC
   
 - <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
- Tenga en cuenta que, cuando se crea un objeto <xref:System.Data.DataView> a partir de una consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], el método <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> deber ser el método final que se invoca en la consulta. Esto se muestra en el ejemplo siguiente, que crea un <xref:System.Data.DataView> de pedidos en línea ordenados por el importe total a pagar:  
+ Tenga en cuenta que, cuando un <xref:System.Data.DataView> se crea a partir de LINQ a consultas de conjunto de datos la <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A> método debe ser el último método llamado en la consulta. Esto se muestra en el ejemplo siguiente, que crea un <xref:System.Data.DataView> de pedidos en línea ordenados por el importe total a pagar:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- También puede usar basada en cadena <xref:System.Data.DataView.RowFilter%2A> y <xref:System.Data.DataView.Sort%2A> propiedades para filtrar y ordenar un <xref:System.Data.DataView> después de que se ha creado desde una consulta. Observe que con esto se borrará la información de ordenación y filtro heredada de la consulta. El ejemplo siguiente crea <xref:System.Data.DataView> a partir de una consulta [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] que filtra por apellidos que empiezan por "S". La propiedad basada en cadena <xref:System.Data.DataView.Sort%2A> se establece para ordenar por apellidos en orden ascendente y después por nombres en orden descendente:  
+ También puede usar basada en cadena <xref:System.Data.DataView.RowFilter%2A> y <xref:System.Data.DataView.Sort%2A> propiedades para filtrar y ordenar un <xref:System.Data.DataView> después de que se ha creado desde una consulta. Observe que con esto se borrará la información de ordenación y filtro heredada de la consulta. En el ejemplo siguiente se crea un <xref:System.Data.DataView> desde una consulta LINQ to DataSet que filtra por apellidos que empiezan con la '. La propiedad basada en cadena <xref:System.Data.DataView.Sort%2A> se establece para ordenar por apellidos en orden ascendente y después por nombres en orden descendente:  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
 ## <a name="creating-a-dataview-from-a-datatable"></a>Crear DataView a partir de DataTable  
- Además se crea a partir un [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consulta, un <xref:System.Data.DataView> objeto puede crearse desde un <xref:System.Data.DataTable> utilizando el <xref:System.Data.DataTableExtensions.AsDataView%2A> método.  
+ Se crea a partir de LINQ a consultas de conjunto de datos, además de un <xref:System.Data.DataView> objeto puede crearse desde un <xref:System.Data.DataTable> utilizando el <xref:System.Data.DataTableExtensions.AsDataView%2A> método.  
   
  En el ejemplo siguiente, se crea <xref:System.Data.DataView> a partir de la tabla SalesOrderDetail y se establece ese objeto como origen de datos de un objeto <xref:System.Windows.Forms.BindingSource>: Este objeto actúa como proxy para un control <xref:System.Windows.Forms.DataGridView>.  
   

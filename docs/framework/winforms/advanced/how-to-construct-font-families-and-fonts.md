@@ -8,15 +8,15 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: d3c4b5b4293b62cfec0f8471f90be673854e9009
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2d609525858c7a8ff77c0b86900b4fc7d6b4e39a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590359"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505945"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Procedimiento para construir fuentes y familias de fuentes
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] las fuentes con el mismo tipo de letra pero distintos estilos se agrupa en familias de fuentes. Por ejemplo, la familia de fuentes Arial contiene las siguientes fuentes:  
+GDI + agrupa las fuentes con el mismo tipo de letra pero distintos estilos en familias de fuentes. Por ejemplo, la familia de fuentes Arial contiene las siguientes fuentes:  
   
 - Arial normal  
   
@@ -26,7 +26,7 @@ ms.locfileid: "65590359"
   
 - Arial negrita cursiva  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] utiliza cuatro estilos para formar familias: normal, negrita, cursiva y negrita cursiva. Adjetivos como *restringir* y *redondea* no se consideran estilos; más bien forman parte del nombre de familia. Por ejemplo, Arial Narrow es una familia de fuentes con los miembros siguientes:  
+ GDI + utiliza cuatro estilos para formar familias: normal, negrita, cursiva y negrita cursiva. Adjetivos como *restringir* y *redondea* no se consideran estilos; más bien forman parte del nombre de familia. Por ejemplo, Arial Narrow es una familia de fuentes con los miembros siguientes:  
   
 - Arial Narrow Normal  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65590359"
   
 - Arial Narrow negrita cursiva  
   
- Antes de poder dibujar texto con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], deberá construir una <xref:System.Drawing.FontFamily> objeto y un <xref:System.Drawing.Font> objeto. El <xref:System.Drawing.FontFamily> objeto especifica el tipo de letra (por ejemplo, Arial) y el <xref:System.Drawing.Font> objeto especifica el tamaño, estilo y unidades.  
+ Antes de poder dibujar texto con GDI +, deberá construir una <xref:System.Drawing.FontFamily> objeto y un <xref:System.Drawing.Font> objeto. El <xref:System.Drawing.FontFamily> objeto especifica el tipo de letra (por ejemplo, Arial) y el <xref:System.Drawing.Font> objeto especifica el tamaño, estilo y unidades.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente crea un estilo normal fuente Arial con un tamaño de 16 píxeles. En el código siguiente, el primer argumento pasado a la <xref:System.Drawing.Font.%23ctor%2A> constructor es la <xref:System.Drawing.FontFamily> objeto. El segundo argumento especifica el tamaño de la fuente medido en unidades identificadas por el cuarto argumento. El tercer argumento identifica el estilo.  

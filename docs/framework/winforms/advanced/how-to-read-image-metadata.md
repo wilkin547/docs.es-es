@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169811"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505781"
 ---
 # <a name="how-to-read-image-metadata"></a>Procedimiento para leer metadatos de imagen
-Algunos archivos de imagen contienen metadatos que se pueden leer para determinar las características de la imagen. Por ejemplo, una fotografía digital podría contener metadatos que se pueden leer para determinar la marca y modelo de la cámara empleada para capturar la imagen. Con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], puede leer los metadatos existentes y también puede escribir los nuevos metadatos para archivos de imagen.  
+Algunos archivos de imagen contienen metadatos que se pueden leer para determinar las características de la imagen. Por ejemplo, una fotografía digital podría contener metadatos que se pueden leer para determinar la marca y modelo de la cámara empleada para capturar la imagen. Con GDI +, puede leer los metadatos existentes y también puede escribir los nuevos metadatos para archivos de imagen.  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] almacena un elemento individual de los metadatos en un <xref:System.Drawing.Imaging.PropertyItem> objeto. Puede leer el <xref:System.Drawing.Image.PropertyItems%2A> propiedad de un <xref:System.Drawing.Image> objeto para recuperar todos los metadatos de un archivo. El <xref:System.Drawing.Image.PropertyItems%2A> propiedad devuelve una matriz de <xref:System.Drawing.Imaging.PropertyItem> objetos.  
+ GDI + almacena un elemento individual de los metadatos en un <xref:System.Drawing.Imaging.PropertyItem> objeto. Puede leer el <xref:System.Drawing.Image.PropertyItems%2A> propiedad de un <xref:System.Drawing.Image> objeto para recuperar todos los metadatos de un archivo. El <xref:System.Drawing.Image.PropertyItems%2A> propiedad devuelve una matriz de <xref:System.Drawing.Imaging.PropertyItem> objetos.  
   
  Un <xref:System.Drawing.Imaging.PropertyItem> objeto tiene las siguientes cuatro propiedades: `Id`, `Value`, `Len`, y `Type`.  
   

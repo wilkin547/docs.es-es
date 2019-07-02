@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 682474120cbeeeb4cb83b69188a5a125228279d3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34abfc86e980a24ebb835cfd88d2522f8372c68d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631633"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506024"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Procedimiento para dibujar una línea con extremos de línea
-Puede dibujar el inicio o final de una línea en una de varias formas llamadas extremos de línea. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] admite varios extremos de línea, como round, cuadrado, rombo y punta de flecha.  
+Puede dibujar el inicio o final de una línea en una de varias formas llamadas extremos de línea. GDI + admite varios extremos de línea, como round, cuadrado, rombo y punta de flecha.  
   
 ## <a name="example"></a>Ejemplo  
  Puede especificar extremos de línea para el inicio de una línea (extremo inicial), el final de una línea (extremo final) o los guiones de una línea discontinua (dash CAP.).  

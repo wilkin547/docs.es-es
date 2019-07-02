@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 92aaeabfc12e964ac294fbd69998c4671fc8763c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e3c48aec830cdc3ccceb8683f93e3a99ee6364e2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582606"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506195"
 ---
 # <a name="overriding-the-onpaint-method"></a>Reemplazar el método OnPaint
 Los pasos básicos para reemplazar un evento definido en .NET Framework son idénticos y se resumen en la lista siguiente.  
@@ -82,7 +82,7 @@ public class PaintEventArgs : EventArgs {
 }  
 ```  
   
- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> es el rectángulo que se va a pintar y el <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> propiedad hace referencia a un <xref:System.Drawing.Graphics> objeto. Las clases en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres se administran las clases que proporcionan acceso a la funcionalidad de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], la nueva biblioteca de gráficos de Windows. La <xref:System.Drawing.Graphics> objeto tiene métodos para dibujar puntos, cadenas, líneas, arcos, elipses y muchas otras formas.  
+ <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> es el rectángulo que se va a pintar y el <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> propiedad hace referencia a un <xref:System.Drawing.Graphics> objeto. Las clases en el <xref:System.Drawing?displayProperty=nameWithType> espacio de nombres se administran las clases que proporcionan acceso a la funcionalidad de GDI +, la nueva biblioteca de gráficos de Windows. La <xref:System.Drawing.Graphics> objeto tiene métodos para dibujar puntos, cadenas, líneas, arcos, elipses y muchas otras formas.  
   
  Un control invoca su <xref:System.Windows.Forms.Control.OnPaint%2A> método cada vez que necesita cambiar su apariencia visual. Este método a su vez provoca la <xref:System.Windows.Forms.Control.Paint> eventos.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664173"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504634"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Consultas de tabla única (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] las consultas funcionan en los orígenes de datos que implementan la <xref:System.Collections.Generic.IEnumerable%601> interfaz o <xref:System.Linq.IQueryable%601> interfaz. El <xref:System.Data.DataTable> clase no implementa ninguna de estas interfaces, por lo que debe llamar el <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método si desea utilizar el <xref:System.Data.DataTable> como origen en el `From` cláusula de una [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consulta.  
@@ -20,7 +20,7 @@ ms.locfileid: "61664173"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- La consulta variable local se inicializa con una expresión de consulta, que opera en uno o varios orígenes de información aplicando uno o varios operadores de consulta desde cualquiera de los operadores de consulta estándar, o bien, en el caso de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], operadores específicos de la <xref:System.Data.DataSet>clase. La expresión de consulta del ejemplo anterior utiliza dos de los operadores estándar de consulta: `Where` y `Select`.  
+ La consulta variable local se inicializa con una expresión de consulta, que opera en uno o varios orígenes de información aplicando uno o varios operadores de consulta desde cualquiera de los operadores de consulta estándar, o bien, en el caso de LINQ to DataSet, operadores específicos de la <xref:System.Data.DataSet>clase. La expresión de consulta del ejemplo anterior utiliza dos de los operadores estándar de consulta: `Where` y `Select`.  
   
  La cláusula `Where` filtra la secuencia basándose en una condición, en este caso que `OnlineOrderFlag` se establezca en `true`. El operador `Select` asigna y devuelve un objeto enumerable que captura los argumentos pasados al operador. En el ejemplo anterior, se crea un tipo anónimo con tres propiedades: `SalesOrderID`, `OrderDate` y `SalesOrderNumber`. Los valores de estas tres propiedades se establecen en los valores de las columnas `SalesOrderID`, `OrderDate` y `SalesOrderNumber` a partir de la tabla `SalesOrderHeader`.  
   

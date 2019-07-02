@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487260"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506168"
 ---
 # <a name="security-in-windows-forms-overview"></a>Información general sobre la seguridad en formularios Windows Forms
 
@@ -77,7 +77,7 @@ En la tabla siguiente se describen estas tecnologías.
 
 La tecnología elegida dependerá de su entorno de implementación. Para más información, consulte el artículo [Elegir una estrategia de implementación de ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-De forma predeterminada, las aplicaciones ClickOnce implementadas mediante Visual Studio o las herramientas de .NET Framework SDK (Mage.exe y MageUI.exe) se configuran para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con Visual Studio o la herramienta MageUI.exe de SDK de .NET Framework, al configurar la implementación. Para obtener más información sobre cómo usar MageUI.exe, consulte el tutorial: Implementar una aplicación ClickOnce desde la línea de comandos.  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
+De forma predeterminada, las aplicaciones ClickOnce implementadas mediante Visual Studio o las herramientas de .NET Framework SDK (Mage.exe y MageUI.exe) se configuran para ejecutarse en un equipo cliente que tiene plena confianza. Si va a implementar la aplicación con confianza parcial o solo con algunos permisos adicionales, tendrá que cambiar este valor predeterminado. Puede hacerlo con Visual Studio o la herramienta MageUI.exe de SDK de .NET Framework, al configurar la implementación. Para obtener más información sobre cómo usar MageUI.exe, vea [Tutorial: Implementar manualmente una aplicación ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Consulte también [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) o [Cómo: Establecer permisos personalizados para una aplicación ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Para obtener más información acerca de los aspectos de seguridad de ClickOnce y la elevación de permisos, consulte [proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications). Para más información sobre la implementación de aplicaciones de confianza, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).
 

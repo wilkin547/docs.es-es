@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14abac5678bfffa3cdb61307fd3cb54681c82a99
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011489"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506087"
 ---
 # <a name="custom-control-painting-and-rendering"></a>Dibujo y representación personalizados de controles
 Dibujo personalizado de controles es una de las muchas tareas complicadas fáciles mediante .NET Framework. Al crear un control personalizado, tiene muchas opciones con respecto a la apariencia gráfica del control. Si va a crear un control que hereda de la `Control`, debe proporcionar código que permita el control representar su representación gráfica. Si va a crear un control de usuario que se herede de la `UserControl`, o se hereda desde uno de los controles de Windows Forms, puede reemplazar la representación gráfica estándar y proporcionar su propio código de gráficos. Si desea proporcionar una representación personalizada para los controles constituyentes de una `UserControl` va a crear, las opciones se convierten en más limitadas, pero aún permiten una amplia gama de posibilidades gráficas para los controles y las aplicaciones.  
@@ -47,7 +47,7 @@ Dibujo personalizado de controles es una de las muchas tareas complicadas fácil
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Cómo: Crear objetos Graphics para dibujar](../advanced/how-to-create-graphics-objects-for-drawing.md)  
- Presenta [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funcionalidad de gráficos desde una vínculos de perspectiva y proporciona Visual Studio para obtener más información.  
+ Presenta la funcionalidad de gráficos GDI + desde la perspectiva de Visual Studio y proporciona vínculos a información adicional.  
   
  [Variedades de controles personalizados](varieties-of-custom-controls.md)  
  Describe los tipos de controles personalizados que puede crear.

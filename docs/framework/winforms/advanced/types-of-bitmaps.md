@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663949"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505298"
 ---
 # <a name="types-of-bitmaps"></a>Tipos de mapas de bits
 Un mapa de bits es una matriz de bits que especifica el color de cada píxel en una matriz rectangular de píxeles. El número de bits asignado a un píxel individual determina el número de colores que se pueden asignar a ese píxel. Por ejemplo, si cada píxel se representa mediante 4 bits, a continuación, un píxel determinado puede asignarse uno de los 16 colores distintos (2 ^ 4 = 16). En la tabla siguiente se muestra algunos ejemplos del número de colores que se pueden asignar a un píxel representado por un número determinado de bits.  
@@ -53,7 +53,7 @@ Un mapa de bits es una matriz de bits que especifica el color de cada píxel en 
  ![Ejemplo de mapa de bits](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>Formatos de archivo de gráficos  
- Hay muchos formatos estándares para guardar los mapas de bits en los archivos de disco. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es compatible con el archivo gráfico formatos descritos en los párrafos siguientes.  
+ Hay muchos formatos estándares para guardar los mapas de bits en los archivos de disco. GDI + es compatible con el archivo gráfico formatos descritos en los párrafos siguientes.  
   
 ### <a name="bmp"></a>BMP  
  BMP es un formato estándar usado por Windows para almacenar imágenes independientes del dispositivo e independiente de la aplicación. El número de bits por píxel (1, 4, 8, 15, 24, 32 o 64) de un archivo BMP determinado se especifica en un encabezado de archivo. Archivos BMP con 24 bits por píxel son comunes. Archivos BMP no suelen comprimirse y, por lo tanto, no son adecuados para la transferencia a través de Internet.  

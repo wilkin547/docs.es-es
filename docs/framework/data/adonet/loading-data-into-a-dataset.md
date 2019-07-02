@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a53e5dc1-9669-49d4-828d-efa633237066
-ms.openlocfilehash: cb5578d790e5d3f54f75f964bb3288d861c9d7c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26b77269b21e1b365f81746ba2df66d7df91677e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878545"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504319"
 ---
 # <a name="loading-data-into-a-dataset"></a>Cargar datos en un conjunto de datos
-Un objeto <xref:System.Data.DataSet> se debe rellenar primero antes de poderlo consultar con [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Existen varias formas de rellenar <xref:System.Data.DataSet>. Por ejemplo, puede usar [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] para consultar la base de datos y cargar los resultados en el <xref:System.Data.DataSet>. Para más información, vea [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
+Un <xref:System.Data.DataSet> objeto debe rellenar primero antes de poder consultar con LINQ to DataSet encima de él. Existen varias formas de rellenar <xref:System.Data.DataSet>. Por ejemplo, puede usar [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] para consultar la base de datos y cargar los resultados en el <xref:System.Data.DataSet>. Para más información, vea [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
  Otra forma habitual de cargar datos en <xref:System.Data.DataSet> es utilizar la clase <xref:System.Data.Common.DataAdapter> para recuperar datos desde la base de datos. Esto se muestra en el ejemplo siguiente.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se utiliza <xref:System.Data.Common.DataAdapter> para consultar en la base de datos AdventureWorks la información de ventas del año 2002, y cargar los resultados en un <xref:System.Data.DataSet>. Una vez que se ha rellenado <xref:System.Data.DataSet>, se pueden escribir consultas en él mediante [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. El `FillDataSet` método en este ejemplo se utiliza en las consultas de ejemplo en [conjunto de datos de ejemplos de LINQ to](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md). Para obtener más información, consulte [consultar conjuntos de datos](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md).  
+ En este ejemplo se utiliza <xref:System.Data.Common.DataAdapter> para consultar en la base de datos AdventureWorks la información de ventas del año 2002, y cargar los resultados en un <xref:System.Data.DataSet>. Después de la <xref:System.Data.DataSet> ha sido rellena, puede escribir consultas con él mediante el uso de LINQ to DataSet. El `FillDataSet` método en este ejemplo se utiliza en las consultas de ejemplo en [conjunto de datos de ejemplos de LINQ to](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md). Para obtener más información, consulte [consultar conjuntos de datos](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md).  
   
  [!code-csharp[DP LINQ to DataSet Examples#FillDataSet](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#filldataset)]
  [!code-vb[DP LINQ to DataSet Examples#FillDataSet](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#filldataset)]  

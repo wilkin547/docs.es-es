@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 9a2913de6534612455c14858f6baffea8ef78976
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 1b2c7434543bb2574c59eaec126a621121dd7cef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347476"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504788"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>Métodos genéricos Field y SetField (LINQ to DataSet)
-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] proporciona métodos de extensión a la clase <xref:System.Data.DataRow> para obtener acceso a los valores de columna: el método <xref:System.Data.DataRowExtensions.Field%2A> y el método <xref:System.Data.DataRowExtensions.SetField%2A>. Estos métodos facilitan el acceso a los valores de columna a los desarrolladores, sobre todo en lo relativo a valores NULL. El <xref:System.Data.DataSet> usa <xref:System.DBNull.Value?displayProperty=nameWithType> para representar valores null, mientras que [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] usa el <xref:System.Nullable> y <xref:System.Nullable%601> tipos. Mediante el descriptor de acceso de columna preexistente en <xref:System.Data.DataRow> , deberá convertir el objeto devuelto al tipo adecuado. Si un campo determinado en un <xref:System.Data.DataRow> puede ser null, debe comprobar explícitamente un valor null porque devuelve <xref:System.DBNull.Value?displayProperty=nameWithType> y su conversión implícita a otro tipo produce una <xref:System.InvalidCastException>. En el ejemplo siguiente, si la <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> no usó el método para comprobar si un valor null, se iniciaría una excepción si el indizador devolviera <xref:System.DBNull.Value?displayProperty=nameWithType> e intentó convertir un <xref:System.String>.  
+LINQ to DataSet proporciona métodos de extensión para el <xref:System.Data.DataRow> clase para tener acceso a los valores de columna: el <xref:System.Data.DataRowExtensions.Field%2A> método y el <xref:System.Data.DataRowExtensions.SetField%2A> método. Estos métodos facilitan el acceso a los valores de columna a los desarrolladores, sobre todo en lo relativo a valores NULL. El <xref:System.Data.DataSet> usa <xref:System.DBNull.Value?displayProperty=nameWithType> para representar valores null, mientras que [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] usa el <xref:System.Nullable> y <xref:System.Nullable%601> tipos. Mediante el descriptor de acceso de columna preexistente en <xref:System.Data.DataRow> , deberá convertir el objeto devuelto al tipo adecuado. Si un campo determinado en un <xref:System.Data.DataRow> puede ser null, debe comprobar explícitamente un valor null porque devuelve <xref:System.DBNull.Value?displayProperty=nameWithType> y su conversión implícita a otro tipo produce una <xref:System.InvalidCastException>. En el ejemplo siguiente, si la <xref:System.Data.DataRow.IsNull%2A?displayProperty=nameWithType> no usó el método para comprobar si un valor null, se iniciaría una excepción si el indizador devolviera <xref:System.DBNull.Value?displayProperty=nameWithType> e intentó convertir un <xref:System.String>.  
   
  [!code-csharp[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#whereisnull)]
  [!code-vb[DP LINQ to DataSet Examples#WhereIsNull](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#whereisnull)]  

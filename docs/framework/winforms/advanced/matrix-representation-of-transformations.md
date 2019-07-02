@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967522"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505638"
 ---
 # <a name="matrix-representation-of-transformations"></a>Representación matricial de transformaciones
 Una matriz m × n es un conjunto de números organizados en millones de filas y columnas n. La ilustración siguiente muestra varias matrices.  
@@ -66,7 +66,7 @@ Una matriz m × n es un conjunto de números organizados en millones de filas y 
   
  ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] puede almacenar una transformación afín en un <xref:System.Drawing.Drawing2D.Matrix> objeto. Dado que la tercera columna de una matriz que representa una transformación afín siempre es (0, 0, 1), especifique solo los seis números en las dos primeras columnas cuando se construye un <xref:System.Drawing.Drawing2D.Matrix> objeto. La instrucción `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` crea la matriz se muestra en la ilustración anterior.  
+ En GDI + puede almacenar una transformación afín en un <xref:System.Drawing.Drawing2D.Matrix> objeto. Dado que la tercera columna de una matriz que representa una transformación afín siempre es (0, 0, 1), especifique solo los seis números en las dos primeras columnas cuando se construye un <xref:System.Drawing.Drawing2D.Matrix> objeto. La instrucción `Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)` crea la matriz se muestra en la ilustración anterior.  
   
 ## <a name="composite-transformations"></a>Transformaciones compuestas  
  Una transformación compuesta es una secuencia de transformaciones, una tras otra. Tenga en cuenta las matrices y las transformaciones en la lista siguiente:  

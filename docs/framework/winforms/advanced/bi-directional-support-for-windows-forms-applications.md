@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655664"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506215"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Compatibilidad bidireccional en las aplicaciones de Windows Forms
 Puede usar Visual Studio para crear aplicaciones basadas en Windows que admiten bidireccionales (de derecha a izquierda) idiomas como el árabe y hebreo. Esto incluye formularios estándar, cuadros de diálogo, formularios MDI y todos los controles con los que puede trabajar en estos formularios, es decir, todos los objetos del espacio de nombres <xref:System.Windows.Forms.Control>.  
@@ -82,7 +82,7 @@ Puede usar Visual Studio para crear aplicaciones basadas en Windows que admiten 
  Los formularios Windows Forms admiten Unicode, por lo que puede incluir cualquier juego de caracteres al crear aplicaciones bidireccionales. Sin embargo, no todos los controles de formularios Windows Forms admiten Unicode en todas las plataformas. Para más información, consulte [Codificación y globalización de Windows Forms](encoding-and-windows-forms-globalization.md).  
   
 ## <a name="gdi"></a>GDI+  
- Puede usar [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] para dibujar texto con orden de lectura de derecha a izquierda. El método <xref:System.Drawing.Graphics.DrawString%2A>, que se utiliza para dibujar texto, admite un parámetro `StringFormat` que puede establecer como el miembro <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> de la enumeración <xref:System.Drawing.StringFormatFlags> con el fin de invertir el punto de origen del texto.  
+ Puede usar GDI + para dibujar texto con orden de lectura de derecha a izquierda. El método <xref:System.Drawing.Graphics.DrawString%2A>, que se utiliza para dibujar texto, admite un parámetro `StringFormat` que puede establecer como el miembro <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> de la enumeración <xref:System.Drawing.StringFormatFlags> con el fin de invertir el punto de origen del texto.  
   
 ## <a name="common-dialog-boxes"></a>Cuadros de diálogo comunes  
  Las herramientas del sistema, como el cuadro de diálogo Abrir archivo, están bajo el control de Windows. Heredan los elementos de idioma del sistema operativo. Si está utilizando una versión de Windows con la configuración de idioma correcta, estos cuadros de diálogo funcionarán correctamente con los idiomas bidireccionales.  

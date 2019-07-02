@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET (Página de portal)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
-ms.translationtype: HT
+ms.openlocfilehash: 5783e45f666779e6cfecd611f1e2a34dae5e7df9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487808"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506005"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Página de portal)
 LINQ to ADO.NET le permite realizar consultas sobre cualquier objeto enumerable en ADO.NET mediante el [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] modelo de programación.  
@@ -15,12 +15,12 @@ LINQ to ADO.NET le permite realizar consultas sobre cualquier objeto enumerable 
 > [!NOTE]
 >  LINQ to ADO.NET documentación se encuentra en la sección ADO.NET del SDK de .NET Framework: [LINQ y ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md).
   
- Existen tres tecnologías [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] de ADO.NET independientes: [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] y [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] Proporciona consultas más enriquecidas y optimizadas a través de la <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] le permite consultar directamente esquemas de base de datos de SQL Server, y [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] le permite consultar un Entity Data Model.  
+ Hay tres ADO.NET independientes [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] tecnologías: LINQ to DataSet, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], y [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]. LINQ to DataSet proporciona consultas más enriquecidas y optimizadas a través de la <xref:System.Data.DataSet>, [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] le permite consultar directamente esquemas de base de datos de SQL Server, y [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] le permite consultar un Entity Data Model.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> es uno de los componentes más usados de ADO.NET, además de un elemento clave del modelo de programación desconectado en el que se basa ADO.NET. En cambio, a pesar de su importancia, <xref:System.Data.DataSet> tiene funciones de consulta limitadas.  
   
- [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] le permite compilar funciones de consulta más complejas en <xref:System.Data.DataSet> mediante la misma función de consulta disponible para muchos otros orígenes de datos.  
+ LINQ to DataSet permite compilar capacidades de consulta más complejas en <xref:System.Data.DataSet> mediante el uso de la misma funcionalidad de consulta que está disponible para muchos otros orígenes de datos.  
   
  Para más información, vea [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md).  
   

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8acb732841aa7aaaad3e8fdd2cf2962ff44dd60b
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025410"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506060"
 ---
 # <a name="xarray-markup-extension"></a>x:Array (Extensión de marcado)
 Proporciona compatibilidad general para las matrices de objetos en XAML a través de una extensión de marcado. Esto corresponde a la `x:ArrayExtension` tipo XAML en [MS-XAML].  
   
 ## <a name="xaml-object-element-usage"></a>Uso de elementos de objeto XAML  
   
-```  
+```xaml
 <x:Array Type="typeName">  
   arrayContents  
 </x:Array>  
@@ -55,17 +55,14 @@ Proporciona compatibilidad general para las matrices de objetos en XAML a travé
   
  Por ejemplo, la siguiente es una simple matriz de dos cadenas, con el `sys` prefijo (y también `x`) definidos en el nivel de la matriz.  
   
- [xaml]  
-  
- `<x:Array Type="sys:String" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
-  
- `xmlns:sys="clr-namespace:System;assembly=mscorlib">`  
-  
- `<sys:String>Hello</sys:String>`  
-  
- `<sys:String>World</sys:String>`  
-  
- `</x:Array>`  
+```xaml
+<x:Array Type="sys:String"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String>Hello</sys:String>
+    <sys:String>World</sys:String>
+</x:Array>
+```
   
  Para los tipos personalizados que se usan como elementos de matriz, la clase también debe admitir los requisitos para que se va a crear una instancia en XAML como elementos de objeto. Para obtener más información, consulte [XAML y clases personalizadas para WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - examples [Windows Forms], pens
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-ms.openlocfilehash: 3846c59712cec6003c35f336714041544dec94b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d20b4e47c9f8a5dd7a144e6ebb3151d3ab65a800
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777252"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505140"
 ---
 # <a name="using-a-pen-to-draw-lines-and-shapes"></a>Utilizar lápiz para dibujar líneas y formas
-Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objetos que se va a dibujar los contornos de formas, curvas y segmentos de línea. En esta sección, *línea* hace referencia a cualquiera de estos, a menos que indique que se trata únicamente de un segmento de línea. Establecer las propiedades de un lápiz para controlar el color, ancho, alineación y el estilo de las líneas dibujadas con ese lápiz.  
+Usar GDI + `Pen` objetos que se va a dibujar los contornos de formas, curvas y segmentos de línea. En esta sección, *línea* hace referencia a cualquiera de estos, a menos que indique que se trata únicamente de un segmento de línea. Establecer las propiedades de un lápiz para controlar el color, ancho, alineación y el estilo de las líneas dibujadas con ese lápiz.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Cómo: Utilizar lápiz para dibujar líneas](how-to-use-a-pen-to-draw-lines.md)  

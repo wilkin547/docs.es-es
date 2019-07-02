@@ -7,17 +7,17 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: daf4ef0032ef8bfcce02ec925cc957abdecb3643
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: f3671b7071cc30f5fae0dbd85677987f441d846f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910697"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505980"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Tutorial: Escribir consultas en Visual Basic
 Este tutorial muestra cómo puede utilizar las características del lenguaje Visual Basic para escribir [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] las expresiones de consulta. El tutorial muestra cómo crear consultas en una lista de objetos Student, cómo ejecutar las consultas y cómo modificarlos. Las consultas incorporan varias características que incluyen tipos anónimos, inferencia de tipos local y los inicializadores de objeto.  
   
- Después de completar este tutorial, estará listo para pasar a los ejemplos y documentación específica para la [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] está interesado en el proveedor. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] incluyen proveedores [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)], y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+ Después de completar este tutorial, estará listo para pasar a los ejemplos y documentación específica para la [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] está interesado en el proveedor. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] incluyen proveedores [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet, y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="create-a-project"></a>Crear un proyecto  
   

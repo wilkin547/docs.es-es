@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81c0ddf5b937d604559a9eb1a8b598885546c97f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791162"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504956"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Utilizar transformaciones para ajustar la escala de los colores
 Una transformación de escala multiplica uno o varios de los cuatro componentes de color por un número. En la siguiente tabla figuran las entradas de la matriz de color que representan el escalado.  
@@ -35,7 +35,7 @@ Una transformación de escala multiplica uno o varios de los cuatro componentes 
   
  ![Captura de pantalla que compara los colores originales y se escalan.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
- En la tabla siguiente se enumera los vectores de color de las cuatro barras antes y después de ajustar el azul. Tenga en cuenta que el componente azul de la cuarta barra de color pasó de 0,8 a 0,6. Eso es porque [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] conserva sólo la parte fraccionaria del resultado. Por ejemplo, (2)(0.8) = 1.6, y la parte fraccionaria de 1,6 es 0,6. Conservar solo la parte fraccionaria garantiza que el resultado es siempre en el intervalo [0, 1].  
+ En la tabla siguiente se enumera los vectores de color de las cuatro barras antes y después de ajustar el azul. Tenga en cuenta que el componente azul de la cuarta barra de color pasó de 0,8 a 0,6. Eso es porque GDI + conserva sólo la parte fraccionaria del resultado. Por ejemplo, (2)(0.8) = 1.6, y la parte fraccionaria de 1,6 es 0,6. Conservar solo la parte fraccionaria garantiza que el resultado es siempre en el intervalo [0, 1].  
   
 |Original|Escalar|  
 |--------------|------------|  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66061341ee6539e2172c537a0b2a6ec9ff87565c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960945"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506111"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>Líneas y rellenos con mezcla alfa
-En [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], un color es un valor de 32 bits con 8 bits para alfa, rojo, verde y azul. El valor alfa indica la transparencia del color, la extensión a la que el color se mezcla con el color de fondo. Intervalo de valores alfa de 0 a 255, donde 0 representa un color completamente transparente, y 255 representa un color completamente opaco.  
+En GDI +, un color es un valor de 32 bits con 8 bits para alfa, rojo, verde y azul. El valor alfa indica la transparencia del color, la extensión a la que el color se mezcla con el color de fondo. Intervalo de valores alfa de 0 a 255, donde 0 representa un color completamente transparente, y 255 representa un color completamente opaco.  
   
  Combinación alfa es una mezcla de píxel a píxel de datos de origen y de fondo de color. Cada uno de los tres componentes (rojo, verde, azul) de un color de origen dado se mezcla con el componente correspondiente del color de fondo según la siguiente fórmula:  
   

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - graphics [Windows Forms], using managed interface
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
-ms.openlocfilehash: 927fc327d9ad42cd3a99af207d04efbc520df8b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e2fd9dcf31e5fdce16b5a3b6fd21eab6eab66a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645704"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505323"
 ---
 # <a name="overview-of-graphics"></a>Información general de gráficos
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es una interfaz de programación de aplicaciones (API) que forma el subsistema del sistema operativo Microsoft Windows. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es responsable de mostrar información en pantallas e impresoras. Como sugiere su nombre, [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es la sucesora de [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)], la interfaz de dispositivo gráfico incluida en versiones anteriores de Windows.  
+GDI + es una interfaz de programación de aplicaciones (API) que forma el subsistema del sistema operativo Microsoft Windows. GDI + es responsable de mostrar información en pantallas e impresoras. Como sugiere su nombre, GDI + es la sucesora de GDI, la interfaz de dispositivo gráfico incluida en versiones anteriores de Windows.  
   
 ## <a name="managed-class-interface"></a>Interfaz de clases administradas  
- El [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API se expone a través de un conjunto de clases implementadas como código administrado. Este conjunto de clases se denomina el *interfaz de clases administradas* a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Los espacios de nombres siguientes constituyen la interfaz de clases administradas:  
+ La API de GDI + se expone a través de un conjunto de clases implementadas como código administrado. Este conjunto de clases se denomina el *interfaz de clases administradas* a GDI +. Los espacios de nombres siguientes constituyen la interfaz de clases administradas:  
   
 - <xref:System.Drawing>  
   
@@ -28,7 +28,7 @@ ms.locfileid: "64645704"
   
 - <xref:System.Drawing.Printing>  
   
- Con una interfaz de dispositivo de gráficos, como [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], puede mostrar información en una pantalla o impresora sin tener que preocuparse sobre los detalles de un dispositivo de presentación determinado. El programador llama a métodos proporcionados por clases [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. A su vez, estos métodos realizan las llamadas adecuadas a controladores de dispositivos específicos. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] aísla la aplicación del hardware gráfico. Se trata del aislamiento que permite al programador crear aplicaciones independientes del dispositivo.  
+ Con una interfaz de dispositivo de gráficos, como GDI +, puede mostrar información en una pantalla o impresora sin tener que preocuparse sobre los detalles de un dispositivo de presentación determinado. El programador realiza las llamadas a métodos proporcionados por las clases de GDI +. A su vez, estos métodos realizan las llamadas adecuadas a controladores de dispositivos específicos. GDI + aísla la aplicación del hardware gráfico. Se trata del aislamiento que permite al programador crear aplicaciones independientes del dispositivo.  
   
 ## <a name="see-also"></a>Vea también
 

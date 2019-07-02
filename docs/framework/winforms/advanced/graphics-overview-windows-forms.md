@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938195"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505391"
 ---
 # <a name="graphics-overview-windows-forms"></a>Información general de gráficos (Formularios Windows Forms)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] es una interfaz de dispositivo de gráficos que permite a los programadores a escribir aplicaciones independientes del dispositivo. Los servicios de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] se exponen a través de un conjunto de clases administradas.  
+GDI + es una interfaz de dispositivo gráfico que permite a los programadores a escribir aplicaciones independientes del dispositivo. Los servicios de GDI + se exponen a través de un conjunto de clases administradas.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general de gráficos](overview-of-graphics.md)  
- Proporciona una introducción general a [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Proporciona una introducción general a GDI +.  
   
  [Tres categorías de servicios gráficos](three-categories-of-graphics-services.md)  
- Describe las tres categorías que constituyen la programación con [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Describe las tres categorías que constituyen la programación con GDI +.  
   
  [Estructura de la interfaz gráfica](structure-of-the-graphics-interface.md)  
- Describe la interfaz de clase administrada de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Describe la interfaz de clase administrada de GDI +.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Drawing>  
- Proporciona acceso a la funcionalidad básica de gráficos de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Proporciona acceso a la funcionalidad básica de gráficos GDI +.  
   
  <xref:System.Drawing.Drawing2D>  
  Proporciona funcionalidad avanzada de gráficos vectoriales y bidimensionales.  
   
  <xref:System.Drawing.Imaging>  
- Proporciona la funcionalidad avanzada de imágenes de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Proporciona funciones de imagen avanzadas para GDI +.  
   
  <xref:System.Drawing.Text>  
- Proporciona la funcionalidad avanzada de tipografía de [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
+ Proporciona funciones de tipografía avanzadas para GDI +.  
   
  <xref:System.Drawing.Printing>  
  Proporciona servicios relacionados con la impresión.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Proporciona [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] de dibujo y medir la funcionalidad de texto.
+ Proporciona el dibujo de texto GDI y medir la funcionalidad.

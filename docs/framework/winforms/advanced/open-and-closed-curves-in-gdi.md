@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641482"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505455"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>Curvas abiertas y cerradas en GDI+
 La siguiente ilustración muestra dos curvas: una abierta y otra cerrada.  
@@ -23,7 +23,7 @@ La siguiente ilustración muestra dos curvas: una abierta y otra cerrada.
  ![Curvas abiertas y cerradas](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>Interfaz administrada para curvas  
- Curvas cerradas tienen un interior y por lo tanto, se pueden rellenar con un pincel. El <xref:System.Drawing.Graphics> clase [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] proporciona los siguientes métodos para rellenar curvas y formas cerradas: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, y <xref:System.Drawing.Graphics.FillRegion%2A>. Cuando llame a uno de estos métodos, debe pasar uno de los tipos de pincel (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, o <xref:System.Drawing.Drawing2D.PathGradientBrush>) como argumento.  
+ Curvas cerradas tienen un interior y por lo tanto, se pueden rellenar con un pincel. El <xref:System.Drawing.Graphics> en GDI + clase proporciona los siguientes métodos para rellenar curvas y formas cerradas: <xref:System.Drawing.Graphics.FillRectangle%2A>, <xref:System.Drawing.Graphics.FillEllipse%2A>, <xref:System.Drawing.Graphics.FillPie%2A>, <xref:System.Drawing.Graphics.FillPolygon%2A>, <xref:System.Drawing.Graphics.FillClosedCurve%2A>, <xref:System.Drawing.Graphics.FillPath%2A>, y <xref:System.Drawing.Graphics.FillRegion%2A>. Cuando llame a uno de estos métodos, debe pasar uno de los tipos de pincel (<xref:System.Drawing.SolidBrush>, <xref:System.Drawing.Drawing2D.HatchBrush>, <xref:System.Drawing.TextureBrush>, <xref:System.Drawing.Drawing2D.LinearGradientBrush>, o <xref:System.Drawing.Drawing2D.PathGradientBrush>) como argumento.  
   
  El <xref:System.Drawing.Graphics.FillPie%2A> método es un complemento para el <xref:System.Drawing.Graphics.DrawArc%2A> método. Al igual que el <xref:System.Drawing.Graphics.DrawArc%2A> método dibuja una parte del contorno de una elipse, la <xref:System.Drawing.Graphics.FillPie%2A> método rellena una parte del interior de una elipse. El ejemplo siguiente dibuja un arco y rellena la parte correspondiente del interior de la elipse:  
   

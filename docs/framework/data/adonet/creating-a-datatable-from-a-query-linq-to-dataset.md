@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 88abd0e5b7f56702c7a7009842253d3ca552d01f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607341"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504205"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Crear un objeto DataTable a partir de una consulta (LINQ to DataSet)
 El enlace de datos es una utilización muy frecuente del objeto <xref:System.Data.DataTable>. El método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> toma los resultados de una consulta y copia los datos en un objeto <xref:System.Data.DataTable> que puede utilizarse después para el enlace de datos. Cuando las operaciones de datos se han realizado, el <xref:System.Data.DataTable> nuevo se vuelve a combinar en el <xref:System.Data.DataTable> de origen.  
   
  El método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> utiliza el siguiente proceso para crear un <xref:System.Data.DataTable> a partir de una consulta:  
   
-1. El método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> clona un <xref:System.Data.DataTable> a partir de la tabla origen (un objeto <xref:System.Data.DataTable> que implementa la interfaz <xref:System.Linq.IQueryable%601>). El origen de <xref:System.Collections.IEnumerable> se ha originado de una expresión [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] o una consulta de método.  
+1. El método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> clona un <xref:System.Data.DataTable> a partir de la tabla origen (un objeto <xref:System.Data.DataTable> que implementa la interfaz <xref:System.Linq.IQueryable%601>). El <xref:System.Collections.IEnumerable> origen ha originado de LINQ a consultas de expresión o un método de conjunto de datos.  
   
 2. El esquema del <xref:System.Data.DataTable> clonado se compila a partir de las columnas del primer objeto <xref:System.Data.DataRow> enumerado en la tabla origen; el nombre de la tabla clonada es el nombre de la tabla origen con la palabra "query" anexada.  
   
