@@ -6,12 +6,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 44ae8acd1278d8a6163ac1c5bc6e0a0e030c02fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd49834c45f6e07a99be5a1f4293e938eed2cc77
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676970"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267723"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicializadores de objeto y de colección (Guía de programación de C#)
 
@@ -19,7 +19,7 @@ C# permite crear instancias de un objeto o colección y realizar asignaciones de
 
 ## <a name="object-initializers"></a>Inicializadores de objeto
 
-Los inicializadores de objeto permiten asignar valores a cualquier campo o propiedad accesible de un objeto en el momento de su creación sin tener que invocar un constructor seguido de líneas de instrucciones de asignación. La sintaxis de inicializador de objetos permite especificar argumentos para un constructor u omitir los argumentos (y la sintaxis de paréntesis).  En el ejemplo siguiente se muestra cómo usar un inicializador de objeto con un tipo con nombre, `Cat`, y cómo invocar el constructor predeterminado. Tenga en cuenta el uso de propiedades implementadas automáticamente en la clase `Cat`. Para obtener más información, vea [Propiedades implementadas automáticamente](auto-implemented-properties.md).  
+Los inicializadores de objeto permiten asignar valores a cualquier campo o propiedad accesible de un objeto en el momento de su creación sin tener que invocar un constructor seguido de líneas de instrucciones de asignación. La sintaxis de inicializador de objetos permite especificar argumentos para un constructor u omitir los argumentos (y la sintaxis de paréntesis).  En el ejemplo siguiente se muestra cómo usar un inicializador de objeto con un tipo con nombre, `Cat`, y cómo invocar el constructor sin parámetros. Tenga en cuenta el uso de propiedades implementadas automáticamente en la clase `Cat`. Para obtener más información, vea [Propiedades implementadas automáticamente](auto-implemented-properties.md).  
   
 [!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
 [!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
@@ -42,7 +42,7 @@ var thing = new IndexersExample {
     [1] = '1',
     [2] = '4',
     [3] = '9',
-    Baz = Math.PI,
+    Size = Math.PI,
     ['C',4] = "Middle C"
 }
 ```
@@ -54,7 +54,6 @@ public string name;
 public double Size { set { ... }; }
 public char this[int i] { set { ... }; }
 public string this[char c, int i] {  set { ... }; }
-}
 ```
 
 ## <a name="object-initializers-with-anonymous-types"></a>Inicializadores de objeto con tipos anónimos
@@ -114,15 +113,15 @@ Este ejemplo de inicializador llama a <xref:System.Collections.Generic.Dictionar
 
 En el ejemplo siguiente se combinan los conceptos de inicializadores de objeto y colección.
 
-[!code-csharp-interactive[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
+[!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullExample)]  
 
 El ejemplo siguiente muestra un objeto que implementa <xref:System.Collections.IEnumerable> y que contiene un método `Add` con varios parámetros. Usa un inicializador de colección con varios elementos por cada elemento de la lista correspondiente a la firma del método `Add`.
 
-[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
+[!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullListExample)]  
 
 Los métodos `Add` pueden usar la palabra clave `params` para tomar un número variable de argumentos, como se muestra en el ejemplo siguiente. En este ejemplo además se muestra la implementación personalizada de un indizador para inicializar una colección mediante índices.
 
-[!code-csharp-interactive[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
+[!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
 ## <a name="see-also"></a>Vea también
 

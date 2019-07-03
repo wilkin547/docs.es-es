@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591503"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170835"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementación de comportamientos discrecionales en la clase XslTransform
 
 > [!NOTE]
-> La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](migrating-from-the-xsltransform-class.md) para obtener más información.
+> La clase <xref:System.Xml.Xsl.XslTransform> está obsoleta en .NET Framework 2.0. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](migrating-from-the-xsltransform-class.md) para obtener más información.
 
 Los comportamientos discrecionales se describen en la [recomendación de transformaciones XSL (XSLT) versión 1.0 del World Wide Web Consortium (W3C)](https://www.w3.org/TR/1999/REC-xslt-19991116), en la que el proveedor de implementaciones elige una de las distintas opciones que existen para controlar una situación. Por ejemplo, en la sección 7.3 Crear instrucciones de procesamiento, la recomendación del W3C dice que es un error el hecho de que al crear instancias del contexto de `xsl:processing-instruction` se creen nodos que no sean de texto. En el caso de algunos problemas, W3C indica qué decisión tomar si el procesador decide recuperarse del error. En el caso del problema en particular de la sección 7.3, W3C indica que la implementación puede recuperarse del error pasando por alto los nodos y su contenido.
 

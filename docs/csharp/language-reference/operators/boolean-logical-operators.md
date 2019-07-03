@@ -1,5 +1,5 @@
 ---
-title: 'Operadores lógicos booleanos: referencia de C#'
+title: Operadores lógicos booleanos (referencia de C#)
 description: Obtenga información sobre los operadores de C# que realizan operaciones lógicas de negación, conjunción (AND) y disyunción inclusiva y exclusiva (OR) con operandos booleanos.
 ms.date: 04/08/2019
 author: pkulikov
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: d94552d9a1acfdd63b9694810e724c4347e615e7
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758280"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025229"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos booleanos (referencia de C#)
 
@@ -192,6 +192,5 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
 - [Operadores de desplazamiento y bit a bit](bitwise-and-shift-operators.md)

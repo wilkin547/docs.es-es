@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378571"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025971"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -36,7 +36,7 @@ ildasm [options] [PEfilename] [options]
 
 Las siguientes opciones se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.lib* y *.winmd*.
 
-| Opción | Descripción |
+| Opción | DESCRIPCIÓN |
 | ------ | ----------- |
 |**/out=** `filename`|Crea un archivo de salida con el `filename` especificado, en lugar de mostrar los resultados en una interfaz gráfica de usuario.|
 |**/rtf**|Genera la salida en formato de texto enriquecido. Esta opción no es válida si se usa junto con la opción **/text**.|
@@ -46,14 +46,14 @@ Las siguientes opciones se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.li
 
 Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y *.winmd*.
 
-| Opción | Descripción |
+| Opción | DESCRIPCIÓN |
 | ------ | ----------- |
 |**/bytes**|Muestra bytes reales, en formato hexadecimal, como comentarios de instrucciones.|
 |**/caverbal**|Genera objetos binarios de atributos personalizados en formato verbal. El valor predeterminado es el formato binario.|
 |**/linenum**|Incluye referencias a líneas de código fuente originales.|
 |**/nobar**|Suprime la ventana emergente del indicador de progreso del desensamblado.|
 |**/noca**|Suprime la salida de atributos personalizados.|
-|**/project**|Muestra los metadatos en la forma en que aparecen en el código administrado, no de la forma en que aparecen en el [!INCLUDE[wrt](../../../includes/wrt-md.md)] nativo. Si `PEfilename` no es un archivo de metadatos de Windows ( *.winmd*), esta opción no tiene ningún efecto. Consulte [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Muestra los metadatos en la forma en que aparecen en el código administrado, no de la forma en que aparecen en el entorno de Windows Runtime nativo. Si `PEfilename` no es un archivo de metadatos de Windows ( *.winmd*), esta opción no tiene ningún efecto. Consulte [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Desensambla únicamente tipos y miembros públicos. Equivale a **/visibility:PUB**.|
 |**/quoteallnames**|Incluye todos los nombres entre comillas simples.|
 |**/raweh**|Muestra sin formato las cláusulas de control de excepciones.|
@@ -63,7 +63,7 @@ Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y
 
 Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Descripción |
+| Opción | DESCRIPCIÓN |
 | ------ | ----------- |
 |**/all**|Especifica una combinación de las opciones **/header**, **/bytes**, **/stats**, **/classlist** y **/tokens**.|
 |**/classlist**|Incluye una lista de las clases definidas en el módulo.|
@@ -78,13 +78,13 @@ Las opciones siguientes se pueden usar con archivos *.exe*, *.dll* y *.winmd* pa
 
 Las opciones siguientes se pueden usar con archivos *.exe*, *.dll*, *.obj*, *.lib* y *.winmd* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Descripción |
+| Opción | DESCRIPCIÓN |
 | ------ | ----------- |
 |**/metadata**[=`specifier`]|Muestra metadatos, donde `specifier` es:<br /><br /> **MDHEADER**: muestra la información y los tamaños del encabezado de metadatos.<br /><br /> **HEX**: muestra información tanto en hexadecimal como en palabras.<br /><br /> **CSV**: muestra el número de registros y los tamaños de los montones.<br /><br /> **UNREX**: muestra externos sin resolver.<br /><br /> **SCHEMA**: muestra información del esquema y del encabezado de metadatos.<br /><br /> **RAW**: muestra las tablas de metadatos sin formato.<br /><br /> **HEAPS**: muestra los montones sin formato.<br /><br /> **VALIDATE**: valida la coherencia de los metadatos.<br /><br /> Puede especificar **/metadata** varias veces con valores diferentes para `specifier`.|
 
 Las siguientes opciones se pueden usar con archivos *.lib* para mostrar la salida únicamente en la consola o en un archivo.
 
-| Opción | Descripción |
+| Opción | DESCRIPCIÓN |
 | ------ | ----------- |
 |**/objectfile**=`filename`|Muestra los metadatos de un único archivo objeto en la biblioteca especificada.|
 
@@ -100,7 +100,7 @@ El archivo de texto creado por *Ildasm.exe* se puede usar como entrada para el E
 > [!NOTE]
 > Actualmente no se puede usar esta técnica con archivos PE que contienen código nativo incrustado (por ejemplo, archivos PE generados por Visual C++).  
 
-Puede usar la interfaz gráfica de usuario predeterminada en el Desensamblador de IL para ver los metadatos y el código desensamblado de los archivos PE existentes en una vista jerárquica de árbol. Para usar dicha interfaz, escriba **ildasm** en la línea de comandos sin proporcionar el argumento *PEfilename* ni ninguna de las opciones. Desde el menú **Archivo** puede navegar hasta el archivo PE que quiera cargar en *Ildasm.exe*. Para guardar los metadatos y el código desensamblado mostrados para el PE seleccionado, seleccione el comando **Volcar** en el menú **Archivo**. Para guardar únicamente la vista de árbol jerárquica, seleccione el comando **Volcar vista de árbol** en el menú **Archivo**. Para obtener detalles sobre el modo de cargar un archivo en *Ildasm.exe* e interpretar la salida, vea el tutorial de *Ildasm.exe*, ubicado en la carpeta de ejemplos que se incluye con [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Puede usar la interfaz gráfica de usuario predeterminada en el Desensamblador de IL para ver los metadatos y el código desensamblado de los archivos PE existentes en una vista jerárquica de árbol. Para usar dicha interfaz, escriba **ildasm** en la línea de comandos sin proporcionar el argumento *PEfilename* ni ninguna de las opciones. Desde el menú **Archivo** puede navegar hasta el archivo PE que quiera cargar en *Ildasm.exe*. Para guardar los metadatos y el código desensamblado mostrados para el PE seleccionado, seleccione el comando **Volcar** en el menú **Archivo**. Para guardar únicamente la vista de árbol jerárquica, seleccione el comando **Volcar vista de árbol** en el menú **Archivo**. Para obtener detalles sobre el modo de cargar un archivo en *Ildasm.exe* e interpretar la salida, vea el tutorial de *Ildasm.exe*, ubicado en la carpeta de ejemplos que se incluye con el kit de desarrollo de software (SDK) de Windows.
 
 Si ejecuta *Ildasm.exe* con un argumento *PEfilename* que contiene recursos incrustados, la herramienta creará varios archivos de salida: un archivo de texto que contiene código IL y, para cada recurso administrado incrustado, un nuevo archivo .resources al que asignará el nombre usado para el recurso en los metadatos. Si un recurso no administrado se inserta en el argumento *PEfilename*, se creará un archivo .res con el nombre de archivo especificado por la opción **/output** para la salida de IL.
 

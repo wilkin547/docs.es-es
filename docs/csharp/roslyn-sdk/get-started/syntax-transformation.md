@@ -3,12 +3,12 @@ title: Introducción a la transformación de sintaxis (API de Roslyn)
 description: Introducción para recorrer y consultar árboles de sintaxis.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788445"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306929"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Introducción a la transformación de sintaxis
 
@@ -30,7 +30,7 @@ Elija una de las dos estrategias para las transformaciones de sintaxis. Los patr
 
 En la primera transformación de sintaxis se muestran los patrones de diseño Factory Method. Va a reemplazar una instrucción `using System.Collections;` por una instrucción `using System.Collections.Generic;`. En este ejemplo se muestra cómo crear objetos <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> mediante los patrones de diseño Factory Method <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>. Para cada tipo de **nodo**, **token** o **curiosidades** hay un patrón Factory Method que crea una instancia de ese tipo. Creará árboles de sintaxis mediante la composición de nodos jerárquicamente de abajo arriba. Luego, transformará el programa existente para reemplazar los nodos existentes por el nuevo árbol que ha creado.
 
-Inicie Visual Studio y cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C#. En Visual Studio, elija **Archivo** > **Nuevo** > **Proyecto** para mostrar el cuadro de diálogo Nuevo proyecto. En **Visual C#** > **Extensibilidad**, elija **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente). Este tutorial rápido tiene dos proyectos de ejemplo, así que llame a la solución **SyntaxTransformationQuickStart** y al proyecto **ConstructionCS**. Haga clic en **Aceptar**.
+Inicie Visual Studio y cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C#. En Visual Studio, elija **Archivo** > **Nuevo** > **Proyecto** para mostrar el cuadro de diálogo Nuevo proyecto. En **Visual C#**  > **Extensibilidad**, elija **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente). Este tutorial rápido tiene dos proyectos de ejemplo, así que llame a la solución **SyntaxTransformationQuickStart** y al proyecto **ConstructionCS**. Haga clic en **Aceptar**.
 
 Este proyecto usa los métodos de clase <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> para construir un <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> que representa el espacio de nombres `System.Collections.Generic`.
 
@@ -94,9 +94,9 @@ Ejecute el programa otra vez. Esta vez el árbol importa correctamente el espaci
 
 Los métodos `With*` y <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> proporcionan un medio cómodo para transformar ramas individuales de un árbol de sintaxis. La clase <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> realiza varias transformaciones en un árbol de sintaxis. La clase <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> es una subclase de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> aplica una transformación a un tipo específico de <xref:Microsoft.CodeAnalysis.SyntaxNode>. Puede aplicar transformaciones a varios tipos de objetos <xref:Microsoft.CodeAnalysis.SyntaxNode> dondequiera que aparezcan en un árbol de sintaxis. En el segundo proyecto de este tutorial rápido se crea una refactorización de línea de comandos que quita tipos explícitos en declaraciones de variable local en cualquier lugar en que pudiera utilizarse una inferencia de tipos.
 
-Cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C#. En Visual Studio, haga clic en el nodo de la solución `SyntaxTransformationQuickStart`. Elija **Agregar** > **Nuevo proyecto** para mostrar el **cuadro de diálogo Nuevo proyecto**. En **Visual C#** > **Extensibilidad**, elija **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente). Proporcione un nombre al proyecto `TransformationCS` y haga clic en Aceptar.
+Cree un proyecto de **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente) de C#. En Visual Studio, haga clic en el nodo de la solución `SyntaxTransformationQuickStart`. Elija **Agregar** > **Nuevo proyecto** para mostrar el **cuadro de diálogo Nuevo proyecto**. En **Visual C#**  > **Extensibilidad**, elija **Stand-Alone Code Analysis Tool** (Herramienta de análisis de código independiente). Proporcione un nombre al proyecto `TransformationCS` y haga clic en Aceptar.
 
-El primer paso es crear una clase que se derive de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> para realizar las transformaciones. Agregue un nuevo archivo de clase al proyecto. En Visual Studio, elija **Proyecto** > **Agregar clase...**. En el cuadro de diálogo **Agregar nuevo elemento**, escriba `TypeInferenceRewriter.cs` como nombre de archivo.
+El primer paso es crear una clase que se derive de <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> para realizar las transformaciones. Agregue un nuevo archivo de clase al proyecto. En Visual Studio, elija **Proyecto** > **Agregar clase...** . En el cuadro de diálogo **Agregar nuevo elemento**, escriba `TypeInferenceRewriter.cs` como nombre de archivo.
 
 Agregue las siguientes directivas using al archivo `TypeInferenceRewriter.cs`:
 
@@ -112,7 +112,7 @@ Agregue el código siguiente para declarar un campo privado de solo lectura para
 
 Invalide el método <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)>:
 
-```C#
+```csharp
 public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 {
 

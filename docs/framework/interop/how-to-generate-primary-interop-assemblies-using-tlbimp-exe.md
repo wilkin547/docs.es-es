@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 09ee63a1283744da407cde2a99802969c7f55127
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910767"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833653"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
 Hay dos maneras de generar un ensamblado de interoperabilidad primario:  
   
-- Mediante el [importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) proporcionado por [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+- Mediante el [importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) proporcionado por el kit de desarrollo de software (SDK) de Windows.  
   
      La manera más sencilla de generar ensamblados de interoperabilidad primarios es usar el [importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md). Tlbimp.exe ofrece las siguientes medidas de protección:  
   

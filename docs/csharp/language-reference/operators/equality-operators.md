@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 3b2aeceae8371f0728da2bcebbbe597ee135f256
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: f60d62d1823a8bd06b0417638719a81e95d7438b
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758265"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267703"
 ---
 # <a name="equality-operators-c-reference"></a>Operadores de igualdad (referencia de C#)
 
@@ -57,7 +57,7 @@ Es la comparación de ordinales que distingue entre mayúsculas de minúsculas. 
 
 Dos operandos de tipos de referencia (excepto `string`) son iguales si hacen referencia al mismo objeto:
 
-[!code-csharp-interactive[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
+[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
 
 Como se muestra en el ejemplo, el operador `==` es compatible de forma predeterminada con los tipos de referencia definidos por el usuario. Sin embargo, un tipo de referencia definido por el usuario puede sobrecargar el operador `==`. Si un tipo de referencia sobrecarga el operador `==`, use el método <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> para comprobar si dos referencias de ese tipo hacen referencia al mismo objeto.
 
@@ -80,7 +80,6 @@ Para obtener más información, vea la sección [Operadores de comprobación de 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>

@@ -5,17 +5,17 @@ ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb130c17fa7b2a5d02f55a2944be386bc1bb334c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750714"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170774"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Fragmento del árbol de resultados en transformaciones
 
 > [!NOTE]
-> La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](migrating-from-the-xsltransform-class.md) para obtener más información.
+> La clase <xref:System.Xml.Xsl.XslTransform> está obsoleta en .NET Framework 2.0. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](migrating-from-the-xsltransform-class.md) para obtener más información.
 
  Los fragmentos del árbol de resultados, también conocidos como fragmentos de árboles de resultados, no son más que un tipo especial de conjuntos de nodos. Cualquier función que pueda realizar sobre un conjunto de nodos puede realizarla también sobre estos fragmentos. También puede convertir un fragmento del árbol de resultados en un conjunto de nodos utilizando la función `node-set()`, y podrá utilizar dicho fragmento posteriormente en cualquier lugar en el que puede utilizarse un conjunto de nodos.
 

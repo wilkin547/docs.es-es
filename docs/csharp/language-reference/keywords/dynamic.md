@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic [C#]
 - dynamic keyword [C#]
 ms.assetid: 9e797102-cc83-4964-bf58-afe4f54d16bc
-ms.openlocfilehash: d2aef5b2ed291aab917573408abf26b9fbedfbd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8748f1869e8e2d5246910fac0100a6c70790579
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540330"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306646"
 ---
 # <a name="dynamic-c-reference"></a>dynamic (Referencia de C#)
 
@@ -68,10 +68,10 @@ Para obtener más información y ejemplos, vea [Uso de tipo dinámico (Guía de 
 
 - <xref:System.Dynamic.ExpandoObject?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [Uso de tipo dinámico](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [object](../../../csharp/language-reference/keywords/object.md)
-- [is](../../../csharp/language-reference/keywords/is.md)
-- [as](../../../csharp/language-reference/keywords/as.md)
-- [typeof](../../../csharp/language-reference/keywords/typeof.md)
+- [Uso de tipo dinámico](../../programming-guide/types/using-type-dynamic.md)
+- [object](object.md)
+- [is](../operators/type-testing-and-conversion-operators.md#is-operator)
+- [as](../operators/type-testing-and-conversion-operators.md#as-operator)
+- [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)
 - [Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
-- [Tutorial: Crear y usar objetos dinámicos](../../../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
+- [Tutorial: Crear y usar objetos dinámicos (C# y Visual Basic)](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

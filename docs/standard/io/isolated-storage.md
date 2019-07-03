@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f6453b8ef2ef2a1b5e86ae461a626808cff7455
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: df5601fb0dbf088bd28da91f7279a330f2bb3494
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025516"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170696"
 ---
 # <a name="isolated-storage"></a>Almacenamiento aislado
-<a name="top"></a> Para las aplicaciones de [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], el almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. La estandarización ofrece además otras ventajas. Los administradores pueden usar herramientas diseñadas para manipular el almacenamiento aislado para configurar el espacio de almacenamiento de archivos, establecer directivas de seguridad y eliminar los datos no utilizados. Con el almacenamiento aislado, el código ya no requiere rutas de acceso únicas para especificar ubicaciones seguras en el sistema de archivos y los datos están protegidos de otras aplicaciones que solo tienen acceso a un almacenamiento aislado. La información en código que indica la ubicación del área de almacenamiento de la aplicación no es necesaria.
+<a name="top"></a> Para las aplicaciones de escritorio, el almacenamiento aislado es un mecanismo de almacenamiento de datos que proporciona aislamiento y seguridad mediante la definición de modos estándar de asociar código a los datos guardados. La estandarización ofrece además otras ventajas. Los administradores pueden usar herramientas diseñadas para manipular el almacenamiento aislado para configurar el espacio de almacenamiento de archivos, establecer directivas de seguridad y eliminar los datos no utilizados. Con el almacenamiento aislado, el código ya no requiere rutas de acceso únicas para especificar ubicaciones seguras en el sistema de archivos y los datos están protegidos de otras aplicaciones que solo tienen acceso a un almacenamiento aislado. La información en código que indica la ubicación del área de almacenamiento de la aplicación no es necesaria.
 
 > [!IMPORTANT]
 > El almacenamiento aislado no está disponible para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . En su lugar, use las clases de datos de la aplicación de los espacios de nombres `Windows.Storage` incluidas en la API de Windows Runtime para almacenar archivos y datos locales. Para más información, vea [Datos de aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) en el Centro de desarrollo de Windows.
@@ -164,7 +164,7 @@ Muchas aplicaciones usan bases de datos para almacenar y aislar los datos y, en 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Title|DESCRIPCIÓN|
 |-----------|-----------------|
 |[Tipos de aislamiento](../../../docs/standard/io/types-of-isolation.md)|Describe los distintos tipos de aislamiento.|
 |[Cómo: Obtener los almacenes de almacenamiento aislado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Proporciona un ejemplo de uso de la clase <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obtener un almacén aislado por usuario y ensamblado.|

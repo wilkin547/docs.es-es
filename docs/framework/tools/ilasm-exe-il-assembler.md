@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 78a601e8b2da4fda0951c1d4f7b565753f0ca03a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378578"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833889"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
 
@@ -36,11 +36,11 @@ ilasm [options] filename [[options]filename...]
 
 ## <a name="parameters"></a>Parámetros
 
-| Argumento | Descripción |
+| Argumento | DESCRIPCIÓN |
 | -------- | ----------- |
 |`filename`|El nombre del archivo de código fuente con extensión .il. Este archivo consta de directivas de declaraciones de metadatos e instrucciones simbólicas de IL. Con *Ilasm.exe* se pueden proporcionar varios argumentos de archivo de código fuente para producir un único archivo PE. **Nota:** Asegúrese de que la última línea de código del archivo de código fuente .il tiene un espacio en blanco al final o un carácter de fin de línea.|
 
-| Opción | Descripción |
+| Opción | DESCRIPCIÓN |
 | ------ | ----------- |
 |**/32bitpreferred**|Crea una imagen preferida de 32 bits (PE32).|
 |**/alignment:** `integer`|Establece FileAlignment en el valor especificado por `integer` en el encabezado NT opcional. Si se especifica la directiva IL .alignment en el archivo, esta opción la reemplaza.|
@@ -104,7 +104,7 @@ Para que este uso combinado de *Ildasm.exe* e *Ilasm.exe* sea lo más preciso po
 > [!NOTE]
 > *Ildasm.exe* solo funciona en archivos existentes en disco. No funciona en archivos instalados en la caché global de ensamblados.
 
-Para obtener más información sobre la gramática de IL, vea el archivo asmparse.grammar en [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Para obtener más información sobre la gramática de IL, vea el archivo asmparse.grammar en el kit de desarrollo de software (SDK) de Windows.
 
 ## <a name="version-information"></a>Información de versión
 
@@ -137,7 +137,7 @@ A partir de .NET Framework 4.5, se puede especificar un objeto binario grande (
         Test(object A_1) cil managed
 ```
 
-Para obtener más información sobre la gramática de IL, vea el archivo asmparse.grammar en [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].
+Para obtener más información sobre la gramática de IL, vea el archivo asmparse.grammar en el kit de desarrollo de software (SDK) de Windows.
 
 ## <a name="examples"></a>Ejemplos
 

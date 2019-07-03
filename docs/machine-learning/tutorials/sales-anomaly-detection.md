@@ -1,19 +1,19 @@
 ---
-title: Uso de ML.NET en un escenario de detección de anomalías de ventas
-description: Descubra cómo usar ML.NET en un escenario de detección de anomalías de ventas de productos para aprender a analizar los datos de los picos de anomalías y puntos de cambio para realizar la acción adecuada.
-ms.date: 05/29/2019
+title: 'Tutorial: Detección de anomalías en las ventas de productos'
+description: Aprenda a crear una aplicación de detección de anomalías para los datos de ventas de productos. En este tutorial se va a crear una aplicación de consola de .NET Core mediante C# en Visual Studio 2019.
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758799"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306226"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>Tutorial: Uso de ML.NET para la detección de anomalías de ventas de productos 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detección de anomalías en ventas de productos con ML.NET
 
-En este tutorial de ejemplo se muestra cómo utilizar ML.NET para detectar anomalías en datos de ventas de productos para realizar la acción adecuada a través de una aplicación de consola de .NET Core mediante C# en Visual Studio 2019. 
+Aprenda a crear una aplicación de detección de anomalías para los datos de ventas de productos. En este tutorial se va a crear una aplicación de consola de .NET Core mediante C# en Visual Studio.
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]

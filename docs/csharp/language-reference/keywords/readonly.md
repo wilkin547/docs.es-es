@@ -8,18 +8,27 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c7f3b1b1525277bf948070c9121d151f9f520127
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 4a51bb0e854de127c632c28f613a7602bf09f432
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204670"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348013"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referencia de C#)
 
 La palabra clave `readonly` es un modificador que se puede usar en tres contextos:
 
-- En una [declaración de campo](#readonly-field-example), `readonly` indica que la asignación a un campo solo se puede producir como parte de la declaración o en un constructor de la misma clase.
+- En una [declaración de campo](#readonly-field-example), `readonly` indica que la asignación a un campo solo se puede producir como parte de la declaración o en un constructor de la misma clase. Se puede asignar y reasignar varias veces un campo de solo lectura dentro de la declaración de campo y el constructor. 
+  
+  No se puede asignar un campo `readonly` después de que el constructor salga. Tiene diferentes implicaciones para los tipos de valor y tipos de referencia:
+  
+  - Debido a que los tipos de valor contienen directamente sus datos, un campo que es un tipo de valor `readonly` es inmutable. 
+  - Dado que los tipos de referencia contienen una referencia a sus datos, un campo que es un tipo de referencia `readonly` debe referirse siempre al mismo objeto. Ese objeto no es inmutable. El modificador `readonly` evita que el campo se reemplace por una instancia diferente del tipo de referencia. Sin embargo, el modificador no impide que los datos de instancia del campo se modifiquen a través del campo de solo lectura.
+
+  > [!WARNING]
+  > Un tipo visible externamente que contenga un campo de solo lectura visible externamente que sea un tipo de referencia mutable puede ser una vulnerabilidad de seguridad y puede desencadenar la advertencia [CA2104](/visualstudio/code-quality/ca2104-do-not-declare-read-only-mutable-reference-types): "No declarar tipos de referencias mutables de solo lectura".
+
 - En una [definición de `readonly struct`](#readonly-struct-example), `readonly` indica que `struct` es inmutable.
 - En una [devolución del método `ref readonly`](#ref-readonly-return-example), el modificador `readonly` indica que el método devuelve una referencia y las operaciones de escritura no se permiten en esa referencia.
 
@@ -35,9 +44,9 @@ Solo se puede asignar un valor a un campo `readonly` en los siguientes contextos
 
 - Cuando la variable se inicializa en la declaración, por ejemplo:
 
-```csharp
-public readonly int y = 5;
-```
+  ```csharp
+  public readonly int y = 5;
+  ```
 
 - En un constructor de instancia de la clase que contiene la declaración de campo de instancia.
 - En el constructor estático de la clase que contiene la declaración de campo estático.
@@ -55,7 +64,9 @@ Estos contextos de constructor son también los únicos en los que es válido pa
 
 En el ejemplo anterior, si se usa una instrucción como el ejemplo siguiente:
 
-`p2.y = 66;        // Error`
+```csharp
+p2.y = 66;        // Error
+```
 
 se obtendrá el siguiente mensaje de error del compilador:
 
@@ -88,7 +99,7 @@ La adición de un campo no marcado `readonly` genera el error del compilador `CS
 El modificador `readonly` en una `ref return` indica que la referencia devuelta no se puede modificar. En el ejemplo siguiente se devuelve una referencia al origen. Usa el modificador `readonly` para indicar que los autores de la llamada no pueden modificar el origen:
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
-No es necesario que el tipo devuelto sea una `readonly struct`. Cualquier tipo que `ref` pueda devolver `ref readonly` también puede devolver.
+No es necesario que el tipo devuelto sea una `readonly struct`. Cualquier tipo que pueda devolver `ref` también puede devolver `ref readonly`.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

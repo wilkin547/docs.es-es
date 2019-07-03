@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186083"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025097"
 ---
 # <a name="methods"></a>Métodos
 
@@ -144,9 +144,9 @@ Un autor de llamada puede luego invocar el método de una de las tres maneras si
 - Si se pasa una lista separada por comas de los argumentos individuales del tipo adecuado para el método.
 - Si no se proporciona un argumento a la matriz de parámetros.
 
-En el ejemplo siguiente se define un método denominado `DoStringOperation` que realiza la operación de cadena especificada por su primer parámetro, un miembro de enumeración `StringOperation`. Las cadenas en las que se va a realizar la operación se definen mediante una matriz de parámetros. El método `Main` muestra las tres formas de invocar el método. Tenga en cuenta que el método etiquetado con la palabra clave `params` debe estar preparado para tomar el control en caso de que no se proporcione ningún argumento para la matriz de parámetros, por lo que su valor es `null`.
+En el ejemplo siguiente se define un método denominado `GetVowels` que devuelve todas las vocales de una matriz de parámetros. El método `Main` muestra las tres formas de invocar el método. Los autores de llamadas no deben proporcionar argumentos para los parámetros que incluyen el modificador `params`. En ese caso, el parámetro es `null`.
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 
@@ -157,7 +157,7 @@ La definición de un método puede especificar que sus parámetros son necesario
 El valor predeterminado del parámetro debe asignarse con uno de los siguientes tipos de expresiones:
 
 - Una constante, como una cadena literal o un número.
-- Una expresión con el formato `new ValType`, donde `ValType` es un tipo de valor. Tenga en cuenta que esto invoca el constructor predeterminado implícito del tipo de valor, que no es un miembro real del tipo.
+- Una expresión con el formato `new ValType`, donde `ValType` es un tipo de valor. Tenga en cuenta que esta acción invoca el constructor sin parámetros implícito del tipo de valor, que no es un miembro real del tipo.
 - Una expresión con el formato `default(ValType)`, donde `ValType` es un tipo de valor.
 
 Si un método incluye parámetros necesarios y opcionales, los parámetros opcionales se definen al final de la lista de parámetros, después de todos los parámetros necesarios.

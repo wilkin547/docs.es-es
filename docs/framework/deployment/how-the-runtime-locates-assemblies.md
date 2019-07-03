@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613974"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833721"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -24,7 +24,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
  Common Language Runtime realiza una serie de pasos cuando intenta buscar un ensamblado y resolver una referencia de ensamblado. Cada paso se explica en las secciones siguientes. El sondeo de términos suele usarse cuando se describe la manera en que el tiempo de ejecución busca ensamblados; hace referencia al conjunto de heurística que se usa para buscar el ensamblado en función de su nombre y referencia cultural.  
   
 > [!NOTE]
->  Puede ver la información de enlace en el archivo de registro usando el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que se incluye en el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].  
+>  Puede ver la información de enlace en el archivo de registro usando el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que se incluye en el kit de desarrollo de software (SDK) de Windows.  
   
 ## <a name="initiating-the-bind"></a>Iniciar el enlace  
  El proceso de buscar y enlazar a un ensamblado comienza cuando el tiempo de ejecución intenta resolver una referencia a otro ensamblado. Esta referencia puede ser estática o dinámica. El compilador registra las referencias estáticas en los metadatos del manifiesto del ensamblado en tiempo de compilación. Las referencias dinámicas se construyen sobre la marcha como resultado de llamar a varios métodos, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
@@ -130,7 +130,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Cuando se actualiza un componente compartido y todas las aplicaciones que lo usan deben seleccionar la nueva versión de dicho componente, se usa un archivo de directiva de edición. La configuración del archivo de directiva de edición invalida la configuración del archivo de configuración de la aplicación, a menos que este último aplique el modo seguro.  
   
 #### <a name="safe-mode"></a>Modo seguro  
- Los archivos de directiva de edición por lo general se instalan explícitamente como parte de un Service Pack o de una actualización del programa. Si hay algún problema con el componente compartido actualizado, puede pasar por alto los reemplazos realizados en el archivo de directiva de edición usando el modo seguro. El modo seguro está determinado por el elemento **\<publisherPolicy apply="yes**&#124;**no"/>**, que se encuentra solo en el archivo de configuración de la aplicación. Especifica si la información de configuración de directiva de edición debe quitarse del proceso de enlace.  
+ Los archivos de directiva de edición por lo general se instalan explícitamente como parte de un Service Pack o de una actualización del programa. Si hay algún problema con el componente compartido actualizado, puede pasar por alto los reemplazos realizados en el archivo de directiva de edición usando el modo seguro. El modo seguro está determinado por el elemento **\<publisherPolicy apply="yes**&#124;**no"/>** , que se encuentra solo en el archivo de configuración de la aplicación. Especifica si la información de configuración de directiva de edición debe quitarse del proceso de enlace.  
   
  El modo seguro se puede establecer para toda la aplicación o para los ensamblados seleccionados. Es decir, puede desactivar la directiva para todos los ensamblados que componen la aplicación, o bien activarla para algunos ensamblados pero no para otros. Para aplicar de forma selectiva la directiva de edición a los ensamblados que componen una aplicación, establezca **\<publisherPolicy apply\=no/>** y especifique los ensamblados que desee que se vean afectados mediante el elemento \<**dependentAssembly**>. Para aplicar la directiva de edición a todos los ensamblados que componen la aplicación, establezca **\<publisherPolicy apply\=no/>** sin elementos de ensamblado dependiente. Para obtener más información acerca de la configuración, consulte [Configurar aplicaciones con archivos de configuración](../../../docs/framework/configure-apps/index.md).  
   

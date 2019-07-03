@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377878"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832880"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 
@@ -51,7 +51,7 @@ En el siguiente escenario se firma un ensamblado con un nombre seguro y después
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>Omitir la verificación de la firma de ensamblados de confianza
 
-A partir de [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)], las firmas de nombre seguro no se validan cuando un ensamblado se carga en un dominio de aplicación de plena confianza, como el dominio de aplicación predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La característica de omisión de nombres seguros evita en esta situación la sobrecarga innecesaria por comprobación de firmas de nombre seguro de ensamblados de plena confianza, lo que permite cargar los ensamblados con mayor rapidez.
+A partir de .NET Framework 3.5 Service Pack 1, las firmas de nombre seguro no se validan cuando un ensamblado se carga en un dominio de aplicación de plena confianza, como el dominio de aplicación predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La característica de omisión de nombres seguros evita en esta situación la sobrecarga innecesaria por comprobación de firmas de nombre seguro de ensamblados de plena confianza, lo que permite cargar los ensamblados con mayor rapidez.
 
 La característica de omisión se aplica a cualquier ensamblado que esté firmado con un nombre seguro y que:
 
@@ -67,7 +67,7 @@ Esta característica puede deshabilitarse en aplicaciones concretas o en todo un
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Title|DESCRIPCIÓN|
 |-----------|-----------------|
 |[Cómo: Creación de un par de claves privada y pública](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Describe cómo crear un par de claves criptográficas para firmar un ensamblado.|
 |[Cómo: Firma de un ensamblado con un nombre seguro](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Describe cómo crear un ensamblado con nombre seguro.|

@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 617f1da8f9b5b26ddfb2910ac0c06a6898d8ab6e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835257"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170932"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Escritura de scripts de hojas de estilos XSLT mediante \<msxsl:script>
 Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`.  
   
 > [!NOTE]
->  La clase <xref:System.Xml.Xsl.XslTransform> es obsoleta en [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
+>  La clase <xref:System.Xml.Xsl.XslTransform> está obsoleta en .NET Framework 2.0. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
   
  Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediante el elemento `script`. Cuando se carga la hoja de estilos, las funciones definidas se compilan en el lenguaje intermedio de Microsoft (MSIL) ya que se incluyen en una definición de clase y no se produce pérdida alguna de rendimiento.  
   
@@ -31,8 +31,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  donde `msxsl` es un prefijo enlazado al espacio de nombres `urn:schemas-microsoft-com:xslt`.  
   
- El atributo `language` no es obligatorio, pero si se especifica, su valor deberá ser uno de los siguientes: C#, VB, JScript, JavaScript, VisualBasic o CSharp. Si no se especifica, el lenguaje predeterminado es JScript. 
-  `language-name` no distingue entre mayúsculas y minúsculas, entonces 'JavaScript' y 'javascript' son equivalentes.  
+ El atributo `language` no es obligatorio, pero si se especifica, su valor deberá ser uno de los siguientes: C#, VB, JScript, JavaScript, VisualBasic o CSharp. Si no se especifica, el lenguaje predeterminado es JScript. `language-name` no distingue entre mayúsculas y minúsculas, entonces 'JavaScript' y 'javascript' son equivalentes.  
   
  El atributo `implements-prefix` es obligatorio. Este atributo se utiliza para declarar un espacio de nombres y asociarlo con el bloque del script. El valor de este atributo es el prefijo que representa el espacio de nombres. Este espacio de nombres puede definirse en cualquier parte de la hoja de estilos.  
   
@@ -50,7 +49,7 @@ Esta clase <xref:System.Xml.Xsl.XslTransform> admite scripts incrustados mediant
   
  Las funciones se pueden declarar dentro del elemento `msxsl:script`. La tabla siguiente muestra los espacios de nombres que se admiten de forma predeterminada. Es posible utilizar clases fuera de los espacios de nombres enumerados. Sin embargo, el nombre de las clases debe estar completo.  
   
-|Espacios de nombres predeterminados|Descripción|  
+|Espacios de nombres predeterminados|DESCRIPCIÓN|  
 |------------------------|-----------------|  
 |Sistema|Clase del sistema.|  
 |System.Collection|Clases de colección|  

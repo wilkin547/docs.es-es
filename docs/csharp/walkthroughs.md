@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: b7240295f154277e722f38e99beb221c1c4d9a34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77ecab9738afd7ff5cfd4f8ef0cd0e49a302eb27
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522003"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025411"
 ---
 # <a name="c-walkthroughs"></a>Tutoriales de C#
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
@@ -24,7 +24,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
  Muestra cómo crear una solución asincrónica mediante el uso de [async](../csharp/language-reference/keywords/async.md) y [await](../csharp/language-reference/keywords/await.md).  
   
  [Crear un componente de Windows Runtime en C# o Visual Basic y llamarlo desde JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Muestra cómo crear un tipo [!INCLUDE[wrt](~/includes/wrt-md.md)], empaquetarlo en un componente de [!INCLUDE[wrt](~/includes/wrt-md.md)]y, a continuación, llamar al componente desde una aplicación de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] creada para Windows mediante JavaScript.  
+ Muestra cómo crear un tipo de Windows Runtime, empaquetarlo en un componente de Windows Runtime y, a continuación, llamar al componente desde una aplicación de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] creada para Windows mediante JavaScript.  
   
  [Programación de Office (C# y Visual Basic)](../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Muestra cómo crear un libro de Excel y un documento de Word mediante C# y Visual Basic.  

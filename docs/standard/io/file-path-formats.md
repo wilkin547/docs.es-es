@@ -1,6 +1,6 @@
 ---
 title: Formatos de ruta de acceso de archivo en los sistemas Windows
-ms.date: 06/28/2018
+ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecaae9e1af359ead1c15a9e431eac21e41040efe
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 75261bc44b938432c9c22b90dc4db30ca00d630b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835829"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170737"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de ruta de acceso de archivo en los sistemas Windows
 
@@ -30,7 +30,7 @@ Una ruta de acceso DOS estándar puede constar de tres componentes:
 - Un nombre de directorio. El [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>) separa los subdirectorios dentro de la jerarquía de directorios anidados.
 - Un nombre de archivo opcional. El [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>) separa la ruta de acceso y el nombre del archivo.
 
-Si los tres componentes están presentes, la ruta de acceso es absoluta. Si no se especifica la letra de volumen o unidad y los nombres de directorio comienzan por el [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>), la ruta de acceso es relativa con respecto a la raíz de la unidad actual. En caso contrario, la ruta de acceso es relativa al directorio actual. En la tabla siguiente se muestran algunas rutas de acceso de directorio y archivo posibles.
+Si los tres componentes están presentes, la ruta de acceso es absoluta. Si no se especifica la letra de volumen o unidad y el nombre de directorio comienza por el [carácter separador de directorio](<xref:System.IO.Path.DirectorySeparatorChar>), la ruta de acceso es relativa con respecto a la raíz de la unidad actual. En caso contrario, la ruta de acceso es relativa al directorio actual. En la tabla siguiente se muestran algunas rutas de acceso de directorio y archivo posibles.
 
 |Ruta de acceso  |Descripción  |
 | -- | -- |
@@ -76,6 +76,11 @@ El sistema operativo Windows tiene un modelo de objetos unificado que apunta a t
 `\\.\C:\Test\Foo.txt`  
 `\\?\C:\Test\Foo.txt`
 
+Además de identificar una unidad por su letra de unidad, puede identificar un volumen mediante su GUID de volumen. Esto toma la forma:
+
+`\\.\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+`\\?\Volume{b75e2c83-0000-0000-0000-602f00000000}\Test\Foo.txt`
+
 > [!NOTE]
 > La sintaxis de ruta de acceso de dispositivo DOS es compatible con las implementaciones de .NET que se ejecutan en Windows a partir de .NET Core 1.1 y .NET Framework 4.6.2.
 
@@ -85,8 +90,8 @@ La ruta de acceso de dispositivo DOS consta de los componentes siguientes:
 
    > [!NOTE]
    > `\\?\` se admite en todas las versiones de .NET Core y en .NET Framework a partir de la versión 4.6.2.
-   
-- Un vínculo simbólico al objeto de dispositivo "real" (en este caso, C:).
+
+- Un vínculo simbólico para el objeto de dispositivo "real" (C: en el caso de un nombre de unidad o Volume{b75e2c83-0000-0000-0000-602f00000000} en el caso de un identificador de volumen).
 
    El primer segmento de la ruta de acceso de dispositivo DOS, una vez que el especificador de ruta de acceso de dispositivo identifica el volumen o la unidad. (Por ejemplo, `\\?\C:\` y `\\.\BootPartition\`).
 

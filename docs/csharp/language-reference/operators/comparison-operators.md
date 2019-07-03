@@ -1,5 +1,5 @@
 ---
-title: 'Operadores de comparación: referencia de C#'
+title: Operadores de comparación (referencia de C#)
 description: Obtenga información sobre los operadores de comparación de C# que puede usar para comprobar el orden de los valores numéricos.
 ms.date: 04/25/2019
 author: pkulikov
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 3b123ea1ae57735cdcb763087f12c30b8008dc11
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758203"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025211"
 ---
 # <a name="comparison-operators-c-reference"></a>Operadores de comparación (referencia de C#)
 
@@ -74,7 +74,6 @@ Para obtener más información, vea la sección [Operadores de comprobación de 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
 - <xref:System.IComparable%601?displayProperty=nameWithType>
 - [Operadores de igualdad](equality-operators.md)

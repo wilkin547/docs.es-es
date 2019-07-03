@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611398"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135654"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empaquetado e implementación de recursos en aplicaciones .NET
 
@@ -55,7 +55,7 @@ Este modelo cuenta con varias ventajas:
 
 ## <a name="resource-naming-conventions"></a>Convenciones de nomenclatura de recursos
 
-Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Vea la lista completa de nombres de referencia cultural en [National Language Support (NLS) API Reference](https://go.microsoft.com/fwlink/?LinkId=200048) (Referencia de la API de compatibilidad con el idioma nacional [NLS]) en el Centro de desarrolladores Go Global.
+Al empaquetar los recursos de la aplicación, debe asignarles un nombre según las convenciones de nomenclatura de recursos que espera Common Language Runtime. El tiempo de ejecución identifica un recurso por su nombre de referencia cultural. Cada referencia cultural tiene un nombre único, que suele ser una combinación de un nombre de referencia cultural de dos letras en minúsculas asociado a un idioma y, si es necesario, un nombre de referencia cultural secundaria de dos letras en mayúsculas asociado a un país o región. El nombre de la referencia cultural secundaria va después del nombre de la referencia cultural, separado por un guion (-). Algunos ejemplos son los siguientes: ja-JP para japonés de Japón, en-US para inglés de Estados Unidos, de-DE para alemán de Alemania o de-AT para alemán de Austria. Consulte la columna **Etiqueta de idioma** en la [lista de nombres de los idiomas y las regiones compatibles con Windows](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Los nombres de las referencias culturales siguen el estándar definido por [BCP 47](https://tools.ietf.org/html/bcp47).
 
 > [!NOTE]
 > Para más información sobre cómo crear archivos de recursos, vea [Crear archivos de recursos](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) y [Crear ensamblados satélite](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 68f0c12d173587e8efc0fe283617b5805c6f7eae
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0ebc4fa3029e16c5ee89da7d9af8b89924b2c4dc
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877025"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833362"
 ---
 # <a name="command-line-build-with-cscexe"></a>Compilar la línea de comandos con csc.exe
 Puede invocar el compilador de C# escribiendo el nombre de su archivo ejecutable (*csc.exe*) en un símbolo del sistema.
@@ -19,11 +19,11 @@ Si usa la ventana **Símbolo del sistema para desarrolladores de Visual Studio**
 
 Si usa una ventana de símbolo del sistema estándar, debe ajustar la ruta de acceso antes de poder invocar *csc.exe* desde cualquier subdirectorio del equipo. También debe ejecutar *vsvars32.bat* para establecer las variables de entorno adecuadas para admitir las compilaciones desde la línea de comandos. Para obtener más información sobre *vsvars32.bat*, incluyendo instrucciones para buscarlo y ejecutarlo, consulte [Cómo: Establecer variables de entorno para la línea de comandos de Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).
 
-Si trabaja en un equipo que solo tiene [!INCLUDE[winsdklong](~/includes/winsdklong-md.md)], puede usar el compilador de C# en el **símbolo del sistema de SDK**, que puede abrir desde la opción de menú **Microsoft .NET Framework SDK**.
+Si trabaja en un equipo que solo tiene el kit de desarrollo de software (SDK) de Windows, puede usar el compilador de C# en el **símbolo del sistema de SDK**, que puede abrir desde la opción de menú **Microsoft .NET Framework SDK**.
 
 También puede usar MSBuild para compilar programas de C# mediante programación. Para obtener más información, vea [MSBuild](/visualstudio/msbuild/msbuild).
 
-El archivo ejecutable *csc.exe* suele encontrarse en la carpeta Microsoft.NET\Framework\\*\<Versión>* del directorio de *Windows*. Su ubicación puede variar, según la configuración exacta de un equipo concreto. Si se instala más de una versión de .NET Framework en el equipo, encontrará varias versiones de este archivo. Para obtener más información sobre estas instalaciones, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
+El archivo ejecutable *csc.exe* suele encontrarse en la carpeta Microsoft.NET\Framework\\ *\<Versión>* del directorio de *Windows*. Su ubicación puede variar, según la configuración exacta de un equipo concreto. Si se instala más de una versión de .NET Framework en el equipo, encontrará varias versiones de este archivo. Para obtener más información sobre estas instalaciones, vea [Cómo: Determinar qué versiones de .NET Framework están instaladas](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md).
 
 > [!TIP]
 >  Al compilar un proyecto mediante el IDE de Visual Studio, puede mostrar el comando **csc** y las opciones del compilador asociadas en la ventana **Salida**. Para mostrar esta información, siga las instrucciones de [Cómo: Ver, guardar y configurar archivos de registro de compilación](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log) para cambiar el nivel de detalle de los datos del registro a **Normal** o **Detallado**. Una vez recompilado el proyecto, busque **csc** en la ventana **Salida** para localizar la invocación del compilador de C#.
@@ -93,7 +93,7 @@ csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Diferencias entre el resultado del compilador de C++ y el compilador de C#
-No se crean archivos objeto (*.obj*) como resultado de invocar el compilador de C#; se crean directamente archivos de salida. Como consecuencia de ello, el compilador de C# no requiere un vinculador.
+No se crean archivos objeto ( *.obj*) como resultado de invocar el compilador de C#; se crean directamente archivos de salida. Como consecuencia de ello, el compilador de C# no requiere un vinculador.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,5 +1,5 @@
 ---
-title: Operadores relacionados con el puntero (Referencia de C#)
+title: Operadores relacionados con el puntero (referencia de C#)
 description: Obtenga información sobre los operadores de C# que se pueden usar al trabajar con punteros.
 ms.date: 05/20/2019
 author: pkulikov
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758104"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025110"
 ---
-# <a name="pointer-related-operators-c-reference"></a>Operadores relacionados con el puntero (Referencia de C#)
+# <a name="pointer-related-operators-c-reference"></a>Operadores relacionados con el puntero (referencia de C#)
 
 Puede usar los siguientes operadores para trabajar con punteros:
 
@@ -96,7 +96,7 @@ En el ejemplo siguiente se muestra cómo acceder a los elementos de matriz con u
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-En el ejemplo se usa el [operador `stackalloc`](../keywords/stackalloc.md) para asignar un bloque de memoria en la pila.
+En el ejemplo se usa el [operador `stackalloc`](stackalloc.md) para asignar un bloque de memoria en la pila.
 
 > [!NOTE]
 > El operador de acceso de elemento de puntero no busca errores fuera de límites.
@@ -188,10 +188,9 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
 - [Tipos de puntero](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [Palabra clave `unsafe`](../keywords/unsafe.md)
-- [Palabra clave `fixed`](../keywords/fixed-statement.md)
-- [`stackalloc` operator](../keywords/stackalloc.md)
-- [`sizeof` operator](../keywords/sizeof.md)
+- [unsafe (palabra clave)](../keywords/unsafe.md)
+- [fixed (palabra clave)](../keywords/fixed-statement.md)
+- [stackalloc (operador)](stackalloc.md)
+- [sizeof (operador)](../keywords/sizeof.md)

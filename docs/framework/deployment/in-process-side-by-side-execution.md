@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816053"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170513"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
@@ -56,7 +56,7 @@ A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo 
   
      Qué se debe hacer: en este escenario, no haga nada. Los componentes COM se ejecutarán con la versión de .NET Framework con la que se han registrado.  
   
-- **Escenario 2**: aplicación administrada compilada con .NET Framework 2.0  SP1 que preferiblemente debería ejecutarse con [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)], pero que se puede ejecutar en .NET Framework 4 si la versión 2.0 no está presente.  
+- **Escenario 2**: aplicación administrada compilada con .NET Framework 2.0  SP1 que preferiblemente debería ejecutarse con .NET Framework 2.0, pero que se puede ejecutar en .NET Framework 2.0 si la versión 4 no está presente.  
   
      Versiones de .NET Framework instaladas: Versión anterior de .NET Framework y .NET Framework 4.  
   

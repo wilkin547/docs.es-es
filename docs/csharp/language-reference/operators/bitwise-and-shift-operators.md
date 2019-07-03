@@ -1,5 +1,5 @@
 ---
-title: Operadores de desplazamiento y bit a bit (Referencia de C#)
+title: Operadores de desplazamiento y bit a bit (referencia de C#)
 description: Obtenga información sobre los operadores de C# que realizan operaciones de desplazamiento o lógicas bit a bit con operandos de tipo entero.
 ms.date: 04/18/2019
 author: pkulikov
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: bf42a53a89676f457d3d2df8d193a83299c3e4cc
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758371"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025239"
 ---
-# <a name="bitwise-and-shift-operators-c-reference"></a>Operadores de desplazamiento y bit a bit (Referencia de C#)
+# <a name="bitwise-and-shift-operators-c-reference"></a>Operadores de desplazamiento y bit a bit (referencia de C#)
 
 Los siguientes operadores realizan operaciones de desplazamiento o bit a bit con operandos de [tipo entero](../keywords/integral-types-table.md):
 
@@ -195,6 +195,5 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
 - [Operadores lógicos booleanos](boolean-logical-operators.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607823"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832916"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Ensamblados en Common Language Runtime
 Los ensamblados son los bloques de creación de las aplicaciones .NET Framework; constituyen la unidad fundamental de implementación, control de versiones, reutilización, ámbitos de activación y permisos de seguridad. Un ensamblado es una colección de tipos y recursos compilados para funcionar en conjunto y formar una unidad lógica de funcionalidad. Los ensamblados proporcionan a Common Language Runtime la información necesaria para conocer las implementaciones de tipos. Para la ejecución, un tipo no existe fuera del contexto de un ensamblado.  
@@ -42,11 +42,11 @@ Los ensamblados son los bloques de creación de las aplicaciones .NET Framework;
   
  Los ensamblados pueden ser estáticos o dinámicos. Los ensamblados estáticos pueden incluir tipos de .NET Framework (interfaces y clases), así como recursos para el ensamblado (mapas de bits, archivos JPEG, archivos de recursos, etc.). Los ensamblados estáticos se almacenan en el disco, en archivos ejecutables portables PE. También se puede utilizar .NET Framework para crear ensamblados dinámicos, que se ejecutan directamente desde la memoria y no se guardan en el disco antes de su ejecución. Los ensamblados dinámicos se pueden guardar en el disco una vez que se hayan ejecutado.  
   
- Existen varias formas de crear ensamblados. Puede usar herramientas de desarrollo, como Visual Studio, que haya empleado anteriormente para crear archivos .dll o .exe. Puede utilizar las herramientas suministradas en [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] para generar ensamblados con módulos creados en otros entornos de programación. También puede utilizar las API de Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=nameWithType>, para crear ensamblados dinámicos.  
+ Existen varias formas de crear ensamblados. Puede usar herramientas de desarrollo, como Visual Studio, que haya empleado anteriormente para crear archivos .dll o .exe. Puede utilizar las herramientas suministradas en el kit de desarrollo de software (SDK) de Windows para generar ensamblados con módulos creados en otros entornos de programación. También puede utilizar las API de Common Language Runtime, como <xref:System.Reflection.Emit?displayProperty=nameWithType>, para crear ensamblados dinámicos.  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Title|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Contenido de los ensamblados](../../../docs/framework/app-domains/assembly-contents.md)|Describe los elementos que componen el ensamblado.|  
 |[Manifiesto del ensamblado](../../../docs/framework/app-domains/assembly-manifest.md)|Describe los datos incluidos en el manifiesto del ensamblado y cómo se almacenan en los ensamblados.|  

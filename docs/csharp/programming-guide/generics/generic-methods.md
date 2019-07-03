@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 083fc6ff3dd15252fb6cf2beb27b5be0a6e489f5
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 443d4367cc64eb7f9054b2cd52bef59e589f55b3
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423450"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170250"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Métodos genéricos (Guía de programación de C#)
 Un método genérico es un método que se declara con parámetros de tipo, de la manera siguiente:  
@@ -31,7 +31,7 @@ Un método genérico es un método que se declara con parámetros de tipo, de la
   
  [!code-csharp[csProgGuideGenerics#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#25)]  
   
- Si define un método genérico que toma los mismos parámetros de tipo que la clase contenedora, el compilador genera la advertencia CS0693 porque dentro del ámbito del método, el argumento que se ha proporcionado para el `T` interno oculta el argumento que se ha proporcionado para el `T` externo. Si necesita la flexibilidad de llamar a un método de la clase genérica con argumentos de tipo diferentes de los que se han proporcionado cuando se ha creado una instancia de la clase, considere la posibilidad de proporcionar otro identificador para el parámetro de tipo del método, como se muestra en `GenericList2<T>` en el ejemplo siguiente.  
+ Si define un método genérico que toma los mismos parámetros de tipo que la clase contenedora, el compilador genera la advertencia [CS0693](../../misc/cs0693.md) porque, dentro del ámbito del método, el argumento que se ha proporcionado para el `T` interno oculta el argumento que se ha proporcionado para el `T` externo. Si necesita la flexibilidad de llamar a un método de la clase genérica con argumentos de tipo diferentes de los que se han proporcionado cuando se ha creado una instancia de la clase, considere la posibilidad de proporcionar otro identificador para el parámetro de tipo del método, como se muestra en `GenericList2<T>` en el ejemplo siguiente.  
   
  [!code-csharp[csProgGuideGenerics#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#26)]  
   

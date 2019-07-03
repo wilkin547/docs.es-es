@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195831"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832892"
 ---
 # <a name="assembly-names"></a>Nombres de ensamblado
 Un nombre de ensamblado se almacena en los metadatos y tiene un importante impacto en el ámbito del ensamblado y en su uso por parte de una aplicación. Un ensamblado con nombre seguro tiene un nombre completo que incluye nombre, referencia cultural, clave pública y número de versión. Se conoce como el nombre para mostrar y en los ensamblados cargados puede obtenerse mediante la propiedad <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -24,7 +24,7 @@ myTypes, Version=1.0.1234.0, Culture=en-US, PublicKeyToken=b77a5c561934e089c, Pr
 ```  
   
 > [!NOTE]
->  La arquitectura del procesador se ha agregado a la identidad del ensamblado en la versión 2.0 de .NET Framework para permitir versiones específicas de procesador de ensamblados. Puede crear versiones de un ensamblado cuya identidad solo se diferencie por la arquitectura del procesador, por ejemplo versiones específicas del procesador de 32 y 64 bits. La arquitectura del procesador no es necesaria para los nombres seguros. Para obtener más información, vea <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
+>  La arquitectura del procesador se ha agregado a la identidad del ensamblado en la versión 2.0 de .NET Framework para permitir versiones específicas de procesador de ensamblados. Puede crear versiones de un ensamblado cuya identidad solo se diferencie por la arquitectura del procesador, por ejemplo versiones específicas del procesador de 32 y 64 bits. La arquitectura del procesador no es necesaria para los nombres seguros. Para más información, consulte <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A?displayProperty=nameWithType>.  
   
  En este ejemplo, el nombre completo indica que el ensamblado `myTypes` tiene un nombre seguro con un token de clave pública, tiene el valor de referencia cultural de inglés de los Estados Unidos y tiene un número de versión de 1.0.1234.0. Su arquitectura del procesador es "msil", lo que significa que será compilado JIT (just-in-time) para código de 32 o 64 bits según el sistema operativo y el procesador.  
   
@@ -45,7 +45,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
->  El runtime trata los nombres de ensamblado sin distinción entre mayúsculas y minúsculas al enlazar a un ensamblado, pero conserva las minúsculas y mayúsculas que se usan en un nombre de ensamblado. Varias herramientas de [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] controlan los nombres de ensamblado sin distinción entre mayúsculas y minúsculas. Para obtener mejores resultados, administre los nombres de ensamblado con distinción entre mayúsculas y minúsculas.  
+>  El runtime trata los nombres de ensamblado sin distinción entre mayúsculas y minúsculas al enlazar a un ensamblado, pero conserva las minúsculas y mayúsculas que se usan en un nombre de ensamblado. Varias herramientas del kit de desarrollo de Software (SDK) de Windows controlan los nombres de ensamblado distinguiendo mayúsculas de minúsculas. Para obtener mejores resultados, administre los nombres de ensamblado con distinción entre mayúsculas y minúsculas.  
   
 ## <a name="naming-application-components"></a>Nombre de los componentes de la aplicación  
  El runtime no tiene en cuenta el nombre de archivo a la hora de determinar la identidad de un ensamblado. La identidad del ensamblado, que se compone del nombre del ensamblado, la versión, la referencia cultural y el nombre seguro, debe ser clara para el runtime.  

@@ -2,12 +2,12 @@
 title: Procedimiento para escribir datos de objeto en un archivo XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: a4fdb496e3b015b2e3b46c9705ba1c05c20423f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77d3a45f6213bc390e0b3da0d30cfbc55235b1d1
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595522"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170236"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Procedimiento para escribir datos de objeto en un archivo XML (C#)
 En este ejemplo se escribe el objeto de una clase en un archivo XML con la clase <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -45,7 +45,7 @@ public class XMLWrite
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- La clase debe tener un constructor público sin parámetros.  
+ La clase que se serializa debe tener un constructor público sin parámetros.  
   
 ## <a name="robust-programming"></a>Programación sólida  
  Las condiciones siguientes pueden provocar una excepción:  

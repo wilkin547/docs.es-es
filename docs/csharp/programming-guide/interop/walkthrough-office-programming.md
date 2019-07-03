@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608274"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169854"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Tutorial: Programación de Office (C# y Visual Basic)
 Visual Studio presenta características en C# y Visual Basic que mejoran la programación de Microsoft Office. Las características útiles de C# incluyen argumentos opcionales y con nombre, y devuelven valores de tipo `dynamic`. En la programación COM, puede omitir la palabra clave `ref` y obtener acceso a las propiedades indexadas. Las nuevas características de Visual Basic incluyen propiedades implementadas automáticamente, instrucciones de expresiones lambda e inicializadores de colección.
@@ -37,7 +37,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
 2. En el menú **Archivo** , elija **Nuevo**y haga clic en **Proyecto**.  
   
-3. En el panel **Plantillas instaladas**, expanda **Visual Basic** o **Visual C#**, expanda **Office** y, después, haga clic en el año de la versión del producto de Office.  
+3. En el panel **Plantillas instaladas**, expanda **Visual Basic** o **Visual C#** , expanda **Office** y, después, haga clic en el año de la versión del producto de Office.  
   
 4. En el panel **Plantillas**, haga clic en **versión de \<Excel > Complemento**.  
   
@@ -93,7 +93,7 @@ Debe tener Microsoft Office Excel y Microsoft Office Word instalados en su equip
   
      En este método se utilizan dos características de C# nuevas. Ambas características ya existen en Visual Basic.  
   
-    - El método [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) tiene un *parámetro opcional* para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el ejemplo anterior no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `excelApp.Workbooks.Add(Type.Missing)`.  
+    - El método [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) tiene un *parámetro opcional* para especificar una plantilla determinada. Los parámetros opcionales introducidos en C# 4 permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el ejemplo anterior no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Para obtener más información, vea [Argumentos opcionales y con nombre](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   

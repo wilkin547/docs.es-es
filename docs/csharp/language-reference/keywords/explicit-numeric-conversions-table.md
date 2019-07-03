@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 22482a8f55cdb53f9826fbcc850992e20b7a8feb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236319"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306613"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tabla de conversiones numéricas explícitas (Referencia de C#)
 
@@ -67,9 +67,8 @@ La siguiente tabla muestra las conversiones explícitas predefinidas entre tipos
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Conversiones de tipos](../../programming-guide/types/casting-and-type-conversions.md)
-- [Operator ()](../operators/invocation-operator.md)
+- [Operador ()](../operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [Tabla de tipos enteros](integral-types-table.md)
 - [Tabla de tipos de punto flotante](floating-point-types-table.md)
 - [Tabla de tipos integrados](built-in-types-table.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: bfcad2669c5ae34605c142f9834c52b4b84c36ae
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cd989b47c87ef32371b45650d531bd8cbeb85032
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608091"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306951"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Conversiones de tipos (Guía de programación de C#)
 
@@ -83,7 +83,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C# proporciona los operadores [is](../../../csharp/language-reference/keywords/is.md) y [as](../../../csharp/language-reference/keywords/as.md) para permitir probar la compatibilidad antes de realizar una conversión. Para obtener más información, vea [Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
+ C# proporciona el operador [is](../../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) para permitir probar la compatibilidad antes de realizar una conversión. Para más información, consulte [Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
@@ -93,7 +93,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [Guía de programación de C#](../../../csharp/programming-guide/index.md)
 - [Tipos](../../../csharp/programming-guide/types/index.md)
-- [Operator ()](../../../csharp/language-reference/operators/invocation-operator.md)
+- [Operator ()](../../../csharp/language-reference/operators/type-testing-and-conversion-operators.md#cast-operator-)
 - [explicit](../../../csharp/language-reference/keywords/explicit.md)
 - [implicit](../../../csharp/language-reference/keywords/implicit.md)
 - [Operadores de conversión](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)

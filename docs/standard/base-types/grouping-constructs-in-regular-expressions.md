@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634338"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135681"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -164,7 +164,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La tabla siguiente muestra cómo se interpreta la expresión regular.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\D+`|Coincide con uno o más caracteres de dígito no decimal.|  
 |`(?<digit>\d+)`|Coincide con uno o más caracteres de dígito decimal. Asigna la coincidencia al grupo llamado `digit`.|  
@@ -187,7 +187,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  donde *nombre1* es el grupo actual (opcional), *nombre2* es un grupo definido previamente y *subexpresión* es cualquier patrón de expresión regular válido. La definición de grupo de compensación elimina la definición de *nombre2* y almacena el intervalo entre *nombre2* y *nombre1* en *nombre1*. Si no se ha definido el grupo *nombre2* , la búsqueda de coincidencias retrocede. Como al eliminar la última definición de *nombre2* se revela la definición anterior de *nombre2*, esta construcción permite usar la pila de capturas del grupo *nombre2* como contador para realizar el seguimiento de construcciones anidadas como paréntesis o corchetes de apertura y cierre.  
   
- La definición del grupo de compensación utiliza *nombre2* como pila. El carácter inicial de cada construcción anidada se coloca en el grupo y en su colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> . Cuando se encuentra una coincidencia con el carácter de cierre, el carácter de apertura correspondiente se quita del grupo, y la colección <xref:System.Text.RegularExpressions.Group.Captures%2A> disminuye en una unidad. Después de buscar las coincidencias con los caracteres de apertura y cierre de todas las construcciones anidadas, *nombre1* estará vacío.  
+ La definición del grupo de compensación utiliza *nombre2* como pila. El carácter inicial de cada construcción anidada se coloca en el grupo y en su colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> . Cuando se encuentra una coincidencia con el carácter de cierre, el carácter de apertura correspondiente se quita del grupo, y la colección <xref:System.Text.RegularExpressions.Group.Captures%2A> disminuye en una unidad. Después de buscar las coincidencias con los caracteres de apertura y cierre de todas las construcciones anidadas, *nombre2* estará vacío.  
   
 > [!NOTE]
 >  Después de modificar la expresión regular del ejemplo siguiente para que utilice el carácter de apertura y cierre adecuado de una construcción anidada, puede utilizarla con la mayoría de las estructuras anidadas, como expresiones matemáticas o líneas de código de programa que incluyen varias llamadas a métodos anidadas.  
@@ -205,7 +205,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular se interpreta como sigue:  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Comienza al principio de la cadena.|  
 |`[^<>]*`|Coincide con cero o más caracteres que no son corchetes angulares de apertura o cierre.|  
@@ -380,7 +380,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  El patrón de la expresión regular `(?<=\b20)\d{2}\b` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\d{2}`|Coincide con dos dígitos decimales.|  
 |`(?<=\b20)`|Continúa la búsqueda si los dos dígitos decimales van precedidos de los dos dígitos decimales "20" en un límite de palabra.|  
@@ -434,7 +434,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  La expresión regular sin retroceso `(?>(\w)\1+).\b` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`(\w)`|Coincide con un único carácter que se usa para formar palabras y se lo asigna al primer grupo de captura.|  
 |`\1+`|Coincide con el valor de la primera subcadena capturada una o varias veces.|  

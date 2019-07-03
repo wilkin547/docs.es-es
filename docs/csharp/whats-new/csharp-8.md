@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
+ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557146"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67151974"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -381,7 +381,7 @@ Esta compatibilidad con idiomas se basa en dos nuevos tipos y dos nuevos operado
 
 Comencemos con las reglas de índices. Considere un elemento `sequence` de matriz. El índice `0` es igual que `sequence[0]`. El índice `^0` es igual que `sequence[sequence.Length]`. Tenga en cuenta que `sequence[^0]` produce una excepción, al igual que `sequence[sequence.Length]`. Para cualquier número `n`, el índice `^n` es igual que `sequence.Length - n`.
 
-Un rango especifica el *inicio* y el *final* de un intervalo. Los rangos son excluyentes, lo que significa que el *final* no se incluye en el intervalo. El rango `[0..^0]` representa todo el intervalo, al igual que `[0..sequence.Length]` representa todo el intervalo. 
+Un rango especifica el *inicio* y el *final* de un intervalo. El inicio del intervalo es inclusivo, pero su final es exclusivo, lo que significa que el *inicio* se incluye en el intervalo, pero el *final* no. El rango `[0..^0]` representa todo el intervalo, al igual que `[0..sequence.Length]` representa todo el intervalo. 
 
 Veamos algunos ejemplos. Tenga en cuenta la siguiente matriz, anotada con su índice desde el principio y desde el final:
 

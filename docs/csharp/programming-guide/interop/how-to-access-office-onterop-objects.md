@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 76bd9d9bce8e41605b96e979c2a39ea15e1d15ad
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303003"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169940"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Procedimiento Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C# (Guía de programación de C#)
 Visual C# tiene nuevas características que simplifican el acceso a objetos de la API de Office. Las nuevas características incluyen argumentos con nombre y opcionales, un nuevo tipo llamado `dynamic` y la capacidad de pasar argumentos a parámetros de referencia en los métodos COM como si fueran parámetros de valor.  
@@ -76,7 +76,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
 1. Agregue el método siguiente a la clase `Program` para configurar una hoja de cálculo de Excel.  
   
-     El método <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> tiene un parámetro opcional para especificar una plantilla determinada. Los parámetros opcionales introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el código siguiente no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     El método <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> tiene un parámetro opcional para especificar una plantilla determinada. Los parámetros opcionales introducidos en C# 4 permiten omitir el argumento para ese parámetro si se desea utilizar el valor predeterminado del parámetro. Dado que en el código siguiente no se envía ningún argumento, `Add` usa la plantilla predeterminada y crea un libro nuevo. La instrucción equivalente en versiones anteriores de C# requiere un argumento de marcador de posición: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
@@ -96,7 +96,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] —y versiones posteriores— convierte automáticamente el `Object` devuelto en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.  
+     C# 4, y versiones posteriores, convierte automáticamente el valor `Object` devuelto en `dynamic` si se hace referencia al ensamblado mediante la opción del compilador [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) o, de forma equivalente, si la propiedad **Incrustar tipos de interoperabilidad** de Excel se establece en true. El valor predeterminado de esta propiedad es true.  
   
 ## <a name="to-run-the-project"></a>Para ejecutar el proyecto  
   
@@ -110,13 +110,13 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
 ## <a name="to-add-a-word-document"></a>Para agregar un documento de Word  
   
-1. Para ilustrar las formas adicionales en que [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] y versiones posteriores mejoran la programación de Office, el código siguiente abre una aplicación de Word y crea un icono que se vincula a la hoja de cálculo de Excel.  
+1. Para ilustrar las formas adicionales en que C# 4, y versiones posteriores, mejoran la programación de Office, el código siguiente abre una aplicación de Word y crea un icono que se vincula a la hoja de cálculo de Excel.  
   
-     Pegue el método `CreateIconInWordDoc`, proporcionado más adelante en este paso, en la clase `Program`. `CreateIconInWordDoc` usa argumentos con nombre y opcionales para reducir la complejidad de las llamadas de método a <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> y <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Estas llamadas incorporan otras dos nuevas características introducidas en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] que simplifican las llamadas a métodos COM que tienen parámetros de referencia. En primer lugar, puede enviar argumentos a los parámetros de referencia como si fueran parámetros de valor. Es decir, puede enviar valores directamente, sin necesidad de crear una variable para cada parámetro de referencia. El compilador genera variables temporales para contener los valores de argumento y las descarta cuando se regresa de la llamada. En segundo lugar, se puede omitir la palabra clave `ref` en la lista de argumentos.  
+     Pegue el método `CreateIconInWordDoc`, proporcionado más adelante en este paso, en la clase `Program`. `CreateIconInWordDoc` usa argumentos con nombre y opcionales para reducir la complejidad de las llamadas de método a <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> y <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Estas llamadas incorporan otras dos nuevas características introducidas en C# 4 que simplifican las llamadas a métodos COM que tienen parámetros de referencia. En primer lugar, puede enviar argumentos a los parámetros de referencia como si fueran parámetros de valor. Es decir, puede enviar valores directamente, sin necesidad de crear una variable para cada parámetro de referencia. El compilador genera variables temporales para contener los valores de argumento y las descarta cuando se regresa de la llamada. En segundo lugar, se puede omitir la palabra clave `ref` en la lista de argumentos.  
   
-     El método `Add` tiene cuatro parámetros de referencia, todos ellos opcionales. En [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] o versiones posteriores, puede omitir los argumentos de cualquiera o de todos los parámetros si desea usar sus valores predeterminados. En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] y versiones anteriores, se debe proporcionar un argumento para cada parámetro; el argumento debe ser una variable, ya que los parámetros son parámetros de referencia.  
+     El método `Add` tiene cuatro parámetros de referencia, todos ellos opcionales. En C# 4, o versiones posteriores, puede omitir los argumentos de cualquiera o de todos los parámetros si desea usar sus valores predeterminados. En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] y versiones anteriores, se debe proporcionar un argumento para cada parámetro; el argumento debe ser una variable, ya que los parámetros son parámetros de referencia.  
   
-     El método `PasteSpecial` inserta el contenido del Portapapeles. El método tiene siete parámetros de referencia, todos ellos opcionales. El siguiente código especifica los argumentos para dos de ellos: `Link`, para crear un vínculo con el origen del contenido del Portapapeles, y `DisplayAsIcon`, para mostrar el vínculo como un icono. En [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], puede usar argumentos con nombre para esos dos y omitir los demás. Aunque se trata de parámetros de referencia, no es necesario utilizar la palabra clave `ref` ni crear variables para enviarlas como argumentos. Puede enviar los valores directamente. En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] y versiones anteriores, debe enviar un argumento de variable para cada parámetro de referencia.  
+     El método `PasteSpecial` inserta el contenido del Portapapeles. El método tiene siete parámetros de referencia, todos ellos opcionales. El siguiente código especifica los argumentos para dos de ellos: `Link`, para crear un vínculo con el origen del contenido del Portapapeles, y `DisplayAsIcon`, para mostrar el vínculo como un icono. En C# 4, puede usar argumentos con nombre para esos dos y omitir los demás. Aunque se trata de parámetros de referencia, no es necesario utilizar la palabra clave `ref` ni crear variables para enviarlas como argumentos. Puede enviar los valores directamente. En [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] y versiones anteriores, debe enviar un argumento de variable para cada parámetro de referencia.  
   
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
@@ -142,7 +142,7 @@ Visual C# tiene nuevas características que simplifican el acceso a objetos de l
   
      Además, programar resulta más fácil porque los tipos requeridos y devueltos por los métodos COM se pueden representar con el tipo `dynamic` en vez de `Object`. Las variables de tipo `dynamic` no se evalúan hasta el tiempo de ejecución, lo que elimina la necesidad de la conversión explícita. Para obtener más información, vea [Uso del tipo dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
-     En [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], el comportamiento predeterminado es insertar información de tipos en lugar de utilizar los PIA. Debido a ese comportamiento predeterminado, algunos de los ejemplos anteriores se simplifican dado que no es necesaria la conversión explícita. Por ejemplo, la declaración de `worksheet` en `DisplayInExcel` se escribe como `Excel._Worksheet workSheet = excelApp.ActiveSheet` en lugar de `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Las llamadas a `AutoFit` en el mismo método también requerirían conversión explícita sin el valor predeterminado, porque `ExcelApp.Columns[1]` devuelve un `Object` y `AutoFit` es un método de Excel. En el código siguiente se muestra la conversión.  
+     En C# 4, el comportamiento predeterminado es insertar información de tipos en lugar de utilizar los PIA. Debido a ese comportamiento predeterminado, algunos de los ejemplos anteriores se simplifican dado que no es necesaria la conversión explícita. Por ejemplo, la declaración de `worksheet` en `DisplayInExcel` se escribe como `Excel._Worksheet workSheet = excelApp.ActiveSheet` en lugar de `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet`. Las llamadas a `AutoFit` en el mismo método también requerirían conversión explícita sin el valor predeterminado, porque `ExcelApp.Columns[1]` devuelve un `Object` y `AutoFit` es un método de Excel. En el código siguiente se muestra la conversión.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   

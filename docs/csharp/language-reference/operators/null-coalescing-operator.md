@@ -1,5 +1,5 @@
 ---
-title: '?? operador: Referencia de C#'
+title: ?? Operador (referencia de C#)
 ms.custom: seodec18
 ms.date: 06/07/2019
 f1_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816008"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024994"
 ---
-# <a name="-operator-c-reference"></a>?? operator (Referencia de C#)
+# <a name="-operator-c-reference"></a>?? Operador (referencia de C#)
 
 El operador de uso combinado de NULL `??` devuelve el valor del operando izquierdo si no es `null`; en caso contrario, evalúa el operando derecho y devuelve su resultado. El operador `??` no evalúa su operando derecho si el operando izquierdo se evalúa como no NULL.
 
@@ -60,7 +60,6 @@ Para obtener más información, vea la sección [El operador de uso combinado de
 ## <a name="see-also"></a>Vea también
 
 - [Referencia de C#](../index.md)
-- [Guía de programación de C#](../../programming-guide/index.md)
 - [Operadores de C#](index.md)
 - [Operadores ?. y ?[]](member-access-operators.md#null-conditional-operators--and-)
 - [Operador ?:](conditional-operator.md)

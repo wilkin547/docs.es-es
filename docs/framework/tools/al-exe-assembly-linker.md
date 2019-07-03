@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b947aefae4924a70c394626ace5a5abe1ebf546f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816153"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832771"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -37,15 +37,15 @@ al sources options
 
 Puede especificar uno o varios de los siguientes orígenes (`sources`).
 
-| Origen | Descripción |
+| Origen | DESCRIPCIÓN |
 | ------ | ----------- |
 |`file`[,`target`]|Copia el contenido de `file` (un módulo) en el nombre de archivo especificado en `target`. Después de la copia, *Al.exe* compila `target` en un ensamblado.|
-|**/embed[resource]:** `file`[,`name`[,`private`]]|Inserta el recurso especificado en `file` en la imagen que contiene el manifiesto del ensamblado; *Al.exe* copia el contenido de `file` en la imagen portable ejecutable (PE).<br /><br /> El parámetro `name` es un identificador interno del recurso. De forma predeterminada, los recursos son públicos en el ensamblado (visibles para otros ensamblados). Si se especifica `private`, el recurso no es visible para otros ensamblados.<br /><br /> Si `file` es un archivo de recursos de .NET Framework creado, por ejemplo, por el [Generador de archivos de recursos *Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del <xref:System.Resources>. Para obtener más información, vea <xref:System.Resources.ResourceManager>. Para todos los demás recursos, use los métodos `GetManifestResource`* de <xref:System.Reflection.Assembly> para obtener acceso al recurso en tiempo de ejecución.<br /><br /> Si solo se pasan archivos de recursos a *Al.exe*, el archivo de salida es un ensamblado de recursos satélite.|
-|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|Vincula un archivo de recursos a un ensamblado. El recurso especificado en `file` pasa a formar parte del ensamblado; el archivo no se copia. El parámetro `file` puede estar en cualquier formato de archivo. Por ejemplo, puede especificar un archivo DLL nativo como parámetro `file`. Así, el archivo DLL nativo formará parte del ensamblado; de esta forma, se podrá instalar en la caché global de ensamblados y tener acceso al mismo a partir de código administrado del ensamblado. También puede hacerlo mediante la opción del compilador **/linkresource**. Para obtener más información, consulte [/linkresource (Opciones del compilador de C#)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> El parámetro `name` es un identificador interno del recurso. El parámetro `target` especifica una ruta de acceso y el nombre del archivo en el que *Al.exe* copia el `file` *.* Después de la copia, *Al.exe* compila `target` en un ensamblado. De forma predeterminada, los recursos son públicos en el ensamblado (visibles para otros ensamblados). Si se especifica `private`, el recurso no es visible para otros ensamblados.<br /><br /> Si `file` es un archivo de recursos de .NET Framework creado, por ejemplo, por el Generador de archivos de recursos (*Resgen.exe*) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del espacio de nombres <xref:System.Resources>. Para obtener más información, vea <xref:System.Resources.ResourceManager>. Para todos los demás recursos, use los métodos `GetManifestResource` * de la clase <xref:System.Reflection.Assembly> para tener acceso al recurso en tiempo de ejecución.<br /><br /> Si solo se pasan archivos de recursos a *Al.exe*, el archivo de salida es un ensamblado de recursos satélite.|
+|**/embed[resource]:** `file`[,`name`[,`private`]]|Inserta el recurso especificado en `file` en la imagen que contiene el manifiesto del ensamblado; *Al.exe* copia el contenido de `file` en la imagen portable ejecutable (PE).<br /><br /> El parámetro `name` es un identificador interno del recurso. De forma predeterminada, los recursos son públicos en el ensamblado (visibles para otros ensamblados). Si se especifica `private`, el recurso no es visible para otros ensamblados.<br /><br /> Si `file` es un archivo de recursos de .NET Framework creado, por ejemplo, por el [Generador de archivos de recursos *Resgen.exe*)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del <xref:System.Resources>. Para más información, consulte <xref:System.Resources.ResourceManager>. Para todos los demás recursos, use los métodos `GetManifestResource`* de <xref:System.Reflection.Assembly> para obtener acceso al recurso en tiempo de ejecución.<br /><br /> Si solo se pasan archivos de recursos a *Al.exe*, el archivo de salida es un ensamblado de recursos satélite.|
+|**/link[resource]:** `file`[,`name`[,`target`[,`private`]]]|Vincula un archivo de recursos a un ensamblado. El recurso especificado en `file` pasa a formar parte del ensamblado; el archivo no se copia. El parámetro `file` puede estar en cualquier formato de archivo. Por ejemplo, puede especificar un archivo DLL nativo como parámetro `file`. Así, el archivo DLL nativo formará parte del ensamblado; de esta forma, se podrá instalar en la caché global de ensamblados y tener acceso al mismo a partir de código administrado del ensamblado. También puede hacerlo mediante la opción del compilador **/linkresource**. Para obtener más información, consulte [/linkresource (Opciones del compilador de C#)](~/docs/csharp/language-reference/compiler-options/linkresource-compiler-option.md).<br /><br /> El parámetro `name` es un identificador interno del recurso. El parámetro `target` especifica una ruta de acceso y el nombre del archivo en el que *Al.exe* copia el `file` *.* Después de la copia, *Al.exe* compila `target` en un ensamblado. De forma predeterminada, los recursos son públicos en el ensamblado (visibles para otros ensamblados). Si se especifica `private`, el recurso no es visible para otros ensamblados.<br /><br /> Si `file` es un archivo de recursos de .NET Framework creado, por ejemplo, por el Generador de archivos de recursos (*Resgen.exe*) o en el entorno de desarrollo, se puede tener acceso al mismo con miembros del espacio de nombres <xref:System.Resources>. Para más información, consulte <xref:System.Resources.ResourceManager>. Para todos los demás recursos, use los métodos `GetManifestResource` * de la clase <xref:System.Reflection.Assembly> para tener acceso al recurso en tiempo de ejecución.<br /><br /> Si solo se pasan archivos de recursos a *Al.exe*, el archivo de salida es un ensamblado de recursos satélite.|
 
 Se pueden especificar las siguientes `options`; debe especificar **/out**.
 
-| Opción | Descripción |
+| Opción | DESCRIPCIÓN |
 | ------ | ----------- |
 |**/algid:** `id`|Especifica un algoritmo que genera un valor hash para todos los archivos en un ensamblado de múltiples archivos, exceptuando el archivo que contiene el manifiesto del ensamblado. El algoritmo predeterminado es CALG_SHA1. Para obtener información sobre otros algoritmos, vea ALG_ID en la documentación de Platform SDK. En la primera versión de .NET Framework, solo son válidos los algoritmos CALG_SHA1 y CALG_MD5.<br /><br /> Los valores hash se almacenan en la tabla de archivos del manifiesto del ensamblado. Durante la instalación y la carga, se cotejan los valores hash de los archivos del ensamblado.<br /><br /> También puede especificar esta opción como un atributo personalizado (<xref:System.Reflection.AssemblyAlgorithmIdAttribute>) en el código fuente de cualquier módulo.|
 |**/base[address]:** `addr`|Especifica la dirección donde se cargará un archivo DLL en el equipo del usuario en tiempo de ejecución. Las aplicaciones se cargan con mayor rapidez si se especifica la dirección base de los archivos DLL, en lugar de dejar que el sistema operativo cambie la ubicación de los mismos en el espacio de proceso.|
@@ -89,7 +89,7 @@ Para instalar ensamblados en la memoria caché, quitar ensamblados de la memoria
 
 En la tabla siguiente se enumeran los errores generados por *Al.exe*.
 
-| Error | Descripción |
+| Error | DESCRIPCIÓN |
 | ----- | ----------- |
 |al1001|Error interno del compilador<br /><br /> Intente determinar si *Al.exe* está fallando porque no puede analizar una sintaxis inesperada. A continuación, póngase en contacto con los servicios de soporte técnico de Microsoft.|
 |al1002|Memoria agotada<br /><br /> *Al.exe* se ha quedado sin memoria y se ha detenido. Aumente la cantidad de memoria disponible.|
@@ -108,7 +108,7 @@ En la tabla siguiente se enumeran los errores generados por *Al.exe*.
 |al1015|No se puede encontrar el archivo de mensajes 'alinkui.dll'<br /><br /> *Al.exe* requiere el archivo *Alinkui.dll*. Asegúrese de que este archivo está en la ruta de acceso. Si es necesario, cópielo desde el CD del producto.|
 |al1016|No se especificaron archivos de entrada válidos.<br /><br /> *Al.exe* necesita uno o más archivos de entrada que no tienen información de ensamblado.|
 |al1017|No se especificó ningún nombre de archivo de destino<br /><br /> Faltaba la opción obligatoria **/out** que especifica el nombre de archivo de destino.|
-|al1018|No se pudo cargar el archivo requerido 'archivo'<br /><br /> No se pueden cargar determinados archivos DLL. Vuelva a instalar Visual Studio o el [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)].|
+|al1018|No se pudo cargar el archivo requerido 'archivo'<br /><br /> No se pueden cargar determinados archivos DLL. Vuelva a instalar Visual Studio o el kit de desarrollo de Software (SDK) de Windows.|
 |al1019|Error de metadatos al crear el ensamblado — motivo<br /><br /> Se interrumpió la generación del ensamblado por el motivo especificado. Por ejemplo, este error se produce si no se encuentra ningún archivo especificado con la opción **/win32res**.|
 |al1020|Se ignoró el ensamblado 'archivo' incluido<br /><br /> Se especificó un archivo de entrada que contenía un ensamblado. Los archivos de entrada de *Al.exe* no pueden contener ensamblados.|
 |al1021|'valor': se reemplazó el valor anterior<br /><br /> Un módulo tenía un valor de configuración concreto, asignado posiblemente a través de atributos personalizados, que se ha reemplazado por un valor pasado mediante una opción de línea de comandos de *Al.exe*.|

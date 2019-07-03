@@ -7,15 +7,15 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 3ecea9d55ef61d2158da0dabeca22a58460b3bea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a8b09061157c45b865613c31ae1425e5820687f4
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313975"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170398"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Procedimiento Usar argumentos nombrados y opcionales en la programación de Office (Guía de programación de C#)
-Los argumentos con nombre y los argumentos opcionales, introducidos en [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#. Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.  
+Los argumentos con nombre y los argumentos opcionales, introducidos en C# 4, mejoran la comodidad, la flexibilidad y la legibilidad en la programación de C#. Además, estas características facilitan enormemente el acceso a interfaces COM, como las API de automatización de Microsoft Office.  
   
  En el ejemplo siguiente, el método [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) tiene dieciséis parámetros que representan las características de una tabla, como el número de columnas y filas, el formato, los bordes, las fuentes y los colores. Los dieciséis parámetros son opcionales, ya que la mayoría de las veces no interesa especificar valores concretos para todos ellos. Pero si no hay argumentos opcionales y con nombre, es necesario proporcionar un valor o un valor de marcador de posición para cada parámetro. Con los argumentos opcionales y con nombre, puede especificar valores solamente para los parámetros necesarios para el proyecto.  
   

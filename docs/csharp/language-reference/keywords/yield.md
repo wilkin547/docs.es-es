@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 60ee4b8c5ac3a572fd352140c968a8ec8f3a084a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3e5bb96357293c42d4bd2161756260fd849cc099
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632997"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267789"
 ---
 # <a name="yield-c-reference"></a>yield (Referencia de C#)
 
@@ -30,7 +30,7 @@ yield break;
 
 Utilice una instrucción `yield return` para devolver cada elemento de uno en uno.
 
-Para consumir un método iterador, use una instrucción [foreach](foreach-in.md) o una consulta LINQ. Cada iteración del bucle `foreach` llama al método iterador. Cuando se alcanza una instrucción `yield return` en el método iterador, se devuelve `expression` y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama a la función del iterador.
+La secuencia devuelta desde un método iterador se puede consumir mediante la instrucción [foreach](foreach-in.md) o una consulta LINQ. Cada iteración del bucle `foreach` llama al método iterador. Cuando se alcanza una instrucción `yield return` en el método iterador, se devuelve `expression` y se conserva la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama a la función del iterador.
 
 Puede usar una instrucción `yield break` para finalizar la iteración.
 
