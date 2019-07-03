@@ -8,7 +8,7 @@
       items:
         - name: Información general
           href: keywords/index.md
-        - name: Tipos
+        - name: Tipos integrados
           items:
             - name: Tipos de valor
               items:
@@ -16,8 +16,9 @@
                   href: keywords/value-types.md
                 - name: bool
                   href: keywords/bool.md
-                - name: byte
-                  href: keywords/byte.md
+                - name: Tipos numéricos integrales
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+                  href: builtin-types/integral-numeric-types.md
                 - name: char
                   href: keywords/char.md
                 - name: decimal
@@ -28,22 +29,8 @@
                   href: keywords/enum.md
                 - name: float
                   href: keywords/float.md
-                - name: int
-                  href: keywords/int.md
-                - name: long
-                  href: keywords/long.md
-                - name: sbyte
-                  href: keywords/sbyte.md
-                - name: short
-                  href: keywords/short.md
                 - name: struct
                   href: keywords/struct.md
-                - name: uint
-                  href: keywords/uint.md
-                - name: ulong
-                  href: keywords/ulong.md
-                - name: ushort
-                  href: keywords/ushort.md
             - name: Tipos de referencia
               items:
                 - name: Características de los tipos de referencia
@@ -68,8 +55,6 @@
               items:
                 - name: Tabla de tipos integrados
                   href: keywords/built-in-types-table.md
-                - name: Tabla de tipos enteros
-                  href: keywords/integral-types-table.md
                 - name: Tabla de tipos de punto flotante
                   href: keywords/floating-point-types-table.md
                 - name: Tabla de tipos de valor
@@ -118,6 +103,8 @@
               href: keywords/extern.md
             - name: in (modificador genérico)
               href: keywords/in-generic-modifier.md
+            - name: new (modificador de miembro)
+              href: keywords/new-modifier.md
             - name: out (modificador genérico)
               href: keywords/out-generic-modifier.md
             - name: override
@@ -218,20 +205,16 @@
           items:
             - name: is
               href: keywords/is.md
+        - name: Palabras clave de restricción de tipo genérico
+          items:
+            - name: Restricción new
+              href: keywords/new-constraint.md
+            - name: donde
+              href: keywords/where-generic-type-constraint.md
         - name: Palabras clave de operador
           items:
             - name: await
               href: keywords/await.md
-            - name: new
-              items:
-                - name: 'Operador, modificador y restricción new'
-                  href: keywords/new.md
-                - name: Operador new
-                  href: keywords/new-operator.md
-                - name: Modificador new
-                  href: keywords/new-modifier.md
-                - name: Restricción new
-                  href: keywords/new-constraint.md
             - name: sizeof
               href: keywords/sizeof.md
             - name: nameof
@@ -280,8 +263,6 @@
               href: keywords/set.md
             - name: when (condición de filtro)
               href: keywords/when.md
-            - name: where (restricción de tipo genérico)
-              href: keywords/where-generic-type-constraint.md
             - name: value
               href: keywords/value.md
             - name: yield
@@ -367,6 +348,8 @@
         - name: 'Operador ::'
           href: operators/namespace-alias-qualifer.md
           displayName: namespace alias qualifier
+        - name: new (Operador)
+          href: operators/new-operator.md
         - name: Operador stackalloc
           href: operators/stackalloc.md
         - name: operadores true y false
