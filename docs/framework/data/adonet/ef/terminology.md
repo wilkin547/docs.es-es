@@ -2,12 +2,12 @@
 title: Terminología de Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: bc3712628d308629208af893e8fdee16cbba1e93
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306341"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539878"
 ---
 # <a name="entity-framework-terminology"></a>Terminología de Entity Framework
 En este tema se define los términos que se hace referencia con frecuencia en [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentación. Se proporcionan vínculos a temas importantes donde hay información adicional.  
@@ -44,7 +44,7 @@ En este tema se define los términos que se hace referencia con frecuencia en [!
 |asociación independiente|Una asociación entre entidades que se representa, y a la que se hace el seguimiento, a través de un objeto independiente.|  
 |key|Atributo de un tipo de entidad que especifica qué propiedad o conjunto de propiedades se utiliza para identificar instancias únicas del tipo de entidad. Se representa en el nivel de objetos mediante la clase <xref:System.Data.EntityKey>.<br /><br /> Para obtener más información, consulte [elemento Key (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#key-element-csdl) y [clave de entidad](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |carga diferida|Cuando una consulta devuelve objetos, los objetos relacionados no se cargan al mismo tiempo. En vez de ello, se cargan automáticamente cuando se obtiene acceso a la propiedad de navegación.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Sintaxis de consulta que define un conjunto de operadores de consulta que permiten operaciones de recorrido, filtro y proyección se expresen de forma directa y declarativa en Visual C# y Visual Basic.<br /><br /> Para obtener más información, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|LINQ to Entities|Sintaxis de consulta que define un conjunto de operadores de consulta que permiten operaciones de recorrido, filtro y proyección se expresen de forma directa y declarativa en Visual C# y Visual Basic.<br /><br /> Para obtener más información, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |asignar|Especificación de las correspondencias entre los elementos de un modelo conceptual y los elementos de un modelo de almacenamiento.<br /><br /> Para obtener más información, consulte [especificación de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |archivo .msl|Archivo XML que contiene la asignación entre el modelo conceptual y el modelo de almacenamiento, expresado en MSL.|  
 |lenguaje de especificación de asignaciones (MLS)|Lenguaje basado en XML que se utiliza para asignar los elementos definidos en un modelo conceptual a los elementos de un modelo de almacenamiento.<br /><br /> Para obtener más información, consulte [especificación de MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  

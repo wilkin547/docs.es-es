@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 234b3059f9109c23b8ecae4da37e15f7f094fbd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b77fc4c2a7c7df6efc9f4d8ce4001c39250ab94
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034195"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539902"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Expresiones en consultas de LINQ to Entities
 Una expresión es un fragmento de código que se puede evaluar como un valor, objeto, método o espacio de nombres único. Las expresiones pueden contener un valor literal, una llamada a un método, un operador y sus operandos, o un nombre simple. Los nombres simples pueden ser el nombre de una variable, el miembro de un tipo, el parámetro de un método, un espacio de nombres o un tipo. Las expresiones pueden utilizar operadores que a su vez utilizan otras expresiones como parámetros, o llamadas a métodos cuyos parámetros son a su vez otras llamadas a métodos. Por consiguiente, las expresiones pueden ser de muy simples a muy complejas.  
   
- En [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, las expresiones pueden contener cualquier elemento permitido por los tipos dentro de la <xref:System.Linq.Expressions> espacio de nombres, incluidas las expresiones lambda. Las expresiones que se pueden utilizar en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] son un supraconjunto de las expresiones que se pueden utilizar para consultar [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  Las expresiones que forman parte de las consultas en el [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] están limitadas por las operaciones admitidas por `ObjectQuery<T>` y el origen de datos subyacente.  
+ En consultas LINQ to Entities, las expresiones pueden contener cualquier elemento permitido por los tipos dentro de la <xref:System.Linq.Expressions> espacio de nombres, incluidas las expresiones lambda. Las expresiones que pueden utilizarse en LINQ a consultas de las entidades son un superconjunto de las expresiones que se puede usar para consultar el [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  Las expresiones que forman parte de las consultas en el [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] están limitadas por las operaciones admitidas por `ObjectQuery<T>` y el origen de datos subyacente.  
   
  En el ejemplo siguiente, la comparación en la cláusula `Where` es una expresión:  
   
@@ -23,7 +23,7 @@ Una expresión es un fragmento de código que se puede evaluar como un valor, ob
  [!code-vb[DP L2E Conceptual Examples#WhereExpression](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#whereexpression)]  
   
 > [!NOTE]
->  Las estructuras de un lenguaje concreto, como `unchecked`de C#, no tienen ningún significado en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)].  
+>  Construcciones de lenguaje específico, como C# `unchecked`, no tienen ningún significado en LINQ to Entities.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Expresiones constantes](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  

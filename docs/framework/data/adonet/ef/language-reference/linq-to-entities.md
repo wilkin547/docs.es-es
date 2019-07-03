@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630737"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539772"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities proporciona la capacidad de realizar consultas integradas en lenguajes (LINQ) que permite a los desarrolladores de software escribir consultas contra el modelo conceptual de Entity Framework mediante Visual Basic o Visual C#. Las consultas con Entity Framework se representan mediante consultas de árboles de comandos, que se ejecutan en el contexto del objeto. LINQ to Entities convierte las consultas de Language-Integrated Queries (LINQ) en consultas de árboles de comandos, ejecuta las consultas en Entity Framework y devuelve objetos que se pueden usar tanto en Entity Framework como en LINQ. A continuación se muestra el proceso para crear y ejecutar una consulta de LINQ to Entities.  
@@ -47,7 +47,7 @@ LINQ to Entities proporciona la capacidad de realizar consultas integradas en le
   
  Para obtener información sobre cómo se asignan llamadas a métodos CLR a funciones canónicas del origen de datos, vea [método CLR a la asignación de función canónica](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- Para obtener información acerca de cómo llamar a canónica, la base de datos y funciones personalizadas desde [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, vea [llamar a funciones en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ Para obtener información acerca de cómo llamada canónico, base de datos y funciones personalizadas desde dentro de LINQ a consultas de entidades, vea [llamar a funciones en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Ejecución de la consulta  
  Una vez que el usuario crea una consulta de LINQ, esta se convierte en una representación compatible con Entity Framework (en forma de árboles de comandos), que después se ejecuta en el origen de datos. En el momento de ejecutar la consulta, todas las expresiones de consulta (o sus componentes) se evalúan en el cliente o en el servidor. Esto incluye las expresiones que se usan en la materialización resultante o en las proyecciones de entidades. Para obtener más información, consulte [ejecución de la consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Para obtener información sobre cómo mejorar el rendimiento compilando una consulta una vez y ejecutándola después varias veces con parámetros diferentes, consulte [consultas compiladas (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  

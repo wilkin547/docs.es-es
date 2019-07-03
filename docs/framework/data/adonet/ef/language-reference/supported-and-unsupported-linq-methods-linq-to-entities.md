@@ -2,18 +2,18 @@
 title: Métodos de LINQ compatibles y no compatibles (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 338069b5139999a046d1b1b10a8eac4acb1d9e06
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797688"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539437"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Métodos de LINQ compatibles y no compatibles (LINQ to Entities)
-En esta sección se proporciona información sobre los operadores de consulta estándar de Language-Integrated Query (LINQ) que se admiten o no en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Muchos de los operadores de consulta estándar de LINQ tienen una versión sobrecargada que acepta un argumento entero. El argumento entero corresponde a un índice de base cero de la secuencia que se opera, un <xref:System.Collections.Generic.IEqualityComparer%601>, o <xref:System.Collections.Generic.IComparer%601>. A menos que se especifique lo contrario, estas versiones sobrecargadas de los operadores de consulta estándar de LINQ no se admiten y, si intenta utilizarlos, se iniciará una excepción.  
+En esta sección se proporciona información sobre los operadores de consulta estándar de Language-Integrated Query (LINQ) que se admiten o no en LINQ a consultas de entidades. Muchos de los operadores de consulta estándar de LINQ tienen una versión sobrecargada que acepta un argumento entero. El argumento entero corresponde a un índice de base cero de la secuencia que se opera, un <xref:System.Collections.Generic.IEqualityComparer%601>, o <xref:System.Collections.Generic.IComparer%601>. A menos que se especifique lo contrario, estas versiones sobrecargadas de los operadores de consulta estándar de LINQ no se admiten y, si intenta utilizarlos, se iniciará una excepción.  
   
 ## <a name="projection-and-restriction-methods"></a>Métodos de restricción y proyección  
- La mayoría de los métodos de restricción y proyección de LINQ se admiten en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], con la excepción de las que aceptan un argumento de posición. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). En la tabla siguiente se enumeran los métodos de restricción y proyección admitidos y no admitidos.  
+ La mayoría de los métodos de restricción y proyección de LINQ es compatibles con LINQ a consultas de entidades, a excepción de las que aceptan un argumento posicional. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). En la tabla siguiente se enumeran los métodos de restricción y proyección admitidos y no admitidos.  
   
 |Método|Soporte técnico|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -27,7 +27,7 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |<xref:System.Linq.Queryable.Where%2A>|No compatibles|`Function Where(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Where<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="join-methods"></a>Métodos de combinación  
- Los métodos de combinación de LINQ se admiten en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], con excepción de los que aceptan un `IEqualityComparer`, porque el comparador no se puede convertir en el origen de datos. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de combinación admitidos y no admitidos.  
+ Los métodos de combinación LINQ se admiten en LINQ to Entities, a excepción de los que aceptan un `IEqualityComparer` porque el comparador no se puede convertir al origen de datos. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de combinación admitidos y no admitidos.  
   
 |Método|Soporte técnico|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -37,7 +37,7 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |<xref:System.Linq.Queryable.Join%2A>|No admitido|`Function Join(Of TOuter, TInner, TKey, TResult) ( _ outer As IQueryable(Of TOuter), _ inner As IEnumerable(Of TInner), _ outerKeySelector As Expression(Of Func(Of TOuter, TKey)), _ innerKeySelector As Expression(Of Func(Of TInner, TKey)), _ resultSelector As Expression(Of Func(Of TOuter, TInner, TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> Join\<TOuter, TInner, TKey, TResult>( this IQueryable<TOuter> outer, IEnumerable<TInner> inner, Expression<Func\<TOuter, TKey>> outerKeySelector, Expression<Func\<TInner, TKey>> innerKeySelector, Expression<Func\<TOuter, TInner, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="set-methods"></a>Métodos Set  
- La mayoría de los métodos se admiten en el conjunto de LINQ [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, a excepción de las que usan un <xref:System.Collections.Generic.EqualityComparer%601>. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos Set admitidos y no admitidos.  
+ La mayoría de los métodos set LINQ es compatibles con LINQ a consultas de entidades, a excepción de las que usan un <xref:System.Collections.Generic.EqualityComparer%601>. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos Set admitidos y no admitidos.  
   
 |Método|Soporte técnico|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -59,7 +59,7 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |<xref:System.Linq.Queryable.Union%2A>|No compatibles|`Function Union(Of TSource) ( _ source1 As IQueryable(Of TSource), _ source2 As IEnumerable(Of TSource), _ comparer As IEqualityComparer(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Union<TSource>( this IQueryable<TSource> source1, IEnumerable<TSource> source2, IEqualityComparer<TSource> comparer )`|  
   
 ## <a name="ordering-methods"></a>Métodos de ordenación  
- La mayoría de lo métodos de ordenación de LINQ se admiten en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], a excepción de las que aceptan un <xref:System.Collections.Generic.IComparer%601>, porque el comparador no se puede convertir al origen de datos. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de ordenación admitidos y no admitidos.  
+ La mayoría de lo métodos de ordenación de LINQ se admiten en LINQ to Entities, a excepción de las que aceptan un <xref:System.Collections.Generic.IComparer%601>, porque el comparador no se puede convertir al origen de datos. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de ordenación admitidos y no admitidos.  
   
 |Método|Soporte técnico|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -74,7 +74,7 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |<xref:System.Linq.Queryable.Reverse%2A>|No compatibles|`Function Reverse(Of TSource) ( _ source As IQueryable(Of TSource) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> Reverse<TSource>( this IQueryable<TSource> source )`|  
   
 ## <a name="grouping-methods"></a>Métodos de agrupamiento  
- La mayoría de los métodos de agrupamiento de LINQ se admiten en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], a excepción de las que aceptan un <xref:System.Collections.Generic.IEqualityComparer%601>, porque el comparador no se puede convertir al origen de datos. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de agrupamiento admitidos y no admitidos.  
+ La mayoría de los métodos de agrupamiento de LINQ se admite en LINQ to Entities, a excepción de los que aceptan un <xref:System.Collections.Generic.IEqualityComparer%601>, porque el comparador no se puede convertir al origen de datos. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de agrupamiento admitidos y no admitidos.  
   
 |Método|Soporte técnico|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -88,7 +88,7 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |<xref:System.Linq.Queryable.GroupBy%2A>|No compatibles|`Function GroupBy(Of TSource, TKey, TElement, TResult) ( _ source As IQueryable(Of TSource), _ keySelector As Expression(Of Func(Of TSource, TKey)), _ elementSelector As Expression(Of Func(Of TSource, TElement)), _ resultSelector As Expression(Of Func(Of TKey, IEnumerable(Of TElement), TResult)), _ comparer As IEqualityComparer(Of TKey) _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> GroupBy<TSource, TKey, TElement, TResult>( this IQueryable<TSource> source, Expression<Func<TSource, TKey>> keySelector, Expression<Func<TSource, TElement>> elementSelector, Expression<Func<TKey, IEnumerable<TElement>, TResult>> resultSelector, IEqualityComparer<TKey> comparer )`|  
   
 ## <a name="aggregate-methods"></a>Métodos de agregación  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] admite la mayoría de los métodos de agregación que aceptan tipos de datos primitivos. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de agregación admitidos y no admitidos.  
+ Admite la mayoría de los métodos de agregación que aceptan tipos de datos primitivos en LINQ to Entities. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de agregación admitidos y no admitidos.  
   
 |Método|Soporte técnico|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  
@@ -153,7 +153,7 @@ En esta sección se proporciona información sobre los operadores de consulta es
 |<xref:System.Linq.Queryable.OfType%2A>|Se admite para <xref:System.Data.Metadata.Edm.EntityType>|`Function OfType(Of TResult) ( _ source As IQueryable _ ) As IQueryable(Of TResult)`|`IQueryable<TResult> OfType<TResult>( this IQueryable source )`|  
   
 ## <a name="paging-methods"></a>Métodos de paginación  
- Algunos métodos de paginación de LINQ no se admiten en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de paginación admitidos y no admitidos.  
+ Un número de los métodos de paginación de LINQ no se admite en LINQ a consultas de entidades. Para obtener más información, consulte [operadores de consulta estándar en consultas LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). La tabla siguiente enumera los métodos de paginación admitidos y no admitidos.  
   
 |Método|Soporte técnico|Firma de funciones de Visual Basic|Firma de métodos de C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

@@ -2,12 +2,12 @@
 title: Información general sobre Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 498d0478dc94048a69c393151d3ff8a752706e1c
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307340"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539475"
 ---
 # <a name="entity-framework-overview"></a>Introducción a Entity Framework
 
@@ -45,7 +45,7 @@ El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] utiliza estos 
 
 Como algo más que otra solución de asignación objeto-relacional, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] trata fundamentalmente de permitir que las aplicaciones obtengan acceso y cambien los datos que están representados como entidades y relaciones en el modelo conceptual. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] usa la información de los archivos del modelo y de asignación para traducir las consultas de objeto con los tipos de entidad que se representan en el modelo conceptual en consultas específicas del origen de datos. Resultados de la consulta se materializan en objetos que el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] administra. El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proporciona los siguientes métodos para consultar un modelo conceptual y devolver objetos:
 
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Proporciona compatibilidad con Language-Integrated Query (LINQ) para consultar los tipos de entidad que se definen en un modelo conceptual. Para obtener más información, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- LINQ to Entities. Proporciona compatibilidad con Language-Integrated Query (LINQ) para consultar los tipos de entidad que se definen en un modelo conceptual. Para obtener más información, consulte [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Un dialecto independiente del almacenamiento de SQL que trabaja directamente con entidades en el modelo conceptual y que admite conceptos de Entity Data Model. [!INCLUDE[esql](../../../../../includes/esql-md.md)] se utiliza con las consultas de objeto y las consultas que se ejecutan con el proveedor de EntityClient. Para obtener más información, consulte [información general de Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 

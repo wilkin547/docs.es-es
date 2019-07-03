@@ -2,24 +2,24 @@
 title: Operadores de consulta estándar en consultas de LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2661f1b492ff8f2ed18c7b396326562050ca45b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797727"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539441"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Operadores de consulta estándar en consultas de LINQ to Entities
 En una consulta, se especifica la información que se desea recuperar del origen de datos. Una consulta también puede especificar cómo se debe ordenar, agrupar y conformar esa información antes de que se devuelva. LINQ proporciona un conjunto de métodos de consulta estándar que se puede utilizar en una consulta. La mayoría de estos métodos funciona en secuencias; en este contexto, una secuencia es un objeto cuyo tipo implementa la <xref:System.Collections.Generic.IEnumerable%601> interfaz o <xref:System.Linq.IQueryable%601> interfaz. La funcionalidad de consulta de los operadores de consulta estándar incluye las operaciones de filtrado, proyección, agregación, ordenación, agrupamiento y paginación, entre otras. Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis de palabras clave especial para que se puedan invocar utilizando la sintaxis de las expresiones de consulta. Una expresión de consulta constituye una forma diferente de expresar una consulta, más legible que su equivalente basada en métodos. Las cláusulas de las expresiones de consulta se convierten en llamadas a los métodos de consulta en tiempo de compilación. Para obtener una lista de operadores de consulta estándar que poseen cláusulas de expresiones de consulta equivalentes, consulte [Standard Query Operators Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120)).  
   
- No todos los operadores de consulta estándar se admiten en las consultas de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información, consulte [admitidas y los métodos de LINQ no admitidos (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). En este tema se proporciona información sobre los operadores de consulta estándar que es específica de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Para obtener más información sobre problemas conocidos de [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] consultas, vea [problemas conocidos y consideraciones en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
+ Todos los operadores de consulta estándar no son compatibles con LINQ a consultas de entidades. Para obtener más información, consulte [admitidas y los métodos de LINQ no admitidos (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). En este tema se proporciona información sobre los operadores de consulta estándar que es específico de LINQ to Entities. Para obtener más información sobre problemas conocidos de LINQ a consultas de entidades, vea [problemas conocidos y consideraciones en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
 ## <a name="projection-and-filtering-methods"></a>Métodos de proyección y filtrado  
  *Proyección* hace referencia a la transformación de los elementos de un conjunto de resultados en un formato deseado. Por ejemplo, se puede proyectar un subconjunto de las propiedades que se necesitan de cada objeto del conjunto de resultados, se puede proyectar una propiedad y realizar un cálculo matemático con ella, o se puede proyectar el objeto completo del conjunto de resultados. Los métodos de proyección son `Select` y `SelectMany`.  
   
  *Filtrado* hace referencia a la operación de restringir el conjunto de resultados a sólo contenga los elementos que cumplen una condición especificada. El método de filtrado es `Where`.  
   
- La mayoría de las sobrecargas de los métodos de proyección y filtrado se admiten en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], con la excepción de las que aceptan un argumento de posición.  
+ Mayoría de las sobrecargas de los métodos de filtrado y proyección se admite en LINQ to Entities, a excepción de las que aceptan un argumento posicional.  
   
 ## <a name="join-methods"></a>Métodos de combinación  
  La combinación es una operación importante de las consultas dirigidas a orígenes de datos que no tienen relaciones navegables entre sí. Una combinación de dos orígenes de datos es la asociación de objetos en un origen de datos con objetos de otro origen de datos que comparten un atributo o propiedad comunes. Los métodos de combinación son `Join` y `GroupJoin`.  
@@ -29,7 +29,7 @@ En una consulta, se especifica la información que se desea recuperar del origen
 ## <a name="set-methods"></a>Métodos Set  
  Las operaciones Set de LINQ son operaciones de consulta que basan sus conjuntos de resultados en la presencia o ausencia de elementos equivalentes dentro de la misma o de otra colección (o conjunto). Los métodos Set son `All`, `Any`, `Concat`, `Contains`, `DefaultIfEmpty`, `Distinct`, `EqualAll`, `Except`, `Intersect` y `Union`.  
   
- La mayor parte de las sobrecargas de los métodos Set se admiten en [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], aunque hay algunas diferencias en el comportamiento en comparación con LINQ to Objects. Sin embargo, los métodos set que utilicen un <xref:System.Collections.Generic.IEqualityComparer%601> no se admiten porque el comparador no se puede convertir al origen de datos.  
+ Mayoría de las sobrecargas de los métodos set se admite en LINQ to Entities, aunque hay algunas diferencias de comportamiento en comparación con LINQ to Objects. Sin embargo, los métodos set que utilicen un <xref:System.Collections.Generic.IEqualityComparer%601> no se admiten porque el comparador no se puede convertir al origen de datos.  
   
 ## <a name="ordering-methods"></a>Métodos de ordenación  
  La ordenación hace referencia a la forma de ordenar los elementos de un conjunto de resultados según uno o varios atributos. Si se especifica más de un criterio de ordenación, se pueden romper los enlaces dentro de un grupo.  

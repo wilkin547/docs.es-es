@@ -2,12 +2,12 @@
 title: Consideraciones de seguridad (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307300"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539832"
 ---
 # <a name="security-considerations-entity-framework"></a>Consideraciones de seguridad (Entity Framework)
 En este tema se describen consideraciones de seguridad que son específicas del desarrollo, implementación y ejecución de aplicaciones de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. También debe seguir las recomendaciones para crear aplicaciones seguras de .NET Framework. Para obtener más información, consulte [información general sobre seguridad](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -100,9 +100,9 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
      Las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)] aceptan parámetros siempre que se aceptan literales. Se deben usar consultas parametrizadas en lugar de insertar literales directamente en la consulta procedentes de un agente externo. También debe considerar el uso [métodos del generador de consultas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100)) para construir de forma segura Entity SQL.  
   
-- Ataques de inyección de [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]:  
+- LINQ a ataques de inyección de entidades:  
   
-     Aunque en [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] se admite la composición de consultas, se lleva a cabo a través de la API del modelo de objetos. A diferencia de las consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)], las consultas de [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] no se crean mediante la manipulación ni la concatenación de cadenas y no son susceptibles a los ataques de inyección de SQL tradicionales.  
+     Aunque la composición de consultas es posible en LINQ to Entities, se realiza a través de la API del modelo de objetos. A diferencia de [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas, consultas LINQ to Entities no se crean mediante manipulando ni concatenando cadenas y no son susceptibles a ataques de inyección SQL tradicionales.  
   
 #### <a name="prevent-very-large-result-sets"></a>Evite los conjuntos de resultados muy grandes.  
  Un conjunto de resultados muy grande podría hacer que el sistema cliente se cerrara si el cliente realizara operaciones que consumieran recursos en proporción al tamaño del conjunto de resultados. Los conjuntos de resultados inesperadamente grandes se pueden producir en las condiciones siguientes:  
@@ -113,7 +113,7 @@ En este tema se describen consideraciones de seguridad que son específicas del 
   
 - En consultas de [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
- Al aceptar datos proporcionados por el usuario, debe asegurarse de que no puedan provocar que los conjuntos de resultados se vuelvan mayores de lo que el sistema puede administrar. También puede usar el <xref:System.Linq.Queryable.Take%2A> método [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] o [límite](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operador en [!INCLUDE[esql](../../../../../includes/esql-md.md)] para limitar el tamaño del conjunto de resultados.  
+ Al aceptar datos proporcionados por el usuario, debe asegurarse de que no puedan provocar que los conjuntos de resultados se vuelvan mayores de lo que el sistema puede administrar. También puede usar el <xref:System.Linq.Queryable.Take%2A> método en LINQ to Entities o [límite](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) operador en [!INCLUDE[esql](../../../../../includes/esql-md.md)] para limitar el tamaño del conjunto de resultados.  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>Evitar devolver resultados de IQueryable al exponer métodos a autores de llamadas que pueden no ser de confianza.  
  Evite devolver tipos <xref:System.Linq.IQueryable%601> desde métodos expuestos a autores de llamadas que pueden no ser de confianza por las siguientes razones:  
