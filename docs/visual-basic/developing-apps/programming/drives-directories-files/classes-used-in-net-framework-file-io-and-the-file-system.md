@@ -4,22 +4,22 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832533"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348001"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Clases utilizadas en el sistema de archivos y la E/S de archivos en .NET Framework (Visual Basic)
 En las tablas siguientes se incluyen las clases usadas más comúnmente para las operaciones de E/S de archivos en .NET Framework, clasificadas en clases de E/S de archivos, clases usadas para crear secuencias y clases usadas para leer y escribir en secuencias.  
   
- Para entrar en la documentación de [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] y consultar una lista más completa, vea [Información general de la biblioteca de clases](../../../../standard/class-library-overview.md).  
+Para obtener una lista más completa, vea [Información general de la biblioteca de clases](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Clases básicas de E/S para archivos, unidades y directorios  
  En la tabla siguiente se muestran y describen las clases principales usadas para las operaciones de E/S de archivos.  
   
-|Clase|Descripción|  
+|Clase|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Proporciona métodos estáticos para crear, mover y enumerar en directorios y subdirectorios.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Proporciona métodos de instancia para crear, mover y enumerar en directorios y subdirectorios.|  
@@ -36,7 +36,7 @@ En las tablas siguientes se incluyen las clases usadas más comúnmente para las
 ## <a name="classes-used-to-create-streams"></a>Clases usadas para crear secuencias  
  En la tabla siguiente se muestran y describen las clases principales usadas para crear secuencias.  
   
-|Clase|Descripción|  
+|Clase|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Agrega una capa de almacenamiento en búfer para las operaciones de lectura y escritura en otra secuencia.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Admite el acceso aleatorio a archivos a través de su método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre los archivos sincrónicamente de manera predeterminada, pero también admite operaciones asincrónicas.|  

@@ -1,20 +1,20 @@
 ---
-title: Entrenamiento y evaluación de un modelo de Machine Learning con validación cruzada
-description: Aprenda cómo entrenar y evaluar un modelo de Machine Learning con validación cruzada
-ms.date: 05/03/2019
+title: Entrenamiento de un modelo de aprendizaje automático con validación cruzada
+description: Obtenga información sobre cómo usar la validación cruzada para compilar modelos de aprendizaje automático más eficaces en ML.NET. La validación cruzada es una técnica de evaluación de modelos y entrenamiento que divide los datos en diversas particiones y entrena varios algoritmos en estas particiones.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557830"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397658"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>Entrenamiento y evaluación de un modelo de Machine Learning con validación cruzada
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>Entrenamiento de un modelo de aprendizaje automático con validación cruzada
 
-Obtenga información sobre cómo usar la validación cruzada para compilar modelos de aprendizaje automático más eficaces en ML.NET. 
+Obtenga información sobre cómo usar la validación cruzada para entrenar modelos de aprendizaje automático más eficaces en ML.NET. 
 
 La validación cruzada es una técnica de evaluación de modelos y entrenamiento que divide los datos en diversas particiones y entrena varios algoritmos en estas particiones. Esta técnica mejora la estabilidad del modelo que contiene datos del proceso de entrenamiento. Además de mejorar el rendimiento en observaciones no vistas y en entornos con limitaciones de datos, puede ser una herramienta eficaz para el entrenamiento de modelos con un conjunto de datos más pequeño.
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 El resultado almacenado en `cvResults` es una colección de objetos [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601). Este objeto incluye el modelo entrenado, así como las métricas que son accesibles desde las propiedades [`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) y [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) respectivamente. En este ejemplo, la propiedad `Model` es de tipo [`ITransformer`](xref:Microsoft.ML.ITransformer) y la propiedad `Metrics` es de tipo [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics). 
 
-## <a name="extract-metrics"></a>Extracción de métricas
+## <a name="evaluate-the-model"></a>Evaluar el modelo
 
 Las métricas de los diferentes modelos entrenados se pueden acceder a través de la propiedad `Metrics` del objeto [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) individual. En este caso, la [métrica de R cuadrado](https://en.wikipedia.org/wiki/Coefficient_of_determination) se accede y almacena en la variable `rSquared`. 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-Si examina el contenido de la variable `rSquared`, la salida debe tener cinco valores comprendidos entre 0 y 1, donde el valor más cercano a 1 es mejor.
-
-## <a name="select-the-best-performing-model"></a>Selección del modelo con mejor rendimiento
-
-Mediante métricas como R cuadrado, seleccione los modelos de mejor a peor rendimiento. A continuación, seleccione el mejor modelo con el que realizará predicciones u operaciones adicionales.
+Si examina el contenido de la variable `rSquared`, la salida debe tener cinco valores comprendidos entre 0 y 1, donde el valor más cercano a 1 es mejor. Mediante métricas como R cuadrado, seleccione los modelos de mejor a peor rendimiento. A continuación, seleccione el mejor modelo con el que realizará predicciones u operaciones adicionales.
 
 ```csharp
 // Select all models

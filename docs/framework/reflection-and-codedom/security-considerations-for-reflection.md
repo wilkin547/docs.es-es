@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 178255c03c2f5da41579f00c0c81ba3c85a0b0ee
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816132"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347351"
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 La reflexión proporciona la capacidad de obtener información sobre tipos y miembros, así como de obtener acceso a miembros (es decir, para llamar a métodos y constructores, obtener y establecer valores de propiedades, agregar y quitar controladores de eventos etc.). No hay restricciones en el uso de la reflexión para obtener información sobre tipos y miembros. Todo el código puede usar la reflexión para realizar las siguientes tareas:  
@@ -102,7 +102,7 @@ La reflexión proporciona la capacidad de obtener información sobre tipos y mie
   
 - La marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> se introdujo en .NET Framework 2.0 Service Pack 1. Las versiones anteriores de .NET Framework requieren la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> en el código que usa la reflexión para acceder a miembros no públicos. Se trata de un permiso que nunca debe concederse al código de confianza parcial.  
   
-- A partir de [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], el uso de la reflexión para obtener información sobre tipos y miembros no públicos no requiere ningún permiso. En versiones anteriores, se requiere <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
+- A partir de .NET Framework 2.0, el uso de la reflexión para obtener información sobre tipos y miembros no públicos no requiere ningún permiso. En versiones anteriores, se requiere <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 

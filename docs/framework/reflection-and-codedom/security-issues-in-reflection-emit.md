@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 434a88e305f833a5a95bb62835b5badd4a2c4949
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816135"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347311"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de seguridad en la emisión de la reflexión
 .NET Framework proporciona tres maneras para emitir Lenguaje Intermedio de Microsoft (MSIL), cada una con sus propios problemas de seguridad:  
@@ -151,7 +151,7 @@ ms.locfileid: "66816135"
  Por último, .NET Framework 2.0 SP1 presenta métodos hospedados de forma anónima.  
   
 ### <a name="obtaining-information-on-types-and-members"></a>Obtener información sobre tipos y miembros  
- A partir de [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)], no se requieren permisos para obtener información sobre tipos y miembros no públicos. A fin de obtener la información necesaria para emitir métodos dinámicos, se usa la reflexión. Por ejemplo, los objetos <xref:System.Reflection.MethodInfo> se usan para emitir llamadas a métodos. Las versiones anteriores de .NET Framework requieren <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obtener más información, vea el artículo sobre [consideraciones de seguridad sobre la reflexión](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
+ A partir de .NET Framework 2.0, no se requieren permisos para obtener información sobre tipos y miembros no públicos. A fin de obtener la información necesaria para emitir métodos dinámicos, se usa la reflexión. Por ejemplo, los objetos <xref:System.Reflection.MethodInfo> se usan para emitir llamadas a métodos. Las versiones anteriores de .NET Framework requieren <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>. Para obtener más información, vea el artículo sobre [consideraciones de seguridad sobre la reflexión](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md).  
   
 ## <a name="see-also"></a>Vea también
 

@@ -1,18 +1,18 @@
 ---
-title: Carga de datos
-description: Carga de archivos de datos y datos de transmisión en ML.NET
-ms.date: 05/03/2019
-ms.custom: mvc,how-to
-ms.openlocfilehash: 6edcc92b610e2e1f5e21c371b9f0aefd0b216d31
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+title: Carga de datos de archivos y otros orígenes
+description: Este procedimiento muestra cómo cargar datos para su procesamiento y entrenamiento en ML.NET. Los datos originalmente se almacenan en archivos u otros orígenes de datos, como colecciones en memoria, JSON, XML o bases de datos.
+ms.date: 06/25/2019
+ms.custom: mvc,how-to, title-hack-0625
+ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063644"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397745"
 ---
-# <a name="load-data-from-file-and-in-memory-sources"></a>Carga de datos desde orígenes de archivo y en memoria
+# <a name="load-data-from-files-and-other-sources"></a>Carga de datos de archivos y otros orígenes
 
-Este procedimiento muestra cómo cargar datos para su procesamiento y entrenamiento en ML.NET. Los datos se almacenan originalmente en archivos u orígenes de datos de transmisión o en tiempo real.
+Este procedimiento muestra cómo cargar datos para su procesamiento y entrenamiento en ML.NET. Los datos originalmente se almacenan en archivos u otros orígenes de datos, como colecciones en memoria, JSON, XML o bases de datos.
 
 ## <a name="create-the-data-model"></a>Crear el modelo de datos
 
@@ -102,16 +102,15 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-streaming-source"></a>Carga de datos desde un origen de transmisión
+## <a name="load-data-from-other-sources"></a>Carga de datos desde otros orígenes
 
-Además de cargar los datos almacenados en disco, ML.NET admite la carga de datos desde diversos orígenes de transmisión, entre los que se incluyen, aunque sin carácter restrictivo:
+Además de cargar los datos almacenados en archivos, ML.NET admite la carga de datos desde orígenes entre los que se incluyen, aunque sin carácter restrictivo:
 
 - Colecciones en memoria
 - JSON/XML
 - Bases de datos
 
-> [!IMPORTANT]
-> Tenga en cuenta que al trabajar con orígenes de transmisión, ML.NET espera que la entrada tenga la forma de una colección en memoria. Por lo tanto, cuando se trabaja con orígenes como JSON o XML, asegúrese de dar a los datos el formato de una colección en memoria.
+Tenga en cuenta que al trabajar con orígenes de transmisión, ML.NET espera que la entrada tenga la forma de una colección en memoria. Por lo tanto, cuando se trabaja con orígenes como JSON o XML, asegúrese de dar a los datos el formato de una colección en memoria.
 
 Dada la siguiente colección en memoria:
 
