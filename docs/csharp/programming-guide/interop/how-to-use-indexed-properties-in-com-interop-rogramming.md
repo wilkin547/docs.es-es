@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Office programming [C#], indexed properties
 - properties [C#], indexed
 ms.assetid: 756bfc1e-7c28-4d4d-b114-ac9288c73882
-ms.openlocfilehash: 4b064f7042e5e5f0f6d5545c59de2f37897927b4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d2b992131bb5722b8a10ec4a71fc42602c98a12c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978038"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347626"
 ---
 # <a name="how-to-use-indexed-properties-in-com-interop-programming-c-programming-guide"></a>Procedimiento Utilizar propiedades indizadas en la programación de interoperabilidad COM (Guía de programación de C#)
 Las *propiedades indexadas* mejoran la manera en que se usan las propiedades COM con parámetros en la programación de C#. Las propiedades indexadas funcionan junto con otras características de Visual C#, como los [argumentos con nombre y opcionales](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md), un nuevo tipo ([dinámico](../../../csharp/language-reference/keywords/dynamic.md)) y la [información de tipo insertada](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md), para mejorar la programación en Microsoft Office.  
@@ -28,7 +28,7 @@ Las *propiedades indexadas* mejoran la manera en que se usan las propiedades COM
 > [!NOTE]
 >  En el ejemplo anterior, también se usa la característica [argumentos opcionales](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md), que le permite omitir `Type.Missing`.  
   
- De manera similar, para establecer el valor de la propiedad `Value` de un objeto <xref:Microsoft.Office.Interop.Excel.Range> en Visual C# 2008 y versiones anteriores, se necesitan dos argumentos. Uno proporciona un argumento para un parámetro opcional que especifica el tipo del valor del intervalo. El otro proporciona el valor de la propiedad `Value`. Estas técnicas se ilustran en los siguientes ejemplos. En ambos ejemplos, se establece el valor de la celda A1 en `Name`.
+ De manera similar, para establecer el valor de la propiedad `Value` de un objeto <xref:Microsoft.Office.Interop.Excel.Range> en C# 3.0 y versiones anteriores, se necesitan dos argumentos. Uno proporciona un argumento para un parámetro opcional que especifica el tipo del valor del intervalo. El otro proporciona el valor de la propiedad `Value`. Estas técnicas se ilustran en los siguientes ejemplos. En ambos ejemplos, se establece el valor de la celda A1 en `Name`.
   
  [!code-csharp[csProgGuideIndexedProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#3)]  
   

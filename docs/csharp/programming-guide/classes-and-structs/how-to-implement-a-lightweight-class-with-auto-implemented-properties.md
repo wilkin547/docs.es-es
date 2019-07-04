@@ -6,24 +6,28 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: be4d7e5cf4d2f7c117766858dbba9c7c59c74b73
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267686"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398498"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Procedimiento Implementar una clase ligera con propiedades autoimplementadas (Guía de programación de C#)
-En este ejemplo se muestra cómo crear una clase ligera inmutable que solo sirve para encapsular un conjunto de propiedades autoimplementadas. Use este tipo de construcción en lugar de un struct cuando deba utilizar una semántica de tipo de referencia.  
-  
- Puede crear una propiedad inmutable de dos maneras.  Puede declarar el descriptor de acceso [set](../../../csharp/language-reference/keywords/set.md) como [private](../../../csharp/language-reference/keywords/private.md).  La propiedad solo se puede establecer dentro del tipo, pero es inmutable a los consumidores.  En su lugar puede declarar solo el descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md), que hace que la propiedad sea inmutable en cualquier lugar excepto en el constructor del tipo.  
-  
- Cuando se declara un descriptor de acceso `set` privado, no se puede usar un inicializador de objeto para inicializar la propiedad. Se debe utilizar un constructor o un método factory.  
-  
-## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestran dos maneras de implementar una clase inmutable que tenga propiedades autoimplementadas. Cada forma declara una de las propiedades con un `set` privado y una de las propiedades solamente con un `get`.  La primera clase usa un constructor solo para inicializar las propiedades y la segunda clase utiliza un método factory estático que llama a un constructor.  
-  
-```csharp  
+
+En este ejemplo se muestra cómo crear una clase ligera inmutable que solo sirve para encapsular un conjunto de propiedades autoimplementadas. Use este tipo de construcción en lugar de un struct cuando deba utilizar una semántica de tipo de referencia.
+
+Puede crear una propiedad inmutable de dos maneras:
+- Puede declarar el descriptor de acceso [set](../../../csharp/language-reference/keywords/set.md) como [private](../../../csharp/language-reference/keywords/private.md).  La propiedad solo se puede establecer dentro del tipo, pero es inmutable a los consumidores.
+
+  Cuando se declara un descriptor de acceso `set` privado, no se puede usar un inicializador de objeto para inicializar la propiedad. Se debe utilizar un constructor o un método factory.
+- Puede declarar solo el descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md), que hace que la propiedad sea inmutable en cualquier lugar excepto en el constructor del tipo.
+
+## <a name="example"></a>Ejemplo
+
+En el siguiente ejemplo se muestran dos maneras de implementar una clase inmutable que tenga propiedades autoimplementadas. Cada forma declara una de las propiedades con un `set` privado y una de las propiedades solamente con un `get`.  La primera clase usa un constructor solo para inicializar las propiedades y la segunda clase utiliza un método factory estático que llama a un constructor.
+
+```csharp
 // This class is immutable. After an object is created,
 // it cannot be modified from outside the class. It uses a
 // constructor to initialize its properties.
@@ -102,18 +106,18 @@ public class Program
         Console.ReadKey();
     }
 }
-  
-/* Output:  
-    Terry Adams, 123 Main St.  
-    Fadi Fakhouri, 345 Cypress Ave.  
-    Hanying Feng, 678 1st Ave  
-    Cesar Garcia, 12 108th St.  
-    Debra Garcia, 89 E. 42nd St.  
-*/  
-```  
-  
- El compilador crea campos de respaldo para cada propiedad autoimplementada. No se puede acceder a los campos directamente desde el código fuente.  
-  
+
+/* Output:
+    Terry Adams, 123 Main St.
+    Fadi Fakhouri, 345 Cypress Ave.
+    Hanying Feng, 678 1st Ave
+    Cesar Garcia, 12 108th St.
+    Debra Garcia, 89 E. 42nd St.
+*/
+```
+
+El compilador crea campos de respaldo para cada propiedad autoimplementada. No se puede acceder a los campos directamente desde el código fuente.
+
 ## <a name="see-also"></a>Vea también
 
 - [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)

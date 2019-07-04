@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet add package
 description: El comando “dotnet add package” constituye una opción práctica para agregar la referencia de un paquete de NuGet a un proyecto.
-ms.date: 04/24/2019
-ms.openlocfilehash: 82f178026b46eb0237243b8ae49d17fbcc1af6ec
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.date: 06/26/2019
+ms.openlocfilehash: f387d32cbf706e1711439e393c1a7811bc8f47bd
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959240"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422059"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -25,7 +25,7 @@ ms.locfileid: "65959240"
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>DESCRIPCIÓN
 
 El comando `dotnet add package` constituye una opción práctica para agregar una referencia de paquete a un archivo del proyecto. Después de ejecutar el comando, existe una comprobación de compatibilidad para garantizar que el paquete es compatible con los marcos del proyecto. Si se pasa la comprobación, un elemento `<PackageReference>` se agrega al archivo del proyecto y [dotnet restore](dotnet-restore.md) se ejecuta.
 
@@ -82,7 +82,7 @@ El archivo *ToDo.csproj* contiene ahora un elemento [`<PackageReference>`](/nuge
 
 * **`--package-directory <PACKAGE_DIRECTORY>`**
 
-  Directorio donde quiere restaurar los paquetes.
+  Directorio donde quiere restaurar los paquetes. La ubicación predeterminada de restauración de paquetes es `%userprofile%\.nuget\packages` en Windows y `~/.nuget/packages` en macOS y Linux. Para obtener más información, vea [Administración de las carpetas de paquetes globales, de caché y temporales in NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders).
 
 * **`-s|--source <SOURCE>`**
 
@@ -111,3 +111,8 @@ El archivo *ToDo.csproj* contiene ahora un elemento [`<PackageReference>`](/nuge
   ```console
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
+
+## <a name="see-also"></a>Vea también
+
+- [Administración de las carpetas de paquetes globales, de caché y temporales en NuGet](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
+- [Control de versiones de paquetes NuGet](https://docs.microsoft.com/nuget/reference/package-versioning)

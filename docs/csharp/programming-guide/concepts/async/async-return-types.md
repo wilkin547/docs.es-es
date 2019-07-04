@@ -2,12 +2,12 @@
 title: Tipos de valor devueltos asincrónicos (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 327168e3ac77ab1ed7c9841d592781c704839660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca429db9b3ad81555df3c7e02d8827136734e26c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599784"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347737"
 ---
 # <a name="async-return-types-c"></a>Tipos de valor devueltos asincrónicos (C#)
 Los métodos asincrónicos pueden tener los siguientes tipos de valor devuelto:

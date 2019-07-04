@@ -7,15 +7,16 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eae57ae1f285e7f0e44c49e3d54fbd81bb4be591
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583108"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398428"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Saber cuándo utilizar las palabras clave Override y New (Guía de programación de C#)
-En C#, un método de una clase derivada puede tener el mismo nombre que un método de la clase base. Se puede especificar cómo interactúan los métodos mediante las palabras clave [new](../../../csharp/language-reference/keywords/new.md) y [override](../../../csharp/language-reference/keywords/override.md). El modificador `override` *extiende* el método de clase base y el modificador `new` lo *oculta*. En los ejemplos de este tema se ilustra la diferencia.  
+
+En C#, un método de una clase derivada puede tener el mismo nombre que un método de la clase base. Se puede especificar cómo interactúan los métodos mediante las palabras clave [new](../../../csharp/language-reference/keywords/new-modifier.md) y [override](../../../csharp/language-reference/keywords/override.md). El modificador `override` *extiende* el método de clase base `virtual` y el modificador `new` *oculta* un método de clase base accesible. En los ejemplos de este tema se ilustra la diferencia.  
   
  En una aplicación de consola, declare las dos clases siguientes, `BaseClass` y `DerivedClass`. `DerivedClass` hereda de `BaseClass`.  
   

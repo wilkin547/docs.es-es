@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1cc4b691763c1aff4bacc2935a0a6cf32c880180
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210144"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422613"
 ---
 # <a name="runtime-callable-wrapper"></a>Contenedor al que se puede llamar en tiempo de ejecución
 Common Language Runtime expone objetos COM mediante un proxy denominado el contenedor RCW (Runtime Callable Wrapper). Aunque el contenedor RCW aparece como un objeto corriente para los clientes .NET, su función principal es calcular referencias de llamadas entre un cliente .NET y un objeto COM.  
@@ -43,7 +43,7 @@ En la imagen siguiente se muestra el proceso para obtener acceso a objetos COM a
   
  El contenedor RCW consume las interfaces enumeradas en la siguiente tabla, expuestas por el objeto que encapsula.  
   
-|Interfaz|Descripción|  
+|Interfaz|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |**IDispatch**|Para el enlace en tiempo de ejecución a objetos COM mediante reflexión.|  
 |**IErrorInfo**|Proporciona una descripción textual del error, su origen, un archivo de ayuda, contexto de ayuda y el GUID de la interfaz que definió el error (siempre **GUID_NULL** para las clases. NET).|  
@@ -52,7 +52,7 @@ En la imagen siguiente se muestra el proceso para obtener acceso a objetos COM a
   
  Opcionalmente, el contenedor RCW consume las interfaces enumeradas en la siguiente tabla, expuestas por el objeto que encapsula.  
   
-|Interfaz|Descripción|  
+|Interfaz|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |**IConnectionPoint** e **IConnectionPointContainer**|El contenedor RCW convierte los objetos que exponen el estilo de evento de punto de conexión en eventos basados en delegado.|  
 |**IDispatchEx**|Si la clase implementa **IDispatchEx**, el contenedor RCW implementa **IExpando**. La interfaz **IDispatchEx** es una extensión de la interfaz **IDispatch** que, a diferencia de **IDispatch**, permite enumerar, agregar, eliminar y llamar a miembros con distinción de mayúsculas y minúsculas.|  

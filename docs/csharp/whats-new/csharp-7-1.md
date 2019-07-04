@@ -2,12 +2,12 @@
 title: Novedades de C# 7.1
 description: Información general sobre las nuevas características en C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881551"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347617"
 ---
 # <a name="whats-new-in-c-71"></a>Novedades de C# 7.1
 
@@ -29,6 +29,13 @@ Las nuevas características de lenguaje de esta versión son las siguientes:
 Por último, el compilador tiene dos opciones, `-refout` y `-refonly`, que controlan la [generación de ensamblados de referencia](#reference-assembly-generation).
 
 Para usar las características más recientes en una versión secundaria, tendrá que [configurar la versión del idioma de compilador](../language-reference/configure-language-version.md) y seleccionar la versión.
+
+En el resto de este artículo se proporciona información general sobre cada característica. Para cada característica, conocerá el razonamiento subyacente. Aprenderá la sintaxis. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
+
+1. Instalar la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clonar el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Establecer el directorio actual en el subdirectorio *csharp7* para el repositorio *try-samples*.
+1. Ejecute `dotnet try`.
 
 ## <a name="async-main"></a>Async main
 

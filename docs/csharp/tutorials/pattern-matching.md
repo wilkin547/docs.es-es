@@ -3,12 +3,12 @@ title: Uso de las características de coincidencia de patrones para ampliar los 
 description: En este tutorial avanzado se muestra cómo usar técnicas de coincidencia de patrones para crear una funcionalidad con datos y algoritmos creados por separado.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378080"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397833"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Uso de las características de coincidencia de patrones para ampliar los tipos de datos
 
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-A la autoridad encargada de los peajes no le preocupa el número de pasajeros en los camiones de reparto. En su lugar, se cobra más en función de la clase de peso de los camiones. A los camiones de más de 2268 kilos se les cobran USD 5 adicionales. Los camiones livianos, por debajo de los 1360 kilos, tienen un descuento de 2 USD. Esta regla se implementa con el código siguiente:
+A la autoridad encargada de los peajes no le preocupa el número de pasajeros en los camiones de reparto. Alternativamente, ajustan el importe del peaje en base a la clase de peso de los camiones, como sigue:
+
+- A los camiones de más de 2268 kilos se les cobran USD 5 adicionales.
+- Los camiones livianos, por debajo de los 1360 kilos, tienen un descuento de 2 USD.
+
+Esta regla se implementa con el código siguiente:
 
 ```csharp
 vehicle switch

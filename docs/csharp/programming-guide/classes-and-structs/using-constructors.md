@@ -5,23 +5,24 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7422267d6ce067ed30d0fbd4be8de2fd122b4a90
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 14ff272fe940c265dc8984d6b20985bb2d2ba12d
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200642"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398250"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilizar constructores (Guía de programación de C#)
+
 Cuando se crea una [class](../../../csharp/language-reference/keywords/class.md) o un [struct](../../../csharp/language-reference/keywords/struct.md), se llama a su constructor. Los constructores tienen el mismo nombre que la class o el struct y suelen inicializar los miembros de datos del nuevo objeto.  
   
- En el ejemplo siguiente, una clase denominada `Taxi` se define mediante un constructor simple. Luego, se crea una instancia de la clase con el operador [new](../../../csharp/language-reference/keywords/new.md). El constructor `Taxi` se invoca con el operador `new` inmediatamente después de asignar memoria para el nuevo objeto.  
+ En el ejemplo siguiente, una clase denominada `Taxi` se define mediante un constructor simple. Luego, se crea una instancia de la clase con el operador [new](../../../csharp/language-reference/operators/new-operator.md). El constructor `Taxi` se invoca con el operador `new` inmediatamente después de asignar memoria para el nuevo objeto.  
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
- Un constructor que no toma ningún parámetro se denomina *constructor predeterminado*. Los constructores predeterminados se invocan cada vez que se crea una instancia de un objeto mediante el operador `new` y no se especifica ningún argumento en `new`. Para obtener más información, vea [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md) (Constructores de instancias [Guía de programación de C#]).  
+ Un constructor que no toma ningún parámetro se denomina *constructor sin parámetros*. Los constructores predeterminados se invocan cada vez que se crea una instancia de un objeto mediante el operador `new` y no se especifica ningún argumento en `new`. Para obtener más información, vea [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md) (Constructores de instancias [Guía de programación de C#]).  
   
- A menos que la clase sea [static](../../../csharp/language-reference/keywords/static.md), las clases sin constructores tienen un constructor público predeterminado por el compilador de C# con el fin de habilitar la creación de instancias de clase. Para más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ A menos que la clase sea [static](../../../csharp/language-reference/keywords/static.md), las clases sin constructores tienen un constructor público sin parámetros por el compilador de C# con el fin de habilitar la creación de instancias de clase. Para más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   
  Puede impedir que se cree una instancia de una clase convirtiendo el constructor en privado, de la manera siguiente:  
   
@@ -29,7 +30,7 @@ Cuando se crea una [class](../../../csharp/language-reference/keywords/class.md)
   
  Para obtener más información, vea [Private Constructors](../../../csharp/programming-guide/classes-and-structs/private-constructors.md) (Constructores privados [Guía de programación de C#]).  
   
- Los constructores de tipos [struct](../../../csharp/language-reference/keywords/struct.md) son similares a los constructores de clases, pero `structs` no puede contener un constructor predeterminado explícito porque el compilador proporciona uno automáticamente. Este constructor inicializa cada campo del `struct` en los valores predeterminados. Para obtener más información, vea [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md) (Tabla de valores predeterminados [Referencia de C#]). Pero este constructor predeterminado solo se invoca si las instancias de `struct` se crean con `new`. Por ejemplo, este código usa el constructor predeterminado para <xref:System.Int32>, por lo que se tiene la certeza de que el entero se inicializa:  
+ Los constructores de tipos [struct](../../../csharp/language-reference/keywords/struct.md) son similares a los constructores de clases, pero `structs` no puede contener un constructor sin parámetros explícito porque el compilador proporciona uno automáticamente. Este constructor inicializa cada campo del `struct` en los valores predeterminados. Para obtener más información, vea [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md) (Tabla de valores predeterminados [Referencia de C#]). Pero este constructor sin parámetros solo se invoca si las instancias de `struct` se crean con `new`. Por ejemplo, este código usa el constructor sin parámetros para <xref:System.Int32>, por lo que se tiene la certeza de que el entero se inicializa:  
   
 ```csharp  
 int i = new int();  
@@ -52,9 +53,9 @@ b = 33;      // Or assign it before using it.
 Console.WriteLine("{0}, {1}", a, b);  
 ```  
   
- Por lo que no es necesario llamar al constructor predeterminado para un tipo de valor.  
+ Por lo que no es necesario llamar al constructor sin parámetros para un tipo de valor.  
   
- Tanto las clases como los `structs` pueden definir constructores que toman parámetros. Los constructores que toman parámetros deben llamarse mediante una instrucción `new` o [base](../../../csharp/language-reference/keywords/base.md). Las clases y `structs` también pueden definir varios constructores y no es necesario definir un constructor predeterminado. Por ejemplo:  
+ Tanto las clases como los `structs` pueden definir constructores que toman parámetros. Los constructores que toman parámetros deben llamarse mediante una instrucción `new` o [base](../../../csharp/language-reference/keywords/base.md). Las clases y `structs` también pueden definir varios constructores y no es necesario definir un constructor sin parámetros. Por ejemplo:  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -68,13 +69,13 @@ Console.WriteLine("{0}, {1}", a, b);
   
  En este ejemplo, se llama al constructor de la clase base antes de ejecutar el bloque del constructor. La palabra clave `base` puede usarse con o sin parámetros. Los parámetros del constructor se pueden usar como parámetros en `base` o como parte de una expresión. Para obtener más información, vea [base](../../../csharp/language-reference/keywords/base.md).  
   
- En una clase derivada, si un constructor de clase base no se llama explícitamente con la palabra clave `base`, se llama implícitamente al constructor predeterminado, si hay alguno. Esto significa que las siguientes declaraciones del constructor son en efecto iguales:  
+ En una clase derivada, si un constructor de clase base no se llama explícitamente con la palabra clave `base`, se llama implícitamente al constructor sin parámetros, si hay alguno. Esto significa que las siguientes declaraciones del constructor son en efecto iguales:  
   
  [!code-csharp[csProgGuideObjects#58](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#58)]  
   
  [!code-csharp[csProgGuideObjects#57](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#57)]  
   
- Si una clase base no proporciona un constructor predeterminado, la clase derivada debe realizar una llamada explícita a un constructor base mediante `base`.  
+ Si una clase base no proporciona un constructor sin parámetros, la clase derivada debe realizar una llamada explícita a un constructor base mediante `base`.  
   
  Un constructor puede invocar otro constructor en el mismo objeto mediante la palabra clave [this](../../../csharp/language-reference/keywords/this.md). Igual que `base`, `this` puede usarse con o sin parámetros. Además, los parámetros del constructor están disponibles como parámetros en `this` o como parte de una expresión. Por ejemplo, el segundo constructor del ejemplo anterior se puede reescribir con `this`:  
   

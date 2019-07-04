@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 010077cd95a9cf6bd7d4c22a54abc02b167755e8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8af6d7d91efef81569e6f783352ec89d260cdd13
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584312"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347598"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Procedimiento Publicar eventos que cumplan las directrices de .NET Framework (Guía de programación de C#)
 En el siguiente procedimiento se muestra cómo agregar eventos que cumplan el patrón de .NET Framework estándar para las clases y los structs. Todos los eventos de la biblioteca de clases de .NET Framework se basan en el delegado <xref:System.EventHandler>, que se define de la siguiente manera:  
@@ -20,7 +20,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 ```  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] incluye una versión genérica de este delegado, <xref:System.EventHandler%601>. En los siguientes ejemplos se muestra cómo usar las dos versiones.  
+>  .NET Framework 2.0 incluye una versión genérica de este delegado, <xref:System.EventHandler%601>. En los siguientes ejemplos se muestra cómo usar las dos versiones.  
   
  Aunque los eventos de las clases que defina se pueden basar en cualquier tipo de delegado válido, incluidos los delegados que devuelven un valor, por lo general se recomienda basar los eventos en el patrón de .NET Framework mediante <xref:System.EventHandler>, como se muestra en el ejemplo siguiente.  
   

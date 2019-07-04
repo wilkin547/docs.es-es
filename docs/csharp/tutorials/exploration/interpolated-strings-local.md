@@ -4,12 +4,12 @@ description: En este tutorial se muestra cómo usar la característica de interp
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: a39ed5b320f16004f4ddcb35a7fcee5869b97137
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195898"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397806"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Uso de la interpolación de cadenas para construir cadenas con formato
 
@@ -54,7 +54,7 @@ En el ejemplo siguiente, en primer lugar se define un tipo de datos de [clase](.
 public Vegetable(string name) => Name = name;
 ```
 
-Luego se crea una instancia de la clase `Vegetable` denominada `item` al usar la [palabra clave `new`](../../language-reference/keywords/new-operator.md) y al proporcionar un parámetro de nombre para el constructor `Vegetable`:
+Luego se crea una instancia de la clase `Vegetable` denominada `item` al usar el [operador `new`](../../language-reference/operators/new-operator.md) y al proporcionar un parámetro de nombre para el constructor `Vegetable`:
 
 ```csharp
 var item = new Vegetable("eggplant");

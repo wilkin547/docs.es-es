@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f6f6fa8afe2e4aaea6e9f2b96329542b7fe5292
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607689"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423407"
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 <a name="top"></a> Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
@@ -31,7 +31,7 @@ ms.locfileid: "64607689"
   
 - La evidencia de entrada se combina con la evidencia recopilada por el cargador para crear un juego final de evidencias que se utiliza en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load**, **Assembly.LoadFrom** y **Activator.CreateInstance**.  
   
-- La evidencia de entrada se utiliza sin modificaciones como el conjunto final de evidencias utilizadas en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load(byte[])** y **AppDomain.DefineDynamicAssembly()**.  
+- La evidencia de entrada se utiliza sin modificaciones como el conjunto final de evidencias utilizadas en la resolución de directivas. Entre los métodos que utilizan esta semántica se incluyen: **Assembly.Load(byte[])** y **AppDomain.DefineDynamicAssembly()** .  
   
  Se pueden conceder permisos opcionales mediante la [directiva de seguridad](../../../docs/framework/misc/code-access-security-basics.md) establecida en el equipo donde se ejecutará el ensamblado. Si desea que su código controle todas las posibles excepciones de seguridad, puede:  
   

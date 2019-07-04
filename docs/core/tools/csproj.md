@@ -2,12 +2,12 @@
 title: Adiciones al formato csproj para .NET Core
 description: Conozca las diferencias entre los archivos csproj de .NET Core y los existentes
 ms.date: 04/08/2019
-ms.openlocfilehash: 9c1f084af68010632cbe595858b2f242d37af598
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a9b1caf6068a7161258a6825ed16894ac41b3be7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631802"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397536"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adiciones al formato csproj para .NET Core
 
@@ -74,7 +74,7 @@ En la siguiente tabla se muestra qué elementos y qué [globs](https://en.wikipe
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Compile           | \*\*/\*.cs (u otras extensiones de lenguaje) | \*\*/\*.user;  \*\*/\*.\*proj;  \*\*/\*.sln;  \*\*/\*.vssscc  | N/D                      |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/D                      |
-| Ninguna              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+| None              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
 > **Glob para excluir** siempre excluye las carpetas `./bin` y `./obj`, que se representan mediante las propiedades `$(BaseOutputPath)` y `$(BaseIntermediateOutputPath)` de MSBuild, respectivamente. En su conjunto, todos los "exclude" se representan mediante `$(DefaultItemExcludes)`.
@@ -250,7 +250,7 @@ Una lista separada por punto y coma de los autores de los paquetes, que coincide
 
 Una descripción larga del paquete para su visualización en la interfaz de usuario.
 
-### <a name="description"></a>Descripción
+### <a name="description"></a>DESCRIPCIÓN
 
 Una descripción larga del ensamblado. Si `PackageDescription` no se especifica, esta propiedad también se utiliza como la descripción del paquete.
 

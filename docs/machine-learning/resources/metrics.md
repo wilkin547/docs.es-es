@@ -2,19 +2,19 @@
 title: Métricas de ML.NET
 description: Introducción a las métricas que se utilizan para evaluar el rendimiento de un modelo de ML.NET
 ms.date: 04/29/2019
-author: ''
-ms.openlocfilehash: 802f0a8fd32c492c8d9f89933b183802cb178cb3
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+author: natke
+ms.openlocfilehash: 45176902a195906e7b5cffd24fc9da839406ad9d
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053040"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410534"
 ---
 # <a name="model-evaluation-metrics-in-mlnet"></a>Métricas de evaluación de modelos en ML.NET
 
 ## <a name="metrics-for-binary-classification"></a>Métricas para la clasificación binaria
 
-| Métricas   |      Descripción      |  Buscar |
+| Métricas   |      DESCRIPCIÓN      |  Buscar |
 |-----------|-----------------------|-----------|
 | **Precisión** |  La [precisión](https://en.wikipedia.org/wiki/Accuracy_and_precision#In_binary_classification) es la proporción de predicciones correctas con un conjunto de datos de prueba. Es la relación entre el número de predicciones correctas y el número total de ejemplos de entrada. Funciona bien solo si hay un número similar de muestras que pertenecen a cada clase.| **Cuanto más cerca de 1,00, mejor**. Pero exactamente 1,00 indica un problema (normalmente: fuga de etiqueta/destino, sobreajuste o pruebas con datos de entrenamiento). Cuando los datos de prueba están desequilibrados (donde la mayoría de las instancias pertenece a una de las clases), el conjunto de datos es muy pequeño o las puntuaciones se acercan a 0,00 o 1,00, la precisión no captura realmente la eficacia de un clasificador y es necesario comprobar métricas adicionales. |
 | **AUC** |    [aucROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) o *Área bajo la curva*: Esto mide el área bajo la curva que se creó limpiando la tasa de positivos verdaderos frente a la tasa de falsos positivos.  |   **Cuanto más cerca de 1,00, mejor**. Para que un modelo sea aceptable, debe ser superior a 0,50. Un modelo con AUC de 0,50 o menos no tiene ningún valor. |
@@ -29,7 +29,7 @@ Para obtener más información sobre las métricas de clasificación binaria, le
 
 ## <a name="metrics-for-multi-class-classification"></a>Métricas para la clasificación multiclase
 
-| Métricas   |      Descripción      |  Buscar |
+| Métricas   |      DESCRIPCIÓN      |  Buscar |
 |-----------|-----------------------|-----------|
 | **Microprecisión** |  La [precisión de micropromedio](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MicroAccuracy) agrega las contribuciones de todas las clases para calcular la métrica promedio. Es la fracción de instancias que se predijeron correctamente. El micropromedio no tiene en cuenta la pertenencia a una clase. Básicamente, todos los pares de ejemplo y clase contribuyen del mismo modo a la métrica de precisión. | **Cuanto más cerca de 1,00, mejor**. En una tarea de clasificación multiclase, la microprecisión es preferible a la macroprecisión si se sospecha que podría haber un desequilibrio de clases (por ejemplo, podría tener muchos más ejemplos de una clase que de otras clases).|
 | **Macroprecisión** | La [precisión de macropromedio](xref:Microsoft.ML.Data.MulticlassClassificationMetrics.MacroAccuracy) es la precisión promedio en el nivel de clase. La precisión de cada clase se calcula y la macroprecisión es el promedio de estas precisiones. Básicamente, todas las clases contribuyen del mismo modo a la métrica de precisión. Las clases minoritarias tienen el mismo peso que las clases más grandes. La métrica de macropromedio proporciona el mismo peso a cada clase, independientemente de cuántas instancias de esa clase contiene el conjunto de datos. |  **Cuanto más cerca de 1,00, mejor**.  Calcula la métrica de forma independiente para cada clase y, a continuación, toma la media (por lo tanto, se consideran todas las clases de igual forma) |
@@ -52,7 +52,7 @@ Para obtener más información sobre las métricas de clasificación multiclase,
 
 ## <a name="metrics-for-regression"></a>Métricas de regresión
 
-| Métricas   |      Descripción      |  Buscar |
+| Métricas   |      DESCRIPCIÓN      |  Buscar |
 |-----------|-----------------------|-----------|
 | **R cuadrado** |  [R cuadrado (R2)](https://en.wikipedia.org/wiki/Coefficient_of_determination), o el *coeficiente de determinación* representan la eficacia predictiva del modelo como un valor comprendido entre -inf y 1,00. 1,00 significa que hay un ajuste perfecto y, dado que el ajuste puede ser arbitrariamente deficiente, las puntuaciones pueden ser negativas. Una puntuación de 0,00 significa que el modelo consiste en adivinar el valor esperado para la etiqueta. R2 mide la proximidad de los valores de datos de prueba reales a los valores de predicción. | **Cuanto más cerca de 1,00, es mejor la calidad**. Sin embargo, a veces valores bajos de R cuadrado (por ejemplo, 0,50) pueden ser completamente normales o lo suficientemente buenos en un escenario, y los valores altos de R cuadrado no siempre son buenos y pueden ser sospechosos. |
 | **Pérdida absoluta** |  La [pérdida absoluta](https://en.wikipedia.org/wiki/Mean_absolute_error) o la *desviación media (MAE)* mide la proximidad de las predicciones a los resultados reales. Se trata de la media de todos los errores del modelo, donde el error del modelo es la distancia absoluta entre el valor de la etiqueta predicho y el valor de la etiqueta correcto. Este error de predicción se calcula para cada registro del conjunto de datos de prueba. Por último, el valor medio se calcula para todas las desviaciones medias registradas.| **Cuanto más cerca de 0,00, es mejor la calidad.** Tenga en cuenta que la desviación media utiliza la misma escala que los datos que se van a medir (no se normaliza en un intervalo específico). La pérdida absoluta, la pérdida cuadrática y la pérdida de RMS solo pueden usarse para realizar comparaciones entre los modelos del mismo conjunto de datos o el conjunto de datos y una distribución de valores de etiqueta similar. |

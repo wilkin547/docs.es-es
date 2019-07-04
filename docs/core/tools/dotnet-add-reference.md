@@ -1,13 +1,13 @@
 ---
 title: Comando dotnet-add reference
 description: El comando dotnet add reference constituye una opción práctica para agregar referencias entre proyectos.
-ms.date: 04/24/2019
-ms.openlocfilehash: e90f95527d4f14c7851ccd8d30201daaaaefa2ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 6e0ca40e701b62dcc18147f9de83cafa6aa2f50f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631941"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422001"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -23,7 +23,7 @@ ms.locfileid: "65631941"
 
 ## <a name="synopsis"></a>Sinopsis
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]`
+`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
 ## <a name="description"></a>Descripción
 
@@ -56,6 +56,10 @@ El comando `dotnet add reference` constituye una opción práctica para agregar 
 * **`-f|--framework <FRAMEWORK>`**
 
   Agrega referencias de proyecto solo cuando apunta a un[marco](../../standard/frameworks.md) específico.
+
+* **`--interactive`**
+
+  Permite que el comando se detenga y espere la entrada o acción del usuario (por ejemplo, completar la autenticación). Disponible desde el SDK de .NET Core 3.0.
 
 ## <a name="examples"></a>Ejemplos
 

@@ -2,12 +2,12 @@
 title: Comando dotnet test
 description: El comando “dotnet test” se usa para ejecutar pruebas unitarias en un proyecto determinado.
 ms.date: 05/29/2018
-ms.openlocfilehash: 1b2a3917a930db0c0a49ebea41f568aaf4a58ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b67273f549edd7712237756a5aba13d5cb59a61
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535287"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410366"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -48,7 +48,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>DESCRIPCIÓN
 
 El comando `dotnet test` se usa para ejecutar pruebas unitarias en un proyecto determinado. El comando `dotnet test` inicia la aplicación de la consola de ejecutor de pruebas especificada para un proyecto. El ejecutor de pruebas ejecuta las pruebas que se definen para un marco de pruebas unitarias (por ejemplo, MSTest, NUnit o xUnit) y notifica el éxito o fracaso de cada prueba. Si todas las pruebas son correctas, el ejecutor de pruebas devuelve 0 como un código de salida; en caso contrario, si se produce algún error en una prueba, devuelve 1. El ejecutor de pruebas y la biblioteca de pruebas unitarias se empaquetan como paquetes de NuGet y se restauran como dependencias ordinarias para el proyecto.
 
@@ -120,7 +120,7 @@ El directorio donde se guardarán los resultados de pruebas. Si el directorio es
 
 `-s|--settings <SETTINGS_FILE>`
 
-Configuración que se usará al ejecutar las pruebas.
+El archivo `.runsettings` que se usará para ejecutar las pruebas. [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -190,7 +190,7 @@ El directorio donde se guardarán los resultados de pruebas. Si el directorio es
 
 `-s|--settings <SETTINGS_FILE>`
 
-Configuración que se usará al ejecutar las pruebas.
+El archivo `.runsettings` que se usará para ejecutar las pruebas. [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 
@@ -240,7 +240,7 @@ Directorio donde se encuentran los archivos binarios que se ejecutarán.
 
 `-s|--settings <SETTINGS_FILE>`
 
-Configuración que se usará al ejecutar las pruebas.
+El archivo `.runsettings` que se usará para ejecutar las pruebas. [Configuración de pruebas unitarias con un archivo `.runsettings`.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file?view=vs-2019)
 
 `-t|--list-tests`
 

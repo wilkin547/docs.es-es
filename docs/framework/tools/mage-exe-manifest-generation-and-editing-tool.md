@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 549eca835b2161429668a2ee340a71dfae658524
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877575"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422355"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Herramienta de generación y edición de manifiestos)
 
@@ -32,7 +32,7 @@ Mage [commands] [commandOptions]
 
 En la tabla siguiente se muestran los comandos que admite *Mage.exe*. Para más información sobre las opciones que admiten estos comandos, vea [Opciones de los comandos New y Update](#new-and-update-command-options) y [Opciones del comando Sign](#sign-command-options).
 
-|Comando|Descripción|
+|Comando|DESCRIPCIÓN|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Borra la memoria caché de aplicaciones descargadas de todas las aplicaciones que solo están disponibles en línea.|
 |**-n, -New** *fileType [newOptions]*|Crea un nuevo archivo del tipo especificado. Los tipos válidos son:<br /><br /> -   `Deployment`: Crea un nuevo manifiesto de implementación.<br />-   `Application`: Crea un nuevo manifiesto de aplicación.<br /><br /> Si no especifica parámetros adicionales con este comando, se creará un archivo del tipo adecuado con etiquetas y valores de atributo predeterminados adecuados.<br /><br /> Use la opción **-ToFile** (consulte la tabla siguiente) para especificar el nombre de archivo y la ruta de acceso del nuevo archivo.<br /><br /> Use la opción **-FromDirectory** (consulte la tabla siguiente) para crear un manifiesto de aplicación con todos los ensamblados de una aplicación agregados a la sección \<dependency> del manifiesto.|
@@ -45,7 +45,7 @@ En la tabla siguiente se muestran los comandos que admite *Mage.exe*. Para más 
 
 En la tabla siguiente se muestran las opciones que admiten los comandos `-New` y `-Update`:
 
-|Opciones|Valor predeterminado|Se aplica a|Descripción|
+|Opciones|Valor predeterminado|Se aplica a|DESCRIPCIÓN|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Manifiestos de aplicación.<br /><br /> Manifiestos de implementación.|Especifica el algoritmo con el que se generarán los resúmenes de dependencia. El valor debe ser "sha256RSA" o "sha1RSA.<br /><br /> Úselo con la opción "-Update". Esta opción se omite cuando se usa la opción "-Sign".|
 |**-appc, -AppCodeBase** `manifestReference`||Manifiestos de implementación.|Inserta una dirección URL o una referencia a la ruta de acceso del archivo en el archivo de manifiesto de aplicación. Este valor debe ser la ruta de acceso completa al manifiesto de aplicación.|
@@ -57,7 +57,7 @@ En la tabla siguiente se muestran las opciones que admiten los comandos `-New` y
 |**-if, -IconFile**  `filePath`||Manifiestos de aplicación.|Especifica la ruta de acceso completa a un archivo de icono .ICO. Este icono aparece junto al nombre de la aplicación en el menú Inicio y en su entrada Agregar o quitar programas. Si no se especifica ningún icono, se usa el icono predeterminado.|
 |**-ip, -IncludeProviderURL**  `url`|true|Manifiestos de implementación.|Indica si el manifiesto de implementación incluye el valor de ubicación de actualizaciones establecido por **-ProviderURL**.|
 |**-i, -Install** `willInstall`|true|Manifiestos de implementación.|Indica si la aplicación ClickOnce debe instalarse en el equipo local o si debe ejecutarse desde la Web. Cuando se instala una aplicación, esta aparece en el menú **Inicio** de Windows. Los valores válidos son "true" o "t", y "false" o "f".<br /><br /> Si especifica la opción **-MinVersion** y un usuario tiene instalada una versión anterior a **-MinVersion** , forzará la instalación de la aplicación, independientemente del valor que pase a **-Install**.<br /><br /> Esta opción no se puede combinar con la opción **-ProviderURL** . Si intenta especificar ambas para el mismo manifiesto, provocará un error.|
-|**-kc, -KeyContainer** `name`||Todos los tipos de archivo.|Especifica el contenedor de claves que contiene el nombre de la clave privada. Esta opción requiere la opción **CyproProvider**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
+|**-kc, -KeyContainer** `name`||Todos los tipos de archivo.|Especifica el contenedor de claves que contiene el nombre de la clave privada. Esta opción requiere la opción **CryptoProvider**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
 |**-mv, -MinVersion**  `[version]`|La versión indicada en el manifiesto de implementación de ClickOnce tal y como especifica la marca **-Version** .|Manifiestos de implementación.|La versión mínima de esta aplicación que un usuario puede ejecutar. Esta marca hace que la versión con nombre de la aplicación sea una actualización necesaria. Si publica una versión del producto con una actualización para un cambio importante o una reparación de un error crítico de seguridad, puede usar esta marca para especificar que se debe instalar esta actualización y que el usuario no puede continuar ejecutando las versiones anteriores.<br /><br /> `version` tiene la misma semántica que el argumento de la marca **-Version** .|
 |**-n, -Name** `nameString`|Implementar|Todos los tipos de archivo.|El nombre usado para identificar la aplicación. ClickOnce usará este nombre para identificar la aplicación en el menú **Inicio** (si la aplicación se ha configurado para instalarse automáticamente) y en los cuadros de diálogo Elevación de permisos. **Nota:**  Si va a actualizar un manifiesto existente y no especifica el nombre del publicador con esta opción, *Mage.exe* actualiza el manifiesto con el nombre de la organización definido en el equipo. Si desea usar otro nombre, utilice esta opción y especifique el nombre del publicador deseado.|
 |**-pwd, -Password** `passwd`||Todos los tipos de archivo.|La contraseña usada para firmar un manifiesto con un certificado digital. Se debe usar junto con la opción **-CertFile** .|
@@ -76,12 +76,12 @@ En la tabla siguiente se muestran las opciones que admiten los comandos `-New` y
 
 En la siguiente tabla se muestran las opciones que admite el comando `-Sign` y que se aplican a todos los tipos de archivos.
 
-|Opciones|Descripción|
+|Opciones|DESCRIPCIÓN|
 |-------------|-----------------|
 |**-cf, -CertFile** `filePath`|Especifica la ubicación de un certificado digital para firmar un manifiesto. Esta opción se puede usar junto con la opción **-Password** si el certificado requiere una contraseña para archivos de intercambio de información personal (PFX). A partir de .NET Framework 4.7, si el archivo no contiene una clave privada, se necesita una combinación de las opciones **-CryptoProvider** y **-KeyContainer** opciones.<br/><br/>A partir de .NET Framework 4.6.2, *Mage.exe* firma manifiestos con CNG así como certificados CAPI.|
 |**-ch, -CertHash** `hashSignature`|El hash de un certificado digital guardado en el almacén de certificados personal del equipo cliente. Corresponde a la propiedad de huella digital de un certificado digital que aparece en la consola de certificados de Windows.<br /><br /> `hashSignature` puede ir en mayúsculas o minúsculas y puede especificarse como cadena única, o bien, separando cada octeto de la huella digital mediante espacios y poniendo toda la huella digital entre comillas.|
 **-csp, -CryptoProvider** `provider-name`|Especifica el proveedor de servicios criptográficos (CSP) que contiene el contenedor de claves privadas. Esta opción requiere la opción **-KeyContainer**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
-|**-kc, -KeyContainer** `name`|Especifica el contenedor de claves que contiene el nombre de la clave privada. Esta opción requiere la opción **CyproProvider**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
+|**-kc, -KeyContainer** `name`|Especifica el contenedor de claves que contiene el nombre de la clave privada. Esta opción requiere la opción **CryptoProvider**.<br/><br/>Esta opción está disponible a partir de .NET Framework 4.7.|
 |**-pwd, -Password** `passwd`|La contraseña usada para firmar un manifiesto con un certificado digital. Se debe usar junto con la opción **-CertFile** .|
 |**-t, -ToFile** `filePath`|Especifica la ruta de acceso de salida del archivo que se ha creado o modificado.|
 
@@ -214,7 +214,7 @@ mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
 En el ejemplo siguiente se firma un manifiesto de implementación existente mediante un certificado digital y una clave privada del directorio de trabajo actual.
 
 ```console
-mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>Vea también

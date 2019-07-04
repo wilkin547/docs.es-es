@@ -1,22 +1,22 @@
 ---
-title: Inspección de los valores de datos intermedios durante el procesamiento de ML.NET
-description: Obtenga más información sobre cómo inspeccionar los valores reales de los datos intermedios durante el procesamiento de canalizaciones de aprendizaje de automático de ML.NET.
-ms.date: 04/29/2019
+title: Inspección de los datos intermedios durante el procesamiento de ML.NET
+description: Obtenga información sobre cómo inspeccionar los datos intermedios durante los pasos de entrenamiento del modelo, procesamiento y carga de canalización de aprendizaje automático en ML.NET.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063515"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402384"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>Inspección de los valores de datos intermedios durante el procesamiento
+# <a name="inspect-intermediate-data-during-processing"></a>Inspección de los datos intermedios durante el procesamiento
 
-Obtenga información sobre cómo inspeccionar valores durante los pasos de carga, procesamiento y entrenamiento en ML.NET.
+Obtenga información sobre cómo inspeccionar los datos intermedios durante los pasos de entrenamiento del modelo, procesamiento y carga en ML.NET. Los datos intermedios son el resultado de cada fase de la canalización de aprendizaje automático.
 
-Los datos como los representados a continuación, que se cargan en un [`IDataView`](xref:Microsoft.ML.IDataView), pueden inspeccionarse de varias maneras en ML.NET.
+Los datos intermedios, como los representados a continuación, que se cargan en un [`IDataView`](xref:Microsoft.ML.IDataView), pueden inspeccionarse de varias maneras en ML.NET.
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,9 +62,9 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>Conversión de IDataView en IEnumerable
 
-Una de las formas más rápidas de inspeccionar los valores de una clase [`IDataView`](xref:Microsoft.ML.IDataView) es convertirla en una clase [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Para convertir una clase [`IDataView`](xref:Microsoft.ML.IDataView) en [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), utilice el método [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*). 
+Una de las formas más rápidas de inspeccionar una clase [`IDataView`](xref:Microsoft.ML.IDataView) es convertirla en una clase [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601). Para convertir una clase [`IDataView`](xref:Microsoft.ML.IDataView) en [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601), utilice el método [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*). 
 
-Para optimizar el rendimiento, establezca el valor de `reuseRowObject` en `true`. De esta forma, se rellenará de forma diferida el mismo objeto con los datos de la fila actual a medida que se evalúa, en lugar de crear un nuevo objeto para cada fila del conjunto de datos.
+Para optimizar el rendimiento, establezca `reuseRowObject` en `true`. De esta forma, se rellenará de forma diferida el mismo objeto con los datos de la fila actual a medida que se evalúa, en lugar de crear un nuevo objeto para cada fila del conjunto de datos.
 
 ```csharp
 // Create an IEnumerable of HousingData objects from IDataView
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>Obtener acceso a índices específicos con IEnumerable
 
 Si solo necesita acceder a parte de los datos o a índices específicos, use [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) y establezca el valor del parámetro `reuseRowObject` en `false` para que se cree un objeto por cada una de las filas solicitadas del conjunto de datos. Después, convierta [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) en una matriz o lista.
 

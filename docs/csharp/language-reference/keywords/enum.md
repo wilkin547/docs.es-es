@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727643"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424236"
 ---
 # <a name="enum-c-reference"></a>enum (Referencia de C#)
 
@@ -35,13 +35,12 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 En esta enumeración, la secuencia de elementos debe iniciarse a partir de `1` en lugar de `0`. Sin embargo, se recomienda incluir una constante con el valor 0. Para obtener más información, vea [Tipos de enumeración](../../programming-guide/enumeration-types.md).
 
-Cada tipo de enumeración tiene un tipo subyacente, que puede ser cualquier tipo entero excepto [char](char.md). El tipo subyacente predeterminado de los elementos de la enumeración es [int](int.md). Para declarar una enumeración de otro tipo entero, como [byte](byte.md), use el carácter de dos puntos después del identificador y escriba a continuación el tipo, como se muestra en el ejemplo siguiente.
+Cada tipo de enumeración tiene un tipo subyacente, que puede ser cualquier [tipo numérico entero](../builtin-types/integral-numeric-types.md). El tipo [char](char.md) no puede ser un tipo subyacente de una enumeración. El tipo subyacente predeterminado de los elementos de la enumeración es [int](../builtin-types/integral-numeric-types.md). Para declarar una enumeración de otro tipo entero, como [byte](../builtin-types/integral-numeric-types.md), use el carácter de dos puntos después del identificador y escriba a continuación el tipo, como se muestra en el ejemplo siguiente.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-Los tipos admitidos para una enumeración son [byte](byte.md), [sbyte](sbyte.md), [short](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [long](long.md) o [ulong](ulong.md).
 
 A una variable de un tipo de enumeración se le puede asignar cualquier valor en el intervalo del tipo subyacente; los valores no se limitan a las constantes con nombre.
 
@@ -50,7 +49,7 @@ El valor predeterminado de `enum E` es el valor que produce la expresión `(E)0`
 > [!NOTE]
 > Un enumerador no puede contener espacios en blanco en su nombre.
 
-El tipo subyacente especifica la cantidad de almacenamiento asignado a cada enumerador. No obstante, se necesita una conversión explícita para convertir un tipo `enum` a un tipo entero. Por ejemplo, la siguiente instrucción asigna el enumerador `Sun` a una variable de tipo [int](int.md) utilizando una conversión de tipos para convertir de `enum` a `int`.
+El tipo subyacente especifica la cantidad de almacenamiento asignado a cada enumerador. No obstante, se necesita una conversión explícita para convertir un tipo `enum` a un tipo entero. Por ejemplo, la siguiente instrucción asigna el enumerador `Sun` a una variable de tipo [int](../builtin-types/integral-numeric-types.md) utilizando una conversión de tipos para convertir de `enum` a `int`.
 
 ```csharp
 int x = (int)Day.Sun;
@@ -101,7 +100,7 @@ Si quita `Flags`, el ejemplo muestra los siguientes valores:
 - [Referencia de C#](../index.md)
 - [Tipos de enumeración](../../programming-guide/enumeration-types.md)
 - [Palabras clave de C#](index.md)
-- [Tabla de tipos enteros](integral-types-table.md)
+- [Tipos enteros](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [Tabla de tipos integrados](built-in-types-table.md)
 - [Tabla de conversiones numéricas implícitas](implicit-numeric-conversions-table.md)
 - [Tabla de conversiones numéricas explícitas](explicit-numeric-conversions-table.md)
