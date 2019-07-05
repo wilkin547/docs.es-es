@@ -1,18 +1,18 @@
 ---
-title: Preparar los datos
+title: Preparación de los datos para la compilación de un modelo
 description: Aprenda cómo utilizar las transformaciones de ML.NET para manipular y preparar datos para su procesamiento adicional o la creación de modelos.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 05/03/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.date: 06/25/2019
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268238"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397719"
 ---
-# <a name="prepare-data"></a>Preparar los datos
+# <a name="prepare-data-for-building-a-model"></a>Preparación de los datos para la compilación de un modelo
 
 Aprenda cómo utilizar ML.NET para preparar datos para el procesamiento adicional o la creación de un modelo.
 

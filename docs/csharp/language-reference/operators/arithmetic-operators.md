@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: af3f7a9379aa8ac12ef8c12abc99a0ded9188eb8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025311"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423989"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referencia de C#)
 
@@ -41,7 +41,7 @@ Los operadores siguientes realizan operaciones aritméticas con tipos numéricos
 - Operadores unarios [`++` (incremento)](#increment-operator-), [`--` (decremento)](#decrement-operator---), [`+` (más)](#unary-plus-and-minus-operators) y [`-` (menos)](#unary-plus-and-minus-operators).
 - Operadores binarios [`*` (multiplicación)](#multiplication-operator-), [`/` (división)](#division-operator-), [`%` (resto)](#remainder-operator-), [`+` (suma)](#addition-operator-) y [`-` (resta)](#subtraction-operator--).
 
-Estos operadores admiten todos los tipos numéricos [integrales](../keywords/integral-types-table.md) y de [punto flotante](../keywords/floating-point-types-table.md).
+Estos operadores admiten todos los tipos numéricos [integrales](../builtin-types/integral-numeric-types.md) y de [punto flotante](../keywords/floating-point-types-table.md).
 
 ## <a name="increment-operator-"></a>Operador de incremento ++
 
@@ -85,7 +85,7 @@ El operador `+` unario devuelve el valor de su operando. El operador unario `-` 
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-El operador unario `-` no es compatible con el tipo [ulong](../keywords/ulong.md).
+El operador unario `-` no es compatible con el tipo [ulong](../builtin-types/integral-numeric-types.md).
 
 ## <a name="multiplication-operator-"></a>Operador de multiplicación *
 
@@ -97,7 +97,7 @@ El operador unario `*` es el [operador de direccionamiento indirecto del puntero
 
 ## <a name="division-operator-"></a>Operador de división /
 
-El operador de división `/` divide su primer operando por su segundo operando.
+El operador de división `/` divide el operando izquierdo entre el derecho.
 
 ### <a name="integer-division"></a>División de enteros
 
@@ -119,11 +119,11 @@ Si uno de los operandos es `decimal`, otro operando no puede ser `float` ni `dou
 
 ## <a name="remainder-operator-"></a>Operador de resto %
 
-El operador de resto `%` calcula el resto después de dividir su primer operando entre el segundo.
+El operador de resto `%` calcula el resto después de dividir el operando izquierdo entre el derecho.
 
 ### <a name="integer-remainder"></a>Resto entero
   
-En el caso de los operandos de tipos enteros, el resultado de `a % b` es el valor producido por `a - (a / b) * b`. El signo de resto distinto de cero es el mismo que el del primer operando, como se muestra en el ejemplo siguiente:
+En el caso de los operandos de tipos enteros, el resultado de `a % b` es el valor producido por `a - (a / b) * b`. El signo de resto distinto de cero es el mismo que el del operando izquierdo, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
@@ -157,7 +157,7 @@ También puede usar el operador `+` para la concatenación de cadenas y la combi
 
 ## <a name="subtraction-operator--"></a>Operador de resta -
 
-El operador de resta `-` resta su segundo operando del primero:
+El operador de resta `-` resta el operando derecho del izquierdo:
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 

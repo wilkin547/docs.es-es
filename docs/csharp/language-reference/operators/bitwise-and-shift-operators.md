@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025239"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424009"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operadores de desplazamiento y bit a bit (referencia de C#)
 
-Los siguientes operadores realizan operaciones de desplazamiento o bit a bit con operandos de [tipo entero](../keywords/integral-types-table.md):
+Los siguientes operadores realizan operaciones de desplazamiento o bit a bit con operandos de [tipo entero](../builtin-types/integral-numeric-types.md):
 
 - Operador unario [`~` (complemento bit a bit)](#bitwise-complement-operator-)
 - Operadores de desplazamiento binarios [`<<` (desplazamiento izquierdo)](#left-shift-operator-) y [`>>` (desplazamiento derecho)](#right-shift-operator-)
@@ -60,39 +60,39 @@ También se puede usar el símbolo `~` para declarar finalizadores. Para obtener
 
 ## <a name="left-shift-operator-"></a>Operador de desplazamiento izquierdo \<\<
 
-El operador `<<` desplaza su primer operando a la izquierda el número de bits definido por su segundo operando.
+El operador `<<` desplaza el operando izquierdo a la izquierda el número de bits definido por el operando derecho.
 
 La operación de desplazamiento izquierdo descarta los bits de orden superior que están fuera del rango del tipo de resultado y establece las posiciones de bits vacías de orden inferior en cero, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-Dado que los operadores de desplazamiento solo se definen para los tipos `int`, `uint`, `long` y `ulong`, el resultado de una operación siempre contiene al menos 32 bits. Si el primer operando es de otro tipo entero (`sbyte`, `byte`, `short`, `ushort` o `char`), su valor se convierte en el tipo `int`, como se muestra en el ejemplo siguiente:
+Dado que los operadores de desplazamiento solo se definen para los tipos `int`, `uint`, `long` y `ulong`, el resultado de una operación siempre contiene al menos 32 bits. Si el operando izquierdo es de otro tipo entero (`sbyte`, `byte`, `short`, `ushort` o `char`), su valor se convierte al tipo `int`, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-Para obtener información sobre cómo el segundo operando del operador `<<` define el recuento de desplazamiento, vea la sección [Recuento de desplazamiento de los operadores de desplazamiento](#shift-count-of-the-shift-operators).
+Para obtener información sobre cómo el operando derecho del operador `<<` define el recuento de desplazamiento, vea la sección [Recuento de desplazamiento de los operadores de desplazamiento](#shift-count-of-the-shift-operators).
 
 ## <a name="right-shift-operator-"></a>Operador de desplazamiento derecho >>
 
-El operador `>>` desplaza su primer operando a la derecha el número de bits definido por su segundo operando.
+El operador `>>` desplaza el operando izquierdo a la derecha el número de bits definido por el operando derecho.
 
 La operación de desplazamiento derecho descarta los bits de orden inferior, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-Las posiciones de bits vacíos de orden superior se establecen basándose en el tipo del primer operando como sigue:
+Las posiciones de bits vacíos de orden superior se establecen basándose en el tipo del operando izquierdo, tal como se indica a continuación:
 
-- Si el primer operando es de tipo [int](../keywords/int.md) o [long](../keywords/long.md), el operador de desplazamiento a la derecha realiza un desplazamiento *aritmético*: el valor del bit más significativo (el bit de signo) del primer operando se propaga a las posiciones de bits vacíos de orden superior. Es decir, las posiciones de bits vacíos de orden superior se establecen en cero si el primer operando no es negativo y se establecen en uno si es negativo.
+- Si el operando izquierdo es de tipo [int](../builtin-types/integral-numeric-types.md) o [long](../builtin-types/integral-numeric-types.md), el operador de desplazamiento a la derecha realiza un desplazamiento *aritmético*: el valor del bit más significativo (el bit de signo) del operando izquierdo se propaga a las posiciones de bits vacíos de orden superior. Es decir, las posiciones de bits vacíos de orden superior se establecen en cero si el operando izquierdo no es negativo y, en caso de serlo, se establecen en uno.
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- Si el primer operando es de tipo [uint](../keywords/uint.md) o [ulong](../keywords/ulong.md), el operador de desplazamiento a la derecha realiza un desplazamiento *lógico*: las posiciones de bits vacíos de orden superior se establecen siempre en cero.
+- Si el operando izquierdo es de tipo [uint](../builtin-types/integral-numeric-types.md) o [ulong](../builtin-types/integral-numeric-types.md), el operador de desplazamiento a la derecha realiza un desplazamiento *lógico*: las posiciones de bits vacíos de orden superior se establecen siempre en cero.
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-Para obtener información sobre cómo el segundo operando del operador `>>` define el recuento de desplazamiento, vea la sección [Recuento de desplazamiento de los operadores de desplazamiento](#shift-count-of-the-shift-operators).
+Para obtener información sobre cómo el operando derecho del operador `>>` define el recuento de desplazamiento, vea la sección [Recuento de desplazamiento de los operadores de desplazamiento](#shift-count-of-the-shift-operators).
 
-## <a name="logical-and-operator-amp"></a>Operador AND lógico &amp;
+## <a name="logical-and-operator-"></a> Operador AND lógico &amp;
 
 El operador `&` calcula el AND lógico bit a bit de sus operandos:
 
@@ -158,13 +158,13 @@ Para obtener la lista completa de los operadores de C# ordenados por nivel de pr
 
 ## <a name="shift-count-of-the-shift-operators"></a>Recuento de desplazamiento de los operadores de desplazamiento
 
-En el caso de los operadores de desplazamiento `<<` y `>>`, el tipo del segundo operando debe ser [int](../keywords/int.md) o un tipo que tenga una [conversión numérica implícita predefinida](../keywords/implicit-numeric-conversions-table.md) en `int`.
+En el caso de los operadores de desplazamiento `<<` y `>>`, el tipo del operando derecho debe ser [int](../builtin-types/integral-numeric-types.md) o un tipo que tenga una [conversión numérica implícita predefinida](../keywords/implicit-numeric-conversions-table.md) en `int`.
 
 En el caso de las expresiones `x << count` y `x >> count`, el recuento de desplazamiento real depende del tipo de `x`, de esta forma:
 
-- Si el tipo de `x` es [int](../keywords/int.md) o [uint](../keywords/uint.md), el recuento de desplazamiento viene definido por los *cinco* bits de orden inferior del segundo operando. Es decir, el valor de desplazamiento se calcula a partir de `count & 0x1F` (o `count & 0b_1_1111`).
+- Si el tipo de `x` es [int](../builtin-types/integral-numeric-types.md) o [uint](../builtin-types/integral-numeric-types.md), el recuento de desplazamiento viene definido por los *cinco* bits de orden inferior del operando derecho. Es decir, el valor de desplazamiento se calcula a partir de `count & 0x1F` (o `count & 0b_1_1111`).
 
-- Si el tipo de `x` es [long](../keywords/long.md) o [ulong](../keywords/ulong.md), el recuento de desplazamiento viene definido por los *seis* bits de orden inferior del segundo operando. Es decir, el valor de desplazamiento se calcula a partir de `count & 0x3F` (o `count & 0b_11_1111`).
+- Si el tipo de `x` es [long](../builtin-types/integral-numeric-types.md) o [ulong](../builtin-types/integral-numeric-types.md), el recuento de desplazamiento viene definido por los *seis* bits de orden inferior del operando derecho. Es decir, el valor de desplazamiento se calcula a partir de `count & 0x3F` (o `count & 0b_11_1111`).
 
 En el ejemplo siguiente se muestra ese comportamiento:
 
@@ -180,7 +180,7 @@ Normalmente, los operadores lógicos bit a bit se usan con un tipo de enumeraci�
 
 Un tipo definido por el usuario puede [sobrecargar](../keywords/operator.md) los operadores `~`, `<<`, `>>`, `&`, `|` y `^`. Cuando se sobrecarga un operador binario, también se sobrecarga de forma implícita el operador de asignación compuesta correspondiente. Un tipo definido por el usuario no puede sobrecargar de forma explícita un operador de asignación compuesta.
 
-Si un tipo definido por el usuario `T` sobrecarga el operador `<<` o `>>`, el tipo del primer operando debe ser `T` y el del segundo `int`.
+Si un tipo definido por el usuario `T` sobrecarga el operador `<<` o `>>`, el tipo del operando izquierdo debe ser `T` y el del derecho `int`.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

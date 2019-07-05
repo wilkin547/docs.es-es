@@ -1,20 +1,20 @@
 ---
 title: Entrenamiento y evaluación de un modelo
-description: Aprenda a compilar modelos de aprendizaje automático, extraer parámetros aprendidos y medir el rendimiento con ML.NET. Aunque este ejemplo entrena un modelo de regresión, los conceptos se aplican en casi todos los demás algoritmos.
-ms.date: 06/11/2019
+description: Obtenga más información sobre cómo compilar modelos de aprendizaje automático, recopilar métricas y medir el rendimiento con ML.NET. Un modelo de aprendizaje automático identifica patrones en los datos de entrenamiento para realizar predicciones mediante datos nuevos.
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307440"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397638"
 ---
 # <a name="train-and-evaluate-a-model"></a>Entrenamiento y evaluación de un modelo
 
-Aprenda a compilar modelos de aprendizaje automático, extraer parámetros aprendidos y medir el rendimiento con ML.NET. Aunque este ejemplo entrena un modelo de regresión, los conceptos se aplican en casi todos los demás algoritmos.
+Obtenga más información sobre cómo compilar modelos de aprendizaje automático, recopilar métricas y medir el rendimiento con ML.NET. Aunque este ejemplo entrena un modelo de regresión, los conceptos se aplican en casi todos los demás algoritmos.
 
 ## <a name="split-data-for-training-and-testing"></a>Dividir datos para entrenamiento y pruebas
 

@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 99056c9cd330c0c3ae6c63239989a2e9e9dc496c
-ms.sourcegitcommit: 5e05f983e63d5bbd8c0b246d02c6e4f23d2fc1db
+ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67151974"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397773"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -30,7 +30,12 @@ Hay muchas mejoras en el lenguaje C# que ya se pueden probar.
 > [!NOTE]
 > Este artículo se actualizó por última vez para la versión preliminar 5 de C# 8.0.
 
-En el resto de este artículo se describen brevemente estas características. Cuando hay disponibles artículos detallados, se proporcionan vínculos a esos tutoriales e introducciones.
+En el resto de este artículo se describen brevemente estas características. Cuando hay disponibles artículos detallados, se proporcionan vínculos a esos tutoriales e introducciones. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
+
+1. Instale la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clone el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Establezca el directorio actual en el subdirectorio *csharp8* para el repositorio *try-samples*.
+1. Ejecute `dotnet try`.
 
 ## <a name="readonly-members"></a>Miembros de solo lectura
 
@@ -425,7 +430,7 @@ En los ejemplos siguientes se crean rangos con final abierto para el inicio, el 
 ```csharp
 var allWords = words[..]; // contains "The" through "dog".
 var firstPhrase = words[..4]; // contains "The" through "fox"
-var lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
+var lastPhrase = words[6..]; // contains "the", "lazy" and "dog"
 ```
 
 También puede declarar rangos como variables:
