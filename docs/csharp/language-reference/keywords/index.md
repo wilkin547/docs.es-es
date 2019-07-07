@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 793ed56e970c95e576a809152f4a013f006a9895
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 7a5aee40bfcf1f58d1747233ec105f56aeeb7199
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424149"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610051"
 ---
 # <a name="c-keywords"></a>Palabras clave de C#
 
@@ -30,11 +30,11 @@ Las palabras clave son identificadores reservados predefinidos que tienen un sig
 |[continue](continue.md)|[decimal](decimal.md)|[default](default.md)|[delegate](delegate.md)|  
 |[do](do.md)|[double](double.md)|[else](if-else.md)|[enum](enum.md)|  
 |[event](event.md)|[explicit](explicit.md)|[extern](extern.md)|[false](false-literal.md)|  
-|[finally](try-finally.md)|[fijo](fixed-statement.md)|[float](float.md)|[for](for.md)|  
+|[finally](try-finally.md)|[fixed](fixed-statement.md)|[float](float.md)|[for](for.md)|  
 |[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](implicit.md)|  
 |[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[interface](interface.md)|[internal](internal.md)|
 |[is](is.md)|[lock](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[namespace](namespace.md)|
-|[nuevo](../operators/new-operator.md)|[null](null.md)|[objeto](object.md)|[operator](operator.md)|
+|[new](../operators/new-operator.md)|[null](null.md)|[object](object.md)|[operator](../operators/operator-overloading.md)|
 |[out](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
 |[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
 |[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
@@ -51,7 +51,7 @@ Las palabras clave son identificadores reservados predefinidos que tienen un sig
   
 ||||  
 |---|---|---|  
-|[agregar](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
+|[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
 |[async](async.md)|[await](await.md)|[by](by.md)|
 |[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
 |[from](from-clause.md)|[get](get.md)|[global](global.md)|
