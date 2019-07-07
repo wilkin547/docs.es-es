@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0032492a9403660e91980f5e968b519a4306589
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001473"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610492"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Inicialización de elementos de objeto no incluidos en un árbol de objetos
 Algunos aspectos de inicialización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se fraccionan en procesos que suelen depender de la conexión del elemento con el árbol lógico o visual. En este tema se describen los pasos que pueden ser necesarios para inicializar un elemento que no esté conectado a ninguno de estos árboles.  
@@ -33,7 +33,7 @@ Algunos aspectos de inicialización de [!INCLUDE[TLA#tla_winclient](../../../../
  Si el elemento está definiendo propiedades es un <xref:System.Windows.FrameworkElement> o <xref:System.Windows.FrameworkContentElement> clase derivada, puede llamar a las versiones de la clase de <xref:System.Windows.FrameworkElement.BeginInit%2A> y <xref:System.Windows.FrameworkElement.EndInit%2A> en lugar de la conversión a <xref:System.ComponentModel.ISupportInitialize>.  
   
 ### <a name="sample-code"></a>Código de ejemplo  
- El ejemplo siguiente es el código de ejemplo para una aplicación de consola que usa la representación [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] y <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> de un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos para ilustrar la posición correcta de <xref:System.Windows.FrameworkElement.BeginInit%2A> y <xref:System.Windows.FrameworkElement.EndInit%2A> alrededor otro [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] llamadas que ajustar las propiedades que afectan a la representación.  
+ El ejemplo siguiente es el código de ejemplo para una aplicación de consola que usa la representación [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] y <xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType> de un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] archivos para ilustrar la posición correcta de <xref:System.Windows.FrameworkElement.BeginInit%2A> y <xref:System.Windows.FrameworkElement.EndInit%2A> alrededor de otras llamadas API que ajustarán propiedades que afectan a la representación.  
   
  El ejemplo solo ilustra la función principal. Las funciones `Rasterize` y `Save` (que no se muestran) son funciones de utilidad que se encargan del procesamiento de imágenes y la E/S.  
   

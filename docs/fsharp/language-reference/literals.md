@@ -2,12 +2,12 @@
 title: Literales
 description: Obtenga información sobre los tipos literales en la F# lenguaje de programación.
 ms.date: 06/28/2019
-ms.openlocfilehash: 53647d8cbc2a59527a50e122bc1abc6055c1fce5
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c9ced0b505817a161ca39c6c9f853f94cedf410
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487780"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610155"
 ---
 # <a name="literals"></a>Literales
 
@@ -69,7 +69,7 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>Comentarios
 
-Las cadenas Unicode pueden contener codificaciones explícitas que se pueden especificar mediante el uso de `\u` seguido por un código hexadecimal de 16 bits (0000 - FFFF), o codificaciones UTF-32 que se pueden especificar mediante el uso de `\U` seguido por un código hexadecimal de 32 bits que representa cualquier punto de código Unicode (00000000 - 00010FFFF).
+Las cadenas Unicode pueden contener codificaciones explícitas que se pueden especificar mediante el uso de `\u` seguido por un código hexadecimal de 16 bits (0000 - FFFF), o codificaciones UTF-32 que se pueden especificar mediante el uso de `\U` seguido por un código hexadecimal de 32 bits que representa cualquier punto de código Unicode (00000000 - 0010FFFF).
 
 El uso de otros operadores bit a bit distinto `|||` no está permitido.
 

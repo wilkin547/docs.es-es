@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053150"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610353"
 ---
 # <a name="wpf-architecture"></a>Arquitectura de WPF
 En este tema se proporciona un paseo guiado de la jerarquía de clases de Windows Presentation Foundation (WPF). En él se explican la mayoría de los subsistemas principales de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describe cómo interactúan. También se detallan algunas de las decisiones tomadas por los arquitectos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -62,7 +62,7 @@ En este tema se proporciona un paseo guiado de la jerarquía de clases de Window
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- Con un sistema ya definido, el paso siguiente consiste en conseguir que se dibujen los píxeles en la pantalla. El <xref:System.Windows.Media.Visual> proporciona clases para la creación de un árbol de objetos visuales, cada uno puede contener instrucciones de dibujo y metadatos sobre cómo presentar esas instrucciones (recorte, transformación, etcetera.). <xref:System.Windows.Media.Visual> está diseñado para ser sumamente ligero y flexible, por lo que la mayoría de las características no tienen pública [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] exposición y dependen en gran medida de las funciones de devolución de llamada protegidas.  
+ Con un sistema ya definido, el paso siguiente consiste en conseguir que se dibujen los píxeles en la pantalla. El <xref:System.Windows.Media.Visual> proporciona clases para la creación de un árbol de objetos visuales, cada uno puede contener instrucciones de dibujo y metadatos sobre cómo presentar esas instrucciones (recorte, transformación, etcetera.). <xref:System.Windows.Media.Visual> está diseñado para ser sumamente ligero y flexible, por lo que la mayoría de las características no tiene ninguna exposición de la API pública y dependen en gran medida de las funciones de devolución de llamada protegidas.  
   
  <xref:System.Windows.Media.Visual> es realmente el punto de entrada para el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sistema de composición. <xref:System.Windows.Media.Visual> es el punto de conexión entre estos dos subsistemas, los recursos administrados [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] y el milcore no administrado.  
   
@@ -112,7 +112,7 @@ En este tema se proporciona un paseo guiado de la jerarquía de clases de Window
   
  La directiva primaria presentada por <xref:System.Windows.FrameworkElement> es alrededor de diseño de la aplicación. <xref:System.Windows.FrameworkElement> se basa en el contrato del diseño básico introducido por <xref:System.Windows.UIElement> y agrega la noción de un diseño "ranura", lo que facilita a los autores del diseño tiene un conjunto coherente de semántica del diseño orientados de propiedad. Propiedades como <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>, <xref:System.Windows.FrameworkElement.MinWidth%2A>, y <xref:System.Windows.FrameworkElement.Margin%2A> (por nombrar algunos) dar a todos los componentes derivados <xref:System.Windows.FrameworkElement> un comportamiento coherente dentro de contenedores de diseño.  
   
- <xref:System.Windows.FrameworkElement> También facilita [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] muchas de las características que se encuentra en las capas básicas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Por ejemplo, <xref:System.Windows.FrameworkElement> proporciona acceso directo a la animación a través de la <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> método. Un <xref:System.Windows.Media.Animation.Storyboard> proporciona una manera de varias animaciones con un conjunto de propiedades de script.  
+ <xref:System.Windows.FrameworkElement> También proporciona más fácil de exposición de API a muchas características que se encuentran en las capas básicas de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Por ejemplo, <xref:System.Windows.FrameworkElement> proporciona acceso directo a la animación a través de la <xref:System.Windows.FrameworkElement.BeginStoryboard%2A> método. Un <xref:System.Windows.Media.Animation.Storyboard> proporciona una manera de varias animaciones con un conjunto de propiedades de script.  
   
  Las dos cosas más importantes que <xref:System.Windows.FrameworkElement> presenta son el enlace de datos y estilos.  
   

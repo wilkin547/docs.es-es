@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598653"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610369"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Marcar eventos enrutados como controlados y control de clases
 Los controladores de un evento enrutado pueden marcar el evento como controlado en los datos del evento. Controlar el evento acorta de forma efectiva la ruta. El control de clases es un concepto de programación que admiten los eventos enrutados. Un controlador de clases tiene la oportunidad de controlar un evento enrutado determinado en un nivel de clase con un controlador que se invoca antes que cualquier controlador de instancias de cualquier instancia de la clase.  
@@ -49,7 +49,7 @@ Los controladores de un evento enrutado pueden marcar el evento como controlado 
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>Controladores de clases y controladores de instancias  
- Los eventos enrutados consideran dos tipos distintos de agentes de escucha para el evento: de clase y de instancia. Los agentes de escucha de clase existen porque los tipos han llamado a un determinado <xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] ,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, en su constructor estático, o han invalidado un método virtual de controlador de clase de una clase base del elemento. Los agentes de escucha de instancia son instancias de clase en particular o elementos que se adjuntaron uno o varios controladores para ese evento enrutado mediante una llamada a <xref:System.Windows.UIElement.AddHandler%2A>. Existente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos enrutados realizan llamadas a <xref:System.Windows.UIElement.AddHandler%2A> como parte de la [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] agregar contenedor de eventos{} y quitar{} implementaciones del evento, que también es la forma simple [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mecanismo de adjuntar controladores de eventos a través de una sintaxis de atributo está habilitada. Por tanto, incluso los más sencillos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uso equivale a un <xref:System.Windows.UIElement.AddHandler%2A> llamar.  
+ Los eventos enrutados consideran dos tipos distintos de agentes de escucha para el evento: de clase y de instancia. Los agentes de escucha de clase existen porque los tipos han llamado a un determinado <xref:System.Windows.EventManager> API,<xref:System.Windows.EventManager.RegisterClassHandler%2A>, en su constructor estático, o han invalidado un método virtual de controlador de clase de una clase base del elemento. Los agentes de escucha de instancia son instancias de clase en particular o elementos que se adjuntaron uno o varios controladores para ese evento enrutado mediante una llamada a <xref:System.Windows.UIElement.AddHandler%2A>. Existente [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] eventos enrutados realizan llamadas a <xref:System.Windows.UIElement.AddHandler%2A> como parte de la [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] agregar contenedor de eventos{} y quitar{} implementaciones del evento, que también es la forma simple [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mecanismo de adjuntar controladores de eventos a través de una sintaxis de atributo está habilitada. Por tanto, incluso los más sencillos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] uso equivale a un <xref:System.Windows.UIElement.AddHandler%2A> llamar.  
   
  Se comprueban las implementaciones de controlador registradas de los elementos del árbol visual. Los controladores se pueden invocar a lo largo de la ruta en el orden inherente al tipo de la estrategia de enrutamiento para el evento enrutado. Por ejemplo, los eventos enrutados de propagación invocan primero los controladores adjuntos al mismo elemento que generó el evento enrutado. A continuación, el evento enrutado "se propaga" en el siguiente elemento primario y así sucesivamente hasta que se alcanza el elemento raíz de aplicación.  
   

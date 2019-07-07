@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 01122991e99e41259c3b83a38eba002734d749ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655523"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610532"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>Código subyacente y XAML en WPF
 <a name="introduction"></a> Código subyacente es un término que se usa para describir el código que se une con objetos definidos por marcado, cuando un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página está compilado por marcado. En este tema se describe los requisitos para el código subyacente, así como un mecanismo de código insertado alternativo para el código en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "64655523"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>Limitaciones del código insertado  
- Debe considerar el evitar o limitar el uso de código en línea. En términos de arquitectura y la filosofía de codificación, mantener una separación entre el marcado y código subyacente mantiene las funciones de diseñador y desarrollador distintos mucho más. En un nivel más técnico, el código que se escribe para el código insertado puede ser incómodo de escribir, porque siempre se escriben en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] clase parcial generada y solo se pueden usar las asignaciones de espacio de nombres XML predeterminado. Dado que no se puede agregar `using` instrucciones, debe calificar totalmente muchas de las [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] las llamadas que realice. El valor predeterminado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] asignaciones incluyen más pero no todos los [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espacios de nombres que se encuentran en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ensamblados; tendrá que completar llamadas a tipos y miembros contenidos en los otros espacios de nombres CLR. También se no se puede definir cualquier cosa más allá de la clase parcial en el código en línea, y todas las entidades de código de usuario que se hace referencia deben existir como un miembro o una variable dentro de la clase parcial generada. Otras características programación específica del lenguaje, como las macros o `#ifdef` frente a las variables globales o las variables de compilación, tampoco están disponibles. Para obtener más información, consulte [x: Code tipo XAML intrínseco](../../xaml-services/x-code-intrinsic-xaml-type.md).  
+ Debe considerar el evitar o limitar el uso de código en línea. En términos de arquitectura y la filosofía de codificación, mantener una separación entre el marcado y código subyacente mantiene las funciones de diseñador y desarrollador distintos mucho más. En un nivel más técnico, el código que se escribe para el código insertado puede ser incómodo de escribir, porque siempre se escriben en el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] clase parcial generada y solo se pueden usar las asignaciones de espacio de nombres XML predeterminado. Dado que no se puede agregar `using` instrucciones, debe calificar totalmente muchas de las llamadas de API que realice. El valor predeterminado [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] asignaciones incluyen más pero no todos los [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] espacios de nombres que se encuentran en el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ensamblados; tendrá que completar llamadas a tipos y miembros contenidos en los otros espacios de nombres CLR. También se no se puede definir cualquier cosa más allá de la clase parcial en el código en línea, y todas las entidades de código de usuario que se hace referencia deben existir como un miembro o una variable dentro de la clase parcial generada. Otras características programación específica del lenguaje, como las macros o `#ifdef` frente a las variables globales o las variables de compilación, tampoco están disponibles. Para obtener más información, consulte [x: Code tipo XAML intrínseco](../../xaml-services/x-code-intrinsic-xaml-type.md).  
   
 ## <a name="see-also"></a>Vea también
 

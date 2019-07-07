@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878251"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610581"
 ---
 # <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 Las siguientes secciones dan respuesta a algunos problemas comunes que podría encontrar al implementar [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
@@ -132,9 +132,9 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ```  
   
 ## <a name="errors-using-sql-compact-35"></a>Errores en el uso de SQL Compact 3.5  
- P. Obtengo un error cuando arrastro tablas fuera de una base de datos de [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)].  
+ P. Obtengo un error cuando arrastro tablas fuera de una base de datos de SQL Server Compact 3.5.  
   
- R. El [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] no admite [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)], aunque el motor de ejecución de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sí lo hace. En esta situación, debe crear sus propias clases de entidad y agregar los atributos adecuados.  
+ R. El [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] no admite SQL Server Compact 3.5, aunque el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] runtime realiza. En esta situación, debe crear sus propias clases de entidad y agregar los atributos adecuados.  
   
 ## <a name="errors-in-inheritance-relationships"></a>Errores en relaciones de herencia  
  P. Utilizo la herramienta de herencia incluida en el cuadro de herramientas del [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para conectar dos entidades, pero obtengo errores.  
@@ -144,7 +144,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="provider-model"></a>Modelo de proveedor  
  P. ¿Existe un modelo de proveedor público disponible?  
   
- R. No existe ningún modelo de proveedor público disponible. En este momento, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] es compatible con SQL Server y [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] solo.  
+ R. No existe ningún modelo de proveedor público disponible. En este momento, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solo es compatible con SQL Server y SQL Server Compact 3.5.  
   
 ## <a name="sql-injection-attacks"></a>Ataques mediante inserción de SQL  
  P. ¿Cómo se protege [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de ataques de inyección de código SQL?  

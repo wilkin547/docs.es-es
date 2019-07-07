@@ -1,13 +1,13 @@
 ---
 title: Cadenas
 description: Obtenga información sobre cómo el F# tipo 'string' representa texto inmutable como una secuencia de caracteres Unicode.
-ms.date: 06/28/2019
-ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.date: 07/05/2019
+ms.openlocfilehash: b252aef7d7e6e299df8282407198714971e80cd5
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487769"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610161"
 ---
 # <a name="strings"></a>Cadenas
 
@@ -22,14 +22,26 @@ Literales de cadena se delimitan mediante el carácter de comillas dobles ("). E
 
 |Carácter|Secuencia de escape|
 |---------|---------------|
+|Alerta|`\a`|
 |Retroceso|`\b`|
+|Avance de página|`\f`|
 |Nueva línea|`\n`|
 |Retorno de carro|`\r`|
 |Tab|`\t`|
+|Tabulación vertical|`\v`|
 |Barra diagonal inversa|`\\`|
 |Comillas|`\"`|
 |Apóstrofo|`\'`|
-|Carácter Unicode|`\uXXXX` (UTF-16) o `\U00XXXXXX` (UTF-32) (donde `X` indica un dígito hexadecimal)|
+|Carácter Unicode|`\DDD` (donde `D` indica un valor decimal dígitos; intervalo 000 - 255; por ejemplo, `\231` = "ç")|
+|Carácter Unicode|`\xHH` (donde `H` indica un dígito hexadecimal; intervalo de 00 - FF; por ejemplo, `\xE7` = "ç")|
+|Carácter Unicode|`\uHHHH` (UTF-16) (donde `H` indica un dígito hexadecimal; el rango de 0000 - FFFF;  Por ejemplo, `\u00E7` = "ç")|
+|Carácter Unicode|`\U00HHHHHH` (UTF-32) (donde `H` indica un dígito hexadecimal; intervalo 000000 - 10FFFF;  Por ejemplo, `\U0001F47D` = "👽")|
+
+> [!IMPORTANT]
+> El `\DDD` secuencia de escape es la notación decimal, octal no notación como en la mayoría de los otra lenguajes. Por lo tanto, los dígitos `8` y `9` son válidas y una secuencia de `\032` representa un espacio (u+0020), mientras que ese mismo punto de código en notación octal sería `\040`.
+
+> [!NOTE]
+> Está restringido a un intervalo de 0 - 255 (0xFF), el `\DDD` y `\x` secuencias de escape son efectivamente el [ISO-8859-1](https://en.wikipedia.org/wiki/ISO/IEC_8859-1#Code_page_layout) carácter conjunto, ya que coincide con los primeros 256 puntos de código Unicode.
 
 Si va precedido por el símbolo @, el literal es una cadena textual. Esto significa que se omiten las secuencias de escape, excepto en que dos caracteres de comilla se interpretan como caracteres de una comilla simple.
 

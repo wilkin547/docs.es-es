@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876893"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610550"
 ---
 # <a name="standard-query-operator-translation"></a>Traslación del operador de consulta estándar
 
@@ -198,7 +198,7 @@ Para obtener más información acerca de la asignación a estos tipos de fecha y
 
 ## <a name="sql-server-2000-support"></a>Compatibilidad con SQL Server 2000
 
-Las siguientes limitaciones de [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (frente a [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) afectan a la compatibilidad con [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].
+La siguiente [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] limitaciones (en comparación con Microsoft SQL Server 2005) afectan a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite.
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Operadores Cross Apply y Outer Apply
 
@@ -208,7 +208,7 @@ Estos operadores no están disponibles en [!INCLUDE[ss2k](../../../../../../incl
 
 ### <a name="text--ntext"></a>text / ntext
 
-Tipos de datos `text`  /  `ntext` no puede utilizarse en determinadas operaciones de consulta en `varchar(max)`  /  `nvarchar(max)`, que son compatibles con [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)].
+Tipos de datos `text`  /  `ntext` no puede utilizarse en determinadas operaciones de consulta en `varchar(max)`  /  `nvarchar(max)`, que son compatibles con Microsoft SQL Server 2005.
 
 Esta limitación no tiene ninguna resolución. Concretamente, no puede utilizar `Distinct()` en ningún resultado que contenga miembros que se asignen a columnas `text` o `ntext`.
 

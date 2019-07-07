@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 1b0bc360c4c04457e71115dc5caf935841a2bbc1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 79c539bd0117c712670601b7498c490fca76090e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619634"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610514"
 ---
 # <a name="freezable-objects-overview"></a>Información general sobre objetos Freezable
 En este tema se describe cómo usar de forma eficaz y crear <xref:System.Windows.Freezable> objetos, que proporcionan características especiales que pueden ayudar a mejorar el rendimiento de la aplicación. Pinceles, lápices, transformaciones, geometrías y las animaciones son ejemplos de objetos freezable.  
@@ -150,7 +150,7 @@ mc:Ignorable="PresentationOptions"
   
 - Al principio de cualquier [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] que lee los miembros de datos de propiedad no son de dependencia, llame a la <xref:System.Windows.Freezable.ReadPreamble%2A> método.  
   
-- Al principio de cualquier API que escribe los miembros de datos de propiedad no son de dependencia, llame a la <xref:System.Windows.Freezable.WritePreamble%2A> método. (Una vez que haya llamado a <xref:System.Windows.Freezable.WritePreamble%2A> en un [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)], no es necesario realizar una llamada adicional a <xref:System.Windows.Freezable.ReadPreamble%2A> si también leer miembros de datos de la propiedad de dependencia no.)  
+- Al principio de cualquier API que escribe los miembros de datos de propiedad no son de dependencia, llame a la <xref:System.Windows.Freezable.WritePreamble%2A> método. (Una vez que haya llamado a <xref:System.Windows.Freezable.WritePreamble%2A> en una API, no es necesario realizar una llamada adicional a <xref:System.Windows.Freezable.ReadPreamble%2A> si también leer miembros de datos de propiedad no son de dependencia.)  
   
 - Llame a la <xref:System.Windows.Freezable.WritePostscript%2A> método antes de salir de los métodos que se escriben a los miembros de datos de propiedad no son de dependencia.  
   

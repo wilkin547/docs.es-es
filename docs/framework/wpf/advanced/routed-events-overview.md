@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063892"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610438"
 ---
 # <a name="routed-events-overview"></a>Información general sobre eventos enrutados
 En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En el tema se define la terminología de los eventos enrutados, se describe cómo se enrutan a través de un árbol de elementos, se resume cómo controlar los eventos enrutados y se explica cómo crear sus propios eventos enrutados personalizados.
@@ -98,7 +98,7 @@ En este tema se describe el concepto de eventos enrutados en [!INCLUDE[TLA#tla_w
   
  Los eventos enrutados demuestran su eficacia cuando se usa cualquiera de los escenarios sugeridos: definir los controladores comunes en una raíz común, componer un control personalizado o definir una clase de controles personalizada.  
   
- Los agentes de escucha y los orígenes de los eventos enrutados no necesitan compartir un evento común en su jerarquía. Cualquier <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> puede ser un agente de escucha de eventos para cualquier evento enrutado. Por tanto, se puede usar todo el conjunto de eventos enrutados disponibles en la [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] activa como una "interfaz" conceptual en la que elementos dispares de la aplicación pueden intercambiar información sobre los eventos. Este concepto de "interfaz" para los eventos enrutados es especialmente aplicable a los eventos de entrada.  
+ Los agentes de escucha y los orígenes de los eventos enrutados no necesitan compartir un evento común en su jerarquía. Cualquier <xref:System.Windows.UIElement> o <xref:System.Windows.ContentElement> puede ser un agente de escucha de eventos para cualquier evento enrutado. Por lo tanto, puede usar el conjunto completo de eventos enrutados disponibles en el conjunto como una "interfaz" conceptual que elementos dispares de la aplicación pueden intercambiar información de eventos de la API de trabajo. Este concepto de "interfaz" para los eventos enrutados es especialmente aplicable a los eventos de entrada.  
   
  Los eventos enrutados también se pueden usar para comunicar datos a través del árbol de elementos, porque los datos de evento para cada evento se perpetúan en cada elemento de la ruta. Un elemento podría cambiar algo en los datos del evento, y ese cambio estaría disponible para el elemento siguiente de la ruta.  
   
