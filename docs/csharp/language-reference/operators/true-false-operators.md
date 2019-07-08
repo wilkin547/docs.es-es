@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: cb5cde6be16ecf8898c5976e8db23d5ef70d1a47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 7cbfca932b5f9f8a6f658e84204da5005da5ffb8
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401307"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609838"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operadores true y false (referencia de C#)
 
@@ -26,7 +26,7 @@ Un tipo con el operador `true` definido puede ser el tipo de un resultado de una
 
 ## <a name="user-defined-conditional-logical-operators"></a>Operadores lógicos condicionales definidos por el usuario
 
-Si un tipo con los operadores `true` y `false` definidos [sobrecarga](../keywords/operator.md) el [operador lógico OR](boolean-logical-operators.md#logical-or-operator-) `|` o el [operador lógico AND](boolean-logical-operators.md#logical-and-operator-) `&` de una manera determinada, el [operador lógico condicional OR](boolean-logical-operators.md#conditional-logical-or-operator-) `||` o el [operador lógico condicional AND](boolean-logical-operators.md#conditional-logical-and-operator-) `&&`, respectivamente, se puede evaluar para los operandos de ese tipo. Para obtener más información, vea la sección [Operadores lógicos condicionales definidos por el usuario](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
+Si un tipo con los operadores `true` y `false` definidos [sobrecarga](operator-overloading.md) el [operador lógico OR](boolean-logical-operators.md#logical-or-operator-) `|` o el [operador lógico AND](boolean-logical-operators.md#logical-and-operator-) `&` de una manera determinada, el [operador lógico condicional OR](boolean-logical-operators.md#conditional-logical-or-operator-) `||` o el [operador lógico condicional AND](boolean-logical-operators.md#conditional-logical-and-operator-) `&&`, respectivamente, se puede evaluar para los operandos de ese tipo. Para obtener más información, vea la sección [Operadores lógicos condicionales definidos por el usuario](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="example"></a>Ejemplo
 

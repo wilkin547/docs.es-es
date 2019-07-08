@@ -3,12 +3,12 @@ title: 'Expresiones de C#: un paseo por el lenguaje C#'
 description: Las expresiones, los operandos y los operadores son bloques de creación del lenguaje C#.
 ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753650"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609319"
 ---
 # <a name="expressions"></a>Expresiones
 
@@ -23,7 +23,7 @@ Cuando un operando se encuentra entre dos operadores con la misma precedencia, l
 
 La precedencia y la asociatividad pueden controlarse mediante paréntesis. Por ejemplo, `x + y * z` primero multiplica `y` por `z` y luego suma el resultado a `x`, pero `(x + y) * z` primero suma `x` y `y` y luego multiplica el resultado por `z`.
 
-La mayoría de los operadores se pueden [*sobrecargar*](../language-reference/keywords/operator.md). La sobrecarga de operador permite la especificación de implementaciones de operadores definidas por el usuario para operaciones donde uno o ambos operandos son de un tipo de struct o una clase definidos por el usuario.
+La mayoría de los operadores se pueden [*sobrecargar*](../language-reference/operators/operator-overloading.md). La sobrecarga de operador permite la especificación de implementaciones de operadores definidas por el usuario para operaciones donde uno o ambos operandos son de un tipo de struct o una clase definidos por el usuario.
 
 C# ofrece una serie de operadores para realizar operaciones [aritméticas](../language-reference/operators/arithmetic-operators.md), [lógicas](../language-reference/operators/boolean-logical-operators.md), [de desplazamiento y bit a bit](../language-reference/operators/bitwise-and-shift-operators.md), además de comparaciones de [igualdad](../language-reference/operators/equality-operators.md) y de [orden](../language-reference/operators/comparison-operators.md).
 

@@ -4,16 +4,16 @@ description: Cómo usar el Generador de modelos de ML.NET para entrenar un model
 author: natke
 ms.date: 06/26/2019
 ms.custom: overview
-ms.openlocfilehash: 6f5bbe3c389e3ca42550a48ef3e6edbc963ac2e9
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: 6049db79753986544de18faebfd047aa190af153
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410593"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539804"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
-El Generador de modelos de ML.NET es una extensión gráfica fácil de entender de Visual Studio para compilar, entrenar e implementar modelos de Machine Learning personalizados. 
+El Generador de modelos de ML.NET es una extensión gráfica fácil de entender de Visual Studio para compilar, entrenar e implementar modelos de Machine Learning personalizados.
 
 El Generador de modelos usa aprendizaje automático automatizado (AutoML) para explorar distintos algoritmos y configuraciones de aprendizaje automático a fin de ayudar a encontrar el más adecuado a cada escenario.
 
@@ -52,7 +52,7 @@ La clasificación binaria se usa para clasificar los datos en dos clases (sí o 
 - ¿Es esta transacción de tarjeta de crédito fraudulenta? (detección de fraudes)
 
 Si el escenario requiere clasificación en dos categorías, puede usar esta plantilla con un conjunto de datos propio.
- 
+
 #### <a name="issue-classification-multiclass-classification"></a>Clasificación de problemas (clasificación multiclase)
 
 La clasificación de problemas se puede usar para clasificar problemas de comentarios de clientes (por ejemplo, en GitHub) mediante el título y la descripción del problema. Es un ejemplo de la tarea de clasificación multiclase.
@@ -142,10 +142,10 @@ Puede proporcionar un tiempo de entrenamiento. En general, el entrenamiento dura
 Tamaño del conjunto de datos  | Tipo de conjunto de datos       | Prom. Tiempo de entrenamiento
 ------------- | ------------------ | --------------
 0 - 10 MB     | Numérico y texto   | 10 s
-10 - 100 MB   | Numérico y texto   | 10 min 
-100 - 500 MB  | Numérico y texto   | 30 min 
-500 - 1 GB    | Numérico y texto   | 60 min 
-1 GB o más         | Numérico y texto   | Más de 3 horas 
+10 - 100 MB   | Numérico y texto   | 10 min
+100 - 500 MB  | Numérico y texto   | 30 min
+500 - 1 GB    | Numérico y texto   | 60 min
+1 GB o más         | Numérico y texto   | Más de 3 horas
 
 El tiempo exacto de entrenamiento también depende de:
 
@@ -160,13 +160,13 @@ El Generador de modelos se ha probado a escala con un conjunto de datos de 1 TB,
 
 La evaluación es el proceso de usar el modelo entrenado para realizar predicciones con nuevos datos de prueba y luego medir la calidad de las predicciones.
 
-El Generador de modelos divide los datos de entrenamiento en un conjunto de entrenamiento y un conjunto de prueba. Los datos de entrenamiento (80 %) se usan para entrenar el modelo y los datos de prueba (20 %) se incluyen para evaluar el modelo.  Las métricas usadas para la evaluación dependen de la tarea de Machine Learning. Para obtener más información, vea [Métricas de evaluación de modelos](resources/metrics.md).  
+El Generador de modelos divide los datos de entrenamiento en un conjunto de entrenamiento y un conjunto de prueba. Los datos de entrenamiento (80 %) se usan para entrenar el modelo y los datos de prueba (20 %) se incluyen para evaluar el modelo.  Las métricas usadas para la evaluación dependen de la tarea de Machine Learning. Para obtener más información, vea [Métricas de evaluación de modelos](resources/metrics.md).
 
 ### <a name="sentiment-analysis-binary-classification"></a>Análisis de opinión (clasificación binaria)
 
 La métrica predeterminada para los problemas de clasificación binaria es la **precisión**. La precisión define la proporción de predicciones correctas que realiza el modelo en el conjunto de datos de prueba. **Cuanto más cerca de 100 %, mejor es el modelo**.
 
-Otras métricas notificadas, como AUC (área bajo la curva), que mide la tasa de positivos verdaderos frente a la tasa de falsos positivos, deben ser superiores a 0,50 para que los modelos sean aceptables. 
+Otras métricas notificadas, como AUC (área bajo la curva), que mide la tasa de positivos verdaderos frente a la tasa de falsos positivos, deben ser superiores a 0,50 para que los modelos sean aceptables.
 
 Otras métricas, como la puntuación F1, pueden usarse para controlar el equilibrio entre precisión (relación de predicciones correctas con respecto al total de predicciones de esa clase) y coincidencia (proporción de predicciones correctas con respecto a los miembros reales totales de esa clase).
 
@@ -176,15 +176,14 @@ La métrica predeterminada para los problemas de clasificación multiclase es la
 
 En el caso de los problemas donde los datos se clasifican en varias clases, hay dos tipos de precisión:
 
-- Microprecisión: fracción de predicciones correctas en todas las instancias. En el escenario de clasificación de problemas, la microprecisión es la proporción de problemas entrantes que se asignan a la categoría correcta. 
+- Microprecisión: fracción de predicciones correctas en todas las instancias. En el escenario de clasificación de problemas, la microprecisión es la proporción de problemas entrantes que se asignan a la categoría correcta.
 - Macroprecisión: precisión media en el nivel de clase. En el escenario de clasificación de problemas, la precisión se mide para cada categoría y luego se calcula el promedio de precisión de las categorías. En el caso de esta métrica, todas las clases tienen el mismo peso. En los conjuntos de datos perfectamente equilibrados (donde hay un número igual de ejemplos de cada categoría), la microprecisión y la macroprecisión son lo mismo.
-
 
 ### <a name="price-prediction-regression"></a>Predicción de precios (regresión)
 
 La métrica predeterminada para los problemas de regresión es **RSquared**. 1 es el mejor valor posible. Cuanto más se acerca RSquared a 1, mejor es el modelo.
 
-Otras métricas notificadas, como pérdida absoluta, pérdida al cuadrado y pérdida RMS, pueden usarse para comprender el modelo y compararlo con otros modelos de regresión. 
+Otras métricas notificadas, como pérdida absoluta, pérdida al cuadrado y pérdida RMS, pueden usarse para comprender el modelo y compararlo con otros modelos de regresión.
 
 ## <a name="improve"></a>Mejora
 
@@ -192,7 +191,7 @@ Si la puntuación de rendimiento del modelo no es tan buena como se quiere que s
 
 * Entrenar durante más tiempo. Con más tiempo, el motor de aprendizaje automático automatizado prueba más algoritmos y configuraciones.
 
-* Agregar más datos. A veces la cantidad de datos no es suficiente para entrenar un modelo de Machine Learning de alta calidad. 
+* Agregar más datos. A veces la cantidad de datos no es suficiente para entrenar un modelo de Machine Learning de alta calidad.
 
 * Equilibrar los datos. En las tareas de clasificación, asegúrese de que el conjunto de entrenamiento esté equilibrado entre las categorías. Por ejemplo, si tiene cuatro clases de 100 ejemplos de entrenamiento y las dos primeras (etiqueta1 y etiqueta2) se usan para 90 registros, pero las otras dos (etiqueta3 y etiqueta4) solo se usan en los 10 registros restantes, la falta de datos equilibrados puede hacer que el modelo se esfuerce por predecir correctamente etiqueta3 o etiqueta4.
 

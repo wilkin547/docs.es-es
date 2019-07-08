@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 80603107beb708e76a2c7446f300d71ede411570
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347907"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609856"
 ---
 # <a name="--and---operators-c-reference"></a>Operadores - y -= (referencia de C#)
 
@@ -72,7 +72,7 @@ También se usa el operador `-=` con el fin de especificar un método de control
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-Un tipo definido por el usuario puede [sobrecargar](../keywords/operator.md) el operador `-`. Cuando se sobrecarga un operador `-` binario, el operador `-=` también se sobrecarga de modo implícito. Un tipo definido por el usuario no puede sobrecargar de forma explícita el operador `-=`.
+Un tipo definido por el usuario puede [sobrecargar](operator-overloading.md) el operador `-`. Cuando se sobrecarga un operador `-` binario, el operador `-=` también se sobrecarga de modo implícito. Un tipo definido por el usuario no puede sobrecargar de forma explícita el operador `-=`.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 

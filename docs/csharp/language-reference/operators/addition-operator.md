@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 41355dbadd566648b45d825cdd6515bfc6d411aa
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347974"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610036"
 ---
 # <a name="-and--operators-c-reference"></a>Operadores + y += (referencia de C#)
 
@@ -71,7 +71,7 @@ También usa el operador `+=` para especificar un método de controlador de even
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-Un tipo definido por el usuario puede [sobrecargar](../keywords/operator.md) el operador `+`. Cuando se sobrecarga un operador `+` binario, el operador `+=` también se sobrecarga de modo implícito. Un tipo definido por el usuario no puede sobrecargar de forma explícita el operador `+=`.
+Un tipo definido por el usuario puede [sobrecargar](operator-overloading.md) el operador `+`. Cuando se sobrecarga un operador `+` binario, el operador `+=` también se sobrecarga de modo implícito. Un tipo definido por el usuario no puede sobrecargar de forma explícita el operador `+=`.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
