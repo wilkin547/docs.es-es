@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4108583a5f97d1349fb54c335d55252352ea4883
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423989"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609993"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referencia de C#)
 
@@ -243,7 +243,7 @@ Para obtener más información, vea los comentarios en las páginas de referenci
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
-Un tipo definido por el usuario puede [sobrecargar](../keywords/operator.md) los operadores unarios (`++`, `--`, `+` y `-`), los operadores binarios (`*`, `/`, `%`, `+` y `-`) y los operadores aritméticos. Cuando se sobrecarga un operador binario, también se sobrecarga de forma implícita el operador de asignación compuesta correspondiente. Un tipo definido por el usuario no puede sobrecargar de forma explícita un operador de asignación compuesta.
+Un tipo definido por el usuario puede [sobrecargar](operator-overloading.md) los operadores unarios (`++`, `--`, `+` y `-`), los operadores binarios (`*`, `/`, `%`, `+` y `-`) y los operadores aritméticos. Cuando se sobrecarga un operador binario, también se sobrecarga de forma implícita el operador de asignación compuesta correspondiente. Un tipo definido por el usuario no puede sobrecargar de forma explícita un operador de asignación compuesta.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
