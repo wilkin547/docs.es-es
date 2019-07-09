@@ -2,12 +2,12 @@
 title: Extensión de administración de transacción
 ms.date: 03/30/2017
 ms.assetid: 1e96331e-31b6-4272-bbbd-29ed1e110460
-ms.openlocfilehash: 1e40244e1f6b5ffd7b52584a5da121d1203f8376
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df2597d6fcce7fbd51f6f17bd42469cb7fcf3fdf
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630569"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662457"
 ---
 # <a name="transaction-management-escalation"></a>Extensión de administración de transacción
 Windows hospeda un conjunto de servicios y módulos que juntos constituyen un administrador de transacciones. La subida de administración de transacciones describe el proceso de migración de una transacción desde uno de los componentes del administrador de transacciones a otro.  
@@ -25,7 +25,7 @@ Windows hospeda un conjunto de servicios y módulos que juntos constituyen un ad
   
 - Por lo menos un recurso duradero que no admite notificaciones de la fase única se da de alta en la transacción.  
   
-- Por lo menos dos recursos duraderos que admiten notificaciones de la fase del soltero se dan de alta en la transacción. Por ejemplo, dar de alta una conexión única con [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] no produce  la promoción de ninguna transacción. Sin embargo, cada vez que se abre una segunda conexión a una base de datos [!INCLUDE[sqprsqlong](../../../../includes/sqprsqlong-md.md)] que hace que la base de datos se inscriba, la infraestructura <xref:System.Transactions> detecta que es el segundo recurso duradero en la transacción, y realiza una escalada a una transacción de MSDTC.  
+- Por lo menos dos recursos duraderos que admiten notificaciones de la fase del soltero se dan de alta en la transacción. Por ejemplo, dar de alta una conexión única con SQL Server 2005 no provoca una transacción que se va a promocionar. Sin embargo, cada vez que abra una segunda conexión a una base de datos de SQL Server 2005 la causa de la base de datos dar de alta, el <xref:System.Transactions> infraestructura detecta que es el segundo recurso duradero en la transacción y realiza una escalada a una transacción MSDTC.  
   
 - Se invoca una solicitud para "calcular las referencias" de la transacción a un dominio de aplicación diferente o un proceso diferente. Por ejemplo, la serialización del objeto de transacción a través de un límite del dominio de aplicación. Se calculan referencias al objeto de transacción por valor, lo que significa que cualquier intento de pasarlo por un límite de dominio de aplicación (incluso en el mismo proceso) da como resultado la serialización del objeto de transacción. Puede pasar los objetos de transacción realizando una llamada en un método remoto que toma <xref:System.Transactions.Transaction> como un parámetro o puede intentar tener acceso a un componente transaccional-reparado remoto. Esto serializa el objeto de transacción y resulta en una subida, como cuando una transacción se serializa por un dominio de aplicación. Se distribuye y el administrador de transacciones local ya no es adecuado.  
   

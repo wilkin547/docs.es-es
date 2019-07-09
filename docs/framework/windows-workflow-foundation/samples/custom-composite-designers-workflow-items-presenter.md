@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 403b0125e6b1966d201c891448ad25ec83f42be5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: b28981196490e249d053ecd1704f6ba978585520
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881929"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662863"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Diseñadores compuestos personalizados - Moderador de elementos de flujo de trabajo
 
@@ -45,7 +45,7 @@ El código de este ejemplo muestra lo siguiente:
   - La propiedad <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> es una plantilla que se puede proporcionar para determinar el diseño de los elementos de la colección. En este caso, se usa un panel de apilamiento horizontal.
 
   El ejemplo de código siguiente muestra cómo hacerlo.
-  
+
   ```xaml
   <sad:WorkflowItemsPresenter HintText="Drop Activities Here"
                                 Items="{Binding Path=ModelItem.Branches}">
@@ -64,7 +64,7 @@ El código de este ejemplo muestra lo siguiente:
 
 - Realice una asociación de `DesignerAttribute` al tipo `Parallel` y, a continuación, genere los atributos indicados.
 
-    - En primer lugar, registre todos los diseñadores predeterminados.
+  - En primer lugar, registre todos los diseñadores predeterminados.
 
     A continuación se muestra el ejemplo de código.
 
@@ -82,7 +82,7 @@ El código de este ejemplo muestra lo siguiente:
     RegisterCustomMetadata()
     ```
 
-    - A continuación, invalide el paralelo en el método `RegisterCustomMetadata`.
+  - A continuación, invalide el paralelo en el método `RegisterCustomMetadata`.
 
     El siguiente código muestra esta acción en C# y Visual Basic.
 

@@ -2,12 +2,12 @@
 title: Solución de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307205"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661859"
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 La siguiente información expone algunos problemas que podría encontrar en sus aplicaciones de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y proporciona sugerencias para evitar o reducir el efecto de estos problemas.  
@@ -57,7 +57,7 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Omitir y aceptar excepciones en SQL Server 2000  
  Debe usar miembros de identidad (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) cuando utilice <xref:System.Linq.Queryable.Take%2A> o <xref:System.Linq.Queryable.Skip%2A> contra una base de datos de SQL Server 2000. La consulta debe realizarse contra una sola tabla (es decir, no una unión), o ser una operación <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> o <xref:System.Linq.Queryable.Union%2A>, y no debe incluir una operación <xref:System.Linq.Queryable.Concat%2A>. Para obtener más información, vea la sección "Compatibilidad con SQL Server 2000" en [traslación del operador de consulta estándar](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
- Este requisito no se aplica a [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
+ Este requisito no se aplica a SQL Server 2005.  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  Esta excepción se produce cuando un valor de columna es nulo en una consulta <xref:System.Linq.Enumerable.GroupBy%2A> que agrupa mediante una expresión `boolean`, como `group x by (Phone==@phone)`. Dado que la expresión es un `boolean`, la clave se infiere para ser `boolean`, no `nullable` `boolean`. Cuando la comparación traducida genera un valor null, se realiza un intento para asignar un `nullable` `boolean` a un `boolean`, y se produce la excepción.  

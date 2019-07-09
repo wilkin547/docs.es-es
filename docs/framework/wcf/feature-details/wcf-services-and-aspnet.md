@@ -2,12 +2,12 @@
 title: Servicios WCF y ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: ef772a360ea53c2b5f177ed88ad14c4a1e1277ef
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d42787492b00b8e0a5a732d641947fec61b5ff96
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637550"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663678"
 ---
 # <a name="wcf-services-and-aspnet"></a>Servicios WCF y ASP.NET
 
@@ -29,15 +29,15 @@ Los resultados del modelo en paralelo son de la siguiente manera:
 
 - Dentro de un AppDomain, implementadas por el tiempo de ejecución HTTP de características se aplican al contenido de ASP.NET, pero no a WCF. Muchas características específicas de HTTP de la plataforma de aplicaciones de ASP.NET no se aplican a los servicios WCF hospedados dentro de un AppDomain que incluya contenido de ASP.NET. Ejemplos de estas características incluyen lo siguiente:
 
-    - HttpContext: <xref:System.Web.HttpContext.Current%2A> siempre `null` al acceder desde dentro de un servicio WCF. Utilice <xref:System.ServiceModel.Channels.RequestContext> en su lugar.
+  - HttpContext: <xref:System.Web.HttpContext.Current%2A> siempre `null` al acceder desde dentro de un servicio WCF. Utilice <xref:System.ServiceModel.Channels.RequestContext> en su lugar.
 
-    - Autorización basada en archivo: El modelo de seguridad WCF no permite la lista de control de acceso (ACL) que se aplica al archivo .svc del servicio de hora de decidir si se autoriza una solicitud de servicio.
+  - Autorización basada en archivo: El modelo de seguridad WCF no permite la lista de control de acceso (ACL) que se aplica al archivo .svc del servicio de hora de decidir si se autoriza una solicitud de servicio.
 
-    - Autorización de URL basada en la configuración: De forma similar, el modelo de seguridad WCF no se adhiere a ninguna regla de autorización basada en la dirección URL especificada en de System.Web \<autorización > elemento de configuración. Estos valores se omiten para las solicitudes WCF si un servicio reside en un espacio de direcciones URL protegido por ASP. Reglas de autorización de dirección URL de la red.
+  - Autorización de URL basada en la configuración: De forma similar, el modelo de seguridad WCF no se adhiere a ninguna regla de autorización basada en la dirección URL especificada en de System.Web \<autorización > elemento de configuración. Estos valores se omiten para las solicitudes WCF si un servicio reside en un espacio de direcciones URL protegido por ASP. Reglas de autorización de dirección URL de la red.
 
-    - Extensibilidad de HttpModule: La infraestructura de hospedaje de WCF intercepta WCF solicita cuando el <xref:System.Web.HttpApplication.PostAuthenticateRequest> se provoca el evento y no devuelve el procesamiento a la canalización HTTP de ASP.NET. Los módulos que están codificados para interceptar las solicitudes en las fases posteriores de la canalización no interceptan las solicitudes WCF.
+  - Extensibilidad de HttpModule: La infraestructura de hospedaje de WCF intercepta WCF solicita cuando el <xref:System.Web.HttpApplication.PostAuthenticateRequest> se provoca el evento y no devuelve el procesamiento a la canalización HTTP de ASP.NET. Los módulos que están codificados para interceptar las solicitudes en las fases posteriores de la canalización no interceptan las solicitudes WCF.
 
-    - Suplantación de ASP.NET: De forma predeterminada, WCF solicita siempre se ejecuta como IIS identidad de proceso, aun cuando ASP.NET se configura para permitir la suplantación mediante de System.Web \<identity impersonate = "true" / > opción de configuración.
+  - Suplantación de ASP.NET: De forma predeterminada, WCF solicita siempre se ejecuta como IIS identidad de proceso, aun cuando ASP.NET se configura para permitir la suplantación mediante de System.Web \<identity impersonate = "true" / > opción de configuración.
 
 Estas restricciones se aplican sólo a los servicios WCF hospedados en la aplicación de IIS. El comportamiento del contenido de ASP.NET no se ve afectado por la presencia de WCF.
 

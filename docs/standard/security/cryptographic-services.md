@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: c026174e881768af245860d1b719184dc47f1798
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690532"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663996"
 ---
 # <a name="cryptographic-services"></a>servicios criptográficos
 
@@ -207,19 +207,19 @@ Dos partes (Alicia y Roberto) podrían utilizar una función hash para asegurar 
 
 - Alicia enviaría a Roberto el mensaje de texto simple y el mensaje al que aplicó el algoritmo hash (firma digital). Roberto recibiría el mensaje y le aplicaría el algoritmo hash. A continuación, compararía su valor hash con el valor hash que recibió de Alicia. Si los dos valores hash son idénticos, el mensaje no se ha modificado. Si los valores no son idénticos, el mensaje se modificó después de que Alicia lo escribiera.
 
-    Desgraciadamente, este método no determina la autenticidad del remitente. Cualquiera puede suplantar a Alicia y enviar un mensaje a Roberto. Pueden utilizar el mismo algoritmo hash para firmar su mensaje, y todo lo que Roberto podría determinar es que el mensaje coincide con su firma. Esta es una forma de ataque de tipo "Man in the middle". Para obtener más información, consulte [ejemplo de comunicación segura de Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
+  Desgraciadamente, este método no determina la autenticidad del remitente. Cualquiera puede suplantar a Alicia y enviar un mensaje a Roberto. Pueden utilizar el mismo algoritmo hash para firmar su mensaje, y todo lo que Roberto podría determinar es que el mensaje coincide con su firma. Esta es una forma de ataque de tipo "Man in the middle". Para obtener más información, consulte [ejemplo de comunicación segura de Cryptography Next Generation (CNG)](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100)).
 
 - Alicia envía el mensaje de texto simple a Roberto a través de un canal público que no es seguro. Envía a Roberto el mensaje al que aplicó el algoritmo hash a través de un canal privado seguro. Roberto recibe el mensaje de texto simple, le aplica un algoritmo hash y compara el valor hash con el valor hash que se intercambió de forma privada. Si los valores hash coinciden, Roberto sabe dos cosas:
 
-    - que el mensaje no se alteró.
+  - que el mensaje no se alteró.
 
-    - que el remitente del mensaje (Alicia) es auténtico.
+  - que el remitente del mensaje (Alicia) es auténtico.
 
-    Para que este sistema funcione, Alicia debe ocultar el valor hash original a todos excepto a Roberto.
+  Para que este sistema funcione, Alicia debe ocultar el valor hash original a todos excepto a Roberto.
 
 - Alicia envía el mensaje de texto simple a Roberto a través de un canal público que no es seguro y publica el mensaje al que aplicó el algoritmo hash en su sitio web para que esté visible públicamente.
 
-    Este método evita que se manipule el mensaje, ya que impide que nadie modifique el valor hash. Aunque cualquier persona puede leer el mensaje y su valor hash, este valor hash únicamente lo puede modificar Alicia. Un atacante que desee suplantar a Alicia necesitaría tener acceso al sitio web de Alicia.
+  Este método evita que se manipule el mensaje, ya que impide que nadie modifique el valor hash. Aunque cualquier persona puede leer el mensaje y su valor hash, este valor hash únicamente lo puede modificar Alicia. Un atacante que desee suplantar a Alicia necesitaría tener acceso al sitio web de Alicia.
 
 Ninguno de los métodos anteriores evitará que alguien lea los mensajes de Alicia, ya que se transmiten en texto simple. Para conseguir una seguridad total, normalmente se necesitarán firmas digitales (firma del mensaje) y mecanismos de cifrado.
 

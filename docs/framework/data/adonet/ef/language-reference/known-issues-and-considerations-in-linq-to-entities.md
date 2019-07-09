@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: d7d87a3e95cf66efb91b71f6ff3c7c9bb1fbb311
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539820"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662148"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Problemas conocidos y consideraciones en LINQ to Entities
 Esta sección proporciona información sobre problemas conocidos con LINQ a consultas de entidades.  
@@ -35,7 +35,7 @@ Esta sección proporciona información sobre problemas conocidos con LINQ a cons
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>Pérdida de información de ordenación  
- La proyección de columnas en un tipo anónimo provocará la pérdida de información de ordenación en algunas consultas que se ejecuten en un conjunto de base de datos de [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] con un nivel de la compatibilidad de "80".  Esto se produce cuando un nombre de columna en la lista ORDER BY coincide con un nombre de columna en el selector, como se muestra en el ejemplo siguiente:  
+ Proyección de columnas en un tipo anónimo provocará la información de ordenación se perderá en algunas consultas que se ejecutan en una base de datos de SQL Server 2005 que se establece en un nivel de compatibilidad de "80".  Esto se produce cuando un nombre de columna en la lista ORDER BY coincide con un nombre de columna en el selector, como se muestra en el ejemplo siguiente:  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
