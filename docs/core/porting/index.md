@@ -2,14 +2,14 @@
 title: Portabilidad del código de .NET Framework a .NET Core
 description: Comprenda el proceso de portabilidad y descubra herramientas que le pueden resultar útiles al realizar la portabilidad de un proyecto de .NET Framework a .NET Core.
 author: cartermp
-ms.date: 12/07/2018
+ms.date: 07/03/2019
 ms.custom: seodec18
-ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c408beb97290c41d2ab6944b9d1f68bbc5e946fb
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663237"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609245"
 ---
 # <a name="port-your-code-from-net-framework-to-net-core"></a>Realice la portabilidad de su código de .NET Framework a .NET Core.
 
@@ -39,13 +39,13 @@ Este es el proceso que se recomienda al portar un proyecto a .NET Core. Cada pas
 
 En la lista siguiente se muestran las herramientas que puede resultarle útiles durante el proceso de portabilidad:
 
-* Api Portability Analyzer: [herramienta de línea de comandos](https://github.com/Microsoft/dotnet-apiport/releases) o [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), una cadena de herramientas que puede generar un informe de lo portátil que es su código entre .NET Framework y .NET Core, con un desglose de problemas ensamblado por ensamblado. Para más información, consulte [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md).
-* Analizador de API en .NET: un analizador de Roslyn que detecta posibles riesgos de compatibilidad de las API de C# en distintas plataformas y detecta llamadas a API en desuso. Para más información, consulte [Analizador de API en .NET](../../standard/analyzers/api-analyzer.md).
+* .NET Portability Analyzer: [herramienta de línea de comandos](https://github.com/Microsoft/dotnet-apiport/releases) o [Visual Studio Extension](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer), una herramienta que puede generar un informe de lo portátil que es su código entre .NET Framework y la plataforma .NET Core de destino. El informe contiene un desglose ensamblado por ensamblado del tipo y las API que faltan en la plataforma de .NET Core de destino. Para más información, consulte [Analizador de portabilidad de .NET](../../standard/analyzers/portability-analyzer.md). Se recomienda ejecutar la herramienta Analizador de portabilidad de .NET antes de iniciar la portabilidad, ya que le ayudará a identificar los huecos en las API que faltan.
+* Analizador de API de .NET: un analizador Roslyn que descubre API de .NET Standard que emite <xref:System.PlatformNotSupportedException> en algunas plataformas, detecta llamadas a API en desuso y descubre algunos riesgos potenciales de compatibilidad para API de C# en distintas plataformas. Para más información, consulte [Analizador de API en .NET](../../standard/analyzers/api-analyzer.md). Este analizador es útil después de haber creado su proyecto de .NET Core para identificar diferencias en el comportamiento durante el tiempo de ejecución en varias plataformas.
 * Reverse Package Search: un [servicio web útil](https://packagesearch.azurewebsites.net) que le permite buscar un tipo y encontrar los paquetes que lo contienen.
 
 Además, puede intentar portar soluciones más pequeñas o proyectos individuales en el formato de archivo de proyecto de .NET Core con la herramienta [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017).
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 es una herramienta de terceros. No hay ninguna garantía de que funcione con todos los proyectos, y podría provocar cambios sutiles de comportamiento de los que dependa. CsprojToVs2017 debe usarse como _punto de partida_ que automatiza los elementos básicos que se pueden automatizar. No es una solución que se garantice para migrar formatos de archivo de proyecto.
 
 >[!div class="step-by-step"]

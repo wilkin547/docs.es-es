@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: bb100ea064585235768ecb46781eb830c7dae0c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401958"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539275"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>Novedades de .NET Core 3.0 (versión preliminar 6)
 
@@ -107,6 +107,15 @@ El comando `dotnet publish` admite empaquetar la aplicación en un ejecutable de
 
 Para publicar un ejecutable de archivo único, establezca `PublishSingleFile` en el proyecto o en la línea de comandos con el comando `dotnet publish`:
 
+```xml
+<PropertyGroup>
+  <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+  <PublishSingleFile>true</PublishSingleFile>
+</PropertyGroup>
+```
+
+O bien
+
 ```console
 dotnet publish -r win10-x64 /p:PublishSingleFile=true
 ```
@@ -121,7 +130,7 @@ Las aplicaciones independientes incluyen todo lo necesario para ejecutar el cód
 
 .NET Core incluye ahora un valor que usará la herramienta [Enlazador de IL](https://github.com/mono/linker) para examinar el nivel de integridad de la aplicación. Esta herramienta detecta qué código es necesario y, a continuación, recorta las bibliotecas sin usar. Esta herramienta puede reducir significativamente el tamaño de implementación de algunas aplicaciones.
 
-Para habilitar esta herramienta, use el valor `<PublishTrimmed>` en el proyecto y publique una aplicación independiente:
+Para habilitar esta herramienta, agregue el valor `<PublishTrimmed>` en el proyecto y publique una aplicación independiente:
 
 ```xml
 <PropertyGroup>

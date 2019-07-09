@@ -4,12 +4,12 @@ description: En este tutorial se muestra cómo crear una aplicación de consola 
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a766d95c62fd3a89e3291e1ab803f5222fac46ea
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 833aeeb045ef1fd7bb0e6dbd2236bc3d9da2e8fc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306180"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506153"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Análisis de opinión de los comentarios del sitio web con clasificación binaria de ML.NET
 
@@ -93,12 +93,16 @@ La clase de conjunto de datos de entrada, `SentimentData`, tiene un `string` par
 |¡Ah! Me encantó el lugar.              |    1     |
 |El servicio fue muy rápido.              |    1     |
 
-`SentimentPrediction` es la clase de predicción que se utiliza tras el entrenamiento del modelo. Se hereda de `SentimentData` para mostrar `SentimentText` con las predicciones. `SentimentPrediction` tiene un solo valor booleano (`Sentiment`) y un atributo `PredictedLabel` `ColumnName`. `Label` se usa para crear y entrenar el modelo, y se usa también con el conjunto de datos de prueba dividido para evaluar el modelo. `PredictedLabel` se usa durante la predicción y la evaluación. Para la evaluación, se usan datos de entrenamiento, los valores de predicción y el modelo.
+`SentimentPrediction` es la clase de predicción que se utiliza tras el entrenamiento del modelo. Hereda de `SentimentData` para que la entrada `SentimentText` pueda mostrarse junto con la predicción de salida. El booleano `Prediction` es el valor que predice el modelo cuando se proporciona con la nueva entrada `SentimentText`.
 
-La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para todas las operaciones de ML.NET. La inicialización de `mlContext` crea un entorno de ML.NET que se puede compartir entre los objetos del flujo de trabajo de creación de modelos. Como concepto, se parece a `DBContext` en Entity Framework.
+La clase de salida `SentimentPrediction` contiene otras dos propiedades calculadas por el modelo: `Score`, el resultado sin formato calculado por el modelo y `Probability`, la puntuación calibrada de la probabilidad de que el texto tenga un sentimiento positivo.
+
+Para este tutorial, la propiedad más importante es `Prediction`.
 
 ## <a name="load-the-data"></a>Carga de los datos
 Los datos de ML.NET se representan como una [clase IDataView](xref:Microsoft.ML.IDataView). `IDataView` es una manera flexible y eficiente de describir datos tabulares (numéricos y de texto). Los datos se pueden cargar desde un archivo de texto o en tiempo real (por ejemplo, archivos de registro o base de datos SQL) en un objeto `IDataView`.
+
+La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para todas las operaciones de ML.NET. La inicialización de `mlContext` crea un entorno de ML.NET que se puede compartir entre los objetos del flujo de trabajo de creación de modelos. Como concepto, se parece a `DBContext` en Entity Framework.
 
 Prepare la aplicación y luego cargue datos:
 

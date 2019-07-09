@@ -3,12 +3,12 @@ title: Herramientas de la interfaz de línea de comandos (CLI) de .NET Core
 description: Introducción a las herramientas y características de la interfaz de la línea de comandos (CLI) de .NET Core.
 ms.date: 08/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff96023dd0b161271e146f7a7e69924c9db9e769
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61647429"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569516"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Herramientas de la interfaz de la línea de comandos (CLI) de .NET Core
 
@@ -99,7 +99,7 @@ La CLI adopta un modelo de extensibilidad que le permite especificar herramienta
 
 ## <a name="command-structure"></a>Estructura de comandos
 
-La estructura de comandos de la CLI consta del [controlador ("dotnet")](#driver), [el comando (o "verbo")](#command-verb) y posiblemente de los [argumentos de comandos](#arguments) y otras [opciones](#options). Este patrón se puede ver en la mayoría de las operaciones de la CLI, como la creación de una nueva aplicación de consola y su ejecución desde la línea de comandos, como muestran los siguientes comandos cuando se ejecutan desde un directorio denominado *my_app* :
+La estructura de comandos de la CLI consta del [controlador ("dotnet")](#driver), [el comando](#command) y posiblemente de los [argumentos de comandos](#arguments) y otras [opciones](#options). Este patrón se puede ver en la mayoría de las operaciones de la CLI, como la creación de una nueva aplicación de consola y su ejecución desde la línea de comandos, como muestran los siguientes comandos cuando se ejecutan desde un directorio denominado *my_app* :
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
@@ -134,9 +134,9 @@ Cuando se proporciona un comando para el controlador, `dotnet.exe` inicia el pro
 
 En primer lugar, el controlador determina la versión de SDK que se debe usar. Si no hay ningún elemento ["global.json"](global-json.md), se usa la última versión del SDK disponible. Podría tratarse de una versión preliminar o de una versión estable, en función de lo último que esté disponible en el equipo.  Una vez determinada la versión del SDK, se ejecutará el comando.
 
-### <a name="command-verb"></a>Comando ("verbo")
+### <a name="command"></a>Comando
 
-El comando (o "verbo") es simplemente un comando que realiza una acción. Por ejemplo, `dotnet build` compila el código. `dotnet publish` publica el código. Los comandos se implementan como una aplicación de consola usando una convención `dotnet {verb}`.
+El comando realiza una acción. Por ejemplo, `dotnet build` compila código. `dotnet publish` publica el código. Los comandos se implementan como una aplicación de consola usando una convención `dotnet {command}`.
 
 ### <a name="arguments"></a>Argumentos
 
@@ -148,7 +148,7 @@ Las opciones que se pasan en la línea de comandos son las opciones para el coma
 
 ## <a name="migration-from-projectjson"></a>Migración desde project.json
 
-Si usó herramientas de la versión preliminar 2 para producir proyectos basados en *project.json*, consulte el tema sobre [dotnet migrate](dotnet-migrate.md) para más información sobre cómo migrar su proyecto a MSBuild/*.csproj*  para usarlo con herramientas de versión. Para los proyectos de .NET Core creados antes del lanzamiento de las herramientas de la versión preliminar 2, actualice manualmente el proyecto siguiendo las instrucciones que se indican en [Migración de DNX a CLI de .NET Core (project.json)](../migration/from-dnx.md) y, luego, use `dotnet migrate` o actualice directamente los proyectos.
+Si usó herramientas de la versión preliminar 2 para producir proyectos basados en *project.json*, consulte el tema sobre [dotnet migrate](dotnet-migrate.md) para más información sobre cómo migrar su proyecto a MSBuild/ *.csproj*  para usarlo con herramientas de versión. Para los proyectos de .NET Core creados antes del lanzamiento de las herramientas de la versión preliminar 2, actualice manualmente el proyecto siguiendo las instrucciones que se indican en [Migración de DNX a CLI de .NET Core (project.json)](../migration/from-dnx.md) y, luego, use `dotnet migrate` o actualice directamente los proyectos.
 
 ## <a name="see-also"></a>Vea también
 

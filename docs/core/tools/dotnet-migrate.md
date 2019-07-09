@@ -1,21 +1,28 @@
 ---
 title: Comando dotnet migrate
 description: El comando dotnet migrate migra un proyecto y todas sus dependencias.
-ms.date: 05/25/2018
-ms.openlocfilehash: 861cd2cb982c6f41baf00a2cbd7e04b26816af76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 3304f666d15d9188cdae76a401747d91791f817f
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631952"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539399"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
+**Este tema se aplica a: ✓** SDK de .NET Core 1.x y versiones posteriores
+
+<!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
 
 ## <a name="name"></a>nombre
 
-`dotnet migrate`: migra un proyecto .NET Core de la versión preliminar 2 a un proyecto del SDK 1.0 de .NET Core.
+`dotnet migrate`: migra un proyecto .NET Core de la versión preliminar 2 a un proyecto del estilo de SDK de .NET Core.
+
+> [!NOTE]
+> `dotnet migrate` se quitará del SDK de .NET Core 3.0 en la próxima publicación de versión preliminar.
 
 ## <a name="synopsis"></a>Sinopsis
 
@@ -24,9 +31,9 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--r
 dotnet migrate [-h|--help]
 ```
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>DESCRIPCIÓN
 
-El comando `dotnet migrate` migra un proyecto válido basado en *project.json* de la versión preliminar 2 a un proyecto válido *csproj* del SDK 1.0 de .NET Core.
+Con el comando `dotnet migrate` se migra un proyecto válido basado en *project.json* de la versión preliminar 2 a un proyecto válido *csproj* del estilo de SDK de .NET Core.
 
 De forma predeterminada, el comando migra el proyecto raíz y todas las referencias de proyecto que contiene. Este comportamiento se deshabilita mediante la opción `--skip-project-references` en tiempo de ejecución.
 

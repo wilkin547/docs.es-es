@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3f303583b1cff785ab0020e616fee58ef02a1c58
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222346"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487037"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Herramienta de generación y edición de manifiestos, cliente gráfico)
 
@@ -26,7 +26,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ## <a name="uielement-list"></a>Lista de UIElement  
  La siguiente tabla enumera los elementos de menú y de barra de herramientas disponibles.  
   
-|Comando|Menú|Acceso directo|Descripción|  
+|Comando|Menú|Acceso directo|DESCRIPCIÓN|  
 |-------------|----------|--------------|-----------------|  
 |**Manifiesto de aplicación**|**Archivo, Nuevo**||Crea un nuevo manifiesto de aplicación.|  
 |**Manifiesto de implementación**|**Archivo, Nuevo**||Crea un nuevo manifiesto de implementación.|  
@@ -47,10 +47,10 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ## <a name="preferences-dialog-box"></a>Cuadro de diálogo Preferencias  
  El cuadro de diálogo **Preferencias** contiene los elementos siguientes.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Firmar al guardar**|Le pide que firme un archivo cada vez que guarde sus modificaciones.|  
-|**Usar certificado de firma predeterminado**|Usa la clave especificada en el cuadro de texto **Archivo de certificado** para firmar todos los archivos. Esta opción elimina el mensaje de solicitud de firma que suele aparecer al guardar un archivo si la opción **Firmar al guardar** está seleccionada. Use el botón de puntos suspensivos (**…**) situado junto al cuadro de texto **Archivo de certificado** para seleccionar un archivo de claves.|  
+|**Usar certificado de firma predeterminado**|Usa la clave especificada en el cuadro de texto **Archivo de certificado** para firmar todos los archivos. Esta opción elimina el mensaje de solicitud de firma que suele aparecer al guardar un archivo si la opción **Firmar al guardar** está seleccionada. Use el botón de puntos suspensivos ( **…** ) situado junto al cuadro de texto **Archivo de certificado** para seleccionar un archivo de claves.|  
 |Algoritmo de resumen|Especifica el algoritmo con el que se generarán los resúmenes de dependencia. El valor debe ser "sha256RSA" o "sha1RSA". Usa SHA1 como valor predeterminado. Se usa tanto en los manifiestos de aplicación como de implementación. Si el usuario proporciona un certificado al guardar el manifiesto, usa los algoritmos del certificado para generar los resúmenes de dependencia.|  
   
 ## <a name="signing-options-dialog-box"></a>Cuadro de diálogo Opciones de firma  
@@ -58,12 +58,12 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
  Este cuadro de diálogo contiene los siguientes elementos.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Firmar con archivo de certificado**|Firma el manifiesto con un certificado digital almacenado en el sistema de archivos.|  
 |**Archivo**|Proporciona un área para escribir la ruta de acceso al archivo .pfx que representa el certificado.|  
 |**...**|Abre un cuadro de diálogo **Elegir archivo** que permite seleccionar un archivo .pfx existente.|  
-|**Nuevo**|Genera un nuevo .pfx que no se puede comprobar a través de una entidad de certificación (CA). Para más información sobre los tipos de certificados usados para firmar implementaciones de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], consulte [Información general sobre la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).|  
+|**Nuevo**|Genera un nuevo .pfx que no se puede comprobar a través de una entidad de certificación (CA). Para obtener más información sobre los tipos de certificados usados para firmar implementaciones de ClickOnce, consulte [Información general sobre la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Contraseña**|Proporciona un área para escribir la contraseña usada para firmar con este certificado. Si no procede, puede dejarse en blanco.|  
 |**Firmar con certificado almacenado**|Muestra una lista seleccionable de certificados digitales guardados en el almacén de certificados del equipo.|  
 |**URI de marca de tiempo**|Muestra el Localizador uniforme de recursos (URI) de un servicio de marca de tiempo digital. Las marcas de tiempo en los manifiestos evitan tener que volver a firmarlos en caso de que el certificado digital expire antes de implementar la versión siguiente de la aplicación. Para más información, consulte [Miembros del programa de certificados raíz de Windows](https://go.microsoft.com/fwlink/?LinkId=159000) y [ClickOnce y Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
@@ -77,7 +77,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
  La pestaña **Manifiesto de aplicación** contiene las siguientes pestañas.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Name**|Especifica la información de identificación de la implementación.|  
 |**Descripción**|Especifica la información de publicador, producto y compatibilidad.|  
@@ -88,7 +88,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ### <a name="name-tab"></a>Pestaña Nombre  
  La pestaña **Nombre** se muestra al crear o abrir por primera vez un manifiesto de aplicación. Identifica de forma única la implementación y, opcionalmente, especifica una plataforma de destino válida.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Name**|Obligatorio. Es el nombre del manifiesto de aplicación. Normalmente, coincide con el nombre de archivo.|  
 |**Versión**|Obligatorio. Es el número de versión de la implementación en formato *N.N.N.N*. Solo es obligatorio el primer número de la compilación principal. Por ejemplo, para la versión 1.0 de una aplicación, los valores válidos incluirían `1`, `1.0`, `1.0.0` y `1.0.0.0`.|  
@@ -99,7 +99,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ### <a name="description-tab"></a>Pestaña Descripción  
  Esta información normalmente se proporciona dentro del manifiesto de implementación. Estos campos solo pueden modificarse si se selecciona la casilla **Usar manifiesto de la aplicación para la información de confianza** en la pestaña **Opciones de la aplicación**.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Publicador**|Nombre de la persona u organización responsable de la aplicación. Este valor se usa como nombre de la carpeta del menú Inicio.|  
 |**Producto**|Nombre completo del producto. Si seleccionó **Instalar localmente** para el elemento **Tipo de aplicación** de la pestaña **Opciones de implementación** del manifiesto de implementación, este nombre aparecerá en el vínculo del menú **Inicio** y en **Agregar o quitar programas** para esta aplicación.|  
@@ -107,16 +107,16 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
 ### <a name="application-options-tab"></a>Pestaña Opciones de la aplicación  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Aplicación Explorador de Windows Presentation Foundation**|Especifica si se trata de una aplicación WPF que se ejecuta en el explorador como una aplicación de explorador XAML (XBAP).|  
 |**Usar manifiesto de la aplicación para la información de confianza**|Especifica si este manifiesto contiene información de confianza.|  
   
 ### <a name="files-tab"></a>Pestaña Archivos  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
-|**Directorio de la aplicación**|Es el directorio en el que residen los archivos de la aplicación. Use el botón de puntos suspensivos (**…**) para seleccionar el directorio.|  
+|**Directorio de la aplicación**|Es el directorio en el que residen los archivos de la aplicación. Use el botón de puntos suspensivos ( **…** ) para seleccionar el directorio.|  
 |**Rellenar**|Agrega todos los archivos del directorio de la aplicación y sus subdirectorios al manifiesto de aplicación. Si MageUI.exe encuentra un único archivo ejecutable en el directorio, lo marca automáticamente como punto de entrada, es decir, como el archivo que se ejecuta primero cuando se inicia la aplicación ClickOnce en el cliente.|  
 |**Archivos de aplicación**|Enumera todos los archivos de la aplicación. Cada archivo tiene tres atributos modificables, descritos a continuación.|  
 |**Tipo de archivo**|El tipo de archivo puede ser uno de cuatro valores:<br /><br /> -   Ninguno.<br />-   Punto de entrada. Archivo ejecutable principal de la aplicación. Tan solo se puede marcar un archivo ejecutable como punto de entrada.<br />-   Archivo de datos. Archivo que proporciona datos a la aplicación (por ejemplo, un archivo XML).<br />-   Archivo de icono. Icono de la aplicación, como el que aparece en el escritorio o en la esquina de una ventana de aplicación.|  
@@ -126,7 +126,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ### <a name="permissions-required-tab"></a>Pestaña Permisos necesarios  
  Use la pestaña **Permisos necesarios** si necesita conceder a la aplicación más acceso al equipo local del que se concede de forma predeterminada. Para más información, consulte [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Tipo de conjunto de permisos**|El conjunto de permisos mínimo requerido por la aplicación para ejecutarse en el cliente. Para obtener una descripción de estos conjuntos de permisos y ver qué permisos se exigen, vea [Conjuntos de permisos con nombre](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Detalles**|Es el XML creado para el manifiesto de aplicación para representar el conjunto de permisos. A menos que tenga amplios conocimientos del formato XML del manifiesto de aplicación, no debe modificar manualmente este XML. Para más información, consulte [Manifiesto de aplicación ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
@@ -134,18 +134,18 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
 ### <a name="deployment-manifest-tab"></a>Pestaña Manifiesto de implementación  
  La pestaña **Manifiesto de implementación** contiene las siguientes pestañas.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Name**|Especifica la información de identificación de la implementación.|  
 |**Descripción**|Especifica la información de publicador, producto y compatibilidad.|  
 |**Opciones de implementación**|Especifica información adicional sobre la implementación, como el tipo de aplicación y la ubicación de inicio.|  
-|**Opciones de actualización**|Especifica la frecuencia con la que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] debe comprobar si hay actualizaciones de la aplicación.|  
+|**Opciones de actualización**|Especifica la frecuencia con la que ClickOnce debe comprobar si hay actualizaciones de la aplicación.|  
 |**Referencia de aplicación**|Especifica el manifiesto de aplicación para esta implementación.|  
   
 ### <a name="name-tab"></a>Pestaña Nombre  
  La pestaña **Nombre** aparece al crear o abrir por primera vez un manifiesto de implementación. Identifica de forma única la implementación y, opcionalmente, especifica una plataforma de destino válida.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Name**|Obligatorio. Es el nombre del manifiesto de implementación. Normalmente, coincide con el nombre de archivo.|  
 |**Versión**|Obligatorio. Es el número de versión de la implementación en formato *N.N.N.N*. Solo es obligatorio el primer número de la compilación principal. Por ejemplo, para la versión 1.0 de una aplicación, los valores válidos incluirían `1`, `1.0`, `1.0.0` y `1.0.0.0`.|  
@@ -155,7 +155,7 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
 ### <a name="description-tab"></a>Pestaña Descripción  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Publicador**|Obligatorio. Es el nombre de la persona u organización responsable de la aplicación. Este valor se usa como nombre de la carpeta del menú Inicio.|  
 |**Producto**|Obligatorio. Nombre completo del producto. Si seleccionó **Instalar localmente** para el elemento **Tipo de aplicación** en la pestaña **Opciones de implementación**, este nombre aparecerá en el vínculo del menú **Inicio** y en **Agregar o quitar programas** para esta aplicación.|  
@@ -163,30 +163,30 @@ MageUI.exe admite la misma funcionalidad que la herramienta de línea de comando
   
 ### <a name="deployment-options-tab"></a>Pestaña Opciones de implementación  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Tipo de aplicación**|Opcional. Especifica si la aplicación se instala por sí misma en el equipo cliente (**Instalar localmente**), se ejecuta en línea (**Solo en línea**) o es una aplicación WPF que se ejecuta en el explorador (**Aplicación de explorador WPF**). El valor predeterminado es **Instalar localmente**.|  
 |**Ubicación de inicio**|Opcional. Es la dirección URL desde la que debe iniciarse realmente la aplicación. Resulta útil al implementar una aplicación desde un CD que debe actualizarse desde la Web.|  
-|**Incluir la ubicación de inicio (ProviderURL) en el manifiesto**|Opcional. Especifica la dirección URL que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] examinará para buscar actualizaciones de la aplicación.|  
-|**Ejecutar automáticamente la aplicación después de instalarla**|Obligatorio. Especifica que la aplicación de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] debe ejecutarse inmediatamente después de la instalación inicial desde una dirección URL. El valor predeterminado es que la casilla esté activada.|  
-|**Permitir que se pasen los parámetros de la dirección URL a la aplicación**|Obligatorio. Permite la transferencia de datos de parámetros a la aplicación de [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] a través de una cadena de consulta anexa a la dirección URL del manifiesto de implementación. El valor predeterminado es que la casilla esté desactivada.|  
+|**Incluir la ubicación de inicio (ProviderURL) en el manifiesto**|Opcional. Especifica la dirección URL que ClickOnce examinará para buscar actualizaciones de la aplicación.|  
+|**Ejecutar automáticamente la aplicación después de instalarla**|Obligatorio. Especifica que la aplicación de ClickOnce debe ejecutarse inmediatamente después de la instalación inicial desde una dirección URL. El valor predeterminado es que la casilla esté activada.|  
+|**Permitir que se pasen los parámetros de la dirección URL a la aplicación**|Obligatorio. Permite la transferencia de datos de parámetros a la aplicación de ClickOnce a través de una cadena de consulta anexa a la dirección URL del manifiesto de implementación. El valor predeterminado es que la casilla esté desactivada.|  
 |**Usar la extensión de archivo .deploy**|Obligatorio. Cuando se selecciona, todos los archivos del manifiesto de aplicación deben tener la extensión .deploy. El valor predeterminado es que la casilla esté desactivada.|  
   
 ### <a name="update-options-tab"></a>Pestaña Opciones de actualización  
  La pestaña **Opciones de actualización** solo contiene las opciones mencionadas aquí cuando el cuadro de selección **Tipo de aplicación** de la pestaña **Nombre** se establece en **Instalar localmente**.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
-|**Esta aplicación debe buscar actualizaciones**|Especifica si [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] debe comprobar si hay actualizaciones de la aplicación. Si no se selecciona esta casilla, la aplicación no buscará actualizaciones a menos que se actualice mediante programación usando las API en el espacio de nombres <xref:System.Deployment.Application>.|  
+|**Esta aplicación debe buscar actualizaciones**|Especifica si ClickOnce debe comprobar si hay actualizaciones de la aplicación. Si no se selecciona esta casilla, la aplicación no buscará actualizaciones a menos que se actualice mediante programación usando las API en el espacio de nombres <xref:System.Deployment.Application>.|  
 |**Elija cuándo debe buscar actualizaciones la aplicación**|Proporciona dos opciones para la búsqueda de actualizaciones:<br /><br /> -   **Antes de que se inicie la aplicación**. La búsqueda de actualizaciones se realiza antes de la ejecución de la aplicación.<br />-   **Después de que se inicie la aplicación**. La búsqueda de actualizaciones comienza una vez que se ha inicializado el formulario principal de la aplicación y se ejecutará la próxima vez que se inicie la aplicación.|  
-|**Actualice la frecuencia de comprobación**|Determina la frecuencia con la que [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] debe buscar actualizaciones:<br /><br /> -   **Comprobar cada vez que se ejecute la aplicación**. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] llevará a cabo una búsqueda de actualizaciones cada vez que el usuario abra la aplicación.<br />-   **Comprobar cada**: Seleccione el intervalo y la unidad (horas, días o semanas) del tiempo que debe transcurrir antes de comprobar si hay actualizaciones.|  
+|**Actualice la frecuencia de comprobación**|Determina la frecuencia con la que ClickOnce debe buscar actualizaciones:<br /><br /> -   **Comprobar cada vez que se ejecute la aplicación**. ClickOnce llevará a cabo una búsqueda de actualizaciones cada vez que el usuario abra la aplicación.<br />-   **Comprobar cada**: Seleccione el intervalo y la unidad (horas, días o semanas) del tiempo que debe transcurrir antes de comprobar si hay actualizaciones.|  
 |**Especifique la versión mínima requerida para esta aplicación**|Opcional. Especifica la instalación obligatoria de una versión concreta de la aplicación para evitar que los usuarios trabajen con una versión anterior.|  
 |**Version**|Obligatorio si se selecciona la casilla **Especifique la versión mínima requerida para esta aplicación**. El número de versión proporcionado debe tener el formato *N.N.N.N*. Solo es obligatorio el primer número de la compilación principal. Por ejemplo, para la versión 1.0 de una aplicación, los valores válidos incluirían `1`, `1.0`, `1.0.0` y `1.0.0.0`.|  
   
 ### <a name="application-reference-tab"></a>Pestaña Referencia de aplicación  
  La pestaña **Referencia de la aplicación** contiene los mismos campos que la pestaña **Nombre** descrita anteriormente en este tema. La única excepción es el campo siguiente.  
   
-|Elemento de la interfaz de usuario|Descripción|  
+|Elemento de la interfaz de usuario|DESCRIPCIÓN|  
 |----------------|-----------------|  
 |**Seleccionar manifiesto**|Le permite elegir el manifiesto de aplicación. El resto de campos de esta página se rellenarán cuando elija un manifiesto de aplicación.|  
   

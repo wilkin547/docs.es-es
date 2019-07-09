@@ -3,12 +3,12 @@ title: Trabajar con LINQ
 description: En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486983"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609307"
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -268,6 +268,14 @@ En su archivo `Extensions.cs`, escriba o copie el siguiente método. Este métod
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
+Verá un subrayado en zigzag rojo bajo `File`, lo que indica que no existe. No se compilará, ya que el compilador no sabe qué es `File`. Para solucionar este problema, asegúrese de agregar la siguiente línea de código bajo la primera línea de `Extensions.cs`:
+
+```csharp
+using System.IO;
+```
+
+Esto debería resolver el problema y el error en rojo debería desaparecer.
+
 A continuación, instrumente la definición de cada consulta con un mensaje de registro:
 
 ```csharp
@@ -345,4 +353,3 @@ Para más información sobre LINQ, vea:
   - [Transformaciones de datos con LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
   - [Sintaxis de consultas y sintaxis de métodos en LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [Características de C# compatibles con LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
-    
