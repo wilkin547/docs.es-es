@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c59a0c5ef1e89c2853a566bd3b587d15a1ed80c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1af01559e65bd80fc62cb2eba44bf21d4fa3113
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770911"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop (Método)
 Detiene la ejecución de código en tiempo de ejecución para el proceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT Stop ();  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|La operación fue correcta.|  
 |S_FALSE|No se pudo completar la operación.|  

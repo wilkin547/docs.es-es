@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 734857428c205b6d806a4279213afb1193f914c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650777"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776601"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>ISymUnmanagedWriter::SetMethodSourceRange (Método)
 Especifica el principio y final reales de un método dentro de un archivo de origen. Utilice este método para especificar la extensión de un método con independencia de los puntos de secuencia que existan dentro del método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetMethodSourceRange(  
     [in] ISymUnmanagedDocumentWriter  *startDoc,  
     [in] ULONG32                      startLine,  

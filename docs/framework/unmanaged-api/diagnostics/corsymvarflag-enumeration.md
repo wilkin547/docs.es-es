@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c797378f5e13f39c1c786237a3a7b9cf577fccc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5b387ee7fd4cc0088c90d2b8278fbf18bb36f51
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763656"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755685"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag (Enumeración)
 Indica si una variable es generado por el compilador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorSymVarFlag   
 {  
     VAR_IS_COMP_GEN = 1  
@@ -37,7 +37,7 @@ typedef enum CorSymVarFlag
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`VAR_IS_COMP_GEN`|Indica que la variable dada es generado por el compilador.|  
   

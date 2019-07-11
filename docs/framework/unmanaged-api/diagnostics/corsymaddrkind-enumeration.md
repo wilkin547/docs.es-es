@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adef1010d08561c0a0fe38480fe0d2f519a80b49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba24f5394ef8fb31d8bfa4e74ac59e7bd4af86d8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993439"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769862"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind (Enumeración)
 Indica el tipo de dirección de memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorSymAddrKind  
 {  
     ADDR_IL_OFFSET          = 1,  
@@ -46,7 +46,7 @@ typedef enum CorSymAddrKind
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`ADDR_IL_OFFSET`|Indica un lenguaje intermedio (MSIL) local variable o parámetro de índice de Microsoft.|  
 |`ADDR_NATIVE_RVA`|Indica una dirección virtual relativa en un módulo.|  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e51ff24698a2839972f9a36eac6c18d4f6709ebd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6187da564a62b8c30abdc6a150f0df45d565615
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600148"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763872"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager (Método)
 Obtiene un puntero de interfaz a la implementación del host de la interfaz con los valores especificados `IID`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetHostManager (  
     [in] REFIID riid,  
     [out, iid_is(riid)] void** ppObject  
@@ -45,7 +45,7 @@ HRESULT GetHostManager (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`GetHostManager` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

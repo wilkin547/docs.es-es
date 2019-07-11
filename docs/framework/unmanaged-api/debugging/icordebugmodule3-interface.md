@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a340086be042c790ae7bf750759ff80f7c9eaf23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37041764ad37221ea80cefa12adfb214287d8248
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942446"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764005"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 (Interfaz)
 Crea un lector de símbolos para un módulo dinámico.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 interface ICorDebugModule3 : IUnknown  
 {  
     HRESULT CreateReaderForInMemorySymbols  
@@ -41,7 +41,7 @@ interface ICorDebugModule3 : IUnknown
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |[ICorDebugModule3::CreateReaderForInMemorySymbols (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Crea un lector de símbolos (normalmente [interfaz ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) para un módulo dinámico.|  
   

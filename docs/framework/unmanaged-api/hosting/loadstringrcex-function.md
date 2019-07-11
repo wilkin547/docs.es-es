@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b5520aef09c72819ff2b3763cd43af13f013263c
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4a0cac77d7bf7611acf6042298bfe6814d8f4352
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490209"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768449"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx (Función)
 Convierte un valor HRESULT a un mensaje de error adecuado para la referencia cultural especificada.  
@@ -30,7 +30,7 @@ Convierte un valor HRESULT a un mensaje de error adecuado para la referencia cul
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT LoadStringRCEx (  
     [in]  LCID    lcid,   
     [in]  UINT    iResouceID,   
@@ -63,7 +63,7 @@ HRESULT LoadStringRCEx (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve códigos de error COM estándar, tal como se define en WinError.h, además de los valores siguientes.  
   
-|Código devuelto|Descripción|  
+|Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`szBuffer` es null, o `iMax` es cero (0).|  

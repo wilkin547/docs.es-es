@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5039117c649943a1f05a91ecccf22eb4230e5e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905923"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776379"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA (Estructura)
 Contiene información sobre el ensamblado que se hace referencia, incluidos su versión y su nivel de compatibilidad con configuraciones regionales, procesadores y sistemas operativos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct {  
     USHORT  usMajorVersion;  
     USHORT  usMinorVersion;  
@@ -45,7 +45,7 @@ typedef struct {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`usMajorVersion`|El número de versión principal del ensamblado que se hace referencia. Este valor no puede ser cero. Si todos los bits de `usMajorVersion` están configurados, no se especifica la versión principal.|  
 |`usMinorVersion`|El número de versión secundaria del ensamblado que se hace referencia. Este valor no puede ser cero. Si todos los bits de `usMinorVersion` están configurados, no se especifica la versión secundaria.|  

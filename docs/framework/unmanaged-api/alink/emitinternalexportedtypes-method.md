@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15174480c4345f2514572701a5525f0f192ad120
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790018"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742102"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes (Método)
 Emite los tipos agregados al ensamblado. Llame a este método después de que conoce los tipos internos se han agregado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT EmitInternalExportedTypes(  
     mdAssembly AssemblyID  
 ) PURE;  

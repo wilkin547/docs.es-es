@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a78a4b82d0b2064c90c938a8614b0c7594f7856
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2e73caa3c69090bca30c8d4a907ddb619bd0ed4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043295"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776323"
 ---
 # <a name="ceesectionrelocextra-union"></a>CeeSectionRelocExtra (Unión)
 Representa un desplazamiento de dirección que usa el [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interfaz para reubicar una sección.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef union  {  
     USHORT highAdj;  
 } CeeSectionRelocExtra;  
@@ -36,7 +36,7 @@ typedef union  {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`highAdj`|El ajuste de la dirección superior de la sección.|  
   

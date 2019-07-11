@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3090887d3c670b2784b7b40c7d63832715596c3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c5e8dd4a9dbf301b0910eda220513e9a3ffdc1cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697607"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778637"
 ---
 # <a name="getidentityauthority-function"></a>GetIdentityAuthority (Función)
 Obtiene un puntero a un [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) instancia que administra las claves para los objetos de código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetIdentityAuthority (  
     [out] IIdentityAuthority   **ppIIdentityAuthority  
  );  

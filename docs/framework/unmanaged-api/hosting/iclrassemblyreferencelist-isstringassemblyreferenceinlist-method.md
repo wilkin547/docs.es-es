@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: de17a91b5093372579a4d9435532a95406addd0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b2860e811a16406a71d7ab8df123f2b32aaf13e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969915"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773300"
 ---
 # <a name="iclrassemblyreferencelistisstringassemblyreferenceinlist-method"></a>ICLRAssemblyReferenceList::IsStringAssemblyReferenceInList (Método)
 Obtiene un valor que indica si el nombre proporcionado coincide con el nombre de un ensamblado en la lista.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT IsStringAssemblyReferenceInList (  
     [in] LPCWSTR pwzAssemblyName  
 );  
@@ -41,7 +41,7 @@ HRESULT IsStringAssemblyReferenceInList (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|La cadena aparece en la lista.|  
 |S_FALSE|La cadena no aparece en la lista.|  

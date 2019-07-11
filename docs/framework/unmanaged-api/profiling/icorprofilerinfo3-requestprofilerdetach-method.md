@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1b04c0453d9ff8545f79f235e7d73095c55203e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab203fc054298971fadfd9abe4e787844313898b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049523"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765324"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach (Método)
 Indica al CLR que desasocie el generador de perfiles.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT RequestProfilerDetach(  
    [in] DWORD    dwExpectedCompletionMilliseconds);  
 ```  
@@ -41,7 +41,7 @@ HRESULT RequestProfilerDetach(
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|La solicitud de desasociación es válida y el procedimiento de desasociación continuará ahora en otro subproceso. Una vez completada totalmente la desasociación, se genera un evento `ProfilerDetachSucceeded`.|  
 |E_ CORPROF_E_CALLBACK3_REQUIRED|El generador de perfiles no se pudo un [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) intento para el [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interfaz, que debe implementar para admitir la operación de desasociación. La desasociación no se intentó.|  

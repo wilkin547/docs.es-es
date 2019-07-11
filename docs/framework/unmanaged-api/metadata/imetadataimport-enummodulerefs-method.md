@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d66d24da05bc3b8f0c3d0a828456d7c61613d219
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afa2d35a193a11360b52bcbdc1d9e5dae16d1c90
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049887"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782126"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs (Método)
 Enumera los tokens de ModuleRef que representan los módulos importados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT EnumModuleRefs (  
    [in, out] HCORENUM     *phEnum,  
    [out]     mdModuleRef  rModuleRefs[],  
@@ -53,7 +53,7 @@ HRESULT EnumModuleRefs (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`S_OK`|`EnumModuleRefs` se devolvió correctamente.|  
 |`S_FALSE`|No hay ningún token para enumerar. En ese caso, `pcModuleRefs` es cero.|  

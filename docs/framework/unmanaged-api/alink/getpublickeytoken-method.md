@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d1b28eadc9f09abff799f99d1d6012c98b1d3dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789849"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741873"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken (Método)
 Recupera el token de clave pública para un determinado archivo de clave o un contenedor de claves.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetPublicKeyToken(  
     LPCWSTR pszKeyFile,  
     LPCWSTR pszKeyContainer,  

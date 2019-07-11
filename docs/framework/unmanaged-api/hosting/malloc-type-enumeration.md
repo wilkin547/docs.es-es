@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 695f69c8d9c3a295a705971743733339cf8aab13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f1c3fd9155761528b9203a5c69dee0bde16327f7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765224"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779346"
 ---
 # <a name="malloctype-enumeration"></a>MALLOC_TYPE (enumeración)
 Contiene valores que especifican las características de la memoria que se está asignando.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     MALLOC_THREADSAFE = 0x1,  
     MALLOC_EXECUTABLE = 0x2,  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`MALLOC_EXECUTABLE`|La memoria asignada puede contener un archivo ejecutable.|  
 |`MALLOC_THREADSAFE`|La memoria asignada es segura para subprocesos. Es decir, la memoria puede obtenerse mediante varios subprocesos sin ninguna sincronización.<br /><br /> Si no se establece esta marca, se deben serializar las llamadas en el objeto.|  

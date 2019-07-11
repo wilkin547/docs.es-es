@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cb1f55e1d8643feb2750e8ea468f608dc3d5d40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36ff06b4bbe916e7038840d9bf3cbc455f161b70
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984261"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768301"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx (Método)
 Obtiene la clave pública de un par de claves pública y privada y especifica un algoritmo hash y un algoritmo de firma.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT StrongNameGetPublicKey (   
     [in]  LPCWSTR   pwzKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
@@ -76,9 +76,9 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se muestra el conjunto de valores aceptados para el `uHashAlgId` parámetro.  
   
-|Name|Valor|  
+|NOMBRE|Valor|  
 |----------|-----------|  
-|Ninguna|0|  
+|None|0|  
 |SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  

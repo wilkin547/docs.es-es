@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: c92b112262aa2bede03bddc1396947b5fdfd6286
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cd256250021436e611142de11c3625a21aeec814
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629990"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764742"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>Método ISOSDacInterface::GetMethodDescPtrFromIP
 
@@ -30,7 +30,7 @@ Recupera el puntero de la MethodDesc correspondiente del método que contiene la
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT GetMethodDescPtrFromIP(
     CLRDATA_ADDRESS ip,
     CLRDATA_ADDRESS * ppMD
@@ -52,8 +52,8 @@ El método proporcionado forma parte de la [ `ISOSDacInterface` interfaz](isosda
 ## <a name="requirements"></a>Requisitos
 
 **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: Ninguna  
-**Biblioteca:** Ninguna  
+**Encabezado**: None  
+**Biblioteca:** None  
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también

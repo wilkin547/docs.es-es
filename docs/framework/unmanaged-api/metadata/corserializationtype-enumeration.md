@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15b1f6be2dac6bc7566852791ac22e495949521c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b9b7138d403bc84ab377301b82d697fd137416c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992646"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781594"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType (Enumeración)
 Especifica cómo se serializa un objeto por common language runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorSerializationType {  
   
     SERIALIZATION_TYPE_UNDEFINED     = 0,  
@@ -57,7 +57,7 @@ typedef enum CorSerializationType {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|La serialización del objeto es indefinida.|  
 |`SERIALIZATION_TYPE_BOOLEAN`|El objeto se serializa como un tipo booleano|  

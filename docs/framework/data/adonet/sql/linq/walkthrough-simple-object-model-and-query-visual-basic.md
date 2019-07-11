@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: 0d4e3360920347c38f24b962c097af32eb92bc48
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bf97263bf8ae0ac3ece187e81a51edfaef48a54
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657414"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742580"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Tutorial: Modelo de objetos simple y consultas (Visual Basic)
 Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] básico, con las mínimas dificultades. Creará una clase de entidad que modela la tabla Customers de la base de datos de ejemplo Northwind. Después creará una consulta simple para enumerar los clientes que se encuentran en Londres.  
   
- Este tutorial está orientado a código por diseño, para que sea más sencillo mostrar los conceptos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Normalmente, para crear un modelo de objetos utilizaría el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  
+ Este tutorial está orientado a código por diseño, para que sea más sencillo mostrar los conceptos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Normalmente, utilizaría el Object Relational Designer para crear un modelo de objetos.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -54,7 +54,7 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
   
 4. En el **nombre** , escriba **LinqConsoleApp**.  
   
-5. Haga clic en **Aceptar**.  
+5. Haga clic en **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Agregar referencias y directivas LINQ  
  En este tutorial se usan ensamblados que podrían no estar instalados en el proyecto de forma predeterminada. Si `System.Data.Linq` no aparece como una referencia en el proyecto (haga clic en **mostrar todos los archivos** en **el Explorador de soluciones** y expanda el **referencias** nodo), agréguelo, como se explica en los pasos siguientes.  

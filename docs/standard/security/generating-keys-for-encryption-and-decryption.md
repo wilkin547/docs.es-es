@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c197dfc9-a453-4226-898d-37a16638056e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd6a5d710f4b42ae8d1bedb535abface7a053cbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52ec268df38a12dfe7dac469eed9901d7c0646a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654393"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769606"
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generar claves para cifrado y descifrado
 La creación y administración de claves es una parte importante del proceso criptográfico. Los algoritmos simétricos requieren la creación de una clave y un IV (Initialization Vector, vector de inicialización). La clave debe mantenerse en secreto y a salvo de quienes no deban descifrar los datos. No es necesario que el vector de inicialización sea secreto, pero debe cambiarse para cada sesión. Los algoritmos asimétricos requieren la creación de una clave pública y una clave privada. La clave pública puede revelarse a cualquiera, mientras que la privada debe conocerla sólo la parte que descifrará los datos cifrados con la clave pública. En esta sección se describe cómo generar y administrar claves para algoritmos simétricos y asimétricos.  
   
 ## <a name="symmetric-keys"></a>Claves simétricas  
- Las clases de cifrado simétrico que proporciona .NET Framework requieren una clave y un nuevo vector de inicialización (IV) para cifrar y descifrar datos. Siempre que cree una nueva instancia de una de las clases criptográficas simétricas administradas utilizando el constructor predeterminado, se crean automáticamente una clave y un vector de inicialización nuevos. Cualquier persona a la que permita descifrar sus datos debe poseer la misma clave y el mismo IV, y utilizar el mismo algoritmo. Normalmente, debe crearse una nueva clave y vector de inicialización para cada sesión, y ni la clave ni el vector deberían almacenarse para utilizarlos en una sesión posterior.  
+ Las clases de cifrado simétrico que proporciona .NET Framework requieren una clave y un nuevo vector de inicialización (IV) para cifrar y descifrar datos. Siempre que cree una nueva instancia de una de las clases criptográficas simétricas administradas utilizando el constructor sin parámetros, se crean automáticamente una nueva clave e IV. Cualquier persona a la que permita descifrar sus datos debe poseer la misma clave y el mismo IV, y utilizar el mismo algoritmo. Normalmente, debe crearse una nueva clave y vector de inicialización para cada sesión, y ni la clave ni el vector deberían almacenarse para utilizarlos en una sesión posterior.  
   
  Para comunicar una clave simétrica y un IV a una parte remota, la clave simétrica normalmente se cifra usando cifrado asimétrico. El envío de la clave a través de una red insegura sin cifrarla resulta peligroso, ya que quien intercepte la clave y el IV podrá descifrar los datos. Para obtener más información sobre el intercambio de datos mediante el cifrado, vea [Crear un esquema criptográfico](../../../docs/standard/security/creating-a-cryptographic-scheme.md).  
   
@@ -60,7 +60,7 @@ tdes.GenerateKey();
  Cuando se ejecuta el código anterior, se generan una clave y un IV al crear la nueva instancia de **TripleDESCryptoServiceProvider** . Se crean otra clave e IV cuando se llama a los métodos **GenerateKey** y **GenerateIV** .  
   
 ## <a name="asymmetric-keys"></a>Claves asimétricas  
- .NET Framework proporciona las clases <xref:System.Security.Cryptography.RSACryptoServiceProvider> y <xref:System.Security.Cryptography.DSACryptoServiceProvider> para el cifrado asimétrico. Estas clases crean un par de claves pública y privada cuando utiliza el constructor predeterminado para crear una nueva instancia. Las claves asimétricas pueden almacenarse para utilizarse en sesiones múltiples o bien generarse para una sesión únicamente. Aunque la clave pública puede ponerse a disposición general, la clave privada debe guardarse bien.  
+ .NET Framework proporciona las clases <xref:System.Security.Cryptography.RSACryptoServiceProvider> y <xref:System.Security.Cryptography.DSACryptoServiceProvider> para el cifrado asimétrico. Estas clases crean un par de claves pública y privada cuando utiliza el constructor sin parámetros para crear una nueva instancia. Las claves asimétricas pueden almacenarse para utilizarse en sesiones múltiples o bien generarse para una sesión únicamente. Aunque la clave pública puede ponerse a disposición general, la clave privada debe guardarse bien.  
   
  Un par de claves pública y privada se genera siempre que se crea una nueva instancia de una clase de algoritmo asimétrico. Una vez creada una nueva instancia de la clase, la información de la clave puede extraerse mediante uno de estos dos métodos:  
   
@@ -93,4 +93,4 @@ RSAParameters rsaKeyInfo = rsa.ExportParameters(false);
 - [Cifrar datos](../../../docs/standard/security/encrypting-data.md)
 - [Descifrar datos](../../../docs/standard/security/decrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
-- [Cómo: Store claves asimétricas en un contenedor de claves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+- [Procedimientos: Store claves asimétricas en un contenedor de claves](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

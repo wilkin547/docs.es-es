@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6dc4e3adf5adec1aa4626a31b6a9391e2a04f1ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16cb3495bbc2fa9ead25afd5e7120774b021a37f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970097"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773563"
 ---
 # <a name="iclrassemblyidentitymanagergetbindingidentityfromstream-method"></a>ICLRAssemblyIdentityManager::GetBindingIdentityFromStream (Método)
 Obtiene los datos de identidad de ensamblado canónico para el ensamblado en la secuencia especificada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetBindingIdentityFromStream (  
     [in] IStream    *pStream,  
     [in] DWORD       dwFlags,  
@@ -53,7 +53,7 @@ HRESULT GetBindingIdentityFromStream (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se devolvió correctamente.|  
 |E_INVALIDARG|Suministrado `pStream` es null.|  

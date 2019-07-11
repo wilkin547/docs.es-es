@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63c3ecd0ae0d9e1df62d73eb05b759093583f652
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09c36dd65c8a4202f13d362668f74cd9a362e35a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915322"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744359"
 ---
 # <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER (Enumeración)
 Identifica las devoluciones de llamada para las funciones del depurador. Para obtener más información, consulte el [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 enum tagNOTIFY_FILTER  
 {  
     NOTIFY_FILTER_ONSYNCCALLOUT    = 0x1,  
@@ -43,7 +43,7 @@ enum tagNOTIFY_FILTER
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`NOTIFY_FILTER_ONSYNCCALLOUT`|Indica que el [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) se debe invocar el método.|  
 |`NOTIFY_FILTER_ONSYNCCALLENTER`|Indica que el [Inotifysink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) se debe invocar el método.|  

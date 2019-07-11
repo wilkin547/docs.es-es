@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e38a85b688d66e9f44bd8026bb4c9e141a6eb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6e9e5c199ad437290d7bf19d65b5f29a0abed5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000342"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780108"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey (Función)
 Obtiene la clave pública de un par de claves pública y privada. El par de claves puede proporcionarse como un nombre de contenedor de claves dentro de un proveedor de servicios criptográficos (CSP) o como una colección de bytes sin formato.  
@@ -31,7 +31,7 @@ Obtiene la clave pública de un par de claves pública y privada. El par de clav
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 BOOLEAN StrongNameGetPublicKey (   
     [in]  LPCWSTR   szKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  

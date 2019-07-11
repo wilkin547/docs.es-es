@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05f5d3fbe05ad1e97a1ae61ed0496f314c4ec5cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985691"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765971"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem (Estructura)
 Describe un elemento que se agregarán a un volcado personalizado en informes de errores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct {  
     ECustomDumpItemKind itemKind;   
     union {  
@@ -39,7 +39,7 @@ struct {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`itemKind`|Un [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valor que indica el tipo de elemento que va a agregar.|  
 |`pReserved`|No se están utilizando. Todos los elementos agregados a la unión no deben ser superior al tamaño del puntero. Si un `struct` es necesario, debe asignarlo por separado y apunte a ella.|  

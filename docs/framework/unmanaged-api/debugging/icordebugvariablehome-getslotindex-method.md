@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b819f1f02870a8a85a531d7d341cbaf488a1ccd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 199c3ba5d5b9588db4c665070b4dec6266cefc2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993673"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760347"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>Método ICorDebugVariableHome::GetSlotIndex
 Obtiene el índice de ranura administrado de una variable local.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetSlotIndex(  
     [out] ULONG32 *pSlotIndex  
 );  
@@ -42,7 +42,7 @@ HRESULT GetSlotIndex(
 ## <a name="return-value"></a>Valor devuelto  
  El método devuelve los valores siguientes.  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`S_OK`|La llamada al método devuelve un valor de índice de ranura en `pSlotIndex`.|  
 |`E_FAIL`|Actual [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instancia representa un argumento de función.|  
