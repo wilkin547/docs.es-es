@@ -10,12 +10,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: b606de4b7cf4648fdc7ada3c1f6faec81342d02c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcd65f231ab0e05da0ec152b05878233558f2cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792189"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772062"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Tutorial: Heredar de un control de formularios Windows Forms con Visual Basic
 Con Visual Basic, puede crear controles personalizados eficaces mediante *herencia*. A través de la herencia puede crear controles que conserven toda la funcionalidad inherente de controles de Windows Forms estándar y además incorporen funcionalidad personalizada. En este tutorial, creará un control heredado simple denominado `ValueButton`. Este botón heredará funcionalidad de los formularios de Windows estándar <xref:System.Windows.Forms.Button> controlar y expondrá una propiedad personalizada denominada `ButtonValue`.  
@@ -26,7 +26,7 @@ Con Visual Basic, puede crear controles personalizados eficaces mediante *herenc
 ## <a name="creating-the-project"></a>Crear el proyecto  
  Cuando cree un proyecto, especifique su nombre para establecer el espacio de nombres raíz, el nombre de ensamblado y el nombre del proyecto, y para asegurarse de que el componente predeterminado estará en el espacio de nombres correcto.  
   
-#### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Para crear la biblioteca de controles ValueButtonLib y el control ValueButton  
+### <a name="to-create-the-valuebuttonlib-control-library-and-the-valuebutton-control"></a>Para crear la biblioteca de controles ValueButtonLib y el control ValueButton  
   
 1. En el menú **Archivo**, elija **Nuevo** y haga clic en **Proyecto** para abrir el cuadro de diálogo **Nuevo proyecto**.  
   
@@ -54,7 +54,7 @@ Con Visual Basic, puede crear controles personalizados eficaces mediante *herenc
 ## <a name="adding-a-property-to-your-inherited-control"></a>Agregar una propiedad al control heredado  
  Un uso posible de los controles de Windows Forms heredados es la creación de controles que sean idénticos en apariencia y comportamiento a los controles de Windows Forms estándar, pero que expongan propiedades personalizadas. En esta sección, agregará una propiedad denominada `ButtonValue` al control.  
   
-#### <a name="to-add-the-value-property"></a>Para agregar la propiedad Value  
+### <a name="to-add-the-value-property"></a>Para agregar la propiedad Value  
   
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en **ValueButton.vb** y haga clic en **Ver código** en el menú contextual.  
   
@@ -84,13 +84,13 @@ Con Visual Basic, puede crear controles personalizados eficaces mediante *herenc
 ## <a name="testing-your-control"></a>Probar el control  
  Los controles no son proyectos independientes; deben hospedarse en un contenedor. Para probar el control, debe proporcionar un proyecto de prueba donde pueda ejecutarse. También debe hacer que el control resulte accesible al proyecto de prueba al compilarlo. En esta sección, compilará el control y lo probará en Windows Forms.  
   
-#### <a name="to-build-your-control"></a>Para compilar el control  
+### <a name="to-build-your-control"></a>Para compilar el control  
   
 1. En el menú **Compilar** , haga clic en **Compilar solución**.  
   
      La compilación debería completarse correctamente sin advertencias ni errores del compilador.  
   
-#### <a name="to-create-a-test-project"></a>Para crear un proyecto de prueba  
+### <a name="to-create-a-test-project"></a>Para crear un proyecto de prueba  
   
 1. En el menú **Archivo**, elija **Agregar** y haga clic en **Nuevo proyecto** para abrir el cuadro de diálogo **Agregar nuevo proyecto**.  
   
@@ -108,7 +108,7 @@ Con Visual Basic, puede crear controles personalizados eficaces mediante *herenc
   
 8. En el **Explorador de soluciones**, haga clic con el botón derecho en **Probar** y seleccione **Compilar**.  
   
-#### <a name="to-add-your-control-to-the-form"></a>Para agregar el control al formulario  
+### <a name="to-add-your-control-to-the-form"></a>Para agregar el control al formulario  
   
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en **Form1.vb** y elija **Ver diseñador** en el menú contextual.  
   
@@ -149,6 +149,6 @@ Con Visual Basic, puede crear controles personalizados eficaces mediante *herenc
 ## <a name="see-also"></a>Vea también
 
 - [Tutorial: Crear un Control compuesto con Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Cómo: Mostrar un Control en la elija el cuadro de diálogo de elementos de cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Procedimientos: Mostrar un Control en la elija el cuadro de diálogo de elementos de cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Desarrollar controles personalizados de Windows Forms con .NET Framework](developing-custom-windows-forms-controls.md)
 - [Fundamentos de la herencia (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

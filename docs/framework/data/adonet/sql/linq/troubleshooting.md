@@ -1,15 +1,15 @@
 ---
-title: Solución de problemas
+title: solución de problemas
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 697432dce5f7698a8b4eabde3586bb4f77fd62de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661859"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742744"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="troubleshooting"></a>solución de problemas
 La siguiente información expone algunos problemas que podría encontrar en sus aplicaciones de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y proporciona sugerencias para evitar o reducir el efecto de estos problemas.  
   
  Otros problemas se tratan en [preguntas más frecuentes](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
@@ -26,7 +26,7 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
  Para especificar un nombre de archivo de entrada, agregue el nombre a la línea de comandos como archivo de entrada. No se admite la inclusión del nombre de archivo en la cadena de conexión (mediante la opción **/conn** ). Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Proyectos de biblioteca de clases  
- El [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] crea una cadena de conexión en el archivo `app.config` del proyecto. En proyectos de biblioteca de clases, el archivo `app.config` no se utiliza. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utiliza la cadena de conexión proporcionada en los archivos en tiempo de diseño. Al cambiar el valor en `app.config`, la base de datos a la que se conecta su aplicación no cambia.  
+ Object Relational Designer crea una cadena de conexión en el `app.config` archivo del proyecto. En proyectos de biblioteca de clases, el archivo `app.config` no se utiliza. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utiliza la cadena de conexión proporcionada en los archivos en tiempo de diseño. Al cambiar el valor en `app.config`, la base de datos a la que se conecta su aplicación no cambia.  
   
 ## <a name="cascade-delete"></a>Eliminación en cascada  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no admite ni reconoce las operaciones de eliminación en cascada. Si desea eliminar una fila de una tabla que tiene restringidas las eliminaciones, deberá hacerlo mediante una de las siguientes opciones:  
@@ -37,7 +37,7 @@ La siguiente información expone algunos problemas que podría encontrar en sus 
   
  En caso contrario, se producirá una excepción <xref:System.Data.SqlClient.SqlException>.  
   
- Para obtener más información, vea [Cómo: Eliminar filas de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+ Para obtener más información, consulte [Cómo Eliminar filas de la base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
 ## <a name="expression-not-queryable"></a>Expresión que no se puede consultar  
  Si obtiene el error "No se puede consultar una expresión de tipo [expresión]. Compruebe que no falta ninguna referencia de ensamblado", asegúrese de lo siguiente:  

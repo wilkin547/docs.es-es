@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 491819c52c5bb1e7767e41fce7e56d8f95d10286
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1d91306c9cc9788046d19cc5de9e4712cdaa7e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933697"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772549"
 ---
 # <a name="introducing-xml-serialization"></a>Introducir la serialización XML
 
@@ -133,7 +133,7 @@ Al usar la clase **XmlSerializer**, debe tener en cuenta lo siguiente:
 
 - Solo se pueden serializar los campos y las propiedades públicas. Las propiedades deben ser de acceso público (métodos get y set). Si debe serializar datos no públicos, use la clase <xref:System.Runtime.Serialization.DataContractSerializer> en lugar de la serialización XML.
 
-- Una clase debe tener un constructor predeterminado que se vaya a serializar mediante **XmlSerializer**.
+- Una clase debe tener un constructor sin parámetros para serializar **XmlSerializer**.
 
 - Los métodos no pueden serializarse.
 
@@ -185,5 +185,5 @@ Para obtener una lista completa de asignaciones de tipo, vea la propiedad **Data
 - [Serialización](index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [Ejemplos de serialización XML](examples-of-xml-serialization.md)
-- [Cómo: Serializar un objeto](how-to-serialize-an-object.md)
+- [Procedimientos: Serializar un objeto](how-to-serialize-an-object.md)
 - [Cómo: Deserializar un objeto](how-to-deserialize-an-object.md)

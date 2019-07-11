@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 153aa7d6b8c35129638de3d47ffa6aff72f550c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b89409a08ed2dff0111b3b6e552960ac78a5882e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946806"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781532"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo (Método)
 Obtiene un puntero a una matriz de tokens asociados con el índice de fila especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetCodedTokenInfo (   
     [in]  ULONG       ixCdTkn,  
     [out] ULONG       *pcTokens,  

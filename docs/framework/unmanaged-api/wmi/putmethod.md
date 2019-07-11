@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99bc65b0181a7c0ab7877273b3747ece91544f99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ca510f30f0f38ae54eb83046b0e9d5541db882d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049263"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758688"
 ---
 # <a name="putmethod-function"></a>Función PutMethod
 Crea un método.
@@ -30,7 +30,7 @@ Crea un método.
     
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT PutMethod (
    [in] int                vFunc, 
    [in] IWbemClassObject*  ptr, 
@@ -65,7 +65,7 @@ HRESULT PutMethod (
 
 Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos. |
 | `WBEM_E_INVALID_DUPLICATE_PARAMETER` | 0x80041043 | El `[in, out]` parámetro del método especificado en ambos el *pInSignature* y *pOutSignature* objetos tienen distintos calificadores.

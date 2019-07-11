@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cce96e8c6d046beba9e45c7121bf68444fd51c95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c394c2b17404351bd0813ab1eb21230a1edd9de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597960"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781103"
 ---
 # <a name="icorprofilerthreadenumskip-method"></a>ICorProfilerThreadEnum::Skip (Método)
 Desplaza el cursor del enumerador desde su posición actual para omitir el número especificado de elementos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT Skip (    [in] ULONG celt  
 );  
 ```  
@@ -41,7 +41,7 @@ HRESULT Skip (    [in] ULONG celt
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`celt` se omitieron los elementos.|  
 |S_FALSE|Menos de `celt` se omitieron los elementos, lo que indica que no hay ningún elemento más.|  

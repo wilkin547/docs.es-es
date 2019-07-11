@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0f4a1de47670c59f2794feecd0be301a68b8724
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15269646e967d3b260b305db5999a7b5e63be33b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613795"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736425"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>Método ICorDebugProcess6::EnableVirtualModuleSplitting
 Habilita o deshabilita la división de módulos virtuales.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT EnableVirtualModuleSplitting(  
    BOOL enableSplitting  
 );  
@@ -83,7 +83,7 @@ HRESULT EnableVirtualModuleSplitting(
 - El método ICorDebugAssembly3.GetContainerAssembly devuelve el módulo contenedor.  
   
 ## <a name="interfaces-retrieved-from-modules"></a>Interfaces obtenidas de los módulos  
- Se pueden crear y recuperar diversas interfaces de los módulos. Algunas de ellas son:  
+ Se pueden crear y recuperar diversas interfaces de los módulos. Algunos son:  
   
 - Un objeto ICorDebugClass, que es devuelto por la [ICorDebugModule](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md) método.  
   

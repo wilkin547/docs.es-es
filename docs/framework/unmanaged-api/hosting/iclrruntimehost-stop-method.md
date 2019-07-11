@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85116244ad21842fab025ddd48106deef75f210b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97a0e6cbbd8972f58f9eedcfeb8aff1f93694064
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771838"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765671"
 ---
 # <a name="iclrruntimehoststop-method"></a>ICLRRuntimeHost::Stop (Método)
 Detiene la ejecución de código por common language runtime (CLR).  
@@ -32,13 +32,13 @@ Detiene la ejecución de código por common language runtime (CLR).
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT Stop();  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`Stop` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

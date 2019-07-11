@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b5015dc42497d269cdc2de944f14454558be6c07
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f657957d42cef1421ab3aa19f297bd04b0cacd8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042750"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781330"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum (Método)
 Obtiene el número de elementos de la enumeración que se recuperó el enumerador especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT CountEnum (  
    [in]  HCORENUM    hEnum,   
    [out] ULONG       *pulCount  

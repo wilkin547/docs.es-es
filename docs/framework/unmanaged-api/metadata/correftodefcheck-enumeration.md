@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ae87dd4538a9a8e88591f498c0ce77b51bfa852
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906183"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781619"
 ---
 # <a name="correftodefcheck-enumeration"></a>CorRefToDefCheck (Enumeración)
 Especifica marcas para controlar qué elementos referenciados se convierten en sus definiciones para optimizar el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorRefToDefCheck {  
     MDRefToDefDefault           = 0x00000003,  
     MDRefToDefAll               = 0xffffffff,  
@@ -40,7 +40,7 @@ typedef enum CorRefToDefCheck {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`MDRefToDefDefault`|Especifica que se debe convertir a las definiciones de las referencias de tipo y miembro. Este es el valor predeterminado (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
 |`MDRefToDefAll`|Especifica que se deben convertir todos los elementos que se hace referencia a las definiciones.|  

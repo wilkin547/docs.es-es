@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea71439c9a6c494c218a7cfc18508f4f8173b03
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609261"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740387"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason (Enumeración)
 Especifica los motivos por lo que un subproceso se puede bloquear en un objeto determinado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 Typedef enum CorDebugBlockingReason  
 {  
    BLOCKING_NONE = 0  
@@ -39,7 +39,7 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`BLOCKING_NONE`|Solo para uso interno.|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|Un subproceso está intentando adquirir la sección crítica que está asociada con el bloqueo de monitor en un objeto. Normalmente, esto se produce cuando se llama a uno de los <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> o <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> métodos.|  

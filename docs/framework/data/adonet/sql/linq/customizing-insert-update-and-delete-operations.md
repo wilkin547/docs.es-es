@@ -2,23 +2,23 @@
 title: Personalizar operaciones de actualización, inserción y eliminación
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: b4578a030300872bf4e0bab30b8daf12544be0cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 114447fd45806e567b4fde8e9e74138c096bff07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032778"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743572"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>Personalizar operaciones de actualización, inserción y eliminación
 De forma predeterminada, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera SQL dinámico para implementar operaciones de inserción, lectura, actualización y eliminación. Sin embargo, en la práctica, normalmente se personaliza la aplicación para satisfacer las necesidades de la empresa.  
   
 > [!NOTE]
->  Si utiliza Visual Studio, puede usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para personalizar la inserción, actualización y eliminación de acciones.  
+>  Si utiliza Visual Studio, puede usar Object Relational Designer para personalizar la inserción, actualización y eliminación de acciones.  
   
  En esta sección de temas se describen las técnicas que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona para personalizar las operaciones de inserción, lectura, actualización y eliminación en una aplicación.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Personalizar operaciones: información general](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
+ [Personalizar operaciones: Introducción](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-overview.md)  
  Describe las distintas técnicas que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona para personalizar las operaciones de inserción, lectura, actualización y eliminación.  
   
  [Operaciones de inserción, actualización y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)  

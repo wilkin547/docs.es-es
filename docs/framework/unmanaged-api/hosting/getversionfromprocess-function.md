@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3055ac73f15329015f532f42c1f922eab38828cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4015ecec38466650488a653641f5af93c4680f22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490309"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779593"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess (Función)
 Obtiene el número de versión de common language runtime (CLR) que está asociado con el identificador de proceso especificado.  
@@ -31,7 +31,7 @@ Obtiene el número de versión de common language runtime (CLR) que está asocia
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetVersionFromProcess (  
     [in]  HANDLE  hProcess,   
     [out] LPWSTR  pVersion,   
@@ -56,7 +56,7 @@ HRESULT GetVersionFromProcess (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los valores siguientes.  
   
-|Código devuelto|Descripción|  
+|Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`pVersion` es null y `cchBuffer` no es null, o viceversa.<br /><br /> -o bien-<br /><br /> `hProcess` no es un identificador válido para un proceso.<br /><br /> -o bien-<br /><br /> No se carga el CLR.|  

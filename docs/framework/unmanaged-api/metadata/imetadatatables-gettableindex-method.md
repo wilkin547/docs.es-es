@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eebef02babdca5305deaa4ae11e4bca3bf8bf504
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 195642d9186016417db310402b664a1043d09e71
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042190"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781377"
 ---
 # <a name="imetadatatablesgettableindex-method"></a>IMetaDataTables::GetTableIndex (Método)
 Obtiene el índice de la tabla al que hace referencia el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetTableIndex (  
     [in]  ULONG   token,  
     [out] ULONG   *pixTbl  

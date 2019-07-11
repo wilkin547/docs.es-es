@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0400da0cd29d642a1be42be7e2b22213ae54b94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6875ce0e7ae4cefa9b0c8abaded0dd4535bdf838
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609665"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740825"
 ---
 # <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION (Estructura)
 Contiene información sobre las funciones que están actualmente activas en los marcos de un subproceso. Esta estructura se usa por la [Icordebugthread2](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct  _COR_ACTIVE_FUNCTION {  
     ICorDebugAppDomain   *pAppDomain;  
     ICorDebugModule      *pModule;  
@@ -40,7 +40,7 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`pAppDomain`|Puntero en el propietario del dominio de aplicación de la `ilOffset` campo.|  
 |`pModule`|Puntero al propietario del módulo de la `ilOffset` campo.|  
