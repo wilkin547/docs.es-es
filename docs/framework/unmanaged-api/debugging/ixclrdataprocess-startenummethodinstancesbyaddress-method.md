@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 41b6ff0a3c44d3ad997c54b1c82590cc3583fe52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7c395e68ad5d8042f9850f25757a5aa445e5c40
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775237"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752677"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>Método IXCLRDataProcess::StartEnumMethodInstancesByAddress
 
@@ -30,7 +30,7 @@ Proporciona un identificador para enumerar las instancias de método de `AppDoma
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT StartEnumMethodInstancesByAddress(
     [in] CLRDATA_ADDRESS     address,
     [in] IXCLRDataAppDomain *appDomain,
@@ -56,8 +56,8 @@ El método proporcionado forma parte de la `IXCLRDataProcess` interfaz y corresp
 ## <a name="requirements"></a>Requisitos
 
 **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: Ninguna  
-**Biblioteca:** Ninguna  
+**Encabezado**: None  
+**Biblioteca:** None  
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también

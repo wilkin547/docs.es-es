@@ -12,19 +12,19 @@ helpviewer_keywords:
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: KrzysztofCwalina
-ms.openlocfilehash: cc5b8d7effda31b0236477b217bccf5cf2137f8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650146"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775546"
 ---
 # <a name="struct-design"></a>Diseño de structs
 El tipo de valor de uso general más a menudo se conoce como una estructura, su palabra clave de C#. Esta sección proporciona instrucciones para el diseño de la estructura general.  
   
- **X DO NOT** proporcionar un constructor predeterminado para un struct.  
+ **X no** proporciona un constructor sin parámetros para un struct.  
   
- Seguir esta directriz permite que las matrices de structs crearse sin tener que ejecutar el constructor en cada elemento de la matriz. Tenga en cuenta que C# no permite que las estructuras tienen constructores predeterminados.  
+ Seguir esta directriz permite que las matrices de structs crearse sin tener que ejecutar el constructor en cada elemento de la matriz. Tenga en cuenta que C# no permite que las estructuras tienen constructores sin parámetros.  
   
  **X DO NOT** definir tipos de valor mutable.  
   

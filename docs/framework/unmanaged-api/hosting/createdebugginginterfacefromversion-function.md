@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 247383e267ab3e8932d43621e122986a59d9a30d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fe34ffded73e8305e4ade3bb9b402b1d8e1bcc49
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490510"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764681"
 ---
 # <a name="createdebugginginterfacefromversion-function"></a>CreateDebuggingInterfaceFromVersion (Función)
 Crea un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) objeto basándose en la información de versión especificada.  
@@ -31,7 +31,7 @@ Crea un [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT CreateDebuggingInterfaceFromVersion (  
     [in]  int      iDebuggerVersion,   
     [in]  LPCWSTR  szDebuggeeVersion,   
@@ -52,7 +52,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve códigos de error COM estándar, tal como se define en el archivo WinError.h, además de los valores siguientes.  
   
-|Código devuelto|Descripción|  
+|Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`szDebuggeeVersion` o `ppCordb` es null, o la versión de cadena no es correcta.|  

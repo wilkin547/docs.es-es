@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5606a556dd7aeafe6d7a6408d236f2bee8dc773
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20fd186c32857fe547c47d06874f635a5628b178
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992217"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750767"
 ---
 # <a name="icorprofilercallbackruntimesuspendstarted-method"></a>ICorProfilerCallback::RuntimeSuspendStarted (Método)
 Notifica al generador de perfiles que el tiempo de ejecución está a punto de suspender todos los subprocesos en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT RuntimeSuspendStarted(  
     [in] COR_PRF_SUSPEND_REASON suspendReason);  
 ```  

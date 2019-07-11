@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663868"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780146"
 ---
 # <a name="animation-overview"></a>Información general sobre animaciones
 
@@ -231,10 +231,10 @@ En la tabla siguiente se muestran varios tipos de animación comunes y algunas p
 
 |Tipo de propiedad|Animación básica correspondiente (From/To/By)|Animación de fotogramas clave correspondiente|Animación de trazado correspondiente|Ejemplo de uso|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Ninguna|Animar el <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> o <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|None|Animar el <xref:System.Windows.Media.SolidColorBrush.Color%2A> de un <xref:System.Windows.Media.SolidColorBrush> o <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Animar el <xref:System.Windows.FrameworkElement.Width%2A> de un <xref:System.Windows.Controls.DockPanel> o <xref:System.Windows.FrameworkElement.Height%2A> de un <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Animar el <xref:System.Windows.Media.EllipseGeometry.Center%2A> posición de un <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|Ninguna|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Ninguna|Animar el <xref:System.Windows.Controls.TextBlock.Text%2A> de un <xref:System.Windows.Controls.TextBlock> o <xref:System.Windows.Controls.ContentControl.Content%2A> de un <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|None|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|None|Animar el <xref:System.Windows.Controls.TextBlock.Text%2A> de un <xref:System.Windows.Controls.TextBlock> o <xref:System.Windows.Controls.ContentControl.Content%2A> de un <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -242,7 +242,7 @@ En la tabla siguiente se muestran varios tipos de animación comunes y algunas p
 
 Todos los tipos de animaciones heredan de la <xref:System.Windows.Media.Animation.Timeline> clase; por lo tanto, todas las animaciones son tipos especializados de escalas de tiempo. Un <xref:System.Windows.Media.Animation.Timeline> define un segmento de tiempo. Puede especificar el *comportamientos de temporización* de escala de tiempo: su <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, cuántas veces se repite e incluso cómo rapidez pasa el tiempo para ella.
 
-Dado que una animación es un <xref:System.Windows.Media.Animation.Timeline>, también representa un segmento de tiempo. Una animación también calcula los valores de salida de medida que avanza por su segmento de tiempo especificado (o <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). A medida que la animación avanza, o se "reproduce", actualiza la propiedad a la que está asociada.
+Dado que una animación es un <xref:System.Windows.Media.Animation.Timeline>, también representa un segmento de tiempo. Una animación también calcula los valores de salida a medida que avanza a través de su segmento de tiempo especificado (o <xref:System.Windows.Media.Animation.Timeline.Duration%2A>). A medida que la animación avanza, o se "reproduce", actualiza la propiedad a la que está asociada.
 
 Tres propiedades de sincronización usados con frecuencia son <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, y <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>.
 
@@ -321,7 +321,7 @@ El <xref:System.Windows.Media.Animation.DoubleAnimation> en el ejemplo anterior 
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-Dado que su <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> no se ha cambiado respecto a su valor predeterminado, que es <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, la animación retiene el valor final, 0, cuando finaliza. Por lo tanto, el <xref:System.Windows.UIElement.Opacity%2A> de la permanece rectángulo en 0 después de la animación finaliza. Si establece la <xref:System.Windows.UIElement.Opacity%2A> del rectángulo en otro valor, el código parece que no tienen ningún efecto, porque la animación todavía influye la <xref:System.Windows.UIElement.Opacity%2A> propiedad.
+Dado que su <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> no se ha cambiado respecto a su valor predeterminado, que es <xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>, la animación retiene su valor final, 0, cuando finaliza. Por lo tanto, el <xref:System.Windows.UIElement.Opacity%2A> de la permanece rectángulo en 0 después de la animación finaliza. Si establece la <xref:System.Windows.UIElement.Opacity%2A> del rectángulo en otro valor, el código parece que no tienen ningún efecto, porque la animación todavía influye la <xref:System.Windows.UIElement.Opacity%2A> propiedad.
 
 Una manera de recobrar el control de una propiedad animada en el código es usar el <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> método y especifique null para el <xref:System.Windows.Media.Animation.AnimationTimeline> parámetro. Para obtener más información y un ejemplo, vea [establecer una propiedad después de animarla con un guión gráfico](how-to-set-a-property-after-animating-it-with-a-storyboard.md).
 
@@ -367,12 +367,12 @@ Los ejemplos siguientes pueden ayudarle a familiarizarse con la forma de agregar
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Descripción|
+|Título|DESCRIPCIÓN|
 |-----------|-----------------|
 |[Información general sobre sistemas de control de tiempo y animación ](animation-and-timing-system-overview.md)|Describe cómo se utiliza el sistema de temporización el <xref:System.Windows.Media.Animation.Timeline> y <xref:System.Windows.Media.Animation.Clock> clases, que le permiten crear animaciones.|
 |[Sugerencias y trucos para animaciones](animation-tips-and-tricks.md)|Enumera las sugerencias útiles para solucionar problemas con animaciones, como el rendimiento.|
 |[Información general sobre animaciones personalizadas ](custom-animations-overview.md)|Describe cómo extender el sistema de animación con fotogramas clave, clases de animación o devoluciones de llamada por fotograma.|
-|Información general sobre animaciones From/To/By|Describe cómo crear una animación que realiza la transición entre dos valores.|
+|[Información general sobre animaciones From/To/By](from-to-by-animations-overview.md)|Describe cómo crear una animación que realiza la transición entre dos valores.|
 |[Información general sobre animaciones de fotogramas clave](key-frame-animations-overview.md)|Describe cómo crear una animación con varios valores de destino, incluida la capacidad de controlar el método de interpolación.|
 |[Funciones de aceleración ](easing-functions.md)|Explica cómo aplicar fórmulas matemáticas a las animaciones para obtener un comportamiento realista, como el rebote.|
 |[Información general sobre animaciones en trazados ](path-animations-overview.md)|Describe cómo mover o girar un objeto a lo largo de un trazado complejo.|

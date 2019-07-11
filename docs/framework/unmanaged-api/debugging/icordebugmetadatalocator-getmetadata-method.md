@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c29e581a77ac90882d102cfee2c715e9c309e1a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780912"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762276"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData (Método)
 Pide al depurador que devuelva la ruta de acceso completa a un módulo cuyos metadatos se necesitan para completar una operación solicitada por el depurador.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetMetaData(  
       [in] LPCWSTR wszImagePath,  
       [in] DWORD   dwImageTimeStamp,  
@@ -67,7 +67,7 @@ HRESULT GetMetaData(
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método. Cualquier otro HRESULT de error indica que el archivo no se puede recuperar.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente. `wszPathBuffer` contiene la ruta de acceso completa al archivo y termina en NULL.|  
 |E_NOT_SUFFICIENT_BUFFER|El tamaño actual de `wszPathBuffer` no es suficiente para contener la ruta de acceso completa. En este caso, `pcchPathBuffer` contiene el número necesario de `WCHAR`, incluido el carácter NULL final, y se llama a `GetMetaData` una segunda vez con el tamaño de búfer solicitado.|  

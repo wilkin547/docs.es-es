@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ac28f28d4d284ba26fadd46e53ebeb8e5b5f3cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eda866c1a1f1f69f0d042ccfde3dfad293df9b37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984157"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776509"
 ---
 # <a name="waitoption-enumeration"></a>WAIT_OPTION (Enumeración)
 Contiene valores que indican que la acción de un host debe realizar si una operación solicitada por el common language runtime (CLR) bloquea.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     WAIT_MSGPUMP       = 0x1,  
     WAIT_ALERTABLE     = 0x2,  
@@ -38,7 +38,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`WAIT_ALERTABLE`|Notifica al host que la tarea debe activarse si CLR llama a la [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md) método.|  
 |`WAIT_MSGPUMP`|Notifica al host que debe suministrar mensajes en el subproceso del sistema operativo actual si se bloquea el subproceso. El tiempo de ejecución especifica este valor solo en un <xref:System.Threading.ApartmentState.STA> subproceso.|  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc0fc18e31b89b22ffd30d99a8b079ed7b87fa1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752505"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext (Estructura)
 Proporciona un contexto simple que se puede usar en lugar de una estructura `CONTEXT` completa.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 struct StackTrace_SimpleContext  
 {  
     ULONG64 StackOffset;       // ESP on x86  
@@ -40,7 +40,7 @@ struct StackTrace_SimpleContext
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`StackOffset`|El puntero de pila o el puntero de pila (ESP) en x86 plataformas.|  
 |`FrameOffset`|Desplazamiento del marco o registro EBP en x86 plataformas.|  

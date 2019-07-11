@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d97d75eb5fab396530a6f48314e96c8d47d06439
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 86299a1f64120b3ca0ec858975b824b7e7288af9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656484"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773263"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager (Método)
 Obtiene un puntero de interfaz a una instancia de cualquiera de los tipos de administrador que el host puede utilizar para configurar common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetCLRManager (  
     [in]  REFIID  riid,  
     [out] void  **ppObject  
@@ -59,7 +59,7 @@ HRESULT GetCLRManager (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

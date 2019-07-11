@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b3667f7371131a4c1394ba5ca619d1f605c89ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a730947b0c962d801975917cdf752136e7221c4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000186"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746475"
 ---
 # <a name="nextmethod-function"></a>Función NextMethod
 Recupera el siguiente método en una enumeración que comienza con una llamada a [BeginMethodEnumeration](beginmethodenumeration.md).  
@@ -30,7 +30,7 @@ Recupera el siguiente método en una enumeración que comienza con una llamada a
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT NextMethod (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -65,7 +65,7 @@ HRESULT NextMethod (
 
 Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_E_UNEXPECTED` | 0x8004101d | Se ha producido ninguna llamada a la [ `BeginEnumeration` ](beginenumeration.md) función. |
 | `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |

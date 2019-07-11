@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 848765a4ea9657020bd84e476f992ae69750dda9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 61a9cad9d0ce807d62c811e77402b8cc6d8c6905
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617687"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740697"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE (Estructura)
 Contiene información sobre un objeto que se va a recolectar con elemento no utilizado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct _COR_GC_REFERENCE {  
     ICorDebugAppDomain *domain;   
     ICorDebugValue *location;  
@@ -39,7 +39,7 @@ typedef struct _COR_GC_REFERENCE {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`domain`|Un puntero al dominio de aplicación a la que pertenece el objeto o identificador. Su valor puede ser `null`.|  
 |`location`|ICorDebugValue o una ICorDebugReferenceValue (interfaz) que se corresponde con el objeto que se recopilan de elementos no utilizados.|  
@@ -59,9 +59,9 @@ typedef struct _COR_GC_REFERENCE {
   
 - `DependentSource`. Si el `type` es `CorGCREferenceType.CorHandleStrongDependent`, este campo es el objeto que, si se activa, raíces para recopilar los elementos no utilizados en el objeto de `COR_GC_REFERENCE.Location`.  
   
-- `RefCount`. Si el `type` es `CorGCREferenceType.CorHandleStrongRefCount`, este campo es el recuento de referencias del identificador.  
+- `RefCount` Si el `type` es `CorGCREferenceType.CorHandleStrongRefCount`, este campo es el recuento de referencias del identificador.  
   
-- `Size`. Si el `type` es `CorGCREferenceType.CorHandleStrongSizedByref`, este campo es el último tamaño del árbol de objetos para el que el recolector de elementos no utilizados calcula las raíces de objeto. Tenga en cuenta que este cálculo no es necesariamente actualizado.  
+- `Size` Si el `type` es `CorGCREferenceType.CorHandleStrongSizedByref`, este campo es el último tamaño del árbol de objetos para el que el recolector de elementos no utilizados calcula las raíces de objeto. Tenga en cuenta que este cálculo no es necesariamente actualizado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  

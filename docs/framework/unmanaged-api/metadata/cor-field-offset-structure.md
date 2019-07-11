@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 820c99de1bdb108a24203a3438b1709ca54490b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fdfbb22d231d16be7757ff5df26a5a010928af54
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046194"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767056"
 ---
 # <a name="corfieldoffset-structure"></a>COR_FIELD_OFFSET (Estructura)
 Almacena el desplazamiento, dentro de una clase, del campo especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct COR_FIELD_OFFSET {  
     mdFieldDef  ridOfField;  
     ULONG       ulOffset;  
@@ -37,7 +37,7 @@ typedef struct COR_FIELD_OFFSET {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`ridOfField`|Un `mdFieldDef` token de metadatos que representa el campo.|  
 |`ulOffset`|El desplazamiento del campo dentro de su clase.|  

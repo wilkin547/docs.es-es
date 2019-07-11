@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4bc763d908156f3bbf8998c13073820686903f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3210f0186401729a5bc95369e88b290ae49a634
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986380"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776995"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion (Método)
 Obtiene un método del lector de símbolos, dado un token de método y un número de versión de editar y copiar. Números de versión empiezan en 1 y se incrementan cada vez que cambia el método como resultado de una operación de copia y edición.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetMethodByVersion (  
     [in]  mdMethodDef  token,  
     [in]  int  version,  

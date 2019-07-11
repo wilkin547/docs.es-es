@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0f4b6e024d75d9334f91373f9d3bbd2c5e41093
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4bf3a0507f9f7d4d622163a55fc9c45b4a4dd0a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622509"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781145"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS (Enumeración)
 Contiene valores que indican qué información acerca de common language runtime (CLR) se debe devolver.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
   
     RUNTIME_INFO_UPGRADE_VERSION             = 0x01,  
@@ -45,7 +45,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Indica que no debe incluirse la información de directorio.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Indica que no debe incluirse la información de versión.|  

@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cd3012d966c777749eb800b8986974a4e8d401f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 920aecab03e386a48f59843b26610cf260419293
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796648"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749444"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime (Método)
 Notifica al host que el control está dejando common language runtime (CLR) y escribir una función no administrada que a su vez, se ha llamado desde código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT ReverseLeaveRuntime ();  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`ReverseLeaveRuntime` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc98b2421d23ffd6dfb716a8cc782b46a9d59ce0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c402dcda79f013b19b091c6309b3d71951018a18
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043329"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776370"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags (Enumeración)
 Contiene valores que describen las características de una referencia de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     arfFullOriginator = 0x0001  
 } AssemblyRefFlags;  
@@ -36,7 +36,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`arfFullOriginator`|Especifica que la referencia de ensamblado contiene información sobre el publicador completa, sin valor de hash del ensamblado.|  
   

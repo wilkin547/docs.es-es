@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ef5bb2539820d5a7bcd4ca6b4de86564290709
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00322a75c4a15e42c89ff5a8680171a168a37613
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984417"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758698"
 ---
 # <a name="ihostgcmanagersuspensionstarting-method"></a>IHostGCManager::SuspensionStarting (Método)
 Notifica al host que common language runtime (CLR) está suspendiendo la ejecución de tareas para realizar una recolección de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SuspensionStarting ();  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`SuspensionStarting` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

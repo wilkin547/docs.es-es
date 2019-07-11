@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b60dde31707175a27d2dc6c50484d6089adaeaa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10eead2772a2bbd8abaf7b9c090a091687725972
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697632"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778652"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory (Función)
 Recupera la ruta de acceso del directorio de historial de la aplicación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetHistoryFileDirectory (  
     [in]      LPWSTR      wzDir,  
     [in,out]  LPCWSTR  *pdwsize,  
@@ -45,7 +45,7 @@ HRESULT GetHistoryFileDirectory (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve códigos de error COM estándar, tal como se define en el archivo WinError.h, además de los valores siguientes.  
   
-|Código devuelto|Descripción|  
+|Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`wzDir` o `pdwSize` es null, o la versión de cadena no es correcta.|  

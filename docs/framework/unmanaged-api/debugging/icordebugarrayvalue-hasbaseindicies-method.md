@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49f5ed8b24d81ba8f32a9fe0ad7488693718bde9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c488ca3a77f2c2b2a40c6143989cd86adf071787
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645674"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737432"
 ---
 # <a name="icordebugarrayvaluehasbaseindicies-method"></a>ICorDebugArrayValue::HasBaseIndicies (Método)
 Obtiene un valor que indica si las dimensiones de esta matriz tienen un índice base distinto de cero.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT HasBaseIndicies (  
     [out] BOOL    *pbHasBaseIndicies  
 );  

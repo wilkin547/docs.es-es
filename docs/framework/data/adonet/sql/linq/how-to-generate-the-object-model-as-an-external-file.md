@@ -2,18 +2,18 @@
 title: Procedimiento para generar el modelo de objetos como un archivo externo
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 828e92903447b5c7cd3d7d27ed72bfe61d0dc6a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033753"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743291"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Procedimiento para generar el modelo de objetos como un archivo externo
 Como alternativa a la asignación basada en atributos, puede generar su modelo de objetos como un archivo XML externo mediante la herramienta de línea de comandos SQLMetal. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Utilizando un archivo de asignación XML externo, se reduce el desorden en su código. También puede cambiar el comportamiento modificando el archivo externo sin recompilar los binarios de su aplicación. Para obtener más información, consulte [asignaciones externas](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  El [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] no admite la generación de un archivo de asignación externo.  
+>  Object Relational Designer no admite la generación de un archivo de asignación externo.  
   
 ## <a name="example"></a>Ejemplo  
  El comando siguiente genera un archivo de asignación externo a partir de la base de datos de ejemplo Northwind.  

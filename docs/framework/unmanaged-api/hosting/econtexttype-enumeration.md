@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f3643bf4880532a46fe7f9f57b8077032013728
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f93f36a78ff5579e131ef4bb3d48f04e806c14de
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779397"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType (Enumeración)
 Describe el contexto de seguridad del subproceso en ejecución actualmente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     eCurrentContext    = 0x00,  
     eRestrictedContext = 0x01  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`eCurrentContext`|Indica el contexto en el subproceso actual en el momento en que common language runtime (CLR) llama a la [IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md) método o el contexto solicitado por CLR en una llamada a la [ IHostSecurityManager:: SetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md) método.|  
 |`eRestrictedContext`|Indica un contexto en el que el host tiene menos privilegios, como el recolector de elementos no utilizados o constructores de clase o módulo.|  

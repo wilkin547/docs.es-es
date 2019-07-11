@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41d96c6d2024dbc3cab669f2dba2f99faef89f4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701299"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777308"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo (Método)
 Devuelve la información necesaria para que un compilador escribir la entrada de directorio de depuración en el encabezado del archivo portable ejecutable (PE). Rellena todos los campos, excepto para el escritor de símbolos `TimeDateStamp` y `PointerToRawData`. (El compilador es responsable de establecer correctamente estos dos campos).  
@@ -31,7 +31,7 @@ Devuelve la información necesaria para que un compilador escribir la entrada de
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetDebugInfo(  
     [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,  
     [in]  DWORD cData,  

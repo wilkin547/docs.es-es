@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2ba46c025c2d031f0526c6a9da5f6ab07023741
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f3d74830de0541ec789081c47352beca8d81d74
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042744"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780709"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents (Método)
 Enumera los tokens de definición de eventos del token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT EnumEvents (   
    [in, out] HCORENUM    *phEnum,   
    [in]      mdTypeDef   td,   
@@ -57,7 +57,7 @@ HRESULT EnumEvents (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`S_OK`|`EnumEvents` se devolvió correctamente.|  
 |`S_FALSE`|No hay ningún evento para enumerar. En ese caso, `pcEvents` es cero.|  

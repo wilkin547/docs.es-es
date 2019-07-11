@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7969d8482970b13951938203262f6ce8f9bf574a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b21bf047acf306fb41a7e6a8f8e73c698ea5b619
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993959"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765204"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk (Método)
 Crea un [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para el subproceso cuya pila desea desenredar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|La `ICorDebugStackWalk` objeto se creó correctamente.|  
 |E_FAIL|El `ICorDebugStackWalk` no se creó el objeto.|  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ebf9ad72f7a1b0dd7ac54afa104089182f122ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c276fc560474ff41afd0e93173d87a76a17a1323
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984287"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781004"
 ---
 # <a name="ihostsecuritymanagerimpersonateloggedonuser-method"></a>IHostSecurityManager::ImpersonateLoggedOnUser (Método)
 Las solicitudes que se ejecuta código mediante las credenciales de la identidad del usuario actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT ImpersonateLoggedOnUser (  
     [in] HANDLE hToken  
 );  
@@ -41,7 +41,7 @@ HRESULT ImpersonateLoggedOnUser (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`ImpersonateLoggedOnUser` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

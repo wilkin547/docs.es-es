@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bae2d134c412023d0f126453b5285662d994c78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 841b05ca1037d82046820554878d883f94687d34
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789602"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779148"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost (Coclase)
 Proporciona interfaces para administrar la ejecución de código por el tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 coclass CLRRuntimeHost {  
     [default] interface  ICLRRuntimeHost;  
     interface            ICLRValidator;  
@@ -37,7 +37,7 @@ coclass CLRRuntimeHost {
   
 ## <a name="interfaces"></a>Interfaces  
   
-|Interfaz|Descripción|  
+|Interfaz|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |[ICLRRuntimeHost (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Proporciona métodos para controlar la ejecución de aplicaciones por el tiempo de ejecución.|  
 |[ICLRValidator (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Proporciona métodos para la validación de imágenes ejecutables portables y para generar informes detallados de errores de validación.|  

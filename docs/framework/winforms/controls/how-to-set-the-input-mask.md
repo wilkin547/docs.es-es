@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: dd156f9e5bf6519363f66ca61687f1e9f2bfc6ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac747bf46c4dd1451e58615b1ec0311d75c899e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630427"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760478"
 ---
 # <a name="how-to-set-the-input-mask"></a>Procedimiento para establecer la máscara de entrada
 El control de cuadro de texto enmascarado es un control de cuadro de texto mejorado que admite una sintaxis declarativa para aceptar o rechazar la intervención del usuario. Al establecer la propiedad Mask, puede especificar la entrada del usuario permitido sin escribir ninguna lógica de validación personalizada en la aplicación. Para obtener más información, vea la sección Comentarios de la <xref:System.Windows.Forms.MaskedTextBox> clase.  
@@ -19,7 +19,7 @@ El control de cuadro de texto enmascarado es un control de cuadro de texto mejor
 ## <a name="setting-the-mask-property-manually"></a>Establecer la propiedad Mask manualmente  
  Si está familiarizado con los caracteres que la propiedad Mask admite, puede escribirla manualmente. Para obtener un resumen de los caracteres compatibles con la propiedad de máscara, consulte la sección Comentarios de la <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> propiedad.  
   
-#### <a name="to-set-the-mask-property-manually"></a>Para establecer la propiedad Mask manualmente  
+### <a name="to-set-the-mask-property-manually"></a>Para establecer la propiedad Mask manualmente  
   
 1. En **diseño** visualizarla, seleccione un <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -30,7 +30,7 @@ El control de cuadro de texto enmascarado es un control de cuadro de texto mejor
 ## <a name="using-the-input-mask-dialog-box"></a>Mediante el cuadro de diálogo de máscara de entrada  
  El cuadro de diálogo de máscara de entrada proporciona algunas máscaras de entrada predefinidos. También puede cambiar las máscaras predefinidas o escribir manualmente su propia máscara.  
   
-#### <a name="to-open-the-input-mask-dialog-box"></a>Para abrir el cuadro de diálogo de máscara de entrada  
+### <a name="to-open-the-input-mask-dialog-box"></a>Para abrir el cuadro de diálogo de máscara de entrada  
   
 1. En **diseño** visualizarla, seleccione un <xref:System.Windows.Forms.MaskedTextBox>.  
   
@@ -46,7 +46,7 @@ El control de cuadro de texto enmascarado es un control de cuadro de texto mejor
   
      El **máscara de entrada** aparece el cuadro de diálogo.  
   
-#### <a name="to-use-the-input-mask-dialog-box"></a>Para usar el cuadro de diálogo de máscara de entrada  
+### <a name="to-use-the-input-mask-dialog-box"></a>Para usar el cuadro de diálogo de máscara de entrada  
   
 1. (Opcional) Haga clic en una de las máscaras predefinidas en la lista.  
   
@@ -59,7 +59,7 @@ El control de cuadro de texto enmascarado es un control de cuadro de texto mejor
   
 4. Active o desactive el **utilizar ValidatingType** casilla de verificación. El **utilizar ValidatingType** casilla especifica si un tipo de datos se usa para comprobar la entrada de datos por el usuario. Para obtener más información, vea la propiedad <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>.  
   
-5. Haga clic en **Aceptar**.  
+5. Haga clic en **OK**.  
   
      La máscara se especifica en el **máscara** propiedad en el **propiedades** ventana.  
   

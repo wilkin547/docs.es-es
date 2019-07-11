@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 004122e9bb52dfe2e51ca00cd5362b2b7a06f30e
-ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
+ms.openlocfilehash: 99b87ca1af6c8e88173624f544117eee700fba17
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67569573"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779773"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime (Método)
 Obtiene el [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaz que corresponde a una versión determinada de common language runtime (CLR). Este método reemplaza el [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) función que se usa con el [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md) marca.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetRuntime (  
     [in] LPCWSTR pwzVersion,  
     [in] REFIID riid,  
@@ -55,7 +55,7 @@ HRESULT GetRuntime (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`pwzVersion` o `ppRuntime` es null.|  

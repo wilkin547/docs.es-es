@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9869efee18549c3d0c8b9ee9ca27cf31c1ccf452
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6916e6344fe5c112b216ca753c372fa73a4d5af5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050147"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777704"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a>IMetaDataDispenserEx::SetOption (Método)
 Establece la opción especificada en un valor especificado para el ámbito de metadatos actual. La opción controla cómo se controlan las llamadas al ámbito de metadatos actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetOption (  
     [in] REFGUID optionId,   
     [in] const VARIANT *pValue  
@@ -46,7 +46,7 @@ HRESULT SetOption (
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se enumera los GUID disponibles que el `optionId` parámetro puede apuntar a y los correspondientes valores válidos para el `pValue` parámetro.  
   
-|GUID|Descripción|`pValue` Parámetro|  
+|GUID|DESCRIPCIÓN|`pValue` Parámetro|  
 |----------|-----------------|------------------------|  
 |MetaDataCheckDuplicatesFor|Controla qué elementos se comprueban los duplicados. Cada vez que se llama una [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) método que crea un nuevo elemento, puede pedir el método para comprobar si el elemento ya existe en el ámbito actual. Por ejemplo, puede comprobar la existencia de `mdMethodDef` elementos; en este caso, cuando se llama a [DefineMethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md), comprobará que el método no existe ya en el ámbito actual. Esta comprobación usa la clave que identifica un método determinado: primario de tipo, nombre y firma.|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la [CorCheckDuplicatesFor](../../../../docs/framework/unmanaged-api/metadata/corcheckduplicatesfor-enumeration.md) enumeración.|  
 |MetaDataRefToDefCheck|Los controles que hacen referencia a elementos se convierten en definiciones. De forma predeterminada, el motor de metadatos optimizará el código mediante la conversión de un elemento que se hace referencia a su definición si el elemento que se hace referencia realmente está definido en el ámbito actual.|Debe ser una variante de tipo UI4 y debe contener una combinación de los valores de la [CorRefToDefCheck](../../../../docs/framework/unmanaged-api/metadata/correftodefcheck-enumeration.md) enumeración.|  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f66b0145dbaece7292d2ccad169a97fbb10b6d11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ba9d7f8873d15a7cab2b9893feb8563dfc971b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959599"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778760"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints (Método)
 Obtiene un enumerador para una matriz de restricciones de parámetros genéricos asociados con el parámetro genérico representado por el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT EnumGenericParamConstraints (  
     [in, out] HCORENUM                *phEnum,  
     [in]  mdGenericParam              tk,  
@@ -57,7 +57,7 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`S_OK`|`EnumGenericParameterConstraints` se devolvió correctamente.|  
 |`S_FALSE`|`phEnum` no tiene ningún elemento de miembro. En este caso, `pcGenericParameterConstraints` se establece en 0 (cero).|  

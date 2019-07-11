@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eef2d75a2c8a3445c7f8666fec5be9e4d089e3cb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609377"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740522"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT (Estructura)
 Contiene información sobre una región de memoria en el montón administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct _COR_SEGMENT {  
     CORDB_ADDRESS start;            
     CORDB_ADDRESS end;              
@@ -39,7 +39,7 @@ typedef struct _COR_SEGMENT {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`start`|La dirección de inicio de la región de memoria.|  
 |`end`|La dirección final de la región de memoria.|  

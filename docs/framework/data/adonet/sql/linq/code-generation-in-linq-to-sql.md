@@ -2,15 +2,15 @@
 title: Generación de código en LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbc70669b9c03b59468f4f6a67c1f73432883193
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903284"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743603"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Generación de código en LINQ to SQL
-Puede generar código para representar una base de datos utilizando el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta de línea de comandos SQLMetal. En cualquier caso, la generación de código de un extremo a otro se produce en tres etapas:  
+Puede generar código para representar una base de datos mediante el uso de Object Relational Designer o la herramienta de línea de comandos SQLMetal. En cualquier caso, la generación de código de un extremo a otro se produce en tres etapas:  
   
 1. El *Extractor de DBML* extrae información de esquema de la base de datos y vuelve a ensamblar la información en un archivo DBML con formato XML.  
   
@@ -18,7 +18,7 @@ Puede generar código para representar una base de datos utilizando el [!INCLUDE
   
 3. Si no aparece ningún error de validación, el archivo se pasa al Generador de código.  
   
- Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Los desarrolladores que usan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para generar el código. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Los desarrolladores que usan Visual Studio también pueden usar Object Relational Designer para generar código. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="dbml-extractor"></a>Extractor de DBML  
  El Extractor de DBML es un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] componente que toma los metadatos de la base de datos como entrada y genera un archivo DBML como resultado.  
@@ -273,6 +273,6 @@ elementFormDefault="qualified" >
 
 - [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Cómo: Generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [Procedimientos: Generar el modelo de objetos como un archivo externo](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
 - [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

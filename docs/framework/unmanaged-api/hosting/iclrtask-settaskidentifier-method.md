@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abd8848ed54b26b66090e4865f9c3a0e5c4d20db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fe678dbf47141c31fb0870f1364983bc2ad69fc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763508"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770412"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier (Método)
 Indica a common language runtime (CLR) para asociar el valor de identificador especificado a la tarea actual [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetTaskIdentifier (  
     [in] DWORD Asked  
 );  
@@ -41,7 +41,7 @@ HRESULT SetTaskIdentifier (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`SetTaskIdentifier` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|El CLR no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

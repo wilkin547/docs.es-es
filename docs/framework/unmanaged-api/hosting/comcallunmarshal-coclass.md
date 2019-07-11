@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f17a88a90905006432ae8c5dc040277124c947b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fde42e3ecfac81a168920bc152833be7ba72b995
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697295"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779083"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal (Coclase)
 Proporciona interfaces para administrar el cálculo de referencias de punteros de interfaz.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 coclass ComCallUnmarshal {  
     [default] interface IMarshal;  
 };  
@@ -36,7 +36,7 @@ coclass ComCallUnmarshal {
   
 ## <a name="interfaces"></a>Interfaces  
   
-|Interfaz|Descripción|  
+|Interfaz|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`IMarshal`|Proporciona métodos para crear, inicializar y administrar a un servidor proxy en un proceso de cliente.|  
   

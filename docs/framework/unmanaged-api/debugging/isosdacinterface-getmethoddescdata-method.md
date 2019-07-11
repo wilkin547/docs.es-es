@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cdbf662c664d6c87b2fa17bcb10d735b0f573dd2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ea54fdd83b9470db4a08daceaa695e450f5ca1af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632312"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764826"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>Método ISOSDacInterface::GetMethodDescData
 
@@ -30,7 +30,7 @@ Obtiene los datos para el puntero de MethodDesc determinado.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
@@ -68,8 +68,8 @@ El método proporcionado forma parte de la `ISOSDacInterface` interfaz y corresp
 ## <a name="requirements"></a>Requisitos
 
 **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: Ninguna  
-**Biblioteca:** Ninguna  
+**Encabezado**: None  
+**Biblioteca:** None  
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también

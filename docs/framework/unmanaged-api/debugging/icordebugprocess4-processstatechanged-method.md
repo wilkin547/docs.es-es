@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 5e3a6714489e2051a09b5855ab9f911ef2f57450
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: adfd563e19389642ac0ed0a3cef4aae8a32fa466
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632282"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767191"
 ---
 # <a name="icordebugprocess4processstatechanged-method"></a>Método ICorDebugProcess4::ProcessStateChanged
 
@@ -28,7 +28,7 @@ Notifica a la canalización ICorDebug que fuera del depurador de proceso contin�
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT ProcessStateChanged(
     [in] CorDebugStateChange change
 );
@@ -47,9 +47,9 @@ El método proporcionado forma parte de la `ICorDebugProcess4` interfaz y corres
 
  **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
 
- **Encabezado**: Ninguna
+ **Encabezado**: None
 
- **Biblioteca:** Ninguna
+ **Biblioteca:** None
  
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 

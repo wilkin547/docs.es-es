@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9dc3f87ce727076d561923fe35495bbfe4419e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789615"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768129"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance (Función)
 Proporciona una de tres interfaces: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), o [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT CLRCreateInstance(  
     [in]  REFCLSID  clsid,  
     [in]  REFIID     riid,  
@@ -50,7 +50,7 @@ HRESULT CLRCreateInstance(
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`ppInterface` es null.|  
@@ -66,7 +66,7 @@ HRESULT CLRCreateInstance(
   
  El código siguiente muestra cómo usar `CLRCreateInstance` para obtener las tres interfaces:  
   
-```  
+```cpp  
 #include <metahost.h>  
 #pragma comment(lib, "mscoree.lib")  
   

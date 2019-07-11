@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85a43fef7f6dfa6dbe0bb9f1c4caec2c9c224b93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23ead080823ace1b091568108af8866dcbca14ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763436"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770264"
 ---
 # <a name="iclrtask2beginpreventasyncabort-method"></a>ICLRTask2::BeginPreventAsyncAbort (Método)
 Subproceso nuevo retrasos solicitudes de anulación de lo que las anulaciones de subproceso en el subproceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT BeginPreventAsyncAbort();  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |HOST_E_INVALIDOPERATION|Se llamó al método en un subproceso que no es el subproceso actual.|  

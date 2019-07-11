@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 2f7505051cce3aee99e6b6ea88a6a94498926214
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 7073ddc50b47ff239e8b310c0a5a1fbd84504133
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609628"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743880"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instrucciones, expresiones y operadores (Guía de programación de C#)
 
@@ -32,12 +32,6 @@ El código de C# que conforma una aplicación consta de instrucciones basadas en
 - [Operadores](operators.md)
 
 - [Funciones anónimas](anonymous-functions.md)
-
-- [Operadores de conversión](conversion-operators.md)
-
-  - [Utilizar operadores de conversión](using-conversion-operators.md)
-
-  - [Cómo: Implementar conversiones definidas por el usuario entre structs](how-to-implement-user-defined-conversions-between-structs.md)
 
 - [Comparaciones de igualdad](equality-comparisons.md)
 

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0631afe149c7a179a6cda4b5e491ad28653ddee9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 405d5ff49ba7bc2e5204f00cf50c30822354e56d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991801"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775586"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo (Método)
 Obtiene la identidad del subproceso Win32 actual para el subproceso especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetThreadInfo(  
     [in]  ThreadID threadId,  
     [out] DWORD    *pdwWin32ThreadId);  

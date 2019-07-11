@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea63627bc1e689c93634c8fe8b9048b271758573
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9fdacb690b31e7b9930825e5d54ef8fc95bb3a5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937055"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762133"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>ICorRuntimeHost::CreateDomain (Método)
 Crea un dominio de aplicación. El llamador recibe un puntero de interfaz de tipo <xref:System._AppDomain> a una instancia de tipo <xref:System.AppDomain?displayProperty=nameWithType>.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT CreateDomain (  
     [in] LPWSTR    pwzFriendlyName,  
     [in] IUnknown* pIdentityArray,  
@@ -49,7 +49,7 @@ HRESULT CreateDomain (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|La operación fue correcta.|  
 |S_FALSE|No se pudo completar la operación.|  

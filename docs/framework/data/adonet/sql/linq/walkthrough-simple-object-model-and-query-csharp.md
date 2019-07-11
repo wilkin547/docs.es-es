@@ -2,17 +2,17 @@
 title: 'Tutorial: Modelo de objetos simple y consultas (C#)'
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: dd4ba42247a8305b14d859a5b49da4c11cfc18bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62d28d61b3df0cfd792cedc87daf91526b162818
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617973"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742616"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Tutorial: Modelo de objetos simple y consultas (C#)
 Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] básico, con las mínimas dificultades. Creará una clase de entidad que modela la tabla Customers de la base de datos de ejemplo Northwind. Después creará una consulta simple para enumerar los clientes que se encuentran en Londres.  
   
- Este tutorial está orientado a código por diseño, para que sea más sencillo mostrar los conceptos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Normalmente, para crear un modelo de objetos utilizaría el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)].  
+ Este tutorial está orientado a código por diseño, para que sea más sencillo mostrar los conceptos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Normalmente, utilizaría el Object Relational Designer para crear un modelo de objetos.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -54,7 +54,7 @@ Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../.
   
 5. En el **ubicación** Compruebe dónde desea almacenar los archivos de proyecto.  
   
-6. Haga clic en **Aceptar**.  
+6. Haga clic en **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Agregar referencias y directivas LINQ  
  En este tutorial se usan ensamblados que podrían no estar instalados en el proyecto de forma predeterminada. Si System.Data.Linq no se incluye como referencia en el proyecto (expanda el **referencias** nodo **el Explorador de soluciones**), agréguelo, como se explica en los pasos siguientes.  

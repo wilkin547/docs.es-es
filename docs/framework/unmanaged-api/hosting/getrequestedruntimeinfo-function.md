@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21b96d435bdb0265d31972edbd4038d0b8cd8d2b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 62a6f6d6e73ce42c8c86d4e458322e5bd361f412
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490344"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778128"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo (Función)
 Obtiene información de versión y directorio sobre requerido por una aplicación de common language runtime (CLR).  
@@ -31,7 +31,7 @@ Obtiene información de versión y directorio sobre requerido por una aplicació
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeInfo (  
     [in]  LPCWSTR  pExe,   
     [in]  LPCWSTR  pwszVersion,   
@@ -84,7 +84,7 @@ HRESULT GetRequestedRuntimeInfo (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los valores siguientes.  
   
-|Código devuelto|Descripción|  
+|Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |ERROR_INSUFFICIENT_BUFFER|El búfer de directorio no es suficientemente grande como para almacenar la ruta de acceso de directorio.<br /><br /> o bien<br /><br /> El búfer de versión no es suficientemente grande como para almacenar la cadena de versión.|  

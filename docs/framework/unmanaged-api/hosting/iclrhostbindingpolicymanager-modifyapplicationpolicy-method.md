@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07a4998f86958e21fffc8ba8657ec9f2a170f43e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a9e438e6dd436303cd6f7aa60c779179b5d3c04
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984664"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779669"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy (Método)
 Modifica la directiva de enlace para el ensamblado especificado y crea una nueva versión de la directiva.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT  ModifyApplicationPolicy (  
     [in] LPCWSTR     pwzSourceAssemblyIdentity,   
     [in] LPCWSTR     pwzTargetAssemblyIdentity,  
@@ -65,7 +65,7 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|La directiva se modificó correctamente.|  
 |E_INVALIDARG|`pwzSourceAssemblyIdentity` o `pwzTargetAssemblyIdentity` era una referencia nula.|  

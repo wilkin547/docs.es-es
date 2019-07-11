@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51d2f0aedffdd88974a8184954ecbb9a231b70c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23228c1414f5f6327cfb326c95a3224ae231a033
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939950"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776786"
 ---
 # <a name="isymunmanageddisposedestroy-method"></a>ISymUnmanagedDispose::Destroy (Método)
 Hace que el objeto subyacente liberar todas las referencias internas y devuelva un error en las llamadas de método subsiguientes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT Destroy();  
 ```  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a682999c888a93cef94162a8179673c862dc43ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e03e7a965bc923d91cb0c83a9ea8ea5899da63a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988720"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754658"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>ICorDebugFunction::GetLocalVarSigToken (Método)
 Obtiene los metadatos de token para la firma de variable local de la función representada por esta instancia ICorDebugFunction.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetLocalVarSigToken (  
     [out] mdSignature *pmdSig  
 );  

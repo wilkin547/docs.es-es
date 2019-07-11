@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7fcd7a3aa1a6c034985099c24071429384563700
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19aced41860002081caaf6436bad08f5f9a09e9a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985301"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766658"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated (Método)
 Obtiene el tamaño total, en bytes, de todas las asignaciones de memoria que el dominio de aplicación se han realizado desde que se creó, sin restar la memoria que se ha recopilado de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,  
                             [out] ULONGLONG* pBytesAllocated);  
 ```  
@@ -44,7 +44,7 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |COR_E_APPDOMAINUNLOADED|El dominio de aplicación se ha descargado o no existe.|  
