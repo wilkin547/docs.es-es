@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9000f35e9a8f7ecc6c40cf0ef9c220fc9f4f9c10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 05f5d3fbe05ad1e97a1ae61ed0496f314c4ec5cd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985691"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765971"
 ---
-# <a name="customdumpitem-structure"></a><span data-ttu-id="c007e-102">CustomDumpItem (Estructura)</span><span class="sxs-lookup"><span data-stu-id="c007e-102">CustomDumpItem Structure</span></span>
-<span data-ttu-id="c007e-103">Describe un elemento que se agregarán a un volcado personalizado en informes de errores.</span><span class="sxs-lookup"><span data-stu-id="c007e-103">Describes an item to be added to a custom dump in error reporting.</span></span>  
+# <a name="customdumpitem-structure"></a><span data-ttu-id="e1a29-102">CustomDumpItem (Estructura)</span><span class="sxs-lookup"><span data-stu-id="e1a29-102">CustomDumpItem Structure</span></span>
+<span data-ttu-id="e1a29-103">Describe un elemento que se agregarán a un volcado personalizado en informes de errores.</span><span class="sxs-lookup"><span data-stu-id="e1a29-103">Describes an item to be added to a custom dump in error reporting.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c007e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c007e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e1a29-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e1a29-104">Syntax</span></span>  
   
-```  
+```cpp  
 struct {  
     ECustomDumpItemKind itemKind;   
     union {  
@@ -37,25 +37,25 @@ struct {
 } CustomDumpItem;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="c007e-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="c007e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e1a29-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="e1a29-105">Members</span></span>  
   
-|<span data-ttu-id="c007e-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="c007e-106">Member</span></span>|<span data-ttu-id="c007e-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="c007e-107">Description</span></span>|  
+|<span data-ttu-id="e1a29-106">Member</span><span class="sxs-lookup"><span data-stu-id="e1a29-106">Member</span></span>|<span data-ttu-id="e1a29-107">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="e1a29-107">Description</span></span>|  
 |------------|-----------------|  
-|`itemKind`|<span data-ttu-id="c007e-108">Un [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valor que indica el tipo de elemento que va a agregar.</span><span class="sxs-lookup"><span data-stu-id="c007e-108">An [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) value that indicates the kind of item to be added.</span></span>|  
-|`pReserved`|<span data-ttu-id="c007e-109">No se están utilizando.</span><span class="sxs-lookup"><span data-stu-id="c007e-109">Not currently used.</span></span> <span data-ttu-id="c007e-110">Todos los elementos agregados a la unión no deben ser superior al tamaño del puntero.</span><span class="sxs-lookup"><span data-stu-id="c007e-110">Any items added to the union must be no larger than pointer size.</span></span> <span data-ttu-id="c007e-111">Si un `struct` es necesario, debe asignarlo por separado y apunte a ella.</span><span class="sxs-lookup"><span data-stu-id="c007e-111">If a `struct` is required, you must allocate it separately and point to it.</span></span>|  
+|`itemKind`|<span data-ttu-id="e1a29-108">Un [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) valor que indica el tipo de elemento que va a agregar.</span><span class="sxs-lookup"><span data-stu-id="e1a29-108">An [ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md) value that indicates the kind of item to be added.</span></span>|  
+|`pReserved`|<span data-ttu-id="e1a29-109">No se están utilizando.</span><span class="sxs-lookup"><span data-stu-id="e1a29-109">Not currently used.</span></span> <span data-ttu-id="e1a29-110">Todos los elementos agregados a la unión no deben ser superior al tamaño del puntero.</span><span class="sxs-lookup"><span data-stu-id="e1a29-110">Any items added to the union must be no larger than pointer size.</span></span> <span data-ttu-id="e1a29-111">Si un `struct` es necesario, debe asignarlo por separado y apunte a ella.</span><span class="sxs-lookup"><span data-stu-id="e1a29-111">If a `struct` is required, you must allocate it separately and point to it.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c007e-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c007e-112">Remarks</span></span>  
- <span data-ttu-id="c007e-113">[ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) toma un parámetro de tipo `CustomDumpItem`.</span><span class="sxs-lookup"><span data-stu-id="c007e-113">[ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) takes a parameter of type `CustomDumpItem`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e1a29-112">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e1a29-112">Remarks</span></span>  
+ <span data-ttu-id="e1a29-113">[ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) toma un parámetro de tipo `CustomDumpItem`.</span><span class="sxs-lookup"><span data-stu-id="e1a29-113">[ICLRErrorReportingManager::BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md) takes a parameter of type `CustomDumpItem`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c007e-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c007e-114">Requirements</span></span>  
- <span data-ttu-id="c007e-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c007e-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e1a29-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e1a29-114">Requirements</span></span>  
+ <span data-ttu-id="e1a29-115">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1a29-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c007e-116">**Encabezado**: MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="c007e-116">**Header:** MSCorEE.idl</span></span>  
+ <span data-ttu-id="e1a29-116">**Encabezado**: MSCorEE.idl</span><span class="sxs-lookup"><span data-stu-id="e1a29-116">**Header:** MSCorEE.idl</span></span>  
   
- <span data-ttu-id="c007e-117">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c007e-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e1a29-117">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e1a29-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c007e-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c007e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e1a29-118">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1a29-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c007e-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="c007e-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e1a29-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="e1a29-119">See also</span></span>
 
-- [<span data-ttu-id="c007e-120">Estructuras de hospedaje</span><span class="sxs-lookup"><span data-stu-id="c007e-120">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="e1a29-120">Estructuras de hospedaje</span><span class="sxs-lookup"><span data-stu-id="e1a29-120">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

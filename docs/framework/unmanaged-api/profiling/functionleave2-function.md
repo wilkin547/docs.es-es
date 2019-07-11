@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bde206d56bc7e8c930e1e428512232caccfb940
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 124921f2f99ca4d8da88cc3713624383e225a26f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586842"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781264"
 ---
-# <a name="functionleave2-function"></a><span data-ttu-id="4b7be-102">FunctionLeave2 (Función)</span><span class="sxs-lookup"><span data-stu-id="4b7be-102">FunctionLeave2 Function</span></span>
-<span data-ttu-id="4b7be-103">Notifica al generador de perfiles que una función está a punto de devolver al autor de llamada y proporciona información sobre la pila marco y la función de valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="4b7be-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
+# <a name="functionleave2-function"></a><span data-ttu-id="8f6ed-102">FunctionLeave2 (Función)</span><span class="sxs-lookup"><span data-stu-id="8f6ed-102">FunctionLeave2 Function</span></span>
+<span data-ttu-id="8f6ed-103">Notifica al generador de perfiles que una función está a punto de devolver al autor de llamada y proporciona información sobre la pila marco y la función de valor devuelto.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4b7be-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="4b7be-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8f6ed-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="8f6ed-104">Syntax</span></span>  
   
-```  
+```cpp  
 void __stdcall FunctionLeave2 (  
     [in]  FunctionID                        funcId,  
     [in]  UINT_PTR                          clientData,  
@@ -37,50 +37,50 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4b7be-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="4b7be-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="8f6ed-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="8f6ed-105">Parameters</span></span>  
  `funcId`  
- <span data-ttu-id="4b7be-106">[in] El identificador de la función que devuelve.</span><span class="sxs-lookup"><span data-stu-id="4b7be-106">[in] The identifier of the function that is returning.</span></span>  
+ <span data-ttu-id="8f6ed-106">[in] El identificador de la función que devuelve.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-106">[in] The identifier of the function that is returning.</span></span>  
   
  `clientData`  
- <span data-ttu-id="4b7be-107">[in] El identificador de la función reasignada, que el generador de perfiles especificado anteriormente a través de la [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) función.</span><span class="sxs-lookup"><span data-stu-id="4b7be-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
+ <span data-ttu-id="8f6ed-107">[in] El identificador de la función reasignada, que el generador de perfiles especificado anteriormente a través de la [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) función.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-107">[in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.</span></span>  
   
  `func`  
- <span data-ttu-id="4b7be-108">[in] Un `COR_PRF_FRAME_INFO` valor al que apunta a la información sobre el marco de pila.</span><span class="sxs-lookup"><span data-stu-id="4b7be-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
+ <span data-ttu-id="8f6ed-108">[in] Un `COR_PRF_FRAME_INFO` valor al que apunta a la información sobre el marco de pila.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-108">[in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.</span></span>  
   
- <span data-ttu-id="4b7be-109">El generador de perfiles debe tratar como un identificador opaco que puede pasarse al motor de ejecución en el [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="4b7be-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
+ <span data-ttu-id="8f6ed-109">El generador de perfiles debe tratar como un identificador opaco que puede pasarse al motor de ejecución en el [ICorProfilerInfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-109">The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.</span></span>  
   
  `retvalRange`  
- <span data-ttu-id="4b7be-110">[in] Un puntero a un [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estructura que especifica la ubicación de memoria del valor devuelto de la función.</span><span class="sxs-lookup"><span data-stu-id="4b7be-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>  
+ <span data-ttu-id="8f6ed-110">[in] Un puntero a un [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estructura que especifica la ubicación de memoria del valor devuelto de la función.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-110">[in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.</span></span>  
   
- <span data-ttu-id="4b7be-111">Para tener acceso a información del valor devuelto, el `COR_PRF_ENABLE_FUNCTION_RETVAL` se debe establecer la marca.</span><span class="sxs-lookup"><span data-stu-id="4b7be-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="4b7be-112">El generador de perfiles puede utilizar el [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para establecer las marcas de evento.</span><span class="sxs-lookup"><span data-stu-id="4b7be-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
+ <span data-ttu-id="8f6ed-111">Para tener acceso a información del valor devuelto, el `COR_PRF_ENABLE_FUNCTION_RETVAL` se debe establecer la marca.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-111">In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="8f6ed-112">El generador de perfiles puede utilizar el [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para establecer las marcas de evento.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4b7be-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="4b7be-113">Remarks</span></span>  
- <span data-ttu-id="4b7be-114">Los valores de la `func` y `retvalRange` parámetros no son válidos tras el `FunctionLeave2` función devuelve porque los valores pueden cambiar o se destruye.</span><span class="sxs-lookup"><span data-stu-id="4b7be-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8f6ed-113">Comentarios</span><span class="sxs-lookup"><span data-stu-id="8f6ed-113">Remarks</span></span>  
+ <span data-ttu-id="8f6ed-114">Los valores de la `func` y `retvalRange` parámetros no son válidos tras el `FunctionLeave2` función devuelve porque los valores pueden cambiar o se destruye.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-114">The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.</span></span>  
   
- <span data-ttu-id="4b7be-115">El `FunctionLeave2` función es una devolución de llamada; debe implementar.</span><span class="sxs-lookup"><span data-stu-id="4b7be-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="4b7be-116">La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="4b7be-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
+ <span data-ttu-id="8f6ed-115">El `FunctionLeave2` función es una devolución de llamada; debe implementar.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-115">The `FunctionLeave2` function is a callback; you must implement it.</span></span> <span data-ttu-id="8f6ed-116">La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-116">The implementation must use the `__declspec`(`naked`) storage-class attribute.</span></span>  
   
- <span data-ttu-id="4b7be-117">El motor de ejecución no guarda ningún registro antes de llamar a esta función.</span><span class="sxs-lookup"><span data-stu-id="4b7be-117">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="8f6ed-117">El motor de ejecución no guarda ningún registro antes de llamar a esta función.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-117">The execution engine does not save any registers before calling this function.</span></span>  
   
-- <span data-ttu-id="4b7be-118">En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).</span><span class="sxs-lookup"><span data-stu-id="4b7be-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+- <span data-ttu-id="8f6ed-118">En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).</span><span class="sxs-lookup"><span data-stu-id="8f6ed-118">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
-- <span data-ttu-id="4b7be-119">En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.</span><span class="sxs-lookup"><span data-stu-id="4b7be-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+- <span data-ttu-id="8f6ed-119">En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-119">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
- <span data-ttu-id="4b7be-120">La implementación de `FunctionLeave2` no debe bloquearse porque retrasará la recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="4b7be-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="4b7be-121">La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="4b7be-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="4b7be-122">Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionLeave2` devuelve.</span><span class="sxs-lookup"><span data-stu-id="4b7be-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
+ <span data-ttu-id="8f6ed-120">La implementación de `FunctionLeave2` no debe bloquearse porque retrasará la recolección de elementos.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-120">The implementation of `FunctionLeave2` should not block because it will delay garbage collection.</span></span> <span data-ttu-id="8f6ed-121">La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-121">The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state.</span></span> <span data-ttu-id="8f6ed-122">Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionLeave2` devuelve.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-122">If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.</span></span>  
   
- <span data-ttu-id="4b7be-123">Además, el `FunctionLeave2` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.</span><span class="sxs-lookup"><span data-stu-id="4b7be-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
+ <span data-ttu-id="8f6ed-123">Además, el `FunctionLeave2` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.</span><span class="sxs-lookup"><span data-stu-id="8f6ed-123">Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4b7be-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4b7be-124">Requirements</span></span>  
- <span data-ttu-id="4b7be-125">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4b7be-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8f6ed-124">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8f6ed-124">Requirements</span></span>  
+ <span data-ttu-id="8f6ed-125">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8f6ed-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4b7be-126">**Encabezado**: CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="4b7be-126">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="8f6ed-126">**Encabezado**: CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="8f6ed-126">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="4b7be-127">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4b7be-127">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="8f6ed-127">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8f6ed-127">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4b7be-128">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4b7be-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="8f6ed-128">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f6ed-128">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b7be-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="4b7be-129">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8f6ed-129">Vea también</span><span class="sxs-lookup"><span data-stu-id="8f6ed-129">See also</span></span>
 
-- [<span data-ttu-id="4b7be-130">FunctionEnter2 (Función)</span><span class="sxs-lookup"><span data-stu-id="4b7be-130">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [<span data-ttu-id="4b7be-131">FunctionTailcall2 (Función)</span><span class="sxs-lookup"><span data-stu-id="4b7be-131">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [<span data-ttu-id="4b7be-132">SetEnterLeaveFunctionHooks2 (método)</span><span class="sxs-lookup"><span data-stu-id="4b7be-132">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [<span data-ttu-id="4b7be-133">Funciones estáticas globales para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="4b7be-133">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [<span data-ttu-id="8f6ed-130">FunctionEnter2 (Función)</span><span class="sxs-lookup"><span data-stu-id="8f6ed-130">FunctionEnter2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
+- [<span data-ttu-id="8f6ed-131">FunctionTailcall2 (Función)</span><span class="sxs-lookup"><span data-stu-id="8f6ed-131">FunctionTailcall2 Function</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
+- [<span data-ttu-id="8f6ed-132">SetEnterLeaveFunctionHooks2 (método)</span><span class="sxs-lookup"><span data-stu-id="8f6ed-132">SetEnterLeaveFunctionHooks2 Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [<span data-ttu-id="8f6ed-133">Funciones estáticas globales para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="8f6ed-133">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

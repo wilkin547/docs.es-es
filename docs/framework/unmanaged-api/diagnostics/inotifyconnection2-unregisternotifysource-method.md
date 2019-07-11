@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742be1467d2f1e6eb7d8567ddf85f8e65ea4b8d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b8a8c3dbfb7b9949811025846484ab233ed3741
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794334"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776621"
 ---
-# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="68de7-102">INotifyConnection2::UnregisterNotifySource (Método)</span><span class="sxs-lookup"><span data-stu-id="68de7-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
-<span data-ttu-id="68de7-103">Quita un objeto de origen de notificación especificado de la conexión.</span><span class="sxs-lookup"><span data-stu-id="68de7-103">Removes a specified notification source object from the connection.</span></span>  
+# <a name="inotifyconnection2unregisternotifysource-method"></a><span data-ttu-id="31956-102">INotifyConnection2::UnregisterNotifySource (Método)</span><span class="sxs-lookup"><span data-stu-id="31956-102">INotifyConnection2::UnregisterNotifySource Method</span></span>
+<span data-ttu-id="31956-103">Quita un objeto de origen de notificación especificado de la conexión.</span><span class="sxs-lookup"><span data-stu-id="31956-103">Removes a specified notification source object from the connection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="68de7-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="68de7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="31956-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="31956-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT UnregisterNotifySource  
 (  
     [in]  INotifySource2*  in_pNotifySource  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="68de7-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="68de7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="31956-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="31956-105">Parameters</span></span>  
  `in_pNotifySource`  
- <span data-ttu-id="68de7-106">[in] Objeto de notificación se va a anular.</span><span class="sxs-lookup"><span data-stu-id="68de7-106">[in] Notification object to be unregistered.</span></span>  
+ <span data-ttu-id="31956-106">[in] Objeto de notificación se va a anular.</span><span class="sxs-lookup"><span data-stu-id="31956-106">[in] Notification object to be unregistered.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="68de7-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="68de7-107">Return Value</span></span>  
- <span data-ttu-id="68de7-108">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="68de7-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="31956-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="31956-107">Return Value</span></span>  
+ <span data-ttu-id="31956-108">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="31956-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="68de7-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="68de7-109">Requirements</span></span>  
- <span data-ttu-id="68de7-110">**Encabezado**: ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="68de7-110">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="31956-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="31956-109">Requirements</span></span>  
+ <span data-ttu-id="31956-110">**Encabezado**: ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="31956-110">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68de7-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="68de7-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31956-111">Vea también</span><span class="sxs-lookup"><span data-stu-id="31956-111">See also</span></span>
 
-- [<span data-ttu-id="68de7-112">INotifyConnection2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="68de7-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
-- [<span data-ttu-id="68de7-113">INotifySource2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="68de7-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="68de7-114">INotifySink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="68de7-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="68de7-115">RegisterNotifySource (método)</span><span class="sxs-lookup"><span data-stu-id="68de7-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)
+- [<span data-ttu-id="31956-112">INotifyConnection2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="31956-112">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="31956-113">INotifySource2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="31956-113">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="31956-114">INotifySink2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="31956-114">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="31956-115">RegisterNotifySource (método)</span><span class="sxs-lookup"><span data-stu-id="31956-115">RegisterNotifySource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)

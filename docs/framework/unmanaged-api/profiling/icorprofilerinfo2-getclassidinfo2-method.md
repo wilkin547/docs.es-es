@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b98746be189e211572e5517aac1f06825973b39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892379d3281a98821b7feb5250973fac74f1f4f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779787"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751853"
 ---
-# <a name="icorprofilerinfo2getclassidinfo2-method"></a><span data-ttu-id="02964-102">ICorProfilerInfo2::GetClassIDInfo2 (Método)</span><span class="sxs-lookup"><span data-stu-id="02964-102">ICorProfilerInfo2::GetClassIDInfo2 Method</span></span>
-<span data-ttu-id="02964-103">Obtiene el módulo primario y los metadatos (token) para la definición de genérica abierta de la clase especificada, el `ClassID` de su clase primaria y el `ClassID` para cada argumento de tipo, si está presente, de la clase.</span><span class="sxs-lookup"><span data-stu-id="02964-103">Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.</span></span>  
+# <a name="icorprofilerinfo2getclassidinfo2-method"></a><span data-ttu-id="a3a5f-102">ICorProfilerInfo2::GetClassIDInfo2 (Método)</span><span class="sxs-lookup"><span data-stu-id="a3a5f-102">ICorProfilerInfo2::GetClassIDInfo2 Method</span></span>
+<span data-ttu-id="a3a5f-103">Obtiene el módulo primario y los metadatos (token) para la definición de genérica abierta de la clase especificada, el `ClassID` de su clase primaria y el `ClassID` para cada argumento de tipo, si está presente, de la clase.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-103">Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="02964-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="02964-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3a5f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a3a5f-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetClassIDInfo2(  
     [in]  ClassID classId,  
     [out] ModuleID *pModuleId,  
@@ -40,49 +40,49 @@ HRESULT GetClassIDInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="02964-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="02964-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a3a5f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a3a5f-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="02964-106">[in] Identificador de la clase para la que se recuperará información.</span><span class="sxs-lookup"><span data-stu-id="02964-106">[in] The ID of the class for which information will be retrieved.</span></span>  
+ <span data-ttu-id="a3a5f-106">[in] Identificador de la clase para la que se recuperará información.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-106">[in] The ID of the class for which information will be retrieved.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="02964-107">[out] Puntero al identificador del módulo primario para la definición de genérico abierto de la clase especificada.</span><span class="sxs-lookup"><span data-stu-id="02964-107">[out] Pointer to the ID of the parent module for the open generic definition of the specified class.</span></span>  
+ <span data-ttu-id="a3a5f-107">[out] Puntero al identificador del módulo primario para la definición de genérico abierto de la clase especificada.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-107">[out] Pointer to the ID of the parent module for the open generic definition of the specified class.</span></span>  
   
  `pTypeDefToken`  
- <span data-ttu-id="02964-108">[out] Puntero al token de metadatos para la definición de genérico abierto de la clase especificada.</span><span class="sxs-lookup"><span data-stu-id="02964-108">[out] Pointer to the metadata token for the open generic definition of the specified class.</span></span>  
+ <span data-ttu-id="a3a5f-108">[out] Puntero al token de metadatos para la definición de genérico abierto de la clase especificada.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-108">[out] Pointer to the metadata token for the open generic definition of the specified class.</span></span>  
   
  `pParentClassId`  
- <span data-ttu-id="02964-109">[out] Puntero al identificador de la clase primaria.</span><span class="sxs-lookup"><span data-stu-id="02964-109">[out] Pointer to the ID of the parent class.</span></span>  
+ <span data-ttu-id="a3a5f-109">[out] Puntero al identificador de la clase primaria.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-109">[out] Pointer to the ID of the parent class.</span></span>  
   
  `cNumTypeArgs`  
- <span data-ttu-id="02964-110">[in] Tamaño de la matriz `typeArgs`.</span><span class="sxs-lookup"><span data-stu-id="02964-110">[in] The size of the `typeArgs` array.</span></span>  
+ <span data-ttu-id="a3a5f-110">[in] Tamaño de la matriz `typeArgs`.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-110">[in] The size of the `typeArgs` array.</span></span>  
   
  `pcNumTypeArgs`  
- <span data-ttu-id="02964-111">[out] Puntero al número total de elementos disponibles.</span><span class="sxs-lookup"><span data-stu-id="02964-111">[out] Pointer to the total number of available elements.</span></span>  
+ <span data-ttu-id="a3a5f-111">[out] Puntero al número total de elementos disponibles.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-111">[out] Pointer to the total number of available elements.</span></span>  
   
  `typeArgs`  
- <span data-ttu-id="02964-112">[out] Matriz de valores `ClassID`, cada uno de los cuales representa el identificador de un argumento de tipo de la clase.</span><span class="sxs-lookup"><span data-stu-id="02964-112">[out] An array of `ClassID` values, each of which represents the ID of a type argument of the class.</span></span> <span data-ttu-id="02964-113">Cuando el método vuelve, `typeArgs` contendrá algunos o todos los valores `ClassID` disponibles.</span><span class="sxs-lookup"><span data-stu-id="02964-113">When the method returns, `typeArgs` will contain some or all the available `ClassID` values.</span></span>  
+ <span data-ttu-id="a3a5f-112">[out] Matriz de valores `ClassID`, cada uno de los cuales representa el identificador de un argumento de tipo de la clase.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-112">[out] An array of `ClassID` values, each of which represents the ID of a type argument of the class.</span></span> <span data-ttu-id="a3a5f-113">Cuando el método vuelve, `typeArgs` contendrá algunos o todos los valores `ClassID` disponibles.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-113">When the method returns, `typeArgs` will contain some or all the available `ClassID` values.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="02964-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="02964-114">Remarks</span></span>  
- <span data-ttu-id="02964-115">El `GetClassIDInfo2` método es similar a la [GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) método, pero `GetClassIDInfo2` obtiene información adicional sobre un tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="02964-115">The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a3a5f-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a3a5f-114">Remarks</span></span>  
+ <span data-ttu-id="a3a5f-115">El `GetClassIDInfo2` método es similar a la [GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) método, pero `GetClassIDInfo2` obtiene información adicional sobre un tipo genérico.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-115">The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.</span></span>  
   
- <span data-ttu-id="02964-116">El código del generador de perfiles puede llamar a [GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obtener un [metadatos](../../../../docs/framework/unmanaged-api/metadata/index.md) interfaz para un módulo determinado.</span><span class="sxs-lookup"><span data-stu-id="02964-116">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module.</span></span> <span data-ttu-id="02964-117">Después, el token de metadatos que se devuelve a la ubicación a la que `pTypeDefToken` hace referencia puede usarse para acceder a los metadatos de la clase.</span><span class="sxs-lookup"><span data-stu-id="02964-117">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
+ <span data-ttu-id="a3a5f-116">El código del generador de perfiles puede llamar a [GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obtener un [metadatos](../../../../docs/framework/unmanaged-api/metadata/index.md) interfaz para un módulo determinado.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-116">The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module.</span></span> <span data-ttu-id="a3a5f-117">Después, el token de metadatos que se devuelve a la ubicación a la que `pTypeDefToken` hace referencia puede usarse para acceder a los metadatos de la clase.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-117">The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.</span></span>  
   
- <span data-ttu-id="02964-118">Después de que `GetClassIDInfo2` vuelva, debe comprobar que el búfer `typeArgs` era lo suficientemente grande como para contener todos los valores `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="02964-118">After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values.</span></span> <span data-ttu-id="02964-119">Para ello, compare el valor al que `pcNumTypeArgs` apunta con el valor del parámetro `cNumTypeArgs`.</span><span class="sxs-lookup"><span data-stu-id="02964-119">To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter.</span></span> <span data-ttu-id="02964-120">Si `pcNumTypeArgs` apunta un valor mayor que `cNumTypeArgs`, asigne un búfer `typeArgs` mayor, actualice `cNumTypeArgs` con el nuevo tamaño de mayores dimensiones y vuelva a llamar a `GetClassIDInfo2`.</span><span class="sxs-lookup"><span data-stu-id="02964-120">If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.</span></span>  
+ <span data-ttu-id="a3a5f-118">Después de que `GetClassIDInfo2` vuelva, debe comprobar que el búfer `typeArgs` era lo suficientemente grande como para contener todos los valores `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-118">After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values.</span></span> <span data-ttu-id="a3a5f-119">Para ello, compare el valor al que `pcNumTypeArgs` apunta con el valor del parámetro `cNumTypeArgs`.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-119">To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter.</span></span> <span data-ttu-id="a3a5f-120">Si `pcNumTypeArgs` apunta un valor mayor que `cNumTypeArgs`, asigne un búfer `typeArgs` mayor, actualice `cNumTypeArgs` con el nuevo tamaño de mayores dimensiones y vuelva a llamar a `GetClassIDInfo2`.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-120">If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.</span></span>  
   
- <span data-ttu-id="02964-121">También tiene la opción de llamar primero a `GetClassIDInfo2` con un búfer `typeArgs` de longitud de cero para obtener el tamaño de búfer correcto.</span><span class="sxs-lookup"><span data-stu-id="02964-121">Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="02964-122">Después, puede establecer el tamaño del búfer `typeArgs` en el valor devuelto en `pcNumTypeArgs` y volver a llamar a `GetClassIDInfo2`.</span><span class="sxs-lookup"><span data-stu-id="02964-122">You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.</span></span>  
+ <span data-ttu-id="a3a5f-121">También tiene la opción de llamar primero a `GetClassIDInfo2` con un búfer `typeArgs` de longitud de cero para obtener el tamaño de búfer correcto.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-121">Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="a3a5f-122">Después, puede establecer el tamaño del búfer `typeArgs` en el valor devuelto en `pcNumTypeArgs` y volver a llamar a `GetClassIDInfo2`.</span><span class="sxs-lookup"><span data-stu-id="a3a5f-122">You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="02964-123">Requisitos</span><span class="sxs-lookup"><span data-stu-id="02964-123">Requirements</span></span>  
- <span data-ttu-id="02964-124">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="02964-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3a5f-123">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a3a5f-123">Requirements</span></span>  
+ <span data-ttu-id="a3a5f-124">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a3a5f-124">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="02964-125">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="02964-125">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a3a5f-125">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a3a5f-125">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="02964-126">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="02964-126">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a3a5f-126">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a3a5f-126">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="02964-127">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="02964-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a3a5f-127">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3a5f-127">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="02964-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="02964-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3a5f-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="a3a5f-128">See also</span></span>
 
-- [<span data-ttu-id="02964-129">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="02964-129">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="02964-130">ICorProfilerInfo2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="02964-130">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [<span data-ttu-id="02964-131">Interfaces para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="02964-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="02964-132">Generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="02964-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="a3a5f-129">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a3a5f-129">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="a3a5f-130">ICorProfilerInfo2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a3a5f-130">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [<span data-ttu-id="a3a5f-131">Interfaces para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="a3a5f-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="a3a5f-132">Generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="a3a5f-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

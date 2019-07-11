@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb8917fa401db9424cff168fe0b06ad84065827c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996260"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737945"
 ---
-# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="93469-102">ICorDebugAppDomain::GetId (Método)</span><span class="sxs-lookup"><span data-stu-id="93469-102">ICorDebugAppDomain::GetId Method</span></span>
-<span data-ttu-id="93469-103">Obtiene el identificador único del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="93469-103">Gets the unique identifier of the application domain.</span></span>  
+# <a name="icordebugappdomaingetid-method"></a><span data-ttu-id="c1cc0-102">ICorDebugAppDomain::GetId (Método)</span><span class="sxs-lookup"><span data-stu-id="c1cc0-102">ICorDebugAppDomain::GetId Method</span></span>
+<span data-ttu-id="c1cc0-103">Obtiene el identificador único del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="c1cc0-103">Gets the unique identifier of the application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93469-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="93469-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c1cc0-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c1cc0-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetID (  
     [out] ULONG32   *pId  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="93469-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="93469-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c1cc0-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c1cc0-105">Parameters</span></span>  
  `pId`  
- <span data-ttu-id="93469-106">[out] El identificador único del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="93469-106">[out] The unique identifier of the application domain.</span></span>  
+ <span data-ttu-id="c1cc0-106">[out] El identificador único del dominio de aplicación.</span><span class="sxs-lookup"><span data-stu-id="c1cc0-106">[out] The unique identifier of the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="93469-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="93469-107">Remarks</span></span>  
- <span data-ttu-id="93469-108">El identificador del dominio de aplicación es único dentro del proceso que lo contiene.</span><span class="sxs-lookup"><span data-stu-id="93469-108">The identifier for the application domain is unique within the containing process.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c1cc0-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="c1cc0-107">Remarks</span></span>  
+ <span data-ttu-id="c1cc0-108">El identificador del dominio de aplicación es único dentro del proceso que lo contiene.</span><span class="sxs-lookup"><span data-stu-id="c1cc0-108">The identifier for the application domain is unique within the containing process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93469-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="93469-109">Requirements</span></span>  
- <span data-ttu-id="93469-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="93469-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c1cc0-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c1cc0-109">Requirements</span></span>  
+ <span data-ttu-id="c1cc0-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c1cc0-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="93469-111">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="93469-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c1cc0-111">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c1cc0-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="93469-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="93469-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c1cc0-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c1cc0-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="93469-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="93469-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="c1cc0-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c1cc0-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
