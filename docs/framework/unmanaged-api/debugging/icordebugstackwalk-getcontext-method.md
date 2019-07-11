@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bba1e6c113fb4caa0db8963e238d3eceba0cc8ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f453e950a79b0f929ec8f813cc13eb2e01ab8c87
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782751"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760917"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext (Método)
 Devuelve el contexto para el fotograma actual en el [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetContext([in]  ULONG32 contextFlags,  
                    [in]  ULONG32 contextBufSize,  
                    [out] ULONG32* contextSize,  
@@ -52,7 +52,7 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El contexto del marco actual se devolvió correctamente.|  
 |E_FAIL|No se pudo devolver el contexto.|  

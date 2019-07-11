@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 315d6dd522f3c6be2d36b1eb411d9f471350df60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f101fe2a84a26efb23f57bac3aaf4f0e64a4d36c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651759"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740034"
 ---
 # <a name="cordebuggctype-enumeration"></a>CorDebugGCType (Enumeración)
 Indica si el recolector de elementos no utilizados se está ejecutando en una estación de trabajo o en un servidor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorDebugGCType {  
     CorDebugWorkstationGC  = 0,  
     CorDebugServerGC       = ( CorDebugWorkstationGC + 1 )  
@@ -39,7 +39,7 @@ typedef enum CorDebugGCType {
   
 ## <a name="members"></a>Miembros  
   
-|Nombre de miembro|Descripción|  
+|Nombre de miembro|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |`CorDebugWorkstationGC`|El recolector de elementos no utilizados se ejecuta en una estación de trabajo.|  
 |`CorDebugServerGC`|El recolector de elementos no utilizados se ejecuta en un servidor.|  

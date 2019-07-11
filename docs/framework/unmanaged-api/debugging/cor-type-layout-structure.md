@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7efb2c3e8033b8bd8fa736a29b2ab9b3bedebeaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1793547cfc0d9637352b62ff47beee41e9f5ac5c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609508"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740508"
 ---
 # <a name="cortypelayout-structure"></a>COR_TYPE_LAYOUT (Estructura)
 Proporciona información sobre la distribución de un objeto en la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct COR_TYPE_LAYOUT {  
     COR_TYPEID parentID;  
     ULONG32 objectSize;  
@@ -40,7 +40,7 @@ typedef struct COR_TYPE_LAYOUT {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`parentID`|El identificador del tipo primario para este tipo. Este será el identificador de tipo NULL (símbolo1 = 0, símbolo2 = 0) si el identificador de tipo corresponde a <xref:System.Object?displayProperty=nameWithType>.|  
 |`objectSize`|El tamaño de la base de un objeto de este tipo. Este es el tamaño total de objetos de tamaño no variable.|  

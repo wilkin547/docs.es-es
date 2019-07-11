@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a59067f72005e87152680e4f990fc74e4acdaa9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ee186604529a3e77a0217c5688df5b62ff8b28c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948946"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736987"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>ICorDebugProcess2::GetDesiredNGENCompilerFlags (Método)
 Obtiene el compilador actual configuración del indicador de que common language runtime (CLR) se utiliza para seleccionar el valor correcto precompilado (es decir, nativo) la imagen se cargue en este proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetDesiredNGENCompilerFlags (  
     [out] DWORD   *pdwFlags  
 );  

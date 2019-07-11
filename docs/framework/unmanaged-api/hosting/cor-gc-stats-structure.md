@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774548"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768137"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS (Estructura)
 Proporciona estadísticas sobre el mecanismo de recopilación de elementos no utilizados de common language runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct _COR_GC_STATS {  
     ULONG   Flags;   
     SIZE_T  ExplicitGCCount;  
@@ -46,7 +46,7 @@ typedef struct _COR_GC_STATS {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`Flags`|Indica qué valores de campo deben ser calcula y devuelve.|  
 |`ExplicitGCCount`|Indica el número de recolecciones forzadas por solicitud externa.|  
@@ -71,7 +71,7 @@ typedef struct _COR_GC_STATS {
   
  Un ejemplo de uso es como sigue:  
   
-```  
+```cpp  
 COR_GC_STATS GCStats;  
 GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;  
 pCLRGCManager->GetStats(&GCStats);  

@@ -2,18 +2,18 @@
 title: Aprender con tutoriales
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6b5f77d6d918ae1402074c9c3037ccadec8ac02
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582921"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743031"
 ---
 # <a name="learning-by-walkthroughs"></a>Aprender con tutoriales
 El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentación proporciona varios tutoriales. En este tema se resuelven algunos de los problemas generales que plantean los tutoriales y se proporcionan vínculos a varios tutoriales de iniciación a través de los cuales conocerá [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
 > [!NOTE]
->  En los tutoriales de esta sección introductoria, conocerá el código básico que admite la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. En la práctica real, normalmente utilizará el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] y proyectos de Windows Forms para implementar sus aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. La documentación de [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] proporciona ejemplos y tutoriales con esta finalidad.  
+>  En los tutoriales de esta sección introductoria, conocerá el código básico que admite la tecnología [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. En la práctica, normalmente usará los proyectos de Object Relational Designer y Windows Forms para implementar su [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplicaciones. La documentación de Object Relational Designer proporciona ejemplos y tutoriales para este propósito.  
   
 ## <a name="getting-started-walkthroughs"></a>Tutoriales introductorios  
  En esta sección hay varios tutoriales disponibles. En estos tutoriales se utiliza la base de datos de ejemplo Northwind y en ellos se presentan las características de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] paso a paso, con el mínimo grado de dificultad.  
@@ -45,7 +45,7 @@ El [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 - El nombre de la clase que normalmente representa la tabla Orders en la base de datos de ejemplo Northwind es `[Order]`. Las secuencias de escape es necesario porque `Order` es una palabra clave en Visual Basic.  
   
-## <a name="troubleshooting"></a>Solución de problemas  
+## <a name="troubleshooting"></a>solución de problemas  
  Pueden producirse errores en tiempo de ejecución, ya que no dispone de los permisos suficientes para tener acceso a las bases de datos utilizadas en estos tutoriales. Los pasos siguientes pueden ayudarle a resolver los problemas más comunes.  
   
 ### <a name="log-on-issues"></a>Problemas de inicio de sesión  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 01b000ed3d75ddb6a7882cb8f03ff2cec64fb9fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423852"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767875"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation (Enumeración)
 Describe el conjunto de operaciones para que un host puede aplicar acciones de directiva.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     OPR_ThreadAbort,  
     OPR_ThreadRudeAbortInNonCriticalRegion,  
@@ -42,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`OPR_AppDomainRudeUnload`|El host puede especificar acciones de directiva va a realizarse cuando un <xref:System.AppDomain> se descargan de forma que no sea estable (forzada).|  
 |`OPR_AppDomainUnload`|El host puede especificar acciones de directiva va a realizarse cuando un <xref:System.AppDomain> se descarga.|  

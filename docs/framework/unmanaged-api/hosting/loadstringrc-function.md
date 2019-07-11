@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d985ed3b7af2aec7da709c3bbbfd10312e5e3a9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9047bf973224cdbc1f67463ef70f15f81089f827
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490205"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768459"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC (Función)
 Convierte un valor HRESULT en un mensaje de error mediante el uso de la referencia cultural predeterminada del subproceso actual.  
@@ -30,7 +30,7 @@ Convierte un valor HRESULT en un mensaje de error mediante el uso de la referenc
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT LoadStringRC (  
     [in]  UINT    iResourceID,   
     [out] LPWSTR  szBuffer,   
@@ -55,7 +55,7 @@ HRESULT LoadStringRC (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los valores siguientes.  
   
-|Código devuelto|Descripción|  
+|Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_INVALIDARG|`szBuffer` es null o `iMax` es cero (0).|  

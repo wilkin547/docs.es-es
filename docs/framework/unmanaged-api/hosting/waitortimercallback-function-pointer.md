@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f938c7dcf08654eef1e2403426eb5c54d6d2a6b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 65af5303468904ee40da4d567381782af70bfb38
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490128"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776501"
 ---
 # <a name="waitortimercallback-function-pointer"></a>puntero a la función WAITORTIMERCALLBACK
 Señala a una función que notifica al host que un identificador de una espera (<xref:System.Threading.WaitHandle>) se ha señalado o tiempo de espera.  
@@ -30,7 +30,7 @@ Señala a una función que notifica al host que un identificador de una espera (
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
     [in] PVOID lpParameter,  
     [in] BOOL  TimerOrWaitFired  

@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 647c87b6f42b01922a385d502d72410af3140cd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a0ea4bd222500015f6c78cb0455539aa2c24e681
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771792"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765620"
 ---
 # <a name="iclrruntimeinfobindaslegacyv2runtime-method"></a>ICLRRuntimeInfo::BindAsLegacyV2Runtime (Método)
 Enlaza el tiempo de ejecución actual para todas heredado common language runtime (CLR) versión 2 activación Directiva las decisiones.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT BindAsLegacyV2Runtime ();  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT concretos:  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|Enlace se ha realizado correctamente o ya estaba enlazada este tiempo de ejecución que CLR versión 2 activación directiva runtime heredado.|  
 |CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|Un runtime diferente ya estaba enlazado a la directiva de 2 activación de versión CLR heredada.|  

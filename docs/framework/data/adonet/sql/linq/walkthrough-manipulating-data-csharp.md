@@ -2,12 +2,12 @@
 title: 'Tutorial: Manipular datos (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 7bac370ae8dc260ca4b665fd51680a80fd9846fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d45861569bc4a8b57427b01e107f87809203e11
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618037"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742735"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Tutorial: Manipular datos (C#)
 Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos. Utilizará una copia de la base de datos de ejemplo Northwind para agregar un cliente, cambiar el nombre de un cliente y eliminar un pedido.  
@@ -27,7 +27,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 - Un archivo de código de C# generado a partir de la base de datos Northwind.  
   
-     Puede generar este archivo mediante el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] o la herramienta SQLMetal. Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:  
+     Este archivo se puede generar mediante el uso de Object Relational Designer o la herramienta SQLMetal. Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:  
   
      **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
   
@@ -63,7 +63,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 5. En el **ubicación** Compruebe dónde desea almacenar los archivos de proyecto.  
   
-6. Haga clic en **Aceptar**.  
+6. Haga clic en **OK**.  
   
 ## <a name="adding-linq-references-and-directives"></a>Agregar referencias y directivas LINQ  
  En este tutorial se usan ensamblados que podrían no estar instalados en el proyecto de forma predeterminada. Si System.Data.Linq no se incluye como referencia en el proyecto, agréguelo, como se explica en los pasos siguientes:  

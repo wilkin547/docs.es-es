@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f244d256d3af104d1d0c65769e82a87d6de046e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f7c5378490dce93599086819ee6fc806c707aa2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043928"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777491"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet (Método)
 Crea un conjunto de permisos de seguridad que se va a adjuntar al objeto al que hace referencia el token especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT DefineSecurityAttributeSet (   
     [in]  mdToken       tkObj,   
     [in]  COR_SECATTR   rSecAttrs[],   

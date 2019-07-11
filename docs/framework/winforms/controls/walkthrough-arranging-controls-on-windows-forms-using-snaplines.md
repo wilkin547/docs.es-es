@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606410"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771642"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El Diseñador de Windows Forms ofrece muchas herramientas de diseño para realizar esta acción. Una de las más importantes es la <xref:System.Windows.Forms.Design.Behavior.SnapLine> característica.  
@@ -53,7 +53,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="creating-the-project"></a>Crear el proyecto  
  El primer paso es crear el proyecto y configurar el formulario.  
   
-#### <a name="to-create-the-project"></a>Para crear el proyecto  
+### <a name="to-create-the-project"></a>Para crear el proyecto  
   
 1. Cree un proyecto de aplicación basada en Windows llamado "SnaplineExample" (**archivo** > **New** > **proyecto**  >  **Visual C#** o **Visual Basic** > **escritorio clásico de** > **aplicación de Windows Forms**).  
   
@@ -62,7 +62,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>Espaciado y alinear controles mediante las guías de alineación  
  Las guías de alineación proporcionan una manera precisa e intuitiva para alinear los controles en el formulario. Aparecen cuando va a mover un control o controles seleccionados cerca de una posición que estaría en consonancia con otro control o conjunto de controles. La selección se "ajustará" a la posición sugerida medida que se desplaza más allá de los demás controles.  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>Para organizar los controles mediante líneas de ajuste  
+### <a name="to-arrange-controls-using-snaplines"></a>Para organizar los controles mediante líneas de ajuste  
   
 1. Arrastre un control <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al formulario.  
   
@@ -85,7 +85,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="aligning-to-form-and-container-margins"></a>Alinear al formulario y los márgenes de contenedor  
  Las guías de alineación le ayudan a alinear los controles a los márgenes del contenedor y del formulario de una manera coherente.  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>Para alinear los controles a los márgenes del contenedor y del formulario  
+### <a name="to-align-controls-to-form-and-container-margins"></a>Para alinear los controles a los márgenes del contenedor y del formulario  
   
 1. Seleccione uno de los <xref:System.Windows.Forms.Button> controla y muévalo cerca del borde derecho del formulario hasta que aparezca una guía de alineación. Distancia de la Guía de alineación desde el borde derecho es la suma del control <xref:System.Windows.Forms.Control.Margin%2A> propiedad y el formulario <xref:System.Windows.Forms.Control.Padding%2A> los valores de propiedad.  
   
@@ -107,7 +107,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="aligning-to-grouped-controls"></a>Alinear a controles agrupados  
  Puede usar las líneas de ajuste para alinear controles agrupados, así como los controles dentro de un <xref:System.Windows.Forms.GroupBox> control.  
   
-#### <a name="to-align-to-grouped-controls"></a>Para alinear los controles agrupados  
+### <a name="to-align-to-grouped-controls"></a>Para alinear los controles agrupados  
   
 1. Seleccione dos de los controles en el formulario. Mover la selección y tenga en cuenta las líneas de ajuste que aparecen entre la selección y los demás controles.  
   
@@ -120,7 +120,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>Uso de las guías de alineación para colocar un Control esquematizando su tamaño  
  Las guías de alineación le ayudan a que alinear los controles cuando se coloca por primera vez en un formulario.  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Para usar las guías de alineación para colocar un control esquematizando su tamaño  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>Para usar las guías de alineación para colocar un control esquematizando su tamaño  
   
 1. En el **cuadro de herramientas**, haga clic en el icono del control <xref:System.Windows.Forms.Button> . No lo arrastre hasta el formulario.  
   
@@ -137,7 +137,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>Uso de las guías de alineación al arrastrar un Control desde el cuadro de herramientas  
  Las guías de alineación le ayudan a alinear los controles cuando se arrastra desde el **cuadro de herramientas** hasta su formulario.  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Para usar las guías de alineación al arrastrar un control desde el cuadro de herramientas  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>Para usar las guías de alineación al arrastrar un control desde el cuadro de herramientas  
   
 1. Arrastre un <xref:System.Windows.Forms.Button> controlar desde la **cuadro de herramientas** hasta el formulario, pero no suelte el botón del mouse.  
   
@@ -150,7 +150,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="resizing-controls-using-snaplines"></a>Cambiar el tamaño de los controles mediante las guías de alineación  
  Las guías de alineación le ayudan a alinear los controles, como cambiar su tamaño.  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>Para cambiar el tamaño de un control mediante líneas de ajuste  
+### <a name="to-resize-a-control-using-snaplines"></a>Para cambiar el tamaño de un control mediante líneas de ajuste  
   
 1. Arrastre un control <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al formulario.  
   
@@ -163,7 +163,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="aligning-a-label-to-a-controls-text"></a>Alinear una etiqueta en el texto de un Control  
  Algunos controles ofrecen una guía de alineación para alinear otros controles de texto mostrado.  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>Para alinear una etiqueta de texto de un control  
+### <a name="to-align-a-label-to-a-controls-text"></a>Para alinear una etiqueta de texto de un control  
   
 1. Arrastre un control <xref:System.Windows.Forms.TextBox> del **cuadro de herramientas** al formulario. Al colocar el <xref:System.Windows.Forms.TextBox> controlar hasta el formulario, haga clic en el glifo de etiqueta inteligente y seleccione el **establezca texto en textBox1** opción. Para obtener más información, consulte [Tutorial: Realizar tareas comunes utilizando etiquetas inteligentes en Windows Forms controles](performing-common-tasks-using-smart-tags-on-wf-controls.md).  
   
@@ -178,7 +178,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="using-snaplines-with-keyboard-navigation"></a>Uso de las guías de alineación con navegación mediante el teclado  
  Las guías de alineación le ayudan a que alinear los controles cuando está organizándolos mediante teclas de flecha del teclado.  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>Para usar las guías de alineación con la navegación mediante el teclado  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>Para usar las guías de alineación con la navegación mediante el teclado  
   
 1. Arrastre un control <xref:System.Windows.Forms.Button> del **cuadro de herramientas** al formulario. Colóquelo en la esquina superior izquierda del formulario.  
   
@@ -199,7 +199,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="snaplines-and-layout-panels"></a>Las guías de alineación y paneles de diseño  
  Las guías de alineación se deshabilitan dentro de paneles de diseño.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Para deshabilitar de forma selectiva las guías de alineación  
+### <a name="to-selectively-disable-snaplines"></a>Para deshabilitar de forma selectiva las guías de alineación  
   
 1. Arrastre un control <xref:System.Windows.Forms.TableLayoutPanel> del **cuadro de herramientas** al formulario.  
   
@@ -214,13 +214,13 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 ## <a name="disabling-snaplines"></a>Deshabilitar las guías de alineación  
  Las guías de alineación están activadas de forma predeterminada. Puede deshabilitar las líneas de ajuste de forma selectiva o deshabilitarlos en el entorno de diseño.  
   
-#### <a name="to-selectively-disable-snaplines"></a>Para deshabilitar de forma selectiva las guías de alineación  
+### <a name="to-selectively-disable-snaplines"></a>Para deshabilitar de forma selectiva las guías de alineación  
   
 - Presione la tecla ALT y mientras mueve un control alrededor del formulario.  
   
      Tenga en cuenta que no las guías de alineación aparecen y el control no se ajusta a las posibles posiciones de alineación.  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>Para deshabilitar las guías de alineación en el entorno de diseño  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>Para deshabilitar las guías de alineación en el entorno de diseño  
   
 1. Desde el **herramientas** menú abierto el **opciones** cuadro de diálogo. Abra el cuadro de diálogo del Diseñador de Windows Forms. Para obtener más información, consulte [General, el Diseñador de Windows Forms, el cuadro de diálogo Opciones](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100)).  
   

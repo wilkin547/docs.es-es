@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14eee096c25967d321e4693b260501827d944a80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04bed418d96658e29328cf2ce6bba445639b437f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045180"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750762"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType (Enumeración)
 Especifica el tipo de un módulo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum  
 {  
     ValidatorModuleTypeInvalid  = 0x0,  
@@ -43,7 +43,7 @@ typedef enum
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`ValidatorModuleTypeInvalid`|El módulo es un tipo no válido.|  
 |`ValidatorModuleTypeMin`|El valor mínimo de la `CorValidatorModuleType` enum.|  

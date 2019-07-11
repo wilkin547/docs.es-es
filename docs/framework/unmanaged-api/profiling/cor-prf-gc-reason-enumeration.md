@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf97f25b1adc30b173fcd81812a4b197915cdd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f5a596608719889e6440e5cd42dafb82abaa074
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775055"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753728"
 ---
 # <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON (Enumeración)
 Indica el motivo por el que se está produciendo la recolección de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_GC_INDUCED = 1,  
     COR_PRF_GC_OTHER = 0  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COR_PRF_GC_INDUCED`|Indujo la recolección de elementos mediante un <xref:System.GC.Collect%2A> método.|  
 |`COR_PRF_GC_OTHER`|No se especifica el motivo.|  

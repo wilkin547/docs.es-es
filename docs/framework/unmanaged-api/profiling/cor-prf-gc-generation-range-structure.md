@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 646c4e37a7fab503a26557f9fdfc926b1186b17b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f82b187a099ef7decca590da361f6b1abfa22e0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775061"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753801"
 ---
 # <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE (Estructura)
 Describe un intervalo (es decir, un bloque) de memoria sometida a recopilación de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct COR_PRF_GC_GENERATION_RANGE {  
     COR_PRF_GC_GENERATION generation;  
     ObjectID rangeStart;  
@@ -39,7 +39,7 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`generation`|Un valor de la [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeración que especifica el bloque de memoria de la generación a la que pertenece.|  
 |`rangeStart`|El identificador de un objeto que especifica la ubicación inicial del bloque de memoria.|  

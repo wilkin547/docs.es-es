@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663567"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756756"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estrategia de seguridad de WPF: Seguridad de plataforma
 Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de seguridad, también aprovecha las características de seguridad de la plataforma subyacente, que incluye el sistema operativo, el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], y [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Estas capas se combinan para proporcionar a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modelo de seguridad sólido y profundo que intenta evitar todos los puntos flacos, como se muestra en la ilustración siguiente:  
@@ -41,7 +41,7 @@ Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de
   
 - Compilación /GS  
   
-- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)]  
   
 #### <a name="gs-compilation"></a>Compilación /GS  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] proporciona protección mediante la recopilación de muchas bibliotecas de sistema principales, incluidas todas las dependencias de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] como el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], para ayudar a mitigar las saturaciones del búfer. Esto se logra usando el parámetro /GS con el compilador de línea de comandos de C o C++. Aunque las saturaciones del búfer se deben evitar de manera explícita, la compilación /GS proporciona un ejemplo de una defensa en profundidad contra posibles vulnerabilidades creadas por dichas saturaciones de forma accidental o malintencionada.  
@@ -126,7 +126,7 @@ Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de
   
 - **Sitios que no son de confianza**. Aplicaciones identificadas por un usuario como no confiables (no confiables).  
   
- Para cada una de estas zonas, [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] proporciona un conjunto de permisos predefinidos que incluye los permisos que coinciden con el nivel de confianza asociado a cada una. Se incluyen los siguientes:  
+ Para cada una de estas zonas, [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] proporciona un conjunto de permisos predefinidos que incluye los permisos que coinciden con el nivel de confianza asociado a cada una. Entre ellas se incluyen las siguientes:  
   
 - **FullTrust**. Para las aplicaciones iniciadas desde la **Mi PC** zona. Se conceden todos los permisos posibles.  
   
@@ -140,14 +140,14 @@ Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de
   
  ![Diagrama que muestra los conjuntos de permisos CAS.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- Las restricciones del espacio aislado de seguridad de la zona de Internet se aplican igualmente a cualquier código que un [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] importe desde una biblioteca del sistema, incluido [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Esto garantiza que cada bit del código está bloqueado, incluso [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Desgraciadamente, para poder ejecutarse, un [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] necesita ejecutar funcionalidades que requieren más permisos que los habilitados por el espacio aislado de seguridad de la zona de Internet.  
+ Las restricciones del recinto de seguridad de la zona de Internet se aplican igualmente a cualquier código que importa una aplicación XBAP desde una biblioteca del sistema, incluidos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Esto garantiza que cada bit del código está bloqueado, incluso [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Desgraciadamente, para poder ejecutar una aplicación XBAP necesita ejecutar funcionalidades que necesitan más permisos que los habilitados por el recinto de seguridad de la zona de Internet.  
   
- Imagine una aplicación [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] que incluya la página siguiente:  
+ Considere la posibilidad de una aplicación XBAP que incluye la siguiente página:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Para ejecutar este [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], el código [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] subyacente debe ejecutar más funcionalidad de la disponible para el [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] de llamada, lo que incluye:  
+ Para ejecutar esta aplicación XBAP, subyacente [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] código debe ejecutar más funcionalidades que está disponible para la aplicación XBAP que realiza la llamada, incluidos:  
   
 - Creación de un identificador de ventana (HWND) para la representación  
   
@@ -157,7 +157,7 @@ Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de
   
  Desde el un punto de vista de la seguridad, permitir el acceso directo a cualquiera de estas operaciones desde la aplicación en espacio aislado resultaría catastrófico.  
   
- Afortunadamente, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se encarga de esta situación ya que permite que estas operaciones se ejecuten con privilegios elevados en nombre de la aplicación en espacio aislado. Mientras que todos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operaciones se comprueban con los permisos limitados de seguridad de zona de Internet del dominio de aplicación de la [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (al igual que con otras bibliotecas de sistema) se concede un conjunto de permisos que incluye todas las posibles permisos.
+ Afortunadamente, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se encarga de esta situación ya que permite que estas operaciones se ejecuten con privilegios elevados en nombre de la aplicación en espacio aislado. Mientras que todos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] operaciones se comprueban con los permisos limitados de seguridad de zona de Internet del dominio de aplicación de la aplicación XBAP, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (al igual que con otras bibliotecas de sistema) se concede un conjunto de permisos que incluye todos los permisos posibles.
   
  Esto requiere que [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] reciba privilegios elevados al tiempo que se evita que esos privilegios se rijan por el conjunto de permisos de zona de Internet del dominio de la aplicación host.  
   
@@ -166,7 +166,7 @@ Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- El **Assert** esencialmente impide que los permisos ilimitados requeridos por [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] estén restringidos por Internet de los permisos de la zona del [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)].  
+ El **Assert** esencialmente impide que los permisos ilimitados requeridos por [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] estén restringidos por Internet de la zona permisos de la aplicación XBAP.  
   
  Desde una perspectiva de plataforma, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] es responsable de usar **Assert** correctamente; un uso incorrecto de **Assert** podría permitir que el código malintencionado elevase los privilegios. Por lo tanto, es importante sólo llamar a **Assert** cuando sea necesario, y para asegurarse de que sandbox restricciones permanecen intactas. Por ejemplo, el código en espacio aislado no tiene permiso para abrir archivos aleatorios, pero sí para usar fuentes. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] permite que las aplicaciones en espacio aislado usar la funcionalidad de fuentes mediante una llamada a **Assert**y para [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] para leer los archivos que contienen estas fuentes en nombre de la aplicación en espacio aislado.  
   
@@ -178,11 +178,11 @@ Aunque Windows Presentation Foundation (WPF) ofrece una variedad de servicios de
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>Metodología crítica para la seguridad  
- El código [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] que usa permisos para habilitar el espacio aislado de zona de Internet para las aplicaciones [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] debe mantenerse en el máximo nivel de control y auditoría de seguridad. Para facilitar este requisito, .NET Framework proporciona nueva compatibilidad para administrar el código que eleva los privilegios. En concreto, el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] le permite identificar el código que eleva los privilegios y marcarlo con el <xref:System.Security.SecurityCriticalAttribute>; cualquier código no marcado con <xref:System.Security.SecurityCriticalAttribute> se convierte en *transparente* mediante esta metodología. Por el contrario, se impide que el código administrado que no está marcado con <xref:System.Security.SecurityCriticalAttribute> eleve sus privilegios.  
+ El [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] código que usa permisos para habilitar el espacio aislado de zona de Internet para las aplicaciones XBAP se deben mantener en el máximo nivel de auditoría de seguridad y control. Para facilitar este requisito, .NET Framework proporciona nueva compatibilidad para administrar el código que eleva los privilegios. En concreto, el [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] le permite identificar el código que eleva los privilegios y marcarlo con el <xref:System.Security.SecurityCriticalAttribute>; cualquier código no marcado con <xref:System.Security.SecurityCriticalAttribute> se convierte en *transparente* mediante esta metodología. Por el contrario, se impide que el código administrado que no está marcado con <xref:System.Security.SecurityCriticalAttribute> eleve sus privilegios.  
   
  La metodología de seguridad crítica permite la organización de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] código que eleva los privilegios en *kernel crítico para la seguridad*, con el resto sean transparente. Aislar el código crítico para la seguridad permite la [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] equipo de ingeniería centrar un control de origen y análisis de seguridad adicional en el kernel crítico para la seguridad más allá de las prácticas de seguridad estándar (vea [estrategia de seguridad de WPF -Ingeniería de seguridad](wpf-security-strategy-security-engineering.md)).  
   
- Tenga en cuenta que .NET Framework permite que el código de confianza para ampliar la [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] espacio aislado de zona de Internet, ya que permite a los desarrolladores escribir ensamblados administrados marcados con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) e implementado del caché de ensamblados Global (GAC) para el usuario. Marcar un ensamblado con APTCA es una operación de seguridad muy sensible ya que permite que cualquier código llame a ese ensamblado, incluso el código malintencionado procedente de Internet. Cuando lo haga, extreme las precauciones y siga los procedimientos recomendados; asimismo, los usuarios deben confiar en el software para que pueda instalarse.  
+ Tenga en cuenta que .NET Framework permite que el código de confianza para ampliar el espacio aislado de zona de Internet de XBAP, ya que permite a los desarrolladores escribir ensamblados administrados marcados con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) e implementado del caché de ensamblados Global (GAC) para el usuario. Marcar un ensamblado con APTCA es una operación de seguridad muy sensible ya que permite que cualquier código llame a ese ensamblado, incluso el código malintencionado procedente de Internet. Cuando lo haga, extreme las precauciones y siga los procedimientos recomendados; asimismo, los usuarios deben confiar en el software para que pueda instalarse.  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Seguridad de Microsoft Internet Explorer  

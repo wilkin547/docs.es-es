@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8a1942f903b1c7c15e58077e35b6a72a86a9419
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636524"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746660"
 ---
 # <a name="get-function"></a>Función Get
 
@@ -31,7 +31,7 @@ Recupera el valor de propiedad especificado si existe.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -66,7 +66,7 @@ HRESULT Get (
 `plFlavor`\
 [out] Si la función devuelve correctamente, recibe información acerca del origen de la propiedad. Su valor puede ser `null`, o una de las siguientes constantes WBEM_FLAVOR_TYPE definidas en el *WbemCli.h* archivo de encabezado: 
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | La propiedad es una propiedad estándar del sistema. |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para una clase: La propiedad se hereda de la clase primaria. <br> Para una instancia: La propiedad, mientras se hereda de la clase primaria, no se ha modificado por la instancia.  |
@@ -76,7 +76,7 @@ HRESULT Get (
 
 Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos. |

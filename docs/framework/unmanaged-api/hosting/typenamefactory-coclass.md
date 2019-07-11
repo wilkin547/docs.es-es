@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a915ed72350f278a5df01191e69c95a4917f1230
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14266f02dd402e81928b72d155f224e10e910592
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944604"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781244"
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory (Coclase)
 Proporciona una interfaz para administrar la anulación de la construcción de un nombre de tipo.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 coclass TypeNameFactory {  
     [default] interface ITypeNameFactory;  
 };  
@@ -36,7 +36,7 @@ coclass TypeNameFactory {
   
 ## <a name="interfaces"></a>Interfaces  
   
-|Interfaz|Descripción|  
+|Interfaz|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |[ITypeNameFactory (interfaz)](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Esta interfaz es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|  
   

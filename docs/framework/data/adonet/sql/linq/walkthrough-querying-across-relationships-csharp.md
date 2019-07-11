@@ -2,12 +2,12 @@
 title: 'Tutorial: Realizar consultas en varias relaciones (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618024"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742649"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Tutorial: Realizar consultas en varias relaciones (C#)
 Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *asociaciones* para representar relaciones de clave externa en la base de datos.  
@@ -31,7 +31,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
 ## <a name="mapping-relationships-across-tables"></a>Asignar relaciones entre tablas  
  Después de la definición de la clase `Customer`, cree la definición de la clase de entidad `Order`, que incluye el código siguiente, que indica que `Order.Customer` se relaciona como clave externa con `Customer.CustomerID`.  
   
-#### <a name="to-add-the-order-entity-class"></a>Para agregar la clase de entidad Order  
+### <a name="to-add-the-order-entity-class"></a>Para agregar la clase de entidad Order  
   
 - Escriba o pegue el código siguiente después de la clase `Customer`:  
   
@@ -40,7 +40,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
 ## <a name="annotating-the-customer-class"></a>Anotar la clase Customer  
  En este paso, anotará la clase `Customer` para indicar su relación con la clase `Order`. (Esta adición no es estrictamente necesaria, porque para crear el vínculo basta con definir la relación en cualquier dirección. Sin embargo, al agregar esta anotación, se puede navegar con facilidad por los objetos en cualquier dirección.)  
   
-#### <a name="to-annotate-the-customer-class"></a>Para anotar la clase Customer  
+### <a name="to-annotate-the-customer-class"></a>Para anotar la clase Customer  
   
 - Escriba o pegue el código siguiente en la clase `Customer`:  
   
@@ -49,7 +49,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Crear y ejecutar una consulta en la relación Customer-Order  
  Ahora puede tener acceso a los objetos `Order` directamente desde los objetos `Customer`, o a la inversa. No es necesario explícita *combinación* entre clientes y pedidos.  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>Para tener acceso a los objetos Order a través de los objetos Customer  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>Para tener acceso a los objetos Order a través de los objetos Customer  
   
 1. Modifique el método `Main`; para ello, escriba o pegue el código siguiente en el método:  
   
@@ -67,7 +67,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
   
  En los pasos siguientes, creará `Customers` como una tabla fuertemente tipada que está asignada a la tabla Customers de la base de datos.  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>Para que el objeto DataContext esté fuertemente tipado  
+### <a name="to-strongly-type-the-datacontext-object"></a>Para que el objeto DataContext esté fuertemente tipado  
   
 1. Agregue el siguiente código encima de la declaración de la clase `Customer`.  
   

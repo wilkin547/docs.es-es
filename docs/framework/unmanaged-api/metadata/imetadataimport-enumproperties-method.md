@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 410fd7a702d3aa3812b4ea053c43fdaa507a474a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c63797b60354b461891f44d32cf1840f7fdcf3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62042515"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756491"
 ---
 # <a name="imetadataimportenumproperties-method"></a>IMetaDataImport::EnumProperties (Método)
 Enumera los tokens de PropertyDef que representan las propiedades del tipo al que hace referencia el token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT EnumProperties (  
    [in, out] HCORENUM    *phEnum,  
    [in]      mdTypeDef   td,  
@@ -57,7 +57,7 @@ HRESULT EnumProperties (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`S_OK`|`EnumProperties` se devolvió correctamente.|  
 |`S_FALSE`|No hay ningún token para enumerar. En ese caso, `pcProperties` es cero.|  

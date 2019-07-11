@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 593644802fa490c80b361bfdad3473abe4e82922
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609143"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740279"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>Enumeración CorDebugCodeInvokePurpose
 Explica los motivos por los que una función exportada llama a código administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorDebugCodeInvokePurpose  
 {  
     CODE_INVOKE_PURPOSE_NONE,  
@@ -36,7 +36,7 @@ typedef enum CorDebugCodeInvokePurpose
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`CODE_INVOKE_PURPOSE_NONE`|Ninguno o desconocido.|  
 |`CODE_INVOKE_PURPOSE_NATIVE_TO_MANAGED_TRANSITION`|El código administrado ejecutará cualquier punto de entrada administrado, como una PInvoke inversa. Cualquier otro propósito más detallado es desconocido para el tiempo de ejecución.|  

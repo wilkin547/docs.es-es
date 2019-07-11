@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aab42e939651d75b1933962d72ba8bec1090f52d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a820d5d742c722b495a5a4b3952450a0434110fd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753470"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741555"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly (Método)
 Cierra el archivo de ensamblado. Llame a este método después de cerrar todos los demás archivos, pero antes de cerrar el archivo de ensamblado. No llame a este método para módulos no enlazados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT PreCloseAssembly(  
     mdAssembly AssemblyID  
 ) PURE;  

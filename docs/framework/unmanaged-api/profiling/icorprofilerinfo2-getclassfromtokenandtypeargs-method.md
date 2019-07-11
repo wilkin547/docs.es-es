@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d4d5ec9119cdcf89e507f133288f569e6fb37ea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a88a6c19a5c8b45576dd6f632adf70f7ec2eed55
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000693"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751876"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs (Método)
 Obtiene el `ClassID` de un tipo con el token de metadatos especificado y la `ClassID` valores de cualquier tipo de argumentos.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetClassFromTokenAndTypeArgs(  
     [in] ModuleID moduleID,  
     [in] mdTypeDef typeDef,  

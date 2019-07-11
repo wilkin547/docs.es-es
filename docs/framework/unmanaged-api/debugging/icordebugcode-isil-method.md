@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a82606d90444c2d543065287780e42da4f8b4943
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1257c870371895cec89996be0e94906597b09ed8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750272"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747455"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL (Método)
 Obtiene un valor que indica si esta instancia de "ICorDebugCode" representa el código que se compila en lenguaje intermedio de Microsoft (MSIL).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT IsIL (  
     [out] BOOL       *pbIL  
 );  

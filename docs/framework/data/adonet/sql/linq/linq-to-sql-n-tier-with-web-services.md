@@ -2,18 +2,18 @@
 title: N niveles de LINQ to SQL con servicios Web
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fafaa60dd75def98b486e18faa5bd3ecd1d6315
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033545"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743052"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N niveles de LINQ to SQL con servicios Web
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] está diseñado especialmente para su uso en el nivel intermedio en una capa de acceso de acoplamiento flexible de datos (DAL) como un servicio Web. Si el nivel de presentación es una página web ASP.NET, el control de servidor web <xref:System.Web.UI.WebControls.LinqDataSource> se utiliza para controlar la transferencia de datos entre la interfaz de usuario y [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] en el de nivel intermedio. Si el nivel de presentación no es una página ASP.NET, entonces el nivel intermedio y el nivel de presentación deben realizar un trabajo adicional para administrar la serialización y deserialización de datos.  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>Establecer LINQ to SQL en el nivel intermedio  
- En un servicio Web o aplicación de n niveles, el nivel intermedio contiene el contexto de los datos y las clases de entidad. Puede crear estas clases manualmente o mediante SQLMetal.exe o el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], como se describe en otra parte de la documentación. En tiempo de diseño, tiene la opción de hacer las clases de entidad serializables. Para obtener más información, vea [Cómo: Serializar entidades](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Otra opción consiste en crear un conjunto independiente de clases que encapsulan los datos que se van a serializar y, a continuación, proyectar en esos tipos serializables cuando se devuelvan datos en las consultas de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ En un servicio Web o aplicación de n niveles, el nivel intermedio contiene el contexto de los datos y las clases de entidad. Puede crear estas clases manualmente o mediante SQLMetal.exe o el Object Relational Designer tal como se describe en la documentación. En tiempo de diseño, tiene la opción de hacer las clases de entidad serializables. Para obtener más información, vea [Cómo: Serializar entidades](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md). Otra opción consiste en crear un conjunto independiente de clases que encapsulan los datos que se van a serializar y, a continuación, proyectar en esos tipos serializables cuando se devuelvan datos en las consultas de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
  A continuación, se define la interfaz con los métodos a los que los clientes llamarán para recuperar, insertar y actualizar datos. Los métodos de interfaz envuelven las consultas de [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]. Puede utilizar cualquier tipo de mecanismo de serialización para administrar las llamadas a métodos remotos y la serialización de datos. El único requisito es que, si tiene relaciones cíclicas o bidireccionales en su modelo de objetos, como las que existen entre Clientes y Pedidos en el modelo de objetos estándar de Northwind, deberá utilizar un serializador que admita esa situación. Windows Communication Foundation (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> admite relaciones bidireccionales, pero no así el serializador XmlSerializer que se utiliza con servicios Web que no son de WCF. Si selecciona el serializador XmlSerializer, deberá asegurarse de que su modelo de objetos no contenga relaciones cíclicas.  
   

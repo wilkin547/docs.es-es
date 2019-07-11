@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 94279675b5a50bf2a19bb080876b91b85599c077
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 07ad83da2bc608e3c5925664a68eec4a548860e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65630096"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739228"
 ---
 # <a name="dacpgetmoduleaddressrequest-method"></a>Método DacpGetModuleAddress::Request
 
@@ -30,7 +30,7 @@ Realiza una solicitud para rellenar la estructura de la estructura de tiempo de 
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT Request(
     [in] IXCLRDataModule* pDataModule
 );
@@ -50,8 +50,8 @@ Esta estructura reside en el tiempo de ejecución y no se expone a través de lo
 ## <a name="requirements"></a>Requisitos
 
 **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: Ninguna     
-**Biblioteca:** Ninguna  
+**Encabezado**: None     
+**Biblioteca:** None  
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ada9a3131ea3063239ab7897d0096f0accbd0f94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1cfb57ba6f07437abfc8576ca4d5ff9cd0131d8b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697269"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753434"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent (Método)
 Crea un objeto de evento de restablecimiento manual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT CreateManualEvent (  
     [in]  BOOL bInitialState,  
     [out] IHostManualEvent **ppEvent  
@@ -45,7 +45,7 @@ HRESULT CreateManualEvent (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`CreateManualEvent` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

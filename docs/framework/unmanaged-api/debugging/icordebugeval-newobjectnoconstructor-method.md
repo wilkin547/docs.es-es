@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6846b866fd47674ca6b5fd187b580fd28e080fd0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e4a09db3cedce7b0ae6049c7e550c0c3e21cc8c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995935"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753170"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor (Método)
 Asigna una nueva instancia de objeto del tipo especificado, sin intentar llamar a un método de constructor.  
@@ -31,7 +31,7 @@ Asigna una nueva instancia de objeto del tipo especificado, sin intentar llamar 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT NewObjectNoConstructor (  
     [in] ICorDebugClass     *pClass  
 );  

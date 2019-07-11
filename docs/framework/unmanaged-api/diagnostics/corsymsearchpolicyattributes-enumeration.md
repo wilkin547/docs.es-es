@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a9b0f085820bac12638c0310ab23b2eafacb23b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29766636cd151744d25cf66deb60cd2e066e1b32
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986510"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775782"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes (Enumeración)
 Especifica la directiva que se usará al realizar una búsqueda de un lector de símbolos. Estas constantes se utilizan por el [ISymUnmanagedBinder2:: Getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) y [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) métodos.  
@@ -31,7 +31,7 @@ Especifica la directiva que se usará al realizar una búsqueda de un lector de 
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorSymSearchPolicyAttributes  
 {  
     AllowRegistryAccess      = 0x1,       
@@ -43,7 +43,7 @@ typedef enum CorSymSearchPolicyAttributes
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`AllowRegistryAccess`|Consulta el registro para las rutas de búsqueda de símbolos.|  
 |`AllowSymbolServerAccess`|Tiene acceso a un servidor de símbolos.|  

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e392d3afcd81e6eace7a674788a2a957da28842c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723334"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746462"
 ---
 # <a name="getqualifierset-function"></a>Función GetQualifierSet
 Recupera el calificador establecido para una instancia o una definición de clase.
@@ -30,7 +30,7 @@ Recupera el calificador establecido para una instancia o una definición de clas
     
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetQualifierSet (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -53,7 +53,7 @@ HRESULT GetQualifierSet (
 
 Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | El método especificado no existe. |

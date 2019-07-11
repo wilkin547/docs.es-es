@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ec2981cbee4675f9cd2a4fd13d507f50ad2a3ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597146"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758194"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>ICorProfilerCallback4::ReJITCompilationFinished (Método)
 Notifica al generador de perfiles que el compilador de just-in-time (JIT) ha terminado de volver a compilar una función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT ReJITCompilationFinished(  
     [in] FunctionID functionId,    [in] ReJITID rejitId,  
     [in] HRESULT    hrStatus,  

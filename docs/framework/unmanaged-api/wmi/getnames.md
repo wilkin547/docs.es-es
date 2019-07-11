@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e75bf9aab820216373f2f33fe8aa567f10befcb1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61724088"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746517"
 ---
 # <a name="getnames-function"></a>Función GetNames
 Recupera un subconjunto o todos los nombres de las propiedades de un objeto. 
@@ -30,7 +30,7 @@ Recupera un subconjunto o todos los nombres de las propiedades de un objeto.
     
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetNames (
    [in] int                 vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -65,7 +65,7 @@ HRESULT GetNames (
 
 Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos o se especificó una combinación de marcas y los parámetros incorrecta. |
@@ -82,19 +82,19 @@ Valores de la marca de `lFlags` son campos de bits
 
 Las marcas que se pueden pasar como el `lEnumFlags` argumento son campos de bits que se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código.  Puede combinar una marca de todos los grupos con cualquier marca de cualquier otro grupo. Sin embargo, las marcas del mismo grupo se excluyen mutuamente. 
 
-| Marcas de grupo 1 |Valor  |Descripción  |
+| Marcas de grupo 1 |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_FLAG_ALWAYS` | 0 | Devolver todos los nombres de propiedad. `strQualifierName` y `pQualifierVal` no se usan. |
 | `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Devolver solo las propiedades que tienen un calificador del nombre especificado por el `strQualifierName` parámetro. Si se usa esta marca, debe especificar `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Devolver solo las propiedades que no tienen un calificador del nombre especificado por el `strQualifierName` parámetro. Si se usa esta marca, debe especificar `strQualifierName`. |
 |`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Devolver solo las propiedades que tienen un calificador del nombre especificado por el `wszQualifierName` parámetro y también tiene un valor idéntico al especificado por el `pQualifierVal` estructura. Si se usa esta marca, debe especificar tanto un `wszQualifierName` y un `pQualifierValue`. |
 
-| Marcas de grupo 2 |Valor  |Descripción  |
+| Marcas de grupo 2 |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0x4 | Devolver solo los nombres de propiedades que definen las claves. |
 |`WBEM_FLAG_REFS_ONLY` | 0x8 | Valor devuelto solo nombres de propiedad que son referencias a objetos. |
 
-| Marcas de grupo 3 |Valor  |Descripción  |
+| Marcas de grupo 3 |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Devolver solo los nombres de propiedad que pertenecen a la clase más derivada. Excluir propiedades de las clases principales. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Devolver solo los nombres de propiedad que pertenecen a las clases principales. |

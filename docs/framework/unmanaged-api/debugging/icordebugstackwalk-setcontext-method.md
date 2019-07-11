@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7306ee61d750ae256c93c049819a23d3d61f7297
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782660"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771037"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext (Método)
 Establece el [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) contexto actual del objeto en un contexto válido para el subproceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetContext([in] CorDebugSetContextFlag flag,  
                    [in] ULONG32 contextSize,  
                    [in, size_is(contextSize)] BYTE context[]);  
@@ -48,7 +48,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El `ICorDebugStackWalk` contexto del objeto se ha establecido correctamente.|  
 |E_FAIL|El `ICorDebugStackWalk` no se ha establecido el contexto del objeto.|  

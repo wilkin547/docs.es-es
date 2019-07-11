@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef308b624525c3a139c892e6118a24d6adb6e14a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 46e3356df6578f2adf2ceee00b1363b65fd014ea
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490461"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760230"
 ---
 # <a name="flockclrversioncallback-function-pointer"></a>puntero a la función FLockClrVersionCallback
 Señala una función que las llamadas de runtime (CLR) de lenguaje común para indicar que la inicialización se ha iniciado o completado.  
@@ -30,7 +30,7 @@ Señala una función que las llamadas de runtime (CLR) de lenguaje común para i
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef HRESULT (__stdcall *FLockClrVersionCallback) ( );  
 ```  
   

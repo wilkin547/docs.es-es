@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87afb19736a484d24bde56cc34854dcd26c6b53b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755695"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776549"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification (Método)
 Proporciona una función de devolución de llamada que se garantiza que se llama cuando una versión de common language runtime (CLR) se carga por primera vez, pero aún no se ha iniciado. Este método reemplaza el [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) función.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT RequestRuntimeLoadedNotification (  
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
@@ -41,7 +41,7 @@ HRESULT RequestRuntimeLoadedNotification (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`pCallbackFunction` es null.|  
@@ -57,7 +57,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
  La función de devolución de llamada tiene el siguiente prototipo:  
   
-```  
+```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
                      ICLRRuntimeInfo *pRuntimeInfo,  
                      CallbackThreadSetFnPtr pfnCallbackThreadSet,  
@@ -68,13 +68,13 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
 - `pfnCallbackThreadSet`:  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
 - `pfnCallbackThreadUnset`:  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   

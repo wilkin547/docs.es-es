@@ -9,23 +9,23 @@ helpviewer_keywords:
 - type constructors
 - virtual members
 - constructors, types
-- default constructors
+- parameterless constructors
 - static constructors
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: KrzysztofCwalina
-ms.openlocfilehash: 68192e3b75a120c73b82c34005d4dee650540bf3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 074aa391b71257584a01171e95da7472354cdc2c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925468"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746778"
 ---
 # <a name="constructor-design"></a>Diseño de constructores
 Hay dos tipos de constructores: escriba los constructores y los constructores de instancia.  
   
  Constructores de tipos son estáticos y se ejecutan en el CLR antes de utilizar el tipo. Constructores de instancias se ejecutan cuando se crea una instancia de un tipo.  
   
- Constructores de tipos no toman ningún parámetro. Constructores de instancias pueden. Constructores de instancias que no toman ningún parámetro se denominan a menudo los constructores predeterminados.  
+ Constructores de tipos no toman ningún parámetro. Constructores de instancias pueden. Constructores de instancias que no toman ningún parámetro se denominan a menudo constructores sin parámetros.  
   
  Los constructores son la forma más natural para crear instancias de un tipo. La mayoría de los desarrolladores buscará y pruebe a utilizar un constructor antes de que consideran modos alternativos de creación de instancias (por ejemplo, los métodos de fábrica).  
   
@@ -49,15 +49,15 @@ Hay dos tipos de constructores: escriba los constructores y los constructores de
   
  **✓ DO** genere excepciones desde los constructores de instancia, si procede.  
   
- **✓ DO** declarar explícitamente el constructor predeterminado público en clases, si se requiere un constructor de ese tipo.  
+ **HACER ✓** declarar explícitamente el constructor público sin parámetros en las clases, si se requiere un constructor de este tipo.  
   
- Si no declara ningún constructor en un tipo explícitamente, muchos lenguajes (por ejemplo, C#) agregará automáticamente un constructor predeterminado público. (Las clases abstractas obtención un constructor protegido).  
+ Si no se declara explícitamente ningún constructor en un tipo, muchos lenguajes (como C#) se agregará automáticamente un constructor público sin parámetros. (Las clases abstractas obtención un constructor protegido).  
   
- Agregando un constructor con parámetros a una clase, impide que el compilador agregue el constructor predeterminado. Esto hace que a menudo cambios accidentales.  
+ Agregando un constructor con parámetros a una clase, impide que el compilador agregue el constructor sin parámetros. Esto hace que a menudo cambios accidentales.  
   
- **X AVOID** la definición explícita de constructores predeterminados en estructuras.  
+ **X Evite** definir explícitamente los constructores sin parámetros en structs.  
   
- Esto acelera la creación de una matriz, porque si no se define el constructor predeterminado, no tiene que ejecutarse en todas las ranuras de la matriz. Tenga en cuenta que muchos compiladores, incluidos C# no permite que las estructuras tienen constructores sin parámetros por este motivo.  
+ Esto acelera la creación de una matriz, porque si no se define el constructor sin parámetros, no tiene que ejecutarse en todas las ranuras de la matriz. Tenga en cuenta que muchos compiladores, incluidos C# no permite que las estructuras tienen constructores sin parámetros por este motivo.  
   
  **X AVOID** al llamar a los miembros virtuales en un objeto dentro de su constructor.  
   

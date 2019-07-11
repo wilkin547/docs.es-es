@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 724db50285532c20132fbfd5262df26227db6742
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82f6c96e64b1197b5762c0ad7dbed5458b5d71a3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782673"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760898"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next (Método)
 Mueve el [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto al marco siguiente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT Next();  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El tiempo de ejecución se desenreda correctamente al marco siguiente (vea comentarios).|  
 |E_FAIL|El `ICorDebugStackWalk` no se pudo avanzar el objeto.|  

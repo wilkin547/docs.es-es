@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 268462db51435b87194aafc374d5d8e8ec1df165
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3225e42df44e719ecde31c26fae70f26731fa157
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638656"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761586"
 ---
 # <a name="iclrprobingassemblyenumget-method"></a>ICLRProbingAssemblyEnum::Get (Método)
 Obtiene la identidad del ensamblado en el índice especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT Get (  
     [in] DWORD dwIndex,  
     [out, size_is(*pcchBufferSize)] LPWSTR pwzBuffer,  
@@ -49,7 +49,7 @@ HRESULT Get (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`Get` se devolvió correctamente.|  
 |ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` es demasiado pequeño.|  

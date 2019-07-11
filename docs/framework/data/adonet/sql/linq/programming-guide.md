@@ -2,15 +2,15 @@
 title: Guía de programación
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 102d2ecba162e19258b707c1c902c29b0a7f2f02
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: c63fbedc1cf7484943614c50e7dd7554a2ddea0e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490050"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742941"
 ---
 # <a name="programming-guide"></a>Guía de programación
-Esta sección contiene información sobre cómo crear y utilizar un modelo de objetos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Si utiliza Visual Studio, también puede usar el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] para realizar muchas de estas mismas tareas.  
+Esta sección contiene información sobre cómo crear y utilizar un modelo de objetos [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Si utiliza Visual Studio, también puede usar Object Relational Designer para realizar muchas de estas mismas tareas.  
   
  También puede buscar Microsoft Docs sobre problemas concretos y participar en el [foro de LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), dónde debatirá detalladamente temas más complejos con expertos. Por último, el [LINQ to SQL: Language-Integrated Query para datos relacionales](https://go.microsoft.com/fwlink/?LinkId=93205) notas detalles [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tecnología, junto con ejemplos de código de Visual Basic y C#.  
   

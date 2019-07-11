@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ce2b23306e7e38f3982f8d5a4b377aa2f9547c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d9dc94689083d79858319387747eb9dafe8b2f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723165"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739566"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason (Enumeración)
 Indica el resultado de un paso individual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorDebugStepReason {  
     STEP_NORMAL,  
     STEP_RETURN,  
@@ -42,7 +42,7 @@ typedef enum CorDebugStepReason {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`STEP_NORMAL`|Ejecución paso a paso ha finalizado normalmente, dentro de la misma función.|  
 |`STEP_RETURN`|Ejecución paso a paso ha continuado normalmente, después de la función devuelto.|  

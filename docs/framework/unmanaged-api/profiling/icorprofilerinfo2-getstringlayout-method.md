@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: faa5ecf63ac3795a58369d94f9fb15f853edb576
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490703"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782242"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout (Método)
 Obtiene información sobre la distribución de un objeto de cadena. Este método está en desuso en .NET Framework 4 y se ha reemplazado por la [ICorProfilerInfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetStringLayout(  
     [out] ULONG *pBufferLengthOffset,  
     [out] ULONG *pStringLengthOffset,  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9503c12da9e98fbd43f3904aad25c5d10655cec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 550d25e995bdfe010fb1aa664a7c9882a775f4d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994648"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757162"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild (Método)
 Determina si el marco actual es un marco secundario.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El estado del secundario se devolvió correctamente.|  
 |E_FAIL|No se pudo devolver el estado del elemento secundario.|  

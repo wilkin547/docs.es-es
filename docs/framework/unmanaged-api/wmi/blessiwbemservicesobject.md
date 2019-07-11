@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28497c637a40d7e2659b18868124ea898397f92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636908"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761716"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Función BlessIWbemServicesObject
 Indica si las credenciales de usuario permiten el acceso a un determinado [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objeto. 
@@ -30,7 +30,7 @@ Indica si las credenciales de usuario permiten el acceso a un determinado [IWbem
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -65,7 +65,7 @@ HRESULT BlessIWbemServicesObject (
 
 Los siguientes valores devueltos por esta función se definen en el *WinError.h* archivo de encabezado, también puede definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Uno o más argumentos no son válidos. |
 | `E_POINTER` | 0x80004003 | El valor de `pIWbemServices` es `null`. | 

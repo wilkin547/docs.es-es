@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36792d01ebdad72271a8b0597a33d83cab34780e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5274e70c5bead201beb158ee2895415d7ec9e53c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789589"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779129"
 ---
 # <a name="clsidresolutionflags-enumeration"></a>CLSID_RESOLUTION_FLAGS (Enumeración)
 Contiene valores que indican el modo en que common language runtime (CLR) debe resolver un `CLSID`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     CLSID_RESOLUTION_DEFAULT      = 0x0,  
     CLSID_RESOLUTION_REGISTERED   = 0x1  
@@ -37,7 +37,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`CLSID_RESOLUTION_DEFAULT`|Indica el comportamiento predeterminado.|  
 |`CLSID_RESOLUTION_REGISTERED`|Indica que el tiempo de ejecución busca en el registro y aplica la directiva de correcciones de compatibilidad.|  

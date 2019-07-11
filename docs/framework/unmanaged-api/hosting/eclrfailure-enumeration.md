@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490438"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769656"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure (Enumeración)
 Describe el conjunto de errores para el que un host puede establecer acciones de directiva.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     FAIL_NonCriticalResource,  
     FAIL_CriticalResource,  
@@ -42,7 +42,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`FAIL_NonCriticalResource`|Error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región no crítica del código.|  
 |`FAIL_CriticalResource`|Error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región crítica del código.|  

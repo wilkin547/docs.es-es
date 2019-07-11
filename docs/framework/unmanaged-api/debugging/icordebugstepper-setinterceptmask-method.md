@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25a9d287e6520f1fc7826d85dfbcd8e9a6da22f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37b644227a6085352bed682f0ddd7c3455b54895
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987641"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760701"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>ICorDebugStepper::SetInterceptMask (Método)
 Establece un valor que especifica los tipos de código que se ejecutar paso a paso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetInterceptMask (  
     [in] CorDebugIntercept    mask  
 );  

@@ -4,12 +4,12 @@ ms.date: 04/10/2018
 ms.assetid: 3ba543d8-15e5-4322-b6e7-1ebfc92ed7dd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b29fc50e4bda23053c239292956f9b2cd0c628a3
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 8cbc66ef1eb5048d2c708a615a99ea363d29540f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268070"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752177"
 ---
 # <a name="corprfhighmonitor-enumeration"></a>COR_PRF_HIGH_MONITOR (Enumeración)
 [Compatible con .NET Framework 4.5.2 y versiones posteriores]  
@@ -18,7 +18,7 @@ ms.locfileid: "67268070"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```
+```cpp
 typedef enum {  
     COR_PRF_HIGH_MONITOR_NONE                     = 0x00000000,  
     COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES          = 0x00000001,  
@@ -40,7 +40,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COR_PRF_HIGH_MONITOR_NONE`|No se establecen marcas.|  
 |`COR_PRF_HIGH_ADD_ASSEMBLY_REFERENCES`|Los controles de la [icorprofilercallback6:: Getassemblyreference](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) devolución de llamada para agregar referencias de ensamblado durante el rastreo de cierre de referencias de ensamblado CLR.|  

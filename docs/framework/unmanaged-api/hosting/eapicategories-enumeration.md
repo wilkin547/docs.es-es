@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3debd3f13d78841188dd8c900f51c0110e1d4c67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41513d9b6f98743bfad95e4d9606cfb4927369e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906378"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769789"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories (Enumeración)
 Describe las categorías de funciones que puede bloquear el host que se ejecutan en el código de confianza parcial.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     eNoCategory               = 0,  
     eSynchronization          = 0x1,  
@@ -46,7 +46,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`eAll`|Especifica que todos los administrados de las clases y miembros que están cubiertos por otro `EApiCategories` campos podrá ejecutarse en el código de confianza parcial.|  
 |`eExternalProcessMgmt`|Especifica que las clases administradas y los miembros que permiten la creación, manipulación y destrucción de procesos externos podrá ejecutarse en el código de confianza parcial.|  

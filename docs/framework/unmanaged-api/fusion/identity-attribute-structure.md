@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb970d31fb5158adc7dbcbb7cc0175cc91c83c8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de1646cdbc11369b43a821d8b762879d1df7ed2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698049"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751535"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE (Estructura)
 Contiene información de atributos de metadatos sobre un [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) instancia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE {  
     LPCWSTR  pszNamespace;  
     LPCWSTR  pszName;  
@@ -38,7 +38,7 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`pszNamespace`|Un puntero a una cadena de caracteres terminada en null que contiene el espacio de nombres del atributo está en.|  
 |`pszName`|Un puntero a una cadena de caracteres terminada en null que contiene el nombre del atributo.|  

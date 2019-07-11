@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f531b96211a1dd6072d62937b9f93fc17f105d4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcfa0c01dc36a68711c42a7e8318cea023b1772f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777987"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752432"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>ISymUnmanagedWriter3::Commit (Método)
 Confirma los cambios que se han escrito en la secuencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT Commit();  
 ```  
   

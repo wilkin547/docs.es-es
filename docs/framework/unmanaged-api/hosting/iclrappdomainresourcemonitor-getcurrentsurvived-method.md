@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 408ef5419fbc2081d25ad442986ec8155bcb4c62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10df17f2f21928ab89c65be7fd07afe81c468a07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985197"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766547"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived (Método)
 Obtiene el número de bytes que sobrevivieron a la última completa de la recolección de elementos no utilizados de bloqueo y que se hace referencia el dominio de aplicación actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT STDMETHODCALLTYPE GetCurrentSurvived(  
              [in]  DWORD dwAppDomainId,  
              [out] ULONGLONG *pAppDomainBytesSurvived,  
@@ -49,7 +49,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |COR_E_APPDOMAINUNLOADED|El dominio de aplicación se ha descargado o no existe.|  

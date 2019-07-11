@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05ff93f9dc7e875c9f84dd6d8d1f4be9b4f12653
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f254582d96b310c247778818fc0d5daaae0d911c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043516"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737266"
 ---
 # <a name="startupflags-enumeration"></a>STARTUP_FLAGS (Enumeración)
 Contiene valores que indican el comportamiento de inicio de Common Language Runtime (CLR). De manera predeterminada, la recolección de elementos no utilizados es no simultánea y solo se carga la biblioteca de clases base en el área neutral con respecto al dominio.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     STARTUP_CONCURRENT_GC                         = 0x1,  
     STARTUP_LOADER_OPTIMIZATION_MASK              = 0x3<<1,  
@@ -55,7 +55,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`STARTUP_CONCURRENT_GC`|Especifica que se debería utilizar la recolección de elementos no utilizados simultánea. Si el llamador solicita la compilación para servidor y la recolección de elementos no utilizados simultánea en un equipo con un solo procesador, se ejecuta, en su lugar, la versión para estación de trabajo y la recolección no simultánea de elementos no utilizados. **Nota:**  No se admite la recolección de elementos no utilizados simultánea en aplicaciones en las que se ejecuta el emulador WOW64 x86 en sistemas de 64 bits y que implementan la arquitectura Intel Itanium (denominada anteriormente IA-64). Para obtener más información sobre el uso de WOW64 en sistemas Windows de 64 bits, consulte [aplicaciones de la ejecución de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).|  
 |`STARTUP_LOADER_OPTIMIZATION_MASK`|Especifica que se producirá la optimización del cargador.|  

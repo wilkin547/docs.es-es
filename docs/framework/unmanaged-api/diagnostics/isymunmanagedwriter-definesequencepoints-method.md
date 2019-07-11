@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 735b33ac1f049f8d4d3740239e7c34a6fa16dd32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f07685351425a4685ac4a0c8e1b8e3c198b14187
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969174"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777303"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints (Método)
 Define un grupo de puntos de secuencia dentro del método actual. Cada línea de inicio y la columna inicial define el principio de una instrucción dentro de un método. Cada línea final y columna final definen el final de una instrucción dentro de un método. Las matrices se deben ordenar en orden creciente de los desplazamientos. El desplazamiento siempre se mide desde el principio del método, en bytes.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT DefineSequencePoints(  
     [in] ISymUnmanagedDocumentWriter*  document,  
     [in] ULONG32 spCount,  

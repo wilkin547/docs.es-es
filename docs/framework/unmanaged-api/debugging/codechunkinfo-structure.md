@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609612"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740885"
 ---
 # <a name="codechunkinfo-structure"></a>Estructura CodeChunkInfo
 
@@ -29,7 +29,7 @@ Representa un único fragmento de código en la memoria.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct _CodeChunkInfo {  
     CORDB_ADDRESS startAddr;  
     ULONG32       length;  
@@ -38,7 +38,7 @@ typedef struct _CodeChunkInfo {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`startAddr`|Un `CORDB_ADDRESS` valor que especifica la dirección inicial del fragmento.|  
 |`length`|El tamaño, en bytes, del fragmento.|  

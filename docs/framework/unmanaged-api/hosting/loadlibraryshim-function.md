@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87ca5470fe5994d34d12a339c2d92a5f3917063d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 03bc5584d24efa790989f93426251f9f38e65904
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490225"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768523"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim (Función)
 Carga la versión especificada de un archivo DLL que se incluye en el paquete redistribuible de .NET Framework.  
@@ -31,7 +31,7 @@ Carga la versión especificada de un archivo DLL que se incluye en el paquete re
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT LoadLibraryShim (  
     [in]  LPCWSTR  szDllName,  
     [in]  LPCWSTR  szVersion,  
@@ -56,7 +56,7 @@ HRESULT LoadLibraryShim (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los valores siguientes.  
   
-|Código devuelto|Descripción|  
+|Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |CLR_E_SHIM_RUNTIMELOAD|Cargando `szDllName` requiere la carga no se puede cargar common language runtime (CLR) y la versión necesaria de CLR.|  

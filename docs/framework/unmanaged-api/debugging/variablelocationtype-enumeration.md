@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2093466c78b039a06a01e2d850b88ff4543d0ab3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986523"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752461"
 ---
 # <a name="variablelocationtype-enumeration"></a>Enumeración VariableLocationType
 Indica el tipo de ubicación nativa de una variable.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum VariableLocationType  
 {  
     VLT_REGISTER,               
@@ -39,7 +39,7 @@ typedef enum VariableLocationType
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`VLT_REGISTER`|La variable está en un registro.|  
 |`VLT_REGISTER_RELATIVE`|La variable está en una ubicación de memoria relativa del registro.|  

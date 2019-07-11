@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0200ad36490efc546daebfa93904676b0af7684
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3da22faa5e8863275cdfa8d03b980a5cbb55e87d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490527"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758353"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a>CorMarkThreadInThreadPool (Función)
 Marca el subproceso de grupo de subprocesos actualmente en ejecución para la ejecución de código administrado. A partir de la versión 2.0 de .NET Framework, esta función tiene ningún efecto. No es necesario y puede quitarse desde el código. Esta función está en desuso en .NET Framework 4.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 void CorMarkThreadInThreadPool ();  
 ```  
   

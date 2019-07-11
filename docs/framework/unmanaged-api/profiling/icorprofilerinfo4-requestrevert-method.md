@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92137e1a5b0923bc34745513715934c483616700
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e74cb663f968cc9b1b04a912307e3b4a12e86d4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000498"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748663"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert (Método)
 Revierte todas las instancias de las funciones especificadas a sus versiones originales.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT RequestRevert (  
    [in] ULONG    cFunctions,  
    [in, size_is(cFunctions)]  ModuleID    moduleIds[],  
@@ -53,7 +53,7 @@ HRESULT RequestRevert (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|Se intentaron revertir todas las solicitudes; sin embargo, se debe comprobar la matriz de estados devueltos para determinar qué funciones se han revertido correctamente.|  
 |CORPROF_E_CALLBACK4_REQUIRED|El generador de perfiles debe implementar la [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interfaz para esta llamada que se deben admitir.|  
@@ -63,7 +63,7 @@ HRESULT RequestRevert (
   
 ## <a name="status-hresults"></a>HRESULT de estado  
   
-|HRESULT de la matriz de estados|Descripción|  
+|HRESULT de la matriz de estados|DESCRIPCIÓN|  
 |--------------------------|-----------------|  
 |S_OK|La función correspondiente se revirtió correctamente.|  
 |E_INVALIDARG|El parámetro `moduleID` o `methodDef` es `NULL`.|  

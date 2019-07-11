@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9d4c0a1938edd3e2fe88ea6e418b3430f1b5cb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5b30fae0e0a6b6cca64581ecafe78621c8f0068b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995888"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754308"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>ICorDebugExceptionDebugEvent::GetNativeIP (método)
 Obtiene el puntero de pila para este evento de depuración de la excepción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetStackPointer(  
    [out]CORDB_ADDRESS *pStackPointer  
 );  
@@ -29,7 +29,7 @@ HRESULT GetStackPointer(
 ## <a name="remarks"></a>Comentarios  
  El significado de este puntero de pila depende del tipo de evento, como se muestra en la tabla siguiente.  
   
-|Tipo de evento.|Significado del valor `pStackPointer`|  
+|Tipo de evento|Significado del valor `pStackPointer`|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Puntero de pila para el marco que produjo la excepción.|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Puntero de pila para el marco de código de usuario más cercano al punto de la excepción generada.|  

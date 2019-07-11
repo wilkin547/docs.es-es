@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a84fdfdba96c58671302c723b8a56848b70eb60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 23f5a2b6b0970f3cb64ee339e6a1a409354a60e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984131"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780950"
 ---
 # <a name="coinitiee-enumeration"></a>COINITIEE (Enumeración)
 Especifica las constantes utilizadas por [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) al inicializar common language runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum tagCOINITEE {  
    COINITEE_DEFAULT = 0x0,  
    COINITEE_DLL     = 0x1,  
@@ -38,7 +38,7 @@ typedef enum tagCOINITEE {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COINITEE_DEFAULT`|Modo de inicialización predeterminado. Esto inicializa el tiempo de ejecución y se crea el valor predeterminado <xref:System.AppDomain>.|  
 |`COINITEE_DLL`|Se inicializa para ejecutar un archivo DLL administrado.|  

@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2dc3d350f5c97736b3b65c814a668195aceef2b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2921484cb2baa92593ddb0335cf7b20c5c0f33eb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969993"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773010"
 ---
 # <a name="iclrdebugmanagersetsymbolreadingpolicy-method"></a>ICLRDebugManager::SetSymbolReadingPolicy (Método)
 Establece la directiva para leer los archivos de programa (PDB) de la base de datos. La directiva determina si se incluye información sobre archivos y números de línea en las pilas de llamadas.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetSymbolReadingPolicy (  
     [in] ESymbolReadingPolicy policy  
 );  
@@ -42,7 +42,7 @@ HRESULT SetSymbolReadingPolicy (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`SetSymbolReadingPolicy` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

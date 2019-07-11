@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490719"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775744"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurar un entorno de generación de perfiles
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "66490719"
   
 - COR_PROFILER: Si el COR_ENABLE_PROFILING comprobar pasadas, CLR conecta con el generador de perfiles que tiene este CLSID o ProgID, que debe haber almacenado previamente en el registro. La variable de entorno COR_PROFILER se define como una cadena, como se muestra en los dos ejemplos siguientes.  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -66,7 +66,7 @@ ms.locfileid: "66490719"
 ## <a name="initializing-the-profiler"></a>Inicializar el generador de perfiles  
  Cuando ambas comprobaciones de variables de entorno se realizan correctamente, CLR crea una instancia del generador de perfiles de una manera similar a la función COM `CoCreateInstance`. El generador de perfiles no se carga mediante una llamada directa a `CoCreateInstance`. Por consiguiente, se evita una llamada a `CoInitialize`, que requiere la configuración del modelo de subprocesos. El CLR, a continuación, llama a la [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) método del generador de perfiles. La firma de este método es como sigue.  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>Establecer notificaciones de eventos  
  El generador de perfiles, a continuación, llama a la [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para especificar qué categorías de notificaciones que está interesado. Por ejemplo, si el generador de perfiles solamente está interesado en notificaciones de entrada y salida de funciones y notificaciones de recolección de elementos no utilizados, especifica lo siguiente.  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

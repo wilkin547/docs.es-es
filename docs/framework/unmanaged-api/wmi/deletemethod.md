@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb96a75686a14182b9526a0832223c2b9abfc34
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 291d5d0461da8d130d41f9a0eca67ea3be42b4bc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040682"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746813"
 ---
 # <a name="deletemethod-function"></a>Función DeleteMethod
 Elimina el método especificado de una definición de clase CIM.
@@ -30,7 +30,7 @@ Elimina el método especificado de una definición de clase CIM.
     
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT Delete (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -53,7 +53,7 @@ HRESULT Delete (
 
 Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | El método especificado no existe. |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay memoria suficiente para completar la operación. |

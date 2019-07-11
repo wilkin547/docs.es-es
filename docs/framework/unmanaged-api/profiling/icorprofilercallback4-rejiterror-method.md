@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f152279a21f28b54acebbf0be7c65bb73efa70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767480"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758150"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError (Método)
 Notifica al generador de perfiles que el compilador de just-in-time (JIT) detectó un error en el proceso de recompilación.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT ReJITError(  
     [in] ModuleID    moduleId,  
     [in] mdMethodDef methodId,  
@@ -55,7 +55,7 @@ HRESULT ReJITError(
   
 ## <a name="status-hresults"></a>HRESULT de estado  
   
-|HRESULT de la matriz de estados|Descripción|  
+|HRESULT de la matriz de estados|DESCRIPCIÓN|  
 |--------------------------|-----------------|  
 |E_INVALIDARG|El `moduleID` o `methodDef` token es `NULL`.|  
 |CORPROF_E_DATAINCOMPLETE|El módulo no está totalmente cargado aún o está en proceso de descarga.|  

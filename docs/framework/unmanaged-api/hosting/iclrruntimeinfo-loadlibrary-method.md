@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fe1f93c621fd567471b9a49e4aa75cb90e6e0e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65ac05a524297029ca50970bdd231c6a9112e35c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771649"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748388"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary (Método)
 Carga una biblioteca de .NET Framework de common language runtime (CLR) representado por un [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaz.  
@@ -31,7 +31,7 @@ Carga una biblioteca de .NET Framework de common language runtime (CLR) represen
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT LoadLibrary(  
      [in]  LPCWSTR pwzDllName,  
      [out, retval] HMODULE *phndModule);  
@@ -47,7 +47,7 @@ HRESULT LoadLibrary(
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |E_POINTER|`pwzDllName` o `phndModule` es null.|  

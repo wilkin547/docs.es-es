@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0fc3329d8b6d49c2924c991e4d606a437eff9d2d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: b6916c223aee615fad0bb9e5a47691122db41c98
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752057"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR (Enumeración)
 Contiene valores que se usan para especificar el comportamiento, las funcionalidades o los eventos a los que el generador de perfiles quiere suscribirse.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_MONITOR_NONE                = 0x00000000,  
     COR_PRF_MONITOR_FUNCTION_UNLOADS    = 0x00000001,  
@@ -115,14 +115,14 @@ typedef enum {
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>No hay ningún conjunto de marcas  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_NONE`|No se establecen marcas.|  
   
 <a name="Callback"></a>   
 ### <a name="callback-flags"></a>Marcas de devolución de llamada  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|Habilita todos los eventos de devolución de llamada.|  
 |`COR_PRF_MONITOR_APPDOMAIN_LOADS`|Los controles de la `AppDomainCreation*` y `AppDomainShutdown*` devoluciones de llamada en el [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfaz.|  
@@ -148,13 +148,13 @@ typedef enum {
 <a name="Feature"></a>   
 ### <a name="feature-enabling-flags"></a>Marcas para habilitar características  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COR_PRF_ENABLE_FRAME_INFO`|Habilita la recuperación de una ciencia exacta `ClassID` para una función genérica llamando el [GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) método con un `COR_PRF_FRAME_INFO` valor devuelto por la [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) devolución de llamada.|  
 |`COR_PRF_ENABLE_FUNCTION_ARGS`|Seguimiento de los argumentos de habilita usando el [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) devolución de llamada o el [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) devolución de llamada y el [GetFunctionEnter3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md) método.|  
 |`COR_PRF_ENABLE_FUNCTION_RETVAL`|Habilita el seguimiento de los valores devueltos mediante el uso de la [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) devolución de llamada o el [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) devolución de llamada y [GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) método.|  
-|`COR_PRF_ENABLE_INPROC_DEBUGGING`|Desusado.<br /><br /> No se admite la depuración en proceso. Esta marca no tiene efecto.|  
-|`COR_PRF_ENABLE_JIT_MAPS`|Desusado.<br /><br /> Permite al generador de perfiles obtener asignaciones de IL a nativo mediante [GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md). A partir de .NET Framework 2.0, el tiempo de ejecución siempre realiza el seguimiento de las asignaciones de IL a nativo; por lo tanto, se considera que esta marca está siempre establecida.|  
+|`COR_PRF_ENABLE_INPROC_DEBUGGING`|En desuso.<br /><br /> No se admite la depuración en proceso. Esta marca no tiene efecto.|  
+|`COR_PRF_ENABLE_JIT_MAPS`|En desuso.<br /><br /> Permite al generador de perfiles obtener asignaciones de IL a nativo mediante [GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md). A partir de .NET Framework 2.0, el tiempo de ejecución siempre realiza el seguimiento de las asignaciones de IL a nativo; por lo tanto, se considera que esta marca está siempre establecida.|  
 |`COR_PRF_ENABLE_OBJECT_ALLOCATED`|Informa al tiempo de ejecución que puede que el generador de perfiles quiera notificaciones de asignación de objetos. Esta marca se debe establecer durante la inicialización. Permite que el generador de perfiles seguir usando el `COR_PRF_MONITOR_OBJECT_ALLOCATED` marca para recibir [ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md) devoluciones de llamada.|  
 |`COR_PRF_ENABLE_REJIT`|Habilita las llamadas a la [RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md) y [RequestRevert](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrevert-method.md) métodos. El generador de perfiles debe establecer esta marca en el inicio.  Si el generador de perfiles especifica esta marca, también debe especificar `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
 |`COR_PRF_ENABLE_STACK_SNAPSHOT`|Habilita las llamadas a la [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) método.|  
@@ -162,7 +162,7 @@ typedef enum {
 <a name="Config"></a>   
 ### <a name="configuration-flags"></a>Marcas de configuración  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Impide que se carguen todas las imágenes nativas (incluidas imágenes mejoradas por el generador de perfiles).  Si se especifican esta marca y la marca `COR_PRF_USE_PROFILE_IMAGES`, se usa `COR_PRF_DISABLE_ALL_NGEN_IMAGES`.|  
 |`COR_PRF_DISABLE_INLINING`|Deshabilita todas las inserciones.|  
@@ -173,7 +173,7 @@ typedef enum {
 <a name="Composite"></a>   
 ### <a name="composite-flags"></a>Marcas compuestas  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COR_PRF_ALL`|Representa todos los valores de la marca `COR_PRF_MONITOR`.|  
 |`COR_PRF_ALLOWABLE_AFTER_ATTACH`|Representa todas las marcas `COR_PRF_MONITOR` que se pueden establecer después de que el generador de perfiles se asocie a una aplicación en ejecución. En la sección sobre la sintaxis se indica cada una de las marcas presentes en esta máscara de bits.|  

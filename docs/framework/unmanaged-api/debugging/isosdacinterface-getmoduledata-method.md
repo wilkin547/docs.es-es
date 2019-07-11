@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 4cc4266f569c3fb3e70227ec2543b962f7bd4b1d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 97b297def9fba329ff6d9573f7b2e7cc811273f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764718"
 ---
 # <a name="isosdacinterfacegetmoduledata-method"></a>Método ISOSDacInterface::GetModuleData
 
@@ -30,7 +30,7 @@ Captura los datos correspondientes al módulo cargado en una dirección dada.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```cpp
 HRESULT GetModuleData(
     CLRDATA_ADDRESS moduleAddr,
     DacpModuleData *data
@@ -52,8 +52,8 @@ El método proporcionado forma parte de la `ISOSDacInterface` interfaz y corresp
 ## <a name="requirements"></a>Requisitos
 
 **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
-**Encabezado**: Ninguna  
-**Biblioteca:** Ninguna  
+**Encabezado**: None  
+**Biblioteca:** None  
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Vea también
