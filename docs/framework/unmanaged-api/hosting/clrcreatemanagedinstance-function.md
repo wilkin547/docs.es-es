@@ -20,21 +20,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67bd6e8a0519d35b867cb525d5ff7730c0459016
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e1ae530b8488dcd375e91058a227316dd38cf4ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490684"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779157"
 ---
-# <a name="clrcreatemanagedinstance-function"></a><span data-ttu-id="b56fd-102">ClrCreateManagedInstance (Función)</span><span class="sxs-lookup"><span data-stu-id="b56fd-102">ClrCreateManagedInstance Function</span></span>
-<span data-ttu-id="b56fd-103">Crea una instancia del tipo administrado especificado.</span><span class="sxs-lookup"><span data-stu-id="b56fd-103">Creates an instance of the specified managed type.</span></span>  
+# <a name="clrcreatemanagedinstance-function"></a><span data-ttu-id="91be4-102">ClrCreateManagedInstance (Función)</span><span class="sxs-lookup"><span data-stu-id="91be4-102">ClrCreateManagedInstance Function</span></span>
+<span data-ttu-id="91be4-103">Crea una instancia del tipo administrado especificado.</span><span class="sxs-lookup"><span data-stu-id="91be4-103">Creates an instance of the specified managed type.</span></span>  
   
- <span data-ttu-id="b56fd-104">Esta función está desusada en .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="b56fd-104">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="b56fd-105">Utilizar la activación de COM para crear una instancia del tipo administrado o utilizar el host (consulte [CLR hospedaje Interfaces agregadas en .NET Framework 4 y 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).</span><span class="sxs-lookup"><span data-stu-id="b56fd-105">Use COM activation to create an instance of the managed type, or use hosting (see [CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).</span></span>  
+ <span data-ttu-id="91be4-104">Esta función está desusada en .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="91be4-104">This function has been deprecated in the .NET Framework 4.</span></span> <span data-ttu-id="91be4-105">Utilizar la activación de COM para crear una instancia del tipo administrado o utilizar el host (consulte [CLR hospedaje Interfaces agregadas en .NET Framework 4 y 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).</span><span class="sxs-lookup"><span data-stu-id="91be4-105">Use COM activation to create an instance of the managed type, or use hosting (see [CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b56fd-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b56fd-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="91be4-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="91be4-106">Syntax</span></span>  
   
-```  
+```cpp  
 STDAPI ClrCreateManagedInstance (  
     [in]  LPCWSTR  pTypeName,   
     [in]  REFIID   riid,   
@@ -42,29 +42,29 @@ STDAPI ClrCreateManagedInstance (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b56fd-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b56fd-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="91be4-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="91be4-107">Parameters</span></span>  
  `pTypeName`  
- <span data-ttu-id="b56fd-108">[in] Un puntero al nombre del tipo de instancia que se solicita.</span><span class="sxs-lookup"><span data-stu-id="b56fd-108">[in] A pointer to the name of the instance type being requested.</span></span>  
+ <span data-ttu-id="91be4-108">[in] Un puntero al nombre del tipo de instancia que se solicita.</span><span class="sxs-lookup"><span data-stu-id="91be4-108">[in] A pointer to the name of the instance type being requested.</span></span>  
   
  `riid`  
- <span data-ttu-id="b56fd-109">[in] El `IID` del tipo de instancia que se solicita.</span><span class="sxs-lookup"><span data-stu-id="b56fd-109">[in] The `IID` of the instance type being requested.</span></span>  
+ <span data-ttu-id="91be4-109">[in] El `IID` del tipo de instancia que se solicita.</span><span class="sxs-lookup"><span data-stu-id="91be4-109">[in] The `IID` of the instance type being requested.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="b56fd-110">[out] Un puntero a un puntero a una instancia del tipo administrado que se solicitó el llamador.</span><span class="sxs-lookup"><span data-stu-id="b56fd-110">[out] A pointer to a pointer to an instance of the managed type that was requested by the caller.</span></span>  
+ <span data-ttu-id="91be4-110">[out] Un puntero a un puntero a una instancia del tipo administrado que se solicitó el llamador.</span><span class="sxs-lookup"><span data-stu-id="91be4-110">[out] A pointer to a pointer to an instance of the managed type that was requested by the caller.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b56fd-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b56fd-111">Remarks</span></span>  
- <span data-ttu-id="b56fd-112">Ya se debe cargar common language runtime en un proceso.</span><span class="sxs-lookup"><span data-stu-id="b56fd-112">The common language runtime should already be loaded into a process.</span></span> <span data-ttu-id="b56fd-113">Por ejemplo, se puede cargar mediante el uso de una llamada a la [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funcionen antes de la `ClrCreateManagedInstance` se llama a la función.</span><span class="sxs-lookup"><span data-stu-id="b56fd-113">For example, it can be loaded by using a call to the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function before the `ClrCreateManagedInstance` function is called.</span></span> <span data-ttu-id="b56fd-114">Si no se carga el tiempo de ejecución, `ClrCreateManagedInstance` en primer lugar intenta cargar v1.0.3705 del tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="b56fd-114">If the runtime is not loaded, `ClrCreateManagedInstance` first tries to load v1.0.3705 of the runtime.</span></span> <span data-ttu-id="b56fd-115">Si se produce un error, intenta cargar la versión más reciente del tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="b56fd-115">If that fails, it attempts to load the latest version of the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="91be4-111">Comentarios</span><span class="sxs-lookup"><span data-stu-id="91be4-111">Remarks</span></span>  
+ <span data-ttu-id="91be4-112">Ya se debe cargar common language runtime en un proceso.</span><span class="sxs-lookup"><span data-stu-id="91be4-112">The common language runtime should already be loaded into a process.</span></span> <span data-ttu-id="91be4-113">Por ejemplo, se puede cargar mediante el uso de una llamada a la [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) funcionen antes de la `ClrCreateManagedInstance` se llama a la función.</span><span class="sxs-lookup"><span data-stu-id="91be4-113">For example, it can be loaded by using a call to the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function before the `ClrCreateManagedInstance` function is called.</span></span> <span data-ttu-id="91be4-114">Si no se carga el tiempo de ejecución, `ClrCreateManagedInstance` en primer lugar intenta cargar v1.0.3705 del tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="91be4-114">If the runtime is not loaded, `ClrCreateManagedInstance` first tries to load v1.0.3705 of the runtime.</span></span> <span data-ttu-id="91be4-115">Si se produce un error, intenta cargar la versión más reciente del tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="91be4-115">If that fails, it attempts to load the latest version of the runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b56fd-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b56fd-116">Requirements</span></span>  
- <span data-ttu-id="b56fd-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b56fd-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="91be4-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="91be4-116">Requirements</span></span>  
+ <span data-ttu-id="91be4-117">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="91be4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b56fd-118">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b56fd-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="91be4-118">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="91be4-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="b56fd-119">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="b56fd-119">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="91be4-119">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="91be4-119">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="b56fd-120">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b56fd-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="91be4-120">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="91be4-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b56fd-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="b56fd-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="91be4-121">Vea también</span><span class="sxs-lookup"><span data-stu-id="91be4-121">See also</span></span>
 
-- [<span data-ttu-id="b56fd-122">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="b56fd-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
-- [<span data-ttu-id="b56fd-123">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="b56fd-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="91be4-122">Funciones de hospedaje de CLR en desuso</span><span class="sxs-lookup"><span data-stu-id="91be4-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="91be4-123">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="91be4-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

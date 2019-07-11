@@ -16,32 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 878941f7af71fa5e3de8e38c4a68a66cb964983d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993790"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772437"
 ---
-# <a name="icordebugtype2-interface"></a><span data-ttu-id="b5e82-102">Interfaz ICorDebugType2</span><span class="sxs-lookup"><span data-stu-id="b5e82-102">ICorDebugType2 Interface</span></span>
-<span data-ttu-id="b5e82-103">Extiende la interfaz ICorDebugType para recuperar el identificador de tipo de un tipo base o un tipo complejo (definido por el usuario).</span><span class="sxs-lookup"><span data-stu-id="b5e82-103">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  
+# <a name="icordebugtype2-interface"></a><span data-ttu-id="306db-102">Interfaz ICorDebugType2</span><span class="sxs-lookup"><span data-stu-id="306db-102">ICorDebugType2 Interface</span></span>
+<span data-ttu-id="306db-103">Extiende la interfaz ICorDebugType para recuperar el identificador de tipo de un tipo base o un tipo complejo (definido por el usuario).</span><span class="sxs-lookup"><span data-stu-id="306db-103">Extends the ICorDebugType interface to retrieve the type identifier  of a base type or complex (user-defined) type.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b5e82-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="b5e82-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="306db-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="306db-104">Methods</span></span>  
   
-|<span data-ttu-id="b5e82-105">Método</span><span class="sxs-lookup"><span data-stu-id="b5e82-105">Method</span></span>||  
+|<span data-ttu-id="306db-105">Método</span><span class="sxs-lookup"><span data-stu-id="306db-105">Method</span></span>||  
 |------------|-|  
-|[<span data-ttu-id="b5e82-106">GetTypeID (método)</span><span class="sxs-lookup"><span data-stu-id="b5e82-106">GetTypeID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|<span data-ttu-id="b5e82-107">Obtiene un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) para este tipo.</span><span class="sxs-lookup"><span data-stu-id="b5e82-107">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>|  
+|[<span data-ttu-id="306db-106">GetTypeID (método)</span><span class="sxs-lookup"><span data-stu-id="306db-106">GetTypeID Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|<span data-ttu-id="306db-107">Obtiene un [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) para este tipo.</span><span class="sxs-lookup"><span data-stu-id="306db-107">Gets a [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) for this type.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b5e82-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b5e82-108">Remarks</span></span>  
- <span data-ttu-id="b5e82-109">Esta interfaz es una extensión lógica de ICorDebugType (interfaz).</span><span class="sxs-lookup"><span data-stu-id="b5e82-109">This interface is a logical extension of the ICorDebugType interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="306db-108">Comentarios</span><span class="sxs-lookup"><span data-stu-id="306db-108">Remarks</span></span>  
+ <span data-ttu-id="306db-109">Esta interfaz es una extensión lógica de ICorDebugType (interfaz).</span><span class="sxs-lookup"><span data-stu-id="306db-109">This interface is a logical extension of the ICorDebugType interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b5e82-110">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="b5e82-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="306db-110">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="306db-110">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b5e82-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b5e82-111">Example</span></span>  
- <span data-ttu-id="b5e82-112">El fragmento de código siguiente muestra el uso de la [icordebugtype2:: GetTypeId](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="b5e82-112">The following code fragment illustrates the use of the [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) method.</span></span>  
+## <a name="example"></a><span data-ttu-id="306db-111">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="306db-111">Example</span></span>  
+ <span data-ttu-id="306db-112">El fragmento de código siguiente muestra el uso de la [icordebugtype2:: GetTypeId](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) método.</span><span class="sxs-lookup"><span data-stu-id="306db-112">The following code fragment illustrates the use of the [ICorDebugType2::GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) method.</span></span>  
   
-```  
+```cpp  
 // (error checking omitted for brevity)  
 // given an ICorDebugType *pType  
   
@@ -54,15 +54,15 @@ pType2->GetTypeID(&id);
 // now we can use existing APIs to get information about this COR_TYPEID  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="b5e82-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b5e82-113">Requirements</span></span>  
- <span data-ttu-id="b5e82-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b5e82-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="306db-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="306db-113">Requirements</span></span>  
+ <span data-ttu-id="306db-114">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="306db-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5e82-115">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5e82-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="306db-115">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="306db-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b5e82-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5e82-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="306db-116">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="306db-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b5e82-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5e82-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="306db-117">**Versiones de .NET Framework:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="306db-117">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b5e82-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="b5e82-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="306db-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="306db-118">See also</span></span>
 
-- [<span data-ttu-id="b5e82-119">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="b5e82-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="306db-119">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="306db-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
