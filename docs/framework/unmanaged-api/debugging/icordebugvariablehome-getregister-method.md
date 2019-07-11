@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 290647f0e0dcaeae53362762ed7f8e0c2f05a82c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4b3b80546095b79dc5b551a9c5e92ec15c0dddb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993647"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771790"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>Método ICorDebugVariableHome::GetRegister
 Obtiene el registro que contiene una variable con un tipo de ubicación de `VLT_REGISTER`y el registro de base de una variable con un tipo de ubicación de `VLT_REGISTER_RELATIVE`.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetRegister(  
     [out] CorDebugRegister *pRegister  
 );  
@@ -42,7 +42,7 @@ HRESULT GetRegister(
 ## <a name="return-value"></a>Valor devuelto  
  El método devuelve los valores siguientes:  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`S_OK`|La variable está en el registro indicado por la `pRegister` argumento.|  
 |`E_FAIL`|La variable no está en un registro o una ubicación relativa del registro.|  

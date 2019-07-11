@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 076d5de3e9d1925e3a030fee4a06a89862105897
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c6ac7dabd2dfcc7829fd42389c0a6c261fe456d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045869"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781870"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags (Enumeración)
 Contiene valores que describen el tipo de archivo definido en una llamada a [IMetaDataAssemblyEmit:: DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorFileFlags {  
   
     ffContainsMetaData      =   0x0000,  
@@ -39,7 +39,7 @@ typedef enum CorFileFlags {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`ffContainsMetaData`|Indica que el archivo no es un archivo de recursos.|  
 |`ffContainsNoMetaData`|Indica que el archivo, posiblemente un archivo de recursos, no contiene metadatos.|  

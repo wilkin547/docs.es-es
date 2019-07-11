@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648678"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742572"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Tutorial: Usar solo procedimientos almacenados (Visual Basic)
 Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos utilizando procedimientos almacenados solamente. Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.  
@@ -19,7 +19,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
  Para fines de este tutorial, utilizará dos métodos que se han asignado a los procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce cuando se ejecuta la herramienta de línea de comandos SqlMetal para generar un archivo de Visual Basic. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
   
- En este tutorial no se utiliza el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Los desarrolladores que usan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar la funcionalidad de procedimiento almacenado. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ En este tutorial no se basa en Object Relational Designer. Los desarrolladores que usan Visual Studio también pueden usar el Object Relational Designer para implementar la funcionalidad de procedimiento almacenado. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -60,7 +60,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
  En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
   
-#### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
+### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
 1. En el menú **Archivo** de Visual Studio, haga clic en **Nuevo proyecto**.  
   
@@ -70,14 +70,14 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 4. En el **nombre** , escriba **SprocOnlyApp**.  
   
-5. Haga clic en **Aceptar**.  
+5. Haga clic en **OK**.  
   
      Se abre el Diseñador de Windows Forms.  
   
 ## <a name="adding-the-linq-to-sql-assembly-reference"></a>Agregar la referencia al ensamblado de LINQ to SQL  
  El ensamblado de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no está incluido en la plantilla Aplicación de Windows Forms estándar. Tendrá que agregar el ensamblado como se explica en los pasos siguientes:  
   
-#### <a name="to-add-systemdatalinqdll"></a>Para agregar System.Data.Linq.dll  
+### <a name="to-add-systemdatalinqdll"></a>Para agregar System.Data.Linq.dll  
   
 1. En **el Explorador de soluciones**, haga clic en **mostrar todos los archivos**.  
   
@@ -90,7 +90,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="adding-the-northwind-code-file-to-the-project"></a>Agregar el archivo de código de Northwind al proyecto  
  En este paso se asume que ha utilizado la herramienta SqlMetal para generar un archivo de código a partir de la base de datos de ejemplo Northwind. Para obtener más información, vea la sección Requisitos previos, anteriormente en este tutorial.  
   
-#### <a name="to-add-the-northwind-code-file-to-the-project"></a>Para agregar el archivo de código de Northwind al proyecto  
+### <a name="to-add-the-northwind-code-file-to-the-project"></a>Para agregar el archivo de código de Northwind al proyecto  
   
 1. En el **proyecto** menú, haga clic en **Agregar elemento existente**.  
   
@@ -101,7 +101,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="creating-a-database-connection"></a>Crear una conexión de base de datos  
  En este paso, definirá la conexión con la base de datos de ejemplo Northwind. En este tutorial se utiliza "c:\linqtest3\northwnd.mdf" como ruta de acceso.  
   
-#### <a name="to-create-the-database-connection"></a>Para crear la conexión a la base de datos  
+### <a name="to-create-the-database-connection"></a>Para crear la conexión a la base de datos  
   
 1. En **el Explorador de soluciones**, haga clic en **Form1.vb**y, a continuación, haga clic en **ver código**.  
   
@@ -114,9 +114,9 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="setting-up-the-user-interface"></a>Configurar la interfaz de usuario  
  En esta tarea creará una interfaz para que los usuarios puedan ejecutar procedimientos almacenados para tener acceso a los datos de la base de datos. En la aplicación que desarrolla con este tutorial, los usuarios pueden tener acceso a los datos de la base de datos únicamente mediante los procedimientos almacenados que están incrustados en la aplicación.  
   
-#### <a name="to-set-up-the-user-interface"></a>Para configurar la interfaz de usuario  
+### <a name="to-set-up-the-user-interface"></a>Para configurar la interfaz de usuario  
   
-1. Diseñador de vuelta a la Windows Forms (**Form1.vb [Design]**).  
+1. Diseñador de vuelta a la Windows Forms (**Form1.vb [Design]** ).  
   
 2. En el menú **Ver** , haga clic en **Cuadro de herramientas**.  
   
@@ -131,9 +131,9 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 4. Haga clic en **Label1**y, a continuación, haga clic en **propiedades**.  
   
-5. Cambiar el **texto** propiedad desde **Label1** a **Enter OrderID:**.  
+5. Cambiar el **texto** propiedad desde **Label1** a **Enter OrderID:** .  
   
-6. En la misma manera para **Label2**, cambie el **texto** propiedad desde **Label2** a **Enter CustomerID:**.  
+6. En la misma manera para **Label2**, cambie el **texto** propiedad desde **Label2** a **Enter CustomerID:** .  
   
 7. En la misma manera, cambie el **texto** propiedad **Button1** a **Order Details**.  
   
@@ -141,7 +141,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      Amplíe los controles de botón para que todo el texto esté visible.  
   
-#### <a name="to-handle-button-clicks"></a>Para administrar los clics de botón  
+### <a name="to-handle-button-clicks"></a>Para administrar los clics de botón  
   
 1. Haga doble clic en **Order Details** en **Form1** para crear el `Button1` controlador de eventos y abra el editor de código.  
   
@@ -158,7 +158,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="testing-the-application"></a>Probar la aplicación  
  Ha llegado el momento de probar la aplicación. Observe que su contacto con el almacén de datos se limita a las acciones que puedan realizar los dos procedimientos almacenados. Esas acciones son: devolver los productos incluidos para cualquier orderID que escriba o devolver un historial de los productos solicitados para cualquier CustomerID que escriba.  
   
-#### <a name="to-test-the-application"></a>Para probar la aplicación  
+### <a name="to-test-the-application"></a>Para probar la aplicación  
   
 1. Presiona F5 para iniciar la depuración.  
   

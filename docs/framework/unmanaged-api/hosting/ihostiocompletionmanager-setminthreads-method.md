@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fd37546c63ef5e5f25686e105247555dfeb132a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55570050a4053eac6327f9d7887c2fcd08eceab7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780733"
 ---
 # <a name="ihostiocompletionmanagersetminthreads-method"></a>IHostIoCompletionManager::SetMinThreads (Método)
 Establece el número mínimo de subprocesos que el host debe asignar a la finalización de E/S.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetMinThreads (  
     [in] DWORD dwMinIoCompletionThreads  
 );  
@@ -41,7 +41,7 @@ HRESULT SetMinThreads (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`SetMinThreads` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  

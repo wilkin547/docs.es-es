@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a2ce58576ebf03d756c4e8157ab65d57cd7683b
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 1d35bd5f8aaa2dc0df0044671414a5a936fed24d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380250"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781057"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>METAHOST_POLICY_FLAGS (Enumeración)
 Proporciona directivas de enlace que son comunes a la mayoría de los hosts en tiempo de ejecución. Esta enumeración se utiliza en el [ICLRMetaHostPolicy:: GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     METAHOST_POLICY_HIGHCOMPAT              = 0x00,  
     METAHOST_POLICY_APPLY_UPGRADE_POLICY    = 0x08,  
@@ -43,7 +43,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`METAHOST_POLICY_HIGHCOMPAT`|Define la directiva de compatibilidad de alta, que no tiene en cuenta cualquier common language runtime (CLR) que se carga en el proceso actual. En su lugar, considera que sólo el CLR instalados y las preferencias del componente, según se deriva el propio archivo de ensamblado, la versión integrada contra declarada o el archivo de configuración.|  
 |`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Aplica la directiva de actualización para el resultado del enlace de versión cuando no se encuentra una coincidencia exacta, según el contenido de HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Esto tiene el mismo efecto que [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  

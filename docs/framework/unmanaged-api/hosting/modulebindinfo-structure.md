@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f14d3dcaad1cc8cac11599b1647d61df3a793301
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e0e877402daf27c375aedddf8922e919a546ae5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765185"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781177"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo (Estructura)
 Proporciona información detallada sobre el módulo que se hace referencia y el ensamblado que lo contiene.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct _ModuleBindInfo {  
     DWORD    dwAppDomainId;  
     LPCWSTR  lpAssemblyIdentity;  
@@ -38,7 +38,7 @@ typedef struct _ModuleBindInfo {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`dwAppDomainId`|Un identificador único para el `IStream` devuelto por una llamada a la [IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md) método desde el que se puede cargar el módulo que se hace referencia.|  
 |`lpAssemblyIdentity`|Un identificador único para el ensamblado que contiene el módulo que se hace referencia.|  

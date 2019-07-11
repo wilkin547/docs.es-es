@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1142b33f029708d93cc3b808dc6be2b2df5b0ee3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4141c79502dae89ec228e4e39da121615f292786
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942285"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782970"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences (Método)
 Notifica al generador de perfiles de objetos en memoria que se hace referencia el objeto especificado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT ObjectReferences(  
     [in]  ObjectID objectId,  
     [in]  ClassID  classId,  

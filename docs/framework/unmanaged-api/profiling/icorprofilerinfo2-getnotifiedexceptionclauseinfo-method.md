@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cabe2f1ad5b586fed24c7317bb3a7b8407e09158
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a659e139040174a66043283ed4633d9c9d223ce8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782517"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774033"
 ---
 # <a name="icorprofilerinfo2getnotifiedexceptionclauseinfo-method"></a>ICorProfilerInfo2::GetNotifiedExceptionClauseInfo (Método)
 Obtiene la información de dirección y el marco nativa para la cláusula de excepción (`catch`/`finally`/`filter`) que se va a ejecutarse o que recientemente se ha ejecutado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetNotifiedExceptionClauseInfo(  
     [out] COR_PRF_EX_CLAUSE_INFO *pinfo);  
 ```  

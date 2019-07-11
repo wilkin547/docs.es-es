@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 148ca261e717b9a54192a13c317fe385b98f4ccd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85c0cc3880e4fc78d4badea329d62a6fced2a977
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651161"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781945"
 ---
 # <a name="corprfexclauseinfo-structure"></a>COR_PRF_EX_CLAUSE_INFO (Estructura)
 Almacena información sobre una instancia específica de cláusula de excepción y su marco asociado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct COR_PRF_EX_CLAUSE_INFO {  
     COR_PRF_CLAUSE_TYPE clauseType;  
     UINT_PTR programCounter;  
@@ -39,7 +39,7 @@ typedef struct COR_PRF_EX_CLAUSE_INFO {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`clauseType`|Un valor de la [COR_PRF_CLAUSE_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-clause-type-enumeration.md) enumeración que especifica el tipo de cláusula de excepción del código que acaba de escribir o a la izquierda.|  
 |`programCounter`|El punto de entrada nativo del controlador de cláusula, por ejemplo, el contenido del registro X86 EIP.|  

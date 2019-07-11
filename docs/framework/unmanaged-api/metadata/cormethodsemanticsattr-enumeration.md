@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e36cb91c3ef741badb04b54e2b62158ecf6ced1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b09ccfdb33c9853ed97005461f2288f1e7e6fd1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045635"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781748"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr (Enumeración)
 Contiene valores que describen la relación entre un método y una propiedad o evento asociados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorMethodSemanticsAttr {  
   
     msSetter    =   0x0001,  
@@ -43,7 +43,7 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`msSetter`|Especifica que el método es un `set` descriptor de acceso para una propiedad.|  
 |`msGetter`|Especifica que el método es un `get` descriptor de acceso para una propiedad.|  

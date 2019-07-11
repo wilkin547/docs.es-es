@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 882242da493c49a2e6aa09888e9503dcf2933589
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1218ee76a3b7a2f501f87adf1e0bc8133d5329b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781349"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType (Enumeración)
 Proporciona valores para influir en el tipo de `reloc` instrucción se emite en una llamada a [ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum  {  
     srRelocAbsolute,  
     srRelocHighLow          = 3,  
@@ -52,7 +52,7 @@ typedef enum  {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`srRelocAbsolute`|Genera solo una sección relacionados con `reloc`y envía nada en una sección .reloc.|  
 |`srRelocHighLow`|Genera un `reloc` para una ubicación dimensionado por puntero. Esto se transforma en BASED_HIGHLOW o BASED_DIR64, dependiendo de la plataforma.|  

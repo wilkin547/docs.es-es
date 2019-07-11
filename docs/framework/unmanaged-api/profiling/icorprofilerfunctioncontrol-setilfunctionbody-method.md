@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f3351c13530b636cb6715c815b81ab4d9306f53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d831dd7a63c06327bb0f373b3be254401c6e2ee9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049692"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780354"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody (Método)
 Reemplaza el cuerpo del Lenguaje intermedio común (CIL) del método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT SetILFunctionBody(  
     [in]  ULONG   cbNewILMethodHeader,  
     [in, size_is(cbNewILMethodHeader)] LPCBYTE pbNewILMethodHeader);  
@@ -45,7 +45,7 @@ HRESULT SetILFunctionBody(
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT concretos.  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El reemplazo se ha realizado correctamente.|  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 878941f7af71fa5e3de8e38c4a68a66cb964983d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e953fa129308527f63df8dd8c5061252f8be57b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993790"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772437"
 ---
 # <a name="icordebugtype2-interface"></a>Interfaz ICorDebugType2
 Extiende la interfaz ICorDebugType para recuperar el identificador de tipo de un tipo base o un tipo complejo (definido por el usuario).  
@@ -41,7 +41,7 @@ Extiende la interfaz ICorDebugType para recuperar el identificador de tipo de un
 ## <a name="example"></a>Ejemplo  
  El fragmento de código siguiente muestra el uso de la [icordebugtype2:: GetTypeId](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md) método.  
   
-```  
+```cpp  
 // (error checking omitted for brevity)  
 // given an ICorDebugType *pType  
   

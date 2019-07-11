@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be2dfd6bb521dee14afd3728bdd9c446cb779e85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598849"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782593"
 ---
 # <a name="qualifiersetendenumeration-function"></a>Función QualifierSet_EndEnumeration
 Finaliza la enumeración iniciada con una llamada a la [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) función.  
@@ -30,7 +30,7 @@ Finaliza la enumeración iniciada con una llamada a la [QualifierSet_BeginEnumer
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT QualifierSet_EndEnumeration (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr
@@ -49,7 +49,7 @@ HRESULT QualifierSet_EndEnumeration (
 
 El siguiente valor devuelto por esta función se define en el *WbemCli.h* archivo de encabezado, también puede definir como una constante en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
   

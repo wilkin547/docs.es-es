@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbc77195c3fe2581475d768b59993de274ac06a6
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4083440903e6147ae645f2d6420f19160471841c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490335"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779580"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion (Función)
 Obtiene el número de versión de common language runtime (CLR) solicitado por la aplicación especificada. Si esa versión no está instalada, obtiene la versión más reciente que esté instalada antes de la versión solicitada.  
@@ -31,7 +31,7 @@ Obtiene el número de versión de common language runtime (CLR) solicitado por l
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeVersion (  
     [in]  LPWSTR  pExe,   
     [out] LPWSTR  pVersion,   
@@ -56,7 +56,7 @@ HRESULT GetRequestedRuntimeVersion (
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve códigos de error de modelo de objetos componentes (COM) estándar, tal como se define en WinError.h, además de los valores siguientes.  
   
-|Código devuelto|Descripción|  
+|Código devuelto|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
 |ERROR_INSUFFICIENT_BUFFER|El búfer de versión no es suficientemente grande como para almacenar la cadena de versión.|  

@@ -2,12 +2,12 @@
 title: 'Tutorial: Usar solo procedimientos almacenados (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: f4c34252f7d92985dac94663c85d3cca0dc58ab3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f16cbdc1d22e7ec08237c0f13db9499ee2f9194f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655129"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742552"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Tutorial: Usar solo procedimientos almacenados (C#)
 Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos ejecutando procedimientos almacenados solamente. Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.  
@@ -17,7 +17,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
  Para fines de este tutorial, utilizará dos métodos que se han asignado a los procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para crear un archivo de C#. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
   
- En este tutorial no se utiliza el [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Los desarrolladores que usan Visual Studio también pueden usar el [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] para implementar la funcionalidad de procedimiento almacenado. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ En este tutorial no se basa en Object Relational Designer. Los desarrolladores que usan Visual Studio también pueden usar el Object Relational Designer para implementar la funcionalidad de procedimiento almacenado. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -70,7 +70,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 5. En el **ubicación** Compruebe dónde desea almacenar los archivos de proyecto.  
   
-6. Haga clic en **Aceptar**.  
+6. Haga clic en **OK**.  
   
      Se abre el Diseñador de Windows Forms.  
   
@@ -112,7 +112,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 #### <a name="to-set-up-the-user-interface"></a>Para configurar la interfaz de usuario  
   
-1. Diseñador de vuelta a la Windows Forms (**Form1.cs [Diseño]**).  
+1. Diseñador de vuelta a la Windows Forms (**Form1.cs [Diseño]** ).  
   
 2. En el menú **Ver** , haga clic en **Cuadro de herramientas**.  
   
@@ -127,9 +127,9 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 4. Haga clic en **label1**y, a continuación, haga clic en **propiedades**.  
   
-5. Cambiar el **texto** propiedad desde **label1** a **Enter OrderID:**.  
+5. Cambiar el **texto** propiedad desde **label1** a **Enter OrderID:** .  
   
-6. En la misma manera para **label2**, cambie el **texto** propiedad desde **label2** a **Enter CustomerID:**.  
+6. En la misma manera para **label2**, cambie el **texto** propiedad desde **label2** a **Enter CustomerID:** .  
   
 7. En la misma manera, cambie el **texto** propiedad **button1** a **Order Details**.  
   

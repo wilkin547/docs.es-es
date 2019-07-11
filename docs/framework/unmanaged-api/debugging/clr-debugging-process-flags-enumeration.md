@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8321e5aeba435ca5f1398a9cb827a93ae821d686
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef142ed5284262fd758ff13af8207b2290938e77
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61996364"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741150"
 ---
 # <a name="clrdebuggingprocessflags-enumeration"></a>CLR_DEBUGGING_PROCESS_FLAGS (Enumeración)
 Proporciona valores que se usan por el [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) método.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CLR_DEBUGGING_PROCESS_FLAGS  
 {  
    CLR_DEBUGGING_MANAGED_EVENT_PENDING = 1,  
@@ -38,7 +38,7 @@ typedef enum CLR_DEBUGGING_PROCESS_FLAGS
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`CLR_DEBUGGING_MANAGED_EVENT_PENDING`|Este tiempo de ejecución tiene que enviar un evento de depurador administrado-catch-up. Consulte la sección Comentarios para la distinción entre los eventos de puesta al día y -catch-up.|  
 |`CLR_DEBUGGING_MANAGED_EVENT_DEBUGGER_LAUNCH`|Es el evento administrado que está pendiente un <xref:System.Diagnostics.Debugger.Launch%2A?displayProperty=nameWithType> solicitud.|  

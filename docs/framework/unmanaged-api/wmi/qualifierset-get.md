@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0dc76a2732bf9c1e4f3a26fa2d045bfbcd837ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24ab27a8724107bac96c9fae695fb791b00bfa5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597009"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782585"
 ---
 # <a name="qualifiersetget-function"></a>Función QualifierSet_Get
 Obtiene el calificador con nombre especificado.  
@@ -30,7 +30,7 @@ Obtiene el calificador con nombre especificado.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT QualifierSet_Get (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 
@@ -65,7 +65,7 @@ HRESULT QualifierSet_Get (
 
 Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | El calificador especificado no existe. |

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 293ad30ebf47ca8684d158b1ae1772ab245d7981
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 658b88349bedcbcefd0b97226c7bd1fa34f656c7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775095"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781922"
 ---
 # <a name="corprffunctionargumentinfo-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO (Estructura)
 Representa los argumentos de una función, ordenados de izquierda a derecha.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {  
     ULONG numRanges;  
     ULONG totalArgumentSize;  
@@ -38,7 +38,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`numRanges`|El número de bloques de argumentos. Es decir, este valor es el número de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) estructuras en el `ranges` matriz.|  
 |`totalArgumentSize`|El tamaño total de todos los argumentos. En otras palabras, este valor es la suma de las longitudes de argumento.|  

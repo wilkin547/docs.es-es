@@ -3,12 +3,12 @@ title: Cómo compilar aplicaciones ASP.NET con reconocimiento de notificaciones 
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650402"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742496"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Cómo compilar aplicaciones ASP.NET con reconocimiento de notificaciones mediante la autenticación de Windows
 ## <a name="applies-to"></a>Se aplica a  
@@ -56,7 +56,7 @@ ms.locfileid: "64650402"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>Paso 1: Crear una aplicación sencilla de formularios Web Forms ASP.NET  
  En este paso creará una aplicación de formularios Web Forms ASP.NET.  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla  
+### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla  
   
 1. Inicie Visual Studio y, después, haga clic en **Archivo**, **Nuevo** y en **Proyecto**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64650402"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Paso 2: Configurar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de Windows  
  En este paso agregará una entrada de configuración al archivo de configuración *Web.config* y modificará el archivo *Default.aspx* para que se muestre la información de notificaciones de una cuenta.  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Para configurar la aplicación ASP.NET para notificaciones mediante la autenticación de Windows  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Para configurar la aplicación ASP.NET para notificaciones mediante la autenticación de Windows  
   
 1. En el archivo *Default.aspx* del proyecto **TestApp**, reemplace el marcado existente por el siguiente:  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650402"
 ## <a name="step-3--test-your-solution"></a>Paso 3: Probar la solución  
  En este paso se prueba la aplicación de formularios Web Forms ASP.NET y se comprueba que se presentan notificaciones cuando un usuario inicia sesión con la autenticación de Windows.  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de Windows  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de Windows  
   
 1. Presione **F5** para compilar y ejecutar la aplicación. Debe aparecer con *Default.aspx*, y su nombre de cuenta Windows (incluido el nombre de dominio) ya debe aparecer como el usuario autenticado en la parte superior derecha de la página. El contenido de la página debe incluir una tabla en la que aparecen las notificaciones que se han recuperado de su cuenta Windows.

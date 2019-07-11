@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a361e04b6f8f39ec0083471d8cb47d5a29376c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75ba3fd634b108c996e848f48000ffcd0600b00c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000355"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774586"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob (Estructura)
 Representa, en formato binario, la clave pública de un par de claves pública y privada.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct {  
     unsigned int SigAlgId;  
     unsigned int HashAlgId;  
@@ -39,7 +39,7 @@ typedef struct {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`SigAlgId`|El identificador del algoritmo de firma (de tipo `ALG_ID`, tal como se define en WinCrypt.h) de la clave pública.|  
 |`HashAlgId`|El identificador del algoritmo hash (de tipo `ALG_ID`, tal como se define en WinCrypt.h) de la clave pública.|  

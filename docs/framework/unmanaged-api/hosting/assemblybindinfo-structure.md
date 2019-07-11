@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce79987c7fcf45b8d10dcc4613e053ee735941de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f4cb71e5ac0afe19e865ffca6fe578ad08f3162
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946853"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773870"
 ---
 # <a name="assemblybindinfo-structure"></a>AssemblyBindInfo (Estructura)
 Proporciona información detallada sobre el ensamblado que se hace referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef struct _AssemblyBindInfo {  
     DWORD       dwAppDomainId;  
     LPCWSTR     lpReferencedIdentity;  
@@ -39,7 +39,7 @@ typedef struct _AssemblyBindInfo {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`dwAppDomainId`|Un identificador único para el `IStream` devuelto por una llamada a [IHostAssemblyStore:: ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md), desde la que tiene que se puede cargar el ensamblado que se hace referencia.|  
 |`lpReferencedIdentity`|Un identificador único para el ensamblado que se hace referencia.|  

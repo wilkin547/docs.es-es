@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 263c22a07f363c2752afb50779515de043976e93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f179e3b01d6c3b34dfa765565a0fc38d0ba867c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775068"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753698"
 ---
 # <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS (Enumeración)
 Indica una propiedad de una raíz de la colección de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_GC_ROOT_PINNING = 0x1,  
     COR_PRF_GC_ROOT_WEAKREF = 0x2,  
@@ -39,7 +39,7 @@ typedef enum {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`COR_PRF_GC_ROOT_PINNING`|La raíz impide que una colección de elementos no utilizados traslade el objeto.|  
 |`COR_PRF_GC_ROOT_WEAKREF`|La raíz no impide la recolección de elementos.|  

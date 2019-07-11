@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c7b9b25673685dde8b75702c80f525515917ae1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 352a45a33a109570f100e91a24cd44dc4f6780e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61915258"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740148"
 ---
 # <a name="cordebugexceptionflags-enumeration"></a>CorDebugExceptionFlags (Enumeración)
 Proporciona información adicional sobre una excepción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorDebugExceptionFlags {  
     DEBUG_EXCEPTION_NONE = 0,  
     DEBUG_EXCEPTION_CAN_BE_INTERCEPTED = 0x0001  
@@ -37,7 +37,7 @@ typedef enum CorDebugExceptionFlags {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`DEBUG_EXCEPTION_NONE`|No hay ninguna excepción.|  
 |`DEBUG_EXCEPTION_CAN_BE_INTERCEPTED`|La excepción se puede interceptar.<br /><br /> Sin embargo, la temporización de la excepción podría hacer que el depurador no la intercepte. Por ejemplo, si no hay ningún código administrado debajo de la devolución de llamada actual o el evento de excepción se produjo por una asociación Just-In-Time (JIT), la excepción no se puede interceptar.|  

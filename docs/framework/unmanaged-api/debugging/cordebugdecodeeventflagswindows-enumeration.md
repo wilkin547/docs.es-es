@@ -12,19 +12,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d4e006a03db5b16de93dfd07ec7b964db4bfc1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bab7da5855eaf562e55738b489ebf6f62dc45d04
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609222"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740231"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a>Enumeración CorDebugDecodeEventFlagsWindows
 Proporciona información extra sobre los eventos de depuración en la plataforma Windows.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorDebugDecodeEventFlagsWindows {  
     IS_FIRST_CHANCE = 1,  
 } CorDebugDecodeEventFlagsWindows;  
@@ -32,7 +32,7 @@ typedef enum CorDebugDecodeEventFlagsWindows {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`IS_FIRST_CHANCE`|Indica que el evento de depuración es una primera excepción.|  
   

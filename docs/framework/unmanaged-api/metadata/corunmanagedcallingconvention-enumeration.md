@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff308a81282a1cc14c35583daf9cbb057149e556
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9206fbde13f457d4b2e2941ee744d645c6df9774
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905442"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781993"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention (Enumeración)
 Especifica las convenciones de llamada para código no administrado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorUnmanagedCallingConvention {  
   
     IMAGE_CEE_UNMANAGED_CALLCONV_C         = 0x1,  
@@ -46,7 +46,7 @@ typedef enum CorUnmanagedCallingConvention {
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_C`|La convención de llamada de lenguaje C.|  
 |`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|La convención de llamada estándar.|  

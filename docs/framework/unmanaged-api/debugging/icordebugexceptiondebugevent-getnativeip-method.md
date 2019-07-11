@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 12e6a262-d9ac-49b8-9b80-1e653a2a3819
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2455e52e46edd7fc8d4d6e8b003d3ebfd87ea07f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a3fa4ad73847d172ee8e1c7d239bfc00fe11638
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995949"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67754332"
 ---
 # <a name="icordebugexceptiondebugeventgetnativeip-method"></a>ICorDebugExceptionDebugEvent::GetNativeIP (método)
 Obtiene el puntero de instrucción nativo para este evento de depuración de la excepción.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetNativeIP(  
    [out]CORDB_ADDRESS *pIP  
 );  
@@ -29,7 +29,7 @@ HRESULT GetNativeIP(
 ## <a name="remarks"></a>Comentarios  
  El significado de este puntero de instrucción depende del tipo de evento, como se muestra en la tabla siguiente.  
   
-|Tipo de evento.|Significado del valor `pStackPointer`|  
+|Tipo de evento|Significado del valor `pStackPointer`|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|Dirección de la instrucción con errores.|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|La dirección de código en el marco indicado por el [GetStackPointer](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-getstackpointer-method.md) método donde se reanuda la ejecución si no se hubiese producida ninguna excepción. La excepción puede o no puede causar un código diferente, por ejemplo, un bloque catch de una cláusula `try/catch/finally`, para ejecutar en este marco.|  

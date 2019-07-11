@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69fcc862e98e305105a6f17ca49940bd10cef39c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 545af69e06e7ea4262450025e9cb0d6529f99ad4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937064"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780058"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains (Método)
 Obtiene un enumerador para los dominios en el proceso actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT EnumDomains (  
     [out] HCORENUM *hEnum  
 );  
@@ -41,7 +41,7 @@ HRESULT EnumDomains (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|La operación fue correcta.|  
 |S_FALSE|No se pudo completar la operación.|  

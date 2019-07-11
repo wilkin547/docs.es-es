@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 45089d1b64264e000c07603808f0c5fb1263b042
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984638"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776577"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost (Interfaz)
 Proporciona métodos que devuelven una versión concreta de common language runtime (CLR) en función de su número de versión, enumerar todos los CLR instalados, lista de todos los runtimes que se cargan en un proceso especificado, detección la versión CLR utilizada para compilar un ensamblado, sale de un proceso con un apagado limpio en tiempo de ejecución y el enlace de API de consulta heredado.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |[EnumerateInstalledRuntimes (método)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateinstalledruntimes-method.md)|Devuelve una enumeración que contiene un válido [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) puntero de interfaz para cada versión CLR que está instalado en un equipo.|  
 |[EnumerateLoadedRuntimes (método)](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-enumerateloadedruntimes-method.md)|Devuelve una enumeración que contiene un válido [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) puntero de interfaz para cada CLR que se carga en un proceso determinado. Este método reemplaza a [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md).|  
@@ -41,7 +41,7 @@ Proporciona métodos que devuelven una versión concreta de common language runt
 ## <a name="remarks"></a>Comentarios  
  La única manera de obtener una instancia de esta interfaz es mediante una llamada a la [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) funcione como se indica a continuación:  
   
-```  
+```cpp  
 ICLRMetaHost *pMetaHost = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,  
                    IID_ICLRMetaHost, (LPVOID*)&pMetaHost);  

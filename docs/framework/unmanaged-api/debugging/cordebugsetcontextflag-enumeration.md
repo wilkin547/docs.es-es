@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5754968511f7b2db48f60b99748f10f5d27e8d21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e959ce7a77ad6ceb7f2fc848193cbd9fff028279
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599408"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739618"
 ---
 # <a name="cordebugsetcontextflag-enumeration"></a>CorDebugSetContextFlag (Enumeración)
 Indica si el contexto procede del marco activo (u hoja) en la pila o si se ha calculado mediante desenredo de otro marco.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 typedef enum CorDebugSetContextFlag  
 {  
    SET_CONTEXT_FLAG_ACTIVE_FRAME = 1  
@@ -38,7 +38,7 @@ typedef enum CorDebugSetContextFlag
   
 ## <a name="members"></a>Miembros  
   
-|Miembro|Descripción|  
+|Member|DESCRIPCIÓN|  
 |------------|-----------------|  
 |SET_CONTEXT_FLAG_ACTIVE_FRAME|El contexto es el contexto del subproceso activo.|  
 |SET_CONTEXT_FLAG_UNWIND_FRAME|El contexto se ha calculado mediante desenredo de otro marco.|  

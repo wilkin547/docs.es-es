@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d16a05bbe139c3fe02677526bc28809a93be0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700207"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779717"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats (Método)
 Obtiene un conjunto de estadísticas actuales sobre el sistema de recopilación de elementos no utilizados de common language runtime.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
 HRESULT GetStats (  
     [in, out] COR_GC_STATS *pStats  
 );  
@@ -41,7 +41,7 @@ HRESULT GetStats (
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|`GetStats` se devolvió correctamente.|  
 |HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
@@ -57,7 +57,7 @@ HRESULT GetStats (
   
  Un ejemplo de uso es como sigue:  
   
-```  
+```cpp  
 COR_GC_STATS GCStats;  
 GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;  
 pCLRGCManager->GetStats(&GCStats);  
