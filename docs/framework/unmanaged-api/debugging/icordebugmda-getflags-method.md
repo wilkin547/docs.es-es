@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a35e9f7cf43105db05408f285cd89dbd839a4cd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 701d578a1d3af941923d68ddc0cb7c97dd0ca8ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761940"
 ---
-# <a name="icordebugmdagetflags-method"></a><span data-ttu-id="c7059-102">ICorDebugMDA::GetFlags (Método)</span><span class="sxs-lookup"><span data-stu-id="c7059-102">ICorDebugMDA::GetFlags Method</span></span>
-<span data-ttu-id="c7059-103">Obtiene los marcadores asociados con el Asistente para depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="c7059-103">Gets the flags associated with the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
+# <a name="icordebugmdagetflags-method"></a><span data-ttu-id="23877-102">ICorDebugMDA::GetFlags (Método)</span><span class="sxs-lookup"><span data-stu-id="23877-102">ICorDebugMDA::GetFlags Method</span></span>
+<span data-ttu-id="23877-103">Obtiene los marcadores asociados con el Asistente para depuración administrada (MDA) representado por [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span><span class="sxs-lookup"><span data-stu-id="23877-103">Gets the flags associated with the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c7059-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c7059-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="23877-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="23877-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetFlags (  
     [in] CorDebugMDAFlags *pFlags  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c7059-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c7059-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="23877-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="23877-105">Parameters</span></span>  
  `pFlags`  
- <span data-ttu-id="c7059-106">[in] Una combinación bit a bit de los [CorDebugMDAFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) valores de enumeración que especifican los valores de las marcas para este MDA.</span><span class="sxs-lookup"><span data-stu-id="c7059-106">[in] A bitwise combination of the [CorDebugMDAFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) enumeration values that specify the settings of the flags for this MDA.</span></span>  
+ <span data-ttu-id="23877-106">[in] Una combinación bit a bit de los [CorDebugMDAFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) valores de enumeración que especifican los valores de las marcas para este MDA.</span><span class="sxs-lookup"><span data-stu-id="23877-106">[in] A bitwise combination of the [CorDebugMDAFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugmdaflags-enumeration.md) enumeration values that specify the settings of the flags for this MDA.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c7059-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c7059-107">Requirements</span></span>  
- <span data-ttu-id="c7059-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c7059-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="23877-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="23877-107">Requirements</span></span>  
+ <span data-ttu-id="23877-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23877-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c7059-109">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7059-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="23877-109">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="23877-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c7059-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7059-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="23877-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="23877-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c7059-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7059-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="23877-111">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23877-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c7059-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="c7059-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="23877-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="23877-112">See also</span></span>
 
-- [<span data-ttu-id="c7059-113">ICorDebugMDA (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c7059-113">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="c7059-114">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="c7059-114">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="23877-113">ICorDebugMDA (interfaz)</span><span class="sxs-lookup"><span data-stu-id="23877-113">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="23877-114">Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)</span><span class="sxs-lookup"><span data-stu-id="23877-114">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

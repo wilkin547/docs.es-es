@@ -15,51 +15,51 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: cbea6c0562c68ae5d18247dc97bc53eb9dfbfd7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965950"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739184"
 ---
-# <a name="dacpgetmoduleaddress-structure"></a><span data-ttu-id="70cd4-102">Estructura DacpGetModuleAddress</span><span class="sxs-lookup"><span data-stu-id="70cd4-102">DacpGetModuleAddress Structure</span></span>
+# <a name="dacpgetmoduleaddress-structure"></a><span data-ttu-id="a79db-102">Estructura DacpGetModuleAddress</span><span class="sxs-lookup"><span data-stu-id="a79db-102">DacpGetModuleAddress Structure</span></span>
 
-<span data-ttu-id="70cd4-103">Define el contenedor para una solicitud de dirección del módulo.</span><span class="sxs-lookup"><span data-stu-id="70cd4-103">Defines the container for a module address request.</span></span>
+<span data-ttu-id="a79db-103">Define el contenedor para una solicitud de dirección del módulo.</span><span class="sxs-lookup"><span data-stu-id="a79db-103">Defines the container for a module address request.</span></span>
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
-## <a name="syntax"></a><span data-ttu-id="70cd4-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="70cd4-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a79db-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a79db-104">Syntax</span></span>
 
-```
+```cpp
 struct DacpGetModuleAddress
 {
     CLRDATA_ADDRESS ModulePtr;
 };
 ```
 
-## <a name="members"></a><span data-ttu-id="70cd4-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="70cd4-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="a79db-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="a79db-105">Members</span></span>
 
-| <span data-ttu-id="70cd4-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="70cd4-106">Member</span></span>      | <span data-ttu-id="70cd4-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="70cd4-107">Description</span></span>                |
+| <span data-ttu-id="a79db-106">Member</span><span class="sxs-lookup"><span data-stu-id="a79db-106">Member</span></span>      | <span data-ttu-id="a79db-107">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="a79db-107">Description</span></span>                |
 | ----------- | -------------------------- |
-| `ModulePtr` | <span data-ttu-id="70cd4-108">Puntero al módulo.</span><span class="sxs-lookup"><span data-stu-id="70cd4-108">The pointer to the module.</span></span> |
+| `ModulePtr` | <span data-ttu-id="a79db-108">Puntero al módulo.</span><span class="sxs-lookup"><span data-stu-id="a79db-108">The pointer to the module.</span></span> |
 
-## <a name="methods"></a><span data-ttu-id="70cd4-109">Métodos</span><span class="sxs-lookup"><span data-stu-id="70cd4-109">Methods</span></span>
+## <a name="methods"></a><span data-ttu-id="a79db-109">Métodos</span><span class="sxs-lookup"><span data-stu-id="a79db-109">Methods</span></span>
 
-| <span data-ttu-id="70cd4-110">Método</span><span class="sxs-lookup"><span data-stu-id="70cd4-110">Method</span></span>                                                                                               | <span data-ttu-id="70cd4-111">Descripción</span><span class="sxs-lookup"><span data-stu-id="70cd4-111">Description</span></span>                                                                    |
+| <span data-ttu-id="a79db-110">Método</span><span class="sxs-lookup"><span data-stu-id="a79db-110">Method</span></span>                                                                                               | <span data-ttu-id="a79db-111">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="a79db-111">Description</span></span>                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [<span data-ttu-id="70cd4-112">Solicitud</span><span class="sxs-lookup"><span data-stu-id="70cd4-112">Request</span></span>](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | <span data-ttu-id="70cd4-113">Realiza una solicitud para rellenar la estructura de la estructura de tiempo de ejecución determinado.</span><span class="sxs-lookup"><span data-stu-id="70cd4-113">Performs a request to populate the structure from the given runtime structure.</span></span> |
+| [<span data-ttu-id="a79db-112">Solicitud</span><span class="sxs-lookup"><span data-stu-id="a79db-112">Request</span></span>](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | <span data-ttu-id="a79db-113">Realiza una solicitud para rellenar la estructura de la estructura de tiempo de ejecución determinado.</span><span class="sxs-lookup"><span data-stu-id="a79db-113">Performs a request to populate the structure from the given runtime structure.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="70cd4-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="70cd4-114">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a79db-114">Comentarios</span><span class="sxs-lookup"><span data-stu-id="a79db-114">Remarks</span></span>
 
-<span data-ttu-id="70cd4-115">Esta estructura reside en el tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="70cd4-115">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="70cd4-116">Para ello, defina la estructura según lo especificado anteriormente, donde `CLRDATA_ADDRESS` es un entero de 64 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="70cd4-116">To use it, define the structure as specified above, where `CLRDATA_ADDRESS` is a 64-bit unsigned integer.</span></span>
+<span data-ttu-id="a79db-115">Esta estructura reside en el tiempo de ejecución y no se expone a través de los encabezados o archivos de biblioteca.</span><span class="sxs-lookup"><span data-stu-id="a79db-115">This structure lives inside the runtime and is not exposed through any headers or library files.</span></span> <span data-ttu-id="a79db-116">Para ello, defina la estructura según lo especificado anteriormente, donde `CLRDATA_ADDRESS` es un entero de 64 bits sin signo.</span><span class="sxs-lookup"><span data-stu-id="a79db-116">To use it, define the structure as specified above, where `CLRDATA_ADDRESS` is a 64-bit unsigned integer.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="70cd4-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="70cd4-117">Requirements</span></span>
-<span data-ttu-id="70cd4-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70cd4-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
-<span data-ttu-id="70cd4-119">**Encabezado**: Ninguna</span><span class="sxs-lookup"><span data-stu-id="70cd4-119">**Header:** None</span></span>  
-<span data-ttu-id="70cd4-120">**Biblioteca:** Ninguna</span><span class="sxs-lookup"><span data-stu-id="70cd4-120">**Library:** None</span></span>  
-<span data-ttu-id="70cd4-121">**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="70cd4-121">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a79db-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a79db-117">Requirements</span></span>
+<span data-ttu-id="a79db-118">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a79db-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+<span data-ttu-id="a79db-119">**Encabezado**: None</span><span class="sxs-lookup"><span data-stu-id="a79db-119">**Header:** None</span></span>  
+<span data-ttu-id="a79db-120">**Biblioteca:** None</span><span class="sxs-lookup"><span data-stu-id="a79db-120">**Library:** None</span></span>  
+<span data-ttu-id="a79db-121">**Versiones de .NET Framework:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span><span class="sxs-lookup"><span data-stu-id="a79db-121">**.NET Framework Versions:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]</span></span>  
 
-## <a name="see-also"></a><span data-ttu-id="70cd4-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="70cd4-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a79db-122">Vea también</span><span class="sxs-lookup"><span data-stu-id="a79db-122">See also</span></span>
 
-- [<span data-ttu-id="70cd4-123">Depuración</span><span class="sxs-lookup"><span data-stu-id="70cd4-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [<span data-ttu-id="70cd4-124">Estructuras de depuración</span><span class="sxs-lookup"><span data-stu-id="70cd4-124">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="a79db-123">Depuración</span><span class="sxs-lookup"><span data-stu-id="a79db-123">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="a79db-124">Estructuras de depuración</span><span class="sxs-lookup"><span data-stu-id="a79db-124">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

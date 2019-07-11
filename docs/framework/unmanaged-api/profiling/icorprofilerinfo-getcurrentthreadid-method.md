@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 802072f3a0151aabc5ca5796df57ea7c694a2070
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db5ed871734205d59c602cc8b5c0cc9e8ac4682a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041215"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762870"
 ---
-# <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="05f7c-102">ICorProfilerInfo::GetCurrentThreadID (Método)</span><span class="sxs-lookup"><span data-stu-id="05f7c-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
-<span data-ttu-id="05f7c-103">Obtiene el identificador del subproceso actual, si es un subproceso administrado.</span><span class="sxs-lookup"><span data-stu-id="05f7c-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  
+# <a name="icorprofilerinfogetcurrentthreadid-method"></a><span data-ttu-id="d0a35-102">ICorProfilerInfo::GetCurrentThreadID (Método)</span><span class="sxs-lookup"><span data-stu-id="d0a35-102">ICorProfilerInfo::GetCurrentThreadID Method</span></span>
+<span data-ttu-id="d0a35-103">Obtiene el identificador del subproceso actual, si es un subproceso administrado.</span><span class="sxs-lookup"><span data-stu-id="d0a35-103">Gets the ID of the current thread, if it is a managed thread.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05f7c-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="05f7c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0a35-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d0a35-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetCurrentThreadID(  
     [out] ThreadID *pThreadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="05f7c-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="05f7c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0a35-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d0a35-105">Parameters</span></span>  
  `pThreadId`  
- <span data-ttu-id="05f7c-106">[out] Un puntero al identificador devuelto del subproceso administrado.</span><span class="sxs-lookup"><span data-stu-id="05f7c-106">[out] A pointer to the returned ID of the managed thread.</span></span>  
+ <span data-ttu-id="d0a35-106">[out] Un puntero al identificador devuelto del subproceso administrado.</span><span class="sxs-lookup"><span data-stu-id="d0a35-106">[out] A pointer to the returned ID of the managed thread.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="05f7c-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="05f7c-107">Remarks</span></span>  
- <span data-ttu-id="05f7c-108">Si el subproceso actual es un subproceso en tiempo de ejecución interno u otro subproceso no administrado, `GetCurrentThreadID` devuelve CORPROF_E_NOT_MANAGED_THREAD como HRESULT y el valor devuelto de la `pThreadId` parámetro será nulo.</span><span class="sxs-lookup"><span data-stu-id="05f7c-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0a35-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d0a35-107">Remarks</span></span>  
+ <span data-ttu-id="d0a35-108">Si el subproceso actual es un subproceso en tiempo de ejecución interno u otro subproceso no administrado, `GetCurrentThreadID` devuelve CORPROF_E_NOT_MANAGED_THREAD como HRESULT y el valor devuelto de la `pThreadId` parámetro será nulo.</span><span class="sxs-lookup"><span data-stu-id="d0a35-108">If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05f7c-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="05f7c-109">Requirements</span></span>  
- <span data-ttu-id="05f7c-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="05f7c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0a35-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d0a35-109">Requirements</span></span>  
+ <span data-ttu-id="d0a35-110">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0a35-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05f7c-111">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="05f7c-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d0a35-111">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d0a35-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="05f7c-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="05f7c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d0a35-112">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0a35-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="05f7c-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05f7c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d0a35-113">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0a35-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05f7c-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="05f7c-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0a35-114">Vea también</span><span class="sxs-lookup"><span data-stu-id="d0a35-114">See also</span></span>
 
-- [<span data-ttu-id="05f7c-115">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="05f7c-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="d0a35-115">ICorProfilerInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d0a35-115">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

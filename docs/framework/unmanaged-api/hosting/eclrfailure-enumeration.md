@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5f3e39d94996f14f1ae6593b9adaa5db3ef674c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490438"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769656"
 ---
-# <a name="eclrfailure-enumeration"></a><span data-ttu-id="23e71-102">EClrFailure (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="23e71-102">EClrFailure Enumeration</span></span>
-<span data-ttu-id="23e71-103">Describe el conjunto de errores para el que un host puede establecer acciones de directiva.</span><span class="sxs-lookup"><span data-stu-id="23e71-103">Describes the set of failures for which a host can set policy actions.</span></span>  
+# <a name="eclrfailure-enumeration"></a><span data-ttu-id="319a1-102">EClrFailure (Enumeración)</span><span class="sxs-lookup"><span data-stu-id="319a1-102">EClrFailure Enumeration</span></span>
+<span data-ttu-id="319a1-103">Describe el conjunto de errores para el que un host puede establecer acciones de directiva.</span><span class="sxs-lookup"><span data-stu-id="319a1-103">Describes the set of failures for which a host can set policy actions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="23e71-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="23e71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="319a1-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="319a1-104">Syntax</span></span>  
   
-```  
+```cpp  
 typedef enum {  
     FAIL_NonCriticalResource,  
     FAIL_CriticalResource,  
@@ -40,33 +40,33 @@ typedef enum {
 } EClrFailure;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="23e71-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="23e71-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="319a1-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="319a1-105">Members</span></span>  
   
-|<span data-ttu-id="23e71-106">Miembro</span><span class="sxs-lookup"><span data-stu-id="23e71-106">Member</span></span>|<span data-ttu-id="23e71-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="23e71-107">Description</span></span>|  
+|<span data-ttu-id="319a1-106">Member</span><span class="sxs-lookup"><span data-stu-id="319a1-106">Member</span></span>|<span data-ttu-id="319a1-107">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="319a1-107">Description</span></span>|  
 |------------|-----------------|  
-|`FAIL_NonCriticalResource`|<span data-ttu-id="23e71-108">Error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región no crítica del código.</span><span class="sxs-lookup"><span data-stu-id="23e71-108">A failure occurred during an attempt to allocate a resource (such as a thread, a block of memory, or a lock) in a non-critical region of code.</span></span>|  
-|`FAIL_CriticalResource`|<span data-ttu-id="23e71-109">Error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región crítica del código.</span><span class="sxs-lookup"><span data-stu-id="23e71-109">A failure occurred during an attempt to allocate a resource (such as a thread, a block of memory, or a lock) in a critical region of code.</span></span>|  
-|`FAIL_FatalRuntime`|<span data-ttu-id="23e71-110">Common language runtime (CLR) ya no es capaz de ejecutar código administrado en el proceso.</span><span class="sxs-lookup"><span data-stu-id="23e71-110">The common language runtime (CLR) is no longer able to run managed code in the process.</span></span> <span data-ttu-id="23e71-111">Aquí en adelante, las llamadas a las funciones de hospedaje devuelven un valor HRESULT de HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="23e71-111">Henceforth, calls to any hosting functions return an HRESULT value of HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|`FAIL_OrphanedLock`|<span data-ttu-id="23e71-112">Un subproceso no pudo liberar un bloqueo al volver de un <xref:System.AppDomain> objeto.</span><span class="sxs-lookup"><span data-stu-id="23e71-112">A thread has failed to release a lock upon returning from an <xref:System.AppDomain> object.</span></span> <span data-ttu-id="23e71-113">El host no puede establecer este error para hacer que un subproceso se anule.</span><span class="sxs-lookup"><span data-stu-id="23e71-113">The host cannot set this failure to cause a thread to abort.</span></span>|  
-|`FAIL_StackOverflow`|<span data-ttu-id="23e71-114">Se ha producido un desbordamiento de pila.</span><span class="sxs-lookup"><span data-stu-id="23e71-114">A stack overflow has occurred.</span></span>|  
-|`FAIL_AccessViolation`|<span data-ttu-id="23e71-115">Se intentó leer o escribir en la memoria protegida.</span><span class="sxs-lookup"><span data-stu-id="23e71-115">An attempt was made to read or write protected memory.</span></span> <span data-ttu-id="23e71-116">No se admite en .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="23e71-116">Not supported in the .NET Framework 4.</span></span>|  
-|`FAIL_CodeContract`|<span data-ttu-id="23e71-117">Se ha producido un error de contrato de código.</span><span class="sxs-lookup"><span data-stu-id="23e71-117">A code contract failure occurred.</span></span> <span data-ttu-id="23e71-118">Consulte [contratos de código](../../../../docs/framework/debug-trace-profile/code-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="23e71-118">See [Code Contracts](../../../../docs/framework/debug-trace-profile/code-contracts.md).</span></span>|  
+|`FAIL_NonCriticalResource`|<span data-ttu-id="319a1-108">Error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región no crítica del código.</span><span class="sxs-lookup"><span data-stu-id="319a1-108">A failure occurred during an attempt to allocate a resource (such as a thread, a block of memory, or a lock) in a non-critical region of code.</span></span>|  
+|`FAIL_CriticalResource`|<span data-ttu-id="319a1-109">Error al intentar asignar un recurso (por ejemplo, un subproceso, un bloque de memoria o un bloqueo) en una región crítica del código.</span><span class="sxs-lookup"><span data-stu-id="319a1-109">A failure occurred during an attempt to allocate a resource (such as a thread, a block of memory, or a lock) in a critical region of code.</span></span>|  
+|`FAIL_FatalRuntime`|<span data-ttu-id="319a1-110">Common language runtime (CLR) ya no es capaz de ejecutar código administrado en el proceso.</span><span class="sxs-lookup"><span data-stu-id="319a1-110">The common language runtime (CLR) is no longer able to run managed code in the process.</span></span> <span data-ttu-id="319a1-111">Aquí en adelante, las llamadas a las funciones de hospedaje devuelven un valor HRESULT de HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="319a1-111">Henceforth, calls to any hosting functions return an HRESULT value of HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|`FAIL_OrphanedLock`|<span data-ttu-id="319a1-112">Un subproceso no pudo liberar un bloqueo al volver de un <xref:System.AppDomain> objeto.</span><span class="sxs-lookup"><span data-stu-id="319a1-112">A thread has failed to release a lock upon returning from an <xref:System.AppDomain> object.</span></span> <span data-ttu-id="319a1-113">El host no puede establecer este error para hacer que un subproceso se anule.</span><span class="sxs-lookup"><span data-stu-id="319a1-113">The host cannot set this failure to cause a thread to abort.</span></span>|  
+|`FAIL_StackOverflow`|<span data-ttu-id="319a1-114">Se ha producido un desbordamiento de pila.</span><span class="sxs-lookup"><span data-stu-id="319a1-114">A stack overflow has occurred.</span></span>|  
+|`FAIL_AccessViolation`|<span data-ttu-id="319a1-115">Se intentó leer o escribir en la memoria protegida.</span><span class="sxs-lookup"><span data-stu-id="319a1-115">An attempt was made to read or write protected memory.</span></span> <span data-ttu-id="319a1-116">No se admite en .NET Framework 4.</span><span class="sxs-lookup"><span data-stu-id="319a1-116">Not supported in the .NET Framework 4.</span></span>|  
+|`FAIL_CodeContract`|<span data-ttu-id="319a1-117">Se ha producido un error de contrato de código.</span><span class="sxs-lookup"><span data-stu-id="319a1-117">A code contract failure occurred.</span></span> <span data-ttu-id="319a1-118">Consulte [contratos de código](../../../../docs/framework/debug-trace-profile/code-contracts.md).</span><span class="sxs-lookup"><span data-stu-id="319a1-118">See [Code Contracts](../../../../docs/framework/debug-trace-profile/code-contracts.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="23e71-119">Comentarios</span><span class="sxs-lookup"><span data-stu-id="23e71-119">Remarks</span></span>  
- <span data-ttu-id="23e71-120">Consulte la [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) método para obtener una lista de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valores el host puede utilizar para especificar las acciones de directiva para las condiciones de error.</span><span class="sxs-lookup"><span data-stu-id="23e71-120">See the [ICLRPolicyManager::SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) method for a list of [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values the host can use to specify the policy actions for failure conditions.</span></span> <span data-ttu-id="23e71-121">Para obtener más información acerca de las regiones que no son críticas y de código, vea [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="23e71-121">For more information about critical and non-critical regions of code, see [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="319a1-119">Comentarios</span><span class="sxs-lookup"><span data-stu-id="319a1-119">Remarks</span></span>  
+ <span data-ttu-id="319a1-120">Consulte la [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) método para obtener una lista de [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) valores el host puede utilizar para especificar las acciones de directiva para las condiciones de error.</span><span class="sxs-lookup"><span data-stu-id="319a1-120">See the [ICLRPolicyManager::SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) method for a list of [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values the host can use to specify the policy actions for failure conditions.</span></span> <span data-ttu-id="319a1-121">Para obtener más información acerca de las regiones que no son críticas y de código, vea [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).</span><span class="sxs-lookup"><span data-stu-id="319a1-121">For more information about critical and non-critical regions of code, see [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="23e71-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="23e71-122">Requirements</span></span>  
- <span data-ttu-id="23e71-123">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="23e71-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="319a1-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="319a1-122">Requirements</span></span>  
+ <span data-ttu-id="319a1-123">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="319a1-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="23e71-124">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="23e71-124">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="319a1-124">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="319a1-124">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="23e71-125">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="23e71-125">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="319a1-125">**Biblioteca:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="319a1-125">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="23e71-126">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="23e71-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="319a1-126">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="319a1-126">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23e71-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="23e71-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="319a1-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="319a1-127">See also</span></span>
 
-- [<span data-ttu-id="23e71-128">ICLRPolicyManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="23e71-128">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="23e71-129">SetActionOnFailure (método)</span><span class="sxs-lookup"><span data-stu-id="23e71-129">SetActionOnFailure Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)
-- [<span data-ttu-id="23e71-130">IHostPolicyManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="23e71-130">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
-- [<span data-ttu-id="23e71-131">Enumeraciones para hosts</span><span class="sxs-lookup"><span data-stu-id="23e71-131">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="319a1-128">ICLRPolicyManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="319a1-128">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="319a1-129">SetActionOnFailure (método)</span><span class="sxs-lookup"><span data-stu-id="319a1-129">SetActionOnFailure Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)
+- [<span data-ttu-id="319a1-130">IHostPolicyManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="319a1-130">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [<span data-ttu-id="319a1-131">Enumeraciones para hosts</span><span class="sxs-lookup"><span data-stu-id="319a1-131">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

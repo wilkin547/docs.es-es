@@ -17,44 +17,44 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: efe3070b41b1d71e0cf533a7f9f211f4c6626726
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cff277179be761bb0dc78b02702e7d35ad4b6a9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782569"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779250"
 ---
-# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="1d3ff-102">ICorProfilerCallback3::ProfilerDetachSucceeded (Método)</span><span class="sxs-lookup"><span data-stu-id="1d3ff-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
-<span data-ttu-id="1d3ff-103">Notifica al generador de perfiles que Common Language Runtime (CLR) está a punto de descargar el archivo DLL del generador de perfiles.</span><span class="sxs-lookup"><span data-stu-id="1d3ff-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
+# <a name="icorprofilercallback3profilerdetachsucceeded-method"></a><span data-ttu-id="99993-102">ICorProfilerCallback3::ProfilerDetachSucceeded (Método)</span><span class="sxs-lookup"><span data-stu-id="99993-102">ICorProfilerCallback3::ProfilerDetachSucceeded Method</span></span>
+<span data-ttu-id="99993-103">Notifica al generador de perfiles que Common Language Runtime (CLR) está a punto de descargar el archivo DLL del generador de perfiles.</span><span class="sxs-lookup"><span data-stu-id="99993-103">Notifies the profiler that the common language runtime (CLR) is about to unload the profiler DLL.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1d3ff-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1d3ff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="99993-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="99993-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT ProfilerDetachSucceeded();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="1d3ff-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="1d3ff-105">Return Value</span></span>  
- <span data-ttu-id="1d3ff-106">Se omite el valor devuelto por esta devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="1d3ff-106">The return value from this callback is ignored.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="99993-105">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="99993-105">Return Value</span></span>  
+ <span data-ttu-id="99993-106">Se omite el valor devuelto por esta devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="99993-106">The return value from this callback is ignored.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1d3ff-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1d3ff-107">Remarks</span></span>  
- <span data-ttu-id="1d3ff-108">La devolución de llamada `ProfilerDetachSucceeded` se emite después de que todos los subprocesos han salido del código del generador de perfiles.</span><span class="sxs-lookup"><span data-stu-id="1d3ff-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="1d3ff-109">Cuando se llama a este método, el generador de perfiles debe realizar tareas de última hora que no son adecuadas para su destructor, tales como notificar a su interfaz de usuario o registrar componentes.</span><span class="sxs-lookup"><span data-stu-id="1d3ff-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="1d3ff-110">Sin embargo, el generador de perfiles no debe llamar a funciones en las interfaces proporcionadas por el CLR durante esta devolución de llamada (como el [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) o `IMetaData*` interfaces).</span><span class="sxs-lookup"><span data-stu-id="1d3ff-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="99993-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="99993-107">Remarks</span></span>  
+ <span data-ttu-id="99993-108">La devolución de llamada `ProfilerDetachSucceeded` se emite después de que todos los subprocesos han salido del código del generador de perfiles.</span><span class="sxs-lookup"><span data-stu-id="99993-108">The `ProfilerDetachSucceeded` callback is issued after all threads have exited the profiler's code.</span></span> <span data-ttu-id="99993-109">Cuando se llama a este método, el generador de perfiles debe realizar tareas de última hora que no son adecuadas para su destructor, tales como notificar a su interfaz de usuario o registrar componentes.</span><span class="sxs-lookup"><span data-stu-id="99993-109">When this method is called, the profiler should perform any last-minute tasks that are not appropriate for its destructor, such as notifying its UI or logging component.</span></span> <span data-ttu-id="99993-110">Sin embargo, el generador de perfiles no debe llamar a funciones en las interfaces proporcionadas por el CLR durante esta devolución de llamada (como el [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) o `IMetaData*` interfaces).</span><span class="sxs-lookup"><span data-stu-id="99993-110">However, the profiler must not call functions on interfaces that are provided by the CLR during this callback (such as the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) or `IMetaData*` interfaces).</span></span>  
   
- <span data-ttu-id="1d3ff-111">El CLR crea una entrada en el registro de eventos de aplicación de Windows para indicar que la operación de desasociación ha sido correcta.</span><span class="sxs-lookup"><span data-stu-id="1d3ff-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
+ <span data-ttu-id="99993-111">El CLR crea una entrada en el registro de eventos de aplicación de Windows para indicar que la operación de desasociación ha sido correcta.</span><span class="sxs-lookup"><span data-stu-id="99993-111">The CLR creates an entry in the Windows Application event log to indicate that the detach operation is successful.</span></span>  
   
- <span data-ttu-id="1d3ff-112">Después de que el generador de perfiles vuelva de esta devolución de llamada, el CLR libera el objeto de generador de perfiles y descarga el archivo DLL del generador de perfiles.</span><span class="sxs-lookup"><span data-stu-id="1d3ff-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="1d3ff-113">Por lo tanto, el generador de perfiles no debe realizar acciones que puedan hacer que la ejecución se realice dentro del archivo DLL del generador de perfiles después de que vuelva de esta devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="1d3ff-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="1d3ff-114">Por ejemplo, no debe crear subprocesos ni registrar devoluciones de llamada de temporizador.</span><span class="sxs-lookup"><span data-stu-id="1d3ff-114">For example, it must not create threads or register timer callbacks.</span></span>  
+ <span data-ttu-id="99993-112">Después de que el generador de perfiles vuelva de esta devolución de llamada, el CLR libera el objeto de generador de perfiles y descarga el archivo DLL del generador de perfiles.</span><span class="sxs-lookup"><span data-stu-id="99993-112">After the profiler returns from this callback, the CLR releases the profiler object and unloads the profiler DLL.</span></span> <span data-ttu-id="99993-113">Por lo tanto, el generador de perfiles no debe realizar acciones que puedan hacer que la ejecución se realice dentro del archivo DLL del generador de perfiles después de que vuelva de esta devolución de llamada.</span><span class="sxs-lookup"><span data-stu-id="99993-113">Therefore, the profiler must not perform any actions that would cause execution to occur inside the profiler DLL after it returns from this callback.</span></span> <span data-ttu-id="99993-114">Por ejemplo, no debe crear subprocesos ni registrar devoluciones de llamada de temporizador.</span><span class="sxs-lookup"><span data-stu-id="99993-114">For example, it must not create threads or register timer callbacks.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1d3ff-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1d3ff-115">Requirements</span></span>  
- <span data-ttu-id="1d3ff-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1d3ff-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99993-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="99993-115">Requirements</span></span>  
+ <span data-ttu-id="99993-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="99993-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1d3ff-117">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1d3ff-117">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="99993-117">**Encabezado**: CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="99993-117">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1d3ff-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1d3ff-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="99993-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="99993-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1d3ff-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1d3ff-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="99993-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="99993-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1d3ff-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="1d3ff-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99993-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="99993-120">See also</span></span>
 
-- [<span data-ttu-id="1d3ff-121">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="1d3ff-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
-- [<span data-ttu-id="1d3ff-122">ICorProfilerInfo3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="1d3ff-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="1d3ff-123">Interfaces para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="1d3ff-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="1d3ff-124">Generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="1d3ff-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="99993-121">Interfaces de metadatos</span><span class="sxs-lookup"><span data-stu-id="99993-121">Metadata Interfaces</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [<span data-ttu-id="99993-122">ICorProfilerInfo3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="99993-122">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="99993-123">Interfaces para generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="99993-123">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="99993-124">Generación de perfiles</span><span class="sxs-lookup"><span data-stu-id="99993-124">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

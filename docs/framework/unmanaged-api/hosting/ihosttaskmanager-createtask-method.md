@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eddb11ab56bae5243ea7d00614090bbfe774f71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a154aeafed9bc4de63dea3fe7fc32e2daee7b96
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789453"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749726"
 ---
-# <a name="ihosttaskmanagercreatetask-method"></a><span data-ttu-id="cabfd-102">IHostTaskManager::CreateTask (Método)</span><span class="sxs-lookup"><span data-stu-id="cabfd-102">IHostTaskManager::CreateTask Method</span></span>
-<span data-ttu-id="cabfd-103">Solicita que el host cree una nueva tarea.</span><span class="sxs-lookup"><span data-stu-id="cabfd-103">Requests that the host create a new task.</span></span>  
+# <a name="ihosttaskmanagercreatetask-method"></a><span data-ttu-id="e6d71-102">IHostTaskManager::CreateTask (Método)</span><span class="sxs-lookup"><span data-stu-id="e6d71-102">IHostTaskManager::CreateTask Method</span></span>
+<span data-ttu-id="e6d71-103">Solicita que el host cree una nueva tarea.</span><span class="sxs-lookup"><span data-stu-id="e6d71-103">Requests that the host create a new task.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cabfd-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="cabfd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6d71-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e6d71-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT CreateTask (  
     [in]  DWORD stacksize,   
     [in]  LPTHREAD_START_ROUTINE pStartAddress,  
@@ -38,46 +38,46 @@ HRESULT CreateTask (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cabfd-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="cabfd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e6d71-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e6d71-105">Parameters</span></span>  
  `stacksize`  
- <span data-ttu-id="cabfd-106">[in] El tamaño solicitado, en bytes, de la pila solicitada, o 0 (cero) para el tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="cabfd-106">[in] The requested size, in bytes, of the requested stack, or 0 (zero) for the default size.</span></span>  
+ <span data-ttu-id="e6d71-106">[in] El tamaño solicitado, en bytes, de la pila solicitada, o 0 (cero) para el tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="e6d71-106">[in] The requested size, in bytes, of the requested stack, or 0 (zero) for the default size.</span></span>  
   
  `pStartAddress`  
- <span data-ttu-id="cabfd-107">[in] Un puntero a la función de la tarea consiste en ejecutar.</span><span class="sxs-lookup"><span data-stu-id="cabfd-107">[in] A pointer to the function the task is to execute.</span></span>  
+ <span data-ttu-id="e6d71-107">[in] Un puntero a la función de la tarea consiste en ejecutar.</span><span class="sxs-lookup"><span data-stu-id="e6d71-107">[in] A pointer to the function the task is to execute.</span></span>  
   
  `pParameter`  
- <span data-ttu-id="cabfd-108">[in] Un puntero a los datos de usuario que se pasará a la función, o null si la función no toma ningún parámetro.</span><span class="sxs-lookup"><span data-stu-id="cabfd-108">[in] A pointer to the user data to be passed to the function, or null if the function takes no parameters.</span></span>  
+ <span data-ttu-id="e6d71-108">[in] Un puntero a los datos de usuario que se pasará a la función, o null si la función no toma ningún parámetro.</span><span class="sxs-lookup"><span data-stu-id="e6d71-108">[in] A pointer to the user data to be passed to the function, or null if the function takes no parameters.</span></span>  
   
  `ppTask`  
- <span data-ttu-id="cabfd-109">[out] Un puntero a la dirección de un [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia creada por el host, o null si no se puede crear la tarea.</span><span class="sxs-lookup"><span data-stu-id="cabfd-109">[out] A pointer to the address of an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance created by the host, or null if the task cannot be created.</span></span> <span data-ttu-id="cabfd-110">La tarea permanece en estado suspendido hasta que se inicia explícitamente mediante una llamada a [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).</span><span class="sxs-lookup"><span data-stu-id="cabfd-110">The task remains in a suspended state until it is explicitly started by a call to [IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).</span></span>  
+ <span data-ttu-id="e6d71-109">[out] Un puntero a la dirección de un [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia creada por el host, o null si no se puede crear la tarea.</span><span class="sxs-lookup"><span data-stu-id="e6d71-109">[out] A pointer to the address of an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instance created by the host, or null if the task cannot be created.</span></span> <span data-ttu-id="e6d71-110">La tarea permanece en estado suspendido hasta que se inicia explícitamente mediante una llamada a [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).</span><span class="sxs-lookup"><span data-stu-id="e6d71-110">The task remains in a suspended state until it is explicitly started by a call to [IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cabfd-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="cabfd-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e6d71-111">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="e6d71-111">Return Value</span></span>  
   
-|<span data-ttu-id="cabfd-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="cabfd-112">HRESULT</span></span>|<span data-ttu-id="cabfd-113">Descripción</span><span class="sxs-lookup"><span data-stu-id="cabfd-113">Description</span></span>|  
+|<span data-ttu-id="e6d71-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="e6d71-112">HRESULT</span></span>|<span data-ttu-id="e6d71-113">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="e6d71-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="cabfd-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="cabfd-114">S_OK</span></span>|<span data-ttu-id="cabfd-115">`CreateTask` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="cabfd-115">`CreateTask` returned successfully.</span></span>|  
-|<span data-ttu-id="cabfd-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="cabfd-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="cabfd-117">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="cabfd-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="cabfd-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="cabfd-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="cabfd-119">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="cabfd-119">The call timed out.</span></span>|  
-|<span data-ttu-id="cabfd-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="cabfd-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="cabfd-121">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="cabfd-121">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="cabfd-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="cabfd-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="cabfd-123">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="cabfd-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="cabfd-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="cabfd-124">E_FAIL</span></span>|<span data-ttu-id="cabfd-125">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="cabfd-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="cabfd-126">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="cabfd-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="cabfd-127">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="cabfd-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="cabfd-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="cabfd-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="cabfd-129">No había suficiente memoria disponible para crear la tarea solicitada.</span><span class="sxs-lookup"><span data-stu-id="cabfd-129">Not enough memory was available to create the requested task.</span></span>|  
+|<span data-ttu-id="e6d71-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="e6d71-114">S_OK</span></span>|<span data-ttu-id="e6d71-115">`CreateTask` se devolvió correctamente.</span><span class="sxs-lookup"><span data-stu-id="e6d71-115">`CreateTask` returned successfully.</span></span>|  
+|<span data-ttu-id="e6d71-116">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="e6d71-116">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="e6d71-117">Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.</span><span class="sxs-lookup"><span data-stu-id="e6d71-117">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="e6d71-118">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="e6d71-118">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="e6d71-119">La llamada ha agotado el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="e6d71-119">The call timed out.</span></span>|  
+|<span data-ttu-id="e6d71-120">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="e6d71-120">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="e6d71-121">El llamador no posee el bloqueo.</span><span class="sxs-lookup"><span data-stu-id="e6d71-121">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="e6d71-122">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="e6d71-122">HOST_E_ABANDONED</span></span>|<span data-ttu-id="e6d71-123">Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.</span><span class="sxs-lookup"><span data-stu-id="e6d71-123">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="e6d71-124">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="e6d71-124">E_FAIL</span></span>|<span data-ttu-id="e6d71-125">Se ha producido un error irrecuperable desconocido.</span><span class="sxs-lookup"><span data-stu-id="e6d71-125">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="e6d71-126">Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso.</span><span class="sxs-lookup"><span data-stu-id="e6d71-126">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="e6d71-127">Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="e6d71-127">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="e6d71-128">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="e6d71-128">E_OUTOFMEMORY</span></span>|<span data-ttu-id="e6d71-129">No había suficiente memoria disponible para crear la tarea solicitada.</span><span class="sxs-lookup"><span data-stu-id="e6d71-129">Not enough memory was available to create the requested task.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="cabfd-130">Comentarios</span><span class="sxs-lookup"><span data-stu-id="cabfd-130">Remarks</span></span>  
- <span data-ttu-id="cabfd-131">CLR llama a `CreateTask` para solicitar que el host cree una nueva tarea.</span><span class="sxs-lookup"><span data-stu-id="cabfd-131">The CLR calls `CreateTask` to request that the host create a new task.</span></span> <span data-ttu-id="cabfd-132">El host devuelve un puntero de interfaz a un `IHostTask` instancia.</span><span class="sxs-lookup"><span data-stu-id="cabfd-132">The host returns an interface pointer to an `IHostTask` instance.</span></span> <span data-ttu-id="cabfd-133">La tarea devuelta debe permanecer suspendida hasta que se inicia explícitamente mediante una llamada a `IHostTask::Start`.</span><span class="sxs-lookup"><span data-stu-id="cabfd-133">The returned task must remain suspended until it is explicitly started by a call to `IHostTask::Start`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6d71-130">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e6d71-130">Remarks</span></span>  
+ <span data-ttu-id="e6d71-131">CLR llama a `CreateTask` para solicitar que el host cree una nueva tarea.</span><span class="sxs-lookup"><span data-stu-id="e6d71-131">The CLR calls `CreateTask` to request that the host create a new task.</span></span> <span data-ttu-id="e6d71-132">El host devuelve un puntero de interfaz a un `IHostTask` instancia.</span><span class="sxs-lookup"><span data-stu-id="e6d71-132">The host returns an interface pointer to an `IHostTask` instance.</span></span> <span data-ttu-id="e6d71-133">La tarea devuelta debe permanecer suspendida hasta que se inicia explícitamente mediante una llamada a `IHostTask::Start`.</span><span class="sxs-lookup"><span data-stu-id="e6d71-133">The returned task must remain suspended until it is explicitly started by a call to `IHostTask::Start`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cabfd-134">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cabfd-134">Requirements</span></span>  
- <span data-ttu-id="cabfd-135">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cabfd-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6d71-134">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e6d71-134">Requirements</span></span>  
+ <span data-ttu-id="e6d71-135">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6d71-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cabfd-136">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="cabfd-136">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="e6d71-136">**Encabezado**: MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="e6d71-136">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="cabfd-137">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="cabfd-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e6d71-137">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="e6d71-137">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="cabfd-138">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cabfd-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="e6d71-138">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6d71-138">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cabfd-139">Vea también</span><span class="sxs-lookup"><span data-stu-id="cabfd-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6d71-139">Vea también</span><span class="sxs-lookup"><span data-stu-id="e6d71-139">See also</span></span>
 
-- [<span data-ttu-id="cabfd-140">ICLRTask (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cabfd-140">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="cabfd-141">ICLRTaskManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cabfd-141">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="cabfd-142">IHostTask (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cabfd-142">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="cabfd-143">IHostTaskManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="cabfd-143">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [<span data-ttu-id="e6d71-140">ICLRTask (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e6d71-140">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="e6d71-141">ICLRTaskManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e6d71-141">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="e6d71-142">IHostTask (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e6d71-142">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="e6d71-143">IHostTaskManager (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e6d71-143">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
