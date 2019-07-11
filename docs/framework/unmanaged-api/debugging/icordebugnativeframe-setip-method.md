@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 604486a074c3dbe3d19b741df28499ee03e1b2e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc442e0bcd8d392041284269e46821e0642d0891
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942420"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765884"
 ---
-# <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="e04d9-102">ICorDebugNativeFrame::SetIP (Método)</span><span class="sxs-lookup"><span data-stu-id="e04d9-102">ICorDebugNativeFrame::SetIP Method</span></span>
-<span data-ttu-id="e04d9-103">Establece el puntero de instrucción en la ubicación de desplazamiento especificada en código nativo.</span><span class="sxs-lookup"><span data-stu-id="e04d9-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  
+# <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="10f72-102">ICorDebugNativeFrame::SetIP (Método)</span><span class="sxs-lookup"><span data-stu-id="10f72-102">ICorDebugNativeFrame::SetIP Method</span></span>
+<span data-ttu-id="10f72-103">Establece el puntero de instrucción en la ubicación de desplazamiento especificada en código nativo.</span><span class="sxs-lookup"><span data-stu-id="10f72-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e04d9-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e04d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10f72-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="10f72-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT SetIP (  
     [in] ULONG32 nOffset  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e04d9-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e04d9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="10f72-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="10f72-105">Parameters</span></span>  
  `nOffset`  
- <span data-ttu-id="e04d9-106">[in] La ubicación de desplazamiento en el código nativo.</span><span class="sxs-lookup"><span data-stu-id="e04d9-106">[in] The offset location in the native code.</span></span>  
+ <span data-ttu-id="10f72-106">[in] La ubicación de desplazamiento en el código nativo.</span><span class="sxs-lookup"><span data-stu-id="10f72-106">[in] The offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e04d9-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e04d9-107">Remarks</span></span>  
- <span data-ttu-id="e04d9-108">Las llamadas a `SetIP` invalidar inmediatamente todos los marcos y cadenas para el subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="e04d9-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="e04d9-109">Si el depurador necesita información de marco después de llamar a `SetIP`, que debe realizar un seguimiento de pila nuevo.</span><span class="sxs-lookup"><span data-stu-id="e04d9-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="10f72-107">Comentarios</span><span class="sxs-lookup"><span data-stu-id="10f72-107">Remarks</span></span>  
+ <span data-ttu-id="10f72-108">Las llamadas a `SetIP` invalidar inmediatamente todos los marcos y cadenas para el subproceso actual.</span><span class="sxs-lookup"><span data-stu-id="10f72-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="10f72-109">Si el depurador necesita información de marco después de llamar a `SetIP`, que debe realizar un seguimiento de pila nuevo.</span><span class="sxs-lookup"><span data-stu-id="10f72-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
   
- <span data-ttu-id="e04d9-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) intentará mantener el marco de pila en un estado válido.</span><span class="sxs-lookup"><span data-stu-id="e04d9-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="e04d9-111">Sin embargo, incluso si el marco está en un estado válido, lo que se refiere el tiempo de ejecución, todavía puede haber problemas, como variables locales sin inicializar y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="e04d9-111">However, even if the frame is in a valid state, as far as the runtime is concerned, there still may be problems, such as uninitialized local variables, and so on.</span></span> <span data-ttu-id="e04d9-112">El llamador es responsable de garantizar la coherencia del programa en ejecución.</span><span class="sxs-lookup"><span data-stu-id="e04d9-112">The caller is responsible for insuring coherency of the running program.</span></span>  
+ <span data-ttu-id="10f72-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) intentará mantener el marco de pila en un estado válido.</span><span class="sxs-lookup"><span data-stu-id="10f72-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="10f72-111">Sin embargo, incluso si el marco está en un estado válido, lo que se refiere el tiempo de ejecución, todavía puede haber problemas, como variables locales sin inicializar y así sucesivamente.</span><span class="sxs-lookup"><span data-stu-id="10f72-111">However, even if the frame is in a valid state, as far as the runtime is concerned, there still may be problems, such as uninitialized local variables, and so on.</span></span> <span data-ttu-id="10f72-112">El llamador es responsable de garantizar la coherencia del programa en ejecución.</span><span class="sxs-lookup"><span data-stu-id="10f72-112">The caller is responsible for insuring coherency of the running program.</span></span>  
   
- <span data-ttu-id="e04d9-113">En las plataformas de 64 bits, no se puede mover el puntero de instrucción fuera de un `catch` o `finally` bloque.</span><span class="sxs-lookup"><span data-stu-id="e04d9-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="e04d9-114">Si `SetIP` se llama para hacer ese cambio en una plataforma de 64 bits, devolverá un valor HRESULT que indica un error.</span><span class="sxs-lookup"><span data-stu-id="e04d9-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
+ <span data-ttu-id="10f72-113">En las plataformas de 64 bits, no se puede mover el puntero de instrucción fuera de un `catch` o `finally` bloque.</span><span class="sxs-lookup"><span data-stu-id="10f72-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="10f72-114">Si `SetIP` se llama para hacer ese cambio en una plataforma de 64 bits, devolverá un valor HRESULT que indica un error.</span><span class="sxs-lookup"><span data-stu-id="10f72-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e04d9-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e04d9-115">Requirements</span></span>  
- <span data-ttu-id="e04d9-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e04d9-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10f72-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="10f72-115">Requirements</span></span>  
+ <span data-ttu-id="10f72-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10f72-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e04d9-117">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e04d9-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="10f72-117">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="10f72-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e04d9-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e04d9-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="10f72-118">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10f72-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e04d9-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e04d9-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="10f72-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10f72-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e04d9-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="e04d9-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10f72-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="10f72-120">See also</span></span>

@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41d96c6d2024dbc3cab669f2dba2f99faef89f4b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8737885015055994bff3f6066bccb551f19f74f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701299"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777308"
 ---
-# <a name="isymunmanagedwritergetdebuginfo-method"></a><span data-ttu-id="a4937-102">ISymUnmanagedWriter::GetDebugInfo (Método)</span><span class="sxs-lookup"><span data-stu-id="a4937-102">ISymUnmanagedWriter::GetDebugInfo Method</span></span>
-<span data-ttu-id="a4937-103">Devuelve la información necesaria para que un compilador escribir la entrada de directorio de depuración en el encabezado del archivo portable ejecutable (PE).</span><span class="sxs-lookup"><span data-stu-id="a4937-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span></span> <span data-ttu-id="a4937-104">Rellena todos los campos, excepto para el escritor de símbolos `TimeDateStamp` y `PointerToRawData`.</span><span class="sxs-lookup"><span data-stu-id="a4937-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span></span> <span data-ttu-id="a4937-105">(El compilador es responsable de establecer correctamente estos dos campos).</span><span class="sxs-lookup"><span data-stu-id="a4937-105">(The compiler is responsible for setting these two fields appropriately.)</span></span>  
+# <a name="isymunmanagedwritergetdebuginfo-method"></a><span data-ttu-id="00f31-102">ISymUnmanagedWriter::GetDebugInfo (Método)</span><span class="sxs-lookup"><span data-stu-id="00f31-102">ISymUnmanagedWriter::GetDebugInfo Method</span></span>
+<span data-ttu-id="00f31-103">Devuelve la información necesaria para que un compilador escribir la entrada de directorio de depuración en el encabezado del archivo portable ejecutable (PE).</span><span class="sxs-lookup"><span data-stu-id="00f31-103">Returns the information necessary for a compiler to write the debug directory entry in the portable executable (PE) file header.</span></span> <span data-ttu-id="00f31-104">Rellena todos los campos, excepto para el escritor de símbolos `TimeDateStamp` y `PointerToRawData`.</span><span class="sxs-lookup"><span data-stu-id="00f31-104">The symbol writer fills out all fields except for `TimeDateStamp` and `PointerToRawData`.</span></span> <span data-ttu-id="00f31-105">(El compilador es responsable de establecer correctamente estos dos campos).</span><span class="sxs-lookup"><span data-stu-id="00f31-105">(The compiler is responsible for setting these two fields appropriately.)</span></span>  
   
- <span data-ttu-id="a4937-106">Un compilador debe llamar a este método, emitir el blob de datos hasta el archivo PE, establezca el `PointerToRawData` campo IMAGE_DEBUG_DIRECTORY para señalar los datos emitidos y escribir IMAGE_DEBUG_DIRECTORY en el archivo PE.</span><span class="sxs-lookup"><span data-stu-id="a4937-106">A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file.</span></span> <span data-ttu-id="a4937-107">El compilador también debe establecer el `TimeDateStamp` campo igual la `TimeDateStamp` del archivo PE que se está generando.</span><span class="sxs-lookup"><span data-stu-id="a4937-107">The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.</span></span>  
+ <span data-ttu-id="00f31-106">Un compilador debe llamar a este método, emitir el blob de datos hasta el archivo PE, establezca el `PointerToRawData` campo IMAGE_DEBUG_DIRECTORY para señalar los datos emitidos y escribir IMAGE_DEBUG_DIRECTORY en el archivo PE.</span><span class="sxs-lookup"><span data-stu-id="00f31-106">A compiler should call this method, emit the data blob to the PE file, set the `PointerToRawData` field in the IMAGE_DEBUG_DIRECTORY to point to the emitted data, and write the IMAGE_DEBUG_DIRECTORY to the PE file.</span></span> <span data-ttu-id="00f31-107">El compilador también debe establecer el `TimeDateStamp` campo igual la `TimeDateStamp` del archivo PE que se está generando.</span><span class="sxs-lookup"><span data-stu-id="00f31-107">The compiler should also set the `TimeDateStamp` field to equal the `TimeDateStamp` of the PE file being generated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4937-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="a4937-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00f31-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="00f31-108">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetDebugInfo(  
     [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,  
     [in]  DWORD cData,  
@@ -40,25 +40,25 @@ HRESULT GetDebugInfo(
         length_is(*pcData)] BYTE data[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a4937-109">Parámetros</span><span class="sxs-lookup"><span data-stu-id="a4937-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="00f31-109">Parámetros</span><span class="sxs-lookup"><span data-stu-id="00f31-109">Parameters</span></span>  
  `pIDD`  
- <span data-ttu-id="a4937-110">[in, out] Un puntero a IMAGE_DEBUG_DIRECTORY que van a rellenar el escritor de símbolos.</span><span class="sxs-lookup"><span data-stu-id="a4937-110">[in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.</span></span>  
+ <span data-ttu-id="00f31-110">[in, out] Un puntero a IMAGE_DEBUG_DIRECTORY que van a rellenar el escritor de símbolos.</span><span class="sxs-lookup"><span data-stu-id="00f31-110">[in, out] A pointer to an IMAGE_DEBUG_DIRECTORY that the symbol writer will fill out.</span></span>  
   
  `cData`  
- <span data-ttu-id="a4937-111">[in] Un `DWORD` que contiene el tamaño de los datos de depuración.</span><span class="sxs-lookup"><span data-stu-id="a4937-111">[in] A `DWORD` that contains the size of the debug data.</span></span>  
+ <span data-ttu-id="00f31-111">[in] Un `DWORD` que contiene el tamaño de los datos de depuración.</span><span class="sxs-lookup"><span data-stu-id="00f31-111">[in] A `DWORD` that contains the size of the debug data.</span></span>  
   
  `pcData`  
- <span data-ttu-id="a4937-112">[out] Un puntero a un `DWORD` que recibe el tamaño del búfer necesario para contener los datos de depuración.</span><span class="sxs-lookup"><span data-stu-id="a4937-112">[out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.</span></span>  
+ <span data-ttu-id="00f31-112">[out] Un puntero a un `DWORD` que recibe el tamaño del búfer necesario para contener los datos de depuración.</span><span class="sxs-lookup"><span data-stu-id="00f31-112">[out] A pointer to a `DWORD` that receives the size of the buffer required to contain the debug data.</span></span>  
   
  `data`  
- <span data-ttu-id="a4937-113">[out] Un puntero a un búfer que es lo suficientemente grande como para contener los datos para el almacén de símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="a4937-113">[out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.</span></span>  
+ <span data-ttu-id="00f31-113">[out] Un puntero a un búfer que es lo suficientemente grande como para contener los datos para el almacén de símbolos de depuración.</span><span class="sxs-lookup"><span data-stu-id="00f31-113">[out] A pointer to a buffer that is large enough to hold the debug data for the symbol store.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a4937-114">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="a4937-114">Return Value</span></span>  
- <span data-ttu-id="a4937-115">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="a4937-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="00f31-114">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="00f31-114">Return Value</span></span>  
+ <span data-ttu-id="00f31-115">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="00f31-115">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a4937-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a4937-116">Requirements</span></span>  
- <span data-ttu-id="a4937-117">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a4937-117">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="00f31-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="00f31-116">Requirements</span></span>  
+ <span data-ttu-id="00f31-117">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="00f31-117">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4937-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="a4937-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="00f31-118">Vea también</span><span class="sxs-lookup"><span data-stu-id="00f31-118">See also</span></span>
 
-- [<span data-ttu-id="a4937-119">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="a4937-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="00f31-119">ISymUnmanagedWriter (interfaz)</span><span class="sxs-lookup"><span data-stu-id="00f31-119">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
