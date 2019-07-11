@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: c8696ef58e0177d2d2bc6e2d4731206be77a33af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f6486965d9e44524420975523e10ded32a135b7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753882"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755217"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definición de tipos anónimos (Visual Basic)
 
@@ -52,7 +52,7 @@ Public Class $Anonymous1
 End Class
 ```
 
-Además, las definiciones de tipo anónimo contienen un constructor predeterminado. No se permiten los constructores que requieren parámetros.
+Además, las definiciones de tipo anónimo contienen un constructor sin parámetros. No se permiten los constructores que requieren parámetros.
 
 Si una declaración de tipo anónimo contiene al menos una propiedad clave, la definición de tipo invalida tres miembros heredados de <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, y <xref:System.Object.ToString%2A>. Si no se declara ninguna propiedad clave, solo <xref:System.Object.ToString%2A> se reemplaza. Las invalidaciones proporcionan la funcionalidad siguiente:
 

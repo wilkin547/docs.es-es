@@ -2,12 +2,12 @@
 title: 'Tutorial: Inserción de tipos a partir de ensamblados administrados en Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c0de529a0005c9dbaf1f8d0f25957b217280e31
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754833"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753022"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>Tutorial: Inserción de tipos a partir de ensamblados administrados en Visual Studio (Visual Basic)
 
@@ -51,7 +51,7 @@ Dado que la función principal de la inserción de tipos es admitir la inserció
 
 ## <a name="creating-an-interface"></a>Creación de una interfaz
 
-#### <a name="to-create-the-type-equivalence-interface-project"></a>Para crear el proyecto de interfaz de equivalencia de tipos
+### <a name="to-create-the-type-equivalence-interface-project"></a>Para crear el proyecto de interfaz de equivalencia de tipos
 
 1. En el menú **Archivo** de Visual Studio, apunte a **Nuevo** y haga clic en **Proyecto**.
 
@@ -61,7 +61,7 @@ Dado que la función principal de la inserción de tipos es admitir la inserció
 
 4. Haga clic con el botón derecho en el proyecto TypeEquivalenceInterface y haga clic en **Propiedades**. Haga clic en la pestaña **Compilar**. Establezca la ruta de acceso de salida en una ubicación válida en el equipo de desarrollo, como `C:\TypeEquivalenceSample`. Esta ubicación también se usará en un paso posterior en este tutorial.
 
-5. Mientras sigue editando las propiedades del proyecto, haga clic en la pestaña **Firma**. Seleccione la opción **Firmar el ensamblado**. En la lista **Elija un archivo de clave de nombre seguro**, haga clic en **<Nuevo...>**. En el cuadro **Nombre del archivo de clave**, escriba `key.snk`. Desactive la casilla **Proteger mi archivo de clave mediante contraseña**. Haga clic en **Aceptar**.
+5. Mientras sigue editando las propiedades del proyecto, haga clic en la pestaña **Firma**. Seleccione la opción **Firmar el ensamblado**. En la lista **Elija un archivo de clave de nombre seguro**, haga clic en **<Nuevo...>** . En el cuadro **Nombre del archivo de clave**, escriba `key.snk`. Desactive la casilla **Proteger mi archivo de clave mediante contraseña**. Haga clic en **OK**.
 
 6. Abra el archivo ISampleInterface.vb. Agregue el código siguiente al archivo de clase ISampleInterface para crear la interfaz ISampleInterface.
 
@@ -96,7 +96,7 @@ Dado que la función principal de la inserción de tipos es admitir la inserció
 
 ## <a name="creating-a-runtime-class"></a>Creación de una clase en tiempo de ejecución
 
-#### <a name="to-create-the-type-equivalence-runtime-project"></a>Para crear el proyecto en tiempo de ejecución de equivalencia de tipos
+### <a name="to-create-the-type-equivalence-runtime-project"></a>Para crear el proyecto en tiempo de ejecución de equivalencia de tipos
 
 1. En el menú **Archivo** de Visual Studio, apunte a **Nuevo** y haga clic en **Proyecto**.
 
@@ -106,7 +106,7 @@ Dado que la función principal de la inserción de tipos es admitir la inserció
 
 4. Haga clic con el botón derecho en el proyecto TypeEquivalenceRuntime y haga clic en **Propiedades**. Haga clic en la pestaña **Compilar**. Establezca la ruta de acceso de salida en la misma ubicación que se usa en el proyecto TypeEquivalenceInterface, por ejemplo, `C:\TypeEquivalenceSample`.
 
-5. Mientras sigue editando las propiedades del proyecto, haga clic en la pestaña **Firma**. Seleccione la opción **Firmar el ensamblado**. En la lista **Elija un archivo de clave de nombre seguro**, haga clic en **<Nuevo...>**. En el cuadro **Nombre del archivo de clave**, escriba `key.snk`. Desactive la casilla **Proteger mi archivo de clave mediante contraseña**. Haga clic en **Aceptar**.
+5. Mientras sigue editando las propiedades del proyecto, haga clic en la pestaña **Firma**. Seleccione la opción **Firmar el ensamblado**. En la lista **Elija un archivo de clave de nombre seguro**, haga clic en **<Nuevo...>** . En el cuadro **Nombre del archivo de clave**, escriba `key.snk`. Desactive la casilla **Proteger mi archivo de clave mediante contraseña**. Haga clic en **OK**.
 
 6. Haga clic con el botón derecho en el proyecto TypeEquivalenceRuntime y haga clic en **Agregar referencia**. Haga clic en la pestaña **Examinar** y vaya a la carpeta de la ruta de acceso de salida. Seleccione el archivo TypeEquivalenceInterface.dll y haga clic en **Aceptar**.
 
@@ -142,7 +142,7 @@ Dado que la función principal de la inserción de tipos es admitir la inserció
 
 ## <a name="creating-a-client-project"></a>Creación de un proyecto de cliente
 
-#### <a name="to-create-the-type-equivalence-client-project"></a>Para crear el proyecto de cliente de equivalencia de tipos
+### <a name="to-create-the-type-equivalence-client-project"></a>Para crear el proyecto de cliente de equivalencia de tipos
 
 1. En el menú **Archivo** de Visual Studio, apunte a **Nuevo** y haga clic en **Proyecto**.
 
@@ -181,7 +181,7 @@ Dado que la función principal de la inserción de tipos es admitir la inserció
 
 ## <a name="modifying-the-interface"></a>Modificación de la interfaz
 
-#### <a name="to-modify-the-interface"></a>Para modificar la interfaz
+### <a name="to-modify-the-interface"></a>Para modificar la interfaz
 
 1. En el menú **Archivo** de Visual Studio, apunte a **Abrir** y haga clic en **Proyecto o solución**.
 
@@ -201,7 +201,7 @@ Dado que la función principal de la inserción de tipos es admitir la inserció
 
 ## <a name="modifying-the-runtime-class"></a>Modificación de la clase en tiempo de ejecución
 
-#### <a name="to-modify-the-runtime-class"></a>Para modificar la clase en tiempo de ejecución
+### <a name="to-modify-the-runtime-class"></a>Para modificar la clase en tiempo de ejecución
 
 1. En el menú **Archivo** de Visual Studio, apunte a **Abrir** y haga clic en **Proyecto o solución**.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591569"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755167"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos y clases de Visual Basic
 
@@ -28,7 +28,7 @@ Para comprender la relación entre un objeto y su clase, piense en las galletas 
 
 Debe crear un objeto para poder acceder a sus miembros.
 
-#### <a name="to-create-an-object-from-a-class"></a>Para crear un objeto a partir de una clase
+### <a name="to-create-an-object-from-a-class"></a>Para crear un objeto a partir de una clase
 
 1. Determine en qué clase desea crear un objeto.
 
@@ -121,7 +121,7 @@ Tenga en cuenta que un método es simplemente un *procedimiento* que se expone m
 
 Para más información, vea [Procedimientos en Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/index.md).
 
-### <a name="events"></a>Eventos
+### <a name="events"></a>Events
 
 Un evento es una acción reconocida por un objeto, como hacer clic con el ratón o presionar una tecla, para la que puede escribir código para que responda. Los eventos pueden producirse como resultado de una acción del usuario o código de programa, o puede provocarlos el sistema. Se dice que el código que señala un evento *genera* el evento y el código que responde a él se dice que lo *controla*.
 
@@ -135,7 +135,7 @@ Los miembros declarados con la palabra clave `Shared` son *miembros compartidos*
 
 #### <a name="accessing-nonshared-members"></a>Acceso a miembros no compartidos
 
-###### <a name="to-access-a-nonshared-member-of-an-object"></a>Para acceder a un miembro no compartido de un objeto
+##### <a name="to-access-a-nonshared-member-of-an-object"></a>Para acceder a un miembro no compartido de un objeto
 
 1. Asegúrese de que el objeto se crea a partir de su clase y de que se asigna a una variable de objeto.
 
@@ -151,7 +151,7 @@ Los miembros declarados con la palabra clave `Shared` son *miembros compartidos*
 
 #### <a name="accessing-shared-members"></a>Acceso a miembros compartidos
 
-###### <a name="to-access-a-shared-member-of-an-object"></a>Para acceder a un miembro compartido de un objeto
+##### <a name="to-access-a-shared-member-of-an-object"></a>Para acceder a un miembro compartido de un objeto
 
 - Coloque detrás el nombre de clase el *operador de acceso a miembro* (`.`) y, a continuación, el nombre del miembro. Siempre debe acceder a un miembro `Shared` del objeto directamente a través del nombre de clase.
 
@@ -204,7 +204,7 @@ Cuando las clases se derivan de clases más fundamentales, se dice que tienen un
 
 En el ejemplo siguiente, suponga que quiere definir un tipo especial de <xref:System.Windows.Forms.Button> que actúa como un <xref:System.Windows.Forms.Button> normal, pero también expone un método que invierte los colores de primer plano y de fondo.
 
-##### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Para definir una clase derivada de una clase ya existente
+#### <a name="to-define-a-class-is-derived-from-an-already-existing-class"></a>Para definir una clase derivada de una clase ya existente
 
 1. Use una [instrucción Class](../../../../visual-basic/language-reference/statements/class-statement.md) para definir una clase desde la que crear el objeto que necesita.
 
@@ -239,7 +239,7 @@ En el ejemplo siguiente, suponga que quiere definir un tipo especial de <xref:Sy
 
 Las clases derivadas heredan miembros de la clase en que se basan, lo que permite agregar complejidad a medida que progresa en una jerarquía de clases. Para más información, vea [Fundamentos de la herencia](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-#### <a name="compiling-the-code"></a>Compilación del código
+### <a name="compiling-the-code"></a>Compilación del código
 
 Asegúrese de que el compilador puede tener acceso a la clase de la que pretende derivar la nueva clase. Esto puede conllevar su nombre completo, como en el ejemplo anterior, o la identificación de su espacio de nombres en una [Instrucción Imports (Tipo y espacio de nombres de .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Si la clase está en un proyecto diferente, tendrá que agregar una referencia a ese proyecto. Para más información, vea [Administrar referencias en un proyecto](/visualstudio/ide/managing-references-in-a-project).
 

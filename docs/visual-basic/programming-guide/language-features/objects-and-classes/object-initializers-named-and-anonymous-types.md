@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 151c2f6cbb560d83ef0fcfef518bc50cec246ca2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649772"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783246"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicializadores de objeto: Tipos con nombre y anónimos (Visual Basic)
 Los inicializadores de objeto permiten especificar las propiedades de un objeto complejo mediante el uso de una sola expresión. Se puede usar para crear instancias de tipos con nombre y de tipos anónimos.  
@@ -32,7 +32,7 @@ Los inicializadores de objeto permiten especificar las propiedades de un objeto 
  Los requisitos y los resultados de las dos declaraciones no son los mismos. Para `namedCust`, un `Customer` clase que tiene un `Name` propiedad ya debe existir y la declaración crea una instancia de esa clase. Para `anonymousCust`, el compilador define una nueva clase que tiene una propiedad, una cadena denominada `Name`y crea una nueva instancia de esa clase.  
   
 ## <a name="named-types"></a>Tipos con nombre  
- Los inicializadores de objeto proporcionan una manera sencilla de llamar al constructor de un tipo y, a continuación, establezca los valores de algunas o todas las propiedades en una sola instrucción. El compilador invoca al constructor adecuado para la instrucción: el constructor predeterminado si no hay argumentos o un constructor con parámetros si se envían uno o más argumentos. Después de eso, se inicializan las propiedades especificadas en el orden en que se presentan en la lista de inicializadores.  
+ Los inicializadores de objeto proporcionan una manera sencilla de llamar al constructor de un tipo y, a continuación, establezca los valores de algunas o todas las propiedades en una sola instrucción. El compilador invoca al constructor adecuado para la instrucción: el constructor sin parámetros si no hay argumentos o un constructor con parámetros si se envían uno o más argumentos. Después de eso, se inicializan las propiedades especificadas en el orden en que se presentan en la lista de inicializadores.  
   
  Cada inicialización de la lista de inicializadores consta de la asignación de un valor inicial a un miembro de la clase. Los nombres y tipos de datos de los miembros se determinan cuando se define la clase. En los ejemplos siguientes, el `Customer` clase debe existir y deben tienen miembros con nombre `Name` y `City` que puede aceptar los valores de cadena.  
   
@@ -42,7 +42,7 @@ Los inicializadores de objeto permiten especificar las propiedades de un objeto 
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Cada una de estas declaraciones es equivalente al ejemplo siguiente se crea un `Customer` objeto utilizando el constructor predeterminado y, a continuación, especifica los valores iniciales de la `Name` y `City` propiedades mediante el uso de un `With` instrucción.  
+ Cada una de estas declaraciones es equivalente al ejemplo siguiente se crea un `Customer` objeto utilizando el constructor sin parámetros y, a continuación, especifica los valores iniciales de la `Name` y `City` propiedades mediante el uso de un `With` instrucción.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
@@ -132,6 +132,6 @@ Los inicializadores de objeto permiten especificar las propiedades de un objeto 
 - [Inferencia de tipo de variable local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Introducción a LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Cómo: Deducir tipos y nombres de propiedad en declaraciones de tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [Procedimientos: Deducir tipos y nombres de propiedad en declaraciones de tipos anónimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [Key](../../../../visual-basic/language-reference/modifiers/key.md)
 - [Cómo: Declarar un objeto usando un inicializador de objeto](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
