@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3dc3c842bbb4b86b82d03848751673400bed193b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2c64d7ead2f7ce3d76b40f4fdc604506ee85561
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986120"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777884"
 ---
-# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="95307-102">ISymUnmanagedScope::GetNamespaces (Método)</span><span class="sxs-lookup"><span data-stu-id="95307-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
-<span data-ttu-id="95307-103">Obtiene los espacios de nombres que se utilizan dentro de este ámbito.</span><span class="sxs-lookup"><span data-stu-id="95307-103">Gets the namespaces that are being used within this scope.</span></span>  
+# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="10f61-102">ISymUnmanagedScope::GetNamespaces (Método)</span><span class="sxs-lookup"><span data-stu-id="10f61-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
+<span data-ttu-id="10f61-103">Obtiene los espacios de nombres que se utilizan dentro de este ámbito.</span><span class="sxs-lookup"><span data-stu-id="10f61-103">Gets the namespaces that are being used within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95307-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="95307-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10f61-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="10f61-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetNamespaces(  
     [in]  ULONG32  cNameSpaces,  
     [out] ULONG32  *pcNameSpaces,  
@@ -38,22 +38,22 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="95307-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="95307-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="10f61-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="10f61-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="95307-106">[in] Tamaño de la matriz `namespaces`.</span><span class="sxs-lookup"><span data-stu-id="95307-106">[in] The size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="10f61-106">[in] Tamaño de la matriz `namespaces`.</span><span class="sxs-lookup"><span data-stu-id="10f61-106">[in] The size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="95307-107">[out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="95307-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="10f61-107">[out] Un puntero a un `ULONG32` que recibe el tamaño del búfer necesario para contener los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="10f61-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="95307-108">[out] Matriz que recibe los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="95307-108">[out] The array that receives the namespaces.</span></span>  
+ <span data-ttu-id="10f61-108">[out] Matriz que recibe los espacios de nombres.</span><span class="sxs-lookup"><span data-stu-id="10f61-108">[out] The array that receives the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="95307-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="95307-109">Return Value</span></span>  
- <span data-ttu-id="95307-110">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="95307-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="10f61-109">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="10f61-109">Return Value</span></span>  
+ <span data-ttu-id="10f61-110">S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.</span><span class="sxs-lookup"><span data-stu-id="10f61-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95307-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="95307-111">Requirements</span></span>  
- <span data-ttu-id="95307-112">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="95307-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10f61-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="10f61-111">Requirements</span></span>  
+ <span data-ttu-id="10f61-112">**Encabezado**: CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="10f61-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95307-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="95307-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10f61-113">Vea también</span><span class="sxs-lookup"><span data-stu-id="10f61-113">See also</span></span>
 
-- [<span data-ttu-id="95307-114">ISymUnmanagedScope (interfaz)</span><span class="sxs-lookup"><span data-stu-id="95307-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="10f61-114">ISymUnmanagedScope (interfaz)</span><span class="sxs-lookup"><span data-stu-id="10f61-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

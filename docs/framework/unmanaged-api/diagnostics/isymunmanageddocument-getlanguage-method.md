@@ -17,30 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05ce47953358b7025e30080fbbaf288a6c0e879d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 167eb9ae550454afee05cf1e724ba4afa4f95430
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939846"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776725"
 ---
-# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="f83e6-102">ISymUnmanagedDocument::GetLanguage (Método)</span><span class="sxs-lookup"><span data-stu-id="f83e6-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
-<span data-ttu-id="f83e6-103">Obtiene el identificador de idioma de este documento</span><span class="sxs-lookup"><span data-stu-id="f83e6-103">Gets the language identifier of this document</span></span>  
+# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="48159-102">ISymUnmanagedDocument::GetLanguage (Método)</span><span class="sxs-lookup"><span data-stu-id="48159-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
+<span data-ttu-id="48159-103">Obtiene el identificador de idioma de este documento</span><span class="sxs-lookup"><span data-stu-id="48159-103">Gets the language identifier of this document</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f83e6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f83e6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="48159-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="48159-104">Syntax</span></span>  
   
-```  
+```cpp  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f83e6-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f83e6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="48159-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="48159-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="f83e6-106">[out] Un puntero a una variable que recibe el identificador de idioma.</span><span class="sxs-lookup"><span data-stu-id="f83e6-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
+ <span data-ttu-id="48159-106">[out] Un puntero a una variable que recibe el identificador de idioma.</span><span class="sxs-lookup"><span data-stu-id="48159-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f83e6-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="f83e6-107">Return Value</span></span>  
- <span data-ttu-id="f83e6-108">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="f83e6-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="48159-107">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="48159-107">Return Value</span></span>  
+ <span data-ttu-id="48159-108">S_OK si el método tiene éxito.</span><span class="sxs-lookup"><span data-stu-id="48159-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f83e6-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="f83e6-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="48159-109">Vea también</span><span class="sxs-lookup"><span data-stu-id="48159-109">See also</span></span>
 
-- [<span data-ttu-id="f83e6-110">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="f83e6-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="48159-110">ISymUnmanagedDocument (interfaz)</span><span class="sxs-lookup"><span data-stu-id="48159-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
