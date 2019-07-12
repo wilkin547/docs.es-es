@@ -6,12 +6,12 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 9e3f0941d2fd92b8657d2d9df5b050e7793eb1d1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647208"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802224"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el cliente
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "64647208"
   
  Sin embargo, los controles más antiguos como los de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] no admiten directamente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. En su lugar, se sirven estos controles por los proveedores que existen en el proceso del cliente y obtienen información sobre los controles mediante la comunicación entre procesos; por ejemplo, al supervisar mensajes de ventana hacia y desde los controles. Estos proveedores del lado cliente a veces se denominan servidores proxy.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Proporciona los proveedores estándar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] y controles de formularios Windows Forms. Además, un proveedor de reserva ofrece compatibilidad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] parcial a cualquier control que no sea atendido por otro proxy o proveedor del lado servidor pero que tenga una implementación de [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] . Todos estos proveedores se cargan automáticamente y están disponibles para las aplicaciones cliente.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Proporciona los proveedores estándar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] y controles de formularios Windows Forms. Además, un proveedor de reserva ofrece parcial [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] admite a cualquier control que no sea atendido por otro proveedor en el servidor o proxy, pero tiene una implementación de Microsoft Active Accessibility. Todos estos proveedores se cargan automáticamente y están disponibles para las aplicaciones cliente.  
   
  Para obtener más información sobre la compatibilidad con [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] y los controles de Windows Forms, vea [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   
