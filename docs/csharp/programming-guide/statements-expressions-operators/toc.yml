@@ -21,14 +21,6 @@
           href: how-to-use-lambda-expressions-outside-linq.md
         - name: Métodos anónimos
           href: anonymous-methods.md
-    - name: Operadores de conversión
-      items:
-        - name: Información general de conversiones
-          href: conversion-operators.md
-        - name: Uso de operadores de conversión
-          href: using-conversion-operators.md
-        - name: Procedimiento para implementar conversiones definidas por el usuario entre estructuras
-          href: how-to-implement-user-defined-conversions-between-structs.md
     - name: Expresiones de valor predeterminado
       href: default-value-expressions.md
     - name: Igualdad y comparaciones de igualdad

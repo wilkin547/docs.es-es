@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 668b3b927ac059acf160f5d96e8fbc614f57ddff
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504000"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802313"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -62,10 +62,10 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
 |\n|Nueva línea|0x000A|  
 |\r|Retorno de carro|0x000D|  
 |\t|Tabulación horizontal|0x0009|  
-|\U|Secuencia de escape Unicode (UTF-32)|`\U00nnnnnn` (por ejemplo, `\U0001F47D` = "&#x1F47D;")|  
-|\u|Secuencia de escape Unicode (UTF-16)|`\unnnn` (por ejemplo, `\u0041` = "A")|  
 |\v|Tabulación vertical|0x000B|  
-|\x|Secuencia de escape Unicode similar a "\u" excepto con longitud variable.|`\x0041` o `\x41` = "A"|  
+|\u|Secuencia de escape Unicode (UTF-16)|`\uHHHH` (intervalo: 0000 - FFFF; ejemplo: `\u00E7` = "ç")|  
+|\U|Secuencia de escape Unicode (UTF-32)|`\U00HHHHHH` (intervalo: 000000 - 10FFFF; ejemplo: `\U0001F47D` = "&#x1F47D;")|  
+|\x|Secuencia de escape Unicode similar a "\u" excepto con longitud variable|`\xH[H][H][H]` (intervalo: 0 - FFFF; ejemplo: `\x00E7` o `\x0E7` o `\xE7` = "ç")|  
   
 > [!WARNING]
 >  Cuando se usa la secuencia de escape `\x` y se especifican menos de 4 dígitos hexadecimales, si los caracteres que van inmediatamente después de la secuencia de escape son dígitos hexadecimales válidos (es decir, 0-9, A-f y a-f), se interpretará que forman parte de la secuencia de escape. Por ejemplo, `\xA1` genera "&#161;", que es el punto de código U+00A1. Sin embargo, si el carácter siguiente es "A" o "a", la secuencia de escape se interpretará como `\xA1A` y producirá "&#x0A1A;", que es el punto de código U+0A1A. En casos así, se pueden especificar los 4 dígitos hexadecimales (por ejemplo, `\x00A1`) para evitar posibles errores de interpretación.  

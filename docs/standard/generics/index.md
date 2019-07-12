@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c4f59bdb0537ab6ce404ed0623c40f9f3b31598d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423957"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766823"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
@@ -83,7 +83,7 @@ ms.locfileid: "66423957"
   
 - La *covarianza* y *contravarianza* de parámetros de tipo genérico permite usar tipos genéricos construidos, cuyos argumentos de tipo están más derivados (covarianza) o menos derivados (contravarianza) que un tipo construido de destino. La covarianza y la contravarianza se denominan colectivamente *varianza*. Para obtener más información, vea [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
-- Las*restricciones* son límites colocados en parámetros de tipo genérico. Por ejemplo, puede limitar un parámetro de tipo a tipos que implementan la interfaz genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> para asegurarse de que se pueden ordenar las instancias del tipo. También puede restringir los parámetros de tipo a tipos que tienen una clase base concreta, un constructor predeterminado o que son tipos de referencia o tipos de valor. Los usuarios del tipo genérico no pueden sustituir los argumentos de tipo que no cumplen con las restricciones.  
+- Las*restricciones* son límites colocados en parámetros de tipo genérico. Por ejemplo, puede limitar un parámetro de tipo a tipos que implementan la interfaz genérica <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> para asegurarse de que se pueden ordenar las instancias del tipo. También puede restringir los parámetros de tipo a tipos que tienen una clase base concreta, un constructor sin parámetros o que son tipos de referencia o tipos de valor. Los usuarios del tipo genérico no pueden sustituir los argumentos de tipo que no cumplen con las restricciones.  
   
 - Una *definición de método genérico* es un método con dos listas de parámetros: una lista de parámetros de tipo genérico y una lista de parámetros formales. Los parámetros de tipo pueden aparecer como el tipo de valor devuelto o como los tipos de los parámetros formales, como se muestra en el siguiente código.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "66423957"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Title|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Colecciones genéricas en .NET](../../../docs/standard/generics/collections.md)|Describe las clases de colección genérica y otros tipos genéricos en .NET.|  
 |[Delegados genéricos para manipular matrices y listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Describe los delegados genéricos para conversiones, predicados de búsqueda y acciones realizadas en los elementos de una matriz o colección.|  

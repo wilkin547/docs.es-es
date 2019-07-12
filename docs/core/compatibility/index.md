@@ -4,12 +4,12 @@ description: Conozca las formas en que .NET Core intenta mantener la compatibili
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/10/2019
-ms.openlocfilehash: b58edd9ff0bd56b12b861162cc92d484a3b36c8b
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c68a19b8b98a98bb9c64f5b9fa60b378935e6e93
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307540"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736558"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Evaluación de los cambios importantes en .NET Core
 
@@ -107,7 +107,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
 - **✔️ Adición de un constructor a una clase, junto con un constructor predeterminado (sin parámetros) si la clase no tenía previamente constructores**
 
-   Sin embargo, no se permite agregar un constructor a una clase que antes no tenía constructores *sin* agregar el constructor predeterminado.
+   Sin embargo, no se permite agregar un constructor a una clase que antes no tenía constructores *sin* agregar el constructor sin parámetros.
 
 - **✔️ Cambio de un miembro de tipo [abstract](../../csharp/language-reference/keywords/abstract.md) a [virtual](../../csharp/language-reference/keywords/virtual.md)**
 
@@ -174,7 +174,7 @@ Los cambios en esta categoría *modifican* el área expuesta pública de un tipo
 
   Esto interrumpe a los clientes existentes que se enlazaron a la sobrecarga anterior. Por ejemplo, si una clase tiene una versión única de un método que acepta un <xref:System.UInt32>, un consumidor existente se enlazará correctamente a esa sobrecarga al pasar un valor <xref:System.Int32>. Sin embargo, si agrega una sobrecarga que acepte un <xref:System.Int32>, al volver a compilar o utilizar la característica de enlace en tiempo de ejecución, el compilador se enlaza ahora a la nueva sobrecarga. Si se produce un comportamiento diferente, se trata de un cambio importante.
 
-- **❌ Adición de un constructor a una clase que antes no tenía constructores sin agregar el constructor predeterminado**
+- **❌ Adición de un constructor a una clase que antes no tenía constructores sin agregar el constructor sin parámetros**
 
 - **❌️ Adición de [readonly](../../csharp/language-reference/keywords/readonly.md) a un campo**
 

@@ -2,12 +2,12 @@
 title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 011e2a8208e647fb2df2ea2e949bfe2d2274eb37
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609261"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744265"
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
@@ -66,7 +66,7 @@ Puede que deba convertir un objeto a otro tipo.
 - [Convierta una matriz de bytes en un valor int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Convierta una cadena en un número](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Use la coincidencia de patrones y los operadores `as` y `is` para una conversión segura a otro tipo](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
-- [Defina los operadores de conversión para tipos `struct`](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
+- [Definición de las conversiones de tipos personalizadas](../language-reference/operators/user-defined-conversion-operators.md).
 - [Determine si un tipo es un tipo de valor que acepta valores NULL](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Realice conversiones entre tipos de valores que aceptan valores NULL y tipos que no](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 

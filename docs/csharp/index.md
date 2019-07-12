@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: fee2aad90485d3d06f1730d5937fd4e1240b4801
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65064031"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744255"
 ---
 # <a name="c-guide"></a>Guía de C#
 
@@ -35,7 +35,7 @@ Hay varias secciones en la Guía de C#. Puede leerlas en orden o ir directamente
 * [Primeros pasos](getting-started/index.md)
   * En esta sección se describe lo que necesita instalar para un entorno de desarrollo de C# en la plataforma preferida. En los diferentes temas de esta sección se explica cómo crear su primer programa de C# en diferentes entornos compatibles.
 
-* [Tutoriales de introducción a C#](tutorials/intro-to-csharp/index.md):
+* [Tutoriales de introducción a C#](tutorials/intro-to-csharp/index.md)
   * Los tutoriales de introducción a C# presentan tutoriales interactivos para que los desarrolladores sin experiencia exploren y se familiaricen con el lenguaje C# en el explorador con una interfaz read–eval–print loop (REPL). Una vez finalizadas las lecciones interactivas, puede mejorar sus habilidades de programación practicando con las mismas lecciones en su máquina.
 
 * [Tutoriales](tutorials/index.md)
