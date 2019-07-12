@@ -24,12 +24,12 @@ helpviewer_keywords:
 - focus [WPF]
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
-ms.openlocfilehash: 47d892db8418b44fffeec870e56b49d5f986b563
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 5835cfb633451025ed32c2a26228e33a1b24473e
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610477"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67857063"
 ---
 # <a name="input-overview"></a>Información general sobre acciones del usuario
 <a name="introduction"></a> El [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un eficaz subsistema [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] para obtener datos desde una variedad de dispositivos, incluido el mouse, teclado, táctil y lápiz. En este tema se describen los servicios que proporciona [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] y se explica la arquitectura de los sistemas de entrada.
@@ -58,7 +58,7 @@ ms.locfileid: "67610477"
  El <xref:System.Windows.Input.Mouse> y <xref:System.Windows.Input.Keyboard> clases se tratan con más detalle a lo largo de esta introducción.
 
 ### <a name="stylus-input"></a>Entrada del lápiz
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene compatibilidad integrada para la <xref:System.Windows.Input.Stylus>.  El <xref:System.Windows.Input.Stylus> es una entrada de lápiz que popularizó la [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones pueden tratar el lápiz como un mouse con el mouse, API, pero [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también expone una abstracción del dispositivo de lápiz óptico que usan un modelo similar del teclado y mouse (ratón).  Todas las [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] relacionadas con el lápiz contienen la palabra "Stylus".
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene compatibilidad integrada para la <xref:System.Windows.Input.Stylus>.  El <xref:System.Windows.Input.Stylus> es una entrada de lápiz que popularizó la [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)].  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones pueden tratar el lápiz como un mouse con el mouse, API, pero [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también expone una abstracción del dispositivo de lápiz óptico que usan un modelo similar del teclado y mouse (ratón).  Todas las API relacionadas con el lápiz contienen la palabra "Stylus".
 
  Dado que el lápiz puede actuar como un mouse, las aplicaciones que solo admiten la entrada de mouse pueden tener cierto nivel de compatibilidad con el lápiz automáticamente. Cuando se usa el lápiz de esta forma, la aplicación tiene la oportunidad de controlar el evento de lápiz adecuado y, a continuación, el evento de mouse correspondiente. Además, los servicios de nivel superior, como las entradas manuscritas, también están disponibles a través de la abstracción del dispositivo de lápiz.  Para obtener más información sobre la escritura con lápiz como entrada, consulte [Introducción a las entradas manuscritas](getting-started-with-ink.md).
 
@@ -354,10 +354,10 @@ ms.locfileid: "67610477"
 
 <a name="mouse_capture"></a>
 ## <a name="mouse-capture"></a>Captura del mouse
- Los dispositivos de mouse tienen una característica modal concreta que se denomina captura del mouse. La captura del mouse se usa para mantener un estado de entrada transitorio cuando se inicia una operación de arrastrar y colocar, para que otras operaciones relacionadas con la posición en pantalla nominal del puntero del mouse no se produzcan necesariamente. Al arrastrar, el usuario no puede hacer clic sin anular la acción de arrastrar y colocar, lo que hace que la mayoría de las indicaciones que se producen al pasar el mouse sean inadecuadas mientras se conserva la captura del mouse desde el origen de la acción de arrastrar. El sistema de entrada expone [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] que pueden determinar el estado de captura del mouse, además de [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] que pueden forzar la captura del mouse en un elemento concreto o borrar el estado de la captura del mouse. Para obtener más información sobre las operaciones de arrastrar y colocar, consulte [Información general sobre la función de arrastrar y colocar](drag-and-drop-overview.md).
+ Los dispositivos de mouse tienen una característica modal concreta que se denomina captura del mouse. La captura del mouse se usa para mantener un estado de entrada transitorio cuando se inicia una operación de arrastrar y colocar, para que otras operaciones relacionadas con la posición en pantalla nominal del puntero del mouse no se produzcan necesariamente. Al arrastrar, el usuario no puede hacer clic sin anular la acción de arrastrar y colocar, lo que hace que la mayoría de las indicaciones que se producen al pasar el mouse sean inadecuadas mientras se conserva la captura del mouse desde el origen de la acción de arrastrar. El sistema de entrada expone las API que se pueden determinar el estado de la captura del mouse, así como las API que pueden forzar la captura del mouse en un elemento concreto o borrar el estado de la captura del mouse. Para obtener más información sobre las operaciones de arrastrar y colocar, consulte [Información general sobre la función de arrastrar y colocar](drag-and-drop-overview.md).
 
 <a name="commands"></a>
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
  Los comandos habilitan el control de entrada en un nivel más semántico que la entrada de dispositivos.  Los comandos son directivas sencillas, como `Cut`, `Copy`, `Paste` o `Open`.  Los comandos son útiles para centralizar la lógica de comando.  Puede tener acceso el mismo comando desde un <xref:System.Windows.Controls.Menu>, en un <xref:System.Windows.Controls.ToolBar>, o a través de un método abreviado de teclado. Los comandos también proporcionan un mecanismo para deshabilitar controles cuando el comando deja de estar disponible.
 
  <xref:System.Windows.Input.RoutedCommand> es el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] implementací <xref:System.Windows.Input.ICommand>.  Cuando un <xref:System.Windows.Input.RoutedCommand> se ejecuta, un <xref:System.Windows.Input.CommandManager.PreviewExecuted> y un <xref:System.Windows.Input.CommandManager.Executed> eventos se generan en el destino del comando, y se tunelizan y propagan a través del árbol de elementos como otra entrada.  Si no se define ningún destino de comando, el elemento con el foco de teclado será el destino del comando.  La lógica que ejecuta el comando se adjunta a un <xref:System.Windows.Input.CommandBinding>.  Cuando un <xref:System.Windows.Input.CommandManager.Executed> evento alcanza un <xref:System.Windows.Input.CommandBinding> para ese comando concreto, el <xref:System.Windows.Input.ExecutedRoutedEventHandler> en el <xref:System.Windows.Input.CommandBinding> se llama.  Este controlador realiza la acción del comando.

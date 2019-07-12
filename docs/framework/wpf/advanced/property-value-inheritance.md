@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c5547955a1d5d20938e3896406631da0fae0c5d
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981921"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860047"
 ---
 # <a name="property-value-inheritance"></a>Herencia de valores de propiedad
 La herencia de valores de propiedad es una característica del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La herencia de valores de propiedad permite que los elementos secundarios de un árbol de elementos obtengan el valor de una propiedad determinada de los elementos principales y que hereden ese valor tal como se estableció en cualquier otro lugar del elemento principal más cercano. Es posible que el elemento principal también haya obtenido su valor a través de la herencia de valores de propiedad, por lo que el sistema se repite potencialmente hasta la raíz de la página. La herencia de valores de propiedad no es el comportamiento del sistema de propiedades predeterminado: es necesario establecer una propiedad con un valor de metadatos concreto para que inicie la herencia de valores de propiedad en elementos secundarios.  
@@ -22,7 +22,7 @@ La herencia de valores de propiedad es una característica del sistema de propie
   
 <a name="Practical_Applications_of_Property_Value_Inheritance"></a>   
 ## <a name="practical-applications-of-property-value-inheritance"></a>Aplicaciones prácticas de la herencia de valores de propiedad  
- Las [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluyen varias propiedades que tienen habilitada la herencia de propiedad. Normalmente, el escenario en estos casos es que implican una propiedad donde es apropiado que se establezca la propiedad una sola vez por página, pero donde esa propiedad también es un miembro de una de las clases de elementos base y, por tanto, también existirá en la mayoría de los elementos secundarios. Por ejemplo, el <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad controla qué dirección fluye el contenido debe aparecer y se organizan en la página. Normalmente, quiere que el concepto de flujo de texto se controle de forma coherente en todos los elementos secundarios. Si el usuario o una acción del entorno restableciera la dirección de flujo por alguna razón en algún nivel del árbol de elementos, normalmente, debería restablecerse en todo el árbol. Cuando el <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad se realiza para heredar, el valor sólo se debe establecer o restablecer una vez en el nivel del árbol de elementos que abarque las necesidades de presentación de cada página de la aplicación. Incluso el valor predeterminado inicial se heredará de esta manera. El modelo de herencia de valor de propiedad aún permite que elementos individuales restablezcan el valor para los pocos casos en los que tener una combinación de direcciones de flujo es deliberado.  
+ El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API incluyen varias propiedades que tienen habilitada la herencia de propiedad. Normalmente, el escenario en estos casos es que implican una propiedad donde es apropiado que se establezca la propiedad una sola vez por página, pero donde esa propiedad también es un miembro de una de las clases de elementos base y, por tanto, también existirá en la mayoría de los elementos secundarios. Por ejemplo, el <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad controla qué dirección fluye el contenido debe aparecer y se organizan en la página. Normalmente, quiere que el concepto de flujo de texto se controle de forma coherente en todos los elementos secundarios. Si el usuario o una acción del entorno restableciera la dirección de flujo por alguna razón en algún nivel del árbol de elementos, normalmente, debería restablecerse en todo el árbol. Cuando el <xref:System.Windows.FrameworkElement.FlowDirection%2A> propiedad se realiza para heredar, el valor sólo se debe establecer o restablecer una vez en el nivel del árbol de elementos que abarque las necesidades de presentación de cada página de la aplicación. Incluso el valor predeterminado inicial se heredará de esta manera. El modelo de herencia de valor de propiedad aún permite que elementos individuales restablezcan el valor para los pocos casos en los que tener una combinación de direcciones de flujo es deliberado.  
   
 <a name="Making_a_Custom_Property_Inheritable"></a>   
 ## <a name="making-a-custom-property-inheritable"></a>Hacer heredable una propiedad personalizada  

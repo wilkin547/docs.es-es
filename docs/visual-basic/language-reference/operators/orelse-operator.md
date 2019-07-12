@@ -11,31 +11,31 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 28d1481b71979936bb16a2ecfb1140d85a674ef7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02be78c8f2b7529f1fb0e46e9fe610a3c66b0652
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054996"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860143"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse (Operador) (Visual Basic)
 Realiza una disyunción lógica inclusiva en dos expresiones de cortocircuito.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```vb
 result = expression1 OrElse expression2  
 ```  
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Cualquier expresión `Boolean` .  
+ Necesario. Cualquier expresión `Boolean` .  
   
  `expression1`  
- Obligatorio. Cualquier expresión `Boolean` .  
+ Necesario. Cualquier expresión `Boolean` .  
   
  `expression2`  
- Obligatorio. Cualquier expresión `Boolean` .  
+ Necesario. Cualquier expresión `Boolean` .  
   
 ## <a name="remarks"></a>Comentarios  
  Se dice que una operación lógica sea *cortocircuitar* si el código compilado puede omitir la evaluación de una expresión en función del resultado de otra expresión. Si el resultado de la primera expresión evaluada determina el resultado final de la operación, no hay ninguna necesidad de evaluar la segunda expresión, porque no se puede cambiar el resultado final. Evaluación cortocircuitada puede mejorar el rendimiento si la expresión omitida es compleja, o si se trata de las llamadas a procedimiento.  
@@ -49,7 +49,8 @@ result = expression1 OrElse expression2
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>Tipos de datos  
- El `OrElse` operador está definido solo para el [tipo de datos Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic convierte cada operando según sea necesario para `Boolean` y realiza la operación totalmente en `Boolean`. Si asigna el resultado a un tipo numérico, Visual Basic convierte desde `Boolean` a ese tipo. Esto podría producir un comportamiento inesperado. Por ejemplo, `5 OrElse 12` da como resultado `–1` cuando se convierte en `Integer`.  
+ El `OrElse` operador está definido solo para el [tipo de datos Boolean](../../../visual-basic/language-reference/data-types/boolean-data-type.md). Visual Basic convierte cada operando según sea necesario para `Boolean` antes de evaluar la expresión. Si asigna el resultado a un tipo numérico, Visual Basic convierte desde `Boolean` a ese tipo de modo que `False` se convierte en `0` y `True` se convierte en `-1`.
+Para obtener más información, consulte [conversiones de tipo booleano](../data-types/boolean-data-type.md#type-conversions)
   
 ## <a name="overloading"></a>Sobrecarga  
  El [operador o](../../../visual-basic/language-reference/operators/or-operator.md) y [IsTrue (operador)](../../../visual-basic/language-reference/operators/istrue-operator.md) puede ser *sobrecargado*, lo que significa que una clase o estructura puede redefinir su comportamiento cuando un operando tiene el tipo de la clase o estructura. Sobrecargar el `Or` y `IsTrue` operadores afecta al comportamiento de la `OrElse` operador. Si el código usa `OrElse` en una clase o estructura que sobrecarga `Or` y `IsTrue`, asegúrese de conocer su comportamiento redefinido. Para obtener más información, consulta [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  

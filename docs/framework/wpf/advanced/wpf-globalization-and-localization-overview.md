@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 374ab546cb0ba7a4b1fd789b13aca0158f22f686
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6bccff6bf3bb061a430a9105d99f2fee3511c7fd
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662899"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859900"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Información general sobre la globalización y la localización de WPF
 
@@ -82,13 +82,13 @@ Cuando localice un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharpt
 
 Al desarrollar una [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación, el proceso de compilación para la localización es como sigue:
 
-- El desarrollador crea y globaliza la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación. En el proyecto de archivos el desarrollador establece `<UICulture>en-US</UICulture>` para que cuando se compila la aplicación, se genera un ensamblado principal independiente del idioma. Este ensamblado tiene un archivo satélite .resources.dll que contiene todos los recursos localizables. Si lo desea, puede mantener el idioma de origen en el ensamblado principal porque nuestro localización [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] admiten la extracción desde el ensamblado principal.
+- El desarrollador crea y globaliza la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicación. En el proyecto de archivos el desarrollador establece `<UICulture>en-US</UICulture>` para que cuando se compila la aplicación, se genera un ensamblado principal independiente del idioma. Este ensamblado tiene un archivo satélite .resources.dll que contiene todos los recursos localizables. Si lo desea, puede mantener el idioma de origen en el ensamblado principal porque nuestra API de localización permiten la extracción desde el ensamblado principal.
 
 - Cuando se compila el archivo en la compilación, el [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se convierte en el formulario BAML de XAML. Culturalmente neutro `MyDialog.exe` y culturalmente dependiente (en inglés) `MyDialog.resources.dll` archivos se liberan al cliente angloparlante.
 
 ### <a name="localization-workflow"></a>Flujo de trabajo de localización
 
-El proceso de localización comienza después el sin localizar `MyDialog.resources.dll` se compila el archivo. El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos y propiedades de la original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] el formulario BAML de XAML en pares clave-valor se extraen mediante el uso de la [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] en <xref:System.Windows.Markup.Localizer>. Los localizadores usan los pares clave-valor para localizar la aplicación. Puede generar un nuevo archivo .resource.dll a partir de los nuevos valores, una vez completada la localización.
+El proceso de localización comienza después el sin localizar `MyDialog.resources.dll` se compila el archivo. El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementos y propiedades de la original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] se extraen mediante las API en el formulario BAML de XAML en pares de clave-valor <xref:System.Windows.Markup.Localizer>. Los localizadores usan los pares clave-valor para localizar la aplicación. Puede generar un nuevo archivo .resource.dll a partir de los nuevos valores, una vez completada la localización.
 
 Las claves de los pares de clave y valor son `x:Uid` valores que se colocan por el desarrollador en el original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Estos `x:Uid` valores permiten que la API para realizar un seguimiento y combinar los cambios que se producen entre el desarrollador y el localizador durante la localización. Por ejemplo, si el desarrollador cambia el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] después de que el localizador empiece a localizar, puede combinar el cambio de desarrollo con el trabajo de localización ya completado para que el trabajo de traducción mínima se pierde.
 
@@ -130,9 +130,9 @@ La propiedad Window anterior cambia automáticamente el tamaño de la ventana en
 
 `<Grid x:Uid="Grid_1">`
 
-<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> se necesitan propiedades en orden para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localización [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] funcione correctamente.
+<xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> se necesitan propiedades en orden para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localización API funcione correctamente.
 
-Se usan por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] localización [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] para realizar el seguimiento de cambios entre el desarrollo y la localización de la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades le permiten combinar una versión más reciente de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con una localización anterior de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Agrega un <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedad ejecutando `msbuild -t:updateuid RunDialog.csproj` en un shell de comandos. Este es el método recomendado de agregar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades porque agregarlas manualmente suele exigir mucho tiempo y menos precisa. Puede comprobar que <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades se establecen correctamente ejecutando `msbuild -t:checkuid RunDialog.csproj`.
+Se usan por [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] API para realizar el seguimiento de cambios entre el desarrollo y la localización de localización del [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades le permiten combinar una versión más reciente de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] con una localización anterior de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Agrega un <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedad ejecutando `msbuild -t:updateuid RunDialog.csproj` en un shell de comandos. Este es el método recomendado de agregar <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades porque agregarlas manualmente suele exigir mucho tiempo y menos precisa. Puede comprobar que <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> propiedades se establecen correctamente ejecutando `msbuild -t:checkuid RunDialog.csproj`.
 
 El [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] se estructura usando el <xref:System.Windows.Controls.Grid> control, que es un control útil para aprovechar el diseño automático en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Observe que el cuadro de diálogo se divide en tres filas y cinco columnas. No, una de las definiciones de columna y fila tiene un tamaño fijo; por lo tanto, el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] los elementos que se colocan en cada celda pueden adaptarse a aumentos y reducciones de tamaño durante la localización.
 
@@ -178,26 +178,26 @@ Después de compilar la aplicación, el primer paso para localizarla es analizar
 
 Use su editor favorito de archivos .CSV compatible con Unicode para modificar este archivo. Filtre todas las entradas que tengan la categoría de localización "None". Debería ver las entradas siguientes:
 
-|Clave de recurso|Categoría de localización|Valor|
+|Clave de recurso|Categoría de localización|Value|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Botón|Aceptar|
+|Button_1:System.Windows.Controls.Button.$Content|Botón|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Botón|Cancelar|
 |Button_3:System.Windows.Controls.Button.$Content|Botón|Examinar...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Escriba el nombre del programa, carpeta, documento o recurso de Internet que desea abrir con Windows.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Abrir:|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Escriba el nombre del programa, carpeta, documento o recurso de Internet que desea abrir con Windows.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Abrir:|
 |Window_1:System.Windows.Window.Title|Título|Run|
 
 Localizar la aplicación a alemán requerirá las traducciones siguientes:
 
 |Clave de recurso|Categoría de localización|Valor|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|Botón|Aceptar|
+|Button_1:System.Windows.Controls.Button.$Content|Botón|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Botón|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Botón|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Öffnen:|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|Öffnen:|
 |Window_1:System.Windows.Window.Title|Título|Run|
 
 **Generar**
@@ -269,7 +269,7 @@ Este comentario se asocia con el contenido de TextBlock_1 y en el caso de la her
 
 |Clave de recurso|Categoría|Legible|Modificable|Comentario|Valor|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|TRUE|true|Este carácter se usa como una regla decorativa.|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|Este carácter se usa como una regla decorativa.|&#124;|
 
 Se pueden colocar comentarios en el contenido o en las propiedades de cualquier elemento usando la sintaxis siguiente:
 

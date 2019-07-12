@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: f19186380b0cbc71cdd64013ca5e49361ba26cda
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0181093de1c40889110ab7eae75a3847a17845a9
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778381"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859937"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Tutorial: Hospedar un control ActiveX en WPF
-Para habilitar la interacción mejorada con los exploradores, puede usar [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controles en su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-aplicación basada en. Este tutorial muestra cómo puede hospedar el [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] como un control en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página.
+Para habilitar la interacción mejorada con los exploradores, puede usar los controles ActiveX de Microsoft en su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-aplicación basada en. Este tutorial muestra cómo puede hospedar el [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] como un control en un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] página.
 
  Las tareas ilustradas en este tutorial incluyen:
 
@@ -26,7 +26,7 @@ Para habilitar la interacción mejorada con los exploradores, puede usar [!INCLU
 
 - Hospedar el control ActiveX en una página de WPF.
 
- Cuando haya completado este tutorial, comprenderá cómo usar [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controles en su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-aplicación basada en.
+ Cuando haya completado este tutorial, comprenderá cómo usar controles ActiveX de Microsoft en su [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-aplicación basada en.
 
 ## <a name="prerequisites"></a>Requisitos previos
  Necesita los componentes siguientes para completar este tutorial:
@@ -60,7 +60,7 @@ Para habilitar la interacción mejorada con los exploradores, puede usar [!INCLU
 9. Si se le solicite cambiar el nombre de todas las referencias, haga clic en **Sí**.
 
 ## <a name="creating-the-activex-control"></a>Crear el Control ActiveX
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] genera automáticamente un <xref:System.Windows.Forms.AxHost> clase contenedora para un [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] controlar cuando el control se agrega a una superficie de diseño. El procedimiento siguiente crea un ensamblado administrado denominado AxInterop.WMPLib.dll.
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] genera automáticamente un <xref:System.Windows.Forms.AxHost> clase contenedora para un control ActiveX de Microsoft cuando el control se agrega a una superficie de diseño. El procedimiento siguiente crea un ensamblado administrado denominado AxInterop.WMPLib.dll.
 
 ### <a name="to-create-the-activex-control"></a>Para crear el control ActiveX
 
@@ -76,7 +76,7 @@ Para habilitar la interacción mejorada con los exploradores, puede usar [!INCLU
 
 ### <a name="to-host-the-activex-control"></a>Para hospedar el control ActiveX
 
-1. En el proyecto HostingAxInWpf, agregue una referencia a generado [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] ensamblado de interoperabilidad.
+1. En el proyecto HostingAxInWpf, agregue una referencia al ensamblado de interoperabilidad ActiveX generado.
 
      Este ensamblado se denomina AxInterop.WMPLib.dll y se agregó a la carpeta Debug del proyecto WmpAxLib al importar el control de Windows Media Player.
 

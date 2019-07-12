@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 0c5bae64fbbeddedd905e5df0b5789542e29f2f1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 61e7f6d29cf9275004238ca776d5af9bf027004f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833929"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859911"
 ---
 # <a name="weak-event-patterns"></a>Modelos de evento débil
 En las aplicaciones, es posible que los controladores que están conectados a orígenes de eventos no se destruirán en coordinación con el objeto de agente de escucha que adjuntó el controlador para el origen. Esta situación puede provocar pérdidas de memoria. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] presenta un patrón de diseño que se puede usar para resolver este problema, que proporciona una clase de administrador dedicada para eventos concretos e implementando una interfaz en los agentes de escucha para ese evento. Este patrón de diseño se conoce como el *modelo de evento débil*.  
@@ -21,7 +21,7 @@ En las aplicaciones, es posible que los controladores que están conectados a or
   
  Esta técnica crea una referencia segura desde el origen del evento a la escucha de eventos. Normalmente, adjuntar un controlador de eventos para un agente de escucha, hace que el agente de escucha tienen una duración de objeto que se ve afectada por la duración del objeto de origen (a menos que explícitamente se quita el controlador de eventos). Pero en determinadas circunstancias, puede que desee la duración del objeto del agente de escucha que estén controladas por otros factores, como si lo actualmente pertenece al árbol visual de la aplicación y no por la duración de la fuente. Cada vez que la duración del objeto de origen se extiende más allá de la duración del objeto del agente de escucha, el patrón de eventos normales conduce a una pérdida de memoria: el agente de escucha se mantiene activo más tiempo del previsto.  
   
- El modelo de evento débil está diseñado para resolver este problema de pérdida de memoria. El modelo de evento débil puede usarse siempre que un agente de escucha necesita registrarse para un evento, pero el agente de escucha no conoce explícitamente cuándo se debe anular el registro. También se puede usar el modelo de evento débil cada vez que la duración del objeto de origen supera la duración del objeto útiles del agente de escucha. (En este caso, *útil* viene determinada por el usuario.) El modelo de evento débil permite que el agente de escucha para registrarse y recibir el evento sin que afecte a las características de la duración de objeto del agente de escucha de ninguna manera. De hecho, la referencia implícita desde el origen no determina si el agente de escucha es apto para la recolección de elementos. La referencia es una referencia débil, por lo tanto la denominación de modelo de evento débil y relacionado [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. El agente de escucha puede ser elementos no utilizados o se destruye en caso contrario, y el origen puede continuar sin conservar las referencias de controlador no recopilables a un objeto que se ha destruido.  
+ El modelo de evento débil está diseñado para resolver este problema de pérdida de memoria. El modelo de evento débil puede usarse siempre que un agente de escucha necesita registrarse para un evento, pero el agente de escucha no conoce explícitamente cuándo se debe anular el registro. También se puede usar el modelo de evento débil cada vez que la duración del objeto de origen supera la duración del objeto útiles del agente de escucha. (En este caso, *útil* viene determinada por el usuario.) El modelo de evento débil permite que el agente de escucha para registrarse y recibir el evento sin que afecte a las características de la duración de objeto del agente de escucha de ninguna manera. De hecho, la referencia implícita desde el origen no determina si el agente de escucha es apto para la recolección de elementos. La referencia es una referencia débil, por lo tanto la denominación de modelo de evento débil y las API relacionadas. El agente de escucha puede ser elementos no utilizados o se destruye en caso contrario, y el origen puede continuar sin conservar las referencias de controlador no recopilables a un objeto que se ha destruido.  
   
 ## <a name="who-should-implement-the-weak-event-pattern"></a>¿Quién debe implementar el modelo de evento débil?  
  Implementar el patrón de evento débil es interesante, principalmente para los autores de controles. Como autor del control, es responsable en gran medida el comportamiento y la contención de su control y el impacto que tiene en las aplicaciones en la que se inserta. Esto incluye el comportamiento de duración de objetos de control, en particular la administración del problema de pérdida de memoria descrito.  

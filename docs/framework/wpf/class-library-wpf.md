@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WPF class library [WPF]
 - Windows Presentation Foundation class library [WPF]
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
-ms.openlocfilehash: 1c806147d1dfb30bfd9fa73102ed4b65c776671a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d43b46be2e05561eadcba12c744368db056a3ce5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489603"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859706"
 ---
 # <a name="class-library-wpf"></a>Biblioteca de clases (WPF)
-Los vínculos siguientes hacen referencia a espacios de nombres que contienen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../includes/tlasharptla-apisharpplural-md.md)].  
+Los vínculos siguientes hacen referencia a espacios de nombres que contienen [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 27554d7e0a7e980d240e0609fe0561c2138f0aa1
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 659497543d40c8eda18b55b4d98feac976c5abf5
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664057"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860243"
 ---
 # <a name="custom-dependency-properties"></a>Propiedades de dependencia personalizadas
 
@@ -87,7 +87,7 @@ La definición de una propiedad de dependencia consta de cuatro conceptos distin
 
 ### <a name="registering-the-property-with-the-property-system"></a>Registro de la propiedad con el sistema de propiedades
 
-Para que la propiedad sea una propiedad de dependencia, debe registrarla en una tabla (de cuyo mantenimiento se encargue el sistema de propiedades) y asignarle un identificador único, que se usará como calificador en operaciones posteriores del sistema de propiedades. Estas operaciones podrían ser operaciones internas, o bien su propio sistema de propiedades de llamada al código [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Para registrar la propiedad, llame a la <xref:System.Windows.DependencyProperty.Register%2A> método dentro del cuerpo de la clase (dentro de la clase, pero fuera de las definiciones de miembros). El campo de identificador también lo proporciona el <xref:System.Windows.DependencyProperty.Register%2A> llamada al método, como el valor devuelto. La razón por la que el <xref:System.Windows.DependencyProperty.Register%2A> llamada se realiza fuera de otro miembro definiciones es porque este valor devuelto se utiliza para asignar y crear un `public` `static` `readonly` campo de tipo <xref:System.Windows.DependencyProperty> como parte de la clase. Este campo se convierte en el identificador de la propiedad de dependencia.
+Para que la propiedad sea una propiedad de dependencia, debe registrarla en una tabla (de cuyo mantenimiento se encargue el sistema de propiedades) y asignarle un identificador único, que se usará como calificador en operaciones posteriores del sistema de propiedades. Estas operaciones podrían ser operaciones internas o su propio código que llama a las API del sistema de propiedades. Para registrar la propiedad, llame a la <xref:System.Windows.DependencyProperty.Register%2A> método dentro del cuerpo de la clase (dentro de la clase, pero fuera de las definiciones de miembros). El campo de identificador también lo proporciona el <xref:System.Windows.DependencyProperty.Register%2A> llamada al método, como el valor devuelto. La razón por la que el <xref:System.Windows.DependencyProperty.Register%2A> llamada se realiza fuera de otro miembro definiciones es porque este valor devuelto se utiliza para asignar y crear un `public` `static` `readonly` campo de tipo <xref:System.Windows.DependencyProperty> como parte de la clase. Este campo se convierte en el identificador de la propiedad de dependencia.
 
 [!code-csharp[WPFAquariumSln#RegisterAG](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerag)]
 [!code-vb[WPFAquariumSln#RegisterAG](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerag)]
@@ -174,7 +174,7 @@ Las propiedades de dependencia de tipo de colección presentan algunos problemas
 
 ## <a name="dependency-property-security-considerations"></a>Consideraciones de seguridad de las propiedades de dependencia
 
-Las propiedades de dependencia deben declararse como propiedades públicas. Los campos de identificador de las propiedades de dependencia deben declararse como campos estáticos públicos. Aunque intente declarar otros niveles de acceso (como protegido), siempre se puede acceder a una propiedad de dependencia a través del identificador en combinación con el sistema de propiedades [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]. Incluso un campo de identificador protegido es potencialmente accesible debido a la determinación de elaboración de informes o el valor de metadatos [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] que forman parte del sistema de propiedades, como <xref:System.Windows.LocalValueEnumerator>. Para obtener más información, consulte [Seguridad de las propiedades de dependencia](dependency-property-security.md).
+Las propiedades de dependencia deben declararse como propiedades públicas. Los campos de identificador de las propiedades de dependencia deben declararse como campos estáticos públicos. Aunque intente declarar otros niveles de acceso (como protegidos), una propiedad de dependencia siempre se puede acceder a través del identificador en combinación con las API del sistema de propiedad. Incluso un campo de identificador protegido es potencialmente accesible debido a la determinación de elaboración de informes o el valor de metadatos API que forman parte del sistema de propiedades, como <xref:System.Windows.LocalValueEnumerator>. Para obtener más información, consulte [Seguridad de las propiedades de dependencia](dependency-property-security.md).
 
 <a name="DPCtor"></a>
 

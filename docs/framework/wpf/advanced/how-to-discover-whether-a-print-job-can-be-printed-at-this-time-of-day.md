@@ -10,19 +10,19 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: c68e6a69553f2cb14eb442c31e5138009f3c8411
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee38caedc5d5a29d2221d6e5a6bf6cf74617bf8c
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619441"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859721"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Procedimiento Detectar si un trabajo de impresión se puede imprimir en esta hora del día
 Las colas de impresión no están siempre disponibles durante 24 horas al día. Tienen propiedades de tiempo de inicio y finalización que se pueden establecer para que no esté disponible en determinados momentos del día. Esta característica, por ejemplo, puede usarse para reservar una impresora para uso exclusivo de un determinado departamento después de las 5 P.M.. Ese departamento tendría una cola diferente, mantenimiento de la impresora que otros departamentos usar. La cola para los otros departamentos se establecería en estar disponible después de 5 P.M., mientras que la cola del departamento favorecido podría establecerse como disponible en todo momento.  
   
  Además, los propios trabajos de impresión se pueden establecer en ser imprimible solo dentro de un intervalo de tiempo especificado.  
   
- El <xref:System.Printing.PrintQueue> y <xref:System.Printing.PrintSystemJobInfo> clases se expongan en el [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] de Microsoft .NET Framework proporcionan un medio para la comprobación de forma remota si un determinado trabajo de impresión puede imprimir en una cola determinada en el momento actual.  
+ El <xref:System.Printing.PrintQueue> y <xref:System.Printing.PrintSystemJobInfo> clases expuestas en la API de Microsoft .NET Framework proporcionan un medio para la comprobación de forma remota si un determinado trabajo de impresión puede imprimir en una cola determinada en el momento actual.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente es un ejemplo que puede diagnosticar problemas con un trabajo de impresión.  
@@ -54,7 +54,7 @@ Las colas de impresión no están siempre disponibles durante 24 horas al día. 
  Las dos sobrecargas de los **ReportAvailabilityAtThisTime** método son idénticos salvo por el tipo pasado a ellas, por lo que solo el <xref:System.Printing.PrintQueue> versión se presenta a continuación.  
   
 > [!NOTE]
->  El hecho de que los métodos son idénticos salvo por tipo plantea la pregunta de por qué el ejemplo no crea un método genérico **ReportAvailabilityAtThisTime\<T >**. El motivo es que este tipo de método tendría que estar restringido a una clase que tiene el **las StartTimeOfDay** y **UntilTimeOfDay** las propiedades que se llama al método, pero un método genérico solo pueden restringirse a un único de clase y la única clase comunes a ambos <xref:System.Printing.PrintQueue> y <xref:System.Printing.PrintSystemJobInfo> en la herencia es árbol <xref:System.Printing.PrintSystemObject> que no tiene ninguna propiedad de este tipo.  
+>  El hecho de que los métodos son idénticos salvo por tipo plantea la pregunta de por qué el ejemplo no crea un método genérico **ReportAvailabilityAtThisTime\<T >** . El motivo es que este tipo de método tendría que estar restringido a una clase que tiene el **las StartTimeOfDay** y **UntilTimeOfDay** las propiedades que se llama al método, pero un método genérico solo pueden restringirse a un único de clase y la única clase comunes a ambos <xref:System.Printing.PrintQueue> y <xref:System.Printing.PrintSystemJobInfo> en la herencia es árbol <xref:System.Printing.PrintSystemObject> que no tiene ninguna propiedad de este tipo.  
   
  El **ReportAvailabilityAtThisTime** método (presentado en el ejemplo de código siguiente) comienza por inicializar un <xref:System.Boolean> variable centinela para `true`. Se restablecerá a `false`, si la cola no está disponible.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: d2fe63ed4bdefc91e4847af799747219bd7b4a76
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31efc6e514682502e91487565869285dad22cab0
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611726"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860023"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Compartir bucles de mensajes entre Win32 y WPF
 Este tema describe cómo implementar un bucle de mensajes para la interoperación con [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], mediante el uso existente del mensaje exposición de bucle en <xref:System.Windows.Threading.Dispatcher> o mediante la creación de un bucle de mensajes independiente en el [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] en paralelo del código de interoperación.  
@@ -20,7 +20,7 @@ Este tema describe cómo implementar un bucle de mensajes para la interoperació
 ## <a name="componentdispatcher-and-the-message-loop"></a>ComponentDispatcher y el bucle de mensajes  
  Un escenario normal para la compatibilidad con eventos de teclado y la interoperación consiste en implementar <xref:System.Windows.Interop.IKeyboardInputSink>, o para crear una subclase de las clases que ya implementan <xref:System.Windows.Interop.IKeyboardInputSink>, tales como <xref:System.Windows.Interop.HwndSource> o <xref:System.Windows.Interop.HwndHost>. Sin embargo, compatibilidad con receptor de teclado no abordar las necesidades de bucle de mensaje posible es posible que tenga al enviar y recibir mensajes a través de los límites de interoperación. Para ayudar a formalizar una arquitectura de bucle de mensaje de aplicación, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona el <xref:System.Windows.Interop.ComponentDispatcher> (clase), que define un protocolo simple de un bucle de mensajes a seguir.  
   
- <xref:System.Windows.Interop.ComponentDispatcher> es una clase estática que expone a varios miembros. El ámbito de cada método implícitamente está asociado al subproceso que realiza la llamada. Un bucle de mensajes debe llamar a algunas de ellas [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] en los momentos críticos (como se define en la sección siguiente).  
+ <xref:System.Windows.Interop.ComponentDispatcher> es una clase estática que expone a varios miembros. El ámbito de cada método implícitamente está asociado al subproceso que realiza la llamada. Un bucle de mensajes debe llamar a algunas de esas API en los momentos críticos (como se define en la sección siguiente).  
   
  <xref:System.Windows.Interop.ComponentDispatcher> Proporciona eventos que pueden escuchar otros componentes (por ejemplo, el receptor del teclado). El <xref:System.Windows.Threading.Dispatcher> llama a todos los controles de la clase <xref:System.Windows.Interop.ComponentDispatcher> métodos en la secuencia apropiada. Si está implementando su propio bucle de mensajes, el código es responsable de llamar a <xref:System.Windows.Interop.ComponentDispatcher> los métodos de una manera similar.  
   
