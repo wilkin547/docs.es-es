@@ -9,7 +9,5 @@
       href: how-to-raise-base-class-events-in-derived-classes.md
     - name: Procedimiento para implementar eventos de interfaz
       href: how-to-implement-interface-events.md
-    - name: Procedimiento para usar un diccionario para almacenar instancias de eventos
-      href: how-to-use-a-dictionary-to-store-event-instances.md
     - name: Procedimiento para implementar descriptores de acceso de eventos personalizados
       href: how-to-implement-custom-event-accessors.md
