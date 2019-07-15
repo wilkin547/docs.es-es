@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ce8e162e11802de1b06bfbc63d5c55de67ef23df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a2d4b7592727ca20ee79867094d6972eb9c4baed
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805129"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857272"
 ---
 ### <a name="wcf-msmqsecurehashalgorithm-default-value-is-now-sha256"></a>El valor predeterminado de MsmqSecureHashAlgorithm de WCF ahora es SHA256
 
@@ -15,3 +15,4 @@ ms.locfileid: "59805129"
 |Ámbito|Secundaria|
 |Versión|4.7.1|
 |Tipo|Tiempo de ejecución|
+

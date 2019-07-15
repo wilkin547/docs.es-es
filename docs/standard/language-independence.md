@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214746"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663006"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Independencia del lenguaje y componentes independientes del lenguaje
 
@@ -29,35 +29,35 @@ En este artículo:
 
 * [Reglas de conformidad con CLS](#cls-compliance-rules)
 
-    * [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatures)
+  * [Signaturas de tipos y miembros de tipo](#types-and-type-member-signatures)
 
-    * [Convenciones de nomenclatura](#naming-conventions)
+  * [Convenciones de nomenclatura](#naming-conventions)
 
-    * [Conversión de tipos](#type-conversion)
+  * [Conversión de tipos](#type-conversion)
 
-    * [Matrices](#arrays)
+  * [Matrices](#arrays)
 
-    * [Interfaces](#interfaces)
+  * [Interfaces](#interfaces)
 
-    * [Enumeraciones](#enumerations)
+  * [Enumeraciones](#enumerations)
 
-    * [Miembros de tipos en general](#type-members-in-general)
+  * [Miembros de tipos en general](#type-members-in-general)
 
-    * [Accesibilidad de miembros](#member-accessibility)
+  * [Accesibilidad de miembros](#member-accessibility)
 
-    * [Miembros y tipos genéricos](#generic-types-and-members)
+  * [Miembros y tipos genéricos](#generic-types-and-members)
 
-    * [Constructores](#constructors)
+  * [Constructores](#constructors)
 
-    * [Propiedades](#properties)
+  * [Propiedades](#properties)
 
-    * [Eventos](#events)
+  * [Eventos](#events)
 
-    * [Sobrecargas](#overloads)
+  * [Sobrecargas](#overloads)
 
-    * [Excepciones](#exceptions)
+  * [Excepciones](#exceptions)
 
-    * [Atributos](#attributes)
+  * [Atributos](#attributes)
 
 * [CLSCompliantAttribute (Atributo)](#the-clscompliantattribute-attribute)
 
@@ -315,7 +315,7 @@ Todos los tipos que aparecen en las signaturas de miembros, incluidos los tipos 
 
 El [sistema de tipos común](common-type-system.md) de .NET incluye varios tipos integrados que se admiten directamente en Common Language Runtime y que se codifican de forma especial en los metadatos de un ensamblado. De estos tipos intrínsecos, los tipos enumerados en la tabla siguiente son conformes a CLS.
 
-Tipo conforme a CLS | Descripción
+Tipo conforme a CLS | DESCRIPCIÓN
 ------------------ | -----------
 [Byte](xref:System.Byte) | Entero de 8 bits sin signo
 [Int16](xref:System.Int16) | Entero de 16 bits con signo
@@ -331,7 +331,7 @@ Tipo conforme a CLS | Descripción
 
 Los tipos intrínsecos enumerados en la tabla siguiente no son conformes a CLS.
 
-Tipo no conforme | Descripción | Alternativa conforme a CLS
+Tipo no conforme | DESCRIPCIÓN | Alternativa conforme a CLS
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Tipo de datos enteros de 8 bits con signo | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Entero de 16 bits sin signo | [Int32](xref:System.Int32)
@@ -1307,11 +1307,11 @@ Las enumeraciones conformes a CLS deben seguir estas reglas:
 
 * Hay dos tipos de enumeraciones:
 
-    * Las enumeraciones que representan un conjunto de valores enteros con nombre mutuamente excluyentes. Este tipo de enumeración se indica por la ausencia del atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute).
+  * Las enumeraciones que representan un conjunto de valores enteros con nombre mutuamente excluyentes. Este tipo de enumeración se indica por la ausencia del atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute).
 
-    * Las enumeraciones que representan un conjunto de marcadores de bits que se pueden combinar para generar un valor sin nombre. Este tipo de enumeración se indica por la presencia del atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute).
+  * Las enumeraciones que representan un conjunto de marcadores de bits que se pueden combinar para generar un valor sin nombre. Este tipo de enumeración se indica por la presencia del atributo personalizado [System.FlagsAttribute](xref:System.FlagsAttribute).
 
- Para obtener más información, consulte la documentación de la estructura [Enum](xref:System.Enum).
+Para obtener más información, consulte la documentación de la estructura [Enum](xref:System.Enum).
 
 * El valor de una enumeración no se limita al intervalo de sus valores especificados. Es decir, el intervalo de valores de una enumeración es el intervalo de su valor subyacente. Puede utilizar el método `Enum.IsDefined` para determinar si un valor especificado es miembro de una enumeración.
 

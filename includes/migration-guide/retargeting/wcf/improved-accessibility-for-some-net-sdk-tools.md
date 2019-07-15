@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0b087fca59d60a086a9ea8b2bb19c09f646c3dfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79005f19ac31ba32e7e468ef61eb867a052eff40
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59805094"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858979"
 ---
 ### <a name="improved-accessibility-for-some-net-sdk-tools"></a>Mejor accesibilidad para algunas herramientas del SDK de .NET
 
@@ -14,3 +14,4 @@ ms.locfileid: "59805094"
 |Ámbito|Borde|
 |Versión|4.7.1|
 |Tipo|Redestinación|
+

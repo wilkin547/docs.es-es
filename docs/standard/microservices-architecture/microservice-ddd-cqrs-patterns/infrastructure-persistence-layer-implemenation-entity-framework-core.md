@@ -2,12 +2,12 @@
 title: Implementación del nivel de persistencia de la infraestructura con Entity Framework Core
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre la implementación del nivel de persistencia de la infraestructura con Entity Framework Core.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639525"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778057"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementación del nivel de persistencia de infraestructura con Entity Framework Core
 
@@ -21,7 +21,7 @@ Entity Framework (EF) Core es una versión ligera, extensible y multiplataforma 
 
 Puesto que en la documentación de Microsoft ya hay una introducción a EF Core, aquí nos limitaremos a proporcionar vínculos a dicha información.
 
-#### <a name="additional-resources"></a>Recursos adicionales
+### <a name="additional-resources"></a>Recursos adicionales
 
 - **Entity Framework Core** \
   [https://docs.microsoft.com/ef/core/](/ef/core/)
@@ -230,7 +230,7 @@ builder.RegisterType<OrderRepository>()
 
 Tenga en cuenta que utilizar la duración de singleton para el repositorio puede causar problemas de simultaneidad graves al establecer DbContext en una duración determinada (InstancePerLifetimeScope) (duraciones predeterminadas para DBContext).
 
-#### <a name="additional-resources"></a>Recursos adicionales
+### <a name="additional-resources"></a>Recursos adicionales
 
 - **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \ (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación ASP.NET MVC)
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
@@ -447,7 +447,7 @@ Además de encapsular la lógica de filtro, puede especificar la forma de los da
 
 Aunque no se recomienda devolver IQueryable desde un repositorio, se puede usar perfectamente dentro del repositorio para crear un conjunto de resultados. Puede ver cómo se usa este enfoque en el método List anterior, en que se utilizan expresiones IQueryable intermedias para generar la lista de consultas de inclusión antes de ejecutar la consulta con los criterios de especificación de la última línea.
 
-#### <a name="additional-resources"></a>Recursos adicionales
+### <a name="additional-resources"></a>Recursos adicionales
 
 - **Table Mapping** \ (Asignación de tabla)
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)

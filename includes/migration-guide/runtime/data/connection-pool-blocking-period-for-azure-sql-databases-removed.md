@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 33c262ebe131aade2b32d824395721f098640cf9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9605352c66f85b6942ba24942cb07c88bdd81f2a
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236080"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857550"
 ---
 ### <a name="connection-pool-blocking-period-for-azure-sql-databases-is-removed"></a>Se ha quitado el período de bloqueo del grupo de conexiones para Azure SQL Database
 
@@ -16,3 +16,4 @@ ms.locfileid: "59236080"
 |Versión|4.6.2|
 |Tipo|Tiempo de ejecución|
 |API afectadas|<ul><li><xref:System.Data.Common.DbConnection.OpenAsync?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.Open?displayProperty=nameWithType></li><li><xref:System.Data.SqlClient.SqlConnection.OpenAsync(System.Threading.CancellationToken)?displayProperty=nameWithType></li></ul>|
+

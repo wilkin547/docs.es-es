@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 5df5afec17d400ed14fe9b4c03c2f754895f0dd7
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2e870b8d7b8ed986863632f947223946a6604f89
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378769"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802457"
 ---
-### <a name="resizing-a-grid-can-cause-an-application-to-become-unresponsive"></a>El cambio de tamaño de una cuadrícula puede hacer que una aplicación deje de responder.
+### <a name="resizing-a-grid-can-hang"></a>El cambio de tamaño de una cuadrícula puede dejar de responder
 
 |   |   |
 |---|---|
@@ -15,3 +15,4 @@ ms.locfileid: "66378769"
 |Ámbito|Borde|
 |Versión|4.7|
 |Tipo|Tiempo de ejecución|
+

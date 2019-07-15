@@ -4,12 +4,12 @@ description: Descubra cómo usar la herramienta de la CLI de ML.NET para entrena
 author: CESARDELATORRE
 ms.date: 04/17/2019
 ms.custom: how-to
-ms.openlocfilehash: 33383582140d9df4290a0bbf30659301af837d1d
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e5f75dc70ea5a76951d8698ea9c0d07cb2d4ddec
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065898"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663923"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizar el entrenamiento del modelo con la CLI de ML.NET
 
@@ -17,16 +17,16 @@ La CLI de ML.NET "democratiza" ML.NET para desarrolladores de .NET cuando se ent
 
 Para usar la API de ML.NET por sí misma (sin la CLI de AutoML de ML.NET) debe elegir un instructor (implementación de un algoritmo de aprendizaje automático para una tarea determinada) y el conjunto de transformaciones de datos (ingeniería de características) para aplicar a los datos. La canalización óptima puede variar para cada conjunto de datos y seleccionar el algoritmo óptimo entre todas las opciones agrega complejidad. Aún más, cada algoritmo tiene un conjunto de hiperparámetros que se deben optimizar. Por lo tanto, puede ahorrar semanas y a veces meses en la optimización del modelo de Machine Learning intentando encontrar las mejores combinaciones de ingeniería de características, algoritmos de aprendizaje e hiperparámetros.
 
-Este proceso se puede automatizar con la CLI de ML.NET, que implementa el motor inteligente de AutoML de ML.NET. 
+Este proceso se puede automatizar con la CLI de ML.NET, que implementa el motor inteligente de AutoML de ML.NET.
 
 > [!NOTE]
-> Este tema hace referencia a la **CLI** de ML.NET y **AutoML** de ML.NET, que se encuentran actualmente en versión preliminar, por lo que el material está sujeto a cambios. 
+> Este tema hace referencia a la **CLI** de ML.NET y **AutoML** de ML.NET, que se encuentran actualmente en versión preliminar, por lo que el material está sujeto a cambios.
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>¿Qué es la herramienta de la interfaz de la línea de comandos (CLI) de ML.NET?
 
 Puede ejecutar la CLI de ML.NET en cualquier símbolo del sistema (Windows, Mac o Linux) para generar modelos de ML.NET de buena calidad y el código fuente basado en sus conjuntos de datos de entrenamiento.
 
-Tal como se muestra en la siguiente figura, es fácil generar un modelo de ML.NET de alta calidad (archivo .zip del modelo serializado) además del código de C# de ejemplo para ejecutar o calificar dicho modelo. Además, el código de C# para crear o entrenar dicho modelo también se genera automáticamente para que pueda investigar e iterar en el algoritmo y la configuración que se usan para ese "mejor modelo" generado. 
+Tal como se muestra en la siguiente figura, es fácil generar un modelo de ML.NET de alta calidad (archivo .zip del modelo serializado) además del código de C# de ejemplo para ejecutar o calificar dicho modelo. Además, el código de C# para crear o entrenar dicho modelo también se genera automáticamente para que pueda investigar e iterar en el algoritmo y la configuración que se usan para ese "mejor modelo" generado.
 
 ![imagen](media/automate-training-with-cli/cli-high-level-process.png "motor de AutoML trabajando dentro de la CLI de ML.NET")
 
@@ -35,7 +35,7 @@ Puede generar dichos recursos desde sus propios conjuntos de datos sin necesidad
 Actualmente, las tareas de Machine Learning compatibles con la CLI de ML.NET son:
 
 - `binary-classification`
-- `multiclass-classification` 
+- `multiclass-classification`
 - `regression`
 - Futuro: otras tareas de aprendizaje automático, como `recommendation`, `ranking`, `anomaly-detection`, `clustering`
 
@@ -53,15 +53,15 @@ Se puede ejecutar de la misma manera en *Windows PowerShell*, * bash de macOS o 
 
 El comando `auto-train` de la CLI genera los siguientes recursos en la carpeta de salida:
 
-- Un archivo .zip de modelo serializado ("mejor modelo") listo para usarse en la ejecución de predicciones. 
+- Un archivo .zip de modelo serializado ("mejor modelo") listo para usarse en la ejecución de predicciones.
 - Solución de C# con:
-    - El código de C# para ejecutar o calificar dicho modelo generado (para realizar predicciones en las aplicaciones del usuario final con ese modelo).
-    - El código de C# con el código de entrenamiento utilizado para generar ese modelo (con fines de aprendizaje o posibilidad de volver a entrenar el modelo).
+  - El código de C# para ejecutar o calificar dicho modelo generado (para realizar predicciones en las aplicaciones del usuario final con ese modelo).
+  - El código de C# con el código de entrenamiento utilizado para generar ese modelo (con fines de aprendizaje o posibilidad de volver a entrenar el modelo).
 - Archivo de registro con información de todas las iteraciones o barridos en varios algoritmos evaluados, incluida su canalización o configuración detallada.
 
 Los dos primeros recursos se pueden usar directamente en las aplicaciones de usuario final (aplicación web ASP.NET Core, servicios, aplicación de escritorio, etc.) para realizar predicciones con dicho modelo de ML generado.
 
-El tercer recurso, el código de aprendizaje, le muestra el código de la API de ML.NET que utilizó la CLI para entrenar el modelo generado, de modo que pueda volver a entrenar el modelo e investigar e iterar en qué hiperparámetros y algoritmos o instructores específicos seleccionó la CLI y AutoML en el interior. 
+El tercer recurso, el código de aprendizaje, le muestra el código de la API de ML.NET que utilizó la CLI para entrenar el modelo generado, de modo que pueda volver a entrenar el modelo e investigar e iterar en qué hiperparámetros y algoritmos o instructores específicos seleccionó la CLI y AutoML en el interior.
 
 ## <a name="understanding-the-quality-of-the-model"></a>Descripción de la calidad del modelo
 
@@ -71,7 +71,7 @@ Aquí se resumen esas métricas agrupadas por tareas de ML para que pueda compre
 
 ### <a name="metrics-for-binary-classification-models"></a>Métricas para los modelos de clasificación binaria
 
- A continuación, se muestra la lista de métricas de la tarea de ML de clasificación binaria para los cinco principales modelos encontrados por la CLI: 
+A continuación, se muestra la lista de métricas de la tarea de ML de clasificación binaria para los cinco principales modelos encontrados por la CLI:
 
 ![imagen](media/automate-training-with-cli/cli-binary-classification-metrics.png)
 
@@ -81,7 +81,7 @@ Para explorar y comprender las métricas que son el resultado de la CLI, consult
 
 ### <a name="metrics-for-multi-class-classification-models"></a>Métricas para modelos de clasificación multiclase
 
- A continuación, se muestra la lista de métricas de la tarea de ML de clasificación multiclase para los cinco principales modelos encontrados por la CLI: 
+A continuación, se muestra la lista de métricas de la tarea de ML de clasificación multiclase para los cinco principales modelos encontrados por la CLI:
 
 ![imagen](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 

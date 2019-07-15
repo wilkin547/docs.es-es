@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: f3fecf521ca4a9397bacffbb084c4107af97f5b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fc96baaff3b70fcb32e19e2ce08bdb0187c86c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345279"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783199"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Tutorial: Manipular archivos utilizando métodos de .NET Framework (Visual Basic)
 En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xref:System.IO.StreamReader>, comprobar si se ha tenido acceso a un archivo, buscar una cadena dentro de un archivo leído con una instancia de la clase <xref:System.IO.StreamReader> y escribir en un archivo mediante la clase <xref:System.IO.StreamWriter>.  
@@ -30,7 +30,7 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
 ## <a name="creating-the-application"></a>Crear la aplicación  
  Inicie Visual Studio y comience el proyecto mediante la creación de un formulario que el usuario pueda usar para escribir en el archivo designado.  
   
-#### <a name="to-create-the-project"></a>Para crear el proyecto  
+### <a name="to-create-the-project"></a>Para crear el proyecto  
   
 1. En el menú **Archivo**, seleccione **Nuevo proyecto**.  
   
@@ -51,7 +51,7 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
 ## <a name="writing-to-the-file"></a>Escribir en el archivo  
  Para agregar la capacidad de escribir en un archivo a través de la aplicación, use la clase <xref:System.IO.StreamWriter>. La clase <xref:System.IO.StreamWriter> está diseñada para la salida de caracteres en una codificación determinada, mientras que la clase <xref:System.IO.Stream> está diseñada para la entrada y la salida de bytes. Use la clase <xref:System.IO.StreamWriter> para escribir líneas de información en un archivo de texto estándar. Para más información sobre la clase <xref:System.IO.StreamWriter>, vea <xref:System.IO.StreamWriter>.  
   
-#### <a name="to-add-writing-functionality"></a>Para agregar funcionalidad de escritura  
+### <a name="to-add-writing-functionality"></a>Para agregar funcionalidad de escritura  
   
 1. En el menú **Vista**, seleccione **Código** para abrir el Editor de código.  
   
@@ -96,7 +96,7 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Text**|`GetEntries`<br /><br /> **Obtener entradas**|  
 |<xref:System.Windows.Forms.ComboBox>|**Name**<br /><br /> **Texto**<br /><br /> **Habilitado**|`PickEntries`<br /><br /> **Seleccione una entrada**<br /><br /> `False`|  
   
-#### <a name="to-populate-the-combo-box"></a>Para rellenar el cuadro combinado  
+### <a name="to-populate-the-combo-box"></a>Para rellenar el cuadro combinado  
   
 1. El control `PickEntries`<xref:System.Windows.Forms.ComboBox> se usa para mostrar las fechas en las que el usuario envía cada entrada, de modo que el usuario pueda seleccionar una entrada de una fecha concreta. Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `GetEntries` y agréguele el siguiente código.  
   
@@ -104,7 +104,7 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
   
 2. Para probar el código, presione F5 para compilar la aplicación y, después, haga clic en **Obtener entradas**. Haga clic en la flecha desplegable en <xref:System.Windows.Forms.ComboBox> para mostrar las flechas de entrada.  
   
-#### <a name="to-choose-and-display-individual-entries"></a>Para seleccionar y mostrar entradas individuales  
+### <a name="to-choose-and-display-individual-entries"></a>Para seleccionar y mostrar entradas individuales  
   
 1. Cree un controlador de eventos <xref:System.Windows.Forms.Control.Click> para el botón `Display` y agregue el código siguiente.  
   
@@ -123,7 +123,7 @@ En este tutorial se muestra cómo abrir y leer un archivo mediante la clase <xre
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**<br /><br /> **Habilitado**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|  
 |<xref:System.Windows.Forms.Button>|**Name**<br /><br /> **Texto**<br /><br /> **Enabled**|`SubmitEdit`<br /><br /> **Enviar edición**<br /><br /> `False`|  
   
-#### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar la eliminación y la modificación de entradas  
+### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar la eliminación y la modificación de entradas  
   
 1. Agregue el código siguiente al evento <xref:System.Windows.Forms.Control.Click> del botón `Display`, después de `DisplayEntry.Text = ReadString`.  
   

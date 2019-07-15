@@ -8,73 +8,77 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1243ad856bc5f8cc104c9f2e08fce515a849d8
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: d8af0f32c676f4438334f7c64b771e237db90dd3
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457055"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663854"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Tipos obsoletos en .NET Framework
+
 <a name="introduction"></a> En las tablas de este artículo se enumeran los tipos que están obsoletos en .NET Framework 4.5 y .NET Framework 4.6, organizados por ensamblado. Utilice los vínculos siguientes para ver una lista de tipos obsoletos y las alternativas recomendadas en cada ensamblado. Dado que estos tipos están en desuso, todos sus miembros también lo están. Para obtener una lista de miembros obsoletos adicionales de la biblioteca de clases de .NET Framework, vea [Miembros obsoletos](obsolete-members.md).
 
 - [Tipos obsoletos en ensamblados del sistema](#obsolete_types_in_system_assemblies)
 
-    - [mscorlib.dll](#mscorlib)
+  - [mscorlib.dll](#mscorlib)
 
-    - [System.Core.dll](#Core)
+  - [System.Core.dll](#Core)
 
-    - [System.Data.dll](#data)
+  - [System.Data.dll](#data)
 
-    - [System.Data.OracleClient.dll](#oracleclient)
+  - [System.Data.OracleClient.dll](#oracleclient)
 
-    - [System.Design.dll](#design)
+  - [System.Design.dll](#design)
 
-    - [System.dll](#system)
+  - [System.dll](#system)
 
-    - [System.EnterpriseServices.dll](#enterpriseservices)
+  - [System.EnterpriseServices.dll](#enterpriseservices)
 
-    - [System.Net.dll](#net)
+  - [System.Net.dll](#net)
 
-    - [System.ServiceModel.dll](#servicemodel)
+  - [System.ServiceModel.dll](#servicemodel)
 
-    - [System.Web.dll](#web)
+  - [System.Web.dll](#web)
 
-    - [System.Web.Mobile.dll](#mobile)
+  - [System.Web.Mobile.dll](#mobile)
 
-    - [System.Workflow.Activities.dll](#workflow_activities)
+  - [System.Workflow.Activities.dll](#workflow_activities)
 
-    - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
+  - [System.Workflow.ComponentModel.dll](#workflow_componentmodel)
 
-    - [System.Workflow.Runtime.dll](#workflow_runtime)
+  - [System.Workflow.Runtime.dll](#workflow_runtime)
 
-    - [System.WorkflowServices.dll](#workflowservices)
+  - [System.WorkflowServices.dll](#workflowservices)
 
-    - [System.Xaml.dll](#xaml)
+  - [System.Xaml.dll](#xaml)
 
-    - [System.Xml.dll](#xml)
+  - [System.Xml.dll](#xml)
 
-    - [WindowsBase.dll](#WindowsBase)
+  - [WindowsBase.dll](#WindowsBase)
 
 - [Tipos obsoletos en ensamblados de Microsoft](#obsolete_types_in_microsoft_assemblies)
 
-    - [IEHost.dll e IEExec.exe](#IEHost)
+  - [IEHost.dll e IEExec.exe](#IEHost)
 
-    - [Microsoft.Build.Engine.dll](#Engine)
+  - [Microsoft.Build.Engine.dll](#Engine)
 
-    - [Microsoft.JScript.dll](#jscript)
+  - [Microsoft.JScript.dll](#jscript)
 
-    - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
+  - [Microsoft.VisualBasic.Compatibility.dll](#VBCompat)
 
-    - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
+  - [Microsoft.VisualBasic.Compatibility.Data.dll](#VBCompatData)
 
-    - [Microsoft.VisualC.dll](#visualc)
+  - [Microsoft.VisualC.dll](#visualc)
 
 <a name="obsolete_types_in_system_assemblies"></a>
+
 ## <a name="obsolete-types-in-system-assemblies"></a>Tipos obsoletos en ensamblados del sistema
- En las tablas siguientes se enumeran los tipos que se han declarado obsoletos en ensamblados del sistema. Estos ensamblados se usan para el desarrollo de aplicaciones de uso\-general cuyo destino es .NET Framework.
+
+En las tablas siguientes se enumeran los tipos que se han declarado obsoletos en ensamblados del sistema. Estos ensamblados se usan para el desarrollo de aplicaciones de uso\-general cuyo destino es .NET Framework.
 
 <a name="mscorlib"></a>
+
 ### <a name="assembly-mscorlibdll"></a>Ensamblado: mscorlib.dll
 
 |Tipo|Mensaje|
@@ -137,18 +141,20 @@ ms.locfileid: "66457055"
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|La seguridad declarativa de nivel de ensamblado está obsoleta y CLR ya no la exige de manera predeterminada.|
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Este tipo está obsoleto y se quitará en futuras versiones de .NET Framework.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="Core"></a>
+
 ### <a name="assembly-systemcoredll"></a>Ensamblado: System.Core.dll
 
 |Tipo|Mensaje|
 |----------|-------------|
 |<xref:System.Runtime.CompilerServices.ExecutionScope?displayProperty=nameWithType>|El uso de este tipo genera un error del compilador.<br /><br /> No use este tipo.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="data"></a>
+
 ### <a name="assembly-systemdatadll"></a>Ensamblado: System.Data.dll
 
 |Tipo|Mensaje|
@@ -158,9 +164,10 @@ ms.locfileid: "66457055"
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|La clase <xref:System.Data.TypedDataSetGenerator> se quitará en futuras versiones. Utilice <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> en System.Design.dll.|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|La clase <xref:System.Xml.XmlDataDocument> se quitará en futuras versiones.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="oracleclient"></a>
+
 ### <a name="assembly-systemdataoracleclientdll"></a>Ensamblado: System.Data.OracleClient.dll
 
 |Tipo|Mensaje|
@@ -174,9 +181,10 @@ ms.locfileid: "66457055"
 |<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> está desusado.|
 |<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> está desusado.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="design"></a>
+
 ### <a name="assembly-systemdesigndll"></a>Ensamblado: System.Design.dll
 
 |Tipo|Mensaje|
@@ -196,9 +204,10 @@ ms.locfileid: "66457055"
 |<xref:System.Web.UI.Design.WebControls.CalendarAutoFormatDialog?displayProperty=nameWithType>|No se recomienda el uso de este tipo porque el host del diseñador inicia el cuadro de diálogo Autoformato. La lista de autoformatos disponibles se expone en el objeto <xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType> en la propiedad <xref:System.Web.UI.Design.ControlDesigner.AutoFormats%2A?displayProperty=nameWithType>.|
 |<xref:System.Web.UI.Design.WebControls.PanelDesigner?displayProperty=nameWithType>|La alternativa recomendada es <xref:System.Web.UI.Design.WebControls.PanelContainerDesigner?displayProperty=nameWithType> porque utiliza un objeto <xref:System.Web.UI.Design.EditableDesignerRegion?displayProperty=nameWithType> para editar el contenido. Las regiones del diseñador permiten un control mejor del contenido que se va a editar.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="system"></a>
+
 ### <a name="assembly-systemdll"></a>Ensamblado: System.dll
 
 |Tipo|Mensaje|
@@ -211,18 +220,20 @@ ms.locfileid: "66457055"
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|Esta clase está en desuso. Utilice <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> en su lugar para obtener acceso al proxy global predeterminado y establecerlo. Use "null" en lugar de <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>.|
 |<xref:System.Net.Sockets.SocketClientAccessPolicyProtocol?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este tipo genera un error del compilador.<br /><br /> Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="enterpriseservices"></a>
+
 ### <a name="assembly-systementerpriseservicesdll"></a>Ensamblado: System.EnterpriseServices.dll
 
 |Tipo|Mensaje|
 |----------|-------------|
 |<xref:System.EnterpriseServices.RegistrationHelperTx?displayProperty=nameWithType>|La clase <xref:System.EnterpriseServices.RegistrationHelperTx> está desusada.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="net"></a>
+
 ### <a name="assembly-systemnetdll"></a>Ensamblado: System.Net.dll
 
 |Tipo|Mensaje|
@@ -237,9 +248,10 @@ ms.locfileid: "66457055"
 |<xref:System.Net.Sockets.UdpAnySourceMulticastClient?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este tipo genera un error del compilador.<br /><br /> Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|
 |<xref:System.Net.Sockets.UdpSingleSourceMulticastClient?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> El uso de este tipo genera un error del compilador.<br /><br /> Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="servicemodel"></a>
+
 ### <a name="assembly-systemservicemodeldll"></a>Ensamblado: System.ServiceModel.dll
 
 |Tipo|Mensaje|
@@ -253,9 +265,10 @@ ms.locfileid: "66457055"
 |<xref:System.ServiceModel.Configuration.PeerTransportElement?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La característica de canal del mismo nivel está obsoleta y se quitará en el futuro.|
 |<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> La característica de canal del mismo nivel está obsoleta y se quitará en el futuro.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="web"></a>
+
 ### <a name="assembly-systemwebdll"></a>Ensamblado: System.Web.dll
 
 |Tipo|Mensaje|
@@ -274,9 +287,10 @@ ms.locfileid: "66457055"
 |<xref:System.Web.Security.PassportPrincipal?displayProperty=nameWithType>|Este tipo está obsoleto. El producto de autenticación mediante Passport ya no se admite y se ha sustituido por la [cuenta Microsoft](https://go.microsoft.com/fwlink/?LinkId=733413).|
 |<xref:System.Web.UI.ObjectConverter?displayProperty=nameWithType>|La alternativa recomendada es <xref:System.Convert?displayProperty=nameWithType> y <xref:System.String.Format%2A?displayProperty=nameWithType>.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="mobile"></a>
+
 ### <a name="assembly-systemwebmobiledll"></a>Ensamblado: System.Web.Mobile.dll
 
 |Tipo|Mensaje|
@@ -474,9 +488,10 @@ ms.locfileid: "66457055"
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidationSummaryAdapter?displayProperty=nameWithType>|El ensamblado System.Web.Mobile.dll ha quedado en desuso y no se debe utilizar. Para obtener información sobre cómo desarrollar aplicaciones móviles de ASP.NET, vea [ASP.NET para dispositivos móviles](https://go.microsoft.com/fwlink/?LinkId=157231).|
 |<xref:System.Web.UI.MobileControls.Adapters.XhtmlAdapters.XhtmlValidatorAdapter?displayProperty=nameWithType>|El ensamblado System.Web.Mobile.dll ha quedado en desuso y no se debe utilizar. Para obtener información sobre cómo desarrollar aplicaciones móviles de ASP.NET, vea [ASP.NET para dispositivos móviles](https://go.microsoft.com/fwlink/?LinkId=157231).|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="workflow_activities"></a>
+
 ### <a name="assembly-systemworkflowactivitiesdll"></a>Ensamblado: System.Workflow.Activities.dll
 
 |Tipo|Mensaje|
@@ -487,9 +502,10 @@ ms.locfileid: "66457055"
 |<xref:System.Workflow.Activities.Rules.RuleConditionReference?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|
 |<xref:System.Workflow.Activities.Rules.RuleSetReference?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="workflow_componentmodel"></a>
+
 ### <a name="assembly-systemworkflowcomponentmodeldll"></a>Ensamblado: System.Workflow.ComponentModel.dll
 
 |Tipo|Mensaje|
@@ -505,9 +521,10 @@ ms.locfileid: "66457055"
 |<xref:System.Workflow.ComponentModel.Serialization.CompositeActivityMarkupSerializer?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|
 |<xref:System.Workflow.ComponentModel.Serialization.DependencyObjectCodeDomSerializer?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="workflow_runtime"></a>
+
 ### <a name="assembly-systemworkflowruntimedll"></a>Ensamblado: System.Workflow.Runtime.dll
 
 |Tipo|Mensaje|
@@ -520,9 +537,10 @@ ms.locfileid: "66457055"
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Hosting> excepto <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Runtime.Tracking>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de System.Workflow.\* están en desuso. En su lugar, use los nuevos tipos de <xref:System.Activities>\*.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="workflowservices"></a>
+
 ### <a name="assembly-systemworkflowservicesdll"></a>Ensamblado: System.WorkflowServices.dll
 
 |Tipo|Mensaje|
@@ -549,18 +567,20 @@ ms.locfileid: "66457055"
 |Todos los tipos del espacio de nombres <xref:System.Workflow.Activities?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>\*.|
 |<xref:System.Workflow.Runtime.Hosting.ChannelManagerService?displayProperty=nameWithType>|Quedó por vez primera en desuso en .NET Framework 4.5.<br /><br /> Los tipos de WF 3 están en desuso. En su lugar, use los nuevos tipos de WF 4 de <xref:System.Activities>\*.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="xaml"></a>
+
 ### <a name="assembly-systemxamldll"></a>Ensamblado: System.Xaml.dll
 
 |Tipo|Mensaje|
 |----------|-------------|
 |<xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute?displayProperty=nameWithType>|Este tipo no lo utiliza el analizador de XAML. Consulte <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute?displayProperty=nameWithType>.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="xml"></a>
+
 ### <a name="assembly-systemxmldll"></a>Ensamblado: System.Xml.dll
 
 |Tipo|Mensaje|
@@ -571,28 +591,34 @@ ms.locfileid: "66457055"
 |<xref:System.Xml.XmlXapResolver?displayProperty=nameWithType>|El uso de este tipo genera un error del compilador. Esta API es compatible con la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.|
 |<xref:System.Xml.Xsl.XslTransform?displayProperty=nameWithType>|Esta clase está desusada. Use <xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType> en su lugar.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="WindowsBase"></a>
+
 ### <a name="assembly-windowsbasedll"></a>Ensamblado: WindowsBase.dll
 
 |Tipo|Mensaje|
 |----------|-------------|
 |<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> está desusado. Esta interfaz ya no se utiliza.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="obsolete_types_in_microsoft_assemblies"></a>
+
 ## <a name="obsolete-types-in-microsoft-assemblies"></a>Tipos obsoletos en ensamblados de Microsoft
- En las secciones siguientes se enumeran los tipos obsoletos en ensamblados de Microsoft. Estos ensamblados son ensamblados para fines especiales, como ensamblados que están destinados a un lenguaje individual (por ejemplo, Microsoft.JScript.dll o Microsoft.VisualC.dll).
+
+En las secciones siguientes se enumeran los tipos obsoletos en ensamblados de Microsoft. Estos ensamblados son ensamblados para fines especiales, como ensamblados que están destinados a un lenguaje individual (por ejemplo, Microsoft.JScript.dll o Microsoft.VisualC.dll).
 
 <a name="IEHost"></a>
-### <a name="assembly-iehostdll-and-ieexecexe"></a>Ensamblado: IEHost.dll e IEExec.exe
- Se han quitado de .NET Framework los ensamblados IEHost.dll e IEExec.exe. Todos sus tipos y miembros están obsoletos y no se admiten a partir de .NET Framework 4. Estos ensamblados se utilizaban para hospedar los controles de Windows Forms y ejecutar las aplicaciones ejecutables en Internet Explorer. Entre las alternativas recomendadas se incluye ClickOnce, aplicaciones de explorador XAML (XBAP) y Microsoft Silverlight.
 
- [Volver al principio](#introduction)
+### <a name="assembly-iehostdll-and-ieexecexe"></a>Ensamblado: IEHost.dll e IEExec.exe
+
+Se han quitado de .NET Framework los ensamblados IEHost.dll e IEExec.exe. Todos sus tipos y miembros están obsoletos y no se admiten a partir de .NET Framework 4. Estos ensamblados se utilizaban para hospedar los controles de Windows Forms y ejecutar las aplicaciones ejecutables en Internet Explorer. Entre las alternativas recomendadas se incluye ClickOnce, aplicaciones de explorador XAML (XBAP) y Microsoft Silverlight.
+
+[Volver al principio](#introduction)
 
 <a name="Engine"></a>
+
 ### <a name="assembly-microsoftbuildenginedll"></a>Ensamblado: Microsoft.Build.Engine.dll
 
 |Tipo|Mensaje|
@@ -600,9 +626,10 @@ ms.locfileid: "66457055"
 |<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|Esta clase está en desuso. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> del ensamblado *Microsoft.Build* en su lugar.|
 |<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|Esta clase está en desuso. Use <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> del ensamblado *Microsoft.Build* en su lugar.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="jscript"></a>
+
 ### <a name="assembly-microsoftjscriptdll"></a>Ensamblado: Microsoft.JScript.dll
 
 |Tipo|Mensaje|
@@ -626,13 +653,14 @@ ms.locfileid: "66457055"
 |<xref:Microsoft.JScript.Vsa.ResInfo?displayProperty=nameWithType>|Este tipo ha quedado en desuso en Visual Studio 2005 y esta característica no se ha reemplazado. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> para obtener información adicional.|
 |<xref:Microsoft.JScript.Vsa.VsaEngine?displayProperty=nameWithType>|Este tipo ha quedado en desuso en Visual Studio 2005 y esta característica no se ha reemplazado. Vea la documentación de <xref:System.CodeDom.Compiler.ICodeCompiler?displayProperty=nameWithType> para obtener información adicional.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="VBCompat"></a>
+
 ### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Ensamblado: Microsoft.VisualBasic.Compatibility.dll
 
 Para más información sobre la migración desde Visual Basic 6, vea [Centro de recursos de Visual Basic 6.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation).
-  
+
 |Tipo|Mensaje|
 |----------|-------------|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.BaseControlArray?displayProperty=nameWithType>|Este miembro está obsoleto.|
@@ -703,9 +731,10 @@ Para más información sobre la migración desde Visual Basic 6, vea [Centro de 
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.WebItemUnexpectedErrorReadingTemplateFile?displayProperty=nameWithType>|Este miembro está obsoleto.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.ZOrderConstants?displayProperty=nameWithType>|Este miembro está obsoleto.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="VBCompatData"></a>
+
 ### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Ensamblado: Microsoft.VisualBasic.Compatibility.Data.dll
 
 |Tipo|Mensaje|
@@ -760,9 +789,10 @@ Para más información sobre la migración desde Visual Basic 6, vea [Centro de 
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UNAME?displayProperty=nameWithType>|Este miembro está obsoleto.|
 |<xref:Microsoft.VisualBasic.Compatibility.VB6.UpdateMode?displayProperty=nameWithType>|Este miembro está obsoleto.|
 
- [Volver al principio](#introduction)
+[Volver al principio](#introduction)
 
 <a name="visualc"></a>
+
 ### <a name="assembly-microsoftvisualcdll"></a>Ensamblado: Microsoft.VisualC.dll
 
 |Tipo|Mensaje|

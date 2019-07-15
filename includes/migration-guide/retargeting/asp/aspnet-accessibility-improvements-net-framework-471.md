@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1b68caebb3abad36f1809ff3ba096b24de3e1ab4
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 100b34941b045619c7424921f9315e679f173a60
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65212045"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859015"
 ---
 ### <a name="aspnet-accessibility-improvements-in-net-framework-471"></a>Mejoras de accesibilidad de ASP.NET en .NET Framework 4.7.1
 
@@ -15,3 +15,4 @@ ms.locfileid: "65212045"
 |Ámbito|Secundaria|
 |Versión|4.7.1|
 |Tipo|Redestinación|
+
