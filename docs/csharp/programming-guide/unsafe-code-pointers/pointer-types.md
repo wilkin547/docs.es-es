@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 81e9a86c4761b329918bf04023dea42d2e1ad6f5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 59846affb1eea5bd9d6a80c623eab5e3aa9db87c
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423528"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661082"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de puntero (Guía de programación de C#)
 
@@ -24,10 +24,10 @@ void* identifier; //allowed but not recommended
 El tipo especificado antes de `*` en un tipo de puntero se denomina **tipo referente**. Cualquiera de los tipos siguientes puede ser un tipo referente:
 
 - Cualquier tipo integral: [sbyte](../../language-reference/builtin-types/integral-numeric-types.md), [byte](../../language-reference/builtin-types/integral-numeric-types.md), [short](../../language-reference/builtin-types/integral-numeric-types.md), [ushort](../../language-reference/builtin-types/integral-numeric-types.md), [int](../../language-reference/builtin-types/integral-numeric-types.md), [uint](../../language-reference/builtin-types/integral-numeric-types.md), [long](../../language-reference/builtin-types/integral-numeric-types.md), [ulong](../../language-reference/builtin-types/integral-numeric-types.md).
-- Cualquier tipo de punto flotante: [float](../../language-reference/keywords/float.md), [doble](../../language-reference/keywords/double.md).
+- Cualquier tipo de punto flotante: [float](../../language-reference/builtin-types/floating-point-numeric-types.md), [doble](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - [char](../../language-reference/keywords/char.md).
 - [bool](../../language-reference/keywords/bool.md).
-- [decimal](../../language-reference/keywords/decimal.md).
+- [decimal](../../language-reference/builtin-types/floating-point-numeric-types.md).
 - Cualquier tipo [enum](../../language-reference/keywords/enum.md).
 - Cualquier tipo de puntero. Esto permite expresiones como `void**`.
 - Cualquier tipo struct definido por el usuario que solo contenga campos de tipos no administrados.

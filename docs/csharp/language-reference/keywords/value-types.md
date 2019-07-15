@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 9907811a43f408020e2ee76621d4975a53945570
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424031"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661588"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -41,7 +41,7 @@ Cada tipo de valor tiene un constructor sin parámetros implícito que inicializ
 Los *tipos simples* son un conjunto de tipos struct predefinidos proporcionados por C# y comprenden los siguientes tipos:
 
 - [Tipos enteros](../builtin-types/integral-numeric-types.md): tipos numéricos enteros y tipo [char](char.md)
-- [Tipos de punto flotante](floating-point-types-table.md)
+- [Tipos de punto flotante](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 
 Los tipos simples se identifican mediante palabras clave, pero estas palabras clave son simplemente los alias para tipos struct predefinidos en el espacio de nombres <xref:System>. Por ejemplo, [int](../builtin-types/integral-numeric-types.md) es un alias de <xref:System.Int32?displayProperty=nameWithType>. Para una lista completa de alias, vea [Tabla de tipos integrados](built-in-types-table.md).
@@ -93,7 +93,7 @@ Con el operador [new](../operators/new-operator.md) se llama al constructor sin 
 Con tipos definidos por el usuario, use [new](../operators/new-operator.md) para invocar al constructor sin parámetros. Por ejemplo, la siguiente instrucción invoca al constructor sin parámetros del struct `Point`:
 
 ```csharp
-Point p = new Point(); // Invoke parameterless constructor for the struct.
+var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 Después de esta llamada, el struct se considera asignado definitivamente; es decir, todos sus miembros se inicializan a sus valores predeterminados.

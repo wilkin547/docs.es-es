@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 9c3efe1dbea355e8bc00ef44e08efcc9d0e0bdca
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 516505ccacfd2a8a5c275b0de033e1316fa06d3a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424178"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661336"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Tabla de conversiones numéricas implícitas (Referencia de C#)
 
@@ -30,11 +30,11 @@ En la tabla siguiente se muestran las conversiones implícitas predefinidas entr
 |[uint](../builtin-types/integral-numeric-types.md)|`long`, `ulong`, `float`, `double` o `decimal`|  
 |[long](../builtin-types/integral-numeric-types.md)|`float`, `double`o `decimal`|  
 |[ulong](../builtin-types/integral-numeric-types.md)|`float`, `double`o `decimal`|  
-|[float](float.md)|`double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`double`|  
   
 ## <a name="remarks"></a>Comentarios  
 
-- Cualquier [tipo entero](../builtin-types/integral-numeric-types.md) es implícitamente convertible en cualquier [tipo de punto flotante](floating-point-types-table.md).
+- Cualquier [tipo entero](../builtin-types/integral-numeric-types.md) es implícitamente convertible en cualquier [tipo de punto flotante](../builtin-types/floating-point-numeric-types.md).
 
 - Es posible que en las conversiones de `int`, `uint`, `long` o `ulong` en `float` y de `long` o `ulong` en `double` se pierda la precisión, pero no la magnitud.  
   
@@ -58,7 +58,7 @@ Para obtener más información sobre las conversiones implícitas, vea la secci�
 - [Referencia de C#](../index.md)
 - [Guía de programación de C#](../../programming-guide/index.md)
 - [Tipos enteros](../builtin-types/integral-numeric-types.md)
-- [Tabla de tipos de punto flotante](floating-point-types-table.md)
+- [Tabla de tipos de punto flotante](../builtin-types/floating-point-numeric-types.md)
 - [Tabla de tipos integrados](built-in-types-table.md)
 - [Tabla de conversiones numéricas explícitas](explicit-numeric-conversions-table.md)
 - [Conversiones de tipos](../../programming-guide/types/casting-and-type-conversions.md)

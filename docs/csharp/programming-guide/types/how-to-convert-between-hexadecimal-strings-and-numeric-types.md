@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 046a406c32cd2ad0649cf88381a9e121f7566fe5
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2b896fb645113bc33b6a320948770947adc16dab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423505"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661142"
 ---
 # <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>Procedimiento Convertir cadenas hexadecimales en tipos numéricos (Guía de programación de C#)
 En estos ejemplos se muestra cómo realizar las tareas siguientes:  
@@ -24,7 +24,7 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
   
 - Convertir un elemento `string` hexadecimal en un elemento [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md).  
   
-- Convertir un elemento `string` hexadecimal en un elemento [float](../../../csharp/language-reference/keywords/float.md).  
+- Convertir un elemento `string` hexadecimal en un elemento [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md).  
   
 - Convertir una matriz de [bytes](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) en un elemento `string` hexadecimal.  
   
@@ -44,7 +44,7 @@ En estos ejemplos se muestra cómo realizar las tareas siguientes:
  [!code-csharp[csProgGuideTypes#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#32)]  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestra cómo convertir un `string` hexadecimal en un elemento [float](../../../csharp/language-reference/keywords/float.md) con la clase <xref:System.BitConverter?displayProperty=nameWithType> y el método <xref:System.UInt32.Parse%2A?displayProperty=nameWithType>.  
+ En el siguiente ejemplo se muestra cómo convertir un `string` hexadecimal en un elemento [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) con la clase <xref:System.BitConverter?displayProperty=nameWithType> y el método <xref:System.UInt32.Parse%2A?displayProperty=nameWithType>.  
   
  [!code-csharp[csProgGuideTypes#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#39)]  
   
