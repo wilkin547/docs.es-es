@@ -2,12 +2,12 @@
 title: Modernizar las aplicaciones de .NET existentes con Azure Cloud y contenedores de Windows (2nd edition)
 description: Aprenda a elevación y desplazamiento y modernizar aplicaciones existentes a la nube de Azure y contenedores con este libro electrónico.
 ms.date: 04/28/2018
-ms.openlocfilehash: 79e06c64867a7e1bb6c5d7da718886a713cb3c4c
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 4e632fcfbb8904a9def3fdad992286055c5df4f0
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870595"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicaciones .NET existentes con la nube de Azure y contenedores de Windows (2nd edition)
 
@@ -98,7 +98,7 @@ En la tabla 1-1 se describen las principales ventajas y motivos para elegir cada
 | **Ventajas**|
 | <li>Ningún código de cambio de la arquitectura, no hay nuevo <li> Mínimo esfuerzo para una migración rápida <li> Mínimo común denominador compatible con Azure <li> Garantías de disponibilidad básicas <li> Después de la migración a la nube, todavía es más fácil modernizar | <li> Ningún cambio de la arquitectura <li> Cambios de código/configuración mínima <li> Desarrollo y agilidad de DevOps mejorados para publicar debido a los contenedores <li> Mayor densidad y costos de implementación más bajos <li> Portabilidad de aplicaciones y dependencias <li> Flexibilidad de destinos host: Enfoques de PaaS o IaaS | <li> Arquitecto de la nube, obtener los mejores beneficios de la nube pero se requiere nuevo código <li> Enfoques nativos de la nube de los microservicios <li> Aplicaciones modernas de misión crítica, resistente en la nube muy escalable <li> Servicios totalmente administrados <li> Optimizado para escalado <li> Optimizado para la agilidad autónoma por subsistema <li> Basado en implementaciones y DevOps |
 | **Desafíos** |
-| <li> Valor menor de la nube, aparte del cambio en gastos operativos o en el cierre de los centros de datos <li> Poca administración: Ningún sistema operativo o middleware revisión; Puede usar soluciones de infraestructura, como Terraform, Spinnaker o Puppet | <li> Inclusión en contenedores es un paso adicional en la curva de aprendizaje para desarrolladores y las operaciones de TI <li> Las canalizaciones de DevOps y CI/CD suele ser 'obligatorio' para este enfoque. Si no se encuentra actualmente en la referencia cultural de la organización, podría ser un desafío adicional| <li> Requiere rediseño de aplicaciones nativas en la nube y las arquitecturas de microservicios y normalmente no requiere código significativa refactorización o reescribir cuando Modernice (un aumento del tiempo y presupuesto) <li> Las canalizaciones de DevOps y CI/CD suele ser 'obligatorio' para este enfoque. Si no se encuentra actualmente en la referencia cultural de la organización, podría ser un desafío adicional|
+| <li> Valor menor de la nube, aparte del cambio en gastos operativos o en el cierre de los centros de datos <li> Poca administración: Ningún sistema operativo o middleware revisión; Puede usar soluciones de infraestructura, como Terraform, Spinnaker o Puppet | <li> Inclusión en contenedores es un paso adicional en la curva de aprendizaje para desarrolladores y las operaciones de TI <li> DevOps y canalizaciones de CI/CD son normalmente 'obligatorio' para este enfoque. Si no se encuentra actualmente en la referencia cultural de la organización, podría ser un desafío adicional| <li> Requiere rediseño de aplicaciones nativas en la nube y las arquitecturas de microservicios y normalmente no requiere código significativa refactorización o reescribir cuando Modernice (un aumento del tiempo y presupuesto)|
 > **Tabla 1-1.** Ventajas y desafíos de la modernización de rutas de los servicios y las aplicaciones .NET existentes
 
 ### <a name="key-technologies-and-architectures-by-maturity-level"></a>Arquitecturas y tecnologías clave por nivel de madurez
