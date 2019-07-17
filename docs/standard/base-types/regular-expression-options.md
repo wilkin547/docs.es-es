@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb3120887a1a42d01b8d8ddc3351d1209294ffc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5e77fac49db4a2faadb5785c4ef15e401f340d8b
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677570"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663983"
 ---
 # <a name="regular-expression-options"></a>Opciones de expresiones regulares
 
@@ -44,26 +44,26 @@ Las opciones de las expresiones regulares se pueden especificar de tres modos:
 
 - En el parámetro `options` de un constructor de clases <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o método de coincidencia de patrones estático (`Shared` en Visual Basic), como <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> o <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>. El parámetro `options` es una combinación OR bit a bit de valores enumerados de <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.
 
-    Cuando se proporcionan opciones a una instancia <xref:System.Text.RegularExpressions.Regex> mediante el parámetro `options` de un constructor de clase, las opciones se asignan a la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>. Sin embargo, la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> no refleja las opciones insertadas en el mismo patrón de expresión regular.
+  Cuando se proporcionan opciones a una instancia <xref:System.Text.RegularExpressions.Regex> mediante el parámetro `options` de un constructor de clase, las opciones se asignan a la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>. Sin embargo, la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> no refleja las opciones insertadas en el mismo patrón de expresión regular.
 
-    Esto se muestra en el ejemplo siguiente. Usa el parámetro `options` del método <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas, así como para ignorar el espacio en blanco del patrón a la hora de identificar palabras que empiecen por la letra “d”.
+  Esto se muestra en el ejemplo siguiente. Usa el parámetro `options` del método <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas, así como para ignorar el espacio en blanco del patrón a la hora de identificar palabras que empiecen por la letra “d”.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
-    [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
+  [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
+  [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
 - Con la aplicación de las opciones insertadas en un patrón de expresión regular con la sintaxis `(?imnsx-imnsx)`. La opción se aplica al patrón a partir del punto en que la opción se define hasta el final del patrón o hasta el punto en que otra opción insertada deja a la opción sin definir. Tenga en cuenta que la propiedad <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> de una instancia <xref:System.Text.RegularExpressions.Regex> no refleja estas opciones insertadas. Para más información, consulte el tema [Construcciones misceláneas](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).
 
-    Esto se muestra en el ejemplo siguiente. Usa opciones insertadas para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas, así como para ignorar el espacio en blanco del patrón a la hora de identificar palabras que empiecen por la letra “d”.
+  Esto se muestra en el ejemplo siguiente. Usa opciones insertadas para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas, así como para ignorar el espacio en blanco del patrón a la hora de identificar palabras que empiecen por la letra “d”.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
-    [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
+  [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
+  [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
 - Con la aplicación de opciones insertadas en una construcción de agrupamiento determinada en un patrón de expresión regular con la sintaxis `(?imnsx-imnsx:`*subexpresión*`)`. El conjunto de opciones se activa si no va precedido por un signo y se desactiva si va precedido por un signo menos. (`?` es una parte fija de la sintaxis del constructor de lenguaje que se necesita si las opciones están habilitadas o deshabilitadas). La opción solo se aplica a ese grupo. Para más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-    Esto se muestra en el ejemplo siguiente. Usa opciones insertadas en una construcción de agrupamiento para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas, así como para ignorar el espacio en blanco del patrón a la hora de identificar palabras que empiecen por la letra “d”.
+  Esto se muestra en el ejemplo siguiente. Usa opciones insertadas en una construcción de agrupamiento para habilitar la coincidencia sin distinción entre mayúsculas y minúsculas, así como para ignorar el espacio en blanco del patrón a la hora de identificar palabras que empiecen por la letra “d”.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
-    [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
+  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
+  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
 
 Si las opciones están insertadas, un signo menos (`-`) antes de una opción o conjunto de opciones desactiva dichas opciones. Por ejemplo, la construcción insertada `(?ix-ms)` activa las opciones <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> y <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> y desactiva las opciones <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> y <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType>. Todas las opciones de expresión regular están desactivadas de forma predeterminada.
 
@@ -133,7 +133,7 @@ La opción <xref:System.Text.RegularExpressions.RegexOptions.None?displayPropert
 - Los grupos de captura del patrón de expresión regular son implícitos y explícitos.
 
 > [!NOTE]
-> La opción <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> no tiene ningún equivalente de inserción. Cuando las opciones de expresión regular se aplican mediante inserción, el comportamiento predeterminado se restaura opción por opción, mediante la desactivación de una opción concreta.  Por ejemplo, `(?i)` activa la comparación sin distinción entre mayúsculas y minúsculas, y `(?-i)` restaura la comparación con distinción entre mayúsculas y minúsculas.
+> La opción <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> no tiene ningún equivalente de inserción. Cuando las opciones de expresión regular se aplican mediante inserción, el comportamiento predeterminado se restaura opción por opción, mediante la desactivación de una opción concreta. Por ejemplo, `(?i)` activa la comparación sin distinción entre mayúsculas y minúsculas, y `(?-i)` restaura la comparación con distinción entre mayúsculas y minúsculas.
 
 Debido a que la opción <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> representa el comportamiento predeterminado del motor de expresiones regulares, casi nunca se especifica de forma explícita en una llamada a método. En su lugar, se llama a un constructor o método estático de coincidencia de patrones sin un parámetro `options`.
 
@@ -172,7 +172,7 @@ En el ejemplo siguiente se extraen los nombres y las puntuaciones de los jugador
 
 El patrón de expresión regular `^(\w+)\s(\d+)\r*$` se define como se muestra en la tabla siguiente.
 
-|Modelo|Descripción|
+|Modelo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`^`|Comienza al principio de la línea.|
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Este es el primer grupo de captura.|
@@ -229,7 +229,7 @@ En el ejemplo siguiente se muestra información sobre las coincidencias devuelta
 
 El patrón de expresión regular `\b\(?((?>\w+),?\s?)+[\.!?]\)?` se define como se muestra en la siguiente tabla.
 
-|Modelo|Descripción|
+|Modelo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`\b`|Empieza en un límite de palabras.|
 |`\(?`|Busca una coincidencia con cero o con una aparición de los paréntesis de apertura ("(").|
@@ -296,9 +296,9 @@ No obstante, en los casos siguientes, los caracteres de espacio de una expresió
 
 - No se admiten espacios en blanco en una secuencia de caracteres que presenta un elemento de lenguaje. Por ejemplo:
 
-    - El elemento de lenguaje `(?:`*subexpresión*`)` representa un grupo sin captura, y la parte `(?:` del elemento no puede tener espacios insertados. El modelo `(? :`*subexpresión*`)` produce una clase <xref:System.ArgumentException> en tiempo de ejecución porque el motor de expresiones regulares no puede analizar el modelo, y el modelo `( ?:`*subexpresión*`)` no coincide con *subexpresión*.
+  - El elemento de lenguaje `(?:`*subexpresión*`)` representa un grupo sin captura, y la parte `(?:` del elemento no puede tener espacios insertados. El modelo `(? :`*subexpresión*`)` produce una clase <xref:System.ArgumentException> en tiempo de ejecución porque el motor de expresiones regulares no puede analizar el modelo, y el modelo `( ?:`*subexpresión*`)` no coincide con *subexpresión*.
 
-    - El elemento de lenguaje `\p{`*nombre*`}`, que representa una categoría Unicode o bloque con nombre, no puede incluir espacios insertados en la parte `\p{` del elemento. Si se incluye un espacio en blanco, el elemento produce una <xref:System.ArgumentException> en tiempo de ejecución.
+  - El elemento de lenguaje `\p{`*nombre*`}`, que representa una categoría Unicode o bloque con nombre, no puede incluir espacios insertados en la parte `\p{` del elemento. Si se incluye un espacio en blanco, el elemento produce una <xref:System.ArgumentException> en tiempo de ejecución.
 
 Esta opción sirve para simplificar las expresiones regulares que a menudo resultan difíciles de analizar y entender. Además, mejora la legibilidad y posibilita la documentación de una expresión regular.
 
@@ -339,7 +339,7 @@ Observe también que la aserción de búsqueda anticipada (el elemento de lengua
 
 El patrón de expresión regular se define como se muestra en la tabla siguiente.
 
-|Modelo|Descripción|
+|Modelo|DESCRIPCIÓN|
 |-------------|-----------------|
 |`(?<=\d{1,2}\s)`|El inicio de la coincidencia debe estar precedido por uno o dos dígitos decimales seguidos de un espacio.|
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|
@@ -364,32 +364,32 @@ El comportamiento de las expresiones regulares canónicas y ECMAScript se difere
 
 - Sintaxis de la clase de caracteres. Debido a que las expresiones regulares canónicas admiten Unicode y ECMAScript no, las clases de caracteres de ECMAScript tienen una sintaxis más limitada y algunos elementos de lenguaje de clases de caracteres tienen un significado diferente. Por ejemplo, ECMAScript no admite elementos de lenguaje como la categoría Unicode ni elementos como `\p` y `\P`. De igual modo, el elemento `\w`, que coincide con un carácter literal, es equivalente a la clase de caracteres `[a-zA-Z_0-9]` al usar ECMAScript y a `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]` al usar comportamiento canónico. Para más información, consulte [Clases de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).
 
-    En el ejemplo siguiente se muestra la diferencia entre la búsqueda de coincidencias canónica y la de ECMAScript. Se define una expresión regular, `\b(\w+\s*)+`, que busca coincidencias con palabras seguidas de caracteres de espacio en blanco. La entrada consta de dos cadenas: una que usa el conjunto de caracteres latinos y otra que usa el conjunto de caracteres del cirílico. Tal como muestra el resultado, la llamada al método <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> que usa la búsqueda de coincidencias de ECMAScript no encuentra coincidencias con las palabras del cirílico, mientras que la llamada al método que usa la búsqueda de coincidencias canónica sí encuentra coincidencias con estas palabras.
+  En el ejemplo siguiente se muestra la diferencia entre la búsqueda de coincidencias canónica y la de ECMAScript. Se define una expresión regular, `\b(\w+\s*)+`, que busca coincidencias con palabras seguidas de caracteres de espacio en blanco. La entrada consta de dos cadenas: una que usa el conjunto de caracteres latinos y otra que usa el conjunto de caracteres del cirílico. Tal como muestra el resultado, la llamada al método <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> que usa la búsqueda de coincidencias de ECMAScript no encuentra coincidencias con las palabras del cirílico, mientras que la llamada al método que usa la búsqueda de coincidencias canónica sí encuentra coincidencias con estas palabras.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
-    [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
+  [!code-csharp[Conceptual.Regex.Language.Options#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript1.cs#16)]
+  [!code-vb[Conceptual.Regex.Language.Options#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript1.vb#16)]
 
 - Grupos de captura con autorreferencia. Una clase de captura de expresión regular con una referencia inversa a sí misma debe actualizarse con cada iteración de captura. Como se muestra en el ejemplo siguiente, esta característica permite a la expresión regular `((a+)(\1) ?)+` coincidir con la cadena “ aa aaaa aaaaaa ” si se usa ECMAScript, pero no si se usa la búsqueda de coincidencias canónica.
 
-    [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
-    [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
+  [!code-csharp[Conceptual.Regex.Language.Options#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/ecmascript2.cs#21)]
+  [!code-vb[Conceptual.Regex.Language.Options#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/ecmascript2.vb#21)]
 
-    La expresión regular se define como se muestra en la tabla siguiente.
+  La expresión regular se define como se muestra en la tabla siguiente.
 
-    |Modelo|Descripción|
-    |-------------|-----------------|
-    |(a+)|Busca una coincidencia con la letra “a” una o más veces. Este es el segundo grupo de captura.|
-    |(\1)|Busca una coincidencia con la subcadena capturada por el primer grupo de captura. Éste es el tercer grupo de captura.|
-    |?|Busca una coincidencia con cero o un carácter de espacio.|
-    |((a+)(\1) ?)+|Busca una coincidencia con el patrón de uno o varios caracteres “a” seguidos por una cadena que coincide con el primer grupo de captura seguido por cero o por un carácter de espacio una o varias veces. Este es el primer grupo de captura.|
+  |Modelo|DESCRIPCIÓN|
+  |-------------|-----------------|
+  |(a+)|Busca una coincidencia con la letra “a” una o más veces. Este es el segundo grupo de captura.|
+  |(\1)|Busca una coincidencia con la subcadena capturada por el primer grupo de captura. Éste es el tercer grupo de captura.|
+  |?|Busca una coincidencia con cero o un carácter de espacio.|
+  |((a+)(\1) ?)+|Busca una coincidencia con el patrón de uno o varios caracteres “a” seguidos por una cadena que coincide con el primer grupo de captura seguido por cero o por un carácter de espacio una o varias veces. Este es el primer grupo de captura.|
 
 - Resolución de ambigüedades entre secuencias de escape octales y referencias inversas. En la tabla siguiente se indican las diferencias en la interpretación de referencia inversa frente a octal por parte de expresiones regulares canónicas y de ECMAScript.
 
-    |Expresión regular|Comportamiento canónico|Comportamiento de ECMAScript|
-    |------------------------|------------------------|-------------------------|
-    |`\0` seguido de 0 a 2 dígitos octales|Se interpreta como un octal. Por ejemplo, `\044` se interpreta siempre como un valor octal y significa “$”.|Mismo comportamiento.|
-    |`\` seguido de un dígito de 1 a 9, seguido de ningún dígito decimal adicional|Se interpreta como una referencia inversa. Por ejemplo, `\9` siempre significa una referencia inversa de 9, incluso si no existe un noveno grupo de captura. Si el grupo de captura no existe, el analizador de expresiones regulares produce una <xref:System.ArgumentException>.|Si existe un grupo de captura de un solo dígito decimal, realice una referencia inversa a ese dígito. De lo contrario, interprete el valor como literal.|
-    |`\` seguido de un dígito de 1 a 9, seguido de dígitos decimales adicionales|Interprete los dígitos como un valor decimal. Si existe ese grupo de captura, interprete la expresión como una referencia inversa.<br /><br /> De lo contrario, interprete los dígitos octales iniciales hasta el octal 377; es decir, tenga en cuenta solo los 8 bits inferiores del valor. Interprete el resto de dígitos como literales. Por ejemplo, en la expresión `\3000`, si existe el grupo de captura 300, interprételo como referencia inversa de 300; si el grupo de captura 300 no existe, interprételo como un octal 300 seguido de 0.|Para interpretarlo como una referencia inversa, convierta todos los dígitos posibles en un valor decimal que pueda hacer referencia a una captura. Si no se puede convertir ningún dígito, interprételo como un octal; para ello, use los dígitos octales iniciales hasta el octal 377 e interprete el resto de dígitos como literales.|
+  |Expresión regular|Comportamiento canónico|Comportamiento de ECMAScript|
+  |------------------------|------------------------|-------------------------|
+  |`\0` seguido de 0 a 2 dígitos octales|Se interpreta como un octal. Por ejemplo, `\044` se interpreta siempre como un valor octal y significa “$”.|Mismo comportamiento.|
+  |`\` seguido de un dígito del 1 al 9, seguido de ningún dígito decimal adicional,|Se interpreta como una referencia inversa. Por ejemplo, `\9` siempre significa una referencia inversa de 9, incluso si no existe un noveno grupo de captura. Si el grupo de captura no existe, el analizador de expresiones regulares produce una <xref:System.ArgumentException>.|Si existe un grupo de captura de un solo dígito decimal, realice una referencia inversa a ese dígito. De lo contrario, interprete el valor como literal.|
+  |`\` seguido de un dígito del 1 al 9, seguido de dígitos decimales adicionales|Los dígitos se interpretan como un valor decimal. Si existe ese grupo de captura, interprete la expresión como una referencia inversa.<br /><br /> De lo contrario, interprete los dígitos octales iniciales hasta el octal 377; es decir, tenga en cuenta solo los 8 bits inferiores del valor. Interprete el resto de dígitos como literales. Por ejemplo, en la expresión `\3000`, si existe el grupo de captura 300, interprételo como referencia inversa de 300; si el grupo de captura 300 no existe, interprételo como un octal 300 seguido de 0.|Para interpretarlo como una referencia inversa, convierta todos los dígitos posibles en un valor decimal que pueda hacer referencia a una captura. Si no se puede convertir ningún dígito, interprételo como un octal; para ello, use los dígitos octales iniciales hasta el octal 377 e interprete el resto de dígitos como literales.|
 
 [Volver al principio](#Top)
 
@@ -399,7 +399,7 @@ El comportamiento de las expresiones regulares canónicas y ECMAScript se difere
 
 De forma predeterminada, el motor de expresiones regulares, cuando realiza comparaciones sin distinguir entre mayúsculas y minúsculas, utiliza las convenciones sobre el uso de mayúsculas de la referencia cultural actual con el fin de determinar los caracteres equivalentes en mayúscula y minúscula.
 
-Sin embargo, este comportamiento no es el deseado en algunos tipos de comparaciones, en particular al comparar la entrada del usuario con los nombres de recursos del sistema, como pueden ser contraseñas, archivos o direcciones URL. En el ejemplo siguiente se muestra ese escenario. La finalidad del código es bloquear el acceso a los recursos cuya dirección URL va precedida de **FILE://**. La expresión regular intenta una búsqueda de coincidencias con la cadena sin distinguir entre mayúsculas y minúsculas y, a tal fin, usa la expresión `$FILE://`. Sin embargo, cuando la referencia cultural actual del sistema es tr-TR (Turco -Turquía), “I” no es el equivalente en mayúscula de “i”. Como resultado, la llamada al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> devuelve `false`, con lo que se permite el acceso al archivo.
+Sin embargo, este comportamiento no es el deseado en algunos tipos de comparaciones, en particular al comparar la entrada del usuario con los nombres de recursos del sistema, como pueden ser contraseñas, archivos o direcciones URL. En el ejemplo siguiente se muestra ese escenario. La finalidad del código es bloquear el acceso a los recursos cuya dirección URL va precedida de **FILE://** . La expresión regular intenta una búsqueda de coincidencias con la cadena sin distinguir entre mayúsculas y minúsculas y, a tal fin, usa la expresión `$FILE://`. Sin embargo, cuando la referencia cultural actual del sistema es tr-TR (Turco -Turquía), “I” no es el equivalente en mayúscula de “i”. Como resultado, la llamada al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> devuelve `false`, con lo que se permite el acceso al archivo.
 
 [!code-csharp[Conceptual.Regex.Language.Options#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#14)]
 [!code-vb[Conceptual.Regex.Language.Options#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#14)]

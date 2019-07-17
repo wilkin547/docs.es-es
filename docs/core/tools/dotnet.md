@@ -2,18 +2,18 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para las herramientas de la CLI de .NET Core) y su uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: 5278adf44d12e428cdeacf1d475377ce9155c314
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613010"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859553"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>nombre
+## <a name="name"></a>NOMBRE
 
 `dotnet`: herramienta para administrar archivos binarios y código fuente de .NET.
 
@@ -42,7 +42,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ---
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>DESCRIPCIÓN
 
 `dotnet` es una herramienta para administrar archivos binarios y código fuente de .NET. Expone los comandos que realizan tareas específicas, como [`dotnet build`](dotnet-build.md) y [`dotnet run`](dotnet-run.md). Cada comando define sus propios argumentos. Escriba `--help` después de cada comando para acceder a una breve documentación de ayuda.
 
@@ -88,7 +88,7 @@ Muestra los SDK de .NET Core instalados.
 
 Define el comportamiento cuando el marco de trabajo compartido necesario no está disponible. `N` puede ser:
 * `0`: se deshabilita la puesta al día incluso de las versiones secundarias.
-* `1`: puesta al día de la versión secundaria, pero no de la versión principal. Éste es el comportamiento predeterminado.
+* `1`: puesta al día de la versión secundaria, pero no de la versión principal. Este es el comportamiento predeterminado.
 * `2`: puesta al día de las versiones principales y secundarias.
 
  Para obtener más información, vea [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward) (Puesta al día).
@@ -177,7 +177,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| Comando                                       | Función                                                            |
+| Get-Help                                       | Función                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | Compila una aplicación .NET Core.                                     |
 | [dotnet build-server](dotnet-build-server.md) | Interactúa con servidores iniciados por una compilación.                          |
@@ -196,7 +196,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| Comando                             | Función                                                            |
+| Get-Help                             | Función                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Compila una aplicación .NET Core.                                     |
 | [dotnet clean](dotnet-clean.md)     | Limpia las salidas de la compilación.                                              |
@@ -214,7 +214,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| Comando                             | Función                                                            |
+| Get-Help                             | Función                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Compila una aplicación .NET Core.                                     |
 | [dotnet clean](dotnet-clean.md)     | Limpia las salidas de la compilación.                                              |
@@ -232,7 +232,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 ### <a name="project-references"></a>Referencias de proyecto
 
-Comando | Función
+Get-Help | Función
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | Agrega una referencia de proyecto.
 [dotnet list reference](dotnet-list-reference.md) | Enumera referencias de proyecto.
@@ -240,14 +240,14 @@ Comando | Función
 
 ### <a name="nuget-packages"></a>Paquetes NuGet
 
-Comando | Función
+Get-Help | Función
 --- | ---
 [dotnet add package](dotnet-add-package.md) | Agrega un paquete NuGet.
 [dotnet remove package](dotnet-remove-package.md) | Quita un paquete NuGet.
 
 ### <a name="nuget-commands"></a>Comandos NuGet
 
-Comando | Función
+Get-Help | Función
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | Elimina o quita de la lista un paquete del servidor.
 [dotnet nuget locals](dotnet-nuget-locals.md) | Borra o muestra los recursos de NuGet locales, como la caché de solicitudes http, la caché temporal o la carpeta de paquetes global de toda la máquina.
@@ -257,7 +257,7 @@ Comando | Función
 
 Las [herramientas globales de .NET Core](global-tools.md) están disponibles a partir del SDK de .NET Core 2.1.300:
 
-Comando | Función
+Get-Help | Función
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Instala una herramienta global en su equipo.
 [dotnet tool list](dotnet-tool-list.md) | Enumera todas las herramientas globales instaladas actualmente en el directorio predeterminado de la máquina o en la ruta especificada.
@@ -304,7 +304,7 @@ Ejecutar un archivo DLL de aplicación como `myapp.dll`:
 
 `DOTNET_PACKAGES`
 
-La caché del paquete principal. Si no se establece, el valor predeterminado es `$HOME/.nuget/packages` en Unix o `%HOME%\NuGet\Packages` en Windows.
+La carpeta de paquetes globales. Si no se establece, el valor predeterminado es `~/.nuget/packages` en Unix o `%userprofile%\.nuget\packages` en Windows.
 
 `DOTNET_SERVICING`
 
@@ -326,7 +326,7 @@ Deshabilita la puesta al día de versiones secundarias, si está establecido en 
 
 `DOTNET_PACKAGES`
 
-La caché del paquete principal. Si no se establece, el valor predeterminado es `$HOME/.nuget/packages` en Unix o `%HOME%\NuGet\Packages` en Windows.
+La caché del paquete principal. Si no se establece, el valor predeterminado es `$HOME/.nuget/packages` en Unix o `%userprofile%\.nuget\packages` en Windows.
 
 `DOTNET_SERVICING`
 
@@ -344,7 +344,7 @@ Especifica si desde la ubicación global se resuelve .NET Core Runtime, el marco
 
 `DOTNET_PACKAGES`
 
-La caché del paquete principal. Si no se establece, el valor predeterminado es `$HOME/.nuget/packages` en Unix o `%HOME%\NuGet\Packages` en Windows.
+La caché del paquete principal. Si no se establece, el valor predeterminado es `$HOME/.nuget/packages` en Unix o `%userprofile%\.nuget\packages` en Windows.
 
 `DOTNET_SERVICING`
 

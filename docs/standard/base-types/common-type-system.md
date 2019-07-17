@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: fdd7eef0994ca9c7b0533b6497d76a4720dd1f64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634637"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782632"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 Common Type System define cómo se declaran, usan y administran los tipos en Common Language Runtime. Es también una parte importante de la compatibilidad en tiempo de ejecución con la integración entre lenguajes. El sistema de tipos común realiza las funciones siguientes:  
@@ -73,7 +73,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
  En la tabla siguiente se describen algunas de las características que una clase puede tener. Cada lenguaje compatible con el motor en tiempo de ejecución proporciona una forma de indicar que una clase o un miembro de clase tiene una o varias de estas características. En cambio, puede que no estén disponibles todas estas características en los lenguajes de programación orientados a .NET.  
   
-|Característica|Descripción|  
+|Característica|DESCRIPCIÓN|  
 |--------------------|-----------------|  
 |sealed|Especifica que no se puede derivar otra clase de este tipo.|  
 |implementa|Indica que la clase utiliza una o varias interfaces proporcionando implementaciones de miembros de la interfaz.|  
@@ -86,7 +86,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
   
  Los miembros de clase que no tienen implementación son miembros abstractos. Una clase que tiene uno o varios miembros abstractos es abstracta y no se pueden crear nuevas instancias de ella. Algunos lenguajes destinados al motor en tiempo de ejecución permiten marcar una clase como abstracta incluso aunque no tenga ningún miembro abstracto. Se puede usar una clase abstracta cuando se desea encapsular un conjunto básico de funcionalidad que las clases derivadas pueden heredar o invalidar según corresponda. Las clases que no son abstractas se conocen como clases concretas.  
   
- Una clase puede implementar cualquier número de interfaces pero puede heredar solo de una clase base además de la clase <xref:System.Object?displayProperty=nameWithType>, de la que todas las clases heredan implícitamente. Todas las clases deben tener al menos un constructor, que inicializa nuevas instancias de la clase. Si no se define explícitamente un constructor, la mayoría de los compiladores proporcionarán automáticamente un constructor predeterminado (sin parámetros).  
+ Una clase puede implementar cualquier número de interfaces pero puede heredar solo de una clase base además de la clase <xref:System.Object?displayProperty=nameWithType>, de la que todas las clases heredan implícitamente. Todas las clases deben tener al menos un constructor, que inicializa nuevas instancias de la clase. Si no se define explícitamente un constructor, la mayoría de los compiladores proporcionarán automáticamente un constructor sin parámetros.  
   
 <a name="Structures"></a>   
 ### <a name="structures"></a>Estructuras  
@@ -190,7 +190,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 ### <a name="type-accessibility"></a>Accesibilidad a tipos  
  Todos los tipos tienen un modificador que rige su accesibilidad desde otros tipos. En la tabla siguiente se describen las accesibilidades a tipos que admite el motor en tiempo de ejecución.  
   
-|Accesibilidad|Descripción|  
+|Accesibilidad|DESCRIPCIÓN|  
 |-------------------|-----------------|  
 |public|Todos los ensamblados pueden tener acceso al tipo.|  
 |ensamblado|El tipo sólo es accesible desde su ensamblado.|  
@@ -273,9 +273,9 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 ### <a name="constructors"></a>Constructores  
  Un constructor es un tipo de método especial que crea nuevas instancias de una clase o una estructura. Al igual que cualquier otro método, un constructor puede incluir parámetros; sin embargo, los constructores no tienen ningún valor devuelto (es decir, devuelven `void`).  
   
- Si el código fuente de una clase no define explícitamente un constructor, el compilador incluye un constructor predeterminado (sin parámetros). Sin embargo, si el código fuente de una clase define solo constructores parametrizados, los compiladores de Visual Basic y C# no generan un constructor sin parámetros.  
+ Si el código fuente de una clase no define explícitamente un constructor, el compilador incluye un constructor sin parámetros. Sin embargo, si el código fuente de una clase define solo constructores parametrizados, los compiladores de Visual Basic y C# no generan un constructor sin parámetros.  
   
- Si el código fuente de una estructura define constructores, estos deben tener parámetros; una estructura no puede definir un constructor predeterminado (sin parámetros) y los compiladores no generan constructores sin parámetros para las estructuras u otros tipos de valor. Todos los tipos de valor tienen un constructor predeterminado implícito. Common Language Runtime implementa este constructor, que inicializa todos los campos de la estructura en sus valores predeterminados.  
+ Si el código fuente de una estructura define constructores, estos deben tener parámetros; una estructura no puede definir un constructor sin parámetros y los compiladores no generan constructores sin parámetros para las estructuras u otros tipos de valor. Todos los tipos de valor tienen un constructor sin parámetros implícito. Common Language Runtime implementa este constructor, que inicializa todos los campos de la estructura en sus valores predeterminados.  
   
 <a name="Events"></a>   
 ### <a name="events"></a>Eventos  
@@ -291,7 +291,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 ## <a name="characteristics-of-type-members"></a>Características de los miembros de tipos  
  Common Type System permite que los miembros de tipos tengan diversas características; sin embargo, no es necesario que los lenguajes admitan todas estas características. En la siguiente tabla se describen las características de los miembros.  
   
-|Característica|Se puede aplicar a|Descripción|  
+|Característica|Se puede aplicar a|DESCRIPCIÓN|  
 |--------------------|------------------|-----------------|  
 |abstract|Métodos, propiedades y eventos|El tipo no proporciona la implementación del método. Los tipos que heredan o implementan métodos abstractos deben proporcionar una implementación para el método. La única excepción es que el tipo derivado sea un tipo abstracto. Todos lo métodos abstractos son virtuales.|  
 |private, family, assembly, family y assembly, family o assembly, o public|Todas|Define la accesibilidad del miembro:<br /><br /> private<br /> Solo es accesible desde el mismo tipo que el miembro o desde un tipo anidado.<br /><br /> family<br /> Accesible desde el mismo tipo que el miembro y desde tipos derivados que heredan de él.<br /><br /> ensamblado<br /> Accesible sólo en el ensamblado en que está definido el tipo.<br /><br /> family y assembly<br /> Accesible sólo desde los tipos que estén calificados para el acceso de familia y ensamblado.<br /><br /> family o assembly<br /> Accesible sólo desde los tipos que califican el acceso de familia o ensamblado.<br /><br /> public<br /> Accesible desde cualquier tipo.|  

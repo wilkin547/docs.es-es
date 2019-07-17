@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: d2ee9537df540936e0a5ec448e6aaddbbbc162b1
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 56fed00ec049fd2746d5b07b9926b8abda998260
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610545"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742442"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Herramienta de generación de código)
 La herramienta de línea de comandos SqlMetal genera el código y las asignaciones del componente [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] de .NET Framework. Si aplica las opciones que se incluyen posteriormente en este tema, puede indicarle a SqlMetal que realice algunas acciones diferentes, entre las que se incluyen las siguientes:  
@@ -28,7 +28,7 @@ La herramienta de línea de comandos SqlMetal genera el código y las asignacion
  Esta herramienta se instala automáticamente con Visual Studio. De manera predeterminada, el archivo se encuentra en `drive`:\Archivos de programa\Microsoft SDKs\Windows\\v`n.nn`\bin. Si no instala Visual Studio, también puede obtener el archivo de SQLMetal descargando [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
->  Los programadores que utilizan Visual Studio también pueden usar [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] para generar clases de entidad. El enfoque de la línea de comandos se ajusta bien a las bases de datos grandes. Dado que SqlMetal es una herramienta de línea de comandos, puede utilizarse en un proceso de compilación.  
+>  Los desarrolladores que utilizan Visual Studio también pueden usar Object Relational Designer para generar clases de entidad. El enfoque de la línea de comandos se ajusta bien a las bases de datos grandes. Dado que SqlMetal es una herramienta de línea de comandos, puede utilizarse en un proceso de compilación.  
   
  Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para obtener más información, vea [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md). En el símbolo del sistema, escriba lo siguiente:  
   

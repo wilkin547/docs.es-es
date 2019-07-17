@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4f9741944dcf8a5fcc05c169a1c3c3f679902474
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200927"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67859678"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -34,16 +34,16 @@ tlbimp tlbFile [options]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Argumento|Descripción|  
+|Argumento|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |*tlbFile*|Nombre de cualquier archivo que contenga una biblioteca de tipos COM.|  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**/asmversion:** *númeroVersión*|Especifica el número de versión del ensamblado que se genera. Especifique *númeroVersión* con el formato *principal.secundaria.compilación.revisión*.|  
 |**/company:** `companyinformation`|Agrega información de la compañía al ensamblado de salida.|  
 |**/copyright:** `copyrightinformation`|Agrega información de copyright al ensamblado de salida. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
-|**/delaysign**|Indica a la herramienta Tlbimp.exe que firme el ensamblado resultante con un nombre seguro mediante la firma retardada. Esta opción se debe especificar con las opciones **/keycontainer:**, **/keyfile:** o **/publickey:**. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../app-domains/delay-sign-assembly.md).|  
+|**/delaysign**|Indica a la herramienta Tlbimp.exe que firme el ensamblado resultante con un nombre seguro mediante la firma retardada. Esta opción se debe especificar con las opciones **/keycontainer:** , **/keyfile:** o **/publickey:** . Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../app-domains/delay-sign-assembly.md).|  
 |**/help**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |**/keycontainer:** *nombreContenedor*|Firma el ensamblado resultante con un nombre seguro utilizando el par de claves pública y privada que se encuentra en el contenedor de claves especificado mediante *nombreContenedor*.|  
 |**/keyfile:** *nombreArchivo*|Firma el ensamblado resultante con un nombre seguro utilizando el par de claves pública y privada oficial del editor que se encuentra en *nombreArchivo*.|  
@@ -55,7 +55,7 @@ tlbimp tlbFile [options]
 |**/primary**|Genera un ensamblado de interoperabilidad primario para la biblioteca de tipos especificada. La información se agrega al ensamblado indicando que se ha generado con el editor de la biblioteca de tipos. Al especificar un ensamblado de interoperabilidad primario, es posible diferenciar el ensamblado de un editor de otros ensamblados creados desde la biblioteca de tipos mediante Tlbimp.exe. Solo debería utilizar la opción **/primary** si es el editor de la biblioteca de tipos que va a importar con Tlbimp.exe. Tenga en cuenta que debe firmar un ensamblado de interoperabilidad primario con un [nombre seguro](../app-domains/strong-named-assemblies.md). Para obtener más información, vea [Ensamblados de interoperabilidad primarios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).|  
 |**/product:** `productinformation`|Agrega información del producto al ensamblado de salida. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
 |**/productversion:** `productversioninformation`|Agrega información de la versión al ensamblado de salida. No hay restricciones de formato. Esta información se puede ver en el cuadro de diálogo **Propiedades del archivo** del ensamblado.|  
-|**/publickey:** *nombreArchivo*|Especifica el archivo que contiene la clave pública que se va a utilizar para firmar el ensamblado resultante. Si se especifica las opciones **/keyfile:** o **/keycontainer:** en lugar de **/publickey:**, Tlbimp.exe genera la clave pública a partir del par de claves pública y privada suministrado por **/keyfile:** o **/keycontainer:**. La opción **/publickey:** admite los escenarios de clave de prueba y de firma retardada. El archivo tiene el formato generado por Sn.exe. Para obtener más información, vea la opción **-p** de Sn.exe en la [herramienta Nombre seguro (Sn.exe)](sn-exe-strong-name-tool.md).|  
+|**/publickey:** *nombreArchivo*|Especifica el archivo que contiene la clave pública que se va a utilizar para firmar el ensamblado resultante. Si se especifica las opciones **/keyfile:** o **/keycontainer:** en lugar de **/publickey:** , Tlbimp.exe genera la clave pública a partir del par de claves pública y privada suministrado por **/keyfile:** o **/keycontainer:** . La opción **/publickey:** admite los escenarios de clave de prueba y de firma retardada. El archivo tiene el formato generado por Sn.exe. Para obtener más información, vea la opción **-p** de Sn.exe en la [herramienta Nombre seguro (Sn.exe)](sn-exe-strong-name-tool.md).|  
 |**/reference:** *nombreArchivo*|Especifica el archivo de ensamblado que se utiliza para resolver referencias en tipos definidos fuera de la biblioteca de tipos actual. Si no se especifica la opción **/reference**, Tlbimp.exe importa de forma automática y recursiva todas las bibliotecas de tipos externas a la que se haga referencia en la biblioteca de tipos que se va a importar. Si especifica la opción **/reference**, la herramienta intenta resolver los tipos externos en los ensamblados a los que se hace referencia antes de importar otras bibliotecas de tipos.|  
 |**/silence:** `warningnumber`|Suprime la presentación de la advertencia especificada. Esta opción no se puede utilizar con la opción **/silent**.|  
 |**/silent**|Suprime la presentación de mensajes de aprobación. Esta opción no se puede utilizar con la opción **/silence**.|  
@@ -78,8 +78,10 @@ tlbimp tlbFile [options]
   
  Hay veces que resulta útil o es necesario poder asignar [nombres seguros](../app-domains/strong-named-assemblies.md) a los ensamblados. Por consiguiente, Tlbimp.exe incluye opciones que proporcionan la información necesaria para generar ensamblados con nombre seguro. Las dos opciones **/keyfile:** y **/keycontainer:** firman los ensamblados con nombres seguros. Por tanto, lo lógico es proporcionar una de estas opciones cada vez.  
   
- Puede especificar diversos ensamblados de referencia utilizando la opción **/reference** varias veces.  
-  
+ Puede especificar diversos ensamblados de referencia utilizando la opción **/reference** varias veces.
+ 
+ Debido a la forma en que Tlbimp.exe genera ensamblados, no es posible redirigir a un ensamblado a otra versión de `mscorlib`. Por ejemplo, si desea generar un ensamblado que tiene como destino .NET Framework 2.0, será necesario usar la versión de Tlbimp.exe incluida en el SDK de .NET Framework 2.0/3.0/3.5. Para usar .NET Framework 4.x como destino, será necesario usar la versión de Tlbimp.exe incluida con el SDK de .NET Framework 4.x.
+ 
  De manera opcional, un identificador de recurso se puede anexar a un archivo de biblioteca de tipos cuando se importa desde un módulo que contiene varias bibliotecas de tipos. Tlbimp.exe encuentra este archivo solo si se ubica en el directorio actual o si se especifica la ruta de acceso completa. Vea el ejemplo que se muestra más adelante en este tema.  
   
 ## <a name="examples"></a>Ejemplos  

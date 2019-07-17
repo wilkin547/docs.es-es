@@ -32,12 +32,12 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: bde0b7cea52951cd72bde6cfd7d8f1c7dbcb8f46
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425600"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744220"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
 
@@ -76,14 +76,14 @@ var binaryLiteral = 0b_0010_1010;
 
 Los literales decimales no requieren ningún prefijo. El prefijo `x` o `X` significa un *literal hexadecimal*. El prefijo `b` o `B` significa un *literal binario*. La declaración de `binaryLiteral` muestra el uso de `_` como un *separador de dígitos*. El separador de dígitos también se puede usar con todos los literales numéricos. Los literales binarios y el separador de dígitos `_` se admiten a partir de C# 7.0.
 
-## <a name="literal-suffixes"></a>Sufijos literales 
+### <a name="literal-suffixes"></a>Sufijos literales 
 
-El sufijo `l` o `L` especifica que el literal entero debe ser del tipo `long`. El sufijo `ul` o `UL` especifica el tipo `ulong`. Si el sufijo `L` se usa en un literal que es mayor de 9 223 372 036 854 775 807 (el valor máximo de `long`), el valor se convierte en el tipo `ulong`. Si el valor que representa un literal entero supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, se produce un error de compilación [CS1021](../../misc/cs1021.md). 
+El sufijo `l` o `L` especifica que el literal entero debe ser del tipo `long`. El sufijo `ul` o `UL` especifica el tipo `ulong`. Si el sufijo `L` se usa en un literal que es mayor de 9 223 372 036 854 775 807 (el valor máximo de `long`), el valor se convierte en el tipo `ulong`. Si el valor que representa un literal integral supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, se produce un error de compilación [CS1021](../../misc/cs1021.md). 
 
 > [!NOTE]
 > Puede usar la letra minúscula "l" como sufijo, aunque esto genera una advertencia del compilador porque la letra "l" se confunde fácilmente con el dígito "1". Use "L" para mayor claridad.
 
-## <a name="type-of-an-integral-literal"></a>Tipo de un literal entero
+### <a name="type-of-an-integral-literal"></a>Tipo de un literal entero
 
 Si un literal entero no tiene sufijo, su tipo es el primero de los siguientes tipos en el que se puede representar su valor:
 
@@ -118,8 +118,16 @@ Debe usar una conversión explícita para convertir un tipo entero en otro tipo 
 
 - [Especificación del lenguaje C# - Tipos enteros](~/_csharplang/spec/types.md#integral-types)
 - [Referencia de C#](../index.md)
-- [Tabla de tipos de punto flotante](../keywords/floating-point-types-table.md)
+- [Tipos de punto flotante](floating-point-numeric-types.md)
 - [Tabla de valores predeterminados](../keywords/default-values-table.md)
 - [Tabla de formatos de presentación para valores numéricos](../keywords/formatting-numeric-results-table.md)
 - [Tabla de tipos integrados](../keywords/built-in-types-table.md)
 - [Valores numéricos en .NET](../../../standard/numerics.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- <xref:System.SByte?displayProperty=nameWithType>
+- <xref:System.Int16?displayProperty=nameWithType>
+- <xref:System.UInt16?displayProperty=nameWithType>
+- <xref:System.Int32?displayProperty=nameWithType>
+- <xref:System.UInt32?displayProperty=nameWithType>
+- <xref:System.Int64?displayProperty=nameWithType>
+- <xref:System.UInt64?displayProperty=nameWithType>

@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463714"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804717"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -30,11 +30,11 @@ Las pruebas unitarias, como solo prueban una unidad del código, sin dependencia
 
 ### <a name="integration-tests"></a>Pruebas de integración
 
-Aunque es una buena idea encapsular el código que interactúa con la infraestructura como bases de datos y sistemas de archivos, seguirá disponiendo de parte de ese código y, probablemente le interesará probarlo. Además, debe comprobar que las capas del código interactúan según lo esperado cuando se resuelvan completamente las dependencias de la aplicación. Esta es la responsabilidad de las pruebas de integración. Las pruebas de integración tienden a ser más lentas y más difíciles de configurar que las pruebas unitarias, porque a menudo dependen de la infraestructura y de dependencias externas. Por tanto, debe evitar realizar pruebas de cosas que podrían ser pruebas con pruebas unitarias en pruebas de integración. Si un escenario determinado se puede probar con una prueba unitaria, debe probarlo con una prueba unitaria. Si no es posible, considere la posibilidad de usar una prueba de integración.
+Aunque es una buena idea encapsular el código que interactúa con la infraestructura como bases de datos y sistemas de archivos, seguirá disponiendo de parte de ese código y, probablemente le interesará probarlo. Además, debe comprobar que las capas del código interactúan según lo esperado cuando se resuelvan completamente las dependencias de la aplicación. Esta es la responsabilidad de las pruebas de integración. Las pruebas de integración tienden a ser más lentas y más difíciles de configurar que las pruebas unitarias, porque a menudo dependen de la infraestructura y de dependencias externas. Por tanto, debe evitar realizar pruebas de cosas que podrían evaluarse con pruebas unitarias en pruebas de integración. Si un escenario determinado se puede probar con una prueba unitaria, debe probarlo con una prueba unitaria. Si no es posible, considere la posibilidad de usar una prueba de integración.
 
 Las pruebas de integración a menudo tendrán procedimientos más complejos de instalación y desmontaje que las pruebas unitarias. Por ejemplo, una prueba de integración dirigida a una base de datos real necesitará un modo de devolver la base de datos a un estado conocido antes de cada serie de pruebas. Cuando se agregan nuevas pruebas y el esquema de base de datos de producción evoluciona, estos scripts de prueba tienden a aumentar de tamaño y complejidad. En muchos sistemas de gran tamaño, no resulta práctico ejecutar conjuntos completos de pruebas de integración en las estaciones de trabajo de desarrollador antes de insertar en el repositorio los cambios en el control de código fuente compartido. En estos casos, las pruebas de integración se pueden ejecutar en un servidor de compilación.
 
-La clase de implementación LocalFileImageService implementa la lógica para recuperar y devolver los bytes de un archivo de imagen de una carpeta concreta con un identificador dado:
+Con la clase de implementación `LocalFileImageService` se implementa la lógica para recuperar y devolver los bytes de un archivo de imagen de una carpeta concreta con un identificador dado:
 
 ```csharp
 public class LocalFileImageService : IImageService
@@ -147,7 +147,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-La realización de pruebas unitarias en este método se complica debido a su dependencia directa de System.IO.File, que usa para leer del sistema de archivos. Puede probar este comportamiento para asegurarse de que funciona de la forma esperada, pero si lo hace con archivos reales será una prueba de integración. Cabe mencionar que no se puede realizar la prueba unitaria de la ruta de este método: verá cómo hacerlo con una prueba funcional en breve.
+La realización de pruebas unitarias en este método se complica debido a su dependencia directa de `System.IO.File`, que usa para leer el sistema de archivos. Puede probar este comportamiento para asegurarse de que funciona de la forma esperada, pero si lo hace con archivos reales será una prueba de integración. Cabe mencionar que no se puede realizar la prueba unitaria de la ruta de este método: verá cómo hacerlo con una prueba funcional en breve.
 
 Si no se pueden realizar directamente pruebas unitarias del comportamiento del sistema de archivos y no se puede probar la ruta, ¿qué se puede probar? Después de la refactorización para que las pruebas unitarias sean posibles, puede detectar varios casos de prueba y comportamiento que falta, como el control de errores. ¿Qué hace el método cuando no se encuentra un archivo? ¿Qué debería hacer? En este ejemplo, el método refactorizado tiene el aspecto siguiente:
 
@@ -175,7 +175,7 @@ En la mayoría de los casos, es recomendable que use controladores de excepcione
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Pruebas de integración en aplicaciones ASP.NET Core
 
-La mayoría de las pruebas de integración en las aplicaciones ASP.NET Core deberían consistir en la prueba de servicios y otros tipos de implementación definidos en el proyecto de la infraestructura. La mejor manera de probar si el proyecto de ASP.NET Core MVC se comporta correctamente es realizar pruebas funcionales en la aplicación que se ejecuta en un host de prueba. En la sección Pruebas de integración mostrada anteriormente en este capítulo, se muestra un ejemplo de una prueba de integración de una clase de acceso de datos.
+La mayoría de las pruebas de integración en las aplicaciones ASP.NET Core deberían consistir en la prueba de servicios y otros tipos de implementación definidos en el proyecto de la infraestructura. Por ejemplo, podría [probar que EF Core actualiza y recupera correctamente los datos que espera](https://docs.microsoft.com/ef/core/miscellaneous/testing/) de las clases de acceso a los datos que residen en el proyecto de infraestructura. La mejor manera de probar si el proyecto de ASP.NET Core MVC se comporta correctamente es realizar pruebas funcionales en la aplicación que se ejecuta en un host de prueba.
 
 ## <a name="functional-testing-aspnet-core-apps"></a>Pruebas funcionales en aplicaciones ASP.NET Core
 
@@ -308,6 +308,15 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 ```
 
 Esta prueba funcional ejecuta la pila de la aplicación ASP.NET Core MVC o Razor Pages completa, incluidos todo el software intermedio, filtros, enlazadores, etc., que puedan estar definidos. Comprueba que una ruta determinada ("/") devuelve el código de estado correcto esperado y la salida HTML. Lo hace sin configurar un servidor web real y de ese modo evita gran parte de la fragilidad que supone el uso de un servidor web real para realizar pruebas (por ejemplo, problemas con la configuración de firewall). Las pruebas funcionales que se ejecutan en TestServer normalmente son más lentas que las pruebas unitarias y de integración, pero son mucho más rápidas que las que se ejecutarían a través de la red a un servidor web de prueba. Debe usar las pruebas funcionales para garantizar que la pila de front-end de la aplicación funciona según lo previsto. Estas pruebas son especialmente útiles al buscar duplicados en controladores o páginas, y solucionar la duplicación mediante la adición de filtros. Idealmente, esta refactorización no cambiará el comportamiento de la aplicación, y un conjunto de pruebas funcionales comprobará que sea así.
+
+> ### <a name="references--test-aspnet-core-mvc-apps"></a>Referencias: prueba de aplicaciones ASP.NET Core MVC
+>
+> - **Pruebas y depuración en ASP.NET Core**  
+>   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Convención de nomenclatura de prueba unitaria**  
+>   <https://ardalis.com/unit-test-naming-convention>
+> - **Pruebas de EF Core**  
+>   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
 
 >[!div class="step-by-step"]
 >[Anterior](work-with-data-in-asp-net-core-apps.md)

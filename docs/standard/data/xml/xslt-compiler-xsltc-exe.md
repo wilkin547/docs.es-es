@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f423c37ca264c4f23aca3736a72164f5d13bdca3
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066005"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774900"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilador XSLT (xsltc.exe)
 El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. La hoja de estilos compilada se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. No se pueden generar ensamblados firmados con xsltc.exe.  
@@ -25,19 +25,19 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
   
 ## <a name="argument"></a>Argumento  
   
-|Argumento|Descripción|  
+|Argumento|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |`sourceFile`|Especifica el nombre de la hoja de estilos. La hoja de estilos debe ser un archivo local o bien estar ubicada en la intranet.|  
   
 ## <a name="options"></a>Opciones  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|Especifica el nombre de la clase para la hoja de estilos siguiente. El nombre de la clase puede ser completo.<br /><br /> De forma predeterminada, el nombre de la clase es igual al de la hoja de estilos. Por ejemplo, si se compila la hoja de estilos customer.xsl, el nombre predeterminado de la clase será customers.|  
-|`/debug[`+&#124;-`]`|Especifica si se debe generar o no información de depuración.<br /><br /> Si se especifica la opción `+` o `/debug`, el compilador generará información de depuración y la almacenará en el archivo de base de datos del programa (PDB). El nombre del archivo PDB generado será `assemblyName`.pdb.<br /><br /> Si se especifica la opción `-`, que será la utilizada en caso de que no especifique `/debug`, no se generará información de depuración. Se genera un ensamblado listo para ser distribuido. **Nota:**  Si se compila en modo depuración, es posible que ello afecte significativamente al rendimiento del XSLT.|  
+|`/debug[`+&#124;-`]`|Especifica si se debe generar o no información de depuración.<br /><br /> Si se especifica la opción `+` o `/debug`, el compilador generará información de depuración y la almacenará en el archivo de base de datos del programa (PDB). El nombre del archivo PDB generado será `assemblyName`.pdb.<br /><br /> Si se especifica la opción `-`, que será la utilizada en caso de que no especifique `/debug`, no se generará información de depuración. Se genera un ensamblado listo para ser distribuido. **Nota:**  Si se compila en modo de depuración, es posible que ello afecte significativamente al rendimiento del XSLT.|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |`/nologo`|Suprime el mensaje de copyright del compilador.|  
-|`/platform:` `string`|Especifica las plataformas en las que se podrá ejecutar el ensamblado. A continuación se describen los valores permitidos para las plataformas:<br /><br /> `x86` compila el ensamblado de forma que el CLR de 32 bits compatible con x86 pueda ejecutarlo.<br /><br /> `x64` compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] compila el ensamblado de forma que el CLR del lenguaje común de 64 bits pueda ejecutarlo en equipos que tengan un procesador [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)].<br /><br /> `anycpu` compila en ensamblado de forma que se pueda ejecutar en cualquier plataforma. Este es el valor predeterminado.|  
+|`/platform:` `string`|Especifica las plataformas en las que se podrá ejecutar el ensamblado. A continuación se describen los valores permitidos para las plataformas:<br /><br /> `x86` compila el ensamblado de forma que el CLR de 32 bits compatible con x86 pueda ejecutarlo.<br /><br /> `x64` compila el ensamblado de forma que el CLR de 64 bits pueda ejecutarlo en equipos compatibles con el conjunto de instrucciones AMD64 o EM64T.<br /><br /> Itanium compila el ensamblado de forma que Common Language Runtime de 64 bits pueda ejecutarlo en equipos que tengan un procesador Itanium.<br /><br /> `anycpu` compila en ensamblado de forma que se pueda ejecutar en cualquier plataforma. Este es el valor predeterminado.|  
 |`/out:` `assemblyName`|Especifica el nombre del ensamblado que se va a generar. De forma predeterminada, el nombre del ensamblado es el mismo que el de la hoja de estilos, o bien de la primera hoja de estilos, en caso de existir varias.<br /><br /> Si la hoja de estilos contiene scripts, éstos se guardarán en un ensamblado aparte. Los nombres de los ensamblados de scripts se generarán a partir del nombre del ensamblado principal. Por ejemplo, si especificó que el nombre del ensamblado sería CustOrders.dll, el nombre del primer ensamblado de script será CustOrders_Script1.dll.|  
 |`/settings:` `document+-, script+-, DTD+-,`|Especifica si se permiten o no funciones `document()`, scripts XSLT o definiciones de tipo de documento (DTD) en la hoja de estilos.<br /><br /> De forma predeterminada, no habrá compatibilidad con DTD, con las funciones `document()` y con los scripts.|  
 |`@` `file`|Le permite especificar un archivo que contenga las opciones del compilador.|  

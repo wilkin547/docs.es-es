@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pri
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 7d127476e37b9eefa9ddc13d26991145b6245b45
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442989"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775900"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -50,7 +50,7 @@ La **Inversión de dependencias** es una parte fundamental de la creación de ap
 
 ### <a name="explicit-dependencies"></a>Dependencias explícitas
 
-**Los métodos y las clases deben requerir explícitamente todos los objetos de colaboración que necesiten para funcionar correctamente.** Los constructores de clases proporcionan una oportunidad para que las clases identifiquen lo que necesitan para poder tener un estado válido y funcionar correctamente. Si se definen clases que se pueden construir y llamar, pero que solo funcionarán correctamente si existen determinados componentes globales o de infraestructura, estas clases no estarán siendo *honestas* con sus clientes. El contrato de constructor indica al cliente que solo necesita los elementos especificados (posiblemente ninguno si la clase solo usa un constructor predeterminado) pero después, en tiempo de ejecución, en realidad el objeto necesita algo más.
+**Los métodos y las clases deben requerir explícitamente todos los objetos de colaboración que necesiten para funcionar correctamente.** Los constructores de clases proporcionan una oportunidad para que las clases identifiquen lo que necesitan para poder tener un estado válido y funcionar correctamente. Si se definen clases que se pueden construir y llamar, pero que solo funcionarán correctamente si existen determinados componentes globales o de infraestructura, estas clases no estarán siendo *honestas* con sus clientes. El contrato de constructor indica al cliente que solo necesita los elementos especificados (posiblemente ninguno si la clase solo usa un constructor sin parámetros), pero después, en tiempo de ejecución, en realidad el objeto necesita algo más.
 
 Si siguen el principio de dependencias explícitas, las clases y métodos estarán siendo sinceros con sus clientes con respecto a lo que necesitan para poder funcionar. Esto hace que el código sea más autoexplicativo y los contratos de codificación más fáciles de usar, puesto que los usuarios confiarán en eso siempre que proporcionen lo que se necesita en forma de parámetros de método o constructor, los objetos con los trabajan se comportarán correctamente en tiempo de ejecución.
 
@@ -85,7 +85,7 @@ Algunos ejemplos de las infracciones de este principio son estos:
 
 - Clases responsables de guardarse a sí mismas (por ejemplo, el patrón de registro activo).
 
-- Un constructor predeterminado requerido.
+- Constructor sin parámetros requerido.
 
 - Propiedades que requieren la palabra clave virtual.
 

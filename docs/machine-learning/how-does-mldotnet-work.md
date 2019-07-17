@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 06085091a13ad76dcd554cfe637bcc151bbb8476
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610176"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67660636"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>¿Qué es ML.NET y cómo funciona?
 
@@ -163,7 +163,7 @@ En esta sección, veremos los patrones arquitectónicos de ML.NET. Si es un desa
 
 Una aplicación de ML.NET se inicia con un objeto <xref:Microsoft.ML.MLContext>. Este objeto singleton contiene **catálogos**. Un catálogo es una fábrica para cargar y guardar datos, transformaciones, instructores y componentes de la operación de modelos. Cada objeto de catálogo tiene métodos para crear los diferentes tipos de componentes:
 
-||||
+|||||
 |-|-|-|-|
 |Carga y guardado de datos||<xref:Microsoft.ML.DataOperationsCatalog>||
 |Preparación de datos||<xref:Microsoft.ML.TransformsCatalog>||
@@ -171,11 +171,11 @@ Una aplicación de ML.NET se inicia con un objeto <xref:Microsoft.ML.MLContext>.
 ||Clasificación multiclase|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||Detección de anomalías|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||Agrupación en clústeres|<xref:Microsoft.ML.ClusteringCatalog>||
-||Previsión|<xref:Microsoft.ML.Forecasting>||
+||Previsión|<xref:Microsoft.ML.ForecastingCatalog>||
 ||Clasificación|<xref:Microsoft.ML.RankingCatalog>||
 ||Regresión|<xref:Microsoft.ML.RegressionCatalog>||
-||Recomendación|<xref:Microsoft.ML.RecommendationCatalog>|add Microsoft.ML.Recommender|
-||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|add Microsoft.ML.TimeSeries|
+||Recomendación|<xref:Microsoft.ML.RecommendationCatalog>|Adición del paquete NuGet `Microsoft.ML.Recommender`|
+||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|Adición del paquete NuGet `Microsoft.ML.TimeSeries`|
 |Uso del modelo ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
 Puede navegar a los métodos de creación en cada una de las categorías anteriores. Con Visual Studio, los catálogos se muestran a través de IntelliSense.

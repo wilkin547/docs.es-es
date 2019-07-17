@@ -4,12 +4,12 @@ description: Encuentre recursos para aprender a crear aplicaciones .NET Core en 
 author: thraka
 ms.author: adegeo
 ms.date: 06/27/2018
-ms.openlocfilehash: 2ec7f57250db8779552305b2ee69cbcf1db55d0c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b111d464b83f3bc6a4a0da86678c5364bf4a9537
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977184"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802297"
 ---
 # <a name="get-started-with-net-core"></a>Introducción a .NET Core
 
@@ -17,7 +17,7 @@ En este artículo se proporciona información sobre cómo comenzar con .NET Core
 
 Si no está seguro de qué es .NET Core o cómo se relaciona con otras tecnologías .NET, comience con la información general [¿Qué es .NET?](https://www.microsoft.com/net/learn/dotnet/what-is-dotnet). En resumen, .NET Core es una implementación multiplataforma de código abierto de .NET.
 
-## <a name="create-an-application"></a>Crear una aplicación
+## <a name="create-an-application"></a>Creación de una aplicación
 
 En primer lugar, descargue e instale el [SDK de .NET Core](https://www.microsoft.com/net/download/) en el equipo.
 
@@ -28,13 +28,13 @@ dotnet new console --output sample1
 dotnet run --project sample1
 ```
 
-Debería ver los siguientes resultados:
+Debería ver la siguiente salida:
 
 ```console
 Hello World!
 ```
 
-¡Enhorabuena! Ha creado una sencilla aplicación .NET Core. También puede usar [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio 2017](tutorials/with-visual-studio.md) (solo Windows) o [Visual Studio para Mac](tutorials/using-on-mac-vs.md) (solo macOS), para crear una aplicación .NET Core.
+Felicidades. Ha creado una sencilla aplicación .NET Core. También puede usar [Visual Studio Code](tutorials/with-visual-studio-code.md), [Visual Studio ](tutorials/with-visual-studio.md) (solo Windows) o [Visual Studio para Mac](tutorials/using-on-mac-vs.md) (solo macOS), para crear una aplicación .NET Core.
 
 ## <a name="tutorials"></a>Tutoriales
 

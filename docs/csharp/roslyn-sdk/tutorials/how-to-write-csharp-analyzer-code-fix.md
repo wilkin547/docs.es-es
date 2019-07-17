@@ -3,12 +3,12 @@ title: 'Tutorial: Crear el primer analizador y la corrección de código'
 description: En este tutorial se proporcionan instrucciones detalladas para compilar un analizador y la corrección del código con el SDK del compilador de .NET (API de Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 45529a72e3c64a573bfc043fe44da29caed1a0c4
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870564"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: Crear el primer analizador y la corrección de código
 
@@ -18,9 +18,10 @@ En este tutorial, explorará la creación de un **analizador** y una **correcci�
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017](https://www.visualstudio.com/downloads)
+* [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+* [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Deberá instalar el **SDK de .NET Compiler Platform**:
+Debe instalar el **SDK de .NET Compiler Platform** a través del Instalador de Visual Studio:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -51,7 +52,7 @@ Console.WriteLine(x);
 El análisis para determinar si una variable se puede convertir en constante, que requiere un análisis sintáctico, un análisis constante de la expresión del inicializador y un análisis del flujo de datos para garantizar que no se escriba nunca en la variable. .NET Compiler Platform proporciona las API que facilita la realización de este análisis. El primer paso es crear un proyecto en C# del **analizador con corrección de código**.
 
 * En Visual Studio, elija **Archivo > Nuevo > Proyecto...** para mostrar el cuadro de diálogo Nuevo proyecto.
-* En **Visual C# > Extensibilidad**, elija **Analizador con corrección de código (.NET Standard)**.
+* En **Visual C# > Extensibilidad**, elija **Analizador con corrección de código (.NET Standard)** .
 * Asigne al proyecto el nombre "**MakeConst**" y haga clic en Aceptar.
 
 La plantilla del analizador con corrección de código crea tres proyectos: uno contiene el analizador y la corrección de código, el segundo es un proyecto de prueba unitaria y el tercero es el proyecto de VSIX. El proyecto de inicio predeterminado es el proyecto de VSIX. Presione **F5** para iniciar el proyecto de VSIX. De esta forma se inicia una segunda instancia de Visual Studio que ha cargado el nuevo analizador.

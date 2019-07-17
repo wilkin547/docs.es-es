@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 4468bc86634ad97f2dfbdb5f842eb5206f957a79
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a9e5139e6d650aa6935bff934ca25502fdc14775
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307516"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744077"
 ---
 # <a name="type-testing-and-conversion-operators-c-reference"></a>Operadores de conversión y prueba de tipos (referencia de C#)
 
@@ -109,7 +109,7 @@ El ejemplo siguiente muestra las conversiones explícitas numérica y de referen
 
 [!code-csharp-interactive[cast expression](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#Cast)]
 
-Para obtener más información sobre las conversiones explícitas, vea la sección [Conversiones explícitas](~/_csharplang/spec/conversions.md#explicit-conversions) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md). Para obtener información sobre cómo definir una conversión personalizada de tipo explícito o implícito, consulte el artículo con la palabra clave [explicit](../keywords/explicit.md) o [implicit](../keywords/implicit.md), respectivamente.
+Para obtener más información sobre las conversiones explícitas, vea la sección [Conversiones explícitas](~/_csharplang/spec/conversions.md#explicit-conversions) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md). Para obtener información sobre cómo definir una conversión personalizada de tipo explícito o implícito, vea [Operadores de conversión definidos por el usuario](user-defined-conversion-operators.md).
 
 ### <a name="other-usages-of-"></a>Otros usos de ()
 
@@ -139,7 +139,7 @@ Use el operador `typeof` para comprobar si el tipo en tiempo de ejecución del r
 
 Los operadores `is`, `as` y `typeof` no son sobrecargables.
 
-Un tipo definido por el usuario no se puede sobrecargar el operador `()`, pero puede definir conversiones de tipos personalizadas que pueden realizarse mediante una expresión de conversión. Para más información, consulte los artículos sobre las palabras clave [explicit](../keywords/explicit.md) e [implicit](../keywords/implicit.md).
+Un tipo definido por el usuario no se puede sobrecargar el operador `()`, pero puede definir conversiones de tipos personalizadas que pueden realizarse mediante una expresión de conversión. Para obtener más información, vea [Operadores de conversión definidos por el usuario](user-defined-conversion-operators.md).
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
