@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: d40d1636b510fcfe667ab3e728d1688ce38641d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 13812fa5429bbe33341e51e4b3be14fbbcb361cb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611938"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238448"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimizar el rendimiento: Aprovechar el hardware
 La arquitectura interna de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tiene dos canalizaciones de representación, hardware y software. En este tema se proporciona información sobre estas canalizaciones de representación que le ayudarán a tomar decisiones acerca de las optimizaciones del rendimiento de las aplicaciones.  
@@ -30,7 +30,7 @@ La arquitectura interna de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tl
 ### <a name="graphics-rendering-tiers"></a>Niveles de representación de gráficos  
  Puede ser muy difícil de predecir la configuración de hardware que se ejecutará la aplicación. Sin embargo, puede considerar un diseño que permite que la aplicación cambiar a la perfección características cuando se ejecuta en un hardware diferente, por lo que puede aprovechar al máximo cada configuración de hardware diferente.  
   
- Para lograrlo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona funcionalidad para determinar la capacidad gráfica de un sistema en tiempo de ejecución. Capacidad para gráficos viene determinada por la clasificación de la tarjeta de vídeo como uno de los tres niveles de funcionalidad de representación. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expone un [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] que permite que una aplicación consultar el nivel de funcionalidad de representación. La aplicación, a continuación, puede tomar diferentes rutas de código en tiempo de ejecución según el nivel de representación compatible con el hardware.  
+ Para lograrlo, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona funcionalidad para determinar la capacidad gráfica de un sistema en tiempo de ejecución. Capacidad para gráficos viene determinada por la clasificación de la tarjeta de vídeo como uno de los tres niveles de funcionalidad de representación. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] expone una API que permite que una aplicación consultar el nivel de funcionalidad de representación. La aplicación, a continuación, puede tomar diferentes rutas de código en tiempo de ejecución según el nivel de representación compatible con el hardware.  
   
  Las características del hardware gráfico que más afectan a los niveles de representación son:  
   

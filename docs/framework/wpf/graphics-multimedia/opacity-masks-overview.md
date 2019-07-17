@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 3ee02eca9719f4ffa3ee0c165ad2541c9ffd085e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7554471d8b812b60e0b1aeb6dd3096b542ca44d6
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625272"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238412"
 ---
 # <a name="opacity-masks-overview"></a>Información general sobre las máscaras de opacidad
 Las máscaras de opacidad permiten hacer que partes de un elemento o un objeto visual sea total o parcialmente transparentes. Para crear una máscara de opacidad, aplicar un <xref:System.Windows.Media.Brush> a la <xref:System.Windows.UIElement.OpacityMask%2A> propiedad de un elemento o <xref:System.Windows.Media.Visual>.  El pincel se asigna al elemento o al objeto visual, y el valor de opacidad de cada píxel del pincel se usa para determinar la opacidad resultante de cada píxel correspondiente del elemento o objeto visual.  
@@ -69,15 +69,15 @@ Ejemplo de máscara de opacidad DrawingBrush
 ## <a name="specifying-gradient-stops-for-an-opacity-mask"></a>Especificación de delimitadores de degradado para una máscara de opacidad  
  En el ejemplo anterior, el color definido por el sistema <xref:System.Windows.Media.Colors.Black%2A> se utiliza como el color inicial del degradado. Dado que todos los colores en el <xref:System.Windows.Media.Colors> (clase), excepto <xref:System.Windows.Media.Colors.Transparent%2A>, son totalmente opacos, se puede usar para definir un color inicial para una máscara de opacidad de degradado.  
   
- Para un control adicional sobre los valores alfabéticos cuando se define una máscara de opacidad, puede especificar el canal alfa de los colores usando [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] notación hexadecimal en el marcado o utilizando el <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> método.  
+ Para un control adicional sobre los valores alfabéticos cuando se define una máscara de opacidad, puede especificar el canal alfa de los colores mediante la notación hexadecimal ARGB en marcado o mediante el <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> método.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Especificación de la opacidad del color en "XAML"  
- En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], usa la notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] para especificar la opacidad de colores individuales. La notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] usa la sintaxis siguiente:  
+ En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], utilice la notación hexadecimal ARGB para especificar la opacidad de colores individuales. Notación hexadecimal ARGB utiliza la sintaxis siguiente:  
   
  `#` **aa** *rrggbb*  
   
- El valor *aa* de la línea anterior representa un valor hexadecimal de dos dígitos que se usa para especificar la opacidad del color. Cada uno de los valores *rr*, *gg* y *bb* representa un valor hexadecimal de dos dígitos que se usa para especificar la cantidad de rojo, verde y azul en el color. Cada dígito hexadecimal debe tener un valor entre 0 t 9 y entre A y F. 0 es el valor menor y F, el mayor. Un valor alfa de 00 especifica un color completamente transparente, mientras que un valor alfa de FF crea un color completamente opaco.  En el ejemplo siguiente, la notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] se usa para especificar dos colores. El primero es completamente opaco, mientras que el segundo, completamente transparente.  
+ El valor *aa* de la línea anterior representa un valor hexadecimal de dos dígitos que se usa para especificar la opacidad del color. Cada uno de los valores *rr*, *gg* y *bb* representa un valor hexadecimal de dos dígitos que se usa para especificar la cantidad de rojo, verde y azul en el color. Cada dígito hexadecimal debe tener un valor entre 0 t 9 y entre A y F. 0 es el valor menor y F, el mayor. Un valor alfa de 00 especifica un color completamente transparente, mientras que un valor alfa de FF crea un color completamente opaco.  En el ejemplo siguiente, se usa la notación hexadecimal ARGB para especificar dos colores. El primero es completamente opaco, mientras que el segundo, completamente transparente.  
   
  [!code-xaml[OpacityMasksSnippet#AARRGGBBValueonOpacityMask](~/samples/snippets/csharp/VS_Snippets_Wpf/OpacityMasksSnippet/CS/GradientBrushExample.xaml#aarrggbbvalueonopacitymask)]  
   

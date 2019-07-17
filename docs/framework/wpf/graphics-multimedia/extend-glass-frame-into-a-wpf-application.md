@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1c3316fa88d3024af4e81072cbe64c13cfbdb18e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610292"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238587"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Ampliar el marco de vidrio en una aplicación de WPF
 
@@ -30,7 +30,7 @@ La siguiente imagen ilustra el marco glass extendido en la barra de direcciones 
 
 ![Captura de pantalla mostrando marco de vidrio ampliado detrás de la barra de direcciones de IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Para ampliar el marco de cristal en una aplicación [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se requiere acceso a la [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] no administrada. El ejemplo de código siguiente realiza una invocación de plataforma (pinvoke) para las dos API necesaria para ampliar el marco en el área cliente. Cada una de estas API se declaran en una clase denominada **NonClientRegionAPI**.
+Para ampliar el marco de vidrio en una [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación, es necesario tener acceso a la API no administrada. El ejemplo de código siguiente realiza una invocación de plataforma (pinvoke) para las dos API necesaria para ampliar el marco en el área cliente. Cada una de estas API se declaran en una clase denominada **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]

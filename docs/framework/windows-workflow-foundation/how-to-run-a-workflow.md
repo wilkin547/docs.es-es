@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a7784f37c9e8009adc3735974a6fb0423f24ea37
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637516"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238515"
 ---
 # <a name="how-to-run-a-workflow"></a>Procedimiento para ejecutar un flujo de trabajo
 En este tema es una continuación de Windows Workflow Foundation tutorial de introducción y se explica cómo crear un host de flujo de trabajo y ejecutar el flujo de trabajo definido en el anterior [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md) tema.
@@ -30,7 +30,7 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
     > [!TIP]
     >  Si la ventana **Explorador de soluciones** no se muestra, seleccione **Explorador de soluciones** en el menú **Ver** .
 
-3. En el nodo **Instalado** , seleccione **Visual C#**, **Flujo de trabajo** (o **Visual Basic**, **Flujo de trabajo**).
+3. En el nodo **Instalado** , seleccione **Visual C#** , **Flujo de trabajo** (o **Visual Basic**, **Flujo de trabajo**).
 
     > [!NOTE]
     >  En función del lenguaje de programación que se configure como lenguaje principal en Visual Studio, el nodo **Visual C#** o **Visual Basic** puede estar bajo el nodo **Otros lenguajes** en el nodo **Instalado** .
@@ -51,13 +51,13 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
      Dado que este proyecto se creó con la plantilla **Aplicación de consola de flujos de trabajo** , **Program.cs** o **Module1.vb** , contiene el siguiente código básico de hospedaje de flujo de trabajo.
 
     ```vb
-    ' Create and cache the workflow definition
-    Activity workflow1 = new Workflow1()
+    ' Create and cache the workflow definition.
+    Dim workflow1 As Activity = New Workflow1()
     WorkflowInvoker.Invoke(workflow1)
     ```
 
     ```csharp
-    // Create and cache the workflow definition
+    // Create and cache the workflow definition.
     Activity workflow1 = new Workflow1();
     WorkflowInvoker.Invoke(workflow1);
     ```
@@ -166,6 +166,6 @@ En este tema es una continuación de Windows Workflow Foundation tutorial de int
 - [Programación de Windows Workflow Foundation](programming.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
 - [Cómo: Crear un flujo de trabajo](how-to-create-a-workflow.md)
-- [Cómo: Crear y ejecutar una larga ejecución de flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md)
+- [Procedimientos: Crear y ejecutar una larga ejecución de flujo de trabajo](how-to-create-and-run-a-long-running-workflow.md)
 - [Espera de la entrada en un flujo de trabajo](waiting-for-input-in-a-workflow.md)
 - [Hospedaje de flujos de trabajo](hosting-workflows.md)

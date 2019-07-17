@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 2fa2e039d73d079b6dacc9326c64fc2015eecc49
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610353"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238483"
 ---
 # <a name="wpf-architecture"></a>Arquitectura de WPF
 En este tema se proporciona un paseo guiado de la jerarquía de clases de Windows Presentation Foundation (WPF). En él se explican la mayoría de los subsistemas principales de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describe cómo interactúan. También se detallan algunas de las decisiones tomadas por los arquitectos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -64,7 +64,7 @@ En este tema se proporciona un paseo guiado de la jerarquía de clases de Window
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
  Con un sistema ya definido, el paso siguiente consiste en conseguir que se dibujen los píxeles en la pantalla. El <xref:System.Windows.Media.Visual> proporciona clases para la creación de un árbol de objetos visuales, cada uno puede contener instrucciones de dibujo y metadatos sobre cómo presentar esas instrucciones (recorte, transformación, etcetera.). <xref:System.Windows.Media.Visual> está diseñado para ser sumamente ligero y flexible, por lo que la mayoría de las características no tiene ninguna exposición de la API pública y dependen en gran medida de las funciones de devolución de llamada protegidas.  
   
- <xref:System.Windows.Media.Visual> es realmente el punto de entrada para el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sistema de composición. <xref:System.Windows.Media.Visual> es el punto de conexión entre estos dos subsistemas, los recursos administrados [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] y el milcore no administrado.  
+ <xref:System.Windows.Media.Visual> es realmente el punto de entrada para el [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sistema de composición. <xref:System.Windows.Media.Visual> es el punto de conexión entre estos dos subsistemas, la API administrada y el milcore no administrado.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] muestra los datos recorriendo las estructuras de datos no administradas de cuya administración se encarga Milcore. Estas estructuras, denominadas nodos de composición, representan un árbol de presentación jerárquica con instrucciones de representación en cada nodo. Solo se puede tener acceso a este árbol, mostrado en el lado derecho de la ilustración siguiente, a través de un protocolo de mensajería.  
   

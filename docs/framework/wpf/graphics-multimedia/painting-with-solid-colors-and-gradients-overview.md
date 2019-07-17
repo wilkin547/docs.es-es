@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 4e004b624c331375501c5f48d2566a664b734d3b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ba8127d5be24a9fdcccf0bebcc08e5699d98033
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649980"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238400"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Información general sobre el dibujo con colores sólidos y degradados
 Este tema describe cómo usar <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, y <xref:System.Windows.Media.RadialGradientBrush> objetos para pintar con colores sólidos, degradados lineales y degradados radiales.  
@@ -31,7 +31,7 @@ Este tema describe cómo usar <xref:System.Windows.Media.SolidColorBrush>, <xref
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
-- Elija un color en la paleta de colores de 32 bits; para ello, especifique las cantidades de rojo, verde y azul que se combinarán en un color sólido.  El formato para especificar un color de la paleta de 32 bits es "*#rrggbb*", donde *rr* es un número hexadecimal de dos dígitos que especifica la cantidad relativa de rojo, *gg* especifica la cantidad de verde y *bb* especifica la cantidad de azul.  Además, el color se puede especificar como "#*aarrggbb*", donde *aa* especifica el valor *alfa*, o la transparencia, del color. Este enfoque le permite crear colores que sean parcialmente transparentes.  En el ejemplo siguiente, la <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> está establecido en rojo completamente opaco mediante la notación hexadecimal.  
+- Elija un color en la paleta de colores de 32 bits; para ello, especifique las cantidades de rojo, verde y azul que se combinarán en un color sólido.  El formato para especificar un color de la paleta de 32 bits es " *#rrggbb*", donde *rr* es un número hexadecimal de dos dígitos que especifica la cantidad relativa de rojo, *gg* especifica la cantidad de verde y *bb* especifica la cantidad de azul.  Además, el color se puede especificar como "#*aarrggbb*", donde *aa* especifica el valor *alfa*, o la transparencia, del color. Este enfoque le permite crear colores que sean parcialmente transparentes.  En el ejemplo siguiente, la <xref:System.Windows.Controls.Control.Background%2A> de un <xref:System.Windows.Controls.Button> está establecido en rojo completamente opaco mediante la notación hexadecimal.  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
@@ -142,15 +142,15 @@ RadialGradientBrushes con distintos ajustes GradientOrigin, Center, RadiusX y Ra
   
 <a name="specifyinggradientcolors"></a>   
 ## <a name="specifying-transparent-or-partially-transparent-gradient-stops"></a>Especificación de delimitadores de degradado transparentes o parcialmente transparentes  
- Porque los delimitadores de degradado no proporcionan una propiedad de opacidad, debe especificar el canal alfa de los colores usando [!INCLUDE[TLA#tla_argb](../../../../includes/tlasharptla-argb-md.md)] notación hexadecimal en el marcado o use el <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> método para crear delimitadores de degradado que sean transparentes o parcialmente transparentes. En las secciones siguientes se explica cómo crear delimitadores de degradado parcialmente transparentes en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y en el código.  
+ Porque los delimitadores de degradado no proporcionan una propiedad de opacidad, debe especificar el canal alfa de los colores mediante la notación hexadecimal de ARGB en el marcado o use el <xref:System.Windows.Media.Color.FromScRgb%2A?displayProperty=nameWithType> método para crear delimitadores de degradado que sean transparentes o parcialmente transparentes. En las secciones siguientes se explica cómo crear delimitadores de degradado parcialmente transparentes en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y en el código.  
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Especificación de la opacidad del color en "XAML"  
- En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], usa la notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] para especificar la opacidad de colores individuales. La notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] usa la sintaxis siguiente:  
+ En [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], utilice la notación hexadecimal ARGB para especificar la opacidad de colores individuales. Notación hexadecimal ARGB utiliza la sintaxis siguiente:  
   
  `#` **aa** *rrggbb*  
   
- El valor *aa* de la línea anterior representa un valor hexadecimal de dos dígitos que se usa para especificar la opacidad del color. Cada uno de los valores *rr*, *gg* y *bb* representa un valor hexadecimal de dos dígitos que se usa para especificar la cantidad de rojo, verde y azul en el color. Cada dígito hexadecimal debe tener un valor entre 0 t 9 y entre A y F. 0 es el valor menor y F, el mayor. Un valor alfa de 00 especifica un color completamente transparente, mientras que un valor alfa de FF crea un color completamente opaco.  En el ejemplo siguiente, la notación hexadecimal [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] se usa para especificar dos colores. El primero es parcialmente transparente (tiene un valor alfa de x20), mientras que el segundo es completamente opaco.  
+ El valor *aa* de la línea anterior representa un valor hexadecimal de dos dígitos que se usa para especificar la opacidad del color. Cada uno de los valores *rr*, *gg* y *bb* representa un valor hexadecimal de dos dígitos que se usa para especificar la cantidad de rojo, verde y azul en el color. Cada dígito hexadecimal debe tener un valor entre 0 t 9 y entre A y F. 0 es el valor menor y F, el mayor. Un valor alfa de 00 especifica un color completamente transparente, mientras que un valor alfa de FF crea un color completamente opaco.  En el ejemplo siguiente, se usa la notación hexadecimal ARGB para especificar dos colores. El primero es parcialmente transparente (tiene un valor alfa de x20), mientras que el segundo es completamente opaco.  
   
  [!code-xaml[GradientBrushExamples_snip#TransparentGradientStopExample1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/GradientBrushExamples_snip/XAML/GradientStopsExample.xaml#transparentgradientstopexample1xaml)]  
   

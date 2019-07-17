@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 4ea417b2a922574eb92a07aa845c360f6e843f17
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7d5ff09bb9cc8da45f44cf6fe952411e7cd3f4c4
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663397"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68238537"
 ---
 # <a name="dependency-property-value-precedence"></a>Prioridad de los valores de propiedades de dependencia
 <a name="introduction"></a> En este tema se explica cómo puede afectar el trabajo del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al valor de una propiedad de dependencia y se describe la precedencia de aplicación de los aspectos del sistema de propiedades al valor efectivo de una propiedad.  
@@ -43,7 +43,7 @@ ms.locfileid: "64663397"
   
 2. **Animaciones activas o animaciones con un comportamiento Hold.** Para tener cualquier efecto práctico, una animación de una propiedad debe poder tener precedencia sobre el valor base (inanimado), aunque dicho valor se estableciera localmente. Para obtener más información, consulte [Coerción, animación y valor base](#animations) más adelante en este tema.  
   
-3. **Valor local.** Un valor local se puede establecer a través de la comodidad de la propiedad "contenedor", que también equivale a establecerlo como un atributo o elemento de propiedad en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], o mediante una llamada a la <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] utilizando una propiedad de una instancia específica. Si establece un valor local mediante un enlace o un recurso, cada uno de estos actuará con la precedencia como si se hubiese establecido un valor directo.  
+3. **Valor local.** Un valor local se puede establecer a través de la comodidad de la propiedad "contenedor", que también equivale a establecerlo como un atributo o elemento de propiedad en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], o mediante una llamada a la <xref:System.Windows.DependencyObject.SetValue%2A> API con una propiedad de una instancia específica. Si establece un valor local mediante un enlace o un recurso, cada uno de estos actuará con la precedencia como si se hubiese establecido un valor directo.  
   
 4. **Propiedades de la plantilla TemplatedParent.** Un elemento tiene un <xref:System.Windows.FrameworkElement.TemplatedParent%2A> si se ha creado como parte de una plantilla (una <xref:System.Windows.Controls.ControlTemplate> o <xref:System.Windows.DataTemplate>). Para obtener más información sobre cuándo se aplica el caso anterior, consulte [TemplatedParent](#templatedparent) más adelante en este tema. En la plantilla, se aplica la siguiente precedencia:  
   
