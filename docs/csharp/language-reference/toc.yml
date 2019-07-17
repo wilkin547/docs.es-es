@@ -34,16 +34,11 @@
                   href: keywords/reference-types.md
                 - name: clase
                   href: keywords/class.md
-                - name: delegado
-                  href: keywords/delegate.md
-                - name: dynamic
-                  href: keywords/dynamic.md
+                - name: Tipos de referencia integrados
+                  displayName: 'object, delegate, dynamic, string'
+                  href: builtin-types/reference-types.md
                 - name: interfaz
                   href: keywords/interface.md
-                - name: objeto
-                  href: keywords/object.md
-                - name: cadena
-                  href: keywords/string.md
             - name: void
               href: keywords/void.md
             - name: var
