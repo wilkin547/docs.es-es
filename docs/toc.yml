@@ -203,6 +203,14 @@
     - name: Tutoriales
       href: core/tutorials/index.md
       items:
+        - name: Plantillas para CLI
+          items:
+            - name: 1 - Crear una plantilla de elemento
+              href: core/tutorials/cli-templates-create-item-template.md
+            - name: 2 - Crear una plantilla de proyecto
+              href: core/tutorials/cli-templates-create-project-template.md
+            - name: 3 - Crear un paquete de plantillas
+              href: core/tutorials/cli-templates-create-template-pack.md
         - name: Introducción a .NET Core en macOS
           href: core/tutorials/using-on-macos.md
         - name: Introducción a .NET Core en macOS con Visual Studio para Mac
@@ -219,8 +227,6 @@
           href: core/tutorials/aspnet-core.md
         - name: Hospedaje de .NET Core desde código nativo
           href: core/tutorials/netcore-hosting.md
-        - name: Creación de una plantilla personalizada para dotnet new
-          href: core/tutorials/create-custom-template.md
     - name: 'Paquetes, metapaquetes y marcos de trabajo'
       href: core/packages.md
     - name: Cambios en la información general de la CLI
