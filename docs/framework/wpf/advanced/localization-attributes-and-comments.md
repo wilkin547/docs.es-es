@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: a242dc1f69c79b2c1a67c1a9235d3e942553caf1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ef18802ab3568df00e29eb4ccaf717f4bdf4863
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598716"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330997"
 ---
 # <a name="localization-attributes-and-comments"></a>Atributos y comentarios sobre localización
 Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] son propiedades, en el código fuente [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], que proporcionan los desarrolladores para ofrecer reglas y sugerencias para la localización. Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] contienen dos conjuntos de información: atributos de localizabilidad y comentarios de localización de forma libre. Los atributos de localización se usan en la API de localización de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para indicar qué recursos se van a localizar. Los comentarios de forma libre son cualquier información que el autor de la aplicación quiera incluir.  
@@ -33,7 +33,7 @@ Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../inc
   
     - **All**: quita los comentarios y los atributos del ensamblado y los coloca en un archivo LocFile independiente.  
   
-4. Cuando los recursos localizables se extraen de [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)], la API de localización [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] respeta los atributos de localizabilidad.  
+4. Cuando se extraen recursos localizables de BAML, la API de localización de BAML respeta los atributos de localizabilidad.  
   
 5. Los archivos de comentarios de localización, que contienen solo comentarios de forma libre, se incorporan al proceso de localización en un momento posterior.  
   
@@ -82,15 +82,15 @@ Los comentarios de localización de [!INCLUDE[TLA#tla_winclient](../../../../inc
   
  Estos atributos se pueden especificar en cualquier orden delimitado por un espacio. En caso de que se especifiquen atributos duplicados, el último atributo invalidará los anteriores. Por ejemplo, Localization.Attributes = "Unmodifiable Modifiable" define el atributo Modificabilidad como Modificable porque es el último valor.  
   
- La modificabilidad y la legibilidad no necesitan explicación. El atributo Categoría proporciona categorías predefinidas que ayudan al localizador al traducir el texto. Las categorías, como Text, Label o Title, ofrecen al localizador información sobre cómo traducir el texto. También hay categorías especiales: Ninguno, heredar, pasar por alto y NeverLocalize.  
+ La modificabilidad y la legibilidad no necesitan explicación. El atributo Categoría proporciona categorías predefinidas que ayudan al localizador al traducir el texto. Las categorías, como Text, Label o Title, ofrecen al localizador información sobre cómo traducir el texto. También hay categorías especiales: Ninguno, heredar, omitir y NeverLocalize.  
   
  En la tabla siguiente se muestra el significado de las categorías especiales.  
   
 |Categoría|Significado|  
 |--------------|-------------|  
-|Ninguna|El valor de destino no tiene ninguna categoría definida.|  
+|None|El valor de destino no tiene ninguna categoría definida.|  
 |Inherit|El valor de destino hereda su categoría de su elemento primario.|  
-|Ignore|El valor de destino se omite en el proceso de localización. Ignore solo afecta al valor actual. No afecta a los nodos secundarios.|  
+|Ignorar|El valor de destino se omite en el proceso de localización. Ignore solo afecta al valor actual. No afecta a los nodos secundarios.|  
 |NeverLocalize|No se puede localizar el valor actual. Los elementos secundarios de un elemento heredan esta categoría.|  
   
 <a name="Localization_Comments"></a>   
