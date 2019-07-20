@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b19fbeb0144698c5091a9bbe6bce45c21c4f0d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616368"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364050"
 ---
 # <a name="lazy-initialization"></a>Inicialización diferida
 La *inicialización diferida* de un objeto implica que su creación se aplaza hasta que se usa por primera vez. (En este tema, los términos *inicialización diferida* y *creación diferida de instancias* son sinónimos). La inicialización diferida se usa principalmente para mejorar el rendimiento, evitar la pérdida de tiempo en los cálculos y reducir los requisitos de memoria de los programas. Estos son los escenarios más comunes:  
@@ -27,14 +27,14 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
  En la tabla siguiente se muestran los tipos que .NET Framework versión 4 proporciona para habilitar la inicialización diferida en distintos escenarios.  
   
-|Tipo|Descripción|  
+|Type|DESCRIPCIÓN|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|Clase contenedora que proporciona semántica de inicialización diferida para cualquier biblioteca de clases o tipo definido por el usuario.|  
 |<xref:System.Threading.ThreadLocal%601>|Se parece a <xref:System.Lazy%601>, con la diferencia de que proporciona semántica de inicialización diferida para cada subproceso local. Cada subproceso tiene acceso a su propio valor único.|  
 |<xref:System.Threading.LazyInitializer>|Proporciona métodos `static` avanzados (`Shared` en Visual Basic) para la inicialización diferida de objetos sin la sobrecarga de una clase.|  
   
 ## <a name="basic-lazy-initialization"></a>Inicialización diferida básica  
- Para definir un tipo con inicialización diferida, como `MyType`, use `Lazy<MyType>` (`Lazy(Of MyType)` en Visual Basic), como se muestra en el ejemplo siguiente. Si no se pasa ningún delegado en el constructor <xref:System.Lazy%601>, el tipo contenedor se crea mediante <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> cuando se tiene acceso por primera vez a la propiedad de valor. Si el tipo no tiene un constructor predeterminado, se produce una excepción en tiempo de ejecución.  
+ Para definir un tipo con inicialización diferida, como `MyType`, use `Lazy<MyType>` (`Lazy(Of MyType)` en Visual Basic), como se muestra en el ejemplo siguiente. Si no se pasa ningún delegado en el constructor <xref:System.Lazy%601>, el tipo contenedor se crea mediante <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> cuando se tiene acceso por primera vez a la propiedad de valor. Si el tipo no tiene un constructor sin parámetros, se produce una excepción en tiempo de ejecución.  
   
  En el ejemplo siguiente, supongamos que `Orders` es una clase que contiene una matriz de objetos `Order` recuperados de una base de datos. Un objeto `Customer` contiene una instancia de `Orders`, pero en función de las acciones del usuario, los datos del objeto `Orders` podrían no ser necesarios.  
   
@@ -78,8 +78,8 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
 |Seguridad para subprocesos del objeto|Parámetro `mode` de `LazyThreadSafetyMode`|Parámetro booleano `isThreadSafe`|Sin parámetros de seguridad para subprocesos|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Totalmente seguro para subprocesos; solo intenta inicializar el valor un subproceso de cada vez.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Sí.|  
-|No es seguro para subprocesos.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|No es aplicable.|  
-|Totalmente seguro para subprocesos; los subprocesos se apresuran a inicializar el valor.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|No es aplicable.|No es aplicable.|  
+|No es seguro para subprocesos.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|No aplicable.|  
+|Totalmente seguro para subprocesos; los subprocesos se apresuran a inicializar el valor.|<xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>|No aplicable.|No aplicable.|  
   
  Como se muestra en la tabla, especificar <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> para el parámetro `mode` equivale a especificar `true` para el parámetro `isThreadSafe`, y especificar <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType> equivale a especificar `false`.  
   
@@ -87,9 +87,9 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
 <a name="ExceptionsInLazyObjects"></a>   
 ## <a name="exceptions-in-lazy-objects"></a>Excepciones en objetos diferidos  
- Como ya se ha indicado, un objeto <xref:System.Lazy%601> siempre devuelve el mismo objeto o valor con el que se ha inicializado y, por tanto, la propiedad <xref:System.Lazy%601.Value%2A> es de solo lectura. Si habilita el almacenamiento en caché de excepciones, esta inmutabilidad también se aplica al comportamiento de las excepciones. Si un objeto con inicialización diferida tiene habilitada la caché de excepción y produce una excepción desde su método de inicialización cuando la <xref:System.Lazy%601.Value%2A> en primer lugar se accede a la propiedad, esa misma excepción se produce en cada intento posterior para tener acceso a la <xref:System.Lazy%601.Value%2A> propiedad . En otras palabras, el constructor del tipo encapsulado nunca se vuelve a invocar, ni siquiera en escenarios multiproceso. Por lo tanto, el objeto <xref:System.Lazy%601> no puede producir una excepción en un acceso y devolver un valor en un acceso posterior.  
+ Como ya se ha indicado, un objeto <xref:System.Lazy%601> siempre devuelve el mismo objeto o valor con el que se ha inicializado y, por tanto, la propiedad <xref:System.Lazy%601.Value%2A> es de solo lectura. Si habilita el almacenamiento en caché de excepciones, esta inmutabilidad también se aplica al comportamiento de las excepciones. Si un objeto con inicialización diferida tiene habilitado el almacenamiento en caché de excepciones y produce una excepción desde <xref:System.Lazy%601.Value%2A> su método de inicialización cuando se obtiene acceso por primera vez a la propiedad, se produce <xref:System.Lazy%601.Value%2A> la misma excepción en cada intento posterior de acceder a la propiedad. . En otras palabras, el constructor del tipo encapsulado nunca se vuelve a invocar, ni siquiera en escenarios multiproceso. Por lo tanto, el objeto <xref:System.Lazy%601> no puede producir una excepción en un acceso y devolver un valor en un acceso posterior.  
   
- El almacenamiento en caché de excepciones se habilita cuando se usa cualquier constructor <xref:System.Lazy%601?displayProperty=nameWithType> que toma un método de inicialización (un parámetro `valueFactory`); por ejemplo, se habilita cuando se usa el constructor `Lazy(T)(Func(T))`. Si el constructor también toma un valor <xref:System.Threading.LazyThreadSafetyMode> (un parámetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> o <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Al especificar un método de inicialización, se permite el almacenamiento en caché de excepciones para estos dos modos. El método de inicialización puede ser muy simple. Por ejemplo, podría llamar al constructor predeterminado para `T`: `new Lazy<Contents>(() => new Contents(), mode)` en C#, o `New Lazy(Of Contents)(Function() New Contents())` en Visual Basic. Si usa un constructor <xref:System.Lazy%601?displayProperty=nameWithType> que no especifica un método de inicialización, las excepciones que inicie el constructor predeterminado para `T` no se almacenarán en caché. Para obtener más información, vea la enumeración <xref:System.Threading.LazyThreadSafetyMode>.  
+ El almacenamiento en caché de excepciones se habilita cuando se usa cualquier constructor <xref:System.Lazy%601?displayProperty=nameWithType> que toma un método de inicialización (un parámetro `valueFactory`); por ejemplo, se habilita cuando se usa el constructor `Lazy(T)(Func(T))`. Si el constructor también toma un valor <xref:System.Threading.LazyThreadSafetyMode> (un parámetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> o <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Al especificar un método de inicialización, se permite el almacenamiento en caché de excepciones para estos dos modos. El método de inicialización puede ser muy simple. Por ejemplo, podría llamar al constructor sin parámetros `T`para: `new Lazy<Contents>(() => new Contents(), mode)` in C#o `New Lazy(Of Contents)(Function() New Contents())` en Visual Basic. Si usa un <xref:System.Lazy%601?displayProperty=nameWithType> constructor que no especifica un método de inicialización, las excepciones producidas por el constructor sin parámetros para `T` no se almacenan en caché. Para obtener más información, vea la enumeración <xref:System.Threading.LazyThreadSafetyMode>.  
   
 > [!NOTE]
 >  Si crea un objeto <xref:System.Lazy%601> con el parámetro de constructor `isThreadSafe` establecido en `false` o el parámetro de constructor `mode` establecido en <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, debe tener acceso al objeto <xref:System.Lazy%601> desde un subproceso o proporcionar su propia sincronización. Esto se aplica a todos los aspectos del objeto, incluido el almacenamiento en caché de excepciones.  
@@ -100,11 +100,11 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
 |Constructor|Modo de seguridad para subprocesos|Usa método de inicialización|Las excepciones se almacenan en caché|  
 |-----------------|------------------------|--------------------------------|---------------------------|  
-|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|No|No|  
+|Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Sin|Sin|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|Sí|Sí|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|No|No|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Sin|Sin|  
 |Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) o `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|Sí|Sí|  
-|Lazy(T)(LazyThreadSafetyMode)|Especificado por el usuario|No|No|  
+|Lazy(T)(LazyThreadSafetyMode)|Especificado por el usuario|Sin|Sin|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|Especificado por el usuario|Sí|No si el usuario especifica <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>; en caso contrario, sí.|  
   
 ## <a name="implementing-a-lazy-initialized-property"></a>Implementar una propiedad con inicialización diferida  

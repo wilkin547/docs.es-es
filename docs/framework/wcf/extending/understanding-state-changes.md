@@ -2,12 +2,12 @@
 title: Introducción a los cambios de estado
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 858da2a88c17920910c05966bb3b211d754fb278
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424778"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363944"
 ---
 # <a name="understanding-state-changes"></a>Introducción a los cambios de estado
 En este tema se discuten los estados y transiciones que los canales tienen, los tipos utilizados para estructurar los estados del canal, y cómo implementarlos.  
@@ -24,16 +24,16 @@ En este tema se discuten los estados y transiciones que los canales tienen, los 
 ## <a name="icommunicationobject-communicationobject-and-states-and-state-transition"></a>ICommunicationObject, CommunicationObject y estados y transición de estado  
  <xref:System.ServiceModel.ICommunicationObject> empieza en el estado Creado donde se pueden configurar sus diferentes propiedades. Una vez en el estado Abierto, el objeto se puede utilizar para enviar y recibir mensajes pero sus propiedades se consideran inmutables. Una vez en el estado Cerrando, el objeto ya no puede procesar nuevas solicitudes de envío o recepción, pero las solicitudes existentes tiene una oportunidad para completarse hasta que se alcance el tiempo de espera de Cerrar.  Si se produce un error irrecuperable, el objeto pasa al estado Error donde se puede inspeccionar para obtener información sobre el error y finalmente cerrarlo. Cuando en el estado Cerrado el objeto ha llegado esencialmente al fin de la máquina de estados. Cuando objeto pasa de un estado al siguiente, no regresa a un estado anterior.  
   
- El diagrama siguiente muestra los estados <xref:System.ServiceModel.ICommunicationObject> y transiciones de estado. Transiciones de estado pueden deberse a una llamada a uno de los tres métodos: Anular, abrir o cerrar. También se pueden producir llamando a otros métodos específicos de la implementación. La transición al estado Error se podría producir como resultado de los errores mientras se abre o después de haber abierto el objeto de comunicación.  
+ El diagrama siguiente muestra los estados <xref:System.ServiceModel.ICommunicationObject> y transiciones de estado. Las transiciones de estado pueden deberse a una llamada a uno de los tres métodos: Anular, abrir o cerrar. También se pueden producir llamando a otros métodos específicos de la implementación. La transición al estado Error se podría producir como resultado de los errores mientras se abre o después de haber abierto el objeto de comunicación.  
   
  Cada <xref:System.ServiceModel.ICommunicationObject> empieza en el estado Creado. En este estado, una aplicación puede configurar el objeto estableciendo sus propiedades. Cuando un objeto está en un estado diferente a Creado, se considera inmutable.  
   
- ![Transición de estado del canal](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Transición de estado de canal](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Figura 1. La máquina de estados de ICommunicationObject.  
   
- Windows Communication Foundation (WCF) proporciona una clase base abstracta denominada <xref:System.ServiceModel.Channels.CommunicationObject> que implementa <xref:System.ServiceModel.ICommunicationObject> y la máquina de Estados del canal. El gráfico siguiente es un diagrama de estados modificado que es específico de <xref:System.ServiceModel.Channels.CommunicationObject>. Además de la máquina de estados <xref:System.ServiceModel.ICommunicationObject>, muestra el control de tiempo cuando se invocan métodos <xref:System.ServiceModel.Channels.CommunicationObject> adicionales.  
+ Windows Communication Foundation (WCF) proporciona una clase base abstracta denominada <xref:System.ServiceModel.Channels.CommunicationObject> que <xref:System.ServiceModel.ICommunicationObject> implementa y la máquina de Estados del canal. El gráfico siguiente es un diagrama de estados modificado que es específico de <xref:System.ServiceModel.Channels.CommunicationObject>. Además de la máquina de estados <xref:System.ServiceModel.ICommunicationObject>, muestra el control de tiempo cuando se invocan métodos <xref:System.ServiceModel.Channels.CommunicationObject> adicionales.  
   
- ![State changes](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![Cambios de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Figura 2. La implementación de CommunicationObject del equipo de estados ICommunicationObject incluidas las llamadas a eventos y métodos protegidos.  
   
 ### <a name="icommunicationobject-events"></a>Eventos ICommunicationObject  
@@ -64,7 +64,7 @@ Figura 2. La implementación de CommunicationObject del equipo de estados ICommu
   
  <xref:System.ServiceModel.Channels.CommunicationObject> proporciona tres constructores; todos ellos dejan el objeto en el estado Creado. Los constructores se definen como:  
   
- El primer constructor es un constructor predeterminado que delega a la sobrecarga del constructor que toma un objeto:  
+ El primer constructor es un constructor sin parámetros que delega a la sobrecarga del constructor que toma un objeto:  
   
  `protected CommunicationObject() : this(new object()) { … }`  
   
@@ -82,7 +82,7 @@ Figura 2. La implementación de CommunicationObject del equipo de estados ICommu
   
  Condición previa: Se crea el estado.  
   
- Condición posterior: Estado está abierto o con errores. Podría iniciar una excepción.  
+ Condición posterior: El estado está abierto o tiene errores. Podría iniciar una excepción.  
   
  El método Open () intentará abrir el objeto de comunicación y establecer el estado en Abierto. Si encuentra un error, establecerá el estado en Error.  
   
@@ -90,28 +90,28 @@ Figura 2. La implementación de CommunicationObject del equipo de estados ICommu
   
  A continuación establece el estado en Abriendo y llama a OnOpening () (que desencadena el evento Abriendo), OnOpen () y OnOpened () en ese orden. OnOpened () establece el estado en Abierto y desencadena el evento Abierto. Si cualquiera de estas operaciones provoca una excepción, Open() llama a Fault() y permite que se produzca la excepción. El diagrama siguiente muestra con más detalle el proceso Abrir.  
   
- ![State changes](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![Cambios de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 Invalide el método OnOpen para implementar lógica abierta personalizada como abrir un objeto de comunicación interno.  
   
  Close (Método)  
   
  Condición previa: Ninguno.  
   
- Condición posterior: Está cerrada. Podría iniciar una excepción.  
+ Condición posterior: El estado es Closed. Podría iniciar una excepción.  
   
  Se puede llamar al método Close() en cualquier estado. Intenta cerrar normalmente el objeto. Si se encuentra un error, finaliza el objeto. El método no hace nada si el estado actual es Cerrando o Cerrado. De lo contrario establece el estado en Cerrando. Si el estado original era Creado, Abriendo o Error, llama a Abort() (vea el diagrama siguiente). Si el estado original era Abierto, llama a OnClosing() (que desencadena el evento Cerrando), OnClose() y OnClosed() en ese orden. Si cualquiera de estas operaciones provoca una excepción, Close() llama a Abort() y permite que se produzca la excepción. OnClosed() establece el estado en Cerrado y desencadena el evento Cerrado. El diagrama siguiente muestra con más detalle el proceso Cerrar.  
   
- ![State changes](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
+ ![Cambios de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
 Invalide el método OnClose para implementar la lógica del cierre personalizada, como cerrar un objeto de comunicación interno. Toda lógica de cierre elegante que se pueda bloquear durante mucho tiempo (por ejemplo, esperando a que el otro lado responda) se debería implementar en OnClose() porque toma un parámetro de tiempo de espera y porque no se llama como parte de Abort().  
   
  Abort  
   
  Condición previa: Ninguno.  
-Condición posterior: Está cerrada. Podría iniciar una excepción.  
+Condición posterior: El estado es Closed. Podría iniciar una excepción.  
   
  El método Abort() no hace nada si el estado actual es Cerrado o si el objeto se ha finalizado antes (por ejemplo, posiblemente teniendo Abort() ejecutándose en otro subproceso). De lo contrario establece el estado a Cerrando y llama a OnClosing() (que desencadena el evento Cerrando), OnAbort() y OnClosed() en ese orden (no llama a OnClose porque se está finalizando el objeto, no cerrado). OnClosed() establece el estado en Cerrado y desencadena el evento Cerrado. Si cualquiera de estas operaciones provoca una excepción, se reinicia el llamador de Anular. Las implementaciones de OnClosing(), OnClosed() y OnAbort() no se deberían bloquear (por ejemplo, en entrada/salida). El diagrama siguiente muestra con más detalle el proceso Anular.  
   
- ![State changes](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
+ ![Cambios de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 Invalide el método OnAbort para implementar lógica de finalización personalizada como finalizar un objeto de comunicación interno.  
   
  Fault  
@@ -120,7 +120,7 @@ Invalide el método OnAbort para implementar lógica de finalización personaliz
   
  Condición previa: Ninguno.  
   
- Condición posterior: Estado es error. Podría iniciar una excepción.  
+ Condición posterior: El estado es error. Podría iniciar una excepción.  
   
  El método Fault() no hace nada si el estado actual es Error o Cerrado. De lo contrario establece el estado a Error y llama a OnFaulted(), que desencadena el evento Error. Si OnFaulted producir una excepción se reinicia.  
   
@@ -141,12 +141,12 @@ Invalide el método OnAbort para implementar lógica de finalización personaliz
 |Abriendo|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Abierto|N/D|<xref:System.InvalidOperationException?displayProperty=nameWithType>|  
 |Closing|Sí|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType>|  
-|Closing|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Closing|Sin|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Cerrado|Sí|<xref:System.ServiceModel.CommunicationObjectAbortedException?displayProperty=nameWithType> en el caso de que una llamada anterior y explícita de Anular cerrara un objeto. Si llama a Cerrar en el objeto, se produce <xref:System.ObjectDisposedException?displayProperty=nameWithType>.|  
-|Cerrado|No|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
+|Cerrado|Sin|<xref:System.ObjectDisposedException?displayProperty=nameWithType>|  
 |Error|N/D|<xref:System.ServiceModel.CommunicationObjectFaultedException?displayProperty=nameWithType>|  
   
-### <a name="timeouts"></a>Tiempos de espera  
+### <a name="timeouts"></a>Tiempos de expiración  
  Algunos de los métodos que hemos abordado utilizan parámetros de tiempo de espera. Son Cerrar, Abrir (ciertas sobrecargas y versiones asincrónicas), OnClose y OnOpen. Estos métodos están diseñados para permitir las operaciones largas (por ejemplo, bloquear en entrada/salida mientras se cierra una conexión) de modo que el parámetro de tiempo de espera indica cuánto tiempo pueden tardar tales operaciones antes de ser interrumpidas. Las implementaciones de cualquiera de estos métodos deberían utilizar el valor de tiempo de espera proporcionado para garantizar que vuelvan al llamador dentro de ese tiempo de espera. Las implementaciones de otros métodos que no tienen un tiempo de espera no están diseñadas para las operaciones largas y no se bloquean en entrada/salida.  
   
  Las excepciones son las sobrecargas de Open() y Close() que no tienen un tiempo de espera. Estos usan un valor de tiempo de espera predeterminado proporcionado por la clase derivada. <xref:System.ServiceModel.Channels.CommunicationObject> expone dos propiedades abstractas protegidas denominadas <xref:System.ServiceModel.Channels.CommunicationObject.DefaultCloseTimeout%2A> y <xref:System.ServiceModel.Channels.CommunicationObject.DefaultOpenTimeout%2A> definidas como:  

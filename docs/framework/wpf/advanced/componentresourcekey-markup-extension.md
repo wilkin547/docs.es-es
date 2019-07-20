@@ -8,29 +8,29 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: a593839447742ed91d22a397d29b2455ce7a3b2d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93735d12426042fd6517c10a55d1a9bd32f906bb
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627408"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363065"
 ---
 # <a name="componentresourcekey-markup-extension"></a>Extensión de marcado ComponentResourceKey
-Define y hace referencia a las claves de recursos que se cargan desde ensamblados externos. Esto permite una búsqueda de recursos especificar un tipo de destino en un ensamblado, en lugar de un diccionario de recursos explícita en un ensamblado o en una clase.  
+Define y hace referencia a las claves de los recursos que se cargan desde ensamblados externos. Esto permite que una búsqueda de recursos especifique un tipo de destino en un ensamblado, en lugar de un diccionario de recursos explícito en un ensamblado o en una clase.  
   
-## <a name="xaml-attribute-usage-setting-key-compact"></a>Uso de atributos XAML (clave de configuración, compact)  
+## <a name="xaml-attribute-usage-setting-key-compact"></a>Uso de atributos XAML (clave de configuración, Compact)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey {x:Type targetTypeName}, targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-setting-key-verbose"></a>Uso de atributos XAML (clave de valor, detallado)  
+## <a name="xaml-attribute-usage-setting-key-verbose"></a>Uso de atributos XAML (configuración de clave, detallado)  
   
 ```xml  
 <object x:Key="{ComponentResourceKey TypeInTargetAssembly={x:Type targetTypeName}, ResourceID=targetID}" .../>  
 ```  
   
-## <a name="xaml-attribute-usage-requesting-resource-compact"></a>Uso de atributos XAML (recurso de solicitud, compact)  
+## <a name="xaml-attribute-usage-requesting-resource-compact"></a>Uso de atributos XAML (recurso de solicitud, Compact)  
   
 ```xml  
 <object property="{DynamicResource {ComponentResourceKey {x:Type targetTypeName}, targetID}}" .../>  
@@ -46,31 +46,31 @@ Define y hace referencia a las claves de recursos que se cargan desde ensamblado
   
 |||  
 |-|-|  
-|`targetTypeName`|El nombre del público [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] tipo que se define en el ensamblado de recursos.|  
-|`targetID`|La clave para el recurso. Cuando se buscan recursos `targetID` será similar a la [Directiva x: Key](../../xaml-services/x-key-directive.md) del recurso.|  
+|`targetTypeName`|Nombre del tipo público [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] que se define en el ensamblado de recursos.|  
+|`targetID`|La clave para el recurso. Cuando se buscan los recursos, `targetID` será análogo a la [Directiva x:Key](../../xaml-services/x-key-directive.md) del recurso.|  
   
 ## <a name="remarks"></a>Comentarios  
- Tal como se muestra en los usos anteriores, un {`ComponentResourceKey`} uso de la extensión de marcado se encuentra en dos lugares:  
+ Tal como se ha mostrado en los usos anteriores,`ComponentResourceKey`un uso de la extensión de marcado {} se encuentra en dos lugares:  
   
-- La definición de una clave dentro de un diccionario de recursos de tema, según lo proporcionado por el autor de un control.  
+- La definición de una clave dentro de un diccionario de recursos de tema, tal y como la proporciona el autor de un control.  
   
-- Obtener acceso a un recurso de temas desde el ensamblado, cuando el control vuelve a crear plantillas, pero desea utilizar los valores de propiedad que proceden de los recursos proporcionados por los temas del control.  
+- Obtener acceso a un recurso de tema desde el ensamblado, cuando se replantilla el control, pero se desea usar valores de propiedad que proceden de los recursos proporcionados por los temas del control.  
   
- Para hacer referencia a los recursos del componente que proceden de los temas, se recomienda por lo general utilice `{DynamicResource}` lugar `{StaticResource}`. Esto se muestra en los usos. `{DynamicResource}` se recomienda porque el propio tema puede cambiarse por el usuario. Si desea que el recurso de componente que mejor coincida con intención del autor de control para admitir un tema, debe habilitar la referencia de recurso de componente que también sean dinámicos.  
+ Para hacer referencia a los recursos de componentes que proceden de los temas, se `{DynamicResource}` recomienda usar `{StaticResource}`en lugar de. Esto se muestra en los usos. `{DynamicResource}`se recomienda porque el usuario puede cambiar el propio tema. Si desea que el recurso del componente coincida mejor con la intención del autor del control para admitir un tema, debe permitir que la referencia de recurso del componente también sea dinámica.  
   
- El <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> identifica un tipo que existe en el ensamblado de destino que el recurso está definido realmente. Un `ComponentResourceKey` puede definirse y utilizarse independientemente de saber exactamente donde el <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> está definido, pero finalmente debe resolver el tipo de los ensamblados que se hace referencia.  
+ <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> Identifica un tipo que existe en el ensamblado de destino en el que se define realmente el recurso. Se puede definir y usar independientemente de <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> que sepa exactamente dónde se define, pero finalmente debe resolver el tipo a través de los ensamblados a los que se hace referencia. `ComponentResourceKey`  
   
- Un uso común para <xref:System.Windows.ComponentResourceKey> consiste en definir las claves que, a continuación, se exponen como miembros de una clase. Para este uso, usa el <xref:System.Windows.ComponentResourceKey> constructor de clase, no la extensión de marcado. Para obtener más información, consulte <xref:System.Windows.ComponentResourceKey>, o en la sección "Definir y hacer referencia a claves de recursos de tema" del tema [Control Authoring Overview](../controls/control-authoring-overview.md).  
+ Un uso común de <xref:System.Windows.ComponentResourceKey> es definir las claves que se exponen como miembros de una clase. Para este uso, se usa el <xref:System.Windows.ComponentResourceKey> constructor de clase, no la extensión de marcado. Para obtener más información, <xref:System.Windows.ComponentResourceKey>vea o la sección "definir y hacer referencia a las claves para los recursos del tema" del tema [información general sobre la creación de controles](../controls/control-authoring-overview.md).  
   
- Para establecer las claves tanto que hacen referencia a recursos con clave, normalmente se utiliza la sintaxis de atributo para el `ComponentResourceKey` extensión de marcado.  
+ Para establecer claves y hacer referencia a recursos con clave, la sintaxis de atributo se `ComponentResourceKey` usa normalmente para la extensión de marcado.  
   
- La sintaxis compacta se muestra se basa en el <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> firma del constructor y el uso de parámetro posicional de una extensión de marcado. El orden en que el `targetTypeName` y `targetID` reciben es importante. La sintaxis detallada se basa en el <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> constructor predeterminado y, a continuación, Establece el <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> y <xref:System.Windows.ComponentResourceKey.ResourceId%2A> de manera que es análoga a una sintaxis de atributo es true en un elemento de objeto. En la sintaxis detallada, no es importante el orden en el que se establecen las propiedades. La relación y los mecanismos de estas dos alternativas (compacta y detallados) se describe con más detalle en el tema [extensiones de marcado y WPF XAML](markup-extensions-and-wpf-xaml.md).  
+ La sintaxis compacta que se muestra se basa <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> en la firma del constructor y el uso de parámetros posicionales de una extensión de marcado. El orden en el que `targetTypeName` se `targetID` proporcionan y es importante. La sintaxis detallada se basa en el <xref:System.Windows.ComponentResourceKey.%23ctor%2A?displayProperty=nameWithType> constructor sin parámetros y, a continuación, <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> establece y <xref:System.Windows.ComponentResourceKey.ResourceId%2A> de forma análoga a una sintaxis de atributo verdadera en un elemento de objeto. En la sintaxis detallada, el orden en el que se establecen las propiedades no es importante. La relación y los mecanismos de estas dos alternativas (compacta y detallada) se describen con más detalle en el tema [extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
   
- Técnicamente, el valor de `targetID` puede ser cualquier objeto, no tiene que ser una cadena. Sin embargo, el uso más común en WPF es alinear los `targetID` valor con los formularios que son cadenas, y donde las cadenas de este tipo son válidas en el [gramática de XamlName](../../xaml-services/xamlname-grammar.md).  
+ Técnicamente, el valor de `targetID` puede ser cualquier objeto, no tiene que ser una cadena. Sin embargo, el uso más común en WPF es alinear `targetID` el valor con formularios que son cadenas, y donde dichas cadenas son válidas en la [gramática de XamlName](../../xaml-services/xamlname-grammar.md).  
   
- `ComponentResourceKey` se puede usar en la sintaxis de elemento de objeto. En este caso, especificando el valor de ambos el <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> y <xref:System.Windows.ComponentResourceKey.ResourceId%2A> propiedades es necesario para inicializar correctamente la extensión.  
+ `ComponentResourceKey`se puede usar en la sintaxis de elemento de objeto. En este caso, es necesario especificar el valor de <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A> las propiedades y <xref:System.Windows.ComponentResourceKey.ResourceId%2A> para inicializar correctamente la extensión.  
   
- En el [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementación de lector, el control para esta extensión de marcado se define por la <xref:System.Windows.ComponentResourceKey> clase.  
+ En la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementación del lector, la <xref:System.Windows.ComponentResourceKey> clase define el control para esta extensión de marcado.  
   
  `ComponentResourceKey` es una extensión de marcado. Las extensiones de marcado se suelen implementar cuando se necesita que los valores de los atributos de escape no sean valores literales o nombres de controladores, y este requisito es de índole más global que limitarse a colocar los convertidores de tipos en determinados tipos o propiedades. Todas las extensiones de marcado de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usan los caracteres { y } en su sintaxis de atributo, que es la convención que permite que un procesador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconozca que el atributo se debe procesar mediante una extensión de marcado. Para más información, vea [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md).  
   

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 64e639e5fd6200b525ef6face56f7df2e804d7ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 627b68d707dbedfaf6a291f2ab22dbc9a4f60835
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767109"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363860"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>Procedimiento para importar aserciones de directivas personalizadas
 Las aserciones de directivas describen las funciones y requisitos de un extremo de servicio.  Las aplicaciones cliente pueden utilizar aserciones de directivas en metadatos del servicio para configurar el enlace de cliente o para personalizar el contrato de servicio de un punto de conexión de servicio.  
   
- Las aserciones de directiva personalizadas se importan implementando la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> y pasando ese objeto al sistema de los metadatos o registrando el tipo de implementación en su archivo de configuración de la aplicación.  Las implementaciones de la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension> deben proporcionar un constructor predeterminado.  
+ Las aserciones de directiva personalizadas se importan implementando la interfaz <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> y pasando ese objeto al sistema de los metadatos o registrando el tipo de implementación en su archivo de configuración de la aplicación.  Las implementaciones de <xref:System.ServiceModel.Description.IPolicyImportExtension> la interfaz deben proporcionar un constructor sin parámetros.  
   
 ### <a name="to-import-custom-policy-assertions"></a>Para importar aserciones de directivas personalizadas  
   
@@ -25,7 +25,7 @@ Las aserciones de directivas describen las funciones y requisitos de un extremo 
   
 3. El uso de un archivo de configuración Consulte los procedimientos siguientes.  
   
-4. Uso de un archivo de configuración con [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Consulte los procedimientos siguientes.  
+4. Usar un archivo de configuración con la herramienta de utilidad de metadatos de [ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Consulte los procedimientos siguientes.  
   
 5. Insertar mediante programación el importador de la directiva. Consulte los procedimientos siguientes.  
   
@@ -40,11 +40,11 @@ Las aserciones de directivas describen las funciones y requisitos de un extremo 
   
 3. Realice la personalización para el enlace o contrato que admite la función o el requisito especificó por la aserción de directiva. Normalmente las aserciones indican que un enlace requiere una configuración determinada o un elemento de enlace concreto. Realice estas modificaciones obteniendo acceso a la propiedad <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType>. Otras aserciones requieren que modifique el contrato.  Puede obtener acceso y modificar el contrato mediante la propiedad <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType>.  Observe que su importador de directivas se puede llamar varias veces para el mismo enlace y contrato, pero para alternativas de directivas diferentes si no se importa correctamente una alternativa de directivas. Su código debería ser resistente a este comportamiento.  
   
-4. Elimine la aserción de directiva personalizada de la colección de aserciones. Si no quita la aserción de Windows Communication Foundation (WCF) se da por supuesto que la importación de la directiva se realizó correctamente y no importa el enlace asociado. Si usó el método <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> para ubicar la aserción de directivas personalizadas y eliminarla de la colección en un paso no tiene que realizar este paso.  
+4. Elimine la aserción de directiva personalizada de la colección de aserciones. Si no quita la aserción Windows Communication Foundation (WCF) supone que la importación de la Directiva no se ha realizado correctamente y no importa el enlace asociado. Si usó el método <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> para ubicar la aserción de directivas personalizadas y eliminarla de la colección en un paso no tiene que realizar este paso.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>Para insertar el importador de directivas personalizadas en el sistema de metadatos utilizando un archivo de configuración  
   
-1. Agregar el tipo de importador para el `<extensions>` elemento dentro de la [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) elemento en el archivo de configuración de cliente.  
+1. Agregue el tipo de importador al `<extensions>` elemento dentro del [ \<elemento > policyImporters](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) en el archivo de configuración del cliente.  
   
      [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
   
@@ -55,9 +55,9 @@ Las aserciones de directivas describen las funciones y requisitos de un extremo 
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>Para insertar el importador de directivas personalizadas en el sistema de metadatos utilizando Svcutil.exe  
   
-1. Agregar el tipo de importador para el `<extensions>` elemento dentro de la [ \<policyImporters >](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) elemento en el archivo de configuración Svcutil.exe.config. También puede señalar Svcutil.exe para cargar tipos de importador de directivas registrados en un archivo de configuración diferente mediante la opción `/svcutilConfig`.  
+1. Agregue el tipo de importador al `<extensions>` elemento dentro del [ \<elemento > policyImporters](../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md) en el archivo de configuración SvcUtil. exe. config. También puede señalar Svcutil.exe para cargar tipos de importador de directivas registrados en un archivo de configuración diferente mediante la opción `/svcutilConfig`.  
   
-2. Use [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) importar los metadatos y el importador se invoca automáticamente.  
+2. Use la herramienta de utilidad de metadatos de [ServiceModel (SvcUtil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para importar los metadatos y el importador se invoca automáticamente.  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>Para insertar mediante programación el importador de directivas personalizadas en el sistema de metadatos  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: ce626d9b75f2061ff024fa25ce005f952301603e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617259"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364318"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Información general sobre las extensiones de marcado para el lenguaje XAML
 Las extensiones de marcado son una técnica XAML para obtener un valor que no es un tipo primitivo ni específico de XAML. Para el uso de atributos, las extensiones de marcado usan la secuencia de caracteres conocida de una llave de apertura `{` para entrar en el ámbito de la extensión de marcado y una llave de cierre `}` para salir. Al usar los servicios XAML de .NET Framework, puede usar algunas de las extensiones de marcado del lenguaje XAML predefinidas del ensamblado System.Xaml. También puede crear subclases de la clase <xref:System.Windows.Markup.MarkupExtension> , definida en System.Xaml, y definir sus propias extensiones de marcado. Asimismo, puede usar las extensiones de marcado definidas por un marco determinado si ya se hace referencia a dicho marco.  
@@ -22,7 +22,7 @@ Las extensiones de marcado son una técnica XAML para obtener un valor que no es
  Varias extensiones de marcado se implementan mediante los servicios XAML de .NET Framework para la compatibilidad con el lenguaje XAML. Estas extensiones de marcado corresponden a las partes de la especificación de XAML como lenguaje. Suelen identificarse por el prefijo `x:` en la sintaxis, tal como se muestra en el uso común. Todas las implementaciones de servicios XAML de .NET Framework para estos elementos del lenguaje XAML derivan de la clase base  <xref:System.Windows.Markup.MarkupExtension> .  
   
 > [!NOTE]
->  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para el espacio de nombres del lenguaje XAML, en el elemento raíz de una producción de XAML. Por ejemplo, las plantillas de proyecto y una página de Visual Studio para diversos marcos concretos inician un archivo XAML usando esta `x:` asignación. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres XAML predeterminado de un marco concreto o de otros espacios de nombres XML o CLR arbitrarios.  
+>  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para el espacio de nombres del lenguaje XAML, en el elemento raíz de una producción de XAML. Por ejemplo, las plantillas de proyecto y de página de Visual Studio para varios marcos de trabajo específicos inician `x:` un archivo XAML con esta asignación. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres XAML predeterminado de un marco concreto o de otros espacios de nombres XML o CLR arbitrarios.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` proporciona el objeto <xref:System.Type> para el tipo con nombre. Esta funcionalidad se usa con más frecuencia en los mecanismos de aplazamiento que usan el tipo CLR subyacente y la derivación de tipos como identificador o moniker de agrupación. Los estilos y plantillas WPF y su uso de las propiedades `TargetType` son un ejemplo concreto. Para obtener más información, consulta [x:Type Markup Extension](x-type-markup-extension.md).  
@@ -39,8 +39,8 @@ Las extensiones de marcado son una técnica XAML para obtener un valor que no es
 ### <a name="xreference"></a>x:Reference  
  `x:Reference` forma parte de XAML 2009, una extensión del lenguaje original (2006). `x:Reference` representa una referencia a otro objeto existente en un gráfico de objetos. Dicho objeto se identifica por su `x:Name`. Para obtener más información, consulta [x:Reference Markup Extension](x-reference-markup-extension.md).  
   
-### <a name="other-x-constructs"></a>Otros x: Construcciones  
- Existen otras construcciones `x:` que admiten características del lenguaje XAML, pero no se implementan como extensiones de marcado. Para obtener más información, consulte [XAML Namespace (x:) Características del lenguaje](xaml-namespace-x-language-features.md).  
+### <a name="other-x-constructs"></a>Otro x: Construcciones  
+ Existen otras construcciones `x:` que admiten características del lenguaje XAML, pero no se implementan como extensiones de marcado. Para obtener más información, [vea espacio de nombres XAML (x:) Características](xaml-namespace-x-language-features.md)del lenguaje.  
   
 <a name="the_markupextension_base_class"></a>   
 ## <a name="the-markupextension-base-class"></a>Clase base MarkupExtension  
@@ -63,9 +63,9 @@ Las extensiones de marcado son una técnica XAML para obtener un valor que no es
  Desde la perspectiva del uso del marcado, es válido incluir el sufijo `Extension` como parte del uso. Sin embargo, esto se comporta como si `Extension` realmente formase parte del nombre de clase, y los escritores de objetos XAML no podrían resolver una clase de compatibilidad de la extensión de marcado para ese uso si la clase de compatibilidad no tuviese el sufijo `Extension` .  
   
 ### <a name="the-default-constructor"></a>El constructor predeterminado  
- Para todos los tipos de compatibilidad de la extensión de marcado, debe exponer un constructor público predeterminado. Un constructor predeterminado es necesario para todos los casos en que un escritor de objetos XAML crea una instancia de la extensión de marcado a partir del uso de elementos de objeto. La compatibilidad con el uso de elementos de objeto es una expectativa lógica para una extensión de marcado, en especial para la serialización. Sin embargo, puede implementar una extensión de marcado sin un constructor público si solo desea admitir usos de atributos de la extensión de marcado.  
+ Para todos los tipos de compatibilidad de la extensión de marcado, debe exponer un constructor sin parámetros público. Se requiere un constructor sin parámetros para cualquier caso en el que un escritor de objetos XAML cree una instancia de la extensión de marcado a partir de un uso de elemento de objeto. La compatibilidad con el uso de elementos de objeto es una expectativa lógica para una extensión de marcado, en especial para la serialización. Sin embargo, puede implementar una extensión de marcado sin un constructor público si solo desea admitir usos de atributos de la extensión de marcado.  
   
- Si el uso de la extensión de marcado no tiene ningún argumento, es necesario el constructor predeterminado para admitir el uso.  
+ Si el uso de la extensión de marcado no tiene ningún argumento, se requiere el constructor sin parámetros para admitir el uso.  
   
 <a name="constructor_patterns_and_positional_arguments_for_a_custom_markup_extension"></a>   
 ## <a name="constructor-patterns-and-positional-arguments-for-a-custom-markup-extension"></a>Patrones de constructor y argumentos posicionales para una extensión de marcado personalizada  
@@ -81,7 +81,7 @@ public Collate(CollationMode collationMode) {...}
   
  El procesamiento funciona conceptualmente como si la extensión de marcado fuera un objeto que se va a crear y, a continuación, se establecieran sus valores de miembro. Cada propiedad especificada que se va a establecer se evalúa de modo similar a la manera en que se puede establecer un miembro especificado en un objeto creado cuando se analiza XAML. Hay dos diferencias importantes:  
   
-- Como se mencionó anteriormente, un tipo de compatibilidad de la extensión de marcado no necesita tener un constructor predeterminado para que se cree una instancia suya en XAML. La construcción de objetos se aplaza hasta que sus posibles argumentos en la sintaxis de texto se conviertan en tokens y se evalúen como argumentos con nombre o posicionales y se llame al constructor adecuado en ese momento.  
+- Como se indicó anteriormente, un tipo de compatibilidad de la extensión de marcado no necesita tener un constructor sin parámetros para poder crear instancias en XAML. La construcción de objetos se aplaza hasta que sus posibles argumentos en la sintaxis de texto se conviertan en tokens y se evalúen como argumentos con nombre o posicionales y se llame al constructor adecuado en ese momento.  
   
 - Los usos de las extensiones de marcado se pueden anidar. Primero se evalúa la extensión de marcado más interna. Por lo tanto, puede suponer este tipo de uso y declarar uno de los parámetros de construcción de modo que sea un tipo que requiere que se genere un convertidor de valores (como una extensión de marcado).  
   
@@ -116,7 +116,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="property-element-usage-of-a-markup-extension"></a>Uso de elementos de propiedad de una extensión de marcado  
  Los escenarios para los usos de la extensión de marcado suelen estar diseñados para emplear la extensión de marcado en el uso de atributos. Sin embargo, también es posible definir la clase de respaldo de modo que admita el uso de elementos de propiedad.  
   
- Para admitir el uso de elementos de propiedad de la extensión de marcado, defina un constructor predeterminado público. Debe ser un constructor de instancia, no un constructor estático. Esto es necesario porque un procesador XAML generalmente debe invocar el constructor predeterminado en todos los elementos de objeto que procesa desde el marcado, lo que incluye las clases de extensión de marcado como elementos de objeto. En el caso de escenarios avanzados, puede definir rutas de acceso de construcción no predeterminadas para las clases. (Para obtener más información, consulte [x: FactoryMethod Directive](x-factorymethod-directive.md).) Sin embargo, no debe usar estos patrones con fines de extensión de marcado, ya que esto dificulta mucho la detección del patrón de uso, tanto a los diseñadores como a los usuarios del marcado sin formato.  
+ Para admitir el uso de elementos de propiedad de la extensión de marcado, defina un constructor sin parámetros público. Debe ser un constructor de instancia, no un constructor estático. Esto es necesario porque un procesador XAML generalmente debe invocar el constructor sin parámetros en cualquier elemento de objeto que procesa desde el marcado, lo que incluye las clases de extensión de marcado como elementos de objeto. En el caso de escenarios avanzados, puede definir rutas de acceso de construcción no predeterminadas para las clases. (Para obtener más información, vea [la Directiva x:FactoryMethod](x-factorymethod-directive.md)). Sin embargo, no debe usar estos patrones con fines de extensión de marcado, ya que esto dificulta mucho la detección del patrón de uso, tanto a los diseñadores como a los usuarios del marcado sin formato.  
   
 <a name="attributing_for_a_custom_markup_extension"></a>   
 ## <a name="attributing-for-a-custom-markup-extension"></a>Atribución para una extensión de marcado personalizada  

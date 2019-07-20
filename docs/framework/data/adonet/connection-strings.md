@@ -2,65 +2,72 @@
 title: Cadenas de conexión de ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 02fe8d984f1287673477bb142b3f9626e248898e
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881161"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363749"
 ---
 # <a name="connection-strings-in-adonet"></a>Cadenas de conexión de ADO.NET
 
-Una cadena de conexión contiene información de inicialización que se transfiere como un parámetro desde un proveedor de datos a un origen de datos. El proveedor de datos recibe la cadena de conexión como el valor de la <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> propiedad. El proveedor analiza la cadena de conexión y se garantiza que la sintaxis es correcta y que se admiten las palabras clave. El <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> método pasa los parámetros de conexión analizado al origen de datos. El origen de datos realiza la validación y establece una conexión.
+Una cadena de conexión contiene información de inicialización que se transfiere como un parámetro desde un proveedor de datos a un origen de datos. El proveedor de datos recibe la cadena de conexión como el valor <xref:System.Data.Common.DbConnection.ConnectionString?displayProperty=nameWithType> de la propiedad. El proveedor analiza la cadena de conexión y garantiza que la sintaxis es correcta y que se admiten las palabras clave. A continuación <xref:System.Data.Common.DbConnection.Open?displayProperty=nameWithType> , el método pasa los parámetros de conexión analizados al origen de datos. El origen de datos realiza una validación adicional y establece una conexión.
 
-## <a name="connection-string-syntax"></a>Sintaxis de la cadena de conexión
+## <a name="connection-string-syntax"></a>Sintaxis de cadena de conexión
 
-Una cadena de conexión es una lista delimitada por punto y coma de pares de parámetro de clave/valor:
+Una cadena de conexión es una lista delimitada por signos de punto y coma de pares de parámetros de clave-valor:
 
 ```
 keyword1=value; keyword2=value;
 ```
 
-Palabras clave no distinguen mayúsculas de minúsculas. Sin embargo, los valores, pueden ser entre mayúsculas y minúsculas, según el origen de datos. Pueden contener las palabras clave y valores [caracteres de espacio en blanco](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Espacio en blanco inicial y final se omite en las palabras clave y sin comillas los valores.
+Las palabras clave no distinguen mayúsculas de minúsculas. Sin embargo, los valores pueden distinguir entre mayúsculas y minúsculas, en función del origen de datos. Las palabras clave y los valores pueden contener [caracteres de espacio en blanco](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Los espacios en blanco iniciales y finales se omiten en las palabras clave y los valores sin comillas.
 
-Si el valor contiene el punto y coma, [caracteres de control Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), o iniciales o finales de espacio en blanco, debe encerrarse entre comillas simples o dobles. Por ejemplo:
+Si un valor contiene el punto y coma, [caracteres de control Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters)o espacios en blanco iniciales o finales, debe incluirse entre comillas simples o dobles. Por ejemplo:
 
 ```
 Keyword=" whitespace  ";
 Keyword='special;character';
 ```
 
-El carácter envolvente no puede producirse dentro del valor que se agrega. Por lo tanto, un valor que contiene comillas simples puede incluirse únicamente en las comillas dobles y viceversa:
+Es posible que el carácter envolvente no se encuentre dentro del valor que contiene. Por lo tanto, un valor que contenga comillas simples solo se puede incluir entre comillas dobles y viceversa:
 
 ```
 Keyword='double"quotation;mark';
 Keyword="single'quotation;mark";
 ```
 
-Las comillas a sí mismos, así como el signo igual, no requiere la adición, por lo que las siguientes cadenas de conexión son válidas:
+También puede escapar el carácter envolvente con dos de ellos juntos:
+
+```
+Keyword="double""quotation";
+Keyword='single''quotation';
+```
+
+Las comillas, así como el signo igual, no requieren caracteres de escape, por lo que las siguientes cadenas de conexión son válidas:
 
 ```
 Keyword=no "escaping" 'required';
 Keyword=a=b=c
 ```
 
-Dado que cada valor se lee hasta el punto y coma siguiente o al final de cadena, el valor en el último ejemplo es `a=b=c`, y el punto y coma final es opcional.
+Puesto que cada valor se lee hasta el punto y coma siguiente o el final de la cadena, el valor del último `a=b=c`ejemplo es y el punto y coma final es opcional.
 
-Todas las cadenas de conexión comparten la misma sintaxis básica que se ha descrito anteriormente. El conjunto de palabras clave reconocidos depende del proveedor, sin embargo y ha evolucionado durante los años desde las primeras API como *ODBC*. El *.NET Framework* proveedor de datos para *SQL Server* (`SqlClient`) es compatible con muchas palabras clave de API anteriores, pero es generalmente más flexible y acepta sinónimos para muchos de la cadena de conexión comunes palabras clave.
+Todas las cadenas de conexión comparten la misma sintaxis básica que se ha descrito anteriormente. Sin embargo, el conjunto de palabras clave reconocidas depende del proveedor y ha evolucionado a lo largo de los años desde API anteriores, como *ODBC*. El proveedor de datos de *.NET Framework* para`SqlClient` *SQL Server* () admite muchas palabras clave de API anteriores, pero suele ser más flexible y acepta sinónimos para muchas de las palabras clave de cadena de conexión comunes.
 
-Errores de escritura pueden provocar errores. Por ejemplo, `Integrated Security=true` es válido, pero `IntegratedSecurity=true` produce un error.
+Los errores tipográficos pueden producir errores. Por ejemplo, `Integrated Security=true` es válido, pero `IntegratedSecurity=true` produce un error.
 
-Las cadenas de conexión creadas manualmente en tiempo de ejecución desde una entrada de usuario son vulnerables a ataques por inyección de cadenas y poner en peligro la seguridad en el origen de datos. Para abordar estos problemas, *ADO.NET* 2.0 introducidas [generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md) para cada *.NET Framework* proveedor de datos. Estos generadores de cadenas de conexión exponen parámetros como propiedades fuertemente tipadas y hacen posible validar la cadena de conexión antes de enviarla al origen de datos.
+Las cadenas de conexión construidas manualmente en tiempo de ejecución desde la entrada de usuario no validada son vulnerables a ataques de inyección de cadenas y ponen en peligro la seguridad en el origen de datos. Para solucionar estos problemas, *ADO.NET* 2,0 presentó [generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md) para cada proveedor de datos *.NET Framework* . Estos generadores de cadenas de conexión exponen parámetros como propiedades fuertemente tipadas y permiten validar la cadena de conexión antes de enviarla al origen de datos.
 
 ## <a name="in-this-section"></a>En esta sección
 
 [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)\
 Muestra cómo usar las clases `ConnectionStringBuilder` para construir cadenas de conexión válidas en tiempo de ejecución.
 
-[Las cadenas de conexión y archivos de configuración](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+[Cadenas de conexión y archivos de configuración](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
 Muestra cómo almacenar y recuperar cadenas de conexión en archivos de configuración.
 
-[Sintaxis de la cadena de conexión](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+[Sintaxis de cadena de conexión](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
 Describe cómo configurar cadenas de conexión específicas de proveedor para `SqlClient`, `OracleClient`, `OleDb` y `Odbc`.
 
 [Protección de la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)\

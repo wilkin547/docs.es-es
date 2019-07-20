@@ -2,18 +2,18 @@
 title: Usar actividades de WF de .NET Framework 3.0 en .NET Framework 4 con la actividad Interop
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 00636824277b57c46d760c419138dc9e001af17e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: baca65da29fd0b18bd61f9b79ce82429faaed432
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649368"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364138"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Usar actividades de WF de .NET Framework 3.0 en .NET Framework 4 con la actividad Interop
 La actividad <xref:System.Activities.Statements.Interop> es una actividad de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) que ajusta una actividad de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) dentro de un flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. La actividad WF 3 puede ser una actividad de hoja única o un árbol completo de actividades. La ejecución (incluso la cancelación y el control de excepciones) y la persistencia de la actividad de [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] se producen en el contexto de la instancia de flujo de trabajo de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que está ejecutando.  
   
 > [!NOTE]
->  El <xref:System.Activities.Statements.Interop> actividad no aparece en el cuadro de herramientas Diseñador de flujo de trabajo a menos que el proyecto del flujo de trabajo tiene su **.NET Framework de destino** configuración establecida en **.NET Framework 4.5**.  
+>  La <xref:System.Activities.Statements.Interop> actividad no aparece en el cuadro de herramientas del diseñador de flujo de trabajo a menos que el proyecto del flujo de trabajo tenga la configuración de la **plataforma de destino** establecida en **.NET Framework 4,5**.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Criterios para usar una actividad WF 3 con una actividad de interoperabilidad  
  Para ejecutar una actividad WF3 dentro de una actividad <xref:System.Activities.Statements.Interop>, se deben cumplir los siguientes criterios:  
@@ -22,14 +22,14 @@ La actividad <xref:System.Activities.Statements.Interop> es una actividad de [!I
   
 - La actividad WF 3 debe declararse como `public` y no ser `abstract`.  
   
-- La actividad WF 3 debe tener un constructor predeterminado público.  
+- La actividad WF 3 debe tener un constructor sin parámetros público.  
   
 - Debido a las limitaciones en los tipos de interfaz que la actividad <xref:System.Activities.Statements.Interop> puede admitir, <xref:System.Workflow.Activities.HandleExternalEventActivity> y <xref:System.Workflow.Activities.CallExternalMethodActivity> no se pueden usar directamente, aunque se pueden usar actividades derivativas creadas con la herramienta de actividad de comunicación de flujo de trabajo (WCA.exe). Consulte [herramientas de Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=178889) para obtener más información.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Configurar una actividad WF 3 dentro de una actividad de interoperabilidad  
  Para configurar y pasar datos dentro y fuera de una actividad WF 3 (a través del límite de interoperabilidad), la actividad <xref:System.Activities.Statements.Interop> expone las propiedades de los metadatos y de la actividad WF 3. Las propiedades de metadatos de la actividad WF 3 (como <xref:System.Workflow.ComponentModel.Activity.Name%2A>) se exponen a través de la colección de <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A>. Se trata de una colección de valores nombre-valor que se usa para definir los valores para las propiedades de metadatos de la actividad WF 3. Una propiedad de metadatos es una propiedad respaldada por la propiedad de dependencia para la que se define la marca <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata>.  
   
- Las propiedades de la actividad WF 3 se exponen mediante la colección de <xref:System.Activities.Statements.Interop.ActivityProperties%2A>. Se trata de un conjunto de pares nombre-valor, en el que cada valor es un objeto <xref:System.Activities.Argument> que se usa para definir los argumentos para las propiedades de la actividad WF 3. Dado que no se puede inferir la dirección de una propiedad de actividad de WF 3, cada propiedad aparece como un <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument> par. Dependiendo del uso de la actividad de la propiedad, es posible que desee proporcionar una entrada <xref:System.Activities.InArgument>, una entrada <xref:System.Activities.OutArgument> o ambas. El nombre que se espera para la entrada <xref:System.Activities.InArgument> en la colección es el nombre de la propiedad tal y como se define en la actividad WF 3. El nombre que espera el <xref:System.Activities.OutArgument> entrada en la colección es una concatenación del nombre de la propiedad y la cadena "Out".  
+ Las propiedades de la actividad WF 3 se exponen mediante la colección de <xref:System.Activities.Statements.Interop.ActivityProperties%2A>. Se trata de un conjunto de pares nombre-valor, en el que cada valor es un objeto <xref:System.Activities.Argument> que se usa para definir los argumentos para las propiedades de la actividad WF 3. Dado que no se puede inferir la dirección de una propiedad de actividad de WF 3, todas las propiedades <xref:System.Activities.InArgument> se muestran como un / <xref:System.Activities.OutArgument> par. Dependiendo del uso de la actividad de la propiedad, es posible que desee proporcionar una entrada <xref:System.Activities.InArgument>, una entrada <xref:System.Activities.OutArgument> o ambas. El nombre que se espera para la entrada <xref:System.Activities.InArgument> en la colección es el nombre de la propiedad tal y como se define en la actividad WF 3. El nombre esperado de la <xref:System.Activities.OutArgument> entrada en la colección es una concatenación del nombre de la propiedad y la cadena "out".  
   
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Limitaciones de usar una actividad WF 3 dentro de una actividad de interoperabilidad  
  Las actividades WF 3 proporcionadas por el sistema no se pueden encapsular en una actividad <xref:System.Activities.Statements.Interop>. Para algunas actividades WF 3, como <xref:System.Workflow.Activities.DelayActivity>, esto se debe a que hay una actividad WF 4.5 análoga. En otros casos, esto se debe a que no se admite la funcionalidad de la actividad. Se pueden usar muchas actividades proporcionadas por el sistema WF 3 dentro de los flujos de trabajo encapsulados por la actividad <xref:System.Activities.Statements.Interop>, aunque sujetas a las siguientes restricciones:  

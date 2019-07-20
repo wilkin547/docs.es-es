@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 98377a48b1ffe1ffabd72d0b42de4ed3da3ef93a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fcc5d3aa6d093f1fbf8af19c4f0c65036e1705d7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642936"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364387"
 ---
 # <a name="wpf-partial-trust-security"></a>Seguridad de confianza parcial de WPF
-<a name="introduction"></a> En general, deben restringirse las aplicaciones de Internet para que no tengan acceso directo a recursos críticos del sistema y así evitar daños malintencionados. De forma predeterminada, [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] y lenguajes de scripting del lado cliente no tienen acceso a recursos críticos del sistema. Dado que las aplicaciones hospedadas en Explorador de Windows Presentation Foundation (WPF) se pueden iniciar desde el explorador, deben cumplir un conjunto similar de restricciones. Para aplicar estas restricciones, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se basa en [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] y [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (consulte [estrategia de seguridad de WPF: seguridad de la plataforma](wpf-security-strategy-platform-security.md)). De forma predeterminada, las aplicaciones hospedadas en explorador solicitan la zona de Internet [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] conjunto de permisos, independientemente de si se inician desde Internet, la intranet local o el equipo local. Las aplicaciones que se ejecutan con menos permisos que el conjunto completo de permisos se dice que se ejecutan con confianza parcial.  
+<a name="introduction"></a> En general, deben restringirse las aplicaciones de Internet para que no tengan acceso directo a recursos críticos del sistema y así evitar daños malintencionados. De forma predeterminada [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] , y los lenguajes de scripting del lado cliente no pueden tener acceso a los recursos críticos del sistema. Dado que las aplicaciones hospedadas en un explorador Windows Presentation Foundation (WPF) se pueden iniciar desde el explorador, deben ajustarse a un conjunto similar de restricciones. Para aplicar estas restricciones, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se basa en la seguridad de acceso del código (CAS [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] ) y en (consulte [estrategia de seguridad de WPF: seguridad de plataforma](wpf-security-strategy-platform-security.md)). De forma predeterminada, las aplicaciones hospedadas en el explorador solicitan el conjunto de permisos de la zona de Internet, independientemente de si se inician desde Internet, la Intranet local o el equipo local. Las aplicaciones que se ejecutan con menos permisos que el conjunto completo de permisos se dice que se ejecutan con confianza parcial.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Proporciona una amplia variedad de soporte técnico para asegurarse de que puede utilizarse con seguridad tanta funcionalidad como sea posible en confianza parcial y, junto con [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)], proporciona compatibilidad adicional para la programación de confianza parcial.  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]proporciona una amplia variedad de compatibilidad para garantizar que tanta funcionalidad como sea posible se pueda usar de forma segura en confianza parcial y, junto con las CA, proporciona compatibilidad adicional para la programación de confianza parcial.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "64642936"
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>Compatibilidad de confianza parcial de las características de WPF  
- En la tabla siguiente se enumera las características de alto nivel de Windows Presentation Foundation (WPF) que son seguras de usar dentro de los límites del conjunto de permisos de zona de Internet.  
+ En la tabla siguiente se enumeran las características de alto nivel de Windows Presentation Foundation (WPF) que se pueden usar con seguridad dentro de los límites del conjunto de permisos de la zona de Internet.  
   
  Tabla 1: Características de WPF que son seguras en confianza parcial  
   
@@ -50,23 +50,23 @@ ms.locfileid: "64642936"
 |Editar|Revisión ortográfica<br /><br /> RichTextBox<br /><br /> Compatibilidad con texto sin formato y portapapeles de entrada de lápiz<br /><br /> Pegado iniciado por el usuario<br /><br /> Copiar contenido seleccionado|  
 |Controles|Controles generales|  
   
- Esta tabla se tratan los [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] características en un nivel alto. Para obtener más información, el [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] documenta los permisos requeridos por cada miembro en [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Además, las características siguientes ofrecen más información detallada sobre la ejecución de confianza parcial, incluidas algunas consideraciones especiales.  
+ En esta tabla se [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] tratan las características de en un nivel alto. Para obtener información más detallada, [!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)] documenta los permisos que necesita cada miembro de. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Además, las características siguientes ofrecen más información detallada sobre la ejecución de confianza parcial, incluidas algunas consideraciones especiales.  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (consulte [información general sobre XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)](consulte [información general sobre XAML (WPF)](./advanced/xaml-overview-wpf.md)).  
   
-- Elementos emergentes (consulte <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>).  
+- Elementos emergentes ( <xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>vea).  
   
-- Arrastrar y colocar (consulte [Drag and Drop Overview](./advanced/drag-and-drop-overview.md)).  
+- Arrastrar y colocar (vea [Introducción a la función de arrastrar y colocar](./advanced/drag-and-drop-overview.md)).  
   
-- Portapapeles (consulte <xref:System.Windows.Clipboard?displayProperty=nameWithType>).  
+- Portapapeles <xref:System.Windows.Clipboard?displayProperty=nameWithType>(vea).  
   
-- Creación de imágenes (consulte <xref:System.Windows.Controls.Image?displayProperty=nameWithType>).  
+- Creación de imágenes <xref:System.Windows.Controls.Image?displayProperty=nameWithType>(vea).  
   
-- Serialización (vea <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>, <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
+- Serialización (vea <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType> <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>).  
   
-- Abra el cuadro de diálogo de archivo (consulte <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
+- Cuadro de diálogo Abrir archivo ( <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>vea).  
   
- La siguiente tabla se describen los [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] conjunto de permisos de zona de las características que no son seguras para ejecutarse dentro de los límites de Internet.  
+ En la tabla siguiente se describen las [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] características que no son seguras para ejecutarse dentro de los límites del conjunto de permisos de la zona de Internet.  
   
  Tabla 2: Características de WPF que no son seguras en confianza parcial  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64642936"
   
 <a name="Partial_Trust_Programming"></a>   
 ## <a name="partial-trust-programming"></a>Programación de confianza parcial  
- Para [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] aplicaciones, el código que supera el conjunto de permisos predeterminado tendrá un comportamiento diferente según la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarla. El usuario puede elegir continuar o cancelar la instalación. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.  
+ En [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] el caso de las aplicaciones, el código que supera el conjunto de permisos predeterminado tendrá un comportamiento diferente en función de la zona de seguridad. En algunos casos, el usuario recibirá una advertencia al intentar instalarla. El usuario puede elegir continuar o cancelar la instalación. En la tabla siguiente se describe el comportamiento de la aplicación para cada zona de seguridad y qué se debe hacer para que la aplicación reciba plena confianza.  
   
 |Zona de seguridad|Comportamiento|Obtener plena confianza|  
 |-------------------|--------------|------------------------|  
@@ -89,18 +89,18 @@ ms.locfileid: "64642936"
 > [!NOTE]
 >  El comportamiento descrito en la tabla anterior es para XBAP de plena confianza que no siguen el modelo de implementación de confianza ClickOnce.  
   
- En general, el código que puede superar los permisos permitidos es probable que sea código común compartido entre aplicaciones independientes y hospedadas en explorador. [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] y [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ofrecen varias técnicas para administrar este escenario.  
+ En general, el código que puede superar los permisos permitidos es probable que sea código común compartido entre aplicaciones independientes y hospedadas en explorador. CAS y [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ofrecen varias técnicas para administrar este escenario.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Detectar permisos con CAS  
- En algunas situaciones, es posible que el código compartido en ensamblados de biblioteca que va a usar aplicaciones independientes y [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]. En estos casos, es posible que el código ejecute funcionalidades que podrían necesitar más permisos que los que se incluyen en el conjunto de permisos que concede la aplicación. La aplicación puede detectar si tiene un permiso determinado mediante el uso de seguridad de Microsoft .NET Framework o no. En concreto, puede comprobar si tiene un permiso específico mediante una llamada a la <xref:System.Security.CodeAccessPermission.Demand%2A> método en la instancia del permiso deseado. Esto se muestra en el ejemplo siguiente, que contiene código que consulta si tiene la capacidad de guardar un archivo en el disco local:  
+ En algunas situaciones, es posible que las aplicaciones independientes y [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]utilicen el código compartido de los ensamblados de biblioteca. En estos casos, es posible que el código ejecute funcionalidades que podrían necesitar más permisos que los que se incluyen en el conjunto de permisos que concede la aplicación. La aplicación puede detectar si tiene un permiso determinado mediante Microsoft .NET seguridad del marco de trabajo. En concreto, puede probar si tiene un permiso específico llamando al <xref:System.Security.CodeAccessPermission.Demand%2A> método en la instancia del permiso deseado. Esto se muestra en el ejemplo siguiente, que contiene código que consulta si tiene la capacidad de guardar un archivo en el disco local:  
   
  [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
  [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
 [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
 [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
- Si una aplicación no tiene el permiso deseado, la llamada a <xref:System.Security.CodeAccessPermission.Demand%2A> producirá una excepción de seguridad. De lo contrario, se concedió el permiso. `IsPermissionGranted` encapsula este comportamiento y devuelve `true` o `false` según corresponda.  
+ Si una aplicación no tiene el permiso deseado, la llamada a <xref:System.Security.CodeAccessPermission.Demand%2A> producirá una excepción de seguridad. De lo contrario, se concedió el permiso. `IsPermissionGranted`encapsula este comportamiento y devuelve `true` o `false` , según corresponda.  
   
 <a name="Graceful_Degradation_of_Functionality"></a>   
 ### <a name="graceful-degradation-of-functionality"></a>Degradación correcta de la funcionalidad  
@@ -113,37 +113,37 @@ ms.locfileid: "64642936"
   
  En muchos casos, debería poder encontrar una alternativa de confianza parcial.  
   
- En un entorno controlado, como una intranet, los marcos administrados personalizados se pueden instalar a través de la base de cliente en el [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]. Estas bibliotecas pueden ejecutar código que requiere plena confianza y hacer referencia a las aplicaciones que solo se permiten la confianza parcial mediante el uso de <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (para obtener más información, consulte [seguridad](security-wpf.md) y [seguridad de WPF Estrategia - seguridad de plataforma](wpf-security-strategy-platform-security.md)).  
+ En un entorno controlado, como una intranet, los marcos administrados personalizados se pueden instalar a través de la base de [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]cliente en. Estas bibliotecas pueden ejecutar código que requiere plena confianza y se puede hacer referencia a ellas desde aplicaciones a las que solo se permite <xref:System.Security.AllowPartiallyTrustedCallersAttribute> la confianza parcial mediante el uso de (para obtener más información, vea [seguridad](security-wpf.md) y [estrategia de seguridad de WPF: seguridad de plataforma](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Detección de host del explorador  
- Uso de [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] comprobar los permisos es una técnica conveniente cuando necesite comprobar en una base por cada permiso. Sin embargo, esta técnica depende de la detección de excepciones como parte del procesamiento normal, que, en general, no se recomienda y puede tener problemas de rendimiento. En su lugar, si su [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] solo se ejecuta en el espacio aislado de zona de Internet, puede usar el <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> propiedad, que devuelve true para [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+ El uso de entidades de certificación para comprobar los permisos es una técnica adecuada cuando se necesita comprobar por cada permiso. Sin embargo, esta técnica depende de la detección de excepciones como parte del procesamiento normal, que, en general, no se recomienda y puede tener problemas de rendimiento. En su lugar, si [!INCLUDE[TLA#tla_xbap](../../../includes/tlasharptla-xbap-md.md)] solo se ejecuta en el espacio aislado de zona de Internet, <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> puede usar la propiedad, que [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)]devuelve true para.  
   
 > [!NOTE]
->  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A> solo distingue si una aplicación se ejecuta en un explorador, no qué conjunto de permisos de una aplicación se está ejecutando con.  
+>  <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A>solo distingue si una aplicación se ejecuta en un explorador, no el conjunto de permisos con el que se ejecuta una aplicación.  
   
 <a name="Managing_Permissions"></a>   
 ## <a name="managing-permissions"></a>Gestión de permisos  
- De forma predeterminada, [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] ejecutar con confianza parcial (conjunto de permisos de zona de Internet de forma predeterminada). Sin embargo, según los requisitos de la aplicación, es posible cambiar el conjunto de permisos predeterminado. Por ejemplo, si un [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] se inicia desde una intranet local, puede aprovechar las ventajas de un conjunto de permisos mayor, que se muestra en la tabla siguiente.  
+ De forma predeterminada [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] , se ejecuta con confianza parcial (conjunto de permisos predeterminados de la zona de Internet). Sin embargo, según los requisitos de la aplicación, es posible cambiar el conjunto de permisos predeterminado. Por ejemplo, si se [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] inicia un desde una Intranet local, puede aprovechar un conjunto de permisos mejorado, que se muestra en la tabla siguiente.  
   
- Tabla 3: Permisos de Internet y de intranet local  
+ Tabla 3: Permisos de intranet y de Internet  
   
 |Permiso|Atributo|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
-|DNS|Servidores DNS de acceso|Sí|No|  
-|Variables de entorno|Leer|Sí|No|  
+|DNS|Servidores DNS de acceso|Sí|Sin|  
+|Variables de entorno|Lectura|Sí|Sin|  
 |Cuadros de diálogo de archivo|Abrir|Sí|Sí|  
-|Cuadros de diálogo de archivo|Sin restricción|Sí|No|  
-|Almacenamiento aislado|Aislamiento de ensamblados por el usuario|Sí|No|  
+|Cuadros de diálogo de archivo|Sin restricción|Sí|Sin|  
+|Almacenamiento aislado|Aislamiento de ensamblados por el usuario|Sí|Sin|  
 |Almacenamiento aislado|Aislamiento desconocido|Sí|Sí|  
-|Almacenamiento aislado|Cuota de usuario ilimitada|Sí|No|  
+|Almacenamiento aislado|Cuota de usuario ilimitada|Sí|Sin|  
 |Multimedia|Imágenes, vídeo y audio seguros|Sí|Sí|  
-|Impresión|Impresión predeterminada|Sí|No|  
+|Impresión|Impresión predeterminada|Sí|Sin|  
 |Impresión|Impresión segura|Sí|Sí|  
-|Reflexión|Emitir|Sí|No|  
+|Reflexión|Emitir|Sí|Sin|  
 |Seguridad|Ejecución de código administrado|Sí|Sí|  
-|Seguridad|Permisos de aserción concedidos|Sí|No|  
-|Interfaz de usuario|Sin restricción|Sí|No|  
+|Seguridad|Permisos de aserción concedidos|Sí|Sin|  
+|Interfaz de usuario|Sin restricción|Sí|Sin|  
 |Interfaz de usuario|Ventanas seguras de nivel superior|Sí|Sí|  
 |Interfaz de usuario|Portapapeles propio|Sí|Sí|  
 |Explorador web|Navegación de marcos segura a HTML|Sí|Sí|  
@@ -159,9 +159,9 @@ ms.locfileid: "64642936"
   
 - [Proteger las aplicaciones ClickOnce](/visualstudio/deployment/securing-clickonce-applications).  
   
- Si su [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] requiere plena confianza, puede usar las mismas herramientas para aumentar los permisos solicitados. Aunque un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] solo recibirá plena confianza si está instalado en y se inicia desde el equipo local, la intranet, o desde una dirección URL que aparece en el Explorador de confianza o sitios permitidos. Si la aplicación se instala desde la intranet o un sitio de confianza, el usuario recibirá el mensaje estándar de ClickOnce, que le notificará los permisos elevados. El usuario puede elegir continuar con la instalación o cancelarla.  
+ [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] Si requiere plena confianza, puede utilizar las mismas herramientas para aumentar los permisos solicitados. Aunque un [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] solo recibirá plena confianza si se instala y se inicia desde el equipo local, la intranet o desde una dirección URL que se muestra en sitios de confianza o permitidos del explorador. Si la aplicación se instala desde la intranet o un sitio de confianza, el usuario recibirá el mensaje estándar de ClickOnce, que le notificará los permisos elevados. El usuario puede elegir continuar con la instalación o cancelarla.  
   
- Como alternativa, puede usar el modelo de implementación de confianza de ClickOnce para realizar una implementación de plena confianza desde cualquier zona de seguridad. Para obtener más información, consulte [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) y [seguridad](security-wpf.md).  
+ Como alternativa, puede usar el modelo de implementación de confianza de ClickOnce para realizar una implementación de plena confianza desde cualquier zona de seguridad. Para obtener más información, consulte [Introducción a la implementación de aplicaciones de confianza](/visualstudio/deployment/trusted-application-deployment-overview) y [seguridad](security-wpf.md).  
   
 ## <a name="see-also"></a>Vea también
 

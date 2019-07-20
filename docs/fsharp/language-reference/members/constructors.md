@@ -1,27 +1,27 @@
 ---
 title: Constructores
-description: Obtenga información sobre cómo definir y utilizar constructores en F# para crear e inicializar objetos de clase y estructura.
+description: Obtenga información sobre cómo definir y usar constructores F# en para crear e inicializar objetos de clase y estructura.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fb6e77ce369d7aa4fce3aa2c97ecf7df280c03
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645228"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364359"
 ---
 # <a name="constructors"></a>Constructores
 
-Este tema describe cómo definir y usar constructores para crear e inicializar objetos de clase y estructura.
+En este tema se describe cómo definir y usar constructores para crear e inicializar objetos de clase y estructura.
 
 ## <a name="construction-of-class-objects"></a>Construcción de objetos de clase
 
-Los objetos de tipos de clase tienen constructores. Hay dos tipos de constructores. Uno es el constructor principal, cuyos parámetros aparecen entre paréntesis justo después del nombre de tipo. Especificar otros constructores adicionales opcionales mediante el `new` palabra clave. Todos estos constructores adicionales deben llamar al constructor principal.
+Los objetos de tipos de clase tienen constructores. Hay dos tipos de constructores. Uno es el constructor principal, cuyos parámetros aparecen entre paréntesis justo después del nombre de tipo. Especifique otros constructores adicionales opcionales mediante la `new` palabra clave. Cualquier constructor adicional de este tipo debe llamar al constructor principal.
 
-El constructor principal contiene `let` y `do` los enlaces que aparecen al principio de la definición de clase. Un `let` enlace declara campos privados y métodos de la clase; un `do` enlace ejecuta código. Para obtener más información acerca de `let` los enlaces en los constructores de clase, vea [ `let` Bindings in Classes](let-bindings-in-classes.md). Para obtener más información acerca de `do` los enlaces en los constructores, vea [ `do` Bindings in Classes](do-bindings-in-classes.md).
+El constructor principal contiene `let` enlaces `do` y que aparecen al principio de la definición de clase. Un `let` enlace declara los campos y métodos privados de la clase; un `do` enlace ejecuta código. Para obtener más información `let` sobre los enlaces de los constructores de clase, vea [ `let` enlaces en clases](let-bindings-in-classes.md). Para obtener más información `do` sobre los enlaces en constructores, vea [ `do` enlaces en clases](do-bindings-in-classes.md).
 
-Independientemente de si el constructor que desea llamar es un constructor primario o un constructor adicional, puede crear objetos mediante un `new` expresión, con o sin el elemento opcional `new` palabra clave. Inicializar los objetos junto con los argumentos de constructor, ya sea con una lista de los argumentos en orden y separados por comas y entre paréntesis, o mediante el uso de argumentos con nombre y los valores entre paréntesis. También puede establecer propiedades en un objeto durante la construcción del objeto mediante el uso de los nombres de propiedad y al igual que utiliza la asignación de valores con nombre argumentos de constructor.
+Independientemente de si el constructor al que desea llamar es un constructor principal o un constructor adicional, puede crear objetos mediante una `new` expresión, con o sin la palabra clave opcional. `new` Los objetos se inicializan junto con los argumentos del constructor, ya sea mediante una lista de los argumentos en orden y se separan mediante comas y entre paréntesis, o usando argumentos y valores con nombre entre paréntesis. También puede establecer las propiedades de un objeto durante la construcción del objeto utilizando los nombres de propiedad y asignando valores de la misma forma que se usan los argumentos del constructor con nombre.
 
-El código siguiente muestra una clase que tiene un constructor y las diversas formas de crear objetos.
+En el código siguiente se muestra una clase que tiene un constructor y varias maneras de crear objetos.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
@@ -36,21 +36,21 @@ Initialized object that has coordinates (0, 0, 0)
 
 ## <a name="construction-of-structures"></a>Construcción de estructuras
 
-Las estructuras siguen todas las reglas de clases. Por lo tanto, puede tener un constructor primario, y puede proporcionar constructores adicionales mediante `new`. Sin embargo, hay una diferencia importante entre las clases y estructuras: las estructuras pueden tener un constructor predeterminado (es decir, uno sin argumentos), incluso si no se define ningún constructor primario. El constructor predeterminado inicializa todos los campos en el valor predeterminado para ese tipo, normalmente cero o su equivalente. Los constructores que se definen para las estructuras de deben tener al menos un argumento para que no entren en conflicto con el constructor predeterminado.
+Las estructuras siguen todas las reglas de las clases. Por lo tanto, puede tener un constructor principal y puede proporcionar constructores `new`adicionales mediante. Sin embargo, hay una diferencia importante entre las estructuras y las clases: las estructuras pueden tener un constructor sin parámetros (es decir, uno sin argumentos) aunque no se haya definido ningún constructor principal. El constructor sin parámetros inicializa todos los campos en el valor predeterminado de ese tipo, normalmente cero o su equivalente. Los constructores que defina para las estructuras deben tener al menos un argumento para que no entren en conflicto con el constructor predeterminado.
 
-Además, las estructuras tienen a menudo campos que se crean mediante el `val` palabra clave; las clases también pueden tener estos campos. Estructuras y clases que tienen campos definidos mediante el `val` palabra clave también se puede inicializar en constructores adicionales mediante el uso de expresiones de registro, como se muestra en el código siguiente.
+Además, las estructuras suelen tener campos que se crean mediante la `val` palabra clave; las clases también pueden tener estos campos. Las estructuras y las clases que tienen campos definidos mediante `val` la palabra clave también se pueden inicializar en constructores adicionales mediante el uso de expresiones de registro, como se muestra en el código siguiente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
-Para obtener más información, consulte [campos explícitos: El `val` palabra clave](explicit-fields-the-val-keyword.md).
+Para obtener más información, [vea campos explícitos: `val` Palabra clave](explicit-fields-the-val-keyword.md).
 
 ## <a name="executing-side-effects-in-constructors"></a>Ejecutar efectos secundarios en constructores
 
-Un constructor primario en una clase puede ejecutar código en un `do` enlace. Sin embargo, ¿qué ocurre si tiene que ejecutar código en un constructor adicional, sin un `do` enlace? Para ello, usa el `then` palabra clave.
+Un constructor principal de una clase puede ejecutar código en un `do` enlace. Sin embargo, ¿qué ocurre si tiene que ejecutar código en un constructor adicional, `do` sin un enlace? Para ello, use la `then` palabra clave.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
-Seguir ejecutando los efectos del constructor principal. Por lo tanto, el resultado es como sigue.
+Los efectos secundarios del constructor principal todavía se ejecutan. Por lo tanto, el resultado es el siguiente.
 
 ```console
 Created a person object.
@@ -58,37 +58,37 @@ Created a person object.
 Created an invalid person object.
 ```
 
-## <a name="self-identifiers-in-constructors"></a>Autoidentificadores en constructores
+## <a name="self-identifiers-in-constructors"></a>Identificadores propios en constructores
 
-En otros miembros, proporcione un nombre para el objeto actual en la definición de cada miembro. También puede colocar el identificador propio en la primera línea de la definición de clase mediante el uso de la `as` palabra clave inmediatamente después de los parámetros del constructor. El ejemplo siguiente muestra esta sintaxis.
+En otros miembros, se proporciona un nombre para el objeto actual en la definición de cada miembro. También puede colocar el identificador propio en la primera línea de la definición de clase mediante la `as` palabra clave inmediatamente después de los parámetros del constructor. En el ejemplo siguiente se muestra esta sintaxis.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
-En los constructores adicionales, también puede definir un identificador propio colocando el `as` cláusula justo después de los parámetros del constructor. El ejemplo siguiente muestra esta sintaxis.
+En los constructores adicionales, también puede definir un identificador propio colocando la `as` cláusula justo después de los parámetros del constructor. En el ejemplo siguiente se muestra esta sintaxis.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
-Pueden producirse problemas cuando se intenta usar un objeto antes de que está totalmente definida. Por lo tanto, usos del identificador propio pueden hacer que el compilador emite una advertencia e inserte comprobaciones adicionales para asegurarse de que no se tiene acceso a los miembros de un objeto antes de que se inicializa el objeto. Solo se debe usar el identificador propio en la `do` enlaces del constructor principal o después de la `then` palabra clave en los constructores adicionales.
+Pueden producirse problemas al intentar usar un objeto antes de que se defina por completo. Por lo tanto, los usos del propio identificador pueden hacer que el compilador emita una advertencia e inserte comprobaciones adicionales para asegurarse de que no se tiene acceso a los miembros de un objeto antes de que se inicialice el objeto. Solo se debe usar el identificador propio en los `do` enlaces del constructor principal o después de la `then` palabra clave en constructores adicionales.
 
-El nombre del propio identificador no tiene que ser `this`. Puede ser cualquier identificador válido.
+No es necesario que el nombre del propio identificador sea `this`. Puede ser cualquier identificador válido.
 
 ## <a name="assigning-values-to-properties-at-initialization"></a>Asignar valores a propiedades en la inicialización
 
-Puede asignar valores a las propiedades de un objeto de clase en el código de inicialización mediante la anexión de una lista de asignaciones del formulario `property = value` a la lista de argumentos para un constructor. Esto se muestra en el ejemplo de código siguiente.
+Puede asignar valores a las propiedades de un objeto de clase en el código de inicialización anexando una lista de asignaciones del formulario `property = value` a la lista de argumentos de un constructor. Esto se muestra en el ejemplo de código siguiente.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
-La versión siguiente del código anterior muestra la combinación de argumentos normales, los argumentos opcionales y configuración de propiedades de una llamada de constructor.
+La siguiente versión del código anterior muestra la combinación de argumentos ordinarios, argumentos opcionales y valores de propiedades en una llamada a un constructor.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
-## <a name="constructors-in-inherited-class"></a>Constructores de clase heredada
+## <a name="constructors-in-inherited-class"></a>Constructores en la clase heredada
 
-Al heredar de una clase base que tiene un constructor, debe especificar sus argumentos en la cláusula heredar. Para obtener más información, consulte [constructores y herencia](../inheritance.md#constructors-and-inheritance).
+Al heredar de una clase base que tiene un constructor, debe especificar sus argumentos en la cláusula inherit. Para obtener más información, vea [constructores y herencia](../inheritance.md#constructors-and-inheritance).
 
-## <a name="static-constructors-or-type-constructors"></a>Los constructores estáticos o constructores de tipos
+## <a name="static-constructors-or-type-constructors"></a>Constructores estáticos o constructores de tipo
 
-Además de especificar el código para crear objetos, estáticos `let` y `do` enlaces se pueden crear tipos de clase que se ejecutan antes de que el tipo en primer lugar se utiliza para realizar la inicialización en el nivel de tipo. Para obtener más información, consulte [ `let` Bindings in Classes](let-bindings-in-classes.md) y [ `do` Bindings in Classes](do-bindings-in-classes.md).
+Además de especificar el código para crear objetos, se pueden `let` crear `do` enlaces estáticos y en tipos de clase que se ejecutan antes de que el tipo se use por primera vez para realizar la inicialización en el nivel de tipo. Para obtener más información, vea [ `let` enlaces en clases](let-bindings-in-classes.md) y [ `do` enlaces en clases](do-bindings-in-classes.md).
 
 ## <a name="see-also"></a>Vea también
 

@@ -2,12 +2,12 @@
 title: Cambiar los niveles de uso compartido de caché para actividades Send
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: 079eb037f074155aec3ad5473480bbf5d4d341b2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425165"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363844"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Cambiar los niveles de uso compartido de caché para actividades Send
 La extensión <xref:System.ServiceModel.Activities.SendMessageChannelCache> le permite personalizar los niveles de uso compartido de la memoria caché, la configuración de la memoria caché del generador de canales y la de la memoria caché del canal para los flujos de trabajo que envían mensajes a los puntos de conexión de servicio utilizando las actividades de mensajería de <xref:System.ServiceModel.Activities.Send>. Estos flujos de trabajo son normalmente flujos de trabajo del cliente pero podrían ser también servicios de flujo de trabajo que se hospedan en <xref:System.ServiceModel.WorkflowServiceHost>. La memoria caché del generador de canales contiene objetos <xref:System.ServiceModel.ChannelFactory%601> almacenados en caché. La memoria caché del canal contiene canales almacenados en memoria caché.  
@@ -20,11 +20,11 @@ La extensión <xref:System.ServiceModel.Activities.SendMessageChannelCache> le p
   
  A continuación, se enumeran los distintos niveles de uso compartido de la memoria caché disponibles para las actividades de <xref:System.ServiceModel.Activities.Send> en un flujo de trabajo y su uso recomendado:  
   
-- **Nivel de host**: En el nivel de uso compartido de host, la memoria caché está disponible solo para las instancias de flujo de trabajo hospedadas en el host de servicio de flujo de trabajo. Además, la memoria caché también puede compartirse entre los hosts de servicio de flujo de trabajo en una memoria caché de todo el proceso.  
+- **Nivel de host**: En el nivel de uso compartido de host, la memoria caché solo está disponible para las instancias de flujo de trabajo hospedadas en el host de servicio de flujo de trabajo. Además, la memoria caché también puede compartirse entre los hosts de servicio de flujo de trabajo en una memoria caché de todo el proceso.  
   
-- **Nivel de instancia**: En la instancia de nivel de uso compartido, la memoria caché está disponible para una instancia de flujo de trabajo concreto a lo largo de su duración, pero la memoria caché no está disponible para otras instancias de flujo de trabajo.  
+- **Nivel de instancia**: En el nivel de uso compartido de la instancia, la memoria caché está disponible para una instancia de flujo de trabajo determinada a lo largo de su duración, pero la memoria caché no está disponible para otras instancias de flujo de trabajo.  
   
-- **Sin caché**: La memoria caché se desactiva de forma predeterminada si tiene un flujo de trabajo que usa extremos definidos en la configuración. También se recomienda mantener la memoria caché desactivada en este caso porque activarla podría no ser seguro. Por ejemplo, si se necesita una identidad diferente (con credenciales diferentes o usando la suplantación) para cada envío.  
+- **Sin caché**: La memoria caché está desactivada de forma predeterminada si tiene un flujo de trabajo que usa extremos definidos en la configuración. También se recomienda mantener la memoria caché desactivada en este caso porque activarla podría no ser seguro. Por ejemplo, si se necesita una identidad diferente (con credenciales diferentes o usando la suplantación) para cada envío.  
   
 ## <a name="changing-the-cache-sharing-level-for-a-client-workflow"></a>Cambiar el nivel de uso compartido de la memoria caché para un flujo de trabajo de cliente  
  Para establecer el uso compartido de la memoria caché en un flujo de trabajo del cliente, agregue una instancia de la clase <xref:System.ServiceModel.Activities.SendMessageChannelCache> como una extensión al conjunto que desee de instancias de flujo de trabajo. Este hecho da como resultado compartir la memoria caché por todas las instancias de flujo de trabajo. En los siguientes ejemplos de código se muestra cómo realizar estos pasos:  
@@ -86,7 +86,7 @@ serviceHost.WorkflowExtensions.Add(() => new SendMessageChannelCache
 ```  
   
 ## <a name="customizing-cache-settings"></a>Personalizar la configuración de la memoria caché  
- Puede personalizar la configuración de la memoria caché para la memoria caché del generador de canales y del canal. La configuración de la memoria caché se define en la clase <xref:System.ServiceModel.Activities.ChannelCacheSettings>. La clase <xref:System.ServiceModel.Activities.SendMessageChannelCache> define la configuración de la memoria caché predeterminada para la memoria caché del generador de canales y la memoria caché del canal en su constructor predeterminado. En la siguiente tabla se hace una lista de los valores predeterminados de la configuración de cada tipo de memoria caché.  
+ Puede personalizar la configuración de la memoria caché para la memoria caché del generador de canales y del canal. La configuración de la memoria caché se define en la clase <xref:System.ServiceModel.Activities.ChannelCacheSettings>. La <xref:System.ServiceModel.Activities.SendMessageChannelCache> clase define la configuración de caché predeterminada para la memoria caché del generador de canales y la memoria caché del canal en su constructor sin parámetros. En la siguiente tabla se hace una lista de los valores predeterminados de la configuración de cada tipo de memoria caché.  
   
 |Configuración|LeaseTimeout (min)|IdleTimeout (min)|MaxItemsInCache|  
 |-|-|-|-|  
@@ -150,7 +150,7 @@ SendMessageChannelCache customChannelCacheExtension =
 clientInstance.Extensions.Add(customChannelCacheExtension);  
 ```  
   
- En un servicio de flujo de trabajo hospedado, puede especificar la configuración de la memoria caché del generador y del canal en el archivo de configuración de la aplicación. Para ello, agregue un comportamiento de servicio que contenga los valores de memoria caché para el generador y memoria caché del canal, y agregue este comportamiento de servicio a su servicio. El ejemplo siguiente muestra el contenido de un archivo de configuración que contiene el `MyChannelCacheBehavior` comportamiento del servicio con la configuración de caché de memoria caché y canal de generador personalizado. Este comportamiento del servicio se agrega al servicio mediante el `behaviorConfiguration` atributo.  
+ En un servicio de flujo de trabajo hospedado, puede especificar la configuración de la memoria caché del generador y del canal en el archivo de configuración de la aplicación. Para ello, agregue un comportamiento de servicio que contenga los valores de memoria caché para el generador y memoria caché del canal, y agregue este comportamiento de servicio a su servicio. En el ejemplo siguiente se muestra el contenido de un archivo de configuración `MyChannelCacheBehavior` que contiene el comportamiento del servicio con la configuración personalizada de la memoria caché del generador y del canal. Este comportamiento del servicio se agrega al servicio a través `behaviorConfiguration` del atributo.  
   
 ```xml  
 <configuration>    
