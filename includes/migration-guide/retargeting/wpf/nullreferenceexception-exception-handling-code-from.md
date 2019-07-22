@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 122741d13294c8b137ce48e28f0aa39c6e36265a
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 824d75585efd40937c1a48376ec7862cba1a8fa3
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67859071"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235593"
 ---
 ### <a name="nullreferenceexception-in-exception-handling-code-from-imagesourceconverterconvertfrom"></a>Excepción NullReferenceException en el código de control de excepciones de ImageSourceConverter.ConvertFrom
 
@@ -16,4 +16,3 @@ ms.locfileid: "67859071"
 |Versión|4.7|
 |Tipo|Redestinación|
 |API afectadas|<ul><li><xref:System.Windows.Media.ImageSourceConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)?displayProperty=nameWithType></li></ul>|
-

@@ -3,12 +3,12 @@ title: Historia de C# - Guía de C#
 description: ¿Qué aspecto tenía el lenguaje en sus primeras versiones y cómo ha evolucionado desde entonces?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8230efcbcdd67cc99f321efc6509df3665d9f2f7
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423236"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363880"
 ---
 # <a name="the-history-of-c"></a>Historia de C\#
 
@@ -56,7 +56,7 @@ Aquí las cosas empiezan a ponerse interesantes. Echemos un vistazo a algunas de
 
 - [Genéricos](../programming-guide/generics/index.md)
 - [Tipos parciales](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [Métodos anónimos](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Métodos anónimos](../language-reference/operators/delegate-operator.md)
 - [Nullable types](../programming-guide/nullable-types/index.md) (Tipos que aceptan valores NULL [Guía de programación de C#])
 - [Iteradores](../programming-guide/concepts/iterators.md)
 - [Covarianza y contravarianza](../programming-guide/concepts/covariance-contravariance/index.md)
@@ -122,7 +122,7 @@ La versión 5.0 de C# era una versión del lenguaje centrada. Casi todo el traba
 - [Miembros asincrónicos](../async.md)
 - [Atributos de información del llamador](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>Vea también
+### <a name="see-also"></a>Otras referencias
 
 * [Proyecto de código: Atributos de información del autor de llamada en C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
