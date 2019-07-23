@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: faab42a7a2f7dda12f32a65890b795abfe0d11ca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62785753cf0eb11965f93e517d6a784081b41a13
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608712"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363798"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guía de programación de C#)
 Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tipo que representa referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Cuando se crea una instancia de un delegado, puede asociar su instancia a cualquier método mediante una signatura compatible y un tipo de valor devuelto. Puede invocar (o llamar) al método a través de la instancia del delegado.  
@@ -40,7 +40,7 @@ Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tip
   
 - No es necesario que los métodos coincidan exactamente con el tipo de delegado. Para obtener más información, consulte [Usar varianza en delegados](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md).  
   
-- La versión 2.0 de C# presentó el concepto de [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md), los cuales permiten pasar bloques de código como parámetros en lugar de un método definido por separado. En C# 3.0 se presentaron las expresiones lambda como una manera más concisa de escribir bloques de código alineado. Tanto los métodos anónimos como las expresiones lambda (en ciertos contextos) se compilan en tipos de delegado. Juntas, estas características se conocen ahora como funciones anónimas. Para obtener más información sobre las expresiones lambda, consulte [Funciones anónimas](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+- La versión 2.0 de C# presentó el concepto de los [métodos anónimos](../../../csharp/language-reference/operators/delegate-operator.md), los cuales permiten pasar bloques de código como parámetros en lugar de un método definido por separado. En C# 3.0 se presentaron las expresiones lambda como una manera más concisa de escribir bloques de código alineado. Tanto los métodos anónimos como las expresiones lambda (en ciertos contextos) se compilan en tipos de delegado. Juntas, estas características se conocen ahora como funciones anónimas. Para más información sobre las expresiones lambda, consulte [Expresiones lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -49,8 +49,6 @@ Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tip
 - [Cuándo usar delegados en lugar de interfaces (Guía de programación de C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
 - [Delegados con métodos con nombre y delegados con métodos anónimos](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
-  
-- [Métodos anónimos](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
 - [Uso de varianza en delegados](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
