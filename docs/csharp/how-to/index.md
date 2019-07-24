@@ -2,16 +2,16 @@
 title: Artículos de procedimientos (guía de C#)
 description: Colección de sugerencias rápidas y ejemplos de código breves y concisos.
 ms.date: 12/20/2017
-ms.openlocfilehash: 63410d687bd09f95a5ce7ce9304f2281b2f8d334
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 09e39e3c9bea5d4b9240039e37d2a5998fe1ebf8
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859531"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400739"
 ---
 # <a name="how-to-c"></a>Procedimientos (C#)
 
-En la sección de procedimientos de la guía de C# encontrará respuestas rápidas a preguntas frecuentes. En algunos casos, los artículos pueden mostrarse en varias secciones. Hemos querido que sean fáciles de encontrar en diferentes rutas de búsqueda. 
+En la sección de procedimientos de la guía de C# encontrará respuestas rápidas a preguntas frecuentes. En algunos casos, los artículos pueden mostrarse en varias secciones. Hemos querido que sean fáciles de encontrar en diferentes rutas de búsqueda.
 
 ## <a name="general-c-concepts"></a>Conceptos generales de C#
 
@@ -19,7 +19,6 @@ Hay varios trucos y sugerencias que son habituales entre los desarrolladores de 
 
 - [Inicialice los objetos usando un inicializador de objeto](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Obtenga información sobre las diferencias entre pasar una estructura o una clase a un método](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
-- [Obtenga información sobre cómo usar expresiones lambda](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Resuelva conflictos de nombre de tipo mediante el alias de espacio de nombres global](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 - [Use la sobrecarga de operadores](../language-reference/operators/operator-overloading.md).
 - [Implemente e invoque un método de extensión personalizado](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
