@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: e57908d9471cc8bd4a50f05c2c7c9f738b061be3
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364401"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400793"
 ---
 # <a name="security-wpf"></a>Seguridad (WPF)
-<a name="introduction"></a>Al desarrollar aplicaciones independientes y hospedadas en un explorador Windows Presentation Foundation (WPF), debe tener en cuenta el modelo de seguridad. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]las aplicaciones independientes se ejecutan con permisos no restringidos (conjunto de permisos**FullTrust** de CAS), tanto si se implementan mediante [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]Windows Installer (. msi), xcopy o. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear una confianza <xref:System.AppDomain> parcial mediante el modelo de complemento de .NET Framework. Para obtener más información, consulte [Introducción a](./app-development/wpf-add-ins-overview.md)los complementos de WPF.  
+<a name="introduction"></a>Al desarrollar aplicaciones independientes y hospedadas en un explorador Windows Presentation Foundation (WPF), debe tener en cuenta el modelo de seguridad. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]las aplicaciones independientes se ejecutan con permisos no restringidos (conjunto de permisos**FullTrust** de CAS), tanto si se implementan mediante Windows Installer (. msi), xcopy o ClickOnce. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear una confianza <xref:System.AppDomain> parcial mediante el modelo de complemento de .NET Framework. Para obtener más información, consulte [Introducción a](./app-development/wpf-add-ins-overview.md)los complementos de WPF.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]las aplicaciones hospedadas en explorador se [!INCLUDE[TLA#tla_iegeneric](../../../includes/tlasharptla-iegeneric-md.md)] hospedan en o en Firefox, [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] y pueden [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] ser o documentos sueltos para obtener más información, vea [información general sobre las aplicaciones de explorador XAML de WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
   
@@ -268,7 +268,7 @@ ms.locfileid: "68364401"
 |----------|--------------|  
 |Código administrado|[Modelos y prácticas Guía de seguridad para aplicaciones](https://go.microsoft.com/fwlink/?LinkId=117426)|  
 |CAS|[Seguridad de acceso del código](../misc/code-access-security.md)|  
-|[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]|[Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
+|ClickOnce|[Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Seguridad de confianza parcial de WPF](wpf-partial-trust-security.md)|  
   
 ## <a name="see-also"></a>Vea también

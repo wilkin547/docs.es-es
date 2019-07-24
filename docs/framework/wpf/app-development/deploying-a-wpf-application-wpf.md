@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: ca00b4a0450539741719f5f5a56d241e4bebfcc2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4679a114f4b6d0bc2b3773d46a4dffa774d38918
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331718"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401676"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
 Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -23,7 +23,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 - Implementación de [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)].  
   
-- Implementación de [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)].  
+- Implementación ClickOnce  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Implementación de XCopy  
@@ -47,7 +47,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>implementación de ClickOnce  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] habilita la implementación de aplicaciones de estilo web para aplicaciones que no son de web. Las aplicaciones se publican e implementan para Web o para servidores de archivos. Aunque [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] no admite la gama completa de características de cliente que sí poseen las aplicaciones instaladas con [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)], admite un subconjunto que incluye lo siguiente:  
+ ClickOnce habilita la implementación de aplicaciones de estilo Web para aplicaciones que no son de Web. Las aplicaciones se publican e implementan para Web o para servidores de archivos. Aunque ClickOnce no admite toda la gama de características de cliente que [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]realizan las aplicaciones instaladas, admite un subconjunto que incluye lo siguiente:  
   
 - Integración con el menú Inicio y el panel de control de Programas.  
   
@@ -59,7 +59,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 - Registro de extensiones de archivo.  
   
- Para obtener más información sobre [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)], vea [Seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+ Para obtener más información sobre ClickOnce, consulte [seguridad e implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>Implementar aplicaciones de WPF  
@@ -73,7 +73,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Implementar aplicaciones independientes  
- Las aplicaciones independientes se implementan usando [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. De cualquier modo, las aplicaciones independientes requieren plena confianza para ejecutarse. La plena confianza se concede automáticamente a las aplicaciones independientes que se implementan mediante [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Las aplicaciones independientes que se implementan mediante [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] no reciben la plena confianza de manera automática. En lugar de ello, [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] muestra un cuadro de diálogo de advertencia de seguridad que el usuario debe aceptar antes de instalar cualquier aplicación independiente. Si el usuario acepta, se instala la aplicación independiente y se le otorgan permisos de plena confianza. En caso contrario, no se instala la aplicación independiente.  
+ Las aplicaciones independientes se implementan mediante ClickOnce [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]o. De cualquier modo, las aplicaciones independientes requieren plena confianza para ejecutarse. La plena confianza se concede automáticamente a las aplicaciones independientes que se implementan mediante [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Las aplicaciones independientes que se implementan mediante ClickOnce no reciben automáticamente plena confianza. En su lugar, ClickOnce muestra un cuadro de diálogo de advertencia de seguridad que los usuarios deben aceptar antes de instalar una aplicación independiente. Si el usuario acepta, se instala la aplicación independiente y se le otorgan permisos de plena confianza. En caso contrario, no se instala la aplicación independiente.  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Implementar aplicaciones XAML solo de marcado  
@@ -98,9 +98,9 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
 > [!NOTE]
 >  Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](building-a-wpf-application-wpf.md).  
   
- Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, consulte [Cómo Cree un nuevo proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))de aplicación de explorador de WPF. Al igual que las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado, las [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se suelen publicar en un servidor web y se ven mediante [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
+ Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, vea [Cómo: Cree un nuevo proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))de aplicación de explorador de WPF. Al igual que las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado, las [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se suelen publicar en un servidor web y se ven mediante [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se puede implementar en los clientes usando cualquiera de las técnicas de implementación. En cambio, se recomienda [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] porque proporciona las siguientes capacidades:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se puede implementar en los clientes usando cualquiera de las técnicas de implementación. Sin embargo, se recomienda ClickOnce, ya que ofrece las siguientes capacidades:  
   
 1. Actualizaciones automáticas cuando se publica una nueva versión.  
   

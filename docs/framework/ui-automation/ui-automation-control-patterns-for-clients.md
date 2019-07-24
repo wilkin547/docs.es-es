@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, control patterns for clients
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
-ms.openlocfilehash: 1b0d374c9dc3e24302a8acfbc56cd9468f41def5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f6fccf828552fbd4102c16bde7ffbaf394b69ac
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033103"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400692"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>Patrones de controles de UI Automation para clientes
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  Este tema es una introducción a los patrones de control para clientes de automatización de la interfaz de usuario. Incluye información que explica cómo un cliente de automatización de la interfaz de usuario puede usar los patrones de control para tener acceso a la información sobre [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
@@ -34,9 +34,9 @@ ms.locfileid: "62033103"
   
 <a name="uiautomation_properties_on_control_patterns"></a>   
 ## <a name="retrieving-properties-on-control-patterns"></a>Recuperar propiedades en patrones de control  
- Para recuperar los valores de propiedad en los patrones de control, los clientes pueden llamar a <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> o <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> y convertir el objeto devuelto al tipo apropiado. Para obtener más información sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] propiedades, consulte [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ Para recuperar los valores de propiedad en los patrones de control, los clientes pueden llamar a <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> o <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> y convertir el objeto devuelto al tipo apropiado. Para obtener más información [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sobre las propiedades, vea [UI Automation Properties for clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
- Además de los métodos `GetPropertyValue` , los valores de propiedad se pueden recuperar mediante los descriptores de acceso de [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] para acceder a las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] en un patrón.  
+ Además de los `GetPropertyValue` métodos, los valores de propiedad se pueden recuperar a través de los descriptores de acceso Common Language Runtime [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (CLR) para tener acceso a las propiedades de un patrón.  
   
 <a name="uiautomation_with_variable_patterns"></a>   
 ## <a name="controls-with-variable-patterns"></a>Controles con patrones variables  
@@ -51,6 +51,6 @@ ms.locfileid: "62033103"
 - [Invocación de un control mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
 - [Obtención del estado de alternancia de una casilla mediante Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/get-the-toggle-state-of-a-check-box-using-ui-automation.md)
 - [Asignación de patrones de control para clientes de Automatización de la interfaz de usuario](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
-- [Ejemplo de TextPattern Insert Text](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
-- [Ejemplo de selección y búsqueda de TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
-- [InvokePattern, ExpandCollapsePattern y TogglePattern de muestra](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+- [Ejemplo de inserción de texto de TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
+- [Ejemplo de búsqueda y selección de TextPattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FindText)
+- [Ejemplo de InvokePattern, ExpandCollapsePattern y TogglePattern](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

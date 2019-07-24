@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 48df7083d990dde157c9b7b2a062c865954cf38a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364206"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401437"
 ---
 # <a name="binding-sources-overview"></a>Información general sobre orígenes de enlaces
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. En este tema se describen los tipos de objetos que se pueden usar como origen de enlace.  
@@ -22,7 +22,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
   
 |Origen de enlace|DESCRIPCIÓN|  
 |--------------------|-----------------|  
-|Objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)].|Puede enlazar a propiedades públicas, subpropiedades, así como de indizadores de cualquier objeto [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. El motor de enlace utiliza la reflexión [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] para obtener los valores de las propiedades. Como alternativa, los objetos que <xref:System.ComponentModel.ICustomTypeDescriptor> implementan o tienen <xref:System.ComponentModel.TypeDescriptionProvider> un registrado también funcionan con el motor de enlace.<br /><br /> Para más información acerca de cómo implementar una clase que puede actuar como un origen de enlace, consulte [Implementar una clase para el origen de enlace](#classes) más adelante en este tema.|  
+|objetos Common Language Runtime (CLR)|Puede enlazar a propiedades públicas, subpropiedades, así como indizadores, de cualquier objeto Common Language Runtime (CLR). El motor de enlace utiliza la reflexión de CLR para obtener los valores de las propiedades. Como alternativa, los objetos que <xref:System.ComponentModel.ICustomTypeDescriptor> implementan o tienen <xref:System.ComponentModel.TypeDescriptionProvider> un registrado también funcionan con el motor de enlace.<br /><br /> Para más información acerca de cómo implementar una clase que puede actuar como un origen de enlace, consulte [Implementar una clase para el origen de enlace](#classes) más adelante en este tema.|  
 |objetos dinámicos|Puede enlazar a las propiedades y los indizadores disponibles de un objeto que implementa <xref:System.Dynamic.IDynamicMetaObjectProvider> la interfaz. Si se puede acceder al miembro en código, puede enlazar a él. Por ejemplo, si un objeto dinámico permite acceder a un miembro en código mediante `someObjet.AProperty`, puede enlazar a él estableciendo el trazado de enlace en `AProperty`.|  
 |Objetos ADO.NET|Puede enlazar a objetos ADO.NET, como <xref:System.Data.DataTable>. ADO.net <xref:System.Data.DataView> implementa la <xref:System.ComponentModel.IBindingList> interfaz, que proporciona notificaciones de cambios que el motor de enlace escucha.|  
 |Objetos [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].|Puede `XPath` enlazar y ejecutar consultas <xref:System.Xml.XmlNode>en, <xref:System.Xml.XmlDocument>o <xref:System.Xml.XmlElement>. Una manera cómoda de acceder [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] a los datos que son el origen de enlace en el marcado <xref:System.Windows.Data.XmlDataProvider> es usar un objeto. Para más información, consulte [Cómo: Enlazar a datos XML mediante XMLDataProvider y consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> También puede enlazar a un <xref:System.Xml.Linq.XElement> o <xref:System.Xml.Linq.XDocument>, o enlazar con los resultados de las consultas que se ejecutan en objetos de estos tipos mediante LINQ to XML. Una manera cómoda de utilizar LINQ to XML para tener acceso a los datos XML que es el origen de enlace en el <xref:System.Windows.Data.ObjectDataProvider> marcado es usar un objeto. Para más información, consulte [Cómo: Enlazar a los resultados de una consulta LINQ for XML, XDocument o XElement](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
@@ -33,9 +33,9 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
  Puede crear sus propios orígenes de enlace. En esta sección se explica lo que necesita saber si está implementando una clase para que actúe como un origen de enlace.  
   
 ### <a name="providing-change-notifications"></a>Proporcionar notificaciones de cambios  
- Si usa <xref:System.Windows.Data.BindingMode.OneWay> el enlace o <xref:System.Windows.Data.BindingMode.TwoWay> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (porque desea que se actualice cuando las propiedades de origen de enlace cambian dinámicamente), debe implementar un mecanismo de notificación de cambio de propiedad adecuado. El mecanismo recomendado es para que [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] la clase dinámica de o implemente la <xref:System.ComponentModel.INotifyPropertyChanged> interfaz. Para más información, consulte [Cómo: Implementar la notificación de cambio de propiedad](how-to-implement-property-change-notification.md).  
+ Si usa <xref:System.Windows.Data.BindingMode.OneWay> el enlace o <xref:System.Windows.Data.BindingMode.TwoWay> [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] (porque desea que se actualice cuando las propiedades de origen de enlace cambian dinámicamente), debe implementar un mecanismo de notificación de cambio de propiedad adecuado. El mecanismo recomendado es que el CLR o la clase dinámica implementen <xref:System.ComponentModel.INotifyPropertyChanged> la interfaz. Para más información, consulte [Cómo: Implementar la notificación de cambio de propiedad](how-to-implement-property-change-notification.md).  
   
- Si crea un [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] objeto que no implementa <xref:System.ComponentModel.INotifyPropertyChanged>, debe organizar su propio sistema de notificación para asegurarse de que los datos usados en un enlace permanecen actualizados. Puede proporcionar notificaciones de cambio admitiendo el patrón `PropertyChanged` para cada propiedad para la que desee cambiar las notificaciones. Para admitir este patrón, defina un evento *PropertyName* cambiado para cada propiedad, donde *PropertyName* es el nombre de la propiedad. Se genera el evento cada vez que cambia la propiedad.  
+ Si crea un objeto CLR que no implementa <xref:System.ComponentModel.INotifyPropertyChanged>, debe organizar su propio sistema de notificación para asegurarse de que los datos usados en un enlace permanecen actualizados. Puede proporcionar notificaciones de cambio admitiendo el patrón `PropertyChanged` para cada propiedad para la que desee cambiar las notificaciones. Para admitir este patrón, defina un evento *PropertyName* cambiado para cada propiedad, donde *PropertyName* es el nombre de la propiedad. Se genera el evento cada vez que cambia la propiedad.  
   
  Si el origen de enlace implementa uno de estos mecanismos de notificación, se producen automáticamente las actualizaciones de destino. Si por alguna razón el origen de enlace no proporciona las notificaciones de cambio de propiedad apropiadas, tiene la opción de usar <xref:System.Windows.Data.BindingExpression.UpdateTarget%2A> el método para actualizar la propiedad de destino explícitamente.  
   
@@ -80,7 +80,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
   
  En esta tabla se describen los siguientes puntos importantes acerca de los requisitos de permisos en el enlace de datos:  
   
-- Para las propiedades [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)], el enlace de datos funciona siempre que el motor de enlace tenga acceso a la propiedad de origen de enlace mediante la reflexión. De lo contrario, el motor de enlace emite una advertencia que indica que no se encuentra la propiedad y utiliza el valor de reserva o el valor predeterminado, si está disponible.  
+- En el caso de las propiedades CLR, el enlace de datos funciona siempre que el motor de enlace pueda acceder a la propiedad de origen de enlace mediante la reflexión. De lo contrario, el motor de enlace emite una advertencia que indica que no se encuentra la propiedad y utiliza el valor de reserva o el valor predeterminado, si está disponible.  
   
 - Puede enlazar a propiedades en objetos dinámicos que se definen en tiempo de compilación o tiempo de ejecución.  
   

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 5be2ca8b4247fcd6bdc628ae0f4aefff30a11256
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652225"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400673"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Información general acerca de los patrones de control de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  Esta introducción presenta los patrones de control de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Los patrones de control proporcionan una manera de categorizar y exponer la funcionalidad de un control independientemente de su tipo o apariencia.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "64652225"
   
  Los clientes de Automatización de la interfaz de usuario acceden a métodos y propiedades de clases de patrones de control [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y los usan para obtener información sobre [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]o para manipular [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Estas clases de patrones de control se encuentran en el espacio de nombres <xref:System.Windows.Automation> (por ejemplo, <xref:System.Windows.Automation.InvokePattern> y <xref:System.Windows.Automation.SelectionPattern>).  
   
- Los clientes utilizan métodos <xref:System.Windows.Automation.AutomationElement> (como <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> o <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) o los descriptores de acceso de [!INCLUDE[TLA#tla_clr](../../../includes/tlasharptla-clr-md.md)] para obtener acceso a las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de un patrón. Cada clase de patrón de control tiene un miembro de campo (por ejemplo, <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> o <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>) que identifica ese patrón de control y se puede pasar como parámetro a <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> o <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> para recuperar ese patrón para un <xref:System.Windows.Automation.AutomationElement>.  
+ Los clientes <xref:System.Windows.Automation.AutomationElement> utilizan métodos ( <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> como o <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType>) o los descriptores de acceso Common Language Runtime (CLR) [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para tener acceso a las propiedades de un patrón. Cada clase de patrón de control tiene un miembro de campo ( <xref:System.Windows.Automation.InvokePattern.Pattern?displayProperty=nameWithType> por <xref:System.Windows.Automation.SelectionPattern.Pattern?displayProperty=nameWithType>ejemplo, o) que identifica ese patrón de control y se puede pasar <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> como <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> un parámetro a o para recuperar <xref:System.Windows.Automation.AutomationElement>ese patrón para un.  
   
 <a name="uiautomation_control_patterns_dynamic"></a>   
 ## <a name="dynamic-control-patterns"></a>Patrones de control dinámicos  
@@ -51,7 +51,7 @@ ms.locfileid: "64652225"
 ## <a name="control-pattern-classes-and-interfaces"></a>Interfaces y clases de patrón de control  
  En la siguiente tabla se describen los patrones de control de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . En la tabla también se enumeran las clases que usan los clientes de Automatización de la interfaz de usuario para acceder a los patrones de control, así como las interfaces que utilizan los proveedores de Automatización de la interfaz de usuario para implementarlos.  
   
-|Clase de patrón de control|Interfaz del proveedor|Descripción|  
+|Clase de patrón de control|Interfaz del proveedor|DESCRIPCIÓN|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Se utiliza con los controles que se pueden acoplar en un contenedor de acoplamiento. Por ejemplo, las barras de herramientas o las paletas de herramientas.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Se utiliza con los controles que pueden expandir o contraer. Por ejemplo, los elementos de menú de una aplicación como el menú **Archivo** .|  

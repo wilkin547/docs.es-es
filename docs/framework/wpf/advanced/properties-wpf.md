@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 8e65e89fb0406d9d2849e0a1be4b1aa764b935ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c685a5227f4339a094ae74af4e1314d4c47f7585
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62030353"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400873"
 ---
 # <a name="properties-wpf"></a>Propiedades (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un conjunto de servicios que puede usarse para ampliar la funcionalidad de una propiedad [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]. Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] se conoce como una propiedad de dependencia.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]proporciona un conjunto de servicios que se pueden utilizar para extender la funcionalidad de una propiedad de Common Language Runtime (CLR). Colectivamente, se suele hacer referencia a estos servicios como el sistema de propiedades de WPF. Una propiedad respaldada por el sistema de propiedades de [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] se conoce como una propiedad de dependencia.  
   
 ## <a name="in-this-section"></a>En esta sección  
 - [Información general sobre las propiedades de dependencia](dependency-properties-overview.md)

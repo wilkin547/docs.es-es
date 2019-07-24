@@ -8,15 +8,15 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020925"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401428"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Procedimiento Crear y enlazar a una colección ObservableCollection
-En este ejemplo se muestra cómo crear y enlazar a una colección que se deriva el <xref:System.Collections.ObjectModel.ObservableCollection%601> (clase), que es una clase de colección que proporciona notificaciones cuando se agregan o quitan elementos.  
+En este ejemplo se muestra cómo crear y enlazar a una colección que se deriva <xref:System.Collections.ObjectModel.ObservableCollection%601> de la clase, que es una clase de colección que proporciona notificaciones cuando se agregan o quitan elementos.  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra la implementación de una colección `NameList`:  
@@ -104,7 +104,7 @@ Public Class PersonName
 End Class  
 ```  
   
- Puede hacer que la colección esté disponible para el enlace de la misma forma que lo haría con otros objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)], como se describe en [Hacer que los datos estén disponibles para el enlace en XAML](how-to-make-data-available-for-binding-in-xaml.md). Por ejemplo, puede crear una instancia de la colección en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y especificar la colección como un recurso, como se muestra aquí:  
+ Puede hacer que la colección esté disponible para el enlace de la misma forma que lo haría con otros objetos Common Language Runtime (CLR), tal y como se describe en [hacer que los datos estén disponibles para el enlace en XAML](how-to-make-data-available-for-binding-in-xaml.md). Por ejemplo, puede crear una instancia de la colección en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] y especificar la colección como un recurso, como se muestra aquí:  
   
 ```xaml  
 <Window  
@@ -136,7 +136,7 @@ End Class
  La definición de `NameItemTemplate` no se muestra aquí.  
   
 > [!NOTE]
->  Los objetos de la colección deben cumplir los requisitos descritos en la [Información general sobre orígenes de enlaces](binding-sources-overview.md). En concreto, si utilizas <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (por ejemplo, desea que su [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] actualizar cuando cambian dinámicamente las propiedades de origen), debe implementar un mecanismo de notificación de cambio de propiedad adecuado, como el <xref:System.ComponentModel.INotifyPropertyChanged>interfaz.  
+>  Los objetos de la colección deben cumplir los requisitos descritos en la [Información general sobre orígenes de enlaces](binding-sources-overview.md). En concreto, si usa <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (por [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ejemplo, desea que actualice cuando las propiedades de origen cambian dinámicamente), debe implementar un mecanismo de notificación de cambio de propiedad adecuado como el <xref:System.ComponentModel.INotifyPropertyChanged>interfaz.  
   
  Para más información, consulte la sección Enlace a colecciones en [Información general sobre el enlace de datos](data-binding-overview.md).  
   

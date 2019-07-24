@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 4fc8c8e4d8c4cc2a53ed7e21ced9ab9c761e9d2b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: fd99d97d677ef588c3f7e2a178190377d72c74ce
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331528"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400642"
 ---
 # <a name="globalization-for-wpf"></a>Globalización de WPF
 En este tema se presentan los problemas que debe tener en cuenta [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al escribir aplicaciones para el mercado mundial. Los elementos de programación de globalización se [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] definen `System.Globalization`en en.
@@ -147,12 +147,12 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Interfaz de usuario localizable
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usan para definir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]su. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] permite a los desarrolladores especificar una jerarquía de objetos con un conjunto de propiedades y lógica. El uso principal de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] es desarrollar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones, pero se puede usar para especificar una jerarquía de cualquier [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] objeto. La mayoría de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] los desarrolladores usan para especificar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] la aplicación y usar un lenguaje de C# programación como para reaccionar a la interacción del usuario.
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usan para definir [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]su. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] permite a los desarrolladores especificar una jerarquía de objetos con un conjunto de propiedades y lógica. El uso principal de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] es desarrollar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones, pero se puede usar para especificar una jerarquía de cualquier objeto Common Language Runtime (CLR). La mayoría de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] los desarrolladores usan para especificar [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] la aplicación y usar un lenguaje de C# programación como para reaccionar a la interacción del usuario.
 
  Desde el punto de vista de los recursos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , un archivo diseñado para describir un dependiente [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del lenguaje es un elemento de recurso y, por tanto, su formato de distribución final debe ser localizable para admitir idiomas internacionales. Dado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que no puede controlar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] eventos, muchas aplicaciones contienen bloques de código para hacerlo. Para obtener más información, vea [información general sobre XAML (WPF)](xaml-overview-wpf.md). El código se quita y se compila en distintos archivos binarios cuando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] un archivo se acorta en la forma BAML de XAML. Los archivos, imágenes y otros tipos de objetos de recursos administrados con formato BAML de XAML se insertan en el ensamblado de recursos satélite, que se puede localizar a otros idiomas, o en el ensamblado principal, cuando no se requiere la localización.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones admiten [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] todos [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] los recursos, como tablas de cadenas, imágenes, etc.
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones admiten [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]todos los recursos de CLR, como tablas de cadenas, imágenes, etc.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Compilar aplicaciones localizables

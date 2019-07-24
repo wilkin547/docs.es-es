@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8fc25407eda75c7f2fbb188b96c68ac1b8342ad
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020548"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400373"
 ---
 # <a name="data"></a>Datos
-El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a datos desde una variedad de orígenes de datos en forma de objetos [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] y XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también ofrece un mecanismo para transferir los datos a través de operaciones de arrastrar y soltar.  
+El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a los datos de una variedad de orígenes de datos en forma de objetos de Common Language Runtime (CLR) y XML. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] también ofrece un mecanismo para transferir los datos a través de operaciones de arrastrar y soltar.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Enlace de datos](data-binding-wpf.md)  
@@ -41,4 +41,4 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
 ## <a name="see-also"></a>Vea también
 
 - [Tutorial: Mi primera aplicación de escritorio WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación WPF](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

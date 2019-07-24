@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 66158d14b7686f520260cd24fbf6c1b0e7dda1d4
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364095"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68400776"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 En este tema se definen los términos que se usan para describir los elementos de la sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente como para los otros marcos de trabajo que usan XAML o los conceptos básicos de XAML habilitados por la compatibilidad del lenguaje XAML en el nivel System. Xaml. En este tema se amplía la terminología básica introducida en el tema [información general sobre XAML (WPF)](xaml-overview-wpf.md).  
@@ -47,7 +47,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML y CLR  
- XAML es un lenguaje de marcado. , [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]Como está implicado en su nombre, habilita la ejecución en tiempo de ejecución. XAML no es en sí mismo uno de los lenguajes comunes que el Runtime de CLR usa directamente. En su lugar, puede considerar XAML como compatible con su propio sistema de tipos. El sistema de análisis de XAML concreto que usa WPF se basa en CLR y en el sistema de tipos de CLR. Los tipos XAML se asignan a los tipos de CLR para crear instancias de una representación en tiempo de ejecución cuando se analiza el XAML para WPF. Por esta razón, el resto de la explicación de la sintaxis de este documento incluirá referencias al sistema de tipos de CLR, aunque las discusiones de sintaxis equivalentes en la especificación del lenguaje XAML no lo hacen. (Según el nivel de especificación del lenguaje XAML, los tipos XAML pueden asignarse a cualquier otro sistema de tipos, que no tiene que ser el CLR, pero eso requeriría la creación y el uso de un analizador XAML diferente).  
+ XAML es un lenguaje de marcado. El Common Language Runtime (CLR), tal y como lo implica su nombre, habilita la ejecución en tiempo de ejecución. XAML no es en sí mismo uno de los lenguajes comunes que el Runtime de CLR usa directamente. En su lugar, puede considerar XAML como compatible con su propio sistema de tipos. El sistema de análisis de XAML concreto que usa WPF se basa en CLR y en el sistema de tipos de CLR. Los tipos XAML se asignan a los tipos de CLR para crear instancias de una representación en tiempo de ejecución cuando se analiza el XAML para WPF. Por esta razón, el resto de la explicación de la sintaxis de este documento incluirá referencias al sistema de tipos de CLR, aunque las discusiones de sintaxis equivalentes en la especificación del lenguaje XAML no lo hacen. (Según el nivel de especificación del lenguaje XAML, los tipos XAML pueden asignarse a cualquier otro sistema de tipos, que no tiene que ser el CLR, pero eso requeriría la creación y el uso de un analizador XAML diferente).  
   
 #### <a name="members-of-types-and-class-inheritance"></a>Miembros de tipos y herencia de clases  
  Las propiedades y los eventos tal como aparecen como miembros XAML [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de un tipo se suelen heredar de los tipos base. Por ejemplo, considere este ejemplo: `<Button Background="Blue" .../>`. La <xref:System.Windows.Controls.Control.Background%2A> propiedad no es una propiedad declarada inmediatamente <xref:System.Windows.Controls.Button> en la clase, si se va a examinar la definición de clase, los resultados de la reflexión o la documentación. En su lugar <xref:System.Windows.Controls.Control.Background%2A> , se hereda de la <xref:System.Windows.Controls.Control> clase base.  
