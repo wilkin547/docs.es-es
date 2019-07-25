@@ -15,17 +15,15 @@
           href: anonymous-functions.md
         - name: Expresiones lambda
           href: lambda-expressions.md
-        - name: Procedimiento para usar expresiones lambda en una consulta
+        - name: 'Procedimientos para: Usar expresiones lambda en una consulta'
           href: how-to-use-lambda-expressions-in-a-query.md
-        - name: Procedimiento para usar expresiones lambda fuera de LINQ
-          href: how-to-use-lambda-expressions-outside-linq.md
     - name: Expresiones de valor predeterminado
       href: default-value-expressions.md
     - name: Igualdad y comparaciones de igualdad
       items:
         - name: Comparaciones de igualdad
           href: equality-comparisons.md
-        - name: Procedimiento para definir la igualdad de valores para un tipo
+        - name: 'Procedimientos para: Definir la igualdad de valores para un tipo'
           href: how-to-define-value-equality-for-a-type.md
-        - name: Procedimiento para probar la igualdad de referencia (identidad)
+        - name: 'Procedimientos para: Probar la igualdad de referencia (Identidad)'
           href: how-to-test-for-reference-equality-identity.md
