@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e018d8c83165b3e025ad4db7f3d59b6ba58b72a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60f48422d23fc5db743eeb05e3eddeb732bff102
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616092"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68364022"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Generador de clases fuertemente tipadas para administración)
 La herramienta Generador de clases fuertemente tipadas para administración permite generar con rapidez una clase administrada en tiempo de compilación para una clase especificada de Instrumental de administración de Windows (WMI). La clase generada simplifica el código que se debe escribir para tener acceso a una instancia de la clase de WMI.  
@@ -30,11 +30,11 @@ mgmtclassgen
 WMIClass [options]   
 ```  
   
-|Argumento|Descripción|  
+|Argumento|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |*WMIClass*|Clase de Instrumental de administración de Windows para la que se genera una clase administrada en tiempo de compilación.|  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**/l**  *language*|Especifica el lenguaje en el que se genera la clase administrada en tiempo de compilación. Puede especificar **CS** (C#, predeterminado), **VB** (Visual Basic), **MC** (C++) o **JS** (JScript) como argumento del lenguaje.|  
 |**/m**  *machine*|Especifica el equipo con el que se va a conectar y en el que reside la clase de WMI. La opción predeterminada es el equipo local.|  
@@ -83,7 +83,7 @@ WMIClass [options]
   
 - Una propiedad numérica se puede modificar mediante los calificadores **Values** y **ValueMaps** para indicar que la propiedad solo se puede establecer en valores permisibles especificados. Con estos calificadores **Values** y **ValueMaps** se genera una enumeración y se asigna la propiedad a la enumeración.  
   
-- WMI utiliza el término singleton para describir una clase que solo puede tener una instancia. Por tanto, el constructor predeterminado para una clase singleton inicializará la clase en la única instancia de la misma.  
+- WMI utiliza el término singleton para describir una clase que solo puede tener una instancia. Por tanto, el constructor sin parámetros para una clase singleton inicializará la clase en la única instancia de la misma.  
   
 - Una clase WMI puede tener propiedades que sean objetos. Cuando se genera una clase fuertemente tipada para este tipo de clase WMI, se debe considerar la posibilidad de generar clases fuertemente tipadas para los tipos de las propiedades de objetos incrustados. Esto permitirá tener acceso a los objetos incrustados de un modo fuertemente tipado. Tenga en cuenta que existe la posibilidad de que el código generado no pueda detectar el tipo del objeto incrustado. En este caso, se creará un comentario en el código generado para informar al usuario de este punto. A continuación, se puede modificar el código generado para que el tipo de la propiedad corresponda a la otra clase generada.  
   

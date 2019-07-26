@@ -2,12 +2,12 @@
 title: 'Novedades de C# 8.0: Guía de C#'
 description: Obtenga información general sobre las nuevas características disponibles en C# 8.0. Este artículo está actualizado con la versión preliminar 5.
 ms.date: 02/12/2019
-ms.openlocfilehash: 962829b68c5d02c3a7e563a00d391c4698024d47
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: bf67baba926effd012ae01d3d802ba921e41ad5a
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397773"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363895"
 ---
 # <a name="whats-new-in-c-80"></a>Novedades de C# 8.0
 
@@ -265,7 +265,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     using var file = new System.IO.StreamWriter("WriteLines2.txt");
     foreach (string line in lines)
     {
-        // If the line doesn't contain the word 'Second', write the line to the file.
         if (!line.Contains("Second"))
         {
             file.WriteLine(line);
@@ -284,7 +283,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
     {
         foreach (string line in lines)
         {
-            // If the line doesn't contain the word 'Second', write the line to the file.
             if (!line.Contains("Second"))
             {
                 file.WriteLine(line);
@@ -296,7 +294,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 En el ejemplo anterior, el archivo se elimina cuando se alcanza la llave de cierre asociada con la instrucción `using`.
 
-En ambos casos, el compilador genera la llamada a `Dispose()`. El compilador genera un error si la expresión de la instrucción using no se puede eliminar.
+En ambos casos, el compilador genera la llamada a `Dispose()`. El compilador genera un error si la expresión de la instrucción `using` no se puede eliminar.
 
 ## <a name="static-local-functions"></a>Funciones locales estáticas
 
@@ -382,7 +380,7 @@ Esta compatibilidad con idiomas se basa en dos nuevos tipos y dos nuevos operado
 - <xref:System.Index?displayProperty=nameWithType> representa un índice en una secuencia.
 - El operador `^`, que especifica que un índice es relativo al final de la secuencia.
 - <xref:System.Range?displayProperty=nameWithType> representa un subrango de una secuencia.
-- El operador de rango (`..`), que especifica el inicio y el final de un intervalo como sus operandos.
+- El operador de rango (`..`), que especifica el inicio y el fin de un intervalo como sus operandos.
 
 Comencemos con las reglas de índices. Considere un elemento `sequence` de matriz. El índice `0` es igual que `sequence[0]`. El índice `^0` es igual que `sequence[sequence.Length]`. Tenga en cuenta que `sequence[^0]` produce una excepción, al igual que `sequence[sequence.Length]`. Para cualquier número `n`, el índice `^n` es igual que `sequence.Length - n`.
 

@@ -4,12 +4,12 @@ description: En este tutorial obtendrá información sobre cómo incluir una apl
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609300"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331048"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Incluir una aplicación de .NET Core en un contenedor
 
@@ -177,7 +177,7 @@ El archivo *Dockerfile* lo usa el comando `docker build` para crear una imagen d
 En el terminal, suba un directorio a la carpeta de trabajo creada al principio. Cree un archivo denominado *Dockerfile* en la carpeta de trabajo y ábralo en un editor de texto. Agregue el comando siguiente como la primera línea del archivo:
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
+FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 ```
 
 El comando `FROM` indica a Docker que extraiga la imagen con la etiqueta **2.2** desde el repositorio **mcr.microsoft.com/dotnet/core/runtime**. Asegúrese de extraer el runtime de .NET Core que coincida con el runtime que el SDK tiene como destino. Por ejemplo, en la aplicación que se creó en la sección anterior se usó el SDK de .NET Core 2.2 y se creó una aplicación destinada a .NET Core 2.2. Por lo tanto, la imagen base a la que se hace referencia en *Dockerfile* tiene la etiqueta **2.2**.
@@ -205,7 +205,13 @@ docker-working
     └───obj
 ```
 
-Desde el terminal, ejecute `docker build -t myimage -f Dockerfile .` y Docker procesará cada línea del *Dockerfile*. `.` del comando `docker build` indica a Docker que use la carpeta actual para encontrar un archivo *Dockerfile*. Este comando crea la imagen y un repositorio local denominado **myimage** que apunta a esa imagen. Una vez que finalice este comando, ejecute `docker images` para ver una lista de las imágenes instaladas:
+Desde un terminal, ejecute el comando siguiente:
+
+```console
+docker build -t myimage -f Dockerfile .
+```
+
+Docker procesará cada línea en el archivo *Dockerfile*. `.` del comando `docker build` indica a Docker que use la carpeta actual para encontrar un archivo *Dockerfile*. Este comando crea la imagen y un repositorio local denominado **myimage** que apunta a esa imagen. Una vez que finalice este comando, ejecute `docker images` para ver una lista de las imágenes instaladas:
 
 ```console
 > docker images
@@ -241,7 +247,6 @@ Removing intermediate container f34da5c18e7c
  ---> ddcc6646461b
 Successfully built ddcc6646461b
 Successfully tagged myimage:latest
-
 
 > docker images
 REPOSITORY                              TAG                 IMAGE ID            CREATED             SIZE

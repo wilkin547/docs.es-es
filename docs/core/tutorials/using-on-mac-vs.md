@@ -2,14 +2,14 @@
 title: Introducción a .NET Core en macOS con Visual Studio para Mac
 description: Este tema le guía en la creación de una aplicación de consola sencilla con Visual Studio para Mac y .NET Core.
 author: mairaw
-ms.date: 06/12/2017
+ms.date: 07/11/2019
 ms.custom: seodec18
-ms.openlocfilehash: 4467842c0b65ea536cc26601981d9fcc2bc68f2d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: a6d58d2a54ce9742542a3f7e5c9378be89b8f89a
+ms.sourcegitcommit: 6472349821dbe202d01182bc2cfe9d7176eaaa6c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67870541"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introducción a .NET Core en macOS con Visual Studio para Mac
 
@@ -24,21 +24,25 @@ Visual Studio para Mac proporciona un entorno de desarrollo integrado (IDE) comp
 
 Vea el tema [Requisitos previos para .NET Core en Mac](../../core/macos-prerequisites.md).
 
+Consulte la guía [Compatibilidad de .NET Core](https://docs.microsoft.com/visualstudio/mac/net-core-support?view=vsmac-2019) para asegurarse de que usa una versión compatible de .NET Core.
+
 ## <a name="get-started"></a>Primeros pasos
 
 Si ya ha instalado los requisitos previos y Visual Studio para Mac, omita esta sección y proceda con [Creación de un proyecto](#creating-a-project). Siga estos pasos para instalar los requisitos previos y Visual Studio para Mac:
 
-Descargue el [instalador de Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Ejecute el instalador. Lea y acepte el contrato de licencia. Durante la instalación, se les proporciona la oportunidad de instalar Xamarin, una tecnología de desarrollo de aplicaciones móviles multiplataforma. La instalación de Xamarin y sus componentes relacionados es opcional para el desarrollo de .NET Core. Para ver un tutorial del proceso de instalación de Visual Studio para Mac, consulte la [documentación de Visual Studio para Mac](/visualstudio/mac/). Una vez completada la instalación, inicie el IDE de Visual Studio para Mac.
+Descargue el [instalador de Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Ejecute el instalador. Lea y acepte el contrato de licencia. Durante la instalación, seleccione la opción de instalar .NET Core. Se le proporciona la oportunidad de instalar Xamarin, una tecnología de desarrollo de aplicaciones móviles multiplataforma. La instalación de Xamarin y sus componentes relacionados es opcional para el desarrollo de .NET Core. Para ver un tutorial del proceso de instalación de Visual Studio para Mac, consulte la [documentación de Visual Studio para Mac](/visualstudio/mac/). Una vez completada la instalación, inicie el IDE de Visual Studio para Mac.
 
 ## <a name="creating-a-project"></a>Creación de un proyecto
 
-1. Seleccione **Nuevo proyecto** en la pantalla de bienvenida.
+1. Seleccione **Nuevo** en la ventana de inicio.
 
-   ![Botón Nuevo proyecto en la pantalla de bienvenida de Visual Studio para Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
+   ![Botón Nuevo en la pantalla Inicio de Visual Studio para Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
 1. En el cuadro de diálogo **Nuevo proyecto**, seleccione **Aplicación** en el nodo **.NET Core**. Seleccione la plantilla **Aplicación de consola** y haga clic en **Siguiente**.
 
    ![Lista de plantillas de Nuevo proyecto](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
+
+1. Si tiene instalada más de una versión de .NET Core, seleccione el marco de destino del proyecto.
 
 1. Escriba "HelloWorld" en **Nombre de proyecto**. Seleccione **Crear**.
 
@@ -50,7 +54,7 @@ Descargue el [instalador de Visual Studio para Mac](https://visualstudio.microso
 
 ## <a name="run-the-application"></a>Ejecutar la aplicación
 
-Ejecute la aplicación en modo de depuración mediante <kbd>F5</kbd> o en modo de versión mediante <kbd>CTRL</kbd>+<kbd>F5</kbd>.
+Ejecute la aplicación en modo de depuración con ⌘ ↵ (comando + ENTRAR) o en modo de versión ⌥ ⌘ ↵ (opción + comando + ENTRAR).
 
 ![El panel de salida de la aplicación muestra ¡Hola a todos!](./media/using-on-mac-vs/visual-studio-mac-output.png)
 

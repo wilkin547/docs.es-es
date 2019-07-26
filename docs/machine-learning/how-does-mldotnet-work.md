@@ -1,21 +1,21 @@
 ---
 title: ¿Qué es ML.NET y cómo funciona?
-description: ML.NET le permite agregar aprendizaje automático a las aplicaciones. NET. Con esta funcionalidad, puede realizar predicciones automáticas con los datos disponibles para su aplicación. En este artículo se explican los conceptos básicos de aprendizaje automático en ML.NET.
-ms.date: 04/10/2019
+description: ML.NET ofrece la posibilidad de agregar el aprendizaje automático en aplicaciones de .NET, ya sea en escenarios en línea o sin conexión. Con esta funcionalidad, es posible realizar predicciones automáticas usando los datos disponibles para la aplicación sin tener que estar conectado a una red para usar ML.NET. En este artículo se explican los conceptos básicos de aprendizaje automático en ML.NET.
+ms.date: 07/17/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 30e96d85ecc04332bc5e6c8f57badd000f729904
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 23e71e86b75854042068b6a68f90cf995749ee58
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660636"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331580"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>¿Qué es ML.NET y cómo funciona?
 
-ML.NET le permite agregar aprendizaje automático a las aplicaciones. NET. Con esta funcionalidad, puede realizar predicciones automáticas con los datos disponibles para su aplicación. En este artículo se explican los conceptos básicos de aprendizaje automático en ML.NET. 
+ML.NET ofrece la posibilidad de agregar el aprendizaje automático en aplicaciones de .NET, ya sea en escenarios en línea o sin conexión. Con esta funcionalidad, es posible realizar predicciones automáticas usando los datos disponibles para la aplicación sin tener que estar conectado a una red. En este artículo se explican los conceptos básicos de aprendizaje automático en ML.NET. 
 
 Algunos ejemplos del tipo de predicciones que puede hacer con ML.NET:
 

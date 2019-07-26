@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e57ec1a70aaae384f73b1ffdbf92e93fc0a7bdd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b2e14a7508d4a5e8069a3b98dee38a0ac62750c
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648561"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363983"
 ---
 # <a name="qualifying-net-types-for-interoperation"></a>Habilitar tipos de .NET para la interoperación
 Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga en cuenta los requisitos de interoperabilidad COM en tiempo de diseño. Los tipos administrados (clase, interfaz, estructura y enumeración) se integran fácilmente con los tipos COM si se cumplen las directrices siguientes:  
@@ -37,9 +37,9 @@ Si tiene previsto exponer tipos en un ensamblado a las aplicaciones COM, tenga e
   
      Los miembros de tipos públicos también deben ser públicos si van a ser visibles para COM. La aplicación de <xref:System.Runtime.InteropServices.ComVisibleAttribute> permite restringir la visibilidad de un ensamblado, un tipo público o miembros públicos de un tipo público. De forma predeterminada, todos los tipos y miembros públicos son visibles.  
   
-- Los tipos deben tener un constructor público predeterminado para que se activen desde COM.  
+- Los tipos deben tener un constructor público sin parámetros para que se activen desde COM.  
   
-     Los tipos públicos administrados son visibles para COM. Pero sin un constructor público predeterminado (un constructor sin argumentos), los clientes COM no pueden crear el tipo. Los clientes COM todavía pueden usar el tipo si se activa por otros medios.  
+     Los tipos públicos administrados son visibles para COM. Pero sin un constructor público sin parámetros (un constructor sin argumentos), los clientes COM no pueden crear el tipo. Los clientes COM todavía pueden usar el tipo si se activa por otros medios.  
   
 - Los tipos no pueden ser abstractos.  
   

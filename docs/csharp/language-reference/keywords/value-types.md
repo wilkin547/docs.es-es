@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: fd865f2a9c4a6d2c17f79a21866103a2db982e5f
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 72771ee494b6be7142ce3f9bec43dcb8aa8a8401
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661588"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363086"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referencia de C#)
 
@@ -88,7 +88,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Con el operador [new](../operators/new-operator.md) se llama al constructor sin parámetros del tipo específico y se asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor sin parámetros ha asignado el valor `0` a `myInt`. Para más información sobre los valores que se han asignado llamando a los constructores predeterminados, vea [Tabla de valores predeterminados](default-values-table.md).
+Con el operador [new](../operators/new-operator.md) se llama al constructor sin parámetros del tipo específico y se asigna el valor predeterminado a la variable. En el ejemplo anterior, el constructor sin parámetros ha asignado el valor `0` a `myInt`. Para más información sobre los valores que se han asignado llamando a los constructores sin parámetros, consulte [Tabla de valores predeterminados](default-values-table.md).
 
 Con tipos definidos por el usuario, use [new](../operators/new-operator.md) para invocar al constructor sin parámetros. Por ejemplo, la siguiente instrucción invoca al constructor sin parámetros del struct `Point`:
 

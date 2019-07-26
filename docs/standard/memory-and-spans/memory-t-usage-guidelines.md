@@ -6,16 +6,16 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 380c0eef137eb5142c30e63f5446f5d60723087a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66834043"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68362907"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Instrucciones de uso de Memory\<T> y Span\<T>
 
-.NET Core incluye una serie de tipos que representan una región contigua y arbitraria de memoria. .NET Core 2.0 introdujo <xref:System.Span%601> y <xref:System.ReadOnlySpan%601>, que son búferes de memoria ligera que se puede respaldar por la memoria administrada o no administrada. Dado que estos tipos se pueden almacenar en la pila, no son aptos para una serie de escenarios, incluidas las llamadas de método asincrónico. .NET Core 2.1 agrega numerosos tipos adicionales, incluidos <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> y <xref:System.Buffers.MemoryPool%601>. Al igual que <xref:System.Span%601>, <xref:System.Memory%601> y sus tipos relacionados pueden estar respaldados por la memoria administrada y no administrada. A diferencia de <xref:System.Span%601>, <xref:System.Memory%601> solo se puede almacenar en el montón administrado.
+.NET Core incluye una serie de tipos que representan una región contigua y arbitraria de memoria. .NET Core 2.0 introdujo <xref:System.Span%601> y <xref:System.ReadOnlySpan%601>, que son búferes de memoria ligera que se puede respaldar por la memoria administrada o no administrada. Dado que estos tipos solo se pueden almacenar en la pila, no son aptos para una serie de escenarios, incluidas las llamadas de método asincrónico. .NET Core 2.1 agrega numerosos tipos adicionales, incluidos <xref:System.Memory%601>, <xref:System.ReadOnlyMemory%601>, <xref:System.Buffers.IMemoryOwner%601> y <xref:System.Buffers.MemoryPool%601>. Al igual que <xref:System.Span%601>, <xref:System.Memory%601> y sus tipos relacionados pueden estar respaldados por la memoria administrada y no administrada. A diferencia de <xref:System.Span%601>, <xref:System.Memory%601> se puede almacenar en el montón administrado.
 
 <xref:System.Span%601> y <xref:System.Memory%601> son los búferes de datos estructurados que se pueden usar en las canalizaciones. Es decir, están diseñados para que parte de los datos, o todos, se pueda pasar de forma eficaz a los componentes de la canalización, que puede procesarlos y, opcionalmente, modifique el búfer. Como varios componentes o subprocesos pueden acceder a <xref:System.Memory%601> y sus tipos relacionados, es importante que los desarrolladores sigan algunas directrices de uso estándar para crear código sólido.
 

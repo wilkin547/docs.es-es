@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 14ff272fe940c265dc8984d6b20985bb2d2ba12d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 018710f753df261fce28e2e1cae1272b36923a05
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398250"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363006"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Utilizar constructores (Guía de programación de C#)
 
@@ -20,7 +20,7 @@ Cuando se crea una [class](../../../csharp/language-reference/keywords/class.md)
   
  [!code-csharp[csProgGuideObjects#53](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#53)]  
   
- Un constructor que no toma ningún parámetro se denomina *constructor sin parámetros*. Los constructores predeterminados se invocan cada vez que se crea una instancia de un objeto mediante el operador `new` y no se especifica ningún argumento en `new`. Para obtener más información, vea [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md) (Constructores de instancias [Guía de programación de C#]).  
+ Un constructor que no toma ningún parámetro se denomina *constructor sin parámetros*. Los constructores sin parámetros se invocan cada vez que se crea una instancia de un objeto mediante el operador `new` y no se especifica ningún argumento en `new`. Para obtener más información, vea [Instance Constructors](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md) (Constructores de instancias [Guía de programación de C#]).  
   
  A menos que la clase sea [static](../../../csharp/language-reference/keywords/static.md), las clases sin constructores tienen un constructor público sin parámetros por el compilador de C# con el fin de habilitar la creación de instancias de clase. Para más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
   

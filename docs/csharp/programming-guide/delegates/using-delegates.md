@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: eb5721d1c04ad761821bcdae03159f290a802ec0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27f47d74a6e0775588e40760fe54c281a7f5e233
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979845"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363788"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizar delegados (Guía de programación de C#)
 Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tipo que encapsula de forma segura un método, similar a un puntero de función en C y C++. A diferencia de los punteros de función de C, los delegados están orientados a objetos, proporcionan seguridad de tipos y son seguros. El tipo de un delegado se define por el nombre del delegado. En el ejemplo siguiente, se declara un delegado denominado `Del` que puede encapsular un método que toma una [string](../../../csharp/language-reference/keywords/string.md) como argumento y devuelve [void](../../../csharp/language-reference/keywords/void.md):  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Normalmente, un objeto delegado se construye al proporcionar el nombre del método que el delegado encapsulará o con un [método anónimo](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md). Una vez que se crea una instancia de delegado, el delegado pasará al método una llamada de método realizada al delegado. Los parámetros pasados al delegado por el autor de la llamada se pasan a su vez al método, y el valor devuelto desde el método, si lo hubiera, es devuelto por el delegado al autor de la llamada. Esto se conoce como invocar al delegado. Un delegado con instancias se puede invocar como si fuera el propio método encapsulado. Por ejemplo:  
+ Normalmente, un objeto delegado se construye al proporcionar el nombre del método que el delegado encapsulará o con una [función anónima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md). Una vez que se crea una instancia de delegado, el delegado pasará al método una llamada de método realizada al delegado. Los parámetros pasados al delegado por el autor de la llamada se pasan a su vez al método, y el valor devuelto desde el método, si lo hubiera, es devuelto por el delegado al autor de la llamada. Esto se conoce como invocar al delegado. Un delegado con instancias se puede invocar como si fuera el propio método encapsulado. Por ejemplo:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   

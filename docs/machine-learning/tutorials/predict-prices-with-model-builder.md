@@ -3,19 +3,19 @@ title: Predicción de precios mediante regresión con el Generador de modelos
 description: En este tutorial se muestra cómo compilar un modelo de regresión con el Generador de modelos de ML.NET para predecir precios, en concreto, las tarifas de taxi de Nueva York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/26/2019
+ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d9a6f193d877fc1a679b7a3cafd7491e021cb2ad
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: b4a08a9866bbc8816b57c95bdb22766bd1b07fdc
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539632"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331694"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Predicción de precios mediante regresión con el Generador de modelos
 
-Obtenga información sobre cómo usar el Generador de modelos de ML.NET para crear un [modelo de regresión](../resources/glossary.md#regression) para predecir precios.  La aplicación de consola de .NET que desarrolla en este tutorial predice las tarifas de taxi en función de los datos históricos de tarifas de taxi de Nueva York.
+Obtenga información sobre cómo usar el Generador de modelos de ML.NET para crear un modelo de regresión para predecir precios.  La aplicación de consola de .NET que desarrolla en este tutorial predice las tarifas de taxi en función de los datos históricos de tarifas de taxi de Nueva York.
 
 La plantilla de predicción de precios del Generador de modelos puede usarse para cualquier escenario que requiera la predicción de un valor numérico. Algunos escenarios de ejemplo son: predicción del precio de la vivienda, predicción de la demanda y previsión de ventas.
 
@@ -39,15 +39,17 @@ Para obtener una lista de los requisitos previos e instrucciones de instalación
 
 1. Cree una **aplicación de consola de .NET Core** denominada "TaxiFarePrediction".
 
-1. Instale el paquete NuGet **Microsoft.ML**:
-
-    En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto *TaxiFarePrediction* y seleccione **Administrar paquetes NuGet**. Elija "nuget.org" como origen del paquete, seleccione la pestaña **Examinar**, busque **Microsoft.ML**, seleccione el paquete en la lista y seleccione el botón **Instalar**. Seleccione el botón **Aceptar** en el cuadro de diálogo **Vista previa de cambios** y, a continuación, seleccione el botón **Acepto** del cuadro de diálogo **Aceptación de la licencia** en caso de que esté de acuerdo con los términos de licencia de los paquetes mostrados.
-
 ## <a name="prepare-and-understand-the-data"></a>Preparar y entender los datos
 
 1. Cree un directorio denominado *Datos* en el proyecto para almacenarlos archivos del conjunto de datos.
 
-1. Descargue el conjunto de datos [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) y guárdelo en la carpeta *Datos* que ha creado en el paso anterior. Este conjunto de datos se usa para entrenar y evaluar el modelo de aprendizaje automático. Este conjunto de datos procede originalmente del [conjunto de datos NYC TLC Taxi Trip](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml).
+1. El conjunto de datos que se usa para entrenar y evaluar el modelo de Machine Learning procede originalmente del conjunto de datos NYC TLC Taxi Trip.
+
+    Para descargar el conjunto de datos, vaya al [vínculo de descarga de taxi-fare-train.csv](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv).
+
+    Cuando se cargue la página, haga clic con el botón derecho en cualquier parte de la página y seleccione **Guardar como**.
+
+    Use el **cuadro de diálogo Guardar como** para guardar el archivo en la carpeta *Data* que creó en el paso anterior.
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el archivo *taxi-fare-train.csv* y seleccione **Propiedades**. En **Avanzadas**, cambie el valor de **Copiar en el directorio de salida** por **Copiar si es posterior**.
 
@@ -60,7 +62,7 @@ Cada fila del conjunto de datos `taxi-fare-train.csv` contiene los detalles de l
     * **vendor_id:** el identificador del taxista es una característica.
     * **rate_code:** el tipo de tarifa del viaje en taxi es una característica.
     * **passenger_count:** el número de pasajeros en el recorrido es una característica.
-    * **trip_time_in_secs:** la cantidad de tiempo que tardó el viaje. Por ejemplo, si quiere calcular la tarifa del viaje antes de que termine y aún no conoce la duración del viaje, el tiempo del viaje no es una característica, por lo que deberá excluir esta columna del modelo.
+    * **trip_time_in_secs:** la cantidad de tiempo que tardó el viaje.
     * **trip_distance:** la distancia del viaje es una característica.
     * **payment_type:** el método de pago (efectivo o tarjeta de crédito) es una característica.
     * **fare_amount:** la tarifa de taxi total pagada es la etiqueta.
@@ -69,14 +71,14 @@ Cada fila del conjunto de datos `taxi-fare-train.csv` contiene los detalles de l
 
 ## <a name="choose-a-scenario"></a>Elección de un escenario
 
-Para entrenar el modelo, deberá seleccionarlo en la lista de escenarios de aprendizaje automático disponibles proporcionada por el Generador de modelos. En este caso, el escenario es `Price Prediction`. Para obtener una lista más amplia, visite el [artículo de información general del Generador de modelos](../automate-training-with-model-builder.md#scenarios).
+Para entrenar el modelo, deberá seleccionarlo en la lista de escenarios de aprendizaje automático disponibles proporcionada por el Generador de modelos. En este caso, el escenario es `Price Prediction`.
 
 1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto *TaxiFarePrediction* y seleccione **Agregar** > **Machine Learning**.
 1. En el paso del escenario de la herramienta Generador de modelos, seleccione el escenario *Predicción de precio*.
 
 ## <a name="load-the-data"></a>Carga de los datos
 
-El Generador de modelos acepta datos de dos orígenes, una base de datos de SQL Server o un archivo local csv o tsv. Para obtener más información sobre los requisitos de formato de datos, visite el siguiente [vínculo](../how-to-guides/install-model-builder.md#limitations).
+El Generador de modelos acepta datos de dos orígenes, una base de datos de SQL Server o un archivo local en formato .csv o .tsv.
 
 1. En el paso de datos de la herramienta Generador de modelos, seleccione *Archivo* en la lista desplegable origen de datos.
 1. Seleccione el botón junto al cuadro de texto *Seleccionar un archivo* y use el Explorador de archivos para examinar y seleccionar *taxi-fare-test.csv* en el directorio *Datos*.
@@ -110,23 +112,21 @@ Una vez completado el entrenamiento, vaya al paso de evaluación.
 
 ## <a name="evaluate-the-model"></a>Evaluar el modelo
 
-El resultado del paso de entrenamiento será un modelo que tenga el mejor rendimiento. En el paso de evaluación de la herramienta Generador de modelos, la sección de salida contendrá el algoritmo usado por el modelo con el mejor rendimiento en la entrada *Mejor modelo* junto con las métricas en *Modelo de mayor calidad (RSquared)* . Además de una tabla resumen que contiene los cinco mejores modelos y sus métricas. Visite el vínculo siguiente para obtener más información sobre las [métricas de evaluación de modelos](https://docs.microsoft.com/dotnet/machine-learning/resources/metrics).
+El resultado del paso de entrenamiento será un modelo que tenga el mejor rendimiento. En el paso de evaluación de la herramienta Generador de modelos, la sección de salida contendrá el algoritmo usado por el modelo con el mejor rendimiento en la entrada *Mejor modelo* junto con las métricas en *Modelo de mayor calidad (RSquared)* . Además de una tabla resumen que contiene los cinco mejores modelos y sus métricas.
 
-Si no está satisfecho con las métricas de precisión, una forma sencilla de intentar mejorar la precisión del modelo es aumentar la cantidad de tiempo para entrenar el modelo o usar más datos.
+Si no está satisfecho con las métricas de precisión, una forma sencilla de intentar mejorar la precisión del modelo es aumentar la cantidad de tiempo para entrenar el modelo o usar más datos. En caso contrario, vaya al paso de código.
 
-## <a name="use-the-model-for-predictions"></a>Usar el modelo para las predicciones
+## <a name="add-the-code-to-make-predictions"></a>Incorporación del código para hacer predicciones
 
 Se crearán dos proyectos como resultado del proceso de entrenamiento.
 
-- TaxiFarePredictionML.ConsoleApp: Una aplicación de consola de .NET que contiene el entrenamiento del modelo y el código de consumo.
+- TaxiFarePredictionML.ConsoleApp: Una aplicación de consola de .NET Core que contiene el entrenamiento del modelo y el código de consumo.
 - TaxiFarePredictionML.Model: Una biblioteca de clases .NET Standard que contienen los modelos de datos que definen el esquema de entrada y salida de los datos del modelo, así como la versión persistente del modelo con mejor rendimiento durante el entrenamiento.
 
-1. En la sección de código de la herramienta Generador de modelos, seleccione **Proyectos agregados** para agregar los proyectos a la solución.
-2. En el Explorador de soluciones, haga clic con el botón derecho en el proyecto *TaxiFarePrediction*. A continuación, seleccione **Agregar > Elemento existente**. Para la lista desplegable de tipos de archivo, seleccione `All Files`, vaya hasta el directorio del proyecto *TaxiFarePredictionML.Model* y seleccione el archivo `MLModel.zip`. A continuación, haga clic con el botón derecho en el archivo agregado recientemente `MLModel.zip` y seleccione *Propiedades*. Para la opción Copiar en el directorio de resultados, seleccione *Copiar si es más reciente* en la lista desplegable.
-3. Haga clic con el botón derecho en el proyecto *TaxiFarePrediction*. A continuación, **Agregar > Referencia**. Elija el nodo **Proyectos > Solución** y, en la lista, marque el proyecto *TaxiFarePredictionML.Model* y haga clic en Aceptar.
-
-4. Abra el archivo *Program.cs* en el proyecto *TaxiFarePrediction*.
-5. Agregue las siguientes instrucciones using:
+1. En el paso de código de la herramienta Generador de modelos, seleccione **Agregar proyectos** para agregar a la solución los proyectos generados automáticamente.
+1. Haga clic con el botón derecho en el proyecto *TaxiFarePrediction*. A continuación, **Agregar > Referencia**. Elija el nodo **Proyectos > Solución** y, en la lista, marque el proyecto *TaxiFarePredictionML.Model* y haga clic en Aceptar.
+1. Abra el archivo *Program.cs* en el proyecto *TaxiFarePrediction*.
+1. Agregue las siguientes instrucciones USING para hacer referencia al paquete de NuGet *Microsoft.ML* y al proyecto *TaxiFarePredictionML.Model*:
 
     ```csharp
     using System;
@@ -134,7 +134,7 @@ Se crearán dos proyectos como resultado del proceso de entrenamiento.
     using TaxiFarePredictionML.Model.DataModels;
     ```
 
-6. Agregue el método `ConsumeModel` a la clase `Program`. `ConsumeModel` creará un `PredictionEngine` según el modelo generado por el Generador de modelos para realizar predicciones sobre nuevos datos y los imprimirá en la consola.
+1. Agregue el método `ConsumeModel` a la clase `Program`.
 
     ```csharp
     static ModelOutput ConsumeModel(ModelInput input)
@@ -154,7 +154,9 @@ Se crearán dos proyectos como resultado del proceso de entrenamiento.
     }
     ```
 
-7. Agregue el siguiente código al método `Main` y ejecute la aplicación.
+    `ConsumeModel` cargará el modelo entrenado, creará un [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para el modelo y lo usará para realizar predicciones según los datos nuevos.
+
+1. Para hacer una predicción según los datos nuevos con el modelo, cree una instancia de la clase `ModelInput` y use el método `ConsumeModel`. Observe que el importe de la tarifa no forma parte de la entrada. Esto se debe a que el modelo generará la predicción para él. Agregue el siguiente código al método `Main` y ejecute la aplicación.
 
     ```csharp
     // Create sample data
@@ -195,9 +197,12 @@ En este tutorial ha aprendido a:
 > * Evaluar el modelo
 > * Usar el modelo para las predicciones
 
-Vaya a cualquiera de los siguientes artículos de procedimientos para aprender a implementar el modelo.
+### <a name="additional-resources"></a>Recursos adicionales
 
-> [!div class="nextstepaction"]
-> [Implementación de un modelo en Azure Functions](../how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
-> [!div class="nextstepaction"]
-> [Implementación de un modelo en una API Web](../how-to-guides/serve-model-web-api-ml-net.md)
+Para más información sobre los temas mencionados en este tutorial, visite estos recursos:
+
+- [Escenarios del Generador de modelos](../automate-training-with-model-builder.md#scenarios)
+- [Formatos de datos del Generador de modelos](../automate-training-with-model-builder.md#data-formats)
+- [Regresión](../resources/glossary.md#regression)
+- [Métricas de regresión del modelo](../resources/metrics.md#metrics-for-regression)
+- [Conjunto de datos NYC TLC Taxi Trip](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)

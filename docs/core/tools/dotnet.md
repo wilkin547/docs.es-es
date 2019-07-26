@@ -2,18 +2,18 @@
 title: comando dotnet
 description: Aprenda sobre el comando dotnet (el controlador genérico para las herramientas de la CLI de .NET Core) y su uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: 2134bf8ed66157619499b027f01d39e03e84411f
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: e1571bea1594b492427bdf5b3a7959733459c54e
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859553"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331016"
 ---
 # <a name="dotnet-command"></a>comando dotnet
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>NOMBRE
+## <a name="name"></a>nombre
 
 `dotnet`: herramienta para administrar archivos binarios y código fuente de .NET.
 
@@ -54,7 +54,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-Ruta de acceso a archivo *deps.json* adicional.
+Ruta de acceso a archivo *.deps.json* adicional.
 
 `--additionalprobingpath <PATH>`
 
@@ -88,7 +88,7 @@ Muestra los SDK de .NET Core instalados.
 
 Define el comportamiento cuando el marco de trabajo compartido necesario no está disponible. `N` puede ser:
 * `0`: se deshabilita la puesta al día incluso de las versiones secundarias.
-* `1`: puesta al día de la versión secundaria, pero no de la versión principal. Este es el comportamiento predeterminado.
+* `1`: puesta al día de la versión secundaria, pero no de la versión principal. Éste es el comportamiento predeterminado.
 * `2`: puesta al día de las versiones principales y secundarias.
 
  Para obtener más información, vea [Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward) (Puesta al día).
@@ -105,7 +105,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 `--additional-deps <PATH>`
 
-Ruta de acceso a archivo *deps.json* adicional.
+Ruta de acceso a archivo *.deps.json* adicional.
 
 `--additionalprobingpath <PATH>`
 
@@ -177,7 +177,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| Get-Help                                       | Función                                                            |
+| Comando                                       | Función                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | Compila una aplicación .NET Core.                                     |
 | [dotnet build-server](dotnet-build-server.md) | Interactúa con servidores iniciados por una compilación.                          |
@@ -196,7 +196,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| Get-Help                             | Función                                                            |
+| Comando                             | Función                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Compila una aplicación .NET Core.                                     |
 | [dotnet clean](dotnet-clean.md)     | Limpia las salidas de la compilación.                                              |
@@ -214,7 +214,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| Get-Help                             | Función                                                            |
+| Comando                             | Función                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Compila una aplicación .NET Core.                                     |
 | [dotnet clean](dotnet-clean.md)     | Limpia las salidas de la compilación.                                              |
@@ -232,7 +232,7 @@ Imprime la versión del SDK de .NET Core en uso.
 
 ### <a name="project-references"></a>Referencias de proyecto
 
-Get-Help | Función
+Comando | Función
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | Agrega una referencia de proyecto.
 [dotnet list reference](dotnet-list-reference.md) | Enumera referencias de proyecto.
@@ -240,14 +240,14 @@ Get-Help | Función
 
 ### <a name="nuget-packages"></a>Paquetes NuGet
 
-Get-Help | Función
+Comando | Función
 --- | ---
 [dotnet add package](dotnet-add-package.md) | Agrega un paquete NuGet.
 [dotnet remove package](dotnet-remove-package.md) | Quita un paquete NuGet.
 
 ### <a name="nuget-commands"></a>Comandos NuGet
 
-Get-Help | Función
+Comando | Función
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | Elimina o quita de la lista un paquete del servidor.
 [dotnet nuget locals](dotnet-nuget-locals.md) | Borra o muestra los recursos de NuGet locales, como la caché de solicitudes http, la caché temporal o la carpeta de paquetes global de toda la máquina.
@@ -257,7 +257,7 @@ Get-Help | Función
 
 Las [herramientas globales de .NET Core](global-tools.md) están disponibles a partir del SDK de .NET Core 2.1.300:
 
-Get-Help | Función
+Comando | Función
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Instala una herramienta global en su equipo.
 [dotnet tool list](dotnet-tool-list.md) | Enumera todas las herramientas globales instaladas actualmente en el directorio predeterminado de la máquina o en la ruta especificada.

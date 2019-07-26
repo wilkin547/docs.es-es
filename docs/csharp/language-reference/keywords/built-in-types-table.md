@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: e770c305afe098e633700b039efb51770c77ada7
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5db982c0a94814bfece087eb4db119a4df246094
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661448"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68330966"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabla de tipos integrados (Referencia de C#)
 
@@ -40,7 +40,7 @@ En la siguiente tabla se muestran las palabras clave para los tipos de C# integr
 
 A todos los tipos de la tabla, excepto `object` y `string`, se les hace referencia como tipos simples.  
   
-Las palabras clave de tipo de C# y sus alias son intercambiables. Por ejemplo, puede declarar una variable de entero con cualquiera de las siguientes declaraciones:  
+Los tipos de .NET y sus alias de palabra clave de tipo de C# son intercambiables. Por ejemplo, puede declarar una variable de entero con cualquiera de las siguientes declaraciones:  
 
 ```csharp
 int x = 123;

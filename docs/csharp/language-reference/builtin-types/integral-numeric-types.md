@@ -32,35 +32,40 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 0a1ed01d9e6cb86ea177e8b947627f9dc02eedae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dfb1298abaff0cfe8eae7536f94511a30012a4a9
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744220"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68236076"
 ---
 # <a name="integral-numeric-types--c-reference"></a>Tipos numéricos enteros (referencia de C#)
 
-Los **tipos numéricos enteros** son un subconjunto de **tipos simples** y se pueden inicializar con [*literales*](#integral-literals). Todos los tipos enteros también son tipos de valor.
+Los **tipos numéricos enteros** son un subconjunto de **tipos simples** y se pueden inicializar con [*literales*](#integral-literals). Todos los tipos enteros también son tipos de valor. Todos los tipos numéricos enteros admiten operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos bit a bit](../operators/bitwise-and-shift-operators.md), de [comparación e igualdad](../operators/equality-operators.md).
 
-Todos los tipos numéricos enteros admiten operadores [aritméticos](../operators/arithmetic-operators.md), [lógicos bit a bit](../operators/bitwise-and-shift-operators.md), de [comparación e igualdad](../operators/equality-operators.md).
+## <a name="characteristics-of-the-integral-types"></a>Características de los tipos enteros
 
-## <a name="sizes-and-ranges"></a>Tamaños e intervalos
+C# admite los siguientes tipos enteros predefinidos:
 
-En la siguiente tabla, se muestran los tamaños e intervalos de los tipos enteros:
+|Palabra clave/tipo de C#|Intervalo|Tamaño|Tipo de .NET|
+|----------|-----------|----------|-------------|
+|`sbyte`|De -128 a 127|Entero de 8 bits con signo|<xref:System.SByte?displayProperty=nameWithType>|
+|`byte`|De 0 a 255|Entero de 8 bits sin signo|<xref:System.Byte?displayProperty=nameWithType>|
+|`short`|De -32 768 a 32 767|Entero de 16 bits con signo|<xref:System.Int16?displayProperty=nameWithType>|
+|`ushort`|De 0 a 65.535|Entero de 16 bits sin signo|<xref:System.UInt16?displayProperty=nameWithType>|
+|`int`|De -2.147.483.648 a 2.147.483.647|Entero de 32 bits con signo|<xref:System.Int32?displayProperty=nameWithType>|
+|`uint`|De 0 a 4.294.967.295|Entero de 32 bits sin signo|<xref:System.UInt32?displayProperty=nameWithType>|
+|`long`|De -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Entero de 64 bits con signo|<xref:System.Int64?displayProperty=nameWithType>|
+|`ulong`|De 0 a 18.446.744.073.709.551.615|Entero de 64 bits sin signo|<xref:System.UInt64?displayProperty=nameWithType>|
 
-|Tipo|Intervalo|Tamaño|  
-|----------|-----------|----------|  
-|`sbyte`|De -128 a 127|Entero de 8 bits con signo|  
-|`byte`|De 0 a 255|Entero de 8 bits sin signo|  
-|`short`|De -32 768 a 32 767|Entero de 16 bits con signo|  
-|`ushort`|De 0 a 65.535|Entero de 16 bits sin signo|  
-|`int`|De -2.147.483.648 a 2.147.483.647|Entero de 32 bits con signo|  
-|`uint`|De 0 a 4.294.967.295|Entero de 32 bits sin signo|  
-|`long`|De -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807|Entero de 64 bits con signo|  
-|`ulong`|De 0 a 18.446.744.073.709.551.615|Entero de 64 bits sin signo|  
+En la tabla anterior, cada palabra clave de tipo de C# de la columna ubicada más a la izquierda es un alias del tipo de .NET correspondiente. Son intercambiables. Por ejemplo, en las declaraciones siguientes se declaran variables del mismo tipo:
 
-El valor predeterminado para todos los tipos enteros es `0`. Cada uno de los tipos enteros tiene constantes denominadas `MinValue` y `MaxValue` para el valor mínimo y máximo de ese tipo.
+```csharp
+int a = 123;
+System.Int32 b = 123;
+```
+
+El valor predeterminado de cada tipo entero es cero, `0`. Cada uno de los tipos enteros tiene las constantes `MinValue` y `MaxValue` que proporcionan el valor mínimo y máximo de ese tipo.
 
 Use la estructura <xref:System.Numerics.BigInteger?displayProperty=nameWithType> para representar un entero con signo sin límite superior ni inferior.
 
@@ -76,7 +81,7 @@ var binaryLiteral = 0b_0010_1010;
 
 Los literales decimales no requieren ningún prefijo. El prefijo `x` o `X` significa un *literal hexadecimal*. El prefijo `b` o `B` significa un *literal binario*. La declaración de `binaryLiteral` muestra el uso de `_` como un *separador de dígitos*. El separador de dígitos también se puede usar con todos los literales numéricos. Los literales binarios y el separador de dígitos `_` se admiten a partir de C# 7.0.
 
-### <a name="literal-suffixes"></a>Sufijos literales 
+### <a name="literal-suffixes"></a>Sufijos literales
 
 El sufijo `l` o `L` especifica que el literal entero debe ser del tipo `long`. El sufijo `ul` o `UL` especifica el tipo `ulong`. Si el sufijo `L` se usa en un literal que es mayor de 9 223 372 036 854 775 807 (el valor máximo de `long`), el valor se convierte en el tipo `ulong`. Si el valor que representa un literal integral supera <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, se produce un error de compilación [CS1021](../../misc/cs1021.md). 
 
@@ -123,11 +128,3 @@ Debe usar una conversión explícita para convertir un tipo entero en otro tipo 
 - [Tabla de formatos de presentación para valores numéricos](../keywords/formatting-numeric-results-table.md)
 - [Tabla de tipos integrados](../keywords/built-in-types-table.md)
 - [Valores numéricos en .NET](../../../standard/numerics.md)
-- <xref:System.Byte?displayProperty=nameWithType>
-- <xref:System.SByte?displayProperty=nameWithType>
-- <xref:System.Int16?displayProperty=nameWithType>
-- <xref:System.UInt16?displayProperty=nameWithType>
-- <xref:System.Int32?displayProperty=nameWithType>
-- <xref:System.UInt32?displayProperty=nameWithType>
-- <xref:System.Int64?displayProperty=nameWithType>
-- <xref:System.UInt64?displayProperty=nameWithType>

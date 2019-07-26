@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo elegir entre aplicaciones web trad
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 5b8569f2abd5160fa8a080c06441a963fb455f6b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825750"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331596"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Elección entre aplicaciones web tradicionales y aplicaciones de página única (SPA)
 
@@ -38,9 +38,9 @@ Además, los marcos de SPA requieren mayores conocimientos de arquitectura y seg
 
 Las mejoras en la experiencia del usuario que posibilita el modelo de SPA deben ponderarse con estas consideraciones.
 
-## <a name="razor-components"></a>Componentes de Razor
+## <a name="blazor"></a>Blazor
 
-ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, conocidas como componentes de Razor. Los componentes de Razor permiten a los desarrolladores crear interfaces de usuario con Razor en el servidor, además de que el código se entregue al navegador y se ejecute del lado cliente mediante una biblioteca de JavaScript llamada WebAssembly. ASP.NET Core 3.0 aún está en desarrollo, pero en la actualización 3.0 de este libro electrónico se incluirá más información sobre dicha tecnología. Para obtener más información sobre los componentes de Razor (con el nombre en clave Blazor), vea [Get started with Blazor](https://blazor.net/docs/get-started.html) (Introducción a Blazor).
+ASP.NET Core 3.0 presenta un nuevo modelo para crear interfaces de usuario detalladas, interactivas y que admiten composición, denominadas Blazor. El lado servidor de Blazor permite a los desarrolladores crear interfaces de usuario con Razor en el servidor, además de que el código se entregue al navegador y se ejecute del lado cliente mediante una biblioteca de JavaScript llamada WebAssembly. ASP.NET Core 3.0 aún está en desarrollo, pero en la actualización 3.0 de este libro electrónico se incluirá más información sobre dicha tecnología. Para más información sobre Blazor, consulte el artículo de [introducción a Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Casos en los que elegir aplicaciones web tradicionales
 

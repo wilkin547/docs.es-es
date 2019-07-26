@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: dd9b77a90030a96d17104c8c0e48964b6a85d165
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 546feb6f3c4515ceecdb5b5afa14c0fc99ab7020
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125738"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363901"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Expresiones lambda (Guía de programación de C#)
 
@@ -41,8 +41,6 @@ También puede pasarla directamente como un argumento de método:
 [!code-csharp-interactive[lambda is argument](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
 Cuando se utiliza la sintaxis de método para llamar al método <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> en la clase <xref:System.Linq.Enumerable?displayProperty=nameWithType> (como se hace en LINQ to Objects y en LINQ to XML), el parámetro es un tipo delegado <xref:System.Func%602?displayProperty=nameWithType>. Una expresión lambda constituye la manera más práctica de crear ese delegado. Cuando se llama al método <xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType> en la clase <xref:System.Linq.Queryable?displayProperty=nameWithType> (como se hace en LINQ to SQL), el tipo de parámetro es un tipo de árbol de expresión [`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>). De nuevo, una expresión lambda constituye una manera muy concisa de construir ese árbol de expresión. Las lambdas permiten que las llamadas a `Select` tengan un aspecto similar, aunque, de hecho, el tipo de objeto creado a partir de la lambda sea diferente.
-
-Todas las restricciones que se aplican a los [métodos anónimos](anonymous-methods.md) también se aplican a las expresiones lambda.
   
 ## <a name="expression-lambdas"></a>Lambdas de expresión
 
@@ -82,7 +80,7 @@ El cuerpo de una lambda de instrucción puede estar compuesto de cualquier núme
 
 [!code-csharp-interactive[statement lambda](~/samples/snippets/csharp/programming-guide/lambda-expressions/ExpressionAndStatementLambdas.cs#StatementLambda)]
 
-Las lambdas de instrucción, como los métodos anónimos, no se pueden utilizar para crear árboles de expresión.
+Las expresiones lambdas no se pueden usar para crear árboles de expresión.
   
 ## <a name="async-lambdas"></a>Lambdas asincrónicas
 
@@ -196,9 +194,9 @@ Las reglas generales para la inferencia de tipos de las lambdas son las siguient
   
 Observe que las expresiones lambda, en sí mismas, no tienen tipo, ya que el sistema de tipos comunes no tiene ningún concepto intrínseco de "expresión lambda". Sin embargo, a veces resulta práctico hablar coloquialmente del "tipo" de una expresión lambda. En estos casos, el tipo hace referencia al tipo del delegado o el tipo de <xref:System.Linq.Expressions.Expression> en el que se convierte la expresión lambda.
 
-## <a name="variable-scope-in-lambda-expressions"></a>Ámbito de las variables en las expresiones lambda
+## <a name="capture-of-outer-variables-and-variable-scope-in-lambda-expressions"></a>Captura de variables externas y el ámbito de las variables en las expresiones lambda
 
-Las lambdas pueden hacer referencia a las *variables externas* (consulte [Métodos anónimos](anonymous-methods.md)) que están en el ámbito del método que define la expresión lambda o en el ámbito del tipo que contiene la expresión lambda. Las variables que se capturan de esta manera se almacenan para su uso en la expresión lambda, cuando de otro modo quedarían fuera de ámbito y serían eliminadas por la recolección de elementos no utilizados. Para poder utilizar una variable externa en una expresión lambda, debe estar previamente asignada. En el ejemplo siguiente se muestran estas reglas:
+Las operaciones lambda pueden hacer referencia a *variables externas*. Estas son las variables que están en el ámbito del método que define la expresión lambda o en el ámbito del tipo que contiene la expresión lambda. Las variables que se capturan de esta manera se almacenan para su uso en la expresión lambda, cuando de otro modo quedarían fuera de ámbito y serían eliminadas por la recolección de elementos no utilizados. Para poder utilizar una variable externa en una expresión lambda, debe estar previamente asignada. En el ejemplo siguiente se muestran estas reglas:
 
 [!code-csharp[variable scope](~/samples/snippets/csharp/programming-guide/lambda-expressions/VariableScopeWithLambdas.cs#VariableScope)]
 
@@ -226,7 +224,6 @@ Para obtener más información, vea la sección [Expresiones de función anónim
 
 - [Guía de programación de C#](../index.md)
 - [LINQ (Language Integrated Query)](../concepts/linq/index.md)
-- [Métodos anónimos](anonymous-methods.md)
 - [Árboles de expresión](../concepts/expression-trees/index.md)
 - [Funciones locales frente a expresiones lambda](../../local-functions-vs-lambdas.md)
 - [Expresiones lambda con tipo implícito](../../implicitly-typed-lambda-expressions.md)

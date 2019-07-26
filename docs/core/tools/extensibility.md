@@ -3,12 +3,12 @@ title: Modelo de extensibilidad de la CLI de .NET Core
 description: Obtenga información sobre cómo puede ampliar las herramientas de la interfaz de la línea de comandos (CLI).
 ms.date: 04/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: ca6bf30fb6aaf815a859a00bc391ef790566acaf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 784eb50dfdbc0f88050a9f727ddbf53db34d3209
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675100"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331005"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidad de las herramientas de la CLI de .NET Core
 
@@ -69,7 +69,7 @@ Como se ha mencionado, las herramientas son simples aplicaciones de consola port
 Después de compilarla, puede usar el comando [`dotnet pack`](dotnet-pack.md) para crear un paquete de NuGet (archivo .nupkg) que contiene el código e información sobre sus dependencias, entre otros. Puede proporcionar cualquier nombre al paquete, pero la aplicación que contiene, el archivo binario de la herramienta real, debe respetar las convenciones de `dotnet-<command>` para que `dotnet` pueda invocarlo.
 
 > [!NOTE]
-> En las versiones anteriores a RC3 de las herramientas de línea de comandos de .NET Core, el comando `dotnet pack` tenía un error que provocaba que `runtime.config.json` no se empaquetase con la herramienta. La falta de dicho archivo provoca errores en tiempo de ejecución. Si se produce este comportamiento, asegúrese de actualizar a las últimas herramientas y pruebe `dotnet pack` nuevo.
+> En las versiones anteriores a RC3 de las herramientas de línea de comandos de .NET Core, el comando `dotnet pack` tenía un error que provocaba que *.runtimeconfig.json* no se empaquetase con la herramienta. La falta de dicho archivo provoca errores en tiempo de ejecución. Si se produce este comportamiento, asegúrese de actualizar a las últimas herramientas y pruebe `dotnet pack` nuevo.
 
 Como las herramientas son aplicaciones portátiles, el usuario que las consume debe tener la versión de las bibliotecas .NET Core con la que se ha compilado la herramienta para poder ejecutar esta. Cualquier otra dependencia que use la herramienta y que no esté contenida en las bibliotecas .NET Core se restauran y colocan en la caché de NuGet. Por lo tanto, la herramienta entera se ejecuta con los ensamblados de las bibliotecas .NET Core, así como los ensamblados de la caché de NuGet.
 

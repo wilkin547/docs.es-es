@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e10b6fd7df003de739b57bbb3e17deb46215763f
+ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469652"
+ms.lasthandoff: 07/20/2019
+ms.locfileid: "68363992"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedimiento para crear contenedores COM
 
@@ -53,7 +53,7 @@ Ahora puede escribir código para tener acceso al objeto COM. Puede empezar por 
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Para crear un contenedor CCW con Visual Studio  
   
-1. Cree un proyecto de biblioteca de clases para la clase administrada que quiera ejecutar en código nativo. La clase debe tener un constructor predeterminado.  
+1. Cree un proyecto de biblioteca de clases para la clase administrada que quiera ejecutar en código nativo. La clase debe tener un constructor sin parámetros.  
   
      Compruebe que dispone de un número de versión de cuatro partes completo para el ensamblado en el archivo AssemblyInfo. Este número es necesario para mantener el control de versiones en el Registro de Windows. Para más información sobre los números de versión, vea [Versiones de los ensamblados](../../../docs/framework/app-domains/assembly-versioning.md).  
   

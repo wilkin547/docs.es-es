@@ -1,15 +1,15 @@
 ---
 title: Analizador de portabilidad de .NET | .NET
 description: Obtenga información sobre cómo usar la herramienta Analizador de portabilidad de .NET para evaluar la portabilidad de su código entre las diferentes implementaciones de .NET, incluidos .NET Core, .NET Standard, UWP y Xamarin.
-ms.date: 07/10/2019
+ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: f05d4f4a2fce8fa9a4d2e334f44190ea37335038
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
+ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859782"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68331745"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -52,7 +52,7 @@ Solo las API que no son compatibles con una plataforma de destino aparecen en el
 
 ![Resumen de portabilidad](./media/portability-analyzer/portabilitysummary.png)
 
-En la sección Resumen de portabilidad del informe se muestra el porcentaje de portabilidad para cada ensamblado incluido en la ejecución. En el ejemplo anterior, el 89,74 % de las API de .NET Framework utilizadas en la aplicación `ConsoleAppFramework` están disponibles en .NET Core + extensiones de la plataforma v2.2. Si ejecuta la herramienta Analizador de portabilidad de .NET en varios ensamblados, cada ensamblado debe tener una fila en el informe de Resumen de portabilidad.
+En la sección Resumen de portabilidad del informe se muestra el porcentaje de portabilidad para cada ensamblado incluido en la ejecución. En el ejemplo anterior, el 71,24 % de las API de .NET Framework utilizadas en la aplicación `svcutil` están disponibles en .NET Core + extensiones de la plataforma. Si ejecuta la herramienta Analizador de portabilidad de .NET en varios ensamblados, cada ensamblado debe tener una fila en el informe de Resumen de portabilidad.
 
 #### <a name="details"></a>Detalles
 
@@ -60,11 +60,11 @@ En la sección Resumen de portabilidad del informe se muestra el porcentaje de p
 
 La sección Detalles del informe enumera las API que faltan desde una de las plataformas de destino. 
 
- - Tipo de destino: al tipo le falta la API desde una plataforma de destino 
- - Miembro de destino: el método no está presente en una plataforma de destino 
- - Nombre del ensamblado: el ensamblado de .NET Framework en el que se encuentra la API que falta. 
- - Cada una de las plataformas de destino seleccionada es una columna, como ".NET Core": El valor de "No compatible" significa que la API no se admite en esta plataforma de destino. 
- - Cambios recomendados: API o tecnología recomendada a la que realizar el cambio. Actualmente, este campo está vacío o no está actualizado para muchas de las API. Debido a la gran cantidad de API, nos enfrentamos a gran desafío para mantenerlas actualizadas. Estamos examinando soluciones alternativas para proporcionar información útil a los clientes.
+- Tipo de destino: al tipo le falta la API desde una plataforma de destino 
+- Miembro de destino: el método no está presente en una plataforma de destino 
+- Nombre del ensamblado: el ensamblado de .NET Framework en el que se encuentra la API que falta. 
+- Cada una de las plataformas de destino seleccionada es una columna, como ".NET Core": El valor de "No compatible" significa que la API no se admite en esta plataforma de destino. 
+- Cambios recomendados: API o tecnología recomendada a la que realizar el cambio. Actualmente, este campo está vacío o no está actualizado para muchas de las API. Debido a la gran cantidad de API, nos enfrentamos a gran desafío para mantenerlas actualizadas. Estamos examinando soluciones alternativas para proporcionar información útil a los clientes.
 
 #### <a name="missing-assemblies"></a>Ensamblados que faltan
 
@@ -73,5 +73,3 @@ La sección Detalles del informe enumera las API que faltan desde una de las pla
 Puede encontrar la sección Ensamblados que faltan en el informe. En él se indica que esta lista de ensamblados hace referencia a los ensamblados analizados y no analizados. Si se trata un ensamblado que posee, inclúyalo en la ejecución del analizador de portabilidad de API para que pueda obtener informe detallado de portabilidad a nivel de API. Si se trata de una biblioteca de terceros, busque si tienen la versión más reciente compatible con la plataforma de destino. Si es así, le recomendamos que migre a la versión más reciente. Finalmente, sería de esperar que esta lista incluya todos los ensamblados de terceros que dependen de la aplicación y confirmar que tienen una versión compatible con la plataforma de destino.  
 
 Para obtener más información sobre el Analizador de portabilidad de .NET, visite la [documentación de GitHub](https://github.com/Microsoft/dotnet-apiport#documentation) y el vídeo de Channel 9 [A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer) (Información breve sobre el Analizador de portabilidad de .NET).
-
-
