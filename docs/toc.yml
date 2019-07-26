@@ -68,12 +68,7 @@
     - name: Control y generación de excepciones
       href: standard/exceptions/
     - name: Ensamblados de .NET
-      href: standard/assembly/index.md
-      items:
-        - name: Formato de archivo de ensamblado .NET
-          href: standard/assembly/file-format.md
-        - name: Procedimiento para usar y depurar la descargabilidad de ensamblado en .NET Core
-          href: standard/assembly/unloadability-howto.md
+      href: standard/assembly/
     - name: recolección de elementos no utilizados
       href: standard/garbage-collection/
     - name: Tipos genéricos
