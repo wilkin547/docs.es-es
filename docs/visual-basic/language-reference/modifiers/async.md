@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Async [Visual Basic]
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
-ms.openlocfilehash: ad6d671a45cee7d534347d23963bb5035ecc8dac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf2c62878e8902afa9455c789d41393b73110172
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802718"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434053"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
-El `Async` modificador indica que el método o [expresión lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) que modifica son asincrónicos. Estos métodos se conocen como *métodos asincrónicos*.  
+El `Async` modificador indica que el método o la [expresión lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) que modifica es asincrónico. Estos métodos se conocen como *métodos asincrónicos*.  
   
  Un método asincrónico proporciona una manera cómoda de hacer el trabajo de larga duración sin bloquear el subproceso del llamador. El llamador de un método asincrónico puede reanudar el trabajo sin esperar a que el método asincrónico finalice.  
   
@@ -42,21 +42,21 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function  
 ```  
   
- Normalmente, un método modificado por la `Async` palabra clave contiene al menos uno [Await](../../../visual-basic/language-reference/modifiers/async.md) expresión o instrucción. El método se ejecuta sincrónicamente hasta alcanzar el primer `Await`, punto en el que se suspende hasta que la tarea en espera se complete. Mientras tanto, se devuelve el control al llamador del método asincrónico. Si el método no contiene una expresión o instrucción `Await`, el método no se suspende y se ejecuta como un método sincrónico. Una advertencia del compilador alerta de cualquier método asincrónico que no contenga `Await`, porque esa situación podría indicar un error. Para obtener más información, consulte el [error del compilador](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md).  
+ Normalmente, un método modificado por la `Async` palabra clave contiene al menos una expresión o instrucción [Await](../../../visual-basic/language-reference/modifiers/async.md) . El método se ejecuta sincrónicamente hasta alcanzar el primer `Await`, punto en el que se suspende hasta que la tarea en espera se complete. Mientras tanto, se devuelve el control al llamador del método asincrónico. Si el método no contiene una expresión o instrucción `Await`, el método no se suspende y se ejecuta como un método sincrónico. Una advertencia del compilador alerta de cualquier método asincrónico que no contenga `Await`, porque esa situación podría indicar un error. Para obtener más información, vea el [error](../../../visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md)del compilador.  
   
  La palabra clave `Async` no está reservada. Es una palabra clave cuando modifica un método o una expresión lambda. En todos los demás contextos, se interpreta como identificador.  
   
 ## <a name="return-types"></a>Tipos de valor devueltos  
- Un método asincrónico es un [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedimiento, o un [función](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) procedimiento que tiene un tipo de valor devuelto de <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. El método no puede declarar ningún [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parámetros.  
+ Un método asincrónico es un procedimiento [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) o un procedimiento de [función](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) que tiene un tipo de valor devuelto <xref:System.Threading.Tasks.Task%601>de <xref:System.Threading.Tasks.Task> o. El método no puede declarar ningún parámetro [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .  
   
- Especifique `Task(Of TResult)` para el tipo de valor devuelto de un método asincrónico si la [devolver](../../../visual-basic/language-reference/statements/return-statement.md) instrucción del método tiene un operando de tipo TResult. Utilice `Task` si no se devuelve ningún valor significativo al completarse el método. Es decir, una llamada al método devuelve `Task`, pero cuando se completa `Task`, ninguna instrucción `Await` que está en espera de `Task` no genera un valor de resultado.  
+ Especifique `Task(Of TResult)` para el tipo de valor devuelto de un método asincrónico [](../../../visual-basic/language-reference/statements/return-statement.md) si la instrucción return del método tiene un operando de tipo TResult. Utilice `Task` si no se devuelve ningún valor significativo al completarse el método. Es decir, una llamada al método devuelve `Task`, pero cuando se completa `Task`, ninguna instrucción `Await` que está en espera de `Task` no genera un valor de resultado.  
   
  Las subrutinas asincrónicas se utilizan principalmente para definir controladores de eventos donde se requiere un procedimiento `Sub`. El llamador de una subrutina asincrónica no puede esperar a que finalice y no puede detectar las excepciones que el método inicia.  
   
  Para más información y ejemplos, vea [Tipos de valor devueltos asincrónicos](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
 ## <a name="example"></a>Ejemplo  
- Los ejemplos siguientes muestran un controlador de eventos asincrónicos, una expresión lambda asincrónica y un método asincrónico. Para obtener un ejemplo completo que usa estos elementos, vea [Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede descargar el código del tutorial en [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
+ Los ejemplos siguientes muestran un controlador de eventos asincrónicos, una expresión lambda asincrónica y un método asincrónico. Para obtener un ejemplo completo en el que se usan [estos elementos, vea Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede descargar el código del tutorial en [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).  
   
 ```vb  
 ' An event handler must be a Sub procedure.  
@@ -78,7 +78,7 @@ AddHandler button1.Click, Async Sub(sender, e)
   
 ' The following async method returns a Task(Of T).  
 ' A typical call awaits the Byte array result:  
-'      Dim result As Byte() = Await GetURLContents("http://msdn.com")  
+'      Dim result As Byte() = Await GetURLContents("https://msdn.com")  
 Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())  
   
     ' The downloaded resource ends up in the variable named content.  
