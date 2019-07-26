@@ -1,77 +1,77 @@
 ---
-title: Arquitectura sin servidor - aplicaciones sin servidor
-description: Exploración de varias arquitecturas y las aplicaciones que son compatibles con arquitecturas sin servidor, incluidas aplicaciones web, móviles y IoT.
+title: 'Arquitectura sin servidor: aplicaciones sin servidor'
+description: Exploración de diversas arquitecturas y aplicaciones compatibles con las arquitecturas sin servidor, como Web Apps, Mobile y IoT.
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b22fecfdc693154dbdeb3e872e0e246e8ca41f9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967818"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434066"
 ---
 # <a name="serverless-architecture"></a>Arquitectura sin servidor
 
-Existen varios enfoques para usar [sin servidor](http://azure.com/serverless) arquitecturas. Este capítulo muestra ejemplos de arquitecturas comunes que se integran sin servidor. También trata cuestiones que pueden plantear retos adicionales o requieren una consideración adicional al implementar sin servidor. Finalmente, varios ejemplos de diseño son siempre que ilustran varios casos de uso sin servidor.
+Existen muchos enfoques para usar las arquitecturas sin [servidor](https://azure.com/serverless) . En este capítulo se exploran ejemplos de arquitecturas comunes que se integran sin servidor. También se tratan los problemas que pueden suponer desafíos adicionales o que se deben tener en cuenta al implementar sin servidor. Por último, se proporcionan varios ejemplos de diseño que ilustran varios casos de uso sin servidor.
 
-Hosts sin servidor suelen usar una existente basada en contenedor o la capa PaaS para administrar las instancias sin servidor. Por ejemplo, Azure Functions se basa en [Azure App Service](https://docs.microsoft.com/azure/app-service/). El servicio de aplicación se usa para escalar horizontalmente las instancias y administrar el tiempo de ejecución que se ejecuta el código de Azure Functions. Para funciones basadas en Windows, se ejecuta el host como PaaS y se escala horizontalmente el tiempo de ejecución .NET. Para las funciones basadas en Linux, el host aprovecha los contenedores.
+Los hosts sin servidor suelen usar un nivel existente basado en contenedores o PaaS para administrar las instancias sin servidor. Por ejemplo, Azure Functions se basa en [Azure App Service](https://docs.microsoft.com/azure/app-service/). El App Service se usa para escalar horizontalmente las instancias y administrar el motor en tiempo de ejecución que ejecuta Azure Functions código. En el caso de las funciones basadas en Windows, el host se ejecuta como PaaS y escala horizontalmente el entorno de tiempo de ejecución de .NET. En el caso de las funciones basadas en Linux, el host aprovecha los contenedores.
 
-![Arquitectura de las funciones de Azure](./media/azure-functions-architecture.png)
+![Arquitectura de Azure Functions](./media/azure-functions-architecture.png)
 
-El núcleo de WebJobs proporciona un contexto de ejecución para la función. El tiempo de ejecución de lenguaje ejecuta secuencias de comandos, ejecuta las bibliotecas y hospeda el marco de trabajo para el lenguaje de destino. Por ejemplo, se usa Node.js para ejecutar las funciones de JavaScript y .NET Framework se usa para ejecutar funciones de C#. Aprenderá más acerca de las opciones de lenguaje y la plataforma más adelante en este capítulo.
+El núcleo de webjobs proporciona un contexto de ejecución para la función. Language Runtime ejecuta scripts, ejecuta bibliotecas y hospeda el marco de trabajo para el lenguaje de destino. Por ejemplo, node. js se usa para ejecutar funciones de JavaScript y el .NET Framework se usa para C# ejecutar funciones. Más adelante en este capítulo obtendrá más información sobre las opciones de lenguaje y plataforma.
 
-Algunos proyectos pueden beneficiarse de adoptar un enfoque "todo" para sin servidor. Las aplicaciones que dependen en gran medida de microservicios pueden implementar todos los microservicios mediante la tecnología sin servidor. La mayoría de las aplicaciones son híbridas, siguiendo un diseño de N niveles y utilizando sin servidor para los componentes que tengan sentido, ya que los componentes son modulares y escalables de forma independiente. Para ayudar a dar sentido a estos escenarios, esta sección se explica algunos ejemplos comunes de arquitectura que utilice sin servidor.
+Algunos proyectos pueden beneficiarse de la adopción de un enfoque "todo en todo" para sin servidor. Las aplicaciones que se basan en gran medida en microservicios pueden implementar todos los microservicios mediante tecnología sin servidor. La mayoría de las aplicaciones son híbridas, siguiendo un diseño de N niveles y usando sin servidor para los componentes que tienen sentido, ya que los componentes son modulares y escalables de forma independiente. Para ayudar a comprender estos escenarios, en esta sección se explican algunos ejemplos comunes de arquitectura que usan sin servidor.
 
-## <a name="full-serverless-back-end"></a>Completa sin servidor back-end
+## <a name="full-serverless-back-end"></a>Back-end sin servidor completo
 
-El back-end sin servidor completa es ideal para varios tipos de escenarios, especialmente al crear nuevos o aplicaciones de "green field". Una aplicación con una gran área expuesta de API puede beneficiarse de la implementación de cada API como una función sin servidor. Las aplicaciones que se basan en la arquitectura de microservicios son otro ejemplo que podría implementarse como un back-end sin servidor completa. Los microservicios se comunican a través de protocolos distintos entre sí. Se incluyen escenarios concretos:
+El back-end sin servidor completo es ideal para varios tipos de escenarios, especialmente cuando se compilan aplicaciones nuevas o "de campo verde". Una aplicación con un área de gran superficie de API puede beneficiarse de la implementación de cada API como una función sin servidor. Las aplicaciones que se basan en la arquitectura de microservicios son otro ejemplo que se puede implementar como un back-end sin servidor completo. Los microservicios se comunican entre sí a través de varios protocolos. Algunos escenarios específicos son:
 
-* Productos basados en API de SaaS (ejemplo: procesador de pagos financiero).
-* Las aplicaciones controladas por mensajes (ejemplo: solución de supervisión de dispositivos).
-* Las aplicaciones que se centran en la integración entre los servicios (ejemplo: aplicación de reservas de líneas aéreas).
-* Los procesos que se ejecute periódicamente (ejemplo: limpieza base de datos basado en temporizador).
-* Las aplicaciones que se centran en la transformación de datos (ejemplo: importación desencadenada por la carga de archivos).
-* Extraiga los procesos de transformación y carga (ETL).
+* Productos SaaS basados en API (por ejemplo: procesador de pagos financieros).
+* Aplicaciones controladas por mensajes (ejemplo: solución de supervisión de dispositivos).
+* Aplicaciones centradas en la integración entre servicios (ejemplo: aplicación de reserva de líneas aéreas).
+* Procesos que se ejecutan periódicamente (por ejemplo: limpieza de base de datos basada en temporizador).
+* Aplicaciones centradas en la transformación de datos (ejemplo: importación desencadenada por la carga de archivos).
+* Extraer procesos de transformación y carga (ETL).
 
-Hay casos de uso de otros, más específicos que se tratan más adelante en este documento.
+Hay otros casos de uso más específicos que se describen más adelante en este documento.
 
-## <a name="monoliths-and-starving-the-beast"></a>Monolitos y "privar a la bestia"
+## <a name="monoliths-and-starving-the-beast"></a>Monolitos y "Private de la"
 
-Un desafío común migra una aplicación monolítica existente a la nube. El enfoque menos riesgo es "Levantar y mover" completamente en máquinas virtuales. Muchas tiendas prefieren usar la migración como una oportunidad para modernizar su código base. Un enfoque práctico a la migración se denomina "y privar así a la bestia." En este escenario, se migra el monolito "tal cual" para empezar. A continuación, se ha modernizado servicios seleccionados. En algunos casos, la firma del servicio es idéntica al original: simplemente se hospeda como una función. Los clientes se actualizan para usar el nuevo servicio en lugar de con el punto de conexión de un monolito. Mientras tanto, los pasos como la replicación de base de datos permiten microservicios hospedar su propio almacenamiento, incluso cuando las transacciones aún se gestionan por el monolito. Finalmente, se migran todos los clientes en los nuevos servicios. El monolito "necesite" (sus servicios deje de llamarse) hasta que toda la funcionalidad se ha reemplazado. La combinación de sin servidor y los servidores proxy pueden facilitar en gran parte de esta migración.
+Un desafío común es migrar una aplicación monolítica existente a la nube. El enfoque menos arriesgado consiste en "levantar y mover" por completo a las máquinas virtuales. Muchas tiendas prefieren usar la migración como una oportunidad para modernizar su código base. Un enfoque práctico para la migración se denomina "privar a la misma". En este escenario, el monolito se migra "tal cual" para comenzar. A continuación, se modernizan los servicios seleccionados. En algunos casos, la firma del servicio es idéntica a la original: simplemente se hospeda como una función. Los clientes se actualizan para usar el nuevo servicio en lugar del punto de conexión monolito. Mientras tanto, los pasos como la replicación de base de datos permiten que los microservicios hospeden su propio almacenamiento, incluso cuando el monolito sigue controlando las transacciones. Finalmente, todos los clientes se migran a los nuevos servicios. El monolito está "desusado" (ya no se llama a sus servicios) hasta que se ha reemplazado toda la funcionalidad. La combinación de servidores proxy y sin servidor puede facilitar gran parte de esta migración.
 
-![Migración de un monolito sin servidor](./media/serverless-monolith-migration.png)
+![Migración de monolítico sin servidor](./media/serverless-monolith-migration.png)
 
-Para obtener más información sobre este enfoque, vea el vídeo: [Traiga su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/Events/Connect/2017/E102).
+Para obtener más información acerca de este enfoque, vea el vídeo: [Lleve su aplicación a la nube con Azure Functions sin servidor](https://channel9.msdn.com/Events/Connect/2017/E102).
 
 ## <a name="web-apps"></a>Aplicaciones web
 
-Las aplicaciones Web son buenos candidatos para las aplicaciones sin servidor. Actualmente, existen dos enfoques comunes para aplicaciones web: controlada por servidor y controladas por cliente (por ejemplo, la aplicación de página única o SPA). Las aplicaciones web controladas por el servidor utilizan normalmente una capa de middleware para emitir llamadas de API para representar la interfaz de usuario web. Las aplicaciones de SPA realizan llamadas API de REST directamente desde el explorador. En ambos escenarios, sin servidor puede alojar el software intermedio o una solicitud de API de REST, ya que proporciona la lógica empresarial necesaria. Es una arquitectura común crear un servidor web estático ligera. La aplicación de página única (SPA) sirve HTML, CSS, JavaScript y otros activos de explorador. La aplicación web, a continuación, se conecta a un back-end de microservicios.
+Las aplicaciones web son buenos candidatos para aplicaciones sin servidor. Hoy en día hay dos enfoques comunes para Web Apps: controlado por servidor y controlado por el cliente (por ejemplo, aplicación de una sola página o SPA). Las aplicaciones web controladas por el servidor suelen usar una capa de middleware para emitir llamadas API para representar la interfaz de usuario Web. Las aplicaciones de SPA realizan llamadas a la API de REST directamente desde el explorador. En ambos escenarios, sin servidor puede acomodar el middleware o la solicitud de la API de REST proporcionando la lógica de negocios necesaria. Una arquitectura común consiste en crear un servidor Web estático ligero. La aplicación de una sola página (SPA) sirve HTML, CSS, JavaScript y otros recursos del explorador. A continuación, la aplicación web se conecta a un back-end de microservicios.
 
-## <a name="mobile-back-ends"></a>Back-end móviles
+## <a name="mobile-back-ends"></a>Back-ends móviles
 
-El paradigma orientado a eventos de aplicaciones sin servidor hace ideal como back-ends móviles. El dispositivo móvil desencadena los eventos y se ejecuta el código sin servidor para satisfacer las solicitudes. Aprovechar un modelo sin servidor permite a los desarrolladores mejorar la lógica de negocios sin tener que implementar una actualización completa de la aplicación. El enfoque sin servidor también permite a los equipos compartir puntos de conexión y trabajar en paralelo.
+El paradigma orientado a eventos de las aplicaciones sin servidor hace que sean ideales como back-ends móviles. El dispositivo móvil desencadena los eventos y el código sin servidor se ejecuta para satisfacer las solicitudes. Aprovechar un modelo sin servidor permite a los desarrolladores mejorar la lógica de negocios sin tener que implementar una actualización de la aplicación completa. El enfoque sin servidor también permite a los equipos compartir puntos de conexión y trabajar en paralelo.
 
-Los desarrolladores móviles pueden compilar la lógica de negocios sin convertirse en expertos en el servidor. Tradicionalmente, aplicaciones móviles conectadas a servicios locales. Creación de la capa de servicio requiere la descripción de la plataforma de servidor y el paradigma de programación. Los desarrolladores trabajaban con operaciones para aprovisionar servidores y configurarlos de forma adecuada. A veces, días o incluso semanas gastados en la creación de una canalización de implementación. Todos estos desafíos se direccionan mediante sin servidor.
+Los desarrolladores de dispositivos móviles pueden crear lógica de negocios sin convertirse en expertos en el lado del servidor. Tradicionalmente, las aplicaciones móviles están conectadas a servicios locales. La creación del nivel de servicio requería comprender la plataforma de servidor y el paradigma de programación. Los desarrolladores trabajaron con operaciones para aprovisionar servidores y configurarlos de forma adecuada. A veces, se dedicaron días o incluso semanas a la creación de una canalización de implementación. Todos estos desafíos los aborda sin servidor.
 
-Serverless abstrae las dependencias del lado servidor y permite al programador centrarse en la lógica de negocios. Por ejemplo, un desarrollador móvil que compila las aplicaciones usan un marco JavaScript puede crear funciones sin servidor con JavaScript. El host sin servidor administra el sistema operativo, una instancia de Node.js para hospedar el código, las dependencias de paquetes y mucho más. El desarrollador se proporciona un conjunto simple de entradas y una plantilla estándar para las salidas. A continuación, puede centrarse en compilar y probar la lógica de negocios. Por lo tanto, podemos usar habilidades existentes para crear la lógica de back-end para la aplicación móvil sin tener que aprender nuevas plataformas o conviértase en un "desarrollador del lado servidor".
+Sin servidor abstrae las dependencias del lado servidor y permite al desarrollador centrarse en la lógica de negocios. Por ejemplo, un desarrollador móvil que crea aplicaciones con un marco de trabajo de JavaScript también puede crear funciones sin servidor con JavaScript. El host sin servidor administra el sistema operativo, una instancia de node. js para hospedar el código, las dependencias de paquete, etc. Se proporciona al desarrollador un conjunto sencillo de entradas y una plantilla estándar para salidas. A continuación, pueden centrarse en la creación y la prueba de la lógica de negocios. Por lo tanto, pueden usar los conocimientos existentes para compilar la lógica de back-end de la aplicación móvil sin tener que aprender nuevas plataformas o convertirse en un "desarrollador del lado servidor".
 
-![End móviles sin servidor nuevo](./media/serverless-mobile-backend.png)
+![Back-end móvil sin servidor](./media/serverless-mobile-backend.png)
 
-La mayoría de los proveedores de nube ofrece productos sin servidor basada en mobile que simplifican el ciclo de vida completo de desarrollo móvil. Los productos pueden automatizar el aprovisionamiento de bases de datos para conservar los datos, controlar cuestiones de DevOps, proporcione se basa en la nube y las pruebas de marcos de trabajo y la capacidad de los procesos empresariales de script con el desarrollador idioma preferido. Un enfoque centrado en dispositivos móviles sin servidor puede agilizar el proceso. Sin servidor quita la enorme sobrecarga que supone aprovisionar, configurar y mantener servidores para el back-end móvil.
+La mayoría de los proveedores de nube ofrecen productos sin servidor basados en móviles que simplifican todo el ciclo de vida de desarrollo móvil. Los productos pueden automatizar el aprovisionamiento de bases de datos para conservar los datos, controlar los problemas de DevOps, proporcionar compilaciones basadas en la nube y marcos de pruebas, y la capacidad de generar scripts de procesos empresariales con el lenguaje preferido del desarrollador. Seguir un enfoque sin servidor centrado en dispositivos móviles puede simplificar el proceso. Sin servidor elimina la enorme sobrecarga del aprovisionamiento, la configuración y el mantenimiento de servidores para el back-end móvil.
 
 ## <a name="internet-of-things-iot"></a>Internet de las cosas (IoT)
 
-IoT hace referencia a objetos físicos que están conectados en red. Le denomina a veces "dispositivos conectados" o "dispositivos inteligentes". Todo el contenido de los automóviles y las máquinas expendedoras pueden estar conectados y enviar información comprendido inventario y datos del sensor, como la temperatura y humedad. En la empresa, IoT proporciona mejoras de los procesos empresariales a través de la supervisión y automatización. Datos de IoT pueden utilizarse para regular el clima en un almacenamiento de gran tamaño o realizar un seguimiento de inventario a través de la cadena de suministro. IoT puede detectar desbordamientos químicos y llamar al departamento de bomberos cuando se detecta el humo.
+IoT hace referencia a los objetos físicos que están conectados a la red. A veces se denominan "dispositivos conectados" o "dispositivos inteligentes". Todo desde automóviles y equipos expendedores pueden estar conectados y enviar información que abarca desde el inventario hasta los datos del sensor, como la temperatura y la humedad. En la empresa, IoT proporciona mejoras en los procesos empresariales a través de la supervisión y la automatización. Los datos de IoT se pueden usar para regular el clima en un almacén grande o realizar un seguimiento del inventario a través de la cadena de suministro. IoT puede detectar derrames químicas y llamar al Departamento de incendios cuando se detecte humo.
 
-El volumen real de dispositivos y a menudo información dicta una arquitectura orientada a eventos para la ruta y procesar mensajes. Sin servidor es una solución ideal por varias razones:
+El gran volumen de dispositivos e información a menudo dicta una arquitectura orientada a eventos para enrutar y procesar mensajes. Sin servidor es una solución ideal por varias razones:
 
-* Permite escala a medida que el volumen de datos y dispositivos aumenta.
-* Permite agregar nuevos extremos para admitir los nuevos dispositivos y sensores.
-* Facilita el control de versiones independiente para que los desarrolladores puedan actualizar la lógica de negocios para un dispositivo específico sin tener que implementar todo el sistema.
-* Resistencia y menor tiempo de inactividad.
+* Permite escalar a medida que aumenta el volumen de los dispositivos y los datos.
+* Permite agregar nuevos extremos para admitir nuevos dispositivos y sensores.
+* Facilita el control de versiones independiente para que los desarrolladores puedan actualizar la lógica de negocios de un dispositivo específico sin tener que implementar todo el sistema.
+* Resistencia y menos tiempo de inactividad.
 
-La omnipresencia de IoT ha traducido en varios productos sin servidor que se centran específicamente en las preocupaciones de IoT, como [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Serverless automatiza las tareas como el registro de dispositivos, la aplicación de directivas, seguimiento e incluso implementación de código a los dispositivos en *el borde*. El borde se refiere a los dispositivos, como los sensores y accionadores que están conectados a, pero no parte activa de Internet.
+La presencia de IoT ha dado como resultado varios productos sin servidor que se centran específicamente en cuestiones de IoT, como [Azure IOT Hub](https://docs.microsoft.com/azure/iot-hub). Sin servidor automatiza tareas como el registro de dispositivos, la aplicación de directivas, el seguimiento e, incluso, la implementación de código en dispositivos en *el perímetro*. El borde se refiere a dispositivos como sensores y accionadores que están conectados a Internet, pero no a una parte activa.
 
 >[!div class="step-by-step"]
 >[Anterior](architecture-approaches.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 7587c8cd24197252506967208869bd454b4f27f2
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6e2b5eaff3ee80434d5cdf39391273685da9faf0
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400673"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68434074"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Información general acerca de los patrones de control de UI Automation
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "68400673"
   
 - Las propiedades y los eventos ofrecen información sobre la funcionalidad del patrón de control, así como información sobre el estado del control.  
   
- Los patrones de control se relacionan con [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de la misma forma en que las interfaces se relacionan con los objetos [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] . En [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)], puede consultar un objeto para averiguar las interfaces que admite y luego usar esas interfaces para acceder a la funcionalidad. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], los clientes de Automatización de la interfaz de usuario pueden preguntar a un control qué patrones de control admite y, después, interactuar con el control mediante los métodos, propiedades, eventos y estructuras que exponen los patrones de control admitidos. Por ejemplo, para un cuadro de edición multilínea, los proveedores de Automatización de la interfaz de usuario implementan <xref:System.Windows.Automation.Provider.IScrollProvider>. Si un cliente sabe que un elemento <xref:System.Windows.Automation.AutomationElement> admite el patrón de control <xref:System.Windows.Automation.ScrollPattern> , puede utilizar las propiedades, los métodos y los eventos expuestos por este patrón de control para manipular el control o acceder a información sobre el control.  
+ Los patrones de control [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] se refieren a como interfaces relacionadas con los objetos del modelo de objetos componentes (com). En COM, puede consultar un objeto para preguntar qué interfaces admite y, a continuación, usar esas interfaces para tener acceso a la funcionalidad. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], los clientes de Automatización de la interfaz de usuario pueden preguntar a un control qué patrones de control admite y, después, interactuar con el control mediante los métodos, propiedades, eventos y estructuras que exponen los patrones de control admitidos. Por ejemplo, para un cuadro de edición multilínea, los proveedores de Automatización de la interfaz de usuario implementan <xref:System.Windows.Automation.Provider.IScrollProvider>. Si un cliente sabe que un elemento <xref:System.Windows.Automation.AutomationElement> admite el patrón de control <xref:System.Windows.Automation.ScrollPattern> , puede utilizar las propiedades, los métodos y los eventos expuestos por este patrón de control para manipular el control o acceder a información sobre el control.  
   
 <a name="uiautomation_control_pattern_client_provider"></a>   
 ## <a name="ui-automation-providers-and-clients"></a>Clientes y proveedores de Automatización de la interfaz de usuario  
