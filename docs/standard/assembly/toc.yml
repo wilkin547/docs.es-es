@@ -1,0 +1,11 @@
+- name: Ensamblados de .NET
+  href: index.md
+  items:
+    - name: Ensamblados de confianza
+      items:
+        - name: Información general
+          href: friend-assemblies.md
+    - name: Formato de archivo de ensamblado .NET
+      href: file-format.md
+    - name: Uso y depuración de la descargabilidad de ensamblado en .NET Core
+      href: unloadability-howto.md
