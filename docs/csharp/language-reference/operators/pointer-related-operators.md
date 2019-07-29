@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 830aef8546191df3df4a70e350ba561367a9e474
+ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401444"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68512352"
 ---
 # <a name="pointer-related-operators-c-reference"></a>Operadores relacionados con el puntero (referencia de C#)
 
@@ -124,7 +124,7 @@ En el caso de un puntero `p` de tipo `T*` y una expresión `n` de un tipo conver
 - Ambas expresiones `p + n` y `n + p` generan un puntero de tipo `T*` que resulta de agregar `n * sizeof(T)` a la dirección proporcionada por `p`.
 - La expresión `p - n` genera un puntero de tipo `T*` que resulta de restar `n * sizeof(T)` a la dirección proporcionada por `p`.
 
-El [operador `sizeof`](../keywords/sizeof.md) obtiene el tamaño de un tipo en bytes.
+El [operador `sizeof`](sizeof.md) obtiene el tamaño de un tipo en bytes.
 
 En el siguiente ejemplo se muestra el uso del operador `+` con un puntero:
 
@@ -193,4 +193,4 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 - [unsafe (palabra clave)](../keywords/unsafe.md)
 - [fixed (palabra clave)](../keywords/fixed-statement.md)
 - [stackalloc (operador)](stackalloc.md)
-- [sizeof (operador)](../keywords/sizeof.md)
+- [sizeof (operador)](sizeof.md)

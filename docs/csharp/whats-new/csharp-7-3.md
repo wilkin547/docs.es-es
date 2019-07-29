@@ -2,12 +2,12 @@
 title: Novedades de C# 7.3
 description: Información general sobre las nuevas características en C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397776"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433522"
 ---
 # <a name="whats-new-in-c-73"></a>Novedades de C# 7.3
 
@@ -36,9 +36,9 @@ Las nuevas opciones del compilador son:
 
 El resto de este artículo proporciona información detallada y vínculos para obtener más información sobre cada una de las mejoras. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
 
-1. Instalar la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
-1. Clonar el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
-1. Establecer el directorio actual en el subdirectorio *csharp7* para el repositorio *try-samples*.
+1. Instale la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clone el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Establezca el directorio actual en el subdirectorio *csharp7* para el repositorio *try-samples*.
 1. Ejecute `dotnet try`.
 
 ## <a name="enabling-more-efficient-safe-code"></a>Habilitación de código seguro más eficaz
@@ -129,7 +129,7 @@ Para más información, vea el artículo sobre la [instrucción `fixed`](../lang
 
 Ahora puede especificar el tipo <xref:System.Enum?displayProperty=nameWithType> o <xref:System.Delegate?displayProperty=nameWithType> como restricciones de clase base para un parámetro de tipo.
 
-También puede usar la nueva restricción `unmanaged` para especificar que el parámetro de tipo debe ser un **tipo no administrado**. Un **tipo no administrado** es un tipo que no es un tipo de referencia y no contiene ningún tipo de referencia en ningún nivel de anidamiento.
+También puede usar la nueva restricción `unmanaged` para especificar que el parámetro de tipo debe ser un [tipo no administrado](../language-reference/builtin-types/unmanaged-types.md).
 
 Para obtener más información, vea los artículos sobre [restricciones genéricas de `where`](../language-reference/keywords/where-generic-type-constraint.md) y [restricciones sobre parámetros de tipo](../programming-guide/generics/constraints-on-type-parameters.md).
 
