@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar la herramienta Analizador de 
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 433936480aa1181370a6ebc2bd2ba9914a50dfa2
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331745"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433950"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -29,7 +29,7 @@ Para empezar a usar el Analizador de portabilidad de .NET en Visual Studio, prim
 
 ![Captura de pantalla de la portabilidad](./media/portability-analyzer/portability-screenshot.png)
 
-También puede usar la aplicación de consola ApiPort, descárguela desde [el repositorio de ApiPort](http://aka.ms/apiportdownload). Puede usar la opción de comando `listTargets` para mostrar la lista de destinos disponible y elegir las plataformas de destino especificando la opción de comando `-t` o `--target`. 
+También puede usar la aplicación de consola ApiPort, descárguela desde [el repositorio de ApiPort](https://aka.ms/apiportdownload). Puede usar la opción de comando `listTargets` para mostrar la lista de destinos disponible y elegir las plataformas de destino especificando la opción de comando `-t` o `--target`. 
 
 ### <a name="analyze-portability"></a>Análisis de portabilidad
 Para analizar todo el proyecto en Visual Studio, haga clic con el botón derecho en el proyecto en **Explorador de soluciones** y seleccione **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). También puede ir al menú **Analizar** y seleccionar **Analyze Assembly Portability** (Analizar la portabilidad del ensamblado). Desde allí, seleccione el ejecutable o .dll del proyecto.
