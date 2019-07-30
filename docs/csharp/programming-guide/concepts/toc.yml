@@ -1,8 +1,24 @@
 - name: Conceptos de programación
   href: index.md
   items:
-    - name: Ensamblados y caché global de ensamblados
-      href: assemblies-gac/
+    - name: Ensamblados
+      items:
+        - name: Ensamblados de confianza
+          items:
+            - name: Procedimiento para crear ensamblados de confianza sin firmar
+              href: assemblies-gac/how-to-create-unsigned-friend-assemblies.md
+            - name: Procedimiento para crear ensamblados de confianza firmados
+              href: assemblies-gac/how-to-create-signed-friend-assemblies.md
+        - name: Procedimiento para crear y usar ensamblados mediante la línea de comandos
+          href: assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md
+        - name: Procedimiento para determinar si un archivo es un ensamblado
+          href: assemblies-gac/how-to-determine-if-a-file-is-an-assembly.md
+        - name: Procedimiento para cargar y descargar ensamblados
+          href: assemblies-gac/how-to-load-and-unload-assemblies.md
+        - name: Procedimiento para compartir un ensamblado con otras aplicaciones
+          href: assemblies-gac/how-to-share-an-assembly-with-other-applications.md
+        - name: 'Tutorial: Insertar tipos de ensamblados administrados en Visual Studio'
+          href: assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
     - name: Programación asincrónica con async y await
       href: async/
     - name: Atributos

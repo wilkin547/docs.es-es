@@ -19,10 +19,6 @@
     - name: Exponer componentes de .NET Framework en COM
       href: exposing-dotnet-components-to-com.md
       items:
-        - name: Habilitar tipos de .NET para la interoperación
-          href: qualifying-net-types-for-interoperation.md
-        - name: Aplicar atributos de interoperabilidad
-          href: applying-interop-attributes.md
         - name: Empaquetar un ensamblado para COM
           href: packaging-an-assembly-for-com.md
         - name: Registrar ensamblados con COM
@@ -94,15 +90,8 @@
               href: how-to-migrate-managed-code-dcom-to-wcf.md
     - name: Procedimiento para asignar resultados HRESULT y excepciones
       href: how-to-map-hresults-and-exceptions.md
-    - name: Contenedores COM
-      href: com-wrappers.md
-      items:
-        - name: Contenedor al que se puede llamar en tiempo de ejecución
-          href: runtime-callable-wrapper.md
-        - name: Contenedor CCW
-          href: com-callable-wrapper.md
-        - name: Procedimiento para crear contenedores COM
-          href: how-to-create-com-wrappers.md
+    - name: Procedimiento para crear contenedores COM
+      href: how-to-create-com-wrappers.md
     - name: Equivalencia de tipos y tipos de interoperabilidad insertados
       href: type-equivalence-and-embedded-interop-types.md
     - name: Procedimiento para generar ensamblados de interoperabilidad primarios mediante Tlbimp.exe
