@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 68bb3b8cd080e5b454776433e65027b7d18e7c3b
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331555"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629872"
 ---
 # <a name="how-to-localize-an-application"></a>Procedimiento Localizar una aplicación
 En este tutorial se explica cómo crear una aplicación localizada mediante la herramienta LocBaml.  
@@ -66,7 +66,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>Crear el ensamblado satélite de recursos de idioma neutro  
  Después de configurar la aplicación para que genere un ensamblado satélite de recursos de idioma neutro, compile la aplicación. Esto genera el ensamblado de aplicación principal, así como el ensamblado satélite de recursos de idioma neutro que LocBaml necesita para la localización. Para compilar la aplicación:  
   
-1. Compile HelloApp para crear un [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]:  
+1. Compile HelloApp para crear una biblioteca de vínculos dinámicos (DLL):  
   
      **msbuild helloapp.csproj**  
   
@@ -91,7 +91,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 4. Las opciones que puede especificar al ejecutar LocBaml son las siguientes:  
   
-    - **Parse** o **-p:** Analiza BAML, recursos o [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] archivos para generar un archivo. csv o. txt.  
+    - **Parse** o **-p:** Analiza los archivos BAML, Resources o DLL para generar un archivo. csv o. txt.  
   
     - **generar** o **-g:** Genera un archivo binario localizado mediante un archivo traducido.  
   
@@ -149,7 +149,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
    En la tabla siguiente se muestra la correspondencia entre estos campos y los valores delimitados del archivo CSV:  
   
-   |Nombre de BAML|Clave de recurso|Categoría|Legibilidad|Modificabilidad|Comentarios|Valor|  
+   |Nombre de BAML|Clave de recurso|Categoría|Legibilidad|Modificabilidad|Comentarios|Value|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
    |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorar|FALSE|FALSE||#Text1;#Text2|
    |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Hello World|
@@ -165,7 +165,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 <a name="merge_translations"></a>   
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>Usar LocBaml para generar un nuevo archivo .resources.dll  
- El contenido que se identificó al analizar HelloApp.resources.dll con LocBaml se ha traducido y debe combinarse en la aplicación original. Use la  opción Generate o **-g** para generar un nuevo archivo. Resources. dll.  
+ El contenido que se identificó al analizar HelloApp.resources.dll con LocBaml se ha traducido y debe combinarse en la aplicación original. Use la opción Generate o **-g** para generar un nuevo archivo. Resources. dll.  
   
 1. Use la sintaxis siguiente para generar un nuevo archivo HelloApp.resources.dll. Marque la referencia cultural como en-US (/cul:en-US).  
   

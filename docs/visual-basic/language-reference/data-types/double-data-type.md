@@ -19,42 +19,44 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 6273f6c9e71f286bdbebc3fe1953988b43de3101
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92adb26702d94dee08e51decd845d019c797e195
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663206"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630098"
 ---
 # <a name="double-data-type-visual-basic"></a>Double (Tipo de datos, Visual Basic)
-Contiene números con signo IEEE de 64 bits (8 bytes) precisión doble punto flotante que intervalo entre - 1, 79769313486231570E + 308 a - 4, 94065645841246544E-324 para los valores negativos y de 4, 94065645841246544E-324 a 1, 79769313486231570E + 308 para valores positivos. Números de precisión doble almacenan una aproximación de un número real.  
-  
-## <a name="remarks"></a>Comentarios  
- El `Double` tipo de datos proporciona las magnitudes más grandes y más pequeño posibles para un número.  
-  
- El valor predeterminado de `Double` es 0.  
-  
-## <a name="programming-tips"></a>Sugerencias de programación  
-  
-- **Precisión.** Cuando se trabaja con números de punto flotante, recuerde que no siempre tienen una representación precisa en memoria. Esto podría provocar resultados inesperados en ciertas operaciones, como la comparación de valor y el `Mod` operador. Para obtener más información, consulte [solución de problemas de los tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
-  
-- **Ceros finales.** Los tipos de datos de punto flotante no tienen una representación interna de cero caracteres finales. Por ejemplo, no distinguen entre 4,2000 y 4,2. Por lo tanto, cero caracteres finales no aparecen cuando se muestren o valores de punto flotante de impresión.  
-  
-- **Caracteres de tipo.** Al agregar el carácter de tipo literal `R` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Double`. Por ejemplo, si un valor entero seguido `R`, el valor se cambia a un `Double`.  
-  
-    ```  
-    ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
-    Dim dub As Double = 4.0R  
-    ```  
-  
-     Si se agrega el carácter de tipo identificador `#` a cualquier identificador, se convierte forzosamente al tipo `Double`. En el ejemplo siguiente, la variable `num` se escribe como un `Double`:  
-  
-    ```  
-    Dim num# = 3  
-    ```  
-  
-- **Tipo de marco de trabajo.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Double?displayProperty=nameWithType>.  
-  
+
+Contiene números de punto flotante de precisión doble de IEEE 64 bits (8 bytes) que van del valor de-1.79769313486231570 E + 308 a-4.94065645841246544 E-324 para los valores negativos y de 4.94065645841246544 E-324 a 1.79769313486231570 E + 308 para valores positivos. Los números de precisión doble almacenan una aproximación de un número real.
+
+## <a name="remarks"></a>Comentarios
+
+El `Double` tipo de datos proporciona las magnitudes más grandes y pequeñas posibles para un número.
+
+El valor predeterminado de `Double` es 0.
+
+## <a name="programming-tips"></a>Sugerencias de programación
+
+- **Precisión.** Al trabajar con números de punto flotante, recuerde que no siempre tienen una representación precisa en la memoria. Esto podría dar lugar a resultados inesperados de ciertas operaciones, como la comparación `Mod` de valores y el operador. Para obtener más información, vea [solución de problemas de tipos de datos](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).
+
+- **Ceros a la derecha.** Los tipos de datos de punto flotante no tienen ninguna representación interna de los caracteres cero finales. Por ejemplo, no distinguen entre 4,2000 y 4,2. Por lo tanto, los caracteres cero finales no aparecen al mostrar o imprimir valores de punto flotante.
+
+- **Caracteres de tipo.** Al agregar el carácter de tipo literal `R` a un literal, el tipo de datos se convierte forzosamente en el tipo de datos `Double`. Por ejemplo, si un valor entero va seguido `R`de, el valor se cambia `Double`a.
+
+  ```vb
+  ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:
+  Dim dub As Double = 4.0R
+  ```
+
+  Si se agrega el carácter de tipo identificador `#` a cualquier identificador, se convierte forzosamente al tipo `Double`. En el ejemplo siguiente, la variable `num` se escribe `Double`como:
+
+  ```vb
+  Dim num# = 3
+  ```
+
+- **Tipo de marco.** El tipo correspondiente en .NET Framework es la estructura <xref:System.Double?displayProperty=nameWithType>.
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Double?displayProperty=nameWithType>

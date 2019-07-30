@@ -1,37 +1,37 @@
 ---
 title: Funciones insertadas
-description: Aprenda a usar F# funciones insertadas que se integran directamente en el código de llamada.
+description: Obtenga información sobre cómo F# usar las funciones insertadas que se integran directamente en el código de llamada.
 ms.date: 05/16/2016
-ms.openlocfilehash: d1c3fb3d2721024febc95b3c5e01e06cd547f81e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2830d1ada5b3005c3fcae975a44e85a7c84554f7
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642070"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630681"
 ---
 # <a name="inline-functions"></a>Funciones insertadas
 
 *Las funciones insertadas* son funciones que se integran directamente en el código de llamada.
 
-## <a name="using-inline-functions"></a>Uso de funciones Inline
+## <a name="using-inline-functions"></a>Usar funciones insertadas
 
-Al usar parámetros de tipo estático, todas las funciones que están parametrizadas según los parámetros de tipo deben ser en línea. Esto garantiza que el compilador puede resolver estos parámetros de tipo. Cuando se usan parámetros de tipo genérico normal, no hay ninguna restricción.
+Cuando se usan parámetros de tipo estático, cualquier función que esté parametrizada por parámetros de tipo debe estar alineada. Esto garantiza que el compilador puede resolver estos parámetros de tipo. Cuando se usan parámetros de tipo genérico normales, no hay ninguna restricción.
 
-Además de habilitar el uso de restricciones de miembro, funciones insertadas pueden ser útil para optimizar el código. Sin embargo, uso excesivo de las funciones insertadas puede provocar que el código sea menos resistente a los cambios en las optimizaciones del compilador y la implementación de funciones de biblioteca. Por este motivo, debe evitar el uso de funciones insertadas para la optimización, a menos que haya intentado todas las otras técnicas de optimización. Realizar una función o método en línea a veces puede mejorar el rendimiento, pero no es siempre el caso. Por lo tanto, también debe usar las medidas de rendimiento para comprobar que la que hace el código de una función realmente tiene un efecto positivo.
+Aparte de habilitar el uso de restricciones de miembro, las funciones insertadas pueden ser útiles para optimizar el código. Sin embargo, el uso excesivo de las funciones insertadas puede hacer que el código sea menos resistente a los cambios en las optimizaciones del compilador y la implementación de las funciones de la biblioteca. Por esta razón, debe evitar el uso de funciones insertadas para la optimización a menos que haya intentado todas las demás técnicas de optimización. Hacer que una función o un método insertado a veces puede mejorar el rendimiento, pero no siempre es el caso. Por lo tanto, también debe usar medidas de rendimiento para comprobar que la realización de cualquier función insertada en realidad tiene un efecto positivo.
 
-El `inline` modificador se puede aplicar a las funciones en el nivel superior, en el nivel de módulo o en el nivel de método en una clase.
+El `inline` modificador se puede aplicar a las funciones en el nivel superior, en el nivel de módulo o en el nivel de método de una clase.
 
-El ejemplo de código siguiente muestra una función inline en el nivel superior, un método de instancia en línea y un método estático en línea.
+En el ejemplo de código siguiente se muestra una función insertada en el nivel superior, un método de instancia insertado y un método estático insertado.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet201.fs)]
 
-## <a name="inline-functions-and-type-inference"></a>Las funciones insertadas e inferencia de tipo
+## <a name="inline-functions-and-type-inference"></a>Funciones insertadas e inferencia de tipos
 
-La presencia de `inline` afecta a la inferencia de tipo. Esto es porque las funciones insertadas pueden resueltos estáticamente los parámetros de tipo, mientras que las funciones no insertadas no. El ejemplo de código siguiente muestra un caso donde `inline` es útil porque, utilizas una función que tiene un parámetro de tipo resueltos estáticamente el `float` operador de conversión.
+La presencia de `inline` afecta a la inferencia de tipos. Esto se debe a que las funciones insertadas pueden tener parámetros de tipo resueltos estáticamente, mientras que las funciones no insertadas no pueden. En el ejemplo de código siguiente se muestra `inline` un caso en el que resulta útil porque se está usando una función que tiene un parámetro de `float` tipo resuelto estáticamente, el operador de conversión.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet202.fs)]
 
-Sin el `inline` fuerza la inferencia de tipo modificador, la función que tome un tipo específico, en este caso `int`. Pero con la `inline` modificador, la función también se infiere para tener un parámetro de tipo resueltos estáticamente. Con el `inline` modificador, el tipo se infiere para ser lo siguiente:
+Sin el `inline` modificador, la inferencia de tipos fuerza a la función a tomar un tipo específico, `int`en este caso. Pero con el `inline` modificador, la función también se deduce para tener un parámetro de tipo resuelto estáticamente. Con el `inline` modificador, se deduce que el tipo es el siguiente:
 
 ```fsharp
 ^a -> unit when ^a : (static member op_Explicit : ^a -> float)

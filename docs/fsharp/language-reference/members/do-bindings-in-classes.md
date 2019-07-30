@@ -1,17 +1,17 @@
 ---
 title: Enlaces do en clases
-description: Aprenda a usar un F# 'do' enlace en una definición de clase, que realiza acciones cuando se construye el objeto o cuando se usa el tipo por primera vez.
+description: Obtenga información sobre cómo usar F# un enlace ' do ' en una definición de clase, que realiza acciones cuando se construye el objeto o cuando se usa el tipo por primera vez.
 ms.date: 05/16/2016
-ms.openlocfilehash: c924c882974989436d8ea404ebee0a7ef3c54fd3
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ced4f1bb17d9e23bf51cc79b5a275cc334cca013
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641798"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627587"
 ---
 # <a name="do-bindings-in-classes"></a>Enlaces do en clases
 
-Un `do` enlace en una definición de clase realiza acciones cuando se construye el objeto o, para una variable static `do` enlace, cuando se usa el tipo en primer lugar.
+Un `do` enlace en una definición de clase realiza acciones cuando se construye el objeto o, para un `do` enlace estático, cuando se usa por primera vez el tipo.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,21 +21,21 @@ Un `do` enlace en una definición de clase realiza acciones cuando se construye 
 
 ## <a name="remarks"></a>Comentarios
 
-Un `do` enlace aparece junto con, o después de `let` enlaces, pero antes de las definiciones de miembros en una definición de clase. Aunque el `do` es opcional para la palabra clave `do` enlaces en el nivel de módulo, no es opcional para `do` enlaces en una definición de clase.
+Un `do` enlace aparece junto con los enlaces `let` o después, pero antes de las definiciones de miembro en una definición de clase. Aunque la `do` palabra clave es opcional `do` para los enlaces en el nivel de módulo, no es opcional `do` para los enlaces en una definición de clase.
 
-Para la construcción de todos los objetos de cualquier dado el tipo, no estático `do` enlaces y no static `let` enlaces se ejecutan en el orden en que aparecen en la definición de clase. Varios `do` enlaces pueden producirse en un tipo. No estático `let` enlaces y que no sea estático `do` enlaces se convierten en el cuerpo del constructor principal. El código en el que no sea estático `do` sección de enlaces puede hacer referencia a los parámetros del constructor principal y los valores o funciones que se definen en el `let` sección de enlaces.
+Para la construcción de cada objeto de un tipo determinado, los enlaces no `do` estáticos y los enlaces no `let` estáticos se ejecutan en el orden en que aparecen en la definición de clase. Pueden `do` producirse varios enlaces en un tipo. Los enlaces no estáticos `let` y los enlaces no estáticos `do` se convierten en el cuerpo del constructor principal. El código de la sección de enlaces `do` no estáticos puede hacer referencia a los parámetros del constructor principal y a los valores o funciones que `let` se definen en la sección de enlaces.
 
-No estáticos `do` enlaces pueden tener acceso a los miembros de la clase como la clase tiene un identificador propio que se define mediante una `as` palabra clave en la clase de encabezado y siempre y cuando todos los usos de esos miembros se califican con el identificador propio para la clase.
+Los enlaces no `do` estáticos pueden tener acceso a los miembros de la clase siempre que la clase tenga un identificador propio definido por una `as` palabra clave en el encabezado de la clase, y siempre y cuando todos los usos de esos miembros estén calificados con el propio identificador de la clase.
 
-Porque `let` enlaces inicializan los campos privados de una clase, que a menudo es necesario para garantizar que los miembros se comportan según lo previsto, `do` enlaces normalmente se colocan después `let` enlaces por lo que el código en el `do` enlace puede ejecutar con un objeto totalmente inicializado. Si el código intenta usar a un miembro antes de completar la inicialización, se produce una excepción InvalidOperationException.
+Dado `let` que los enlaces inicializan los campos privados de una clase, que a menudo es necesario para garantizar que los miembros `do` se comportan según lo `let` esperado, los enlaces normalmente se colocan después de los enlaces para que el `do` código del enlace pueda Ejecute con un objeto completamente inicializado. Si el código intenta utilizar un miembro antes de que se complete la inicialización, se genera una excepción InvalidOperationException.
 
-Estática `do` enlaces pueden hacer referencia a miembros estáticos o campos de la envolvente clase pero no miembros o campos de instancia. Estática `do` enlaces pasan a formar parte del inicializador estático para la clase, que siempre se ejecutará antes de la clase se usa por primera vez.
+Los `do` enlaces estáticos pueden hacer referencia a los miembros o campos estáticos de la clase envolvente, pero no a los miembros o campos de instancia. Los `do` enlaces estáticos forman parte del inicializador estático de la clase, que se garantiza que se ejecuta antes de que se use por primera vez la clase.
 
-Se omiten los atributos para `do` enlaces de tipos. Si un atributo no es necesario para el código que se ejecuta en un `do` de enlace, que debe aplicarse al constructor principal.
+Los atributos se omiten para `do` los enlaces de los tipos. Si se requiere un atributo para el código que se ejecuta en `do` un enlace, debe aplicarse al constructor principal.
 
-En el código siguiente, una clase tiene un estático `do` enlace y un nestatické `do` enlace. El objeto tiene un constructor que tiene dos parámetros, `a` y `b`, y dos campos privados se definen en el `let` enlaces para la clase. También se definen dos propiedades. Todos ellos están en el ámbito en el que no sea estático `do` sección de enlaces, tal como se muestra en la línea que imprime todos esos valores.
+En el código siguiente, una clase tiene un enlace `do` estático y un enlace no estático `do` . El objeto tiene un constructor que tiene dos parámetros, `a` y `b`, y dos campos privados se definen en los `let` enlaces de la clase. También se definen dos propiedades. Todos se encuentran en el ámbito de la sección de enlaces `do` no estáticos, como se muestra en la línea que imprime todos esos valores.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3101.fs)]
 
 La salida es la siguiente.
 
@@ -50,4 +50,4 @@ Initializing object 1 2 2 4 8 16
 - [Clases](../classes.md)
 - [Constructores](constructors.md)
 - [`let` Bindings in Classes](let-bindings-in-classes.md) (Enlaces `let` en clases)
-- [`do` enlaces](../functions/do-Bindings.md)
+- [`do`Enlaces](../functions/do-Bindings.md)

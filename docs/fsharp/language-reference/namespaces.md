@@ -1,17 +1,17 @@
 ---
 title: Espacios de nombres
-description: Obtenga información sobre cómo un F# espacio de nombres permite organizar el código en las áreas de funcionalidad relacionada por lo que le permite asociar un nombre a una agrupación de elementos de programa.
+description: Obtenga información sobre F# cómo un espacio de nombres le permite organizar el código en áreas de funcionalidad relacionada, permitiéndole adjuntar un nombre a una agrupación de elementos de programa.
 ms.date: 12/08/2018
-ms.openlocfilehash: b315d654dad0d36e3584564ad027c68fb3c94cce
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d295f25cae81bc28b4fcb522bdcacde862f9517a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645274"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627378"
 ---
 # <a name="namespaces"></a>Espacios de nombres
 
-Un espacio de nombres permite organizar el código en áreas de funcionalidad relacionada por lo que le permite asociar un nombre a una agrupación de F# elementos del programa. Espacios de nombres son elementos de nivel superior normalmente F# archivos.
+Un espacio de nombres permite organizar el código en áreas de funcionalidad relacionada, ya que permite adjuntar un nombre F# a una agrupación de elementos de programa. Los espacios de nombres suelen ser elementos de nivel F# superior en los archivos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,62 +21,62 @@ namespace [rec] [parent-namespaces.]identifier
 
 ## <a name="remarks"></a>Comentarios
 
-Si desea colocar el código en un espacio de nombres, la primera declaración en el archivo debe declarar el espacio de nombres. El contenido del archivo completo, a continuación, pasan a formar parte del espacio de nombres, siempre no existe ninguna otra declaración de espacios de nombres más en el archivo. Si es así, se considera todo el código hasta la siguiente declaración de espacio de nombres que se encuentra en el primer espacio de nombres.
+Si desea colocar el código en un espacio de nombres, la primera declaración del archivo debe declarar el espacio de nombres. El contenido de todo el archivo se convierte entonces en parte del espacio de nombres, siempre que no exista otra declaración de espacios de nombres en el archivo. En ese caso, todo el código hasta la siguiente declaración de espacio de nombres se considera que está dentro del primer espacio de nombres.
 
-Los espacios de nombres no pueden contener directamente los valores y funciones. En su lugar, los valores y las funciones que deben incluirse en los módulos y los módulos se incluyen en los espacios de nombres. Los espacios de nombres pueden contener tipos de módulos.
+Los espacios de nombres no pueden contener directamente valores y funciones. En su lugar, los valores y las funciones deben estar incluidos en los módulos y los módulos se incluyen en los espacios de nombres. Los espacios de nombres pueden contener tipos, módulos.
 
-Comentarios de documentación XML se pueden declarar por encima de un espacio de nombres, pero se ignoran. También se pueden declarar directivas de compilador por encima de un espacio de nombres.
+Los comentarios de documento XML se pueden declarar sobre un espacio de nombres, pero se omiten. Las directivas de compilador también se pueden declarar sobre un espacio de nombres.
 
-Los espacios de nombres se pueden declarar explícitamente con la palabra clave de espacio de nombres, o implícitamente cuando se declara un módulo. Para declarar un espacio de nombres explícitamente, utilice la palabra clave de espacio de nombres seguida del nombre de espacio de nombres. El ejemplo siguiente muestra un archivo de código que declara un espacio de nombres `Widgets` con un tipo y un módulo incluido en ese espacio de nombres.
+Los espacios de nombres se pueden declarar explícitamente con la palabra clave namespace o implícitamente al declarar un módulo. Para declarar explícitamente un espacio de nombres, use la palabra clave namespace seguida del nombre del espacio de nombres. En el ejemplo siguiente se muestra un archivo de código que declara `Widgets` un espacio de nombres con un tipo y un módulo incluido en dicho espacio de nombres.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
-Si todo el contenido del archivo está en un módulo, también puede declarar espacios de nombres de forma implícita mediante el uso de la `module` palabra clave y proporcionando el nombre de espacio de nombres nuevo en el nombre completo del módulo. El ejemplo siguiente muestra un archivo de código que declara un espacio de nombres `Widgets` y un módulo `WidgetsModule`, que contiene una función.
+Si todo el contenido del archivo está en un módulo, también puede declarar espacios de nombres implícitamente mediante la `module` palabra clave y proporcionando el nuevo nombre de espacio de nombres en el nombre completo del módulo. En el ejemplo siguiente se muestra un archivo de código que declara `Widgets` un espacio de `WidgetsModule`nombres y un módulo, que contiene una función.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6401.fs)]
 
 El código siguiente es equivalente al código anterior, pero el módulo es una declaración de módulo local. En ese caso, el espacio de nombres debe aparecer en su propia línea.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/namespaces/snippet6402.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/namespaces/snippet6402.fs)]
 
-Si se requiere más de un módulo en el mismo archivo en uno o varios espacios de nombres, debe usar las declaraciones de módulo local. Cuando utiliza las declaraciones de módulo local, no puede usar el espacio de nombres completo en las declaraciones de módulo. El código siguiente muestra un archivo que tiene una declaración de espacio de nombres y dos declaraciones de módulo local. En este caso, los módulos se encuentran directamente en el espacio de nombres; No hay ningún módulo creado implícitamente que tiene el mismo nombre que el archivo. Cualquier otro código en el archivo, como un `do` enlace, está en el espacio de nombres, pero no en los módulos internos, por lo que necesita calificar los miembros de módulo `widgetFunction` utilizando el nombre del módulo.
+Si se necesita más de un módulo en el mismo archivo en uno o varios espacios de nombres, debe usar las declaraciones del módulo local. Al utilizar las declaraciones del módulo local, no se puede usar el espacio de nombres completo en las declaraciones del módulo. En el código siguiente se muestra un archivo que tiene una declaración de espacio de nombres y dos declaraciones de módulos locales. En este caso, los módulos se incluyen directamente en el espacio de nombres; no hay ningún módulo creado implícitamente que tenga el mismo nombre que el archivo. Cualquier otro código del archivo, como un `do` enlace, está en el espacio de nombres pero no en los módulos internos, por lo que debe calificar el miembro `widgetFunction` del módulo mediante el nombre del módulo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6403.fs)]
 
-La salida de este ejemplo es como sigue.
+La salida de este ejemplo es la siguiente.
 
 ```fsharp
 Module1 10 20
 Module2 5 6
 ```
 
-Para obtener más información, consulte [módulos](modules.md).
+Para obtener más información, vea [módulos](modules.md).
 
 ## <a name="nested-namespaces"></a>Espacios de nombres anidados
 
-Cuando se crea un espacio de nombres anidado, debe calificar totalmente. En caso contrario, cree un nuevo espacio de nombres de nivel superior. Sangría se omite en las declaraciones de espacio de nombres.
+Al crear un espacio de nombres anidado, debe calificarlo por completo. De lo contrario, se crea un nuevo espacio de nombres de nivel superior. La sangría se omite en las declaraciones de espacio de nombres.
 
-El ejemplo siguiente muestra cómo declarar un espacio de nombres anidado.
+En el ejemplo siguiente se muestra cómo declarar un espacio de nombres anidado.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6404.fs)]
 
-## <a name="namespaces-in-files-and-assemblies"></a>Espacios de nombres de archivos y ensamblados
+## <a name="namespaces-in-files-and-assemblies"></a>Espacios de nombres en archivos y ensamblados
 
-Los espacios de nombres pueden abarcar varios archivos en un solo proyecto o de compilación. El término *fragmento de espacio de nombres* describe la parte del espacio de nombres que se incluye en un archivo. Los espacios de nombres también pueden abarcar varios ensamblados. Por ejemplo, el `System` espacio de nombres incluye todo .NET Framework, que abarca muchos ensamblados y contiene muchos espacios de nombres anidados.
+Los espacios de nombres pueden abarcar varios archivos en un único proyecto o compilación. El término *espacio de nombres* de términos describe la parte de un espacio de nombres que se incluye en un archivo. Los espacios de nombres también pueden abarcar varios ensamblados. Por ejemplo, el `System` espacio de nombres incluye todo el .NET Framework, que abarca muchos ensamblados y contiene muchos espacios de nombres anidados.
 
-## <a name="global-namespace"></a>Namespace global
+## <a name="global-namespace"></a>Espacio de nombres global
 
-Usar el espacio de nombres predefinido `global` para colocar los nombres en el espacio de nombres de nivel superior. NET.
+El espacio de nombres `global` predefinido se usa para colocar nombres en el espacio de nombres de nivel superior de .net.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6407.fs)]
 
-También puede usar global para hacer referencia el espacio de nombres .NET nivel superior, por ejemplo, para resolver conflictos de nombres con otros espacios de nombres.
+También puede usar global para hacer referencia al espacio de nombres .NET de nivel superior, por ejemplo, para resolver conflictos de nombres con otros espacios de nombres.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
 ## <a name="recursive-namespaces"></a>Espacios de nombres recursivos
 
-También se pueden declarar espacios de nombres como recursivo para permitir todo el código independiente para ser mutuamente recursivas.  Esto se realiza mediante `namespace rec`. El uso de `namespace rec` puede aliviar algunas dificultades no se pueda escribir código mutuamente referencial entre los tipos y módulos. Este es un ejemplo de esto:
+Los espacios de nombres también se pueden declarar como recursivos para permitir que todo el código contenido sea mutuamente recursivo.  Esto se hace a `namespace rec`través de. El uso `namespace rec` de puede aliviar algunos problemas al no poder escribir código referencial mutuamente entre tipos y módulos. El siguiente es un ejemplo de esto:
 
 ```fsharp
 namespace rec MutualReferences
@@ -117,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Tenga en cuenta que la excepción `DontSqueezeTheBananaException` y la clase `Banana` ambos hacen referencia entre sí.  Además, el módulo `BananaHelpers` y la clase `Banana` también hacen referencia entre sí. Esto no sería posible expresar en F# si ha quitado el `rec` palabra clave de la `MutualReferences` espacio de nombres.
+Tenga en cuenta que `DontSqueezeTheBananaException` la excepción y `Banana` la clase hacen referencia entre sí.  Además, el módulo `BananaHelpers` y la clase `Banana` también hacen referencia entre sí. No sería posible expresar en F# si quitó la `rec` palabra clave del `MutualReferences` espacio de nombres.
 
-Esta característica también está disponible para su nivel superior [módulos](modules.md).
+Esta característica también está disponible para los [módulos](modules.md)de nivel superior.
 
 ## <a name="see-also"></a>Vea también
 
 - [Referencia del lenguaje F#](index.md)
 - [Módulos](modules.md)
-- [F#RFC FS-1009 - permitir tipos mutuamente referenciales y módulos sobre ámbitos más amplios dentro de archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009: permite tipos y módulos de referencia mutuamente a través de ámbitos mayores en los archivos](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

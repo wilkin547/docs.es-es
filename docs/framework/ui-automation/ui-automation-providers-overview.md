@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ffb8101ba0182c8ff11667f59d9bc10c5ffe670
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033038"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629561"
 ---
 # <a name="ui-automation-providers-overview"></a>Información general sobre proveedores de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  Los proveedores de automatización de la interfaz de usuario permiten a los controles comunicarse con aplicaciones de cliente de automatización de la interfaz de usuario. En general, cada control u otro elemento distinto de un [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] está representado por un proveedor. El proveedor expone información sobre el elemento y, opcionalmente, implementa patrones de control que permiten a la aplicación cliente interactuar con el control.  
   
@@ -27,12 +27,12 @@ ms.locfileid: "62033038"
  Los proveedores de automatización de la interfaz de usuario se dividen en dos categorías: proveedores del lado cliente y proveedores del lado servidor.  
   
 ### <a name="client-side-providers"></a>Proveedores del lado cliente  
- Los proveedores de cliente se implementan por los clientes de automatización de la interfaz de usuario para comunicarse con una aplicación que no admite, o no admite por completo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Los proveedores de cliente suelen comunican con el servidor a través del límite de proceso enviando y recibiendo mensajes de Windows.  
+ Los proveedores de cliente se implementan por los clientes de automatización de la interfaz de usuario para comunicarse con una aplicación que no admite, o no admite por completo, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Los proveedores del lado cliente suelen comunicarse con el servidor a través del límite del proceso mediante el envío y la recepción de mensajes de Windows.  
   
- Dado que los proveedores de UI Automation para los controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones se proporcionan como parte del sistema operativo, aplicaciones cliente rara vez tienen que implementar sus propios proveedores y esta información general no tratan más adelante.  
+ Dado que los proveedores de automatización de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]la interfaz de usuario [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] para los controles en, Windows Forms o aplicaciones se proporcionan como parte del sistema operativo, las aplicaciones cliente rara vez tienen que implementar sus propios proveedores y esta información general no los cubre reducir.  
   
 ### <a name="server-side-providers"></a>Proveedores del lado servidor  
- Los proveedores del lado servidor se implementan mediante controles personalizados y las aplicaciones que se basan en un marco de interfaz de usuario distinto [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, o [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Los proveedores del lado servidor se implementan mediante controles personalizados o aplicaciones que se basan en un marco de interfaz [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]de usuario distinto de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], Windows Forms o.  
   
  Los proveedores del lado servidor se comunican con aplicaciones cliente a través del límite de proceso al exponer interfaces al sistema principal [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , que a su vez atiende solicitudes de los clientes.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "62033038"
   
  Los controles de contenedor[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] como cuadros de lista y vistas de árbol se consideran marcos de trabajo, porque contienen su propio código para representar elementos secundarios y realizar pruebas de aciertos en ellos. Por el contrario, un cuadro de lista [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] no es un marco de trabajo, porque la representación y las pruebas de aciertos se controlan mediante la ventana que lo contiene [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
   
- La [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de una aplicación se puede componer de diferentes marcos de trabajo. Por ejemplo, una ventana de aplicación HWND podría incluir [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] que a su vez contiene un componente como un cuadro combinado en un HWND.  
+ La [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de una aplicación se puede componer de diferentes marcos de trabajo. Por ejemplo, una ventana de aplicación HWND podría contener HTML dinámico (DHTML) que a su vez contiene un componente como un cuadro combinado en un HWND.  
   
-### <a name="fragments"></a>Fragmentos  
+### <a name="fragments"></a>Fragments  
  Un fragmento es un subárbol completo de elementos de un marco de trabajo determinado. El elemento del nodo raíz del subárbol se denomina raíz del fragmento. Una raíz de fragmento no tiene un elemento primario, pero se hospeda dentro de algún otro marco de trabajo, normalmente una ventana de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] (HWND).  
   
 ### <a name="hosts"></a>Hosts  

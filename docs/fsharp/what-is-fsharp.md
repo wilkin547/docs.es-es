@@ -1,19 +1,19 @@
 ---
 title: ¿Qué es F#?
-description: Conozca los aspectos del F# lenguaje de programación es y qué F# programación es similar a. Obtenga información sobre los tipos de datos enriquecidos, funciones y cómo encajan entre sí.
+description: Obtenga información sobre qué F# es el lenguaje de programación F# y qué programación es como. Obtenga información sobre los tipos de datos enriquecidos, las funciones y cómo encajan entre sí.
 ms.date: 08/03/2018
-ms.openlocfilehash: fc4f4db771c43a4ec08cc9d3a247cf1f38e60457
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c576fe49fadebd68e4fc9d2b20ea8f0cb991af5
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486830"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630462"
 ---
-# <a name="what-is-f"></a>¿Qué es F\#
+# <a name="what-is-f"></a>Qué es F\#
 
-F#es un lenguaje de programación funcional que resulta muy fácil escribir código correcto y fácil de mantener.
+F#es un lenguaje de programación funcional que facilita la escritura de código correcto y fácil de mantener.
 
-F#programación principalmente implica la definición de tipos y funciones que son de tipo deduce y generalizadas automáticamente. Esto permite que el enfoque a permanecer en el dominio del problema y manipular los datos, en lugar de los detalles de la programación.
+F#la programación implica principalmente definir tipos y funciones que se infieren de tipo y se generalizan automáticamente. Esto permite que el foco permanezca en el dominio del problema y manipule sus datos, en lugar de los detalles de la programación.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,21 +35,21 @@ let main args =
     0
 ```
 
-F#tiene numerosas características, incluidos:
+F#tiene numerosas características, entre las que se incluyen:
 
 * Sintaxis ligera
-* Inmutables de manera predeterminada
-* Generalización automática y la inferencia de tipos
+* Inmutable de forma predeterminada
+* Inferencia de tipos y generalización automática
 * Funciones de primera clase
 * Tipos de datos eficaces
 * Detección de patrones
 * Programación asincrónica
 
-Un conjunto completo de características se documentan en el [ F# referencia del lenguaje](language-reference/index.md).
+En la [ F# referencia del lenguaje](./language-reference/index.md)se documenta un conjunto completo de características.
 
-## <a name="rich-data-types"></a>Tipos de datos enriquecido
+## <a name="rich-data-types"></a>Tipos de datos enriquecidos
 
-Tipos de datos como [registros](language-reference/records.md) y [uniones discriminadas](language-reference/discriminated-unions.md) le permite representar datos complejos y dominios.
+Los tipos de datos como [registros](./language-reference/records.md) y [uniones discriminadas](./language-reference/discriminated-unions.md) permiten representar dominios y datos complejos.
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F#registros y uniones discriminadas son distintos de null, inmutable y comparable de forma predeterminada, haciéndolos muy fácil de usar.
+F#los registros y las uniones discriminadas son no NULL, inmutables y comparables de forma predeterminada, lo que facilita su uso.
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Corrección impuesto con funciones y coincidencia de patrones
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>Aplicación de corrección con funciones y coincidencia de patrones
 
-F#las funciones son eficaces en la práctica y fácil declarar. Cuando se combina con [coincidencia de patrones](language-reference/pattern-matching.md), le permiten definir comportamiento cuya corrección se aplica por el compilador.
+F#las funciones son fáciles de declarar y eficaces en la práctica. Cuando se combina con la [coincidencia de patrones](./language-reference/pattern-matching.md), permiten definir el comportamiento cuya corrección se aplica mediante el compilador.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,11 +93,11 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F#las funciones también son de primera clase, lo que significa que se pueden pasar como parámetros y devueltos por otras funciones.
+F#las funciones son también de primera clase, lo que significa que se pueden pasar como parámetros y devolverse desde otras funciones.
 
-## <a name="functions-to-define-operations-on-objects"></a>Funciones para definir las operaciones en objetos
+## <a name="functions-to-define-operations-on-objects"></a>Funciones para definir operaciones en objetos
 
-F#es totalmente compatible con objetos, que son tipos de datos útiles cuando es necesario combinar datos y la funcionalidad. F#las funciones se usan para manipular objetos.
+F#tiene compatibilidad total con objetos, que son tipos de datos útiles cuando es necesario combinar datos y funcionalidad. F#las funciones se usan para manipular objetos.
 
 ```fsharp
 type Set<[<EqualityConditionOn>] 'T when 'T: comparison>(elements: seq<'T>) =
@@ -119,8 +119,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-En lugar de escribir código que está orientada a objetos, en F#, a menudo escribirá código que se trata como otro tipo de datos para las funciones para manipular los objetos. Características como [interfaces genéricas](language-reference/interfaces.md), [expresiones de objeto](language-reference/object-expressions.md)y un uso razonable de [miembros](language-reference/members/index.md) son comunes en mayor F# programas.
+En lugar de escribir código orientado a objetos, en F#, a menudo escribirá código que trata los objetos como otro tipo de datos para las funciones que se van a manipular. Las características como las [interfaces genéricas](./language-reference/interfaces.md), las [expresiones de objeto](./language-reference/object-expressions.md)y el uso prudente de [los miembros](./language-reference/members/index.md) son comunes en los programas más grandes F# .
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre un conjunto mayor de F# características, consulte el [ F# paseo](tour.md).
+Para obtener más información acerca de un conjunto F# mayor de características, consulte el [ F# paseo](tour.md).

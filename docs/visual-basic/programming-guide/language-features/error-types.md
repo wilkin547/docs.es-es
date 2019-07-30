@@ -10,28 +10,28 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 030986111a50ab59c605a1d683fedc118d10b260
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973178"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626611"
 ---
 # <a name="error-types-visual-basic"></a>Tipos de error (Visual Basic)
-En Visual Basic, los errores (también denominado *excepciones*) se dividen en tres categorías: errores de sintaxis, errores de tiempo de ejecución y errores lógicos.  
-  
-## <a name="syntax-errors"></a>Errores de sintaxis  
- *Errores de sintaxis* son aquellos que aparecen mientras se escribe código. Visual Basic comprueba el código a medida que escribe en el **Editor de código** ventana y le avisa si comete un error, como escribir mal una palabra o uso incorrecto de un elemento del lenguaje. Errores de sintaxis son el tipo más común de errores. Puede corregir fácilmente en el entorno de codificación en cuanto se producen.  
-  
+En Visual Basic, los errores se dividen en una de estas tres categorías: errores de sintaxis, errores en tiempo de ejecución y errores lógicos.
+
+## <a name="syntax-errors"></a>Errores de sintaxis
+ Los *errores de sintaxis* son los que aparecen mientras se escribe código. Si usa Visual Studio, Visual Basic comprueba el código a medida que lo escribe en la ventana del **Editor de código** y le alerta Si comete un error, como la escritura incorrecta de una palabra o el uso de un elemento del lenguaje de forma incorrecta. Si se compila desde la línea de comandos, Visual Basic muestra un error del compilador con información sobre el error de sintaxis. Los errores de sintaxis son el tipo más común de errores. Puede corregirlas fácilmente en el entorno de codificación en cuanto se produzcan.
+
 > [!NOTE]
->  El `Option Explicit` instrucción es una forma de evitar errores de sintaxis. Nos vemos obligados a declarar por anticipado, todas las variables que se usará en la aplicación. Por lo tanto, cuando esas variables se utilizan en el código, cualquier error tipográfico se detecta inmediatamente y se puede corregir.  
+>  La `Option Explicit` instrucción es un medio para evitar errores de sintaxis. Obliga a declarar, de antemano, todas las variables que se van a usar en la aplicación. Por lo tanto, cuando esas variables se usan en el código, los errores tipográficos se detectan inmediatamente y se pueden corregir.
+
+## <a name="run-time-errors"></a>Errores en tiempo de ejecución
+ Los *errores en tiempo de ejecución* son aquellos que aparecen solo después de compilar y ejecutar el código. Estos incluyen código que puede parecer correcto en que no tiene errores de sintaxis, pero que no se ejecutará. Por ejemplo, puede escribir correctamente una línea de código para abrir un archivo. Pero si el archivo no existe, la aplicación no puede abrir el archivo y produce una excepción. Puede corregir la mayoría de los errores en tiempo de ejecución volviendo a escribir el código defectuoso o usando el [control de excepciones](../../language-reference/statements/try-catch-finally-statement.md)y, a continuación, volviendo a compilarlo y volver a ejecutarlo.
   
-## <a name="run-time-errors"></a>Errores de tiempo de ejecución  
- *Errores de tiempo de ejecución* son aquellos que aparecen después de compilar y ejecutar el código. Fragmentos de código que parece estar correcto en que no tiene ningún error de sintaxis, pero que no se ejecutará. Por ejemplo, podría escribir correctamente una línea de código para abrir un archivo. Pero si el archivo está dañado, la aplicación no se puede llevar a cabo la `Open` función y se detiene la ejecución. Puede corregir la mayoría de los errores de tiempo de ejecución por volver a escribir el código defectuoso y, a continuación, volver a compilar y volver a ejecutarlo.  
-  
-## <a name="logic-errors"></a>Errores lógicos  
- *Errores lógicos* son aquellos que aparecen cuando la aplicación está en uso. Son la mayoría de los resultados inesperada o no deseada a menudo en respuesta a las acciones del usuario. Por ejemplo, una clave mal escrita u otra influencia externa podría hacer que la aplicación deje de funcionar en los parámetros esperados, o por completo. Errores lógicos suelen ser el tipo más difícil de corregir, ya que no siempre está claro dónde se originan.  
-  
+## <a name="logic-errors"></a>Errores lógicos
+ Los *errores lógicos* son los que aparecen una vez que la aplicación está en uso. Suelen ser suposiciones defectuosas realizadas por el desarrollador o resultados no deseados o inesperados en respuesta a las acciones del usuario. Por ejemplo, una clave mal escrita podría proporcionar información incorrecta a un método, o puede suponer que siempre se suministra un valor válido a un método cuando no es el caso. Aunque los errores lógicos se pueden controlar mediante el [control de excepciones](../../language-reference/statements/try-catch-finally-statement.md) (por ejemplo, al comprobar si `Nothing` un argumento es <xref:System.ArgumentNullException>e iniciar un), normalmente deben solucionarse corrigiendo el error en la lógica y volviendo a compilar el aplicación.
+
 ## <a name="see-also"></a>Vea también
 
 - [Try...Catch...Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

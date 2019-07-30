@@ -1,41 +1,41 @@
 ---
 title: Valores NULL
-description: Obtenga información sobre cómo se usa el valor null en la F# lenguaje de programación.
+description: Obtenga información sobre cómo usar el valor null en F# el lenguaje de programación.
 ms.date: 03/22/2019
-ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2038c0a461fec9884c51edd50c3c9f336104e30e
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902283"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630806"
 ---
 # <a name="null-values"></a>Valores NULL
 
-Este tema describe cómo se usa el valor null en F#.
+En este tema se describe cómo se utiliza el valor F#null en.
 
-## <a name="null-value"></a>Valor nulo
+## <a name="null-value"></a>Valor null
 
-El valor null no se usa normalmente en F# para valores o variables. Sin embargo, null aparece como valor anormal en determinadas situaciones. Si se define un tipo en F#, no se permite null como valor normal a menos que el [AllowNullLiteral](https://msdn.microsoft.com/library/4f315196-f444-4cca-ba07-1176ff71eb0f) atributo se aplica al tipo. Si se define un tipo en algún otro lenguaje. NET, null es un valor posible, y cuando está interoperando con estos tipos, su F# código podría encontrar valores null.
+El valor NULL no se utiliza normalmente en F# para valores o variables. Sin embargo, null aparece como un valor anómalo en determinadas situaciones. Si se define un tipo en F#, no se permite NULL como valor normal a menos que el atributo [AllowNullLiteral](https://msdn.microsoft.com/library/4f315196-f444-4cca-ba07-1176ff71eb0f) se aplique al tipo. Si un tipo se define en algún otro lenguaje de .NET, NULL es un valor posible y, al interoperar con estos tipos, el F# código podría encontrar valores NULL.
 
-Para un tipo definido en F# y se utiliza estrictamente desde F#, la única manera de crear un valor null con el F# biblioteca es usar directamente [Unchecked.defaultof](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977) o [Array.zeroCreate](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2). Sin embargo, para un F# tipo que se usa en otros lenguajes. NET, o si usa una API que no se escribe en ese tipo F#, como .NET Framework, puede haber valores null.
+Para un tipo definido en F# y utilizado estrictamente desde F#, la única forma de crear un valor null utilizando directamente F# la biblioteca es usar unchecked [. default](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977) o [array. zerocreate (](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2). Sin embargo, para F# un tipo que se usa desde otros lenguajes .net, o si está usando ese tipo con una API que no está escrita F#en, como la .NET Framework, se pueden producir valores NULL.
 
-Puede usar el `option` escriba F# cuando podría usar una variable de referencia con un posible valor null en otro lenguaje. NET. En lugar de null, con un F# `option` tipo, use el valor de opción `None` si no hay ningún objeto. Utilice el valor de opción `Some(obj)` con un objeto `obj` cuando hay un objeto. Para obtener más información, vea [Opciones](../options.md). Tenga en cuenta que todavía puede empaquetar un `null` valor en una opción if, para `Some x`, `x` resulta ser `null`. Por este motivo, es importante que utilice `None` cuando un valor es `null`.
+Puede usar el `option` tipo en F# cuando pueda usar una variable de referencia con un valor null posible en otro lenguaje .net. En lugar de NULL, con un F# `option` tipo, se usa el valor `None` de la opción si no hay ningún objeto. El valor `Some(obj)` de la opción se usa con `obj` un objeto cuando hay un objeto. Para obtener más información, vea [Opciones](../options.md). Tenga en cuenta que todavía `null` puede empaquetar un valor en una opción si, para `Some x`, `x` es `null`. Por este motivo, es importante usar `None` cuando un valor es. `null`
 
-El `null` palabra clave es una palabra clave válida en el F# lenguaje y es necesario usarla cuando se trabaja con la API de .NET Framework u otras API que se escribe en otro lenguaje. NET. Las dos situaciones en las que podría necesitar un valor null son al llamar a una API de .NET y pasar un valor null como argumento y al interpretar el valor devuelto o parámetro de salida de una llamada al método. NET.
+La `null` palabra clave es una palabra clave válida F# en el lenguaje y tiene que usarlo al trabajar con .NET Framework API u otras API escritas en otro lenguaje .net. Las dos situaciones en las que podría necesitar un valor null son cuando se llama a una API de .NET y se pasa un valor NULL como argumento, y cuando se interpreta el valor devuelto o un parámetro de salida desde una llamada al método .NET.
 
-Para pasar un valor null a un método. NET, solo tiene que usar el `null` palabra clave en el código de llamada. En el siguiente ejemplo código se muestra cómo hacerlo.
+Para pasar un valor null a un método .net, simplemente use la `null` palabra clave en el código de llamada. En el siguiente ejemplo código se muestra cómo hacerlo.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet701.fs)]
 
-Para interpretar un valor null que se obtiene de un método. NET, use la coincidencia de patrones si es posible. El ejemplo de código siguiente muestra cómo usar la coincidencia de patrones para interpretar el valor null que se devuelve desde `ReadLine` cuando intenta leer después del final de un flujo de entrada.
+Para interpretar un valor null que se obtiene de un método .NET, use la coincidencia de patrones si es posible. En el ejemplo de código siguiente se muestra cómo usar la coincidencia de `ReadLine` patrones para interpretar el valor null que se devuelve cuando intenta leer más allá del final de un flujo de entrada.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-Valores NULL para F# también se pueden generar tipos de otras maneras, como cuando se utiliza `Array.zeroCreate`, que llama a `Unchecked.defaultof`. Debe tener cuidado con este código para mantener los valores null encapsulados. En una biblioteca destinada solo F#, no es necesario comprobar si hay valores null en todas las funciones. Si está escribiendo una biblioteca para interoperar con otros lenguajes. NET, es posible que deba agregar comprobaciones para null los parámetros de entrada y producirán un `ArgumentNullException`, tal como haría en el código de C# o Visual Basic.
+Los valores NULL F# de los tipos también se pueden generar de otras maneras, como cuando se `Array.zeroCreate`usa, que `Unchecked.defaultof`llama a. Debe tener cuidado con este código para mantener encapsulados los valores NULL. En una biblioteca diseñada únicamente para F#, no es necesario comprobar si hay valores NULL en cada función. Si está escribiendo una biblioteca para interoperar con otros lenguajes de .net, es posible que tenga que agregar comprobaciones para los parámetros `ArgumentNullException`de entrada NULL y producir una C# , tal como se hace en o Visual Basic código.
 
-Puede usar el código siguiente para comprobar si un valor arbitrario es null.
+Puede usar el código siguiente para comprobar si un valor arbitrario es NULL.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet703.fs)]
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,17 +1,17 @@
 ---
 title: Enlaces let en clases
-description: Obtenga información sobre cómo definir los campos privados y funciones privadas para F# clases mediante el uso de 'let' enlaces en la definición de clase.
+description: Obtenga información sobre cómo definir los campos privados y las F# funciones privadas para las clases mediante los enlaces ' Let ' en la definición de clase.
 ms.date: 05/16/2016
-ms.openlocfilehash: 29f843e3e065837a53fd5eb26c79088bc0778c76
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0086d3a91f85395c2bd0555f978c5d951c363357
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645173"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627487"
 ---
 # <a name="let-bindings-in-classes"></a>Enlaces let en clases
 
-Puede definir campos privados y funciones privadas para F# clases mediante el uso de `let` enlaces en la definición de clase.
+Puede definir campos privados y funciones privadas para F# las clases mediante el `let` uso de enlaces en la definición de clase.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -25,17 +25,17 @@ Puede definir campos privados y funciones privadas para F# clases mediante el us
 
 ## <a name="remarks"></a>Comentarios
 
-La sintaxis anterior aparece después de las declaraciones de encabezado y la herencia de clase, pero antes de las definiciones de miembros. La sintaxis es similar de `let` enlaces fuera de las clases, pero los nombres definidos en una clase tienen un ámbito que está limitado a la clase. Un `let` enlace crea un campo privado o una función; para exponer los datos o funciones públicamente, declaran una propiedad o un método de miembro.
+La sintaxis anterior aparece después del encabezado de clase y las declaraciones de herencia, pero antes de cualquier definición de miembro. La sintaxis es similar a la `let` de los enlaces fuera de las clases, pero los nombres definidos en una clase tienen un ámbito limitado a la clase. Un `let` enlace crea un campo o una función privados; para exponer datos o funciones públicamente, declare una propiedad o un método de miembro.
 
-Un `let` el enlace que no es estático se llama a una instancia `let` enlace. Instancia `let` enlaces ejecutan cuando se crean los objetos. Estática `let` enlaces forman parte del inicializador estático de la clase, que siempre se ejecutará antes de que el tipo se usa por primera vez.
+Un `let` enlace que no es estático se denomina enlace de `let` instancia. Los `let` enlaces de instancia se ejecutan cuando se crean los objetos. Los `let` enlaces estáticos forman parte del inicializador estático de la clase, que se garantiza que se ejecuta antes de que se use por primera vez el tipo.
 
-El código dentro de la instancia `let` enlaces pueden usar los parámetros del constructor principal.
+El código incluido en `let` los enlaces de instancia puede usar los parámetros del constructor principal.
 
-No se permiten los atributos y modificadores de accesibilidad en `let` enlaces en clases.
+Los atributos y los modificadores de accesibilidad no `let` se permiten en los enlaces de clases.
 
-Los ejemplos de código siguientes muestran varios tipos de `let` enlaces en clases.
+En los siguientes ejemplos de código se muestran `let` varios tipos de enlaces en las clases.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
 
 La salida es la siguiente.
 
@@ -45,12 +45,12 @@ La salida es la siguiente.
 
 ## <a name="alternative-ways-to-create-fields"></a>Maneras alternativas de crear campos
 
-También puede usar el `val` palabra clave para crear un campo privado. Cuando se usa el `val` palabra clave, el campo no tiene un valor cuando se crea el objeto, pero en su lugar se inicializa con un valor predeterminado. Para obtener más información, consulte [campos explícitos: Val (palabra clave)](explicit-fields-the-val-keyword.md).
+También puede usar la `val` palabra clave para crear un campo privado. Cuando se usa `val` la palabra clave, el campo no recibe un valor cuando se crea el objeto, sino que se inicializa con un valor predeterminado. Para obtener más información, [vea campos explícitos: Palabra clave](explicit-fields-the-val-keyword.md)Val.
 
-También puede definir los campos privados en una clase mediante una definición de miembro y agregar la palabra clave `private` a la definición. Esto puede ser útil si piensa cambiar la accesibilidad de un miembro sin tener que reescribir el código. Para más información, vea [Access Control](../access-control.md) (Control de acceso).
+También puede definir campos privados en una clase utilizando una definición de miembro y agregando la palabra `private` clave a la definición. Esto puede ser útil si espera cambiar la accesibilidad de un miembro sin reescribir el código. Para más información, vea [Access Control](../access-control.md) (Control de acceso).
 
 ## <a name="see-also"></a>Vea también
 
 - [Miembros](index.md)
 - [`do` Bindings in Classes](do-bindings-in-classes.md) (Enlaces `do` en clases)
-- [`let` enlaces](../functions/let-bindings.md)
+- [`let`Enlaces](../functions/let-bindings.md)

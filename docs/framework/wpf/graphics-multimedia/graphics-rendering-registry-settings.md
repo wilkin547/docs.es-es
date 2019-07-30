@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: b1c61aa333c428e5cb811a5d19469516cbb813e3
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: c3544769480a45068be0ca64e90f91253daf3e16
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663160"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629778"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configuración del Registro en la representación de gráficos
 En este tema se ofrece información general sobre la configuración del Registro en la representación de gráficos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que afecta a las aplicaciones de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -30,10 +30,10 @@ En este tema se ofrece información general sobre la configuración del Registro
 ## <a name="registry-settings"></a>Configuración de registro  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] proporciona cuatro parámetros de configuración del Registro para controlar la representación de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Parámetro|Descripción|  
+|Parámetro|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |**Opción de deshabilitación de aceleración de hardware**|Especifica si se debe habilitar la aceleración de hardware.|  
-|**Valor máximo de muestreo múltiple**|Especifica el grado de muestreo múltiple para el contenido de suavizado de contorno 3D.|  
+|**Valor máximo de muestreo múltiple**|Especifica el grado de muestreo múltiple para el suavizado de contorno de contenido 3D.|  
 |**Configuración obligatoria de fecha del controlador de vídeo**|Especifica si el sistema deshabilita la aceleración de hardware para los controladores publicados antes de noviembre de 2004.|  
 |**Opción de uso del rasterizador de referencia**|Especifica si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] debe utilizar el rasterizador de referencia.|  
   
@@ -57,9 +57,9 @@ En este tema se ofrece información general sobre la configuración del Registro
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- El **valor máximo de muestreo múltiple** permite ajustar la cantidad máxima de suavizado de contorno del contenido 3D. Use este nivel para deshabilitar el suavizado de contorno 3D en [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] o habilitarlo en [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)].  
+ El **valor máximo de muestreo múltiple** permite ajustar la cantidad máxima de suavizado de contorno del contenido 3D. Use este nivel para deshabilitar el suavizado de contorno [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] 3D en o habilitarlo en. [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]  
   
- El **valor máximo de muestreo múltiple** es un valor DWORD comprendido entre 0 y 16. Un valor de 0 especifica que debe deshabilitarse el suavizado de contorno de muestreo múltiple del contenido 3D y un valor de 16 intentará usar un suavizado de contorno de muestreo múltiple hasta 16 veces mayor, si la tarjeta de vídeo lo admite. Tenga en cuenta que establecer este valor de clave del registro en los equipos que usen controladores XPDM hará que las aplicaciones utilizan una gran cantidad de memoria de vídeo adicional, disminuirá el rendimiento de representación 3D, y tiene el potencial de introducir la estabilidad y errores de representación problemas.  
+ El **valor máximo de muestreo múltiple** es un valor DWORD comprendido entre 0 y 16. Un valor de 0 especifica que debe deshabilitarse el suavizado de contorno de muestreo múltiple del contenido 3D y un valor de 16 intentará usar un suavizado de contorno de muestreo múltiple hasta 16 veces mayor, si la tarjeta de vídeo lo admite. Tenga en cuenta que el establecimiento de este valor de clave del registro en los equipos que usan controladores XPDM hará que las aplicaciones usen una gran cantidad de memoria de vídeo adicional, reduzcan el rendimiento de la representación 3D y tenga el potencial de introducir errores de representación y estabilidad surge.  
   
  Cuando no se establece esta clave del Registro, el valor predeterminado de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] es 0 para los controladores XPDM y 4 para los controladores WDDM.  
   
@@ -89,7 +89,7 @@ En este tema se ofrece información general sobre la configuración del Registro
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
- La **opción de uso del rasterizador de referencia** le permite forzar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a un modo simulado de representación de hardware para depuración: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pasa al modo de hardware, pero usa el rasterizador de software de referencia [!INCLUDE[TLA#tla_d3d](../../../../includes/tlasharptla-d3d-md.md)], d3dref9.dll, en lugar de un dispositivo real de hardware.  
+ La **opción usar rasterizador de referencia** permite forzar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] el modo de representación de hardware simulado para la depuración: [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] entra en modo de hardware, pero usa el rasterizador de software de referencia de Microsoft Direct3D, d3dref9. dll. en lugar de un dispositivo de hardware real.  
   
  El rasterizador de referencia es muy lento, pero omite el controlador de vídeo para evitar cualquier problema de representación causado por problemas de controladores. Por este motivo, se puede usar el rasterizador de referencia para determinar si los problemas de representación se deben al controlador de vídeo. El archivo d3dref9.dll debe estar en una ubicación en la que la aplicación pueda acceder a él, como cualquier ubicación en la ruta del sistema o el directorio local de la aplicación.  
   

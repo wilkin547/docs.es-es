@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 259db84c8ab3b9bbad809b9636ba18537dd6fe62
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: b8234dcb33e9d429329c6d68900119382ff2f1cb
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400722"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629791"
 ---
 # <a name="wpf-partial-trust-security"></a>Seguridad de confianza parcial de WPF
 <a name="introduction"></a> En general, deben restringirse las aplicaciones de Internet para que no tengan acceso directo a recursos críticos del sistema y así evitar daños malintencionados. De forma predeterminada [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] , y los lenguajes de scripting del lado cliente no pueden tener acceso a los recursos críticos del sistema. Dado que las aplicaciones hospedadas en un explorador Windows Presentation Foundation (WPF) se pueden iniciar desde el explorador, deben ajustarse a un conjunto similar de restricciones. Para aplicar estas restricciones, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se basa en la seguridad de acceso del código (CAS) y en ClickOnce (consulte [estrategia de seguridad de WPF: seguridad de plataforma](wpf-security-strategy-platform-security.md)). De forma predeterminada, las aplicaciones hospedadas en el explorador solicitan el conjunto de permisos de la zona de Internet, independientemente de si se inician desde Internet, la Intranet local o el equipo local. Las aplicaciones que se ejecutan con menos permisos que el conjunto completo de permisos se dice que se ejecutan con confianza parcial.  
@@ -113,7 +113,7 @@ ms.locfileid: "68400722"
   
  En muchos casos, debería poder encontrar una alternativa de confianza parcial.  
   
- En un entorno controlado, como una intranet, los marcos administrados personalizados se pueden instalar a través de la base de [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]cliente en. Estas bibliotecas pueden ejecutar código que requiere plena confianza y se puede hacer referencia a ellas desde aplicaciones a las que solo se permite <xref:System.Security.AllowPartiallyTrustedCallersAttribute> la confianza parcial mediante el uso de (para obtener más información, vea [seguridad](security-wpf.md) y [estrategia de seguridad de WPF: seguridad de plataforma](wpf-security-strategy-platform-security.md)).  
+ En un entorno controlado, como una intranet, los marcos administrados personalizados se pueden instalar en la base de cliente en la caché de ensamblados global (GAC). Estas bibliotecas pueden ejecutar código que requiere plena confianza y se puede hacer referencia a ellas desde aplicaciones a las que solo se permite <xref:System.Security.AllowPartiallyTrustedCallersAttribute> la confianza parcial mediante el uso de (para obtener más información, vea [seguridad](security-wpf.md) y [estrategia de seguridad de WPF: seguridad de plataforma](wpf-security-strategy-platform-security.md)).  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>Detección de host del explorador  

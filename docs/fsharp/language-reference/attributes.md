@@ -1,17 +1,17 @@
 ---
 title: Atributos
-description: Obtenga información sobre cómo F# atributos permiten que los metadatos que se aplicará a una construcción de programación.
+description: Obtenga información F# sobre cómo los atributos permiten aplicar metadatos a una construcción de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: fed4c549b95d6d3701ab81cf5d62add411c16038
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3f3c3469192c09aa51f31ef3f00aca0196e3c382
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642024"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630079"
 ---
 # <a name="attributes"></a>Atributos
 
-Atributos permiten que los metadatos que se aplicará a una construcción de programación.
+Los atributos permiten aplicar metadatos a una construcción de programación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,47 +21,47 @@ Atributos permiten que los metadatos que se aplicará a una construcción de pro
 
 ## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, el *destino* es opcional y, si está presente, especifica el tipo de entidad de programa que se aplica el atributo. Los valores válidos para *destino* se muestran en la tabla que aparece más adelante en este documento.
+En la sintaxis anterior, el *destino* es opcional y, si está presente, especifica el tipo de entidad de programa a la que se aplica el atributo. Los valores válidos para el *destino* se muestran en la tabla que aparece más adelante en este documento.
 
-El *nombre del atributo* hace referencia al nombre (posiblemente calificado con espacios de nombres) de un tipo de atributo válido, con o sin el sufijo `Attribute` que normalmente se usa en nombres de tipo de atributo. Por ejemplo, el tipo `ObsoleteAttribute` puede abreviar a `Obsolete` en este contexto.
+El *atributo-name* hace referencia al nombre (posiblemente calificado con espacios de nombres) de un tipo de atributo válido, con o sin `Attribute` el sufijo que se suele utilizar en los nombres de tipo de atributo. Por ejemplo, el tipo `ObsoleteAttribute` se puede acortar a simplemente `Obsolete` en este contexto.
 
-El *argumentos* son los argumentos al constructor del tipo de atributo. Si un atributo tiene un constructor predeterminado, se pueden omitir la lista de argumentos y los paréntesis. Los atributos admiten argumentos posicionales y argumentos con nombre. *Los argumentos posicionales* son argumentos que se usan en el orden en que aparecen. Pueden utilizar argumentos con nombre si el atributo tiene propiedades públicas. Puede establecer estas opciones mediante la sintaxis siguiente en la lista de argumentos.
+Los *argumentos* son los argumentos del constructor para el tipo de atributo. Si un atributo tiene un constructor predeterminado, se pueden omitir la lista de argumentos y los paréntesis. Los atributos admiten argumentos posicionales y argumentos con nombre. Los *argumentos posicionales* son argumentos que se usan en el orden en que aparecen. Se pueden usar argumentos con nombre si el atributo tiene propiedades públicas. Puede establecerlos mediante la siguiente sintaxis en la lista de argumentos.
 
 ```
 *property-name* = *property-value*
 ```
 
-Inicializaciones de propiedad pueden estar en cualquier orden, pero deben seguir los argumentos posicionales. La siguiente es un ejemplo de un atributo que usa argumentos posicionales e inicializaciones de propiedad.
+Dichas inicializaciones de propiedad pueden estar en cualquier orden, pero deben seguir cualquier argumento posicional. A continuación se encuentra un ejemplo de un atributo que usa argumentos posicionales e inicializaciones de propiedad.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6202.fs)]
 
-En este ejemplo, el atributo es `DllImportAttribute`, aquí se usa en forma abreviada. El primer argumento es un parámetro de posición y el segundo es una propiedad.
+En este ejemplo, el atributo es `DllImportAttribute`, que se usa en forma abreviada. El primer argumento es un parámetro posicional y el segundo es una propiedad.
 
-Los atributos son una construcción de programación de .NET que permite a un objeto que se conoce como un *atributo* va a asociar a un tipo u otro elemento de programa. El elemento de programa al que se aplica un atributo se conoce como el *destino del atributo*. Normalmente, el atributo contiene metadatos acerca de su destino. En este contexto, los metadatos podrían ser ningún dato sobre el tipo que no sean sus campos y los miembros.
+Los atributos son una construcción de programación de .NET que permite asociar un objeto conocido como *atributo* a un tipo u otro elemento de programa. El elemento de programa al que se aplica un atributo se conoce como *destino de atributo*. El atributo normalmente contiene metadatos sobre su destino. En este contexto, los metadatos pueden ser cualquier dato sobre el tipo que no sea sus campos y miembros.
 
-Los atributos F# se pueden aplicar a las construcciones de programación siguientes: funciones, métodos, ensamblados, módulos, tipos (clases, registros, estructuras, interfaces, delegados, enumeraciones, uniones etc.), constructores, propiedades, campos, los parámetros, escriba los parámetros y valores devueltos. No se admiten atributos en `let` enlaces dentro de clases, las expresiones o expresiones de flujo de trabajo.
+Los atributos F# de se pueden aplicar a las siguientes construcciones de programación: funciones, métodos, ensamblados, módulos, tipos (clases, registros, estructuras, interfaces, delegados, enumeraciones, uniones, etc.), constructores, propiedades, campos, parámetros, parámetros de tipo y valores devueltos. No se permiten atributos en `let` los enlaces dentro de las clases, expresiones o expresiones de flujo de trabajo.
 
-Normalmente, la declaración de atributos aparece directamente antes de la declaración del destino del atributo. Juntos, como se indica a continuación, se pueden usar varias declaraciones de atributo.
+Normalmente, la declaración de atributo aparece directamente antes de la declaración del destino de atributo. Se pueden usar varias declaraciones de atributos juntas, como se indica a continuación.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6603.fs)]
 
-Puede consultar los atributos en tiempo de ejecución mediante la reflexión. NET.
+Puede consultar los atributos en tiempo de ejecución mediante la reflexión de .NET.
 
-Puede declarar varios atributos individualmente, como se muestra en el ejemplo de código anterior, o bien puede declarar en un conjunto de corchetes si usa un punto y coma para separar los atributos individuales y los constructores, como se muestra aquí.
+Puede declarar varios atributos individualmente, como en el ejemplo de código anterior, o puede declararlos en un conjunto de corchetes si usa un punto y coma para separar los atributos y constructores individuales, como se muestra aquí.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6604.fs)]
 
-Atributos encontrados normalmente incluyen la `Obsolete` atributo, los atributos de las consideraciones de seguridad, los atributos para la compatibilidad con COM, atributos relacionados con la propiedad del código y los atributos que indica si se puede serializar un tipo. En el ejemplo siguiente se muestra el uso de la `Obsolete` atributo.
+Normalmente, los atributos encontrados `Obsolete` incluyen el atributo, atributos para las consideraciones de seguridad, atributos para la compatibilidad con com, atributos que se relacionan con la propiedad del código y atributos que indican si un tipo se puede serializar. En el siguiente ejemplo se muestra el uso `Obsolete` del atributo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6605.fs)]
 
-Para los destinos de atributo `assembly` y `module`, aplicar los atributos a un nivel superior `do` enlace en el ensamblado. Puede incluir la palabra `assembly` o `module` en la declaración de atributo, como se indica a continuación.
+En el caso de `assembly` los `module`destinos de atributo y, aplique los atributos a un `do` enlace de nivel superior en el ensamblado. Puede incluir la palabra `assembly` o `module` en la declaración de atributo, como se indica a continuación.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-Si se omite el destino del atributo para un atributo aplicado a un `do` enlace, el F# compilador intenta determinar el destino del atributo que tenga sentido para ese atributo. Muchas clases de atributos tienen un atributo de tipo `System.AttributeUsageAttribute` que incluye información sobre los posibles destinos admitidos para ese atributo. Si el `System.AttributeUsageAttribute` indica que el atributo admite funciones como destinos, se obtendrá el atributo que se aplicará al punto de entrada principal del programa. Si el `System.AttributeUsageAttribute` indica que el atributo admite ensamblados como destinos, el compilador usa el atributo se aplique al ensamblado. La mayoría de los atributos no se aplican a las funciones y ensamblados, pero en los casos donde lo hacen, se toma el atributo que se aplicará a la función principal del programa. Si el destino del atributo se especifica explícitamente, el atributo se aplica al destino especificado.
+Si se omite el destino de atributo para un atributo aplicado a `do` un enlace, F# el compilador intenta determinar el destino de atributo que tiene sentido para ese atributo. Muchas clases de atributos tienen un atributo de `System.AttributeUsageAttribute` tipo que incluye información sobre los posibles destinos admitidos para ese atributo. `System.AttributeUsageAttribute` Si indica que el atributo admite funciones como destinos, se toma el atributo para aplicar al punto de entrada principal del programa. `System.AttributeUsageAttribute` Si indica que el atributo admite ensamblados como destinos, el compilador toma el atributo para aplicar al ensamblado. La mayoría de los atributos no se aplican a las funciones y los ensamblados, pero en los casos en que lo hacen, el atributo se toma para aplicarse a la función principal del programa. Si el destino del atributo se especifica explícitamente, el atributo se aplica al destino especificado.
 
-Aunque normalmente no es necesario especificar el atributo de destino explícitamente, los valores válidos para *destino* en un atributo que se muestran en la siguiente tabla, junto con ejemplos de uso.
+Aunque normalmente no es necesario especificar explícitamente el destino de atributo, en la siguiente tabla se muestran los valores válidos para el *destino* en un atributo, junto con ejemplos de uso.
 
 <table>
   <tr>

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2988b054030df23ae8ccd8840f83c239f0401321
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70c60461f3ddd6bdabd151f60c7bc81eef18e650
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607262"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629469"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> Element
+# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects >, elemento
 En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 gigabytes (GB).  
   
- \<Configuración > elemento  
-\<en tiempo de ejecución > elemento  
-\<gcAllowVeryLargeObjects> Element  
+ \<Elemento Configuration >  
+\<Elemento > en tiempo de ejecución  
+\<gcAllowVeryLargeObjects >, elemento  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,13 +33,13 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`enabled`|Atributo necesario.<br /><br /> Especifica si las matrices con un tamaño total superior a 2 GB se habilitan en plataformas de 64 bits.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`false`|Las matrices con un tamaño total superior a 2 GB no están habilitadas. Este es el valor predeterminado.|  
 |`true`|Las matrices con un tamaño total superior a 2 GB se habilitan en plataformas de 64 bits.|  
@@ -49,7 +49,7 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
@@ -77,6 +77,10 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
 </configuration>  
 ```  
   
+## <a name="supported-in"></a>Compatible con
+
+.NET Framework 4,5 y versiones posteriores
+
 ## <a name="see-also"></a>Vea también
 
 - [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)

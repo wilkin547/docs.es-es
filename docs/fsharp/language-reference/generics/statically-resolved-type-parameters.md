@@ -1,17 +1,17 @@
 ---
 title: Parámetros de tipo resueltos estáticamente
-description: Aprenda a usar un F# parámetro de tipo resueltos estáticamente, que se reemplaza con un tipo real en tiempo de compilación en lugar de en tiempo de ejecución.
+description: Obtenga información sobre cómo usar F# un parámetro de tipo resuelto estáticamente, que se reemplaza con un tipo real en tiempo de compilación en lugar de en tiempo de ejecución.
 ms.date: 05/16/2016
-ms.openlocfilehash: 337d4f40418ee76cb18397add27acba75f756091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 43ed79b6e5f43a499a27b05e26472b021c455e44
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645258"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630584"
 ---
 # <a name="statically-resolved-type-parameters"></a>Parámetros de tipo resueltos estáticamente
 
-Un *parámetro de tipo resueltos estáticamente* es un parámetro de tipo que se reemplaza con un tipo real en tiempo de compilación en lugar de en tiempo de ejecución. Va precedido por el símbolo de intercalación (^).
+Un *parámetro de tipo resuelto estáticamente* es un parámetro de tipo que se reemplaza con un tipo real en tiempo de compilación en lugar de en tiempo de ejecución. Va precedido por el símbolo de intercalación (^).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,7 +40,7 @@ Muchas funciones de la biblioteca básica de F#, sobre todo los operadores, tien
 
 Los métodos y funciones inline que usan operadores u otras funciones que utilicen parámetros de tipo resueltos estáticamente, también pueden emplear ellos mismos este tipo de parámetro. En muchas ocasiones, durante la inferencia de tipos, se deduce que esas funciones inline tienen parámetros de tipo que se resuelven estáticamente. En el siguiente ejemplo, se muestra una definición de operador para la cual se deduce que tiene un parámetro de tipo que se resuelve estáticamente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
 El tipo resuelto de `(+@)` se basa en el uso de `(+)` y `(*)`, que hacen que mediante la inferencia de tipos se deduzcan las restricciones de miembro en los parámetros de tipo estáticamente resueltos. Tal y como se muestra en el intérprete de F#, el tipo resuelto es el siguiente.
 
@@ -57,7 +57,7 @@ La salida es la siguiente.
 1.500000
 ```
 
-A partir de F# 4.1, también puede especificar los nombres de tipo concreto en las firmas de parámetro de tipo resueltos estáticamente.  En versiones anteriores del lenguaje, el nombre de tipo se pudo inferir realmente por el compilador, pero no se puede especificar realmente en la firma.  Como de F# 4.1, también puede especificar los nombres de tipo concreto en las firmas de parámetro de tipo resueltos estáticamente. Por ejemplo:
+A partir F# de 4,1, también puede especificar nombres de tipo concretos en firmas de parámetros de tipo resueltos estáticamente.  En versiones anteriores del lenguaje, el compilador podía inferir el nombre del tipo, pero en realidad no se podía especificar en la signatura.  A partir F# de 4,1, también puede especificar nombres de tipo concretos en firmas de parámetros de tipo resueltos estáticamente. Por ejemplo:
 
 ```fsharp
 let inline konst x _ = x

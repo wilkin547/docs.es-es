@@ -1,13 +1,13 @@
 ---
 title: Directivas de compilador
-description: Obtenga información sobre F# las directivas de preprocesador de lenguaje, directivas de compilación condicional, las directivas de línea y las directivas de compilador.
+description: Obtenga información F# sobre las directivas de preprocesador de lenguaje, las directivas de compilación condicional, las directivas de línea y las directivas de compilador.
 ms.date: 12/10/2018
-ms.openlocfilehash: 2b62fb930a3b0c55103d6b0edbe20ae056ba86bd
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 16db2efb2fee2c2c5e94aa98eb0a13183a4e0e0b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645485"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630404"
 ---
 # <a name="compiler-directives"></a>Directivas de compilador
 
@@ -19,34 +19,34 @@ Una directiva de preprocesador tiene como prefijo el símbolo # y aparece en una
 
 En la siguiente tabla se recoge una lista de las directivas de preprocesador disponibles en F#.
 
-|Directiva|Descripción|
+|Directiva|DESCRIPCIÓN|
 |---------|-----------|
-|`#if` *Símbolo*|Admite la compilación condicional. Código de la sección después de la `#if` se incluye si el *símbolo* está definido. El símbolo también se puede negar con `!`.|
+|`#if`*símbolo* de|Admite la compilación condicional. El código de la sección después `#if` de se incluye si se define el *símbolo* . El símbolo también se puede negar con `!`.|
 |`#else`|Admite la compilación condicional. Marca una sección de código que incluir si el símbolo usado con la directiva `#if` anterior no se ha definido.|
 |`#endif`|Admite la compilación condicional. Marca el final de una sección condicional de código.|
-|`#`[línea] *int*,<br/>`#`[línea] *int* *cadena*,<br/>`#`[line] *int* *verbatim-string*|Indica el nombre de archivo y la línea de código fuente original para la depuración. Esta característica se proporciona para las herramientas que generan código fuente de F#.|
-|`#nowarn` *warningCode*|Deshabilita una o varias advertencias del compilador. Para deshabilitar una advertencia, encuentre su número correspondiente en los resultados del compilador e inclúyalo entre comillas. Omita el prefijo "FS". Para deshabilitar varios números de advertencia en la misma línea, incluya cada número entre comillas y separe cada cadena con un espacio. Por ejemplo:
+|`#`Ondula *int*,<br/>`#`Ondula valor *int* *cadena*,<br/>`#`Ondula valor *int* *cadena textual*|Indica el nombre de archivo y la línea de código fuente original para la depuración. Esta característica se proporciona para las herramientas que generan código fuente de F#.|
+|`#nowarn`*warningcode*|Deshabilita una o varias advertencias del compilador. Para deshabilitar una advertencia, encuentre su número correspondiente en los resultados del compilador e inclúyalo entre comillas. Omita el prefijo "FS". Para deshabilitar varios números de advertencia en la misma línea, incluya cada número entre comillas y separe cada cadena con un espacio. Por ejemplo:
 
 `#nowarn "9" "40"`
 
-El efecto de deshabilitar una advertencia que se aplica a todo el archivo, incluidas las partes del archivo que preceden a la directiva. |
+El efecto de deshabilitar una advertencia se aplica a todo el archivo, incluidas las partes del archivo que preceden a la Directiva.
 
 ## <a name="conditional-compilation-directives"></a>Directivas de compilación condicional
 
-Código que está desactivada de forma una de estas directivas aparece atenuado en el Editor de código de Visual Studio.
+El código que está desactivado por una de estas directivas aparece atenuado en el editor de Visual Studio Code.
 
 > [!NOTE]
 > El comportamiento de las directivas de compilación condicional no es el mismo que en otros idiomas. Así, no se pueden usar expresiones booleanas con símbolos, mientras que `true` y `false` no tienen ningún significado especial. Los símbolos que se usan en la directiva `if` se tienen que definir con la línea de comandos o en la configuración del proyecto; no hay ninguna directiva de preprocesador `define`.
 
-El siguiente código muestra el uso de las directivas `#if`, `#else` y `#endif`. En este ejemplo, el código contiene dos versiones de la definición de `function1`. Cuando `VERSION1` se define utilizando el [-define (opción del compilador)](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), el código entre la `#if` directiva y la `#else` se activa la directiva. De lo contrario, se activará el código entre `#else` y `#endif`.
+El siguiente código muestra el uso de las directivas `#if`, `#else` y `#endif`. En este ejemplo, el código contiene dos versiones de la definición de `function1`. Cuando `VERSION1` se define mediante la [opción-define del](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04)compilador, se activa `#if` el código entre `#else` la Directiva y la Directiva. De lo contrario, se activará el código entre `#else` y `#endif`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7301.fs)]
 
 No hay ninguna directiva de preprocesador `#define` en F#. Hay que usar la configuración del proyecto o la opción del compilador pertinente para definir los símbolos que la directiva `#if` usa.
 
 Las directivas de compilación condicional se pueden anidar. La sangría no es significativa en las directivas de preprocesador.
 
-También puede invalidar un símbolo con `!`. En este ejemplo, un valor de cadena es algo sólo cuando _no_ depuración:
+También puede negar un símbolo con `!`. En este ejemplo, el valor de una cadena es algo que solo se produce cuando _no_ se depura:
 
 ```fsharp
 #if !DEBUG
@@ -62,7 +62,7 @@ Al compilar, el compilador informa de los posibles errores en el código de F# h
 
 Cuando se usa la directiva `#line`, es necesario que los nombres de archivo estén entre comillas. A menos que el token textual (`@`) aparezca delante de la cadena, hay que anteponer caracteres de barra diagonal inversa usando dos caracteres de barra diagonal inversa en lugar de uno, ya que así se podrán usar en la ruta de acceso. Los siguientes tokens de línea son válidos. En estos ejemplos, se da por hecho que el archivo original `Script1` da como resultado un archivo de código de F# generado automáticamente cuando se ejecuta con una herramienta y, asimismo, que el código en la ubicación de estas directivas se genera a partir de determinados tokens en la línea 25 del archivo `Script1`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7303.fs)]
 
 Estos tokens indican que el código de F# generado en esta ubicación se deriva de algunas construcciones en la línea `25` en `Script1`, o cerca de ella.
 
@@ -72,11 +72,11 @@ Las directivas de compilador se parecen a las directivas de preprocesador porque
 
 En la siguiente tabla se recoge una lista de las directivas de compilador disponibles en F#.
 
-|Directiva|Descripción|
+|Directiva|DESCRIPCIÓN|
 |---------|-----------|
-|`#light` ["activado"&#124;"desactivado"]|Habilita o deshabilita la sintaxis ligera de cara a la compatibilidad con otras versiones de ML. La sintaxis ligera está habilitada de forma predeterminada. La sintaxis detallada siempre está habilitada. Por lo tanto, puede usar ambas sintaxis, la ligera y la detallada. La directiva `#light` es equivalente en sí misma a `#light "on"`. Si especifica `#light "off"`, tendrá que usar la sintaxis detallada en todas las construcciones del lenguaje. La sintaxis en la documentación de F# se muestra bajo la asunción de que se está usando la sintaxis ligera. Para obtener más información, consulte [sintaxis detallada](verbose-syntax.md).|
+|`#light`["ON"&#124;"OFF"]|Habilita o deshabilita la sintaxis ligera de cara a la compatibilidad con otras versiones de ML. La sintaxis ligera está habilitada de forma predeterminada. La sintaxis detallada siempre está habilitada. Por lo tanto, puede usar ambas sintaxis, la ligera y la detallada. La directiva `#light` es equivalente en sí misma a `#light "on"`. Si especifica `#light "off"`, tendrá que usar la sintaxis detallada en todas las construcciones del lenguaje. La sintaxis en la documentación de F# se muestra bajo la asunción de que se está usando la sintaxis ligera. Para obtener más información, vea [Sintaxis detallada](verbose-syntax.md).|
 
-Las directivas de intérprete (fsi.exe), consulte [programación interactiva con F# ](../tutorials/fsharp-interactive/index.md).
+Para las directivas de intérprete (FSI. exe), vea [programación F#interactiva con ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Vea también
 

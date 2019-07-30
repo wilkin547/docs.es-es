@@ -1,60 +1,61 @@
 ---
-title: Procedimiento Crear una nueva Variable (Visual Basic)
+title: Procedimiento Crear una nueva variable (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6cb7225ea203f0b38b731795684bfb0cfdfd2d1
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938247"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630904"
 ---
-# <a name="how-to-create-a-new-variable-visual-basic"></a>Procedimiento Crear una nueva Variable (Visual Basic)
-Crear una variable con un [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
-  
-### <a name="to-create-a-new-variable"></a>Para crear una nueva variable  
-  
-1. Declare la variable en un `Dim` instrucción.  
-  
-    ```  
-    Dim newCustomer  
-    ```  
-  
-2. Incluir especificaciones para las características de la variable, como [privada](../../../../visual-basic/language-reference/modifiers/private.md), [estático](../../../../visual-basic/language-reference/modifiers/static.md), [sombras](../../../../visual-basic/language-reference/modifiers/shadows.md), o [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). Para obtener más información, consulte [características de los elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md).  
-  
-    ```  
-    Public Static newCustomer  
-    ```  
-  
-     No es necesario el `Dim` palabra clave si usa otras palabras clave en la declaración.  
-  
-3. Siga las especificaciones con el nombre de variable, que debe seguir las convenciones y reglas de Visual Basic. Para obtener más información, consulte [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
-  
-    ```  
-    Public Static newCustomer  
-    ```  
-  
-4. Siga con el nombre de la [como](../../../../visual-basic/language-reference/statements/as-clause.md) cláusula para especificar el tipo de datos de la variable.  
-  
-    ```  
-    Public Static newCustomer As Customer  
-    ```  
-  
-     Si no especifica el tipo de datos, usa el valor predeterminado: `Object`.  
-  
-5. Siga el `As` cláusula con un signo igual (`=`) y siga el signo igual con el valor inicial de la variable.  
-  
-     Visual Basic se asigna el valor especificado a la variable cada vez que se ejecuta el `Dim` instrucción. Si no especifica un valor inicial, Visual Basic asigna el valor inicial predeterminado para el tipo de datos de la variable cuando entra en primer lugar en el código que contiene el `Dim` instrucción.  
-  
-     Si la variable es un tipo de referencia, puede crear una instancia de su clase incluyendo la [nuevo operador](../../../../visual-basic/language-reference/operators/new-operator.md) palabra clave en el `As` cláusula. Si no usas `New`, el valor inicial de la variable es [nada](../../../../visual-basic/language-reference/nothing.md).  
-  
-    ```  
-    Public Static newCustomer As New Customer  
-    ```  
-  
+# <a name="how-to-create-a-new-variable-visual-basic"></a>Procedimiento Crear una nueva variable (Visual Basic)
+
+Cree una variable con una [instrucción Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).
+
+### <a name="to-create-a-new-variable"></a>Para crear una nueva variable
+
+1. Declare la variable en `Dim` una instrucción.
+
+    ```vb
+    Dim newCustomer
+    ```
+
+2. Incluye especificaciones para las características de la variable, como [Private](../../../../visual-basic/language-reference/modifiers/private.md), [static](../../../../visual-basic/language-reference/modifiers/static.md), [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)o [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md). Para obtener más información, vea características de los [elementos](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)declarados.
+
+    ```vb
+    Public Static newCustomer
+    ```
+
+    No necesita la `Dim` palabra clave si utiliza otras palabras clave en la declaración.
+
+3. Siga las especificaciones con el nombre de la variable, que debe seguir Visual Basic reglas y convenciones. Para obtener más información, vea [nombres de elementos](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)declarados.
+
+    ```vb
+    Public Static newCustomer
+    ```
+
+4. Siga el nombre con la cláusula [as](../../../../visual-basic/language-reference/statements/as-clause.md) para especificar el tipo de datos de la variable.
+
+    ```vb
+    Public Static newCustomer As Customer
+    ```
+
+    Si no se especifica el tipo de datos, se usa el valor predeterminado `Object`:.
+
+5. Siga la `As` cláusula con un signo igual (`=`) y siga el signo igual con el valor inicial de la variable.
+
+    Visual Basic asigna el valor especificado a la variable cada vez que se ejecuta la `Dim` instrucción. Si no especifica un valor inicial, Visual Basic asigna el valor inicial predeterminado para el tipo de datos de la variable cuando entra por primera vez en el código que contiene la `Dim` instrucción.
+
+    Si la variable es un tipo de referencia, puede crear una instancia de su clase incluyendo la palabra clave [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) en la `As` cláusula. Si no usa `New`, el valor inicial de la variable es [Nothing](../../../../visual-basic/language-reference/nothing.md).
+
+    ```vb
+    Public Static newCustomer As New Customer
+    ```
+
 ## <a name="see-also"></a>Vea también
 
 - [Variables](../../../../visual-basic/programming-guide/language-features/variables/index.md)

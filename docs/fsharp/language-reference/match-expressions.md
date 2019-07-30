@@ -1,17 +1,17 @@
 ---
-title: Expresiones de coincidencia.
-description: Obtenga información sobre cómo el F# expresión de coincidencia proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.
+title: Expresiones de coincidencia
+description: Obtenga información sobre F# cómo la expresión de coincidencia proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.
 ms.date: 04/19/2018
-ms.openlocfilehash: 69ff8de1617e6b55d112d310bfcd8b2f967b6e8a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 222cb0604300039d86ed0c80293651631d212eb6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645200"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627614"
 ---
-# <a name="match-expressions"></a>Expresiones de coincidencia.
+# <a name="match-expressions"></a>Expresiones de coincidencia
 
-El `match` expresión proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.
+La `match` expresión proporciona control de bifurcación que se basa en la comparación de una expresión con un conjunto de patrones.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -31,9 +31,9 @@ function
 
 ## <a name="remarks"></a>Comentarios
 
-Las expresiones de coincidencia de patrón permiten bifurcaciones complejas basadas en la comparación de una expresión de prueba con un conjunto de patrones. En el `match` expresión, el *expresión de prueba* se compara con cada modelo a su vez, y cuando se encuentra una coincidencia, la correspondiente *expresión de resultado* se evalúa y el valor resultante es se devuelve como el valor de la expresión de coincidencia.
+Las expresiones de coincidencia de patrones permiten la bifurcación compleja basada en la comparación de una expresión de prueba con un conjunto de patrones. En la `match` expresión, *Test-Expression* se compara con cada patrón a su vez y, cuando se encuentra una coincidencia, se evalúa la *expresión de resultado* correspondiente y el valor resultante se devuelve como el valor de la expresión de coincidencia.
 
-El patrón de coincidencia de función que se muestra en la sintaxis anterior es una expresión lambda en el patrón de coincidencia se realiza inmediatamente en el argumento. El patrón de coincidencia de función que se muestra en la sintaxis anterior es equivalente a la siguiente.
+La función de coincidencia de patrones mostrada en la sintaxis anterior es una expresión lambda en la que la coincidencia de patrones se realiza inmediatamente en el argumento. La función de coincidencia de patrones que se muestra en la sintaxis anterior es equivalente a la siguiente.
 
 ```fsharp
 fun arg ->
@@ -43,27 +43,27 @@ fun arg ->
     | ...
 ```
 
-Para obtener más información sobre las expresiones lambda, vea [expresiones Lambda: El `fun` palabra clave](functions/lambda-expressions-the-fun-keyword.md).
+Para obtener más información sobre las expresiones lambda [, vea expresiones lambda: `fun` Palabra clave](./functions/lambda-expressions-the-fun-keyword.md).
 
-El conjunto completo de patrones debe cubrir a todas las coincidencias de la variable de entrada. Con frecuencia, puede usar el patrón de carácter comodín (`_`) como el último patrón para que coincida con los valores de entrada anteriormente no coincidentes.
+Todo el conjunto de patrones debe cubrir todas las posibles coincidencias de la variable de entrada. Con frecuencia, se usa el patrón de`_`carácter comodín () como último patrón para buscar coincidencias con los valores de entrada no coincidentes previamente.
 
-El código siguiente muestra algunas de las formas en que el `match` se usa la expresión. Para obtener una referencia y ejemplos de todos los posibles modelos que se pueden usar, consulte [coincidencia de patrones](pattern-matching.md).
+En el código siguiente se muestran algunas de las formas en que `match` se usa la expresión. Para obtener una referencia y ejemplos de todos los patrones posibles que se pueden usar, vea [coincidencia de patrones](pattern-matching.md).
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
 
-## <a name="guards-on-patterns"></a>Protecciones en los modelos
+## <a name="guards-on-patterns"></a>Protecciones en patrones
 
-Puede usar un `when` cláusula para especificar una condición adicional que la variable debe cumplir para que coincida con un patrón. Una cláusula de ese tipo se conoce como un *protegerse*. La expresión que sigue el `when` palabra clave no se evalúa a menos que se realiza una coincidencia para el modelo asociado a esa restricción.
+Puede usar una `when` cláusula para especificar una condición adicional que la variable debe cumplir para que coincida con un patrón. Este tipo de cláusula se conoce como *protección*. La expresión que sigue `when` a la palabra clave no se evalúa a menos que se haga una coincidencia con el patrón asociado a dicha protección.
 
-El ejemplo siguiente muestra el uso de una restricción para especificar un intervalo numérico para un modelo de variable. Tenga en cuenta que se combinan varias condiciones mediante operadores booleanos.
+En el ejemplo siguiente se muestra el uso de una protección para especificar un intervalo numérico para un patrón de variable. Tenga en cuenta que se combinan varias condiciones mediante el uso de operadores booleanos.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Tenga en cuenta que dado que no se puede usar valores distintos de literales en el patrón, debe usar un `when` cláusula si tiene alguna parte de la entrada con un valor de comparación. Esto se muestra en el código siguiente:
+Tenga en cuenta que, dado que los valores distintos de los literales no se pueden usar en `when` el modelo, debe utilizar una cláusula si tiene que comparar alguna parte de la entrada con un valor. Esto se muestra en el código siguiente:
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-Tenga en cuenta que cuando un patrón de unión está cubierto por una restricción, la protección se aplica a **todas** de los patrones, no solo la última de ellas. Por ejemplo, dado el código siguiente, el guardián `when a > 12` se aplica a ambos `A a` y `B a`:
+Tenga en cuenta que cuando un modelo de Unión está incluido en una protección, la protección se aplica a **todos** los patrones, no solo al último. Por ejemplo, según el código siguiente, la protección `when a > 12` se aplica tanto `A a` a `B a`como a:
 
 ```fsharp
 type Union =

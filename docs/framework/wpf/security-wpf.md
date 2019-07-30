@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 8d01e018e570a1ab530f476368d80f4082a73bda
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ec026fd9273e99c88ec2e30cf46c3147419ace94
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400793"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629811"
 ---
 # <a name="security-wpf"></a>Seguridad (WPF)
 <a name="introduction"></a>Al desarrollar aplicaciones independientes y hospedadas en un explorador Windows Presentation Foundation (WPF), debe tener en cuenta el modelo de seguridad. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]las aplicaciones independientes se ejecutan con permisos no restringidos (conjunto de permisos**FullTrust** de CAS), tanto si se implementan mediante Windows Installer (. msi), xcopy o ClickOnce. No se admite la implementación de aplicaciones de WPF independientes y de confianza parcial con ClickOnce. Sin embargo, una aplicación host de plena confianza puede crear una confianza <xref:System.AppDomain> parcial mediante el modelo de complemento de .NET Framework. Para obtener más información, consulte [Introducción a](./app-development/wpf-add-ins-overview.md)los complementos de WPF.  
@@ -216,9 +216,9 @@ ms.locfileid: "68400793"
   
 <a name="APTCA"></a>   
 ## <a name="disabling-aptca-assemblies-for-partially-trusted-client-applications"></a>Deshabilitar ensamblados APTCA para aplicaciones cliente de confianza parcial  
- Cuando los ensamblados administrados se [!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]instalan en, se vuelven totalmente confiables, ya que el usuario debe proporcionar permiso explícito para instalarlos. Dado que son de plena confianza, solo las aplicaciones cliente administradas de plena confianza pueden usarlos. Para permitir que las aplicaciones de confianza parcial las utilicen, deben marcarse con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Solo los ensamblados probados como seguros para la ejecución en confianza parcial se deben marcar con este atributo.  
+ Cuando los ensamblados administrados se instalan en la caché de ensamblados global (GAC), se vuelven totalmente confiables, ya que el usuario debe proporcionar permiso explícito para instalarlos. Dado que son de plena confianza, solo las aplicaciones cliente administradas de plena confianza pueden usarlos. Para permitir que las aplicaciones de confianza parcial las utilicen, deben marcarse con <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA). Solo los ensamblados probados como seguros para la ejecución en confianza parcial se deben marcar con este atributo.  
   
- Sin embargo, es posible que un ensamblado APTCA muestre un error de seguridad después de instalarlo [!INCLUDE[TLA2#tla_gac](../../../includes/tla2sharptla-gac-md.md)]en. Cuando se detecta un error de seguridad, los publicadores de ensamblados pueden producir una actualización de seguridad para corregir el problema en las instalaciones existentes y proteger las instalaciones que se produzcan después de detectar el problema. Una opción para la actualización es desinstalar el ensamblado, aunque eso podría causar que otras aplicaciones cliente de plena confianza que usan el ensamblado dejen de funcionar correctamente.  
+ Sin embargo, es posible que un ensamblado APTCA muestre un error de seguridad después de instalarse en la GAC. Cuando se detecta un error de seguridad, los publicadores de ensamblados pueden producir una actualización de seguridad para corregir el problema en las instalaciones existentes y proteger las instalaciones que se produzcan después de detectar el problema. Una opción para la actualización es desinstalar el ensamblado, aunque eso podría causar que otras aplicaciones cliente de plena confianza que usan el ensamblado dejen de funcionar correctamente.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]proporciona un mecanismo por el que se puede deshabilitar un ensamblado APTCA [!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)] para que sea de confianza parcial sin desinstalar el ensamblado APTCA.  
   

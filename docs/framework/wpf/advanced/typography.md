@@ -8,15 +8,15 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 144b137550ff44a8ea4927e6cf611d4761fcb01a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981934"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629610"
 ---
 # <a name="typography"></a>Tipografía
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] incluye compatibilidad para la presentación del contenido de texto. El texto de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se representa mediante [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)], que mejora la claridad y la legibilidad del texto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también admite [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes, que proporcionan funcionalidades adicionales más allá de los definidos por el [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] formato.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]incluye compatibilidad con la presentación enriquecida de contenido de texto. El texto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de se representa con Microsoft ClearType, lo que mejora la claridad y la legibilidad del texto. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]también admite [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] fuentes, que proporcionan capacidades adicionales más allá de las definidas [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] por el formato.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Tipografía en WPF](typography-in-wpf.md)  

@@ -1,13 +1,13 @@
 ---
 title: Valores
-description: Obtenga información sobre cómo los valores de F# son cantidades que tienen un tipo específico.
+description: Obtenga información sobre cómo F# los valores de son cantidades que tienen un tipo específico.
 ms.date: 05/16/2016
-ms.openlocfilehash: fe87bb568591b862737456ff92ba202ba7795e3d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641630"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630801"
 ---
 # <a name="values"></a>Valores
 
@@ -17,11 +17,11 @@ Los valores de F# son cantidades que tienen un tipo específico. Los valores pue
 
 El término *enlace* significa asociar un nombre a una definición. La palabra clave `let` enlaza un valor, como en los ejemplos siguientes:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 El tipo de un valor se infiere de la definición. Para un tipo primitivo, como un número entero o de punto flotante, el tipo se determina a partir del tipo del literal. Por tanto, en el ejemplo anterior, el compilador infiere que el tipo de `b` es `unsigned int`, mientras que el compilador infiere que el tipo de `a` es `int`. El tipo de un valor de función se determina a partir del valor devuelto en el cuerpo de la función. Para más información sobre los tipos de valor de función, vea [Funciones](../functions/index.md). Para más información sobre los tipos literales, vea [Literals](../literals.md) (Literales).
 
-El compilador no emite información de diagnóstico sobre sin usar enlaces de forma predeterminada. Para recibir estos mensajes, habilitar la advertencia 1182 en el archivo de proyecto o al invocar el compilador (consulte `--warnon` en [opciones del compilador](../compiler-options.md)).
+De forma predeterminada, el compilador no emite diagnósticos sobre los enlaces no utilizados. Para recibir estos mensajes, habilite la advertencia 1182 en el archivo del proyecto o al invocar al compilador (vea `--warnon` en [Opciones del compilador](../compiler-options.md)).
 
 ## <a name="why-immutable"></a>¿Por qué inmutables?
 
@@ -37,15 +37,15 @@ Se puede usar la palabra clave `mutable` para especificar una variable que se pu
 
 Se puede asignar un valor inicial a una variable mutable mediante la palabra clave `let` de la misma manera que se define un valor. Pero la diferencia reside en que, posteriormente, se pueden asignar nuevos valores a las variables mutables mediante el operador `<-`, como en el ejemplo siguiente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-Los valores marcados `mutable` se pueden promover automáticamente a `'a ref` si capturado por una clausura, incluidos los formularios que crean, como cierres, `seq` generadores. Si desea recibir una notificación cuando esto ocurre, habilitar la advertencia 3180 en el archivo de proyecto o al invocar el compilador.
+Los valores `mutable` marcados se pueden promover `'a ref` automáticamente a si se capturan mediante un cierre, incluidos los formularios que crean `seq` cierres, como los generadores. Si desea recibir una notificación cuando esto suceda, habilite la advertencia 3180 en el archivo del proyecto o al invocar al compilador.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Título|Descripción|
+|Título|DESCRIPCIÓN|
 |-----|-----------|
-|[Enlaces let](../functions/let-bindings.md)|Proporciona información sobre cómo usar el `let` palabra clave para enlazar nombres a los valores y funciones.|
+|[Enlaces let](../functions/let-bindings.md)|Proporciona información sobre el uso `let` de la palabra clave para enlazar nombres a valores y funciones.|
 |[Funciones](../functions/index.md)|Proporciona información general sobre las funciones en F#.|
 
 ## <a name="see-also"></a>Vea también

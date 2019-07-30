@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 987e48f163d35d27f6736464d7497451cca82c0c
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 440a6d76e5295613d2887c0a77d9a49e870e580b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400861"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629823"
 ---
 # <a name="wpf-architecture"></a>Arquitectura de WPF
 En este tema se proporciona un paseo guiado por la jerarquía de clases de Windows Presentation Foundation (WPF). En él se explican la mayoría de los subsistemas principales de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] y se describe cómo interactúan. También se detallan algunas de las decisiones tomadas por los arquitectos de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -30,7 +30,7 @@ En este tema se proporciona un paseo guiado por la jerarquía de clases de Windo
 ## <a name="systemobject"></a>System.Object  
  El modelo de programación primario de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se expone a través de código administrado. En las primeras fases del proceso de diseño de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], hubo varios debates sobre dónde se debería fijar el límite entre los componentes administrados del sistema y los no administrados. CLR proporciona una serie de características que hacen que el desarrollo sea más productivo y robusto (incluida la administración de la memoria, el control de errores, el sistema de tipos común, etc.), pero tienen un costo.  
   
- Los componentes principales de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se muestran en la ilustración siguiente. Las secciones rojas del diagrama (PresentationFramework, PresentationCore y Milcore) son los componentes principales del código de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. De estos, solo uno es un componente no administrado: Milcore. Milcore se ha escrito en código no administrado para permitir una estrecha integración con [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. La visualización en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se realiza a través del motor de [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], lo que permite una representación eficaz mediante hardware y software. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] también ha necesitado un control preciso sobre la memoria y la ejecución. El motor de composición de Milcore es sumamente sensible al rendimiento y se requiere que se ofrezcan muchas ventajas de CLR para obtener un rendimiento.  
+ Los componentes principales de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se muestran en la ilustración siguiente. Las secciones rojas del diagrama (PresentationFramework, PresentationCore y Milcore) son los componentes principales del código de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. De estos, solo uno es un componente no administrado: Milcore. Milcore está escrito en código no administrado con el fin de permitir una estrecha integración con DirectX. Todas las visualizaciones de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se realizan a través del motor de DirectX, lo que permite una representación eficaz de hardware y software. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] también ha necesitado un control preciso sobre la memoria y la ejecución. El motor de composición de Milcore es sumamente sensible al rendimiento y se requiere que se ofrezcan muchas ventajas de CLR para obtener un rendimiento.  
   
  ![La posición de WPF dentro de .NET Framework.](./media/wpf-architect1.PNG "wpf_architect1")  
   

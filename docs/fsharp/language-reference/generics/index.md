@@ -1,13 +1,13 @@
 ---
 title: Genéricos
-description: Aprenda a usar F# funciones genéricas y tipos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código.
+description: Aprenda a usar F# tipos y funciones genéricos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código.
 ms.date: 05/16/2016
-ms.openlocfilehash: e30b00343e48d3a8abd51f62c003ba0d1984db18
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641862"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630612"
 ---
 # <a name="generics"></a>Genéricos
 
@@ -49,19 +49,19 @@ Cuando el compilador de F# infiere los tipos del código, trata automáticamente
 
 En el ejemplo de código siguiente, `makeList` es genérico aunque no se ha declarado como tal y sus parámetros tampoco.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
 
 La firma de la función se infiere como `'a -> 'a -> 'a list`. Observe que en este ejemplo `a` y `b` se infieren para tener el mismo tipo. Esto se debe a que se incluyen en una lista y todos los elementos de una lista deben ser del mismo tipo.
 
 También se puede hacer genérica una función usando la sintaxis de comillas simples en una anotación de tipo para indicar que un tipo de parámetro es un parámetro de tipo genérico. En el código siguiente, `function1` es genérico porque sus parámetros se han declarado de esta manera, como parámetros de tipo.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
 
 ## <a name="explicitly-generic-constructs"></a>Construcciones explícitamente genéricas
 
 Para convertir una función en genérica, se declaran explícitamente sus parámetros de tipo entre corchetes angulares (`<type-parameter>`). Esto se ilustra en el código siguiente:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
 
 ## <a name="using-generic-constructs"></a>Uso de construcciones genéricas
 
@@ -69,7 +69,7 @@ Cuando se usan funciones o métodos genéricos, no siempre es necesario especifi
 
 En el código siguiente se muestra el uso de las funciones que se definen en las secciones anteriores.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
 > [!NOTE]
 > Hay dos maneras de hacer referencia a un tipo genérico por nombre. Por ejemplo, `list<int>` e `int list` son dos formas de hacer referencia a un tipo genérico `list` que tiene un único argumento de tipo `int`. Por convención, la segunda forma solo se usa con tipos de F# integrados como `list` y `option`. Si hay varios argumentos de tipo, normalmente se usa la sintaxis `Dictionary<int, string>`, pero también se puede usar la sintaxis `(int, string) Dictionary`.
@@ -78,7 +78,7 @@ En el código siguiente se muestra el uso de las funciones que se definen en las
 
 Para especificar que el compilador debe inferir un argumento de tipo, se puede usar un subrayado o símbolo comodín (`_`), en lugar de un argumento de tipo con nombre. Esto se muestra en el código siguiente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
 
 ## <a name="constraints-in-generic-types-and-functions"></a>Restricciones en los tipos y funciones genéricos
 
@@ -90,7 +90,7 @@ Hay dos clases de parámetros de tipo que se pueden usar en programas de F#. La 
 
 ## <a name="examples"></a>Ejemplos
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,17 +1,17 @@
 ---
 title: Registros
-description: Obtenga información sobre cómo F# registros representan agregados simples de valores con nombre, opcionalmente con miembros.
+description: Obtenga información F# sobre cómo los registros representan agregados simples de valores con nombre, opcionalmente con miembros.
 ms.date: 06/09/2019
-ms.openlocfilehash: cfb8de8272b479571119ae4cf91ea1d6fd5db73c
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: d92a1a7517e5b05ee687926df29f33fab123b4dd
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816191"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627285"
 ---
 # <a name="records"></a>Registros
 
-Los registros representan agregados simples de valores con nombre, opcionalmente con miembros. O bien pueden ser tipos de referencia o structs.  Son tipos de referencia de forma predeterminada.
+Los registros representan agregados simples de valores con nombre, opcionalmente con miembros. Pueden ser Structs o tipos de referencia.  Son tipos de referencia de forma predeterminada.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -26,55 +26,55 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, *typename* es el nombre del tipo de registro, *label1* y *label2* son nombres de valores, que se conoce como *etiquetas*, y *type1* y *type2* son los tipos de estos valores. *lista de miembros* es la lista opcional de miembros para el tipo.  Puede usar el `[<Struct>]` atributo para crear un registro de struct en lugar de un registro que es un tipo de referencia.
+En la sintaxis anterior, *TypeName* es el nombre del tipo de registro, *Label1* y *Label2* son nombres de valores, denominados *etiquetas*, y *Type1* y *tipo2* son los tipos de estos valores. *member-List* es la lista opcional de miembros del tipo.  Puede usar el `[<Struct>]` atributo para crear un registro struct en lugar de un registro que sea un tipo de referencia.
 
-Estos son algunos ejemplos.
+A continuación se muestran algunos ejemplos.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1901.fs)]
 
-Una vez cada etiqueta en una línea independiente, el punto y coma es opcional.
+Cuando cada etiqueta está en una línea independiente, el punto y coma es opcional.
 
-Puede establecer los valores en expresiones que se conoce como *grabar expresiones*. El compilador deduce el tipo de las etiquetas que se usa (si las etiquetas son suficientemente distintas de los de otros tipos de registros). Llaves ({}) contienen la expresión de registro. El código siguiente muestra una expresión de registro que inicializa un registro con tres elementos float con etiquetas `x`, `y` y `z`.
+Puede establecer valores en expresiones conocidas como *expresiones de registro*. El compilador deduce el tipo a partir de las etiquetas utilizadas (si las etiquetas son suficientemente distintas de las de otros tipos de registro). Las llaves ({}) incluyen la expresión de registro. En el código siguiente se muestra una expresión de registro que inicializa un registro con tres elementos Float `x`con `y` etiquetas `z`, y.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
-No utilice la forma abreviada si podría haber otro tipo que también tiene las mismas etiquetas.
+No utilice la forma abreviada si puede haber otro tipo que también tenga las mismas etiquetas.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-Las etiquetas del tipo declarado más recientemente tienen prioridad sobre las del tipo declarado previamente, por lo tanto en el ejemplo anterior, `mypoint3D` se infiere para ser `Point3D`. Puede especificar explícitamente el tipo de registro, como se muestra en el código siguiente.
+Las etiquetas del tipo declarado más recientemente tienen prioridad sobre las del tipo declarado previamente, por lo que en el ejemplo anterior, `mypoint3D` se deduce `Point3D`que es. Puede especificar explícitamente el tipo de registro, como en el código siguiente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
-Los métodos se pueden definir para los tipos de registros, como ocurre con los tipos de clase.
+Los métodos se pueden definir para tipos de registro del mismo modo que para los tipos de clase.
 
-## <a name="creating-records-by-using-record-expressions"></a>Creación de registros mediante el uso de expresiones de registro
+## <a name="creating-records-by-using-record-expressions"></a>Crear registros mediante expresiones de registro
 
-Puede inicializar los registros mediante el uso de las etiquetas que se definen en el registro. Una expresión que hace esto se conoce como un *grabar expresión*. Use llaves para incluir la expresión de registro y utilice el punto y coma como delimitador.
+Puede inicializar los registros mediante las etiquetas definidas en el registro. Una expresión que hace esto se conoce como una *expresión de registro*. Use llaves para encerrar la expresión de registro y use el punto y coma como delimitador.
 
-El ejemplo siguiente muestra cómo crear un registro.
+En el ejemplo siguiente se muestra cómo crear un registro.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
 
-El punto y coma después del último campo en la expresión de registro y en la definición de tipo es opcional, independientemente de si los campos están todas en una sola línea.
+Los signos de punto y coma después del último campo de la expresión de registro y de la definición de tipo son opcionales, independientemente de si todos los campos están en una sola línea.
 
-Cuando se crea un registro, debe proporcionar valores para cada campo. Los valores de otros campos en la expresión de inicialización para cualquier campo, no se puede consultar.
+Al crear un registro, debe proporcionar valores para cada campo. No se puede hacer referencia a los valores de otros campos de la expresión de inicialización de ningún campo.
 
-En el código siguiente, el tipo de `myRecord2` se deduce de los nombres de los campos. Si lo desea, puede especificar el nombre de tipo explícitamente.
+En el código siguiente, el tipo de `myRecord2` se deduce de los nombres de los campos. Opcionalmente, puede especificar el nombre del tipo explícitamente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Otra forma de construcción de registro puede ser útil cuando tiene que copiar un registro existente y posiblemente cambiar algunos de los valores de campo. Esto ilustra en la siguiente línea de código:
+Otra forma de construcción de registros puede ser útil si tiene que copiar un registro existente y, posiblemente, cambiar algunos de los valores de los campos. La siguiente línea de código ilustra esto.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-Este formulario de la expresión de registro se denomina el *copiar y actualizar la expresión de registro*.
+Esta forma de la expresión de registro se denomina *expresión de registro de copia y actualización*.
 
-Los registros son inmutables de manera predeterminada; Sin embargo, puede crear fácilmente los registros modificados mediante el uso de una expresión de copia y actualización. Puede especificar explícitamente un campo mutable.
+Los registros son inmutables de forma predeterminada; sin embargo, puede crear fácilmente registros modificados mediante una expresión de copia y actualización. También puede especificar explícitamente un campo mutable.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
 
-No use el atributo DefaultValue con campos de registro. Un mejor enfoque consiste en definir las instancias predeterminadas de los registros con campos que se inicializan en valores predeterminados y, a continuación, usar una copia y actualizar la expresión de registro para establecer los campos que difieren de los valores predeterminados.
+No use el atributo DefaultValue con campos de registro. Un mejor enfoque es definir instancias predeterminadas de registros con campos que se inicializan con valores predeterminados y, a continuación, usar una expresión de registro de copia y actualización para establecer los campos que difieren de los valores predeterminados.
 
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
@@ -90,13 +90,13 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
-## <a name="creating-mutually-recursive-records"></a>Crear mutuamente recursivas registros
+## <a name="creating-mutually-recursive-records"></a>Crear registros recursivos mutuamente
 
-En algún momento al crear un registro, desea hacer que dependen de otro tipo que le gustaría definir posteriormente. Se trata de un error de compilación a menos que defina los tipos de registro para ser mutuamente recursivas.
+En algún momento al crear un registro, puede que desee que dependa de otro tipo que le gustaría definir después. Se trata de un error de compilación a menos que defina los tipos de registro para que sean recursivos mutuamente.
 
-Definición mutuamente recursivas registros se realiza con el `and` palabra clave. Esto le permite vincular los tipos de 2 o más registros.
+La definición de registros recursivos mutuamente se realiza `and` con la palabra clave. Esto le permite vincular 2 o más tipos de registro juntos.
 
-Por ejemplo, el código siguiente define un `Person` y `Address` tipo como mutuamente recursivas:
+Por ejemplo, el código siguiente define un `Person` tipo `Address` y como recursivo mutuamente:
 
 ```fsharp
 // Create a Person type and use the Address type that is not defined
@@ -111,15 +111,15 @@ and Address =
     PostCode: string }
 ```
 
-Si tuviera que definir en el ejemplo anterior sin los `and` palabra clave, entonces no se compilará. El `and` palabra clave es necesaria para mutuamente recursivas definiciones.
+Si fuera a definir el ejemplo anterior sin la `and` palabra clave, no se compilaría. La `and` palabra clave es necesaria para las definiciones mutuamente recursivas.
 
 ## <a name="pattern-matching-with-records"></a>Coincidencia de patrones con registros
 
-Registros pueden utilizarse con coincidencia de patrones. Puede especificar algunos campos explícitamente y proporcionar variables para otros campos que se asignará cuando se produce una coincidencia. En el siguiente ejemplo código se muestra cómo hacerlo.
+Los registros se pueden usar con la coincidencia de patrones. Puede especificar algunos campos explícitamente y proporcionar variables para otros campos que se asignarán cuando se produzca una coincidencia. En el siguiente ejemplo código se muestra cómo hacerlo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
 
-El resultado de este código es como sigue.
+El resultado de este código es el siguiente.
 
 ```
 Point is at the origin.
@@ -127,23 +127,23 @@ Point is on the x-axis. Value is 100.000000.
 Point is at (10.000000, 0.000000, -1.000000).
 ```
 
-## <a name="differences-between-records-and-classes"></a>Diferencias entre clases y los registros
+## <a name="differences-between-records-and-classes"></a>Diferencias entre los registros y las clases
 
-Campos de registro difieren de las clases que automáticamente se exponen como propiedades, y se usan en la creación y copia de registros. Construcción de registro también difiere de la construcción de la clase. En un tipo de registro, no se puede definir un constructor. En su lugar, se aplica la sintaxis de construcción descrita en este tema. Las clases no tienen ninguna relación directa entre los parámetros del constructor, campos y propiedades.
+Los campos de registro difieren de las clases en que se exponen automáticamente como propiedades y se usan en la creación y copia de registros. La construcción de registros también difiere de la construcción de clases. En un tipo de registro, no se puede definir un constructor. En su lugar, se aplica la sintaxis de construcción que se describe en este tema. Las clases no tienen ninguna relación directa entre los parámetros de constructor, los campos y las propiedades.
 
-Al igual que los tipos de estructura y unión, los registros tienen semántica de igualdad estructural. Las clases tienen referencia semántica de igualdad. El siguiente ejemplo de código muestra esto.
+Al igual que los tipos de estructura y Unión, los registros tienen una semántica estructural de igualdad. Las clases tienen semántica de igualdad de referencia. El siguiente ejemplo de código muestra esto.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
-El resultado de este código es como sigue:
+El resultado de este código es el siguiente:
 
 ```
 The records are equal.
 ```
 
-Si escribe el mismo código con clases, los dos objetos de clase sería desiguales porque los dos valores representarían dos objetos en el montón y se comparan solo las direcciones (a menos que el tipo de clase invalida el `System.Object.Equals` método).
+Si escribe el mismo código con clases, los dos objetos de clase no serían iguales porque los dos valores representarían dos objetos en el montón y solo se compararían las direcciones (a menos que el tipo de `System.Object.Equals` clase invalide el método).
 
-Si necesita hacer referencia a la igualdad para los registros, agregue el atributo `[<ReferenceEquality>]` anteriormente el registro.
+Si necesita igualdad de referencia para los registros, agregue el `[<ReferenceEquality>]` atributo encima del registro.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,17 +1,17 @@
 ---
 title: Unidades de medida
-description: Obtenga información de punto flotante cómo y valores enteros con signo F# pueden tener asociados a las unidades de medida, que normalmente se utilizan para indicar la longitud, el volumen y masivo.
+description: Obtenga información sobre cómo los valores de punto flotante y F# de entero con signo en pueden tener asociadas unidades de medida, que se suelen usar para indicar la longitud, el volumen y la masa.
 ms.date: 05/16/2016
-ms.openlocfilehash: 217ef67912625c0a4b187a7ee13a739de811cfcb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f97eac9984f934c55aff8cf9f287afbc3aa098f3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641635"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630163"
 ---
 # <a name="units-of-measure"></a>Unidades de medida
 
-Punto flotante y valores enteros con signo F# pueden tener asociados a las unidades de medida, que normalmente se utilizan para indicar la longitud, volumen, masa y así sucesivamente. Mediante el uso de las cantidades con unidades, permitir que el compilador comprobar que las relaciones aritméticas tienen las unidades correctas, que ayuda a evitar errores de programación.
+Los valores de punto flotante y de entero F# con signo en pueden tener asociadas unidades de medida, que se suelen usar para indicar la longitud, el volumen, la masa, etc. Mediante el uso de cantidades con unidades, se habilita el compilador para comprobar que las relaciones aritméticas tienen las unidades correctas, lo que ayuda a evitar errores de programación.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,65 +21,65 @@ Punto flotante y valores enteros con signo F# pueden tener asociados a las unida
 
 ## <a name="remarks"></a>Comentarios
 
-Define la sintaxis anterior *nombre de la unidad* como una unidad de medida. La parte opcional se utiliza para definir una nueva medida en términos de unidades definidas previamente. Por ejemplo, la línea siguiente define la medida `cm` (centímetro).
+La sintaxis anterior define el *nombre de unidad* como unidad de medida. El elemento opcional se utiliza para definir una nueva medida en términos de unidades definidas previamente. Por ejemplo, la línea siguiente define la medida `cm` (centímetro).
 
 ```fsharp
 [<Measure>] type cm
 ```
 
-La línea siguiente define la medida `ml` (mililitro) como un centímetro cúbico (`cm^3`).
+En la línea siguiente se define `ml` la medida (milliliter) como un centímetro`cm^3`cúbico ().
 
 ```fsharp
 [<Measure>] type ml = cm^3
 ```
 
-En la sintaxis anterior, *medida* es una fórmula que implica unidades. En las fórmulas que impliquen unidades, se admiten potencias enteras (positivas y negativas), espacios entre unidades indican un producto de las dos unidades, `*` también indica un producto de unidades, y `/` indica un cociente de unidades. Para una unidad recíproca, puede usar una potencia de entero negativo o un `/` que indica una separación entre el numerador y denominador de una fórmula de la unidad. Varias unidades en el denominador deben estar entre paréntesis. Unidades separan por espacios después de un `/` se interpretan como parte del denominador, pero las unidades después un `*` se interpretan como parte del numerador.
+En la sintaxis anterior, *Measure* es una fórmula que implica unidades. En las fórmulas que implican unidades, se admiten las potencias enteras (positivas y negativas), los espacios entre las `*` unidades indican un producto de las dos unidades `/` , también indica un producto de unidades e indica un cociente de unidades. En el caso de una unidad recíproca, puede usar una potencia entera negativa o una `/` que indique una separación entre el numerador y el denominador de una fórmula de unidad. Varias unidades del denominador deben ir entre paréntesis. Las unidades separadas por espacios después `/` de un se interpretan como parte del denominador, pero las unidades que siguen `*` a un se interpretan como parte del numerador.
 
-Puede usar 1 en las expresiones de unidad, ya sea por sí solo para indicar una cantidad sin dimensiones, o junto con otras unidades, como se muestra en el numerador. Por ejemplo, las unidades para un índice se escribiría como `1/s`, donde `s` indica los segundos. No se emplean paréntesis en las fórmulas de la unidad. No se especifica las constantes de conversión numérica en las fórmulas de la unidad; Sin embargo, puede definir constantes de conversión con unidades por separado y utilizarlos en cálculos con comprobación de unidad.
+Puede usar 1 en expresiones unitarias, ya sea solo para indicar una cantidad sin dimensiones, o junto con otras unidades, como en el numerador. Por ejemplo, las unidades de una tasa se escribirían como `1/s`, donde `s` indica segundos. No se usan paréntesis en las fórmulas unitarias. No se especifican constantes de conversión numéricas en las fórmulas unitarias; sin embargo, puede definir constantes de conversión con unidades por separado y usarlas en cálculos con comprobación unitaria.
 
-Las fórmulas de la unidad que significan lo mismo pueden escribirse de diferentes formas equivalentes. Por lo tanto, el compilador convierte las fórmulas de la unidad en un formato coherente, lo que convierte potencias negativas recíprocos, unidades de grupos en un solo numerador y denominador y se ordenan alfabéticamente las unidades en el numerador y denominador.
+Las fórmulas de unidad que significan lo mismo pueden escribirse de varias formas equivalentes. Por lo tanto, el compilador convierte las fórmulas unitarias en un formato coherente, que convierte las potencias negativas en recíprocos, agrupa las unidades en un solo numerador y un denominador, y alphabetizes las unidades en el numerador y el denominador.
 
-Por ejemplo, las fórmulas de unidades `kg m s^-2` y `m /s s * kg` se convierten en `kg m/s^2`.
+Por ejemplo, las fórmulas `kg m s^-2` de `m /s s * kg` unidad y se convierten en `kg m/s^2`.
 
-Utilice las unidades de medida en expresiones de punto flotante. El uso de números de punto flotante junto con los asociados unidades de medida agrega otro nivel de seguridad de tipos y ayuda a evitar los errores de coincidencia de unidad que se pueden producir en las fórmulas cuando usas débilmente tipada números de punto flotante. Si escribe un flotante expresión de punto que usa unidades, las unidades en la expresión deben coincidir.
+En las expresiones de punto flotante se usan unidades de medida. El uso de números de punto flotante junto con unidades de medida asociadas agrega otro nivel de seguridad de tipos y ayuda a evitar los errores de no coincidencia de unidad que se pueden producir en las fórmulas cuando se utilizan números de punto flotante débilmente tipados. Si escribe una expresión de punto flotante que utiliza unidades, las unidades de la expresión deben coincidir.
 
-Puede anotar literales con una fórmula de la unidad en corchetes angulares, como se muestra en los ejemplos siguientes.
+Puede anotar literales con una fórmula de unidad entre corchetes angulares, tal como se muestra en los ejemplos siguientes.
 
 ```fsharp
 1.0<cm>
 55.0<miles/hour>
 ```
 
-No colocar un espacio entre el número y el corchete angular; Sin embargo, puede incluir un sufijo literal como `f`, como en el ejemplo siguiente.
+No se coloca un espacio entre el número y el corchete angular; sin embargo, puede incluir un sufijo `f`literal como, como en el ejemplo siguiente.
 
 ```fsharp
 // The f indicates single-precision floating point.
 55.0f<miles/hour>
 ```
 
-Este tipo de anotación cambia el tipo del literal desde su tipo primitivo (como `float`) a un tipo con dimensiones, como `float<cm>` o, en este caso, `float<miles/hour>`. La anotación de una unidad `<1>` indica una cantidad sin dimensiones y su tipo es equivalente al tipo primitivo sin un parámetro de la unidad.
+Esta anotación cambia el tipo del literal de su tipo primitivo ( `float`como) a un tipo de dimensión, `float<cm>` como o, en este caso, `float<miles/hour>`. Una anotación de unidad de `<1>` indica una cantidad sin dimensiones y su tipo es equivalente al tipo primitivo sin un parámetro de unidad.
 
-El tipo de una unidad de medida es un punto flotante o un tipo entero junto con una anotación de unidad adicional, indicado entre corchetes con signo. Por lo tanto, al escribir el tipo de conversión de `g` (gramos) a `kg` (kg), se describen los tipos como sigue.
+El tipo de una unidad de medida es un tipo de punto flotante o entero con signo junto con una anotación de unidad adicional, indicado entre corchetes. Por lo tanto, al escribir el tipo de una conversión `g` de (gramos) `kg` a (kilogramos), se describen los tipos de la siguiente manera.
 
 ```fsharp
 let convertg2kg (x : float<g>) = x / 1000.0<g/kg>
 ```
 
-Las unidades de medida se usan para la comprobación de unidades en tiempo de compilación, pero no se conservan en el entorno de tiempo de ejecución. Por lo tanto, no afectan al rendimiento.
+Las unidades de medida se utilizan para la comprobación unitaria en tiempo de compilación pero no se conservan en el entorno en tiempo de ejecución. Por lo tanto, no afectan al rendimiento.
 
-Las unidades de medida se pueden aplicar a cualquier tipo, no solo los tipos de punto; de flotante Sin embargo, solo los tipos de punto flotante, firma tipos enteros y tipos decimales admiten cantidades con dimensiones. Por lo tanto, solo tiene sentido utilizar unidades de medida en los tipos primitivos y los agregados que contienen estos tipos primitivos.
+Las unidades de medida se pueden aplicar a cualquier tipo, no solo a los tipos de punto flotante; sin embargo, solo los tipos de punto flotante, los tipos enteros con signo y los tipos decimales admiten cantidades dimensionales. Por lo tanto, solo tiene sentido utilizar unidades de medida en los tipos primitivos y en los agregados que contienen estos tipos primitivos.
 
-El ejemplo siguiente muestra el uso de unidades de medida.
+En el ejemplo siguiente se muestra el uso de unidades de medida.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6901.fs)]
 
-El ejemplo de código siguiente muestra cómo convertir de un número de punto flotante sin dimensiones en un valor de punto flotante con dimensiones. Solo multiplique por 1,0, aplicando las dimensiones para la versión 1.0. Esto se puede abstraer en una función como `degreesFahrenheit`.
+En el ejemplo de código siguiente se muestra cómo convertir un número de punto flotante no dimensional en un valor de punto flotante de dimensión. Solo tiene que multiplicar por 1,0 y aplicar las dimensiones a 1,0. Puede abstraerlo en una función como `degreesFahrenheit`.
 
-Además, al pasar valores con dimensiones a funciones que esperan números de punto flotante sin dimensiones, debe anular las unidades o convertir `float` utilizando el `float` operador. En este ejemplo, se divide por `1.0<degC>` para los argumentos de `printf` porque `printf` espera cantidades sin dimensiones.
+Además, cuando pase valores con dimensiones a funciones que esperan números de punto flotante sin dimensiones, debe cancelar las unidades o convertirlos en `float` mediante el `float` operador. En este ejemplo, se divide por `1.0<degC>` para los argumentos en `printf` porque `printf` espera cantidades no dimensionales.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6902.fs)]
 
-La sesión de ejemplo siguiente muestra las entradas y salidas de este código.
+En la sesión de ejemplo siguiente se muestran los resultados de las entradas y en este código.
 
 ```
 Enter a temperature in degrees Fahrenheit.
@@ -87,35 +87,35 @@ Enter a temperature in degrees Fahrenheit.
 That temperature in degrees Celsius is    32.22.
 ```
 
-## <a name="using-generic-units"></a>Usar unidades genéricas
+## <a name="using-generic-units"></a>Uso de unidades genéricas
 
-Puede escribir funciones genéricas que funcionan con datos que tienen una unidad de medida asociada. Para ello, especifica un tipo junto con una unidad genérico como un parámetro de tipo, como se muestra en el siguiente ejemplo de código.
+Puede escribir funciones genéricas que operan en datos que tienen una unidad de medida asociada. Para ello, especifique un tipo junto con una unidad genérica como parámetro de tipo, tal y como se muestra en el ejemplo de código siguiente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6903.fs)]
 
-## <a name="creating-aggregate-types-with-generic-units"></a>Crear tipos agregados con unidades genéricas
+## <a name="creating-aggregate-types-with-generic-units"></a>Crear tipos de agregado con unidades genéricas
 
-El código siguiente muestra cómo crear un tipo agregado que consta de los valores de punto flotante individuales que tienen unidades que son genéricas. Esto permite que un solo tipo crearse que funciona con una variedad de unidades. También, unidades genéricas conservan la seguridad de tipos asegurándose de que un tipo genérico que tiene un conjunto de unidades es un tipo diferente que el mismo tipo genérico con un conjunto diferente de unidades. La base de esta técnica es que la `Measure` atributo puede aplicarse al parámetro de tipo.
+En el código siguiente se muestra cómo crear un tipo de agregado que consta de valores de punto flotante individuales que tienen unidades que son genéricas. Esto permite crear un único tipo que funciona con una variedad de unidades. Además, las unidades genéricas conservan la seguridad de tipos asegurándose de que un tipo genérico que tiene un conjunto de unidades es un tipo diferente del mismo tipo genérico con un conjunto de unidades diferente. La base de esta técnica es que el `Measure` atributo se puede aplicar al parámetro de tipo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6904.fs)]
 
 ## <a name="units-at-runtime"></a>Unidades en tiempo de ejecución
 
-Las unidades de medida se usan para la comprobación de tipos estáticos. Cuando se compilan los valores de punto flotante, se eliminan las unidades de medida, por lo que se pierden las unidades de tiempo de ejecución. Por lo tanto, cualquier intento de implementar la funcionalidad que depende de las unidades de la comprobación en tiempo de ejecución no es posible. Por ejemplo, implementar un `ToString` función para imprimir las unidades no es posible.
+Las unidades de medida se utilizan para la comprobación de tipos estáticos. Cuando se compilan los valores de punto flotante, se eliminan las unidades de medida, por lo que las unidades se pierden en tiempo de ejecución. Por lo tanto, no es posible cualquier intento de implementar la funcionalidad que depende de la comprobación de las unidades en tiempo de ejecución. Por ejemplo, no es `ToString` posible implementar una función para imprimir las unidades.
 
 ## <a name="conversions"></a>Conversiones
 
-Para convertir un tipo que tiene unidades (por ejemplo, `float<'u>`) a un tipo que no tenga unidades, puede usar la función de conversión estándar. Por ejemplo, puede usar `float` para convertir en un `float` valor que no tenga unidades, como se muestra en el código siguiente.
+Para convertir un tipo que tiene unidades (por ejemplo, `float<'u>`) en un tipo que no tiene unidades, puede usar la función de conversión estándar. Por ejemplo, puede usar `float` para convertir en un `float` valor que no tiene unidades, como se muestra en el código siguiente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6905.fs)]
 
-Para convertir un valor sin unidades en un valor que tiene unidades, puede multiplicar por un valor de 1 ó 1.0 que se anota con las unidades adecuadas. Sin embargo, para escribir los niveles de interoperabilidad, también hay algunas funciones explícitas que puede usar para convertir valores sin unidades en valores con unidades. Estos son en el [Microsoft.FSharp.Core.LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) módulo. Por ejemplo, para convertir de un sin unidades `float` a un `float<cm>`, utilice [FloatWithMeasure](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), tal y como se muestra en el código siguiente.
+Para convertir un valor sin unidades en un valor que tiene unidades, puede multiplicar por un valor 1 o 1,0 anotado con las unidades adecuadas. Sin embargo, para escribir capas de interoperabilidad, también hay algunas funciones explícitas que puede usar para convertir valores sin unidades en valores con unidades. Se encuentran en el módulo [Microsoft. FSharp. Core. LanguagePrimitives](https://msdn.microsoft.com/library/69d08ac5-5d51-4c20-bf1e-850fd312ece3) . Por ejemplo, para convertir de una unidad `float` a una `float<cm>`, use [floatwithmeasure (](https://msdn.microsoft.com/library/69520bc7-d67b-46b8-9004-7cac9646b8d9), tal y como se muestra en el código siguiente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Las unidades de medida en el F# biblioteca principal
+## <a name="units-of-measure-in-the-f-core-library"></a>Unidades de medida en la F# biblioteca principal
 
-Una biblioteca de la unidad está disponible en el `FSharp.Data.UnitSystems.SI` espacio de nombres. Incluye las unidades en su forma de símbolos de ambos (como `m` medidor) en el `UnitSymbols` subespacio de nombres y su nombre completo (como `meter` medidor) en el `UnitNames` subespacio de nombres.
+Una biblioteca de unidades está disponible en `FSharp.Data.UnitSystems.SI` el espacio de nombres. Incluye las unidades si en su forma de símbolo (como `m` para el medidor) en `UnitSymbols` el subespacio de nombres y su nombre completo ( `meter` como para el medidor) `UnitNames` en el subespacio de nombres.
 
 ## <a name="see-also"></a>Vea también
 

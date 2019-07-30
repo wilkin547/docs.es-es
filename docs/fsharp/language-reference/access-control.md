@@ -1,56 +1,56 @@
 ---
 title: Control de acceso
-description: Obtenga información sobre cómo controlar el acceso a elementos de programación como tipos, métodos y funciones, en el F# lenguaje de programación.
+description: Obtenga información sobre cómo controlar el acceso a elementos de programación, como tipos, métodos y funciones, en F# el lenguaje de programación.
 ms.date: 05/16/2016
-ms.openlocfilehash: a284d2fa4f98e444279276f58b70a15560537ca4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ed77a09cf87aabf9a4134276e89e84aa42abd3c3
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645608"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629958"
 ---
 # <a name="access-control"></a>Control de acceso
 
-*Control de acceso* se refiere a declarar qué clientes pueden utilizar ciertos elementos del programa, como tipos, métodos y funciones.
+El *control de acceso* hace referencia a la declaración de los clientes que pueden usar determinados elementos de programa, como tipos, métodos y funciones.
 
-## <a name="basics-of-access-control"></a>Conceptos básicos de Control de acceso
+## <a name="basics-of-access-control"></a>Aspectos básicos de Access Control
 
-En F#, los especificadores de control de acceso `public`, `internal`, y `private` puede aplicarse a los módulos, tipos, métodos, las definiciones de valor, funciones, propiedades y campos explícitos.
+En F#, los especificadores `public`de control de `internal`acceso, `private` y se pueden aplicar a módulos, tipos, métodos, definiciones de valores, funciones, propiedades y campos explícitos.
 
-- `public` indica que la entidad puede tener acceso a todos los llamadores.
+- `public`indica que todos los llamadores pueden tener acceso a la entidad.
 
-- `internal` indica que la entidad se puede acceder solo desde el mismo ensamblado.
+- `internal`indica que solo se puede tener acceso a la entidad desde el mismo ensamblado.
 
-- `private` indica que la entidad se puede acceder solo desde el tipo o módulo envolvente.
+- `private`indica que solo se puede tener acceso a la entidad desde el tipo o módulo envolvente.
 
 > [!NOTE]
-> El especificador de acceso `protected` no se utiliza en F#, aunque es aceptable si se utilizan tipos creados en lenguajes que admiten `protected` acceso. Por lo tanto, si invalida un método protegido, el método sigue siendo accesible únicamente dentro de la clase y sus descendientes.
+> El especificador `protected` de acceso no se utiliza F#en, aunque es aceptable si se usan tipos creados en lenguajes que admiten `protected` el acceso. Por consiguiente, si invalida un método protegido, el método permanece accesible solo dentro de la clase y sus descendientes.
 
-En general, el especificador se coloca delante del nombre de la entidad, excepto cuando una `mutable` o `inline` especificador se usa, que aparecen después del especificador de control de acceso.
+En general, el especificador se coloca delante del nombre de la entidad, excepto cuando se usa un `mutable` especificador o `inline` , que aparecen después del especificador de control de acceso.
 
-Si no se utiliza ningún especificador de acceso, el valor predeterminado es `public`, excepto para `let` enlaces en un tipo, que siempre son `private` al tipo.
+Si no se usa ningún especificador de acceso, el `public`valor predeterminado es `let` , excepto para los enlaces de un tipo, `private` que siempre son del tipo.
 
-Las firmas en F# proporcionan otro mecanismo para controlar el acceso a F# elementos del programa. Las firmas no son necesarias para el control de acceso. Para más información, vea [Signatures](signatures.md) (Firmas).
+Las firmas de F# proporcionan otro mecanismo para controlar el acceso F# a los elementos del programa. No se necesitan firmas para el control de acceso. Para más información, vea [Signatures](signatures.md) (Firmas).
 
-## <a name="rules-for-access-control"></a>Reglas de Control de acceso
+## <a name="rules-for-access-control"></a>Reglas para Access Control
 
-Control de acceso está sujeto a las reglas siguientes:
+El control de acceso está sujeto a las siguientes reglas:
 
-- Las declaraciones de herencia (es decir, el uso de `inherit` para especificar una clase base para una clase), las declaraciones (es decir, especificar que una clase implementa una interfaz) de la interfaz y abstraer los miembros siempre tienen la misma accesibilidad que el tipo envolvente. Por lo tanto, no se puede usar un especificador de control de acceso en estas construcciones.
+- Las declaraciones de herencia (es decir, el uso `inherit` de para especificar una clase base para una clase), las declaraciones de interfaz (es decir, la especificación de que una clase implementa una interfaz) y los miembros abstractos siempre tienen la misma accesibilidad que el tipo envolvente. Por lo tanto, no se puede usar un especificador de control de acceso en estas construcciones.
 
-- Accesibilidad para los casos individuales de una unión discriminada viene determinada por la accesibilidad de la propia unión discriminada. Es decir, un caso de unión concreto no menos accesible que la propia unión.
+- La accesibilidad de los casos individuales en una Unión discriminada viene determinada por la accesibilidad de la propia Unión discriminada. Es decir, un caso de Unión determinado no es menos accesible que la propia Unión.
 
-- Accesibilidad para campos individuales de un tipo de registro no viene determinada por la accesibilidad del mismo registro. Es decir, una etiqueta de registro concreto no menos accesible que el mismo registro.
+- La accesibilidad del propio registro no puede determinar la accesibilidad de los campos individuales de un tipo de registro. Es decir, una etiqueta de registro determinada no es menos accesible que el propio registro.
 
 ## <a name="example"></a>Ejemplo
 
-El código siguiente muestra el uso de especificadores de control de acceso. Hay dos archivos en el proyecto, `Module1.fs` y `Module2.fs`. Cada archivo es implícitamente un módulo. Por lo tanto, hay dos módulos, `Module1` y `Module2`. Un tipo privado y un tipo interno se definen en `Module1`. El tipo privado no es accesible desde `Module2`, pero puede tipo interno.
+En el código siguiente se muestra el uso de especificadores de control de acceso. Hay dos archivos en el proyecto, `Module1.fs` y. `Module2.fs` Cada archivo es implícitamente un módulo. Por lo tanto, hay dos módulos `Module1` , `Module2`y. En `Module1`se definen un tipo privado y un tipo interno. No se puede tener acceso al tipo privado `Module2`desde, pero el tipo interno puede.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet1.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/access-control/snippet1.fs)]
 
-El código siguiente comprueba la accesibilidad de los tipos creados en `Module1.fs`.
+En el código siguiente se prueba la accesibilidad de los tipos `Module1.fs`creados en.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/access-control/snippet2.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/access-control/snippet2.fs)]
 
 ## <a name="see-also"></a>Vea también
 

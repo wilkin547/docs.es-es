@@ -1,17 +1,17 @@
 ---
-title: 'Expresiones lambda: La palabra clave fun'
-description: Aprenda a usar el F# palabra clave "diversión" para definir una expresión lambda, que es una función anónima.
+title: 'Expresiones lambda: Palabra clave Fun'
+description: Obtenga información sobre cómo usar F# la palabra clave "Fun" para definir una expresión lambda, que es una función anónima.
 ms.date: 05/16/2016
-ms.openlocfilehash: c59d32bd4226384213453f1a9d362209e68a6fb5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9818724686dd83a7e352fb36819289fa19b002df
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645387"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630665"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>Expresiones lambda: La palabra clave fun (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>Expresiones lambda: Palabra clave Fun (F#)
 
-El `fun` palabra clave se usa para definir una expresión lambda, es decir, una función anónima.
+La `fun` palabra clave se usa para definir una expresión lambda, es decir, una función anónima.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -21,7 +21,7 @@ fun parameter-list -> expression
 
 ## <a name="remarks"></a>Comentarios
 
-El *lista de parámetros* normalmente consta de los nombres y, opcionalmente, tipos de parámetros. Por lo general, el *lista de parámetros* puede estar formada por cualquier F# patrones. Para obtener una lista completa de patrones posibles, consulte [coincidencia de patrones](../pattern-matching.md). Listas de parámetros válidos incluyen los ejemplos siguientes.
+La *lista de parámetros* consta normalmente de nombres y, opcionalmente, tipos de parámetros. En general, la *lista de parámetros* puede estar formada por F# patrones. Para obtener una lista completa de los posibles patrones, consulte [coincidencia](../pattern-matching.md)de patrones. Entre las listas de parámetros válidos se incluyen los ejemplos siguientes.
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -36,15 +36,15 @@ fun (a, b) -> …
 fun head :: tail -> …
 ```
 
-El *expresión* es el cuerpo de la función, la última expresión que genera un valor devuelto. Ejemplos de expresiones lambda válidas incluyen lo siguiente:
+La *expresión* es el cuerpo de la función, la última expresión de la que genera un valor devuelto. Entre los ejemplos de expresiones lambda válidas se incluyen los siguientes:
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet301.fs)]
 
 ## <a name="using-lambda-expressions"></a>Uso de expresiones lambda
 
-Las expresiones lambda son especialmente útiles cuando desea realizar operaciones en una lista o en otra colección y desea evitar el trabajo adicional de definir una función. Muchos F# las funciones de biblioteca toman los valores de función como argumentos, y puede ser especialmente útil usar una expresión lambda en esos casos. El código siguiente aplica una expresión lambda a elementos de una lista. En este caso, la función anónima suma 1 a cada elemento de una lista.
+Las expresiones lambda son especialmente útiles cuando se desea realizar operaciones en una lista o en otra colección y se desea evitar el trabajo adicional de definir una función. Muchas F# funciones de la biblioteca toman los valores de función como argumentos y puede ser especialmente conveniente usar una expresión lambda en esos casos. En el código siguiente se aplica una expresión lambda a los elementos de una lista. En este caso, la función anónima agrega 1 a todos los elementos de una lista.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 
 ## <a name="see-also"></a>Vea también
 

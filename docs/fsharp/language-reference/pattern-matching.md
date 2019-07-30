@@ -1,23 +1,23 @@
 ---
 title: Coincidencia de modelos
-description: Obtenga información sobre cómo se usan patrones en F# para comparar los datos con estructuras lógicas, descomponer datos en sus partes constituyentes o extraer información de los datos.
+description: Obtenga información sobre cómo se usan F# los patrones en para comparar datos con estructuras lógicas, descomponer datos en elementos constituyentes o extraer información de los datos.
 ms.date: 05/16/2016
-ms.openlocfilehash: f76a5fb675f83df87dd896f471a3552495f39e7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641766"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627301"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
-Los modelos son reglas para transformar los datos de entrada. Se usan en toda la F# lenguaje para comparar los datos con una estructura lógica o las estructuras, descomponer datos en sus partes constituyentes o extraer información de los datos de varias maneras.
+Los patrones son reglas para transformar los datos de entrada. Se usan en todo el F# lenguaje para comparar los datos con una estructura lógica o estructuras, descomponer los datos en partes constituyentes o extraer información de los datos de varias maneras.
 
 ## <a name="remarks"></a>Comentarios
 
-Los modelos se utilizan en muchas construcciones de lenguaje, como el `match` expresión. Se utilizan cuando se procesan argumentos para funciones en `let` enlaces, las expresiones lambda y en los controladores de excepción asociados del `try...with` expresión. Para obtener más información, consulte [expresiones de coincidencia](match-expressions.md), [enlaces let](functions/let-bindings.md), [expresiones Lambda: El `fun` palabra clave](functions/lambda-expressions-the-fun-keyword.md), y [excepciones: El `try...with` expresión](exception-handling/the-try-with-expression.md).
+Los patrones se usan en muchas construcciones de lenguaje, como la `match` expresión. Se utilizan cuando se procesan argumentos para funciones en `let` enlaces, expresiones lambda y en los controladores de excepciones asociados a la `try...with` expresión. Para obtener más información, vea [expresiones de coincidencia](match-expressions.md), [enlaces Let](./functions/let-bindings.md), [expresiones lambda: La `fun` palabra](./functions/lambda-expressions-the-fun-keyword.md)clave y[excepciones: `try...with` Expresión.](/.exception-handling/the-try-with-expression.md)
 
-Por ejemplo, en el `match` expresión, el *patrón* lo que sigue el símbolo de canalización.
+Por ejemplo, en la `match` expresión, el *patrón* es lo que sigue al símbolo de canalización.
 
 ```fsharp
 match expression with
@@ -25,56 +25,56 @@ match expression with
 ...
 ```
 
-Cada modelo actúa como una regla para transformar la entrada de alguna manera. En el `match` cada patrón de expresión se examina a su vez, para ver si están compatibles con el patrón de los datos de entrada. Si se encuentra una coincidencia, se ejecuta la expresión de resultado. Si no se encuentra una coincidencia, se prueba la regla del modelo siguiente. Opcional cuando *condición* parte se explica en [expresiones de coincidencia](match-expressions.md).
+Cada patrón actúa como una regla para transformar la entrada de alguna manera. En la `match` expresión, cada patrón se examina a su vez para ver si los datos de entrada son compatibles con el patrón. Si se encuentra una coincidencia, se ejecuta la expresión de resultado. Si no se encuentra ninguna coincidencia, se prueba la siguiente regla de patrón. La parte de *condición* opcional when se explica en [expresiones de coincidencia](match-expressions.md).
 
-Modelos admitidos se muestran en la tabla siguiente. En tiempo de ejecución, la entrada se prueba con cada uno de los siguientes patrones en el orden mostrado en la tabla, y patrones aplica de forma recursiva, del primero al último tal y como aparecen en el código y de izquierda a derecha para los modelos en cada línea.
+Los patrones admitidos se muestran en la tabla siguiente. En tiempo de ejecución, la entrada se prueba con cada uno de los patrones siguientes en el orden indicado en la tabla y los patrones se aplican de forma recursiva, de la primera a la última como aparecen en el código y de izquierda a derecha para los patrones de cada línea.
 
-|Name|Descripción|Ejemplo|
+|NOMBRE|DESCRIPCIÓN|Ejemplo|
 |----|-----------|-------|
-|Patrón de constante|Cualquier numérico, carácter o literal de cadena, una constante de enumeración o un identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
-|Patrón de identificador|Un valor de caso de una unión discriminada, una etiqueta de excepción o un caso de modelo activo|`Some(x)`<br /><br />`Failure(msg)`|
-|Modelo de variable|*identifier*|`a`|
-|`as` Patrón|*patrón* como *identificador*|`(a, b) as tuple1`|
-|O un patrón|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
-|Y el patrón|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
-|Modelo de cons|*identificador* :: *identificador de la lista*|`h :: t`|
-|Modelo de lista|[ *modelo_1*;...; *modelo_n* ]|`[ a; b; c ]`|
-|Patrón de matriz|[&#124; *pattern_1*; .; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|Modelo entre paréntesis|( *pattern* )|`( a )`|
-|Modelo de tupla|( *modelo_1*,..., *modelo_n* )|`( a, b )`|
-|Modelo de registro|{ *identificador1* = *modelo_1*;...; *identificador_n* = *modelo_n* }|`{ Name = name; }`|
-|Patrón de caracteres comodín|_|`_`|
-|Modelo junto con anotación de tipo|*patrón* : *tipo*|`a : int`|
-|Modelo de prueba de tipo|:? *type* [ as *identifier* ]|`:? System.DateTime as dt`|
-|Modelo de null|nulo|`null`|
+|Patrón de constante|Cualquier literal numérico, de carácter o de cadena, una constante de enumeración o un identificador literal definido|`1.0`, `"test"`, `30`, `Color.Red`|
+|Patrón de identificador|Un valor de caso de una Unión discriminada, una etiqueta de excepción o un caso de modelo activo|`Some(x)`<br /><br />`Failure(msg)`|
+|Patrón de variable|*identifier*|`a`|
+|`as`ajedrez|*patrón* como *identificador*|`(a, b) as tuple1`|
+|Patrón OR|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
+|Y patrón|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
+|Patrón de cons|*Identifier* :: *List-Identifier*|`h :: t`|
+|Patrón de lista|[ *pattern_1*;...; *pattern_n* ]|`[ a; b; c ]`|
+|Patrón de matriz|[&#124; *pattern_1*; ..; *pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
+|Patrón entre paréntesis|( *pattern* )|`( a )`|
+|Patrón de tupla|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
+|Patrón de registro|{ *identificador1* = *pattern_1*;...; *identifier_n*  =  *pattern_n* }|`{ Name = name; }`|
+|Patrón de carácter comodín|_|`_`|
+|Patrón junto con anotación de tipo|*patrón* : *tipo*|`a : int`|
+|Modelo de prueba de tipo|:? *tipo* de [como *identificador* ]|`:? System.DateTime as dt`|
+|Patrón null|nulo|`null`|
 
-## <a name="constant-patterns"></a>Modelos de constante
+## <a name="constant-patterns"></a>Patrones constantes
 
-Modelos de constante son numéricos, caracteres y literales de cadena, constantes de enumeración (con el nombre de tipo de enumeración incluidos). Un `match` expresión que tiene modelos de constante solo puede compararse con una instrucción case de otros lenguajes. La entrada se compara con el valor literal y el modelo coincide si los valores son iguales. El tipo del literal debe ser compatible con el tipo de la entrada.
+Los patrones constantes son los literales numéricos, de carácter y de cadena, las constantes de enumeración (con el nombre de tipo de enumeración incluido). Una `match` expresión que solo tiene patrones constantes puede compararse con una instrucción Case en otros lenguajes. La entrada se compara con el valor literal y el patrón coincide si los valores son iguales. El tipo del literal debe ser compatible con el tipo de la entrada.
 
-El ejemplo siguiente muestra el uso de modelos de literal y también usa un modelo de variable y un modelo de OR.
+En el ejemplo siguiente se muestra el uso de patrones literales y también se usa un patrón de variable y un patrón o.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4801.fs)]
 
-Otro ejemplo de un modelo de literal es un modelo basado en constantes de enumeración. Debe especificar el nombre del tipo de enumeración al usar las constantes de enumeración.
+Otro ejemplo de un patrón literal es un modelo basado en constantes de enumeración. Debe especificar el nombre del tipo de enumeración al usar constantes de enumeración.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4802.fs)]
 
 ## <a name="identifier-patterns"></a>Patrones de identificador
 
-Si el patrón es una cadena de caracteres que forman un identificador válido, el formato del identificador determina cómo se compara el patrón. Si el identificador tiene más de un solo carácter y comienza con una letra mayúscula, el compilador intenta hallar una coincidencia con el patrón de identificador. El identificador de este modelo podría ser un valor marcado con el atributo Literal, un caso de unión discriminado, un identificador de excepción o un caso de modelo activo. Si no se encuentra ningún identificador coincidente, la coincidencia produce un error y la regla del modelo siguiente, el modelo de variable, se compara con la entrada.
+Si el patrón es una cadena de caracteres que forma un identificador válido, el formato del identificador determina cómo coincide el patrón. Si el identificador es más largo que un carácter único y comienza con un carácter en mayúsculas, el compilador intenta establecer una coincidencia con el patrón de identificador. El identificador de este patrón puede ser un valor marcado con el atributo literal, un caso de Unión discriminada, un identificador de excepción o un caso de modelo activo. Si no se encuentra ningún identificador coincidente, se produce un error en la coincidencia y la siguiente regla de patrón, el patrón de variable, se compara con la entrada.
 
-Modelos de unión discriminada pueden ser simples casos con nombre o pueden tener un valor o una tupla que contiene varios valores. Si hay un valor, debe especificar un identificador para el valor. En el caso de una tupla, debe proporcionar un modelo de tupla con un identificador para cada elemento de la tupla o un identificador con un nombre de campo para uno o más campos de unión de llamada. Vea los ejemplos de código en esta sección para obtener ejemplos.
+Los patrones de Unión discriminada pueden ser casos con nombre sencillos o pueden tener un valor o una tupla que contiene varios valores. Si hay un valor, debe especificar un identificador para el valor. En el caso de una tupla, debe proporcionar un patrón de tupla con un identificador para cada elemento de la tupla o un identificador con un nombre de campo para uno o más campos de unión con nombre. Vea los ejemplos de código de esta sección para obtener ejemplos.
 
-El `option` tipo es una unión discriminada que tiene dos casos, `Some` y `None`. Un caso (`Some`) tiene un valor, pero el otro (`None`) es simplemente un caso con nombre. Por lo tanto, `Some` debe tener una variable para el valor asociado con el `Some` case, pero `None` deben aparecer por sí mismo. En el código siguiente, la variable `var1` se asigna el valor que se obtiene mediante la coincidencia para el `Some` caso.
+El `option` tipo es una Unión discriminada que tiene dos casos, `Some` y `None`. Un caso (`Some`) tiene un valor, pero el otro (`None`) es simplemente un caso con nombre. Por lo `Some` tanto, debe tener una variable para el valor asociado `Some` al caso, pero `None` debe aparecer por sí sola. En el código siguiente, se proporciona `var1` a la variable el valor que se obtiene al buscar coincidencias con el `Some` caso.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4803.fs)]
 
-En el ejemplo siguiente, la `PersonName` unión discriminada contiene una combinación de cadenas y caracteres que representan posibles formas de nombres. Los casos de la unión discriminada son `FirstOnly`, `LastOnly`, y `FirstLast`.
+En el ejemplo siguiente, la `PersonName` Unión discriminada contiene una mezcla de cadenas y caracteres que representan las posibles formas de los nombres. Los casos de la Unión discriminada son `FirstOnly`, `LastOnly`y `FirstLast`.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4804.fs)]
 
-Las uniones discriminadas que tienen campos de nombre, utilice el signo igual (=) para extraer el valor de un campo con nombre. Por ejemplo, considere una unión discriminada con una declaración similar al siguiente.
+En el caso de las uniones discriminadas que tienen campos con nombre, use el signo igual (=) para extraer el valor de un campo con nombre. Por ejemplo, considere una Unión discriminada con una declaración como la siguiente.
 
 ```fsharp
 type Shape =
@@ -82,7 +82,7 @@ type Shape =
     | Circle of radius : float
 ```
 
-Puede usar los campos con nombre en una expresión de coincidencia de patrón como sigue.
+Puede usar los campos con nombre en una expresión de coincidencia de patrones como se indica a continuación.
 
 ```fsharp
 let matchShape shape =
@@ -91,9 +91,9 @@ let matchShape shape =
     | Circle(r) -> printfn "Circle with radius %f" r
 ```
 
-El uso del campo con nombre es opcional, por lo que en el ejemplo anterior, ambos `Circle(r)` y `Circle(radius = r)` tienen el mismo efecto.
+El uso del campo con nombre es opcional, por lo que en el ejemplo anterior `Circle(r)` , `Circle(radius = r)` y tienen el mismo efecto.
 
-Al especificar varios campos, use el punto y coma (;) como separador.
+Cuando especifique varios campos, use el punto y coma (;) como separador.
 
 ```
 match shape with
@@ -101,105 +101,105 @@ match shape with
 | _ -> ()
 ```
 
-Modelos activos permiten definir coincidencias de modelos personalizadas más complejas. Para obtener más información acerca de los patrones activos, vea [modelos activos](active-patterns.md).
+Los modelos activos permiten definir una coincidencia de patrones personalizada más compleja. Para obtener más información sobre los patrones activos, vea [patrones activos](active-patterns.md).
 
-El caso en que el identificador es una excepción se usa en la coincidencia de patrones en el contexto de los controladores de excepciones. Para obtener información acerca de la coincidencia de patrones en el control de excepciones, vea [excepciones: El `try...with` expresión](exception-handling/the-try-with-expression.md).
+El caso en el que el identificador es una excepción se usa en la coincidencia de patrones en el contexto de los controladores de excepciones. Para obtener información sobre la coincidencia de patrones en el [control de excepciones, vea excepciones: `try...with` Expresión.](/.exception-handling/the-try-with-expression.md)
 
-## <a name="variable-patterns"></a>Modelos de variable
+## <a name="variable-patterns"></a>Patrones de variables
 
-El modelo de variable asigna el valor coincide con un nombre de variable, que está disponible para su uso en la expresión de ejecución a la derecha de la `->` símbolos. Un modelo de variable individual coincide con cualquier entrada, pero los modelos de variable suelen aparecen dentro de otros modelos, por lo tanto, habilitar estructuras más complejas, como las tuplas y matrices para descomposición en variables.
+El patrón variable asigna el valor que coincide con un nombre de variable, que luego está disponible para su uso en la expresión de ejecución a la derecha del `->` símbolo. Un patrón variable solo coincide con cualquier entrada, pero los modelos variables suelen aparecer dentro de otros patrones, lo que permite que las estructuras más complejas, como las tuplas y las matrices, se descompongan en variables.
 
-El ejemplo siguiente muestra un modelo de variable dentro de un modelo de tupla.
+En el ejemplo siguiente se muestra un patrón de variable dentro de un patrón de tupla.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4805.fs)]
 
-## <a name="as-pattern"></a>como el patrón
+## <a name="as-pattern"></a>como patrón
 
-El `as` patrón es un modelo que tiene un `as` cláusula anexado a él. El `as` cláusula enlaza el valor coincidente con un nombre que se puede usar en la expresión de ejecución de un `match` expresión, o bien, en el caso de que se usa este patrón en una `let` de enlace, el nombre se agrega como un enlace con el ámbito local.
+El `as` patrón es un patrón que tiene una `as` cláusula anexada. La `as` cláusula enlaza el valor coincidente con un nombre que se puede usar en la expresión de ejecución de una `match` expresión, o bien, en el caso en que este patrón se utiliza en `let` un enlace, el nombre se agrega como un enlace al ámbito local.
 
-En el ejemplo siguiente se usa un `as` patrón.
+En el ejemplo siguiente se `as` usa un patrón.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4806.fs)]
 
-## <a name="or-pattern"></a>O un patrón
+## <a name="or-pattern"></a>Patrón OR
 
-Cuando los datos de entrada pueden coincidir con varios modelos, y desea ejecutar el mismo código como resultado, se usa el modelo de OR. Los tipos de ambos lados del modelo de OR deben ser compatibles.
+El patrón o se utiliza cuando los datos de entrada pueden coincidir con varios patrones y desea ejecutar el mismo código como resultado. Los tipos de ambos lados del patrón o deben ser compatibles.
 
-El ejemplo siguiente muestra el modelo de OR.
+En el siguiente ejemplo se muestra el patrón o.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4807.fs)]
 
-## <a name="and-pattern"></a>Y el patrón
+## <a name="and-pattern"></a>Y patrón
 
-El modelo de AND exige que la entrada coincida con dos modelos. Los tipos de ambos lados del modelo de AND deben ser compatibles.
+El patrón y requiere que la entrada coincida con dos patrones. Los tipos de ambos lados del patrón y deben ser compatibles.
 
-El ejemplo siguiente es similar a `detectZeroTuple` se muestra en el [modelo de tupla](https://msdn.microsoft.com/library/#tuple) sección más adelante en este tema, pero aquí ambos `var1` y `var2` se obtienen como valores utilizando el modelo de AND.
+El ejemplo siguiente es como `detectZeroTuple` el que se muestra en la sección [modelo de tupla](https://msdn.microsoft.com/library/#tuple) más adelante en este `var1` tema `var2` , pero aquí y se obtienen como valores mediante el patrón y.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4808.fs)]
 
-## <a name="cons-pattern"></a>Modelo de cons
+## <a name="cons-pattern"></a>Patrón de cons
 
-El modelo de cons se utiliza para descomponer una lista en el primer elemento, el *head*y una lista que contiene los elementos restantes, el *final*.
+El patrón cons se usa para descomponer una lista en el primer elemento, el *encabezado*y una lista que contiene los elementos restantes, la *cola*.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4809.fs)]
 
-## <a name="list-pattern"></a>Modelo de lista
+## <a name="list-pattern"></a>Patrón de lista
 
-El patrón de lista permite descomponer en un número de elementos de las listas. El mismo patrón de lista puede coincidir con sólo las listas de un número específico de elementos.
+El patrón de lista permite descomponer listas en varios elementos. El propio patrón de lista solo puede coincidir con las listas de un número específico de elementos.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4810.fs)]
 
 ## <a name="array-pattern"></a>Patrón de matriz
 
-El patrón de matriz parece al modelo de lista y se puede usar para descomponer matrices de una longitud concreta.
+El patrón de matriz se asemeja al patrón de lista y se puede usar para descomponer las matrices de una longitud específica.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4811.fs)]
 
-## <a name="parenthesized-pattern"></a>Modelo entre paréntesis
+## <a name="parenthesized-pattern"></a>Patrón entre paréntesis
 
-Los paréntesis pueden agruparse en torno a los modelos para lograr la asociatividad deseada. En el ejemplo siguiente, se utilizan paréntesis para controlar la asociatividad entre un modelo de AND y un modelo de cons.
+Los paréntesis se pueden agrupar en torno a patrones para lograr la asociatividad deseada. En el ejemplo siguiente, los paréntesis se usan para controlar la asociatividad entre un patrón AND y un patrón cons.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4812.fs)]
 
-## <a name="tuple-pattern"></a>Modelo de tupla
+## <a name="tuple-pattern"></a>Patrón de tupla
 
-El modelo de tupla asocia la entrada en forma de tupla y permite la tupla que se descompone en sus elementos constituyentes utilizando variables para cada posición de la tupla de coincidencia de patrones.
+El patrón de tupla asocia la entrada en forma de tupla y permite descomponer la tupla en sus elementos constituyentes mediante el uso de variables de coincidencia de patrones para cada posición de la tupla.
 
-El ejemplo siguiente muestra el modelo de tupla y también usa modelos de literal, modelos de variable y el patrón de caracteres comodín.
+En el ejemplo siguiente se muestra el patrón de tupla y también se usan patrones literales, patrones de variables y el patrón de caracteres comodín.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4813.fs)]
 
-## <a name="record-pattern"></a>Modelo de registro
+## <a name="record-pattern"></a>Patrón de registro
 
-El modelo de registro se utiliza para descomponer los registros para extraer los valores de campos. El patrón no tiene que hacer referencia a todos los campos del registro; solo los campos omitidos no participan en la coincidencia y no se extraen.
+El patrón de registro se usa para descomponer registros para extraer los valores de los campos. El patrón no tiene que hacer referencia a todos los campos del registro; los campos omitidos simplemente no participan en la coincidencia y no se extraen.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4814.fs)]
 
-## <a name="wildcard-pattern"></a>Patrón de caracteres comodín
+## <a name="wildcard-pattern"></a>Patrón de carácter comodín
 
-El modelo de carácter comodín se representa mediante el carácter de subrayado (`_`) de caracteres y coincide con cualquier entrada, al igual que el modelo de variable, salvo que la entrada se descarta en lugar de asignar a una variable. El modelo de carácter comodín se utiliza a menudo dentro de otros modelos como marcador de posición para los valores que no son necesarios en la expresión a la derecha de la `->` símbolos. El modelo de carácter comodín también con frecuencia se utiliza al final de una lista de patrones para que coincida con cualquier entrada no coincidente. En muchos ejemplos de código de este tema se muestra el patrón de caracteres comodín. Vea el código anterior para obtener un ejemplo.
+El patrón de caracteres comodín se representa mediante el carácter`_`de subrayado () y coincide con cualquier entrada, al igual que el patrón de variable, con la excepción de que la entrada se descarta en lugar de asignarla a una variable. El patrón de caracteres comodín se usa a menudo en otros patrones como un marcador de posición para los valores que no son necesarios en la `->` expresión a la derecha del símbolo. El patrón de caracteres comodín también se usa con frecuencia al final de una lista de patrones para buscar coincidencias con cualquier entrada no coincidente. El patrón de caracteres comodín se muestra en muchos ejemplos de código de este tema. Vea el código anterior para ver un ejemplo.
 
 ## <a name="patterns-that-have-type-annotations"></a>Patrones que tienen anotaciones de tipo
 
-Los modelos pueden tener anotaciones de tipo. Estas se comportan igual que otras anotaciones de tipo y orientan la inferencia como las demás anotaciones de tipo. Se necesitan paréntesis en torno a las anotaciones de tipos de patrones. El código siguiente muestra un modelo que tiene una anotación de tipo.
+Los patrones pueden tener anotaciones de tipo. Estos se comportan como otras anotaciones de tipo e inferencia de la guía como otras anotaciones de tipo. Se requieren paréntesis en torno a las anotaciones de tipo en los patrones. En el código siguiente se muestra un patrón que tiene una anotación de tipo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4815.fs)]
 
 ## <a name="type-test-pattern"></a>Modelo de prueba de tipo
 
-El modelo de prueba de tipo se usa para comparar la entrada con un tipo. Si el tipo de entrada es una coincidencia (o un tipo derivado de) el tipo especificado en el modelo, la coincidencia se realiza correctamente.
+El modelo de prueba de tipo se usa para hacer coincidir la entrada con un tipo. Si el tipo de entrada es una coincidencia con (o un tipo derivado de) el tipo especificado en el patrón, la coincidencia se realiza correctamente.
 
-El ejemplo siguiente muestra el patrón de prueba de tipo.
+En el siguiente ejemplo se muestra el modelo de prueba de tipo.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4816.fs)]
 
-## <a name="null-pattern"></a>Modelo de null
+## <a name="null-pattern"></a>Patrón null
 
-El modelo de null coincide con el valor null que puede aparecer cuando se trabaja con tipos que permiten un valor null. Los modelos de NULL se utilizan con frecuencia al interoperar con código de .NET Framework. Por ejemplo, el valor devuelto de una API de .NET puede ser la entrada a un `match` expresión. Puede controlar el flujo del programa en función de si el valor devuelto es null y también en otras características del valor devuelto. Puede usar el modelo de null para impedir que se propaguen al resto del programa valores null.
+El patrón null coincide con el valor null que puede aparecer cuando se trabaja con tipos que permiten un valor null. Los patrones NULL se utilizan con frecuencia al interoperar con código de .NET Framework. Por ejemplo, el valor devuelto de una API de .net podría ser la entrada `match` a una expresión. Puede controlar el flujo del programa en función de si el valor devuelto es NULL y también de otras características del valor devuelto. Puede usar el patrón null para evitar que los valores NULL se propaguen al resto del programa.
 
-En el ejemplo siguiente se usa el modelo de null y el modelo de variable.
+En el ejemplo siguiente se usa el patrón NULL y el patrón variable.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4817.fs)]
 
 ## <a name="see-also"></a>Vea también
 

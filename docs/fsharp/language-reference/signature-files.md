@@ -1,13 +1,13 @@
 ---
-title: Archivos de firma
-description: Aprenda a usar F# archivos de firma para almacenar información sobre las signaturas públicas de un conjunto de F# elementos, como tipos, espacios de nombres y los módulos del programa.
+title: Archivos de Signatura
+description: Obtenga información sobre cómo F# usar los archivos de firma para almacenar información sobre las firmas públicas de un F# conjunto de elementos de programa, como tipos, espacios de nombres y módulos.
 ms.date: 06/15/2018
-ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c04ac8bf4ee360a2caa15be8f2bbea41105bd160
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770453"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627154"
 ---
 # <a name="signatures"></a>Prototipos
 
@@ -19,13 +19,13 @@ Para cada archivo de código F#, puede tener un *archivo de signatura*, que es u
 
 Un archivo de signatura describe los espacios de nombres, módulos, tipos y miembros en el archivo de implementación correspondiente. Use la información de un archivo de signatura para especificar a qué partes del código de la implementación correspondiente se puede tener acceso desde el código de fuera del archivo de implementación, así como y qué elementos son internos para el archivo de implementación. Los espacios de nombres, módulos y tipos que se incluyen en el archivo de signatura deben ser un subconjunto de los espacios de nombres, módulos y tipos que se incluyen en el archivo de implementación. Con algunas excepciones que se describen más adelante en este tema, los elementos de lenguaje que no aparecen en el archivo de signatura se consideran privados en el archivo de implementación. Si no se encuentra ningún archivo de signatura en el proyecto o en la línea de comandos, se usará la accesibilidad predeterminada.
 
-Para obtener más información sobre la accesibilidad predeterminada, vea [Control de acceso](access-control.md).
+Para obtener más información sobre la accesibilidad predeterminada, vea [Access Control](access-control.md).
 
 En un archivo de firma no se repite la definición de los tipos y las implementaciones de cada método o función. En su lugar, use la signatura de cada método y función, que actúa como una especificación completa de la funcionalidad que se implementa mediante un fragmento del módulo o espacio de nombres. La sintaxis de una signatura de tipo es la misma que la que se usa en las declaraciones de método abstractas de interfaces y clases abstractas. Esta sintaxis también se muestra en IntelliSense y en el archivo fsi.exe intérprete de F# cuando muestra la entrada compilada correctamente.
 
 Si no hay suficiente información en la signatura de tipo para indicar si un tipo está sellado, o si se trata de un tipo de interfaz, debe agregar un atributo que indica la naturaleza del tipo para el compilador. En la tabla siguiente se describen los atributos que se usan para este propósito.
 
-|Atributo|Descripción|
+|Atributo|DESCRIPCIÓN|
 |---------|-----------|
 |`[<Sealed>]`|Para un tipo que no tiene ningún miembro abstracto o que no debe ampliarse.|
 |`[<Interface>]`|Para un tipo que es una interfaz.|
@@ -56,15 +56,15 @@ Las reglas de las signaturas de valor son las siguientes:
 
 - El patrón de parámetros (también conocido como *aridad*) de las signaturas y las implementaciones debe ser coherente.
 
-- Si difieren de los nombres de parámetro en un archivo de signatura del archivo de implementación correspondiente, el nombre en el archivo de signatura se usará en su lugar, lo que puede producir problemas al depurar o generación de perfiles. Si desea recibir una notificación de estos errores de coincidencia de habilitar advertencia 3218 en el archivo de proyecto o al invocar el compilador (consulte `--warnon` en [opciones del compilador](compiler-options.md)).
+- Si los nombres de parámetro de un archivo de signatura difieren del archivo de implementación correspondiente, se usará el nombre del archivo de signatura, lo que puede causar problemas al depurar o generar perfiles. Si desea recibir notificaciones de no coincidencia, habilite la advertencia 3218 en el archivo del proyecto o al invocar al compilador (vea `--warnon` en [Opciones del](compiler-options.md)compilador).
 
 En el ejemplo de código siguiente se muestra un ejemplo de archivo de signatura que tiene el espacio de nombres, el módulo, el valor de la función y las signaturas de tipo junto con los atributos adecuados. También muestra el archivo de implementación correspondiente.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9002.fs)]
 
 En el código siguiente se muestra el archivo de implementación.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/fssignatures/snippet9001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/fssignatures/snippet9001.fs)]
 
 ## <a name="see-also"></a>Vea también
 

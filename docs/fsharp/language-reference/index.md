@@ -1,40 +1,40 @@
 ---
 title: Referencia del lenguaje F#
-description: Buscar F# información de características de lenguaje de esta referencia a tokens de idioma, conceptos, tipos, expresiones y los temas de construcción compatible con el compilador.
+description: Busque F# información de características de lenguaje de esta referencia a los tokens de lenguaje, los conceptos, los tipos, las expresiones y los temas de construcción compatibles con el compilador.
 ms.date: 05/16/2016
-ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b37f9ddcd4fbf6939631f283be95ebf08cf072d6
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666448"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630698"
 ---
 # <a name="f-language-reference"></a>Referencia del lenguaje F#
 
-En esta sección es una referencia a la F# language, lenguaje de programación multiparadigma destinadas a .NET. El lenguaje F# admite los modelos de programación funcional, orientada a objetos e imperativa.
+Esta sección es una referencia al F# lenguaje, un lenguaje de programación multiparadigma destinado a .net. El lenguaje F# admite los modelos de programación funcional, orientada a objetos e imperativa.
 
 ## <a name="f-tokens"></a>Tokens de F#
 
 En la tabla siguiente se muestran temas de referencia que proporcionan tablas de palabras clave, símbolos y literales que se usan como tokens en F#.
 
-|Título|Descripción|
+|Título|DESCRIPCIÓN|
 |-----|-----------|
 |[Referencia de palabras clave](keyword-reference.md)|Contiene vínculos a información sobre todas las palabras clave del lenguaje F#.|
-|[Referencia de símbolos y operadores](symbol-and-operator-reference/index.md)|Contiene una tabla de símbolos y operadores que se usan en el lenguaje F#.|
+|[Referencia de símbolos y operadores](./symbol-and-operator-reference/index.md)|Contiene una tabla de símbolos y operadores que se usan en el lenguaje F#.|
 |[Literales](literals.md)|Describe la sintaxis de los valores literales en F# y cómo especificar la información de tipos para los literales de F#.|
 
 ## <a name="f-language-concepts"></a>Conceptos del lenguaje F#
 
 En la tabla siguiente se muestran los temas de referencia disponibles que describen los conceptos del lenguaje.
 
-|Título|Descripción|
+|Título|DESCRIPCIÓN|
 |-----|-----------|
-|[Funciones](functions/index.md)|Las funciones son la unidad fundamental de la ejecución del programa en cualquier lenguaje de programación. Al igual que en otros lenguajes, una función de F# tiene un nombre, puede tener parámetros y tomar argumentos, y tiene un cuerpo. F# también admite construcciones de programación funcional como el tratamiento de las funciones como valores, el uso de funciones sin nombre en expresiones, la composición de funciones para crear nuevas funciones, funciones currificadas y la definición implícita de funciones mediante la aplicación parcial de argumentos de función.|
+|[Funciones](./functions/index.md)|Las funciones son la unidad fundamental de la ejecución del programa en cualquier lenguaje de programación. Al igual que en otros lenguajes, una función de F# tiene un nombre, puede tener parámetros y tomar argumentos, y tiene un cuerpo. F# también admite construcciones de programación funcional como el tratamiento de las funciones como valores, el uso de funciones sin nombre en expresiones, la composición de funciones para crear nuevas funciones, funciones currificadas y la definición implícita de funciones mediante la aplicación parcial de argumentos de función.|
 |[Tipos en F#](fsharp-types.md)|Describe los tipos que se usan en F#, cómo se les asigna un nombre y se describen.|
 |[Inferencia de tipos](type-inference.md)|Describe cómo el compilador de F# realiza la inferencia de los tipos de valor, variables, parámetros y valores devueltos.|
-|[Generalización automática](generics/automatic-generalization.md)|Describe las construcciones genéricas en F#.|
+|[Generalización automática](./generics/automatic-generalization.md)|Describe las construcciones genéricas en F#.|
 |[Herencia](inheritance.md)|Describe la herencia, que se usa para modelar la relación de identidad o los subtipos en la programación orientada a objetos.|
-|[Miembros](members/index.md)|Describe los miembros de los tipos de objeto de F#.|
+|[Miembros](./members/index.md)|Describe los miembros de los tipos de objeto de F#.|
 |[Parámetros y argumentos](Parameters-and-Arguments.md)|Describe la compatibilidad con lenguajes para definir parámetros y pasar argumentos a las funciones, los métodos y las propiedades. Incluye información sobre cómo pasar por referencia.|
 |[Sobrecarga de operadores](operator-overloading.md)|Describe cómo sobrecargar los operadores aritméticos de un tipo de clase o registro, así como en el nivel global.|
 |[Conversiones](casting-and-conversions.md)|Describe la compatibilidad con las conversiones de tipos en F#.|
@@ -42,7 +42,7 @@ En la tabla siguiente se muestran los temas de referencia disponibles que descri
 |[Coincidencia de patrones](pattern-matching.md)|Describe los patrones, que son las reglas para transformar los datos de entrada que se usan en todo el lenguaje F# para extraer datos de comparación con un patrón, descomponer datos en sus partes constituyentes o extraer información de los datos de varias maneras.|
 |[Patrones activos](active-patterns.md)|Describe los patrones activos. Los patrones activos permiten definir particiones con nombre que subdividen los datos de entrada. Se pueden usar patrones activos para descomponer los datos de manera personalizada para cada partición.|
 |[Aserciones](assertions.md)|Describe la expresión `assert`, que es una característica de depuración que se puede usar para probar una expresión. En caso de error en modo de depuración, una aserción genera un cuadro de diálogo de error del sistema.|
-|[Control de excepciones](exception-handling/index.md)|Contiene información sobre la compatibilidad con el control de excepciones del lenguaje F#.|
+|[Control de excepciones](/.exception-handling/index.md)|Contiene información sobre la compatibilidad con el control de excepciones del lenguaje F#.|
 |[Atributos](attributes.md)|Describe los atributos, que permiten aplicar metadatos a una construcción de programación.|
 |[Administración de recursos: `use`Palabra clave](resource-management-the-use-keyword.md)|Describe las palabras clave `use` y `using`, que permiten controlar la inicialización y la liberación de los recursos.|
 |[Espacios de nombres](namespaces.md)|Describe la compatibilidad con los espacios de nombres en F#. Un espacio de nombres permite organizar el código en áreas de funcionalidad relacionada, lo que permite adjuntar un nombre a una agrupación de elementos de programa.|
@@ -56,9 +56,9 @@ En la tabla siguiente se muestran los temas de referencia disponibles que descri
 
 En la tabla siguiente se muestran los temas de referencia disponibles que describen los tipos admitidos por el lenguaje F#.
 
-|Título|Descripción|
+|Título|DESCRIPCIÓN|
 |-----|-----------|
-|[Valores](values/index.md)|Describe los valores, que son cantidades inmutables que tienen un tipo específico. Los valores pueden ser números enteros o de punto flotante, caracteres o texto, listas, secuencias, matrices, tuplas, uniones discriminadas, registros, tipos de clase o valores de función.|
+|[Valores](./values/index.md)|Describe los valores, que son cantidades inmutables que tienen un tipo específico. Los valores pueden ser números enteros o de punto flotante, caracteres o texto, listas, secuencias, matrices, tuplas, uniones discriminadas, registros, tipos de clase o valores de función.|
 |[Tipos básicos](basic-types.md)|Describe los tipos básicos fundamentales que se usan en el F# lenguaje. También se proporcionan los tipos de .NET correspondientes y los valores máximos y mínimos para cada tipo.|
 |[Tipo unit](unit-type.md)|Describe el tipo `unit`, que indica la ausencia de un valor concreto. El tipo `unit` tiene solo un valor, que actúa como marcador de posición cuando no existe o no se necesita ningún otro valor.|
 |[Cadenas](strings.md)|Describe las cadenas en F#. El tipo `string` representa texto inmutable como una secuencia de caracteres Unicode. `string` es un alias de `System.String` en .NET Framework.|
@@ -87,15 +87,15 @@ En la tabla siguiente se muestran los temas de referencia disponibles que descri
 
 En la tabla siguiente se muestran los temas que describen las expresiones de F#.
 
-|Título|Descripción|
+|Título|DESCRIPCIÓN|
 |-----|-----------|
 |[Expresiones condicionales: `if...then...else`](conditional-expressions-if-then-else.md)|Describe la expresión `if...then...else`, que ejecuta diferentes ramas de código y también se evalúa como un valor distinto según la expresión booleana especificada.|
 |[Expresiones de coincidencia](match-expressions.md)|Describe la expresión `match`, que proporciona control de rama basado en la comparación de una expresión con un conjunto de patrones.|
-|[Bucles: `for...to` Expresión](loops-for-to-expression.md)|Describe la expresión `for...to`, que se usa para recorrer en iteración un bucle sobre un intervalo de valores de una variable de bucle.|
-|[Bucles: `for...in` Expresión](loops-for-in-expression.md)|Describe la expresión `for...in`, una construcción de bucle que se usa para recorrer en iteración las coincidencias de un patrón en una colección enumerable como una expresión de intervalo, una secuencia, una lista, una matriz u otra construcción que admita la enumeración.|
-|[Bucles: `while...do` Expresión](loops-while-do-expression.md)|Describe la expresión `while...do`, que se usa para realizar la ejecución iterativa (en bucle) mientras se cumple una condición de prueba especificada.|
+|[Bucles `for...to`Expresiones](loops-for-to-expression.md)|Describe la expresión `for...to`, que se usa para recorrer en iteración un bucle sobre un intervalo de valores de una variable de bucle.|
+|[Bucles `for...in`Expresiones](loops-for-in-expression.md)|Describe la expresión `for...in`, una construcción de bucle que se usa para recorrer en iteración las coincidencias de un patrón en una colección enumerable como una expresión de intervalo, una secuencia, una lista, una matriz u otra construcción que admita la enumeración.|
+|[Bucles `while...do`Expresiones](loops-while-do-expression.md)|Describe la expresión `while...do`, que se usa para realizar la ejecución iterativa (en bucle) mientras se cumple una condición de prueba especificada.|
 |[Expresiones de objeto](object-expressions.md)|Describe las expresiones de objeto, que son las que crean nuevas instancias de un tipo de objeto anónimo creado dinámicamente que se basa en un tipo base, una interfaz o un conjunto de interfaces existente.|
-|[Expresiones diferidas](lazy-expressions.md)|Describe las expresiones diferidas, que son cálculos que no se evaluarán inmediatamente, pero en su lugar se evalúan cuando realmente se necesita el resultado.|
+|[Expresiones diferidas](lazy-expressions.md)|Describe las expresiones diferidas, que son cálculos que no se evalúan inmediatamente, pero se evalúan en su lugar cuando el resultado es realmente necesario.|
 |[Expresiones de cálculo](computation-expressions.md)|Describe las expresiones de cálculo en F#, que proporcionan una sintaxis adecuada para escribir cálculos que se pueden secuenciar y combinar mediante enlaces y construcciones de flujo de control. Se pueden usar para proporcionar una sintaxis apropiada para los *monads*, una característica de programación funcional que se puede usar para administrar datos, controles y efectos secundarios en programas funcionales. Uno de los tipos de expresión de cálculo, el flujo de trabajo asincrónico, proporciona compatibilidad con los cálculos asincrónicos y en paralelo. Para más información, vea [Flujos de trabajo asincrónicos](asynchronous-workflows.md).|
 |[Flujos de trabajo asincrónicos](asynchronous-workflows.md)|Describe los flujos de trabajo asincrónicos, una característica del lenguaje que permite escribir código asincrónico de manera muy similar a cómo se escribe código sincrónico.|
 |[Expresiones de código delimitadas](code-quotations.md)|Describe las expresiones de código delimitadas, una característica del lenguaje que permite generar expresiones de código de F# y trabajar con ellas mediante programación.|
@@ -105,7 +105,7 @@ En la tabla siguiente se muestran los temas que describen las expresiones de F#.
 
 En la tabla siguiente se muestran los temas que describen las construcciones especiales admitidas por el compilador.
 
-|Tema|Descripción|
+|Tema|DESCRIPCIÓN|
 |-----|-----------|
 |[Opciones del compilador](compiler-options.md)|Describe las opciones de línea de comandos para el compilador de F#.|
 |[Directivas de compilador](compiler-directives.md)|Describe las directivas de procesador y las directivas de compilador.|

@@ -2,12 +2,12 @@
 title: Constructores
 description: Obtenga información sobre cómo definir y usar constructores F# en para crear e inicializar objetos de clase y estructura.
 ms.date: 05/16/2016
-ms.openlocfilehash: ef5dc134ad98179b6a365c4c34a9eca22fe5f7f6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c25fdcb95c2873eb69a94f30c87735e5c04d391b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364359"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627599"
 ---
 # <a name="constructors"></a>Constructores
 
@@ -23,7 +23,7 @@ Independientemente de si el constructor al que desea llamar es un constructor pr
 
 En el código siguiente se muestra una clase que tiene un constructor y varias maneras de crear objetos.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3501.fs)]
 
 La salida es la siguiente.
 
@@ -40,7 +40,7 @@ Las estructuras siguen todas las reglas de las clases. Por lo tanto, puede tener
 
 Además, las estructuras suelen tener campos que se crean mediante la `val` palabra clave; las clases también pueden tener estos campos. Las estructuras y las clases que tienen campos definidos mediante `val` la palabra clave también se pueden inicializar en constructores adicionales mediante el uso de expresiones de registro, como se muestra en el código siguiente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
 Para obtener más información, [vea campos explícitos: `val` Palabra clave](explicit-fields-the-val-keyword.md).
 
@@ -48,7 +48,7 @@ Para obtener más información, [vea campos explícitos: `val` Palabra clave](ex
 
 Un constructor principal de una clase puede ejecutar código en un `do` enlace. Sin embargo, ¿qué ocurre si tiene que ejecutar código en un constructor adicional, `do` sin un enlace? Para ello, use la `then` palabra clave.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3503.fs)]
 
 Los efectos secundarios del constructor principal todavía se ejecutan. Por lo tanto, el resultado es el siguiente.
 
@@ -62,11 +62,11 @@ Created an invalid person object.
 
 En otros miembros, se proporciona un nombre para el objeto actual en la definición de cada miembro. También puede colocar el identificador propio en la primera línea de la definición de clase mediante la `as` palabra clave inmediatamente después de los parámetros del constructor. En el ejemplo siguiente se muestra esta sintaxis.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3504.fs)]
 
 En los constructores adicionales, también puede definir un identificador propio colocando la `as` cláusula justo después de los parámetros del constructor. En el ejemplo siguiente se muestra esta sintaxis.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3505.fs)]
 
 Pueden producirse problemas al intentar usar un objeto antes de que se defina por completo. Por lo tanto, los usos del propio identificador pueden hacer que el compilador emita una advertencia e inserte comprobaciones adicionales para asegurarse de que no se tiene acceso a los miembros de un objeto antes de que se inicialice el objeto. Solo se debe usar el identificador propio en los `do` enlaces del constructor principal o después de la `then` palabra clave en constructores adicionales.
 
@@ -76,11 +76,11 @@ No es necesario que el nombre del propio identificador sea `this`. Puede ser cua
 
 Puede asignar valores a las propiedades de un objeto de clase en el código de inicialización anexando una lista de asignaciones del formulario `property = value` a la lista de argumentos de un constructor. Esto se muestra en el ejemplo de código siguiente.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3506.fs)]
 
 La siguiente versión del código anterior muestra la combinación de argumentos ordinarios, argumentos opcionales y valores de propiedades en una llamada a un constructor.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet3507.fs)]
 
 ## <a name="constructors-in-inherited-class"></a>Constructores en la clase heredada
 

@@ -1,17 +1,17 @@
 ---
 title: Clases abstractas
-description: Obtenga información sobre F# abstraer las clases, que deja algunos o todos los miembros sin implementar y representan la funcionalidad común de un conjunto diverso de tipos de objeto.
+description: Obtenga información F# sobre las clases abstractas, que dejan algunos o todos los miembros no implementados y representan la funcionalidad común de un conjunto diverso de tipos de objeto.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8251d481c9056d40a0b13ae3c89353406986c116
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a6bbfc23b858d5f3833f3f52b6dca46753080f03
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645543"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629681"
 ---
 # <a name="abstract-classes"></a>Clases abstractas
 
-*Clases abstractas* son clases que dejan algunos o todos los miembros sin implementar para que se pueden proporcionar implementaciones de las clases derivadas.
+*Las clases abstractas* son clases que dejan algunos o todos los miembros no implementados, de modo que las implementaciones pueden ser proporcionadas por clases derivadas.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -28,23 +28,23 @@ abstract member member-name : type-signature
 
 ## <a name="remarks"></a>Comentarios
 
-En la programación orientada a objetos, una clase abstracta se usa como clase base de una jerarquía y representa la funcionalidad común de un conjunto diverso de tipos de objeto. Como el nombre "abstract" implica, las clases abstractas a menudo no se corresponden directamente a entidades concretas en el dominio del problema. Sin embargo, representan lo que muchas entidades concretas diferentes tienen en común.
+En la programación orientada a objetos, una clase abstracta se utiliza como una clase base de una jerarquía y representa la funcionalidad común de un conjunto diverso de tipos de objeto. Como el nombre "abstract" implica, las clases abstractas no suelen corresponder directamente con entidades concretas del dominio del problema. Sin embargo, representan las distintas entidades concretas que tienen en común.
 
-Las clases abstractas deben tener el `AbstractClass` atributo. Puede haber miembros implementados y. El uso del término *abstracta* cuando se aplica a una clase es el mismo que en otros lenguajes. NET; sin embargo, el uso del término *abstracta* cuando se aplica a los métodos (y propiedades) es un poco diferente en F# desde su uso en otros lenguajes. NET. En F#, cuando un método está marcado con el `abstract` palabra clave, esto indica que un miembro tiene una entrada, conocida como un *ranura distribución virtual*, en la tabla interna de funciones virtuales de ese tipo. En otras palabras, el método es virtual, aunque el `virtual` no se utiliza la palabra clave en el F# lenguaje. La palabra clave `abstract` se utiliza en los métodos virtuales, independientemente de si se implementa el método. La declaración de una ranura de distribución virtual es independiente de la definición de un método para esa ranura de envío. Por lo tanto, el F# equivalente de una declaración de método virtual y una definición en otro lenguaje de .NET es una combinación de una declaración de método abstracto y una definición independiente, con cualquiera el `default` palabra clave o el `override` palabra clave. Para obtener más información y ejemplos, vea [métodos](members/methods.md).
+Las clases abstractas deben `AbstractClass` tener el atributo. Pueden tener miembros implementados y no implementados. El uso del término *abstracto* cuando se aplica a una clase es igual que en otros lenguajes .net; sin embargo, el uso del término *abstracto* cuando se aplica a métodos (y propiedades) es un poco F# diferente en respecto a su uso en otros lenguajes .net. En F#, cuando un método se marca con la `abstract` palabra clave, indica que un miembro tiene una entrada, conocida como *ranura de envío virtual*, en la tabla interna de funciones virtuales para ese tipo. En otras palabras, el método es virtual, aunque la `virtual` palabra clave no se usa en F# el lenguaje. La palabra `abstract` clave se usa en métodos virtuales independientemente de si se implementa el método. La declaración de una ranura de envío virtual es independiente de la definición de un método para esa ranura de envío. Por lo tanto F# , el equivalente de una declaración y definición de método virtual en otro lenguaje .net es una combinación de una declaración de método abstracto y una definición independiente `default` , con la `override` palabra clave o la palabra clave. Para obtener más información y ejemplos, vea [métodos](./members/methods.md).
 
-Una clase se considera abstracta solo si hay métodos abstractos que se declaran pero no definidos. Por lo tanto, las clases que tienen métodos abstractos no son necesariamente clases abstractas. A menos que una clase no definido métodos abstractos, no use la **AbstractClass** atributo.
+Una clase se considera abstracta solo si hay métodos abstractos que se declaran pero no se definen. Por lo tanto, las clases que tienen métodos abstractos no son necesariamente clases abstractas. A menos que una clase tenga métodos abstractos sin definir, no use el atributo **AbstractClass** .
 
-En la sintaxis anterior, *modificador de accesibilidad* puede ser `public`, `private` o `internal`. Para más información, vea [Access Control](access-control.md) (Control de acceso).
+En la sintaxis anterior, el *modificador de accesibilidad* puede `public`ser `private` , `internal`o. Para más información, vea [Access Control](access-control.md) (Control de acceso).
 
-Al igual que con otros tipos, clases abstractas pueden tener una clase base y una o varias interfaces base. Cada clase base o interfaz aparece en una línea independiente, junto con el `inherit` palabra clave.
+Como con otros tipos, las clases abstractas pueden tener una clase base y una o varias interfaces base. Cada clase base o interfaz aparece en una línea independiente junto con la `inherit` palabra clave.
 
-La definición de tipo de una clase abstracta puede contener miembros definidos completamente, pero también puede contener a miembros abstractos. La sintaxis de los miembros abstractos se muestra por separado en la sintaxis anterior. En esta sintaxis, el *signatura de tipo* de un miembro es una lista que contiene los tipos de parámetros en orden y los tipos de valor devueltos, separada por `->` tokens o `*` tokens según corresponda para currificadas y la tupla parámetros. La sintaxis de las signaturas de tipo de miembro abstracto es el mismo que el se usa en los archivos de firma y que muestra IntelliSense en el Editor de código de Visual Studio.
+La definición de tipo de una clase abstracta puede contener miembros totalmente definidos, pero también puede contener miembros abstractos. La sintaxis de los miembros abstractos se muestra por separado en la sintaxis anterior. En esta sintaxis, la *signatura de tipo* de un miembro es una lista que contiene los tipos de parámetro en orden y los tipos de valor `->` devuelto, separados por `*` tokens o tokens, según corresponda para los parámetros currificados y de tupla. La sintaxis de las signaturas de tipo de miembro abstracto es la misma que la que se usa en los archivos de signatura y que se muestra en IntelliSense en el editor de Visual Studio Code.
 
-El código siguiente muestra una clase abstracta Shape, que tiene dos clases derivadas de no abstracta, Square y Circle. El ejemplo muestra cómo usar las propiedades, métodos y clases abstractas. En el ejemplo, la forma de clase abstracta representa los elementos comunes de las entidades concretas circle y square. Las características comunes de todas formas (en un sistema de coordenadas bidimensional) se abstraen en la clase Shape: la posición en la cuadrícula, un ángulo de giro y las propiedades de área y el perímetro. Estos se pueden invalidar, salvo la posición, el comportamiento de los cuales no se pueden cambiar las formas individuales.
+En el código siguiente se muestra una forma de clase abstracta, que tiene dos clases derivadas no abstractas, Square y Circle. En el ejemplo se muestra cómo usar clases, métodos y propiedades abstractos. En el ejemplo, la forma de clase abstracta representa los elementos comunes del círculo y el cuadrado de las entidades concretas. Las características comunes de todas las formas (en un sistema de coordenadas bidimensional) se abstraen en la clase de forma: la posición en la cuadrícula, un ángulo de rotación y las propiedades del área y del perímetro. Se pueden invalidar, excepto en el caso de la posición, el comportamiento de las formas individuales que no pueden cambiar.
 
-Puede invalidar el método de rotación, como se muestra en la clase Circle, que es la rotación invariable dada su simetría. Por lo que en la clase Circle, el método de rotación se reemplaza por un método que no hace nada.
+Se puede invalidar el método de rotación, como en la clase Circle, que es la rotación invariable debido a su simetría. Por lo tanto, en la clase Circle, el método de rotación se reemplaza por un método que no hace nada.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2901.fs)]
 
 **Salida:**
 
@@ -58,6 +58,6 @@ Area of Circle: 78.539816
 ## <a name="see-also"></a>Vea también
 
 - [Clases](classes.md)
-- [Miembros](members/index.md)
-- [Métodos](members/methods.md)
-- [Propiedades](members/Properties.md)
+- [Miembros](./members/index.md)
+- [Métodos](./members/methods.md)
+- [Propiedades](./members/Properties.md)

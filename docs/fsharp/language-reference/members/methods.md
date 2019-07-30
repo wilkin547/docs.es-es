@@ -1,17 +1,17 @@
 ---
 title: Métodos
-description: Obtenga información sobre cómo un F# método es una función asociada a un tipo que se utilizan para exponer e implementar la funcionalidad y el comportamiento de objetos y tipos.
+description: Obtenga información sobre F# cómo un método es una función asociada a un tipo que se usa para exponer e implementar la funcionalidad y el comportamiento de objetos y tipos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9b661a3ff7fa9a7704f5a31570acb62deaac2fcf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 13503690a59ace13dacba93b6fce9ea3240c5cc2
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641762"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627440"
 ---
 # <a name="methods"></a>Métodos
 
-Un *método* es una función que está asociada a un tipo. En la programación orientada a objetos, métodos se usan para exponer e implementar la funcionalidad y el comportamiento de objetos y tipos.
+Un *método* es una función que está asociada a un tipo. En la programación orientada a objetos, los métodos se utilizan para exponer e implementar la funcionalidad y el comportamiento de los objetos y tipos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -49,59 +49,59 @@ override self-identifier.method-name parameter-list [ : return-type ] =
 
 ## <a name="remarks"></a>Comentarios
 
-En la sintaxis anterior, puede ver las distintas formas de definiciones y declaraciones de método. En los cuerpos de método más largo, un salto de línea detrás del signo igual (=) y se aplica sangría al cuerpo del método completo.
+En la sintaxis anterior, puede ver las distintas formas de declaraciones y definiciones de método. En cuerpos de método más largos, un salto de línea sigue el signo igual (=) y se aplica sangría al cuerpo del método completo.
 
-Atributos pueden aplicarse a cualquier declaración de método. Que preceden a la sintaxis para una definición de método y normalmente se muestran en una línea independiente. Para obtener más información, consulte [Attributes](../attributes.md) (Atributos).
+Los atributos se pueden aplicar a cualquier declaración de método. Preceden a la sintaxis de una definición de método y suelen aparecer en una línea independiente. Para obtener más información, consulte [Attributes](../attributes.md) (Atributos).
 
-Se pueden marcar métodos `inline`. Para más información sobre `inline`, vea [Inline Functions](../functions/inline-functions.md) (Funciones insertadas).
+Se pueden marcar `inline`los métodos. Para más información sobre `inline`, vea [Inline Functions](../functions/inline-functions.md) (Funciones insertadas).
 
-Métodos de en línea no se pueden utilizar de forma recursiva dentro del tipo; no es necesario utilizar explícitamente el `rec` palabra clave.
+Los métodos no insertados se pueden usar de forma recursiva dentro del tipo; no es necesario usar explícitamente la `rec` palabra clave.
 
 ## <a name="instance-methods"></a>Métodos de instancia
 
-Los métodos de instancia se declaran con la `member` palabra clave y un *self-identifier*, seguido de un punto (.) y el nombre del método y los parámetros. Como es el caso de `let` enlaces, el *lista de parámetros* puede ser un modelo. Por lo general, incluya los parámetros entre paréntesis en forma de tupla, los métodos de manera que aparecen en el método F# cuando se crea en otros lenguajes de .NET Framework. Sin embargo, también es común currificada (parámetros separados por espacios) y se admiten otros patrones también.
+Los métodos de instancia se declaran con la `member` palabra clave y un *identificador automático*, seguido de un punto (.) y el nombre del método y los parámetros. Como es el caso de `let` los enlaces, la *lista de parámetros* puede ser un patrón. Normalmente, los parámetros de método se delimitan entre paréntesis en una forma de tupla, que es la F# forma en que los métodos aparecen en cuando se crean en otros lenguajes .NET Framework. Sin embargo, también es común la forma currificada (parámetros separados por espacios) y también se admiten otros patrones.
 
-El ejemplo siguiente muestra la definición y uso de un método de instancia no abstracto.
+En el ejemplo siguiente se muestra la definición y el uso de un método de instancia no abstracta.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3401.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3401.fs)]
 
-Dentro de los métodos de instancia, no use el identificador propio para obtener acceso a los campos definidos mediante enlaces. Use el identificador propio al obtener acceso a otros miembros y propiedades.
+En los métodos de instancia, no use el identificador propio para tener acceso a los campos definidos mediante el uso de enlaces Let. Use el identificador propio al acceder a otros miembros y propiedades.
 
 ## <a name="static-methods"></a>Métodos estáticos
 
-La palabra clave `static` se utiliza para especificar que un método se pueda llamar sin una instancia y no está asociado a una instancia de objeto. En caso contrario, los métodos son métodos de instancia.
+La palabra `static` clave se usa para especificar que se puede llamar a un método sin una instancia de y que no está asociado a una instancia de objeto. De lo contrario, los métodos son métodos de instancia.
 
-El ejemplo de la sección siguiente muestra los campos declarados con el `let` palabra clave, los miembros de la propiedad se declaran con el `member` palabra clave y un método estático que se declara con el `static` palabra clave.
+En el ejemplo de la sección siguiente se muestran los campos `let` declarados con la palabra clave `member` , los miembros de propiedad declarados con `static` la palabra clave y un método estático declarado con la palabra clave.
 
-El ejemplo siguiente muestra la definición y uso de métodos estáticos. Se supone que estas definiciones de método están en el `SomeType` clase en la sección anterior.
+En el ejemplo siguiente se muestra la definición y el uso de métodos estáticos. Suponga que estas definiciones de método se encuentran `SomeType` en la clase de la sección anterior.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
 
 ## <a name="abstract-and-virtual-methods"></a>Métodos abstractos y virtuales
 
-La palabra clave `abstract` indica que un método tiene una ranura de la distribución virtual y que no dispongan de una definición de la clase. Un *ranura distribución virtual* es una entrada en una tabla de funciones mantenida internamente que se usa en tiempo de ejecución para buscar la función virtual llamadas en un tipo de objeto. El mecanismo de distribución virtual es el mecanismo que implementa *polimorfismo*, una característica importante de la programación orientada a objetos. Es una clase que tiene al menos un método abstracto sin una definición de un *clase abstracta*, lo que significa que no se puede crear ninguna instancia de esa clase. Para obtener más información sobre las clases abstractas, vea [clases abstractas](../abstract-classes.md).
+La palabra `abstract` clave indica que un método tiene una ranura de envío virtual y podría no tener una definición en la clase. Una *ranura de envío virtual* es una entrada de una tabla de funciones que se mantiene internamente y que se utiliza en tiempo de ejecución para buscar llamadas a funciones virtuales en un tipo orientado a objetos. El mecanismo de distribución virtual es el mecanismo que implementael polimorfismo, una característica importante de la programación orientada a objetos. Una clase que tiene al menos un método abstracto sin una definición es una *clase abstracta*, lo que significa que no se puede crear ninguna instancia de esa clase. Para obtener más información sobre las clases abstractas, vea [clases abstractas](../abstract-classes.md).
 
-Las declaraciones de método abstracto no incluyen un cuerpo de método. En su lugar, el nombre del método es seguido por dos puntos (:) y una signatura de tipo para el método. La signatura de tipo de un método es el mismo que muestra IntelliSense cuando sitúe el puntero del mouse sobre un nombre de método en el Editor de código de Visual Studio, excepto sin los nombres de parámetro. Las signaturas de tipo también se muestran el intérprete, fsi.exe, cuando se trabaja de forma interactiva. La signatura de tipo de un método está formada por enumerando los tipos de los parámetros, seguidos por el tipo de valor devuelto, con símbolos de separador adecuado. Parámetros currificados están separados por `->` y parámetros de tupla se separan mediante `*`. El valor devuelto siempre se separa de los argumentos mediante un `->` símbolos. Pueden usarse paréntesis para agrupar parámetros complejos, por ejemplo, cuando un tipo de función es un parámetro, o para indicar cuándo una tupla se trata como un único parámetro en lugar de dos parámetros.
+Las declaraciones de método abstracto no incluyen un cuerpo de método. En su lugar, el nombre del método va seguido de un signo de dos puntos (:) y una firma de tipo para el método. La signatura de tipo de un método es la misma que la que se muestra en IntelliSense al pausar el puntero del mouse sobre un nombre de método en el editor de Visual Studio Code, excepto sin nombres de parámetro. El intérprete, FSI. exe, cuando se trabaja de forma interactiva, también muestra las signaturas de tipo. La signatura de tipo de un método se forma enumerando los tipos de los parámetros, seguidos del tipo de valor devuelto, con símbolos de separador adecuados. Los parámetros currificados están separados por `->` y los parámetros de tupla están `*`separados por. El valor devuelto siempre está separado de los argumentos por `->` un símbolo. Los paréntesis se pueden usar para agrupar parámetros complejos, como cuando un tipo de función es un parámetro, o para indicar si una tupla se trata como un parámetro único en lugar de como dos parámetros.
 
-También puedes usar los métodos abstractos definiciones default agregando la definición de la clase y usando el `default` palabra clave, como se muestra en el bloque de sintaxis en este tema. Un método abstracto que tiene una definición de la misma clase es equivalente a un método virtual en otros lenguajes de .NET Framework. Si existe o no una definición, la `abstract` palabra clave crea una nueva ranura de envío en la tabla de funciones virtuales para la clase.
+También puede proporcionar definiciones default de métodos abstractos agregando la definición a la clase y usando `default` la palabra clave, tal como se muestra en el bloque de sintaxis de este tema. Un método abstracto que tiene una definición en la misma clase es equivalente a un método virtual en otros lenguajes .NET Framework. Tanto si existe una definición como si no `abstract` , la palabra clave crea una nueva ranura de envío en la tabla de funciones virtuales para la clase.
 
-Independientemente de si una clase base implementa sus métodos abstractos, las clases derivadas pueden proporcionar implementaciones de métodos abstractos. Para implementar un método abstracto en una clase derivada, defina un método que tiene el mismo nombre y la firma de la clase derivada, excepto que use el `override` o `default` palabra clave y proporcione el cuerpo del método. Las palabras clave `override` y `default` exactamente el mismo significado. Usar `override` si el nuevo método reemplaza una implementación de la clase base; use `default` al crear una implementación en la misma clase que la declaración abstracta original. No utilice el `abstract` palabra clave en el método que implementa el método que se ha declarado como abstracto en la clase base.
+Independientemente de si una clase base implementa sus métodos abstractos, las clases derivadas pueden proporcionar implementaciones de métodos abstractos. Para implementar un método abstracto en una clase derivada, defina un método que tenga el mismo nombre y la misma firma en la clase derivada, `override` excepto `default` use la palabra clave o y proporcione el cuerpo del método. Las palabras `override` clave `default` y significan exactamente lo mismo. Use `override` si el nuevo método invalida una implementación de clase base; Utilice `default` cuando cree una implementación en la misma clase que la declaración abstracta original. No use la `abstract` palabra clave en el método que implementa el método que se declaró Abstract en la clase base.
 
-El ejemplo siguiente muestra un método abstracto `Rotate` que tiene una implementación de forma predeterminada, el equivalente de un método virtual de .NET Framework.
+En el ejemplo siguiente se muestra un método `Rotate` abstracto que tiene una implementación predeterminada, que es el equivalente de un método virtual .NET Framework.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
 
-El ejemplo siguiente muestra una clase derivada que reemplaza un método de clase base. En este caso, la invalidación cambia el comportamiento para que el método no hace nada.
+En el ejemplo siguiente se muestra una clase derivada que reemplaza un método de clase base. En este caso, la invalidación cambia el comportamiento para que el método no hace nada.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3404.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3404.fs)]
 
 ## <a name="overloaded-methods"></a>Métodos sobrecargados
 
-Métodos sobrecargados son métodos que tienen nombres idénticos en un tipo determinado, pero que tienen diferentes argumentos. En F#, argumentos opcionales se suelen usar en lugar de métodos sobrecargados. Sin embargo, se permiten métodos sobrecargados en el lenguaje, siempre que los argumentos son en forma de tupla, no currificada.
+Los métodos sobrecargados son métodos que tienen nombres idénticos en un tipo determinado pero que tienen argumentos diferentes. En F#, normalmente se usan argumentos opcionales en lugar de métodos sobrecargados. Sin embargo, los métodos sobrecargados se permiten en el lenguaje, siempre que los argumentos estén en forma de tupla, no en formato currificados.
 
 ## <a name="optional-arguments"></a>Argumentos opcionales
 
-A partir de F# 4.1, también puede tener argumentos opcionales con valor de parámetro predeterminado en métodos.  Esto sirve para ayudar a facilitar la interoperación con código C#.  El ejemplo siguiente muestra la sintaxis:
+A partir F# de 4,1, también puede tener argumentos opcionales con un valor de parámetro predeterminado en los métodos.  Esto ayuda a facilitar la interoperabilidad C# con el código.  En el ejemplo siguiente se muestra la sintaxis:
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
@@ -109,13 +109,13 @@ type C() =
     __.M([<Optional; DefaultParameterValue(12)>] i) = i + 1
 ```
 
-Tenga en cuenta que el valor pasado para `DefaultParameterValue` debe coincidir con el tipo de entrada.  En el ejemplo anterior, es un `int`.  Intenta pasar un valor no entero `DefaultParameterValue` daría lugar a un error de compilación.
+Tenga en cuenta que el valor pasado `DefaultParameterValue` para debe coincidir con el tipo de entrada.  En el ejemplo anterior, es un `int`.  Si se intenta pasar un valor no entero a `DefaultParameterValue` , se producirá un error de compilación.
 
 ## <a name="example-properties-and-methods"></a>Ejemplo: Propiedades y métodos
 
-En el siguiente ejemplo contiene un tipo que contiene algunos ejemplos de campos, funciones privadas, propiedades y un método estático.
+El ejemplo siguiente contiene un tipo que tiene ejemplos de campos, funciones privadas, propiedades y un método estático.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3406.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3406.fs)]
 
 ## <a name="see-also"></a>Vea también
 

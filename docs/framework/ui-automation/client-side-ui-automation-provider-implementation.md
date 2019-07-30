@@ -6,16 +6,16 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: 02d77dfeb7a00292639131cad72cff7e079704c5
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.openlocfilehash: 361d6d684485e07a958e8272997bb989b8e4fc1b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67802224"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629628"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el cliente
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  Se están usando varios marcos de trabajo [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] diferentes dentro de sistemas operativos [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] , incluidos [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]y [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expone información sobre los elementos de interfaz de usuario a los clientes. Sin embargo, el propio [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] no tiene conocimiento de los diferentes tipos de controles que existen en estos marcos de trabajo y las técnicas que se necesitan para extraen información de ellos. En su lugar, deja esta tarea a objetos denominados proveedores. Un proveedor extrae información de un control concreto y proporciona esa información a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], que luego la presenta al cliente de una manera coherente.  
   
@@ -23,9 +23,9 @@ ms.locfileid: "67802224"
   
  Sin embargo, los controles más antiguos como los de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] y [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] no admiten directamente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. En su lugar, se sirven estos controles por los proveedores que existen en el proceso del cliente y obtienen información sobre los controles mediante la comunicación entre procesos; por ejemplo, al supervisar mensajes de ventana hacia y desde los controles. Estos proveedores del lado cliente a veces se denominan servidores proxy.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Proporciona los proveedores estándar [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] y controles de formularios Windows Forms. Además, un proveedor de reserva ofrece parcial [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] admite a cualquier control que no sea atendido por otro proveedor en el servidor o proxy, pero tiene una implementación de Microsoft Active Accessibility. Todos estos proveedores se cargan automáticamente y están disponibles para las aplicaciones cliente.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)]proporciona proveedores para los [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles estándar y Windows Forms. Además, un proveedor de reserva proporciona compatibilidad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] parcial a cualquier control que no sea atendido por otro proveedor del lado servidor o proxy, pero que tenga una implementación de Microsoft Active Accessibility. Todos estos proveedores se cargan automáticamente y están disponibles para las aplicaciones cliente.  
   
- Para obtener más información sobre la compatibilidad con [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] y los controles de Windows Forms, vea [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Para obtener más información sobre la [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] compatibilidad con los controles de Windows Forms, vea [compatibilidad de UI Automation con los controles estándar](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   
  Las aplicaciones también pueden registrar otros proveedores del lado cliente.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "67802224"
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>   
 ## <a name="registering-and-configuring-client-side-providers"></a>Registro y configuración de proveedores de lado de cliente  
- Los proveedores de lado de cliente en un [!INCLUDE[TLA#tla_dll](../../../includes/tlasharptla-dll-md.md)] se cargan llamando a <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>. No es necesario realizar ninguna acción por una aplicación cliente para usar los proveedores.  
+ Los proveedores del lado cliente de una biblioteca de vínculos dinámicos (DLL) se cargan llamando a <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviderAssembly%2A>. No es necesario realizar ninguna acción por una aplicación cliente para usar los proveedores.  
   
  Los proveedores implementados en el propio código del cliente se registran mediante <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>. Este método toma como argumento una matriz de estructuras <xref:System.Windows.Automation.ClientSideProviderDescription> y cada una de ellas especifica las siguientes propiedades:  
   
