@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 06/14/2019
-ms.openlocfilehash: a808a35876df8d2f6cee3c240c606b7bd979e9ee
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: b1dd243d754bfc3b682c084820547f6b7846f0ea
+ms.sourcegitcommit: 4b9c2d893b45d47048c6598b4182ba87759b1b59
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539275"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68484661"
 ---
 # <a name="whats-new-in-net-core-30-preview-6"></a>Novedades de .NET Core 3.0 (versión preliminar 6)
 
@@ -33,7 +33,7 @@ Si desea obtener más información sobre cada versión preliminar, vea los anunc
 
 ## <a name="net-core-sdk-windows-installer"></a>Windows Installer del SDK de .NET Core
 
-El instalador MSI para Windows ha cambiado a partir de .NET Core 3.0. Los instaladores del SDK actualizarán ahora las versiones de la banda de características del SDK. Las bandas de características se definen en los grupos de *centenas* de la sección *revisión* del número de versión. Por ejemplo, **3.0.*101*** y **3.0.*201*** son versiones de dos bandas de características distintas mientras que **3.0.*101*** y **3.0.*199*** están en la misma banda de características. Y, cuando se instale el SDK **3.0.*101*** de .NET Core, se quitará el SDK **3.0.*100*** de .NET Core de la máquina si existe. Cuando se instale el SDK **3.0.*200*** de .NET Core en la misma máquina, no se quitará el SDK **3.0.*101*** de .NET Core.
+El instalador MSI para Windows ha cambiado a partir de .NET Core 3.0. Los instaladores del SDK actualizarán ahora las versiones de la banda de características del SDK. Las bandas de características se definen en los grupos de *centenas* de la sección *revisión* del número de versión. Por ejemplo, **3.0._101_** y **3.0._201_** son versiones de dos bandas de características distintas mientras que **3.0._101_** y **3.0._199_** están en la misma banda de características. Y, cuando se instale el SDK **3.0._101_** de .NET Core, se quitará el SDK **3.0._100_** de .NET Core de la máquina si existe. Cuando se instale el SDK **3.0._200_** de .NET Core en la misma máquina, no se quitará el SDK **3.0._101_** de .NET Core.
 
 Para obtener más información sobre las versiones, vea el artículo de [introducción a la creación de versiones de .NET Core](../versions/index.md).
 
