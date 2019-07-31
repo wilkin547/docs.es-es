@@ -9,6 +9,25 @@
         - name: Explorador de API de .NET
           tocHref: /dotnet/api/
           topicHref: /dotnet/api/index
+        - name: Guía de la arquitectura de aplicaciones .NET
+          tocHref: /dotnet/architecture/
+          topicHref: /dotnet/architecture/index
+          items:
+            - name: Libro electrónico sobre la modernización de aplicaciones web ASP.NET
+              tocHref: /dotnet/architecture/modern-web-apps-azure/
+              topicHref: /dotnet/architecture/modern-web-apps-azure/index
+            - name: Libro electrónico sobre la arquitectura de microservicios de .NET
+              tocHref: /dotnet/architecture/microservices/
+              topicHref: /dotnet/architecture/microservices/index
+            - name: Libro electrónico sobre la modernización de aplicaciones .NET
+              tocHref: /dotnet/architecture/modernize-with-azure-containers/
+              topicHref: /dotnet/architecture/modernize-with-azure-containers/index
+            - name: Libro electrónico de DevOps de microservicios de .NET
+              tocHref: /dotnet/architecture/containerized-lifecycle/
+              topicHref: /dotnet/architecture/containerized-lifecycle/index
+            - name: Libro electrónico de aplicaciones sin servidor
+              tocHref: /dotnet/architecture/serverless/
+              topicHref: /dotnet/architecture/serverless/index
         - name: Guía de .NET
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index
@@ -19,21 +38,6 @@
             - name: Guía de la biblioteca de código abierto
               tocHref: /dotnet/standard/library-guidance/
               topicHref: /dotnet/standard/library-guidance/index
-            - name: Libro electrónico sobre la modernización de aplicaciones web ASP.NET
-              tocHref: /dotnet/standard/modern-web-apps-azure-architecture/
-              topicHref: /dotnet/standard/modern-web-apps-azure-architecture/index
-            - name: Libro electrónico sobre la arquitectura de microservicios de .NET
-              tocHref: /dotnet/standard/microservices-architecture/
-              topicHref: /dotnet/standard/microservices-architecture/index
-            - name: Libro electrónico sobre la modernización de aplicaciones .NET
-              tocHref: /dotnet/standard/modernize-with-azure-and-containers/
-              topicHref: /dotnet/standard/modernize-with-azure-and-containers/index
-            - name: Libro electrónico de DevOps de microservicios de .NET
-              tocHref: /dotnet/standard/containerized-lifecycle-architecture/
-              topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
-            - name: Libro electrónico de aplicaciones sin servidor
-              tocHref: /dotnet/standard/serverless-architecture/
-              topicHref: /dotnet/standard/serverless-architecture/index
             - name: Modelos para la programación asincrónica
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
@@ -439,7 +443,7 @@
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
                   items:
-                    - name: Ensamblados y GAC
+                    - name: Ensamblados
                       tocHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/
                       topicHref: /dotnet/csharp/programming-guide/concepts/assemblies-gac/index
                     - name: Programación asincrónica
@@ -535,7 +539,7 @@
               tocHref: /dotnet/visual-basic/programming-guide/concepts/
               topicHref: /dotnet/visual-basic/programming-guide/concepts/index
               items:
-                - name: Ensamblados y GAC
+                - name: Ensamblados
                   tocHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/
                   topicHref: /dotnet/visual-basic/programming-guide/concepts/assemblies-gac/index
                 - name: Programación asincrónica
