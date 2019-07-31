@@ -7,39 +7,42 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 33b40ddbb0c959332f7d95ffa0f1633b910bcb33
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007089"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672010"
 ---
 # <a name="xaml-in-wpf"></a>XAML en WPF
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] es un lenguaje de marcado de aplicación declarativo de programación. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementa aXAML implementación del procesador y proporciona compatibilidad con el lenguaje XAML. El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos se implementan de forma que pueden proporcionar el tipo necesario de seguridad para obtener una representación de XAML. En general, puede crear la mayoría de los [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] IU de la aplicación en el marcado XAML.  
+
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]es un lenguaje de marcado para la programación declarativa de aplicaciones. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]implementa una implementación de procesador XAML y proporciona compatibilidad con el lenguaje XAML. Los [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tipos se implementan de forma que pueden proporcionar el tipo necesario de respaldo para una representación XAML. En general, puede crear la mayoría de la interfaz [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de usuario de la aplicación en el marcado XAML.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Información general sobre XAML (WPF)](xaml-overview-wpf.md)  
- [Detalles de la sintaxis XAML](xaml-syntax-in-detail.md)  
- [Código subyacente y XAML en WPF](code-behind-and-xaml-in-wpf.md)  
- [Clases XAML y personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)  
- [Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)  
- [Espacios de nombres y asignación de espacios de nombres XAML para WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [Ámbitos de nombres XAML de WPF](wpf-xaml-namescopes.md)  
- [Estilos y plantillas insertados](inline-styles-and-templates.md)  
- [Espacio en blanco en XAML de procesamiento](../../xaml-services/whitespace-processing-in-xaml.md)  
- [Clases TypeConverter y XAML](typeconverters-and-xaml.md)  
- [Entidades de caracteres XML y XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
- [XAML Namespace (x:) Características del lenguaje](../../xaml-services/xaml-namespace-x-language-features.md)  
- [Extensiones XAML de WPF](wpf-xaml-extensions.md)  
- [Compatibilidad de marcado (mc:) Características del lenguaje](markup-compatibility-mc-language-features.md)  
+
+[Información general sobre XAML (WPF)](xaml-overview-wpf.md)  
+[Detalles de la sintaxis XAML](xaml-syntax-in-detail.md)  
+[Código subyacente y XAML en WPF](code-behind-and-xaml-in-wpf.md)  
+[Clases XAML y personalizadas para WPF](xaml-and-custom-classes-for-wpf.md)  
+[Extensiones de marcado y XAML de WPF](markup-extensions-and-wpf-xaml.md)  
+[Espacios de nombres y asignación de espacios de nombres XAML para WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+[Ámbitos de nombres XAML de WPF](wpf-xaml-namescopes.md)  
+[Estilos y plantillas insertados](inline-styles-and-templates.md)  
+[Procesamiento de espacios en blanco en XAML](../../xaml-services/whitespace-processing-in-xaml.md)  
+[Clases TypeConverter y XAML](typeconverters-and-xaml.md)  
+[Entidades de caracteres XML y XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
+[Espacio de nombres XAML (x:) Características del lenguaje](../../xaml-services/xaml-namespace-x-language-features.md)  
+[Extensiones XAML de WPF](wpf-xaml-extensions.md)  
+[Compatibilidad de marcado (MC:) Características del lenguaje](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Arquitectura de WPF](wpf-architecture.md)  
-  [Elementos base](base-elements.md)  
-  [Árbol de elementos y serialización](element-tree-and-serialization.md)  
-  [Propiedades](properties-wpf.md)  
-  [Eventos](events-wpf.md)  
-  [Entrada](input-wpf.md)  
-  [Recursos](resources-wpf.md)  
-  [Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
-  [Modelo de subprocesos](threading-model.md)
+
+[Arquitectura de WPF](wpf-architecture.md)  
+[Elementos base](base-elements.md)  
+[Árbol de elementos y serialización](element-tree-and-serialization.md)  
+[Propiedades](properties-wpf.md)  
+[Eventos](events-wpf.md)  
+[Entrada](input-wpf.md)  
+[Recursos](resources-wpf.md)  
+[Aplicar estilos y plantillas](../controls/styling-and-templating.md)  
+[Modelo de subprocesos](threading-model.md)

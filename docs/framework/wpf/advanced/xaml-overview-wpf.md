@@ -19,19 +19,20 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 4f3d8a9f275a41b96b6518d63552ce9873cca0fb
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: ee5318b8ba1284f2805b80b3e41fab3ae739158c
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400821"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68672005"
 ---
 # <a name="xaml-overview-wpf"></a>Información general sobre XAML (WPF)
+
 En este tema se describen las características del lenguaje XAML y se muestra cómo usar XAML para escribir aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. En este tema se describe el código XAML específicamente tal y como lo implementa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. El propio código XAML es un concepto de lenguaje más amplio que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
 
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>¿Qué es XAML?  
- XAML es un lenguaje declarativo de marcado. Tal y como se aplica al modelo de programación de .NET Framework, XAML [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] simplifica la creación de un para una aplicación .NET Framework. Se pueden crear elementos visibles de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] en el marcado XAML declarativo y, después, separar la definición de la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de la lógica en tiempo de ejecución mediante archivos de código subyacente, que se unen al marcado mediante definiciones de clases parciales. XAML representa directamente la creación de instancias de objetos en un conjunto concreto de tipos de respaldo definidos en ensamblados. Esto no es lo que sucede con la mayoría de lenguajes de marcado, que normalmente se interpretan sin esa relación directa con un sistema de tipos de respaldo. El código XAML habilita un flujo de trabajo en el que las partes independientes pueden funcionar en la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] y la lógica de una aplicación, a través de herramientas potencialmente diferentes.  
+ XAML es un lenguaje declarativo de marcado. Tal y como se aplica al modelo de programación de .NET Framework, XAML [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] simplifica la creación de un para una aplicación .NET Framework. Puede crear elementos visibles [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] en el marcado XAML declarativo y, a continuación [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] , separar la definición de la lógica de tiempo de ejecución utilizando archivos de código subyacente que se unen al marcado mediante definiciones de clases parciales. XAML representa directamente la creación de instancias de objetos en un conjunto concreto de tipos de respaldo definidos en ensamblados. Esto no es lo que sucede con la mayoría de lenguajes de marcado, que normalmente se interpretan sin esa relación directa con un sistema de tipos de respaldo. El código XAML habilita un flujo de trabajo en el que las partes independientes pueden funcionar en la [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] y la lógica de una aplicación, a través de herramientas potencialmente diferentes.  
   
  Cuando se representan como texto, los archivos XAML son archivos XML que generalmente tienen la extensión `.xaml`. Los archivos se pueden codificar con cualquier codificación XML, pero lo habitual es la codificación UTF-8.  
   
@@ -104,7 +105,7 @@ En este tema se describen las características del lenguaje XAML y se muestra c�
   
  Como regla del lenguaje XAML, el valor de una propiedad de contenido de XAML se debe proporcionar exclusivamente antes o después de cualquier otro elemento de propiedad en ese elemento de objeto. Por ejemplo, el marcado siguiente no se puede compilar:  
   
-```  
+```xaml
 <Button>I am a   
   <Button.Background>Blue</Button.Background>  
   blue button</Button>  
@@ -188,7 +189,7 @@ En este tema se describen las características del lenguaje XAML y se muestra c�
  [!code-xaml[XAMLOvwSupport#MarginVerbose](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page7.xaml#marginverbose)]  
   
 > [!NOTE]
->  También hay un número limitado de objetos en los que la conversión de tipos es la única manera pública de establecer una propiedad en ese tipo sin implicar una subclase, porque el propio tipo no tiene un constructor sin parámetros. Un ejemplo es <xref:System.Windows.Input.Cursor>.  
+> También hay un número limitado de objetos en los que la conversión de tipos es la única manera pública de establecer una propiedad en ese tipo sin implicar una subclase, porque el propio tipo no tiene un constructor sin parámetros. Un ejemplo es <xref:System.Windows.Input.Cursor>.  
   
  Para obtener más información sobre la compatibilidad de la conversión de tipos y su uso para la sintaxis de atributos, vea [Clases TypeConverter y XAML](typeconverters-and-xaml.md).  
   
@@ -228,7 +229,7 @@ En este tema se describen las características del lenguaje XAML y se muestra c�
   
  El siguiente es un ejemplo muy básico de cómo funcionan los prefijos personalizados en el marcado XAML. El prefijo `custom` se define en la etiqueta de elemento raíz y se asigna a un ensamblado concreto que se empaqueta y está disponible con la aplicación. Este ensamblado contiene un tipo `NumericUpDown`, que se implementa para admitir el uso XAML general, además de usar una herencia de clases que permite su inserción en este punto concreto en un modelo de contenido de código XAML de WPF. Se declara una instancia de este control `NumericUpDown` como un elemento de objeto, usando el prefijo para que un analizador de código XAML sepa qué espacio de nombres XAML contiene el tipo y, por consiguiente, dónde está el ensamblado de respaldo que contiene la definición de tipo.  
   
-```  
+```xaml
 <Page  
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"   

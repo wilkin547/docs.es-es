@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: e2c93f4471db2d72851a5d5bd8806b59a3e5ee28
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
+ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629864"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671835"
 ---
 # <a name="technology-regions-overview"></a>Información general sobre áreas de la tecnología
 Si se usan varias tecnologías de representación en una aplicación, como WPF, Win32 o DirectX, deben compartir las áreas de representación en una ventana común de nivel superior. En este tema se describen los problemas que podrían afectar a la presentación y la entrada de una aplicación de interoperación WPF.  
@@ -52,13 +52,13 @@ Si se usan varias tecnologías de representación en una aplicación, como WPF, 
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]admite hrgn; sin embargo, no hay ninguna API administrada para esta funcionalidad. Puede usar la invocación de <xref:System.Windows.Interop.HwndSource> plataforma y llamar a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] las API pertinentes. Para más información, vea [Llamar a funciones nativas desde código administrado](/cpp/dotnet/calling-native-functions-from-managed-code).  
   
- Las ventanas superpuestas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen características diferentes según el sistema operativo. Esto se debe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a que usa DirectX para representarse y las ventanas superpuestas se diseñaron principalmente para la representación, no para la representación de [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] DirectX.  
+ Las ventanas superpuestas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen características diferentes según el sistema operativo. Esto se debe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a que usa DirectX para representarse y las ventanas superpuestas se diseñaron principalmente para la representación de GDI, no para la representación de DirectX.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite ventanas superpuestas con aceleración de hardware en [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] y versiones posteriores. Las ventanas superpuestas con [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] aceleración de hardware en requieren soporte técnico de Microsoft DirectX, por lo que las funcionalidades dependerán de la versión de Microsoft DirectX de ese equipo.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admite las claves de color de transparencia, porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no puede garantizar que se represente exactamente el color que se solicita, en particular cuando se aplica la aceleración de hardware a la representación.  
   
-- Si la aplicación se ejecuta en [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], las ventanas superpuestas encima de las superficies de DirectX parpadean cuando se representa la aplicación de DirectX.  (La secuencia de representación real es que [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] oculta la ventana superpuesta, DirectX dibuja y, a continuación, [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] vuelve a colocar la ventana superpuesta).  Las ventanas superpuestas que no son de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también tienen esta limitación.  
+- Si la aplicación se ejecuta en [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], las ventanas superpuestas encima de las superficies de DirectX parpadean cuando se representa la aplicación de DirectX.  (La secuencia de representación real es que Microsoft Windows Interfaz de dispositivo gráfico (GDI) oculta la ventana en capas, después DirectX dibuja y, a continuación, Microsoft Windows Interfaz de dispositivo gráfico (GDI) coloca la ventana en capas de nuevo).  Las ventanas superpuestas que no son de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también tienen esta limitación.  
   
 ## <a name="see-also"></a>Vea también
 
