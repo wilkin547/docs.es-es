@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Ordenar elementos (Visual Basic)
+title: Procedimiento Elementos sort (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614393"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710484"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a>Procedimiento Ordenar elementos (Visual Basic)
+# <a name="how-to-sort-elements-visual-basic"></a>Procedimiento Elementos sort (Visual Basic)
 Este ejemplo muestra cómo escribir una consulta que ordene sus resultados.  
   
 ## <a name="example"></a>Ejemplo  
@@ -40,7 +40,7 @@ Next
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos de un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).  
   

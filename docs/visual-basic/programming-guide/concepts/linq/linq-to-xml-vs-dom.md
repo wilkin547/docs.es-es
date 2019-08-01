@@ -2,12 +2,12 @@
 title: LINQ to XML frente a DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 8a7d15a8eca8e7d9bcbba068305357ff766a9d9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ca04991fb012aa522e7c0e35eea08d790007f7a
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623065"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710372"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML frente a DOM (Visual Basic)
 En esta sección se describen algunas diferencias fundamentales entre [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] y la API de programación XML predominante actual, Document Object Model (DOM) W3C.  
@@ -51,7 +51,7 @@ doc.AppendChild(contacts)
 Console.WriteLine(doc.OuterXml)  
 ```  
   
- Este estilo de codificación no proporciona mucha información visual acerca de la estructura del árbol XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admite este enfoque para crear un árbol XML, pero también admite un enfoque alternativo, la *construcción funcional*. En Visual Basic, la construcción funcional usa literales XML para crear un árbol XML.  
+ Este estilo de codificación no proporciona mucha información visual acerca de la estructura del árbol XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] admite este enfoque para crear un árbol XML, pero también admite un enfoque alternativo, la *construcción funcional*. En Visual Basic, la construcción funcional utiliza literales XML para generar un árbol XML.  
   
  A continuación se muestra cómo se crea el mismo árbol XML mediante la construcción funcional [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]:  
   
@@ -74,7 +74,7 @@ Dim contacts = _
   
  Tenga en cuenta que si se aplica la sangría al código para crear el árbol XML, se mostrará la estructura XML subyacente.  
   
- Para obtener más información, consulte [crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
+ Para obtener más información, vea [crear árboles XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md).  
   
 ## <a name="working-directly-with-xml-elements"></a>Trabajar directamente con elementos XML  
  La programación con XML suele centrarse en elementos XML y quizás en los atributos. En [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se puede trabajar directamente con atributos y elementos XML. Por ejemplo, puede realizar lo siguiente:  
@@ -99,12 +99,12 @@ doc.AppendChild(name)
  Cuando se utiliza LINQ to XML, se usa la clase <xref:System.Xml.Linq.XDocument> solamente si se desea agregar un comentario o una instrucción de procesamiento en el nivel de raíz del documento.  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>Control simplificado de nombres y espacios de nombres  
- Controlar nombres, espacios de nombres y prefijos de espacios de nombres suele ser una parte compleja de la programación XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica los nombres y los espacios de nombres al eliminar el requisito de tener que tratar con prefijos de espacios de nombres. Si lo desea, puede controlar los prefijos de espacios de nombres. Pero si decide no controlar explícitamente los prefijos de espacios de nombres, durante la serialización [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] asignará prefijos de espacios de nombres si son necesarios, o serializará con espacios de nombres predeterminados si no lo son. Si se usan espacios de nombres predeterminados, no habrá prefijos de espacios de nombres en el documento resultante. Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Controlar nombres, espacios de nombres y prefijos de espacios de nombres suele ser una parte compleja de la programación XML. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica los nombres y los espacios de nombres al eliminar el requisito de tener que tratar con prefijos de espacios de nombres. Si lo desea, puede controlar los prefijos de espacios de nombres. Pero si decide no controlar explícitamente los prefijos de espacios de nombres, durante la serialización [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] asignará prefijos de espacios de nombres si son necesarios, o serializará con espacios de nombres predeterminados si no lo son. Si se usan espacios de nombres predeterminados, no habrá prefijos de espacios de nombres en el documento resultante. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
  Otro problema de DOM consiste en que no permite cambiar el nombre de un nodo. Por el contrario, hay que crear un nuevo nodo y copiar en él todos los nodos secundarios, por lo que se pierde la identidad del nodo original. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] evita este problema al permitir que se establezca la propiedad <xref:System.Xml.Linq.XName> en un nodo.  
   
 ## <a name="static-method-support-for-loading-xml"></a>Compatibilidad con el método estático para cargar XML  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite cargar XML mediante métodos estáticos en lugar de métodos de instancia. Esto simplifica la carga y el análisis. Para obtener más información, vea [Cómo: Cargar XML desde un archivo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permite cargar XML mediante métodos estáticos en lugar de métodos de instancia. Esto simplifica la carga y el análisis. Para obtener más información, consulte [Cómo Cargar XML desde un archivo (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>Eliminación de la compatibilidad con construcciones DTD  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] simplifica aún más la programación XML quitando la compatibilidad con entidades y referencias a entidades. La administración de entidades es compleja y su uso es muy poco común. La eliminación de la compatibilidad aumenta el rendimiento y simplifica la interfaz de programación. Cuando se rellena un árbol de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], se expanden todas las entidades DTD.  

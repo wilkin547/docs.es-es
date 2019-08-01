@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Recuperar un único atributo (LINQ to XML) (Visual Basic)
+title: Procedimiento Recuperar un solo atributo (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: f56bdf86e4b63bc952c1d139aac9ee619b5a5f6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 635644783153765d61aff3c00fe16860642c29f1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051291"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710522"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Procedimiento Recuperar un único atributo (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>Procedimiento Recuperar un solo atributo (LINQ to XML) (Visual Basic)
 Este tema explica cómo recuperar un atributo concreto de un elemento, proporcionando el nombre del atributo. Esto puede resultar útil para escribir expresiones de consulta mediante las cuales encontrar un elemento que contiene un atributo en particular.  
   
  El método <xref:System.Xml.Linq.XElement.Attribute%2A> de la clase <xref:System.Xml.Linq.XElement> devuelve el <xref:System.Xml.Linq.XAttribute> con el nombre especificado.  
@@ -63,7 +63,7 @@ work
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] proporciona operadores de conversión explícita para la clase <xref:System.Xml.Linq.XAttribute> a `string`, `bool`, `bool?`, `int`, `int?`, `uint`, `uint?`, `long`, `long?`, `ulong`, `ulong?`, `float`, `float?`, `double`, `double?`, `decimal`, `decimal?`, `DateTime`, `DateTime?`, `TimeSpan`, `TimeSpan?`, `GUID` y `GUID?`.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra el mismo código para un atributo que se encuentre en un espacio de nombres. Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ El siguiente ejemplo muestra el mismo código para un atributo que se encuentre en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  

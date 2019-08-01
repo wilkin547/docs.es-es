@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 2667417c5d25821f2fed2101e1d485280e171eab
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400646"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710393"
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado para evitar a los programadores las dificultades de los subprocesos. Como resultado, la mayoría de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] los desarrolladores no tendrán que escribir una interfaz que use más de un subproceso. Dado que los programas multiproceso son complejos y difíciles de depurar, se deben evitar cuando existan soluciones de un único subproceso.  
@@ -56,7 +56,7 @@ ms.locfileid: "68400646"
   
 <a name="prime_number"></a>   
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>Una aplicación de un único subproceso con un cálculo de ejecución prolongada  
- La [!INCLUDE[TLA#tla_gui#plural](../../../../includes/tlasharptla-guisharpplural-md.md)] mayoría de los usuarios dedican una gran parte de su tiempo de inactividad mientras esperan los eventos que se generan en respuesta a las interacciones del usuario. Con una programación cuidadosa, este tiempo de inactividad puede usarse de una vez, sin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]que ello afecte a la capacidad de respuesta de. El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de subprocesos no permite que la entrada interrumpa una operación [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que se produzca en el subproceso. Esto significa que debe asegurarse de volver a <xref:System.Windows.Threading.Dispatcher> periódicamente para procesar los eventos de entrada pendientes antes de que queden obsoletos.  
+ La mayoría de las interfaces gráficas de usuario (GUI) emplean una gran parte de su tiempo de inactividad mientras esperan los eventos que se generan en respuesta a las interacciones del usuario. Con una programación cuidadosa, este tiempo de inactividad puede usarse de una vez, sin [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]que ello afecte a la capacidad de respuesta de. El [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] modelo de subprocesos no permite que la entrada interrumpa una operación [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] que se produzca en el subproceso. Esto significa que debe asegurarse de volver a <xref:System.Windows.Threading.Dispatcher> periódicamente para procesar los eventos de entrada pendientes antes de que queden obsoletos.  
   
  Considere el ejemplo siguiente:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "68400646"
   
 <a name="weather_sim"></a>   
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>Control de una operación de bloqueo con un subproceso en segundo plano  
- El control de operaciones de bloqueo en una aplicación gráfica puede ser difícil. No es recomendable llamar a métodos de bloqueo desde controladores de eventos, porque parecerá que la aplicación se inmoviliza. Podemos usar un subproceso independiente para controlar estas operaciones, pero cuando hayamos terminado, tenemos que sincronizar con el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso porque no se puede modificar [!INCLUDE[TLA2#tla_gui](../../../../includes/tla2sharptla-gui-md.md)] directamente el de nuestro subproceso de trabajo. Se puede usar <xref:System.Windows.Threading.Dispatcher.Invoke%2A> o <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> para <xref:System.Windows.Threading.Dispatcher> Insertar[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] delegados en el del subproceso. Finalmente, estos delegados se ejecutarán con permiso [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para modificar los elementos.  
+ El control de operaciones de bloqueo en una aplicación gráfica puede ser difícil. No es recomendable llamar a métodos de bloqueo desde controladores de eventos, porque parecerá que la aplicación se inmoviliza. Podemos usar un subproceso independiente para controlar estas operaciones, pero cuando hayamos terminado, tenemos que sincronizar con el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] subproceso porque no se puede modificar directamente la GUI desde nuestro subproceso de trabajo. Se puede usar <xref:System.Windows.Threading.Dispatcher.Invoke%2A> o <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> para <xref:System.Windows.Threading.Dispatcher> Insertar[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] delegados en el del subproceso. Finalmente, estos delegados se ejecutarán con permiso [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] para modificar los elementos.  
   
  En este ejemplo, se imita una llamada a procedimiento remoto que recupera la previsión meteorológica. Se usa un subproceso de trabajo independiente para ejecutar esta llamada y se programa un método de actualización <xref:System.Windows.Threading.Dispatcher> en el [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del subproceso cuando se haya terminado.  
   

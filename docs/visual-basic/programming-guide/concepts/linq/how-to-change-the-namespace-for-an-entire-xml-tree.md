@@ -1,18 +1,18 @@
 ---
-title: Procedimiento Cambiar el Namespace para todo un árbol XML (Visual Basic)
+title: Procedimiento Cambiar el espacio de nombres de un árbol XML completo (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1837324b-5cb5-4fa8-95b9-3071efa0f913
-ms.openlocfilehash: 5a5926583990e3abda49ceaee4786a2158275a3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c18974da3d60f0abf4df7193f52f24f43501260d
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855024"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710459"
 ---
-# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Procedimiento Cambiar el Namespace para todo un árbol XML (Visual Basic)
+# <a name="how-to-change-the-namespace-for-an-entire-xml-tree-visual-basic"></a>Procedimiento Cambiar el espacio de nombres de un árbol XML completo (Visual Basic)
 En ocasiones, tendrá que cambiar, mediante programación, el espacio de nombres de un elemento o de un atributo. Esto resulta sencillo con LINQ to XML. Es posible modificar la propiedad <xref:System.Xml.Linq.XElement.Name%2A?displayProperty=nameWithType>. No es posible modificar la propiedad <xref:System.Xml.Linq.XAttribute.Name%2A?displayProperty=nameWithType>, pero es posible copiar con facilidad los atributos en un <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, eliminar los atributos existentes y, a continuación, agregar los atributos nuevos que se encuentran en el espacio de nombres deseado.  
   
- Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el código siguiente se crean dos árboles XML que no están en ningún espacio de nombres. A continuación, se cambia el espacio de nombres de cada árbol y se combinan ambos árboles en uno sólo.  

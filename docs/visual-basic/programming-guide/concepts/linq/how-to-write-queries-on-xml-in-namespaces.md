@@ -1,15 +1,15 @@
 ---
-title: Procedimiento Escribir consultas de XML en espacios de nombres (Visual Basic)
+title: Procedimiento Escribir consultas en XML en espacios de nombres (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b910e8b46632fbff2228baef44a45e8c22d731e
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614835"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709873"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procedimiento Escribir consultas de XML en espacios de nombres (Visual Basic)
+# <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>Procedimiento Escribir consultas en XML en espacios de nombres (Visual Basic)
 Para escribir una consulta en XML que esté en un espacio de nombres, debe usar objetos <xref:System.Xml.Linq.XName> que tengan el espacio de nombres correcto.  
   
  En Visual Basic, el enfoque más común consiste en definir un espacio de nombres global y después utilizar literales XML y propiedades XML que usen el espacio de nombres global. Puede definir un espacio de nombres predeterminado global, en cuyo caso los elementos de los literales XML estarán en el espacio de nombres de forma predeterminada. De forma alternativa puede definir un espacio de nombres global con un prefijo y después usar el prefijo según se requiera en los literales XML y en las propiedades XML. Al igual que con otras formas de XML, los atributos no están nunca en ningún espacio de nombres de forma predeterminada.  
@@ -90,4 +90,4 @@ End Module
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Información general sobre espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

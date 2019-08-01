@@ -2,12 +2,12 @@
 title: Procedimiento Escribir una consulta que busca elementos en función del contexto (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
-ms.openlocfilehash: 0981da1e35f2c0b6023c009d4f62c95a612d8971
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1743a0793a8b572cb212d45a31924fe8eb93bf45
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614888"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710404"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>Procedimiento Escribir una consulta que busca elementos en función del contexto (Visual Basic)
 Es posible que alguna vez tenga que escribir una consulta que seleccione elementos basándose en su contexto. Quizás desea filtrar basándose en elementos de mismo nivel precedentes o siguientes. Quizás desea filtrar basándose e elementos secundarios o elementos antecesores.  
@@ -58,7 +58,7 @@ id = 6
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
+ El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres. Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  

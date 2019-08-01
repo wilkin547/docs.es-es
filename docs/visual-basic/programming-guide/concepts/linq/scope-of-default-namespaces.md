@@ -1,15 +1,15 @@
 ---
-title: Ámbito de espacio de nombres predeterminado en Visual Basic
+title: Ámbito de los espacios de nombres predeterminados en Visual Basic
 ms.date: 07/20/2015
 ms.assetid: d4cce80c-342f-4097-be8b-40ab0bfa90ba
-ms.openlocfilehash: e33505dd8e8ad94e3c758f15f245d0cbaf6987bc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af868454c9d1dce7d8bf5a1902f64eff8db8780c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786807"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710356"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Ámbito de espacio de nombres predeterminado en Visual Basic
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Ámbito de los espacios de nombres predeterminados en Visual Basic
 Los espacios de nombres predeterminados del árbol XML no se encuentran en el ámbito de las consultas. Si tiene código XML en un espacio de nombres predeterminado, debe declarar una variable <xref:System.Xml.Linq.XNamespace> y combinarla con el nombre local para convertirla en un nombre completo que se usará en la consulta.  
   
  Uno de los problemas más habituales al consultar árboles XML es que si el árbol XML tiene un espacio de nombres predeterminado, el desarrollador a veces escribe la consulta como si el código XML no estuviera en un espacio de nombres.  
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Información general sobre espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

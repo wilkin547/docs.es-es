@@ -2,15 +2,15 @@
 title: Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908016"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710378"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>Trabajar con espacios de nombres globales (Visual Basic) (LINQ to XML)
-Una de las características clave de literales XML en Visual Basic es la capacidad de declarar espacios de nombres XML mediante el `Imports` instrucción. Mediante esta característica puede declarar un espacio de nombres XML que usa un prefijo o bien puede declarar un espacio de nombres XML predeterminado.  
+Una de las características clave de los literales XML en Visual Basic es la capacidad de declarar espacios de nombres XML mediante `Imports` la instrucción. Mediante esta característica puede declarar un espacio de nombres XML que usa un prefijo o bien puede declarar un espacio de nombres XML predeterminado.  
   
  Esta capacidad es útil en dos situaciones. En primer lugar, los espacios de nombres declarados en los literales XML no se mantienen en expresiones incrustadas. La declaración de espacios de nombres globales reduce la cantidad de trabajo que tiene que realizar para usar expresiones incrustadas con espacios de nombres. En segundo lugar, debe declarar espacios de nombres globales para usar espacios de nombres con propiedades XML.  
   
@@ -199,4 +199,4 @@ http://www.adventure-works.com
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [Información general sobre espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
