@@ -23,6 +23,8 @@
       href: tutorials/image-classification.md
     - name: Análisis de ventas de productos (detección de anomalías)
       href: tutorials/sales-anomaly-detection.md
+    - name: Detección de objetos en imágenes (detección de objetos)
+      href: tutorials/object-detection-onnx.md
 - name: Guías de procedimientos
   items:
     - name: Cargar los datos
