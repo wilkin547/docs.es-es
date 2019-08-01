@@ -1,19 +1,19 @@
 ---
-title: Procedimiento Ordenar elementos (Visual Basic)
+title: Procedimiento Elementos sort (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c2c09279-6c8a-482e-8e71-b1453a815052
-ms.openlocfilehash: b6f2e0056582e60066b2c0715a663022b72a6c9c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f92d8ca36d1b322bb8d1538fd199e7256c982b85
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614393"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710484"
 ---
-# <a name="how-to-sort-elements-visual-basic"></a><span data-ttu-id="e0381-102">Procedimiento Ordenar elementos (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0381-102">How to: Sort Elements (Visual Basic)</span></span>
-<span data-ttu-id="e0381-103">Este ejemplo muestra cómo escribir una consulta que ordene sus resultados.</span><span class="sxs-lookup"><span data-stu-id="e0381-103">This example shows how to write a query that sorts its results.</span></span>  
+# <a name="how-to-sort-elements-visual-basic"></a><span data-ttu-id="e36e7-102">Procedimiento Elementos sort (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e36e7-102">How to: Sort Elements (Visual Basic)</span></span>
+<span data-ttu-id="e36e7-103">Este ejemplo muestra cómo escribir una consulta que ordene sus resultados.</span><span class="sxs-lookup"><span data-stu-id="e36e7-103">This example shows how to write a query that sorts its results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e0381-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e0381-104">Example</span></span>  
- <span data-ttu-id="e0381-105">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e0381-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="e36e7-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e36e7-104">Example</span></span>  
+ <span data-ttu-id="e36e7-105">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e36e7-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim root As XElement = XElement.Load("Data.xml")  
@@ -27,7 +27,7 @@ For Each el As Decimal In prices
 Next  
 ```  
   
- <span data-ttu-id="e0381-106">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="e0381-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="e36e7-106">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="e36e7-106">This code produces the following output:</span></span>  
   
 ```  
 0.99  
@@ -39,10 +39,10 @@ Next
 89.99  
 ```  
   
-## <a name="example"></a><span data-ttu-id="e0381-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e0381-107">Example</span></span>  
- <span data-ttu-id="e0381-108">El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="e0381-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="e0381-109">Para obtener más información, consulte [trabajar con espacios de nombres XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="e0381-109">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="e36e7-107">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="e36e7-107">Example</span></span>  
+ <span data-ttu-id="e36e7-108">El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="e36e7-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="e36e7-109">Para obtener más información, vea [información general sobre los espacios de nombres (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="e36e7-109">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
- <span data-ttu-id="e0381-110">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos de un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="e0381-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="e36e7-110">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Datos numéricos de un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="e36e7-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -62,7 +62,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="e0381-111">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="e0381-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="e36e7-111">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="e36e7-111">This code produces the following output:</span></span>  
   
 ```  
 0.99  
@@ -74,7 +74,7 @@ End Module
 89.99  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e0381-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="e0381-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e36e7-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="e36e7-112">See also</span></span>
 
-- [<span data-ttu-id="e0381-113">Ordenación de datos</span><span class="sxs-lookup"><span data-stu-id="e0381-113">Sorting Data</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
-- [<span data-ttu-id="e0381-114">Consultas básicas (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e0381-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="e36e7-113">Ordenación de datos</span><span class="sxs-lookup"><span data-stu-id="e36e7-113">Sorting Data</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [<span data-ttu-id="e36e7-114">Consultas básicas (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e36e7-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
