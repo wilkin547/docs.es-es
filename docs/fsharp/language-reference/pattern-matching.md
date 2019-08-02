@@ -2,12 +2,12 @@
 title: Coincidencia de modelos
 description: Obtenga información sobre cómo se usan F# los patrones en para comparar datos con estructuras lógicas, descomponer datos en elementos constituyentes o extraer información de los datos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 156bb670e0c494a3d515eab03e2e4672d6743dec
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 60e0d6cd550724bc8448fddd7b163c2c9f1637be
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627301"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733464"
 ---
 # <a name="pattern-matching"></a>Coincidencia de modelos
 
@@ -15,7 +15,7 @@ Los patrones son reglas para transformar los datos de entrada. Se usan en todo e
 
 ## <a name="remarks"></a>Comentarios
 
-Los patrones se usan en muchas construcciones de lenguaje, como la `match` expresión. Se utilizan cuando se procesan argumentos para funciones en `let` enlaces, expresiones lambda y en los controladores de excepciones asociados a la `try...with` expresión. Para obtener más información, vea [expresiones de coincidencia](match-expressions.md), [enlaces Let](./functions/let-bindings.md), [expresiones lambda: La `fun` palabra](./functions/lambda-expressions-the-fun-keyword.md)clave y[excepciones: `try...with` Expresión.](/.exception-handling/the-try-with-expression.md)
+Los patrones se usan en muchas construcciones de lenguaje, como la `match` expresión. Se utilizan cuando se procesan argumentos para funciones en `let` enlaces, expresiones lambda y en los controladores de excepciones asociados a la `try...with` expresión. Para obtener más información, vea [expresiones de coincidencia](match-expressions.md), [enlaces Let](./functions/let-bindings.md), [expresiones lambda: La `fun` palabra](./functions/lambda-expressions-the-fun-keyword.md)clave y[excepciones: `try...with` Expresión.](./exception-handling/the-try-with-expression.md)
 
 Por ejemplo, en la `match` expresión, el *patrón* es lo que sigue al símbolo de canalización.
 
@@ -103,7 +103,7 @@ match shape with
 
 Los modelos activos permiten definir una coincidencia de patrones personalizada más compleja. Para obtener más información sobre los patrones activos, vea [patrones activos](active-patterns.md).
 
-El caso en el que el identificador es una excepción se usa en la coincidencia de patrones en el contexto de los controladores de excepciones. Para obtener información sobre la coincidencia de patrones en el [control de excepciones, vea excepciones: `try...with` Expresión.](/.exception-handling/the-try-with-expression.md)
+El caso en el que el identificador es una excepción se usa en la coincidencia de patrones en el contexto de los controladores de excepciones. Para obtener información sobre la coincidencia de patrones en el [control de excepciones, vea excepciones: `try...with` Expresión.](./exception-handling/the-try-with-expression.md)
 
 ## <a name="variable-patterns"></a>Patrones de variables
 

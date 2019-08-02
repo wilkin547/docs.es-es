@@ -2,12 +2,12 @@
 title: Tipos en F#
 description: Obtenga información sobre los tipos que se usan F# en y F# cómo se denominan y describen los tipos.
 ms.date: 05/16/2016
-ms.openlocfilehash: 44bd9d985e0ce1afa1bf2a8457dcd9470b13dfe1
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 826bcb56aad3b50fbfcf8f807bb34e9cdcdecaf7
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630221"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733499"
 ---
 # <a name="f-types"></a>Tipos en F#
 
@@ -69,4 +69,4 @@ En la tabla siguiente se muestran los aspectos de la F# sintaxis de tipos para l
 |[Delegados](delegates.md)|Describe el tipo de delegado, que representa una función como un objeto.|
 |[Enumeraciones](enumerations.md)|Describe los tipos de enumeración, cuyos valores pertenecen a un conjunto de valores con nombre.|
 |[Atributos](attributes.md)|Describe los atributos, que se usan para especificar los metadatos de otro tipo.|
-|[Tipos de excepción](/.exception-handling/exception-types.md)|Describe las excepciones, que especifican la información de error.|
+|[Tipos de excepción](./exception-handling/exception-types.md)|Describe las excepciones, que especifican la información de error.|
