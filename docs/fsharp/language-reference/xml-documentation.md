@@ -1,60 +1,60 @@
 ---
 title: Documentación XML (F#)
-description: Obtenga información sobre la compatibilidad en F# para generar documentación a partir de comentarios.
+description: Obtenga información sobre la F# compatibilidad de para generar documentación a partir de comentarios.
 ms.date: 05/16/2016
-ms.openlocfilehash: c5305dea8832112644710b2863269ef00feddd10
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b89ab4117f4dd71126f8e203f4a5271ab3c30021
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902179"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630823"
 ---
 # <a name="xml-documentation"></a>Documentación de XML
 
-Se puede generar documentación de triple barra diagonal (/ / /) en los comentarios de código F#. Los comentarios XML pueden preceder a las declaraciones en archivos de código (.fs) o archivos de signatura (.fsi).
+Puede generar documentación a partir de los comentarios de código de barra diagonal triple (/ F#//) en. Los comentarios XML pueden preceder a las declaraciones de los archivos de código (. FS) o de firma (. FSI).
 
-## <a name="generating-documentation-from-comments"></a>Generar documentación a partir de comentarios
+## <a name="generating-documentation-from-comments"></a>Generación de documentación a partir de comentarios
 
-La compatibilidad en F# para generar documentación a partir de comentarios es la misma que en otros lenguajes de .NET Framework. Al igual que en otros lenguajes de .NET Framework, el [-doc (opción) del compilador](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) permite generar un archivo XML que contiene información que se puede convertir en documentación mediante una herramienta como [DocFX](https://dotnet.github.io/docfx/) o [ Sandcastle](https://github.com/EWSoftware/SHFB). La documentación generada mediante las herramientas que están diseñadas para su uso con los ensamblados que se escriben en otros lenguajes de .NET Framework, por lo general generan una vista de las API que se basan en el formato compilado de F# construye. A menos que admiten específicamente herramientas F#, documentación generada por estas herramientas no coincide con el F# vista de una API.
+La compatibilidad con F# para generar documentación a partir de comentarios es la misma que en otros lenguajes .NET Framework. Como en otros lenguajes .NET Framework, la [opción del compilador-doc](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) le permite generar un archivo XML que contiene información que puede convertir en documentación mediante una herramienta como [DocFX](https://dotnet.github.io/docfx/) o [Sandcastle](https://github.com/EWSoftware/SHFB). La documentación que se genera mediante herramientas diseñadas para su uso con ensamblados escritos en otros lenguajes .NET Framework generalmente produce una vista de las API que se basa en la forma compilada de F# construcciones. A menos que las F#herramientas admitan específicamente, la documentación generada por F# estas herramientas no coincide con la vista de una API.
 
-Para obtener más información sobre cómo generar documentación de XML, vea [comentarios de documentación XML &#40;C&#35; Programming Guide&#41;](https://msdn.microsoft.com/library/b2s063f7).
+Para obtener más información sobre cómo generar documentación a partir de XML, vea [comentarios &#40;de&#35; documentación XML&#41;guía de programación de C](https://msdn.microsoft.com/library/b2s063f7).
 
 ## <a name="recommended-tags"></a>Etiquetas recomendadas
 
-Hay dos maneras de escribir comentarios de documentación XML. Una es simplemente escribir la documentación directamente en un comentario de barra diagonal triple, sin usar etiquetas XML. Si lo hace, el texto del comentario se toma como documentación de resumen para la construcción de código que sigue inmediatamente. Utilice este método cuando desee escribir sólo un breve resumen de cada construcción. El otro método consiste en usar etiquetas XML para proporcionar documentación más estructurada. El segundo método permite especificar notas independientes para un breve resumen, comentarios adicionales, documentación de cada parámetro y el parámetro de tipo y la excepción y una descripción del valor devuelto. La tabla siguiente describen las etiquetas XML que se reconocen en F# comentarios del código XML.
+Hay dos maneras de escribir comentarios de documentación XML. Uno consiste simplemente en escribir la documentación directamente en un Comentario de barra diagonal triple, sin usar etiquetas XML. Si lo hace, se toma todo el texto del comentario como la documentación de Resumen de la construcción de código que sigue inmediatamente. Utilice este método cuando desee escribir solo un breve resumen de cada construcción. El otro método es usar etiquetas XML para proporcionar documentación más estructurada. El segundo método permite especificar notas independientes para un breve resumen, comentarios adicionales, documentación para cada parámetro y parámetro de tipo y excepciones que se producen, y una descripción del valor devuelto. En la tabla siguiente se describen las etiquetas XML que F# se reconocen en los comentarios de código XML.
 
-|Sintaxis de etiquetas|Descripción|
+|Sintaxis de etiquetas|DESCRIPCIÓN|
 |----------|-----------|
-|**\<c\>**_text_**\</c\>**|Especifica que *texto* es el código. Esta etiqueta se puede usar generadores de documentación para mostrar texto en una fuente que sea adecuada para el código.|
-|**\<summary\>**_text_**\</summary\>**|Especifica que *texto* es una breve descripción del elemento de programa. La descripción suele ser una o dos frases.|
-|**\<remarks\>**_text_**\</remarks\>**|Especifica que *texto* contiene información adicional sobre el elemento de programa.|
-|**\<nombre de parámetro = "**_nombre_**"\>**_descripción_**\</param\>**|Especifica el nombre y una descripción para un parámetro de función o método.|
-|**\<typeparam nombre = "**_nombre_**"\>**_descripción_**\</typeparam\>**|Especifica el nombre y una descripción para un parámetro de tipo.|
-|**\<returns\>**_text_**\</returns\>**|Especifica que *texto* describe el valor devuelto de una función o método.|
-|**\<excepción cref = "**_tipo_**"\>**_descripción_**\</exception\>**|Especifica el tipo de excepción que se puede generar y las circunstancias en las que se produzca la excepción.|
-|**\<vea cref = "**_referencia_**"\>**_texto_ **\< /ver\>**|Especifica un vínculo insertado a otro elemento de programa. El *referencia* es el nombre tal como aparece en el archivo de documentación XML. El *texto* es el texto que se muestra en el vínculo.|
-|**\<seealso cref = "**_referencia_**" /\>**|Especifica un vínculo Vea también la documentación de otro tipo. El *referencia* es el nombre tal como aparece en el archivo de documentación XML. Vea también suelen aparecer en la parte inferior de una página de documentación de vínculos.|
-|**\<para\>**_text_**\</para\>**|Especifica un párrafo de texto. Esto se usa para separar el texto dentro de la **comentarios** etiqueta.|
+|**\<c\>** _text_ **\</c\>**|Especifica que el *texto* es código. Los generadores de documentación pueden usar esta etiqueta para mostrar texto en una fuente que sea adecuada para el código.|
+|texto de Resumen/Summary  **\<\>** **\<\>**|Especifica que el *texto* es una breve descripción del elemento de programa. La descripción suele ser una o dos oraciones.|
+|**\<remarks\>** _text_ **\</remarks\>**|Especifica que el *texto* contiene información adicional sobre el elemento de programa.|
+|**\>** **paramname\> = "Name" Description/paramReturns\<**  **\<**|Especifica el nombre y la descripción de un parámetro de función o método.|
+|**\>**  **typeparam\<name = "** name"**Descripción/typeparam\<\>**|Especifica el nombre y la descripción de un parámetro de tipo.|
+|**\<returns\>** _text_ **\</returns\>**|Especifica que el *texto* describe el valor devuelto de una función o un método.|
+|**\>**  **Exception\<CREF = "** tipo"**Descripción/Exception\<\>**|Especifica el tipo de excepción que se puede generar y las circunstancias en las que se produce.|
+|**\>**  **consulte\<CREF = "** referencia"**Text/See\<\>**|Especifica un vínculo insertado a otro elemento de programa. La *referencia* es el nombre tal y como aparece en el archivo de documentación XML. El *texto* es el texto que se muestra en el vínculo.|
+|**\>** seeAlso CREF = "referencia"/  **\<**|Especifica un vínculo ver también a la documentación de otro tipo. La *referencia* es el nombre tal y como aparece en el archivo de documentación XML. Vea también los vínculos normalmente aparecen en la parte inferior de una página de documentación.|
+|**\<para\>** _text_ **\</para\>**|Especifica un párrafo de texto. Se usa para separar texto dentro de la etiqueta **comentarios** .|
 
 ## <a name="example"></a>Ejemplo
 
-### <a name="description"></a>Descripción
+### <a name="description"></a>DESCRIPCIÓN
 
-El siguiente es un comentario de documentación XML típico en un archivo de signatura.
+A continuación se encuentra un Comentario de documentación XML típico en un archivo de signatura.
 
 ### <a name="code"></a>Código
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7101.fs)]
 
 ## <a name="example"></a>Ejemplo
 
-### <a name="description"></a>Descripción
+### <a name="description"></a>DESCRIPCIÓN
 
-El ejemplo siguiente muestra el método alternativo, sin las etiquetas XML. En este ejemplo, todo el texto del comentario se considera un resumen. Tenga en cuenta que si no especifica explícitamente una etiqueta de resumen, no debe especificar otras etiquetas, como **param** o **devuelve** etiquetas.
+En el ejemplo siguiente se muestra el método alternativo, sin etiquetas XML. En este ejemplo, todo el texto del comentario se considera un resumen. Tenga en cuenta que si no especifica explícitamente una etiqueta de Resumen, no debe especificar otras etiquetas, como **param** o **Return** Tags.
 
 ### <a name="code"></a>Código
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
 
 ## <a name="see-also"></a>Vea también
 
