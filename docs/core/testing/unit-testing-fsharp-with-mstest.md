@@ -4,15 +4,13 @@ description: 'Aprenda los conceptos de pruebas unitarias para F# en .NET Core: c
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 1765c16cb55857b83a8206ae97327d0fd2809019
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3b93f4ed21d9d5eccf1dd02f253e7456aec02807
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747497"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626467"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y MSTest
 
@@ -123,9 +121,9 @@ member this.TestEvenSequence() =
 
 Observe que la secuencia `expected` se convirtió en lista. La biblioteca de MSTest se basa en muchos tipos de .NET estándar. Esa dependencia significa que la interfaz pública y los resultados esperados admiten <xref:System.Collections.ICollection> en lugar de <xref:System.Collections.IEnumerable>.
 
-Cuando ejecuta la prueba, se observa que no se supera la prueba. Todavía no ha creado la implementación. Cree esta prueba escribiendo el código más simple en la clase `Mathservice` que funciona:
+Cuando ejecuta la prueba, se observa que no se supera la prueba. Todavía no ha creado la implementación. Cree esta prueba que se supera escribiendo el código más simple en la clase `Mathservice` que funciona:
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int> |> Seq.toList
 ```

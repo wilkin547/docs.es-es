@@ -4,15 +4,13 @@ description: 'Aprenda los conceptos de pruebas unitarias en .NET Core: cree paso
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-dev_langs:
-- vb
 ms.custom: seodec18
-ms.openlocfilehash: 193746e8efda5d7bc9e086bb0abf934cfeb1741a
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e8d5b565bc04a0beb30142247b4ee8d94dcce86b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748601"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626440"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>Bibliotecas de .NET Core de prueba unitaria de Visual Basic con pruebas de dotnet y xUnit
 
@@ -102,7 +100,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <Fact>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.False(result, "1 should not be prime")
@@ -114,14 +112,14 @@ End Namespace
 
 El atributo `<Fact>` indica un método de prueba que el ejecutor de pruebas ejecuta. En *unit-testing-using-dotnet-test*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de xUnit tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
 
-La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba escribiendo el código más simple en la clase `PrimeService` que funciona:
+La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba que se supera escribiendo el código más simple en la clase `PrimeService` que funciona:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 

@@ -3,15 +3,13 @@ title: Prueba unitaria de Visual Basic en .NET Core con dotnet test y NUnit
 description: 'Aprenda los conceptos de pruebas unitarias en .NET Core: cree una solución de Visual Basic de ejemplo paso a paso mediante NUnit.'
 author: rprouse
 ms.date: 10/04/2018
-dev_langs:
-- vb
 ms.custom: seodec18
-ms.openlocfilehash: cf8a81241c93a6eeecf04052aba57750774aa050
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 84287a94504594c731c0fbccf2e61a957a15a36f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397506"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626404"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Bibliotecas de .NET Core de prueba unitaria de Visual Basic con pruebas de dotnet y NUnit
 
@@ -52,7 +50,7 @@ Imports System
 Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean
-            Throw New NotImplementedException("Please create a test first")
+            Throw New NotImplementedException("Please create a test first.")
         End Function
     End Class
 End Namespace
@@ -127,7 +125,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <Test>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.False(result, "1 should not be prime")
@@ -139,14 +137,14 @@ End Namespace
 
 El atributo `<TestFixture>` indica una clase que contiene pruebas. El atributo `<Test>` indica un método que el ejecutor de pruebas ejecuta. En *unit-testing-vb-nunit*, ejecute [`dotnet test`](../tools/dotnet-test.md) para compilar las pruebas y la biblioteca de clases y luego ejecutar las pruebas. El ejecutor de pruebas de NUnit tiene el punto de entrada del programa para ejecutar las pruebas desde la consola. `dotnet test` inicia el ejecutor de pruebas con el proyecto de prueba unitaria que creó.
 
-La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba escribiendo el código más simple en la clase `PrimeService` que funciona:
+La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba que se supera escribiendo el código más simple en la clase `PrimeService` que funciona:
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 

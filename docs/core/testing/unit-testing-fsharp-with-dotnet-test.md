@@ -4,15 +4,13 @@ description: 'Aprenda los conceptos de pruebas unitarias para F# en .NET Core: c
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
 ms.custom: seodec18
-ms.openlocfilehash: 9765c463bb427f79dcd0308e7e4fc643fdc06968
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 3a9744bfebd93c5004011819b8c6e739e84b97d0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745951"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626492"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>Bibliotecas de F# de prueba unitaria en .NET Core con pruebas de dotnet y xUnit
 
@@ -112,9 +110,9 @@ let ``Sequence of Evens returns empty collection`` () =
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba escribiendo el código más simple en la clase `MathService` que funciona:
+La prueba produce un error. Todavía no ha creado la implementación. Cree esta prueba que se supera escribiendo el código más simple en la clase `MathService` que funciona:
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```

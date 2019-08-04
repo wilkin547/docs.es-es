@@ -4,12 +4,12 @@ description: Obtenga información sobre las características nuevas de .NET Core
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f48b8e88a716df0f07a5626bdc8f66000cfaeed8
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464078"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626364"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novedades de .NET Core 2.0
 
@@ -156,8 +156,8 @@ Ahora es posible instalar el SDK de .NET Core de manera independiente de Visual 
 
 [Arquitectura de aplicación de .NET](https://www.microsoft.com/net/learn/architecture) le permite acceder a un conjunto de libros electrónicos que ofrecen orientación, procedimientos recomendados y aplicaciones de ejemplo cuando use .NET para compilar:
 
-- [Microservicios y contenedores Docker](../../standard/microservices-architecture/index.md)
-- [Aplicaciones web con ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
+- [Microservicios y contenedores Docker](../../architecture/microservices/index.md)
+- [Aplicaciones web con ASP.NET](../../architecture/modern-web-apps-azure/index.md)
 - [Aplicaciones móviles con Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Aplicaciones que se implementan en la nube con Azure](/azure/architecture/reference-architectures/index)
 
