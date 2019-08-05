@@ -595,14 +595,16 @@
       items:
         - name: 'Sistema de tipos de C#'
           href: csharp/programming-guide/types/index.md
+        - name: Tipos de referencia que aceptan valores NULL
+          href: csharp/nullable-references.md
+        - name: Descripción de las API que aceptan valores NULL mediante atributos y restricciones
+          href: csharp/nullable-attributes.md
         - name: Espacios de nombres
           href: csharp/programming-guide/namespaces/index.md
         - name: Tipos básicos
           href: csharp/basic-types.md
         - name: Clases
           href: csharp/programming-guide/classes-and-structs/classes.md
-        - name: Tipos de referencia que aceptan valores NULL
-          href: csharp/nullable-references.md
         - name: Estructuras
           href: csharp/structs.md
         - name: Tuplas
