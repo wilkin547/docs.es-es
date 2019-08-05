@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b7e9401cbd26c62f88ccb4a4b8c2caeb78768d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119202"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68629569"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
@@ -36,11 +36,11 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Comentarios  
   
-|Argumento|Descripción|  
+|Argumento|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |*file*|Nombre del archivo de código fuente que contiene el control ActiveX que se va a convertir. Este argumento debe tener la extensión .ocx o .dll.|  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`/delaysign`|Especifica que Aximp.exe debe firmar el control resultante mediante la opción de firma retardada. Debe especificar esta opción con la opción `/keycontainer:`, `/keyfile:` o `/publickey:`. Para obtener más información sobre el proceso de firma retardada, vea [Retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Suprime la presentación de la portada de inicio de Microsoft.|  
 |`/out:` *filename*|Especifica el nombre del ensamblado que se va a crear.|  
 |`/publickey:` *filename*|Firma el control resultante con un nombre seguro mediante la clave pública que se encuentra en el archivo especificado por *filename*.|  
-|`/rcw:` *filename*|Utiliza el contenedor invocable en tiempo de ejecución especificado en lugar de generar uno nuevo. Puede especificar varias instancias. El directorio actual se utiliza para las rutas de acceso relativas. Para más información, vea [Runtime Callable Wrapper](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
+|`/rcw:` *filename*|Utiliza el contenedor invocable en tiempo de ejecución especificado en lugar de generar uno nuevo. Puede especificar varias instancias. El directorio actual se utiliza para las rutas de acceso relativas. Para más información, vea [Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Suprime la presentación de mensajes de aprobación.|  
 |`/source`|Genera código fuente de C# para el contenedor de Windows Forms.|  
 |`/verbose`|Especifica el modo detallado; muestra información adicional del progreso.|  
