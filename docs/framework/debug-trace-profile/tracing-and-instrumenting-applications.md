@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 42665b3b971f9026bf49aeb081017521eab0117f
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469532"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796740"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Seguimiento e instrumentación de aplicaciones
 El seguimiento es una manera de supervisar la ejecución de la aplicación mientras se está ejecutando. Puede agregar instrumentación de seguimiento y de depuración a la aplicación de .NET Framework cuando la desarrolle, y puede usar dicha instrumentación mientras desarrolla la aplicación y después de implementarla. Puede usar las clases <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> y <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> para registrar información sobre errores y ejecución de la aplicación en registros, archivos de texto u otros dispositivos para su análisis posterior.  
@@ -58,9 +58,9 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  Cada uno de estos ejemplos mostrará "Hello World!" en la ventana de resultados cuando se ejecute la aplicación en el depurador.  
   
- Esto le permite depurar las aplicaciones y optimizar su rendimiento en función de su comportamiento en el entorno de prueba. Puede depurar la aplicación en la compilación de depuración con el atributo condicional <xref:System.Diagnostics.Debug> activado para así recibir toda la salida de la depuración. Cuando la aplicación está lista para el lanzamiento, puede compilar la versión de lanzamiento sin activar el atributo condicional <xref:System.Diagnostics.Debug>, con lo que el compilador no incluirá el código de depuración en el ejecutable final. Para obtener más información, vea [Cómo: Compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Para más información sobre diferentes configuraciones de compilación para la aplicación, vea [Compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio).  
+ Esto le permite depurar las aplicaciones y optimizar su rendimiento en función de su comportamiento en el entorno de prueba. Puede depurar la aplicación en la compilación de depuración con el atributo condicional <xref:System.Diagnostics.Debug> activado para así recibir toda la salida de la depuración. Cuando la aplicación está lista para el lanzamiento, puede compilar la versión de lanzamiento sin activar el atributo condicional <xref:System.Diagnostics.Debug>, con lo que el compilador no incluirá el código de depuración en el ejecutable final. Para obtener más información, consulte [Cómo Compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Para más información sobre diferentes configuraciones de compilación para la aplicación, vea [Compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio).  
   
- Asimismo, puede usar métodos de la clase <xref:System.Diagnostics.Trace> para seguir la ejecución de código en una aplicación instalada. Si coloca [modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md) en el código, puede controlar si se realiza el seguimiento y su alcance. Esto le permite supervisar el estado de la aplicación en un entorno de producción. Este aspecto es especialmente importante en aplicaciones empresariales que usen varios componentes que se ejecutan en varios equipos. El control sobre el uso de los modificadores después de la implementación se realiza a través del archivo de configuración. Para obtener más información, vea [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+ Asimismo, puede usar métodos de la clase <xref:System.Diagnostics.Trace> para seguir la ejecución de código en una aplicación instalada. Si coloca [modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md) en el código, puede controlar si se realiza el seguimiento y su alcance. Esto le permite supervisar el estado de la aplicación en un entorno de producción. Este aspecto es especialmente importante en aplicaciones empresariales que usen varios componentes que se ejecutan en varios equipos. El control sobre el uso de los modificadores después de la implementación se realiza a través del archivo de configuración. Para obtener más información, consulte [Cómo Crear, inicializar y configurar modificadores](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)de seguimiento.  
   
  Al desarrollar una aplicación para la que se va a usar seguimiento, normalmente se incluyen en el código de la aplicación tanto mensajes de seguimiento como mensajes de depuración. Cuando la aplicación esté lista para implementarse, se puede compilar la versión de lanzamiento sin necesidad de activar el atributo condicional **Debug**. No obstante, se puede activar el atributo condicional **Trace** para que el compilador incluya el código de seguimiento en el ejecutable. Para obtener más información, vea [Cómo: Compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).  
   
@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1. Considere qué salida de seguimiento desea recibir in situ después de haber implementado la aplicación.  
   
-2. Cree un conjunto de conmutadores. Para obtener más información, vea [Cómo: Configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Cree un conjunto de conmutadores. Para obtener más información, consulte [Cómo Configurar modificadores](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)de seguimiento.  
   
 3. Agregue las instrucciones de seguimiento al código de aplicación.  
   
@@ -111,7 +111,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Con las instrucciones de seguimiento puede evitar la difícil tarea de examinar el código fuente original, modificarlo, volver a compilar e intentar reproducir el error de tiempo de ejecución dentro del entorno de depuración. Recuerde que puede instrumentar una aplicación no solo para mostrar errores, sino también para supervisar el rendimiento.  
   
 ## <a name="strategic-placement-of-trace-statements"></a>Colocación estratégica de las instrucciones de seguimiento  
- Debe tener especial cuidado al colocar las instrucciones de seguimiento para su uso durante el tiempo de ejecución. Considere qué información de seguimiento puede ser necesaria en una aplicación implementada de modo que estén bien cubiertos todos los escenarios de seguimiento probables. Puesto que las diferencias entre aplicaciones que usan el seguimiento son enormes, no existen directrices generales para la colocación estratégica del seguimiento. Para obtener más información acerca de cómo colocar instrucciones de seguimiento, vea [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md).  
+ Debe tener especial cuidado al colocar las instrucciones de seguimiento para su uso durante el tiempo de ejecución. Considere qué información de seguimiento puede ser necesaria en una aplicación implementada de modo que estén bien cubiertos todos los escenarios de seguimiento probables. Puesto que las diferencias entre aplicaciones que usan el seguimiento son enormes, no existen directrices generales para la colocación estratégica del seguimiento. Para obtener más información sobre cómo colocar instrucciones de [seguimiento, consulte How to: Agregue instrucciones de seguimiento al código](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)de la aplicación.  
   
 ## <a name="output-from-tracing"></a>Salida del seguimiento  
  La salida del seguimiento se recopila mediante objetos denominados *agentes de escucha*. Un agente de escucha es un objeto que recibe la salida de seguimiento y la escribe en un dispositivo de salida (normalmente un archivo de texto, registro o ventana). Cuando se crea un agente de escucha, normalmente se agrega a la colección <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType>, lo que le permite recibir toda la salida del seguimiento.  
@@ -133,13 +133,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  Si implementa su propio agente de escucha podrá obtener resultados personalizados. Un agente de escucha de seguimiento personalizado puede, por ejemplo, mostrar los mensajes en un cuadro de mensaje o conectarse a una base de datos para agregar mensajes a una tabla. Todos los agentes de escucha personalizados deben admitir los seis métodos mencionados anteriormente. Para obtener más información sobre cómo crear agentes de escucha definidos por el desarrollador, consulte <xref:System.Diagnostics.TraceListener> en la documentación de .NET Framework.  
   
-> [!NOTE]
->  En Visual Basic, el **Debug.Write**, **Debug.WriteIf**, **Debug.WriteLine**, y **Debug.WriteLineIf** han reemplazado el **Debug.Print** método que estaba disponible en versiones anteriores de Visual Basic.  
-  
- Los métodos **Write** y **WriteLine** siempre escriben el texto que especifique. **Assert**, **WriteIf** y **WriteLineIf** requieren un argumento booleano que determina si deben escribir el texto especificado; solo escriben el texto si la expresión es **true** (para **WriteIf** y **WriteLineIf**), o **false** (para **Assert**). El método **Fail** siempre escribe el texto especificado. Para obtener más información, vea [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) y la referencia de .NET Framework.  
+ Los métodos **Write** y **WriteLine** siempre escriben el texto que especifique. **Assert**, **WriteIf** y **WriteLineIf** requieren un argumento booleano que determina si deben escribir el texto especificado; solo escriben el texto si la expresión es **true** (para **WriteIf** y **WriteLineIf**), o **false** (para **Assert**). El método **Fail** siempre escribe el texto especificado. Para obtener más información, consulte [Cómo Agregue instrucciones de seguimiento al código](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md) de la aplicación y a la referencia de .NET Framework.  
   
 ## <a name="security-concerns"></a>Cuestiones de seguridad  
- Si no deshabilita el seguimiento y la depuración antes de implementar una aplicación ASP.NET, la aplicación puede revelar información sobre sí misma que podría ser aprovechada por un programa malintencionado. Para obtener más información, vea [Cómo: Compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [compilar y generar](/visualstudio/ide/compiling-and-building-in-visual-studio), y [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). La depuración también es configurable a través de Internet Information Services (IIS).  
+ Si no deshabilita el seguimiento y la depuración antes de implementar una aplicación ASP.NET, la aplicación puede revelar información sobre sí misma que podría ser aprovechada por un programa malintencionado. Para obtener más información, vea [Cómo: Compilar condicionalmente con Trace](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)y Debug, compilar [ [y generar](/visualstudio/ide/compiling-and-building-in-visual-studio), y cómo: Crear, inicializar y configurar modificadores](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)de seguimiento. La depuración también es configurable a través de Internet Information Services (IIS).  
   
 ## <a name="see-also"></a>Vea también
 
@@ -147,10 +144,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - <xref:System.Diagnostics.TraceSource>
 - [Contratos de código](../../../docs/framework/debug-trace-profile/code-contracts.md)
 - [Tipos de proyectos de C#, F# y Visual Basic](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Cómo: Agregar instrucciones de seguimiento al código de la aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Cómo: Compilación condicional con Trace y Debug](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 - [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [Cómo: Crear e inicializar orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Cómo: Utilizar TraceSource y filtros con agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [Procedimientos: Crear e inicializar orígenes de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [Cómo: Usar TraceSource y filtros con agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)

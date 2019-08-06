@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 114b9a6db7b41c5aac24bcd1badcf5f5b4b2fb08
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589041"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796270"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controles que se utilizan en formularios Windows Forms
 A continuación, se muestra una lista de controles y componentes por orden alfabético que se puede utilizar en formularios Windows Forms. Además de los controles de formularios Windows Forms cubiertos en esta sección, puede añadir ActiveX y controles personalizados a formularios Windows Forms. Si no encuentra aquí el control que necesita, también puede crear el suyo propio. Para obtener más información, consulte [Desarrollar controles de formularios Windows Forms en tiempo de diseño](developing-windows-forms-controls-at-design-time.md). Para obtener más información sobre cómo elegir el control que necesita, consulte [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md).  
   
 > [!NOTE]
->  Controles de Visual Basic se basan en las clases proporcionadas por .NET Framework.  
+>  Visual Basic controles se basan en las clases proporcionadas por el .NET Framework.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)  
- Enumera y describe los controles de Windows Forms basados en .NET Framework.  
+ Muestra y describe Windows Forms controles basados en el .NET Framework.  
   
  [Controles compatibles con dibujos propietarios integrados](controls-with-built-in-owner-drawing-support.md)  
  Describe cómo modificar aspectos de la apariencia de un control que no están disponibles en las propiedades.  
@@ -50,10 +50,10 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  Muestra los datos en un cuadro combinado desplegable.  
   
  [ContextMenu (componente)](contextmenu-component-windows-forms.md)  
- Proporciona a los usuarios un menú de fácil acceso a los comandos usados con frecuencia que están asociados con el objeto seleccionado. Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ContextMenu> control de versiones anteriores, <xref:System.Windows.Forms.ContextMenu> se conserva por compatibilidad con versiones anteriores y uso futuro, si así lo desea.  
+ Proporciona a los usuarios un menú de fácil acceso a los comandos usados con frecuencia que están asociados con el objeto seleccionado. Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad <xref:System.Windows.Forms.ContextMenu> al control de versiones anteriores, se <xref:System.Windows.Forms.ContextMenu> conserva por compatibilidad con versiones anteriores y uso futuro, si así lo desea.  
   
  [ContextMenuStrip (Control)](contextmenustrip-control.md)  
- Representa un menú contextual. Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ContextMenu> control de versiones anteriores, <xref:System.Windows.Forms.ContextMenu> se conserva por compatibilidad con versiones anteriores y uso futuro, si así lo desea.  
+ Representa un menú contextual. Aunque <xref:System.Windows.Forms.ContextMenuStrip> reemplaza y agrega funcionalidad <xref:System.Windows.Forms.ContextMenu> al control de versiones anteriores, se <xref:System.Windows.Forms.ContextMenu> conserva por compatibilidad con versiones anteriores y uso futuro, si así lo desea.  
   
  [DataGrid (control)](datagrid-control-windows-forms.md)  
  Muestra los datos tabulares de un conjunto de datos y permite actualizaciones en el origen de datos.  
@@ -73,7 +73,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [ErrorProvider (componente)](errorprovider-component-windows-forms.md)  
  Muestra información de error al usuario de forma no intrusiva.  
   
- [FileDialog (clase)](filedialog-class.md) proporciona la funcionalidad de la clase base para los cuadros de diálogo de archivo.
+ [FileDialog (clase](filedialog-class.md) ) Proporciona la funcionalidad de la clase base para los cuadros de diálogo de archivo.
 
  [FlowLayoutPanel (control)](flowlayoutpanel-control-windows-forms.md)  
  Representa un panel que dispone dinámicamente su contenido horizontal o verticalmente.  
@@ -162,13 +162,13 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  [SaveFileDialog (componente)](savefiledialog-component-windows-forms.md)  
  Selecciona archivos para guardar y dónde guardarlos.  
   
- [Clase SoundPlayer](soundplayer-class.md) le permite incluir con facilidad sonidos en las aplicaciones.
+ [SoundPlayer (clase](soundplayer-class.md) ) Permite incluir fácilmente sonidos en las aplicaciones.
   
  [SplitContainer (control)](splitcontainer-control-windows-forms.md)  
  Permite al usuario cambiar el tamaño de un control acoplado.  
   
  [Splitter (control)](splitter-control-windows-forms.md)  
- Permite al usuario cambiar el tamaño de un control acoplado (versión de .NET Framework 1.x).  
+ Permite al usuario cambiar el tamaño de un control acoplado (.NET Framework versión 1. x).  
   
  [StatusBar (control)](statusbar-control-windows-forms.md)  
  Muestra información de estado relacionada con el control que está activado. Aunque el control <xref:System.Windows.Forms.StatusStrip> reemplaza y amplía el control <xref:System.Windows.Forms.StatusBar> de versiones anteriores, <xref:System.Windows.Forms.StatusBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, según sea el caso.  
@@ -195,13 +195,13 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  Crea menús y barras de herramientas personalizadas en las aplicaciones de formularios Windows Forms. Aunque el control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar> de las versiones anteriores, <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
   
  [ToolStripContainer (control)](toolstripcontainer-control.md)  
- Proporciona paneles a cada lado de un formulario para acoplar, compartir espacio y organizar <xref:System.Windows.Forms.ToolStrip> controles y un central <xref:System.Windows.Forms.ToolStripContentPanel> para los controles tradicionales.  
+ Proporciona paneles a cada lado de un formulario para el acoplamiento, el espacio compartido y la organización <xref:System.Windows.Forms.ToolStrip> de los controles, y <xref:System.Windows.Forms.ToolStripContentPanel> un centro para los controles tradicionales.  
   
  [ToolStripPanel (control)](toolstrippanel-control.md)  
- Proporciona un panel para acoplar, compartir espacio y organizar <xref:System.Windows.Forms.ToolStrip> controles.  
+ Proporciona un panel para acoplar, compartir y organizar <xref:System.Windows.Forms.ToolStrip> controles.  
   
  [Información general sobre ToolStripProgressBar (control)](toolstripprogressbar-control-overview.md)  
- Indica gráficamente el progreso de una acción hasta su finalización. El <xref:System.Windows.Forms.ToolStripProgressBar> normalmente se encuentra en un <xref:System.Windows.Forms.StatusStrip>.  
+ Indica gráficamente el progreso de una acción hasta su finalización. Normalmente se incluye <xref:System.Windows.Forms.StatusStrip>en. <xref:System.Windows.Forms.ToolStripProgressBar>  
   
  [ToolStripStatusLabel (control)](toolstripstatuslabel-control.md)  
  Representa un panel de un control <xref:System.Windows.Forms.StatusStrip>.  
@@ -229,7 +229,7 @@ A continuación, se muestra una lista de controles y componentes por orden alfab
  Proporciona vínculos a temas detallados, recomendaciones del tipo de control que crear y otra información acerca de cómo crear su propio control.  
   
  [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Proporciona una tabla que asigna controles de Visual Basic 6.0 al control correspondiente en Visual Basic. Tenga en cuenta que los controles ahora son clases de .NET Framework.  
+ Proporciona una tabla que asigna controles en Visual Basic 6,0 al control correspondiente en Visual Basic .NET. Tenga en cuenta que los controles son ahora clases en el .NET Framework.  
   
- [Cómo: Agregar controles ActiveX a formularios de Windows](how-to-add-activex-controls-to-windows-forms.md)  
+ [Cómo: Agregar controles ActiveX a Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  Describe cómo utilizar controles ActiveX en formularios Windows Forms.

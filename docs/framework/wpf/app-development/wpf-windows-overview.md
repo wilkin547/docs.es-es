@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ffb397c673333b26649a815fce7a5d4e63e5b987
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401729"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796774"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con aplicaciones independientes de Windows Presentation Foundation (WPF) a través de Windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Las [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones independientes proporcionan sus propias ventanas mediante la <xref:System.Windows.Window> clase. En este tema <xref:System.Windows.Window> se explica antes de tratar los aspectos básicos de la creación y administración de Windows en aplicaciones independientes.  
@@ -167,7 +167,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 - Minimizarse, maximizarse y restaurarse sin que afecte a las demás.  
   
- Algunas ventanas requieren una relación con la ventana que las abre. Por ejemplo, una [!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)] aplicación puede abrir ventanas de propiedades y ventanas de herramientas cuyo comportamiento típico es cubrir la ventana que las crea. Además, dichas ventanas se deben siempre cerrar, minimizar, maximizar y restaurar de acuerdo con la ventana que las creó. Este tipo de relación se puede establecer mediante la creación de una ventana *propia* , y se consigue estableciendo <xref:System.Windows.Window.Owner%2A> la propiedad de la *ventana de propiedad* con una referencia a la *ventana propietaria*. Esta implementación se muestra en el ejemplo siguiente.  
+ Algunas ventanas requieren una relación con la ventana que las abre. Por ejemplo, una aplicación de entorno de desarrollo integrado (IDE) puede abrir ventanas de propiedades y ventanas de herramientas cuyo comportamiento típico es cubrir la ventana que las crea. Además, dichas ventanas se deben siempre cerrar, minimizar, maximizar y restaurar de acuerdo con la ventana que las creó. Este tipo de relación se puede establecer mediante la creación de una ventana *propia* , y se consigue estableciendo <xref:System.Windows.Window.Owner%2A> la propiedad de la *ventana de propiedad* con una referencia a la *ventana propietaria*. Esta implementación se muestra en el ejemplo siguiente.  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -325,9 +325,9 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  Si desea que el ancho y el alto de la ventana tengan un tamaño que se ajuste al tamaño del contenido de la ventana, puede usar la <xref:System.Windows.Window.SizeToContent%2A> propiedad, que tiene los valores siguientes:  
   
-- <xref:System.Windows.SizeToContent.Manual>. Ningún efecto (valor predeterminado).  
+- <xref:System.Windows.SizeToContent.Manual> Ningún efecto (valor predeterminado).  
   
-- <xref:System.Windows.SizeToContent.Width> Ajustar al ancho del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
+- <xref:System.Windows.SizeToContent.Width>. Ajustar al ancho del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
   
 - <xref:System.Windows.SizeToContent.Height> Ajustar al alto del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinHeight%2A> y <xref:System.Windows.FrameworkElement.MaxHeight%2A> en el alto del contenido.  
   
@@ -372,9 +372,9 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
 ## <a name="window-state"></a>Estado de la ventana  
  Durante la vigencia de una ventana de tamaño ajustable, esta puede tener tres estados: normal, minimizado y maximizado. Una ventana con un estado *normal* es el estado predeterminado de una ventana. Una ventana con este estado permite al usuario moverla y cambiar su tamaño mediante los controles de cambio de tamaño o el borde, si es de tamaño ajustable.  
   
- Una ventana con un  estado minimizado se contrae en el botón de la <xref:System.Windows.Window.ShowInTaskbar%2A> barra de tareas `true`si está establecido en; de lo contrario, se contrae hasta el tamaño más pequeño posible y se reubica en la esquina inferior izquierda del escritorio. Ningún tipo de ventana minimizada puede cambiar de tamaño mediante el borde ni mediante los controles de cambio de tamaño, aunque si no aparece en la barra de tareas se podrá arrastrar a cualquier parte del escritorio.  
+ Una ventana con un estado minimizado se contrae en el botón de la <xref:System.Windows.Window.ShowInTaskbar%2A> barra de tareas `true`si está establecido en; de lo contrario, se contrae hasta el tamaño más pequeño posible y se reubica en la esquina inferior izquierda del escritorio. Ningún tipo de ventana minimizada puede cambiar de tamaño mediante el borde ni mediante los controles de cambio de tamaño, aunque si no aparece en la barra de tareas se podrá arrastrar a cualquier parte del escritorio.  
   
- Una ventana con un  estado maximizado se expande hasta el tamaño máximo que puede ser, que solo será tan grande como <xref:System.Windows.FrameworkElement.MaxWidth%2A>las propiedades, <xref:System.Windows.FrameworkElement.MaxHeight%2A>y <xref:System.Windows.Window.SizeToContent%2A> determinan. Al igual que una ventana minimizada, no puede cambiarse el tamaño de una ventana maximizada mediante un control de cambio de tamaño ni arrastrando el borde.  
+ Una ventana con un estado maximizado se expande hasta el tamaño máximo que puede ser, que solo será tan grande como <xref:System.Windows.FrameworkElement.MaxWidth%2A>las propiedades, <xref:System.Windows.FrameworkElement.MaxHeight%2A>y <xref:System.Windows.Window.SizeToContent%2A> determinan. Al igual que una ventana minimizada, no puede cambiarse el tamaño de una ventana maximizada mediante un control de cambio de tamaño ni arrastrando el borde.  
   
 > [!NOTE]
 >  Los valores de las <xref:System.Windows.Window.Top%2A>propiedades <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, y <xref:System.Windows.FrameworkElement.Height%2A> de una ventana siempre representan los valores para el estado normal, incluso cuando la ventana está maximizada o minimizada actualmente.  
