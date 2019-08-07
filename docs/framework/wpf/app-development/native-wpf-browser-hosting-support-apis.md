@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: eed20417b44b9af78c92871a619f2ccf857b6bba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b52ec2b1701d03bbcc11048610034a849a315e7
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864472"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817932"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>API para el hospedaje nativo de WPF en explorador
-Hospedaje de [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] aplicaciones en exploradores Web se ve facilitado por un servidor de documentos activos (también denominado DocObject) registrado desde el Host de WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] puede activar y directamente integrar con un documento activo. Para el hospedaje de aplicaciones XBAP y documentos XAML flexibles en los exploradores Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] ofrece un complemento NPAPI, que proporciona un entorno de hospedaje similar a la [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documentos activos como [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Sin embargo, la manera más fácil práctica para hospedar las aplicaciones XBAP y XAML se documenta en otros exploradores y aplicaciones independientes es mediante el control de explorador Web Internet Explorer. El control de explorador Web proporciona el entorno de hospedaje de servidor complejo de documento activo, pero permite su propio host personalizar y extender ese entorno y comunicarse directamente con el objeto de documento activo actual.  
+El hospedaje [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] de aplicaciones en exploradores Web se facilita mediante un servidor de documentos activo (también conocido como DocObject) registrado fuera del host de WPF. Internet Explorer puede activarse e integrarse directamente con un documento activo. Para hospedar documentos de XBAP y documentos XAML sueltos en exploradores de Mozilla, [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] proporciona un complemento de NPAPI, que proporciona un entorno de hospedaje similar [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] al servidor de documentos activos como lo hace Internet Explorer. Sin embargo, la manera más sencilla de hospedar los documentos de XBAP y XAML en otros exploradores y aplicaciones independientes se realiza a través del control de explorador Web de Internet Explorer. El control de explorador Web proporciona el entorno de host de servidor de documentos activos complejo, pero permite a su propio host personalizar y ampliar ese entorno y comunicarse directamente con el objeto de documento activo actual.  
   
- El [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documentos activos implementa varias interfaces de hospedaje comunes, como [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Cuando se hospeda en el control del explorador Web, estas interfaces pueden ser consultas desde el objeto devuelto por la [IWebBrowser2:: Document](https://go.microsoft.com/fwlink/?LinkId=162048) propiedad.  
+ El [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] servidor de documentos activos implementa varias interfaces de hospedaje comunes, como [IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049), [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050), [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051), [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045), [IOLECommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047). Cuando se hospeda en el control de explorador Web, estas interfaces pueden ser consultas del objeto devuelto por la propiedad [IWebBrowser2::D bilitar](https://go.microsoft.com/fwlink/?LinkId=162048) .  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- Implementación del servidor de documentos activos de WPF de [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) admite numerosos comandos relacionados con la navegación y específica del explorador del grupo de comandos OLE estándar (con un GUID de grupo de comando nulo). Además, reconoce un grupo de comandos personalizado denominado CGID_PresentationHost. Actualmente, hay solo un comando definido dentro de este grupo.  
+ La implementación de [IOLECommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047) del servidor de documentos activos de WPF admite numerosos comandos relacionados con la navegación y específicos del explorador del grupo de comandos OLE estándar (con un GUID de grupo de comandos null). Además, reconoce un grupo de comandos personalizado denominado CGID_PresentationHost. Actualmente, solo hay un comando definido dentro de este grupo.  
   
 ```  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  
@@ -29,7 +29,7 @@ enum PresentationHostCommands {
 };  
 ```  
   
- PHCMDID_TABINTO indica a PresentationHost para cambiar el foco al primer o último elemento enfocable en su contenido, dependiendo del estado de la tecla MAYÚS.  
+ PHCMDID_TABINTO indica a PresentationHost que cambie el foco al primer o último elemento enfocable en su contenido, en función del estado de la tecla Mayús.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  

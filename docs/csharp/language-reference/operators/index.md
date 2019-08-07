@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 13ad16ab768cdaee96cab29811e2ed058dee977a
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: bc5e2c88314c2f590aeddcfd37bd04c3a7400804
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512237"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796482"
 ---
 # <a name="c-operators-c-reference"></a>Operadores de C# (referencia de C#)
 
@@ -59,7 +59,7 @@ Estos son los operadores de precedencia más alta.
 
 [unchecked](../keywords/unchecked.md): deshabilita la comprobación de desbordamiento para operaciones con enteros. Este es el comportamiento predeterminado del compilador.
 
-[default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) genera el valor predeterminado del tipo T.
+[default(T)](default.md) genera el valor predeterminado del tipo T.
 
 [nameof](nameof.md): obtiene el nombre simple (incompleto) de una variable, tipo o miembro como una cadena constante.
 

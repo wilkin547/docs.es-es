@@ -331,6 +331,9 @@
         - name: 'Operador ::'
           href: operators/namespace-alias-qualifier.md
           displayName: namespace alias qualifier
+        - name: operador default
+          href: operators/default.md
+          displayName: 'default value, default literal, type default'
         - name: delegar operador
           href: operators/delegate-operator.md
           displayName: anonymous

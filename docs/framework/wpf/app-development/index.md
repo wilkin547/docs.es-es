@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 56dbdfd70dd335d32224d11c31a5e64abd3124af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a988baa64025dd9c188e367949c07d861413c197
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655467"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817988"
 ---
 # <a name="application-development"></a>Desarrollo de aplicaciones
-<a name="introduction"></a> Windows Presentation Foundation (WPF) es un marco de presentación que se puede usar para desarrollar los siguientes tipos de aplicaciones:  
+<a name="introduction"></a>Windows Presentation Foundation (WPF) es un marco de presentación que se puede usar para desarrollar los siguientes tipos de aplicaciones:  
   
 - Aplicaciones independientes (aplicaciones en el estilo tradicional de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] compiladas como ensamblados ejecutables que se instalan en el equipo cliente y se ejecutan desde él).  
   
-- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplicaciones compuestas de páginas de navegación que se compilan como ensamblados ejecutables y se hospedan en exploradores web como [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o Mozilla Firefox).  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](aplicaciones compuestas de páginas de navegación que se compilan como ensamblados ejecutables y se hospedan en exploradores Web, como Microsoft Internet Explorer o Mozilla Firefox).  
   
 - Bibliotecas de control personalizadas (ensamblados no ejecutables que contienen controles reutilizables).  
   
@@ -54,7 +54,7 @@ ms.locfileid: "64655467"
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>Archivos de recursos, contenido y datos de aplicaciones de WPF  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] extiende la compatibilidad básica de Microsoft .NET Framework para los recursos incrustados con compatibilidad para tres tipos de archivos de datos no ejecutables: de recursos, contenido y datos. Para obtener más información, vea [Archivos de recursos, contenido y datos de aplicaciones de WPF](wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]extiende la compatibilidad básica en el marco de Microsoft .NET para los recursos incrustados con compatibilidad con tres tipos de archivos de datos no ejecutables: recursos, contenido y datos. Para obtener más información, vea [Archivos de recursos, contenido y datos de aplicaciones de WPF](wpf-application-resource-content-and-data-files.md).  
   
  Un componente clave de la compatibilidad con archivos de datos no ejecutables de WPF es la capacidad de identificarlos y cargarlos usando un [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] único. Para obtener más información, vea [Empaquetar URI en WPF](pack-uris-in-wpf.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "64655467"
   
  <xref:System.Windows.Window> admite la capacidad de crear un tipo especial de ventana denominado cuadro de diálogo. Se pueden crear los tipos modales y no modales de cuadros de diálogo.  
   
- Por comodidad y las ventajas de reusabilidad y una experiencia de usuario coherente en todas las aplicaciones, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] expone tres de los cuadros de diálogo comunes de Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, y <xref:System.Windows.Controls.PrintDialog>.  
+ Para mayor comodidad y las ventajas de la reusabilidad y una experiencia de usuario coherente en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] todas las aplicaciones, expone tres de los cuadros de <xref:Microsoft.Win32.OpenFileDialog>diálogo comunes de <xref:System.Windows.Controls.PrintDialog>Windows:, <xref:Microsoft.Win32.SaveFileDialog>y.  
   
  Un cuadro de mensaje es un tipo especial de cuadro de diálogo para mostrar información de texto importante a los usuarios y plantear preguntas sencillas de Sí/No/Aceptar/Cancelar. Use la clase <xref:System.Windows.MessageBox> para crear y mostrar cuadros de mensajes.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "64655467"
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hospedaje  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] puede hospedarse en [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] o en Firefox. Cada modelo de hospedaje tiene su propio conjunto de consideraciones y restricciones, que se abordan en el tema [Hospedar aplicaciones de WPF](hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]se puede hospedar en Microsoft Internet Explorer o Firefox. Cada modelo de hospedaje tiene su propio conjunto de consideraciones y restricciones, que se abordan en el tema [Hospedar aplicaciones de WPF](hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Compilación e implementación  
@@ -119,7 +119,7 @@ ms.locfileid: "64655467"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Título|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Información general sobre la administración de aplicaciones](application-management-overview.md)|Proporciona información general sobre la clase <xref:System.Windows.Application> incluida la administración de la duración de la aplicación, las ventanas, los recursos de la aplicación y la navegación.|  
 |[Windows en aplicaciones para WPF](windows-in-wpf-applications.md)|Proporciona información detallada sobre la administración de ventanas en la aplicación incluida la forma de usar la clase <xref:System.Windows.Window> y los cuadros de diálogo.|  

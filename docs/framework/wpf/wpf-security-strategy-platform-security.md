@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 42b1596082fe3e682a6fa806412ab5837b087bf9
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 65725851cb413e28ceff0d1c9c4b62b76c4fff18
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400713"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817886"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estrategia de seguridad de WPF: Seguridad de plataforma
-Aunque Windows Presentation Foundation (WPF) proporciona una gran variedad de servicios de seguridad, también aprovecha las características de seguridad de la plataforma subyacente, que incluye el sistema operativo, CLR y [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Estas capas se combinan para proporcionar a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modelo de seguridad sólido y profundo que intenta evitar todos los puntos flacos, como se muestra en la ilustración siguiente:  
+Aunque Windows Presentation Foundation (WPF) proporciona una gran variedad de servicios de seguridad, también aprovecha las características de seguridad de la plataforma subyacente, que incluye el sistema operativo, CLR e Internet Explorer. Estas capas se combinan para proporcionar a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modelo de seguridad sólido y profundo que intenta evitar todos los puntos flacos, como se muestra en la ilustración siguiente:  
   
  ![Diagrama que muestra el modelo de seguridad de WPF.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
@@ -75,15 +75,8 @@ Aunque Windows Presentation Foundation (WPF) proporciona una gran variedad de se
   
 <a name="Limited_Rights_Process_for_Browser_Hosted_Applications"></a>   
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Proceso de derechos limitados para las aplicaciones hospedadas en explorador  
- Las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hospedadas en explorador se ejecutan en el espacio aislado de la zona de Internet. La integración de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] con [!INCLUDE[TLA#tla_ie](../../../includes/tlasharptla-ie-md.md)] amplía esta protección con compatibilidad adicional.  
+ Las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hospedadas en explorador se ejecutan en el espacio aislado de la zona de Internet. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]la integración con Microsoft Internet Explorer amplía esta protección con compatibilidad adicional.  
   
-#### <a name="internet-explorer-6-service-pack-2-and-internet-explorer-7-for-xp"></a>Internet Explorer 6 Service Pack 2 e Internet Explorer 7 para XP  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aprovecha la seguridad del sistema operativo mediante la limitación de privilegios de procesos para [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] a fin de lograr una mayor protección. Antes de que se inicie una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hospedada en explorador, el sistema operativo crea un proceso de host que quita los privilegios innecesarios del token del proceso. Entre los privilegios que se quitan están la capacidad de apagar el equipo del usuario, la carga de controladores y el acceso de lectura a todos los archivos del equipo.  
-  
-#### <a name="internet-explorer-7-for-vista"></a>Internet Explorer 7 para Vista  
- En [!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)], las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se ejecutan en modo protegido. En concreto, las [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)] se ejecutan con integridad de nivel intermedio.  
-  
-#### <a name="defense-in-depth-layer"></a>Capa de defensa en profundidad  
  Puesto que las [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] suelen limitarse al espacio aislado establecido por el conjunto de permisos de zona de Internet, quitar estos privilegios no daña las [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] desde una perspectiva de compatibilidad. En su lugar, se crea una capa adicional de defensa en profundidad; aunque una aplicación en espacio aislado sea capaz de vulnerar otras capas y secuestrar el proceso, el proceso solo tendrá privilegios limitados.  
   
  Consulte [uso de una cuenta de usuario con privilegios mínimos](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
@@ -161,14 +154,14 @@ Aunque Windows Presentation Foundation (WPF) proporciona una gran variedad de se
   
  Esto requiere que [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] reciba privilegios elevados al tiempo que se evita que esos privilegios se rijan por el conjunto de permisos de zona de Internet del dominio de la aplicación host.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]para ello, usa el  método Assert de un permiso. El siguiente código muestra cómo se produce esto:  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]para ello, usa el método Assert de un permiso. El siguiente código muestra cómo se produce esto:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
  Esencialmente, la **aserción** evita que los permisos ilimitados requeridos por [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] estén restringidos por los permisos de la zona de Internet de la aplicación XBAP.  
   
- Desde la perspectiva de la [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] plataforma, es responsable de usar Assert correctamente; un uso incorrecto de Assert podría permitir que el código malintencionado elevase los privilegios. Por lo tanto, es importante llamar a Assert  únicamente cuando sea necesario y asegurarse de que las restricciones de espacio aislado permanecen intactas. Por ejemplo, el código en espacio aislado no tiene permiso para abrir archivos aleatorios, pero sí para usar fuentes. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]permite que las aplicaciones en espacio aislado usen la funcionalidad de fuentes mediante una [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] llamada a Assert y para que lea los archivos que se sabe que contienen esas fuentes en nombre de la aplicación en espacio aislado.  
+ Desde la perspectiva de la [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] plataforma, es responsable de usar Assert correctamente; un uso incorrecto de Assert podría permitir que el código malintencionado elevase los privilegios. Por lo tanto, es importante llamar a Assert únicamente cuando sea necesario y asegurarse de que las restricciones de espacio aislado permanecen intactas. Por ejemplo, el código en espacio aislado no tiene permiso para abrir archivos aleatorios, pero sí para usar fuentes. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]permite que las aplicaciones en espacio aislado usen la funcionalidadde fuentes mediante una [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] llamada a Assert y para que lea los archivos que se sabe que contienen esas fuentes en nombre de la aplicación en espacio aislado.  
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>implementación de ClickOnce  
@@ -186,9 +179,9 @@ Aunque Windows Presentation Foundation (WPF) proporciona una gran variedad de se
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Seguridad de Microsoft Internet Explorer  
- Más allá de reducir los problemas de seguridad y simplificar la configuración de seguridad, [!INCLUDE[TLA#tla_ie6sp2](../../../includes/tlasharptla-ie6sp2-md.md)] contiene varias características que mejoran la seguridad para los usuarios de [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. Estas características intentan ofrecer a los usuarios un mayor control sobre su experiencia de exploración.  
+ Además de reducir los problemas de seguridad y simplificar la configuración de seguridad, Microsoft Internet Explorer 6 (SP2) contiene varias características que mejoran la [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]seguridad para los usuarios de. Estas características intentan ofrecer a los usuarios un mayor control sobre su experiencia de exploración.  
   
- En versiones previas a [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)], los usuarios podían experimentar lo siguiente:  
+ Antes de IE6 SP2, los usuarios podían estar sujetos a lo siguiente:  
   
 - Ventanas emergentes aleatorias.  
   
@@ -198,13 +191,13 @@ Aunque Windows Presentation Foundation (WPF) proporciona una gran variedad de se
   
  En algunos casos, los sitios web que no son de confianza intentan engañar a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] los usuarios mediante la suplantación de la instalación o la visualización repetida de un cuadro de diálogo de instalación de Microsoft ActiveX, aunque el usuario haya cancelado. Es posible que estas técnicas indujeran a un número significativo de usuarios a tomar malas decisiones que hayan dado lugar a la instalación de aplicaciones de spyware.  
   
- [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] incluye varias características para mitigar este tipo de problemas centradas en el concepto de inicio por usuario. [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)]detecta cuándo un usuario hizo clic en un vínculo o elemento de página antes de una acción, lo que se conoce como *Inicio del usuario*, y lo trata de forma diferente que cuando el script de una página desencadena una acción similar. Por ejemplo, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] incorpora un bloqueador de **elementos emergentes** que detecta cuándo un usuario hace clic en un botón antes de que la página cree un elemento emergente. De este modo, [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] permite la mayoría de los elementos emergentes inocuos y evita los elementos emergentes que los usuarios no solicitan ni desean. Los elementos emergentes bloqueados se capturan en la nueva **barra de información**, lo que permite al usuario invalidar manualmente el bloque y ver el elemento emergente.  
+ IE6 SP2 incluye varias características para mitigar estos tipos de problemas, que giran en torno al concepto de inicio del usuario. IE6 SP2 detecta cuándo un usuario hizo clic en un vínculo o elemento de página antes de una acción, lo que se conoce como *Inicio de usuario*, y lo trata de forma diferente a cuando una acción similar se desencadena por el script en una página. Por ejemplo, IE6 SP2 incorpora un bloqueador de **elementos emergentes** que detecta si un usuario hace clic en un botón antes de que la página cree un elemento emergente. Esto permite a IE6 SP2 permitir la mayoría de los elementos emergentes inocuos a la vez que se evitan los elementos emergentes que los usuarios no solicitan ni desean. Los elementos emergentes bloqueados se capturan en la nueva **barra de información**, lo que permite al usuario invalidar manualmente el bloque y ver el elemento emergente.  
   
  También se aplica la misma lógica de inicio de usuario para **abrir**/**Guardar** mensajes de seguridad. Los cuadros de diálogo de instalación de ActiveX siempre se capturan en la barra de información, a menos que representen una actualización de un control instalado previamente. Estas medidas se combinan para brindar a los usuarios una experiencia de usuario más segura y controlada, puesto que están protegidos contra los sitios que les importunan para instalar software malintencionado o no deseado.  
   
- Estas características también protegen a los clientes que usan [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] para ir a sitios web donde pueden descargar e instalar las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. En concreto, esto se debe a que [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] ofrece una mejor experiencia de usuario que reduce la posibilidad de que los usuarios instalen aplicaciones malintencionadas o dañinas independientemente de qué tecnología se utilizó para crearlas, incluido [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]agrega a estas protecciones mediante ClickOnce para facilitar la descarga de sus aplicaciones a través de Internet. Puesto que las [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] se ejecutan dentro de un espacio aislado de seguridad de la zona de Internet, pueden iniciarse sin problemas. Por otro lado, las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] independientes requieren plena confianza para ejecutarse. Para estas aplicaciones, ClickOnce mostrará un cuadro de diálogo de seguridad durante el proceso de inicio para notificar el uso de los requisitos de seguridad adicionales de la aplicación. Sin embargo, esto debe ser iniciado por el usuario, se regirá por la lógica iniciada por el usuario y se puede cancelar.  
+ Estas características también protegen a los clientes que usan IE6 SP2 para buscar sitios web que les permitan descargar [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] e instalar aplicaciones. En concreto, esto se debe a que IE6 SP2 ofrece una mejor experiencia de usuario que reduce la posibilidad de que los usuarios instalen aplicaciones malintencionadas o dañinas independientemente de qué tecnología [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]se usó para compilarla, incluido. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]agrega a estas protecciones mediante ClickOnce para facilitar la descarga de sus aplicaciones a través de Internet. Puesto que las [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] se ejecutan dentro de un espacio aislado de seguridad de la zona de Internet, pueden iniciarse sin problemas. Por otro lado, las aplicaciones de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] independientes requieren plena confianza para ejecutarse. Para estas aplicaciones, ClickOnce mostrará un cuadro de diálogo de seguridad durante el proceso de inicio para notificar el uso de los requisitos de seguridad adicionales de la aplicación. Sin embargo, esto debe ser iniciado por el usuario, se regirá por la lógica iniciada por el usuario y se puede cancelar.  
   
- [!INCLUDE[TLA2#tla_ie7](../../../includes/tla2sharptla-ie7-md.md)] incorpora y amplía las capacidades de seguridad de [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] como parte de un compromiso continuo con la seguridad.  
+ Internet Explorer 7 incorpora y amplía las capacidades de seguridad de IE6 SP2 como parte de un compromiso continuo con la seguridad.  
   
 ## <a name="see-also"></a>Vea también
 

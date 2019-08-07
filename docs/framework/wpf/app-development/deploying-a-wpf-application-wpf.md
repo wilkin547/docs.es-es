@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 2d3a72dad6a4e139288bf3c1fa9f4cde5124586f
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796765"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818026"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
 Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -77,11 +77,11 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>Implementar aplicaciones XAML solo de marcado  
- Las páginas solo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de marcado normalmente se publican en servidores Web, como páginas HTML, y se pueden [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]ver mediante. Las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado se ejecutan dentro de un recinto de seguridad de confianza parcial con restricciones definidas por el conjunto de permisos de zona de Internet. Esto proporciona un espacio aislado de seguridad equivalente a las aplicaciones web basadas en HTML.  
+ Las páginas solo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de marcado normalmente se publican en servidores Web, como páginas HTML, y se pueden ver con Internet Explorer. Las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado se ejecutan dentro de un recinto de seguridad de confianza parcial con restricciones definidas por el conjunto de permisos de zona de Internet. Esto proporciona un espacio aislado de seguridad equivalente a las aplicaciones web basadas en HTML.  
   
  Para obtener más información sobre los cambios en materia de seguridad que se han realizado en las aplicaciones [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], vea [Seguridad (WPF)](../security-wpf.md).  
   
- Las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado se pueden instalar en el sistema de archivos local usando XCopy o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Estas páginas se pueden ver mediante [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] o el explorador de Windows.  
+ Las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado se pueden instalar en el sistema de archivos local usando XCopy o [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]. Estas páginas se pueden ver con Internet Explorer o el explorador de Windows.  
   
  Para obtener más información sobre XAML, vea [Información general sobre XAML (WPF)](../advanced/xaml-overview-wpf.md).  
   
@@ -98,7 +98,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
 > [!NOTE]
 >  Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](building-a-wpf-application-wpf.md).  
   
- Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, consulte [Cómo Cree un nuevo proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))de aplicación de explorador de WPF. Al igual que las páginas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] solo de marcado, las [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se suelen publicar en un servidor web y se ven mediante [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)].  
+ Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, consulte [Cómo Cree un nuevo proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))de aplicación de explorador de WPF. Al igual que las [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] páginas de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] solo marcado, normalmente se publican en un servidor Web y se ven con Internet Explorer.  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se puede implementar en los clientes usando cualquiera de las técnicas de implementación. Sin embargo, se recomienda ClickOnce, ya que ofrece las siguientes capacidades:  
   
@@ -112,13 +112,11 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>Instalar .NET Framework  
- Para ejecutar una [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación, el marco de trabajo de Microsoft .net debe estar instalado en el cliente. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]detecta automáticamente si los clientes se instalan con .NET Framework [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] cuando se ven las aplicaciones hospedadas en el explorador. Si el .NET Framework no está instalado, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] pide a los usuarios que lo instalen.  
+ Para ejecutar una [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación, el marco de trabajo de Microsoft .net debe estar instalado en el cliente. Internet Explorer detecta automáticamente si los clientes se instalan con .NET Framework [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] cuando se ven las aplicaciones hospedadas en el explorador. Si el .NET Framework no está instalado, Internet Explorer solicita a los usuarios que lo instalen.  
   
- Para detectar si está instalado el .NET Framework, [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] incluye una aplicación de programa previo registrada como controlador de [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] reserva para los archivos de contenido con las siguientes extensiones:. XAML,. XPS,. XBAP y. Application. Si navega a estos tipos de archivo y el .NET Framework no está instalado en el cliente, la aplicación de arranque solicita permiso para instalarlo. Si no se proporciona el permiso, no se instalará ni el .NET Framework ni la aplicación.  
+ Para detectar si el .NET Framework está instalado, Internet Explorer incluye una aplicación de programa previo registrada como controlador de [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] reserva para los archivos de contenido con las siguientes extensiones:. XAML,. XPS,. XBAP y. Application. Si navega a estos tipos de archivo y el .NET Framework no está instalado en el cliente, la aplicación de arranque solicita permiso para instalarlo. Si no se proporciona el permiso, no se instalará ni el .NET Framework ni la aplicación.  
   
- Si se concede el permiso [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] , descarga e instala el .NET Framework mediante el servicio de transferencia inteligente en segundo plano de Microsoft (bits). Después de instalar correctamente el .NET Framework, el archivo solicitado originalmente se abre en una nueva ventana del explorador.  
-  
- .NET Framework detección automática está disponible en [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]los clientes de, [!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)] [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)]y que tienen [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] instalado o posterior.  
+ Si se concede el permiso, Internet Explorer descarga e instala el .NET Framework mediante el Servicio de transferencia inteligente en segundo plano de Microsoft (BITS). Después de instalar correctamente el .NET Framework, el archivo solicitado originalmente se abre en una nueva ventana del explorador.  
   
  Para obtener más información, vea [Implementar .NET Framework y aplicaciones](../../deployment/index.md).  
   

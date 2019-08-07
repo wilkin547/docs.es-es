@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 6bea25fbd321eead9137caaeb212b76a9d528e88
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: da9eaf127a4db02cddbb36e53a0d0ddb5b28b841
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710393"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818049"
 ---
 # <a name="threading-model"></a>Modelo de subprocesos
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado para evitar a los programadores las dificultades de los subprocesos. Como resultado, la mayoría de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] los desarrolladores no tendrán que escribir una interfaz que use más de un subproceso. Dado que los programas multiproceso son complejos y difíciles de depurar, se deben evitar cuando existan soluciones de un único subproceso.  
@@ -143,7 +143,7 @@ ms.locfileid: "68710393"
   
  El Explorador de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] funciona de esta manera. Cada nueva ventana del Explorador pertenece al proceso original, pero se crea bajo el control de un subproceso independiente.  
   
- Mediante el uso [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de un <xref:System.Windows.Controls.Frame> control, podemos mostrar páginas Web. Podemos crear fácilmente un sustituto sencillo [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] . Comenzamos con una característica importante: la capacidad de abrir una nueva ventana del explorador. Cuando el usuario hace clic en el botón "Nueva ventana", se inicia una copia de nuestra ventana en un subproceso independiente. De este modo, las operaciones de ejecución prolongada o de bloqueo en una de las ventanas no bloquearán a todas las demás.  
+ Mediante el uso [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de un <xref:System.Windows.Controls.Frame> control, podemos mostrar páginas Web. Podemos crear fácilmente un sustituto simple de Internet Explorer. Comenzamos con una característica importante: la capacidad de abrir una nueva ventana del explorador. Cuando el usuario hace clic en el botón "Nueva ventana", se inicia una copia de nuestra ventana en un subproceso independiente. De este modo, las operaciones de ejecución prolongada o de bloqueo en una de las ventanas no bloquearán a todas las demás.  
   
  En realidad, el modelo de explorador web tiene su propio modelo complicado de subprocesos. Lo elegimos porque debería resultar conocido para la mayoría de los lectores.  
   

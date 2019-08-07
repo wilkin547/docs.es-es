@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: d8e26ff197e22ffa18b4acdd020b80879023c0f7
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a5808261ec9fe957ee993177590446389f219609
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364092"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68818010"
 ---
 # <a name="application-management-overview"></a>Información general sobre la administración de aplicaciones
 Todas las aplicaciones suelen compartir un conjunto común de funciones que se aplica a la implementación y la administración de la aplicación. En este tema se proporciona información general sobre la funcionalidad <xref:System.Windows.Application> de la clase para crear y administrar aplicaciones de.  
@@ -293,7 +293,7 @@ Todas las aplicaciones suelen compartir un conjunto común de funciones que se a
   
 - Una aplicación XBAP se desplaza fuera de.  
   
-- En [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)], cuando se cierra la pestaña que hospeda la aplicación XBAP.  
+- En Internet Explorer, cuando se cierra la pestaña que hospeda la aplicación XBAP.  
   
 - Cuando se cierra el explorador.  
   

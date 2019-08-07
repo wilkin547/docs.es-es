@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 519afa7f39f669b184ccc269546ef930c114c404
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
+ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796774"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68817945"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con aplicaciones independientes de Windows Presentation Foundation (WPF) a través de Windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Las [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones independientes proporcionan sus propias ventanas mediante la <xref:System.Windows.Window> clase. En este tema <xref:System.Windows.Window> se explica antes de tratar los aspectos básicos de la creación y administración de Windows en aplicaciones independientes.  
   
 > [!NOTE]
->  Las aplicaciones hospedadas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en el explorador, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] incluidas [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] y páginas sueltas, no proporcionan sus propias ventanas. En su lugar, se hospedan en Windows proporcionado [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]por. Vea [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
+>  Las aplicaciones hospedadas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en el explorador, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] incluidas [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] y páginas sueltas, no proporcionan sus propias ventanas. En su lugar, se hospedan en Windows proporcionado por Windows Internet Explorer. Vea [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Clase de la ventana  
@@ -325,9 +325,9 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  Si desea que el ancho y el alto de la ventana tengan un tamaño que se ajuste al tamaño del contenido de la ventana, puede usar la <xref:System.Windows.Window.SizeToContent%2A> propiedad, que tiene los valores siguientes:  
   
-- <xref:System.Windows.SizeToContent.Manual> Ningún efecto (valor predeterminado).  
+- <xref:System.Windows.SizeToContent.Manual>. Ningún efecto (valor predeterminado).  
   
-- <xref:System.Windows.SizeToContent.Width>. Ajustar al ancho del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
+- <xref:System.Windows.SizeToContent.Width> Ajustar al ancho del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
   
 - <xref:System.Windows.SizeToContent.Height> Ajustar al alto del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinHeight%2A> y <xref:System.Windows.FrameworkElement.MaxHeight%2A> en el alto del contenido.  
   
