@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b56840ce68caa3eed50773668c64e2622a646ddf
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651641"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892085"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Tipos de datos comunes (Referencia de la API no administrada)
 En este tema se enumeran los tipos de datos que usan las API no administradas de .NET Framework y que se definen mediante instrucciones `typedef` de C/C++. Normalmente, estos tipos de datos son alias de tipos de datos primitivos de C/C++. Normalmente, los valores de estos tipos de datos son opacos; es decir, son devueltos por una función o un método determinados para que se puedan pasar a otras funciones o métodos sin modificar.  
   
-|Tipo de datos|Definición|Definido en|Descripción|  
+|Tipo de datos|Definición|Definido en|DESCRIPCIÓN|  
 |---------------|----------------|----------------|-----------------|  
 |AppDomainID|`typedef UINT_PTR AppDomainID;`|corprof.h|Identificador de un dominio de aplicación.|  
 |AssemblyID|`typedef UINT_PTR AssemblyID;`|corprof.h|Identificador de un ensamblado.|  
@@ -30,13 +30,15 @@ En este tema se enumeran los tipos de datos que usan las API no administradas de
 |CORDB_REGISTER|`typedef ULONG64 CORDB_REGISTER;`|cordebug.h|Valor de un registro de CPU.|
 |FunctionID|`typedef UINT_PTR FunctionID;`|corprof.h|Identificador de una función o un método.|  
 |GCHandleID|`typedef UINT_PTR GCHandleID;`|corprof.h|Controlador de recolección de elementos no utilizados.|  
-|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|Un token de definición de método.|
+|mdMethodDef|`typedef mdToken mdMethodDef;`|cordebug.h|Token de definición de método.|
 |mdToken|`typedef UINT32 mdToken;`|corprof.h|Un token de metadatos (una fila en una tabla de metadatos).|  
 |ModuleID|`typedef UINT_PTR ModuleID;`|corprof.h|Identificador de un módulo de ensamblado.|  
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|Identificador de un objeto.|  
+|PCCOR_SIGNATURE|`typedef SIZE_T PCCOR_SIGNATURE;`|cordebug.h|Un puntero a un miembro o a una firma de metadatos.|
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Identificador de un proceso administrado.|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|Identificador de una función con compilación JIT .|  
-|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|El identificador de un [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instancia.|  
+|SIZE_T|`typedef ULONG_PTR SIZE_T;`|corsym. h|Un puntero a una dirección de memoria de 64 bits.|
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Identificador de una instancia de [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) .|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Identificador de un subproceso administrado.|  
   
 ## <a name="see-also"></a>Vea también

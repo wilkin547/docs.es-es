@@ -4,22 +4,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
-ms.openlocfilehash: b3f93cfdde8e5063c5bf0503857dfc149ee90026
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1a734823d1fedbbd7bb8196c501ac2ee149f3098
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797051"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869041"
 ---
 # <a name="attributes-visual-basic"></a>Atributos de Visual Basic
-Visual Basic ofrece varios atributos que permiten a los objetos de interactúan con código no administrado y un atributo que permite a los miembros de módulo tener acceso sin el nombre del módulo. En la tabla siguiente se enumera los atributos utilizados por Visual Basic.  
+
+Visual Basic proporciona varios atributos que permiten a los objetos interoperar con código no administrado y un atributo que permite tener acceso a los miembros de módulo sin el nombre de módulo. En la tabla siguiente se enumeran los atributos usados por Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indica al compilador que agregue los metadatos que permitan que una clase debe estar expuesta como un objeto COM.|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Permite que los miembros de módulo tener acceso utilizando únicamente la cualificación requerida para el módulo.|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Indica que una matriz de una estructura o variable no local debe tratarse como una matriz de longitud fija.|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indica que una cadena debe tratarse como si fuera de longitud fija.|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Indica al compilador que agregue metadatos que permitan que una clase se exponga como un objeto COM.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Permite tener acceso a los miembros de módulo usando solo la calificación necesaria para el módulo.|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Indica que una matriz de una estructura o una variable no local se debe tratar como una matriz de longitud fija.|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indica que una cadena se debe tratar como si fuera una longitud fija.|
   
 ## <a name="see-also"></a>Vea también
 

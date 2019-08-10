@@ -1,13 +1,13 @@
 ---
-title: Contract1
+title: Contrato
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 10789f9a2940c239ae20c8fd1e9d48bca0e820ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a21e95a6f1f1860ed36c968d17bb8ac8465dce
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61963701"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868428"
 ---
 # <a name="contract"></a>Contrato
 Contrato  
@@ -32,7 +32,7 @@ class Contract
 ## <a name="methods"></a>Métodos  
  La clase Contrato no define ningún método.  
   
-## <a name="properties"></a>Propiedades  
+## <a name="properties"></a>Properties (Propiedades)  
  La clase Contrato tiene las siguientes propiedades:  
   
 ### <a name="appdomainid"></a>AppDomainId  
@@ -49,7 +49,7 @@ class Contract
   
  Los comportamientos asociados a este contrato.  
   
-### <a name="name"></a>Name  
+### <a name="name"></a>NOMBRE  
  Tipo de datos: cadena  
   
  Tipo de acceso: De sólo lectura  
@@ -64,7 +64,7 @@ class Contract
  El espacio de nombres del elemento `portType` en WSDL.  
   
 ### <a name="operations"></a>Operaciones  
- Tipo de datos: Matriz de operación  
+ Tipo de datos: Matriz de operaciones  
   
  Tipo de acceso: De sólo lectura  
   
@@ -91,7 +91,7 @@ class Contract
   
  Indica si el contrato requiere el enlace asociado a este contrato para utilizar las sesiones del canal.  
   
-### <a name="type"></a>Tipo  
+### <a name="type"></a>Type  
  Tipo de datos: cadena  
   
  Tipo de acceso: De sólo lectura  
