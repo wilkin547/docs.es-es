@@ -5,18 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 18f8823327719a120888df580779125be5d07b2c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ad9feed7ea3d96267d632f4ca4bc992f2c8d335f
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965636"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796649"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Procedimiento Usar expresiones lambda en una consulta (Guía de programación de C#)
 No se pueden usar expresiones lambda directamente en la sintaxis de consulta, pero sí en llamadas de método, y las expresiones de consulta pueden contener llamadas de método. De hecho, algunas operaciones de consulta solo se pueden expresar con la sintaxis de método. Para obtener más información sobre la diferencia entre la sintaxis de consulta y la sintaxis de método, vea [Query Syntax and Method Syntax in LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md) (Sintaxis de consulta y sintaxis de método en LINQ).  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se muestra cómo usar una expresión lambda en una consulta basada en métodos con el operador de consulta estándar <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType>. Tenga en cuenta que el método <xref:System.Linq.Enumerable.Where%2A> de este ejemplo tiene un parámetro de entrada de tipo delegado <xref:System.Func%601> y que el delegado toma un entero como entrada y devuelve un valor booleano. La expresión lambda se puede convertir en ese delegado. Si se tratara de una consulta de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] que usa el método <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>, el tipo de parámetro sería `Expression<Func<int,bool>>` pero la expresión lambda tendría exactamente el mismo aspecto. Para más información sobre el tipo Expression, vea <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>.  
+ En el siguiente ejemplo se muestra cómo usar una expresión lambda en una consulta basada en métodos con el operador de consulta estándar <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType>. Tenga en cuenta que el método <xref:System.Linq.Enumerable.Where%2A> de este ejemplo tiene un parámetro de entrada de tipo delegado <xref:System.Func%602> y que el delegado toma un entero como entrada y devuelve un valor booleano. La expresión lambda se puede convertir en ese delegado. Si se tratara de una consulta de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] que usa el método <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>, el tipo de parámetro sería `Expression<Func<int,bool>>` pero la expresión lambda tendría exactamente el mismo aspecto. Para más información sobre el tipo Expression, vea <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>.  
   
  [!code-csharp[csProgGuideLINQ#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#1)]  
   

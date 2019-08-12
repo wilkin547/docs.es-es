@@ -2,12 +2,12 @@
 title: Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 description: Obtenga más información sobre las diferencias y los usos del patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio.
 ms.date: 01/07/2019
-ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9ebd544bdc137a68f03d1ab38cf23bf0d02c420c
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673172"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892231"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Diferencias entre el patrón de puerta de enlace de API y la comunicación directa de cliente a microservicio
 
@@ -128,7 +128,7 @@ Puede haber muchas más cuestiones transversales ofrecidas por los productos de 
 
 [Azure API Management](https://azure.microsoft.com/services/api-management/) (como se muestra en la figura 4-14) no solo resuelve las necesidades de puerta de enlace de API, sino que también proporciona características como la recopilación de información de las API. Si se usa una solución de administración de API, una puerta de enlace de API es solo un componente dentro de esa solución de administración de API completa.
 
-![Azure API Management resuelve las necesidades de administración y de puerta de enlace de API, como el registro, la seguridad, la medición, etc.](./media/image14.png)
+![Azure API Management resuelve las necesidades de administración y de puerta de enlace de API, como el registro, la seguridad, la medición, etc.](./media/api-gateway-azure-api-management.png)
 
 **Figura 4-14**. Uso de Azure API Management para la puerta de enlace de API
 
