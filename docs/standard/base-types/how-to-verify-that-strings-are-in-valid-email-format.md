@@ -1,5 +1,5 @@
 ---
-title: 'Procedimientos para: para comprobar si las cadenas tienen un formato de correo electrónico válido'
+title: Procedimiento para comprobar si las cadenas tienen un formato de correo electrónico válido
 ms.date: 12/10/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -21,13 +21,13 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "65589526"
 ---
-# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedimientos para: para comprobar si las cadenas tienen un formato de correo electrónico válido
+# <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Procedimiento para comprobar si las cadenas tienen un formato de correo electrónico válido
 En el ejemplo siguiente se usa una expresión regular para comprobar que una cadena tiene un formato de correo electrónico válido.  
 
 ## <a name="example"></a>Ejemplo  
@@ -35,7 +35,7 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
   
  Para comprobar que la dirección de correo electrónico es válida, el método `IsValidEmail` llama al método <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.MatchEvaluator%29?displayProperty=nameWithType> con el patrón de expresión regular `(@)(.+)$` para separar el nombre de dominio de la dirección de correo electrónico. El tercer parámetro es un delegado <xref:System.Text.RegularExpressions.MatchEvaluator> que representa el método que procesa y reemplaza el texto coincidente. El patrón de expresión regular se interpreta de esta manera:  
   
-|Patrón|DESCRIPCIÓN|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`(@)`|Buscar el carácter @. Este es el primer grupo de captura.|  
 |`(.+)`|Buscar una coincidencia con una o más apariciones de cualquier carácter. Este es el segundo grupo de captura.|  
@@ -52,7 +52,7 @@ En el ejemplo siguiente se usa una expresión regular para comprobar que una cad
   
  En este ejemplo, el patrón de expresión regular ``^(?(")(".+?(?<!\\)"@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`{}|~\w])*)(?<=[0-9a-z])@))(?([)([(\d{1,3}.){3}\d{1,3}])|(([0-9a-z][-0-9a-z]*[0-9a-z]*.)+[a-z0-9][-a-z0-9]{0,22}[a-z0-9]))$`` se interpreta como se muestra en la tabla siguiente. Observe que la expresión regular se compila mediante la marca <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .  
   
-|Patrón|DESCRIPCIÓN|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Comenzar la búsqueda de coincidencia al principio de la cadena.|  
 |`(?(")`|Determinar si el primer carácter es una comilla. `(?(")` es el principio de una construcción de alternancia.|  

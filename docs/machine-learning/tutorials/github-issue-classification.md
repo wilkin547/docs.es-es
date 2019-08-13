@@ -1,15 +1,15 @@
 ---
 title: 'Tutorial: Clasificación de incidencias de soporte técnico (clasificación multiclase)'
 description: Descubra cómo usar ML.NET en un escenario de clasificación multiclase para clasificar los problemas de GitHub y asignarlos a un área determinada.
-ms.date: 05/16/2019
+ms.date: 07/31/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 3bb556cc591ee35fc14c548e7f53bad58a786e99
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195586"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710303"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: Clasificación multiclase de incidencias de soporte técnico con ML.NET
 
@@ -37,7 +37,7 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 ### <a name="create-a-project"></a>Crear un proyecto
 
-1. Abra Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo **Nuevo proyecto**, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)**. En el cuadro de texto **Nombre**, escriba "GitHubIssueClassification" y, luego, seleccione el botón **Aceptar**.
+1. Abra Visual Studio 2017. Seleccione **Archivo** > **Nuevo** > **Proyecto** de la barra de menús. En el cuadro de diálogo **Nuevo proyecto**, seleccione el nodo **Visual C#** seguido del nodo **.NET Core**. Después, seleccione la plantilla del proyecto **Aplicación de consola (.NET Core)** . En el cuadro de texto **Nombre**, escriba "GitHubIssueClassification" y, luego, seleccione el botón **Aceptar**.
 
 2. Cree un directorio denominado *Datos* en el proyecto para guardar los archivos del conjunto de datos:
 
@@ -285,6 +285,25 @@ Utilice el código siguiente para mostrar las métricas, compartir los resultado
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#DisplayMetrics)]
 
+### <a name="save-the-model-to-a-file"></a>Guardar el modelo en un archivo
+
+Una vez que esté satisfecho con el modelo, guárdelo en un archivo para hacer predicciones más adelante o en otra aplicación. Agregue el código siguiente al método `Evaluate` . 
+
+[!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
+
+Cree el método `SaveModelAsFile` debajo del método `Evaluate`.
+
+```csharp
+private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
+{
+
+}
+```
+
+Agregue el código siguiente al método `SaveModelAsFile`. Este código usa el método [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) para serializar y almacenar el modelo entrenado como archivo ZIP.
+
+[!code-csharp[SnippetSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetSaveModel)]
+
 ## <a name="deploy-and-predict-with-a-model"></a>Implementación y predicción con un modelo
 
 Agregue una llamada al método nuevo desde el método `Main`, justo debajo de la llamada al método `Evaluate`, utilizando el código siguiente:
@@ -302,10 +321,15 @@ private static void PredictIssue()
 
 El método `PredictIssue` ejecuta las tareas siguientes:
 
+* Carga el modelo guardado
 * Crea un único problema de datos de prueba.
 * Predice el área según los datos de prueba.
 * Combina datos de prueba y predicciones para la generación de informes.
 * Muestra los resultados de la predicción.
+
+Cargue el modelo guardado en la aplicación agregando el código siguiente al método `PredictIssue`:
+
+[!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
 Agregue un problema de GitHub para probar la predicción del modelo entrenado en el método `Predict` mediante la creación de una instancia de `GitHubIssue`:
 

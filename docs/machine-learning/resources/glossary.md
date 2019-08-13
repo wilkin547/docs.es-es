@@ -2,13 +2,14 @@
 title: Glosario de aprendizaje automático
 description: Un glosario de los términos importantes sobre aprendizaje automático que resultan de utilidad al crear los modelos personalizados en ML.NET.
 ms.custom: seodec18
-ms.date: 05/09/2019
-ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 1c979d2c4567285146ab87f359116efb506815a1
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557975"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710535"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glosario sobre aprendizaje automático de términos importantes
 
@@ -109,6 +110,10 @@ Un caso de [clasificación](#classification) donde la [etiqueta](#label) es una 
 
 Un esquema de extracción de características para datos de texto: cualquier secuencia de N palabras se convierte en un valor de [característica](#feature).
 
+## <a name="normalization"></a>Normalización
+
+La normalización es el proceso de escalar datos de número de punto flotante a valores entre 0 y 1. Muchos de los algoritmos de aprendizaje usados en ML.NET requieren la normalización de los datos de las características de entrada. ML.NET proporciona una serie de [transformaciones para la normalización](transforms.md#normalization-and-scaling)
+
 ## <a name="numerical-feature-vector"></a>Vector de características numérico
 
 Un vector de [características](#feature) que se compone únicamente de valores numéricos. Esto es similar a `double[]`.
@@ -147,6 +152,10 @@ En [regresión](#regression), una métrica de evaluación que es la suma de todo
 ## <a name="root-of-mean-squared-error-rmse"></a>Raíz cuadrada del error cuadrático medio
 
 En [regresión](#regression), una métrica de evaluación que es la raíz cuadrada del promedio de los cuadrados de los errores.
+
+## <a name="scoring"></a>Puntuación
+
+La puntuación es el proceso de aplicar nuevos datos a un modelo de Machine Learning entrenado y generar predicciones. La puntuación también se conoce como inferencia. Según el tipo de modelo, la puntuación puede ser un valor sin procesar, una probabilidad o una categoría.
 
 ## <a name="supervised-machine-learning"></a>Aprendizaje automático supervisado
 

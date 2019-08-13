@@ -1,14 +1,14 @@
 ---
 title: Carga de datos de archivos y otros orígenes
 description: Este procedimiento muestra cómo cargar datos para su procesamiento y entrenamiento en ML.NET. Los datos originalmente se almacenan en archivos u otros orígenes de datos, como colecciones en memoria, JSON, XML o bases de datos.
-ms.date: 06/25/2019
+ms.date: 08/01/2019
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: fafbe3fed9e3f0b509eda4f9d8967965bde19767
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: d5f3aab14a60a8c9860dc67f1cc98f3b1b3188ed
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397745"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733371"
 ---
 # <a name="load-data-from-files-and-other-sources"></a>Carga de datos de archivos y otros orígenes
 
@@ -55,7 +55,7 @@ Cargar columnas como:
 - Columnas individuales como `Size` y `CurrentPrices` en la clase `HousingData`.
 - Varias columnas a la vez en forma de un vector como `HistoricalPrices` en la clase `HousingData`.
 
-Si tiene una propiedad de vector, aplique el atributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) a la propiedad en el modelo de datos. Es importante tener en cuenta que todos los elementos del vector deben ser del mismo tipo.
+Si tiene una propiedad de vector, aplique el atributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) a la propiedad en el modelo de datos. Es importante tener en cuenta que todos los elementos del vector deben ser del mismo tipo. Mantener las columnas separadas ofrece facilidad y flexibilidad para la ingeniería de características, pero para un gran número de columnas, el funcionamiento de las columnas individuales provoca un impacto en la velocidad del entrenamiento.
 
 ML.NET funciona a través de los nombres de columna. Si desea cambiar el nombre de una columna a otro nombre que no sea el de la propiedad, utilice el atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute). Al crear objetos en memoria, debe crear todavía objetos mediante el nombre de la propiedad. Sin embargo, para el procesamiento de datos y la compilación de modelos de aprendizaje automático, ML.NET invalida la propiedad y hace referencia a esta con el valor proporcionado en el atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute).
 
@@ -139,6 +139,9 @@ HousingData[] inMemoryCollection = new HousingData[]
 ```
 
 Cargue la colección en memoria en un [`IDataView`](xref:Microsoft.ML.IDataView) con el método [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):
+
+> [!IMPORTANT]
+> [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) supone que [`IEnumerable`](xref:System.Collections.IEnumerable) de donde se carga es seguro para subprocesos. 
 
 ```csharp
 // Create MLContext

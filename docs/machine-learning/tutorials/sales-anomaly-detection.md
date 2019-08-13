@@ -4,12 +4,12 @@ description: Aprenda a crear una aplicación de detección de anomalías para lo
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: e87034733b048153202bc11ab94ed7605749f60c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 4228a68ad43416c6e32684441593d92dfdbfd808
+ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331695"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68733281"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detección de anomalías en ventas de productos con ML.NET
 
@@ -18,10 +18,10 @@ Aprenda a crear una aplicación de detección de anomalías para los datos de ve
 En este tutorial aprenderá a:
 > [!div class="checklist"]
 > * Carga de los datos
-> * Entrenar el modelo para la detección de anomalías de picos
-> * Detectar anomalías de picos con el modelo entrenado
-> * Entrenar el modelo para la detección de anomalías de puntos de cambio
-> * Detectar anomalías de puntos de cambio con el modelo entrenado
+> * Crear una transformación para la detección de anomalías de picos
+> * Detectar anomalías de picos con la transformación
+> * Crear una transformación para la detección de anomalías de puntos de cambio
+> * Detectar anomalías de puntos de cambio con la transformación
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection).
 
@@ -32,7 +32,8 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 * [El conjunto de datos product-sales.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
 >[!NOTE]
-> El formato de datos en `product-sales.csv` se basa en el conjunto de datos "Shampoo Sales Over a Three Year Period" (Ventas de champú en un período de tres años) procedente originalmente de DataMarket y proporcionado por Time Series Data Library (TSDL), creado por Rob Hyndman. Conjunto de datos "Shampoo Sales Over a Three Year Period" con una licencia de conjunto de datos que se concede de acuerdo con DataMarket Default Open License.
+> El formato de datos en `product-sales.csv` se basa en el conjunto de datos "Shampoo Sales Over a Three Year Period" (Ventas de champú en un período de tres años) procedente originalmente de DataMarket y proporcionado por Time Series Data Library (TSDL), creado por Rob Hyndman.
+> Conjunto de datos "Shampoo Sales Over a Three Year Period" con una licencia de conjunto de datos que se concede de acuerdo con DataMarket Default Open License.
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
@@ -70,7 +71,7 @@ La siguiente tabla es una vista previa de datos del archivo \*.csv:
 
 ### <a name="create-classes-and-define-paths"></a>Crear clases y definir rutas de acceso
 
-A continuación, defina la estructura de datos de la clase de entrada.
+A continuación, defina las estructuras de datos de la clase de entrada y de predicción.
 
 Agregue una nueva clase a su proyecto:
 
@@ -78,48 +79,50 @@ Agregue una nueva clase a su proyecto:
 
 2. En el **cuadro de diálogo Agregar nuevo elemento**, seleccione **Clase** y cambie el campo **Nombre** a *ProductSalesData.cs*. A continuación, seleccione el botón **Agregar**.
 
-El archivo *ProductSalesData.cs* se abre en el editor de código. Agregue la siguiente instrucción `using` al principio de *ProductSalesData.cs*:
+   El archivo *ProductSalesData.cs* se abre en el editor de código.
 
-```csharp
-using Microsoft.ML.Data;
-```
+3. Agregue la siguiente instrucción `using` al principio de *ProductSalesData.cs*:
 
-Quite la definición de clase existente y agregue el código siguiente, que tiene dos clases, `ProductSalesData` y `ProductSalesPrediction`, al archivo *ProductSalesData.cs*:
+   ```csharp
+   using Microsoft.ML.Data;
+   ```
 
-[!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/ProductSalesData.cs#DeclareTypes "Declare data record types")]
+4. Quite la definición de clase existente y agregue el código siguiente, que tiene dos clases, `ProductSalesData` y `ProductSalesPrediction`, al archivo *ProductSalesData.cs*:
 
-`ProductSalesData` especifica una clase de datos de entrada. El atributo [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) especifica qué columnas (por índice de columna) del conjunto de datos se deben cargar. 
+    [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/ProductSalesData.cs#DeclareTypes "Declare data record types")]
 
-Agregue las siguientes instrucciones `using` adicionales a la parte superior del archivo *Program.cs*:
+    `ProductSalesData` especifica una clase de datos de entrada. El atributo [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) especifica qué columnas (por índice de columna) del conjunto de datos se deben cargar.
 
-[!code-csharp[AddUsings](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddUsings "Add necessary usings")]
+    `ProductSalesPrediction` especifica la clase de datos de predicción. En la detección de anomalías, la predicción consiste en una alerta que indica si hay una anomalía, una puntuación sin procesar y un valor p. Cuanto más se acerque el valor p a 0, más probable es que se haya producido una anomalía.
 
-Debe crear dos campos globales para contener la ruta del archivo de conjunto de datos descargado recientemente y la ruta del archivo del modelo guardado:
+5. Cree dos campos globales para contener la ruta de acceso del archivo de conjunto de datos recientemente descargado y la ruta de acceso del archivo de modelo guardado:
 
-* `_dataPath` tiene la ruta de acceso al conjunto de datos utilizado para entrenar el modelo.
-* `_docsize` tiene el número de registros en el archivo de conjunto de datos. Se usará para calcular `pvalueHistoryLength`.
+    * `_dataPath` tiene la ruta de acceso al conjunto de datos utilizado para entrenar el modelo.
+    * `_docsize` tiene el número de registros en el archivo de conjunto de datos. Usará `_docSize` para calcular `pvalueHistoryLength`.
 
-Agregue el código siguiente a la línea justo encima del método `Main` para especificar las rutas de acceso:
+6. Agregue el código siguiente a la línea justo encima del método `Main` para especificar las rutas de acceso:
 
-[!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DeclareGlobalVariables "Declare global variables")]
-
-La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para todas las operaciones de ML.NET. Al inicializar `mlContext`, se crea un entorno de ML.NET que se puede compartir entre los objetos del flujo de trabajo de creación de modelos. Como concepto, se parece a `DBContext` en Entity Framework.
+    [!code-csharp[Declare global variables](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DeclareGlobalVariables "Declare global variables")]
 
 ### <a name="initialize-variables-in-main"></a>Inicializar variables en Main
 
-Reemplace la línea `Console.WriteLine("Hello World!")` en el método `Main` con el siguiente código para declarar e inicializar la variable `mlContext`:
+1. Reemplace la línea `Console.WriteLine("Hello World!")` del método `Main` por el siguiente código para declarar e inicializar la variable `mlContext`:
 
-[!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateMLContext "Create the ML Context")]
+    [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateMLContext "Create the ML Context")]
+
+    La [clase MLContext](xref:Microsoft.ML.MLContext) es un punto de partida para todas las operaciones de ML.NET. Al inicializar `mlContext`, se crea un entorno de ML.NET que se puede compartir entre los objetos del flujo de trabajo de creación de modelos. Como concepto, se parece a `DBContext` en Entity Framework.
 
 ### <a name="load-the-data"></a>Carga de los datos
 
-Los datos de ML.NET se representan como una [clase IDataView](xref:Microsoft.ML.IDataView). `IDataView` es una manera flexible y eficiente de describir datos tabulares (numéricos y de texto). Los datos se pueden cargar desde un archivo de texto o en tiempo real (por ejemplo, archivos de registro o base de datos SQL) en un objeto `IDataView`. Agregue el siguiente código como la siguiente línea del método `Main()`:
+Los datos de ML.NET se representan como una [clase IDataView](xref:Microsoft.ML.IDataView). `IDataView` es una manera flexible y eficiente de describir datos tabulares (numéricos y de texto). Los datos se pueden cargar desde un archivo de texto o u otros orígenes (por ejemplo, archivos de registro o base de datos SQL) en un objeto `IDataView`.
 
-[!code-csharp[LoadData](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#LoadData "loading dataset")]
+1. Agregue el siguiente código como la siguiente línea del método `Main()`:
 
-[LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define el esquema de datos y lee en el archivo. Toma las variables de ruta de acceso de datos y devuelve `IDataView`.
+    [!code-csharp[LoadData](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#LoadData "loading dataset")]
 
-## <a name="ml-task---time-series-anomaly-detection"></a>Tareas de ML: detección de anomalías de serie temporal 
+    [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define el esquema de datos y lee en el archivo. Toma las variables de ruta de acceso de datos y devuelve `IDataView`.
+
+## <a name="time-series-anomaly-detection"></a>Detección de anomalías en una serie temporal
 
 La detección de anomalías marca comportamientos o eventos inesperados o poco habituales. Proporciona pistas sobre dónde buscar problemas y ayuda a responder la pregunta "¿es extraño esto?".
 
@@ -127,87 +130,93 @@ La detección de anomalías marca comportamientos o eventos inesperados o poco h
 
 La detección de anomalías es el proceso de detectar valores atípicos de datos de series temporales, puntos en determinada serie temporal de entrada donde el comportamiento no es lo que se esperaba o es "extraño".
 
-Esto puede resultar útil de muchas maneras. Por ejemplo:
+La detección de anomalías puede ser útil de muchas maneras. Por ejemplo:
 
 Si tiene un automóvil, tal vez desee saber: ¿Es normal la lectura del medidor de gasolina o tengo una fuga?
 Si está supervisando el consumo de energía, desearía saber: ¿Hay una interrupción?
 
-Hay dos tipos de anomalías de series temporales que se pueden detectar: 
+Hay dos tipos de anomalías de series temporales que se pueden detectar:
 
-* Los **picos** indican ráfagas temporales de comportamiento anómalo en el sistema. 
+* Los **picos** indican ráfagas temporales de comportamiento anómalo en el sistema.
 
-* Los **puntos de cambio** indican el inicio de cambios persistentes con el tiempo en el sistema. 
+* Los **puntos de cambio** indican el inicio de cambios persistentes con el tiempo en el sistema.
 
-En ML.NET, los algoritmos de la detección de picos de IID o de la detección de puntos de cambio de IID son adecuados para los [conjuntos de datos independientes y distribuidos de manera idéntica](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables). 
+En ML.NET, los algoritmos de la detección de picos de IID o de la detección de puntos de cambio de IID son adecuados para los [conjuntos de datos independientes y distribuidos de manera idéntica](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables).
+
+A diferencia de los modelos de los otros tutoriales, las transformaciones del detector de anomalías de series temporales funcionan directamente en los datos de entrada. El método `IEstimator.Fit()` no necesita datos de entrenamiento para generar la transformación. Sin embargo, necesita el esquema de datos, que se proporciona mediante una vista de datos generada a partir de una lista vacía de `ProductSalesData`.
 
 Analizará los mismos datos de ventas de productos para detectar los picos y los puntos de cambio. El proceso de modelo de entrenamiento y compilación es el mismo para la detección de picos y la detección de puntos de cambio. La principal diferencia es el algoritmo de detección específico que se utiliza.
 
-## <a name="spike-detection"></a>Detección de picos 
+## <a name="spike-detection"></a>Detección de picos
 
 El objetivo de la detección de picos es identificar ráfagas repentinas pero temporales que difieren significativamente de la mayoría de los valores de datos de las series temporales. Es importante detectar estos elementos, eventos u observaciones poco frecuentes y sospechosos de manera oportuna con el fin de minimizarlos. El siguiente enfoque puede utilizarse para detectar una variedad de anomalías, como interrupciones, ciberataques o contenido web viral. La siguiente imagen es un ejemplo de los picos de un conjunto de datos de serie temporal:
 
 ![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
 
+### <a name="add-the-createemptydataview-method"></a>Agregar el método CreateEmptyDataView()
+
+Agregue el método siguiente a `Program.cs`:
+
+[!code-csharp[CreateEmptyDataView](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEmptyDataView)]
+
+`CreateEmptyDataView()` genera un objeto de vista de datos vacío con el esquema correcto que se va a usar como entrada para el método `IEstimator.Fit()`.
+
 ### <a name="create-the-detectspike-method"></a>Crear el método DetectSpike()
 
-Agregue la siguiente llamada al método `DetectSpike()` como siguiente línea de código del método `Main()`:
+El método `DetectSpike()` realiza las acciones siguientes:
 
-[!code-csharp[CallDetectSpike](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectSpike)]
-
-El método `DetectSpike()` ejecuta las tareas siguientes:
-
-* Entrena el modelo.
+* Crea la transformación desde el estimador.
 * Detecta picos en función de los datos históricos de ventas.
 * Muestra los resultados.
 
-Cree el método `DetectSpike()`, justo después del método `Main()`, mediante el código siguiente:
+1. Cree el método `DetectSpike()`, justo después del método `Main()`, mediante el código siguiente:
 
-```csharp
-static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales)
-{
+    ```csharp
+    static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales)
+    {
 
-}
-```
+    }
+    ```
 
-Use [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) para entrenar el modelo para la detección de picos. Agréguelo a un método `DetectSpike()` en el siguiente código:
+1. Use [IidSpikeEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidSpikeEstimator) para entrenar el modelo para la detección de picos. Agréguelo a un método `DetectSpike()` en el siguiente código:
 
-[!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
+    [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-Para ajustar el modelo a los datos de `productSales`, agregue lo que se indica debajo como la siguiente línea de código en el método `DetectSpike()`:
+1. Para crear la transformación de detección de picos, agregue lo que se indica a continuación como la siguiente línea de código en el método `DetectSpike()`:
 
-[!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
+    [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
-El método [Fit()](xref:Microsoft.ML.Data.TrivialEstimator%601.Fit%2A) entrena el modelo al transformar el conjunto de datos y aplicar el aprendizaje.
+1. Agregue la siguiente línea de código para transformar los datos `productSales` como la siguiente línea en el método `DetectSpike()`:
 
-Agregue la siguiente línea de código para transformar los datos `productSales` como la siguiente línea en el método `DetectSpike()`:
+    [!code-csharp[TransformData1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData1)]
 
-[!code-csharp[TransformData1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData1)]
+    El código anterior usa el método [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) para hacer predicciones para varias filas de entrada de un conjunto de datos.
 
-El código anterior usa el método [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) para realizar predicciones para varias filas de entrada de un conjunto de datos de prueba especificado.
+1. Convierta su `transformedData` en `IEnumerable` fuertemente tipado para mostrar fácilmente mediante el método [CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) con el código siguiente:
 
-Convierta su `transformedData` en `IEnumerable` fuertemente tipado para mostrar fácilmente mediante el método [CreateEnumerable()](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable%2A) con el código siguiente:
+    [!code-csharp[CreateEnumerable1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEnumerable1)]
 
-[!code-csharp[CreateEnumerable1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEnumerable1)]
+1. Cree una línea de encabezado de visualización mediante el código <xref:System.Console.WriteLine?displayProperty=nameWithType> siguiente:
 
-Cree una línea de encabezado de visualización mediante el código <xref:System.Console.WriteLine?displayProperty=nameWithType> siguiente:
+    [!code-csharp[DisplayHeader1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayHeader1)]
 
-[!code-csharp[DisplayHeader1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayHeader1)]
+    Se mostrará la siguiente información en los resultados de detección de picos:
 
-Se mostrará la siguiente información en los resultados de detección de picos:
+    * `Alert` indica una alerta de pico para determinado punto de datos.
+    * `Score` es el valor `ProductSales` para determinado punto de datos en el conjunto de datos.
+    * `P-Value` La "P" significa probabilidad. Cuanto más se acerque el valor p a 0, más probable es que el punto de datos sea una anomalía.
 
-* `Alert` indica una alerta de pico para determinado punto de datos.
+1. Use el siguiente código para iterar en `predictions` `IEnumerable` y mostrar los resultados:
 
-* `Score` es el valor `ProductSales` para determinado punto de datos en el conjunto de datos.
+    [!code-csharp[DisplayResults1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults1)]
 
-* `P-Value` La "P" significa probabilidad. Esto indica la probabilidad de que este punto de datos sea una anomalía. 
+1. Agregue la llamada al método `DetectSpike()` en el método `Main()`:
 
-Use el siguiente código para iterar en `predictions` `IEnumerable` y mostrar los resultados:
-
-[!code-csharp[DisplayResults1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults1)]
+    [!code-csharp[CallDetectSpike](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectSpike)]
 
 ## <a name="spike-detection-results"></a>Resultados de la detección de picos
 
-Los resultados deberían ser similares a los indicados a continuación. Durante el procesamiento, se muestran mensajes. Puede ver las advertencias o mensajes de procesamiento. Se han quitado de los siguientes resultados para mayor claridad.
+Los resultados deberían ser similares a los indicados a continuación. Durante el procesamiento, se muestran mensajes. Puede ver las advertencias o mensajes de procesamiento. Algunos de los mensajes se han quitado de los resultados siguientes para mayor claridad.
 
 ```console
 Detect temporary changes in pattern
@@ -260,59 +269,59 @@ Alert   Score   P-Value
 
 ### <a name="create-the-detectchangepoint-method"></a>Crear el método DetectChangepoint()
 
-Agregue la siguiente llamada al método `DetectChangepoint()` como siguiente línea de código del método `Main()`:
-
-[!code-csharp[CallDetectChangepoint](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectChangepoint)]
-
 El método `DetectChangepoint()` ejecuta las tareas siguientes:
 
-* Entrena el modelo.
+* Crea la transformación desde el estimador.
 * Detecta puntos de cambio en función de los datos históricos de ventas.
 * Muestra los resultados.
 
-Cree el método `DetectChangepoint()`, justo después del método `Main()`, mediante el código siguiente:
+1. Cree el método `DetectChangepoint()`, justo después del método `Main()`, mediante el código siguiente:
 
-```csharp
-static void DetectChangepoint(MLContext mlContext, int docSize, IDataView productSales)
-{
+    ```csharp
+    static void DetectChangepoint(MLContext mlContext, int docSize, IDataView productSales)
+    {
 
-}
-```
+    }
+    ```
 
-[iidChangePointEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator) se usa para entrenar el modelo para la detección de puntos de cambio. Agréguelo a un método `DetectChangepoint()` en el siguiente código:
+1. Cree [iidChangePointEstimator](xref:Microsoft.ML.Transforms.TimeSeries.IidChangePointEstimator) en el método `DetectChangepoint()` con el código siguiente:
 
-[!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
+    [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-Tal como se ha hecho anteriormente, para ajustar el modelo a los datos de `productSales`, agregue lo que se indica debajo como la siguiente línea de código en el método `DetectChangePoint()`:
+1. Como hizo anteriormente, cree la transformación desde el estimador agregando la siguiente línea de código en el método `DetectChangePoint()`:
 
-[!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
+    [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 
-Use el método `Transform()` para transformar los datos de `Training` mediante la adición del código siguiente a `DetectChangePoint()`:
+1. Use el método `Transform()` para transformar los datos mediante la adición del código siguiente a `DetectChangePoint()`:
 
-[!code-csharp[TransformData2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData2)]
+    [!code-csharp[TransformData2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TransformData2)]
 
-Como lo hizo anteriormente, convierta su `transformedData` en `IEnumerable` fuertemente tipado para mostrar fácilmente mediante el método `CreateEnumerable()` con el código siguiente:
+1. Como lo hizo anteriormente, convierta su `transformedData` en `IEnumerable` fuertemente tipado para mostrar fácilmente mediante el método `CreateEnumerable()` con el código siguiente:
 
-[!code-csharp[CreateEnumerable2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEnumerable2)]
+    [!code-csharp[CreateEnumerable2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CreateEnumerable2)]
 
-Cree un encabezado de visualización con el siguiente código como la siguiente línea en el método `DetectChangePoint()`:
+1. Cree un encabezado de visualización con el siguiente código como la siguiente línea en el método `DetectChangePoint()`:
 
-[!code-csharp[DisplayHeader2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayHeader2)]
+    [!code-csharp[DisplayHeader2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayHeader2)]
 
-Se mostrará la siguiente información en los resultados de detección de puntos de cambio:
+    Se mostrará la siguiente información en los resultados de detección de puntos de cambio:
 
-* `Alert` indica una alerta de punto de cambio para determinado punto de datos.
-* `Score` es el valor `ProductSales` para determinado punto de datos en el conjunto de datos.
-* `P-Value` La "P" significa probabilidad. Esto indica la probabilidad de que este punto de datos sea una anomalía. 
-* `Martingale value` se usa para identificar cuán "extraño" es un punto de datos, en función de la secuencia de valores de P.  
+    * `Alert` indica una alerta de punto de cambio para determinado punto de datos.
+    * `Score` es el valor `ProductSales` para determinado punto de datos en el conjunto de datos.
+    * `P-Value` La "P" significa probabilidad. Cuanto más se acerque el valor P a 0, más probable es que el punto de datos sea una anomalía.
+    * `Martingale value` se usa para identificar cuán "extraño" es un punto de datos, en función de la secuencia de valores de P.
 
-Itere en `predictions` `IEnumerable` y muestre los resultados con el siguiente código:
+1. Itere en `predictions` `IEnumerable` y muestre los resultados con el siguiente código:
 
-[!code-csharp[DisplayResults2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults2)]
+    [!code-csharp[DisplayResults2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#DisplayResults2)]
+
+1. Agregue la llamada siguiente al método `DetectChangepoint()` en el método `Main()`:
+
+    [!code-csharp[CallDetectChangepoint](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#CallDetectChangepoint)]
 
 ## <a name="change-point-detection-results"></a>Resultados de la detección de puntos de cambio
 
-Los resultados deberían ser similares a los indicados a continuación. Durante el procesamiento, se muestran mensajes. Puede ver las advertencias o mensajes de procesamiento. Se han quitado de los siguientes resultados para mayor claridad.
+Los resultados deberían ser similares a los indicados a continuación. Durante el procesamiento, se muestran mensajes. Puede ver las advertencias o mensajes de procesamiento. Algunos de los mensajes se han quitado de los resultados siguientes para mayor claridad.
 
 ```console
 Detect Persistent changes in pattern
