@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: c7d5d4ef7d812e186813cd08f9e4e2adf2ab1a58
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306654"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796454"
 ---
-# <a name="lock-statement-c-reference"></a>lock (Instrucción, Referencia de C#)
+# <a name="lock-statement-c-reference"></a>Instrucción lock (Referencia de C#)
 
 La instrucción `lock` adquiere el bloqueo de exclusión mutua de un objeto determinado, ejecuta un bloque de instrucciones y luego libera el bloqueo. Mientras se mantiene un bloqueo, el subproceso que lo mantiene puede volver a adquirir y liberar el bloqueo. Ningún otro subproceso puede adquirir el bloqueo y espera hasta que se libera.
 
@@ -65,7 +65,7 @@ En el ejemplo siguiente se define una clase `Account` que sincroniza el acceso a
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para más información, consulte la sección sobre la [instrucción lock](~/_csharplang/spec/statements.md#the-lock-statement) de la [especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vea también
 
@@ -74,5 +74,4 @@ En el ejemplo siguiente se define una clase `Account` que sincroniza el acceso a
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
 - [Referencia de C#](../index.md)
 - [Palabras clave de C#](index.md)
-- [Palabras clave de instrucciones](statement-keywords.md)
 - [Información general sobre las primitivas de sincronización](../../../standard/threading/overview-of-synchronization-primitives.md)

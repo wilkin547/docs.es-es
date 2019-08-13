@@ -2,12 +2,12 @@
 title: 'Control de versiones del lenguaje C#: Guía de C#'
 description: Obtenga información sobre cómo la versión del lenguaje C# se determina en función del proyecto y los distintos valores a los que puede ajustarlo manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: e35fdf2bcdb1a31b752c760f3f6df59232e498a4
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 744cec0aac21f743648cccbdc93cf2977c32d644
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68236095"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796530"
 ---
 # <a name="c-language-versioning"></a>Control de versiones del lenguaje C#
 
@@ -28,7 +28,7 @@ El compilador determina un valor predeterminado según estas reglas:
 
 Cuando el proyecto tiene como destino un marco en versión preliminar que tenga una versión de lenguaje preliminar correspondiente, la versión de lenguaje que se usa es la que está en versión preliminar. Esto asegura que puede usar las características más recientes que se garantiza que funcionen con esa versión preliminar en cualquier entorno sin que afecte a los proyectos que tienen como destino una versión de .NET Core.
 
-## <a name="overriding-a-default"></a>Invalidación de un valor predeterminado
+## <a name="override-a-default"></a>Invalidación de un valor predeterminado
 
 Si debe especificar su versión de C# explícitamente, puede hacerlo de varias maneras:
 
@@ -38,7 +38,7 @@ Si debe especificar su versión de C# explícitamente, puede hacerlo de varias m
 
 ### <a name="edit-the-project-file"></a>Edición del archivo del proyecto
 
-Puede establecer la versión del lenguaje en el archivo del proyecto. Por ejemplo, si quiere acceder explícitamente a las características en versión preliminar, puede agregar un elemento similar al siguiente:
+Puede establecer la versión del lenguaje en el archivo del proyecto. Por ejemplo, si quiere acceder explícitamente a las características en versión preliminar, agregue un elemento similar al siguiente:
 
 ```xml
 <PropertyGroup>

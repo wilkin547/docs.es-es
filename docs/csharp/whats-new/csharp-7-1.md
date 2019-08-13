@@ -2,12 +2,12 @@
 title: Novedades de C# 7.1
 description: Información general sobre las nuevas características en C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
+ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347617"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68796593"
 ---
 # <a name="whats-new-in-c-71"></a>Novedades de C# 7.1
 
@@ -32,9 +32,9 @@ Para usar las características más recientes en una versión secundaria, tendr�
 
 En el resto de este artículo se proporciona información general sobre cada característica. Para cada característica, conocerá el razonamiento subyacente. Aprenderá la sintaxis. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
 
-1. Instalar la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
-1. Clonar el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
-1. Establecer el directorio actual en el subdirectorio *csharp7* para el repositorio *try-samples*.
+1. Instale la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clone el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Establezca el directorio actual en el subdirectorio *csharp7* para el repositorio *try-samples*.
 1. Ejecute `dotnet try`.
 
 ## <a name="async-main"></a>Async main
@@ -86,9 +86,7 @@ Ahora, se puede pasar por alto el tipo del lado derecho de la inicialización:
 Func<string, bool> whereClause = default;
 ```
 
-Encontrará más información sobre esta mejora en el artículo sobre las [expresiones de valor predeterminadas](../programming-guide/statements-expressions-operators/default-value-expressions.md) de la guía de programación de C#.
-
-Esta mejora cambia también algunas de las reglas de análisis de [palabras claves predeterminadas](../language-reference/keywords/default.md).
+Para más información, consulte la sección [Literal default](../language-reference/operators/default.md#default-literal) del artículo [Operador default](../language-reference/operators/default.md).
 
 ## <a name="inferred-tuple-element-names"></a>Nombres de elementos de tupla inferidos
 
