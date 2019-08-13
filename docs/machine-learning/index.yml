@@ -29,10 +29,11 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">Clasificación de flores por características mediante el uso de clústeres</a>
           - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">Creación de recomendaciones de películas con factorización matricial</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">Creación de un clasificador de imágenes personalizado con TensorFlow</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/object-detection-onnx">Detect objects in images with ONNX</a> (Detección de objetos en imágenes con ONNX)
   - title: Referencia y recursos
     items:
       - type: paragraph
-        text: 'La API de ML.NET tiene dos conjuntos de paquetes: componentes de la versión y componentes de vista previa. La API de la versión contiene componentes para el control de datos, algoritmos de clasificación binaria, clasificación multiclase, regresión, detección de anomalías y clasificación, ahorro y carga del modelo, y mucho más. La API de la versión preliminar contiene el control de modelos ONNX y TensorFlow, algoritmos para la recomendación de tareas y componentes para procesar datos de serie temporal.'
+        text: 'La API de ML.NET tiene dos conjuntos de paquetes: componentes de la versión y componentes de vista previa. La API de la versión contiene componentes para el control de datos, algoritmos de clasificación binaria, clasificación multiclase, regresión, detección de anomalías, series temporales y previsión, clasificación, guardado y carga de modelos, control de modelos ONNX y TensorFlow, y mucho más. La API de vista previa contiene algoritmos para las tareas de recomendación, y compatibilidad con modelos de aprendizaje profundo estándar.'
       - type: list
         style: unordered
         items:
