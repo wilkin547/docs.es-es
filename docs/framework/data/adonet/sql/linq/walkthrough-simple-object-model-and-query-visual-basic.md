@@ -4,154 +4,164 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: 9bf97263bf8ae0ac3ece187e81a51edfaef48a54
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a7d278dd424fbb3167a30d627379f78d0c65476f
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742580"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971783"
 ---
-# <a name="walkthrough-simple-object-model-and-query-visual-basic"></a><span data-ttu-id="2ea54-102">Tutorial: Modelo de objetos simple y consultas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2ea54-102">Walkthrough: Simple Object Model and Query (Visual Basic)</span></span>
-<span data-ttu-id="2ea54-103">Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] básico, con las mínimas dificultades.</span><span class="sxs-lookup"><span data-stu-id="2ea54-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario with minimal complexities.</span></span> <span data-ttu-id="2ea54-104">Creará una clase de entidad que modela la tabla Customers de la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="2ea54-104">You will create an entity class that models the Customers table in the sample Northwind database.</span></span> <span data-ttu-id="2ea54-105">Después creará una consulta simple para enumerar los clientes que se encuentran en Londres.</span><span class="sxs-lookup"><span data-stu-id="2ea54-105">You will then create a simple query to list customers who are located in London.</span></span>  
-  
- <span data-ttu-id="2ea54-106">Este tutorial está orientado a código por diseño, para que sea más sencillo mostrar los conceptos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2ea54-106">This walkthrough is code-oriented by design to help show [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] concepts.</span></span> <span data-ttu-id="2ea54-107">Normalmente, utilizaría el Object Relational Designer para crear un modelo de objetos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-107">Normally speaking, you would use the Object Relational Designer to create your object model.</span></span>  
-  
- [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
-  
- <span data-ttu-id="2ea54-108">Este tutorial se escribió con la configuración de desarrollo de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2ea54-108">This walkthrough was written by using Visual Basic Development Settings.</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="2ea54-109">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="2ea54-109">Prerequisites</span></span>  
-  
-- <span data-ttu-id="2ea54-110">Este tutorial utiliza una carpeta dedicada ("c:\linqtest") que contiene los archivos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-110">This walkthrough uses a dedicated folder ("c:\linqtest") to hold files.</span></span> <span data-ttu-id="2ea54-111">Cree esta carpeta antes de empezar el tutorial.</span><span class="sxs-lookup"><span data-stu-id="2ea54-111">Create this folder before you begin the walkthrough.</span></span>  
-  
-- <span data-ttu-id="2ea54-112">Este tutorial requiere la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="2ea54-112">This walkthrough requires the Northwind sample database.</span></span> <span data-ttu-id="2ea54-113">Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="2ea54-113">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="2ea54-114">Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="2ea54-114">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="2ea54-115">Después de haber descargado la base de datos, copie el archivo en la carpeta c:\linqtest.</span><span class="sxs-lookup"><span data-stu-id="2ea54-115">After you have downloaded the database, copy the file to the c:\linqtest folder.</span></span>  
-  
-## <a name="overview"></a><span data-ttu-id="2ea54-116">Información general</span><span class="sxs-lookup"><span data-stu-id="2ea54-116">Overview</span></span>  
- <span data-ttu-id="2ea54-117">Este tutorial se compone de seis tareas principales:</span><span class="sxs-lookup"><span data-stu-id="2ea54-117">This walkthrough consists of six main tasks:</span></span>  
-  
-- <span data-ttu-id="2ea54-118">Creación de un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="2ea54-118">Creating a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>  
-  
-- <span data-ttu-id="2ea54-119">Asignar una clase a una tabla de base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-119">Mapping a class to a database table.</span></span>  
-  
-- <span data-ttu-id="2ea54-120">Designar propiedades en la clase para representar las columnas de base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-120">Designating properties on the class to represent database columns.</span></span>  
-  
-- <span data-ttu-id="2ea54-121">Especificar la conexión a la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="2ea54-121">Specifying the connection to the Northwind database.</span></span>  
-  
-- <span data-ttu-id="2ea54-122">Crear una consulta simple para ejecutarla en la base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-122">Creating a simple query to run against the database.</span></span>  
-  
-- <span data-ttu-id="2ea54-123">Ejecutar la consulta y observar los resultados.</span><span class="sxs-lookup"><span data-stu-id="2ea54-123">Executing the query and observing the results.</span></span>  
-  
-## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="2ea54-124">Crear una solución LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="2ea54-124">Creating a LINQ to SQL Solution</span></span>  
- <span data-ttu-id="2ea54-125">En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.</span><span class="sxs-lookup"><span data-stu-id="2ea54-125">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>  
-  
-#### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="2ea54-126">Para crear una solución LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="2ea54-126">To create a LINQ to SQL solution</span></span>  
-  
-1. <span data-ttu-id="2ea54-127">En el menú **Archivo**, haga clic en **Nuevo proyecto**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-127">On the **File** menu, click **New Project**.</span></span>  
-  
-2. <span data-ttu-id="2ea54-128">En el **tipos de proyecto** panel de la **nuevo proyecto** cuadro de diálogo, haga clic en **Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-128">In the **Project types** pane of the **New Project** dialog box, click **Visual Basic**.</span></span>  
-  
-3. <span data-ttu-id="2ea54-129">En el panel **Plantillas**, haga clic en **Aplicación de consola**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-129">In the **Templates** pane, click **Console Application**.</span></span>  
-  
-4. <span data-ttu-id="2ea54-130">En el **nombre** , escriba **LinqConsoleApp**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-130">In the **Name** box, type **LinqConsoleApp**.</span></span>  
-  
-5. <span data-ttu-id="2ea54-131">Haga clic en **OK**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-131">Click **OK**.</span></span>  
-  
-## <a name="adding-linq-references-and-directives"></a><span data-ttu-id="2ea54-132">Agregar referencias y directivas LINQ</span><span class="sxs-lookup"><span data-stu-id="2ea54-132">Adding LINQ References and Directives</span></span>  
- <span data-ttu-id="2ea54-133">En este tutorial se usan ensamblados que podrían no estar instalados en el proyecto de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="2ea54-133">This walkthrough uses assemblies that might not be installed by default in your project.</span></span> <span data-ttu-id="2ea54-134">Si `System.Data.Linq` no aparece como una referencia en el proyecto (haga clic en **mostrar todos los archivos** en **el Explorador de soluciones** y expanda el **referencias** nodo), agréguelo, como se explica en los pasos siguientes.</span><span class="sxs-lookup"><span data-stu-id="2ea54-134">If `System.Data.Linq` is not listed as a reference in your project (click **Show All Files** in **Solution Explorer** and expand the **References** node), add it, as explained in the following steps.</span></span>  
-  
-#### <a name="to-add-systemdatalinq"></a><span data-ttu-id="2ea54-135">Para agregar System.Data.Linq</span><span class="sxs-lookup"><span data-stu-id="2ea54-135">To add System.Data.Linq</span></span>  
-  
-1. <span data-ttu-id="2ea54-136">En **el Explorador de soluciones**, haga clic en **referencias**y, a continuación, haga clic en **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-136">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>  
-  
-2. <span data-ttu-id="2ea54-137">En el **Agregar referencia** cuadro de diálogo, haga clic en **.NET**, haga clic en el ensamblado System.Data.Linq y, a continuación, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-137">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>  
-  
-     <span data-ttu-id="2ea54-138">El ensamblado se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="2ea54-138">The assembly is added to the project.</span></span>  
-  
-3. <span data-ttu-id="2ea54-139">También en el **Agregar referencia** cuadro de diálogo, haga clic en **.NET**, desplácese hasta System.Windows.Forms y, a continuación, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-139">Also in the **Add Reference** dialog box, click **.NET**, scroll to and click System.Windows.Forms, and then click **OK**.</span></span>  
-  
-     <span data-ttu-id="2ea54-140">Este ensamblado, que permite usar el cuadro de mensaje en el tutorial, se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="2ea54-140">This assembly, which supports the message box in the walkthrough, is added to the project.</span></span>  
-  
-4. <span data-ttu-id="2ea54-141">Agregue las directivas siguientes antes de `Module1`:</span><span class="sxs-lookup"><span data-stu-id="2ea54-141">Add the following directives above `Module1`:</span></span>  
-  
-     [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
-  
-## <a name="mapping-a-class-to-a-database-table"></a><span data-ttu-id="2ea54-142">Asignar una clase a una tabla de base de datos</span><span class="sxs-lookup"><span data-stu-id="2ea54-142">Mapping a Class to a Database Table</span></span>  
- <span data-ttu-id="2ea54-143">En este paso, creará una clase y la asignará a una tabla de base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-143">In this step, you create a class and map it to a database table.</span></span> <span data-ttu-id="2ea54-144">Esta clase se denomina un *clase de entidad*.</span><span class="sxs-lookup"><span data-stu-id="2ea54-144">Such a class is termed an *entity class*.</span></span> <span data-ttu-id="2ea54-145">Observe que la asignación se realiza con solo agregar el atributo <xref:System.Data.Linq.Mapping.TableAttribute>.</span><span class="sxs-lookup"><span data-stu-id="2ea54-145">Note that the mapping is accomplished by just adding the <xref:System.Data.Linq.Mapping.TableAttribute> attribute.</span></span> <span data-ttu-id="2ea54-146">La propiedad <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> especifica el nombre de la tabla de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-146">The <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> property specifies the name of the table in the database.</span></span>  
-  
-#### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a><span data-ttu-id="2ea54-147">Para crear una clase de entidad y asignarla a una tabla de base de datos</span><span class="sxs-lookup"><span data-stu-id="2ea54-147">To create an entity class and map it to a database table</span></span>  
-  
-- <span data-ttu-id="2ea54-148">Escriba o pegue el código siguiente en Module1.vb, justo encima de `Sub Main`:</span><span class="sxs-lookup"><span data-stu-id="2ea54-148">Type or paste the following code into Module1.vb immediately above `Sub Main`:</span></span>  
-  
-     [!code-vb[DLinqWalk1VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#2)]  
-  
-## <a name="designating-properties-on-the-class-to-represent-database-columns"></a><span data-ttu-id="2ea54-149">Designar propiedades en la clase para representar columnas de base de datos</span><span class="sxs-lookup"><span data-stu-id="2ea54-149">Designating Properties on the Class to Represent Database Columns</span></span>  
- <span data-ttu-id="2ea54-150">En este paso, realizará varias tareas.</span><span class="sxs-lookup"><span data-stu-id="2ea54-150">In this step, you accomplish several tasks.</span></span>  
-  
-- <span data-ttu-id="2ea54-151">Utilizará el atributo <xref:System.Data.Linq.Mapping.ColumnAttribute> para designar las propiedades `CustomerID` y `City` en la clase de entidad como representativas de las columnas de la tabla de base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-151">You use the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to designate `CustomerID` and `City` properties on the entity class as representing columns in the database table.</span></span>  
-  
-- <span data-ttu-id="2ea54-152">Designará la propiedad `CustomerID` como representativa de una columna de clave principal en la base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-152">You designate the `CustomerID` property as representing a primary key column in the database.</span></span>  
-  
-- <span data-ttu-id="2ea54-153">Designará los campos `_CustomerID` y `_City` para el almacenamiento privado.</span><span class="sxs-lookup"><span data-stu-id="2ea54-153">You designate `_CustomerID` and `_City` fields for private storage.</span></span> <span data-ttu-id="2ea54-154">Después, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] podrá almacenar y recuperar los valores directamente, en lugar de utilizar descriptores de acceso públicos que podrían incluir lógica empresarial.</span><span class="sxs-lookup"><span data-stu-id="2ea54-154">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can then store and retrieve values directly, instead of using public accessors that might include business logic.</span></span>  
-  
-#### <a name="to-represent-characteristics-of-two-database-columns"></a><span data-ttu-id="2ea54-155">Para representar las características de dos columnas de base de datos</span><span class="sxs-lookup"><span data-stu-id="2ea54-155">To represent characteristics of two database columns</span></span>  
-  
-- <span data-ttu-id="2ea54-156">Escriba o pegue el código siguiente en Module1.vb, justo delante de `End Class`:</span><span class="sxs-lookup"><span data-stu-id="2ea54-156">Type or paste the following code into Module1.vb just before `End Class`:</span></span>  
-  
-     [!code-vb[DLinqWalk1VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#3)]  
-  
-## <a name="specifying-the-connection-to-the-northwind-database"></a><span data-ttu-id="2ea54-157">Especificar la conexión a la base de datos Northwind</span><span class="sxs-lookup"><span data-stu-id="2ea54-157">Specifying the Connection to the Northwind Database</span></span>  
- <span data-ttu-id="2ea54-158">En este paso, utilizará un objeto <xref:System.Data.Linq.DataContext> para establecer una conexión entre sus estructuras de datos basadas en código y la propia base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-158">In this step you use a <xref:System.Data.Linq.DataContext> object to establish a connection between your code-based data structures and the database itself.</span></span> <span data-ttu-id="2ea54-159"><xref:System.Data.Linq.DataContext> es el canal principal a través del cual se recuperan los objetos de la base de datos y se envían los cambios.</span><span class="sxs-lookup"><span data-stu-id="2ea54-159">The <xref:System.Data.Linq.DataContext> is the main channel through which you retrieve objects from the database and submit changes.</span></span>  
-  
- <span data-ttu-id="2ea54-160">También declarará `Table(Of Customer)` para que actúe como la tabla lógica con tipo para las consultas que realizará en la tabla Customers de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-160">You also declare a `Table(Of Customer)` to act as the logical, typed table for your queries against the Customers table in the database.</span></span> <span data-ttu-id="2ea54-161">Creará y ejecutar estas consultas en pasos posteriores.</span><span class="sxs-lookup"><span data-stu-id="2ea54-161">You will create and execute these queries in later steps.</span></span>  
-  
-#### <a name="to-specify-the-database-connection"></a><span data-ttu-id="2ea54-162">Para especificar la conexión a la base de datos</span><span class="sxs-lookup"><span data-stu-id="2ea54-162">To specify the database connection</span></span>  
-  
-- <span data-ttu-id="2ea54-163">Escriba o pegue el código siguiente en el método `Sub Main`.</span><span class="sxs-lookup"><span data-stu-id="2ea54-163">Type or paste the following code into the `Sub Main` method.</span></span>  
-  
-     <span data-ttu-id="2ea54-164">Tenga en cuenta que se asume que el archivo `northwnd.mdf` está en la carpeta linqtest.</span><span class="sxs-lookup"><span data-stu-id="2ea54-164">Note that the `northwnd.mdf` file is assumed to be in the linqtest folder.</span></span> <span data-ttu-id="2ea54-165">Para obtener más información, vea la sección Requisitos previos, anteriormente en este tutorial.</span><span class="sxs-lookup"><span data-stu-id="2ea54-165">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>  
-  
-     [!code-vb[DLinqWalk1VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#4)]  
-  
-## <a name="creating-a-simple-query"></a><span data-ttu-id="2ea54-166">Crear una consulta simple</span><span class="sxs-lookup"><span data-stu-id="2ea54-166">Creating a Simple Query</span></span>  
- <span data-ttu-id="2ea54-167">En este paso, creará una consulta para buscar los clientes de la tabla de base de datos Customers que se encuentran en Londres.</span><span class="sxs-lookup"><span data-stu-id="2ea54-167">In this step, you create a query to find which customers in the database Customers table are located in London.</span></span> <span data-ttu-id="2ea54-168">En este paso, el código de la consulta simplemente la describe.</span><span class="sxs-lookup"><span data-stu-id="2ea54-168">The query code in this step just describes the query.</span></span> <span data-ttu-id="2ea54-169">No la ejecuta.</span><span class="sxs-lookup"><span data-stu-id="2ea54-169">It does not execute it.</span></span> <span data-ttu-id="2ea54-170">Este enfoque se conoce como *ejecución aplazada*.</span><span class="sxs-lookup"><span data-stu-id="2ea54-170">This approach is known as *deferred execution*.</span></span> <span data-ttu-id="2ea54-171">Para obtener más información, vea [Introduction to LINQ queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].</span><span class="sxs-lookup"><span data-stu-id="2ea54-171">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
-  
- <span data-ttu-id="2ea54-172">También generará un resultado de registro para mostrar los comandos SQL que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera.</span><span class="sxs-lookup"><span data-stu-id="2ea54-172">You will also produce a log output to show the SQL commands that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates.</span></span> <span data-ttu-id="2ea54-173">Esta característica de registro (que utiliza <xref:System.Data.Linq.DataContext.Log%2A>) es útil para la depuración, así como para determinar que los comandos que se envían a la base de datos representan la consulta de manera precisa.</span><span class="sxs-lookup"><span data-stu-id="2ea54-173">This logging feature (which uses <xref:System.Data.Linq.DataContext.Log%2A>) is helpful in debugging, and in determining that the commands being sent to the database accurately represent your query.</span></span>  
-  
-#### <a name="to-create-a-simple-query"></a><span data-ttu-id="2ea54-174">Para crear una consulta simple</span><span class="sxs-lookup"><span data-stu-id="2ea54-174">To create a simple query</span></span>  
-  
-- <span data-ttu-id="2ea54-175">Escriba o pegue el código siguiente en el método `Sub Main` después de la declaración `Table(Of Customer)`:</span><span class="sxs-lookup"><span data-stu-id="2ea54-175">Type or paste the following code into the `Sub Main` method after the `Table(Of Customer)` declaration:</span></span>  
-  
-     [!code-vb[DLinqWalk1AVB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#5)]  
-  
-## <a name="executing-the-query"></a><span data-ttu-id="2ea54-176">Ejecutar la consulta</span><span class="sxs-lookup"><span data-stu-id="2ea54-176">Executing the Query</span></span>  
- <span data-ttu-id="2ea54-177">En este paso es donde realmente ejecutará la consulta.</span><span class="sxs-lookup"><span data-stu-id="2ea54-177">In this step, you actually execute the query.</span></span> <span data-ttu-id="2ea54-178">Las expresiones de consulta creadas en pasos anteriores no se evalúan hasta que no se necesitan los resultados.</span><span class="sxs-lookup"><span data-stu-id="2ea54-178">The query expressions you created in the previous steps are not evaluated until the results are needed.</span></span> <span data-ttu-id="2ea54-179">Al comenzar la iteración `For Each`, se ejecuta un comando SQL en la base de datos y se materializan los objetos.</span><span class="sxs-lookup"><span data-stu-id="2ea54-179">When you begin the `For Each` iteration, a SQL command is executed against the database and objects are materialized.</span></span>  
-  
-#### <a name="to-execute-the-query"></a><span data-ttu-id="2ea54-180">Para ejecutar la consulta</span><span class="sxs-lookup"><span data-stu-id="2ea54-180">To execute the query</span></span>  
-  
-1. <span data-ttu-id="2ea54-181">Escriba o pegue el código siguiente al final del método `Sub Main` (después de la descripción de la consulta):</span><span class="sxs-lookup"><span data-stu-id="2ea54-181">Type or paste the following code at the end of the `Sub Main` method (after the query description):</span></span>  
-  
-     [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
-  
-2. <span data-ttu-id="2ea54-182">Presione F5 para depurar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="2ea54-182">Press F5 to debug the application.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="2ea54-183">Si la aplicación genera un error en tiempo de ejecución, vea la sección de solución de problemas de [aprender con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).</span><span class="sxs-lookup"><span data-stu-id="2ea54-183">If your application generates a run-time error, see the Troubleshooting section of [Learning by Walkthroughs](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).</span></span>  
-  
-     <span data-ttu-id="2ea54-184">El cuadro de mensaje muestra una lista de seis clientes.</span><span class="sxs-lookup"><span data-stu-id="2ea54-184">The message box displays a list of six customers.</span></span> <span data-ttu-id="2ea54-185">La ventana Consola muestra el código SQL generado.</span><span class="sxs-lookup"><span data-stu-id="2ea54-185">The Console window displays the generated SQL code.</span></span>  
-  
-3. <span data-ttu-id="2ea54-186">Haga clic en **Aceptar** para descartar el cuadro de mensaje.</span><span class="sxs-lookup"><span data-stu-id="2ea54-186">Click **OK** to dismiss the message box.</span></span>  
-  
-     <span data-ttu-id="2ea54-187">La aplicación se cierra.</span><span class="sxs-lookup"><span data-stu-id="2ea54-187">The application closes.</span></span>  
-  
-4. <span data-ttu-id="2ea54-188">En el menú **Archivo**, haga clic en **Guardar todo**.</span><span class="sxs-lookup"><span data-stu-id="2ea54-188">On the **File** menu, click **Save All**.</span></span>  
-  
-     <span data-ttu-id="2ea54-189">Necesitará esta aplicación si va a continuar con el tutorial siguiente.</span><span class="sxs-lookup"><span data-stu-id="2ea54-189">You will need this application if you continue with the next walkthrough.</span></span>  
-  
-## <a name="next-steps"></a><span data-ttu-id="2ea54-190">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="2ea54-190">Next Steps</span></span>  
- <span data-ttu-id="2ea54-191">El [Tutorial: Realizar consultas en varias relaciones (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) tema continúa donde finaliza este tutorial.</span><span class="sxs-lookup"><span data-stu-id="2ea54-191">The [Walkthrough: Querying Across Relationships (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) topic continues where this walkthrough ends.</span></span> <span data-ttu-id="2ea54-192">El tutorial realizar consultas en varias relaciones muestra cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede realizar consultas entre tablas, similar a *combinaciones* en una base de datos relacional.</span><span class="sxs-lookup"><span data-stu-id="2ea54-192">The Querying Across Relationships walkthrough demonstrates how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can query across tables, similar to *joins* in a relational database.</span></span>  
-  
- <span data-ttu-id="2ea54-193">Si desea seguir los pasos del tutorial Realizar consultas en varias relaciones, no olvide guardar la solución del tutorial que acaba de completar, que es un requisito previo.</span><span class="sxs-lookup"><span data-stu-id="2ea54-193">If you want to do the Querying Across Relationships walkthrough, make sure to save the solution for the walkthrough you have just completed, which is a prerequisite.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="2ea54-194">Vea también</span><span class="sxs-lookup"><span data-stu-id="2ea54-194">See also</span></span>
+# <a name="walkthrough-simple-object-model-and-query-visual-basic"></a><span data-ttu-id="38311-102">Tutorial: Modelo de objetos simple y consultas (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="38311-102">Walkthrough: Simple Object Model and Query (Visual Basic)</span></span>
 
-- [<span data-ttu-id="2ea54-195">Aprendizaje con tutoriales</span><span class="sxs-lookup"><span data-stu-id="2ea54-195">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+<span data-ttu-id="38311-103">Este tutorial proporciona un escenario completo de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] básico, con las mínimas dificultades.</span><span class="sxs-lookup"><span data-stu-id="38311-103">This walkthrough provides a fundamental end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenario with minimal complexities.</span></span> <span data-ttu-id="38311-104">Creará una clase de entidad que modela la tabla Customers de la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="38311-104">You will create an entity class that models the Customers table in the sample Northwind database.</span></span> <span data-ttu-id="38311-105">Después creará una consulta simple para enumerar los clientes que se encuentran en Londres.</span><span class="sxs-lookup"><span data-stu-id="38311-105">You will then create a simple query to list customers who are located in London.</span></span>
+
+<span data-ttu-id="38311-106">Este tutorial está orientado a código por diseño, para que sea más sencillo mostrar los conceptos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="38311-106">This walkthrough is code-oriented by design to help show [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] concepts.</span></span> <span data-ttu-id="38311-107">Normalmente, se usaría el Object Relational Designer para crear el modelo de objetos.</span><span class="sxs-lookup"><span data-stu-id="38311-107">Normally speaking, you would use the Object Relational Designer to create your object model.</span></span>
+
+[!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]
+
+<span data-ttu-id="38311-108">Este tutorial se escribió con la configuración de desarrollo de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="38311-108">This walkthrough was written by using Visual Basic Development Settings.</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="38311-109">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="38311-109">Prerequisites</span></span>
+
+- <span data-ttu-id="38311-110">Este tutorial utiliza una carpeta dedicada ("c:\linqtest") que contiene los archivos.</span><span class="sxs-lookup"><span data-stu-id="38311-110">This walkthrough uses a dedicated folder ("c:\linqtest") to hold files.</span></span> <span data-ttu-id="38311-111">Cree esta carpeta antes de empezar el tutorial.</span><span class="sxs-lookup"><span data-stu-id="38311-111">Create this folder before you begin the walkthrough.</span></span>
+
+- <span data-ttu-id="38311-112">Este tutorial requiere la base de datos de ejemplo Northwind.</span><span class="sxs-lookup"><span data-stu-id="38311-112">This walkthrough requires the Northwind sample database.</span></span> <span data-ttu-id="38311-113">Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft.</span><span class="sxs-lookup"><span data-stu-id="38311-113">If you do not have this database on your development computer, you can download it from the Microsoft download site.</span></span> <span data-ttu-id="38311-114">Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span><span class="sxs-lookup"><span data-stu-id="38311-114">For instructions, see [Downloading Sample Databases](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).</span></span> <span data-ttu-id="38311-115">Después de haber descargado la base de datos, copie el archivo en la carpeta c:\linqtest.</span><span class="sxs-lookup"><span data-stu-id="38311-115">After you have downloaded the database, copy the file to the c:\linqtest folder.</span></span>
+
+## <a name="overview"></a><span data-ttu-id="38311-116">Información general</span><span class="sxs-lookup"><span data-stu-id="38311-116">Overview</span></span>
+
+<span data-ttu-id="38311-117">Este tutorial se compone de seis tareas principales:</span><span class="sxs-lookup"><span data-stu-id="38311-117">This walkthrough consists of six main tasks:</span></span>
+
+- <span data-ttu-id="38311-118">Crear una [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="38311-118">Creating a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solution in Visual Studio.</span></span>
+
+- <span data-ttu-id="38311-119">Asignar una clase a una tabla de base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-119">Mapping a class to a database table.</span></span>
+
+- <span data-ttu-id="38311-120">Designar propiedades en la clase para representar las columnas de base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-120">Designating properties on the class to represent database columns.</span></span>
+
+- <span data-ttu-id="38311-121">Especificar la conexión a la base de datos Northwind.</span><span class="sxs-lookup"><span data-stu-id="38311-121">Specifying the connection to the Northwind database.</span></span>
+
+- <span data-ttu-id="38311-122">Crear una consulta simple para ejecutarla en la base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-122">Creating a simple query to run against the database.</span></span>
+
+- <span data-ttu-id="38311-123">Ejecutar la consulta y observar los resultados.</span><span class="sxs-lookup"><span data-stu-id="38311-123">Executing the query and observing the results.</span></span>
+
+## <a name="creating-a-linq-to-sql-solution"></a><span data-ttu-id="38311-124">Crear una solución LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="38311-124">Creating a LINQ to SQL Solution</span></span>
+
+<span data-ttu-id="38311-125">En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y ejecutar un proyecto.</span><span class="sxs-lookup"><span data-stu-id="38311-125">In this first task, you create a Visual Studio solution that contains the necessary references to build and run a [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] project.</span></span>
+
+### <a name="to-create-a-linq-to-sql-solution"></a><span data-ttu-id="38311-126">Para crear una solución LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="38311-126">To create a LINQ to SQL solution</span></span>
+
+1. <span data-ttu-id="38311-127">En el menú **Archivo**, haga clic en **Nuevo proyecto**.</span><span class="sxs-lookup"><span data-stu-id="38311-127">On the **File** menu, click **New Project**.</span></span>
+
+2. <span data-ttu-id="38311-128">En el panel **tipos de proyecto** del cuadro de diálogo **nuevo proyecto** , haga clic en **Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="38311-128">In the **Project types** pane of the **New Project** dialog box, click **Visual Basic**.</span></span>
+
+3. <span data-ttu-id="38311-129">En el panel **Plantillas**, haga clic en **Aplicación de consola**.</span><span class="sxs-lookup"><span data-stu-id="38311-129">In the **Templates** pane, click **Console Application**.</span></span>
+
+4. <span data-ttu-id="38311-130">En el cuadro **nombre** , escriba **LinqConsoleApp**.</span><span class="sxs-lookup"><span data-stu-id="38311-130">In the **Name** box, type **LinqConsoleApp**.</span></span>
+
+5. <span data-ttu-id="38311-131">Haga clic en **OK**.</span><span class="sxs-lookup"><span data-stu-id="38311-131">Click **OK**.</span></span>
+
+## <a name="adding-linq-references-and-directives"></a><span data-ttu-id="38311-132">Agregar referencias y directivas LINQ</span><span class="sxs-lookup"><span data-stu-id="38311-132">Adding LINQ References and Directives</span></span>
+
+<span data-ttu-id="38311-133">En este tutorial se usan ensamblados que podrían no estar instalados en el proyecto de forma predeterminada.</span><span class="sxs-lookup"><span data-stu-id="38311-133">This walkthrough uses assemblies that might not be installed by default in your project.</span></span> <span data-ttu-id="38311-134">Si `System.Data.Linq` no aparece como referencia en el proyecto (haga clic en **Mostrar todos los archivos** en **Explorador de soluciones** y expanda el nodo **referencias** ), agréguelo, como se explica en los pasos siguientes.</span><span class="sxs-lookup"><span data-stu-id="38311-134">If `System.Data.Linq` is not listed as a reference in your project (click **Show All Files** in **Solution Explorer** and expand the **References** node), add it, as explained in the following steps.</span></span>
+
+### <a name="to-add-systemdatalinq"></a><span data-ttu-id="38311-135">Para agregar System.Data.Linq</span><span class="sxs-lookup"><span data-stu-id="38311-135">To add System.Data.Linq</span></span>
+
+1. <span data-ttu-id="38311-136">En **Explorador de soluciones**, haga clic con el botón secundario en **referencias**y, a continuación, haga clic en **Agregar referencia**.</span><span class="sxs-lookup"><span data-stu-id="38311-136">In **Solution Explorer**, right-click **References**, and then click **Add Reference**.</span></span>
+
+2. <span data-ttu-id="38311-137">En el cuadro de diálogo **Agregar referencia** , haga clic en **.net**, haga clic en el ensamblado System. Data. Linq y, a continuación, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="38311-137">In the **Add Reference** dialog box, click **.NET**, click the System.Data.Linq assembly, and then click **OK**.</span></span>
+
+     <span data-ttu-id="38311-138">El ensamblado se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="38311-138">The assembly is added to the project.</span></span>
+
+3. <span data-ttu-id="38311-139">También en el cuadro de diálogo **Agregar referencia** , haga clic en **.net**, desplácese a y haga clic en System. Windows. Forms y, a continuación, haga clic en **Aceptar**.</span><span class="sxs-lookup"><span data-stu-id="38311-139">Also in the **Add Reference** dialog box, click **.NET**, scroll to and click System.Windows.Forms, and then click **OK**.</span></span>
+
+     <span data-ttu-id="38311-140">Este ensamblado, que permite usar el cuadro de mensaje en el tutorial, se agrega al proyecto.</span><span class="sxs-lookup"><span data-stu-id="38311-140">This assembly, which supports the message box in the walkthrough, is added to the project.</span></span>
+
+4. <span data-ttu-id="38311-141">Agregue las directivas siguientes antes de `Module1`:</span><span class="sxs-lookup"><span data-stu-id="38311-141">Add the following directives above `Module1`:</span></span>
+
+     [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]
+
+## <a name="mapping-a-class-to-a-database-table"></a><span data-ttu-id="38311-142">Asignar una clase a una tabla de base de datos</span><span class="sxs-lookup"><span data-stu-id="38311-142">Mapping a Class to a Database Table</span></span>
+
+<span data-ttu-id="38311-143">En este paso, creará una clase y la asignará a una tabla de base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-143">In this step, you create a class and map it to a database table.</span></span> <span data-ttu-id="38311-144">Este tipo de clase se denomina *clase de entidad*.</span><span class="sxs-lookup"><span data-stu-id="38311-144">Such a class is termed an *entity class*.</span></span> <span data-ttu-id="38311-145">Observe que la asignación se realiza con solo agregar el atributo <xref:System.Data.Linq.Mapping.TableAttribute>.</span><span class="sxs-lookup"><span data-stu-id="38311-145">Note that the mapping is accomplished by just adding the <xref:System.Data.Linq.Mapping.TableAttribute> attribute.</span></span> <span data-ttu-id="38311-146">La propiedad <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> especifica el nombre de la tabla de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-146">The <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> property specifies the name of the table in the database.</span></span>
+
+### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a><span data-ttu-id="38311-147">Para crear una clase de entidad y asignarla a una tabla de base de datos</span><span class="sxs-lookup"><span data-stu-id="38311-147">To create an entity class and map it to a database table</span></span>
+
+- <span data-ttu-id="38311-148">Escriba o pegue el código siguiente en Module1.vb, justo encima de `Sub Main`:</span><span class="sxs-lookup"><span data-stu-id="38311-148">Type or paste the following code into Module1.vb immediately above `Sub Main`:</span></span>
+
+     [!code-vb[DLinqWalk1VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#2)]
+
+## <a name="designating-properties-on-the-class-to-represent-database-columns"></a><span data-ttu-id="38311-149">Designar propiedades en la clase para representar columnas de base de datos</span><span class="sxs-lookup"><span data-stu-id="38311-149">Designating Properties on the Class to Represent Database Columns</span></span>
+
+<span data-ttu-id="38311-150">En este paso, realizará varias tareas.</span><span class="sxs-lookup"><span data-stu-id="38311-150">In this step, you accomplish several tasks.</span></span>
+
+- <span data-ttu-id="38311-151">Utilizará el atributo <xref:System.Data.Linq.Mapping.ColumnAttribute> para designar las propiedades `CustomerID` y `City` en la clase de entidad como representativas de las columnas de la tabla de base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-151">You use the <xref:System.Data.Linq.Mapping.ColumnAttribute> attribute to designate `CustomerID` and `City` properties on the entity class as representing columns in the database table.</span></span>
+
+- <span data-ttu-id="38311-152">Designará la propiedad `CustomerID` como representativa de una columna de clave principal en la base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-152">You designate the `CustomerID` property as representing a primary key column in the database.</span></span>
+
+- <span data-ttu-id="38311-153">Designará los campos `_CustomerID` y `_City` para el almacenamiento privado.</span><span class="sxs-lookup"><span data-stu-id="38311-153">You designate `_CustomerID` and `_City` fields for private storage.</span></span> <span data-ttu-id="38311-154">Después, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] podrá almacenar y recuperar los valores directamente, en lugar de utilizar descriptores de acceso públicos que podrían incluir lógica empresarial.</span><span class="sxs-lookup"><span data-stu-id="38311-154">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can then store and retrieve values directly, instead of using public accessors that might include business logic.</span></span>
+
+### <a name="to-represent-characteristics-of-two-database-columns"></a><span data-ttu-id="38311-155">Para representar las características de dos columnas de base de datos</span><span class="sxs-lookup"><span data-stu-id="38311-155">To represent characteristics of two database columns</span></span>
+
+- <span data-ttu-id="38311-156">Escriba o pegue el código siguiente en Module1.vb, justo delante de `End Class`:</span><span class="sxs-lookup"><span data-stu-id="38311-156">Type or paste the following code into Module1.vb just before `End Class`:</span></span>
+
+     [!code-vb[DLinqWalk1VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#3)]
+
+## <a name="specifying-the-connection-to-the-northwind-database"></a><span data-ttu-id="38311-157">Especificar la conexión a la base de datos Northwind</span><span class="sxs-lookup"><span data-stu-id="38311-157">Specifying the Connection to the Northwind Database</span></span>
+
+<span data-ttu-id="38311-158">En este paso, utilizará un objeto <xref:System.Data.Linq.DataContext> para establecer una conexión entre sus estructuras de datos basadas en código y la propia base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-158">In this step you use a <xref:System.Data.Linq.DataContext> object to establish a connection between your code-based data structures and the database itself.</span></span> <span data-ttu-id="38311-159"><xref:System.Data.Linq.DataContext> es el canal principal a través del cual se recuperan los objetos de la base de datos y se envían los cambios.</span><span class="sxs-lookup"><span data-stu-id="38311-159">The <xref:System.Data.Linq.DataContext> is the main channel through which you retrieve objects from the database and submit changes.</span></span>
+
+<span data-ttu-id="38311-160">También declarará `Table(Of Customer)` para que actúe como la tabla lógica con tipo para las consultas que realizará en la tabla Customers de la base de datos.</span><span class="sxs-lookup"><span data-stu-id="38311-160">You also declare a `Table(Of Customer)` to act as the logical, typed table for your queries against the Customers table in the database.</span></span> <span data-ttu-id="38311-161">Creará y ejecutar estas consultas en pasos posteriores.</span><span class="sxs-lookup"><span data-stu-id="38311-161">You will create and execute these queries in later steps.</span></span>
+
+### <a name="to-specify-the-database-connection"></a><span data-ttu-id="38311-162">Para especificar la conexión a la base de datos</span><span class="sxs-lookup"><span data-stu-id="38311-162">To specify the database connection</span></span>
+
+- <span data-ttu-id="38311-163">Escriba o pegue el código siguiente en el método `Sub Main`.</span><span class="sxs-lookup"><span data-stu-id="38311-163">Type or paste the following code into the `Sub Main` method.</span></span>
+
+     <span data-ttu-id="38311-164">Tenga en cuenta que se asume que el archivo `northwnd.mdf` está en la carpeta linqtest.</span><span class="sxs-lookup"><span data-stu-id="38311-164">Note that the `northwnd.mdf` file is assumed to be in the linqtest folder.</span></span> <span data-ttu-id="38311-165">Para obtener más información, vea la sección Requisitos previos, anteriormente en este tutorial.</span><span class="sxs-lookup"><span data-stu-id="38311-165">For more information, see the Prerequisites section earlier in this walkthrough.</span></span>
+
+     [!code-vb[DLinqWalk1VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#4)]
+
+## <a name="creating-a-simple-query"></a><span data-ttu-id="38311-166">Crear una consulta simple</span><span class="sxs-lookup"><span data-stu-id="38311-166">Creating a Simple Query</span></span>
+
+<span data-ttu-id="38311-167">En este paso, creará una consulta para buscar los clientes de la tabla de base de datos Customers que se encuentran en Londres.</span><span class="sxs-lookup"><span data-stu-id="38311-167">In this step, you create a query to find which customers in the database Customers table are located in London.</span></span> <span data-ttu-id="38311-168">En este paso, el código de la consulta simplemente la describe.</span><span class="sxs-lookup"><span data-stu-id="38311-168">The query code in this step just describes the query.</span></span> <span data-ttu-id="38311-169">No la ejecuta.</span><span class="sxs-lookup"><span data-stu-id="38311-169">It does not execute it.</span></span> <span data-ttu-id="38311-170">Este enfoque se conoce como *ejecución aplazada*.</span><span class="sxs-lookup"><span data-stu-id="38311-170">This approach is known as *deferred execution*.</span></span> <span data-ttu-id="38311-171">Para obtener más información, vea [Introduction to LINQ queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].</span><span class="sxs-lookup"><span data-stu-id="38311-171">For more information, see [Introduction to LINQ Queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>
+
+<span data-ttu-id="38311-172">También generará un resultado de registro para mostrar los comandos SQL que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera.</span><span class="sxs-lookup"><span data-stu-id="38311-172">You will also produce a log output to show the SQL commands that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates.</span></span> <span data-ttu-id="38311-173">Esta característica de registro (que utiliza <xref:System.Data.Linq.DataContext.Log%2A>) es útil para la depuración, así como para determinar que los comandos que se envían a la base de datos representan la consulta de manera precisa.</span><span class="sxs-lookup"><span data-stu-id="38311-173">This logging feature (which uses <xref:System.Data.Linq.DataContext.Log%2A>) is helpful in debugging, and in determining that the commands being sent to the database accurately represent your query.</span></span>
+
+### <a name="to-create-a-simple-query"></a><span data-ttu-id="38311-174">Para crear una consulta simple</span><span class="sxs-lookup"><span data-stu-id="38311-174">To create a simple query</span></span>
+
+- <span data-ttu-id="38311-175">Escriba o pegue el código siguiente en el método `Sub Main` después de la declaración `Table(Of Customer)`:</span><span class="sxs-lookup"><span data-stu-id="38311-175">Type or paste the following code into the `Sub Main` method after the `Table(Of Customer)` declaration:</span></span>
+
+     [!code-vb[DLinqWalk1AVB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#5)]
+
+## <a name="executing-the-query"></a><span data-ttu-id="38311-176">Ejecutar la consulta</span><span class="sxs-lookup"><span data-stu-id="38311-176">Executing the Query</span></span>
+
+<span data-ttu-id="38311-177">En este paso es donde realmente ejecutará la consulta.</span><span class="sxs-lookup"><span data-stu-id="38311-177">In this step, you actually execute the query.</span></span> <span data-ttu-id="38311-178">Las expresiones de consulta creadas en pasos anteriores no se evalúan hasta que no se necesitan los resultados.</span><span class="sxs-lookup"><span data-stu-id="38311-178">The query expressions you created in the previous steps are not evaluated until the results are needed.</span></span> <span data-ttu-id="38311-179">Al comenzar la iteración `For Each`, se ejecuta un comando SQL en la base de datos y se materializan los objetos.</span><span class="sxs-lookup"><span data-stu-id="38311-179">When you begin the `For Each` iteration, a SQL command is executed against the database and objects are materialized.</span></span>
+
+### <a name="to-execute-the-query"></a><span data-ttu-id="38311-180">Para ejecutar la consulta</span><span class="sxs-lookup"><span data-stu-id="38311-180">To execute the query</span></span>
+
+1. <span data-ttu-id="38311-181">Escriba o pegue el código siguiente al final del método `Sub Main` (después de la descripción de la consulta):</span><span class="sxs-lookup"><span data-stu-id="38311-181">Type or paste the following code at the end of the `Sub Main` method (after the query description):</span></span>
+
+     [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]
+
+2. <span data-ttu-id="38311-182">Presione F5 para depurar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="38311-182">Press F5 to debug the application.</span></span>
+
+    > [!NOTE]
+    > <span data-ttu-id="38311-183">Si la aplicación genera un error en tiempo de ejecución, consulte la sección de solución de problemas de [aprendizaje por tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).</span><span class="sxs-lookup"><span data-stu-id="38311-183">If your application generates a run-time error, see the Troubleshooting section of [Learning by Walkthroughs](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).</span></span>
+
+     <span data-ttu-id="38311-184">El cuadro de mensaje muestra una lista de seis clientes.</span><span class="sxs-lookup"><span data-stu-id="38311-184">The message box displays a list of six customers.</span></span> <span data-ttu-id="38311-185">La ventana Consola muestra el código SQL generado.</span><span class="sxs-lookup"><span data-stu-id="38311-185">The Console window displays the generated SQL code.</span></span>
+
+3. <span data-ttu-id="38311-186">Haga clic en **Aceptar** para descartar el cuadro de mensaje.</span><span class="sxs-lookup"><span data-stu-id="38311-186">Click **OK** to dismiss the message box.</span></span>
+
+     <span data-ttu-id="38311-187">La aplicación se cierra.</span><span class="sxs-lookup"><span data-stu-id="38311-187">The application closes.</span></span>
+
+4. <span data-ttu-id="38311-188">En el menú **Archivo**, haga clic en **Guardar todo**.</span><span class="sxs-lookup"><span data-stu-id="38311-188">On the **File** menu, click **Save All**.</span></span>
+
+     <span data-ttu-id="38311-189">Necesitará esta aplicación si va a continuar con el tutorial siguiente.</span><span class="sxs-lookup"><span data-stu-id="38311-189">You will need this application if you continue with the next walkthrough.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="38311-190">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="38311-190">Next Steps</span></span>
+
+<span data-ttu-id="38311-191">El [Tutorial: El tema consultas en varias relaciones (](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) Visual Basic) continúa donde finaliza este tutorial.</span><span class="sxs-lookup"><span data-stu-id="38311-191">The [Walkthrough: Querying Across Relationships (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) topic continues where this walkthrough ends.</span></span> <span data-ttu-id="38311-192">El tutorial consultas en varias relaciones muestra cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede realizar consultas entre tablas, de forma similar a las *combinaciones* en una base de datos relacional.</span><span class="sxs-lookup"><span data-stu-id="38311-192">The Querying Across Relationships walkthrough demonstrates how [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] can query across tables, similar to *joins* in a relational database.</span></span>
+
+<span data-ttu-id="38311-193">Si desea seguir los pasos del tutorial Realizar consultas en varias relaciones, no olvide guardar la solución del tutorial que acaba de completar, que es un requisito previo.</span><span class="sxs-lookup"><span data-stu-id="38311-193">If you want to do the Querying Across Relationships walkthrough, make sure to save the solution for the walkthrough you have just completed, which is a prerequisite.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="38311-194">Vea también</span><span class="sxs-lookup"><span data-stu-id="38311-194">See also</span></span>
+
+- [<span data-ttu-id="38311-195">Aprendizaje con tutoriales</span><span class="sxs-lookup"><span data-stu-id="38311-195">Learning by Walkthroughs</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
