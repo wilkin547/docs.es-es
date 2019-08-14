@@ -2,12 +2,12 @@
 title: Procedimiento para escribir consultas de XML en espacios de nombres (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: d33ecc22d8eb6ea4a08b56fbed6b6b437a5e3216
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ef7d970b5e34106bd6f17d4a2caf4ca378dd2258
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484630"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709883"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Procedimiento para escribir consultas de XML en espacios de nombres (C#)
 Para escribir una consulta en XML que esté en un espacio de nombres, debe usar objetos <xref:System.Xml.Linq.XName> que tengan el espacio de nombres correcto.  
@@ -78,4 +78,4 @@ foreach (XElement el in c1)
   
 ## <a name="see-also"></a>Vea también
 
-- [Trabajar con espacios de nombres XML (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)
+- [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

@@ -6,12 +6,12 @@ title: Documentación de .NET
 description: Obtenga información sobre cómo usar .NET para crear una variedad de aplicaciones en cualquier plataforma mediante C#, Visual Basic y F#. Examine referencias de API, código de ejemplo, tutoriales y mucho más.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a6f6bc91a3055ffd0efe9f6b89ba0499921ed1d4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589990"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972389"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,10 +77,10 @@ ms.locfileid: "65589990"
         <h1>Documentación de .NET</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Documentos</a>
+                <a data-default="true" href="#docs">Documentación</a>
                 <ul id="docs">
                     <li>
-                        <a href="#getstarted">Introducción</a>
+                        <a href="#getstarted">Primeros pasos</a>
                         <ul id="getstarted" class="cardsF">
                             <li>
                                 <div class="cardSize">
@@ -309,7 +309,7 @@ ms.locfileid: "65589990"
                                 </a>
                             </li>
                             <li>
-                                <a href="/aspnet/overview">
+                                <a href="/aspnet/core/">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -319,8 +319,8 @@ ms.locfileid: "65589990"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>¿Qué es ASP.NET?</h3>
-                                                    <p>Obtenga información sobre cómo crear aplicaciones web ASP.NET.</p>
+                                                    <h3>¿Qué es ASP.NET Core?</h3>
+                                                    <p>Obtenga información sobre cómo compilar aplicaciones web ASP.NET Core.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -453,7 +453,7 @@ ms.locfileid: "65589990"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Móvil</a>
+                        <a href="#mobile">Mobile</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">

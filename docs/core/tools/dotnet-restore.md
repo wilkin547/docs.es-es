@@ -2,12 +2,12 @@
 title: Comando dotnet restore
 description: Aprenda a restaurar dependencias y herramientas específicas del proyecto con el comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 3ddb9f679cfcab972483a4cb53ffe2b075867614
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 17bbbe33e7cb7b13d6fb1c0e44bb77dd2bbe7020
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613975"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626351"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -37,19 +37,35 @@ dotnet restore [-h|--help]
 
 ---
 
-## <a name="description"></a>Descripción
+## <a name="description"></a>DESCRIPCIÓN
 
 El comando `dotnet restore` usa NuGet para restaurar las dependencias, así como las herramientas específicas del proyecto que se especifican en el archivo project.json. De forma predeterminada, la restauración de dependencias y herramientas se ejecuta en paralelo.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Para restaurar las dependencias, NuGet necesita las fuentes donde se encuentran los paquetes. Las fuente se proporcionan normalmente mediante el archivo de configuración *NuGet.config*. Cuando se instalan las herramientas de la CLI, se proporciona un archivo de configuración predeterminado. Puede especificar más fuentes creando su propio archivo *NuGet.config* en el directorio del proyecto. También puede especificar fuentes adicionales por invocación en un símbolo del sistema.
+Para restaurar las dependencias, NuGet necesita las fuentes donde se encuentran los paquetes. Las fuente se proporcionan normalmente mediante el archivo de configuración *nuget.config*. Cuando se instalan las herramientas de la CLI, se proporciona un archivo de configuración predeterminado. Puede especificar más fuentes creando su propio archivo *nuget.config* en el directorio del proyecto. También puede especificar fuentes adicionales por invocación en un símbolo del sistema.
 
 Para las dependencias, puede especificar dónde se colocan los paquetes restaurados durante la operación de restauración mediante el argumento `--packages`. Si no se especifica, se usa la caché de paquetes NuGet predeterminada, que se encuentra en el directorio `.nuget/packages` del directorio de inicio del usuario en todos los sistemas operativos. Por ejemplo, */home/usuario1* en Linux o *C:\Usuarios\usuario1* en Windows.
 
 Para herramientas específicas del proyecto, `dotnet restore` restaura primero el paquete en el que se empaqueta la herramienta y, a continuación, continúa con la restauración de las dependencias de la herramienta especificadas en su project.json.
 
-El comportamiento del comando `dotnet restore` depende de algunas de las opciones de configuración del archivo *Nuget.Config*, si están presentes. Por ejemplo, establecer `globalPackagesFolder` en *NuGet.Config* coloca los paquetes NuGet restaurados en la carpeta especificada. Esta es una alternativa para especificar la opción `--packages` en el comando `dotnet restore`. Para obtener más información, vea la [referencia de NuGet.Config](/nuget/schema/nuget-config-file).
+### <a name="nugetconfig-differences"></a>Diferencias de nuget.config
+
+El comportamiento del comando `dotnet restore` depende de las opciones de configuración del archivo *nuget.config*, si existe. Por ejemplo, establecer `globalPackagesFolder` en *nuget.config* coloca los paquetes NuGet restaurados en la carpeta especificada. Esta es una alternativa para especificar la opción `--packages` en el comando `dotnet restore`. Para más información, consulte la [referencia de nuget.config](/nuget/schema/nuget-config-file).
+
+Hay tres configuraciones específicas que `dotnet restore` omite:
+
+* [bindingRedirects](/nuget/schema/nuget-config-file#bindingredirects-section)
+
+  Los redireccionamientos de enlace no funcionan con elementos de `<PackageReference>` y .NET Core solo admite elementos de `<PackageReference>` para los paquetes NuGet.
+
+* [solution](/nuget/schema/nuget-config-file#solution-section)
+
+  Esta configuración es específica para Visual Studio y no se aplica a .NET Core. .NET Core no usa un archivo `packages.config` y, en su lugar, usa elementos de `<PackageReference>` para los paquetes NuGet.
+
+* [trustedSigners](/nuget/schema/nuget-config-file#trustedsigners-section)
+
+  Esta configuración no es aplicable porque [NuGet ya no admite la comprobación multiplataforma](https://github.com/NuGet/Home/issues/7939) de los paquetes de confianza.
 
 ## <a name="implicit-dotnet-restore"></a>`dotnet restore` implícito
 
@@ -79,7 +95,7 @@ Ruta de acceso opcional del archivo de proyecto para restaurar.
 
 `--configfile <FILE>`
 
-El archivo de configuración (*NuGet.config*) que se usa para la operación de restauración.
+El archivo de configuración de NuGet (*nuget.config*) que se usa para la operación de restauración.
 
 `--disable-parallel`
 
@@ -115,7 +131,7 @@ Especifica un tiempo de ejecución para la restauración del paquete. Se usa par
 
 `-s|--source <SOURCE>`
 
-Especifica un origen de paquetes de NuGet que se usará durante la operación de restauración. Este valor invalida todos los orígenes especificados en los archivos *NuGet.config*. Al especificar esta opción varias veces, se pueden proporcionar varios orígenes.
+Especifica un origen de paquetes de NuGet que se usará durante la operación de restauración. Este valor invalida todos los orígenes especificados en los archivos *nuget.config*. Al especificar esta opción varias veces, se pueden proporcionar varios orígenes.
 
 `--verbosity <LEVEL>`
 
@@ -129,7 +145,7 @@ Permite que el comando se detenga y espere la entrada o acción del usuario (por
 
 `--configfile <FILE>`
 
-El archivo de configuración (*NuGet.config*) que se usa para la operación de restauración.
+El archivo de configuración de NuGet (*nuget.config*) que se usa para la operación de restauración.
 
 `--disable-parallel`
 
@@ -161,7 +177,7 @@ Especifica un tiempo de ejecución para la restauración del paquete. Se usa par
 
 `-s|--source <SOURCE>`
 
-Especifica un origen de paquetes de NuGet que se usará durante la operación de restauración. Esto invalida todos los orígenes especificados en los archivos *NuGet.config*. Al especificar esta opción varias veces, se pueden proporcionar varios orígenes.
+Especifica un origen de paquetes de NuGet que se usará durante la operación de restauración. Esto invalida todos los orígenes especificados en los archivos *nuget.config*. Al especificar esta opción varias veces, se pueden proporcionar varios orígenes.
 
 `--verbosity <LEVEL>`
 
