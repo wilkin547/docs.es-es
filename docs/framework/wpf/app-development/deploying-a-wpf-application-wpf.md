@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 924553bf457a6668143785c78871ebac6e01efa4
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818026"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68972266"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
 Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -114,7 +114,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
 ## <a name="installing-the-net-framework"></a>Instalar .NET Framework  
  Para ejecutar una [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación, el marco de trabajo de Microsoft .net debe estar instalado en el cliente. Internet Explorer detecta automáticamente si los clientes se instalan con .NET Framework [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] cuando se ven las aplicaciones hospedadas en el explorador. Si el .NET Framework no está instalado, Internet Explorer solicita a los usuarios que lo instalen.  
   
- Para detectar si el .NET Framework está instalado, Internet Explorer incluye una aplicación de programa previo registrada como controlador de [!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)] reserva para los archivos de contenido con las siguientes extensiones:. XAML,. XPS,. XBAP y. Application. Si navega a estos tipos de archivo y el .NET Framework no está instalado en el cliente, la aplicación de arranque solicita permiso para instalarlo. Si no se proporciona el permiso, no se instalará ni el .NET Framework ni la aplicación.  
+ Para detectar si el .NET Framework está instalado, Internet Explorer incluye una aplicación de programa previo que se registra como el controlador de las extensiones multipropósito de correo Internet (MIME) de reserva para los archivos de contenido con las siguientes extensiones:. XAML,. XPS,. XBAP y. Application. Si navega a estos tipos de archivo y el .NET Framework no está instalado en el cliente, la aplicación de arranque solicita permiso para instalarlo. Si no se proporciona el permiso, no se instalará ni el .NET Framework ni la aplicación.  
   
  Si se concede el permiso, Internet Explorer descarga e instala el .NET Framework mediante el Servicio de transferencia inteligente en segundo plano de Microsoft (BITS). Después de instalar correctamente el .NET Framework, el archivo solicitado originalmente se abre en una nueva ventana del explorador.  
   

@@ -3,12 +3,12 @@ title: Cómo compilar aplicaciones ASP.NET con reconocimiento de mediante la aut
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-ms.openlocfilehash: ecaf1de0b806d5568d81fac2ddb2b39b697135ab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75db96a621d7863ef445efb24814111b34da6960
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792755"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971834"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Cómo compilar aplicaciones ASP.NET con reconocimiento de mediante la autenticación basada en formularios
 
@@ -60,7 +60,7 @@ La autenticación de formularios se ha beneficiado de la inclusión de WIF en .N
 
 En este paso creará una aplicación de formularios Web Forms ASP.NET.
 
-#### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla
+### <a name="to-create-a-simple-aspnet-application"></a>Para crear una aplicación de ASP.NET sencilla
 
 1. Inicie Visual Studio y haga clic en **Archivo**, **Nuevo** y, luego, en **Proyecto**.
 
@@ -72,7 +72,7 @@ En este paso creará una aplicación de formularios Web Forms ASP.NET.
 
 En este paso se agrega una entrada de configuración al archivo de configuración *Web.config* y se edita el archivo *Default.aspx* para que muestre la información de notificaciones de una cuenta.
 
-#### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Para configurar la aplicación ASP.NET para notificaciones mediante la autenticación de formularios
+### <a name="to-configure-aspnet-application-for-claims-using-forms-authentication"></a>Para configurar la aplicación ASP.NET para notificaciones mediante la autenticación de formularios
 
 1. En el archivo *Default.aspx*, reemplace el marcado existente por el siguiente:
 
@@ -126,7 +126,7 @@ En este paso se agrega una entrada de configuración al archivo de configuració
 
 En este paso se prueba la aplicación de formularios Web Forms ASP.NET y se comprueba que se presentan notificaciones cuando un usuario inicia sesión con la autenticación de formularios.
 
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-forms-authentication"></a>Para probar la aplicación de formularios Web Forms ASP.NET para notificaciones mediante la autenticación de formularios
 
 1. Presione **F5** para compilar y ejecutar la aplicación. Debe aparecer *Default.aspx*, que tiene los vínculos **Registrarse** e **Iniciar sesión** en la parte superior derecha de la página. Haga clic en **Registrarse**.
 
