@@ -6,62 +6,59 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: f8c268c816975fa9b00725d317365c147312b950
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 180fafa9ace5927fd84ec5dc0a1b2a342f771efd
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593456"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040024"
 ---
-# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a><span data-ttu-id="049df-102">Procedimiento para enlazar controles de formularios Windows Forms con el componente BindingSource mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="049df-102">How to: Bind Windows Forms Controls with the BindingSource Component Using the Designer</span></span>
-<span data-ttu-id="049df-103">Una vez que haya agregado los controles al formulario y determina la interfaz de usuario para la aplicación, puede enlazar los controles a un origen de datos, por lo que, en tiempo de ejecución, los usuarios pueden modificar y guardar los datos relacionados con la aplicación.</span><span class="sxs-lookup"><span data-stu-id="049df-103">After you have added controls to your form and determined the user interface for your application, you can bind the controls to a data source, so that, at run time, users can alter and save data related to the application.</span></span>  
-  
- <span data-ttu-id="049df-104">Enlazar un control o una serie de controles en Windows Forms se consigue más fácilmente mediante el <xref:System.Windows.Forms.BindingSource> control como un puente entre los controles del formulario y el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="049df-104">Binding a control or series of controls in Windows Forms is most easily accomplished using the <xref:System.Windows.Forms.BindingSource> control as a bridge between the controls on the form and the data source.</span></span>  
-  
- <span data-ttu-id="049df-105">Uno o varios controles en un formulario que se pueden enlazar a datos; en el procedimiento siguiente, un <xref:System.Windows.Forms.TextBox> control se enlaza a un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="049df-105">One or more controls on a form can be bound to data; in the following procedure, a <xref:System.Windows.Forms.TextBox> control is bound to a data source.</span></span>  
-  
- <span data-ttu-id="049df-106">Para completar el procedimiento, se supone que se enlazará a un origen de datos derivado de una base de datos.</span><span class="sxs-lookup"><span data-stu-id="049df-106">To complete the procedure, it is assumed that you will bind to a data source derived from a database.</span></span> <span data-ttu-id="049df-107">Para obtener más información sobre cómo crear orígenes de datos desde otros almacenes de datos, vea [agregar nuevos orígenes de datos](/visualstudio/data-tools/add-new-data-sources).</span><span class="sxs-lookup"><span data-stu-id="049df-107">For more information on creating data sources from other stores of data, see [Add new data sources](/visualstudio/data-tools/add-new-data-sources).</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="049df-108">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="049df-108">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="049df-109">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="049df-109">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="049df-110">Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="049df-110">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-### <a name="to-bind-a-control-at-design-time"></a><span data-ttu-id="049df-111">Para enlazar un control en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="049df-111">To bind a control at design time</span></span>  
-  
-1. <span data-ttu-id="049df-112">Arrastre un <xref:System.Windows.Forms.TextBox> control de sesión en el formulario.</span><span class="sxs-lookup"><span data-stu-id="049df-112">Drag a <xref:System.Windows.Forms.TextBox> control on to the form.</span></span>  
-  
-2. <span data-ttu-id="049df-113">En el **propiedades** ventana:</span><span class="sxs-lookup"><span data-stu-id="049df-113">In the **Properties** window:</span></span>  
-  
-    1. <span data-ttu-id="049df-114">Expanda el **(DataBindings)** nodo.</span><span class="sxs-lookup"><span data-stu-id="049df-114">Expand the **(DataBindings)** node.</span></span>  
-  
-    2. <span data-ttu-id="049df-115">Haga clic en la flecha situada junto a la <xref:System.Windows.Forms.TextBox.Text%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="049df-115">Click the arrow next to the <xref:System.Windows.Forms.TextBox.Text%2A> property.</span></span>  
-  
-         <span data-ttu-id="049df-116">El **DataSource** abre el editor de tipos de interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="049df-116">The **DataSource** UI type editor opens.</span></span>  
-  
-         <span data-ttu-id="049df-117">Si un origen de datos se ha configurado previamente para el proyecto o formulario, aparecerá.</span><span class="sxs-lookup"><span data-stu-id="049df-117">If a data source has previously been configured for the project or form, it will appear.</span></span>  
-  
-3. <span data-ttu-id="049df-118">Haga clic en **Agregar origen de datos del proyecto** para conectar con los datos y crear un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="049df-118">Click **Add Project Data Source** to connect to data and create a data source.</span></span>  
-  
-4. <span data-ttu-id="049df-119">En la página principal del **Asistente para la configuración de orígenes de datos**, haga clic en **Siguiente**.</span><span class="sxs-lookup"><span data-stu-id="049df-119">On the **Data Source Configuration Wizard** welcome page, click **Next**.</span></span>  
-  
-5. <span data-ttu-id="049df-120">En el **elegir un tipo de origen de datos** página, seleccione **base de datos**.</span><span class="sxs-lookup"><span data-stu-id="049df-120">On the **Choose a Data Source Type** page, select **Database**.</span></span>  
-  
-6. <span data-ttu-id="049df-121">En el **elegir la conexión de datos** , seleccione una conexión de datos de la lista de conexiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="049df-121">On the **Choose Your Data Connection** page, select a data connection from the list of available connections.</span></span> <span data-ttu-id="049df-122">Si la conexión de datos deseada no está disponible seleccione **nueva conexión** para crear una nueva conexión de datos.</span><span class="sxs-lookup"><span data-stu-id="049df-122">If your desired data connection is not available select **New Connection** to create a new data connection.</span></span>  
-  
-7. <span data-ttu-id="049df-123">Seleccione **Sí, guardar la conexión** para guardar la cadena de conexión en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="049df-123">Select **Yes, save the connection** to save the connection string in the application configuration file.</span></span>  
-  
-8. <span data-ttu-id="049df-124">Seleccione los objetos de base de datos que va a traer a su aplicación.</span><span class="sxs-lookup"><span data-stu-id="049df-124">Select the database objects to bring into your application.</span></span> <span data-ttu-id="049df-125">En este caso, seleccione un campo de una tabla que le gustaría el <xref:System.Windows.Forms.TextBox> para mostrar.</span><span class="sxs-lookup"><span data-stu-id="049df-125">In this case, select a field in a table that you would like the <xref:System.Windows.Forms.TextBox> to display.</span></span>  
-  
-9. <span data-ttu-id="049df-126">Reemplace el nombre del conjunto de datos predeterminado, si lo desea.</span><span class="sxs-lookup"><span data-stu-id="049df-126">Replace the default dataset name if you want.</span></span>  
-  
-10. <span data-ttu-id="049df-127">Haga clic en **Finalizar**.</span><span class="sxs-lookup"><span data-stu-id="049df-127">Click **Finish**.</span></span>  
-  
-11. <span data-ttu-id="049df-128">En el **propiedades** ventana, haga clic en la flecha situada junto a la <xref:System.Windows.Forms.TextBox.Text%2A> propiedad nuevo.</span><span class="sxs-lookup"><span data-stu-id="049df-128">In the **Properties** window, click the arrow next to the <xref:System.Windows.Forms.TextBox.Text%2A> property again.</span></span> <span data-ttu-id="049df-129">En el **DataSource** editor de tipos de interfaz de usuario, seleccione el nombre del campo que se va a enlazar el <xref:System.Windows.Forms.TextBox> a.</span><span class="sxs-lookup"><span data-stu-id="049df-129">In the **DataSource** UI type editor, select the name of the field to bind the <xref:System.Windows.Forms.TextBox> to.</span></span>  
-  
-     <span data-ttu-id="049df-130">El **DataSource** la interfaz de usuario escriba editor cierra y el conjunto de datos, <xref:System.Windows.Forms.BindingSource> y adaptador de tabla específico para que la conexión de datos se agregan al formulario.</span><span class="sxs-lookup"><span data-stu-id="049df-130">The **DataSource** UI type editor closes and the data set, <xref:System.Windows.Forms.BindingSource> and table adapter specific to that data connection are added to your form.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="049df-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="049df-131">See also</span></span>
+# <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a><span data-ttu-id="a6556-102">Procedimiento para enlazar controles de formularios Windows Forms con el componente BindingSource mediante el diseñador</span><span class="sxs-lookup"><span data-stu-id="a6556-102">How to: Bind Windows Forms Controls with the BindingSource Component Using the Designer</span></span>
+<span data-ttu-id="a6556-103">Después de haber agregado controles al formulario y determinado la interfaz de usuario de la aplicación, puede enlazar los controles a un origen de datos, de modo que, en tiempo de ejecución, los usuarios puedan modificar y guardar los datos relacionados con la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a6556-103">After you have added controls to your form and determined the user interface for your application, you can bind the controls to a data source, so that, at run time, users can alter and save data related to the application.</span></span>
+
+ <span data-ttu-id="a6556-104">Enlazar un control o una serie de controles en Windows Forms se consigue más fácilmente <xref:System.Windows.Forms.BindingSource> mediante el control como un puente entre los controles del formulario y el origen de datos.</span><span class="sxs-lookup"><span data-stu-id="a6556-104">Binding a control or series of controls in Windows Forms is most easily accomplished using the <xref:System.Windows.Forms.BindingSource> control as a bridge between the controls on the form and the data source.</span></span>
+
+ <span data-ttu-id="a6556-105">Uno o varios controles de un formulario se pueden enlazar a datos; en el procedimiento siguiente, se <xref:System.Windows.Forms.TextBox> enlaza un control a un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="a6556-105">One or more controls on a form can be bound to data; in the following procedure, a <xref:System.Windows.Forms.TextBox> control is bound to a data source.</span></span>
+
+ <span data-ttu-id="a6556-106">Para completar el procedimiento, se supone que se enlazará a un origen de datos derivado de una base de datos.</span><span class="sxs-lookup"><span data-stu-id="a6556-106">To complete the procedure, it is assumed that you will bind to a data source derived from a database.</span></span> <span data-ttu-id="a6556-107">Para obtener más información sobre cómo crear orígenes de datos de otros almacenes de datos, vea [agregar nuevos orígenes](/visualstudio/data-tools/add-new-data-sources)de datos.</span><span class="sxs-lookup"><span data-stu-id="a6556-107">For more information on creating data sources from other stores of data, see [Add new data sources](/visualstudio/data-tools/add-new-data-sources).</span></span>
+
+## <a name="to-bind-a-control-at-design-time"></a><span data-ttu-id="a6556-108">Para enlazar un control en tiempo de diseño</span><span class="sxs-lookup"><span data-stu-id="a6556-108">To bind a control at design time</span></span>
+
+1. <span data-ttu-id="a6556-109">Arrastre un <xref:System.Windows.Forms.TextBox> control al formulario.</span><span class="sxs-lookup"><span data-stu-id="a6556-109">Drag a <xref:System.Windows.Forms.TextBox> control on to the form.</span></span>
+
+2. <span data-ttu-id="a6556-110">En la ventana **propiedades** :</span><span class="sxs-lookup"><span data-stu-id="a6556-110">In the **Properties** window:</span></span>
+
+    1. <span data-ttu-id="a6556-111">Expanda el nodo **(DataBindings)** .</span><span class="sxs-lookup"><span data-stu-id="a6556-111">Expand the **(DataBindings)** node.</span></span>
+
+    2. <span data-ttu-id="a6556-112">Haga clic en la flecha situada <xref:System.Windows.Forms.TextBox.Text%2A> junto a la propiedad.</span><span class="sxs-lookup"><span data-stu-id="a6556-112">Click the arrow next to the <xref:System.Windows.Forms.TextBox.Text%2A> property.</span></span>
+
+         <span data-ttu-id="a6556-113">Se abre el editor de tipos de interfaz de usuario de **DataSource** .</span><span class="sxs-lookup"><span data-stu-id="a6556-113">The **DataSource** UI type editor opens.</span></span>
+
+         <span data-ttu-id="a6556-114">Si previamente se ha configurado un origen de datos para el proyecto o formulario, aparecerá.</span><span class="sxs-lookup"><span data-stu-id="a6556-114">If a data source has previously been configured for the project or form, it will appear.</span></span>
+
+3. <span data-ttu-id="a6556-115">Haga clic en **Agregar origen de datos del proyecto** para conectar con los datos y crear un origen de datos.</span><span class="sxs-lookup"><span data-stu-id="a6556-115">Click **Add Project Data Source** to connect to data and create a data source.</span></span>
+
+4. <span data-ttu-id="a6556-116">En la página principal del **Asistente para la configuración de orígenes de datos**, haga clic en **Siguiente**.</span><span class="sxs-lookup"><span data-stu-id="a6556-116">On the **Data Source Configuration Wizard** welcome page, click **Next**.</span></span>
+
+5. <span data-ttu-id="a6556-117">En la página **elegir un tipo de origen de datos** , seleccione **base**de datos.</span><span class="sxs-lookup"><span data-stu-id="a6556-117">On the **Choose a Data Source Type** page, select **Database**.</span></span>
+
+6. <span data-ttu-id="a6556-118">En la página **elegir la conexión de datos** , seleccione una conexión de datos de la lista de conexiones disponibles.</span><span class="sxs-lookup"><span data-stu-id="a6556-118">On the **Choose Your Data Connection** page, select a data connection from the list of available connections.</span></span> <span data-ttu-id="a6556-119">Si la conexión de datos deseada no está disponible, seleccione **nueva conexión** para crear una nueva conexión de datos.</span><span class="sxs-lookup"><span data-stu-id="a6556-119">If your desired data connection is not available select **New Connection** to create a new data connection.</span></span>
+
+7. <span data-ttu-id="a6556-120">Seleccione **sí, guardar la conexión** para guardar la cadena de conexión en el archivo de configuración de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="a6556-120">Select **Yes, save the connection** to save the connection string in the application configuration file.</span></span>
+
+8. <span data-ttu-id="a6556-121">Seleccione los objetos de base de datos que va a traer a su aplicación.</span><span class="sxs-lookup"><span data-stu-id="a6556-121">Select the database objects to bring into your application.</span></span> <span data-ttu-id="a6556-122">En este caso, seleccione un campo de una tabla que le <xref:System.Windows.Forms.TextBox> gustaría que mostrara.</span><span class="sxs-lookup"><span data-stu-id="a6556-122">In this case, select a field in a table that you would like the <xref:System.Windows.Forms.TextBox> to display.</span></span>
+
+9. <span data-ttu-id="a6556-123">Reemplace el nombre del conjunto de datos predeterminado, si lo desea.</span><span class="sxs-lookup"><span data-stu-id="a6556-123">Replace the default dataset name if you want.</span></span>
+
+10. <span data-ttu-id="a6556-124">Haga clic en **Finalizar**</span><span class="sxs-lookup"><span data-stu-id="a6556-124">Click **Finish**.</span></span>
+
+11. <span data-ttu-id="a6556-125">En la ventana **propiedades** , haga clic de nuevo en la <xref:System.Windows.Forms.TextBox.Text%2A> flecha situada junto a la propiedad.</span><span class="sxs-lookup"><span data-stu-id="a6556-125">In the **Properties** window, click the arrow next to the <xref:System.Windows.Forms.TextBox.Text%2A> property again.</span></span> <span data-ttu-id="a6556-126">En el editor de tipos de interfaz de usuario de **DataSource** , seleccione el nombre del <xref:System.Windows.Forms.TextBox> campo al que se va a enlazar.</span><span class="sxs-lookup"><span data-stu-id="a6556-126">In the **DataSource** UI type editor, select the name of the field to bind the <xref:System.Windows.Forms.TextBox> to.</span></span>
+
+     <span data-ttu-id="a6556-127">El editor de tipos de interfaz de usuario del **origen** de datos <xref:System.Windows.Forms.BindingSource> se cierra y el conjunto de datos y el adaptador de tabla específico de esa conexión de datos se agregan al formulario.</span><span class="sxs-lookup"><span data-stu-id="a6556-127">The **DataSource** UI type editor closes and the data set, <xref:System.Windows.Forms.BindingSource> and table adapter specific to that data connection are added to your form.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a6556-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="a6556-128">See also</span></span>
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
-- [<span data-ttu-id="049df-132">Agregar nuevos orígenes de datos</span><span class="sxs-lookup"><span data-stu-id="049df-132">Add new data sources</span></span>](/visualstudio/data-tools/add-new-data-sources)
-- <span data-ttu-id="049df-133">[Ventana Orígenes de datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="049df-133">[Data Sources Window](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))</span></span>
+- [<span data-ttu-id="a6556-129">Agregar nuevos orígenes de datos</span><span class="sxs-lookup"><span data-stu-id="a6556-129">Add new data sources</span></span>](/visualstudio/data-tools/add-new-data-sources)
+- <span data-ttu-id="a6556-130">[Ventana orígenes de datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="a6556-130">[Data Sources Window](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))</span></span>

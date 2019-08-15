@@ -9,90 +9,87 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343595"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039709"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="771e3-102">Procedimiento para agregar controles a formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="771e3-102">How to: Add Controls to Windows Forms</span></span>
-<span data-ttu-id="771e3-103">Mayoría de los formularios está diseñada agregando controles a la superficie del formulario para definir una interfaz de usuario (UI).</span><span class="sxs-lookup"><span data-stu-id="771e3-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="771e3-104">Un *control* es un componente en un formulario que se usa para mostrar información o Aceptar la entrada del usuario.</span><span class="sxs-lookup"><span data-stu-id="771e3-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="771e3-105">Para obtener más información acerca de los controles, vea [controles de formularios Windows Forms](index.md).</span><span class="sxs-lookup"><span data-stu-id="771e3-105">For more information about controls, see [Windows Forms Controls](index.md).</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="771e3-106">Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos.</span><span class="sxs-lookup"><span data-stu-id="771e3-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="771e3-107">Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** .</span><span class="sxs-lookup"><span data-stu-id="771e3-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="771e3-108">Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).</span><span class="sxs-lookup"><span data-stu-id="771e3-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-### <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="771e3-109">Para dibujar un control en un formulario</span><span class="sxs-lookup"><span data-stu-id="771e3-109">To draw a control on a form</span></span>  
-  
-1. <span data-ttu-id="771e3-110">Abra el formulario.</span><span class="sxs-lookup"><span data-stu-id="771e3-110">Open the form.</span></span> <span data-ttu-id="771e3-111">Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="771e3-111">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>  
-  
-2. <span data-ttu-id="771e3-112">En el **cuadro de herramientas**, haga clic en el control que desea agregar al formulario.</span><span class="sxs-lookup"><span data-stu-id="771e3-112">In the **Toolbox**, click the control you want to add to your form.</span></span>  
-  
-3. <span data-ttu-id="771e3-113">En el formulario, haga clic donde desee que la esquina superior izquierda del control que se ubiquen y arrastre hasta donde desee que la esquina inferior derecha del control que se encuentra.</span><span class="sxs-lookup"><span data-stu-id="771e3-113">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>  
-  
-     <span data-ttu-id="771e3-114">El control se agrega al formulario con el tamaño y la ubicación especificada.</span><span class="sxs-lookup"><span data-stu-id="771e3-114">The control is added to the form with the specified location and size.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="771e3-115">Cada control tiene definido un tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="771e3-115">Each control has a default size defined.</span></span> <span data-ttu-id="771e3-116">Puede agregar un control al formulario en el tamaño del control de forma predeterminada si lo arrastra desde el **cuadro de herramientas** al formulario.</span><span class="sxs-lookup"><span data-stu-id="771e3-116">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>  
-  
-### <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="771e3-117">Para arrastrar un control a un formulario</span><span class="sxs-lookup"><span data-stu-id="771e3-117">To drag a control to a form</span></span>  
-  
-1. <span data-ttu-id="771e3-118">Abra el formulario.</span><span class="sxs-lookup"><span data-stu-id="771e3-118">Open the form.</span></span> <span data-ttu-id="771e3-119">Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="771e3-119">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>  
-  
-2. <span data-ttu-id="771e3-120">En el **cuadro de herramientas**, haga clic en el control que desee y arrástrelo al formulario.</span><span class="sxs-lookup"><span data-stu-id="771e3-120">In the **Toolbox**, click the control you want and drag it to your form.</span></span>  
-  
-     <span data-ttu-id="771e3-121">El control se agrega al formulario en la ubicación especificada en su tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="771e3-121">The control is added to the form at the specified location in its default size.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="771e3-122">Haga doble clic en un control en el **cuadro de herramientas** para agregarlo a la esquina superior izquierda del formulario en su tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="771e3-122">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>  
-  
-     <span data-ttu-id="771e3-123">También puede agregar controles dinámicamente a un formulario en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="771e3-123">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="771e3-124">En el ejemplo de código siguiente, un <xref:System.Windows.Forms.TextBox> control se agregarán al formulario cuando un <xref:System.Windows.Forms.Button> se hace clic en el control.</span><span class="sxs-lookup"><span data-stu-id="771e3-124">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="771e3-125">El procedimiento siguiente requiere la existencia de un formulario con un **botón** control, `Button1`, ya colocados en él.</span><span class="sxs-lookup"><span data-stu-id="771e3-125">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>  
-  
-### <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="771e3-126">Para agregar un control a un formulario mediante programación</span><span class="sxs-lookup"><span data-stu-id="771e3-126">To add a control to a form programmatically</span></span>  
-  
-1. <span data-ttu-id="771e3-127">En el método que controla el botón `Click` evento dentro de la clase del formulario, insertar código similar al siguiente para agregar una referencia a la variable de control, establezca el control `Location`y agregar el control.</span><span class="sxs-lookup"><span data-stu-id="771e3-127">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>  
-  
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
-       Dim MyText As New TextBox()  
-       MyText.Location = New Point(25, 25)  
-       Me.Controls.Add(MyText)  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)   
-    {  
-       TextBox myText = new TextBox();  
-       myText.Location = new Point(25,25);  
-       this.Controls.Add (myText);  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-      System::Void button1_Click(System::Object ^  sender,  
-        System::EventArgs ^  e)  
-      {  
-        TextBox ^ myText = gcnew TextBox();  
-        myText->Location = Point(25,25);  
-        this->Controls->Add(myText);  
-      }  
-    ```  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="771e3-128">También puede agregar código para inicializar otras propiedades del control.</span><span class="sxs-lookup"><span data-stu-id="771e3-128">You can also add code to initialize other properties of the control.</span></span>  
-  
-    > [!IMPORTANT]
-    >  <span data-ttu-id="771e3-129">Podría exponer el equipo local a un riesgo de seguridad a través de la red haciendo referencia a un malintencionado `UserControl`.</span><span class="sxs-lookup"><span data-stu-id="771e3-129">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="771e3-130">Esto solo sería un problema en el caso de una persona malintencionada cree un control personalizado perjudicial, seguido por el que se agregara a su proyecto.</span><span class="sxs-lookup"><span data-stu-id="771e3-130">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="771e3-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="771e3-131">See also</span></span>
+# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="63332-102">Procedimiento para agregar controles a formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63332-102">How to: Add Controls to Windows Forms</span></span>
+<span data-ttu-id="63332-103">La mayoría de los formularios se diseñan agregando controles a la superficie del formulario para definir una interfaz de usuario (UI).</span><span class="sxs-lookup"><span data-stu-id="63332-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="63332-104">Un *control* es un componente de un formulario que se usa para mostrar información o para aceptar datos proporcionados por el usuario.</span><span class="sxs-lookup"><span data-stu-id="63332-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="63332-105">Para obtener más información sobre los controles, vea [controles de Windows Forms](index.md).</span><span class="sxs-lookup"><span data-stu-id="63332-105">For more information about controls, see [Windows Forms Controls](index.md).</span></span>
 
-- [<span data-ttu-id="771e3-132">Controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="771e3-132">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="771e3-133">Organizar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="771e3-133">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="771e3-134">Cómo: Cambiar el tamaño de los controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="771e3-134">How to: Resize Controls on Windows Forms</span></span>](how-to-resize-controls-on-windows-forms.md)
-- [<span data-ttu-id="771e3-135">Cómo: Establecer el texto mostrado por un Windows Forms Control</span><span class="sxs-lookup"><span data-stu-id="771e3-135">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [<span data-ttu-id="771e3-136">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="771e3-136">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+## <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="63332-106">Para dibujar un control en un formulario</span><span class="sxs-lookup"><span data-stu-id="63332-106">To draw a control on a form</span></span>
+
+1. <span data-ttu-id="63332-107">Abra el formulario.</span><span class="sxs-lookup"><span data-stu-id="63332-107">Open the form.</span></span> <span data-ttu-id="63332-108">Para obtener más información, consulte [Cómo Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="63332-108">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
+
+2. <span data-ttu-id="63332-109">En el **cuadro de herramientas**, haga clic en el control que desee agregar al formulario.</span><span class="sxs-lookup"><span data-stu-id="63332-109">In the **Toolbox**, click the control you want to add to your form.</span></span>
+
+3. <span data-ttu-id="63332-110">En el formulario, haga clic en el lugar en el que desea que se encuentre la esquina superior izquierda del control y arrastre hasta donde desee que se encuentre la esquina inferior derecha del control.</span><span class="sxs-lookup"><span data-stu-id="63332-110">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>
+
+     <span data-ttu-id="63332-111">El control se agrega al formulario con la ubicación y el tamaño especificados.</span><span class="sxs-lookup"><span data-stu-id="63332-111">The control is added to the form with the specified location and size.</span></span>
+
+    > [!NOTE]
+    >  <span data-ttu-id="63332-112">Cada control tiene definido un tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="63332-112">Each control has a default size defined.</span></span> <span data-ttu-id="63332-113">Puede Agregar un control al formulario en el tamaño predeterminado del control arrastrándolo desde el **cuadro de herramientas** al formulario.</span><span class="sxs-lookup"><span data-stu-id="63332-113">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>
+
+## <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="63332-114">Para arrastrar un control a un formulario</span><span class="sxs-lookup"><span data-stu-id="63332-114">To drag a control to a form</span></span>
+
+1. <span data-ttu-id="63332-115">Abra el formulario.</span><span class="sxs-lookup"><span data-stu-id="63332-115">Open the form.</span></span> <span data-ttu-id="63332-116">Para obtener más información, consulte [Cómo Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="63332-116">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>
+
+2. <span data-ttu-id="63332-117">En el **cuadro de herramientas**, haga clic en el control que desee y arrástrelo al formulario.</span><span class="sxs-lookup"><span data-stu-id="63332-117">In the **Toolbox**, click the control you want and drag it to your form.</span></span>
+
+     <span data-ttu-id="63332-118">El control se agrega al formulario en la ubicación especificada en su tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="63332-118">The control is added to the form at the specified location in its default size.</span></span>
+
+    > [!NOTE]
+    >  <span data-ttu-id="63332-119">Puede hacer doble clic en un control en el **cuadro de herramientas** para agregarlo a la esquina superior izquierda del formulario en su tamaño predeterminado.</span><span class="sxs-lookup"><span data-stu-id="63332-119">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>
+
+     <span data-ttu-id="63332-120">También puede Agregar controles de forma dinámica a un formulario en tiempo de ejecución.</span><span class="sxs-lookup"><span data-stu-id="63332-120">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="63332-121">En el ejemplo de código siguiente, <xref:System.Windows.Forms.TextBox> se agregará un control al formulario cuando se <xref:System.Windows.Forms.Button> haga clic en un control.</span><span class="sxs-lookup"><span data-stu-id="63332-121">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>
+
+    > [!NOTE]
+    >  <span data-ttu-id="63332-122">El procedimiento siguiente requiere la existencia de un formulario con un control **botón** , `Button1`, ya colocado en él.</span><span class="sxs-lookup"><span data-stu-id="63332-122">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>
+
+## <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="63332-123">Para agregar un control a un formulario mediante programación</span><span class="sxs-lookup"><span data-stu-id="63332-123">To add a control to a form programmatically</span></span>
+
+1. <span data-ttu-id="63332-124">En el método que controla el evento del `Click` botón dentro de la clase del formulario, inserte código similar al siguiente para agregar una referencia a la variable de control, establecer la clase `Location`del control y agregar el control.</span><span class="sxs-lookup"><span data-stu-id="63332-124">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>
+
+    ```vb
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+       Dim MyText As New TextBox()
+       MyText.Location = New Point(25, 25)
+       Me.Controls.Add(MyText)
+    End Sub
+    ```
+
+    ```csharp
+    private void button1_Click(object sender, System.EventArgs e)
+    {
+       TextBox myText = new TextBox();
+       myText.Location = new Point(25,25);
+       this.Controls.Add (myText);
+    }
+    ```
+
+    ```cpp
+    private:
+      System::Void button1_Click(System::Object ^  sender,
+        System::EventArgs ^  e)
+      {
+        TextBox ^ myText = gcnew TextBox();
+        myText->Location = Point(25,25);
+        this->Controls->Add(myText);
+      }
+    ```
+
+    > [!NOTE]
+    >  <span data-ttu-id="63332-125">También puede agregar código para inicializar otras propiedades del control.</span><span class="sxs-lookup"><span data-stu-id="63332-125">You can also add code to initialize other properties of the control.</span></span>
+
+    > [!IMPORTANT]
+    >  <span data-ttu-id="63332-126">Puede exponer el equipo local a un riesgo de seguridad a través de la red haciendo referencia `UserControl`a un malintencionado.</span><span class="sxs-lookup"><span data-stu-id="63332-126">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="63332-127">Esto solo suponer un problema en el caso de que una persona malintencionada cree un control personalizado perjudicial y, después, lo agregue por error a su proyecto.</span><span class="sxs-lookup"><span data-stu-id="63332-127">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="63332-128">Vea también</span><span class="sxs-lookup"><span data-stu-id="63332-128">See also</span></span>
+
+- [<span data-ttu-id="63332-129">Controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63332-129">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="63332-130">Organizar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63332-130">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="63332-131">Procedimientos: Cambiar el tamaño de los controles en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63332-131">How to: Resize Controls on Windows Forms</span></span>](how-to-resize-controls-on-windows-forms.md)
+- [<span data-ttu-id="63332-132">Procedimientos: Establecer el texto mostrado por un control de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63332-132">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [<span data-ttu-id="63332-133">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="63332-133">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
