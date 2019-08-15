@@ -1,6 +1,6 @@
 ---
-title: FormatFromRawValue (función) (referencia de API no administrada)
-description: FormatFromRawValue (función) convierte los datos de rendimiento sin procesar en un formato especificado.
+title: Función FormatFromRawValue (referencia de la API no administrada)
+description: La función FormatFromRawValue convierte los datos de rendimiento sin procesar en un formato especificado.
 ms.date: 11/21/2017
 api_name:
 - FormatFromRawValue
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47f92122eddf3cc8e6aec19d75fd2a95f76e9973
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 681d7ce42b2b8d16353e4f5b3523f1a953a49d95
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746695"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037893"
 ---
 # <a name="formatfromrawvalue-function"></a>Función FormatFromRawValue
 Convierte un valor de datos de rendimiento sin procesar al formato especificado, o bien dos valores de datos de rendimiento sin procesar si la conversión de formato es de duración definida. 
@@ -44,10 +44,10 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Parámetros
 
 `dwCounterType`\
-[in] El tipo de contador. Para obtener una lista de tipos de contador, vea [WMI Performance Counter Types](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` puede ser cualquier tipo de contador excepto `PERF_LARGE_RAW_FRACTION` y `PERF_LARGE_RAW_BASE`. 
+de El tipo de contador. Para obtener una lista de tipos de contadores, vea tipos de contadores de [rendimiento de WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType`puede ser cualquier tipo de `PERF_LARGE_RAW_FRACTION` contador excepto y. `PERF_LARGE_RAW_BASE` 
 
 `dwFormat`\
-[in] El formato que se va a convertir los datos de rendimiento sin procesar. Puede ser uno de los siguientes valores:
+de Formato al que se van a convertir los datos de rendimiento sin procesar. Puede ser uno de los siguientes valores:
 
 |Constante  |Valor  |DESCRIPCIÓN |
 |---------|---------|---------|
@@ -55,46 +55,46 @@ int FormatFromRawValue (
 | `PDH_FMT_LARGE` | 0x00000400 | Devuelve el valor calculado como un entero de 64 bits. |
 | `PDH_FMT_LONG` | 0x00000100 | Devuelve el valor calculado como un entero de 32 bits. |
 
-Uno de los valores anteriores puede ser ORed con uno de los siguientes indicadores de escalado:
+Uno de los valores anteriores puede ser ORed con una de las siguientes marcas de escalado:
 
 |Constante  |Valor  |DESCRIPCIÓN |
 |---------|---------|---------|
-| `PDH_FMT_NOSCALE` | 0x00001000 | No se aplican los factores de escala del contador. |
-| `PDH_FMT_1000` | 0x00002000 | Multiplica el valor final por 1.000. | 
+| `PDH_FMT_NOSCALE` | 0x00001000 | No aplique los factores de escala del contador. |
+| `PDH_FMT_1000` | 0x00002000 | Multiplique el valor final por 1.000. | 
 
 `pTimeBase`\
-[in] Un puntero a la base de tiempo, si es necesario para la conversión de formato. Si no es necesaria para la conversión de formato base la información de tiempo, se omite el valor de este parámetro.
+de Puntero a la base de tiempo, si es necesario para la conversión de formato. Si la información de base de tiempo no es necesaria para la conversión de formato, se omite el valor de este parámetro.
 
-`pRawValue1`\ [in] un puntero a un [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) estructura que representa un valor de rendimiento sin procesar.
+`pRawValue1`\ [in] un puntero a una [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) estructura que representa un valor de rendimiento sin procesar.
 
 `pRawValue2`\
-[in] Un puntero a un [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) estructura que representa un segundo valor de rendimiento sin procesar. Si no es necesario un segundo valor de rendimiento sin procesar, este parámetro debe ser `null`.
+de Puntero a una [`PDH_RAW_COUNTER`](/windows/win32/api/pdh/ns-pdh-pdh_raw_counter) estructura que representa un segundo valor de rendimiento sin procesar. Si no es necesario un segundo valor de rendimiento sin procesar, este parámetro `null`debe ser.
 
 `pFmtValue`\
-[out] Un puntero a un [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) estructura que recibe el valor de rendimiento con formato.
+enuncia Puntero a una [`PDH_FMT_COUNTERVALUE`](/windows/win32/api/pdh/ns-pdh-pdh_fmt_countervalue) estructura que recibe el valor de rendimiento con formato.
 
 ## <a name="return-value"></a>Valor devuelto
 
 Esta función devuelve los valores siguientes:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | 0 | La llamada de función es correcta. |
-| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Un argumento requerido falta o es incorrecta. | 
+| `ERROR_SUCCESS` | 0 | La llamada de función se realiza correctamente. |
+| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Falta un argumento necesario o es incorrecto. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | El identificador no es un objeto PDH válido. |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) función.
+Esta función contiene una llamada a la función [FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85)) .
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
 
- **Biblioteca:** PerfCounter.dll
+ **Biblioteca** PerfCounter.dll
 
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

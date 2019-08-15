@@ -5,34 +5,39 @@ helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937727"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037907"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>Cómo crear un valor de configuración en tiempo de diseño
-Puede crear una nueva configuración en tiempo de diseño mediante el Diseñador de configuración. El Diseñador de configuración es una interfaz de estilo de cuadrícula que le permite crear una nueva configuración y especificar las propiedades de esos valores. Debe especificar el nombre, valor, tipo y ámbito de la nueva configuración. Una vez que se crea una configuración, es accesible en el código.  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>Para crear una nueva configuración en tiempo de diseño en C\#
-  
-1. En **el Explorador de soluciones**, expanda el **propiedades** nodo del proyecto.  
-  
-2. Haga doble clic en el archivo .settings en el que desea agregar una nueva configuración. El nombre predeterminado para este archivo es Settings.settings.  
-  
-3. En el Diseñador de configuración, establezca el nombre, valor, tipo y ámbito de la configuración. Cada fila representa un valor único.  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-visual-basic"></a>Para crear una nueva configuración en tiempo de diseño en Visual Basic  
-  
-1. En **el Explorador de soluciones**, haga clic en el nodo del proyecto y elija **propiedades**.  
-  
-2. En el **propiedades** página, seleccione el **configuración** ficha.  
-  
-3. En el Diseñador de configuración, establezca el nombre, valor, tipo y ámbito de la configuración. Cada fila representa un valor único.  
-  
+# <a name="how-to-create-a-new-setting-at-design-time"></a>Cómo Crear un nuevo valor de configuración en tiempo de diseño
+
+Puede crear un nuevo valor de configuración en tiempo de diseño mediante el diseñador de configuración de Visual Studio. El diseñador de configuración es una interfaz de estilo de cuadrícula que le permite crear nuevas opciones de configuración y especificar propiedades para esas opciones. Debe especificar el nombre, el valor, el tipo y el ámbito de la nueva configuración. Una vez creada la configuración, se puede acceder a ella en el código.
+
+## <a name="create-a-new-setting-at-design-time-in-c"></a>Crear un nuevo valor de configuración en tiempo de diseño en C\#
+
+1. Abra Visual Studio.
+
+2. En **Explorador de soluciones**, expanda el nodo **propiedades** del proyecto.
+
+3. Haga doble clic en el archivo. Settings en el que desea agregar un nuevo valor. El nombre predeterminado de este archivo es Settings. Settings.
+
+4. En el diseñador de configuración, establezca el **nombre**, el **valor**, el **tipo**y el **ámbito** de la configuración. Cada fila representa una única configuración.
+
+## <a name="create-a-new-setting-at-design-time-in-visual-basic"></a>Crear un nuevo valor de configuración en tiempo de diseño en Visual Basic
+
+1. Abra Visual Studio.
+
+2. En **Explorador de soluciones**, haga clic con el botón secundario en el nodo del proyecto y elija **propiedades**.
+
+3. En la página **propiedades** , seleccione la pestaña **configuración** .
+
+4. En el diseñador de configuración, establezca el **nombre**, el **valor**, el **tipo**y el **ámbito** de la configuración. Cada fila representa una única configuración.
+
 ## <a name="see-also"></a>Vea también
 
 - [Utilizar valores de configuración de aplicación y de usuario](using-application-settings-and-user-settings.md)
 - [Introducción a la configuración de la aplicación](application-settings-overview.md)
-- [Cómo: Cambie el valor de una configuración existente en tiempo de diseño](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [Cómo: Cambiar el valor de una configuración existente en tiempo de diseño](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

@@ -11,65 +11,62 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: adf25973fde790937461007bd0106cca02dd83be
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913632"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039795"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>Procedimiento para mover elementos ToolStripMenuItems
-En tiempo de diseño, puede mover los menús de nivel superior completos y sus elementos de menú a un lugar diferente el <xref:System.Windows.Forms.MenuStrip>. También puede mover elementos de menú individuales entre los menús de nivel superior o cambiar la posición de los elementos de menú dentro de un menú.  
-  
-> [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>Para mover un menú de nivel superior y sus elementos de menú a otra ubicación de nivel superior  
-  
-1. Haga clic y mantenga presionado el botón primario del mouse en el menú que desea mover.  
-  
-2. Arrastre el punto de inserción en el menú de nivel superior que está antes de la nueva ubicación deseada y suelte el botón primario del mouse.  
-  
-     El menú seleccionado se mueve a la derecha del punto de inserción.  
-  
-### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>Para mover un menú de nivel superior y sus elementos de menú a una ubicación de la lista desplegable  
-  
-1. Haga clic en el menú que desea mover y presione CTRL + X, o el menú contextual y seleccione **cortar** en el menú contextual.  
-  
-2. En el menú de nivel superior de destino, haga clic en el elemento de menú por encima de la nueva ubicación deseada y presione CTRL+V, o haga clic en el elemento de menú situado encima de la nueva ubicación deseada y seleccione **pegar** en el menú contextual.  
-  
-     El menú que ha cortado se inserta después del elemento de menú seleccionado.  
-  
-### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>Para mover un elemento de menú dentro de un menú con el Editor de colección de elementos  
-  
-1. Haga clic en el menú que contiene el elemento de menú que desea mover.  
-  
-2. En el menú contextual, elija **Editar DropDownItems**.  
-  
-3. En el **Editor de la colección de elementos**, haga clic en el elemento de menú que desea mover.  
-  
-4. Haga clic en las teclas de dirección arriba y abajo para mover el elemento de menú en el menú.  
-  
-5. Haga clic en **Aceptar**.  
-  
-### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a>Para mover un elemento de menú dentro de un menú mediante el teclado  
-  
-1. Presione y mantenga presionada la tecla ALT.  
-  
-2. Haga clic y mantenga el botón primario del mouse en el elemento de menú que desea mover.  
-  
-3. Arrastre el elemento de menú a la nueva ubicación y suelte el botón primario del mouse.  
-  
-### <a name="to-move-a-menu-item-to-another-menu"></a>Para mover un elemento de menú a otro menú  
-  
-1. Haga clic en el elemento de menú que desea mover y presione CTRL + X, o haga clic en el elemento de menú y elija **cortar** en el menú contextual.  
-  
-2. Haga clic en el menú que contendrá el elemento de menú que ha cortado.  
-  
-3. Haga clic en el elemento de menú que está antes de la nueva ubicación deseada y presione CTRL+V o haga clic en el elemento de menú que es anterior a la nueva ubicación deseada y seleccione **pegar** en el menú contextual.  
-  
-     El elemento de menú que ha cortado se inserta después del elemento de menú seleccionado.  
-  
+En tiempo de diseño, puede desplazar los menús de nivel superior completos y sus elementos de menú a un <xref:System.Windows.Forms.MenuStrip>lugar diferente en el. También puede mover elementos de menú individuales entre los menús de nivel superior o cambiar la posición de los elementos de menú dentro de un menú.
+
+## <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>Para desplace un menú de nivel superior y sus elementos de menú a otra ubicación de nivel superior
+
+1. Haga clic y mantenga presionado el botón primario del mouse en el menú que desea desplace.
+
+2. Arrastre el punto de inserción hasta el menú de nivel superior que está antes de la nueva ubicación deseada y suelte el botón primario del mouse.
+
+     El menú seleccionado se mueve a la derecha del punto de inserción.
+
+## <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>Para trasladar un menú de nivel superior y sus elementos de menú a una ubicación desplegable
+
+1. Haga clic en el menú que desea desplace y presione CTRL + X o haga clic con el botón derecho en el menú y seleccione **cortar** en el menú contextual.
+
+2. En el menú de nivel superior de destino, haga clic con el botón primario en el elemento de menú situado encima de la nueva ubicación deseada y presione CTRL + V, o haga clic con el botón derecho en el elemento de menú situado encima de la nueva ubicación deseada y seleccione **pegar** en el menú contextual.
+
+     El menú que corte se insertará después del elemento de menú seleccionado.
+
+## <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>Para desplace un elemento de menú dentro de un menú mediante el editor de la colección de elementos
+
+1. Haga clic con el botón secundario en el menú que contiene el elemento de menú que desea desplace.
+
+2. En el menú contextual, elija **Editar DropDownItems**.
+
+3. En el **Editor**de la colección de elementos, haga clic con el botón primario en el elemento de menú que desea desplace.
+
+4. Haga clic en las teclas de flecha arriba y abajo para colocar el elemento de menú en el menú.
+
+5. Haga clic en **OK**.
+
+## <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a>Para desplace un elemento de menú dentro de un menú mediante el teclado
+
+1. Presione y mantenga presionada la tecla ALT.
+
+2. Haga clic y mantenga presionado el botón primario del mouse en el elemento de menú que desea desplace.
+
+3. Arrastre el elemento de menú a la nueva ubicación y suelte el botón primario del mouse.
+
+## <a name="to-move-a-menu-item-to-another-menu"></a>Para colocar un elemento de menú en otro menú
+
+1. Haga clic con el botón primario en el elemento de menú que desea desplace y presione CTRL + X o haga clic con el botón derecho en el elemento de menú y elija **cortar** en el menú contextual.
+
+2. Haga clic con el botón primario en el menú que contendrá el elemento de menú que ha cortado.
+
+3. Haga clic con el botón primario en el elemento de menú que está antes de la nueva ubicación deseada y presione CTRL + V, o haga clic con el botón derecho en el elemento de menú que se encuentra antes de la nueva ubicación deseada y seleccione **pegar** en el menú contextual.
+
+     El elemento de menú que corte se insertará después del elemento de menú seleccionado.
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.MenuStrip>

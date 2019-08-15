@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dce0e67479418cd8227c75fadd8872a41ae1a799
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9eef89c9e560da65d670ffe59649b44a64f8da6a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741345"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039610"
 ---
-# <a name="axlauthenticodetimestamperinfo-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO (Estructura)
+# <a name="axl_authenticode_timestamper_info-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO (Estructura)
 Define la información del autor de la marca de hora de Authenticode.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,7 +34,7 @@ typedef struct _AXL_AUTHENTICODE_SIGNER_INFO {
 |`dwError`|Código de error.|  
 |`algHash`|Algoritmo hash.|  
 |`ftTimestamp`|Hora de la marca de hora.|  
-|`pChainContext`|Contexto de cadena del autor de la marca de hora.  Consulte la [CERT_CONTEXT](/windows/desktop/api/wincrypt/ns-wincrypt-_cert_context) estructura.|  
+|`pChainContext`|Contexto de cadena del autor de la marca de hora.  Vea la estructura [CERT_CONTEXT](/windows/win32/api/wincrypt/ns-wincrypt-cert_context) .|  
   
 ## <a name="see-also"></a>Vea también
 

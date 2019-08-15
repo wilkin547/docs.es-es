@@ -6,31 +6,28 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b7ea0fc953be5360e38bef9439347529986908f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011247"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039762"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Procedimiento para agregar un control a una ficha mediante el diseñador
-El uso de los formularios de Windows <xref:System.Windows.Forms.TabControl> consiste en mostrar otros controles de forma organizada. Puede usar estas instrucciones para mostrar una imagen en la parte principal de una página de ficha. Para obtener información sobre cómo agregar un icono a la parte de la etiqueta de una página de ficha, vea [Cómo: Cambiar la apariencia del control TabControl de formularios de Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
-  
- El procedimiento siguiente requiere una **aplicación Windows** proyecto con un formulario que contenga un <xref:System.Windows.Forms.TabControl> control. Para obtener información acerca de cómo configurar un proyecto de este tipo, vea [Cómo: Cree un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) y [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md).  
-  
-> [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-add-a-control-using-the-designer"></a>Para agregar un control mediante el diseñador  
-  
-1. Haga clic en la página de ficha adecuada para que aparezca en la parte superior.  
-  
-2. Dibuje el control en la página de ficha.  
-  
+El uso de la Windows Forms <xref:System.Windows.Forms.TabControl> es mostrar otros controles de manera organizada. Puede usar estas instrucciones para mostrar una imagen en la parte principal de una página de ficha. Para obtener información acerca de cómo agregar un icono a la parte de etiqueta de una [página de ficha, consulte How to: Cambie la apariencia de la Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).
+
+ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con un formulario que <xref:System.Windows.Forms.TabControl> contenga un control. Para obtener información acerca de cómo configurar este tipo de [proyecto, consulte Cómo: Cree un proyecto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicación de [Windows Forms y cómo: Agregue controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
+
+## <a name="to-add-a-control-using-the-designer"></a>Para agregar un control mediante el diseñador
+
+1. Haga clic en la página de ficha correspondiente para que aparezca en la parte superior.
+
+2. Dibuje el control en la página de ficha.
+
 ## <a name="see-also"></a>Vea también
 
 - [TabControl (control)](tabcontrol-control-windows-forms.md)
 - [Información general del control TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Cómo: Cambiar la apariencia del control TabControl de formularios de Windows](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [Cómo: Deshabilitar páginas de fichas](how-to-disable-tab-pages.md)
-- [Cómo: Agregar y quitar fichas con el control TabControl de formularios de Windows](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Cómo: Cambiar la apariencia de la Windows Forms TabControl](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Cómo: Deshabilitar páginas de ficha](how-to-disable-tab-pages.md)
+- [Cómo: Agregar y quitar pestañas con el Windows Forms TabControl](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

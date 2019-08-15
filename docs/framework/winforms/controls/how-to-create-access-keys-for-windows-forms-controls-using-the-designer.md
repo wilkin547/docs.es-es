@@ -15,26 +15,23 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: 410fc0134046c5fa7e05bfcd38ce6818244a0a54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 01bed04483702ba2e62162b675aa1138bc1b0e01
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746896"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039520"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Procedimiento para crear teclas de acceso para controles de formularios Windows Forms mediante el diseñador
-Un *clave de acceso* es un carácter subrayado en el texto de un menú, elemento de menú o la etiqueta de un control como un botón. Permite al usuario "haga clic en" un botón presionando la tecla ALT en combinación con la clave de acceso predefinidas. Por ejemplo, si un botón ejecuta un procedimiento para imprimir un formulario y por lo tanto, su `Text` propiedad se establece en "Imprimir" Agregar una y comercial (&) delante de la letra "P" hace que la letra "P" estar subrayados en el texto del botón en tiempo de ejecución. El usuario puede ejecutar el comando asociado con el botón presionando ALT + P. No puede tener una clave de acceso para un control que no se puede recibir el foco.  
-  
-> [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-an-access-key-for-a-control"></a>Para crear una clave de acceso para un control  
-  
-1. En el **propiedades** ventana, establezca el `Text` en una cadena que incluye una y comercial (&) delante de la letra que será la clave de acceso de propiedad. Por ejemplo, para establecer la letra "P" como la clave de acceso, escriba **& impresión** en la cuadrícula.  
-  
+Una *tecla de acceso* es un carácter subrayado en el texto de un menú, un elemento de menú o la etiqueta de un control, como un botón. Permite al usuario "hacer clic" en un botón presionando la tecla ALT en combinación con la tecla de acceso predefinida. Por ejemplo, si un botón ejecuta un procedimiento para imprimir un formulario y, por tanto `Text` , su propiedad se establece en "Imprimir", agregar un símbolo de y comercial (&) antes de la letra "p" hace que la letra "p" esté subrayada en el texto del botón en tiempo de ejecución. El usuario puede ejecutar el comando asociado al botón presionando ALT + P. No puede tener una tecla de acceso para un control que no puede recibir el foco.
+
+## <a name="to-create-an-access-key-for-a-control"></a>Para crear una tecla de acceso para un control
+
+1. En la ventana **propiedades** , establezca la `Text` propiedad en una cadena que incluya una y comercial (&) delante de la letra que será la tecla de acceso. Por ejemplo, para establecer la letra "P" como tecla de acceso, escriba **& imprimir** en la cuadrícula.
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Button>
 - [Cómo: Responder a clics de botón de Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
-- [Cómo: Establecer el texto mostrado por un Windows Forms Control](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Cómo: Establecer el texto mostrado por un control de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

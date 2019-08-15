@@ -5,30 +5,27 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-ms.openlocfilehash: f127a1a74643c975aea73b24896c098b365aa327
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc352f15fb1e8b531cd0f9b298b2db4ce649d3cf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972307"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039647"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>Procedimiento para designar un botón de formularios Windows Forms como botón para cancelar mediante el diseñador
-En cualquier formulario de Windows, se puede designar un <xref:System.Windows.Forms.Button> que sea el botón Cancelar del control. Cada vez que el usuario presiona la tecla ESC, independientemente de que otro control en el formulario tiene el foco, se hace clic en un botón Cancelar. Habitualmente se programa un botón para permitir que el usuario salga rápidamente de una operación sin confirmar ninguna acción.  
-  
-> [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-designate-the-cancel-button"></a>Para designar el botón Cancelar  
-  
-1. Seleccione el formulario en el que reside el botón.  
-  
-2. En el **propiedades** ventana, establezca el formulario <xref:System.Windows.Forms.Form.CancelButton%2A> propiedad a la <xref:System.Windows.Forms.Button> nombre del control.  
-  
+En cualquier Windows Form, puede designar un <xref:System.Windows.Forms.Button> control para que sea el botón Cancelar. Se hace clic en un botón Cancelar cuando el usuario presiona la tecla ESC, independientemente del control del formulario que tenga el foco. Normalmente, este botón se programa para permitir al usuario salir rápidamente de una operación sin confirmar ninguna acción.
+
+## <a name="to-designate-the-cancel-button"></a>Para designar el botón Cancelar
+
+1. Seleccione el formulario en el que reside el botón.
+
+2. En la ventana **propiedades** , establezca la propiedad del <xref:System.Windows.Forms.Form.CancelButton%2A> formulario en el <xref:System.Windows.Forms.Button> nombre del control.
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Información general sobre el control Button](button-control-overview-windows-forms.md)
 - [Maneras de seleccionar un control Button de formularios Windows Forms](ways-to-select-a-windows-forms-button-control.md)
-- [Cómo: Responder a clics de botón de Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
-- [Cómo: Designar un botón de formularios Windows Forms como botón para aceptar mediante el diseñador](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [Procedimientos: Responder a clics de botón de Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Cómo: Designar un botón de Windows Forms como botón para aceptar mediante el diseñador](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
 - [Botón (control)](button-control-windows-forms.md)

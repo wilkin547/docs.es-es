@@ -8,16 +8,16 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 889e81053d4e2264755468446a4e1681216ae22e
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747690"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040375"
 ---
-# <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Crear contenido de WPF en formularios Windows Forms en tiempo de diseño
+# <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Tutorial: Crear nuevo contenido de WPF en Windows Forms en tiempo de diseño
 
-En este tema se muestra cómo crear un control de Windows Presentation Foundation (WPF) para usarlo en aplicaciones basadas en Windows Forms.
+En este artículo se muestra cómo crear un control de Windows Presentation Foundation (WPF) para su uso en las aplicaciones basadas en Windows Forms.
 
 En este tutorial, realizará las tareas siguientes:
 
@@ -31,27 +31,27 @@ En este tutorial, realizará las tareas siguientes:
 
 Necesita los componentes siguientes para completar este tutorial:
 
-- Visual Studio 2017
+- Visual Studio
 
-## <a name="creating-the-project"></a>Crear el proyecto
+## <a name="create-the-project"></a>Crear el proyecto
 
-El primer paso es crear el proyecto de Windows Forms. Abra Visual Studio y cree un nuevo **Windows Forms App (.NET Framework)** proyecto en Visual Basic o Visual C# llamado `HostingWpf`.
+El primer paso es crear el proyecto de Windows Forms. Abra Visual Studio y cree un nuevo proyecto de **Windows Forms App (.NET Framework)** en Visual Basic o C# en `HostingWpf`visual denominado.
 
 > [!NOTE]
 > Al hospedar contenido de WPF, solo se admiten proyectos de C# y Visual Basic.
 
-## <a name="creating-a-new-wpf-control"></a>Crear un nuevo control WPF
+## <a name="create-a-new-wpf-control"></a>Crear un nuevo control WPF
 
-Crear un nuevo control WPF y agregarlo al proyecto es tan fácil como agregar cualquier otro elemento al proyecto. El Diseñador de formularios de Windows funciona con un determinado tipo de control denominado *control compuesto*, o *control de usuario*. Para obtener más información acerca de los controles de usuario WPF, consulte <xref:System.Windows.Controls.UserControl>.
+Crear un nuevo control WPF y agregarlo al proyecto es tan fácil como agregar cualquier otro elemento al proyecto. El Diseñador de Windows Forms funciona con un tipo determinado de control denominado *control compuesto*o *control de usuario*. Para obtener más información acerca de los controles de usuario WPF, consulte <xref:System.Windows.Controls.UserControl>.
 
 > [!NOTE]
 > El tipo de <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType> para WPF es distinto del tipo de control de usuario proporcionado por Windows Forms, que también se llama <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>.
 
-### <a name="to-create-a-new-wpf-control"></a>Para crear un nuevo control WPF
+Para crear un control de WPF nuevo:
 
-1. En **el Explorador de soluciones**, agregue un nuevo **biblioteca de controles de usuario de WPF (.NET Framework)** proyecto a la solución. Use el nombre predeterminado de la biblioteca de controles, `WpfControlLibrary1`. El nombre predeterminado del control es `UserControl1.xaml`.
+1. En **Explorador de soluciones**, agregue un nuevo proyecto **biblioteca de controles de usuario (.NET Framework) de WPF** a la solución. Use el nombre predeterminado de la biblioteca de controles, `WpfControlLibrary1`. El nombre predeterminado del control es `UserControl1.xaml`.
 
-     Agregar el nuevo control tiene los efectos siguientes:
+     Agregar el nuevo control tiene los siguientes efectos:
 
     - Se agrega el archivo UserControl1.xaml.
 
@@ -61,52 +61,52 @@ Crear un nuevo control WPF y agregarlo al proyecto es tan fácil como agregar cu
 
     - Se abre el archivo UserControl1.xaml en el [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)].
 
-2. En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, vea [Cómo: Seleccionar y mover elementos en la superficie de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100)).
+2. En la vista Diseño, asegúrese de que `UserControl1` está seleccionado. Para obtener más información, consulte [Cómo Seleccione y mueva los elementos en el](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))superficie de diseño.
 
-3. En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.FrameworkElement.Width%2A> y <xref:System.Windows.FrameworkElement.Height%2A> propiedades a **200**.
+3. En la ventana **propiedades** , establezca el valor de las <xref:System.Windows.FrameworkElement.Width%2A> propiedades <xref:System.Windows.FrameworkElement.Height%2A> y en **200**.
 
-4. Desde el **cuadro de herramientas**, arrastre un <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> control a la superficie de diseño.
+4. En el **cuadro de herramientas**, <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> arrastre un control hasta la superficie de diseño.
 
-5. En el **propiedades** ventana, establezca el valor de la <xref:System.Windows.Controls.TextBox.Text%2A> propiedad **contenido hospedado**.
+5. En la ventana **propiedades** , establezca el valor de la <xref:System.Windows.Controls.TextBox.Text%2A> propiedad en **contenido hospedado**.
 
     > [!NOTE]
     > Por lo general, debería hospedar contenido WPF más sofisticado. El control <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> se usa aquí únicamente con fines ilustrativos.
 
 6. Compile el proyecto.
 
-## <a name="adding-a-wpf-control-to-a-windows-form"></a>Agregar un control WPF a un Windows Form
+## <a name="add-a-wpf-control-to-a-windows-form"></a>Agregar un control WPF a Windows Forms
 
-El nuevo control WPF está listo para usarse en el formulario. Windows Forms utiliza el <xref:System.Windows.Forms.Integration.ElementHost> control para hospedar contenido WPF.
+El nuevo control WPF está listo para usarse en el formulario. Windows Forms usa el <xref:System.Windows.Forms.Integration.ElementHost> control para hospedar contenido de WPF.
 
-### <a name="to-add-a-wpf-control-to-a-windows-form"></a>Para agregar un control WPF a un Windows Form
+Para agregar un control de WPF a un Windows Form:
 
 1. Abra `Form1` en el Diseñador de Windows Forms.
 
-2. En el **cuadro de herramientas**, busque la pestaña **controles de usuario de WPF WPFUserControlLibrary**.
+2. En el **cuadro de herramientas**, busque la pestaña etiquetada **WPFUserControlLibrary control de usuario de WPF**.
 
 3. Arrastre una instancia de `UserControl1` hasta el formulario.
 
     - Se crea automáticamente un control <xref:System.Windows.Forms.Integration.ElementHost> en el formulario para hospedar el control WPF.
 
-    - El <xref:System.Windows.Forms.Integration.ElementHost> control se denomina `elementHost1` y en el **propiedades** ventana, puede ver su <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> propiedad está establecida en **UserControl1**.
+    - El <xref:System.Windows.Forms.Integration.ElementHost> control se denomina `elementHost1` y, en la ventana **propiedades** , puede ver que <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> su propiedad está establecida en **UserControl1**.
 
     - Se agregan referencias a ensamblados de WPF al proyecto.
 
     - El control `elementHost1` tiene un panel de etiquetas inteligentes que muestra las opciones de hospedaje disponibles.
 
-4. En el **tareas de ElementHost** panel de etiquetas inteligentes, seleccione **acoplar en contenedor primario**.
+4. En el panel de etiquetas inteligentes **tareas de ElementHost** , seleccione **acoplar en contenedor primario**.
 
 5. Presione **F5** para compilar y ejecutar la aplicación.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Windows Forms y WPF son tecnologías diferentes, pero están diseñadas para interoperar estrechamente. Para proporcionar un aspecto y comportamiento en sus aplicaciones, pruebe lo siguiente:
+Windows Forms y WPF son tecnologías diferentes, pero están diseñadas para interoperar estrechamente. Para proporcionar una apariencia y un comportamiento más completos en las aplicaciones, intente lo siguiente:
 
-- Hospede un control de Windows Forms en una página WPF. Para obtener más información, vea [Tutorial: Control se hospeda en un Windows Forms en WPF](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).
+- Hospede un control de Windows Forms en una página WPF. Para obtener más información, vea [Tutorial: Hospedar un control de Windows Forms](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)en WPF.
 
-- Aplique estilos visuales de Windows Forms a su contenido de WPF. Para obtener más información, vea [Cómo: Habilitar estilos visuales en una aplicación híbrida](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md).
+- Aplique estilos visuales de Windows Forms a su contenido de WPF. Para obtener más información, consulte [Cómo Habilitar estilos visuales en una aplicación](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)híbrida.
 
-- Cambie el estilo de su contenido de WPF. Para obtener más información, vea [Tutorial: Aplicar estilos al contenido WPF](walkthrough-styling-wpf-content.md).
+- Cambie el estilo de su contenido de WPF. Para obtener más información, vea [Tutorial: Aplicar estilos al](walkthrough-styling-wpf-content.md)contenido de WPF.
 
 ## <a name="see-also"></a>Vea también
 

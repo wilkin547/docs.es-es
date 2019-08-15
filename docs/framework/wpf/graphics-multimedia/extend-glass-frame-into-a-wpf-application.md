@@ -10,27 +10,27 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 11c872767b5e3595da1fb4982d3b12e0fc77db98
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: f8d50cb4d0112232f86579542650418a1906bda2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238587"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039845"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Ampliar el marco de vidrio en una aplicación de WPF
 
-En este tema muestra cómo extender el [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] marco de vidrio en el área de cliente de una aplicación de Windows Presentation Foundation (WPF).
+En este tema se muestra cómo extender [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] el marco Glass en el área cliente de una aplicación Windows Presentation Foundation (WPF).
 
 > [!NOTE]
 > Este ejemplo solo funciona en una máquina [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] que ejecute el Administrador de ventanas de escritorio (DWM) con efecto de cristal habilitado. [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] Home Basic no admite el efecto de cristal transparente. Las áreas que normalmente se representarían con el efecto de cristal transparente en otras ediciones de [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] se representan opacas.
 
 ## <a name="example"></a>Ejemplo
 
-La siguiente imagen ilustra el marco glass extendido en la barra de direcciones de Internet Explorer 7:
+En la imagen siguiente se muestra el marco Glass extendido en la barra de direcciones de Internet Explorer 7:
 
-![Captura de pantalla mostrando marco de vidrio ampliado detrás de la barra de direcciones de IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
+![Captura de pantalla que muestra el marco de cristal ampliado detrás de la barra de direcciones de IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Para ampliar el marco de vidrio en una [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación, es necesario tener acceso a la API no administrada. El ejemplo de código siguiente realiza una invocación de plataforma (pinvoke) para las dos API necesaria para ampliar el marco en el área cliente. Cada una de estas API se declaran en una clase denominada **NonClientRegionAPI**.
+Para extender el marco Glass en una [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación, se necesita acceso a la API no administrada. En el ejemplo de código siguiente se realiza una invocación de plataforma (PInvoke) para las dos API necesarias para extender el marco en el área cliente. Cada una de estas API se declaran en una clase denominada **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -62,11 +62,11 @@ Public Shared Function DwmExtendFrameIntoClientArea(ByVal hwnd As IntPtr, ByRef 
 End Function
 ```
 
-[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) es la función de DWM que amplia el marco en el área cliente. Toma dos parámetros; un identificador de ventana y una estructura [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins). [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) se usa para indicarle al DWM cuánto más debe ampliarse el marco en el área cliente.
+[DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) es la función de DWM que amplia el marco en el área cliente. Toma dos parámetros; un identificador de ventana y una estructura [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins). [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) se usa para indicarle al DWM cuánto más debe ampliarse el marco en el área cliente.
 
 ## <a name="example"></a>Ejemplo
 
-Para usar la función [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), debe obtenerse un identificador de ventana. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], se puede obtener el identificador de ventana de la <xref:System.Windows.Interop.HwndSource.Handle%2A> propiedad de un <xref:System.Windows.Interop.HwndSource>. En el ejemplo siguiente, el marco se extiende en el área de cliente en el <xref:System.Windows.FrameworkElement.Loaded> eventos de la ventana.
+Para usar la función [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), debe obtenerse un identificador de ventana. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], el identificador de ventana se puede obtener a <xref:System.Windows.Interop.HwndSource.Handle%2A> partir de la <xref:System.Windows.Interop.HwndSource>propiedad de un. En el ejemplo siguiente, el marco se extiende en el área cliente en el <xref:System.Windows.FrameworkElement.Loaded> evento de la ventana.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -111,7 +111,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ## <a name="example"></a>Ejemplo
 
-En el ejemplo siguiente se muestra una ventana simple en la que el marco se amplía en el área cliente. El marco se amplía por detrás del borde superior que contiene las dos <xref:System.Windows.Controls.TextBox> objetos.
+En el ejemplo siguiente se muestra una ventana simple en la que el marco se amplía en el área cliente. El marco se extiende detrás del borde superior que contiene los dos <xref:System.Windows.Controls.TextBox> objetos.
 
 ```xaml
 <Window x:Class="SDKSample.Window1"
@@ -145,12 +145,12 @@ En el ejemplo siguiente se muestra una ventana simple en la que el marco se ampl
 </Window>
 ```
 
-La siguiente imagen ilustra el marco glass extendido en un [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicación:
+En la imagen siguiente se muestra el marco Glass extendido en [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] una aplicación:
 
-![Captura de pantalla que muestra un marco de vidrio ampliado en una aplicación WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
+![Captura de pantalla que muestra un marco de cristal ampliado en una aplicación WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general del Administrador de ventanas de escritorio](/windows/desktop/dwm/dwm-overview)
-- [Información general de desenfoque del Administrador de ventanas de escritorio](/windows/desktop/dwm/blur-ovw)
+- [Información general de Administrador de ventanas de escritorio](/windows/desktop/dwm/dwm-overview)
+- [Información general sobre desenfoque Administrador de ventanas de escritorio](/windows/desktop/dwm/blur-ovw)
 - [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) (DwmExtendFrameIntoClientArea [función])

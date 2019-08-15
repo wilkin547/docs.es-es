@@ -5,33 +5,30 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 5c92b7bfd5026b0569397dc05cca216fbdab0753
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689306"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039504"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedimiento para crear un control con enlace simple en formularios Windows Forms
 
-Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de columna de una tabla de conjunto de datos en un control. Puede enlazar cualquier propiedad de un control de forma sencilla en un valor de datos.
+Con el *enlace simple*, puede mostrar un único elemento de datos, como un valor de columna de una tabla de conjunto de datos, en un control. Puede enlazar de forma sencilla cualquier propiedad de un control con un valor de datos.
 
-> [!NOTE]
-> Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+### <a name="to-simple-bind-a-control"></a>Para enlazar un control de forma simple
 
-### <a name="to-simple-bind-a-control"></a>Para enlazar un control simple
+1. Conéctese a un origen de datos. Para obtener más información, vea [conectarse a un origen de datos](../data/adonet/connecting-to-a-data-source.md).
 
-1. Conéctese a un origen de datos. Para obtener más información, consulte [conectarse a un origen de datos](../data/adonet/connecting-to-a-data-source.md).
+2. En el formulario, seleccione el control y muestre la ventana **propiedades** .
 
-2. En el formulario, seleccione el control y mostrar el **propiedades** ventana.
+3. Expanda la propiedad **(DataBindings)** .
 
-3. Expanda el **(DataBindings)** propiedad.
+     Las propiedades que se enlazan con mayor frecuencia se muestran debajo de la propiedad **(DataBindings)** . Por ejemplo, en la mayoría de los controles, la propiedad de **texto** se enlaza con mayor frecuencia.
 
-     Las propiedades enlazadas con más frecuencia se muestran bajo el **(DataBindings)** propiedad. Por ejemplo, en la mayoría de los controles, el **texto** propiedad está enlazada con más frecuencia.
+4. Si la propiedad que desea enlazar no es una de las propiedades enlazadas normalmente, haga clic en el![botón de **puntos suspensivos** (el botón de puntos suspensivos (...)](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)en el ventana Propiedades de Visual Studio) en el cuadro **(avanzado)** para mostrar el  **Cuadro de diálogo formato y enlace avanzado** con una lista completa de las propiedades de ese control.
 
-4. Si la propiedad que desea enlazar no es una de las propiedades enlazadas con frecuencia, haga clic en el **puntos suspensivos** botón (![los puntos suspensivos (...) en la ventana Propiedades de Visual Studio.](./media/how-to-create-a-simple-bound-control-on-a-windows-form/visual-studio-ellipsis-button.png)) en el **() Opciones avanzadas)** cuadro para mostrar el **formato y enlace de datos avanzado** cuadro de diálogo con una lista completa de propiedades para ese control.
-
-5. Seleccione la propiedad que desea enlazar y haga clic en la flecha desplegable situada debajo **enlace**.
+5. Seleccione la propiedad que desea enlazar y haga clic en la flecha desplegable situada debajo de **enlace**.
 
      Se muestra una lista de los orígenes de datos disponibles.
 
@@ -39,12 +36,12 @@ Con *enlace simple*, puede mostrar un elemento de datos único, como un valor de
 
 7. Haga clic en el nombre del elemento al que se va a enlazar.
 
-8. Si estuviera trabajando la **formato y enlace de datos avanzado** cuadro de diálogo, haga clic en **Aceptar** para volver a la **propiedades** ventana.
+8. Si está trabajando en el cuadro de diálogo **formato y enlace avanzado** , haga clic en **Aceptar** para volver a la ventana **propiedades** .
 
 9. Si desea enlazar propiedades adicionales del control, repita los pasos del 3 al 7.
 
     > [!NOTE]
-    > Dado que los controles de enlace simple muestran solo un único elemento de datos, es muy habitual incluir lógica de navegación en un formulario de Windows con controles de enlace simple.
+    > Dado que los controles enlazados simples solo muestran un único elemento de datos, es muy habitual incluir la lógica de navegación en Windows Forms con controles enlazados de forma simple.
 
 ## <a name="see-also"></a>Vea también
 

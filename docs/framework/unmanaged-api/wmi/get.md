@@ -1,6 +1,6 @@
 ---
-title: Get (función) (referencia de API no administrada)
-description: La función Get recupera el valor de propiedad especificado.
+title: Función get (referencia de la API no administrada)
+description: La función get recupera el valor de propiedad especificado.
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f838c26d45c0f3cfbd50ac0ce02d234b82ddae
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 265d3edbd3175eebcf6fd35be24f5b66144c960f
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746660"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037950"
 ---
 # <a name="get-function"></a>Función Get
 
@@ -46,55 +46,55 @@ HRESULT Get (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`\
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`\
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`\
-[in] El nombre de la propiedad.
+de Nombre de la propiedad.
 
 `lFlags`\
 [in] Reservado. Este parámetro debe ser 0.
 
 `pVal`\
-[out] Si la función devuelve correctamente, contiene el valor de la `wszName` propiedad. El `pval` argumento se asigna el tipo correcto y el valor del calificador.
+enuncia Si la función se devuelve correctamente, contiene el valor de `wszName` la propiedad. El `pval` argumento tiene asignado el tipo y el valor correctos para el calificador.
 
 `pvtType`\
-[out] Si la función devuelve correctamente, contiene un [constante de tipo de CIM](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) que indica el tipo de propiedad. Su valor puede ser también `null`. 
+enuncia Si la función se devuelve correctamente, contiene una [constante de tipo CIM](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration) que indica el tipo de propiedad. Su valor también puede ser `null`. 
 
 `plFlavor`\
-[out] Si la función devuelve correctamente, recibe información acerca del origen de la propiedad. Su valor puede ser `null`, o una de las siguientes constantes WBEM_FLAVOR_TYPE definidas en el *WbemCli.h* archivo de encabezado: 
+enuncia Si la función se devuelve correctamente, recibe información sobre el origen de la propiedad. Su valor puede ser `null`, o una de las siguientes constantes WBEM_FLAVOR_TYPE definidas en el archivo de encabezado *WbemCli. h* : 
 
 |Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | La propiedad es una propiedad estándar del sistema. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para una clase: La propiedad se hereda de la clase primaria. <br> Para una instancia: La propiedad, mientras se hereda de la clase primaria, no se ha modificado por la instancia.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para una clase: La propiedad pertenece a la clase derivada. <br> Para una instancia: Se modifica la propiedad por la instancia; es decir, se proporcionó un valor o un calificador se ha agregado o modificado. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Para una clase: La propiedad se hereda de la clase primaria. <br> Para una instancia de: La instancia de no ha modificado la propiedad, mientras se hereda de la clase primaria.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Para una clase: La propiedad pertenece a la clase derivada. <br> Para una instancia de: La instancia de modifica la propiedad; es decir, se ha proporcionado un valor o se ha agregado o modificado un calificador. |
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
 |Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
+|`WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | No se encontró la propiedad especificada. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) método.
+Esta función contiene una llamada al método [IWbemClassObject:: get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) .
 
-El `Get` función también puede devolver las propiedades del sistema.
+La `Get` función también puede devolver propiedades del sistema.
 
-El `pVal` argumento se asigna el tipo correcto y el valor para el calificador y el COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) (función)
+El `pVal` argumento tiene asignado el tipo y el valor correctos para el calificador y la función [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) de com.
 
 ## <a name="requirements"></a>Requisitos
 
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
 
  **Encabezado**: WMINet_Utils.idl
 
@@ -102,4 +102,4 @@ El `pVal` argumento se asigna el tipo correcto y el valor para el calificador y 
 
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

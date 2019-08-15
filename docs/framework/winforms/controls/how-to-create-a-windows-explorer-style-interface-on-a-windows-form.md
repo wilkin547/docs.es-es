@@ -6,53 +6,50 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: 578fdf8e24803db0e0d80ff22aa5cebebbc2663e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db2c5431dfb0156c1508a18ef13d2af80eb4981b
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615995"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039531"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Procedimiento para crear una interfaz similar a la del Explorador de Windows en formularios Windows Forms
-El Explorador de Windows es una opción de interfaz de usuario común para las aplicaciones debido a su familiaridad inmediata.  
-  
- El Explorador de Windows es básicamente un <xref:System.Windows.Forms.TreeView> control y un <xref:System.Windows.Forms.ListView> control en paneles independientes. Los paneles se realizan puede cambiar el tamaño por un divisor. Esta organización de los controles es muy eficaz para mostrar y explorar información.  
-  
- Los pasos siguientes muestran cómo organizar controles en un formulario similar al explorador de Windows. No se muestra cómo agregar la funcionalidad de exploración de archivos de la aplicación Explorador de Windows.  
-  
-> [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
-  
-### <a name="to-create-a-windows-explorer-style-windows-form"></a>Para crear un formulario de Windows de estilo Explorador de Windows  
-  
-1. Cree un nuevo proyecto de aplicación de Windows (**archivo** > **New** > **proyecto** > **Visual C#** o **Visual Basic** > **escritorio clásico de** > **aplicación de Windows Forms**).  
-  
-2. Desde el **cuadro de herramientas**:  
-  
-    1. Arrastre un <xref:System.Windows.Forms.SplitContainer> control al formulario.  
-  
-    2. Arrastre un <xref:System.Windows.Forms.TreeView> controlar en **SplitterPanel1** (el panel de la <xref:System.Windows.Forms.SplitContainer> control marcado **Panel1**).  
-  
-    3. Arrastre un <xref:System.Windows.Forms.ListView> controlar en **SplitterPanel2** (el panel de la <xref:System.Windows.Forms.SplitContainer> control marcado **Panel2**).  
-  
-3. Presione la tecla CTRL y haciendo clic a su vez, seleccione los tres controles. Cuando se selecciona el <xref:System.Windows.Forms.SplitContainer> de control, haga clic en la barra de división, en lugar de los paneles.  
-  
+El explorador de Windows es una opción de interfaz de usuario común para las aplicaciones debido a su familiaridad.
+
+ El explorador de Windows es, esencialmente <xref:System.Windows.Forms.TreeView> , un control <xref:System.Windows.Forms.ListView> y un control en paneles independientes. Un divisor realiza el redimensionamiento de los paneles. Esta disposición de controles es muy eficaz para mostrar y examinar la información.
+
+ En los pasos siguientes se muestra cómo organizar los controles en un formulario similar al explorador de Windows. No muestran cómo agregar la funcionalidad de exploración de archivos de la aplicación del explorador de Windows.
+
+## <a name="to-create-a-windows-explorer-style-windows-form"></a>Para crear un Windows Form con estilo Explorador de Windows
+
+1. Crear un nuevo proyecto de aplicación para Windows (**archivo** > **nuevo** > **proyecto** > **Visual C#**  o **Visual Basic** > **escritorio clásico**  >  **Windows Forms aplicación**).
+
+2. En el **cuadro de herramientas**:
+
+    1. Arrastre un <xref:System.Windows.Forms.SplitContainer> control al formulario.
+
+    2. Arrastre un <xref:System.Windows.Forms.TreeView> control a **SplitterPanel1** ( <xref:System.Windows.Forms.SplitContainer> el panel del control marcado como **Panel1**).
+
+    3. Arrastre un <xref:System.Windows.Forms.ListView> control a **SplitterPanel2** ( <xref:System.Windows.Forms.SplitContainer> el panel del control marcado como **Panel2**).
+
+3. Seleccione los tres controles presionando la tecla CTRL y haciendo clic en ellos a su vez. Al seleccionar el <xref:System.Windows.Forms.SplitContainer> control, haga clic en la barra de división, en lugar de en los paneles.
+
     > [!NOTE]
-    >  No utilice el **seleccionar todo** comando el **editar** menú. Si lo hace, la propiedad necesaria en el paso siguiente no aparecerá en el **propiedades** ventana.  
-  
-4. En la ventana **Propiedades** , establezca la propiedad <xref:System.Windows.Forms.SplitContainer.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.  
-  
-5. Presione F5 para ejecutar la aplicación.  
-  
-     El formulario muestra una interfaz de usuario de dos partes, similar a la del explorador de Windows.  
-  
+    >  No use el comando **seleccionar todo** en el menú **edición** . Si lo hace, la propiedad necesaria en el paso siguiente no aparecerá en la ventana **propiedades** .
+
+4. En la ventana **Propiedades** , establezca la propiedad <xref:System.Windows.Forms.SplitContainer.Dock%2A> en <xref:System.Windows.Forms.DockStyle.Fill>.
+
+5. Presione F5 para ejecutar la aplicación.
+
+     El formulario muestra una interfaz de usuario de dos partes, similar a la del explorador de Windows.
+
     > [!NOTE]
-    >  Al arrastrar el divisor, los paneles cambian de tamaño.  
-  
+    >  Al arrastrar el divisor, los paneles cambian de tamaño.
+
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Cómo: Crear una interfaz de usuario de varios paneles con formularios de Windows](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Cómo: Definir el cambio de tamaño y la posición de comportamiento en una ventana dividida](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Cómo: Cree una interfaz de usuario de MULTIPANEL con Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Cómo: Definir el comportamiento de ajuste de tamaño y colocación en una ventana dividida](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
 - [Cómo: Dividir una ventana horizontalmente](how-to-split-a-window-horizontally.md)
 - [SplitContainer (control)](splitcontainer-control-windows-forms.md)
