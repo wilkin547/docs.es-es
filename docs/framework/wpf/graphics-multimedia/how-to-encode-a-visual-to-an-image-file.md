@@ -9,23 +9,23 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 193b6a14e404d32bb49d6e0ef3cbd513166bcce2
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947581"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545293"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>Procedimiento Codificar un objeto visual en un archivo de imagen
-En este ejemplo se muestra cómo codificar un <xref:System.Windows.Media.Visual> objeto en un archivo de imagen con un <xref:System.Windows.Media.Imaging.RenderTargetBitmap> y un <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
+En este ejemplo se muestra cómo codificar <xref:System.Windows.Media.Visual> un objeto en un archivo de imagen <xref:System.Windows.Media.Imaging.RenderTargetBitmap> mediante y <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
   
 ## <a name="example"></a>Ejemplo  
- El <xref:System.Windows.Media.DrawingVisual> se crea mediante un <xref:System.Windows.Media.Imaging.BitmapImage> y <xref:System.Windows.Media.FormattedText> que se representa en un <xref:System.Windows.Media.Imaging.RenderTargetBitmap>. El mapa de bits representado, a continuación, se usa para crear un <xref:System.Windows.Media.Imaging.BitmapFrame> que se agrega a la <xref:System.Windows.Media.Imaging.PngBitmapEncoder> para crear un nuevo [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] archivo.  
+ Se crea <xref:System.Windows.Media.Imaging.RenderTargetBitmap>mediante y que<xref:System.Windows.Media.FormattedText> se representa en un. <xref:System.Windows.Media.Imaging.BitmapImage> <xref:System.Windows.Media.DrawingVisual> El mapa de bits representado se usa para crear un <xref:System.Windows.Media.Imaging.BitmapFrame> que se agrega <xref:System.Windows.Media.Imaging.PngBitmapEncoder> a para crear un nuevo archivo PNG (Portable Network Graphics).  
   
  [!code-csharp[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/RenderTargetBitmapExample_Encode.cs#rtbencodeinline1)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#RTBEncodeInline1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample_Encode.vb#rtbencodeinline1)]  
   
- Un <xref:System.Windows.Media.Imaging.PngBitmapEncoder> se usó en este ejemplo, pero los de la clase derivada <xref:System.Windows.Media.Imaging.BitmapEncoder> objetos se podrían haber utilizado para crear el archivo de imagen.  
+ Se usó en este ejemplo, pero cualquiera de los objetos <xref:System.Windows.Media.Imaging.BitmapEncoder> derivados podría haberse utilizado para crear el archivo de imagen. <xref:System.Windows.Media.Imaging.PngBitmapEncoder>  
   
 ## <a name="see-also"></a>Vea también
 

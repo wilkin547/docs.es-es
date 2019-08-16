@@ -13,25 +13,25 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - encoding PNG images [WPF]
 ms.assetid: 3d31d186-af73-47f0-b5a7-c26ae46409a6
-ms.openlocfilehash: 46d4a7ffbfe7a6a620c26447cce30f3a0bd35adc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a0a2f2625901f7ee32ba9fe70e71681a1b9ccd3
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947542"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545275"
 ---
 # <a name="how-to-encode-and-decode-a-png-image"></a>Procedimiento Codificar y descodificar una imagen PNG
-Los ejemplos siguientes muestran cómo descodificar y codificar una [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)] específico de imagen <xref:System.Windows.Media.Imaging.PngBitmapDecoder> y <xref:System.Windows.Media.Imaging.PngBitmapEncoder> objetos.  
+En los siguientes ejemplos se muestra cómo descodificar y codificar una imagen PNG (Portable Network Graphics) <xref:System.Windows.Media.Imaging.PngBitmapDecoder> mediante <xref:System.Windows.Media.Imaging.PngBitmapEncoder> los objetos y específicos.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se muestra cómo descodificar un [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] imágenes que usan un <xref:System.Windows.Media.Imaging.PngBitmapDecoder> desde un <xref:System.IO.FileStream>.  
+ En este ejemplo se muestra cómo descodificar una imagen PNG <xref:System.Windows.Media.Imaging.PngBitmapDecoder> con un <xref:System.IO.FileStream>de.  
   
  [!code-cpp[PngBitmapDecoderEncoder#1](~/samples/snippets/cpp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CPP/PngEncoderDecoder.cpp#1)]
  [!code-csharp[PngBitmapDecoderEncoder#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CSharp/PngEncoderDecoder.cs#1)]
  [!code-vb[PngBitmapDecoderEncoder#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PngBitmapDecoderEncoder/VB/PngEncoderDecoder.vb#1)]  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se muestra cómo codificar un <xref:System.Windows.Media.Imaging.BitmapSource> en un [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)] imágenes que usan un <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
+ En este ejemplo se muestra cómo codificar <xref:System.Windows.Media.Imaging.BitmapSource> un en una imagen PNG <xref:System.Windows.Media.Imaging.PngBitmapEncoder>mediante.  
   
  [!code-cpp[PngBitmapDecoderEncoder#4](~/samples/snippets/cpp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CPP/PngEncoderDecoder.cpp#4)]
  [!code-csharp[PngBitmapDecoderEncoder#4](~/samples/snippets/csharp/VS_Snippets_Wpf/PngBitmapDecoderEncoder/CSharp/PngEncoderDecoder.cs#4)]

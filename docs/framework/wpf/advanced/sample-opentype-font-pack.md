@@ -6,21 +6,21 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2b3dc3b95cf81a60494f7a02488067717938e97
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053475"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545227"
 ---
 # <a name="sample-opentype-font-pack"></a>Paquete de fuentes OpenType de ejemplo
-En este tema se proporciona información general sobre las fuentes de ejemplo de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] distribuidas con [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]. Las fuentes de ejemplo admiten características de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] extendidas que se pueden usar en las aplicaciones de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+En este tema se proporciona información general sobre las fuentes OpenType de ejemplo que se [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]distribuyen con. Las fuentes de ejemplo admiten características OpenType extendidas que pueden [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] usar las aplicaciones de.  
 
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>Fuentes del paquete de fuentes OpenType  
- [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] proporciona un conjunto de fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de ejemplo que se pueden usar para crear aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Las fuentes de ejemplo se proporcionan bajo licencia de Ascender Corporation. Estas fuentes implementan únicamente un subconjunto de las características totales definidas por el formato [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]. En la tabla siguiente se enumeran los nombres de las fuentes de ejemplo de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
+ Proporciona un conjunto de fuentes OpenType de ejemplo que puede usar para crear [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicaciones de. [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] Las fuentes de ejemplo se proporcionan bajo licencia de Ascender Corporation. Estas fuentes solo implementan un subconjunto de las características totales definidas por el formato OpenType. En la tabla siguiente se enumeran los nombres de las fuentes OpenType de ejemplo.  
   
-|**Name**|**Archivo**|  
+|**Nombre**|**Archivo**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
@@ -31,7 +31,7 @@ En este tema se proporciona información general sobre las fuentes de ejemplo de
 |Pescadero|Pesca.ttf|  
 |Pescadero Bold|Pescab.ttf|  
   
- En la ilustración siguiente se muestra la apariencia de las fuentes de ejemplo de [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)].  
+ En la ilustración siguiente se muestra el aspecto de las fuentes OpenType de ejemplo.  
   
  ![Lista de nombres de fuentes en paquete de fuentes de ejemplo](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
@@ -42,9 +42,9 @@ En este tema se proporciona información general sobre las fuentes de ejemplo de
   
 <a name="installing_the_fonts"></a>   
 ## <a name="installing-the-fonts"></a>Instalación de las fuentes  
- Tiene la opción de instalar las fuentes [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] de ejemplo en el directorio de fuentes predeterminado de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], **\WINDOWS\Fonts**. Use el panel de control Fuentes para instalar las fuentes. Una vez instaladas estas fuentes en el equipo, son accesibles para todas las aplicaciones que hacen referencia a las fuentes predeterminadas de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Puede mostrar un conjunto de caracteres representativo en varios tamaños de fuente haciendo doble clic en el archivo de fuente. En la captura de pantalla siguiente se muestra el archivo de la fuente Lindsey, Linds.ttf.  
+ Tiene la opción de instalar las fuentes OpenType de ejemplo en el directorio [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] de fuentes predeterminado, **\Windows\Fonts**. Use el panel de control Fuentes para instalar las fuentes. Una vez instaladas estas fuentes en el equipo, son accesibles para todas las aplicaciones que hacen referencia a las fuentes predeterminadas de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Puede mostrar un conjunto de caracteres representativo en varios tamaños de fuente haciendo doble clic en el archivo de fuente. En la captura de pantalla siguiente se muestra el archivo de la fuente Lindsey, Linds.ttf.  
   
- ![Fuente Lindsey &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Lindsey fuente &#40;OpenType&#41; ](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Mostrar la fuente Lindsey  
   
 <a name="using_the_fonts"></a>   

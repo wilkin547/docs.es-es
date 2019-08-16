@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: fcf5e8e68492f4d1ff75221384b08ffad2b939f3
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 6d3dce5c8a34257f8509f239ece4bae3efa02b84
+ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971958"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69545369"
 ---
 # <a name="imaging-overview"></a>Información general sobre imágenes
 En este tema se proporciona una introducción a [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] permite a los desarrolladores mostrar, transformar y dar formato a imágenes.  
@@ -38,7 +38,7 @@ En este tema se proporciona una introducción a [!INCLUDE[TLA#tla_wic](../../../
   
 - Modelo de extensibilidad para formatos de imagen nuevos o de propiedad.  
   
-- Mejora en el rendimiento y la seguridad de los formatos de imágenes nativas, incluido el mapa de bits (BMP), [!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]el [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]grupo de expertos fotográficos (JPEG),,, [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)], el formato de intercambio de gráficos (GIF) y el icono (. ico).  
+- Mejora en el rendimiento y la seguridad de los formatos de imágenes nativas, incluido el mapa de bits (BMP), el grupo de expertos de fotográficos [!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]Unidos (JPEG), los gráficos de red portátiles (PNG), [!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)],, el formato de intercambio de gráficos (GIF) y el icono (. ico).  
   
 - Conservación de datos de imagen de alta profundidad de bits de hasta 8 bits por canal (32 bits por píxel).  
   
@@ -56,7 +56,7 @@ En este tema se proporciona una introducción a [!INCLUDE[TLA#tla_wic](../../../
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>Formatos de imagen de WPF  
- Un códec se usa para descodificar o codificar un formato de medios específico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]incluye un códec para los formatos de imagen [!INCLUDE[TLA2#tla_png](../../../../includes/tla2sharptla-png-md.md)]BMP [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)], [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)]JPEG,,,, GIF y Icon. Cada uno de estos códecs permiten a las aplicaciones descodificar y, con la excepción de ICON, codificar sus formatos de imagen respectivos.  
+ Un códec se usa para descodificar o codificar un formato de medios específico. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]incluye un códec para los formatos de imagen BMP, [!INCLUDE[TLA2#tla_tiff](../../../../includes/tla2sharptla-tiff-md.md)]JPEG [!INCLUDE[TLA2#tla_wdp](../../../../includes/tla2sharptla-wdp-md.md)], PNG,,, GIF y Icon. Cada uno de estos códecs permiten a las aplicaciones descodificar y, con la excepción de ICON, codificar sus formatos de imagen respectivos.  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>es una clase importante que se usa en la descodificación y codificación de imágenes. Es el bloque de creación básico de la canalización de [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] y representa un solo conjunto constante de píxeles con un tamaño y resolución determinados. Puede ser un marco individual de una imagen de varios marcos o puede ser el resultado de una transformación realizada <xref:System.Windows.Media.Imaging.BitmapSource>en. <xref:System.Windows.Media.Imaging.BitmapSource> Es el elemento primario de muchas de las clases principales que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] <xref:System.Windows.Media.Imaging.BitmapFrame>se usan en la creación de imágenes como.  
   
