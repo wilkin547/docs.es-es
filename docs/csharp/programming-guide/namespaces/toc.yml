@@ -3,7 +3,5 @@
   items:
     - name: Uso de espacios de nombres
       href: using-namespaces.md
-    - name: Procedimiento para usar el alias del espacio de nombres global
-      href: how-to-use-the-global-namespace-alias.md
-    - name: Procedimiento para usar el espacio de nombres My
+    - name: Uso del espacio de nombres My
       href: how-to-use-the-my-namespace.md
