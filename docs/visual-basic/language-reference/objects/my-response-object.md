@@ -1,5 +1,5 @@
 ---
-title: My.Response (objeto) (Visual Basic)
+title: My. Response (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWebExtension.Response
@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - My.Response object
 ms.assetid: 626359bc-3165-40b4-bfaf-2c610e26eb5b
-ms.openlocfilehash: 0e49a3b5732ee1a3626666ce06e366c4940eca05
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a50701998011c25c600c2a3763459c1aba3cc59a
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881961"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567451"
 ---
 # <a name="myresponse-object"></a>My.Response (Objeto)
-Obtiene el <xref:System.Web.HttpResponse> objeto asociado con el <xref:System.Web.UI.Page>. Este objeto permite enviar datos de respuesta HTTP a un cliente y contiene información sobre esa respuesta.  
+Obtiene el <xref:System.Web.HttpResponse> objeto asociado <xref:System.Web.UI.Page>a. Este objeto permite enviar datos de respuesta HTTP a un cliente y contiene información sobre esa respuesta.  
   
 ## <a name="remarks"></a>Comentarios  
- El `My.Response` objeto contiene actual <xref:System.Web.HttpResponse> objeto asociado a la página.  
+ El `My.Response` objeto contiene el objeto <xref:System.Web.HttpResponse> actual asociado a la página.  
   
- La `My.Response` objeto sólo está disponible para las aplicaciones ASP.NET.  
+ El `My.Response` objeto solo está disponible para las aplicaciones de ASP.net.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se obtiene la colección de encabezados de la `My.Request` objeto y se usa el `My.Response` objeto escribirlo en la página ASP.NET.  
+ En el ejemplo siguiente se obtiene la colección de `My.Request` encabezados del objeto y `My.Response` se usa el objeto para escribirla en la página ASP.net.  
   
- [!code-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
+ [!code-aspx-vb[VbVbalrMyWeb#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWeb/VB/Default.aspx#1)]  
   
 ## <a name="see-also"></a>Vea también
 

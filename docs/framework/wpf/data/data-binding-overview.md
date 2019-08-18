@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: e1fbb46c76fbc729818b6ff24b55c0d18f6b05df
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 44a35131273c6f191ab5da5bc1639d97bd961ff1
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400701"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567521"
 ---
 # <a name="data-binding-overview"></a>Información general sobre el enlace de datos
 El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona una manera sencilla y coherente para que las aplicaciones presenten datos e interactúen con ellos. Los elementos se pueden enlazar a los datos de una variedad de orígenes de datos en forma de objetos Common Language Runtime ( [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]CLR) y. <xref:System.Windows.Controls.ContentControl><xref:System.Windows.Controls.ItemsControl>s como <xref:System.Windows.Controls.Button> y s<xref:System.Windows.Controls.ListBox> como y<xref:System.Windows.Controls.ListView> tienen funcionalidad integrada para habilitar el estilo flexible de elementos de datos individuales o colecciones de elementos de datos. Se pueden generar vistas de ordenación, filtrado ya agrupación encima de los datos.  
@@ -70,7 +70,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
 - Aunque no se especifica en la ilustración, se debe tener en cuentan que el objeto de origen de enlace no está restringido a ser un objeto CLR personalizado. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]el enlace de datos admite datos en forma de objetos CLR [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]y. Para proporcionar algunos ejemplos, el origen del enlace puede ser <xref:System.Windows.UIElement>, cualquier objeto de lista, un objeto CLR que esté asociado a datos ADO.net o servicios Web, o un XmlNode que contenga los [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] datos. Para más información, consulte [Binding Sources Overview](binding-sources-overview.md) (Introducción a los orígenes de enlace).  
   
- Cuando consulte otros temas del software [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)], es importante tener en cuenta que cuando establece un enlace, enlaza un destino de enlace *a* un origen de enlace. Por ejemplo, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] si va <xref:System.Windows.Controls.ListBox> a mostrar algunos datos subyacentes en <xref:System.Windows.Controls.ListBox> un enlace de datos con, va a enlazar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] a los datos.  
+ Al leer otros temas del SDK, es importante recordar que, al establecer un enlace, se enlaza un destino *de enlace a* un origen de enlace. Por ejemplo, [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] si va <xref:System.Windows.Controls.ListBox> a mostrar algunos datos subyacentes en <xref:System.Windows.Controls.ListBox> un enlace de datos con, va a enlazar [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] a los datos.  
   
  Para establecer un enlace, se utiliza el <xref:System.Windows.Data.Binding> objeto. En el resto de este tema se describen muchos de los conceptos asociados a y algunas de las propiedades y el uso <xref:System.Windows.Data.Binding> del objeto.  
   
@@ -186,7 +186,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  ![Diagrama que muestra la propiedad de enlace de datos predeterminada.](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
- Sin embargo, ¿qué ocurre si, en lugar de tener una propiedad de tipo cadena, el  objeto de origen de <xref:System.Windows.Media.Color>enlace tiene una propiedad color de tipo? En ese caso, para que el enlace funcione, deberá convertir primero el valor de la propiedad *color* en algo que la <xref:System.Windows.Controls.Control.Background%2A> propiedad acepte. Necesitaría crear un convertidor personalizado implementando la <xref:System.Windows.Data.IValueConverter> interfaz, como en el ejemplo siguiente:  
+ Sin embargo, ¿qué ocurre si, en lugar de tener una propiedad de tipo cadena, el objeto de origen de <xref:System.Windows.Media.Color>enlace tiene una propiedad color de tipo? En ese caso, para que el enlace funcione, deberá convertir primero el valor de la propiedad *color* en algo que la <xref:System.Windows.Controls.Control.Background%2A> propiedad acepte. Necesitaría crear un convertidor personalizado implementando la <xref:System.Windows.Data.IValueConverter> interfaz, como en el ejemplo siguiente:  
   
  [!code-csharp[ColorPicker_snip#16](~/samples/snippets/csharp/VS_Snippets_Wpf/ColorPicker_snip/CSharp/ColorPickerLib/ColorPicker.cs#16)]
  [!code-vb[ColorPicker_snip#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ColorPicker_snip/visualbasic/colorpickerlib/colorpicker.vb#16)]  
@@ -346,7 +346,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
   
  [!code-xaml[DataBindingLab#AuctionItemDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/DataBindingLabApp.xaml#auctionitemdatatemplate)]  
   
- Con el uso de estos dos <xref:System.Windows.DataTemplate>, la interfaz de usuario resultante es la que se muestra en la sección [¿Qué es el enlace de datos?](#what_is_data_binding) . Como puede ver en la captura de pantalla, además de permitir colocar datos en los controles, <xref:System.Windows.DataTemplate>los s permiten definir objetos visuales atractivos para los datos. Por ejemplo, <xref:System.Windows.DataTrigger>se usan en el anterior <xref:System.Windows.DataTemplate> para que *AuctionItem*s con el valor *SpecialFeatures* de  resaltado se muestre con un borde naranja y una estrella.  
+ Con el uso de estos dos <xref:System.Windows.DataTemplate>, la interfaz de usuario resultante es la que se muestra en la sección [¿Qué es el enlace de datos?](#what_is_data_binding) . Como puede ver en la captura de pantalla, además de permitir colocar datos en los controles, <xref:System.Windows.DataTemplate>los s permiten definir objetos visuales atractivos para los datos. Por ejemplo, <xref:System.Windows.DataTrigger>se usan en el anterior <xref:System.Windows.DataTemplate> para que *AuctionItem*s con el valor *SpecialFeatures* de resaltado se muestre con un borde naranja y una estrella.  
   
  Para más información sobre las plantillas de datos, consulte [Data Templating Overview](data-templating-overview.md) (Introducción a las plantillas de datos).  
   
@@ -371,7 +371,7 @@ El enlace de datos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
  [!code-csharp[DataBindingLab#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/FutureDateRule.cs#2)]
  [!code-vb[DataBindingLab#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/FutureDateRule.vb#2)]  
   
- *StartDateEntryForm* <xref:System.Windows.Controls.TextBox> usa este *FutureDateRule*, tal y como se muestra en el ejemplo siguiente:  
+ StartDateEntryForm<xref:System.Windows.Controls.TextBox> usa este *FutureDateRule*, tal y como se muestra en el ejemplo siguiente:  
   
  [!code-xaml[DataBindingLab#CustomValidation](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/AddProductWindow.xaml#customvalidation)]  
   

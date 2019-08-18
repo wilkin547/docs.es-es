@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: a31a42362e934d14b9cb66724618814e2b232c06
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833762"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567283"
 ---
 # <a name="runtime-profiling"></a>Generar perfiles en tiempo de ejecución
 La generación de perfiles es un método de recopilación de datos de rendimiento en cualquier escenario de desarrollo o implementación. Esta sección está dirigida a los desarrolladores y administradores del sistema que quieren recopilar información sobre el rendimiento de la aplicación.  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>Seguimiento del rendimiento mediante el Monitor de rendimiento (Perfmon.exe)  
- El Monitor de rendimiento es la herramienta más fácil usar un perfil de la aplicación de .NET Framework. El Monitor de rendimiento representa gráficamente los datos encontrados en los contadores de rendimiento de .NET Framework que se instalan con common language runtime y el Kit de desarrollo de Software (SDK) de Windows. Estos contadores se pueden usar para supervisar todo, desde la administración de la memoria hasta el rendimiento del compilador Just-In-Time (JIT). Le informan sobre los recursos que la aplicación usa, que es una medida indirecta del rendimiento de la aplicación. Use estos contadores para entender cómo funciona internamente su aplicación.  
+ El monitor de rendimiento es la herramienta más sencilla de usar para generar perfiles de la aplicación .NET Framework. El monitor de rendimiento representa gráficamente los datos encontrados en los .NET Framework contadores de rendimiento que se instalan con el Common Language Runtime y el Windows SDK. Estos contadores se pueden usar para supervisar todo, desde la administración de la memoria hasta el rendimiento del compilador Just-In-Time (JIT). Le informan sobre los recursos que la aplicación usa, que es una medida indirecta del rendimiento de la aplicación. Use estos contadores para entender cómo funciona internamente su aplicación.  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>Para ejecutar Perfmon.exe en Windows Vista y versiones posteriores  
   
@@ -54,12 +54,12 @@ La generación de perfiles es un método de recopilación de datos de rendimient
  Si quiere generar perfiles de un ensamblado que existe en una zona o en un recurso compartido remoto, asegúrese de que el ensamblado remoto tiene plena confianza en el equipo que ejecuta los contadores de rendimiento. Si el ensamblado no tiene suficiente confianza, los contadores de rendimiento no funcionarán. Para obtener información sobre cómo conceder confianza a distintas zonas, vea [Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
 > [!NOTE]
->  En los sistemas donde está instalado .NET Framework 4, el Monitor de rendimiento es posible que no muestre datos para contadores de rendimiento en algunas categorías, como **.NET CLR Data** y **redes de .NET CLR**, para aplicaciones desarrolladas con .NET Framework 1.1. Si este es el caso, puede configurar el Monitor de rendimiento para mostrar estos datos agregando el elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) al archivo de configuración de la aplicación.  
+>  En los sistemas en los que está instalado el .NET Framework 4, es posible que el monitor de rendimiento no muestre datos de contadores de rendimiento en algunas categorías, como **datos de .net CLR** y **redes de .net CLR**, para las aplicaciones desarrolladas mediante .net. Marco de trabajo 1,1. Si este es el caso, puede configurar el Monitor de rendimiento para mostrar estos datos agregando el elemento [\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) al archivo de configuración de la aplicación.  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>Lectura y creación de contadores de rendimiento mediante programación  
- .NET Framework proporciona clases que puede usar para tener acceso mediante programación a la misma información de rendimiento que está disponible en la consola de rendimiento. También puede usar estas clases para crear contadores de rendimiento personalizados. En la tabla siguiente se describe algunas de las clases que se proporcionan en .NET Framework de supervisión de rendimiento.  
+ El .NET Framework proporciona clases que puede usar para tener acceso mediante programación a la misma información de rendimiento que está disponible en la consola de rendimiento. También puede usar estas clases para crear contadores de rendimiento personalizados. En la tabla siguiente se describen algunas de las clases de supervisión de rendimiento que se proporcionan en el .NET Framework.  
   
-|Clase|Descripción|  
+|Clase|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |<xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType>|Representa un componente de contador de rendimiento de Windows NT. Use esta clase para leer contadores personalizados o predefinidos existentes y publicar datos de rendimiento (de escritura) en contadores personalizados.|  
 |<xref:System.Diagnostics.PerformanceCounterCategory?displayProperty=nameWithType>|Ofrece varios métodos para interactuar con contadores y categorías de contadores en el equipo.|  
