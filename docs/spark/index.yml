@@ -1,0 +1,33 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Documentación de .NET para Apache Spark
+metadata:
+  document_id: na
+  title: 'Documentación de .NET para Apache Spark: tutoriales y referencia de API'
+  meta.description: 'Learn how to use .NET for Apache Spark, the .NET bindings for Spark written on the Spark interop layer. You can process batches of data, real-time streams, machine learning, and ad-hoc query with Apache Spark anywhere you write .NET code.'
+  ms.prod: dotnet-spark
+  ms.topic: landing-page
+  ms.date: 05/17/2019
+  ms.author: mamccrea
+  author: mamccrea
+abstract:
+  description: 'Aprenda a usar .NET para Apache Spark, los enlaces de .NET para Spark escritos en la capa de interoperabilidad de Spark. Puede procesar lotes de datos, transmisiones en tiempo real, aprendizaje automático y consultas ad hoc con Apache Spark en cualquier lugar en el que escriba código .NET. Los tutoriales, ejemplos de código, referencia de API y otra documentación le muestran cómo.'
+sections:
+  - title: Tutoriales detallados
+    items:
+      - type: paragraph
+        text: 'Traiga la eficacia de Apache Spark a las aplicaciones .NET:'
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/spark/tutorials/get-started">Introducción a .NET para Apache Spark</a>
+          - html: <a href="/dotnet/spark/tutorials/hdinsight-deployment">Implementación de .NET para la aplicación Apache Spark en Azure HDInsight</a>
+          - html: <a href="/dotnet/spark/tutorials/amazon-emr-spark-deployment">Implementación de .NET para la aplicación Apache Spark en Amazon EMR Spark</a>
+          - html: <a href="/dotnet/spark/tutorials/databricks-deployment">Implementación de .NET para la aplicación Apache Spark en los bricks de los mismos</a>
+  - title: Referencia y recursos
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/?view=spark-dotnet">.NET para API de Apache Spark</a>
+          - html: '<a href="https://github.com/dotnet/spark">.NET para Apache Spark en el concentrador de Git</a>'
