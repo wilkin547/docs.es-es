@@ -17,11 +17,11 @@ ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612867"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "61793008"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Especificar nombres de tipo completos
 
@@ -143,7 +143,7 @@ Si el espacio de nombres fuera `Ozzy.Out+Back`, el signo más debería ir preced
 
 La información mínima necesaria en una especificación de nombre de ensamblado es el nombre textual (IDENTIFIER) del ensamblado. Puede seguir el IDENTIFIER mediante una lista separada por comas de pares de propiedad-valor, como se describe en la tabla siguiente. La nomenclatura de IDENTIFIER debe seguir las reglas de la nomenclatura de archivos. IDENTIFIER no distingue mayúsculas de minúsculas.
 
-|Nombre de la propiedad|Descripción|Valores permitidos|
+|Nombre de la propiedad|DESCRIPCIÓN|Valores permitidos|
 |-------------------|-----------------|----------------------|
 |**Versión**|Número de versión del ensamblado|*Major.Minor.Build.Revision*, donde *Major*, *Minor*, *Build* y *Revision* son números enteros entre 0 y 65535, ambos incluidos.|
 |**PublicKey**|Clave pública completa|Valor de cadena de la clave pública completa en formato hexadecimal. Especifique una referencia nula (**Nothing** en Visual Basic) para indicar explícitamente un ensamblado privado.|

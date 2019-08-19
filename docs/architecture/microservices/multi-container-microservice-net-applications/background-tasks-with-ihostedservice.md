@@ -2,12 +2,12 @@
 title: Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 description: Arquitectura de microservicios de .NET para aplicaciones .NET en contenedor | Información sobre las nuevas opciones para usar IHostedService y BackgroundService para implementar tareas en segundo plano en microservicios de .NET Core.
 ms.date: 01/07/2019
-ms.openlocfilehash: 958253a3b8ba9f30807f19dd72a6a363ec7e7af2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: b3dca8db6568e6e8429645d6b433886d1d289b95
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676252"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69038131"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implementar tareas en segundo plano en microservicios con IHostedService y la clase BackgroundService
 
@@ -193,7 +193,7 @@ public class GracePeriodManagerService : BackgroundService
             _logger.LogDebug($"GracePeriod task doing background work.");
 
             // This eShopOnContainers method is querying a database table
-            // and publishing events into the Event Bus (RabbitMS / ServiceBus)
+            // and publishing events into the Event Bus (RabbitMQ / ServiceBus)
             CheckConfirmedGracePeriodOrders();
 
             await Task.Delay(_settings.CheckUpdateTime, stoppingToken);

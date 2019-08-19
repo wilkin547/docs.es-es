@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 153df821b0dacccdcbf279bd20bfb106580f3392
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 37dda10a3dcbcb0968674e04292c5dc1a79be66f
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733429"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69013002"
 ---
 # <a name="compiling-an-interop-project"></a>Compilar un proyecto de interoperabilidad
 
@@ -44,6 +44,6 @@ Los proyectos de interoperabilidad COM que hacen referencia a uno o más ensambl
 - [Exponer componentes COM en .NET Framework](exposing-com-components.md)
 - [Independencia del lenguaje y componentes independientes del lenguaje](../../standard/language-independence-and-language-independent-components.md)
 - [Uso de tipos COM en código administrado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
-- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)](/docs/csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [Tutorial: Inserción de tipos a partir de ensamblados administrados en Visual Studio (Visual Basic)](/docs/visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
+- [Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Tutorial: Inserción de tipos a partir de ensamblados administrados en Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
 - [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md)

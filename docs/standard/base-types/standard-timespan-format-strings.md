@@ -20,10 +20,10 @@ ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3e67861a32d5863e4c1b4d9b147c507c1bb54c39
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "66491094"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadenas de formato TimeSpan estándar
@@ -41,7 +41,7 @@ ms.locfileid: "66491094"
   
 <a name="top"></a> En la tabla siguiente se muestran los especificadores de formato de intervalo de tiempo estándar.  
   
-|Especificador de formato|nombre|Descripción|Ejemplos|  
+|Especificador de formato|nombre|DESCRIPCIÓN|Ejemplos|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|Formato constante (invariable)|Este especificador no tiene en cuenta la referencia cultural. Toma la forma `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (Las cadenas de formato "t" y "T" producen los mismos resultados).<br /><br /> Más información: [Especificador de formato constante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|Formato corto general|Este especificador solo genera lo necesario. Tiene en cuenta la referencia cultural y su forma es `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Más información: [Especificador de formato corto general ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
@@ -55,7 +55,7 @@ ms.locfileid: "66491094"
   
  Los elementos de los corchetes ([ y ]) son opcionales. El punto (.) y los dos puntos (:) son símbolos literales. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número opcional de días, sin ceros a la izquierda.|  
@@ -84,7 +84,7 @@ ms.locfileid: "66491094"
   
  Los elementos de los corchetes ([ y ]) son opcionales. Los dos puntos (:) son un símbolo literal. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número opcional de días, sin ceros a la izquierda.|  
@@ -111,7 +111,7 @@ ms.locfileid: "66491094"
   
  Los elementos de los corchetes ([ y ]) son opcionales. Los dos puntos (:) son un símbolo literal. En la siguiente tabla se describen los elementos restantes.  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |*-*|Signo negativo opcional, que indica un intervalo de tiempo negativo.|  
 |*d*|Número de días, sin ceros a la izquierda.|  

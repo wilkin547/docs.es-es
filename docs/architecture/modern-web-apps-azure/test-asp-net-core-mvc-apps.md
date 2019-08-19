@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pru
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 941c73f9a8b7b4c4336adfaec45775feec738f51
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 46c2e53540c3fd929ad2ad1c5e107b538edd5884
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68672882"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69038121"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Prueba de aplicaciones ASP.NET Core MVC
 
@@ -33,32 +33,6 @@ Las pruebas unitarias, como solo prueban una unidad del código, sin dependencia
 Aunque es una buena idea encapsular el código que interactúa con la infraestructura como bases de datos y sistemas de archivos, seguirá disponiendo de parte de ese código y, probablemente le interesará probarlo. Además, debe comprobar que las capas del código interactúan según lo esperado cuando se resuelvan completamente las dependencias de la aplicación. Esta es la responsabilidad de las pruebas de integración. Las pruebas de integración tienden a ser más lentas y más difíciles de configurar que las pruebas unitarias, porque a menudo dependen de la infraestructura y de dependencias externas. Por tanto, debe evitar realizar pruebas de cosas que podrían evaluarse con pruebas unitarias en pruebas de integración. Si un escenario determinado se puede probar con una prueba unitaria, debe probarlo con una prueba unitaria. Si no es posible, considere la posibilidad de usar una prueba de integración.
 
 Las pruebas de integración a menudo tendrán procedimientos más complejos de instalación y desmontaje que las pruebas unitarias. Por ejemplo, una prueba de integración dirigida a una base de datos real necesitará un modo de devolver la base de datos a un estado conocido antes de cada serie de pruebas. Cuando se agregan nuevas pruebas y el esquema de base de datos de producción evoluciona, estos scripts de prueba tienden a aumentar de tamaño y complejidad. En muchos sistemas de gran tamaño, no resulta práctico ejecutar conjuntos completos de pruebas de integración en las estaciones de trabajo de desarrollador antes de insertar en el repositorio los cambios en el control de código fuente compartido. En estos casos, las pruebas de integración se pueden ejecutar en un servidor de compilación.
-
-Con la clase de implementación `LocalFileImageService` se implementa la lógica para recuperar y devolver los bytes de un archivo de imagen de una carpeta concreta con un identificador dado:
-
-```csharp
-public class LocalFileImageService : IImageService
-{
-    private readonly IHostingEnvironment _env;
-    public LocalFileImageService(IHostingEnvironment env)
-    {
-        _env = env;
-    }
-    public byte[] GetImageBytesById(int id)
-    {
-        try
-        {
-            var contentRoot = _env.ContentRootPath + "//Pics";
-            var path = Path.Combine(contentRoot, id + ".png");
-            return File.ReadAllBytes(path);
-        }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
 
 ### <a name="functional-tests"></a>Pruebas funcionales
 
@@ -152,7 +126,7 @@ La realización de pruebas unitarias en este método se complica debido a su dep
 Si no se pueden realizar directamente pruebas unitarias del comportamiento del sistema de archivos y no se puede probar la ruta, ¿qué se puede probar? Después de la refactorización para que las pruebas unitarias sean posibles, puede detectar varios casos de prueba y comportamiento que falta, como el control de errores. ¿Qué hace el método cuando no se encuentra un archivo? ¿Qué debería hacer? En este ejemplo, el método refactorizado tiene el aspecto siguiente:
 
 ```csharp
-[HttpGet("[controller]/pic/{id}")\]
+[HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
     byte[] imageBytes;

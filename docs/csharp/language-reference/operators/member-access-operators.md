@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 763fdb442fa0037dafd51f89badd04436e24d254
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401474"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566833"
 ---
 # <a name="member-access-operators-c-reference"></a>Operadores de acceso a miembros (referencia de C#)
 
@@ -147,7 +147,7 @@ También usa paréntesis al invocar un [constructor](../../programming-guide/cla
 
 También usa los paréntesis para especificar el orden en el que se van a evaluar operaciones en una expresión. Para más información, consulte la sección [Agregar paréntesis](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) del artículo [Operadores](../../programming-guide/statements-expressions-operators/operators.md). Para ver la lista de operadores ordenados por nivel de precedencia, consulte [Operadores de C#](index.md).
 
-[Expresiones de conversión](type-testing-and-conversion-operators.md#cast-operator-), que realizan conversiones de tipo explícitas, también utilizan paréntesis.
+[Expresiones de conversión](type-testing-and-cast.md#cast-operator-), que realizan conversiones de tipo explícitas, también utilizan paréntesis.
 
 ## <a name="operator-overloadability"></a>Posibilidad de sobrecarga del operador
 
@@ -167,3 +167,4 @@ Para más información, vea las secciones siguientes de la [Especificación del 
 - [Referencia de C#](../index.md)
 - [Operadores de C#](index.md)
 - [?? (operador de uso combinado de NULL)](null-coalescing-operator.md)
+- [Operador ::](namespace-alias-qualifier.md)

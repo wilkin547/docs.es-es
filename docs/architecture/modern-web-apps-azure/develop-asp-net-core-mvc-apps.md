@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675282"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971201"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -67,7 +67,7 @@ public class HomeController : Controller
 Las rutas se pueden especificar en atributos [HttpGet] y similares, evitando la necesidad de agregar atributos [Route] independientes. Las rutas de atributo también pueden usar tokens para reducir la necesidad de repetir los nombres de acciones o controladores, como se muestra a continuación:
 
 ```csharp
-[Route("[controller\]")]
+[Route("[controller]")]
 public class ProductsController : Controller
 {
     [Route("")] // Matches 'Products'
@@ -131,7 +131,7 @@ public class Startup
         var builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile(\$"appsettings.{env.EnvironmentName}.json", optional: true);
+        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -476,7 +476,7 @@ public class Program
         StartConnectionAsync();
         _connection.On("receiveMessage", (arguments) =>;
         {
-            Console.WriteLine(\$"{arguments\[0\]} said: {arguments\[1\]}");
+            Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });
         Console.ReadLine();
         StopConnectionAsync();

@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: da36f2a703fe817c171e192b9c94e473c93447a3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 6e3dcaeb71ae32812d3b022fff2bdc4e3e0691bf
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065988"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69040150"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalización de la serialización de estructuras
 
@@ -319,7 +319,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>Personalización de la serialización de campos de decimal
 
-Si está trabajando en Windows, puede encontrar algunas API que usan la estructura [`CY` o `CURRENCY`](/windows/desktop/api/wtypes/ns-wtypes-tagcy) nativa. De forma predeterminada, el tipo `decimal` de .NET serializa a la estructura [`DECIMAL`](/windows/desktop/api/wtypes/ns-wtypes-tagdec) nativa. Sin embargo, puede usar <xref:System.Runtime.InteropServices.MarshalAsAttribute> con el valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para indicar al serializador que convierta un valor `decimal` al valor `CY` nativo.
+Si está trabajando en Windows, puede encontrar algunas API que usan la estructura [`CY` o `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) nativa. De forma predeterminada, el tipo `decimal` de .NET serializa a la estructura [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) nativa. Sin embargo, puede usar <xref:System.Runtime.InteropServices.MarshalAsAttribute> con el valor <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> para indicar al serializador que convierta un valor `decimal` al valor `CY` nativo.
 
 ```csharp
 public struct Currency
@@ -339,7 +339,7 @@ struct Currency
 ## <a name="marshaling-systemobjects"></a>Serialización de `System.Object`
 
 En Windows, puede serializar campos con tipo `object` al código nativo. Puede serializar estos campos a uno de los tres tipos:
-- [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
+- [`VARIANT`](/windows/win32/api/oaidl/ns-oaidl-variant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
 - [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 

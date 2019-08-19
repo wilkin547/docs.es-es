@@ -6,16 +6,16 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 764a69869b8a5b8f76e2f58aced51761af73e50e
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306361"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566278"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>Cómo: Convertir de forma segura mediante la coincidencia de patrones y los operadores is y as
 
-Dado que los objetos son polimórficos, es posible que una variable de un tipo de clase base contenga un [tipo](../programming-guide/types/index.md) derivado. Para acceder a los miembros de instancia del tipo derivado, es necesario volver a [convertir](../programming-guide/types/casting-and-type-conversions.md) el valor en el tipo derivado. Pero una conversión conlleva el riesgo de producir una <xref:System.InvalidCastException>. C# proporciona instrucciones de [coincidencia de patrones](../pattern-matching.md) que realizan una conversión condicionalmente, solo si se va a realizar correctamente. C# además proporciona los operadores [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) y [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) para probar si un valor es de un tipo determinado.
+Dado que los objetos son polimórficos, es posible que una variable de un tipo de clase base contenga un [tipo](../programming-guide/types/index.md) derivado. Para acceder a los miembros de instancia del tipo derivado, es necesario volver a [convertir](../programming-guide/types/casting-and-type-conversions.md) el valor en el tipo derivado. Pero una conversión conlleva el riesgo de producir una <xref:System.InvalidCastException>. C# proporciona instrucciones de [coincidencia de patrones](../pattern-matching.md) que realizan una conversión condicionalmente, solo si se va a realizar correctamente. C# además proporciona los operadores [is](../language-reference/operators/type-testing-and-cast.md#is-operator) y [as](../language-reference/operators/type-testing-and-cast.md#as-operator) para probar si un valor es de un tipo determinado.
 
 El código siguiente muestra la instrucción `is` de coincidencia de patrones. Contiene métodos que prueban un argumento de prueba para determinar si es uno de un posible conjunto de tipos derivados:
 

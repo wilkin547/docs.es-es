@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87fcf4221dc5b334c6e9342c2aaac04a417a9f46
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d75412394ce42f786da88f3d334853b99f266aca
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832771"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567194"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker)
 
@@ -108,7 +108,7 @@ En la tabla siguiente se enumeran los errores generados por *Al.exe*.
 |al1015|No se puede encontrar el archivo de mensajes 'alinkui.dll'<br /><br /> *Al.exe* requiere el archivo *Alinkui.dll*. Asegúrese de que este archivo está en la ruta de acceso. Si es necesario, cópielo desde el CD del producto.|
 |al1016|No se especificaron archivos de entrada válidos.<br /><br /> *Al.exe* necesita uno o más archivos de entrada que no tienen información de ensamblado.|
 |al1017|No se especificó ningún nombre de archivo de destino<br /><br /> Faltaba la opción obligatoria **/out** que especifica el nombre de archivo de destino.|
-|al1018|No se pudo cargar el archivo requerido 'archivo'<br /><br /> No se pueden cargar determinados archivos DLL. Vuelva a instalar Visual Studio o el kit de desarrollo de Software (SDK) de Windows.|
+|al1018|No se pudo cargar el archivo requerido 'archivo'<br /><br /> No se pueden cargar determinados archivos DLL. Vuelva a instalar Visual Studio o Windows SDK.|
 |al1019|Error de metadatos al crear el ensamblado — motivo<br /><br /> Se interrumpió la generación del ensamblado por el motivo especificado. Por ejemplo, este error se produce si no se encuentra ningún archivo especificado con la opción **/win32res**.|
 |al1020|Se ignoró el ensamblado 'archivo' incluido<br /><br /> Se especificó un archivo de entrada que contenía un ensamblado. Los archivos de entrada de *Al.exe* no pueden contener ensamblados.|
 |al1021|'valor': se reemplazó el valor anterior<br /><br /> Un módulo tenía un valor de configuración concreto, asignado posiblemente a través de atributos personalizados, que se ha reemplazado por un valor pasado mediante una opción de línea de comandos de *Al.exe*.|

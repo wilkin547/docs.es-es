@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 96609264044e531bcc8671cb226a02fdc1b962b8
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 7ae19e48467bf5feca115c993c2299c1ecbaadc7
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796454"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566335"
 ---
 # <a name="lock-statement-c-reference"></a>Instrucción lock (Referencia de C#)
 
@@ -54,7 +54,7 @@ No se puede usar la palabra clave [await](await.md) en el cuerpo de una instrucc
 Al sincronizar el acceso del subproceso al recurso compartido, bloquee una instancia dedicada de objeto (por ejemplo, `private readonly object balanceLock = new object();`) u otra instancia cuyo empleo como objeto de bloqueo sea poco probable por parte de elementos no relacionados del código. Evite el uso de la misma instancia de objeto de bloqueo para distintos recursos compartidos, ya que se podría producir un interbloqueo o una contención de bloqueo. En particular, evite utilizar lo siguiente como objetos de bloqueo:
 
 - `this`, porque los autores de llamadas podrían usarlo como un bloqueo.
-- Instancias <xref:System.Type>, porque el operador o la reflexión [typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator) podrían obtenerlas.
+- Instancias <xref:System.Type>, porque el operador o la reflexión [typeof](../operators/type-testing-and-cast.md#typeof-operator) podrían obtenerlas.
 - Instancias de cadena, incluidos literales de cadena, porque podrían [internarse](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Ejemplo

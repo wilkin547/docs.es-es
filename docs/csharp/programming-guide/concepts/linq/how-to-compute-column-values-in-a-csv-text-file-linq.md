@@ -2,21 +2,21 @@
 title: Procedimiento para calcular valores de columna en un archivo de texto CSV (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0bc212ab40bccf5612ef6dea85608c439d2105f4
+ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585768"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69012940"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Procedimiento para calcular valores de columna en un archivo de texto CSV (LINQ) (C#)
 En este ejemplo se muestra cómo efectuar cálculos agregados (como sumas, promedios, mínimos y máximos) en las columnas de un archivo .csv. Los principios de ejemplo que se muestran aquí se pueden aplicar a otros tipos de textos estructurados.  
   
-### <a name="to-create-the-source-file"></a>Para crear el archivo de origen  
+## <a name="to-create-the-source-file"></a>Para crear el archivo de origen  
   
 1. Copie las líneas siguientes en un archivo llamado scores.csv y guárdelo en la carpeta del proyecto. Imagínese que la primera columna representa un identificador de estudiante y que las columnas siguientes representan las notas de cuatro exámenes.  
   
-    ```  
+    ```csv
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
