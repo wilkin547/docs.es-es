@@ -1,25 +1,25 @@
 ---
-title: Los segmentos (F#)
-description: Obtenga información sobre cómo utilizar los segmentos existentes F# tipos de datos y cómo definir sus propios segmentos para otros tipos de datos.
+title: Segmentos (F#)
+description: Obtenga información sobre cómo usar los segmentos para F# los tipos de datos existentes y cómo definir sus propios segmentos para otros tipos de datos.
 ms.date: 01/22/2019
-ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3067982c2b4249312c7e9365bbfb994be840911d
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926005"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68627145"
 ---
 # <a name="slices"></a>Segmentos
 
-En F#, un segmento es un subconjunto de un tipo de datos. Para poder tomar un segmento de un tipo de datos, debe definir el tipo de datos un `GetSlice` método o en un [escriba extensión](type-extensions.md) decir en ámbito. Este artículo explica cómo aprovechar los segmentos de existentes F# tipos y cómo definir las suyas propias.
+En F#, un segmento es un subconjunto de un tipo de datos. Para poder tomar un segmento de un tipo de datos, el tipo de datos debe definir un `GetSlice` método o una extensión de [tipo](type-extensions.md) que esté en el ámbito. En este artículo se explica cómo tomar los segmentos F# de los tipos existentes y cómo definir los suyos propios.
 
-Los segmentos son similares a [indizadores](members/indexed-properties.md), pero en lugar de producir un único valor de la estructura de datos subyacente, producen varias.
+Los segmentos son similares a los [indizadores](./members/indexed-properties.md), pero en lugar de producir un valor único de la estructura de datos subyacente, producen varios.
 
-F#actualmente tiene compatibilidad intrínseca para dividir las cadenas, matrices, listas y matrices 2D.
+F#Actualmente tiene compatibilidad intrínseca con la segmentación de cadenas, listas, matrices y matrices 2D.
 
 ## <a name="basic-slicing-with-f-lists-and-arrays"></a>Segmentación básica con F# listas y matrices
 
-Los tipos de datos más comunes que se segmenta son F# listas y matrices. El ejemplo siguiente muestra cómo hacer esto con listas:
+Los tipos de datos más comunes que se segmentan F# son listas y matrices. En el ejemplo siguiente se muestra cómo hacerlo con listas:
 
 ```fsharp
 // Generate a list of 100 integers
@@ -38,7 +38,7 @@ let unboundedEnd = fullList.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-Segmentación de matrices es igual que la segmentación de listas:
+La segmentación de matrices es igual que las listas de segmentación:
 
 ```fsharp
 // Generate an array of 100 integers
@@ -57,11 +57,11 @@ let unboundedEnd = fullArray.[94..]
 printfn "Unbounded end slice: %A" unboundedEnd
 ```
 
-## <a name="slicing-multidimensional-arrays"></a>Fragmentación de matrices multidimensionales
+## <a name="slicing-multidimensional-arrays"></a>Segmentar matrices multidimensionales
 
-F#admite matrices multidimensionales en el F# biblioteca principal. Al igual que con las matrices unidimensionales, también pueden ser útiles sectores de matrices multidimensionales. Sin embargo, la introducción de dimensiones adicionales exige una sintaxis ligeramente diferente para que pueden tomar segmentos de columnas y filas específicas.
+F#admite matrices multidimensionales en la F# biblioteca principal. Al igual que con las matrices unidimensionales, los segmentos de matrices multidimensionales también pueden ser útiles. Sin embargo, la introducción de dimensiones adicionales asigna una sintaxis ligeramente diferente para que pueda tomar segmentos de filas y columnas específicas.
 
-Los ejemplos siguientes muestran cómo segmentar una matriz 2D:
+En los siguientes ejemplos se muestra cómo segmentar una matriz 2D:
 
 ```fsharp
 // Generate a 3x3 2D matrix
@@ -89,13 +89,13 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-El F# biblioteca principal no define `GetSlice`para matrices 3D. Si desea segmentar los u otras matrices o varias dimensiones, debe definir el `GetSlice` miembro usted mismo.
+La F# biblioteca principal no define `GetSlice`para las matrices 3D. Si desea segmentar esas u otras matrices de más dimensiones, debe definir el `GetSlice` miembro usted mismo.
 
-## <a name="defining-slices-for-other-data-structures"></a>Definición de segmentos de otras estructuras de datos
+## <a name="defining-slices-for-other-data-structures"></a>Definir segmentos para otras estructuras de datos
 
-El F# biblioteca principal define los segmentos para un conjunto limitado de tipos. Si desea definir segmentos más tipos de datos, puede hacerlo en la propia definición de tipo o en una extensión de tipo.
+La F# biblioteca principal define los segmentos para un conjunto limitado de tipos. Si desea definir segmentos para más tipos de datos, puede hacerlo en la propia definición de tipo o en una extensión de tipo.
 
-Por ejemplo, aquí es cómo podría definir segmentos de la <xref:System.ArraySegment%601> clase para permitir la manipulación de datos adecuada:
+Por ejemplo, aquí se muestra cómo podría definir los segmentos de <xref:System.ArraySegment%601> la clase para permitir una manipulación de datos adecuada:
 
 ```fsharp
 open System
@@ -110,9 +110,9 @@ let arr = ArraySegment [| 1 .. 10 |]
 let slice = arr.[2..5] //[ 3; 4; 5]
 ```
 
-### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Uso de inclusión para evitar la conversión boxing si es necesario
+### <a name="use-inlining-to-avoid-boxing-if-it-is-necessary"></a>Usar la inclusión para evitar la conversión boxing si es necesario
 
-Si va a definir segmentos de un tipo que es realmente un struct, se recomienda `inline` el `GetSlice` miembro. El F# compilador optimiza los argumentos opcionales, evitando las asignaciones del montón como resultado de la segmentación. Esto es muy importante para la segmentación de construcciones como <xref:System.Span%601> que no se puede asignar en el montón.
+Si va a definir segmentos para un tipo que es realmente un struct, se recomienda que `inline` sea el `GetSlice` miembro. El F# compilador optimiza los argumentos opcionales, evitando las asignaciones de montón como resultado de la segmentación. Esto es muy importante para las construcciones de segmentación como, <xref:System.Span%601> por ejemplo, que no se pueden asignar en el montón.
 
 ```fsharp
 open System
@@ -137,4 +137,4 @@ printSpan sp.[1..2] // |2; 3|]
 
 ## <a name="see-also"></a>Vea también
 
-- [Propiedades indizadas](members/indexed-properties.md)
+- [Propiedades indizadas](./members/indexed-properties.md)
