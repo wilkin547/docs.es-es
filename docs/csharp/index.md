@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 0bf9fe8124578ba9bd192e10d517e3b0df7e5982
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e820a4d08e938aaf21e4f57db63e6b4f1b5225a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744255"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608296"
 ---
 # <a name="c-guide"></a>Guía de C#
 
@@ -52,16 +52,16 @@ Hay varias secciones en la Guía de C#. Puede leerlas en orden o ir directamente
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [Guía de programación de C#](../csharp/programming-guide/index.md)
+* [Guía de programación de C#](./programming-guide/index.md)
   * Proporciona información y ejemplos prácticos sobre cómo utilizar las construcciones de lenguaje C#.
 
-* [Tutoriales](../csharp/walkthroughs.md)
+* [Tutoriales](./walkthroughs.md)
   * Proporciona vínculos a los tutoriales de programación que usan C# y una breve descripción de cada uno.
 
 * [Referencia del lenguaje](language-reference/index.md)
   * Esta sección contiene material de referencia sobre el lenguaje C#. Este material le ayudará a comprender la sintaxis y la semántica de C#. También incluye material de referencia sobre tipos, operadores, atributos, directivas de preprocesador, modificadores de compiladores y errores y advertencias del compilador.
 
-* [Especificación del lenguaje C#](../csharp/language-reference/language-specification/index.md)
+* [Especificación del lenguaje C#](./language-reference/language-specification/index.md)
   * Vínculos a las últimas versiones de la especificación del lenguaje C#.
 
 ## <a name="see-also"></a>Vea también

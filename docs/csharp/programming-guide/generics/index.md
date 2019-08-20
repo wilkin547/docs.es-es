@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: e32eb7c60e01ca72824ffb3a1e1269cf34650f5a
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7d212aeaa7d7a8c3f152f8610a7ef3fe5de0fe23
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423393"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589593"
 ---
 # <a name="generics-c-programming-guide"></a>Genéricos (Guía de programación de C#)
 Los genéricos se han agregado a la versión 2.0 del lenguaje C# y Common Language Runtime (CLR). Los genéricos introducen en .NET Framework el concepto de parámetros de tipo, lo que le permite diseñar clases y métodos que aplazan la especificación de uno o varios tipos hasta que el código de cliente declare y cree una instancia de la clase o el método. Por ejemplo, al usar un parámetro de tipo genérico T puede escribir una clase única que otro código de cliente puede usar sin incurrir en el costo o riesgo de conversiones en tiempo de ejecución u operaciones de conversión boxing, como se muestra aquí:  
@@ -53,23 +53,23 @@ Las clases y métodos genéricos combinan reusabilidad, seguridad de tipos y efi
 ## <a name="related-sections"></a>Secciones relacionadas  
  Para obtener más información:  
   
-- [Parámetros de tipo genérico](../../../csharp/programming-guide/generics/generic-type-parameters.md)  
+- [Parámetros de tipo genérico](./generic-type-parameters.md)  
   
-- [Restricciones de tipos de parámetros](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [Restricciones de tipos de parámetros](./constraints-on-type-parameters.md)  
   
-- [Clases genéricas](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [Clases genéricas](./generic-classes.md)  
   
-- [Interfaces genéricas](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+- [Interfaces genéricas](./generic-interfaces.md)  
   
-- [Métodos genéricos](../../../csharp/programming-guide/generics/generic-methods.md)  
+- [Métodos genéricos](./generic-methods.md)  
   
-- [Delegados genéricos](../../../csharp/programming-guide/generics/generic-delegates.md)  
+- [Delegados genéricos](./generic-delegates.md)  
   
-- [Diferencias entre plantillas de C++ y tipos genéricos de C#](../../../csharp/programming-guide/generics/differences-between-cpp-templates-and-csharp-generics.md)  
+- [Diferencias entre plantillas de C++ y tipos genéricos de C#](./differences-between-cpp-templates-and-csharp-generics.md)  
   
-- [Genéricos y reflexión](../../../csharp/programming-guide/generics/generics-and-reflection.md)  
+- [Genéricos y reflexión](./generics-and-reflection.md)  
   
-- [Genéricos en el motor en tiempo de ejecución](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
+- [Genéricos en el motor en tiempo de ejecución](./generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  Para obtener más información, consulte la [Especificación del lenguaje C#](~/_csharplang/spec/types.md#constructed-types).  
@@ -77,8 +77,8 @@ Las clases y métodos genéricos combinan reusabilidad, seguridad de tipos y efi
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Collections.Generic>
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Tipos](../../../csharp/programming-guide/types/index.md)
-- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)
-- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)
+- [Guía de programación de C#](../index.md)
+- [Tipos](../types/index.md)
+- [\<typeparam>](../xmldoc/typeparam.md)
+- [\<typeparamref>](../xmldoc/typeparamref.md)
 - [Elementos genéricos en .NET](../../../standard/generics/index.md)

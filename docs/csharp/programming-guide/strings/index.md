@@ -6,27 +6,27 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 21ada083f69b0acf49490b331c5a416361a2ee84
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67802313"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588479"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
   
 ## <a name="string-vs-systemstring"></a>cadena frente System.String  
- En C#, la palabra clave `string` es un alias de <xref:System.String>. Por lo tanto, `String` y `string` son equivalentes y se puede utilizar la convención de nomenclatura que prefiera. La clase `String` proporciona muchos métodos para crear, manipular y comparar cadenas de forma segura. Además, el lenguaje C# sobrecarga algunos operadores para simplificar las operaciones de cadena comunes. Para más información sobre la palabra clave, consulte [string](../../../csharp/language-reference/keywords/string.md). Para obtener más información sobre el tipo y sus métodos, vea <xref:System.String>.  
+ En C#, la palabra clave `string` es un alias de <xref:System.String>. Por lo tanto, `String` y `string` son equivalentes y se puede utilizar la convención de nomenclatura que prefiera. La clase `String` proporciona muchos métodos para crear, manipular y comparar cadenas de forma segura. Además, el lenguaje C# sobrecarga algunos operadores para simplificar las operaciones de cadena comunes. Para más información sobre la palabra clave, consulte [string](../../language-reference/keywords/string.md). Para obtener más información sobre el tipo y sus métodos, vea <xref:System.String>.  
   
 ## <a name="declaring-and-initializing-strings"></a>Declaración e inicialización de cadenas  
  Puede declarar e inicializar cadenas de varias maneras, tal como se muestra en el ejemplo siguiente:  
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- Tenga en cuenta que no se usa el operador [new](../../../csharp/language-reference/operators/new-operator.md) para crear un objeto de cadena, salvo cuando se inicialice la cadena con una matriz de caracteres.  
+ Tenga en cuenta que no se usa el operador [new](../../language-reference/operators/new-operator.md) para crear un objeto de cadena, salvo cuando se inicialice la cadena con una matriz de caracteres.  
   
- Inicialice una cadena con el valor constante <xref:System.String.Empty> para crear un objeto <xref:System.String> cuya cadena tenga longitud cero. La representación literal de la cadena de una cadena de longitud cero es "". Mediante la inicialización de las cadenas con el valor <xref:System.String.Empty> en lugar de [null](../../../csharp/language-reference/keywords/null.md), puede reducir las posibilidades de que se produzca una excepción <xref:System.NullReferenceException>. Use el método estático <xref:System.String.IsNullOrEmpty%28System.String%29> para comprobar el valor de una cadena antes de intentar obtener acceso a ella.  
+ Inicialice una cadena con el valor constante <xref:System.String.Empty> para crear un objeto <xref:System.String> cuya cadena tenga longitud cero. La representación literal de la cadena de una cadena de longitud cero es "". Mediante la inicialización de las cadenas con el valor <xref:System.String.Empty> en lugar de [null](../../language-reference/keywords/null.md), puede reducir las posibilidades de que se produzca una excepción <xref:System.NullReferenceException>. Use el método estático <xref:System.String.IsNullOrEmpty%28System.String%29> para comprobar el valor de una cadena antes de intentar obtener acceso a ella.  
   
 ## <a name="immutability-of-string-objects"></a>Inmutabilidad de los objetos de cadena  
  Los objetos de cadena son *inmutables*: no se pueden cambiar después de haberse creado. Todos los métodos <xref:System.String> y operadores de C# que parecen modificar una cadena en realidad devuelven los resultados en un nuevo objeto de cadena. En el siguiente ejemplo, cuando el contenido de `s1` y `s2` se concatena para formar una sola cadena, las dos cadenas originales no se modifican. El operador `+=` crea una nueva cadena que contiene el contenido combinado. Este nuevo objeto se asigna a la variable `s1` y el objeto original que se asignó a `s1` se libera para la recolección de elementos no utilizados porque ninguna otra variable contiene una referencia a él.  
@@ -125,7 +125,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Cadenas, métodos de extensión y LINQ  
- Dado que el tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, puede usar los métodos de extensión definidos en la clase <xref:System.Linq.Enumerable> en cadenas. Para evitar el desorden visual, estos métodos se excluyen de IntelliSense para el tipo <xref:System.String>, pero aun así están disponibles. También puede utilizar expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en cadenas. Para más información, consulte [LINQ and Strings](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md) (LINQ y cadenas).  
+ Dado que el tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, puede usar los métodos de extensión definidos en la clase <xref:System.Linq.Enumerable> en cadenas. Para evitar el desorden visual, estos métodos se excluyen de IntelliSense para el tipo <xref:System.String>, pero aun así están disponibles. También puede utilizar expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en cadenas. Para más información, consulte [LINQ and Strings](../concepts/linq/linq-and-strings.md) (LINQ y cadenas).  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
@@ -136,12 +136,12 @@ string s = String.Empty;
 |[Cómo: Concatenar varias cadenas](../../how-to/concatenate-multiple-strings.md)|Muestra diferentes maneras de combinar varias cadenas en una.|
 |[Cómo: para analizar cadenas mediante String.Split (Guía de C#)](../../how-to/parse-strings-using-split.md)|Contiene ejemplos de código que muestran cómo utilizar el método `String.Split` para analizar cadenas.|  
 |[Cómo: Buscar cadenas](../../how-to/search-strings.md)|Explica cómo usar la búsqueda para especificar texto o patrones en cadenas.|  
-|[Cómo: Determinar si una cadena representa un valor numérico](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Muestra cómo analizar de forma segura una cadena para ver si tiene un valor numérico válido.|  
+|[Cómo: Determinar si una cadena representa un valor numérico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Muestra cómo analizar de forma segura una cadena para ver si tiene un valor numérico válido.|  
 |[Interpolación de cadenas](../../language-reference/tokens/interpolated.md)|Describe la característica de interpolación de cadena que proporciona una sintaxis adecuada para dar formato a las cadenas.|
-|[Operaciones básicas de cadenas](../../../../docs/standard/base-types/basic-string-operations.md)|Proporciona vínculos a temas que usan los métodos <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> para realizar operaciones básicas de cadenas.|  
+|[Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)|Proporciona vínculos a temas que usan los métodos <xref:System.String?displayProperty=nameWithType> y <xref:System.Text.StringBuilder?displayProperty=nameWithType> para realizar operaciones básicas de cadenas.|  
 |[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Describe cómo convertir las representaciones de cadena de los tipos base de .NET en las instancias de los tipos correspondientes.|  
 |[Analizar cadenas de fecha y hora en .NET](../../../standard/base-types/parsing-datetime.md)|Muestra cómo convertir una cadena como "24/01/2008" en un objeto <xref:System.DateTime?displayProperty=nameWithType>.|  
-|[Comparar cadenas](../../../../docs/standard/base-types/comparing.md)|Incluye información sobre cómo comparar cadenas y proporciona ejemplos de C# y Visual Basic.|  
+|[Comparar cadenas](../../../standard/base-types/comparing.md)|Incluye información sobre cómo comparar cadenas y proporciona ejemplos de C# y Visual Basic.|  
 |[Utilizar la clase StringBuilder](../../../standard/base-types/stringbuilder.md)|Describe cómo crear y modificar objetos de cadena dinámicos con la clase <xref:System.Text.StringBuilder>.|  
-|[LINQ y cadenas](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|Proporciona información sobre cómo realizar varias operaciones de cadena utilizando consultas LINQ.|  
-|[Guía de programación de C#](../../../csharp/programming-guide/index.md)|Proporciona vínculos a temas que explican las construcciones de programación en C#.|  
+|[LINQ y cadenas](../concepts/linq/linq-and-strings.md)|Proporciona información sobre cómo realizar varias operaciones de cadena utilizando consultas LINQ.|  
+|[Guía de programación de C#](../index.md)|Proporciona vínculos a temas que explican las construcciones de programación en C#.|  

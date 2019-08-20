@@ -8,12 +8,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: 0c97a5b843d27258f58d654d35420a262d5b741a
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: ba5d2a9fb74b877c9b847343a9012ccb9624335e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65062956"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604226"
 ---
 # <a name="get-started-with-c"></a>Introducción a C\#
 
@@ -43,15 +43,15 @@ Los siguientes temas se encuentran disponibles:
 
 ## <a name="related-sections"></a>Secciones relacionadas
 
-* [Guía de programación de C#](../../csharp/programming-guide/index.md)
+* [Guía de programación de C#](../programming-guide/index.md)
 
     Proporciona información sobre conceptos de programación en C# y describe cómo realizar diversas tareas en C#.
 
-* [Referencia de C#](../../csharp/language-reference/index.md)
+* [Referencia de C#](../language-reference/index.md)
 
     Proporciona información de referencia detallada sobre palabras clave, operadores, directivas de preprocesador, opciones del compilador y errores del compilador y advertencias de C#.
 
-* [Tutoriales](../../csharp/walkthroughs.md)
+* [Tutoriales](../walkthroughs.md)
 
     Proporciona vínculos a los tutoriales de programación que usan C# y una breve descripción de cada uno.
 
