@@ -3,16 +3,16 @@ title: Información general sobre el SDK de .NET Core
 description: Obtenga información sobre el SDK de .NET Core, que es un conjunto de bibliotecas y herramientas utilizadas para crear proyectos .NET Core.
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0231c08f780455c4956c044815a2e80cef4d827e
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f4c4982bacaf58c1b8c7db6c5319bd314e89b7ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733391"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566247"
 ---
 # <a name="net-core-sdk-overview"></a>Información general sobre el SDK de .NET Core
 
-El kit de desarrollo de software (SDK) de .NET Core es un conjunto de bibliotecas y herramientas que permiten a los desarrolladores crear aplicaciones y bibliotecas de .NET Core. Contiene los siguientes componentes que se usan para compilar y ejecutar aplicaciones:
+El SDK de .NET Core es un conjunto de bibliotecas y herramientas que permiten a los desarrolladores crear aplicaciones y bibliotecas de .NET Core. Contiene los siguientes componentes que se usan para compilar y ejecutar aplicaciones:
 
 - Herramientas de la CLI de .NET Core.
 - Bibliotecas y runtime de .NET Core.

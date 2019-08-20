@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 07/25/2019
-ms.openlocfilehash: 29e62f01ab6a749c252aa488dfbccd5b27cb9dba
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: f1fce2899e9e11b1007d6c270180b27a29eaa167
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733368"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039444"
 ---
 # <a name="whats-new-in-net-core-30-preview-7"></a>Novedades de .NET Core 3.0 (versión preliminar 7)
 
@@ -159,7 +159,7 @@ Para más información sobre la herramienta Enlazador de IL, vea la [documentaci
 
 La [compilación en niveles](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) está activada de forma predeterminada con .NET Core 3.0. Esta característica permite que el runtime utilice el compilador Just-In-Time (JIT) de forma más flexible para generar un mejor rendimiento.
 
-La principal ventaja de TC es permitir el uso de métodos de compilación y recompilación JIT de mayor lentitud pero más rápidos para generar código, o de mayor calidad pero más lentos para generar código. Esto contribuye a aumentar el rendimiento de una aplicación a medida que pasa por distintas fases de ejecución, desde el inicio hasta alcanzar el estado estable. Esto contrasta con el enfoque no TC, donde cada método se compila de una sola manera (al igual que el nivel de alta calidad), que se inclina por el estado estable sobre el rendimiento de inicio.
+La principal ventaja de TC es permitir la vuelta a los métodos JIT con un nivel de menor calidad, pero más rápido, o un nivel de mayor calidad, pero más lento. Esto contribuye a aumentar el rendimiento de una aplicación a medida que pasa por distintas fases de ejecución, desde el inicio hasta alcanzar el estado estable. Esto contrasta con el enfoque no TC, donde cada método se compila de una sola manera (al igual que el nivel de alta calidad), que se inclina por el estado estable sobre el rendimiento de inicio.
 
 Para habilitar JIT rápido (código de nivel 0 con compilación JIT), use esta opción en el archivo de proyecto:
 
@@ -291,7 +291,7 @@ El archivo del proyecto de .NET Core debe especificar los tiempos de ejecución 
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
 ```
 
-## <a name="winforms-highdpi"></a>HighDPI de WinForms
+## <a name="winforms-high-dpi"></a>PPP alto de WinForms
 
 En .NET Core, las aplicaciones de Windows Forms pueden establecer el modo de valores altos de PPP con <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType>. El método `SetHighDpiMode` establece el modo de valores altos de PPP correspondiente a menos que la opción se haya establecido por otros medios como `App.Manifest` o P/Invoke antes de `Application.Run`.
 
@@ -303,9 +303,9 @@ Los posibles valores de `highDpiMode`, expresados por la enumeración <xref:Syst
 * `PerMonitorV2`
 * `DpiUnawareGdiScaled`
 
-Para obtener más información sobre los modos de valores altos de PPP, vea el artículo sobre [desarrollo de aplicaciones de escritorio con valores altos de PPP en Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
+Para más información sobre los modos de valores altos de PPP, consulte el artículo sobre [desarrollo de aplicaciones de escritorio con valores altos de PPP en Windows](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows).
 
-### <a name="ranges-and-indices"></a>Rangos e índices
+## <a name="ranges-and-indices"></a>Rangos e índices
 
 El nuevo tipo <xref:System.Index?displayProperty=nameWithType> se puede utilizar para la indización. Puede crear uno desde un índice `int` que cuente desde el principio o con un operador `^` de prefijo (C#) que cuente desde el final:
 
@@ -324,7 +324,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 Para obtener más información, vea el [tutorial sobre intervalos e índices](../../csharp/tutorials/ranges-indexes.md).
 
-### <a name="async-streams"></a>Flujos asincrónicos
+## <a name="async-streams"></a>Flujos asincrónicos
 
 El tipo <xref:System.Collections.Generic.IAsyncEnumerable%601> es una nueva versión asincrónica de <xref:System.Collections.Generic.IEnumerable%601>. El lenguaje permite ejecutar la instrucción `await foreach` en `IAsyncEnumerable<T>` para consumir sus elementos, y usar la instrucción `yield return` en ellos para generar los elementos.
 
@@ -372,7 +372,7 @@ Corresponde a la operación IEEE `scaleB` que toma un valor integral, devuelve e
 Corresponde a la operación IEEE `log2`. Devuelve el logaritmo de base 2. Minimiza el error de redondeo.
 
 * <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-Corresponde a la operación IEEE `fma`. Realiza una multiplicación y suma fusionadas. Es decir, realiza `(x * y) + z` como operación única, minimizando así el error de redondeo. Un ejemplo sería `FusedMultiplyAdd(1e308, 2.0, -1e308)`, que devuelve `1e308`. La operación `(1e308 * 2.0) - 1e308` regular devuelve `double.PositiveInfinity`.
+Corresponde a la operación IEEE `fma`. Realiza una multiplicación y suma fusionadas. Es decir, realiza `(x * y) + z` como operación única, de forma que se minimiza el error de redondeo. Un ejemplo sería `FusedMultiplyAdd(1e308, 2.0, -1e308)`, que devuelve `1e308`. La operación `(1e308 * 2.0) - 1e308` regular devuelve `double.PositiveInfinity`.
 
 * <xref:System.Math.CopySign(System.Double,System.Double)>\
 Corresponde a la operación IEEE `copySign`. Devuelve el valor de `x`, pero con el signo de `y`.
@@ -403,17 +403,15 @@ Este es un ejemplo de lectura a través del archivo [**launch.json**](https://gi
 
 A continuación se muestra un uso del ejemplo del `JsonDocument` y `JsonElement` que se puede utilizar como punto inicial:
 
-Este es un ejemplo de lectura de C# 8.0 a través del archivo [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) creado por Visual Studio Code:
-
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJson)]
+
+Este es un ejemplo de lectura de C# 8.0 a través del archivo [**launch.json**](https://github.com/dotnet/samples/blob/master/snippets/core/whats-new/whats-new-in-30/cs/launch.json) creado por Visual Studio Code:
 
 [!CODE-csharp[JsonDocument](~/samples/snippets/core/whats-new/whats-new-in-30/cs/program.cs#ReadJsonCall)]
 
 ### <a name="jsonserializer"></a>JsonSerializer
 
-<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> se compila sobre <xref:System.Text.Json.Utf8JsonReader> y <xref:System.Text.Json.Utf8JsonWriter> para proporcionar una rápida opción de serialización de baja memoria cuando se trabaja con documentos y fragmentos de JSON.
-
-EXAMINAR: https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/docs/SerializerProgrammingModel.md para ver un ejemplo de portar en este artículo
+<xref:System.Text.Json.JsonSerializer?displayProperty=nameWithType> se compila sobre <xref:System.Text.Json.Utf8JsonReader> y <xref:System.Text.Json.Utf8JsonWriter> para proporcionar una rápida opción de serialización de memoria baja cuando se trabaja con documentos y fragmentos de JSON.
 
 Este es un ejemplo de serialización de un objeto en JSON:
 

@@ -21,10 +21,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "66378164"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
@@ -164,7 +164,7 @@ ms.locfileid: "66378164"
   
  El primer patrón de expresión regular, `^[0-9A-Z]([-.\w]*[0-9A-Z])*@`, se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -175,7 +175,7 @@ ms.locfileid: "66378164"
   
  El segundo patrón de expresión regular, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, emplea una aserción de búsqueda tardía positiva. Se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -196,7 +196,7 @@ ms.locfileid: "66378164"
   
  El primer patrón de expresión regular, `^(([A-Z]\w*)+\.)*[A-Z]\w*$`, se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
 |`([A-Z]\w*)+\.`|Buscar coincidencias con un carácter alfabético (A-Z) seguido de cero o más caracteres alfabéticos una o más veces, seguidas de un punto. Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
@@ -206,7 +206,7 @@ ms.locfileid: "66378164"
   
  El segundo patrón de expresión regular, `^((?=[A-Z])\w+\.)*[A-Z]\w*$`, emplea una aserción de búsqueda anticipada positiva. Se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias en el principio de la cadena.|  
 |`(?=[A-Z])`|Examinar hacia delante el primer carácter y continuar la búsqueda de coincidencias si es alfabético (A-Z). Esta comparación no distingue mayúsculas de minúsculas, ya que se llama al método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> con la opción <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  

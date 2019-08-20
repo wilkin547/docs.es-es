@@ -14,10 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
 ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "64634715"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
@@ -117,7 +117,7 @@ ms.locfileid: "64634715"
   
  La expresión regular `\p{Sc}+\s*\d+` que se usa en este ejemplo comprueba que la cadena de entrada consta de un símbolo de moneda y al menos un dígito decimal. El patrón se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\p{Sc}+`|Buscar coincidencias con uno o más caracteres de la categoría Símbolo Unicode, Moneda.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
@@ -206,7 +206,7 @@ ms.locfileid: "64634715"
   
  En estos casos, puede optimizar el rendimiento de la expresión regular quitando los cuantificadores anidados y reemplazando la subexpresión externa con una aserción de búsqueda anticipada o de búsqueda tardía de ancho cero. Las aserciones de búsqueda anticipada y de búsqueda tardía son delimitadores; no mueven el puntero en la cadena de entrada, sino que realizan una búsqueda hacia delante o hacia atrás para comprobar si se cumple una condición especificada. Por ejemplo, la expresión regular de número de pieza se puede volver a escribir como `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])\$$`. Este patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Iniciar la búsqueda de coincidencias con el principio de la cadena de entrada.|  
 |`[0-9A-Z]`|Buscar coincidencias de un carácter alfanumérico. El número de pieza debe constar al menos de este carácter.|  
@@ -222,7 +222,7 @@ ms.locfileid: "64634715"
   
  El lenguaje de expresiones regulares de .NET incluye los elementos del lenguaje siguientes, que puede usar para eliminar cuantificadores anidados. Para obtener más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
-|Elemento del lenguaje|Descripción|  
+|Elemento del lenguaje|DESCRIPCIÓN|  
 |----------------------|-----------------|  
 |`(?=` `subexpression` `)`|Búsqueda anticipada positiva de ancho cero. Realizar una búsqueda anticipada de la posición actual para determinar si `subexpression` coincide con la cadena de entrada.|  
 |`(?!` `subexpression` `)`|Búsqueda anticipada negativa de ancho cero. Realizar una búsqueda anticipada de la posición actual para determinar si `subexpression` no coincide con la cadena de entrada.|  
@@ -294,7 +294,7 @@ ms.locfileid: "64634715"
 <a name="RelatedTopics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Title|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina la implementación del motor de expresiones regulares de .NET. El tema se centra en la flexibilidad de las expresiones regulares y explica la responsabilidad del desarrollador para garantizar un funcionamiento eficaz y sólido del motor de expresiones regulares.|  
 |[Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica qué es el retroceso y cómo afecta al rendimiento de las expresiones regulares, y examine los elementos del lenguaje que proporcionan alternativas al retroceso.|  
