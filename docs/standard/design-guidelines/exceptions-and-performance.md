@@ -10,69 +10,73 @@ helpviewer_keywords:
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
-ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 967692092186b81802a7ab635ea8fe4dbacd49ed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026437"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611517"
 ---
-# <a name="exceptions-and-performance"></a><span data-ttu-id="cb16b-102">Excepciones y rendimiento</span><span class="sxs-lookup"><span data-stu-id="cb16b-102">Exceptions and Performance</span></span>
-<span data-ttu-id="cb16b-103">Una preocupación comunes relacionados con las excepciones es que si las excepciones se utilizan para el código que habitualmente se produce un error, el rendimiento de la implementación será aceptable.</span><span class="sxs-lookup"><span data-stu-id="cb16b-103">One common concern related to exceptions is that if exceptions are used for code that routinely fails, the performance of the implementation will be unacceptable.</span></span> <span data-ttu-id="cb16b-104">Esto es una preocupación válida.</span><span class="sxs-lookup"><span data-stu-id="cb16b-104">This is a valid concern.</span></span> <span data-ttu-id="cb16b-105">Cuando un miembro produce una excepción, su rendimiento puede ser órdenes de magnitud más lentas.</span><span class="sxs-lookup"><span data-stu-id="cb16b-105">When a member throws an exception, its performance can be orders of magnitude slower.</span></span> <span data-ttu-id="cb16b-106">Sin embargo, es posible lograr un buen rendimiento al estrictamente siguiendo las instrucciones de la excepción que no permitir el uso de códigos de error.</span><span class="sxs-lookup"><span data-stu-id="cb16b-106">However, it is possible to achieve good performance while strictly adhering to the exception guidelines that disallow using error codes.</span></span> <span data-ttu-id="cb16b-107">Dos patrones descritos en esta sección sugieren formas para hacer esto.</span><span class="sxs-lookup"><span data-stu-id="cb16b-107">Two patterns described in this section suggest ways to do this.</span></span>  
-  
- <span data-ttu-id="cb16b-108">**X DO NOT** usar códigos de error debido a problemas que las excepciones pueden afectar negativamente al rendimiento.</span><span class="sxs-lookup"><span data-stu-id="cb16b-108">**X DO NOT** use error codes because of concerns that exceptions might affect performance negatively.</span></span>  
-  
- <span data-ttu-id="cb16b-109">Para mejorar el rendimiento, es posible usar Tester-Doer (modelo) o el patrón de Try Parse, se describe en las dos secciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="cb16b-109">To improve performance, it is possible to use either the Tester-Doer Pattern or the Try-Parse Pattern, described in the next two sections.</span></span>  
-  
-## <a name="tester-doer-pattern"></a><span data-ttu-id="cb16b-110">Tester-Doer (modelo)</span><span class="sxs-lookup"><span data-stu-id="cb16b-110">Tester-Doer Pattern</span></span>  
- <span data-ttu-id="cb16b-111">A veces se puede mejorar el rendimiento de un miembro de inicio de excepción dividiendo el miembro en dos.</span><span class="sxs-lookup"><span data-stu-id="cb16b-111">Sometimes performance of an exception-throwing member can be improved by breaking the member into two.</span></span> <span data-ttu-id="cb16b-112">Echemos un vistazo a la <xref:System.Collections.Generic.ICollection%601.Add%2A> método de la <xref:System.Collections.Generic.ICollection%601> interfaz.</span><span class="sxs-lookup"><span data-stu-id="cb16b-112">Let’s look at the <xref:System.Collections.Generic.ICollection%601.Add%2A> method of the <xref:System.Collections.Generic.ICollection%601> interface.</span></span>  
-  
-```  
-ICollection<int> numbers = ...   
-numbers.Add(1);  
-```  
-  
- <span data-ttu-id="cb16b-113">El método `Add` se produce si la colección es de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="cb16b-113">The method `Add` throws if the collection is read-only.</span></span> <span data-ttu-id="cb16b-114">Esto puede ser un problema de rendimiento en escenarios donde se espera que la llamada al método producirá un error con frecuencia.</span><span class="sxs-lookup"><span data-stu-id="cb16b-114">This can be a performance problem in scenarios where the method call is expected to fail often.</span></span> <span data-ttu-id="cb16b-115">Una de las formas de mitigar el problema es comprobar si la colección es de escritura antes de intentar agregar un valor.</span><span class="sxs-lookup"><span data-stu-id="cb16b-115">One of the ways to mitigate the problem is to test whether the collection is writable before trying to add a value.</span></span>  
-  
-```  
-ICollection<int> numbers = ...   
-...  
-if(!numbers.IsReadOnly){  
-    numbers.Add(1);  
-}  
-```  
-  
- <span data-ttu-id="cb16b-116">El miembro que se usa para probar una condición, que en nuestro ejemplo es la propiedad `IsReadOnly`, se conoce como la herramienta de comprobación.</span><span class="sxs-lookup"><span data-stu-id="cb16b-116">The member used to test a condition, which in our example is the property `IsReadOnly`, is referred to as the tester.</span></span> <span data-ttu-id="cb16b-117">El miembro que se usa para realizar una operación potencialmente produce, la `Add` método en nuestro ejemplo, se conoce como parte de la acción.</span><span class="sxs-lookup"><span data-stu-id="cb16b-117">The member used to perform a potentially throwing operation, the `Add` method in our example, is referred to as the doer.</span></span>  
-  
- <span data-ttu-id="cb16b-118">**✓ CONSIDER** el patrón de acción de la herramienta de comprobación para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.</span><span class="sxs-lookup"><span data-stu-id="cb16b-118">**✓ CONSIDER** the Tester-Doer Pattern for members that might throw exceptions in common scenarios to avoid performance problems related to exceptions.</span></span>  
-  
-## <a name="try-parse-pattern"></a><span data-ttu-id="cb16b-119">Patrón de try Parse</span><span class="sxs-lookup"><span data-stu-id="cb16b-119">Try-Parse Pattern</span></span>  
- <span data-ttu-id="cb16b-120">Para las API extremadamente sensibles al rendimiento, se debe usar un patrón aún más rápido que el patrón de Tester-Doer descrito en la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="cb16b-120">For extremely performance-sensitive APIs, an even faster pattern than the Tester-Doer Pattern described in the previous section should be used.</span></span> <span data-ttu-id="cb16b-121">El patrón se llama para ajustar el nombre de miembro para realizar una prueba bien definida caso una parte de la semántica de miembro.</span><span class="sxs-lookup"><span data-stu-id="cb16b-121">The pattern calls for adjusting the member name to make a well-defined test case a part of the member semantics.</span></span> <span data-ttu-id="cb16b-122">Por ejemplo, <xref:System.DateTime> define un <xref:System.DateTime.Parse%2A> método que produce una excepción si el análisis de una cadena se produce un error.</span><span class="sxs-lookup"><span data-stu-id="cb16b-122">For example, <xref:System.DateTime> defines a <xref:System.DateTime.Parse%2A> method that throws an exception if parsing of a string fails.</span></span> <span data-ttu-id="cb16b-123">También define correspondiente <xref:System.DateTime.TryParse%2A> método que intenta analizar, pero devuelve false si el análisis es correcta y devuelve el resultado de una correcta con análisis un `out` parámetro.</span><span class="sxs-lookup"><span data-stu-id="cb16b-123">It also defines a corresponding <xref:System.DateTime.TryParse%2A> method that attempts to parse, but returns false if parsing is unsuccessful and returns the result of a successful parsing using an `out` parameter.</span></span>  
-  
-```  
-public struct DateTime {  
-    public static DateTime Parse(string dateTime){   
-        ...   
-    }  
-    public static bool TryParse(string dateTime, out DateTime result){  
-        ...  
-    }  
-}  
-```  
-  
- <span data-ttu-id="cb16b-124">Al utilizar este patrón, es importante definir la funcionalidad de try en términos estrictos.</span><span class="sxs-lookup"><span data-stu-id="cb16b-124">When using this pattern, it is important to define the try functionality in strict terms.</span></span> <span data-ttu-id="cb16b-125">Si el miembro falla por alguna razón distinta try bien definida, el miembro todavía debe producir una excepción correspondiente.</span><span class="sxs-lookup"><span data-stu-id="cb16b-125">If the member fails for any reason other than the well-defined try, the member must still throw a corresponding exception.</span></span>  
-  
- <span data-ttu-id="cb16b-126">**✓ CONSIDER** el patrón de Try-análisis para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.</span><span class="sxs-lookup"><span data-stu-id="cb16b-126">**✓ CONSIDER** the Try-Parse Pattern for members that might throw exceptions in common scenarios to avoid performance problems related to exceptions.</span></span>  
-  
- <span data-ttu-id="cb16b-127">**✓ DO** usar el prefijo "Try" y un valor booleano de tipo de valor devuelto para métodos de implementar este patrón.</span><span class="sxs-lookup"><span data-stu-id="cb16b-127">**✓ DO** use the prefix "Try" and Boolean return type for methods implementing this pattern.</span></span>  
-  
- <span data-ttu-id="cb16b-128">**✓ DO** proporcionan un miembro que inicie excepciones para cada miembro utilizando el modelo de análisis de Try.</span><span class="sxs-lookup"><span data-stu-id="cb16b-128">**✓ DO** provide an exception-throwing member for each member using the Try-Parse Pattern.</span></span>  
-  
- <span data-ttu-id="cb16b-129">*Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="cb16b-129">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
-  
- <span data-ttu-id="cb16b-130">*Reimpreso con permiso de Pearson Education, Inc. de [instrucciones de diseño de Framework: Convenciones, expresiones y patrones para bibliotecas reutilizables. NET, 2ª edición](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina y Brad Abrams, publicada el 22 de octubre de 2008 por Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="cb16b-130">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="cb16b-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="cb16b-131">See also</span></span>
+# <a name="exceptions-and-performance"></a><span data-ttu-id="f56f7-102">Excepciones y rendimiento</span><span class="sxs-lookup"><span data-stu-id="f56f7-102">Exceptions and Performance</span></span>
+<span data-ttu-id="f56f7-103">Un problema común relacionado con las excepciones es que si se usan excepciones para el código que genera un error de forma rutinaria, el rendimiento de la implementación será inaceptable.</span><span class="sxs-lookup"><span data-stu-id="f56f7-103">One common concern related to exceptions is that if exceptions are used for code that routinely fails, the performance of the implementation will be unacceptable.</span></span> <span data-ttu-id="f56f7-104">Este es un problema válido.</span><span class="sxs-lookup"><span data-stu-id="f56f7-104">This is a valid concern.</span></span> <span data-ttu-id="f56f7-105">Cuando un miembro produce una excepción, su rendimiento puede ser un orden de magnitud más lento.</span><span class="sxs-lookup"><span data-stu-id="f56f7-105">When a member throws an exception, its performance can be orders of magnitude slower.</span></span> <span data-ttu-id="f56f7-106">Sin embargo, es posible lograr un buen rendimiento al tiempo que se respetan estrictamente las instrucciones de excepción que no permiten el uso de códigos de error.</span><span class="sxs-lookup"><span data-stu-id="f56f7-106">However, it is possible to achieve good performance while strictly adhering to the exception guidelines that disallow using error codes.</span></span> <span data-ttu-id="f56f7-107">Dos patrones que se describen en esta sección sugieren maneras de hacerlo.</span><span class="sxs-lookup"><span data-stu-id="f56f7-107">Two patterns described in this section suggest ways to do this.</span></span>
 
-- [<span data-ttu-id="cb16b-132">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="cb16b-132">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
-- [<span data-ttu-id="cb16b-133">Instrucciones de diseño de excepciones</span><span class="sxs-lookup"><span data-stu-id="cb16b-133">Design Guidelines for Exceptions</span></span>](../../../docs/standard/design-guidelines/exceptions.md)
+ <span data-ttu-id="f56f7-108">**X DO NOT** usar códigos de error debido a problemas que las excepciones pueden afectar negativamente al rendimiento.</span><span class="sxs-lookup"><span data-stu-id="f56f7-108">**X DO NOT** use error codes because of concerns that exceptions might affect performance negatively.</span></span>
+
+ <span data-ttu-id="f56f7-109">Para mejorar el rendimiento, es posible usar el patrón Tester-doer o el patrón try-Parse, que se describe en las dos secciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="f56f7-109">To improve performance, it is possible to use either the Tester-Doer Pattern or the Try-Parse Pattern, described in the next two sections.</span></span>
+
+## <a name="tester-doer-pattern"></a><span data-ttu-id="f56f7-110">Evaluador: patrón doer</span><span class="sxs-lookup"><span data-stu-id="f56f7-110">Tester-Doer Pattern</span></span>
+ <span data-ttu-id="f56f7-111">A veces, el rendimiento de un miembro de generación de excepciones se puede mejorar dividiendo el miembro en dos.</span><span class="sxs-lookup"><span data-stu-id="f56f7-111">Sometimes performance of an exception-throwing member can be improved by breaking the member into two.</span></span> <span data-ttu-id="f56f7-112">Echemos un vistazo <xref:System.Collections.Generic.ICollection%601.Add%2A> al método de la <xref:System.Collections.Generic.ICollection%601> interfaz.</span><span class="sxs-lookup"><span data-stu-id="f56f7-112">Let’s look at the <xref:System.Collections.Generic.ICollection%601.Add%2A> method of the <xref:System.Collections.Generic.ICollection%601> interface.</span></span>
+
+```csharp
+ICollection<int> numbers = ...
+numbers.Add(1);
+```
+
+ <span data-ttu-id="f56f7-113">El método `Add` produce si la colección es de solo lectura.</span><span class="sxs-lookup"><span data-stu-id="f56f7-113">The method `Add` throws if the collection is read-only.</span></span> <span data-ttu-id="f56f7-114">Puede tratarse de un problema de rendimiento en escenarios en los que se espera que la llamada al método no se realice con frecuencia.</span><span class="sxs-lookup"><span data-stu-id="f56f7-114">This can be a performance problem in scenarios where the method call is expected to fail often.</span></span> <span data-ttu-id="f56f7-115">Una de las formas de mitigar el problema consiste en probar si se puede escribir en la colección antes de intentar agregar un valor.</span><span class="sxs-lookup"><span data-stu-id="f56f7-115">One of the ways to mitigate the problem is to test whether the collection is writable before trying to add a value.</span></span>
+
+```csharp
+ICollection<int> numbers = ...
+...
+if (!numbers.IsReadOnly)
+{
+    numbers.Add(1);
+}
+```
+
+ <span data-ttu-id="f56f7-116">El miembro que se usa para probar una condición, que en nuestro ejemplo es `IsReadOnly`la propiedad, se conoce como evaluador.</span><span class="sxs-lookup"><span data-stu-id="f56f7-116">The member used to test a condition, which in our example is the property `IsReadOnly`, is referred to as the tester.</span></span> <span data-ttu-id="f56f7-117">El miembro que se utiliza para realizar una operación de inicio `Add` potencial, el método en nuestro ejemplo, se conoce como doer.</span><span class="sxs-lookup"><span data-stu-id="f56f7-117">The member used to perform a potentially throwing operation, the `Add` method in our example, is referred to as the doer.</span></span>
+
+ <span data-ttu-id="f56f7-118">**✓ CONSIDER** el patrón de acción de la herramienta de comprobación para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.</span><span class="sxs-lookup"><span data-stu-id="f56f7-118">**✓ CONSIDER** the Tester-Doer Pattern for members that might throw exceptions in common scenarios to avoid performance problems related to exceptions.</span></span>
+
+## <a name="try-parse-pattern"></a><span data-ttu-id="f56f7-119">Patrón try-Parse</span><span class="sxs-lookup"><span data-stu-id="f56f7-119">Try-Parse Pattern</span></span>
+ <span data-ttu-id="f56f7-120">En el caso de las API extremadamente sensibles al rendimiento, se debe usar un patrón aún más rápido que el patrón Tester-doer descrito en la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="f56f7-120">For extremely performance-sensitive APIs, an even faster pattern than the Tester-Doer Pattern described in the previous section should be used.</span></span> <span data-ttu-id="f56f7-121">El patrón llama a para ajustar el nombre del miembro con el fin de convertir un caso de prueba bien definido en una parte de la semántica de los miembros.</span><span class="sxs-lookup"><span data-stu-id="f56f7-121">The pattern calls for adjusting the member name to make a well-defined test case a part of the member semantics.</span></span> <span data-ttu-id="f56f7-122">Por ejemplo, <xref:System.DateTime> define un <xref:System.DateTime.Parse%2A> método que produce una excepción si se produce un error en el análisis de una cadena.</span><span class="sxs-lookup"><span data-stu-id="f56f7-122">For example, <xref:System.DateTime> defines a <xref:System.DateTime.Parse%2A> method that throws an exception if parsing of a string fails.</span></span> <span data-ttu-id="f56f7-123">También define un método correspondiente <xref:System.DateTime.TryParse%2A> que intenta analizar, pero devuelve false si el análisis no se realiza correctamente y devuelve el resultado de un análisis correcto mediante un `out` parámetro.</span><span class="sxs-lookup"><span data-stu-id="f56f7-123">It also defines a corresponding <xref:System.DateTime.TryParse%2A> method that attempts to parse, but returns false if parsing is unsuccessful and returns the result of a successful parsing using an `out` parameter.</span></span>
+
+```csharp
+public struct DateTime
+{
+    public static DateTime Parse(string dateTime)
+    {
+        ...
+    }
+    public static bool TryParse(string dateTime, out DateTime result)
+    {
+        ...
+    }
+}
+```
+
+ <span data-ttu-id="f56f7-124">Al usar este patrón, es importante definir la funcionalidad try en términos estrictos.</span><span class="sxs-lookup"><span data-stu-id="f56f7-124">When using this pattern, it is important to define the try functionality in strict terms.</span></span> <span data-ttu-id="f56f7-125">Si se produce un error en el miembro por cualquier motivo que no sea el try bien definido, el miembro todavía debe producir una excepción correspondiente.</span><span class="sxs-lookup"><span data-stu-id="f56f7-125">If the member fails for any reason other than the well-defined try, the member must still throw a corresponding exception.</span></span>
+
+ <span data-ttu-id="f56f7-126">**✓ CONSIDER** el patrón de Try-análisis para los miembros que pueden producir excepciones en común escenarios para evitar problemas de rendimiento relacionados con las excepciones.</span><span class="sxs-lookup"><span data-stu-id="f56f7-126">**✓ CONSIDER** the Try-Parse Pattern for members that might throw exceptions in common scenarios to avoid performance problems related to exceptions.</span></span>
+
+ <span data-ttu-id="f56f7-127">**✓ DO** usar el prefijo "Try" y un valor booleano de tipo de valor devuelto para métodos de implementar este patrón.</span><span class="sxs-lookup"><span data-stu-id="f56f7-127">**✓ DO** use the prefix "Try" and Boolean return type for methods implementing this pattern.</span></span>
+
+ <span data-ttu-id="f56f7-128">**✓ DO** proporcionan un miembro que inicie excepciones para cada miembro utilizando el modelo de análisis de Try.</span><span class="sxs-lookup"><span data-stu-id="f56f7-128">**✓ DO** provide an exception-throwing member for each member using the Try-Parse Pattern.</span></span>
+
+ <span data-ttu-id="f56f7-129">*Portions © 2005, 2009 Microsoft Corporation. Reservados todos los derechos.*</span><span class="sxs-lookup"><span data-stu-id="f56f7-129">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>
+
+ <span data-ttu-id="f56f7-130">*Se reimprimió por el permiso de Pearson Education, Inc [. desde las directrices de diseño del marco: Convenciones, expresiones y patrones de las bibliotecas de .net reutilizables, 2ª](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) edición de Krzysztof Cwalina y Brad Abrams, publicado el 22 de octubre de 2008 de Addison-Wesley Professional como parte de la serie de desarrollo de Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="f56f7-130">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="f56f7-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="f56f7-131">See also</span></span>
+
+- [<span data-ttu-id="f56f7-132">Instrucciones de diseño de .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f56f7-132">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)
+- [<span data-ttu-id="f56f7-133">Instrucciones de diseño de excepciones</span><span class="sxs-lookup"><span data-stu-id="f56f7-133">Design Guidelines for Exceptions</span></span>](../../../docs/standard/design-guidelines/exceptions.md)
