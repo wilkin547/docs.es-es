@@ -35,8 +35,6 @@
           items:
             - name: Procedimiento para responder a los cambios de las combinaciones de fuentes en una aplicación de formularios Windows Forms
               href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
-            - name: Deshabilitar el reconocimiento de PPP en Visual Studio
-              href: disable-dpi-awareness-visual-studio.md
         - name: Compatibilidad con valores altos de PPP en formularios Windows Forms
           href: high-dpi-support-in-windows-forms.md
     - name: Cambiar la apariencia de formularios Windows Forms
