@@ -2,12 +2,12 @@
 title: Migre sus bases de datos relacionales a Azure
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Migre sus bases de datos relacionales a Azure
 ms.date: 04/28/2018
-ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 982050d99aaa66cde1168a2f2fa64ed5f3e9163b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578378"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660730"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migre sus bases de datos relacionales a Azure
 
@@ -126,4 +126,4 @@ Para obtener información sobre cómo migrar bases de datos mediante Azure Datab
 
 > [!div class="step-by-step"]
 > [Anterior](lift-and-shift-existing-apps-azure-iaas.md)
-> [Siguiente](modernize-existing-apps-to-cloud-optimized/index.md)
+> [Siguiente](modernize-existing-apps-to-cloud-optimized/index.md) <!-- Next Chapter -->

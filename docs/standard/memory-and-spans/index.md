@@ -9,18 +9,18 @@ helpviewer_keywords:
 - pipeline processing
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ada6003cd6d1cd19036c42a3d0d976e18568f3a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fbfd091c821f59febfc8c7a203334454e7b59c12
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833970"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666422"
 ---
 # <a name="memory--and-span-related-types"></a>Tipos relacionados con el intervalo y la memoria
 
 A partir de .NET Core 2.1, .NET incluye una serie de tipos interrelacionados que representan una región contigua de memoria arbitraria fuertemente tipada. Se incluyen los siguientes:
 
-- <xref:System.Span%601?displayProperty=nameWithType>, un tipo que se usa para acceder a una región de memoria contigua. Se puede respaldar una instancia de <xref:System.Span%601> mediante cualquier matriz de tipo `T`, un elemento <xref:System.String>, a búfer asignado con [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) o un puntero a memoria sin administrar. Como debe asignarse en la pila, tiene una serie de restricciones. Por ejemplo, un campo de una clase no puede ser de tipo <xref:System.Span%601>, ni se puede usar un intervalo en operaciones asincrónicas.
+- <xref:System.Span%601?displayProperty=nameWithType>, un tipo que se usa para acceder a una región de memoria contigua. Se puede respaldar una instancia de <xref:System.Span%601> mediante cualquier matriz de tipo `T`, un elemento <xref:System.String>, a búfer asignado con [stackalloc](../../csharp/language-reference/operators/stackalloc.md) o un puntero a memoria sin administrar. Como debe asignarse en la pila, tiene una serie de restricciones. Por ejemplo, un campo de una clase no puede ser de tipo <xref:System.Span%601>, ni se puede usar un intervalo en operaciones asincrónicas.
 
 - <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, una versión inmutable de la estructura <xref:System.Span%601>.
 

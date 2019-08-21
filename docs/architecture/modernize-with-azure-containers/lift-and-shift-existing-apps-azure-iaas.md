@@ -2,12 +2,12 @@
 title: Elevación y desplazamiento de las aplicaciones .NET existentes a IaaS de Azure (lista para la infraestructura de la nube)
 description: Modernice las aplicaciones .NET existentes con los contenedores de Windows y la nube de Azure.
 ms.date: 04/28/2018
-ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: e25ddbf9b6e62c264f3f4d4580d7df3553d262ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578398"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660749"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>Elevación y desplazamiento de las aplicaciones .NET existentes a IaaS de Azure (lista para la infraestructura de la nube)
 
@@ -107,4 +107,4 @@ En la figura 2-3 se muestra la ejecución de varias migraciones de máquinas vir
 
 >[!div class="step-by-step"]
 >[Anterior](index.md)
->[Siguiente](migrate-your-relational-databases-to-azure.md)
+>[Siguiente](migrate-your-relational-databases-to-azure.md) <!-- Next Chapter -->
