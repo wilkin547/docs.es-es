@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4187d266d82783ebb72073c1da92faff95352884
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6f3ea57364832553d16c7e34fc887b1c9f821602
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489379"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663447"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>Elemento \<shadowCopyVerifyByTimestamp>
-Especifica si las instantáneas usa el comportamiento de inicio predeterminado introducido en .NET Framework 4, o se revierte el comportamiento de inicio de las versiones anteriores de .NET Framework.  
+Especifica si la copia sombra usa el comportamiento de inicio predeterminado introducido en el .NET Framework 4, o revierte al comportamiento de inicio de versiones anteriores de la .NET Framework.  
   
- \<Configuración > elemento  
-\<en tiempo de ejecución > elemento  
+ \<Elemento Configuration >  
+\<Elemento > en tiempo de ejecución  
 Elemento \<shadowCopyVerifyByTimestamp>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,32 +32,32 @@ Elemento \<shadowCopyVerifyByTimestamp>
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|enabled|Atributo necesario.<br /><br /> Especifica si los dominios de aplicación que utilizan instantáneas comparan las marcas de tiempo del ensamblado al iniciarse, para determinar si se ha actualizado un ensamblado antes de la instantánea del ensamblado.|  
+|enabled|Atributo necesario.<br /><br /> Especifica si los dominios de aplicación que usan la copia sombra comparan las marcas de tiempo de ensamblado al iniciarse, para determinar si se ha actualizado un ensamblado antes de copiar las instantáneas del ensamblado.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|true|En el inicio, copia solo los ensamblados que se han actualizado desde que se copiaron por última vez en el directorio de instantáneas. Este es el valor predeterminado de .NET Framework 4.|  
-|False|Revierte el comportamiento de inicio de las versiones anteriores de .NET Framework, lo que era copiar todos los archivos en el inicio.|  
+|true|En el inicio, copia solo los ensamblados que se han actualizado desde que se copiaron por última vez en el directorio de instantáneas. Este es el valor predeterminado para el .NET Framework 4.|  
+|false|Revierte al comportamiento de inicio de las versiones anteriores del .NET Framework, que era copiar todos los archivos en el inicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- A partir de .NET Framework 4, los ensamblados son instantáneas sólo si sus marcas de tiempo indican que han cambiado desde que se copiaron por última vez en el directorio de instantáneas. Esto mejora los tiempos de inicio para muchas aplicaciones que utilizan instantáneas, como se describe en [copias sombra de ensamblados](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md). Las aplicaciones que tienen un alto porcentaje y una frecuencia de actualizaciones del ensamblado no pueden beneficiarse de este cambio de comportamiento. En ese caso, puede usar este elemento para restaurar el comportamiento de las versiones anteriores de .NET Framework.  
+ A partir de la .NET Framework 4, los ensamblados solo se copian con instantáneas si sus marcas de tiempo indican que han cambiado desde que se copiaron por última vez en el directorio de instantáneas. Esto mejora los tiempos de inicio de muchas aplicaciones que usan la copia sombra, como se describe en instantáneas de [copia](../../../app-domains/shadow-copy-assemblies.md)de ensamblados. Es posible que las aplicaciones que tienen un alto porcentaje y la frecuencia de las actualizaciones del ensamblado no se beneficien de este cambio de comportamiento. En ese caso, puede usar este elemento para restaurar el comportamiento de versiones anteriores de la .NET Framework.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo deshabilitar el comportamiento de inicio predeterminado de las instantáneas en .NET Framework 4 y revertir al comportamiento de inicio de las versiones anteriores de .NET Framework.  
+ En el ejemplo siguiente se muestra cómo deshabilitar el comportamiento de inicio predeterminado de la copia sombra en el .NET Framework 4 y cómo revertir al comportamiento de inicio de versiones anteriores de la .NET Framework.  
   
 ```xml  
 <configuration>  
@@ -69,6 +69,6 @@ Elemento \<shadowCopyVerifyByTimestamp>
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Copias sombra de ensamblados](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Copias sombra de ensamblados](../../../app-domains/shadow-copy-assemblies.md)
