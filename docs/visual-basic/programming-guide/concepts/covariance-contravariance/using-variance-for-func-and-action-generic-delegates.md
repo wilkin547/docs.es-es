@@ -1,18 +1,18 @@
 ---
-title: Usar la varianza para Func and Action Generic Delegates (Visual Basic)
+title: Usar la varianza para los delegados genéricos FUNC y Action (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36c3012f-b39c-493b-b90f-079b5912ac1b
-ms.openlocfilehash: f2f45a9b6536859499f882b4cd585595176208f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce560f6246469620032ececa4afeeffe69baf407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787275"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664362"
 ---
-# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Usar la varianza para Func and Action Generic Delegates (Visual Basic)
+# <a name="using-variance-for-func-and-action-generic-delegates-visual-basic"></a>Usar la varianza para los delegados genéricos FUNC y Action (Visual Basic)
 En estos ejemplos se muestra cómo usar la covarianza y la contravarianza en los delegados genéricos `Func` y `Action` para habilitar la reutilización de métodos y proporcionar más flexibilidad en el código.  
   
- Para obtener más información sobre la covarianza y contravarianza, vea [varianza en delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
+ Para obtener más información sobre la covarianza y la contravarianza, vea [varianza en delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Usar delegados con parámetros de tipo covariante  
  En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la covarianza en los delegados `Func` genéricos. El método `FindByTitle` toma un parámetro del tipo `String` y devuelve un objeto del tipo `Employee`. Pero este método se puede asignar al delegado `Func(Of String, Person)` porque `Employee` hereda `Person`.  
@@ -92,4 +92,4 @@ End Class
 ## <a name="see-also"></a>Vea también
 
 - [Covarianza y contravarianza (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)
-- [Genéricos](~/docs/standard/generics/index.md)
+- [Genéricos](../../../../standard/generics/index.md)

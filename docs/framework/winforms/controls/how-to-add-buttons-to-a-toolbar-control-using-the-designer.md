@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para agregar botones a un control de la barra de herramientas mediante el diseñador
+title: Filtrar para agregar botones a un control de la barra de herramientas mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding buttons
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: e5069dd46a31a65f65a17d750b685d82762e3d11
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 4d7a49633599aabc96153e4793e50c1a4d6d092d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038204"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666216"
 ---
-# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Procedimiento para agregar botones a un control de la barra de herramientas mediante el diseñador
+# <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Filtrar para agregar botones a un control de la barra de herramientas mediante el diseñador
 
 > [!NOTE]
 > El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.
@@ -23,7 +23,6 @@ ms.locfileid: "69038204"
 Una parte integral del <xref:System.Windows.Forms.ToolBar> control son los botones que se agregan a él. Se pueden usar para facilitar el acceso a los comandos de menú o, como alternativa, se pueden colocar en otra área de la interfaz de usuario de la aplicación para exponer comandos a los usuarios que no están disponibles en la estructura de menús.
 
 El procedimiento siguiente requiere un proyecto de **aplicación Windows** con un formulario que <xref:System.Windows.Forms.ToolBar> contenga un control. Para obtener información acerca de cómo configurar este tipo de [proyecto, consulte Cómo: Cree un proyecto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicación de [Windows Forms y cómo: Agregue controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-add-buttons-at-design-time"></a>Para agregar botones en tiempo de diseño
 
@@ -50,6 +49,6 @@ El procedimiento siguiente requiere un proyecto de **aplicación Windows** con u
 
 - <xref:System.Windows.Forms.ToolBar>
 - [Cómo: Definir un icono para un botón de la barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Procedimientos: Desencadenar eventos de menú para botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Cómo: Desencadenar eventos de menú para botones de barra de herramientas](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Información general del control ToolBar](toolbar-control-overview-windows-forms.md)
 - [ToolBar (control)](toolbar-control-windows-forms.md)

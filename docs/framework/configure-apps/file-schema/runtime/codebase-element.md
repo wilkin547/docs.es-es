@@ -9,18 +9,18 @@ helpviewer_keywords:
 - container tags, <codeBase> element
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
-ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a06daa0b2aa5374c9959cbbe778d62856819a40e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674199"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663864"
 ---
-# <a name="codebase-element"></a>\<codeBase > elemento
+# <a name="codebase-element"></a>\<Elemento codebase >
 
-Especifica que common language runtime puede encontrar un ensamblado.
+Especifica dónde puede encontrar un ensamblado el Common Language Runtime.
 
-\<Configuración > \<en tiempo de ejecución > \<assemblyBinding > \<dependentAssembly > \<codeBase >
+\<Configuration > \<Runtime > \<assemblyBinding > \<dependentAssembly > \<código base >
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -36,16 +36,16 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-|Atributo|Descripción|
+|Atributo|DESCRIPCIÓN|
 |---------------|-----------------|
-|`href`|Atributo necesario.<br /><br /> Especifica la dirección URL donde el tiempo de ejecución puede encontrar la versión especificada del ensamblado.|
-|`version`|Atributo necesario.<br /><br /> Especifica la versión del ensamblado que se aplica el código base. El formato de un número de versión del ensamblado es *principal.secundaria.compilación.revisión*.|
+|`href`|Atributo necesario.<br /><br /> Especifica la dirección URL en la que el tiempo de ejecución puede encontrar la versión especificada del ensamblado.|
+|`version`|Atributo necesario.<br /><br /> Especifica la versión del ensamblado al que se aplica el código base. El formato de un número de versión de ensamblado es *principal. secundaria. compilación. revisión*.|
 
-## <a name="version-attribute"></a>Atributo de versión
+## <a name="version-attribute"></a>version (atributo)
 
-|Valor|Descripción|
+|Valor|DESCRIPCIÓN|
 |-----------|-----------------|
-|Los valores válidos para cada parte del número de versión van del 0 a 65535.|No es aplicable.|
+|Los valores válidos para cada parte del número de versión son de 0 a 65535.|No aplicable.|
 
 ### <a name="child-elements"></a>Elementos secundarios
 
@@ -53,24 +53,24 @@ Ninguno.
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
 |`buildproviders`|Define una colección de proveedores de generación que se utiliza para compilar archivos de recursos personalizados. Puede tener cualquier número de proveedores de generación.|
-|`compilation`|Configura todas las opciones de compilación que utiliza ASP.NET.|
+|`compilation`|Configura todos los valores de compilación que usa ASP.NET.|
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`System.web`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|
 
 ## <a name="remarks"></a>Comentarios
 
-Para el tiempo de ejecución usar el  **\<codeBase >** establecer en un archivo de configuración del equipo o un archivo de directiva de publicador, el archivo también debe redirigir la versión del ensamblado. Archivos de configuración de la aplicación pueden tener una configuración de código base sin redirigir la versión del ensamblado. Después de determinar qué versión del ensamblado, el tiempo de ejecución aplica la configuración del código base del archivo que determina la versión. Si no se indica ningún código base, el tiempo de ejecución sondea el ensamblado de la forma habitual.
+Para que el motor en tiempo de ejecución use el valor de  **\<> del código base** en un archivo de configuración del equipo o un archivo de directiva de edición, el archivo también debe redirigir la versión del ensamblado. Los archivos de configuración de la aplicación pueden tener una configuración de código base sin redirigir la versión del ensamblado. Después de determinar la versión de ensamblado que se va a usar, el tiempo de ejecución aplica la configuración de código base del archivo que determina la versión. Si no se indica ningún código base, el tiempo de ejecución sondea el ensamblado de la manera habitual.
 
-Si el ensamblado tiene un nombre seguro, la configuración de la base de código puede ser en cualquier lugar en la intranet local o en Internet. Si el ensamblado es un ensamblado privado, la configuración de la base de código debe ser una ruta de acceso relativa al directorio de la aplicación.
+Si el ensamblado tiene un nombre seguro, la configuración de código base puede estar en cualquier parte de la Intranet local o Internet. Si el ensamblado es un ensamblado privado, la configuración de código base debe ser una ruta de acceso relativa al directorio de la aplicación.
 
-Para los ensamblados sin un nombre seguro, se omite la versión y el cargador usa la primera aparición de \<codebase > dentro de \<dependentAssembly >. Si hay una entrada en el archivo de configuración de aplicación que redirija el enlace a otro ensamblado, la redirección tendrá prioridad incluso si la versión del ensamblado no coincide con la solicitud de enlace.
+En el caso de los ensamblados sin un nombre seguro, se omite la versión y el \<cargador usa la \<primera aparición de > de código base dentro de la > de dependentAssembly. Si hay una entrada en el archivo de configuración de la aplicación que redirige el enlace a otro ensamblado, la redirección tendrá prioridad aunque la versión del ensamblado no coincida con la solicitud de enlace.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo especificar que el tiempo de ejecución puede encontrar un ensamblado.
+En el ejemplo siguiente se muestra cómo especificar dónde puede encontrar un ensamblado el tiempo de ejecución.
 
 ```xml
 <configuration>
@@ -90,7 +90,7 @@ El ejemplo siguiente muestra cómo especificar que el tiempo de ejecución puede
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Especificar la ubicación de un ensamblado](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Especificar la ubicación de un ensamblado](../../specify-assembly-location.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../deployment/how-the-runtime-locates-assemblies.md)

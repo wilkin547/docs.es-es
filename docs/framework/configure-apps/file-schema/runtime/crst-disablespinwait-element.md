@@ -1,5 +1,5 @@
 ---
-title: elemento < Crst_DisableSpinWait >
+title: < elemento > Crst_DisableSpinWait
 ms.date: 04/18/2019
 f1_keywords:
 - Crst_DisableSpinWait
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a52dd671f1fbf6fda5bdc92c0935784181eb4b03
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754675"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663838"
 ---
-# <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > elemento
+# <a name="crst_disablespinwait-element"></a>\<Crst_DisableSpinWait >, elemento
 
-Especifica si se deshabilita el ciclo de espera para una sección crítica cuando contenidos.  
+Especifica si se va a deshabilitar la espera de giro para una sección crítica cuando esté habilitada.  
   
  \<configuration>  
-\<runtime>  
+\<> en tiempo de ejecución  
 \<Crst_DisableSpinWait>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -34,30 +34,30 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|**enabled**|Especifica si está deshabilitado el ciclo de espera para las secciones críticas al que están contenidos.|  
+|**enabled**|Especifica si está deshabilitada la espera de girar para las secciones críticas cuando están configuradas.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|1|Deshabilite el ciclo de espera cuando no se puede adquirir una sección crítica.|  
-|0|No deshabilite el ciclo de espera cuando no se puede adquirir una sección crítica. Este es el valor predeterminado.|  
+|1|Deshabilitar el giro en espera cuando no se puede adquirir una sección crítica.|  
+|0|No deshabilite la espera de giro cuando no se pueda adquirir una sección crítica. Este es el valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
-|`runtime`|Contiene información sobre las diversas opciones de configuración en tiempo de ejecución.|  
+|`runtime`|Contiene información acerca de diversas opciones de configuración en tiempo de ejecución.|  
   
 ## <a name="example"></a>Ejemplo  
 
-El siguiente ejemplo se deshabilita en espera flechas en las secciones críticas cuando contenidos.  
+En el ejemplo siguiente se deshabilita la espera de giro en las secciones críticas cuando está disponible.  
   
 ```xml  
 <configuration>  
@@ -69,5 +69,5 @@ El siguiente ejemplo se deshabilita en espera flechas en las secciones críticas
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)

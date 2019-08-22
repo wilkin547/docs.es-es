@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para establecer estilos de celdas y formatos de datos predeterminados en el control DataGridView de formularios Windows Forms mediante el diseñador
+title: Filtrar para establecer estilos de celdas y formatos de datos predeterminados en el control DataGridView de formularios Windows Forms mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], cell styles
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 53faf31c8dd3be1606c491e95594c4aae5aedf98
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 6d7d867b7c9e83b68589e046565bfb0199692f5f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039670"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658510"
 ---
-# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Procedimiento para establecer estilos de celdas y formatos de datos predeterminados en el control DataGridView de formularios Windows Forms mediante el diseñador
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Filtrar para establecer estilos de celdas y formatos de datos predeterminados en el control DataGridView de formularios Windows Forms mediante el diseñador
 
 El <xref:System.Windows.Forms.DataGridView> control permite especificar los estilos de celda y los formatos de datos de celda predeterminados para todo el control, para las columnas específicas, para los encabezados de fila y de columna, y para las filas alternas para crear un efecto de libro. Los estilos predeterminados establecidos para todo el control se reemplazan por los estilos predeterminados establecidos para las columnas y las filas alternas. Además, los estilos que se establecen en el código para filas y celdas individuales reemplazan los estilos predeterminados.
 
@@ -23,7 +23,6 @@ Para obtener más información sobre los estilos de celda, vea [estilos de celda
 También puede establecer estilos mediante la <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> propiedad para que afecten a todas las filas que se van a agregar al control. Para obtener más información acerca de la plantilla de [fila, consulte How to: Use la plantilla de filas para personalizar las filas en el control](use-the-row-template-to-customize-rows-in-the-datagrid.md)DataGridView Windows Forms.
 
 Los procedimientos siguientes requieren un proyecto de **aplicación Windows** con un formulario que <xref:System.Windows.Forms.DataGridView> contenga un control. Para obtener información acerca de cómo configurar este tipo de [proyecto, consulte Cómo: Cree un proyecto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicación de [Windows Forms y cómo: Agregue controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Para establecer estilos predeterminados para todas las celdas del control
 
@@ -68,5 +67,5 @@ Los procedimientos siguientes requieren un proyecto de **aplicación Windows** c
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
 - [Estilos de celda en el control DataGridView de Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Cómo: Establecer estilos de fila alternos para el control DataGridView Windows Forms mediante el diseñador](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
-- [Procedimientos: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Cómo: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)

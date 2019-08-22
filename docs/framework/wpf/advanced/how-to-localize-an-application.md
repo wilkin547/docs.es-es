@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Localizar una aplicación
+title: Filtrar Localizar una aplicación
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 749ba2dd9318976289d9d4140cfadd711e0548d4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d7271e792c96dd896d73a52a31ad136acc19e26
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629872"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666787"
 ---
-# <a name="how-to-localize-an-application"></a>Procedimiento Localizar una aplicación
+# <a name="how-to-localize-an-application"></a>Filtrar Localizar una aplicación
 En este tutorial se explica cómo crear una aplicación localizada mediante la herramienta LocBaml.  
   
 > [!NOTE]
@@ -36,7 +36,7 @@ En este tutorial se explica cómo crear una aplicación localizada mediante la h
   
 <a name="create_sample_app"></a>   
 ## <a name="create-a-sample-application"></a>Crear una aplicación de ejemplo  
- En este paso, preparará la aplicación para la localización. En los ejemplos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se proporciona una HelloApp que se usará para los ejemplos de código de este artículo. Si desea usar este ejemplo, descargue los [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivos desde el ejemplo de la [herramienta LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016).  
+ En este paso, preparará la aplicación para la localización. En los ejemplos de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] se proporciona una HelloApp que se usará para los ejemplos de código de este artículo. Si desea usar este ejemplo, descargue los [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] archivos desde el ejemplo de la [herramienta LocBaml](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml).  
   
 1. Desarrolle su aplicación hasta el punto donde desea iniciar la localización.  
   

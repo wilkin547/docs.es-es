@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00af9cf60d0bd2bac60950617b1315579d1a5a4d
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 96d38abad37f9460230164de784a1258e7e937a4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347335"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663724"
 ---
-# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads> Element
+# <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads >, elemento
 Especifica si PerfCounter.dll usa la configuración del Registro CategoryOptions en una aplicación de .NET Framework 1.1 para determinar si se van a cargar los datos del contador de rendimiento desde la memoria compartida específica de la categoría o la memoria global.  
   
  \<configuration>  
-\<runtime>  
+\<> en tiempo de ejecución  
 \<forcePerformanceCounterUniqueSharedMemoryReads>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,43 +33,43 @@ enabled="true|false"/>
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Indica si PerfCounter.dll usa el valor del Registro CategoryOptions para determinar si se debe cargar los datos del contador de rendimiento de memoria compartida específica de la categoría o la memoria global.|  
+|`enabled`|Atributo necesario.<br /><br /> Indica si PerfCounter. dll usa la configuración del Registro CategoryOptions para determinar si se van a cargar los datos del contador de rendimiento de la memoria compartida específica de la categoría o de la memoria global.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|`false`|PerfCounter.dll no utiliza el CategoryOptions esta configuración del registro es el valor predeterminado.|  
-|`true`|PerfCounter.dll usa el valor del Registro CategoryOptions.|  
+|`false`|PerfCounter. dll no utiliza la configuración del registro de CategoryOptions es el valor predeterminado.|  
+|`true`|PerfCounter. dll usa la configuración del Registro CategoryOptions.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- En versiones de .NET Framework anteriores a .NET Framework 4, la versión de PerfCounter.dll cargada correspondía al tiempo de ejecución que se cargó en el proceso. Si un equipo que tenía la versión 1.1 de .NET Framework y .NET Framework 2.0 instalado, una aplicación de .NET Framework 1.1 cargaría la versión de .NET Framework 1.1 de PerfCounter.dll. A partir de .NET Framework 4, se carga la versión instalada más reciente de PerfCounter.dll. Esto significa que una aplicación de .NET Framework 1.1 cargará la versión de .NET Framework 4 de PerfCounter.dll si .NET Framework 4 está instalado en el equipo.  
+ En las versiones de la .NET Framework antes del .NET Framework 4, la versión de PerfCounter. dll que se cargó correspondía al tiempo de ejecución que se cargó en el proceso. Si un equipo tenía la .NET Framework la versión 1,1 y el .NET Framework 2,0 instalado, una aplicación .NET Framework 1,1 cargaría la versión .NET Framework 1,1 de PerfCounter. dll. A partir de la .NET Framework 4, se carga la versión más reciente instalada de PerfCounter. dll. Esto significa que una aplicación .NET Framework 1,1 cargará la versión .NET Framework 4 de PerfCounter. dll si el .NET Framework 4 está instalado en el equipo.  
   
- A partir de .NET Framework 4, al consumir los contadores de rendimiento, PerfCounter.dll comprueba la entrada del Registro CategoryOptions de cada proveedor para determinar si debe leer desde la memoria compartida específica de la categoría o la memoria compartida global. El PerfCounter.dll de .NET Framework 1.1 no lee esa entrada del registro, porque no es consciente de la memoria compartida específica de la categoría; siempre lee la memoria compartida global.  
+ A partir de la .NET Framework 4, cuando se usan contadores de rendimiento, PerfCounter. dll comprueba la entrada del registro de CategoryOptions para cada proveedor para determinar si debe leer la memoria compartida específica de la categoría o la memoria compartida global. La .NET Framework 1,1 PerfCounter. dll no lee la entrada del registro, ya que no es consciente de la memoria compartida específica de la categoría. siempre lee de la memoria compartida global.  
   
- Por compatibilidad con versiones anteriores, el PerfCounter.dll de .NET Framework 4 no comprueba la entrada del Registro CategoryOptions al ejecutarse en una aplicación de .NET Framework 1.1. Simplemente usa memoria compartida global, al igual que el PerfCounter.dll de .NET Framework 1.1. Sin embargo, puede indicar el PerfCounter.dll de .NET Framework 4 para comprobar la configuración del Registro habilitando el `<forcePerformanceCounterUniqueSharedMemoryReads>` elemento.  
+ Por compatibilidad con versiones anteriores, el .NET Framework 4 PerfCounter. dll no comprueba la entrada del registro de CategoryOptions cuando se ejecuta en una aplicación .NET Framework 1,1. Simplemente usa la memoria compartida global, como la .NET Framework 1,1 PerfCounter. dll. Sin embargo, puede indicar al .NET Framework 4 PerfCounter. dll que Compruebe la configuración del registro habilitando `<forcePerformanceCounterUniqueSharedMemoryReads>` el elemento.  
   
 > [!NOTE]
->  Habilitar la `<forcePerformanceCounterUniqueSharedMemoryReads>` elemento no garantiza que se utilizará memoria compartida específica de la categoría. El valor habilitado para `true` sólo hace que PerfCounter.dll hacer referencia a la configuración del Registro CategoryOptions. La configuración predeterminada para CategoryOptions es usar la memoria compartida específica de la categoría; Sin embargo, puede cambiar CategoryOptions para indicar que se debe usar la memoria compartida global.  
+>  Al habilitar `<forcePerformanceCounterUniqueSharedMemoryReads>` el elemento no se garantiza que se utilice la memoria compartida específica de la categoría. Si se establece `true` en habilitado, PerfCounter. dll hará referencia a la configuración del Registro CategoryOptions. La configuración predeterminada de CategoryOptions es usar la memoria compartida específica de la categoría. sin embargo, puede cambiar CategoryOptions para indicar que se debe usar la memoria compartida global.  
   
- La clave del registro que contiene el valor CategoryOptions es HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< categoryName\>\Performance. De forma predeterminada, CategoryOptions se establece en 3, que indica a PerfCounter.dll para usar memoria compartida específica de la categoría. Si CategoryOptions está establecido en 0, PerfCounter.dll usa memoria compartida global. Datos de instancia se reutilizará solo si el nombre de la instancia que se va a crear es idéntico a la instancia que se va a volver a usar. Todas las versiones podrán escribir en la categoría. Si CategoryOptions está establecido en 1, se utiliza la memoria compartida global, pero se pueden reutilizar los datos de instancia si el nombre de categoría es la misma longitud que la categoría que se va a volver a usar.  
+ La clave del registro que contiene el valor de CategoryOptions\\es HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\>< categoryName \Performance. De forma predeterminada, CategoryOptions se establece en 3, lo que indica a PerfCounter. dll que use la memoria compartida específica de la categoría. Si CategoryOptions se establece en 0, PerfCounter. dll utiliza la memoria compartida global. Los datos de instancia se reutilizarán solo si el nombre de la instancia que se va a crear es idéntico a la instancia que se va a reutilizar. Todas las versiones podrán escribir en la categoría. Si CategoryOptions está establecido en 1, se usa la memoria compartida global, pero se pueden volver a usar los datos de instancia si el nombre de la categoría tiene la misma longitud que la categoría que se va a reutilizar.  
   
- Los valores 0 y 1 pueden dar lugar a pérdidas de memoria y el rellenado de la memoria del contador de rendimiento.  
+ Los valores 0 y 1 pueden dar lugar a pérdidas de memoria y al rellenar la memoria del contador de rendimiento.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo especificar que PerfCounter.dll debe hacer referencia a la entrada del Registro CategoryOptions para determinar si debe usar la memoria compartida específica de la categoría.  
+ En el ejemplo siguiente se muestra cómo especificar que PerfCounter. dll debe hacer referencia a la entrada del Registro CategoryOptions para determinar si debe usar la memoria compartida específica de la categoría.  
   
 ```xml  
 <configuration>  
@@ -81,5 +81,5 @@ enabled="true|false"/>
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)

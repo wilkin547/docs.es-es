@@ -13,17 +13,16 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 540226dbbada0373854144ac874d2164208ad943
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: d80f8e3bc729689b274af520bc37fda8417b0407
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039922"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658568"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Tutorial: Crear una interfaz de tipo Explorador con los controles ListView y TreeView mediante el diseñador
 
 Una de las ventajas de Visual Studio es la posibilidad de crear aplicaciones de Windows Forms de aspecto profesional en poco tiempo. Un escenario común es la creación de una interfaz de usuario ( <xref:System.Windows.Forms.ListView> UI <xref:System.Windows.Forms.TreeView> ) con controles y que se parece a la característica explorador de Windows de los sistemas operativos Windows. El explorador de Windows muestra una estructura jerárquica de los archivos y carpetas en el equipo de un usuario.
-
 
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Para crear el formulario que contiene un control ListView y TreeView
 
@@ -106,6 +105,6 @@ Esta aplicación ofrece un ejemplo de una manera de usar <xref:System.Windows.Fo
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [ListView (Control)](listview-control-windows-forms.md)
-- [Procedimientos: Agregar y quitar nodos con el control TreeView Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Cómo: Agregar y quitar elementos con el control ListView de Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Cómo: Agregar columnas al control Windows Forms ListView](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Cómo: Agregar y quitar nodos con el control TreeView Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Procedimientos: Agregar y quitar elementos con el control ListView de Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Procedimientos: Agregar columnas al control Windows Forms ListView](how-to-add-columns-to-the-windows-forms-listview-control.md)

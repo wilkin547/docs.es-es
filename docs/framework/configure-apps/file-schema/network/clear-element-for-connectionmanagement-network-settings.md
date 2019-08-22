@@ -10,14 +10,14 @@ helpviewer_keywords:
 - clear element, connectionManagement
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
-ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86a7a0ab402c8c40ec3b824402a1dba984412b68
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705251"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659443"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<Borrar > elemento para connectionManagement (configuración de red)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>\<borrar > elemento de connectionManagement (configuración de red)
 Borra la lista de administración de conexiones.  
   
  \<configuration>  
@@ -44,7 +44,7 @@ Borra la lista de administración de conexiones.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
   
 ## <a name="remarks"></a>Comentarios  
  El `clear` elemento borra todas las entradas de la lista de administración de conexiones.  
@@ -53,7 +53,7 @@ Borra la lista de administración de conexiones.
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo se borra la lista de administración de conexión y, a continuación, agrega nuevas entradas para el servidor `www.contoso.com` y todos los demás hosts de red.  
+ En el siguiente ejemplo se borra la lista de administración de conexiones y, después, se agregan `www.contoso.com` nuevas entradas de administración de conexiones para el servidor y todos los demás hosts de red.  
   
 ```xml  
 <configuration>  
@@ -71,4 +71,4 @@ Borra la lista de administración de conexiones.
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5df7ab070cc0a40f4e2f3d0545c5bc40ccb07f4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378037"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663680"
 ---
-# <a name="gcserver-element"></a>\<gcServer > elemento
+# <a name="gcserver-element"></a>\<gcServer >, elemento
 Especifica si Common Language Runtime ejecuta la recopilación de elementos no utilizados de servidor.  
   
  \<configuration>  
-\<runtime>  
+\<> en tiempo de ejecución  
 \<gcServer>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,13 +36,13 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`enabled`|Atributo necesario.<br /><br /> Especifica si Common Language Runtime ejecuta la recolección de elementos no utilizados de servidor.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`false`|No ejecuta la recolección de elementos no utilizados de servidor. Este es el valor predeterminado.|  
 |`true`|Ejecuta la recolección de elementos no utilizados de servidor.|  
@@ -52,7 +52,7 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
@@ -65,7 +65,7 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
  Este elemento se puede usar solo en el archivo de configuración de la aplicación; se omite si se encuentra en el archivo de configuración del equipo.  
   
 > [!NOTE]
->  En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de .NET Framework 4.5, la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección no simultánea server, establezca el `<gcServer>` elemento `true` y [ \<gcConcurrent > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) a `false`.  
+>  En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de la .NET Framework 4,5, la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección de elementos no utilizados de servidor no simultánea `<gcServer>` , establezca `true` el elemento en y el [ \<elemento > de gcConcurrent](gcconcurrent-element.md) en. `false`  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se habilita la recolección de elementos no utilizados de servidor.  
@@ -81,6 +81,6 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Para deshabilitar la recopilación de elementos no utilizados simultánea](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Para deshabilitar la recolección de elementos no utilizados simultánea](gcconcurrent-element.md#to-disable-background-garbage-collection)

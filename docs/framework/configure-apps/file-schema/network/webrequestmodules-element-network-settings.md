@@ -8,15 +8,15 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: e5d1780a204b2e99593d51179a479845fd49e608
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c30a7a0bcce62c99d7c1ec0ff17389b8c2cd2f17
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704952"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663940"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > elemento (configuración de red)
-Especifica los módulos que se utilizan para solicitar información de hosts de la red.  
+Especifica los módulos que se van a usar para solicitar información de los hosts de red.  
   
  \<configuration>  
 \<system.net>  
@@ -39,26 +39,26 @@ Especifica los módulos que se utilizan para solicitar información de hosts de 
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Agrega un módulo de solicitud Web personalizado a la aplicación.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Quita todos los módulos de solicitud Web registrados de la aplicación.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Quita un módulo de solicitud Web personalizado de la aplicación.|  
+|[add](add-element-for-webrequestmodules-network-settings.md)|Agrega un módulo de solicitud web personalizado a la aplicación.|  
+|[clear](clear-element-for-webrequestmodules-network-settings.md)|Quita todos los módulos de solicitud Web registrados de la aplicación.|  
+|[remove](remove-element-for-webrequestmodules-network-settings.md)|Quita un módulo de solicitud web personalizado de la aplicación.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
+|[system.net](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `webRequestModules` elemento registra descendientes de la <xref:System.Net.WebRequest> clase para controlar las solicitudes de información a los hosts de red. Módulos de solicitud Web deben implementar la <xref:System.Net.IWebRequestCreate> interfaz.  
+ El `webRequestModules` elemento registra descendientes de la clase <xref:System.Net.WebRequest> para controlar las solicitudes de información a los hosts de red. Los módulos de solicitud Web deben <xref:System.Net.IWebRequestCreate> implementar la interfaz.  
   
- .NET Framework incluye módulos de solicitud Web para los identificadores URI que comienzan por `http://`, `https://`, y `file://`. Puede invalidar los módulos predeterminados sólo mediante el registro de un módulo personalizado en el archivo de configuración.  
+ El .NET Framework incluye módulos de solicitud Web para los URI que `http://`comienzan `https://`por, `file://`y. Solo puede invalidar los módulos predeterminados Si registra un módulo personalizado en el archivo de configuración.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente registra el módulo HTTP predeterminado. Debe reemplazar los valores de versión y PublicKeyToken con los valores correctos para el módulo especificado.  
+ En el ejemplo siguiente se registra el módulo HTTP predeterminado. Debe reemplazar los valores de version y PublicKeyToken por los valores correctos para el módulo especificado.  
   
 ```xml  
 <configuration>  
@@ -77,4 +77,4 @@ Especifica los módulos que se utilizan para solicitar información de hosts de 
 
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

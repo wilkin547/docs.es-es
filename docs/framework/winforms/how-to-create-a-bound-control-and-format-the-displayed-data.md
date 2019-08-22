@@ -1,22 +1,21 @@
 ---
-title: Procedimiento para crear un control enlazado y aplicar formato a los datos mostrados
+title: Filtrar para crear un control enlazado y aplicar formato a los datos mostrados
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms], formatting
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 052e619acb23fb2e25f42daf7b4eaaacb0688f31
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b5ad85a9477ca32cd28f246abe4ece3cace43182
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039424"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666779"
 ---
-# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Procedimiento para crear un control enlazado y aplicar formato a los datos mostrados
+# <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Filtrar para crear un control enlazado y aplicar formato a los datos mostrados
 
 Con Windows Forms enlace de datos, puede dar formato a los datos mostrados en un control enlazado a datos mediante el cuadro de diálogo **formato y enlace avanzado** .
-
 
 ### <a name="to-bind-a-control-and-format-the-displayed-data"></a>Para enlazar un control y dar formato a los datos mostrados
 
@@ -55,6 +54,6 @@ Con Windows Forms enlace de datos, puede dar formato a los datos mostrados en un
 
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Crear un control de enlace simple en Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Procedimientos: Crear un control de enlace simple en Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Validación de los datos proporcionados por el usuario Windows Forms](user-input-validation-in-windows-forms.md)
 - [Enlace de datos en Windows Forms](windows-forms-data-binding.md)

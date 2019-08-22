@@ -2,12 +2,12 @@
 title: Genéricos
 description: Aprenda a usar F# tipos y funciones genéricos, que le permiten escribir código que funciona con una variedad de tipos sin repetir el código.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47eed0b8e074cfb591e6d8e2c382b9ea6a6e97f0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5d6e57762095e44836425f90d21a6c1dc71edaaa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630612"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666701"
 ---
 # <a name="generics"></a>Genéricos
 
@@ -97,6 +97,6 @@ Hay dos clases de parámetros de tipo que se pueden usar en programas de F#. La 
 - [Referencia del lenguaje](../index.md)
 - [Tipos](../fsharp-types.md)
 - [Parámetros de tipo resueltos estáticamente](statically-resolved-type-parameters.md)
-- [Genéricos en .NET Framework](~/docs/standard/generics/index.md)
+- [Genéricos](../../../standard/generics/index.md)
 - [Generalización automática](automatic-generalization.md)
 - [Restricciones](constraints.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dd8790efa14018817c9e51e688b17c22d31d482f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674673"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659568"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<Agregar > elemento para bypasslist (configuración de red)
-Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.  
+# <a name="add-element-for-bypasslist-network-settings"></a>\<Agregar > elemento para BypassList (configuración de red)
+Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.  
   
  \<configuration>  
 \<system.net>  
@@ -41,7 +41,7 @@ Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.
   
 |**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
-|**address**|Una expresión regular que describe una dirección IP o nombre DNS.|  
+|**address**|Expresión regular que describe una dirección IP o un nombre DNS.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -50,22 +50,22 @@ Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen direcciones que no se usa a un proxy.|  
+|[bypasslist](bypasslist-element-network-settings.md)|Proporciona un conjunto de expresiones regulares que describen las direcciones que no utilizan un proxy.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `add` elemento inserta expresiones regulares que describen direcciones IP o nombres de los servidores DNS a la lista de direcciones que omitir un servidor proxy.  
+ El `add` elemento inserta expresiones regulares que describen las direcciones IP o los nombres de servidor DNS en la lista de direcciones que omiten un servidor proxy.  
   
- El valor de la `address` atributo debe ser una expresión regular que describe un conjunto de direcciones IP o nombres de host.  
+ El valor del `address` atributo debe ser una expresión regular que describa un conjunto de direcciones IP o nombres de host.  
   
- Se debe tener cuidado al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\.contoso\\.com" coincide con cualquier host en el dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.cpandl.com. Para que coincida con un host en el dominio contoso.com, use un delimitador ("$"): "[a-z] +\\.contoso\\.com$".  
+ Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\. contoso\\. com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.CPANDL.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ("$"): "[a-\\z]\\+. contoso. com $".  
   
- Para obtener más información sobre las expresiones regulares, vea. [Expresiones regulares de .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../../docs/standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente agrega dos direcciones a la lista de omisión. La primera omite al proxy para todos los servidores en el dominio contoso.com; la segunda omite al proxy para todos los servidores cuya dirección IP comienza con 192.168.  
+ En el ejemplo siguiente se agregan dos direcciones a la lista de omisiones. El primero omite el proxy para todos los servidores del dominio contoso.com; la segunda omite el proxy para todos los servidores cuya dirección IP comienza con 192,168.  
   
 ```xml  
 <configuration>  
@@ -83,4 +83,4 @@ Agrega una dirección IP o nombre DNS a la lista de omisión de proxy.
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

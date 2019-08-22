@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9647297bf976d26a97be0da8807d607789e8a065
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 876452a0a56d10f169526138cdbbbd153572f457
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489575"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658850"
 ---
-# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > elemento
+# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions >, elemento
 Especifica si las excepciones de tareas no controladas deben finalizar un proceso en ejecución.  
   
  \<configuration>  
-\<runtime>  
+\<> en tiempo de ejecución  
 \<ThrowUnobservedTaskExceptions>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,45 +36,45 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si las excepciones no controladas de tarea deben finalizar el proceso en ejecución.|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica si las excepciones de tareas no controladas deben terminar el proceso en ejecución.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|`false`|No termina el proceso en ejecución para una excepción no controlada de tareas. Este es el valor predeterminado.|  
-|`true`|Finaliza el proceso en ejecución para una excepción no controlada de tareas.|  
+|`false`|No finaliza el proceso en ejecución para una excepción de tarea no controlada. Este es el valor predeterminado.|  
+|`true`|Finaliza el proceso de ejecución de una excepción de tarea no controlada.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
 |||  
   
 ## <a name="remarks"></a>Comentarios  
- Si una excepción que está asociada con un <xref:System.Threading.Tasks.Task> no ha observado, no hay ningún <xref:System.Threading.Tasks.Task.Wait%2A> operación, el elemento primario no está conectado y el <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propiedad no se ha leído la excepción de la tarea se considera inadvertida.  
+ Si no se ha observado una excepción asociada <xref:System.Threading.Tasks.Task> a un, no hay ninguna <xref:System.Threading.Tasks.Task.Wait%2A> operación, <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> no se adjunta el elemento primario y no se leyó la propiedad, se considera que la excepción de la tarea no se ha observado.  
   
- En .NET Framework 4, de forma predeterminada, si un <xref:System.Threading.Tasks.Task> que tiene un inadvertido excepción es la recolección, finalizador inicia una excepción y termina el proceso. La terminación del proceso viene determinada por el tiempo de finalización y de recolección de elementos.  
+ En el .NET Framework 4, de forma predeterminada, si <xref:System.Threading.Tasks.Task> un que tiene una excepción no observada se recolecta como elemento no utilizado, el finalizador inicia una excepción y finaliza el proceso. La terminación del proceso viene determinada por el tiempo de recolección y finalización de elementos no utilizados.  
   
- Para facilitar a los desarrolladores escribir código asincrónico basado en tareas, .NET Framework 4.5 cambia este comportamiento predeterminado para las excepciones no observadas. Excepciones inadvertidas provocan que el <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> evento, pero de forma predeterminada, el proceso no finaliza. En su lugar, se omite la excepción después de que se genera el evento, independientemente de si un controlador de eventos observa la excepción.  
+ Para facilitar a los desarrolladores la escritura de código asincrónico basado en tareas, el .NET Framework 4,5 cambia este comportamiento predeterminado en caso de que se produzcan excepciones inadvertidas. Las excepciones no observadas siguen <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> provocando que se produzca el evento, pero, de forma predeterminada, el proceso no finaliza. En su lugar, se omite la excepción una vez provocado el evento, independientemente de si un controlador de eventos observa la excepción.  
   
- En .NET Framework 4.5, puede usar el [ \<ThrowUnobservedTaskExceptions > elemento](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) en un archivo de configuración para habilitar el comportamiento de .NET Framework 4 de producir una excepción.  
+ En el .NET Framework 4,5, puede usar el [ \<elemento de > ThrowUnobservedTaskExceptions](throwunobservedtaskexceptions-element.md) en un archivo de configuración de la aplicación para habilitar el comportamiento de .NET Framework 4 de producir una excepción.  
   
- También puede especificar el comportamiento de excepción en una de las maneras siguientes:  
+ También puede especificar el comportamiento de la excepción de una de las siguientes maneras:  
   
-- Estableciendo la variable de entorno `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- Estableciendo la variable `COMPlus_ThrowUnobservedTaskExceptions` de entorno (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
-- Estableciendo el valor DWORD del Registro valor ThrowUnobservedTaskExceptions = 1 en el HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Tecla NETFramework.  
+- Estableciendo el valor DWORD del registro ThrowUnobservedTaskExceptions = 1 en HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Clave NETFramework.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo habilitar el inicio de excepciones en tareas mediante el uso de un archivo de configuración de la aplicación.  
+ En el ejemplo siguiente se muestra cómo habilitar el inicio de excepciones en tareas mediante el uso de un archivo de configuración de la aplicación.  
   
 ```xml  
 <configuration>   
@@ -85,12 +85,12 @@ Especifica si las excepciones de tareas no controladas deben finalizar un proces
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo se produce una excepción no observada de una tarea. El código debe ejecutarse como un programa de lanzamiento para que funcione correctamente.  
+ En el ejemplo siguiente se muestra cómo se produce una excepción no observada desde una tarea. El código debe ejecutarse como un programa lanzado para que funcione correctamente.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)

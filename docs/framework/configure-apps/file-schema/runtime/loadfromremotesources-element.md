@@ -7,21 +7,21 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8e8663bf9d119007eb7d3771d16d55b1aa54856
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704601"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663607"
 ---
-# <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > elemento
-Especifica si los ensamblados cargados desde orígenes remotos se deben conceder plena confianza en .NET Framework 4 y versiones posteriores.
+# <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources >, elemento
+Especifica si se debe conceder plena confianza a los ensamblados cargados desde orígenes remotos en .NET Framework 4 y versiones posteriores.
   
 > [!NOTE]
->  Si llega a este artículo debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un error de compilación, véase [Cómo: Usar un ensamblado desde la Web en Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100)).  
+>  Si se le dirigió a este artículo debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un [error de compilación, consulte Cómo: Usar un ensamblado desde la web en Visual](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))Studio.  
   
  \<configuration>  
-\<runtime>  
+\<> en tiempo de ejecución  
 \<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,32 +36,32 @@ Especifica si los ensamblados cargados desde orígenes remotos se deben conceder
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si un ensamblado que se carga desde un origen remoto se debe conceder plena confianza.|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica si se debe conceder plena confianza a un ensamblado que se carga desde un origen remoto.|  
   
-## <a name="enabled-attribute"></a>atributo enabled  
+## <a name="enabled-attribute"></a>atributo Enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|`false`|No conceda a plena confianza a las aplicaciones desde orígenes remotos. Este es el valor predeterminado.|  
-|`true`|Conceder plena confianza a las aplicaciones desde orígenes remotos.|  
+|`false`|No conceda plena confianza a las aplicaciones de orígenes remotos. Este es el valor predeterminado.|  
+|`true`|Conceda plena confianza a las aplicaciones desde orígenes remotos.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios
 
-En .NET Framework 3.5 y versiones anteriores, si carga un ensamblado desde una ubicación remota, el código en el ensamblado se ejecuta en confianza parcial con un conjunto de permisos que depende de la zona desde la que se carga. Por ejemplo, si carga un ensamblado desde un sitio Web, se cargan en la zona de Internet y a conceder el conjunto de permisos de Internet. En otras palabras, ejecuta en un espacio aislado de Internet.
+En el .NET Framework 3,5 y versiones anteriores, si carga un ensamblado desde una ubicación remota, el código del ensamblado se ejecuta en confianza parcial con un conjunto de permisos concedidos que depende de la zona desde la que se carga. Por ejemplo, si carga un ensamblado desde un sitio web, se carga en la zona de Internet y se le concede el conjunto de permisos de Internet. En otras palabras, se ejecuta en un espacio aislado de Internet.
 
-A partir de .NET Framework 4, se deshabilita la directiva de seguridad (CA) de acceso de código y los ensamblados se cargan con plena confianza. Normalmente, esto podría conceder plena confianza a los ensamblados cargados con los <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> método que anteriormente había sido en espacio aislado. Para evitar esto, la capacidad para ejecutar código en los ensamblados cargados desde un origen remoto está deshabilitada de forma predeterminada. De forma predeterminada, si intenta cargar un ensamblado remoto, un <xref:System.IO.FileLoadException> con un mensaje de excepción que se produce lo siguiente:
+A partir de la .NET Framework 4, la Directiva de seguridad de acceso del código (CAS) está deshabilitada y los ensamblados se cargan con plena confianza. Normalmente, esto concedería plena confianza a los ensamblados cargados <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> con el método que anteriormente tenía un espacio aislado. Para evitar esto, la capacidad de ejecutar código en los ensamblados cargados desde un origen remoto está deshabilitada de forma predeterminada. De forma predeterminada, si intenta cargar un ensamblado remoto, se <xref:System.IO.FileLoadException> produce una con un mensaje de excepción similar al siguiente:
 
 ```text
 System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported. 
@@ -74,38 +74,38 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 Para cargar el ensamblado y ejecutar su código, debe:
 
-- Cree explícitamente un espacio aislado para el ensamblado (vea [Cómo: Ejecutar código de confianza parcial en un recinto](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Cree explícitamente un espacio aislado para el ensamblado (vea [cómo: Ejecutar código de confianza parcial en un](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)espacio aislado).
 
-- Ejecutar código de ensamblado de plena confianza. Ello, configure el `<loadFromRemoteSources>` elemento. Le permite especificar que los ensamblados que se ejecutan en confianza parcial en versiones anteriores de .NET Framework ahora se ejecutan con plena confianza en .NET Framework 4 y versiones posteriores.
+- Ejecute el código del ensamblado con plena confianza. Para ello, configure el `<loadFromRemoteSources>` elemento. Le permite especificar que los ensamblados que se ejecutan en confianza parcial en versiones anteriores del .NET Framework ahora se ejecutan en plena confianza en el .NET Framework 4 y versiones posteriores.
 
 > [!IMPORTANT]
-> Si el ensamblado no se ejecutará con plena confianza, no establezca este elemento de configuración. En su lugar, cree un espacio aislado <xref:System.AppDomain> en el que se va a cargar el ensamblado.
+> Si el ensamblado no debe ejecutarse con plena confianza, no establezca este elemento de configuración. <xref:System.AppDomain> En su lugar, cree un espacio aislado en el que cargar el ensamblado.
 
-El `enabled` atributo para el `<loadFromRemoteSources>` elemento es efectiva únicamente cuando seguridad de acceso del código (CAS) está deshabilitado. De forma predeterminada, la directiva CAS está deshabilitada en el .NET Framework 4 y versiones posteriores. Si establece `enabled` a `true`, ensamblados remotos gozan de plena confianza.
+El `enabled` atributo del `<loadFromRemoteSources>` elemento solo es efectivo cuando está deshabilitada la seguridad de acceso del código (CAS). De forma predeterminada, la Directiva CAS está deshabilitada en el .NET Framework 4 y versiones posteriores. Si establece `enabled` en, `true`se concederá plena confianza a los ensamblados remotos.
 
-Si `enabled` no está establecido en `true`, un <xref:System.IO.FileLoadException> se produce en cualquiera de las condiciones siguientes:
+Si `enabled` no se establece en `true`, se <xref:System.IO.FileLoadException> produce una excepción en cualquiera de las siguientes condiciones:
 
-- El comportamiento de espacio aislado del dominio actual es diferente de su comportamiento en .NET Framework 3.5. Esto requiere la directiva CAS va a deshabilitar y el dominio actual que no sea espacio aislado.
+- El comportamiento de espacio aislado del dominio actual es diferente de su comportamiento en el .NET Framework 3,5. Esto requiere que la Directiva de CAS esté deshabilitada y que el dominio actual no esté en un espacio aislado.
 
-- El ensamblado que se está cargando no es de la `MyComputer` zona.
+- El ensamblado que se está cargando no `MyComputer` es de la zona.
 
-Establecer el `<loadFromRemoteSources>` elemento `true` impide que se produzca esta excepción. Permite especificar que no se basa en common language runtime para el espacio aislado los ensamblados cargados por seguridad, y que puede ser pueden ejecutarse en plena confianza.
+Establecer el `<loadFromRemoteSources>` elemento en `true` evita que se produzca esta excepción. Permite especificar que no se confíe en el Common Language Runtime para crear un espacio aislado de seguridad de los ensamblados cargados y que se puedan ejecutar con plena confianza.
 
 ## <a name="notes"></a>Notas
 
-- En .NET Framework 4.5 y versiones posteriores, los ensamblados de recursos compartidos de red local se ejecutan con plena confianza de forma predeterminada; no es necesario que habilitar el `<loadFromRemoteSources>` elemento.
+- En el .NET Framework 4,5 y versiones posteriores, los ensamblados de recursos compartidos de red locales se ejecutan de forma predeterminada en plena confianza. no es necesario habilitar el `<loadFromRemoteSources>` elemento.
 
-- Si una aplicación se ha copiado desde la web, se marca por Windows como una aplicación web, incluso si se encuentra en el equipo local. Puede cambiar esa designación cambiando sus propiedades de archivo, o puede usar el `<loadFromRemoteSources>` elemento que se va a conceder el ensamblado de plena confianza. Como alternativa, puede usar el <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> método para cargar un ensamblado local que el sistema operativo ha marcado como cargado desde la web.
+- Si se ha copiado una aplicación de la web, Windows la marca como una aplicación Web, aunque se encuentre en el equipo local. Puede cambiar esa designación cambiando sus propiedades de archivo, o puede usar el `<loadFromRemoteSources>` elemento para conceder plena confianza al ensamblado. Como alternativa, puede utilizar el <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> método para cargar un ensamblado local que el sistema operativo ha marcado como cargado desde Internet.
 
-- Es posible que obtenga un <xref:System.IO.FileLoadException> en una aplicación que se ejecuta en una aplicación de Windows Virtual PC. Esto puede ocurrir cuando se intenta cargar un archivo de carpetas vinculadas en el equipo host. También puede producirse cuando intenta cargar un archivo desde una carpeta vinculada sobre [servicios de escritorio remoto](https://go.microsoft.com/fwlink/?LinkId=182775) (Terminal Services). Para evitar la excepción, establezca `enabled` a `true`.
+- Puede obtener un <xref:System.IO.FileLoadException> en una aplicación que se ejecuta en una aplicación de Windows Virtual PC. Esto puede ocurrir cuando se intenta cargar un archivo desde carpetas vinculadas en el equipo host. También se puede producir al intentar cargar un archivo desde una carpeta vinculada a través de [servicios de escritorio remoto](https://go.microsoft.com/fwlink/?LinkId=182775) (Terminal Services). Para evitar la excepción, establezca `enabled` en `true`.
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se utiliza normalmente en el archivo de configuración de aplicación, pero se puede usar en otros archivos de configuración según el contexto. Para obtener más información, vea el artículo [más implícita usa de la directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) en el blog de seguridad. NET.  
+Este elemento se utiliza normalmente en el archivo de configuración de la aplicación, pero se puede usar en otros archivos de configuración en función del contexto. Para obtener más información, vea el artículo [uso más implícito de la Directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) en el blog de seguridad de .net.  
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo conceder plena confianza a los ensamblados cargados desde orígenes remotos.
+En el ejemplo siguiente se muestra cómo conceder plena confianza a los ensamblados cargados desde orígenes remotos.
 
 ```xml
 <configuration>  
@@ -117,8 +117,8 @@ El ejemplo siguiente muestra cómo conceder plena confianza a los ensamblados ca
 
 ## <a name="see-also"></a>Vea también
 
-- [Los usos más implícitos de la directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
-- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Usos más implícitos de la Directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [Procedimientos: Ejecutar código de confianza parcial en un espacio aislado](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

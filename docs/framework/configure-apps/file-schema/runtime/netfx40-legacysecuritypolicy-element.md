@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5bfa5449ece1b24d4f47fe3e77e36b26bbe430c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689836"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663568"
 ---
-# <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > elemento
+# <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy >, elemento
 
 Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.
 
 \<configuration>\
-\<runtime>\
+\<> en tiempo de ejecución \
 \<NetFx40_LegacySecurityPolicy>
 
 ## <a name="syntax"></a>Sintaxis
@@ -35,16 +35,16 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-|Atributo|Descripción|
+|Atributo|DESCRIPCIÓN|
 |---------------|-----------------|
-|`enabled`|Atributo necesario.<br /><br /> Especifica si el runtime usa la directiva CAS heredada.|
+|`enabled`|Atributo necesario.<br /><br /> Especifica si el Runtime usa una directiva CAS heredada.|
 
 ## <a name="enabled-attribute"></a>Atributo enabled
 
-|Valor|Descripción|
+|Value|DESCRIPCIÓN|
 |-----------|-----------------|
-|`false`|El tiempo de ejecución no usa la directiva CAS heredada. Este es el valor predeterminado.|
-|`true`|El runtime usa la directiva CAS heredada.|
+|`false`|El runtime no utiliza la Directiva CAS heredada. Este es el valor predeterminado.|
+|`true`|El Runtime usa una directiva CAS heredada.|
 
 ### <a name="child-elements"></a>Elementos secundarios
 
@@ -52,35 +52,35 @@ Ninguno.
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|
 
 ## <a name="remarks"></a>Comentarios
 
-En la versión de .NET Framework 3.5 y versiones anteriores, la directiva CAS siempre está en efecto. En .NET Framework 4, debe habilitarse la directiva CAS.
+En la versión 3,5 de .NET Framework y versiones anteriores, la Directiva CAS está siempre en vigor. En el .NET Framework 4, la Directiva de CAS debe estar habilitada.
 
-La directiva CAS es específico de la versión. Deben volver a especificar las directivas personalizadas de las entidades de certificación que existen en versiones anteriores de .NET Framework en .NET Framework 4.
+La Directiva CAS es específica de la versión. Las directivas de CA personalizadas que existen en versiones anteriores del .NET Framework deben reespecificarse en el .NET Framework 4.
 
-Aplicar el `<NetFx40_LegacySecurityPolicy>` no afecta al elemento a un ensamblado de .NET Framework 4 [código transparente en seguridad](../../../../../docs/framework/misc/security-transparent-code.md); las reglas de transparencia se siguen aplican.
+Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento a un ensamblado de .NET Framework 4 no afecta al [código transparente en seguridad](../../../misc/security-transparent-code.md); las reglas de transparencia se siguen aplicando.
 
 > [!IMPORTANT]
-> Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento puede producir reducciones de rendimiento importantes para los ensamblados de imagen nativa creados por el [Native Image Generator (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md) que no están instalados en el [caché global de ensamblados ](../../../../../docs/framework/app-domains/gac.md). La degradación del rendimiento se debe a la imposibilidad de que el tiempo de ejecución para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que sus carga los ensamblados como just-in-time.
+> Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento puede dar lugar a penalizaciones de rendimiento significativas para los ensamblados de imagen nativa creados por el [generador de imágenes nativas (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) que no están instalados en la [caché global](../../../app-domains/gac.md)de ensamblados. La degradación del rendimiento se debe a la incapacidad del tiempo de ejecución para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que da lugar a que se carguen como ensamblados Just-in-Time.
 
 > [!NOTE]
-> Si especifica una versión de .NET Framework de destino es anterior a .NET Framework 4 en la configuración del proyecto para el proyecto de Visual Studio, se habilitará la directiva CAS, incluyendo cualquier directiva CAS personalizada especificada para esa versión. Sin embargo, no podrá usar los nuevos tipos de .NET Framework 4 y miembros. También puede especificar una versión anterior de .NET Framework mediante la [ \<supportedRuntime > elemento](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) en el esquema de configuración de inicio en su [archivo de configuración de aplicación](../../../../../docs/framework/configure-apps/index.md).
+> Si especifica una versión de .NET Framework de destino anterior a la .NET Framework 4 en la configuración del proyecto para el proyecto de Visual Studio, se habilitará la Directiva de CAS, incluidas las directivas CA personalizadas que haya especificado para esa versión. Sin embargo, no podrá usar los nuevos tipos y miembros de .NET Framework 4. También puede especificar una versión anterior del .NET Framework mediante el [ \<elemento supportedRuntime >](../startup/supportedruntime-element.md) en el esquema de configuración de inicio en el [archivo de configuración](../../index.md)de la aplicación.
 
 > [!NOTE]
-> Sintaxis del archivo de configuración distingue mayúsculas de minúsculas. Debe usar la sintaxis que se proporciona en las secciones de sintaxis y ejemplo.
+> La sintaxis del archivo de configuración distingue mayúsculas de minúsculas. Debe utilizar la sintaxis que se proporciona en las secciones sintaxis y ejemplo.
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar solo en el archivo de configuración de la aplicación.
+Este elemento solo se puede usar en el archivo de configuración de la aplicación.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo se habilita la directiva CAS heredada para una aplicación.
+En el ejemplo siguiente se muestra cómo habilitar la Directiva CAS heredada para una aplicación.
 
 ```xml
 <configuration>
@@ -92,5 +92,5 @@ El ejemplo siguiente muestra cómo se habilita la directiva CAS heredada para un
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)

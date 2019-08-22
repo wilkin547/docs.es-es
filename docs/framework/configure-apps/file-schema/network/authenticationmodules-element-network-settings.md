@@ -8,15 +8,15 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6488bfcd97e27a184b4a8cd1498d1c60f32babda
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674719"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659483"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > elemento (configuración de red)
-Especifica los módulos que se usa para autenticar las solicitudes de red.  
+Especifica los módulos que se usan para autenticar las solicitudes de red.  
   
  \<configuration>  
 \<system.net>  
@@ -39,24 +39,24 @@ Especifica los módulos que se usa para autenticar las solicitudes de red.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Agrega un módulo de autenticación a la aplicación.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Borra todos los módulos de autenticación de la aplicación.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|Quita un módulo de autenticación de la aplicación.|  
+|[add](add-element-for-authenticationmodules-network-settings.md)|Agrega un módulo de autenticación a la aplicación.|  
+|[clear](clear-element-for-authenticationmodules-network-settings.md)|Borra todos los módulos de autenticación de la aplicación.|  
+|[remove](remove-element-for-authenticationmodules-network-settings.md)|Quita un módulo de autenticación de la aplicación.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
+|[system.net](system-net-element-network-settings.md)|Contiene valores que especifican cómo se conecta .NET Framework a la red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `authenticationModule` elemento especifica los módulos de autenticación que realizan el proceso de autenticación con un servidor. Un módulo de autenticación debe implementar la <xref:System.Net.IAuthenticationModule> interfaz.  
+ El `authenticationModule` elemento especifica los módulos de autenticación que llevan a cabo el proceso de autenticación con un servidor. Un módulo de autenticación debe implementar <xref:System.Net.IAuthenticationModule> la interfaz.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente habilita un módulo de autenticación. Debe reemplazar los valores de versión y PublicKeyToken con los valores correctos para el módulo especificado.  
+ En el ejemplo siguiente se habilita un módulo de autenticación. Debe reemplazar los valores de version y PublicKeyToken por los valores correctos para el módulo especificado.  
   
 ```xml  
 <configuration>  
@@ -73,4 +73,4 @@ Especifica los módulos que se usa para autenticar las solicitudes de red.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

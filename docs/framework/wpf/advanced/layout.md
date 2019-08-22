@@ -9,15 +9,15 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 1aa182ced462e5fc90b22019aaf424d400bb4fd5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629662"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666763"
 ---
 # <a name="layout"></a>Diseño
-En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
+En este tema se describe el sistema de diseño de Windows Presentation Foundation (WPF). Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en WPF.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -37,7 +37,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>Rectángulos de selección de elementos  
- Al pensar en diseño en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], es importante entender el rectángulo de selección que rodea todos los elementos. Cada <xref:System.Windows.FrameworkElement> consumido por el sistema de diseño puede considerarse como un rectángulo que se ranura en el diseño. La <xref:System.Windows.Controls.Primitives.LayoutInformation> clase devuelve los límites de la asignación de diseño de un elemento o de la ranura. El tamaño del rectángulo se determina calculando el espacio de la pantalla disponible, el tamaño de las restricciones, las propiedades específicas del diseño (como el margen y el relleno) y el comportamiento individual del elemento primario <xref:System.Windows.Controls.Panel> . Al procesar estos datos, el sistema de diseño puede calcular la posición de todos los elementos secundarios de un <xref:System.Windows.Controls.Panel>determinado. Es importante recordar que las características de ajuste de tamaño definidas en el elemento primario, <xref:System.Windows.Controls.Border>como, afectan a sus elementos secundarios.  
+ Al pensar en el diseño en WPF, es importante comprender el rectángulo de selección que rodea todos los elementos. Cada <xref:System.Windows.FrameworkElement> consumido por el sistema de diseño puede considerarse como un rectángulo que se ranura en el diseño. La <xref:System.Windows.Controls.Primitives.LayoutInformation> clase devuelve los límites de la asignación de diseño de un elemento o de la ranura. El tamaño del rectángulo se determina calculando el espacio de la pantalla disponible, el tamaño de las restricciones, las propiedades específicas del diseño (como el margen y el relleno) y el comportamiento individual del elemento primario <xref:System.Windows.Controls.Panel> . Al procesar estos datos, el sistema de diseño puede calcular la posición de todos los elementos secundarios de un <xref:System.Windows.Controls.Panel>determinado. Es importante recordar que las características de ajuste de tamaño definidas en el elemento primario, <xref:System.Windows.Controls.Border>como, afectan a sus elementos secundarios.  
   
  En la siguiente ilustración se muestra un diseño sencillo.  
   
@@ -101,7 +101,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_PanelsCustom"></a>   
 ## <a name="panel-elements-and-custom-layout-behaviors"></a>Elementos de panel y comportamientos de diseño personalizados  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]incluye un grupo de elementos que se derivan de <xref:System.Windows.Controls.Panel>. Estos <xref:System.Windows.Controls.Panel> elementos permiten numerosos diseños complejos. Por ejemplo, los elementos de apilamiento se pueden lograr fácilmente mediante el <xref:System.Windows.Controls.StackPanel> elemento, mientras que los diseños de flujo más complejos y libres son posibles mediante <xref:System.Windows.Controls.Canvas>el uso de.  
+WPF incluye un grupo de elementos que derivan <xref:System.Windows.Controls.Panel>de. Estos <xref:System.Windows.Controls.Panel> elementos permiten numerosos diseños complejos. Por ejemplo, los elementos de apilamiento se pueden lograr fácilmente mediante el <xref:System.Windows.Controls.StackPanel> elemento, mientras que los diseños de flujo más complejos y libres son posibles mediante <xref:System.Windows.Controls.Canvas>el uso de.  
   
  En la tabla siguiente se resumen los elementos <xref:System.Windows.Controls.Panel> de diseño disponibles.  
   
@@ -114,7 +114,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
 |<xref:System.Windows.Controls.VirtualizingPanel>|Proporciona un marco de <xref:System.Windows.Controls.Panel> trabajo para los elementos que virtualizan su colección de datos secundaria. Esta es una clase abstracta.|  
 |<xref:System.Windows.Controls.WrapPanel>|Coloca los elementos secundarios en posición secuencial de izquierda a derecha y traslada el contenido a la línea siguiente en el borde del cuadro contenedor. La ordenación subsiguiente se realiza secuencialmente de arriba abajo o de derecha a izquierda, en función del valor de <xref:System.Windows.Controls.WrapPanel.Orientation%2A> la propiedad.|  
   
- En el caso de las aplicaciones que requieren un diseño que no sea posible mediante el uso <xref:System.Windows.Controls.Panel> de cualquiera de los elementos predefinidos, se pueden lograr <xref:System.Windows.Controls.Panel> los comportamientos de diseño personalizados <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> heredando de e invalidando los <xref:System.Windows.FrameworkElement.MeasureOverride%2A> métodos y. Para obtener un ejemplo, consulte [Custom Radial Panel Sample](https://go.microsoft.com/fwlink/?LinkID=159982) (Ejemplo de panel radial personalizado).  
+ En el caso de las aplicaciones que requieren un diseño que no sea posible mediante el uso <xref:System.Windows.Controls.Panel> de cualquiera de los elementos predefinidos, se pueden lograr <xref:System.Windows.Controls.Panel> los comportamientos de diseño personalizados <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> heredando de e invalidando los <xref:System.Windows.FrameworkElement.MeasureOverride%2A> métodos y.  
   
 <a name="LayoutSystem_Performance"></a>   
 ## <a name="layout-performance-considerations"></a>Consideraciones del rendimiento del diseño  
@@ -138,7 +138,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_LayoutRounding"></a>   
 ## <a name="sub-pixel-rendering-and-layout-rounding"></a>Representación de subpíxeles y redondeo del diseño  
- El sistema de gráficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa unidades independientes del dispositivo para habilitar la resolución y la independencia del dispositivo. Cada píxel independiente del dispositivo se escala automáticamente con la configuración de puntos por pulgada (PPP) del sistema. Esto proporciona [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a las aplicaciones un escalado adecuado para diferentes configuraciones de PPP y hace que la aplicación sea compatible automáticamente con el reconocimiento de PPP.  
+ El sistema de gráficos de WPF usa unidades independientes del dispositivo para habilitar la resolución y la independencia del dispositivo. Cada píxel independiente del dispositivo se escala automáticamente con la configuración de puntos por pulgada (PPP) del sistema. Esto proporciona a las aplicaciones de WPF un ajuste de escala adecuado para diferentes configuraciones de PPP y hace que la aplicación sea compatible automáticamente con el reconocimiento de PPP.  
   
  Sin embargo, esta independencia de PPP puede crear una representación irregular del borde debido al suavizado de contorno. Estos artefactos, que suelen aparecer como bordes borrosos o semitransparentes, pueden mostrarse cuando un borde se encuentra en medio de un píxel de dispositivo, en lugar de entre píxeles de dispositivo. El sistema de diseño proporciona una manera de ajustarlo con el redondeo del diseño. El redondeo del diseño se produce cuando el sistema de diseño redondea los valores de píxel no enteros durante el cálculo de diseño.  
   
@@ -146,7 +146,7 @@ En este tema se describe el sistema de diseño de [!INCLUDE[TLA#tla_winclient](.
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>Pasos adicionales  
- Comprender cómo se miden y organizan los elementos es el primer paso para entender el diseño. Para obtener más información sobre los <xref:System.Windows.Controls.Panel> elementos disponibles, consulte [información general](../controls/panels-overview.md)de los paneles. Para entender mejor las diversas propiedades de posición que pueden afectar al diseño, consulte [Información general sobre alineación, márgenes y relleno](alignment-margins-and-padding-overview.md). Para obtener un ejemplo de un <xref:System.Windows.Controls.Panel> elemento personalizado, vea [ejemplo de panel radial personalizado](https://go.microsoft.com/fwlink/?LinkID=159982). Cuando esté listo para colocarlo todos juntos en una aplicación ligera, consulte [Tutorial: Mi primera aplicación](../getting-started/walkthrough-my-first-wpf-desktop-application.md)de escritorio WPF.  
+ Comprender cómo se miden y organizan los elementos es el primer paso para entender el diseño. Para obtener más información sobre los <xref:System.Windows.Controls.Panel> elementos disponibles, consulte [información general](../controls/panels-overview.md)de los paneles. Para entender mejor las diversas propiedades de posición que pueden afectar al diseño, consulte [Información general sobre alineación, márgenes y relleno](alignment-margins-and-padding-overview.md). Cuando esté listo para colocarlo todos juntos en una aplicación ligera, consulte [Tutorial: Mi primera aplicación](../getting-started/walkthrough-my-first-wpf-desktop-application.md)de escritorio WPF.  
   
 ## <a name="see-also"></a>Vea también
 

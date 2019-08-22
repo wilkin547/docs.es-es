@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15156eaf883fc9ec162e0a85525564d49522b01d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 859e8a12421ea92aa48c54317e052683eb8e83f8
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592667"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663482"
 ---
-# <a name="relativebindforresources-element"></a>\<relativeBindForResources > elemento
+# <a name="relativebindforresources-element"></a>\<relativeBindForResources >, elemento
 Optimiza el sondeo de ensamblados satélite.  
   
- \<Configuración > elemento  
-\<en tiempo de ejecución > elemento  
-\<relativeBindForResources > elemento  
+ \<Elemento Configuration >  
+\<Elemento > en tiempo de ejecución  
+\<relativeBindForResources >, elemento  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -33,46 +33,46 @@ Optimiza el sondeo de ensamblados satélite.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica si common language runtime optimiza el sondeo de ensamblados satélite.|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica si el Common Language Runtime optimiza el sondeo para los ensamblados satélite.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|`false`|El tiempo de ejecución no optimiza el sondeo de los ensamblados satélite. Este es el valor predeterminado.|  
-|`true`|El tiempo de ejecución optimiza el sondeo de ensamblados satélite.|  
+|`false`|El motor en tiempo de ejecución no optimiza el sondeo de ensamblados satélite. Este es el valor predeterminado.|  
+|`true`|El motor en tiempo de ejecución optimiza el sondeo de los ensamblados satélite.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información sobre las opciones de inicialización del motor en tiempo de ejecución.|  
   
 ## <a name="remarks"></a>Comentarios  
- En general, Resource Manager sondea los recursos, como se documenta en el [empaquetar e implementar recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) tema. Esto significa que cuando los sondeos de administrador de recursos para una determinada versión localizada de un recurso, puede buscar en la caché global de ensamblados, busque los ensamblados satélite en una carpeta específica de la referencia cultural en la consulta de base, de código de la aplicación Windows Installer y generar el <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos. El `<relativeBindForResources>` elemento optimiza la manera en que Resource Manager sondea los ensamblados satélite. Puede mejorar el rendimiento cuando el sondeo para los recursos en las siguientes condiciones:  
+ En general, Administrador de recursos sondea los recursos, tal como se documenta en el tema [empaquetar e implementar recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md) . Esto significa que, cuando Administrador de recursos sondea una versión localizada determinada de un recurso, puede buscar en la caché global de ensamblados, buscar en una carpeta específica de la referencia cultural en la base de código de la aplicación, Windows Installer de consulta para los ensamblados satélite y generar el <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento. El `<relativeBindForResources>` elemento optimiza la manera en que administrador de recursos sondea para los ensamblados satélite. Puede mejorar el rendimiento al buscar recursos en las siguientes condiciones:  
   
-- Cuando se implementa el ensamblado satélite en la misma ubicación que el ensamblado de código. En otras palabras, si el ensamblado de código está instalado en la caché global de ensamblados, los ensamblados satélite también deben instalarse allí. Si el ensamblado de código está instalado en la base de código de la aplicación, los ensamblados satélite también deben instalarse en una carpeta específica de la referencia cultural de la base de código.  
+- Cuando el ensamblado satélite se implementa en la misma ubicación que el ensamblado de código. En otras palabras, si el ensamblado de código está instalado en la caché global de ensamblados, los ensamblados satélite también se deben instalar allí. Si el ensamblado de código está instalado en la base de código de la aplicación, los ensamblados satélite también se deben instalar en una carpeta específica de la referencia cultural en el código base.  
   
-- Cuando Windows Installer no se usa o se usa solo en raras ocasiones para la instalación y a petición de ensamblados satélite.  
+- Cuando Windows Installer no se usa o solo se usa con poca frecuencia para la instalación a petición de ensamblados satélite.  
   
-- Cuando el código de aplicación no controla el <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
+- Cuando el código de aplicación no controla <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> el evento.  
   
- Establecer el `enabled` atributo de la `<relativeBindForResources>` elemento `true` optimiza el sondeo del Administrador de recursos de los ensamblados satélite como sigue:  
+ Establecer el `enabled` atributo del elemento `<relativeBindForResources>` para `true` optimizar el sondeo de administrador de recursos para los ensamblados satélite de la manera siguiente:  
   
-- La ubicación del ensamblado de código principal usa para sondear el ensamblado satélite.  
+- Utiliza la ubicación del ensamblado de código primario para sondear el ensamblado satélite.  
   
-- No consulta a Windows Installer para los ensamblados satélite.  
+- No consulta Windows Installer para los ensamblados satélite.  
   
-- No provoca la <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> eventos.  
+- No genera el <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> evento.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Empaquetar e implementar recursos](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Empaquetar e implementar recursos](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento para definir un icono para un botón de la barra de herramientas mediante el diseñador
+title: Filtrar para definir un icono para un botón de la barra de herramientas mediante el diseñador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms], adding icons to buttons
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 5de7645ecbf2123df849046a152643cd629b4898
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 49e93f12bebbf409e6b3a06634556b9103c85f44
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69038235"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666203"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Procedimiento para definir un icono para un botón de la barra de herramientas mediante el diseñador
+# <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>Filtrar para definir un icono para un botón de la barra de herramientas mediante el diseñador
 
 > [!NOTE]
 > El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.
@@ -24,7 +24,6 @@ ms.locfileid: "69038235"
 <xref:System.Windows.Forms.ToolBar>los botones pueden mostrar iconos dentro de ellos para facilitar su identificación por parte de los usuarios. Esto se consigue mediante la adición de imágenes <xref:System.Windows.Forms.ImageList> al componente y su asociación con el <xref:System.Windows.Forms.ToolBar> control.
 
 El procedimiento siguiente requiere un proyecto de **aplicación Windows** con un formulario que <xref:System.Windows.Forms.ToolBar> contenga un <xref:System.Windows.Forms.ImageList> control y un componente. Para obtener información acerca de cómo configurar este tipo de [proyecto, consulte Cómo: Cree un proyecto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicación de [Windows Forms y cómo: Agregue controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
-
 
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>Para establecer un icono para un botón de la barra de herramientas en tiempo de diseño
 

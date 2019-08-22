@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <oidEntry> element
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
-ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 013994e36c4c63410a753967cbac92c38783ae62
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674758"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659590"
 ---
-# <a name="oidentry-element"></a>\<oidEntry > elemento
+# <a name="oidentry-element"></a>\<oidEntry >, elemento
 Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.  
   
  \<configuration>  
@@ -35,28 +35,28 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|**OID**|Atributo necesario.<br /><br /> Especifica el OID ASN.1 correspondiente al algoritmo implementado por la clase.|  
-|**name**|Atributo necesario.<br /><br /> Especifica el valor de la **nombre** atributo en el [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) etiqueta.|  
+|**OID**|Atributo necesario.<br /><br /> Especifica el OID ASN. 1 correspondiente al algoritmo implementado por la clase.|  
+|**name**|Atributo necesario.<br /><br /> Especifica el valor para el atributo de **nombre** en la [ \<](nameentry-element.md) etiqueta de > de elemento nameEntry.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`cryptographySettings`|Contiene la configuración de criptografía.|  
 |`mscorlib`|Contiene el `cryptographySettings` elemento.|  
-|`oidMap`|Contiene asignaciones de identificador (OID) de objeto ASN.1 a clases.|  
+|`oidMap`|Contiene las asignaciones de identificador de objetos (OID) ASN. 1 a las clases.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los identificadores de objeto ASN.1 identifican algoritmos en algunos formatos criptográficos. Los identificadores de objetos se asignan a nombres descriptivos para los algoritmos que desea identificar.  
+ Los identificadores de objeto ASN. 1 identifican los algoritmos en algunos formatos criptográficos. Asigne identificadores de objeto a nombres descriptivos para los algoritmos que desee identificar.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo usar el  **\<oidEntry >** elemento para asignar un identificador de objeto para el algoritmo de hash RIPEMD-160 a una implementación del algoritmo hash.  
+ En el ejemplo siguiente se muestra cómo usar  **\<** el elemento > de oidEntry para asignar un identificador de objeto para el algoritmo hash RIPEMD-160 a una implementación de ese algoritmo hash.  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,8 @@ Asigna un identificador de objeto (OID) ASN.1 a un nombre descriptivo.
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Esquema de la configuración de criptografía](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Esquema de la configuración de criptografía](index.md)
 - [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [Configurar clases de criptografía](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [Asignar identificadores de objeto a algoritmos de criptografía](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Configurar clases de criptografía](../../configure-cryptography-classes.md)
+- [Asignar identificadores de objeto a algoritmos de criptografía](../../map-object-identifiers-to-cryptography-algorithms.md)

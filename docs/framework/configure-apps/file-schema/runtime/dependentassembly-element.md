@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bf1a15ff27f4390f1985a2d2730b1acfcaab2c1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704783"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663828"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly > elemento
-Encapsula la directiva de enlace y la ubicación de cada ensamblado. Utilice uno `dependentAssembly` (elemento) para cada ensamblado.  
+# <a name="dependentassembly-element"></a>\<Elemento > de dependentAssembly
+Encapsula la directiva de enlace y la ubicación de cada ensamblado. Use un `dependentAssembly` elemento para cada ensamblado.  
   
  \<configuration>  
-\<runtime>  
+\<> en tiempo de ejecución  
 \<assemblyBinding>  
 \<dependentAssembly>  
   
@@ -41,23 +41,23 @@ Encapsula la directiva de enlace y la ubicación de cada ensamblado. Utilice uno
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|`assemblyIdentity`|Contiene información de identificación sobre el ensamblado. Este elemento debe incluirse en cada `dependentAssembly` elemento.|  
+|`assemblyIdentity`|Contiene información de identificación sobre el ensamblado. Este elemento debe estar incluido en cada `dependentAssembly` elemento.|  
 |`codeBase`|Especifica dónde puede encontrar el tiempo de ejecución un ensamblado compartido si no está instalado en el equipo.|  
 |`bindingRedirect`|Redirige una versión de ensamblado a otra versión.|  
-|`publisherPolicy`|Especifica si el tiempo de ejecución aplica la directiva de publicador para este ensamblado.|  
+|`publisherPolicy`|Especifica si el tiempo de ejecución aplica la Directiva de edición para este ensamblado.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`assemblyBinding`|Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo encapsular la información de dos ensamblados.  
+ En el ejemplo siguiente se muestra cómo encapsular la información de ensamblado para dos ensamblados.  
   
 ```xml  
 <configuration>  
@@ -82,6 +82,6 @@ Encapsula la directiva de enlace y la ubicación de cada ensamblado. Utilice uno
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Redirigir versiones de ensamblado](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Redirigir versiones de ensamblado](../../redirect-assembly-versions.md)

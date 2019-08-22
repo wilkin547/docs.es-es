@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a77c2567401fd80e355bb7fcee17b6684653ebe
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674379"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659043"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > elemento (configuración de red)
-Configura las características de la secuencia de comandos que se usa para detectar a servidores proxy Web.  
+Configura las características del script que se usan para detectar los proxies Web.  
   
  \<configuration>  
 \<system.net>  
-\<settings>  
+\<> de configuración  
 \<webProxyScript>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,7 +36,7 @@ Configura las características de la secuencia de comandos que se usa para detec
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`downloadTimeout`|Especifica el tiempo máximo para descargar el script en horas, minutos y segundos. El valor predeterminado es un minuto.|  
   
@@ -45,9 +45,9 @@ Configura las características de la secuencia de comandos que se usa para detec
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
+|[Configuración](settings-element-network-settings.md)|Configura opciones de red básicas para el espacio de nombres <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentarios  
   
@@ -56,4 +56,4 @@ Configura las características de la secuencia de comandos que se usa para detec
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

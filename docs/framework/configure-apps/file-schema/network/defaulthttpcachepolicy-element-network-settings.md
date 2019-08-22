@@ -8,15 +8,15 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1dd31884a072d16ed004c0b49be61e8cee399787
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705134"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664148"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > elemento (configuración de red)
-Describe si el almacenamiento en caché de HTTP está activo y describe la directiva de caché de predeterminada.  
+Describe si el almacenamiento en caché de HTTP está activo y describe la Directiva de almacenamiento en caché predeterminada.  
   
  \<configuration>  
 \<system.net>  
@@ -39,32 +39,32 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la direc
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`maximumAge`|Especifica el intervalo de tiempo máximo antes de que un objeto almacenado en caché se marca como caducada.|  
-|`maximumStale`|Especifica el tiempo máximo después de la hora de actualización calculada antes de que un objeto almacenado en caché se marca como caducada.|  
-|`minimumFresh`|Especifica el tiempo mínimo para un objeto almacenado en caché se considerará actualizado.|  
-|`policyLevel`|Especifica si la directiva de caché es automática, o si se omite la memoria caché. El valor predeterminado es `BypassCache`.|  
+|`maximumAge`|Especifica el intervalo de tiempo máximo antes de que un objeto almacenado en memoria caché se marque como expirado.|  
+|`maximumStale`|Especifica el tiempo máximo después del tiempo de actualización calculado antes de que un objeto almacenado en memoria caché se marque como expirado.|  
+|`minimumFresh`|Especifica el tiempo mínimo que un objeto almacenado en memoria caché se debe considerar actualizado.|  
+|`policyLevel`|Especifica si la Directiva de almacenamiento en caché es automática o si se omite la memoria caché. El valor predeterminado es `BypassCache`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguna  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
+|[requestCaching](requestcaching-element-network-settings.md)|Controla el mecanismo de almacenamiento en caché para las solicitudes de red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El valor de la `policyLevel` atributo sea `BypassCache` o `Default`.  
+ El valor `policyLevel` del atributo `BypassCache` es o `Default`.  
   
- Los valores de la `maximumAge`, `maximumStale`, y `minimumFresh` elementos son intervalos de tiempo explícitos con un formato de *d.*. *hh*:*mm*:*ss* (días, horas, minutos y segundos) o las constantes `minValue` o `maxValue`, según corresponda.  
+ Los valores de `maximumAge`los `maximumStale`elementos, `minimumFresh` y son un intervalo de tiempo explícito con un formato de *d*. *HH*:*mm*:*SS* (días, horas, minutos y segundos), `minValue` o las constantes o `maxValue`, según corresponda.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo especificar un intervalo de actualización mínimo de seis horas, una hora de antigüedad máxima de dos días y un obsoleto el tiempo máximo de cuatro horas.  
+ En el ejemplo siguiente se muestra cómo especificar una hora de actualización mínima de seis horas, una duración máxima de dos días y un tiempo de expiración máximo de cuatro horas.  
   
 ```xml  
 <configuration>  
@@ -85,4 +85,4 @@ Describe si el almacenamiento en caché de HTTP está activo y describe la direc
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

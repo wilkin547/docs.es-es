@@ -10,15 +10,15 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: d9c584fb2faa971e7ce1ca287a94c8c6129820fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8ab7a43fbb3e8df5bb0c99b5947f2fafb362399a
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705199"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664027"
 ---
-# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<Quitar > elemento para connectionManagement (configuración de red)
-Quita una dirección IP o nombre DNS de la lista de administración de conexiones.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>\<quitar > elemento de connectionManagement (configuración de red)
+Quita una dirección IP o un nombre DNS de la lista de administración de conexiones.  
   
  \<configuration>  
 \<system.net>  
@@ -40,7 +40,7 @@ Quita una dirección IP o nombre DNS de la lista de administración de conexione
   
 |**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
-|`address`|Una dirección IP o nombre DNS.|  
+|`address`|Una dirección IP o un nombre DNS.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -49,18 +49,18 @@ Quita una dirección IP o nombre DNS de la lista de administración de conexione
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|Especifica el número máximo de conexiones a un host de red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `remove` elemento quita la entrada de lista de administración de conexión para el servidor especificado.  
+ El `remove` elemento quita la entrada de la lista de administración de conexiones para el servidor especificado.  
   
- El valor de la `address` atributo debe ser un nombre de host o dirección IP válido.  
+ El valor del `address` atributo debe ser una dirección IP o un nombre de host válidos.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita cualquier entradas de lista de administración de conexión para el servidor `www.adventure-works.com` y, a continuación, configura una aplicación para usar cuatro conexiones al servidor `www.contoso.com` y dos conexiones con todos los demás servidores.  
+ En el ejemplo siguiente se quitan las entradas de la lista `www.adventure-works.com` de administración de conexiones del servidor y, a continuación, se configura una `www.contoso.com` aplicación para que use cuatro conexiones al servidor y dos conexiones a todos los demás servidores.  
   
 ```xml  
 <configuration>  
@@ -78,4 +78,4 @@ Quita una dirección IP o nombre DNS de la lista de administración de conexione
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f923ce73760fa42a2c435d346f9d1097a5ed82f
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705043"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69664050"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Quitar > elemento para authenticationModules (configuración de red)
+# <a name="remove-element-for-authenticationmodules-network-settings"></a>\<quitar > elemento para authenticationModules (configuración de red)
 Quita un módulo de autenticación de la aplicación.  
   
  \<configuration>  
@@ -40,7 +40,7 @@ Quita un módulo de autenticación de la aplicación.
   
 |**Attribute**|**Descripción**|  
 |-------------------|---------------------|  
-|**type**|El nombre del módulo de autenticación para quitar.|  
+|**type**|Nombre del módulo de autenticación que se va a quitar.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -49,18 +49,18 @@ Quita un módulo de autenticación de la aplicación.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica los módulos que se usa para autenticar las solicitudes de red.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica los módulos que se usan para autenticar las solicitudes de red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `remove` elemento quita módulos de autenticación definidos anteriormente en el archivo de configuración o en un nivel superior de la jerarquía de configuración.  
+ El `remove` elemento quita los módulos de autenticación que se definieron anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.  
   
- El valor de la `type` atributo debe ser un nombre de clase válida.  
+ El valor del `type` atributo debe ser un nombre de clase válido.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente quita un módulo de autenticación.  
+ En el ejemplo siguiente se quita un módulo de autenticación.  
   
 ```xml  
 <configuration>  
@@ -76,4 +76,4 @@ Quita un módulo de autenticación de la aplicación.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 733f22c122dd6acdad41371419375e55e977c016
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c8d04725a576c9e24a4b7d4aec1251516a8c544c
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039932"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666228"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Tutorial: Crear un control de formularios Windows Forms que aproveche las características en tiempo de diseño de Visual Studio
 
@@ -63,14 +63,13 @@ Cuando haya terminado, el control personalizado tendrá un aspecto similar al si
 
 Para obtener la lista de código completa [, consulte Cómo: Cree un control de Windows Forms que aproveche las características](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))en tiempo de diseño.
 
-
 ## <a name="prerequisites"></a>Requisitos previos
 
 Para completar este tutorial, necesitará Visual Studio.
 
 ## <a name="creating-the-project"></a>Crear el proyecto
 
-El primer paso es crear el proyecto de aplicación. Usará este proyecto para compilar la aplicación que hospeda el control personalizado.
+El primer paso es crear el proyecto de la aplicación. Usará este proyecto para compilar la aplicación que hospeda el control personalizado.
 
 Abra Visual Studio y cree un proyecto de aplicación de Windows Forms denominado "MarqueeControlTest" (**archivo** > **nuevo** > **proyecto** > **Visual C#**  o **Visual Basic**  >  **Escritorio clásico** **Windows Forms aplicación).**  > 
 
@@ -82,11 +81,11 @@ El siguiente paso consiste en crear el proyecto de biblioteca de controles. Crea
 
 1. Agregue un proyecto de biblioteca de controles Windows Forms a la solución. Asigne al proyecto el nombre "MarqueeControlLibrary".
 
-2. Use **Explorador de soluciones**para eliminar el control predeterminado del proyecto eliminando el archivo de código fuente denominado "UserControl1.cs" o "UserControl1. VB", según el lenguaje que elija. Para obtener más información, vea [Cómo: Quitar, eliminar y excluir elementos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+2. Use **Explorador de soluciones**para eliminar el control predeterminado del proyecto eliminando el archivo de código fuente denominado "UserControl1.cs" o "UserControl1. VB", según el lenguaje que elija. Para obtener más información, consulte [Cómo Quitar, eliminar y excluir elementos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
 
 3. Agregue un nuevo <xref:System.Windows.Forms.UserControl> elemento `MarqueeControlLibrary` al proyecto. Asigne al nuevo archivo de código fuente el nombre base "MarqueeControl".
 
-4. Con **Explorador de soluciones**, cree una nueva carpeta en el `MarqueeControlLibrary` proyecto. Para obtener más información, consulte [Cómo Agregar nuevos elementos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))de proyecto. Asigne el nombre "diseño" a la nueva carpeta.
+4. Con **Explorador de soluciones**, cree una nueva carpeta en el `MarqueeControlLibrary` proyecto. Para obtener más información, vea [Cómo: Agregar nuevos elementos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))de proyecto. Asigne el nombre "diseño" a la nueva carpeta.
 
 5. Haga clic con el botón secundario en la carpeta **diseño** y agregue una nueva clase. Asigne al archivo de origen un nombre base de "MarqueeControlRootDesigner".
 
@@ -637,7 +636,7 @@ El `MarqueeControlLibrary` muestra una implementación simple de controles perso
 
 - Personalizar aún más la experiencia en tiempo de diseño. Podría intentar sombrear más propiedades que <xref:System.Windows.Forms.Control.Enabled%2A> y <xref:System.Windows.Forms.Control.Visible%2A>, y agregar nuevas propiedades. Agregue nuevos verbos de diseñador para simplificar las tareas comunes, como acoplar los controles secundarios.
 
-- Licencia de `MarqueeControl`. Para obtener más información, consulte [Cómo Componentes y controles](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))de licencia.
+- Licencia de `MarqueeControl`. Para obtener más información, vea [Cómo: Componentes y controles](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))de licencia.
 
 - Controlar cómo se serializan los controles y cómo se genera el código para ellos. Para obtener más información, vea [generación y compilación de código fuente dinámico](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).
 

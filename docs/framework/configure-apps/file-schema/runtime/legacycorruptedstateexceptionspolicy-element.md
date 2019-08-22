@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6191ee2169a85725f0367763874e60c0ceb1d7a4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 2715548a40579375cebbdd5fb9003738a42ff714
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489438"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663651"
 ---
-# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > elemento
-Especifica si common language runtime permite código administrado para detectar infracciones de acceso y otras excepciones de estado dañado.  
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy >, elemento
+Especifica si el Common Language Runtime permite al código administrado detectar infracciones de acceso y otras excepciones de estado dañadas.  
   
  \<configuration>  
-\<runtime>  
+\<> en tiempo de ejecución  
 \<legacyCorruptedStateExceptionsPolicy>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,42 +32,42 @@ Especifica si common language runtime permite código administrado para detectar
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`enabled`|Atributo necesario.<br /><br /> Especifica que la aplicación detectará si se dañan los errores de excepción de estado como infracciones de acceso.|  
+|`enabled`|Atributo necesario.<br /><br /> Especifica que la aplicación detectará errores de excepción de estado dañados, como infracciones de acceso.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|`false`|La aplicación no detectará si se dañan los errores de excepción de estado como infracciones de acceso. Este es el valor predeterminado.|  
-|`true`|La aplicación detectará si se dañan los errores de excepción de estado como infracciones de acceso.|  
+|`false`|La aplicación no detectará errores de excepción de estado dañados, como infracciones de acceso. Este es el valor predeterminado.|  
+|`true`|La aplicación detectará errores de excepción de estado dañados, como infracciones de acceso.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- En la versión 3.5 y versiones anterior de .NET Framework, common language runtime permite código administrado detectar excepciones que se han producido por Estados de proceso dañado. Una infracción de acceso es un ejemplo de este tipo de excepción.  
+ En la .NET Framework versión 3,5 y versiones anteriores, el Common Language Runtime permitía que el código administrado detectara las excepciones que se producían con Estados de proceso dañados. Una infracción de acceso es un ejemplo de este tipo de excepción.  
   
- A partir de .NET Framework 4, código administrado ya no detecta estos tipos de excepciones en `catch` bloques. Sin embargo, puede invalidar este cambio y mantener el control de excepciones de estado dañado de dos maneras:  
+ A partir de la .NET Framework 4, el código administrado ya no detecta estos tipos de excepciones `catch` en bloques. Sin embargo, puede invalidar este cambio y mantener el control de las excepciones de estado dañadas de dos maneras:  
   
-- Establecer el `<legacyCorruptedStateExceptionsPolicy>` del elemento `enabled` atributo `true`. Esta opción de configuración está aplicado a todo el proceso y afecta a todos los métodos.  
+- Establezca el `<legacyCorruptedStateExceptionsPolicy>` atributo del `enabled` elemento en `true`. Esta opción de configuración se aplica processwide y afecta a todos los métodos.  
   
  -o bien-  
   
-- Aplicar el <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> al método que contiene las excepciones `catch` bloque.  
+- Aplique el <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> atributo al método que contiene el bloque de `catch` excepciones.  
   
- Este elemento de configuración está disponible solo en .NET Framework 4 y versiones posteriores.  
+ Este elemento de configuración solo está disponible en el .NET Framework 4 y versiones posteriores.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo especificar que la aplicación debe revertir al comportamiento antes de .NET Framework 4 y detectar dañen todos los errores de excepción de estado.  
+ En el ejemplo siguiente se muestra cómo especificar que la aplicación debe volver al comportamiento anterior a la .NET Framework 4 y detectar todos los errores de excepción de estado dañado.  
   
 ```xml  
 <configuration>  
@@ -80,5 +80,5 @@ Especifica si common language runtime permite código administrado para detectar
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)

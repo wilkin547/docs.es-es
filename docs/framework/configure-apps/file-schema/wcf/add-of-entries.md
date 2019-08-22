@@ -2,21 +2,21 @@
 title: <add> de <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3052a7570d1d93836603454817be921b37d26060
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673646"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69658838"
 ---
 # <a name="add-of-entries"></a>\<Agregar > de \<entradas >
 Representa una entrada de enrutamiento que asigna un filtro a un extremo de cliente que se definió previamente. Los mensajes que coincidan con este filtro se enviarán a este destino.  
   
  \<system.serviceModel>  
-\<routing>  
+\<> de enrutamiento  
 \<filterTables>  
 \<filterTable>  
-\<entries>  
+\<entradas >  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -36,29 +36,26 @@ Representa una entrada de enrutamiento que asigna un filtro a un extremo de clie
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |backupList|Cadena que especifica una referencia a una lista auxiliar de puntos de conexión.|  
-|punto de conexión|Cadena que especifica una referencia a un extremo de cliente que recibirá mensajes que coincidan con el filtro especificado por el atributo `filterName`.|  
+|endpoint|Cadena que especifica una referencia a un extremo de cliente que recibirá mensajes que coincidan con el filtro especificado por el atributo `filterName`.|  
 |filterName|Cadena que especifica una referencia a un elemento de filtro.|  
-|priority|Entero que especifica la prioridad de esta entrada.<br /><br /> Las entradas en la tabla de enrutamiento se evaluarán según la prioridad, siendo 0 la prioridad más baja. Todas las entradas para una prioridad concreta se evalúan simultáneamente; si no se encuentra ninguna entrada coincidente para la prioridad actual, se evaluará el nivel de prioridad siguiente.<br /><br /> Este valor es opcional.|  
+|prioridad|Entero que especifica la prioridad de esta entrada.<br /><br /> Las entradas en la tabla de enrutamiento se evaluarán según la prioridad, siendo 0 la prioridad más baja. Todas las entradas para una prioridad concreta se evalúan simultáneamente; si no se encuentra ninguna entrada coincidente para la prioridad actual, se evaluará el nivel de prioridad siguiente.<br /><br /> Este valor es opcional.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sección de configuración que contiene entradas de asignación de enrutamiento.|  
+|[\<> de enrutamiento](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sección de configuración que contiene entradas de asignación de enrutamiento.|  
   
 ## <a name="see-also"></a>Vea también
 

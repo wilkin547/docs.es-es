@@ -10,14 +10,14 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12ac146926103b40073d34f48895b0645c8a8ed2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674615"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659469"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<Borrar > elemento para authenticationModules (configuración de red)
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<borrar > elemento para authenticationModules (configuración de red)
 Borra todos los módulos de autenticación de la aplicación.  
   
  \<configuration>  
@@ -44,16 +44,16 @@ Borra todos los módulos de autenticación de la aplicación.
   
 |**Element**|**Descripción**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Especifica los módulos que se usa para autenticar las solicitudes de red.|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|Especifica los módulos que se usan para autenticar las solicitudes de red.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `clear` elemento quita todos los módulos de autenticación definidos anteriormente en el archivo de configuración o en un nivel superior de la jerarquía de configuración.  
+ El `clear` elemento quita todos los módulos de autenticación que se definieron anteriormente en el archivo de configuración o en un nivel superior en la jerarquía de configuración.  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente quita todos los módulos de autenticación configurado.  
+ En el ejemplo siguiente se quitan todos los módulos de autenticación configurados.  
   
 ```xml  
 <configuration>  
@@ -69,4 +69,4 @@ Borra todos los módulos de autenticación de la aplicación.
 
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Esquema de la configuración de red](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Esquema de la configuración de red](index.md)

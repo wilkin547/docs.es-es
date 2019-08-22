@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a1923e70143ea2a158447eccdb35d347fe4f51ea
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487666"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69663770"
 ---
-# <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > elemento
+# <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager >, elemento
 Especifica si el comportamiento predeterminado, que consiste en permitir el host en tiempo de ejecución para invalidar los valores de configuración de un dominio de aplicación, está deshabilitado.  
   
- \<Configuración > elemento  
-\<en tiempo de ejecución > elemento  
+ \<Elemento Configuration >  
+\<Elemento > en tiempo de ejecución  
 \<disableFusionUpdatesFromADManager>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -32,40 +32,40 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|enabled|Atributo necesario.<br /><br /> Especifica si se deshabilita la capacidad predeterminada para invalidar la configuración de fusión.|  
+|enabled|Atributo necesario.<br /><br /> Especifica si está deshabilitada la capacidad predeterminada de invalidar la configuración de fusión.|  
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|0|No deshabilite la capacidad de invalidar la configuración de fusión. Este es el comportamiento predeterminado, a partir de .NET Framework 4.|  
-|1|Deshabilitar la capacidad de invalidar la configuración de fusión. Esto revierte el comportamiento de versiones anteriores de .NET Framework.|  
+|0|No deshabilite la capacidad de invalidar la configuración de fusión. Este es el comportamiento predeterminado, comenzando por el .NET Framework 4.|  
+|1|Deshabilitar la capacidad de invalidar la configuración de fusión. Esto revierte el comportamiento de las versiones anteriores del .NET Framework.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`runtime`|Contiene información del enlace del ensamblado y de la recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- A partir de .NET Framework 4, el comportamiento predeterminado es permitir la <xref:System.AppDomainManager> objeto invaliden los valores de configuración mediante el <xref:System.AppDomainSetup.ConfigurationFile%2A> propiedad o el <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método de la <xref:System.AppDomainSetup> objeto que se pasa a la implementación de la <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método en la subclase de <xref:System.AppDomainManager>. Para el dominio de aplicación predeterminado, la configuración que cambia invalida la configuración que se ha especificado por el archivo de configuración de la aplicación. Para otros dominios de aplicación, invalidan los valores de configuración que se pasaron a la <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método.  
+ A partir de la .NET Framework 4, el comportamiento predeterminado es permitir que <xref:System.AppDomainManager> el objeto invalide los valores de <xref:System.AppDomainSetup.ConfigurationFile%2A> configuración mediante la <xref:System.AppDomainSetup.SetConfigurationBytes%2A> propiedad <xref:System.AppDomainSetup> o el método del objeto que se pasa a la implementación. del método, en la subclase de <xref:System.AppDomainManager>. <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> En el caso del dominio de aplicación predeterminado, la configuración que cambie invalida la configuración especificada por el archivo de configuración de la aplicación. En otros dominios de aplicación, invalidan las opciones de configuración que se <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> pasaron <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> al método o.  
   
- Puede pasar nueva información de configuración, o pasar un valor null (`Nothing` en Visual Basic) para eliminar información de configuración que se pasó.  
+ Puede pasar información de configuración nueva o pasar un valor null (`Nothing` en Visual Basic) para eliminar la información de configuración que se ha pasado.  
   
- No pase información de configuración a ambos el <xref:System.AppDomainSetup.ConfigurationFile%2A> propiedad y el <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método. Si se pasa la información de configuración a ambos, la información se pasa a la <xref:System.AppDomainSetup.ConfigurationFile%2A> propiedad se omite porque el <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método invalida la información de configuración del archivo de configuración de la aplicación. Si usas el <xref:System.AppDomainSetup.ConfigurationFile%2A> propiedad, puede pasar null (`Nothing` en Visual Basic) para el <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método para eliminar los bytes de la configuración que se especificaron en la llamada a la <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> método.  
+ No pase información de configuración a la <xref:System.AppDomainSetup.ConfigurationFile%2A> propiedad y al <xref:System.AppDomainSetup.SetConfigurationBytes%2A> método. Si se pasa información de configuración a ambos, se omite la información que <xref:System.AppDomainSetup.ConfigurationFile%2A> se pasa a la propiedad, <xref:System.AppDomainSetup.SetConfigurationBytes%2A> porque el método reemplaza la información de configuración del archivo de configuración de la aplicación. <xref:System.AppDomainSetup.ConfigurationFile%2A> Si usa la propiedad, puede pasar null ( <xref:System.AppDomainSetup.SetConfigurationBytes%2A> `Nothing` en Visual Basic) al método para eliminar los bytes de configuración especificados en la llamada al <xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType> método o <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> .  
   
- Además de información de configuración, puede cambiar la configuración siguiente en el <xref:System.AppDomainSetup> objeto que se pasa a la implementación de la <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>, <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A>, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, <xref:System.AppDomainSetup.DynamicBase%2A>, <xref:System.AppDomainSetup.LoaderOptimization%2A>, <xref:System.AppDomainSetup.PrivateBinPath%2A>, <xref:System.AppDomainSetup.PrivateBinPathProbe%2A>, <xref:System.AppDomainSetup.ShadowCopyDirectories%2A>, y <xref:System.AppDomainSetup.ShadowCopyFiles%2A>.  
+ Además de la información de configuración, puede cambiar la configuración siguiente en el <xref:System.AppDomainSetup> objeto que se pasa a la implementación <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> del método: <xref:System.AppDomainSetup.ApplicationBase%2A>, <xref:System.AppDomainSetup.ApplicationName%2A>, <xref:System.AppDomainSetup.CachePath%2A>,, <xref:System.AppDomainSetup.DisallowBindingRedirects%2A> <xref:System.AppDomainSetup.DisallowApplicationBaseProbing%2A> , <xref:System.AppDomainSetup.DisallowCodeDownload%2A>, <xref:System.AppDomainSetup.DisallowPublisherPolicy%2A>, ,,<xref:System.AppDomainSetup.LoaderOptimization%2A>,, y<xref:System.AppDomainSetup.ShadowCopyDirectories%2A>. <xref:System.AppDomainSetup.PrivateBinPath%2A> <xref:System.AppDomainSetup.PrivateBinPathProbe%2A> <xref:System.AppDomainSetup.DynamicBase%2A> <xref:System.AppDomainSetup.ShadowCopyFiles%2A>  
   
- Como alternativa al uso de la `<disableFusionUpdatesFromADManager>` elemento, puede deshabilitar el comportamiento predeterminado mediante la creación de una configuración del registro o estableciendo una variable de entorno. En el registro, cree un valor DWORD denominado `COMPLUS_disableFusionUpdatesFromADManager` en `HKCU\Software\Microsoft\.NETFramework` o `HKLM\Software\Microsoft\.NETFramework`y establezca el valor en 1. En la línea de comandos, establezca la variable de entorno `COMPLUS_disableFusionUpdatesFromADManager` en 1.  
+ Como alternativa al uso del elemento `<disableFusionUpdatesFromADManager>` , puede deshabilitar el comportamiento predeterminado mediante la creación de una configuración del registro o mediante el establecimiento de una variable de entorno. En el registro, cree un valor DWORD denominado `COMPLUS_disableFusionUpdatesFromADManager` en `HKCU\Software\Microsoft\.NETFramework` o `HKLM\Software\Microsoft\.NETFramework`y establezca el valor en 1. En la línea de comandos, establezca la variable `COMPLUS_disableFusionUpdatesFromADManager` de entorno en 1.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo deshabilitar la capacidad de invalidar la configuración de fusión mediante el `<disableFusionUpdatesFromADManager>` elemento.  
+ En el ejemplo siguiente se muestra cómo deshabilitar la capacidad de invalidar la configuración `<disableFusionUpdatesFromADManager>` de fusión mediante el elemento.  
   
 ```xml  
 <configuration>  
@@ -77,6 +77,6 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de Common Language Runtime](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [Esquema de los archivos de configuración](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Esquema de la configuración de Common Language Runtime](index.md)
+- [Esquema de los archivos de configuración](../index.md)
+- [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../deployment/how-the-runtime-locates-assemblies.md)
