@@ -2,12 +2,12 @@
 title: Ensamblados de .NET
 ms.date: 07/10/2018
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 4a92eea623abc8aaad170dafc4bc3c917a36a474
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09dc44141a4eea7601df3f918e8740efdb99aeda
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627829"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666590"
 ---
 # <a name="assemblies-in-net"></a>Ensamblados de .NET
 
@@ -25,7 +25,7 @@ Los ensamblados tienen las propiedades siguientes:
 
 - Mediante programación, puede obtener información sobre un ensamblado mediante reflexión. Para más información, vea [Reflexión (C#)](../../csharp/programming-guide/concepts/reflection.md) o [Reflexión (Visual Basic)](../../visual-basic/programming-guide/concepts/reflection.md).
 
-- Puede cargar un ensamblado solo para inspeccionarlo mediante una llamada a un método <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>.
+- Puede cargar un ensamblado solo para inspeccionarlo mediante la clase <xref:System.Reflection.MetadataLoadContext>.
 
 ## <a name="assembly-manifest"></a>Manifiesto del ensamblado
 
