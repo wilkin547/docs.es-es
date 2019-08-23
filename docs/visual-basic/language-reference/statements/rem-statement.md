@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Visual Basic code, comments
 - "' comment marker character [Visual Basic]"
 ms.assetid: 34126d7f-e0f9-476d-91e6-b31b398615dc
-ms.openlocfilehash: 3c63c5613b40cb2014c77a0a996e3acb2cc304d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16149ce42e3476cf07a62298f83734fee9ec7253
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957759"
 ---
 # <a name="rem-statement-visual-basic"></a>REM (Instrucción, Visual Basic)
-Se usa para incluir notas explicativas en el código fuente de un programa.  
+Se usa para incluir comentarios explicativos en el código fuente de un programa.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,18 +32,18 @@ REM comment
   
 ## <a name="parts"></a>Elementos  
  `comment`  
- Opcional. El texto de cualquier comentario que desee incluir. Se requiere un espacio entre el `REM` palabra clave y `comment`.  
+ Opcional. Texto de cualquier comentario que desee incluir. Se requiere un espacio entre la `REM` palabra clave `comment`y.  
   
 ## <a name="remarks"></a>Comentarios  
- Puede colocar un `REM` por sí solo en una línea o instrucción puede colocarlo en una línea después de otra instrucción. El `REM` instrucción debe ser la última instrucción en la línea. Si sigue otra instrucción, el `REM` deben estar separados de esa instrucción por un espacio.  
+ Puede colocar una `REM` instrucción solo en una línea o puede colocarla en una línea después de otra instrucción. La `REM` instrucción debe ser la última instrucción de la línea. Si sigue otra instrucción, el debe `REM` estar separado de la instrucción por un espacio.  
   
- Puede usar una comilla simple (`'`) en lugar de `REM`. Esto es cierto si el comentario sigue otra instrucción en la misma línea o se encuentra solo en una línea.  
+ Puede usar una comilla simple (`'`) en lugar de. `REM` Esto es así si el comentario sigue a otra instrucción en la misma línea o solo se coloca en una línea.  
   
 > [!NOTE]
->  No puede continuar una `REM` instrucción mediante el uso de una secuencia de continuación de línea (`_`). Una vez que inicia un comentario, el compilador no examina los caracteres de un significado especial. Para un comentario de varias líneas, use otro `REM` instrucción o un símbolo de comentario (`'`) en cada línea.  
+> No se puede continuar `REM` una instrucción mediante una secuencia de continuación de línea`_`(). Una vez que se inicia un comentario, el compilador no examina los caracteres para un significado especial. Para un Comentario de varias líneas, use otra `REM` instrucción o un símbolo de comentario`'`() en cada línea.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente ilustra la `REM` instrucción, que se usa para incluir notas explicativas en un programa. También se muestra la alternativa de utilizar el carácter de comilla simple (`'`) en lugar de `REM`.  
+ En el ejemplo siguiente se muestra `REM` la instrucción, que se usa para incluir comentarios explicativos en un programa. También se muestra la alternativa de usar el carácter de comilla simple (`'`) en lugar de `REM`.  
   
  [!code-vb[VbVbalrStatements#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#6)]  
   

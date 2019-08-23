@@ -8,12 +8,12 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: 85d3562246170901d83d6314caec5747d52fb9a0
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 76a78debdce14123cc465ac9abf4db906fe0a2df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817965"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961350"
 ---
 # <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>Procedimiento Navegar hacia delante o hacia atrás por el historial de navegación
 En este ejemplo se muestra cómo navegar hacia delante o hacia atrás a las entradas en el historial de navegación.  
@@ -40,4 +40,4 @@ En este ejemplo se muestra cómo navegar hacia delante o hacia atrás a las entr
  **CanGoForward**, **GoForward**, **CanGoBack**y **GoBack** se implementan mediante <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>y <xref:System.Windows.Navigation.NavigationService>.  
   
 > [!NOTE]
->  Si llama a **GoForward**y no hay ninguna entrada en el historial de navegación hacia delante, o si llama a **GoBack**y no hay ninguna entrada en el historial de navegación <xref:System.InvalidOperationException> hacia atrás, se produce una excepción.
+> Si llama a **GoForward**y no hay ninguna entrada en el historial de navegación hacia delante, o si llama a **GoBack**y no hay ninguna entrada en el historial de navegación <xref:System.InvalidOperationException> hacia atrás, se produce una excepción.

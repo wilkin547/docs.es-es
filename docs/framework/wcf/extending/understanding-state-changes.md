@@ -2,12 +2,12 @@
 title: Introducción a los cambios de estado
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 549620ee5317e68735b392ce35b73c92f2474eab
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363944"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963083"
 ---
 # <a name="understanding-state-changes"></a>Introducción a los cambios de estado
 En este tema se discuten los estados y transiciones que los canales tienen, los tipos utilizados para estructurar los estados del canal, y cómo implementarlos.  
@@ -58,7 +58,7 @@ Figura 2. La implementación de CommunicationObject del equipo de estados ICommu
  <xref:System.ServiceModel.Channels.CommunicationObject> proporciona implementaciones de Anular, Cerrar y Abrir. También proporciona un método Error que provoca una transición de estado al estado Error. La figura 2 muestra la máquina de estados <xref:System.ServiceModel.ICommunicationObject> con cada transición etiquetada por el método que la produce (las transiciones no etiquetadas tienen lugar dentro de la implementación del método que produjo la última transición etiquetada).  
   
 > [!NOTE]
->  Todas las implementaciones <xref:System.ServiceModel.Channels.CommunicationObject> de estado de comunicación obtener/establecer están sincronizadas por subproceso.  
+> Todas las implementaciones <xref:System.ServiceModel.Channels.CommunicationObject> de estado de comunicación obtener/establecer están sincronizadas por subproceso.  
   
  Constructor  
   

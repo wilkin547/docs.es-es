@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: f96124f7d97e733b1f0e2559320ce2e09ba5ff21
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 97888a77dfc731be591d5f0284e87f45ef7dc437
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039962"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930175"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>Procedimiento para crear una interfaz de usuario de varios paneles con formularios Windows Forms mediante el diseñador
 En el procedimiento siguiente, creará una interfaz de usuario de varios paneles similar a la usada en Microsoft Outlook, con una lista de **carpetas** , un panel **mensajes** y un panel de **vista previa** . Esta disposición se logra principalmente a través de los controles de acoplamiento con el formato.
@@ -39,7 +39,7 @@ En el procedimiento siguiente, creará una interfaz de usuario de varios paneles
      En este punto, si presiona F5 para ejecutar la aplicación, el formulario muestra una interfaz de usuario de tres partes, similar a la de Microsoft Outlook.
 
     > [!NOTE]
-    >  Al colocar el puntero del mouse sobre cualquiera de los separadores de <xref:System.Windows.Forms.SplitContainer> los controles, puede cambiar el tamaño de las dimensiones internas.
+    > Al colocar el puntero del mouse sobre cualquiera de los separadores de <xref:System.Windows.Forms.SplitContainer> los controles, puede cambiar el tamaño de las dimensiones internas.
 
 En este punto del desarrollo de aplicaciones, ha creado una interfaz de usuario sofisticada. El paso siguiente es continuar con la programación de la propia aplicación, quizás conectando el <xref:System.Windows.Forms.TreeView> control y <xref:System.Windows.Forms.ListView> los controles a algún tipo de origen de datos. Para obtener más información sobre la conexión de controles a datos, consulte [enlace de datos y Windows Forms](../data-binding-and-windows-forms.md).
 

@@ -5,21 +5,21 @@ helpviewer_keywords:
 - retrieving the DrawingGroup value of a Visual [WPF]
 - enumerating the contents of a Visual [WPF]
 ms.assetid: 2974ddb3-2997-4713-8fd2-e93d549c58a8
-ms.openlocfilehash: 4f0afc1075fe66c7f154fcef3cd883709db55316
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25aa0c3706005c1e16cedd7e06914db764545ebb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947477"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930069"
 ---
 # <a name="how-to-enumerate-drawing-content-of-a-visual"></a>Procedimiento Enumerar el contenido de un dibujo de un objeto visual
-El <xref:System.Windows.Media.Drawing> objeto proporcionar un modelo de objetos para enumerar el contenido de un <xref:System.Windows.Media.Visual>.  
+El <xref:System.Windows.Media.Drawing> objeto proporciona un modelo de objetos para enumerar el contenido de <xref:System.Windows.Media.Visual>un objeto.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> método para recuperar el <xref:System.Windows.Media.DrawingGroup> valor de un <xref:System.Windows.Media.Visual> y enumerarlo.  
+ En el ejemplo siguiente se <xref:System.Windows.Media.VisualTreeHelper.GetDrawing%2A> usa el método para <xref:System.Windows.Media.DrawingGroup> recuperar el valor <xref:System.Windows.Media.Visual> de un y enumerarlo.  
   
 > [!NOTE]
->  Cuando se enumera el contenido del objeto visual, que se están recuperando <xref:System.Windows.Media.Drawing> objetos y no la representación subyacente de los datos de representación como una lista de instrucciones de gráficos vectoriales. Para más información, consulte [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md).  
+> Cuando se enumera el contenido del objeto visual, se recuperan <xref:System.Windows.Media.Drawing> los objetos y no la representación subyacente de los datos de representación como una lista de instrucciones de gráficos vectoriales. Para más información, consulte [Información general sobre la representación de gráficos en WPF](wpf-graphics-rendering-overview.md).  
   
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   

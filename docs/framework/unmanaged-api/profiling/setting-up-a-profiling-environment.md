@@ -12,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e6c87a408b348cb6ecc7a3f6afa7060a1568a37
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775744"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966113"
 ---
 # <a name="setting-up-a-profiling-environment"></a>Configurar un entorno de generación de perfiles
 > [!NOTE]
->  Ha habido cambios sustanciales en la generación de perfiles en .NET Framework 4.  
+> Se han realizado cambios sustanciales en la generación de perfiles en el .NET Framework 4.  
   
  Cuando se inicia un proceso administrado (aplicación o servicio), se carga el Common Language Runtime (CLR). Cuando se inicializa el CLR, evalúa las siguientes dos variables de entorno para decidir si el proceso debería conectar con un generador de perfiles:  
   
-- COR_ENABLE_PROFILING: El CLR se conecta a un generador de perfiles sólo si esta variable de entorno existe y está establecida en 1.  
+- COR_ENABLE_PROFILING: CLR se conecta a un generador de perfiles solo si esta variable de entorno existe y está establecida en 1.  
   
-- COR_PROFILER: Si el COR_ENABLE_PROFILING comprobar pasadas, CLR conecta con el generador de perfiles que tiene este CLSID o ProgID, que debe haber almacenado previamente en el registro. La variable de entorno COR_PROFILER se define como una cadena, como se muestra en los dos ejemplos siguientes.  
+- COR_PROFILER: Si se supera la comprobación de COR_ENABLE_PROFILING, el CLR se conecta al generador de perfiles que tiene este CLSID o ProgID, que debe haberse almacenado previamente en el registro. La variable de entorno COR_PROFILER se define como una cadena, como se muestra en los dos ejemplos siguientes.  
   
     ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
@@ -37,43 +37,43 @@ ms.locfileid: "67775744"
  Para generar el perfil de una aplicación CLR, debe establecer las variables de entorno COR_PROFILER y COR_ENABLE_PROFILING antes de ejecutar la aplicación. También debe asegurarse de que se haya registrado la DLL del generador de perfiles.  
   
 > [!NOTE]
->  A partir de .NET Framework 4, los generadores de perfiles no debe estar registrado.  
+> A partir de la .NET Framework 4, no es necesario registrar los perfiles.  
   
 > [!NOTE]
->  Para usar los generadores de perfiles de las versiones 2.0, 3.0 y 3.5 de .NET Framework en .NET Framework 4 y versiones posteriores, debe establecer la variable de entorno COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
+> Para usar .NET Framework las versiones 2,0, 3,0 y 3,5 en el .NET Framework 4 y versiones posteriores, debe establecer la variable de entorno COMPLUS_ProfAPI_ProfilerCompatibilitySetting.  
   
 ## <a name="environment-variable-scope"></a>Ámbito de la variable de entorno  
  La forma de establecer las variables de entorno COR_PROFILER y COR_ENABLE_PROFILING determina su ámbito de influencia. Puede establecer estas variables una de las siguientes maneras:  
   
-- Si establece las variables un [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) llamada, se aplicará solo a la aplicación que se está ejecutando en el momento. (También se aplicarán a otras aplicaciones iniciadas por esa aplicación que hereden el entorno.)  
+- Si establece las variables en una llamada [ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) , solo se aplicarán a la aplicación que está ejecutando en ese momento. (También se aplicarán a otras aplicaciones iniciadas por esa aplicación que hereden el entorno.)  
   
 - Si establece las variables en una ventana del símbolo del sistema, se aplicarán a todas las aplicaciones iniciadas desde esa ventana.  
   
-- Si establece las variables en el nivel de usuario, se aplicarán a todas las aplicaciones que inicie con el Explorador de archivos. Una ventana del símbolo del sistema que abra después de establecer las variables tendrá esta configuración de entorno, y también la tendrán todas las aplicaciones que inicie desde esa ventana. Para establecer las variables de entorno en el nivel de usuario, haga clic en **Mi PC**, haga clic en **propiedades**, haga clic en el **avanzadas** , haga clic **entorno Las variables**y agregue las variables a la **variables de usuario** lista.  
+- Si establece las variables en el nivel de usuario, se aplicarán a todas las aplicaciones que inicie con el Explorador de archivos. Una ventana del símbolo del sistema que abra después de establecer las variables tendrá esta configuración de entorno, y también la tendrán todas las aplicaciones que inicie desde esa ventana. Para establecer variables de entorno en el nivel de usuario, haga clic con el botón secundario en **mi PC**, haga clic en **propiedades**, haga clic en la pestaña **Opciones avanzadas** , haga clic en **variables de entorno**y agregue las variables a la lista variables de **usuario** .  
   
-- Si establece las variables en el nivel de equipo, se aplicarán a todas las aplicaciones que se inicien en ese equipo. Una ventana del símbolo del sistema que abra en ese equipo tendrá esta configuración de entorno, y también la tendrán todas las aplicaciones que inicie desde esa ventana. Esto significa que todos los procesos administrados de ese equipo se iniciarán con el generador de perfiles. Para establecer las variables de entorno en el nivel de equipo, haga clic en **Mi PC**, haga clic en **propiedades**, haga clic en el **avanzadas** , haga clic **entorno Las variables**, agregue las variables a la **variables del sistema** lista y, a continuación, reinicie el equipo. Después de reiniciar, las variables estarán disponibles para todo el sistema.  
+- Si establece las variables en el nivel de equipo, se aplicarán a todas las aplicaciones que se inicien en ese equipo. Una ventana del símbolo del sistema que abra en ese equipo tendrá esta configuración de entorno, y también la tendrán todas las aplicaciones que inicie desde esa ventana. Esto significa que todos los procesos administrados de ese equipo se iniciarán con el generador de perfiles. Para establecer variables de entorno en el nivel de equipo, haga clic con el botón secundario en **mi PC**, haga clic en **propiedades**, haga clic en la pestaña **Opciones avanzadas** , haga clic en **variables de entorno**, agregue las variables a la lista **variables del sistema** y, a continuación, Reinicie el equipo. Después de reiniciar, las variables estarán disponibles para todo el sistema.  
   
  Si está generando perfiles para un servicio de Windows, debe reiniciar el equipo después de establecer las variables de entorno y registrar la DLL del generador de perfiles. Para obtener más información sobre estas consideraciones, consulte la sección [generación de perfiles de un servicio de Windows](#windows_service).  
   
 ## <a name="additional-considerations"></a>Consideraciones adicionales  
   
-- La clase de generador de perfiles implementa las [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) y [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) interfaces. En la versión 2.0 de .NET Framework, un generador de perfiles debe implementar `ICorProfilerCallback2`. Si no lo hace, no se cargará `ICorProfilerCallback2`.  
+- La clase Profiler implementa las interfaces [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) . En la versión 2.0 de .NET Framework, un generador de perfiles debe implementar `ICorProfilerCallback2`. Si no lo hace, no se cargará `ICorProfilerCallback2`.  
   
 - Solamente un generador de perfiles puede generar un perfil en cada momento en un entorno determinado. Puede registrar dos generadores de perfiles diferentes en entornos diferentes, pero cada uno debe actuar en procesos independientes. El generador de perfiles se debe implementar como una DLL del servidor COM en proceso, que está asignada al mismo espacio de direcciones que el proceso que se está perfilando. Esto significa que el generador de perfiles se ejecuta en proceso. .NET Framework no es compatible con ningún otro tipo de servidor COM. Por ejemplo, si un generador de perfiles desea supervisar aplicaciones desde un equipo remoto, debe implementar agentes recolectores en cada PC. Estos agentes generarán resultados por lotes y los comunicarán al equipo central de recolección de datos.  
   
 - Dado que el generador de perfiles es un objeto COM del que se crean instancias en proceso, cada aplicación para la que se generen perfiles tendrá su propia copia del generador de perfiles. Por consiguiente, una instancia única del generador de perfiles no tiene que administrar datos de varias aplicaciones. Sin embargo, tendrá que agregar lógica al código de registro del generador de perfiles para evitar que el archivo de registro sobrescriba otras aplicaciones para las que se haya generado perfiles.  
   
 ## <a name="initializing-the-profiler"></a>Inicializar el generador de perfiles  
- Cuando ambas comprobaciones de variables de entorno se realizan correctamente, CLR crea una instancia del generador de perfiles de una manera similar a la función COM `CoCreateInstance`. El generador de perfiles no se carga mediante una llamada directa a `CoCreateInstance`. Por consiguiente, se evita una llamada a `CoInitialize`, que requiere la configuración del modelo de subprocesos. El CLR, a continuación, llama a la [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) método del generador de perfiles. La firma de este método es como sigue.  
+ Cuando ambas comprobaciones de variables de entorno se realizan correctamente, CLR crea una instancia del generador de perfiles de una manera similar a la función COM `CoCreateInstance`. El generador de perfiles no se carga mediante una llamada directa a `CoCreateInstance`. Por consiguiente, se evita una llamada a `CoInitialize`, que requiere la configuración del modelo de subprocesos. A continuación, CLR llama al método [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) en el generador de perfiles. La firma de este método es como sigue.  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- El generador de perfiles debe consultar `pICorProfilerInfoUnk` para un [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) o [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) puntero de interfaz y guárdelo para que pueda solicitar más información más adelante durante la generación de perfiles.  
+ El generador de perfiles `pICorProfilerInfoUnk` debe consultar un puntero de interfaz [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) o [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) y guardarlo para que pueda solicitar más información más adelante durante la generación de perfiles.  
   
 ## <a name="setting-event-notifications"></a>Establecer notificaciones de eventos  
- El generador de perfiles, a continuación, llama a la [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) método para especificar qué categorías de notificaciones que está interesado. Por ejemplo, si el generador de perfiles solamente está interesado en notificaciones de entrada y salida de funciones y notificaciones de recolección de elementos no utilizados, especifica lo siguiente.  
+ Después, el generador de perfiles llama al método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para especificar las categorías de notificaciones en las que está interesado. Por ejemplo, si el generador de perfiles solamente está interesado en notificaciones de entrada y salida de funciones y notificaciones de recolección de elementos no utilizados, especifica lo siguiente.  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -93,7 +93,7 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  Observe que estos cambios habilitarán la generación de perfiles para todo el sistema. Para evitar que se generen perfiles para cada aplicación administrada que se ejecute a continuación, debe eliminar las variables de entorno del sistema después de reiniciar el equipo de destino.  
   
- Esta técnica también provoca que se generen perfiles para todos los procesos de CLR. El generador de perfiles debe agregar lógica a su [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) devolución de llamada para detectar si el proceso actual es de interés. Si no es así, el generador de perfiles puede producir un error en la devolución de llamada sin realizar la inicialización.  
+ Esta técnica también provoca que se generen perfiles para todos los procesos de CLR. El generador de perfiles debe agregar lógica a su devolución de llamada [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) para detectar si el proceso actual es de interés. Si no es así, el generador de perfiles puede producir un error en la devolución de llamada sin realizar la inicialización.  
   
 ## <a name="see-also"></a>Vea también
 

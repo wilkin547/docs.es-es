@@ -8,18 +8,18 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec65c75fcfd907097f1cd1e0d3092a547272a782
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906456"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933245"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>Estructuras y otros elementos de programación (Visual Basic)
-Puede usar las estructuras junto con las matrices, objetos y procedimientos, así como entre sí. Las interacciones utilizan la misma sintaxis que utilizan estos elementos individualmente.  
+Puede usar estructuras junto con matrices, objetos y procedimientos, así como entre sí. Las interacciones utilizan la misma sintaxis que estos elementos usan individualmente.  
   
 > [!NOTE]
->  No se puede inicializar cualquiera de los elementos de estructura en la declaración de estructura. Puede asignar valores solo a los elementos de una variable que se haya declarado un tipo de estructura.  
+> No se puede inicializar ninguno de los elementos de la estructura en la declaración de la estructura. Solo puede asignar valores a los elementos de una variable que se ha declarado como un tipo de estructura.  
   
 ## <a name="structures-and-arrays"></a>Estructuras y matrices  
  Una estructura puede contener una matriz como uno o varios de sus elementos. Esto se ilustra en el siguiente ejemplo:  
@@ -33,7 +33,7 @@ Public Structure systemInfo
 End Structure   
 ```  
   
- Tener acceso a los valores de una matriz dentro de una estructura de la misma manera que tiene acceso a una propiedad en un objeto. Esto se ilustra en el siguiente ejemplo:  
+ Puede tener acceso a los valores de una matriz dentro de una estructura de la misma manera que tiene acceso a una propiedad en un objeto. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -66,7 +66,7 @@ Protected Structure userInput
 End Structure  
 ```  
   
- Debe usar una clase de objeto específico en esta declaración, en lugar de `Object`.  
+ Debe utilizar una clase de objeto específica en una declaración de este tipo, `Object`en lugar de.  
   
 ## <a name="structures-and-procedures"></a>Estructuras y procedimientos  
  Puede pasar una estructura como un argumento de procedimiento. Esto se ilustra en el siguiente ejemplo:  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- El ejemplo anterior pasa la estructura *por referencia*, lo que permite que el procedimiento modificar sus elementos para que los cambios surtan efecto en el código de llamada. Si desea proteger una estructura de la modificación de este tipo, pasarlo por valor.  
+ En el ejemplo anterior se pasa la estructura *por referencia*, lo que permite al procedimiento modificar sus elementos para que los cambios surtan efecto en el código de llamada. Si desea proteger una estructura contra dicha modificación, pásela por valor.  
   
- También puede devolver una estructura de un `Function` procedimiento. Esto se ilustra en el siguiente ejemplo:  
+ También puede devolver una estructura a partir de `Function` un procedimiento. Esto se ilustra en el siguiente ejemplo:  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -118,9 +118,9 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- También puede usar esta técnica para encapsular una estructura definida en un módulo dentro de una estructura definida en un módulo diferente.  
+ También puede usar esta técnica para encapsular una estructura definida en un módulo dentro de una estructura definida en otro módulo.  
   
- Las estructuras pueden contener otras estructuras hasta una profundidad arbitraria.  
+ Las estructuras pueden contener otras estructuras para una profundidad arbitraria.  
   
 ## <a name="see-also"></a>Vea también
 

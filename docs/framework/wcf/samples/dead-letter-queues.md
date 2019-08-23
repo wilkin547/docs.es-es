@@ -2,21 +2,21 @@
 title: Colas con problemas de entrega
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 59e2344d2bd6a9de3396f7d6d878182333138ff3
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a1e9ad000b83aab1e0d17d3443e1bd6f87310c9a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425483"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962624"
 ---
 # <a name="dead-letter-queues"></a>Colas con problemas de entrega
-Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) ejemplo. El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
+Este ejemplo muestra cómo administrar y procesar mensajes que han producido errores en la entrega. Se basa en el ejemplo de [enlace de MSMQ de transacciones](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . El ejemplo usa el enlace `netMsmqBinding`. El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.
 
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
 > [!NOTE]
->  Este ejemplo muestra cada cola de mensajes no enviados de la aplicación que solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. El ejemplo se puede modificar para utilizar las colas para todo el sistema predeterminadas para MSMQ 3.0 en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Este ejemplo muestra cada cola de mensajes no enviados de la aplicación que solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. El ejemplo se puede modificar para utilizar las colas para todo el sistema predeterminadas para MSMQ 3.0 en [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] y [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
 
  En la comunicación con colas, el cliente se comunica con el servicio mediante una cola. Más exactamente, el cliente envía los mensajes a una cola. El servicio recibe los mensajes de la cola. El servicio y el cliente no necesitan ejecutarse simultáneamente para comunicarse mediante una cola.
 
@@ -26,11 +26,11 @@ Este ejemplo muestra cómo administrar y procesar mensajes que han producido err
 
 - La propiedad <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> expresa el tipo de cola de mensajes no enviados requerido por el cliente. Esta enumeración tiene los valores siguientes:
 
-- `None`: No se requiere ninguna cola de mensajes enviados por el cliente.
+- `None`: El cliente no requiere ninguna cola de mensajes no enviados.
 
-- `System`: La cola de mensajes no enviados del sistema se utiliza para almacenar los mensajes no enviados. Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.
+- `System`: La cola de mensajes no enviados del sistema se usa para almacenar mensajes inactivos. Todas las aplicaciones que se ejecutan en el equipo comparten la cola de mensajes no enviados del sistema.
 
-- `Custom`: Una cola de mensajes no enviados personalizada especificada mediante el <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> propiedad se utiliza para almacenar los mensajes no enviados. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
+- `Custom`: Una cola de mensajes no enviados personalizada especificada mediante <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> la propiedad se utiliza para almacenar mensajes inactivos. Esta característica solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)]. Se utiliza cuando la aplicación debe utilizar su propia cola de mensajes no enviados en lugar de compartirla con otras aplicaciones que se ejecutan en el mismo equipo.
 
 - La propiedad <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> expresa la cola concreta que se debe utilizar como cola de mensajes no enviados. Esto solo está disponible en [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- El código del servicio en el ejemplo es el de la [transacciones enlace MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
+ El código de servicio en el ejemplo es el del [enlace MSMQ de transacción](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).
 
  La comunicación con el servicio tiene lugar dentro del ámbito de una transacción. El servicio lee los mensajes de la cola, realiza la operación y, a continuación, muestra los resultados de la operación. La aplicación también crea una cola de mensajes no enviados para mensajes no enviados.
 
@@ -111,7 +111,7 @@ class Client
  La configuración del cliente especifica una duración corta para que el mensaje alcance el servicio. Si el mensaje no se puede transmitir dentro de la duración especificada, el mensaje expira y se mueve a la cola de mensajes no enviados.
 
 > [!NOTE]
->  Es posible que el cliente entregue el mensaje a la cola del servicio dentro de la hora especificada. Para asegurarse de ver el servicio de mensajes no enviados en acción, se debe ejecutar el cliente antes de iniciar el servicio. El mensaje espera y se entrega al servicio de mensajes no enviados.
+> Es posible que el cliente entregue el mensaje a la cola del servicio dentro de la hora especificada. Para asegurarse de ver el servicio de mensajes no enviados en acción, se debe ejecutar el cliente antes de iniciar el servicio. El mensaje espera y se entrega al servicio de mensajes no enviados.
 
  La aplicación debe definir qué cola utilizar como su cola de mensajes no enviados. Si no se especifica ninguna cola, la cola de mensajes transaccionales no enviados para todo el sistema predeterminada se utiliza para poner en la cola los mensajes no enviados. En este ejemplo, la aplicación cliente especifica su propia cola de mensajes no enviados de la aplicación.
 
@@ -149,7 +149,7 @@ class Client
  El servicio de mensajes no enviados lee los mensajes de la cola de mensajes no enviados. El servicio de mensajes no enviados implementa el contrato `IOrderProcessor`. Sin embargo, su implementación no es procesar las órdenes. El servicio de mensajes no enviados es un servicio del cliente y no tiene facilidad para procesar las órdenes.
 
 > [!NOTE]
->  La cola de mensajes no enviados es una cola del cliente y es local al administrador de cola del cliente.
+> La cola de mensajes no enviados es una cola del cliente y es local al administrador de cola del cliente.
 
  La implementación de servicio de mensajes no enviados comprueba la razón por la que un mensaje no se ha enviado y toma medidas de corrección. La razón de un error en el envío del mensaje se captura en dos enumeraciones, <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> y <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Se puede recuperar el <xref:System.ServiceModel.Channels.MsmqMessageProperty> de <xref:System.ServiceModel.OperationContext> como se muestra en el código muestra siguiente:
 
@@ -169,7 +169,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- Los mensajes en la cola de mensajes no enviados son mensajes que se dirigen al servicio que está procesando el mensaje. Por lo tanto, cuando el servicio de mensajes no enviados lee los mensajes de la cola, la capa del canal Windows Communication Foundation (WCF) encuentra la desigualdad en los puntos de conexión y no envía el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de la orden, pero quien lo recibe es el servicio de mensajes no enviados. Para recibir un mensaje que se dirige a un punto de conexión diferente, una dirección se filtra para coincidir con cualquier dirección especificada en `ServiceBehavior`. Esto se exigen para procesar correctamente los mensajes que se leen de la cola de mensajes no enviados.
+ Los mensajes en la cola de mensajes no enviados son mensajes que se dirigen al servicio que está procesando el mensaje. Por lo tanto, cuando el servicio de mensajes no enviados Lee los mensajes de la cola, el nivel de canal de Windows Communication Foundation (WCF) detecta la falta de coincidencia en los extremos y no envía el mensaje. En este caso, el mensaje se dirige al servicio de procesamiento de la orden, pero quien lo recibe es el servicio de mensajes no enviados. Para recibir un mensaje que se dirige a un punto de conexión diferente, una dirección se filtra para coincidir con cualquier dirección especificada en `ServiceBehavior`. Esto se exigen para procesar correctamente los mensajes que se leen de la cola de mensajes no enviados.
 
  En este ejemplo, el servicio de mensajes no enviados reenvía el mensaje en el caso de que la razón para el error sea que el mensaje ha agotado el tiempo de espera. Para el resto de razones, muestra el error de la entrega, como se muestra en el código muestra siguiente:
 
@@ -268,7 +268,7 @@ public class PurchaseOrderDLQService : IOrderProcessor
  Para ejecutar el ejemplo, hay 3 aplicaciones ejecutables para ejecutar para ver cómo la cola de mensajes no enviados funciona para cada aplicación; el cliente, el servicio y el servicio de mensajes no enviados que lee de la cola de mensajes no enviados para cada aplicación y reenvían el mensaje al servicio. Todos son las aplicaciones de consola con el resultado de ventanas de consola.
 
 > [!NOTE]
->  Debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes. Se debe iniciar el servicio y apagarlo para que se pueda crear la cola.
+> Debido a que se está usando el proceso de poner en cola, el cliente y el servicio no tienen que estar activados y ejecutándose simultáneamente. Puede ejecutar el cliente, cerrarlo e iniciar el servicio y seguir recibiendo mensajes. Se debe iniciar el servicio y apagarlo para que se pueda crear la cola.
 
  Al ejecutar el cliente, el cliente muestra el mensaje:
 
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1. Abra el administrador del servidor en Visual Studio 2012.
+    1. Abra Administrador del servidor en Visual Studio 2012.
 
-    2. Expanda el **características** ficha.
+    2. Expanda la pestaña **características** .
 
-    3. Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
+    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
 
-    4. Compruebe el **transaccional** cuadro.
+    4. Active la casilla **transaccional** .
 
-    5. Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
+    5. Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Para ejecutar el ejemplo en una cola de cambio de configuración de equipos única o cruzada nombres como corresponda, reemplazando el host local con el nombre completo del equipo y siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para ejecutar el ejemplo en una configuración de un solo equipo o entre equipos, cambie los nombres de cola de forma adecuada, reemplazando localhost por el nombre completo del equipo y siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>Para ejecutar el ejemplo en un equipo unido a un grupo de trabajo
 
@@ -350,13 +350,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     >  Establecer `security mode` en `None` es equivalente a definir `MsmqAuthenticationMode`, `MsmqProtectionLevel` y la seguridad de `Message` en `None`.
 
 ## <a name="comments"></a>Comentarios
- De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el error siguiente: "Message interno del usuario no existe el certificado de puesta en cola".
+ De forma predeterminada, con el transporte de enlace `netMsmqBinding`, la seguridad está habilitada. Dos propiedades, `MsmqAuthenticationMode` y `MsmqProtectionLevel`, determinan juntas el tipo de seguridad de transporte. De manera predeterminada, el modo de autenticación está definido en `Windows` y el nivel de protección está definido en `Sign`. Para MSMQ, proporcionar la característica de autenticación y firma, debe formar parte de un dominio. Si ejecuta este ejemplo en un equipo que no forma parte de un dominio, recibirá el siguiente error: "No existe el certificado de Message Queuing interno del usuario".
 
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

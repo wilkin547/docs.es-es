@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 381f796bec31bece354001ad46bf5079381d1b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877946"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914559"
 ---
 # <a name="oracle-and-adonet"></a>Oracle y ADO.NET
 > [!NOTE]
->  Los tipos de <xref:System.Data.OracleClient> están en desuso. Los tipos seguirán estando admitidos en la versión actual de .NET Framework, pero se quitarán en una versión posterior. Microsoft recomienda usar un proveedor de Oracle de otro fabricante.  
+> Los tipos de <xref:System.Data.OracleClient> están en desuso. Los tipos seguirán estando admitidos en la versión actual de .NET Framework, pero se quitarán en una versión posterior. Microsoft recomienda usar un proveedor de Oracle de otro fabricante.  
   
- Esta sección describen las características y comportamientos que son específicos del proveedor de datos de .NET Framework para Oracle.  
+ En esta sección se describen características y comportamientos específicos del proveedor de datos de .NET Framework para Oracle.  
   
- El proveedor de datos de .NET Framework para Oracle proporciona acceso a una base de datos de Oracle mediante Oracle Call Interface (OCI) proporcionados por el software cliente de Oracle. La funcionalidad del proveedor de datos está diseñada para ser similar de los proveedores de datos .NET Framework para SQL Server, OLE DB y ODBC.  
+ El proveedor de datos de .NET Framework para Oracle proporciona acceso a una base de datos de Oracle mediante Oracle Call Interface (OCI), tal y como lo proporciona el software cliente de Oracle. La funcionalidad del proveedor de datos está diseñada para ser similar a la de los .NET Framework proveedores de datos para SQL Server, OLE DB y ODBC.  
   
- Para usar el proveedor de datos de .NET Framework para Oracle, debe hacer referencia a una aplicación la <xref:System.Data.OracleClient> espacio de nombres como sigue:  
+ Para utilizar el proveedor de datos de .NET Framework para Oracle, una aplicación debe <xref:System.Data.OracleClient> hacer referencia al espacio de nombres de la siguiente manera:  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>En esta sección  
  [Requisitos del sistema](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- Describe los requisitos para usar el proveedor de datos de .NET Framework para Oracle y una serie de problemas a tener en cuenta cuando se usa.  
+ Describe los requisitos para usar el proveedor de datos de .NET Framework para Oracle y describe una serie de problemas que se deben tener en cuenta al utilizarlos.  
   
  [Objetos BFILE de Oracle](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  Describe la clase <xref:System.Data.OracleClient.OracleBFile>, que se utiliza para trabajar con el tipo de datos BFILE de Oracle.  

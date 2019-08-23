@@ -2,22 +2,22 @@
 title: Elección de un patrón de intercambio de mensajes
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 2d39164944207d73fdfe418a30326fb40462db72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 518a21ef34d52ef4b70871ba8bad7876374dd319
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664907"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951862"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>Elección de un patrón de intercambio de mensajes
-El primer paso para escribir un transporte personalizado es decidir qué *patrones de intercambio de mensajes* (o MEP) son necesarios para el canal que está desarrollando. Este tema describe las opciones disponibles y trata sobre los distintos requisitos. Se trata de la primera tarea se describe en la lista de tareas de desarrollo de canal [desarrollar canales](../../../../docs/framework/wcf/extending/developing-channels.md).  
+El primer paso para escribir un transporte personalizado es decidir qué *patrones de intercambio de mensajes* (o MEP) son necesarios para el canal que está desarrollando. Este tema describe las opciones disponibles y trata sobre los distintos requisitos. Esta es la primera tarea en la lista de tareas de desarrollo de canales que se describe en [desarrollar canales](../../../../docs/framework/wcf/extending/developing-channels.md).  
   
 ## <a name="six-message-exchange-patterns"></a>Seis patrones de intercambio de mensajes  
  Hay tres MEP entre los que elegir:  
   
 - Datagrama (<xref:System.ServiceModel.Channels.IInputChannel> y <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
-     Al utilizar un MEP de datagrama, un cliente envía un mensaje con un *desencadenar y omitir* exchange. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el extremo remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
+     Cuando se usa un MEP de datagrama, un cliente envía un mensaje mediante un *desencadenador y olvidó* Exchange. Un intercambio de este tipo es uno que exige una confirmación fuera de banda de entrega correcta. El mensaje se podría perderse por el camino y no llegar nunca al servicio. Si la operación de envío se completa correctamente en la parte del cliente, no garantiza que el extremo remoto haya recibido el mensaje. El datagrama es un bloque de creación fundamental para la mensajería, ya que puede crear sus propios protocolos encima de él, incluidos protocolos confiables y seguros. Los canales de datagrama del cliente implementan la interfaz <xref:System.ServiceModel.Channels.IOutputChannel> y los del servicio, la interfaz <xref:System.ServiceModel.Channels.IInputChannel>.  
   
 - Solicitud-respuesta (<xref:System.ServiceModel.Channels.IRequestChannel> y <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
@@ -27,7 +27,7 @@ El primer paso para escribir un transporte personalizado es decidir qué *patron
   
      El MEP dúplex permite que un cliente envíe un número arbitrario de mensajes y que se reciban en cualquier orden. El MEP de dúplex es como una conversación telefónica, donde cada palabra que se pronuncia es un mensaje. Dado que ambos lados pueden enviar y recibir en este MEP, la interfaz implementada por los canales de servicio y cliente es <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
- ![Elegir un patrón de intercambio de mensajes](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
+ ![Elección de un patrón de intercambio de mensajes](../../../../docs/framework/wcf/extending/media/wcfc-basicthreemepsc.gif "wcfc_BasicThreeMEPsc")  
 Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagrama, solicitud-respuesta y dúplex.  
   
  Cada uno de estos MEP también puede admitir *sesiones*. Una sesión (e implementación de <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> de tipo <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType>) pone en correlación todos los mensajes enviados y recibidos en un canal. El patrón de solicitud-respuesta es una sesión autónoma de dos mensajes, ya que la solicitud y la respuesta se ponen en correlación. Por el contrario, el patrón de solicitud-respuesta que admite las sesiones implica que se ponen en correlación todos los pares de solicitud/respuesta en ese canal entre sí. Esto le da un total de seis MEP entre los que elegir:  
@@ -45,14 +45,14 @@ Los tres patrones de intercambio de mensajes básicos. De arriba abajo: datagram
 - Dúplex con sesiones  
   
 > [!NOTE]
->  En el caso del transporte de UDP, el único MEP que se admite es el datagrama, ya que UDP es en sí mismo un protocolo de tipo desencadenar y omitir.  
+> En el caso del transporte de UDP, el único MEP que se admite es el datagrama, ya que UDP es en sí mismo un protocolo de tipo desencadenar y omitir.  
   
 ## <a name="sessions-and-sessionful-channels"></a>Sesiones y canales con sesiones  
- En el mundo de red, hay protocolos orientado a la conexión (por ejemplo, TCP) y protocolos sin conexión (por ejemplo, UDP). WCF usa el término "sesión" para indicar una abstracción lógica conexión. Los protocolos WCF con sesión son similares a los protocolos de red orientados a la conexión y los protocolos WCF sin sesión son similares a los protocolos de red sin sesión.  
+ En el mundo de red, hay protocolos orientado a la conexión (por ejemplo, TCP) y protocolos sin conexión (por ejemplo, UDP). WCF usa el término sesión para indicar una abstracción lógica similar a la de una conexión. Los protocolos WCF con sesión son similares a los protocolos de red orientados a la conexión y los protocolos WCF sin sesión son similares a los protocolos de red sin sesión.  
   
  En el modelo de objetos de canal, cada sesión lógica se manifiesta como una instancia de un canal con sesión. Por consiguiente, cada nueva sesión creada por el cliente y aceptada en el servicio se corresponde con un nuevo canal con sesión en cada lado. El siguiente diagrama muestra, en la parte superior, la estructura de los canales sin sesión y, en la parte inferior, la estructura de los canales con sesión.  
   
- ![Elegir un patrón de intercambio de mensajes](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
+ ![Elección de un patrón de intercambio de mensajes](../../../../docs/framework/wcf/extending/media/wcfc-sessionandsessionlesschannelsc.gif "wcfc_SessionAndSessionlessChannelsc")  
   
  Un cliente crea un nuevo canal con sesión y envía un mensaje. En el lado del servicio, el agente de escucha del canal recibe este mensaje y detecta que pertenece a una nueva sesión de manera que crea un nuevo canal con sesión y lo une a la aplicación (en respuesta a la aplicación que llama a AcceptChannel en el agente de escucha del canal). La aplicación recibe a continuación este mensaje y todos los mensajes subsiguientes enviados en la misma sesión a través del mismo canal con sesión.  
   

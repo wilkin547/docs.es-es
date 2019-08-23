@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: d6d76d677bcf7dfa7df632bde8de76401a46db05
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 304387197c7c6ca31d76ce429cd1516be27ba7b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661888"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938176"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Enumerar instancias de SQL Server (ADO.NET)
-SQL Server permite que las aplicaciones busquen instancias de SQL Server en la red actual. La clase <xref:System.Data.Sql.SqlDataSourceEnumerator> expone esta información para el programador de la aplicación, suministrando una <xref:System.Data.DataTable> que contiene información acerca de todos los servidores visibles. Esta tabla devuelta contiene una lista de instancias de servidor disponibles en la red que coincide con la lista proporcionada cuando un usuario intenta crear una nueva conexión y se expande la lista desplegable que contiene todos los servidores disponibles en el **conexión Propiedades** cuadro de diálogo. Los resultados mostrados no siempre están completos.  
+SQL Server permite a las aplicaciones encontrar SQL Server instancias dentro de la red actual. La clase <xref:System.Data.Sql.SqlDataSourceEnumerator> expone esta información para el programador de la aplicación, suministrando una <xref:System.Data.DataTable> que contiene información acerca de todos los servidores visibles. Esta tabla devuelta contiene una lista de instancias de servidor disponibles en la red que coincide con la lista proporcionada cuando un usuario intenta crear una nueva conexión y expande la lista desplegable que contiene todos los servidores disponibles en las **propiedades de la conexión.** cuadro de diálogo. Los resultados mostrados no siempre están completos.  
   
 > [!NOTE]
->  Como sucede con la mayoría de servicios de Windows, es mejor ejecutar el servicio de explorador de SQL con los menos privilegios posibles. Para obtener más información acerca de este servicio y cómo administrar su comportamiento, vea los Libros en pantalla de SQL Server.  
+> Como sucede con la mayoría de servicios de Windows, es mejor ejecutar el servicio de explorador de SQL con los menos privilegios posibles. Para obtener más información acerca de este servicio y cómo administrar su comportamiento, vea los Libros en pantalla de SQL Server.  
   
 ## <a name="retrieving-an-enumerator-instance"></a>Recuperación de una instancia de enumeración  
  Para recuperar la tabla que contiene información acerca de las instancias de SQL Server disponibles, primero debe recuperar un enumerador mediante la propiedad <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> compartida o estática:  
@@ -43,12 +43,12 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
  La tabla que devuelve la llamada al método contiene las siguientes columnas, cada una de las cuales incluye valores `string`:  
   
-|Columna|Descripción|  
+|Columna|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**ServerName**|Nombre del servidor.|  
-|**InstanceName**|Nombre de la instancia del servidor. Si el servidor se ejecuta como instancia predeterminada, esta columna se muestra en blanco.|  
+|**NombreDeInstancia**|Nombre de la instancia del servidor. Si el servidor se ejecuta como instancia predeterminada, esta columna se muestra en blanco.|  
 |**IsClustered**|Indica si el servidor forma parte de un clúster.|  
-|**Versión**|Versión del servidor. Por ejemplo:<br /><br /> -9.00. x (SQL Server 2005)<br />-   10.0.xx (SQL Server 2008)<br />-10.50.x (SQL Server 2008 R2)<br />-   11.0.xx (SQL Server 2012)|  
+|**Versión**|Versión del servidor. Por ejemplo:<br /><br /> -9,00. x (SQL Server 2005)<br />-10.0. XX (SQL Server 2008)<br />-10,50. x (SQL Server 2008 R2)<br />-11.0. XX (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Limitaciones de la enumeración  
  Es posible que en la lista no aparezcan todos los servidores disponibles. La lista puede variar dependiendo de algunos factores, como los tiempos de espera o el tráfico de la red. Como consecuencia, la lista puede ser diferente en dos llamadas consecutivas. Solo aparecerán en la lista los servidores de la misma red. Normalmente, los paquetes de difusión no recorren los enrutadores; este es el motivo de que a lo mejor no pueda ver uno de los servidores que aparecen en la lista, aunque se mantenga estable entre llamadas.  
@@ -56,9 +56,9 @@ System.Data.DataTable dataTable = instance.GetDataSources();
  Los servidores de la lista pueden tener o no información adicional como `IsClustered` y la versión. Todo depende de cómo se haya obtenido la lista. Los servidores que aparecen en la lista a través del servicio de explorador de SQL Server tendrán más detalles que los que se encuentran a través de la infraestructura de Windows, que solo muestra el nombre.  
   
 > [!NOTE]
->  La enumeración de servidores solo se encuentra disponible cuando se ejecuta con plena confianza. Los ensamblados que se ejecutan en un entorno de confianza parcial no podrán utilizarla, aunque dispongan del permiso de seguridad de acceso del código (CAS) <xref:System.Data.SqlClient.SqlClientPermission>.  
+> La enumeración de servidores solo se encuentra disponible cuando se ejecuta con plena confianza. Los ensamblados que se ejecutan en un entorno de confianza parcial no podrán utilizarla, aunque dispongan del permiso de seguridad de acceso del código (CAS) <xref:System.Data.SqlClient.SqlClientPermission>.  
   
- SQL Server proporciona información para el <xref:System.Data.Sql.SqlDataSourceEnumerator> mediante el uso de un servicio externo de Windows llamado SQL Browser. Este servicio está habilitado de forma predeterminada, pero los administradores pueden desactivarlo o deshabilitarlo, para que la instancia del servidor sea invisible para esta clase.  
+ SQL Server proporciona información para el <xref:System.Data.Sql.SqlDataSourceEnumerator> mediante el uso de un servicio de Windows externo denominado SQL browser. Este servicio está habilitado de forma predeterminada, pero los administradores pueden desactivarlo o deshabilitarlo, para que la instancia del servidor sea invisible para esta clase.  
   
 ## <a name="example"></a>Ejemplo  
  La siguiente aplicación de consola recupera información acerca de todas las instancias de SQL Server visibles y muestra esta información en la ventana de la consola.  

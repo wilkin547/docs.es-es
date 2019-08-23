@@ -1,5 +1,5 @@
 ---
-title: -link (Visual Basic)
+title: -Link (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - l compiler option [Visual Basic]
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fbce22755b3732896a226c00bbf8e068dc1f098e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586532"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929395"
 ---
-# <a name="-link-visual-basic"></a>-link (Visual Basic)
+# <a name="-link-visual-basic"></a>-Link (Visual Basic)
 Hace que el compilador facilite al proyecto que se está compilando información de tipos COM en los ensamblados especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -33,7 +33,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
   
 |Término|Definición|  
 |---|---|  
-|`fileList`|Obligatorio. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
+|`fileList`|Necesario. Lista delimitada por comas de nombres de archivos de ensamblado. Si el nombre de archivo contiene un espacio, escríbalo entre comillas.|  
   
 ## <a name="remarks"></a>Comentarios  
  La opción `-link` permite implementar una aplicación que tiene información de tipo incrustada. La aplicación puede usar los tipos de un ensamblado en tiempo de ejecución que implementan la información de tipo incrustada sin necesidad de una referencia al ensamblado en tiempo de ejecución. Si hay varias versiones del ensamblado en tiempo de ejecución publicadas, la aplicación que contiene la información de tipo incrustada puede trabajar con las distintas versiones sin tener que volver a compilar. Para obtener un ejemplo, vea [Tutorial: Insertar los tipos de los ensamblados administrados](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md).  
@@ -43,7 +43,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
  La opción `-link` incrusta únicamente interfaces, estructuras y delegados. No se admite la incrustación de clases COM.  
   
 > [!NOTE]
->  Cuando se crea una instancia de un tipo COM incrustado en el código, hay que crear la instancia mediante la interfaz adecuada. Si se intenta crear una instancia de un tipo COM incrustado mediante la coclase, se produce un error.  
+> Cuando se crea una instancia de un tipo COM incrustado en el código, hay que crear la instancia mediante la interfaz adecuada. Si se intenta crear una instancia de un tipo COM incrustado mediante la coclase, se produce un error.  
   
  Para establecer la opción `-link` en Visual Studio, agregue una referencia de ensamblado y establezca la propiedad `Embed Interop Types` en **true**. El valor predeterminado de la propiedad `Embed Interop Types` es **false**.  
   
@@ -53,9 +53,9 @@ Hace que el compilador facilite al proyecto que se está compilando información
   
 - Se invoca a un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
- Use [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
+ Use [-LIBPATH](../../../visual-basic/reference/command-line-compiler/libpath.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado.  
   
- Al igual que el [/reference](../../../visual-basic/reference/command-line-compiler/reference.md) opción del compilador, el `-link` opción del compilador usa el archivo de respuesta Vbc.rsp, que hace referencia a los ensamblados de .NET Framework usan con frecuencia. Utilice la [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) opción del compilador si no desea que el compilador que use el archivo Vbc.rsp.  
+ Al igual que la opción del compilador [/Reference](../../../visual-basic/reference/command-line-compiler/reference.md) , la `-link` opción del compilador usa el archivo de respuesta VBC. RSP, que hace referencia a los ensamblados .NET Framework utilizados con frecuencia. Use la opción del compilador [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md) si no desea que el compilador use el archivo Vbc. rsp.  
   
  La forma abreviada de `-link` es `-l`.  
   
@@ -79,7 +79,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente línea de comandos compila el archivo de código fuente `OfficeApp.vb` y hacer referencia a ensamblados de `COMData1.dll` y `COMData2.dll` para producir `OfficeApp.exe`.  
+ La línea de comandos siguiente compila los ensamblados `OfficeApp.vb` de referencia y del `COMData1.dll` archivo de código `OfficeApp.exe`fuente de y `COMData2.dll` para generar.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -89,7 +89,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Compilador de línea de comandos de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Tutorial: Inserción de tipos de ensamblados administrados](../../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [-referencia (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -8,33 +8,33 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: 93e0fba4288ba3231bfed45252bdaa78892d008c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3b3b118c3db95f55c67c2b27149734efc8cbea8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61610054"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968963"
 ---
 # <a name="get-ui-automation-element-properties"></a>Obtener propiedades del elemento de la UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
- En este tema se muestra cómo recuperar las propiedades de un [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] elemento.  
+ En este tema se muestra cómo recuperar las propiedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de un elemento.  
   
-### <a name="get-a-current-property-value"></a>Obtiene un valor de propiedad actual  
+### <a name="get-a-current-property-value"></a>Obtiene un valor de propiedad actual.  
   
-1. Obtener el <xref:System.Windows.Automation.AutomationElement> cuya propiedad desea obtener.  
+1. Obtenga el <xref:System.Windows.Automation.AutomationElement> cuya propiedad desea obtener.  
   
-2. Llame a <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>, o recuperar el <xref:System.Windows.Automation.AutomationElement.Current%2A> estructura de propiedad y obtener el valor de uno de sus miembros.  
+2. Llame <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>a o recupere <xref:System.Windows.Automation.AutomationElement.Current%2A> la estructura de propiedad y obtenga el valor de uno de sus miembros.  
   
-### <a name="get-a-cached-property-value"></a>Obtiene un valor de propiedad almacenados en caché  
+### <a name="get-a-cached-property-value"></a>Obtiene el valor de una propiedad almacenada en caché  
   
-1. Obtener el <xref:System.Windows.Automation.AutomationElement> cuya propiedad desea obtener. La propiedad se ha especificado en el <xref:System.Windows.Automation.CacheRequest>.  
+1. Obtenga el <xref:System.Windows.Automation.AutomationElement> cuya propiedad desea obtener. La propiedad se debe haber especificado en <xref:System.Windows.Automation.CacheRequest>.  
   
-2. Llame a <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>, o recuperar el <xref:System.Windows.Automation.AutomationElement.Cached%2A> estructura de propiedad y obtener el valor de uno de sus miembros.  
+2. Llame <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>a o recupere <xref:System.Windows.Automation.AutomationElement.Cached%2A> la estructura de propiedad y obtenga el valor de uno de sus miembros.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra varias maneras de recuperar las propiedades actuales de un <xref:System.Windows.Automation.AutomationElement>.  
+ En el ejemplo siguiente se muestran varias maneras de recuperar las propiedades <xref:System.Windows.Automation.AutomationElement>actuales de un.  
   
  [!code-csharp[UIAClient_snip#170](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#170)]
  [!code-vb[UIAClient_snip#170](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#170)]  

@@ -10,18 +10,18 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: b5ad2280c832b62e043a1f65f082d5475697c38c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: dfc1f023e9d1adce73a28f475f3796b4f7231ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545354"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960333"
 ---
 # <a name="packaging-fonts-with-applications"></a>Empaquetar fuentes con aplicaciones
 En este tema se proporciona información general sobre cómo empaquetar fuentes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] con la aplicación.  
   
 > [!NOTE]
->  Como con la mayoría de los tipos de software, los archivos de fuentes se otorgan bajo licencia, no se venden. Las licencias que rigen el uso de las fuentes varían de un proveedor a otro, pero en general la mayoría de las [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] licencias, incluidas las [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]que cubren las fuentes con las aplicaciones y, no permiten incrustar las fuentes dentro de las aplicaciones o, de lo contrario, redistribuir. Así pues, como programador, su responsabilidad es asegurarse de disponer de los derechos de licencia necesarios para cualquier fuente que incruste en una aplicación o redistribuya de cualquier otro modo.  
+> Como con la mayoría de los tipos de software, los archivos de fuentes se otorgan bajo licencia, no se venden. Las licencias que rigen el uso de fuentes varían de un proveedor a otro, pero en general, la mayoría de las [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] licencias, incluidas las que abarcan las fuentes suministradas con aplicaciones y ventanas, no permiten incrustar las fuentes dentro de las aplicaciones o de otro modo. redistribuir. Así pues, como programador, su responsabilidad es asegurarse de disponer de los derechos de licencia necesarios para cualquier fuente que incruste en una aplicación o redistribuya de cualquier otro modo.  
 
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Introducción al empaquetado de fuentes  
@@ -81,7 +81,7 @@ En este tema se proporciona información general sobre cómo empaquetar fuentes 
 ```  
   
 > [!NOTE]
->  Al agregar fuentes como recursos a la aplicación, asegúrese de que está estableciendo el `<Resource>` elemento, y no el `<EmbeddedResource>` elemento en el archivo de proyecto de la aplicación. No `<EmbeddedResource>` se admite el elemento para la acción de compilación.  
+> Al agregar fuentes como recursos a la aplicación, asegúrese de que está estableciendo el `<Resource>` elemento, y no el `<EmbeddedResource>` elemento en el archivo de proyecto de la aplicación. No `<EmbeddedResource>` se admite el elemento para la acción de compilación.  
   
  En el ejemplo de marcado siguiente se muestra cómo hacer referencia a los recursos de fuentes de la aplicación.  
   
@@ -152,7 +152,7 @@ En este tema se proporciona información general sobre cómo empaquetar fuentes 
  [!code-xaml[OpenTypeFontsSample#OpenTypeFontsSample1](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontsSample/CS/Kootenay.xaml#opentypefontssample1)]  
   
 > [!NOTE]
->  Este SDK contiene un conjunto de fuentes OpenType de ejemplo que puede usar con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones. Las fuentes se definen en una biblioteca solo de recursos. Para obtener más información, vea [Paquete de fuentes OpenType de ejemplo](sample-opentype-font-pack.md).  
+> Este SDK contiene un conjunto de fuentes OpenType de ejemplo que puede usar con [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] las aplicaciones. Las fuentes se definen en una biblioteca solo de recursos. Para obtener más información, vea [Paquete de fuentes OpenType de ejemplo](sample-opentype-font-pack.md).  
   
 <a name="limitations_on_font_usage"></a>   
 ## <a name="limitations-on-font-usage"></a>Limitaciones de uso de fuentes  

@@ -8,28 +8,28 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenuStrip control [Windows Forms]
 - ContextMenuStrip control [Windows Forms], about ContextMenuStrip control
 ms.assetid: 9787cdb3-88f1-4198-972f-eefd9524ce39
-ms.openlocfilehash: 23699c67de616ba3f535d2527a315aebe7448d3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4a6add5297ba7db606ca1891e9279141f8d6d20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955992"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962156"
 ---
 # <a name="contextmenustrip-control-overview"></a>Información general sobre el control ContextMenuStrip
 > [!NOTE]
->  El <xref:System.Windows.Forms.ContextMenuStrip> control reemplaza y agrega funcionalidad a la <xref:System.Windows.Forms.ContextMenu> controlar; sin embargo, el <xref:System.Windows.Forms.ContextMenu> control se conserva para compatibilidad con versiones anteriores y uso futuro, si elige.  
+> El <xref:System.Windows.Forms.ContextMenuStrip> control reemplaza y agrega funcionalidad <xref:System.Windows.Forms.ContextMenu> al control; sin embargo, el <xref:System.Windows.Forms.ContextMenu> control se conserva por compatibilidad con versiones anteriores y uso futuro si se elige.  
   
- Menús contextuales, aparecen en la posición del mouse cuando el usuario hace clic en el botón secundario del mouse. Método abreviado *menús* proporcionan opciones para el área de cliente o el control en la ubicación del puntero del mouse.  
+ Los menús contextuales, también denominados menús contextuales, aparecen en la posición del mouse cuando el usuario hace clic con el botón secundario del mouse. Los *menús* contextuales proporcionan opciones para el área de cliente o el control en la ubicación del puntero del mouse.  
   
- El <xref:System.Windows.Forms.ContextMenuStrip> control está diseñado para funcionar perfectamente con el nuevo <xref:System.Windows.Forms.ToolStrip> y controles relacionados, pero se puede asociar un <xref:System.Windows.Forms.ContextMenuStrip> con otros controles tan fácilmente.  
+ El <xref:System.Windows.Forms.ContextMenuStrip> control está diseñado para funcionar sin problemas con los controles <xref:System.Windows.Forms.ToolStrip> nuevos y relacionados, pero puede asociar un <xref:System.Windows.Forms.ContextMenuStrip> con otros controles con la misma facilidad.  
   
- La siguiente tabla muestra las importantes <xref:System.Windows.Forms.ContextMenuStrip> clases complementarias.  
+ En la tabla siguiente se muestran <xref:System.Windows.Forms.ContextMenuStrip> las clases complementarias importantes.  
   
-|Clase|Descripción|  
+|Clase|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStripMenuItem>|Representa una opción seleccionable mostrada en un <xref:System.Windows.Forms.MenuStrip> o <xref:System.Windows.Forms.ContextMenuStrip>.|  
-|<xref:System.Windows.Forms.ToolStripDropDown>|Representa un control que permite al usuario seleccionar un único elemento de una lista que se muestra cuando el usuario hace clic en un <xref:System.Windows.Forms.ToolStripDropDownButton> o un elemento de menú de nivel superior.|  
-|<xref:System.Windows.Forms.ToolStripDropDownItem>|Proporciona funcionalidad básica para los controles derivan de <xref:System.Windows.Forms.ToolStripItem> que mostrar los elementos de lista desplegable al hacer clic en.|  
+|<xref:System.Windows.Forms.ToolStripDropDown>|Representa un control que permite al usuario seleccionar un solo elemento de una lista que se muestra cuando el usuario hace clic en <xref:System.Windows.Forms.ToolStripDropDownButton> o en un elemento de menú de nivel superior.|  
+|<xref:System.Windows.Forms.ToolStripDropDownItem>|Proporciona la funcionalidad básica para los controles <xref:System.Windows.Forms.ToolStripItem> derivados de que muestran los elementos desplegables cuando se hace clic en ellos.|  
   
 ## <a name="see-also"></a>Vea también
 

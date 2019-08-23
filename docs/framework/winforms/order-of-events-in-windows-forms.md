@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: f581ca5ee1376251a593e7b8813ef4b0e0f41b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28eb451c7edd740664f80f8ec35c60192764043c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655606"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949874"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Orden de eventos en los formularios Windows Forms
-El orden en que se producen los eventos en las aplicaciones de Windows Forms es de particular interés para los programadores a los que les preocupa controlar cada uno de estos eventos uno por uno. Cuando una situación requiere un control minucioso de los eventos, por ejemplo, cuando se vuelven a dibujar partes del formulario, es necesario conocer el orden exacto en que los eventos se producen en tiempo de ejecución. En este tema se proporcionan algunos detalles sobre el orden de los eventos en varias fases importantes de la duración de las aplicaciones y los controles. Para obtener detalles concretos sobre el orden de los eventos de entrada del mouse, consulte [eventos del Mouse en Windows Forms](mouse-events-in-windows-forms.md). Para obtener información general de eventos en Windows Forms, consulte [información general sobre eventos](events-overview-windows-forms.md). Para obtener más información acerca de la creación de controladores de eventos, consulte [información general sobre controladores de eventos](event-handlers-overview-windows-forms.md).  
+El orden en que se producen los eventos en las aplicaciones de Windows Forms es de particular interés para los programadores a los que les preocupa controlar cada uno de estos eventos uno por uno. Cuando una situación requiere un control minucioso de los eventos, por ejemplo, cuando se vuelven a dibujar partes del formulario, es necesario conocer el orden exacto en que los eventos se producen en tiempo de ejecución. En este tema se proporcionan algunos detalles sobre el orden de los eventos en varias fases importantes de la duración de las aplicaciones y los controles. Para obtener detalles específicos sobre el orden de los eventos de entrada del mouse, consulte [eventos del mouse en Windows Forms](mouse-events-in-windows-forms.md). Para obtener información general sobre los eventos de Windows Forms, consulte [información general sobre eventos](events-overview-windows-forms.md). Para obtener más información sobre la composición de los controladores de eventos, vea [información general](event-handlers-overview-windows-forms.md)sobre los controladores de eventos.  
   
 ## <a name="application-startup-and-shutdown-events"></a>Eventos de inicio y cierre de la aplicación  
  Las clases <xref:System.Windows.Forms.Form> y <xref:System.Windows.Forms.Control> exponen un conjunto de eventos relacionados con el inicio y el cierre de la aplicación. Cuando se inicia una aplicación de Windows Forms, se generan los eventos de inicio del formulario principal en el orden siguiente:  
@@ -49,7 +49,7 @@ El orden en que se producen los eventos en las aplicaciones de Windows Forms es 
  El evento <xref:System.Windows.Forms.Application.ApplicationExit> de la clase <xref:System.Windows.Forms.Application> se genera después de los eventos de cierre del formulario principal.  
   
 > [!NOTE]
->  Visual Basic 2005 incluye eventos de aplicación adicionales, como <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> y <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>.  
+> Visual Basic 2005 incluye eventos de aplicación adicionales, como <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> y <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>.  
   
 ## <a name="focus-and-validation-events"></a>Eventos de foco y validación  
  Al cambiar el foco mediante el teclado (TAB, MAYÚS+TAB, etc.) mediante una llamada a los métodos <xref:System.Windows.Forms.Control.Select%2A> o <xref:System.Windows.Forms.Control.SelectNextControl%2A>, o estableciendo la propiedad <xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> en el formulario actual, los eventos de foco de la clase <xref:System.Windows.Forms.Control> se generan en el orden siguiente:  

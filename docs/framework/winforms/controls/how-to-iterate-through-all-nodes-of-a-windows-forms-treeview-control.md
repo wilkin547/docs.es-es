@@ -10,17 +10,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941094"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966554"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>Procedimiento para iterar todos los nodos del control TreeView de formularios Windows Forms
-A veces es útil examinar todos los nodos en un formulario Windows Forms <xref:System.Windows.Forms.TreeView> control con el fin de realizar algún cálculo en los valores de nodo. Esta operación puede realizarse mediante un procedimiento recursivo (un método recursivo en C# y C++) que recorre en iteración los nodos de cada colección del árbol.  
+A veces resulta útil examinar cada nodo de un control de <xref:System.Windows.Forms.TreeView> Windows Forms para realizar algún cálculo en los valores de nodo. Esta operación puede realizarse mediante un procedimiento recursivo (un método recursivo en C# y C++) que recorre en iteración los nodos de cada colección del árbol.  
   
- Cada <xref:System.Windows.Forms.TreeNode> objeto en una vista de árbol tiene propiedades que puede usar para navegar por la vista de árbol: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, y <xref:System.Windows.Forms.TreeNode.Parent%2A>. El valor de la <xref:System.Windows.Forms.TreeNode.Parent%2A> propiedad es el nodo primario del nodo actual. Los nodos secundarios del nodo actual, si existe alguna, se muestran en su <xref:System.Windows.Forms.TreeNode.Nodes%2A> propiedad. El <xref:System.Windows.Forms.TreeView> propio control tiene el <xref:System.Windows.Forms.TreeView.TopNode%2A> propiedad, que es el nodo raíz de la vista de árbol completa.  
+ Cada <xref:System.Windows.Forms.TreeNode> objeto de una vista de árbol tiene propiedades que puede usar para navegar por la vista de <xref:System.Windows.Forms.TreeNode.FirstNode%2A>árbol <xref:System.Windows.Forms.TreeNode.LastNode%2A>: <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>,, <xref:System.Windows.Forms.TreeNode.Parent%2A>y. El valor de la <xref:System.Windows.Forms.TreeNode.Parent%2A> propiedad es el nodo primario del nodo actual. Los nodos secundarios del nodo actual, si hay alguno, se enumeran en su <xref:System.Windows.Forms.TreeNode.Nodes%2A> propiedad. El <xref:System.Windows.Forms.TreeView> propio control tiene la <xref:System.Windows.Forms.TreeView.TopNode%2A> propiedad, que es el nodo raíz de la vista de árbol completa.  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>Para recorrer en iteración todos los nodos del control TreeView  
   
@@ -28,7 +28,7 @@ A veces es útil examinar todos los nodos en un formulario Windows Forms <xref:S
   
 2. Llame al procedimiento.  
   
-     El ejemplo siguiente muestra cómo imprimir cada <xref:System.Windows.Forms.TreeNode> del objeto <xref:System.Windows.Forms.TreeNode.Text%2A> propiedad:  
+     En el ejemplo siguiente se muestra cómo imprimir <xref:System.Windows.Forms.TreeNode> la propiedad <xref:System.Windows.Forms.TreeNode.Text%2A> de cada objeto:  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -126,4 +126,4 @@ A veces es útil examinar todos los nodos en un formulario Windows Forms <xref:S
 ## <a name="see-also"></a>Vea también
 
 - [TreeView (control)](treeview-control-windows-forms.md)
-- [Procedimientos recursivos](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+- [Procedimientos recursivos](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

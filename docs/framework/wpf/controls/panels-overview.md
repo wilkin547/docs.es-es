@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 4f54596e1ce3ed40f3a029ea6703147a97be992f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 5fe464f2b79fa1f7b0674c049110d32f2ad32335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545270"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944818"
 ---
 # <a name="panels-overview"></a>Información general sobre elementos Panel
 <xref:System.Windows.Controls.Panel>los elementos son componentes que controlan la representación de los elementos, su tamaño y dimensiones, su posición y la disposición de su contenido secundario. Proporciona una serie de elementos predefinidos <xref:System.Windows.Controls.Panel> , así como la capacidad de construir elementos <xref:System.Windows.Controls.Panel>personalizados. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]  
@@ -149,7 +149,7 @@ ms.locfileid: "69545270"
  Las columnas y filas definidas dentro <xref:System.Windows.Controls.Grid> de pueden aprovechar el <xref:System.Windows.GridUnitType.Star> ajuste de tamaño para distribuir proporcionalmente el espacio restante. Cuando <xref:System.Windows.GridUnitType.Star> se selecciona como alto o ancho de una fila o columna, dicha columna o fila recibe una proporción ponderada del espacio disponible restante. Esto contrasta con <xref:System.Windows.GridUnitType.Auto>, que distribuirá el espacio uniformemente en función del tamaño del contenido de una columna o fila. Este valor se expresa como `*` o `2*` cuando se usa [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. En el primer caso, la fila o la columna recibiría una vez el espacio disponible, en el segundo caso, dos veces, y así sucesivamente. Al combinar esta técnica para distribuir proporcionalmente el espacio con un <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> valor <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> de `Stretch` y, es posible particionar el espacio de diseño por porcentaje de espacio de la pantalla. <xref:System.Windows.Controls.Grid>es el único panel de diseño que puede distribuir el espacio de esta manera.  
   
 #### <a name="defining-and-using-a-grid"></a>Definición y uso de una cuadrícula  
- En el ejemplo siguiente se muestra cómo compilar una [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] similar a la del cuadro de diálogo Ejecutar del menú Inicio de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ En el ejemplo siguiente se muestra cómo compilar un [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] similar al que se encuentra en el cuadro de diálogo Ejecutar disponible en el menú Inicio de Windows.  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

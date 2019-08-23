@@ -2,12 +2,12 @@
 title: Procedimiento para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 40c684cbc1b14bf14d3ca23cbc044020e36b85f1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b8ddbaf896ee4c6ea8b6f8e8ce7d0ecef28140ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650225"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932570"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>Procedimiento para usar Svcutil.exe para exportar metadatos desde el código de servicio compilado
 Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados del siguiente modo:  
@@ -19,7 +19,7 @@ Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de da
 - Para exportar todos los tipos de contrato de datos dentro de un conjunto de ensamblados, utilice la opción `/dataContractOnly`.  
   
 > [!NOTE]
->  Utilice la opción `/reference` para especificar las rutas de acceso del archivo a cualquier ensamblado dependiente.  
+> Utilice la opción `/reference` para especificar las rutas de acceso del archivo a cualquier ensamblado dependiente.  
   
 ### <a name="to-export-metadata-for-compiled-service-contracts"></a>Para exportar los metadatos para los contratos de servicios compilados  
   
@@ -28,7 +28,7 @@ Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de da
 2. Ejecute Svcutil.exe en los ensamblados compilados.  
   
     > [!NOTE]
-    >  Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.  
+    > Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.  
   
     ```  
     svcutil.exe Contracts.dll  
@@ -56,7 +56,7 @@ Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de da
 3. Ejecute Svcutil.exe en el ejecutable de servicio compilado utilizando el modificador `/serviceName` para especificar el nombre de configuración del servicio.  
   
     > [!NOTE]
-    >  Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.  
+    > Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.  
   
     ```  
     svcutil.exe /serviceName:MyService Service.exe /reference:path/Contracts.dll  
@@ -69,7 +69,7 @@ Svcutil.exe puede exportar metadatos para los servicios, contratos y tipos de da
 2. Ejecute Svcutil.exe en los ensamblados compilados utilizando el modificador `/dataContract` para especificar que solo se deberían generar los metadatos para los contratos de datos.  
   
     > [!NOTE]
-    >  Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.  
+    > Quizás necesite utilizar el modificador `/reference` para especificar la ruta de acceso del archivo a cualquier ensamblado dependiente.  
   
     ```  
     svcutil.exe /dataContractOnly Contracts.dll  

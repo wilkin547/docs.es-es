@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82a739d3823ff93bf2f797eabf3a8a326b10741c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602530"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917255"
 ---
 # <a name="key-security-concepts"></a>Conceptos clave de seguridad
 Microsoft .NET Framework ofrece seguridad basada en roles para ayudar a solucionar problemas de seguridad relativos a código móvil y para permitir que los componentes determinen qué usuarios tienen autorización para operar.  
@@ -43,7 +43,7 @@ Microsoft .NET Framework ofrece seguridad basada en roles para ayudar a solucion
   
  Para más información, consulte [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md).  
   
-## <a name="authentication"></a>Autenticación  
+## <a name="authentication"></a>Authentication  
  La autenticación es el proceso de detectar y comprobar la identidad de una entidad de seguridad mediante el análisis de las credenciales del usuario y la validación de esas credenciales en alguna autoridad. Su código puede usar fácilmente la información obtenida durante la autenticación. También puede usar la seguridad basada en roles de .NET Framework para autenticar al usuario actual y para determinar si esa entidad de seguridad puede tener acceso a su código. Vea las sobrecargas del método <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> para obtener ejemplos de cómo autenticar la entidad de seguridad para roles específicos. Por ejemplo, puede usar la sobrecarga <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> para determinar si el usuario actual es miembro del grupo Administradores.  
   
  Hoy en día se usan diversos mecanismos de autenticación, muchos de los cuales pueden utilizarse con la seguridad basada en roles de .NET Framework. Algunos de los mecanismos más usados son básico, implícito, Passport, sistema operativo (como NTLM o Kerberos) o los mecanismos definidos por la aplicación.  
@@ -52,7 +52,7 @@ Microsoft .NET Framework ofrece seguridad basada en roles para ayudar a solucion
  El ejemplo siguiente requiere que la entidad de seguridad activa sea un administrador. El parámetro `name` es `null`, que permite que cualquier usuario que sea administrador pase la petición.  
   
 > [!NOTE]
->  En Windows Vista, el control de cuentas de usuario (UAC) determina los privilegios de un usuario. Si es miembro del grupo Administradores integrados, se le asignarán dos símbolos (tokens) de acceso en tiempo de ejecución: un símbolo (token) de acceso de usuario estándar y un símbolo (token) de acceso de administrador. De forma predeterminada, se le asignará el rol de usuario estándar. Para ejecutar código que requiere permisos de administrador, primero debe elevar el nivel de sus privilegios de usuario estándar a administrador. Para ello, inicie una aplicación haciendo clic con el botón derecho en el icono de la aplicación e indique que desea ejecutarla como administrador.  
+> En Windows Vista, el control de cuentas de usuario (UAC) determina los privilegios de un usuario. Si es miembro del grupo Administradores integrados, se le asignarán dos símbolos (tokens) de acceso en tiempo de ejecución: un símbolo (token) de acceso de usuario estándar y un símbolo (token) de acceso de administrador. De forma predeterminada, se le asignará el rol de usuario estándar. Para ejecutar código que requiere permisos de administrador, primero debe elevar el nivel de sus privilegios de usuario estándar a administrador. Para ello, inicie una aplicación haciendo clic con el botón derecho en el icono de la aplicación e indique que desea ejecutarla como administrador.  
   
  [!code-cpp[Classic PrincipalPermission Example#1](../../../samples/snippets/cpp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CPP/source.cpp#1)]
  [!code-csharp[Classic PrincipalPermission Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_Classic/classic PrincipalPermission Example/CS/source.cs#1)]

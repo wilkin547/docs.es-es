@@ -5,44 +5,44 @@ helpviewer_keywords:
 - selection [Windows Forms], modes in DataGridView control
 - DataGridView control [Windows Forms], selection mode
 ms.assetid: a3ebfd3d-0525-479d-9d96-d9e017289b36
-ms.openlocfilehash: 79e13e65938252015e43b59a962d40f20963a5df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfe26e4749e6bff2d0ccdff47c6ea0b301880772
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902673"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960466"
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Modos de selección en el control DataGridView de formularios Windows Forms
-A veces desea que su aplicación para realizar acciones según las selecciones del usuario dentro de un <xref:System.Windows.Forms.DataGridView> control. Dependiendo de las acciones, puede restringir los tipos de selección que son posibles. Por ejemplo, suponga que la aplicación puede imprimir un informe para el registro seleccionado actualmente. En este caso, es posible que desee configurar el <xref:System.Windows.Forms.DataGridView> control para que al hacer clic en cualquier lugar dentro de una fila siempre selecciona la fila completa y, por lo que se puede seleccionar que sólo una fila a la vez.  
+A veces desea que la aplicación realice acciones en función de las selecciones de <xref:System.Windows.Forms.DataGridView> usuario dentro de un control. En función de las acciones, puede que desee restringir los tipos de selección que son posibles. Por ejemplo, supongamos que la aplicación puede imprimir un informe para el registro seleccionado actualmente. En este caso, es posible que desee configurar el <xref:System.Windows.Forms.DataGridView> control de modo que al hacer clic en cualquier parte dentro de una fila, siempre se seleccione toda la fila, de modo que solo se pueda seleccionar una fila cada vez.  
   
- Puede especificar las selecciones permitidas estableciendo el <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> propiedad en uno de los siguientes <xref:System.Windows.Forms.DataGridViewSelectionMode> valores de enumeración.  
+ Puede especificar las selecciones que se permiten estableciendo la <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> propiedad en uno de los siguientes <xref:System.Windows.Forms.DataGridViewSelectionMode> valores de enumeración.  
   
-|Valor de DataGridViewSelectionMode|Descripción|  
+|Valor DataGridViewSelectionMode|DESCRIPCIÓN|  
 |-------------------------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Haga clic en una celda se selecciona. Encabezados de columna y fila no se puede usar para la selección.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Haga clic en una celda se selecciona. Al hacer clic en un encabezado de columna, se selecciona toda la columna. No se puede usar los encabezados de columna para ordenar.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Al hacer clic en una celda o un encabezado de columna, se selecciona toda la columna. No se puede usar los encabezados de columna para ordenar.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Al hacer clic en una celda o un encabezado de fila, se selecciona toda la fila.|  
-|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Modo de selección de forma predeterminada. Haga clic en una celda se selecciona. Al hacer clic en un encabezado de fila, se selecciona toda la fila.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|Al hacer clic en una celda, se selecciona. Los encabezados de fila y de columna no se pueden usar para la selección.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|Al hacer clic en una celda, se selecciona. Al hacer clic en un encabezado de columna, se selecciona toda la columna. Los encabezados de columna no se pueden usar para la ordenación.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>|Al hacer clic en una celda o en un encabezado de columna, se selecciona toda la columna. Los encabezados de columna no se pueden usar para la ordenación.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>|Al hacer clic en una celda o en un encabezado de fila, se selecciona toda la fila.|  
+|<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>|Modo de selección predeterminada. Al hacer clic en una celda, se selecciona. Al hacer clic en un encabezado de fila, se selecciona toda la fila.|  
   
 > [!NOTE]
->  Cambiar automáticamente el modo de selección en tiempo de ejecución, borra la selección actual.  
+> Al cambiar el modo de selección en tiempo de ejecución, se borra automáticamente la selección actual.  
   
- De forma predeterminada, los usuarios pueden seleccionar varias filas, columnas o celdas arrastrando con el mouse, al presionar la tecla CTRL o MAYÚS al seleccionar la opción para ampliar o modificar una selección o al hacer clic en la celda de encabezado de la parte superior izquierda para seleccionar todas las celdas del control. Para evitar este comportamiento, establezca el <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> propiedad `false`.  
+ De forma predeterminada, los usuarios pueden seleccionar varias filas, columnas o celdas arrastrando con el mouse, presionando CTRL o Mayús mientras seleccionan ampliar o modificar una selección, o haciendo clic en la celda del encabezado superior izquierdo para seleccionar todas las celdas del control. Para evitar este comportamiento, establezca la <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> propiedad en `false`.  
   
- El <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> y <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> los modos permiten que los usuarios eliminar filas seleccionándolos y presionando la tecla SUPR. Los usuarios pueden eliminar las filas solo cuando la celda actual no está en modo de edición, el <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> propiedad está establecida en `true`, y el origen de datos subyacente admite la eliminación de fila controlado por el usuario. Tenga en cuenta que esta configuración no impide la eliminación de fila mediante programación.  
+ Los <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> modos <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect> y permiten a los usuarios eliminar filas seleccionándolos y presionando la tecla Supr. Los usuarios solo pueden eliminar filas si la celda actual no está en modo de edición <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> , la propiedad se `true`establece en y el origen de datos subyacente admite la eliminación de filas controlada por el usuario. Tenga en cuenta que esta configuración no impide la eliminación de filas mediante programación.  
   
 ## <a name="programmatic-selection"></a>Selección mediante programación  
- El modo de selección actual limita el comportamiento de selección mediante programación, así como la selección del usuario. La selección actual se puede cambiar mediante programación estableciendo la `Selected` propiedad de las celdas, filas o columnas presentes en el <xref:System.Windows.Forms.DataGridView> control. También puede seleccionar todas las celdas del control a través de la <xref:System.Windows.Forms.DataGridView.SelectAll%2A> método, según el modo de selección. Para borrar la selección, use el <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> método.  
+ El modo de selección actual restringe el comportamiento de la selección mediante programación, así como la selección del usuario. Puede cambiar la selección actual mediante programación estableciendo la `Selected` propiedad de las celdas, filas o columnas presentes en el <xref:System.Windows.Forms.DataGridView> control. También puede seleccionar todas las celdas del control a través del <xref:System.Windows.Forms.DataGridView.SelectAll%2A> método, dependiendo del modo de selección. Para borrar la selección, use el <xref:System.Windows.Forms.DataGridView.ClearSelection%2A> método.  
   
- Si el <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> propiedad está establecida en `true`, puede agregar <xref:System.Windows.Forms.DataGridView> elementos o quitarlos de la selección cambiando el `Selected` propiedad del elemento. En caso contrario, establecer el `Selected` propiedad `true` para un elemento quita automáticamente otros elementos de la selección.  
+ Si la <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> propiedad se establece en `true`, puede agregar <xref:System.Windows.Forms.DataGridView> o quitar elementos de la selección cambiando la `Selected` propiedad del elemento. De lo contrario, `Selected` si se `true` establece la propiedad en para un elemento, se quitan automáticamente otros elementos de la selección.  
   
- Tenga en cuenta que al cambiar el valor de la <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> propiedad, no modifica la selección actual.  
+ Tenga en cuenta que al cambiar el <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> valor de la propiedad no se modifica la selección actual.  
   
- Puede recuperar una colección de las celdas seleccionadas, filas o columnas a través de la <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, y <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> propiedades de la <xref:System.Windows.Forms.DataGridView> control. Acceso a estas propiedades es ineficaz cuando se selecciona todas las celdas del control. Para evitar una reducción del rendimiento en este caso, use el <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> método primero. Además, tener acceso a estas colecciones para determinar el número de celdas seleccionadas, filas o columnas pueden ser ineficaz. En su lugar, debe usar el <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>, <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, o <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> método, pasando el <xref:System.Windows.Forms.DataGridViewElementStates.Selected> valor.  
+ Puede recuperar una colección de las celdas, filas o columnas seleccionadas actualmente a través de las <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>propiedades <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, y <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> del <xref:System.Windows.Forms.DataGridView> control. El acceso a estas propiedades es ineficaz cuando se seleccionan todas las celdas del control. Para evitar una reducción del rendimiento en este caso, use <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> primero el método. Además, el acceso a estas colecciones para determinar el número de celdas, filas o columnas seleccionadas puede ser ineficaz. En su lugar, debe usar el <xref:System.Windows.Forms.DataGridView.GetCellCount%2A>método <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A>, o <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A> , pasando el <xref:System.Windows.Forms.DataGridViewElementStates.Selected> valor.  
   
 > [!TIP]
->  Código de ejemplo que muestra el uso de las celdas seleccionadas mediante programación puede encontrarse en el <xref:System.Windows.Forms.DataGridView> información general de clases.  
+>  En la información general de la <xref:System.Windows.Forms.DataGridView> clase se puede encontrar código de ejemplo que muestra el uso mediante programación de las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -51,4 +51,4 @@ A veces desea que su aplicación para realizar acciones según las selecciones d
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridViewSelectionMode>
 - [Selección y uso del Portapapeles con el control DataGridView de Windows Forms](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
-- [Cómo: Establecer el modo de selección del Control DataGridView de formularios Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+- [Cómo: Establecer el modo de selección del control DataGridView Windows Forms](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

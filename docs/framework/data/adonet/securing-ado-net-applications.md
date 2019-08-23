@@ -2,12 +2,12 @@
 title: Proteger aplicaciones de ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d4c9c21f4d1f4a08ca6d676ee7b4c9e80709ba19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664199"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963120"
 ---
 # <a name="securing-adonet-applications"></a>Proteger aplicaciones de ADO.NET
 Para escribir una aplicación de ADO.NET segura es necesario algo más que evitar los errores de codificación más comunes, como no validar los datos proporcionados por el usuario. Una aplicación que tiene acceso a datos tiene muchos puntos débiles potenciales que un agresor puede aprovechar para obtener, manipular o destruir datos confidenciales. Por eso es importante comprender todos los aspectos de la seguridad, desde el proceso de modelo de amenazas durante la fase de diseño de su aplicación hasta la implementación y el posterior mantenimiento.  
@@ -39,7 +39,7 @@ Para escribir una aplicación de ADO.NET segura es necesario algo más que evita
  [Consideraciones de seguridad](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  Describe la seguridad de las aplicaciones de Entity Framework.  
   
- [Seguridad](../../../../docs/standard/security/index.md)  
+ [Seguridad](../../../standard/security/index.md)  
  Contiene vínculos a temas en los que describen todos los aspectos de la seguridad en .NET.  
   
  [Herramientas de seguridad](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], handling
 - On Error statement [Visual Basic]
 ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
-ms.openlocfilehash: 170cc4a42eda0b54d1e252104a702e008af7a336
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: df2bd232a870e17eeb5106cf0b60a9e77641969d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671820"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963533"
 ---
 # <a name="on-error-statement-visual-basic"></a>Instrucción On Error (Visual Basic)
 Habilita una rutina de control de errores y especifica la ubicación de la rutina dentro de un procedimiento. también se puede usar para deshabilitar una rutina de control de errores. La `On Error` instrucción se utiliza en el control de errores no estructurado y se puede usar en lugar de en el control de excepciones estructurado. El [control estructurado de excepciones](../../../standard/exceptions/index.md) está integrado en .net, suele ser más eficaz y, por lo tanto, se recomienda al controlar los errores en tiempo de ejecución en la aplicación.
@@ -35,7 +35,7 @@ Habilita una rutina de control de errores y especifica la ubicación de la rutin
  Sin el control de errores o el control de excepciones, cualquier error en tiempo de ejecución que se produzca es grave: se muestra un mensaje de error y se detiene la ejecución.
 
 > [!NOTE]
->  La `Error` palabra clave también se usa en la [instrucción de error](../../../visual-basic/language-reference/statements/error-statement.md), que se admite por compatibilidad con versiones anteriores.
+> La `Error` palabra clave también se usa en la [instrucción de error](../../../visual-basic/language-reference/statements/error-statement.md), que se admite por compatibilidad con versiones anteriores.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -55,7 +55,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
 ## <a name="remarks"></a>Comentarios
 
 > [!NOTE]
->  Se recomienda usar el control de excepciones estructurado en el código siempre que sea posible, en lugar de usar el control de excepciones `On Error` no estructurado y la instrucción. Para obtener más información, vea [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).
+> Se recomienda usar el control de excepciones estructurado en el código siempre que sea posible, en lugar de usar el control de excepciones `On Error` no estructurado y la instrucción. Para obtener más información, vea [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) (Try...Catch...Finally [Instrucción, Visual Basic]).
 
  Un controlador de errores "habilitado" es el que está activado por `On Error` una instrucción. Un controlador de errores "activo" es un controlador habilitado que se encuentra en el proceso de control de un error.
 
@@ -66,7 +66,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  Cada vez que el controlador de errores vuelve a pasar el control a un procedimiento que realiza la llamada, ese procedimiento se convierte en el procedimiento actual. Una vez que un controlador de errores controla un error en cualquier procedimiento, la ejecución se reanuda en el procedimiento actual en el punto designado `Resume` por la instrucción.
   
 > [!NOTE]
->  Una rutina de control de errores no es `Sub` un procedimiento o `Function` un procedimiento. Es una sección de código marcada por una etiqueta de línea o un número de línea.
+> Una rutina de control de errores no es `Sub` un procedimiento o `Function` un procedimiento. Es una sección de código marcada por una etiqueta de línea o un número de línea.
   
 ## <a name="number-property"></a>Propiedad Number
  Las rutinas de control de errores se basan en el `Number` valor de la `Err` propiedad del objeto para determinar la causa del error. La rutina debe probar o guardar los valores de propiedad relevantes `Err` en el objeto antes de que pueda producirse cualquier otro error o antes de que se llame a un procedimiento que puede provocar un error. Los valores de `Err` propiedad del objeto reflejan solo el error más reciente. El mensaje de error asociado `Err.Number` a está incluido `Err.Description`en.  
@@ -82,7 +82,7 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  `On Error Resume Next`hace que la ejecución continúe con la instrucción inmediatamente posterior a la instrucción que causó el error en tiempo de ejecución, o con la instrucción inmediatamente posterior a la llamada más reciente fuera del `On Error Resume Next` procedimiento que contiene la instrucción. Esta instrucción permite que la ejecución continúe a pesar de un error en tiempo de ejecución. Puede colocar la rutina de control de errores en la que se produciría el error en lugar de transferir el control a otra ubicación dentro del procedimiento. Una `On Error Resume Next` instrucción pasa a estar inactiva cuando se llama a otro procedimiento, por lo `On Error Resume Next` que debe ejecutar una instrucción en cada rutina llamada si desea controlar los errores en línea dentro de esa rutina.
   
 > [!NOTE]
->  La `On Error Resume Next` construcción puede ser preferible a `On Error GoTo` cuando se controlan los errores generados durante el acceso a otros objetos. La `Err` comprobación después de cada interacción con un objeto elimina la ambigüedad sobre el objeto al que tuvo acceso el código. Puede asegurarse del objeto en el que se colocó el código `Err.Number`de error, así como el objeto que generó originalmente el error (el objeto `Err.Source`especificado en).
+> La `On Error Resume Next` construcción puede ser preferible a `On Error GoTo` cuando se controlan los errores generados durante el acceso a otros objetos. La `Err` comprobación después de cada interacción con un objeto elimina la ambigüedad sobre el objeto al que tuvo acceso el código. Puede asegurarse del objeto en el que se colocó el código `Err.Number`de error, así como el objeto que generó originalmente el error (el objeto `Err.Source`especificado en).
 
 ## <a name="on-error-goto-0"></a>On error GoTo 0
  `On Error GoTo 0`deshabilita el control de errores en el procedimiento actual. No especifica la línea 0 como el inicio del código de control de errores, aunque el procedimiento contenga una línea numerada como 0. Sin una `On Error GoTo 0` instrucción, un controlador de errores se deshabilita automáticamente cuando se sale de un procedimiento.

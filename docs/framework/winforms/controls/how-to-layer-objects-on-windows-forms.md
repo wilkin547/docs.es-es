@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 80973e16445079876e01c89f20b5ecbdca602eb8
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 818f36633575b248d92da475c462cc0f211fe969
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039725"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966536"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Procedimiento para disponer objetos en capas en formularios Windows Forms
 Cuando se crea una interfaz de usuario compleja, o cuando se trabaja con un formulario de interfaz de múltiples documentos (MDI), a menudo se desea disponer en capas los controles y los formularios secundarios para crear interfaces de usuario (UI) más complejas. Para trasladar y realizar un seguimiento de los controles y ventanas dentro del contexto de un grupo, puede manipular su orden z. El *orden z* es el nivel visual de los controles en un formulario a lo largo del eje Z (profundidad) del formulario. La ventana situada en la parte superior del orden z se superpone a todas las demás ventanas. Todas las demás ventanas se superponen a la ventana en la parte inferior del orden z.
@@ -47,7 +47,7 @@ Cuando se crea una interfaz de usuario compleja, o cuando se trabaja con un form
     ```
 
 > [!NOTE]
->  Windows Forms admite la contención de *controles*. La contención de controles implica la colocación de varios controles dentro de un control contenedor, como una <xref:System.Windows.Forms.RadioButton> serie de controles <xref:System.Windows.Forms.GroupBox> de un control. A continuación, puede disponer los controles en el control contenedor. Al mover el cuadro de grupo también se mueven los controles, ya que están incluidos en él.
+> Windows Forms admite la contención de *controles*. La contención de controles implica la colocación de varios controles dentro de un control contenedor, como una <xref:System.Windows.Forms.RadioButton> serie de controles <xref:System.Windows.Forms.GroupBox> de un control. A continuación, puede disponer los controles en el control contenedor. Al mover el cuadro de grupo también se mueven los controles, ya que están incluidos en él.
 
 ## <a name="see-also"></a>Vea también
 

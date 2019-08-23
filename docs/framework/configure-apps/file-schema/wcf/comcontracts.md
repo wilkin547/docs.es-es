@@ -2,18 +2,18 @@
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 47a7d862cf85254f88373d582169ff421be2b5b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d061d48374a8745dc61e1ca156e4fcbbccee5ef7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673295"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919475"
 ---
 # <a name="comcontracts"></a>\<comContracts>
 La sección de configuración `comContracts` contiene elementos que le permiten especificar varias propiedades de un contrato de servicios de la integración de COM+.  
   
 ## <a name="specifying-namespace-and-contract"></a>Especificar espacio de nombres y contrato  
- Contratos de servicio de integración de COM + están restringidos actualmente a la `http://tempuri.org` espacio de nombres y nombre de contrato se deriva de la interfaz COM de apoyo. Puede, sin embargo, especificar alternativas mediante la sección `comContracts` en el archivo de configuración.  
+ Los contratos de servicio de integración de com+ están `http://tempuri.org` restringidos actualmente al espacio de nombres y el nombre del contrato se deriva de la interfaz com compatible. Puede, sin embargo, especificar alternativas mediante la sección `comContracts` en el archivo de configuración.  
   
  Por ejemplo, puede utilizar la configuración siguiente para especificar el espacio de nombres y nombre del contrato del contrato de servicios, así como una opción para exigir el uso en enlaces con sesión.  
   
@@ -31,15 +31,15 @@ La sección de configuración `comContracts` contiene elementos que le permiten 
   
  Cuando esta sección está vacía, la inicialización del servicio aplica un espacio de nombres y un nombre de contrato predeterminados tomados del identificador de la interfaz COM de apoyo.  
   
- Además, puede usar el [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elemento para especificar los métodos COM + que se exponen cuando la interfaz en un componente COM + se expone como un servicio Web. También puede usar el [ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) para especificar tipos con persistencia utilizados en integración. Por último, puede usar el [ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) elemento para incluir define tipos usuario (UDT) que deben incluirse en el contrato de servicio.  
+ Además, puede utilizar el [ \<elemento > de exposedMethod](exposedmethod.md) para especificar métodos com+ que se exponen cuando la interfaz en un componente com+ se expone como un servicio Web. También puede usar el [ \<> persistableTypes](persistabletypes.md) para especificar los tipos que se pueden conservar que se usan en la integración de. Por último, puede usar el [ \<elemento > userDefinedType](userdefinedtype.md) para incluir tipos definidos por el usuario (UDT) que se van a incluir en el contrato de servicio.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
-- [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)
-- [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
-- [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)
-- [Integración en aplicaciones COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Cómo: Configurar el servicio COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<> exposedMethod](exposedmethod.md)
+- [\<persistableTypes>](persistabletypes.md)
+- [\<userDefinedType>](userdefinedtype.md)
+- [\<comContract>](comcontract.md)
+- [Integración en aplicaciones COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Cómo: Configurar el servicio COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59a25eb9b854f0f303d8b1d97db40406c2818df8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ec97861a9d748767199da3e1fb7f53361c3a48ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626277"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966120"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Instrucciones de programación segura para código sin administrar
 El código de algunas bibliotecas necesita llamar a código no administrado (por ejemplo, las API de código nativo, como Win32). Como esto implica salir del perímetro de seguridad del código administrado, se requiere mucha precaución. Si el código es neutro en cuanto a seguridad, tanto su código como cualquier otro código que lo llame deberán tener permiso de código no administrado (<xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificada).  
@@ -53,4 +53,4 @@ El código de algunas bibliotecas necesita llamar a código no administrado (por
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

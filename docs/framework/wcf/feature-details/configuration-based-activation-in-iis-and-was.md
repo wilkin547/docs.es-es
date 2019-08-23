@@ -2,23 +2,23 @@
 title: Activación basada en la configuración en IIS y WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 99f6c7d41620a7bafea0981cbeaa5cdcbad5ef12
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f4de4aff2fbe6b8e82dc3d6523f492d06494c79e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636128"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909767"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Activación basada en la configuración en IIS y WAS
 
-Normalmente al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS) o servicio de activación de proceso de Windows (WAS), debe proporcionar un archivo .svc. El archivo .svc contiene el nombre del servicio y un generador de host de servicio personalizado opcional. Este archivo adicional agrega una sobrecarga de administración. La característica de activación basada en la configuración elimina el requisito de tener un archivo .svc y, por lo tanto, la sobrecarga asociada.
+Normalmente, al hospedar un servicio de Windows Communication Foundation (WCF) en Internet Information Services (IIS) o en el servicio de activación de procesos de Windows (WAS), debe proporcionar un archivo. SVC. El archivo .svc contiene el nombre del servicio y un generador de host de servicio personalizado opcional. Este archivo adicional agrega una sobrecarga de administración. La característica de activación basada en la configuración elimina el requisito de tener un archivo .svc y, por lo tanto, la sobrecarga asociada.
 
 ## <a name="configuration-based-activation"></a>Activación basada en la configuración
 
-La activación basada en la configuración toma los metadatos que se solían encontrar en el archivo .svc y los coloca en el archivo Web.config. En el <`serviceHostingEnvironment`> elemento no existe un <`serviceActivations`> elemento. En el <`serviceActivations`> elemento son uno o más <`add`> elementos, uno para cada servicio hospedado. El <`add`> elemento contiene atributos que le permiten establecer la dirección relativa para el servicio y el tipo de servicio o un generador de host de servicio. El siguiente ejemplo de configuración muestra cómo se utiliza esta sección.
+La activación basada en la configuración toma los metadatos que se solían encontrar en el archivo .svc y los coloca en el archivo Web.config. En el elemento`serviceHostingEnvironment`< > hay un elemento >`serviceActivations`<. Dentro del <`serviceActivations`elemento > son uno o varios elementos`add`de > de <, uno para cada servicio hospedado. El elemento`add`> de < contiene atributos que le permiten establecer la dirección relativa para el servicio y el tipo de servicio o un generador de host de servicio. El siguiente ejemplo de configuración muestra cómo se utiliza esta sección.
 
 > [!NOTE]
->  Cada <`add`> elemento debe especificar un servicio o un atributo de generador. Se puede especificar tanto el servicio como los atributos de generador.
+> Cada <`add`elemento > debe especificar un servicio o un atributo de generador. Se puede especificar tanto el servicio como los atributos de generador.
 
 ```xml
 <serviceHostingEnvironment>
@@ -32,7 +32,7 @@ La activación basada en la configuración toma los metadatos que se solían enc
 
 > [!NOTE]
 > - Cuando se usa la activación basada en la configuración, no se admite código insertado en los archivos .svc.
-> - El `relativeAddress` atributo debe establecerse en una dirección relativa como "\<subdirectorio > / service.svc" o "~ /\<sub/service.svc".
+> - El `relativeAddress` atributo debe establecerse en una dirección relativa como "\<subdirectorio >/Service.SVC" o "~/\<sub-Directory/Service. SVC".
 > - Se produce una excepción de configuración si registra una dirección relativa que no tiene una extensión conocida asociada a WCF.
 > - La dirección relativa especificada es relativa a la raíz de la aplicación virtual.
 > - Debido al modelo jerárquico de la configuración, las direcciones relativas registradas en el equipo y en el sitio son heredadas por aplicaciones virtuales.

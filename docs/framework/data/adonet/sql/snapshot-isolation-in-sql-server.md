@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 0ff89f2d5ffa177b9413f6a2925bb05729e053a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9f9dfd4f1f299817aa424716aac4408a0b77a240
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592899"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958009"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Aislamiento de instantáneas en SQL Server
 El aislamiento de instantánea mejora la simultaneidad para las aplicaciones OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Descripción del aislamiento de instantáneas y la versión de fila  
- Una vez habilitado el aislamiento de instantánea, las versiones de fila actualizada para cada transacción se mantienen en **tempdb**. Cada transacción se identifica con un número único de secuencia de transacción, y estos números únicos se registran para cada versión de fila. La transacción trabaja con las versiones de filas más recientes que tienen un número de secuencia anterior al número de secuencia de la transacción,  y omite las versiones de filas más nuevas creadas con posterioridad a su comienzo.  
+ Una vez habilitado el aislamiento de instantánea, las versiones de fila actualizadas para cada transacción se mantienen en **tempdb**. Cada transacción se identifica con un número único de secuencia de transacción, y estos números únicos se registran para cada versión de fila. La transacción trabaja con las versiones de filas más recientes que tienen un número de secuencia anterior al número de secuencia de la transacción, y omite las versiones de filas más nuevas creadas con posterioridad a su comienzo.  
   
  El término "instantánea" refleja el hecho de que todas las consultas de la transacción ven la misma versión, o instantánea, de la base de datos, en función del estado de ésta en el momento en que comienza la transacción. En una transacción de instantánea no se adquieren bloqueos en las filas o las páginas de datos subyacentes, lo que permite que se ejecuten otras transacciones sin que una transacción anterior sin completarse las bloquee. Las transacciones que modifican datos no bloquean a las que los leen, y éstas no bloquean a las que los escriben, como normalmente sucedería con el nivel de aislamiento predeterminado READ COMMITTED de SQL Server. Este comportamiento de no bloqueo también reduce de forma significativa la probabilidad de interbloqueo en transacciones complejas.  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 - SERIALIZABLE es el nivel de aislamiento más restrictivo, dado que bloquea intervalos enteros de claves y mantiene los bloqueos hasta que se completa la transacción. Incluye REPEATABLE READ y agrega la restricción de que otras transacciones no pueden insertar filas nuevas en intervalos que haya leído la transacción hasta que ésta no se complete.  
   
- Para obtener más información, consulte el [Guía de versiones de fila y bloqueo de transacción](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
+ Para obtener más información, consulte la [Guía de versiones de fila y bloqueo de transacciones](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Extensiones del nivel de aislamiento de instantáneas  
  SQL Server 2005 presentaba extensiones a los niveles de aislamiento SQL-92 con la introducción del nivel de aislamiento SNAPSHOT y una implementación adicional de READ COMMITTED. El nivel de aislamiento READ_COMMITTED_SNAPSHOT puede reemplazar de forma transparente a READ COMMITTED en todas las transacciones.  
@@ -59,24 +59,24 @@ SET READ_COMMITTED_SNAPSHOT ON
 - Cuando el aislamiento de instantáneas está habilitado en una base de datos, la opción de base de datos READ_COMMITTED_SNAPSHOT determina el comportamiento del nivel de aislamiento predeterminado READ COMMITTED. Si no especifica explícitamente READ_COMMITTED_SNAPSHOT ON, READ COMMITTED se aplica a todas las transacciones implícitas. Esto produce el mismo comportamiento que se si establece READ_COMMITTED_SNAPSHOT OFF (el valor predeterminado). Cuando READ_COMMITTED_SNAPSHOT OFF está activo, el motor de base de datos utiliza bloqueos compartidos para exigir el nivel de aislamiento predeterminado. Si establece la opción de base de datos READ_COMMITTED_SNAPSHOT en ON, el motor de base de datos utiliza la versión de fila y el aislamiento de instantáneas como valor predeterminado, en lugar de utilizar bloqueos para proteger los datos.  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Cómo funcionan el aislamiento de instantáneas y la versión de fila  
- Cuando se habilita el nivel de aislamiento SNAPSHOT, cada vez que se actualiza una fila, el motor de base de datos de SQL Server almacena una copia de la fila original en **tempdb**y agrega un número de secuencia de transacción a la fila. A continuación se muestra la secuencia de eventos que tienen lugar:  
+ Cuando el nivel de aislamiento de instantánea está habilitado, cada vez que se actualiza una fila, el SQL Server Motor de base de datos almacena una copia de la fila original en **tempdb**y agrega un número de secuencia de la transacción a la fila. A continuación se muestra la secuencia de eventos que tienen lugar:  
   
 - Se inicia una nueva transacción y se le asigna un número de secuencia de transacción.  
   
-- El motor de base de datos lee una fila dentro de la transacción y recupera la versión de fila de **tempdb** cuyo número de secuencia es más cercana a y menor que el número de secuencia de transacción.  
+- El Motor de base de datos Lee una fila de la transacción y recupera la versión de fila de **tempdb** cuyo número de secuencia es más cercano a y menor que el número de secuencia de la transacción.  
   
 - Luego, comprueba que el número de la secuencia de transacción no esté en la lista de números de secuencia de transacción de las transacciones no confirmadas activas cuando se inició la transacción de instantánea.  
   
-- La transacción lee la versión de la fila de **tempdb** que era actual correspondiente al inicio de la transacción. No verá las nuevas filas insertadas después, dado que esos valores de número de secuencia serán superiores al valor del número de la secuencia de transacción.  
+- La transacción lee la versión de la fila de **tempdb** que estaba actualizada desde el inicio de la transacción. No verá las nuevas filas insertadas después, dado que esos valores de número de secuencia serán superiores al valor del número de la secuencia de transacción.  
   
-- La transacción actual verá las filas que se eliminaron después de que se inició la transacción, porque habrá una versión de fila en **tempdb** con un valor de número de secuencia inferior.  
+- La transacción actual verá las filas que se eliminaron una vez iniciada la transacción, porque habrá una versión de fila en **tempdb** con un valor de número de secuencia inferior.  
   
  El efecto global del aislamiento de instantáneas es que la transacción, a su comienzo, ve todos los datos que existen, sin tener en cuenta ni realizar ningún bloqueo en las tablas subyacentes. Como resultado, puede haber mejoras en el rendimiento en aquellas situaciones en las que hay contención.  
   
  Una transacción de instantánea siempre utiliza un control de simultaneidad optimista, que retiene los bloqueos que impedirían que otras transacciones actualizaran filas. Si una transacción de instantánea intenta confirmar una actualización en una fila que se cambió después de que comenzara, la transacción se revierte y se genera un error.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>Trabajo con aislamiento de instantáneas en ADO.NET  
- El aislamiento de instantáneas se admite en ADO.NET mediante la clase <xref:System.Data.SqlClient.SqlTransaction>. Si una base de datos se ha habilitado para el aislamiento de instantánea pero no está configurado como READ_COMMITTED_SNAPSHOT ON, se debe iniciar un <xref:System.Data.SqlClient.SqlTransaction> utilizando el **IsolationLevel.Snapshot** valor de enumeración al llamar a la <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> método. Este fragmento de código asume que la conexión es un objeto <xref:System.Data.SqlClient.SqlConnection> abierto.  
+ El aislamiento de instantáneas se admite en ADO.NET mediante la clase <xref:System.Data.SqlClient.SqlTransaction>. Si una base de datos se ha habilitado para el aislamiento de instantáneas pero no está configurada <xref:System.Data.SqlClient.SqlTransaction> para READ_COMMITTED_SNAPSHOT on, debe iniciar mediante el <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> valor de enumeración **IsolationLevel. Snapshot** al llamar al método. Este fragmento de código asume que la conexión es un objeto <xref:System.Data.SqlClient.SqlConnection> abierto.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -91,20 +91,20 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>Ejemplo  
  El siguiente ejemplo demuestra cómo se comportan los diferentes niveles de aislamiento al intentar tener acceso a los datos bloqueados, y no está pensado para su uso en código de producción.  
   
- El código se conecta a la **AdventureWorks** base de datos de SQL Server de ejemplo y crea una tabla denominada **TestSnapshot** e inserta una fila de datos. El código utiliza la instrucción ALTER DATABASE de Transact-SQL para activar el aislamiento de instantáneas en la base de datos, pero no establece la opción READ_COMMITTED_SNAPSHOT, lo que deja activo el comportamiento de nivel de aislamiento predeterminado READ COMMITTED. Luego, el código realiza las siguientes acciones:  
+ El código se conecta a la base de datos de ejemplo **AdventureWorks** en SQL Server y crea una tabla denominada **TestSnapshot** e inserta una fila de datos. El código utiliza la instrucción ALTER DATABASE de Transact-SQL para activar el aislamiento de instantáneas en la base de datos, pero no establece la opción READ_COMMITTED_SNAPSHOT, lo que deja activo el comportamiento de nivel de aislamiento predeterminado READ COMMITTED. Luego, el código realiza las siguientes acciones:  
   
 - Inicia, pero no completa, sqlTransaction1, que utiliza el nivel de aislamiento SERIALIZABLE para iniciar una transacción de actualización. El resultado es que la tabla se bloquea.  
   
-- Se abre una segunda conexión y se inicia una segunda transacción con nivel de aislamiento SNAPSHOT para leer los datos en el **TestSnapshot** tabla. Como el aislamiento de instantáneas está habilitado, esta transacción puede leer los datos que existían antes de que se iniciara sqlTransaction1.  
+- Se abre una segunda conexión y se inicia una segunda transacción con el nivel de aislamiento SNAPSHOT para leer los datos de la tabla **TestSnapshot** . Como el aislamiento de instantáneas está habilitado, esta transacción puede leer los datos que existían antes de que se iniciara sqlTransaction1.  
   
 - Se abre una tercera conexión y se inicia una transacción con el nivel de aislamiento READ COMMITTED para intentar leer los datos de la tabla. En este caso, el código no puede leer los datos porque no puede leer con posterioridad a los bloqueos realizados en la tabla en la primera transacción y el tiempo de espera se agota. El mismo resultado se produciría si se utilizaran los niveles de aislamiento REPEATABLE READ y SERIALIZABLE, ya que estos niveles no pueden leer después de los bloqueos realizados en la primera transacción.  
   
 - Se abre una cuarta conexión y se inicia una transacción con el nivel de aislamiento READ UNCOMMITTED, que realiza una lectura no confirmada del valor sin confirmar de sqlTransaction1. Puede que este valor no exista nunca realmente en la base de datos si la primera transacción no se confirma.  
   
-- Se revierte la primera transacción y se limpia mediante la eliminación de la **TestSnapshot** tabla y la desactivación del aislamiento de instantáneas la **AdventureWorks** base de datos.  
+- Revierte la primera transacción y realiza la limpieza eliminando la tabla **TestSnapshot** y desactivando el aislamiento de instantánea para la base de datos **AdventureWorks** .  
   
 > [!NOTE]
->  En los siguientes ejemplos se usa la misma cadena de conexión con la agrupación de conexiones desactivada. Si una conexión está agrupada, el restablecimiento de su nivel de aislamiento no restablece el nivel de aislamiento en el servidor. Así, las conexiones posteriores que utilicen la misma conexión interna agrupada se iniciarán con los niveles de aislamiento establecidos en el nivel de la conexión agrupada. Una alternativa a la desconexión de la agrupación de conexiones consiste en establecer el nivel de aislamiento de forma explícita para cada conexión.  
+> En los siguientes ejemplos se usa la misma cadena de conexión con la agrupación de conexiones desactivada. Si una conexión está agrupada, el restablecimiento de su nivel de aislamiento no restablece el nivel de aislamiento en el servidor. Así, las conexiones posteriores que utilicen la misma conexión interna agrupada se iniciarán con los niveles de aislamiento establecidos en el nivel de la conexión agrupada. Una alternativa a la desconexión de la agrupación de conexiones consiste en establecer el nivel de aislamiento de forma explícita para cada conexión.  
   
  [!code-csharp[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.Demo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.Demo/VB/source.vb#1)]  
@@ -112,19 +112,19 @@ SqlTransaction sqlTran =
 ### <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra el comportamiento del aislamiento de instantáneas cuando se están modificando los datos. El código realiza las siguientes acciones:  
   
-- Se conecta a la **AdventureWorks** base de datos y habilita el aislamiento de instantánea de ejemplo.  
+- Se conecta a la base de datos de ejemplo **AdventureWorks** y habilita el aislamiento de instantánea.  
   
 - Crea una tabla denominada **TestSnapshotUpdate** e inserta tres filas de datos de ejemplo.  
   
 - Inicia, pero no completa, sqlTransaction1 mediante el aislamiento SNAPSHOT. Se seleccionan tres filas de datos en la transacción.  
   
-- Crea un segundo **SqlConnection** a **AdventureWorks** y crea una segunda transacción con el nivel de aislamiento READ COMMITTED que actualiza un valor de una de las filas seleccionadas en sqlTransaction1.  
+- Crea una segunda **SqlConnection** a **AdventureWorks** y crea una segunda transacción con el nivel de aislamiento Read Committed que actualiza un valor en una de las filas seleccionadas en sqlTransaction1.  
   
 - Confirma sqlTransaction2.  
   
-- Vuelve a sqlTransaction1 e intenta actualizar la misma fila que sqlTransaction1 ya ha confirmado. Se produce el Error 3960 y sqlTransaction1 se revierte automáticamente. El **SqlException.Number** y **SqlException.Message** se muestran en la ventana de consola.  
+- Vuelve a sqlTransaction1 e intenta actualizar la misma fila que sqlTransaction1 ya ha confirmado. Se produce el Error 3960 y sqlTransaction1 se revierte automáticamente. Los mensajes **SqlException. Number** y **SqlException. Message** se muestran en la ventana de la consola.  
   
-- Ejecuta el código de limpieza para desactivar el aislamiento de instantánea en **AdventureWorks** y elimine el **TestSnapshotUpdate** tabla.  
+- Ejecuta el código de limpieza para desactivar el aislamiento de instantánea en **AdventureWorks** y eliminar la tabla **TestSnapshotUpdate** .  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  

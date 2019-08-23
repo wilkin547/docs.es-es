@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93352fffbe155183687a9b666d2fe5541428fca9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fe78e2bd9c31bfb122e90b97977117adfc0235d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64752018"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967888"
 ---
 # <a name="runtime-directive-policy-settings"></a>Configuración de directiva de la directiva en tiempo de ejecución
 
 > [!NOTE]
->  En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).
+> En este tema se hace referencia a .NET Native Developer Preview, que es una versión preliminar del software. Puede descargar esta versión preliminar desde el [sitio web de Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (es necesario registrarse).
 
 La configuración de directiva de la directiva en tiempo de ejecución de .NET Native determina la disponibilidad de los metadatos de los tipos y miembros de tipo en tiempo de ejecución. Sin los metadatos necesarios, las operaciones que se basan en la reflexión, la serialización y la deserialización o el cálculo de referencias de tipos de .NET Framework a COM o Windows en tiempo de ejecución pueden producir errores y generar una excepción. Las excepciones más comunes son [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) y, en el caso de la interoperabilidad, [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).
 
@@ -34,7 +34,7 @@ Los archivos de directivas en tiempo de ejecución reconocen tres categorías de
 
   En la siguiente tabla se recogen los tipos de directivas de reflexión y los elementos de programa con los que se pueden usar.
 
-  |Elemento|Activar|Explorar|Dinámico|
+  |Elemento|Activar|Explorar|Dinámica|
   |-------------|--------------|------------|-------------|
   |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|
   |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|
@@ -117,7 +117,7 @@ Los archivos de directivas en tiempo de ejecución reconocen tres categorías de
 
 Cada tipo de directiva se puede establecer en uno de los valores incluidos en la siguiente tabla. Tenga en cuenta que los elementos que representan miembros de tipo admiten un conjunto diferente de opciones de directiva que otros elementos.
 
-|Configuración de directiva|Descripción|Elementos `Assembly`, `Namespace`, `Type` y `TypeInstantiation`|Elementos `Event`, `Field`, `Method`, `MethodInstantiation` y `Property`|
+|Configuración de directiva|DESCRIPCIÓN|Elementos `Assembly`, `Namespace`, `Type` y `TypeInstantiation`|Elementos `Event`, `Field`, `Method`, `MethodInstantiation` y `Property`|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|Habilita la directiva para todos los tipos y miembros que la cadena de herramientas de .NET Native no elimina.|✓||
 |`Auto`|Especifica que se debe usar la directiva predeterminada para el tipo de directiva de ese elemento de programa. Esto es exactamente lo mismo que omitir una directiva para ese tipo de directiva. `Auto` se suele usar para indicar que la directiva se hereda de un elemento primario.|✓|✓|

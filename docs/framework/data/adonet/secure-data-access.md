@@ -2,12 +2,12 @@
 title: Acceso seguro a datos
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7aa68842ab3733943f84e9d6d9157f7a3d65cac7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664225"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963150"
 ---
 # <a name="secure-data-access"></a>Acceso seguro a datos
 Para escribir código de ADO.NET seguro, debe comprender los mecanismos de seguridad disponibles en el almacén de datos subyacente o en la base de datos. También debe tener en cuenta las implicaciones en la seguridad de otras características o componentes que pudieran incluirse en la aplicación.  
@@ -21,10 +21,10 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Describe las prácticas y técnicas recomendadas de seguridad para proteger la información de conexión, como el uso de configuración protegida para cifrar cadenas de conexión.|  
-|[Recomendaciones de estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
+|[Recomendaciones para las estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Proporciona recomendaciones para obtener acceso a datos y realizar operaciones de base de datos.|  
 |[Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)|Describe cómo crear cadenas de conexión a partir de la entrada del usuario en tiempo de ejecución.|  
 |[Información general sobre la seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|Describe la arquitectura de seguridad de SQL Server.|  
   
@@ -33,7 +33,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información sobre el uso de comandos con parámetros, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Parámetros de DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Describe cómo usar parámetros con `DataAdapter`.|  
 |[Modificación de datos con procedimientos almacenados](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Describe cómo especificar parámetros y cómo obtener un valor devuelto.|  
@@ -44,36 +44,36 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Información general de vulnerabilidades de seguridad de secuencia de comandos](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Describe cómo protegerse de ataques mediante scripts o instrucciones SQL.|  
+|[Introducción a los ataques de scripts](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Describe cómo protegerse de ataques mediante scripts o instrucciones SQL.|  
   
 ## <a name="probing-attacks"></a>Ataques mediante sondeo  
  Es muy frecuente que los atacantes utilicen la información de una excepción, como el nombre del servidor, de la base de datos o de una tabla, para llevar a cabo un ataque contra el sistema. Como las excepciones pueden contener información específica sobre la aplicación o el origen de datos, puede mejorar la protección de la aplicación y del origen de datos exponiendo únicamente la información necesaria al cliente.  
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Fundamentos del control de excepciones](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Describe las formas básicas Try/Catch/Finally del control de excepciones estructurado.|  
-|[Procedimientos recomendados para excepciones](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Describe los procedimientos recomendados para controlar excepciones.|  
+|[Fundamentos del control de excepciones](../../../standard/exceptions/exception-handling-fundamentals.md)|Describe las formas básicas Try/Catch/Finally del control de excepciones estructurado.|  
+|[Procedimientos recomendados para excepciones](../../../standard/exceptions/best-practices-for-exceptions.md)|Describe los procedimientos recomendados para controlar excepciones.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Proteger orígenes de datos de Access y Excel de Microsoft  
  Microsoft Access y Microsoft Excel pueden funcionar como almacén de datos para una aplicación de ADO.NET cuando los requisitos de seguridad son mínimos o no existen. Sus características de seguridad son eficaces para fines de disuasión, aunque solo es conveniente confiar en ellas para evitar la intromisión por parte de usuarios no informados. Los archivos de datos físicos de Access y Excel existen en el sistema de archivos y todos los usuarios deben tener acceso a ellos. Esto los hace vulnerables ante ataques que pueden dar lugar al robo o pérdida de datos, ya que los archivos se pueden copiar o modificar fácilmente. Cuando sea necesaria una seguridad potente, use SQL Server u otra base de datos basada en servidor donde los archivos de datos físicos no se puedan leer desde el sistema de archivos.  
   
  Para obtener más información sobre la protección de datos de Access y Excel, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Guía y consideraciones de seguridad para Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Describe técnicas de seguridad para Access 2007 como el cifrado de archivos, la administración de contraseñas, la conversión de bases de datos a los nuevos formatos ACCDB y ACCDE y el uso de otras opciones de seguridad.|  
-|[Descripción de la función de los archivos de información de grupo de trabajo en la seguridad de acceso](https://support.microsoft.com/kb/305542)|Explica la función y la relación del archivo de información de grupo de trabajo en la seguridad de Access 2003.|  
-|[Con frecuencia preguntas más frecuentes sobre Microsoft acceso de seguridad para las versiones 2.0 hasta 2000 de Microsoft Access](https://go.microsoft.com/fwlink/?LinkId=47698)|Versión descargable de las preguntas más frecuentes sobre seguridad en Microsoft Access.|  
+|[Consideraciones de seguridad e instrucciones para el acceso 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Describe técnicas de seguridad para Access 2007 como el cifrado de archivos, la administración de contraseñas, la conversión de bases de datos a los nuevos formatos ACCDB y ACCDE y el uso de otras opciones de seguridad.|  
+|[Descripción del rol de los archivos de información de grupo de trabajo en la seguridad de acceso](https://support.microsoft.com/kb/305542)|Explica la función y la relación del archivo de información de grupo de trabajo en la seguridad de Access 2003.|  
+|[Preguntas más frecuentes sobre la seguridad de Microsoft Access para las versiones de Microsoft Access de 2,0 a 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Versión descargable de las preguntas más frecuentes sobre seguridad en Microsoft Access.|  
 ## <a name="enterprise-services"></a>Enterprise Services  
  COM+ incluye su propio modelo de seguridad que se basa en las cuentas de Windows NT y en la suplantación de procesos y subprocesos. El espacio de nombres <xref:System.EnterpriseServices> proporciona contenedores que permiten a las aplicaciones .NET integrar código administrado con servicios de seguridad COM+ mediante la clase <xref:System.EnterpriseServices.ServicedComponent>.  
   
  Para obtener más información, vea el siguiente recurso.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Seguridad basada en roles](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Describe cómo integrar código administrado en servicios de seguridad COM+.|  
   
@@ -82,7 +82,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
   
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)|Contiene temas que describen cómo exponer componentes COM a .NET Framework y cómo exponer componentes de .NET Framework a COM.|
 |[Interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contiene temas avanzados como, por ejemplo, los ensamblados de interoperabilidad principal, los subprocesos y el cálculo de referencias personalizado.|
@@ -91,7 +91,7 @@ Para escribir código de ADO.NET seguro, debe comprender los mecanismos de segur
 
 - [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [Recomendaciones de estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
+- [Recomendaciones para las estrategias de acceso a datos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Proteger la información de conexión](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

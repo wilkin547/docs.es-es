@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 00b12d9dc25e0704eb73d8bc727ae6647493f494
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 017b32dc07f62cc4553a84f7b91687fb34a53c65
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401171"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937469"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>Procedimiento Agregar un controlador de eventos mediante código
 En este ejemplo se muestra cómo agregar un controlador de eventos a un elemento mediante código.  
@@ -35,7 +35,7 @@ En este ejemplo se muestra cómo agregar un controlador de eventos a un elemento
  [!code-vb[RoutedEventAddRemoveHandler#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/VisualBasic/default.xaml.vb#handler)]  
   
 > [!NOTE]
->  Agregar un controlador de eventos en la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página analizada inicialmente es mucho más sencillo. En el elemento de objeto en el que desea agregar el controlador de eventos, agregue un atributo que coincida con el nombre del evento que desea controlar. A continuación, especifique el valor de ese atributo como el nombre del método de control de eventos que definió en el archivo de código [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] subyacente de la página. Para obtener más información, vea información general sobre [XAML (WPF)](xaml-overview-wpf.md) o [información general sobre eventos](routed-events-overview.md)enrutados.  
+> Agregar un controlador de eventos en la [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] página analizada inicialmente es mucho más sencillo. En el elemento de objeto en el que desea agregar el controlador de eventos, agregue un atributo que coincida con el nombre del evento que desea controlar. A continuación, especifique el valor de ese atributo como el nombre del método de control de eventos que definió en el archivo de código [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] subyacente de la página. Para obtener más información, vea información general sobre [XAML (WPF)](xaml-overview-wpf.md) o [información general sobre eventos](routed-events-overview.md)enrutados.  
   
 ## <a name="see-also"></a>Vea también
 

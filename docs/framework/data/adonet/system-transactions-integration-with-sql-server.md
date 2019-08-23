@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 25b443d8234909a4d8525c2ce2b4e70c3baa337b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880591"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965228"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Integración de System.Transactions con SQL Server
-.NET Framework versión 2.0 introdujo un nuevo marco de transacciones que se puede acceder a través de la <xref:System.Transactions> espacio de nombres. Este marco de trabajo expone las transacciones de manera que está totalmente integrado en .NET Framework, incluidas ADO.NET.  
+La versión .NET Framework 2,0 presentó un marco de trabajo de transacciones al que se puede <xref:System.Transactions> tener acceso a través del espacio de nombres. Este marco de trabajo expone las transacciones de una manera totalmente integrada en el .NET Framework, incluido ADO.NET.  
   
- Además de las mejoras de programación, <xref:System.Transactions> y ADO.NET pueden trabajar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
+ Además de las mejoras de programación, <xref:System.Transactions> y ADO.net pueden funcionar juntos para coordinar las optimizaciones al trabajar con transacciones. Una transacción promovible es una transacción ligera (local) que, en caso necesario, se puede promover automáticamente a una transacción completamente distribuida.  
   
- A partir de ADO.NET 2.0, <xref:System.Data.SqlClient> admite transacciones promocionadas al trabajar con SQL Server. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Las transacciones promocionadas son automáticas y no requieran ninguna intervención del programador.  
+ A partir de ADO.net 2,0 <xref:System.Data.SqlClient> , admite transacciones promocionadas al trabajar con SQL Server. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Las transacciones promocionadas son automáticas y no requieren la intervención del desarrollador.  
   
- Las transacciones promocionadas solo están disponibles cuando se usa el proveedor de datos de .NET Framework para SQL Server (`SqlClient`) con SQL Server.  
+ Las transacciones promocionadas solo están disponibles cuando se usa el proveedor de datos de .NET Framework`SqlClient`para SQL Server () con SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Creación de transacciones promocionadas  
- El proveedor de .NET Framework para SQL Server proporciona compatibilidad con transacciones promocionadas, que se controlan a través de las clases de .NET Framework <xref:System.Transactions> espacio de nombres. Las transacciones promocionadas optimizan las transacciones distribuidas ya que aplazan la creación de las mismas hasta que es necesario. Si solo se necesita un administrador de recursos, no tiene lugar ninguna transacción distribuida.  
+ El proveedor de .NET Framework para SQL Server proporciona compatibilidad con las transacciones promocionadas, que se administran a través de <xref:System.Transactions> las clases en el espacio de nombres .NET Framework. Las transacciones promocionadas optimizan las transacciones distribuidas ya que aplazan la creación de las mismas hasta que es necesario. Si solo se necesita un administrador de recursos, no tiene lugar ninguna transacción distribuida.  
   
 > [!NOTE]
->  En un caso que no es de plena confianza, se requiere <xref:System.Transactions.DistributedTransactionPermission> cuando la transacción se promueve al nivel de transacción distribuida.  
+> En un caso que no es de plena confianza, se requiere <xref:System.Transactions.DistributedTransactionPermission> cuando la transacción se promueve al nivel de transacción distribuida.  
   
 ## <a name="promotable-transaction-scenarios"></a>Situaciones de uso de transacciones promocionadas  
- Normalmente, las transacciones distribuidas consumen muchos recursos del sistema, siendo el encargado de administrarlas Microsoft DTC (Coordinador de transacciones distribuidas), que integra todos los administradores de recursos a los que se tiene acceso en la transacción. Una transacción promocionada es una forma especial de un <xref:System.Transactions> transacción que delega eficazmente el trabajo a una transacción sencilla de SQL Server. <xref:System.Transactions>, <xref:System.Data.SqlClient>, y SQL Server coordinar el trabajo necesario para administrar la transacción y promoverla a una transacción distribuida completa según sea necesario.  
+ Normalmente, las transacciones distribuidas consumen muchos recursos del sistema, siendo el encargado de administrarlas Microsoft DTC (Coordinador de transacciones distribuidas), que integra todos los administradores de recursos a los que se tiene acceso en la transacción. Una transacción promocionada es una forma especial de una <xref:System.Transactions> transacción que delega eficazmente el trabajo a una transacción de SQL Server simple. <xref:System.Transactions>, <xref:System.Data.SqlClient>y SQL Server coordinar el trabajo implicado en el control de la transacción y promoverla a una transacción distribuida completa según sea necesario.  
   
  La ventaja de utilizar transacciones promocionadas es que cuando se abre una conexión utilizando una transacción <xref:System.Transactions.TransactionScope> activa, y no hay ninguna otra conexión abierta, la transacción se confirma como una transacción ligera, en lugar de incurrir en la sobrecarga adicional de una transacción completamente distribuida.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "65880591"
   
  La siguiente tabla describe los posibles valores.  
   
-|Palabra clave|Descripción|  
+|Palabra clave|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |Desenlace implícito|El valor predeterminado. La conexión se separa de la transacción cuando termina, y vuelve a cambiar al modo de confirmación automática.|  
 |Desenlace explícito|La conexión sigue adjuntada a la transacción hasta que ésta se cierra. La conexión producirá errores si no está activa o no coincide con <xref:System.Transactions.Transaction.Current%2A>.|  
@@ -52,10 +52,10 @@ ms.locfileid: "65880591"
  Si se produce una excepción en <xref:System.Transactions.TransactionScope>, la transacción se marca como incoherente y se abandona. Se revertirá cuando se elimine el <xref:System.Transactions.TransactionScope> . Si no se produce ninguna excepción, las transacciones participantes se confirman.  
   
 > [!NOTE]
->  La clase `TransactionScope` crea una transacción con un <xref:System.Transactions.Transaction.IsolationLevel%2A> predeterminado de `Serializable` . Dependiendo de la aplicación, podría estudiar la posibilidad de reducir el nivel de aislamiento para evitar una elevada contención en la aplicación.  
+> La clase `TransactionScope` crea una transacción con un <xref:System.Transactions.Transaction.IsolationLevel%2A> predeterminado de `Serializable` . Dependiendo de la aplicación, podría estudiar la posibilidad de reducir el nivel de aislamiento para evitar una elevada contención en la aplicación.  
   
 > [!NOTE]
->  Se recomienda que solo realice actualizaciones, inserciones y eliminaciones en transacciones distribuidas, ya que consumen una cantidad considerable de recursos de base de datos. Las instrucciones SELECT pueden bloquear los recursos de base de datos de forma innecesaria y, en algunas situaciones, es posible que tengan que utilizarse transacciones para las selecciones. Todo el trabajo que no sea de base de datos debe realizarse fuera del ámbito de la transacción, a menos que estén implicados otros administradores de recursos de transacción. Aunque una excepción en el ámbito de la transacción impide que se confirme la misma, la clase <xref:System.Transactions.TransactionScope> no deja revertir los cambios que haya realizado el código fuera del ámbito de la propia transacción. Si es necesario realizar alguna acción cuando se revierta la transacción, deberá escribir su propia implementación de la interfaz <xref:System.Transactions.IEnlistmentNotification> y darla de alta explícitamente en la transacción.  
+> Se recomienda que solo realice actualizaciones, inserciones y eliminaciones en transacciones distribuidas, ya que consumen una cantidad considerable de recursos de base de datos. Las instrucciones SELECT pueden bloquear los recursos de base de datos de forma innecesaria y, en algunas situaciones, es posible que tengan que utilizarse transacciones para las selecciones. Todo el trabajo que no sea de base de datos debe realizarse fuera del ámbito de la transacción, a menos que estén implicados otros administradores de recursos de transacción. Aunque una excepción en el ámbito de la transacción impide que se confirme la misma, la clase <xref:System.Transactions.TransactionScope> no deja revertir los cambios que haya realizado el código fuera del ámbito de la propia transacción. Si es necesario realizar alguna acción cuando se revierta la transacción, deberá escribir su propia implementación de la interfaz <xref:System.Transactions.IEnlistmentNotification> y darla de alta explícitamente en la transacción.  
   
 ## <a name="example"></a>Ejemplo  
  Trabajar con <xref:System.Transactions> requiere disponer de una referencia a System.Transactions.dll.  

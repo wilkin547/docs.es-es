@@ -2,18 +2,18 @@
 title: <add> de <filters>
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 399fc4e22a9253469a5494af61dac862e33814a3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7975bea1435abdb77528628e7b96c65a72cbbc2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704549"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926697"
 ---
 # <a name="add-of-filters"></a>\<Agregar > de \<filtros >
 Filtro de XPath que especifica el tipo de mensaje que se va a registrar.  
   
  \<system.ServiceModel>  
-\<diagnostic>  
+\<> de diagnóstico  
 \<messageLogging>  
 \<filters>  
 \<add>  
@@ -31,18 +31,18 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|filtro|Cadena que especifica una consulta en un documento XML definida por una expresión de XPath 1.0. Para obtener más información, consulta <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
+|filter|Cadena que especifica una consulta en un documento XML definida por una expresión de XPath 1.0. Para obtener más información, consulta <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Contiene una colección de filtros de XPath que se utilizan para controlar qué tipo de mensaje se registra.|  
+|[\<filters>](filters.md)|Contiene una colección de filtros de XPath que se utilizan para controlar qué tipo de mensaje se registra.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los filtros sólo se aplican en el nivel de transporte, el especificado por `logMessagesAtTransportLevel` es `true`. El nivel de servicio y el registro de mensajes incorrectos no se ven afectados por los filtros.  
@@ -79,5 +79,5 @@ Filtro de XPath que especifica el tipo de mensaje que se va a registrar.
 - <xref:System.ServiceModel.Configuration.MessageLoggingElement.Filters%2A>
 - <xref:System.ServiceModel.Configuration.XPathMessageFilterElement>
 - <xref:System.ServiceModel.Dispatcher.XPathMessageFilter>
-- [Configuración del registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)
-- [\<messageLogging>](../../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
+- [Configuración del registro de mensajes](../../../wcf/diagnostics/configuring-message-logging.md)
+- [\<messageLogging>](messagelogging.md)

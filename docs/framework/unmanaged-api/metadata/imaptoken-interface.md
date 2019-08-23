@@ -16,31 +16,31 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a50f8b13979426b8ea04f1952216afe5de337386
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3fed44fe814ec873cffb1aa4006e11445f8e03db
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111675"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965772"
 ---
 # <a name="imaptoken-interface"></a>IMapToken (Interfaz)
 Proporciona funciones de asignación entre ensamblados.  
   
 > [!NOTE]
->  El `IMapToken` interfaz se debe implementar el cliente.  
+> El `IMapToken` cliente debe implementar la interfaz.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[Map (método)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Asigna una relación entre dos ensamblados utilizando firmas de metadatos.|  
+|[Map (método)](../../../../docs/framework/unmanaged-api/metadata/imaptoken-map-method.md)|Asigna una relación entre dos ensamblados mediante firmas de metadatos.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: Cor.h  
+ **Encabezado**: Cor. h  
   
- **Biblioteca:** Usar como un recurso en MsCorEE.dll  
+ **Biblioteca** Se utiliza como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

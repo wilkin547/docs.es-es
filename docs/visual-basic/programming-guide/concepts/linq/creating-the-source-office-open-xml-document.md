@@ -1,15 +1,15 @@
 ---
-title: Crear el documento de origen Office Open XML (Visual Basic)
+title: Crear el documento de origen de Office Open XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
-ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d01755442a9b64e0577ace4eb05c6818dac9a824
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923427"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965256"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Crear el documento de origen Office Open XML (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Crear el documento de origen de Office Open XML (Visual Basic)
 En este tema se muestra cómo crear el documento WordprocessingML XML abierto de Office que usan los otros ejemplos de este tutorial. Si sigue estas instrucciones, su resultado coincidirá con el resultado proporcionado en cada ejemplo.  
   
  No obstante, los ejemplos de este tutorial funcionarán con cualquier documento WordprocessingML válido.  
@@ -51,8 +51,8 @@ En este tema se muestra cómo crear el documento WordprocessingML XML abierto de
 6. Guarde el documento y déle el nombre SampleDoc.docx.  
   
     > [!NOTE]
-    >  Si está usando Microsoft Word 2003, seleccione **Documento de Word 2007** en la lista desplegable **Guardar como tipo**.  
+    > Si está usando Microsoft Word 2003, seleccione **Documento de Word 2007** en la lista desplegable **Guardar como tipo**.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Manipular contenido en un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipular el contenido de un documento WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

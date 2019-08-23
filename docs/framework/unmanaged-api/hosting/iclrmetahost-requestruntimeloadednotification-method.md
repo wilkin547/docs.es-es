@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e7c1de620979b387e969f4b8c9f17f493e7bcb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 539f69c33b67ad1a8a514062c5d777deaced1599
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776549"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965005"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification (Método)
-Proporciona una función de devolución de llamada que se garantiza que se llama cuando una versión de common language runtime (CLR) se carga por primera vez, pero aún no se ha iniciado. Este método reemplaza el [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) función.  
+Proporciona una función de devolución de llamada que se garantiza que se llamará cuando una versión de Common Language Runtime (CLR) se cargue por primera vez, pero no se haya iniciado todavía. Este método reemplaza a la función [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,7 +36,7 @@ HRESULT RequestRuntimeLoadedNotification (
   
 ## <a name="parameters"></a>Parámetros  
  `pCallbackFunction`  
- [in] La función de devolución de llamada que se invoca cuando se ha cargado un nuevo tiempo de ejecución.  
+ de Función de devolución de llamada que se invoca cuando se ha cargado un nuevo tiempo de ejecución.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
@@ -47,15 +47,15 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` es null.|  
   
 ## <a name="remarks"></a>Comentarios  
- La devolución de llamada funciona de la manera siguiente:  
+ La devolución de llamada funciona de la siguiente manera:  
   
-- La devolución de llamada se invoca sólo cuando se carga un tiempo de ejecución por primera vez.  
+- La devolución de llamada se invoca solo cuando se carga por primera vez un tiempo de ejecución.  
   
-- No se invoca la devolución de llamada para las cargas reentrantes del mismo runtime.  
+- No se invoca la devolución de llamada para las cargas reentrantes del mismo tiempo de ejecución.  
   
-- Para las cargas no reentrante en tiempo de ejecución, se serializan las llamadas a la función de devolución de llamada.  
+- En el caso de las cargas de tiempo de ejecución no reentrantes, se serializan las llamadas a la función de devolución de llamada.  
   
- La función de devolución de llamada tiene el siguiente prototipo:  
+ La función de devolución de llamada tiene el prototipo siguiente:  
   
 ```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
@@ -78,23 +78,23 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- Si el host intenta cargar o producir otro tiempo de ejecución que se cargue en un modo reentrante, la `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` parámetros que se proporcionan en la devolución de llamada de función debe usarse en la siguiente manera:  
+ Si el host intenta cargar o hacer que otro Runtime se cargue de forma reentrante, los `pfnCallbackThreadSet` parámetros y `pfnCallbackThreadUnset` que se proporcionan en la función de devolución de llamada deben usarse de la siguiente manera:  
   
-- `pfnCallbackThreadSet` debe llamarse por el subproceso que podría causar una carga en tiempo de ejecución antes de intenta una carga de este tipo.  
+- `pfnCallbackThreadSet`debe ser invocado por el subproceso que puede producir una carga en tiempo de ejecución antes de que se intente una carga de este tipo.  
   
-- `pfnCallbackThreadUnset` se debe llamar cuando el subproceso ya no hará que la carga de tiempo de ejecución (y antes de abandonar la devolución de llamada inicial).  
+- `pfnCallbackThreadUnset`se debe llamar a cuando el subproceso ya no producirá una carga de este tipo en tiempo de ejecución (y antes de devolver desde la devolución de llamada inicial).  
   
-- `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` son ambos no reentrante.  
+- `pfnCallbackThreadSet`y `pfnCallbackThreadUnset` son no reentrantes.  
   
 > [!NOTE]
->  No deben llamar las aplicaciones host `pfnCallbackThreadSet` y `pfnCallbackThreadUnset` fuera del ámbito de la `pCallbackFunction` parámetro.  
+> Las aplicaciones host no deben `pfnCallbackThreadSet` llamar `pfnCallbackThreadUnset` a y `pCallbackFunction` fuera del ámbito del parámetro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado**: Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

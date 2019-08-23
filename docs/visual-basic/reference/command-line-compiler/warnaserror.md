@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: c06326a250fba0de2f63e13672b4fffbfa8a07f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4382ec8feda2df1e83fd2fdc509abb66984e501f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796180"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937253"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Causa que el compilador trate como un error la primera ocurrencia de una advertencia.  
@@ -37,7 +37,7 @@ Causa que el compilador trate como un error la primera ocurrencia de una adverte
  Si desea que solo algunas advertencias específicas se traten como errores, puede especificar una lista separada por comas de números de advertencias que se deben tratar como errores.  
   
 > [!NOTE]
->  La opción `-warnaserror` no controla cómo se muestran las advertencias. Use la opción [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) para deshabilitar las advertencias.  
+> La opción `-warnaserror` no controla cómo se muestran las advertencias. Use la opción [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md) para deshabilitar las advertencias.  
   
 |Para establecer -warnaserror a fin de tratar todas las advertencias como errores en el IDE de Visual Studio|  
 |---|  

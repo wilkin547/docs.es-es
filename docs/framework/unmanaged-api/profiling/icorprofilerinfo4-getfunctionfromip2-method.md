@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7281f1aa0da417eba618b748ac68ba1fefb4907d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c133338ec0edac19f49d435df41e3081c486f51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780853"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948464"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 (Método)
 Asigna un puntero de instrucción de código administrado a la versión recompilada con JIT de una función.  
@@ -38,26 +38,26 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Parámetros  
  `ip`  
- [in] El puntero de instrucción en el código administrado.  
+ de Puntero de instrucción en código administrado.  
   
  `pFunctionId`  
- [out] El identificador de función.  
+ enuncia IDENTIFICADOR de la función.  
   
  `pReJitId`  
- [out] La identidad de la versión recompilada con JIT de la función.  
+ enuncia La identidad de la versión recompilada con JIT de la función.  
   
 ## <a name="remarks"></a>Comentarios  
- `GetFunctionFromIP2` es similar a `GetFunctionFromIP`, excepto en que obtiene el identificador recompilado con JIT en lugar del identificador de la función de la función que contiene la dirección IP especificada.  
+ `GetFunctionFromIP2`es similar a `GetFunctionFromIP`, con la salvedad de que obtiene el identificador de recompilación JIT en lugar del identificador de función de la función que contiene la dirección IP especificada.  
   
 > [!NOTE]
->  `GetFunctionFromIP2` puede desencadenar una recolección de elementos, mientras que `GetFunctionFromIP` no lo hará.  Para obtener más información, consulte [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2`puede desencadenar una recolección de elementos `GetFunctionFromIP` no utilizados, mientras que no.  Para obtener más información, vea [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado**: Corprof. idl, Corprof. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

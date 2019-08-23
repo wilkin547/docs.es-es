@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3adeb57e853d26415c53b5ac2579f14187e45969
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69658971"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920923"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides >, elemento
 Define uno o varios modificadores usados por la clase <xref:System.AppContext> para proporcionar un mecanismo para cancelar la participación con nueva funcionalidad.  
@@ -138,7 +138,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Controla si la validación de esquemas XSD omite las secuencias de claves vacías en las claves compuestas. Para más información, vea [Mitigación: Validación](../../../migration-guide/mitigation-xml-schema-validation.md)del esquema XML.|.NET Framework 4.6|  
   
 > [!NOTE]
->  En lugar de agregar un `AppContextSwitchOverrides` elemento a un archivo de configuración de la aplicación, también puede establecer los modificadores mediante programación `static` llamando al C#método ( `Shared` en) o ( <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> en Visual Basic).  
+> En lugar de agregar un `AppContextSwitchOverrides` elemento a un archivo de configuración de la aplicación, también puede establecer los modificadores mediante programación `static` llamando al C#método ( `Shared` en) o ( <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> en Visual Basic).  
   
  Los desarrolladores de bibliotecas también pueden definir modificadores personalizados para permitir que los autores de la llamada opten por la funcionalidad modificada introducida en versiones posteriores de sus bibliotecas. Para obtener más información, vea la clase <xref:System.AppContext>.  
   

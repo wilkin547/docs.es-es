@@ -2,85 +2,85 @@
 title: Instrucciones de configuración del directorio virtual
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: a30adb45883ad0803986a237e9ec1967d7f55ca8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f755fadf6bef2bdd58fd31f3460a143b8f52eddf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624224"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966740"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Instrucciones de configuración del directorio virtual
-Los ejemplos de Windows Communication Foundation (WCF) están diseñados para compartir un directorio virtual común denominado servicemodelsamples que está asignado a la carpeta %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
+Los ejemplos de Windows Communication Foundation (WCF) están diseñados para compartir un directorio virtual común denominado servicemodelsamples que se asigna a la carpeta%SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
 > [!NOTE]
->  %SystemDrive% acostumbra a ser C: o D:, según la ubicación de la unidad en que está instalado Internet Information Services (IIS).  
+> %SystemDrive% acostumbra a ser C: o D:, según la ubicación de la unidad en que está instalado Internet Information Services (IIS).  
   
- Puede ejecutar los archivos Setupvroot.bat y Cleanupvroot.bat desde el [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) para crear el directorio virtual. Si prefiere crear manualmente el directorio virtual, utilice los procedimientos siguientes.  
+ Puede ejecutar los archivos Setupvroot. bat y Cleanupvroot. bat desde el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) para crear el directorio virtual. Si prefiere crear manualmente el directorio virtual, utilice los procedimientos siguientes.  
   
 ## <a name="procedures"></a>Procedimientos  
   
-#### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>Para crear un directorio virtual en IIS 7.0 o 7.5  
+#### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>Para crear un directorio virtual en IIS 7,0 o 7,5  
   
-1. Desde el **iniciar** menú, haga clic en **ejecutar**, a continuación, escriba **inetmgr** para abrir el complemento MMC de Internet Information Services (IIS).  
+1. En el menú **Inicio** , haga clic en **Ejecutar**y, a continuación, escriba **inetmgr** para abrir el complemento MMC de Internet Information Services (IIS).  
   
-2. En el panel izquierdo, expanda el nodo con el nombre del equipo y, a continuación, expanda el **sitios** nodo.  
+2. En el panel izquierdo, expanda el nodo con el nombre del equipo y, a continuación, expanda el nodo **sitios** .  
   
-3. Haga clic en **sitio Web predeterminado**y, a continuación, seleccione **Agregar aplicación** para abrir el **ventana Agregar aplicación**.  
+3. Haga clic con el botón secundario en **sitio web predeterminado**y, a continuación, seleccione **Agregar aplicación** para abrir la **ventana Agregar aplicación**.  
   
-4. En la ventana, escriba `servicemodelsamples` como alias para el directorio virtual que está creando.  
+4. En la ventana de, `servicemodelsamples` escriba como el alias del directorio virtual que va a crear.  
   
 5. Cree el siguiente directorio: %SystemDrive%\inetpub\wwwroot\servicemodelsamples  
   
 6. Especifique la ruta de acceso física a %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  La mayoría de los ejemplos de WCF copian los archivos ejecutables de servicio a esta ubicación cuando se compilan.  
   
-7. Haga clic en **Aceptar**. Ahora se crea la aplicación web para los ejemplos de WCF.  
+7. Haga clic en **OK**. Ahora se crea la aplicación web para los ejemplos de WCF.  
   
     > [!NOTE]
-    >  Esta tarea debe realizarse una sola vez, porque todos los ejemplos WCF usan la misma aplicación Web servicemodelsamples.  
+    >  Esta tarea debe realizarse una sola vez, ya que todos los ejemplos de WCF usan la misma aplicación web servicemodelsamples.  
   
     > [!NOTE]
     >  En esta documentación, el término `virtual directory` es sinónimo de `Web application`.  
   
-     Además de crear el directorio virtual, también debe establecer sus propiedades para permitir que se ejecuten los servicios WCF. Para obtener información más detallada, vea a continuación.  
+     Además de crear el directorio virtual, también debe establecer sus propiedades para permitir la ejecución de los servicios WCF. Para obtener información más detallada, vea a continuación.  
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>Para crear un directorio virtual en IIS 5.1 o 6.0  
   
-1. Abra una ventana de símbolo del sistema y escriba `start inetmgr` para abrir el complemento MMC de Internet Information Services (IIS).  
+1. Abra una ventana del símbolo del sistema `start inetmgr` y escriba para abrir el complemento MMC Internet Information Services (IIS).  
   
-2. En el panel izquierdo, expanda el nodo con el nombre del equipo y, a continuación, expanda el **sitios Web** nodo.  
+2. En el panel izquierdo, expanda el nodo con el nombre del equipo y, a continuación, expanda el nodo **sitios web** .  
   
-3. Haga clic en **sitio Web predeterminado** y seleccione **nuevo, el directorio Virtual** para abrir el Asistente para crear un directorio Virtual.  
+3. Haga clic con el botón secundario en **sitio web predeterminado** y seleccione **nuevo, directorio virtual** para abrir el Asistente para crear un directorio virtual.  
   
-4. En el asistente, escriba `servicemodelsamples` como alias para el directorio virtual que está creando.  
+4. En el asistente, escriba `servicemodelsamples` como el alias del directorio virtual que va a crear.  
   
 5. Especifique la ruta de acceso a %SystemDrive%\inetpub\wwwroot\servicemodelsamples. La mayoría de los ejemplos de WCF copian los archivos ejecutables de servicio a esta ubicación cuando se compilan.  
   
-6. Haga clic en **Siguiente**.  
+6. Haga clic en **Next**.  
   
 7. De forma predeterminada, las casillas siguientes están activadas:  
   
     - **Read**  
   
-    - **Ejecutar secuencias de comandos (por ejemplo, ASP)**  
+    - **Ejecutar scripts (como ASP)**  
   
-8. Haga clic en **siguiente**y, a continuación, haga clic en **finalizar** para completar el asistente.  
+8. Haga clic en **siguiente**y, a continuación, haga clic en **Finalizar** para completar el asistente.  
   
     > [!NOTE]
-    >  Esta tarea debe realizarse una sola vez porque todos los ejemplos WCF usan el mismo directorio virtual servicemodelsamples.  
+    >  Esta tarea solo se debe realizar una vez porque todos los ejemplos de WCF usan el mismo directorio virtual servicemodelsamples.  
   
-#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Para establecer las propiedades del directorio virtual adicionales en IIS 7.0 o 7.5  
+#### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Para establecer propiedades adicionales del directorio virtual en IIS 7,0 o 7,5  
   
-1. Haga clic en el nodo servicemodelsamples. Se muestran dos vistas en la parte inferior de la ventana. Seleccione **vista características** si aún no está seleccionado.  
+1. Haga clic en el nodo servicemodelsamples. Se muestran dos vistas en la parte inferior de la ventana. Seleccione la **vista características** si aún no está seleccionada.  
   
-2. Haga doble clic en la entrada de **examen de directorios**.  
+2. Haga doble clic en la entrada para el **examen de directorios**.  
   
-3. En el panel Acciones, seleccione el **habilitar** opción. Esto permite tener acceso al directorio del directorio mediante Internet Explorer, lo que resulta útil cuando se depura un servicio.  
+3. En el panel acciones, seleccione la opción **Habilitar** . Esto permite tener acceso al directorio del directorio mediante Internet Explorer, lo que resulta útil cuando se depura un servicio.  
   
  Finalmente, debe establecer las propiedades de seguridad de la carpeta servicemodelsamples para permitir que otros puedan obtener acceso a ella. Para obtener información más detallada, vea a continuación.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>Para establecer propiedades de directorio virtual adicionales en IIS 5.1 o 6.0  
   
-1. Haga clic en el nodo servicemodelsamples y, a continuación, haga clic en **propiedades**.  
+1. Haga clic con el botón secundario en el nodo servicemodelsamples y, a continuación, haga clic en **propiedades**.  
   
 2. De forma predeterminada, las casillas siguientes están activadas:  
   
@@ -88,107 +88,107 @@ Los ejemplos de Windows Communication Foundation (WCF) están diseñados para co
   
     - **Registrar visitas**  
   
-    - **Indizar este recurso**  
+    - **Indexar este recurso**  
   
-3. Seleccione el **examen de directorios** casilla de verificación. Esto permite tener acceso al directorio del directorio mediante Internet Explorer, lo que resulta útil cuando se depura un servicio.  
+3. Active la casilla **examen de directorios** . Esto permite tener acceso al directorio del directorio mediante Internet Explorer, lo que resulta útil cuando se depura un servicio.  
   
-#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>Para establecer las propiedades de seguridad de la carpeta en IIS 7.0 o 7.5  
+#### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>Para establecer las propiedades de seguridad de la carpeta en IIS 7,0 o 7,5  
   
 1. Navegue hasta %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2. Haga clic en la carpeta servicemodelsamples y haga clic en **Share** o **compartir con**.  
+2. Haga clic con el botón secundario en la carpeta servicemodelsamples y haga clic en **compartir** o **compartir con**.  
   
-3. Haga clic en la flecha hacia abajo a la izquierda de la **agregar** botón.  
+3. Haga clic en la flecha abajo a la izquierda del botón **Agregar** .  
   
-4. Seleccione el **buscar** entrada. El **Seleccionar usuarios o grupos** abre la ventana.  
+4. Seleccione la entrada **Buscar** . Se abre la ventana **Seleccionar usuarios o grupos** .  
   
 5. Haga clic en **Avanzado**.  
   
-6. Haga clic en **ubicaciones**. El **ubicaciones** ahora está abierta la ventana.  
+6. Haga clic en **ubicaciones**. La ventana **ubicaciones** ahora está abierta.  
   
 7. Seleccione la entrada para el equipo que se está utilizando. Es importante seleccionar el equipo local y no una entrada para cualquier dominio o red de la lista. Después de haber seleccionado el equipo, haga clic en **Aceptar**.  
   
 8. Haga clic en **Buscar ahora**. De este modo se rellenan los resultados de la búsqueda con objetos asociados al equipo local.  
   
-9. Buscar el **IIS_IUSRS** entrada en el **nombre (nombre distintivo relativo)** columna. Seleccione esa entrada y haga clic en **Aceptar** cerrar esta ventana de resultados.  
+9. Busque la entrada **IIS_IUSRS** en la columna **nombre (nombre distintivo relativo)** . Seleccione la entrada y haga clic en **Aceptar** para cerrar la ventana Resultados de la búsqueda.  
   
-10. Haga clic en **Aceptar** para cerrar el **Seleccionar usuarios o grupos** ventana.  
+10. Haga clic en **Aceptar** para cerrar la ventana **Seleccionar usuarios o grupos** .  
   
-11. Haga clic en **Share** para conservar los cambios.  
+11. Haga clic en **compartir** para conservar los cambios.  
   
-12. Una vez completados los cambios para habilitar el uso compartido, haga clic en **realiza** para cerrar el **uso compartido de archivos** ventana.  
+12. Una vez completados los cambios para habilitar el uso compartido, haga clic en **listo** para cerrar la ventana de **uso compartido de archivos** .  
   
 #### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>Para establecer propiedades de seguridad de la carpeta en IIS 5.1 o 6.0  
   
 1. Navegue hasta %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2. Haga clic en el **servicemodelsamples** carpeta y, a continuación, haga clic en **compartir y seguridad.**  
+2. Haga clic con el botón secundario en la carpeta **servicemodelsamples** y, a continuación, haga clic en **compartir y seguridad.**  
   
 3. Haga clic en la pestaña **Seguridad** .  
   
-4. Si está utilizando IIS 6.0, en el **los nombres de usuario o grupo** casilla de verificación si **cuenta de invitado para Internet** aparece.  
+4. Si usa IIS 6,0, en el cuadro **nombres de grupos o usuarios** , compruebe si aparece la **cuenta de invitado para Internet** .  
   
      Si no está en la lista:  
   
     1. Haga clic en **Inicio** y después en **Panel de control**.  
   
-    2. Si no ve el **cuentas de usuario** icono, haga clic en **cambiar a vista por categorías**.  
+    2. Si no ve el icono **cuentas de usuario** , haga clic en **cambiar a vista por categorías**.  
   
-    3. Haga clic en el **cuentas de usuario** icono.  
+    3. Haga clic en el icono **cuentas de usuario** .  
   
-    4. Bajo "o elija un icono del Panel de Control," haga clic en **cuentas de usuario**.  
+    4. En "o elija un icono del panel de control", haga clic en **cuentas de usuario**.  
   
-    5. En el **cuentas de usuario** cuadro de diálogo, haga clic en el **avanzadas** ficha.  
+    5. En el cuadro de diálogo **cuentas de usuario** , haga clic en la pestaña **Opciones avanzadas** .  
   
     6. Haga clic en **Avanzado**.  
   
-    7. En el **usuarios y grupos locales** cuadro de diálogo, haga clic para expandir el **usuarios** carpeta.  
+    7. En el cuadro de diálogo **usuarios y grupos locales** , haga clic para expandir la carpeta **usuarios** .  
   
     8. En el panel derecho, haga doble clic en **cuenta de invitado para Internet**.  
   
-    9. En el **propiedades** cuadro de diálogo, copie el nombre se usa como la cuenta de invitado de Internet. De forma predeterminada, el nombre comienza con "USR_" seguido por el nombre del equipo.  
+    9. En el cuadro de diálogo **propiedades** , copie el nombre usado como cuenta de invitado para Internet. De forma predeterminada, el nombre comienza con "USR_" seguido por el nombre del equipo.  
   
-    10. Cerrar la **propiedades** cuadro de diálogo.  
+    10. Cierre el cuadro de diálogo **propiedades** .  
   
-    11. Cerrar la **usuarios y grupos locales** cuadro de diálogo.  
+    11. Cierre el cuadro de diálogo **usuarios y grupos locales** .  
   
-    12. Cerrar la **cuentas de usuario** cuadro de diálogo.  
+    12. Cierre el cuadro de diálogo **cuentas de usuario** .  
   
-    13. Cerrar la otra **cuentas de usuario** cuadro de diálogo.  
+    13. Cierre el cuadro de diálogo otras **cuentas de usuario** .  
   
-    14. En el **propiedades de servicemodelsamples** cuadro de diálogo el **seguridad** , haga clic **agregar**.  
+    14. En el cuadro de diálogo **propiedades de servicemodelsamples** , en la pestaña **seguridad** , haga clic en **Agregar**.  
   
-    15. Escriba el nombre del equipo seguido por una barra diagonal inversa, a continuación, pegue el nombre de la cuenta de usuario de Internet, por ejemplo, myMachineName\\InternetGuestAccountName %  
+    15. Escriba el nombre del equipo seguido de una barra diagonal inversa y, a continuación, pegue el nombre de la cuenta de usuario de Internet\\, por ejemplo, myMachineName% InternetGuestAccountName%  
   
-    16. Haga clic en **comprobar nombres** para comprobar la adición. Si es válido, el nombre está en mayúsculas y subrayado.  
+    16. Haga clic en **Comprobar nombres** para comprobar la adición. Si es válido, el nombre está en mayúsculas y subrayado.  
   
-5. Para IIS 6.0, compruebe también que el servicio de red aparece en el **los nombres de usuario o grupo** cuadro.  
+5. Para IIS 6,0, compruebe también que el servicio de red aparece en el cuadro **nombres de grupos o usuarios** .  
   
      Si el servicio de red no está en la lista:  
   
     1. Haga clic en **Agregar**.  
   
-    2. En el **Seleccionar usuarios o grupos** cuadro de diálogo, escriba el nombre del equipo seguido por una barra diagonal inversa.  
+    2. En el cuadro de diálogo **Seleccionar usuarios o grupos** , escriba el nombre del equipo seguido de una barra diagonal inversa.  
   
-    3. Tipo **servicio** después de la barra diagonal inversa (sin espacio).  
+    3. Escriba **Service** después de la barra diagonal inversa (sin espacio).  
   
-    4. Haga clic en **comprobar nombres**.  
+    4. Haga clic en **Comprobar nombres**.  
   
-    5. Si se encuentran varios nombres, seleccione **NETWORK SERVICE** y haga clic en **Aceptar**.  
+    5. Si se encuentran varios nombres, seleccione **servicio de red** y haga clic en **Aceptar**.  
   
-    6. Haga clic en **Aceptar** para cerrar el **Seleccionar usuarios o grupos** cuadro de diálogo.  
+    6. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Seleccionar usuarios o grupos** .  
   
-6. Si utiliza Windows XP SP2 con IIS 5.1, compruebe que cuenta de invitado para Internet y ASPNET aparecen en la **los nombres de usuario o grupo** cuadro.  
+6. Si usa Windows XP SP2 con IIS 5,1, compruebe que la cuenta de invitado para Internet y ASPNET aparecen en el cuadro **nombres de grupos o usuarios** .  
   
-     Tenga en cuenta que el usuario ASPNET puede ser un miembro de los integrados **usuarios** grupo de seguridad. Si es así, a continuación si el **usuarios** grupo aparece en el cuadro de diálogo, no es necesario agregarlo como un elemento independiente a la lista de usuarios permitidos.  
+     Tenga en cuenta que el usuario ASPNET puede ser miembro del grupo de seguridad **usuarios** integrados. Si es así, si el grupo **usuarios** aparece en el cuadro de diálogo, no es necesario agregarlo como un elemento independiente a la lista de usuarios permitidos.  
   
-     Para comprobar si ASPNET forma parte de la **usuarios** grupo de seguridad:  
+     Para comprobar si ASPNET forma parte del grupo de seguridad de **usuarios** :  
   
-    1. En el **iniciar** menú, haga clic en **Panel de Control**.  
+    1. En el menú **Inicio** , haga clic en **Panel de control**.  
   
-    2. Haga clic en el **cuentas de usuario** icono.  
+    2. Haga clic en el icono **cuentas de usuario** .  
   
-    3. En el **grupo** columna, compruebe que el valor de **ASPNET** es "Users".  
+    3. En la columna **Grupo** , compruebe que el valor de **ASPNET** es "usuarios".  
   
 ## <a name="see-also"></a>Vea también
 

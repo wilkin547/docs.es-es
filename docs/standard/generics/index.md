@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32a4f4f3735c8952cf1458c63655eb56a82fd18f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 5c9f15a7ff30d5647338bf1954aca441b47281b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666436"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948739"
 ---
 # <a name="generics-in-net"></a>Elementos genéricos en .NET
 
@@ -128,7 +128,7 @@ ms.locfileid: "69666436"
 - En Visual Basic, C# y C++, no se pueden crear instancias de un tipo anidado incluido en un tipo genérico, a menos que los tipos se hayan asignado a los parámetros de tipo de todos los tipos envolventes. Dicho de otro modo: en la reflexión, un tipo anidado definido mediante estos lenguajes incluye los parámetros de tipo de todos sus tipos envolventes. Esto permite que los parámetros de tipo de tipos envolventes se usen en las definiciones de miembro de un tipo anidado. Para obtener más información, vea “Tipos anidados” en <xref:System.Type.MakeGenericType%2A>.  
   
     > [!NOTE]
-    >  Un tipo anidado definido mediante la emisión de código en un ensamblado dinámico o mediante el uso de [Ilasm.exe (Ensamblado de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) no necesita incluir los parámetros de tipo de sus tipos envolventes. Sin embargo, si no los incluye, los parámetros de tipo no estarán en el ámbito de la clase anidada.  
+    > Un tipo anidado definido mediante la emisión de código en un ensamblado dinámico o mediante el uso de [Ilasm.exe (Ensamblado de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) no necesita incluir los parámetros de tipo de sus tipos envolventes. Sin embargo, si no los incluye, los parámetros de tipo no estarán en el ámbito de la clase anidada.  
   
      Para obtener más información, vea “Tipos anidados” en <xref:System.Type.MakeGenericType%2A>.  
   

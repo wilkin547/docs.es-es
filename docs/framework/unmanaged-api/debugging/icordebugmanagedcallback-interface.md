@@ -16,63 +16,63 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eacd10eecf2a8a2fc1b73a7f97eef5cb5eabafd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25e40103a2925cbd2a181b8e39c3873e4d7c842c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995207"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940043"
 ---
 # <a name="icordebugmanagedcallback-interface"></a>ICorDebugManagedCallback (Interfaz)
 Proporciona métodos que permiten procesar las devoluciones de llamada del depurador.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[Break (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Notifica al depurador cuando un <xref:System.Reflection.Emit.OpCodes.Break> se ejecuta la instrucción en la secuencia de código.|  
+|[Break (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-break-method.md)|Notifica al depurador cuando se <xref:System.Reflection.Emit.OpCodes.Break> ejecuta una instrucción en la secuencia de código.|  
 |[Breakpoint (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpoint-method.md)|Notifica al depurador cuando se encuentra un punto de interrupción.|  
-|[BreakpointSetError (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|Notifica al depurador que common language runtime (CLR) no pudo enlazar con precisión un punto de interrupción que estableció antes de una función que se compilan just-in-time (JIT).|  
-|[ControlCTrap (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|Notifica al depurador que se captura CTRL+C en el proceso que se está depurando.|  
+|[BreakpointSetError (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-breakpointseterror-method.md)|Notifica al depurador que el Common Language Runtime (CLR) no pudo enlazar con precisión un punto de interrupción establecido antes de que una función se compilara Just-in-Time (JIT).|  
+|[ControlCTrap (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-controlctrap-method.md)|Notifica al depurador que se ha capturado CTRL + C en el proceso que se está depurando.|  
 |[CreateAppDomain (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createappdomain-method.md)|Notifica al depurador que se ha creado un dominio de aplicación.|  
-|[CreateProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)|Notifica al depurador cuando se asocia un proceso o se inicia por primera vez.|  
-|[CreateThread (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)|Notifica al depurador que inicia un subproceso ejecuta código administrado.|  
-|[DebuggerError (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-debuggererror-method.md)|Notifica al depurador que se ha producido un error al intentar controlar un evento de CLR.|  
-|[EditAndContinueRemap (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|Desusado. Notifica al depurador que se ha enviado un evento de reasignación al IDE.|  
+|[CreateProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)|Notifica al depurador cuando un proceso se ha adjuntado o Iniciado por primera vez.|  
+|[CreateThread (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md)|Notifica al depurador que un subproceso ha empezado a ejecutar código administrado.|  
+|[DebuggerError (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-debuggererror-method.md)|Notifica al depurador que se ha producido un error al intentar controlar un evento desde CLR.|  
+|[EditAndContinueRemap (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)|En desuso. Notifica al depurador que se ha enviado un evento de reasignación al IDE.|  
 |[EvalComplete (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalcomplete-method.md)|Notifica al depurador que se ha completado una evaluación.|  
-|[EvalException (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|Notifica al depurador que una evaluación ha finalizado con una excepción no controlada.|  
-|[Exception (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|Notifica al depurador que se ha producido una excepción desde código administrado.|  
-|[ExitAppDomain (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)|Notifica al depurador que se ha cerrado un dominio de aplicación.|  
-|[ExitProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)|Notifica al depurador que un proceso ha terminado.|  
-|[ExitThread (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|Notifica al depurador que ha salido de un subproceso que se estaba ejecutando código administrado.|  
+|[EvalException (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-evalexception-method.md)|Notifica al depurador que se ha finalizado una evaluación con una excepción no controlada.|  
+|[Exception (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md)|Notifica al depurador que se ha producido una excepción del código administrado.|  
+|[ExitAppDomain (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)|Notifica al depurador que se ha salido de un dominio de aplicación.|  
+|[ExitProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)|Notifica al depurador que se ha salido de un proceso.|  
+|[ExitThread (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md)|Notifica al depurador que un subproceso que estaba ejecutando código administrado ha salido.|  
 |[LoadAssembly (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadassembly-method.md)|Notifica al depurador que se ha cargado correctamente un ensamblado CLR.|  
 |[LoadClass (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)|Notifica al depurador que se ha cargado una clase.|  
-|[LoadModule (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)|Notifica al depurador que se ha cargado correctamente un módulo CLR.|  
-|[LogMessage (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|Notifica al depurador que un subproceso administrado de CLR ha llamado a un método el <xref:System.Diagnostics.EventLog> clase para registrar un evento.|  
-|[LogSwitch (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|Notifica al depurador que un subproceso administrado de CLR ha llamado a un método el <xref:System.Diagnostics.Switch> clase para crear, modificar o eliminar un conmutador de depuración y seguimiento.|  
-|[NameChange (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|Notifica al depurador que se ha cambiado el nombre de un dominio de aplicación o el subproceso.|  
+|[LoadModule (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadmodule-method.md)|Notifica al depurador que un módulo CLR se ha cargado correctamente.|  
+|[LogMessage (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)|Notifica al depurador que un subproceso administrado de CLR ha llamado a un <xref:System.Diagnostics.EventLog> método en la clase para registrar un evento.|  
+|[LogSwitch (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logswitch-method.md)|Notifica al depurador que un subproceso administrado de CLR ha llamado a un <xref:System.Diagnostics.Switch> método en la clase para crear, modificar o eliminar un modificador de depuración o traza.|  
+|[NameChange (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-namechange-method.md)|Notifica al depurador que el nombre de un dominio de aplicación o un subproceso ha cambiado.|  
 |[StepComplete (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)|Notifica al depurador que se ha completado un paso.|  
 |[UnloadAssembly (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadassembly-method.md)|Notifica al depurador que se ha descargado un ensamblado CLR.|  
 |[UnloadClass (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)|Notifica al depurador que se está descargando una clase.|  
 |[UnloadModule (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadmodule-method.md)|Notifica al depurador que se ha descargado un módulo CLR (DLL).|  
-|[UpdateModuleSymbols (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)|Notifica al depurador que han cambiado los símbolos para un módulo CLR.|  
+|[UpdateModuleSymbols (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)|Notifica al depurador que los símbolos para un módulo CLR han cambiado.|  
   
 ## <a name="remarks"></a>Comentarios  
- Todas las devoluciones de llamada se serializa, llamados en el mismo subproceso y se llama con el proceso en estado sincronizado.  
+ Todas las devoluciones de llamada se serializan, se llaman en el mismo subproceso y se llama con el proceso en el estado Synchronized.  
   
- Cada implementación de devolución de llamada debe llamar a [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para reanudar la ejecución. Si `ICorDebugController::Continue` no se llama antes de la devolución de llamada, el proceso seguirá detenido y no se producirá ninguna devolución de llamada de evento más hasta `ICorDebugController::Continue` se llama.  
+ Cada implementación de devolución de llamada debe llamar a [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para reanudar la ejecución. Si `ICorDebugController::Continue` no se llama a antes de que se devuelva la devolución de llamada, el proceso seguirá detenido y no se `ICorDebugController::Continue` producirán más devoluciones de llamada de eventos hasta que se llame a.  
   
- Debe implementar un depurador [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) si depurar aplicaciones de .NET Framework versión 2.0. Una instancia de `ICorDebugManagedCallback` o `ICorDebugManagedCallback2` se pasa como el objeto de devolución de llamada a [SetManagedHandler](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md).  
+ Un depurador debe implementar [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) si está depurando .NET Framework aplicaciones de la versión 2,0. Una instancia de `ICorDebugManagedCallback` o `ICorDebugManagedCallback2` se pasa como el objeto de devolución de llamada a [ICorDebug:: SetManagedHandler (](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md).  
   
 > [!NOTE]
->  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
+> Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

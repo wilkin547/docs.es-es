@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 46b0add67fc6bc139ef02e09190670870749d4c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d635100c4e8214a7a8659c2d3e4da61825cf243
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874782"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966305"
 ---
 # <a name="dangerousthreadingapi-mda"></a>MDA de dangerousThreadingAPI
 El Asistente para la depuración administrada (MDA) de `dangerousThreadingAPI` se activa cuando se llama al método <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> en un subproceso diferente al subproceso actual.  
@@ -27,7 +27,7 @@ El Asistente para la depuración administrada (MDA) de `dangerousThreadingAPI` s
   
  Los síntomas pueden variar enormemente debido a la aleatoriedad inherente al problema.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Un subproceso está suspendido de manera asincrónica mediante otro subproceso que usa el método <xref:System.Threading.Thread.Suspend%2A>. No existe ninguna manera de determinar cuándo es seguro suspender otro subproceso que puede encontrarse en el proceso de una operación. La suspensión del subproceso puede provocar daños en los datos o la interrupción de invariantes. Si un subproceso se coloca en un estado suspendido y nunca se reanuda con el método <xref:System.Threading.Thread.Resume%2A>, la aplicación puede bloquearse de manera indefinida y posiblemente dañe los datos de la aplicación. Estos métodos se han marcado como obsoletos.  
   
  Si los tipos primitivos de sincronización se incluyen en el subproceso de destino, permanecen así durante la suspensión. Esto puede provocar interbloqueos si otro subproceso, por ejemplo el subproceso que realiza <xref:System.Threading.Thread.Suspend%2A>, intenta adquirir un bloqueo en el tipo primitivo. En esta situación, el problema se manifiesta como un interbloqueo.  
@@ -71,4 +71,4 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 
 - <xref:System.Threading.Thread>
 - [Diagnosing Errors with Managed Debugging Assistants (Diagnóstico de errores con asistentes para la depuración administrada)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [lock (instrucción)](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [lock (instrucción)](../../csharp/language-reference/keywords/lock-statement.md)

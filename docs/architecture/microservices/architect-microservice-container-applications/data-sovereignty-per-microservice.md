@@ -1,13 +1,13 @@
 ---
 title: Propiedad de los datos por microservicio
-description: La soberanía de datos por microservicio es uno de los puntos clave de los microservicios. Cada microservicio debe ser el único propietario de su base de datos, sin compartirla con ningún otro. Por supuesto, todas las instancias de un microservicio se conectan a la misma base de datos de alta disponibilidad.
+description: La propiedad de datos por microservicio es uno de los puntos clave de los microservicios. Cada microservicio debe ser el único propietario de su base de datos, sin compartirla con ningún otro. Por supuesto, todas las instancias de un microservicio se conectan a la misma base de datos de alta disponibilidad.
 ms.date: 09/20/2018
-ms.openlocfilehash: ccb12451cd7cd44938e09d171eb29e614786f469
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd7be23800394b231e15bdc503d15a960a25a20a
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673182"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566203"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Propiedad de los datos por microservicio
 

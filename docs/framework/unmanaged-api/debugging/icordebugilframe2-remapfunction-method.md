@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdcc2eccbb24a92643415db8e5d267033ac1ca0a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 75004f646c01897ef3e3016b073220ad33a0d925
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967581"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction (Método)
-Reasigna una función editada especificando el nuevo desplazamiento de lenguaje intermedio (MSIL) de Microsoft  
+Reasigna una función editada especificando el nuevo desplazamiento del lenguaje intermedio de Microsoft (MSIL).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,27 +37,27 @@ HRESULT RemapFunction (
   
 ## <a name="parameters"></a>Parámetros  
  `newILOffset`  
- [in] Nuevo desplazamiento de MSIL del marco de pila en el que se debe colocar el puntero de instrucción. Este valor debe ser un punto de secuencia.  
+ de Nuevo desplazamiento de MSIL del marco de pila en el que se debe colocar el puntero de instrucción. Este valor debe ser un punto de secuencia.  
   
- Es responsabilidad del llamador para garantizar la validez de este valor. Por ejemplo, el desplazamiento MSIL no es válido si se encuentra fuera de los límites de la función.  
+ Es responsabilidad del autor de la llamada garantizar la validez de este valor. Por ejemplo, el desplazamiento de MSIL no es válido si está fuera de los límites de la función.  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se ha editado la función de un marco, el depurador puede llamar a la `RemapFunction` método intercambiar en la versión más reciente de la función del marco, por lo que se puede ejecutar. Se iniciará la ejecución del código en el desplazamiento dado de MSIL.  
+ Cuando se ha editado la función de un fotograma, el depurador `RemapFunction` puede llamar al método para intercambiar en la versión más reciente de la función del fotograma para que se pueda ejecutar. La ejecución del código comenzará en el desplazamiento de MSIL especificado.  
   
 > [!NOTE]
->  Una llamada a `RemapFunction`, como una llamada a [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), inmediatamente se invalidarán todas las interfaces de depuración que están relacionados con la generación de un seguimiento de pila del subproceso. Estas interfaces incluyen [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame ICorDebugInternalFrame y ICorDebugNativeFrame.  
+> Llamar `RemapFunction`a, como llamar a [ICorDebugILFrame:: setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), invalidará inmediatamente todas las interfaces de depuración relacionadas con la generación de un seguimiento de la pila para el subproceso. Estas interfaces incluyen [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame (e ICorDebugNativeFrame.  
   
- El `RemapFunction` método puede llamarse únicamente en el contexto del fotograma actual y sólo en uno de los casos siguientes:  
+ Solo `RemapFunction` se puede llamar al método en el contexto del marco actual y solo en uno de los siguientes casos:  
   
-- Después de recibir un [ICorDebugManagedCallback2:: FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) devolución de llamada que todavía no ha continuado.  
+- Después de la recepción de una devolución de llamada [ICorDebugManagedCallback2:: functionremapopportunity (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) que todavía no se ha continuado.  
   
-- Mientras se detiene la ejecución de código debido un [EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) eventos para este marco.  
+- Mientras se detiene la ejecución del código debido a un evento [ICorDebugManagedCallback:: editandcontinueremap (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) para este marco.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

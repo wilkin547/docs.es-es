@@ -2,12 +2,12 @@
 title: Inspectores de mensaje
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: c9d2c47a816e7fd8c5d219009128ed530564b81b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa5b68f203164a1c50ae9ef921032bd6e5c7bfb8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989825"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930710"
 ---
 # <a name="message-inspectors"></a>Inspectores de mensaje
 Este ejemplo muestra cómo implementar y configurar los inspectores de mensaje de cliente y servicio.  
@@ -202,7 +202,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>Comportamiento  
- Los inspectores de mensaje son extensiones del tiempo de ejecución del cliente o de la distribución. Estas extensiones se configuran mediante *comportamientos*. Un comportamiento es una clase que cambia el comportamiento de tiempo de ejecución del modelo del servicio cambiando la configuración predeterminada o agregando extensiones (como inspectores de mensaje) a él.  
+ Los inspectores de mensaje son extensiones del tiempo de ejecución del cliente o de la distribución. Dichas extensiones se configuran mediante *comportamientos*. Un comportamiento es una clase que cambia el comportamiento de tiempo de ejecución del modelo del servicio cambiando la configuración predeterminada o agregando extensiones (como inspectores de mensaje) a él.  
   
  La clase `SchemaValidationBehavior` siguiente es el comportamiento utilizado para agregar el inspector de mensaje de este ejemplo al tiempo de ejecución del cliente o la distribución. La implementación es bastante básica en ambos casos. En <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> y <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>, se crea el inspector de mensaje y se agrega a la colección <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> del tiempo de ejecución respectivo.  
   
@@ -256,10 +256,10 @@ public class SchemaValidationBehavior : IEndpointBehavior
 ```  
   
 > [!NOTE]
->  Este comportamiento determinado no se duplica como un atributo y por consiguiente no se puede agregar mediante declaración a un tipo de contrato de un tipo de servicio. Ésta es una decisión realizada por diseño porque la colección de esquemas no se puede cargar en una declaración de atributos y hacer referencia a una ubicación de configuración adicional (por ejemplo a los valores de la aplicación) en este atributo significa crear un elemento de configuración que no es coherente con el resto de la configuración del modelo de servicio. Por consiguiente, este comportamiento solo se puede agregar imperiosamente a través de código y a través de una extensión de la configuración del modelo de servicio.  
+> Este comportamiento determinado no se duplica como un atributo y por consiguiente no se puede agregar mediante declaración a un tipo de contrato de un tipo de servicio. Ésta es una decisión realizada por diseño porque la colección de esquemas no se puede cargar en una declaración de atributos y hacer referencia a una ubicación de configuración adicional (por ejemplo a los valores de la aplicación) en este atributo significa crear un elemento de configuración que no es coherente con el resto de la configuración del modelo de servicio. Por consiguiente, este comportamiento solo se puede agregar imperiosamente a través de código y a través de una extensión de la configuración del modelo de servicio.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>Agregar el Inspector de Mensaje a través de Configuración  
- Para configurar un comportamiento personalizado en un punto de conexión en el archivo de configuración de aplicación, el modelo de servicio requiere que los implementadores que creen una configuración *elemento extension* representado por una clase derivada de <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>. Esta extensión se debe agregar a continuación a la sección de configuración del modelo del servicio para extensiones, tal y como se muestra para la siguiente extensión discutida en esta sección.  
+ Para configurar un comportamiento personalizado en un punto de conexión en el archivo de configuración de la aplicación, el modelo de servicio exige a los implementadores que creen un elemento <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>de *extensión* de configuración representado por una clase derivada de. Esta extensión se debe agregar a continuación a la sección de configuración del modelo del servicio para extensiones, tal y como se muestra para la siguiente extensión discutida en esta sección.  
   
 ```xml  
 <system.serviceModel>  
@@ -398,17 +398,17 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

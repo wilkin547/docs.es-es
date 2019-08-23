@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 29cf4e03c1e4f91cd4390b84dd62c07268fe0189
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 5c29899846e7210c02b6bcc2b677b05581a5c6b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364318"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939704"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Información general sobre las extensiones de marcado para el lenguaje XAML
 Las extensiones de marcado son una técnica XAML para obtener un valor que no es un tipo primitivo ni específico de XAML. Para el uso de atributos, las extensiones de marcado usan la secuencia de caracteres conocida de una llave de apertura `{` para entrar en el ámbito de la extensión de marcado y una llave de cierre `}` para salir. Al usar los servicios XAML de .NET Framework, puede usar algunas de las extensiones de marcado del lenguaje XAML predefinidas del ensamblado System.Xaml. También puede crear subclases de la clase <xref:System.Windows.Markup.MarkupExtension> , definida en System.Xaml, y definir sus propias extensiones de marcado. Asimismo, puede usar las extensiones de marcado definidas por un marco determinado si ya se hace referencia a dicho marco.  
@@ -22,7 +22,7 @@ Las extensiones de marcado son una técnica XAML para obtener un valor que no es
  Varias extensiones de marcado se implementan mediante los servicios XAML de .NET Framework para la compatibilidad con el lenguaje XAML. Estas extensiones de marcado corresponden a las partes de la especificación de XAML como lenguaje. Suelen identificarse por el prefijo `x:` en la sintaxis, tal como se muestra en el uso común. Todas las implementaciones de servicios XAML de .NET Framework para estos elementos del lenguaje XAML derivan de la clase base  <xref:System.Windows.Markup.MarkupExtension> .  
   
 > [!NOTE]
->  El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para el espacio de nombres del lenguaje XAML, en el elemento raíz de una producción de XAML. Por ejemplo, las plantillas de proyecto y de página de Visual Studio para varios marcos de trabajo específicos inician `x:` un archivo XAML con esta asignación. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres XAML predeterminado de un marco concreto o de otros espacios de nombres XML o CLR arbitrarios.  
+> El prefijo `x:` se usa para la asignación de espacio de nombres típica de XAML para el espacio de nombres del lenguaje XAML, en el elemento raíz de una producción de XAML. Por ejemplo, las plantillas de proyecto y de página de Visual Studio para varios marcos de trabajo específicos inician `x:` un archivo XAML con esta asignación. Puede elegir un token de prefijo diferente en su propia asignación de espacio de nombres XAML, pero en esta documentación se presupone la asignación `x:` predeterminada como manera de identificar las entidades que forman una parte definida del espacio de nombres XAML del lenguaje XAML, en lugar de un espacio de nombres XAML predeterminado de un marco concreto o de otros espacios de nombres XML o CLR arbitrarios.  
   
 ### <a name="xtype"></a>x:Type  
  `x:Type` proporciona el objeto <xref:System.Type> para el tipo con nombre. Esta funcionalidad se usa con más frecuencia en los mecanismos de aplazamiento que usan el tipo CLR subyacente y la derivación de tipos como identificador o moniker de agrupación. Los estilos y plantillas WPF y su uso de las propiedades `TargetType` son un ejemplo concreto. Para obtener más información, consulta [x:Type Markup Extension](x-type-markup-extension.md).  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: d88d658b31c87e7ae89bfb4a11fe794bfbb0e848
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7a3029192ab0da4a954dfd7d3d258a00b154924e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040097"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957112"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedimiento para agregar y quitar columnas en el control DataGridView de formularios Windows Forms mediante el diseñador
 El control <xref:System.Windows.Forms.DataGridView> Windows Forms debe contener columnas para poder mostrar los datos. Si tiene previsto rellenar el control manualmente, debe agregar las columnas. Como alternativa, puede enlazar el control a un origen de datos, que genera y rellena automáticamente las columnas. Si el origen de datos contiene más columnas de las que desea mostrar, puede quitar las columnas no deseadas.
@@ -28,7 +28,7 @@ El control <xref:System.Windows.Forms.DataGridView> Windows Forms debe contener 
 3. Haga clic en el botón **Agregar** para agregar la columna, lo que hará que aparezca en el diseñador si las columnas existentes aún no rellenan el área de presentación del control.
 
     > [!NOTE]
-    >  Puede modificar las propiedades de las columnas en el cuadro de diálogo **Editar columnas** , al que puede tener acceso desde la etiqueta inteligente del control.
+    > Puede modificar las propiedades de las columnas en el cuadro de diálogo **Editar columnas** , al que puede tener acceso desde la etiqueta inteligente del control.
 
 ## <a name="to-remove-a-column-using-the-designer"></a>Para quitar una columna mediante el diseñador
 
@@ -42,4 +42,4 @@ El control <xref:System.Windows.Forms.DataGridView> Windows Forms debe contener 
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Cómo: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Procedimientos: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)

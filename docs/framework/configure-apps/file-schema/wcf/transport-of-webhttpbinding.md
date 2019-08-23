@@ -2,22 +2,22 @@
 title: <transport> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 8dcd51cd248dbba3ccf60295cb1712167684328e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f78add5397644dc40bfd22f10bd84aa5c5eb29e6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788276"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923209"
 ---
-# <a name="transport-of-webhttpbinding"></a>\<transporte > de \<webHttpBinding >
+# <a name="transport-of-webhttpbinding"></a>\<> de transporte \<de webHttpBinding >
 Define los valores de seguridad a nivel de transporte para un punto de conexión de servicio configurado para recibir solicitudes HTTP.  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<webHttpBinding>  
 \<binding>  
-\<security>  
-\<transport>  
+\<> de seguridad  
+\<> de transporte  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
 </webHttpBinding>
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  <xref:System.ServiceModel.HttpTransportSecurity>  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -47,7 +47,7 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`clientCredentialType`|Especifica la credencial utilizada para autenticar el cliente al servicio. Este atributo es del tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |`proxyCredentialType`|Especifica la credencial usada para autenticar al cliente en un proxy del dominio. Este atributo es del tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
@@ -56,7 +56,7 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
-|Valor|Descripción|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`None`|La seguridad está deshabilitada.|  
 |`Basic`|Usa la autenticación básica.|  
@@ -67,7 +67,7 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
   
 ## <a name="proxycredentialtype-attribute"></a>Atributo proxyCredentialType  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`None`|La seguridad está deshabilitada.|  
 |`Basic`|Usa la autenticación básica.|  
@@ -80,9 +80,9 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Representa las funciones de seguridad de la [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) elemento.|  
+|[\<security>](security-of-webhttpbinding.md)|Representa las funciones de seguridad del [ \<elemento > wsHttpBinding](wshttpbinding.md) .|  
   
 ## <a name="see-also"></a>Vea también
 
@@ -90,9 +90,9 @@ Define los valores de seguridad a nivel de transporte para un punto de conexión
 - <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
-- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Modelo de programación de web HTTP de WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+- [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [Modelo de programación de web HTTP de WCF](../../../wcf/feature-details/wcf-web-http-programming-model.md)

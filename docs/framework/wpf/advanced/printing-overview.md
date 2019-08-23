@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: be82b64581ee178b463950d4b8cdae1f98949161
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545306"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958552"
 ---
 # <a name="printing-overview"></a>Información general sobre impresión
 Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windows Presentation Foundation (WPF) tienen un nuevo conjunto de API de impresión y administración del sistema de impresión. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean aplicaciones de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], así como para los que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] y la ruta de impresión [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -35,11 +35,11 @@ Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windo
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Ruta de impresión XPS  
- La ruta de impresión de XML Paper Specification (XPS) es [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] una nueva característica que redefine la forma en que se controla la impresión en aplicaciones de Windows. Dado [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] que puede reemplazar un lenguaje de presentación de documentos (como RTF), un formato de administrador de trabajos de impresión (como WMF) y un lenguaje de descripción de página (como PCL o PostScript), la nueva ruta de impresión mantiene el formato XPS de la publicación de la aplicación al procesamiento final en el dispositivo o controlador de impresión.  
+ La ruta de impresión de XML Paper Specification (XPS) es una nueva característica de Windows que vuelve a definir la forma en que se controla la impresión en aplicaciones de Windows. Dado [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] que puede reemplazar un lenguaje de presentación de documentos (como RTF), un formato de administrador de trabajos de impresión (como WMF) y un lenguaje de descripción de página (como PCL o PostScript), la nueva ruta de impresión mantiene el formato XPS de la publicación de la aplicación al procesamiento final en el dispositivo o controlador de impresión.  
   
  La ruta de impresión XPS se basa en el modelo de controlador de impresora XPS (XPSDrv), que proporciona varias ventajas a [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] los desarrolladores, como impresión, soporte de color mejorado y rendimiento de impresión considerablemente mejorado. (Para obtener más información sobre XPSDrv, consulte la [documentación del kit de controladores de Windows](/windows-hardware/drivers/)).  
   
- La operación del administrador de trabajos de impresión para documentos XPS es esencialmente la misma que en versiones anteriores de Windows. Sin embargo, se ha mejorado para admitir la ruta de impresión XPS además de la ruta de impresión de GDI existente. La nueva ruta de impresión usa de forma nativa un archivo de cola XPS. Aunque los controladores de impresora de modo de usuario escritos para [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] versiones anteriores de seguirán funcionando, es necesario un controlador de impresora XPS (XPSDrv) para poder usar la ruta de impresión XPS.  
+ La operación del administrador de trabajos de impresión para documentos XPS es esencialmente la misma que en versiones anteriores de Windows. Sin embargo, se ha mejorado para admitir la ruta de impresión XPS además de la ruta de impresión de GDI existente. La nueva ruta de impresión usa de forma nativa un archivo de cola XPS. Aunque los controladores de impresora de modo de usuario escritos para versiones anteriores de Windows seguirán funcionando, es necesario un controlador de impresora XPS (XPSDrv) para poder usar la ruta de impresión XPS.  
   
  Las ventajas de la ruta de impresión XPS son significativas e incluyen:  
   

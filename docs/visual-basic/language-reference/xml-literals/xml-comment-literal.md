@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 7af01bda05b113be02261051421a91bdea776851
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 91369392f33f2a86a7a4cb5ffb3faa668c113348
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644569"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965412"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>Literal de comentario XML (Visual Basic)
-Un literal que representa un <xref:System.Xml.Linq.XComment> objeto.  
+Literal que representa un <xref:System.Xml.Linq.XComment> objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,29 +29,29 @@ Un literal que representa un <xref:System.Xml.Linq.XComment> objeto.
   
 |Término|Definición|  
 |---|---|  
-|`<!--`|Obligatorio. Denota el inicio del comentario XML.|  
-|`content`|Obligatorio. Texto que aparecerá en el comentario XML. No puede contener una serie de dos guiones (-) ni terminar con un guión adyacente a la etiqueta de cierre.|  
-|`-->`|Obligatorio. Denota el final del comentario XML.|  
+|`<!--`|Necesario. Denota el inicio del comentario XML.|  
+|`content`|Necesario. Texto que se va a mostrar en el comentario XML. No puede contener una serie de dos guiones (--) ni terminar con un guión adyacente a la etiqueta de cierre.|  
+|`-->`|Necesario. Denota el final del comentario XML.|  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto <xref:System.Xml.Linq.XComment>.  
   
 ## <a name="remarks"></a>Comentarios  
- Los literales de comentario XML no contienen el contenido del documento; que contienen información sobre el documento. La sección de comentarios XML finaliza con la secuencia "-->". Esto implica los siguientes puntos:  
+ Los literales de comentario XML no incluyen el contenido del documento; contienen información sobre el documento. La sección de comentarios XML finaliza con la secuencia "-->". Esto implica los puntos siguientes:  
   
-- No se puede usar una expresión incrustada en un literal de comentario XML porque los delimitadores de expresión incrustada son contenido de comentario XML válido.  
+- No se puede usar una expresión insertada en un literal de comentario XML porque los delimitadores de expresión incrustados son contenido de comentario XML válido.  
   
-- Las secciones de comentario XML no se pueden anidar, porque `content` no puede contener el valor "-->".  
+- Las secciones de comentarios XML no se pueden anidar porque `content` no pueden contener el valor "-->".  
   
- Puede asignar un literal de comentario XML a una variable o incluirlo en un literal de elemento XML.  
+ Puede asignar un literal de comentario XML a una variable o puede incluirlo en un literal de elemento XML.  
   
 > [!NOTE]
->  Un literal XML puede abarcar varias líneas sin usar caracteres de continuación de línea. Esta característica le permite copiar el contenido de un documento XML y péguelo directamente en un programa de Visual Basic.  
+> Un literal XML puede abarcar varias líneas sin utilizar caracteres de continuación de línea. Esta característica permite copiar contenido de un documento XML y pegarlo directamente en un programa Visual Basic.  
   
- El compilador de Visual Basic convierte el literal de comentario XML en una llamada a la <xref:System.Xml.Linq.XComment.%23ctor%2A> constructor.  
+ El compilador Visual Basic convierte el literal de comentario XML en una llamada <xref:System.Xml.Linq.XComment.%23ctor%2A> al constructor.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente crea un comentario XML que contiene el texto "Este es un comentario".  
+ En el ejemplo siguiente se crea un comentario XML que contiene el texto "This is a comment".  
   
  [!code-vb[VbXMLSamples#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples4.vb#9)]  
   

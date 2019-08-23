@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f38f9a3ebd88e0a5abb7a6bc8cb4026dc7d0f068
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 21da325ee58df65ac449464f8292f2ba94d99338
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736936"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943295"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle (Método)
-Obtiene un puntero de referencia al objeto administrado especificado que tiene una colección de elementos no utilizados de identificador.  
+Obtiene un puntero de referencia al objeto administrado especificado que tiene un identificador de recolección de elementos no utilizados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,24 +38,24 @@ HRESULT GetReferenceValueFromGCHandle (
   
 ## <a name="parameters"></a>Parámetros  
  `handle`  
- [in] Un puntero a un objeto administrado que tiene un identificador de la colección de elementos no utilizados. Este valor es un <xref:System.IntPtr> objeto y se pueden recuperar desde el <xref:System.Runtime.InteropServices.GCHandle> para el objeto administrado.  
+ de Un puntero a un objeto administrado que tiene un identificador de recolección de elementos no utilizados. Este valor es un <xref:System.IntPtr> objeto y se puede recuperar <xref:System.Runtime.InteropServices.GCHandle> de para el objeto administrado.  
   
  `pOutValue`  
- [out] Un puntero a la dirección de un objeto ICorDebugReferenceValue que representa una referencia al objeto administrado especificado.  
+ enuncia Puntero a la dirección de un objeto ICorDebugReferenceValue que representa una referencia al objeto administrado especificado.  
   
 ## <a name="remarks"></a>Comentarios  
- No confunda el valor devuelto de referencia con un valor de referencia de la colección de elementos no utilizados.  
+ No confunda el valor de referencia devuelto con un valor de referencia de recolección de elementos no utilizados.  
   
- La referencia devuelta se comporta como una referencia normal. Se deshabilita cuando la ejecución del código continúa después de un punto de interrupción. La duración del objeto de destino no se ve afectada por la duración del valor de referencia.  
+ La referencia devuelta se comporta como una referencia normal. Está deshabilitada cuando la ejecución del código continúa después de un punto de interrupción. La duración del objeto de destino no se ve afectada por la duración del valor de referencia.  
   
 > [!NOTE]
->  El `GetReferenceValueFromGCHandle` método no valida el identificador. Por lo tanto, el `GetReferenceValueFromGCHandle` método puede dañar el depurador y el código que se está depurando si se pasa un identificador no válido.  
+> El `GetReferenceValueFromGCHandle` método no valida el identificador. Por consiguiente, `GetReferenceValueFromGCHandle` el método puede dañar potencialmente el depurador y el código que se está depurando si se pasa un identificador no válido.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

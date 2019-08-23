@@ -11,36 +11,36 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: 7e68bb2f6a3bff0a0a5ff7f8011c2642c141eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebeca5f933eac4da2bf3d4f300866fd2ff52b32a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593440"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917671"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Procedimiento para cambiar los estilos de borde y línea de la cuadrícula en el control DataGridView de formularios Windows Forms
-Con el <xref:System.Windows.Forms.DataGridView> control, puede personalizar la apariencia de borde del control y de las líneas de cuadrícula para mejorar la experiencia del usuario. Puede modificar el color de línea de cuadrícula y el estilo de borde del control además de los estilos de borde para las celdas del control. También puede aplicar estilos de borde de celda diferentes para las celdas normales, las celdas de encabezado de fila y las celdas de encabezado de columna.  
+Con el <xref:System.Windows.Forms.DataGridView> control, puede personalizar la apariencia del borde y las líneas de cuadrícula del control para mejorar la experiencia del usuario. Puede modificar el color de la cuadrícula y el estilo de borde del control, además de los estilos de borde de las celdas del control. También puede aplicar distintos estilos de borde de celda para celdas normales, celdas de encabezado de fila y celdas de encabezado de columna.  
   
 > [!NOTE]
->  El color de línea de cuadrícula solo se usa con el <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>, <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>, y <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> valores de la <xref:System.Windows.Forms.DataGridViewCellBorderStyle> enumeración y el <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> valor de la <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> enumeración. Los demás valores de estas enumeraciones utilizan los colores especificados por el sistema operativo. Además, cuando los estilos visuales están habilitados en Windows XP y la familia Windows Server 2003 a través de la <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> método, el <xref:System.Windows.Forms.DataGridView.GridColor%2A> no se utiliza el valor de propiedad.  
+> El color de la cuadrícula se usa solo <xref:System.Windows.Forms.DataGridViewCellBorderStyle.Single>con <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal>los valores <xref:System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical> , y de <xref:System.Windows.Forms.DataGridViewCellBorderStyle> la enumeración <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle.Single> y el valor <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle> de la enumeración. Los demás valores de estas enumeraciones usan los colores especificados por el sistema operativo. Además, cuando los estilos visuales están habilitados en Windows XP y en la familia de Windows <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Server 2003 a <xref:System.Windows.Forms.DataGridView.GridColor%2A> través del método, no se utiliza el valor de la propiedad.  
   
-### <a name="to-change-the-gridline-color-programmatically"></a>Para cambiar el color de línea de cuadrícula mediante programación  
+### <a name="to-change-the-gridline-color-programmatically"></a>Para cambiar el color de la línea de cuadrícula mediante programación  
   
 - Establecer la propiedad <xref:System.Windows.Forms.DataGridView.GridColor%2A>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
   
-### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Para cambiar el estilo de borde de todo el control DataGridView mediante programación  
+### <a name="to-change-the-border-style-of-the-entire-datagridview-control-programmatically"></a>Para cambiar mediante programación el estilo de borde del control DataGridView completo  
   
 - Establezca la propiedad <xref:System.Windows.Forms.DataGridView.BorderStyle%2A> en uno de los valores de enumeración <xref:System.Windows.Forms.BorderStyle>.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#032)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#032](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#032)]  
   
-### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Para cambiar los estilos de borde para las celdas de DataGridView mediante programación  
+### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>Para cambiar mediante programación los estilos de borde de las celdas de DataGridView  
   
-- Establecer el <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>, <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, y <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> propiedades.  
+- Establezca las <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>propiedades <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>, y <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> .  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  

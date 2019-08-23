@@ -2,12 +2,12 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 1101d021f3c7436c4f45a22a48e50f6d1553f753
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c9dbec13dd0d71ba1b92ea971d067540013b6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940314"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings>
 Un elemento de configuración usado para especificar valores de WebSockets.  
@@ -38,7 +38,7 @@ Un elemento de configuración usado para especificar valores de WebSockets.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |createNotificationOnConnection|Especifica si se envía una notificación al realizar la conexión.|  
 |disablePayloadMasking|Especifica si el enmascaramiento de WebSocket está deshabilitado.|  
@@ -51,23 +51,23 @@ Un elemento de configuración usado para especificar valores de WebSockets.
   
 ## <a name="transportusage-attribute"></a>Atributo transportUsage  
   
-|Valor|Descripción|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |WhenDuplex|Use el protocolo WebSocket cuando el contrato sea dúplex.|  
 |Siempre|Use siempre el protocolo WebSocket independientemente del contrato.|  
 |Nunca|Nunca use el protocolo WebSocket.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguna  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |\<netHttpBinding>|Especifica el NetHttpBinding|  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo usar el \<webSocketSettings > elemento.  
+ En el ejemplo siguiente se muestra cómo usar \<el elemento > de webSocketSettings.  
   
 ```xml  
 <netHttpBinding>
@@ -90,7 +90,7 @@ Un elemento de configuración usado para especificar valores de WebSockets.
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

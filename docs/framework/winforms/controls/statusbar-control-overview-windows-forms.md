@@ -7,26 +7,26 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: 4e1816ef221641f5ad54fb429442ed43289b592a
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: bd58d4c70e3a3c88e57fe242957f669d1944fd71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505427"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964435"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>Información general sobre StatusBar (Control, formularios Windows Forms)
 > [!IMPORTANT]
->  El <xref:System.Windows.Forms.StatusStrip> y <xref:System.Windows.Forms.ToolStripStatusLabel> controles reemplazan y agregan funcionalidad a la <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel> controla; sin embargo, el <xref:System.Windows.Forms.StatusBar> y <xref:System.Windows.Forms.StatusBarPanel> controles se conservan por compatibilidad con versiones anteriores y uso futuro, si se Elija esta opción.  
+> Los <xref:System.Windows.Forms.StatusStrip> controles <xref:System.Windows.Forms.ToolStripStatusLabel> y reemplazan y agregan funcionalidad <xref:System.Windows.Forms.StatusBar> a <xref:System.Windows.Forms.StatusBarPanel> los controles y; sin <xref:System.Windows.Forms.StatusBar> embargo <xref:System.Windows.Forms.StatusBarPanel> , los controles y se conservan por compatibilidad con versiones anteriores y uso futuro, si Elija.  
   
- Los formularios de Windows [StatusBar Control](statusbar-control-windows-forms.md) se utiliza en los formularios como un área, normalmente en la parte inferior de una ventana, en el que una aplicación puede mostrar varios tipos de información de estado. <xref:System.Windows.Forms.StatusBar> los controles pueden tener paneles de barra de estado en ellos que muestran texto o iconos para indicar el estado o una serie de iconos de una animación que indican que un proceso está funcionando; Por ejemplo, Microsoft Word que indica que el documento se está guardando.  
+ El Windows Forms [control StatusBar](statusbar-control-windows-forms.md) se usa en los formularios como un área, que normalmente se muestra en la parte inferior de una ventana, en la que una aplicación puede mostrar diversos tipos de información de estado. <xref:System.Windows.Forms.StatusBar>los controles pueden tener paneles de barra de estado en los que se muestre texto o iconos para indicar el estado o una serie de iconos de una animación que indiquen que un proceso está funcionando; por ejemplo, Microsoft Word indica que el documento se está guardando.  
   
-## <a name="using-the-statusbar-control"></a>Uso del Control StatusBar  
- Internet Explorer usa una barra de estado para indicar la dirección URL de una página cuando el mouse pasa sobre el hipervínculo; Microsoft Word ofrece información sobre la ubicación de la página, la ubicación de la sección y editar modos como sobrescribir y revisar cambios; y Visual Studio usa la barra de estado para ofrecer información contextual, por ejemplo, que le indica cómo manipular ventanas acoplables, acoplada o flotante.  
+## <a name="using-the-statusbar-control"></a>Usar el control StatusBar  
+ Internet Explorer usa una barra de estado para indicar la dirección URL de una página cuando el mouse se sitúa sobre el hipervínculo; Microsoft Word le proporciona información sobre la ubicación de la página, la ubicación de la sección y los modos de edición como sobreescribir y seguimiento de la revisión. y Visual Studio usa la barra de estado para proporcionar información contextual, como indicar cómo manipular las ventanas acoplables como acopladas o flotantes.  
   
- Puede mostrar un único mensaje en la barra de estado estableciendo el <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propiedad a `false` (predeterminado) y estableciendo el <xref:System.Windows.Forms.StatusBar.Text%2A> propiedad de la barra de estado para el texto que desee que aparezca en la barra de estado. Puede dividir la barra de estado en paneles para mostrar más de un tipo de información estableciendo el <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propiedad `true` y el uso de la <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método de <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
+ Puede mostrar un solo mensaje en la barra de estado si establece la <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> propiedad en `false` (valor predeterminado) y establece la <xref:System.Windows.Forms.StatusBar.Text%2A> propiedad de la barra de estado en el texto que desea que aparezca en la barra de estado. Puede dividir la barra de estado en paneles para mostrar más de un tipo de <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> información estableciendo la propiedad en `true` y usando el <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> método de <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [Cómo: Determinar qué Panel de Control StatusBar de formularios Windows Forms se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [Cómo: Determinar en qué panel del control Windows Forms StatusBar se hizo clic](determine-which-panel-wf-statusbar-control-was-clicked.md)

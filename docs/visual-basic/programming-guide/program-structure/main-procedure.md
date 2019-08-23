@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: b6c8ec4052d834d410df7fef12e59434f5fdfb44
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 19c6fcb04a373d782db3deafc732f69bf20e7f0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039979"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962771"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Procedimiento Main en Visual Basic
 Cada Visual Basic aplicación debe contener un procedimiento denominado `Main`. Este procedimiento sirve como punto de partida y control general de la aplicación. El .NET Framework llama `Main` al procedimiento cuando ha cargado la aplicación y está listo para pasarle el control. A menos que cree una aplicación Windows Forms, debe escribir el `Main` procedimiento para las aplicaciones que se ejecutan por sí mismas.
@@ -33,7 +33,7 @@ Cada Visual Basic aplicación debe contener un procedimiento denominado `Main`. 
  Hay cuatro maneras de declarar el `Main` procedimiento. Puede tomar argumentos o no, y puede devolver un valor.
 
 > [!NOTE]
->  Si declara `Main` en una clase, debe utilizar la `Shared` palabra clave. En un módulo, `Main` no es necesario que sea `Shared`.
+> Si declara `Main` en una clase, debe utilizar la `Shared` palabra clave. En un módulo, `Main` no es necesario que sea `Shared`.
 
 - La manera más sencilla consiste en declarar un `Sub` procedimiento que no tome argumentos o devuelva un valor.
 

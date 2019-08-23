@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Etiqueta instrucciones (Visual Basic)
+title: Procedimiento Instrucciones de etiqueta (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - colons (:)
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - ': separator character'
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
-ms.openlocfilehash: cbb80d94dc8280aa67859c89daad1520ce4e9669
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b442b5a0ad731cfc490a7387c78ac9279dddaf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648746"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961322"
 ---
-# <a name="how-to-label-statements-visual-basic"></a>Procedimiento Etiqueta instrucciones (Visual Basic)
-Bloques de instrucciones se componen de líneas de código delimitadas por signos de dos puntos. Líneas de código precedido de un entero o cadena de identificación se consideran *con la etiqueta*. Las etiquetas de instrucciones se usan para marcar una línea de código para identificarla para su uso con instrucciones como `On Error Goto`.  
+# <a name="how-to-label-statements-visual-basic"></a>Procedimiento Instrucciones de etiqueta (Visual Basic)
+Los bloques de instrucciones se componen de líneas de código delimitadas por dos puntos. Se dice que las líneas de código precedidas de una cadena o un enterode identificación están etiquetadas. Las etiquetas de instrucción se usan para marcar una línea de código para identificarla para su uso con `On Error Goto`instrucciones como.  
   
- Las etiquetas pueden ser identificadores Visual Basic válidos, como las que identifican elementos de programación, o literales enteros. Una etiqueta debe aparecer al principio de una línea de código fuente y debe ir seguida por dos puntos, independientemente de si está seguida por una instrucción en la misma línea.  
+ Las etiquetas pueden ser válidas Visual Basic identificadores, como los que identifican elementos de programación, o literales enteros. Una etiqueta debe aparecer al principio de una línea de código fuente y debe ir seguida de dos puntos, independientemente de si va seguido de una instrucción en la misma línea.  
   
- El compilador identifica las etiquetas mediante la comprobación de si el principio de la línea coincide con cualquier identificador ya definido. Si no es así, el compilador supone que es una etiqueta.  
+ El compilador identifica las etiquetas comprobando si el principio de la línea coincide con cualquier identificador ya definido. Si no es así, el compilador supone que es una etiqueta.  
   
- Las etiquetas tienen su propio espacio de declaración y no interfieren con otros identificadores. Ámbito de una etiqueta es el cuerpo del método. Declaración de la etiqueta tiene prioridad en cualquier situación ambigua.  
+ Las etiquetas tienen su propio espacio de declaración y no interfieren con otros identificadores. El ámbito de una etiqueta es el cuerpo del método. La declaración de etiqueta tiene prioridad en cualquier situación ambigua.  
   
 > [!NOTE]
->  Etiquetas se pueden usar únicamente en las instrucciones ejecutables dentro de los métodos.  
+> Las etiquetas solo se pueden usar en instrucciones ejecutables dentro de métodos.  
   
 ### <a name="to-label-a-line-of-code"></a>Para etiquetar una línea de código  
   
-- Coloque un identificador, seguido de dos puntos, al principio de la línea de código fuente.  
+- Coloque un identificador seguido de un signo de dos puntos, al principio de la línea de código fuente.  
   
      Por ejemplo, las siguientes líneas de código se etiquetan con `Jump` y `120`, respectivamente:  
   

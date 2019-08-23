@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d69fd06f4048667a05ddbfec571067c16f9e86a
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833721"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566857"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -24,7 +24,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
  Common Language Runtime realiza una serie de pasos cuando intenta buscar un ensamblado y resolver una referencia de ensamblado. Cada paso se explica en las secciones siguientes. El sondeo de términos suele usarse cuando se describe la manera en que el tiempo de ejecución busca ensamblados; hace referencia al conjunto de heurística que se usa para buscar el ensamblado en función de su nombre y referencia cultural.  
   
 > [!NOTE]
->  Puede ver la información de enlace en el archivo de registro usando el [Visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que se incluye en el kit de desarrollo de software (SDK) de Windows.  
+>  Puede ver la información de enlace en el archivo de registro usando el [visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que se incluye en Windows SDK.  
   
 ## <a name="initiating-the-bind"></a>Iniciar el enlace  
  El proceso de buscar y enlazar a un ensamblado comienza cuando el tiempo de ejecución intenta resolver una referencia a otro ensamblado. Esta referencia puede ser estática o dinámica. El compilador registra las referencias estáticas en los metadatos del manifiesto del ensamblado en tiempo de compilación. Las referencias dinámicas se construyen sobre la marcha como resultado de llamar a varios métodos, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  

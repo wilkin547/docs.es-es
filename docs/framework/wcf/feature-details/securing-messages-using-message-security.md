@@ -2,30 +2,30 @@
 title: Protección de mensajes mediante la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9ba8923d23140bb951a4993739ec267ad6f6a4c4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911770"
 ---
 # <a name="securing-messages-using-message-security"></a>Protección de mensajes mediante la seguridad de mensajes
-Esta sección describe la seguridad de mensaje de WCF al usar <xref:System.ServiceModel.NetMsmqBinding>.  
+En esta sección se describe la seguridad de mensajes <xref:System.ServiceModel.NetMsmqBinding>de WCF cuando se usa.  
   
 > [!NOTE]
->  Antes de leer este tema, se recomienda que lea [conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Antes de leer este tema, se recomienda leer los conceptos de [seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- La ilustración siguiente proporciona un modelo conceptual de comunicación en cola mediante WCF. Esta ilustración y la terminología se utilizan para explicar  
+ En la ilustración siguiente se proporciona un modelo conceptual de comunicación en cola mediante WCF. Esta ilustración y la terminología se utilizan para explicar  
   
  los conceptos de seguridad de transporte.  
   
- ![Diagrama de aplicaciones en la cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "figura cola distribuida")  
+ ![Diagrama de aplicaciones en cola](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Distributed-Queue-figure")  
   
- Al enviar mensajes en cola utilizando WCF, el mensaje de WCF se adjunta como un cuerpo del mensaje de Message Queuing (MSMQ). Aunque la seguridad de transporte protege el mensaje de MSMQ completo, la seguridad de mensajes (o SOAP) solo protege el cuerpo del mensaje de MSMQ.  
+ Al enviar mensajes en cola mediante WCF, el mensaje de WCF se adjunta como cuerpo del mensaje de Message Queuing (MSMQ). Aunque la seguridad de transporte protege el mensaje de MSMQ completo, la seguridad de mensajes (o SOAP) solo protege el cuerpo del mensaje de MSMQ.  
   
- El concepto clave de la seguridad de mensajes es que el cliente protege el mensaje para la aplicación receptora (servicio), a diferencia de la seguridad de transporte donde el cliente protege el mensaje para la cola de destino. Como tal, MSMQ no representa ningún papel al proteger el mensaje WCF mediante la seguridad de mensaje.  
+ El concepto clave de la seguridad de mensajes es que el cliente protege el mensaje para la aplicación receptora (servicio), a diferencia de la seguridad de transporte donde el cliente protege el mensaje para la cola de destino. Como tal, MSMQ no juega ninguna parte al proteger el mensaje de WCF mediante la seguridad del mensaje.  
   
- Seguridad de mensajes WCF agrega encabezados de seguridad para el mensaje WCF que se integran con las infraestructuras de seguridad existentes, como un certificado o el protocolo Kerberos.  
+ La seguridad de mensajes de WCF agrega encabezados de seguridad al mensaje de WCF que se integran con las infraestructuras de seguridad existentes, como un certificado o el protocolo Kerberos.  
   
 ## <a name="message-credential-type"></a>Tipo de credencial de mensaje  
  Utilizando la seguridad de mensajes, el servicio y cliente pueden presentar las credenciales para autenticarse entre sí. Puede seleccionar la seguridad de mensajes estableciendo el modo <xref:System.ServiceModel.NetMsmqBinding.Security%2A> en `Message` o `Both` (es decir, utilizar la seguridad de transporte y la seguridad de mensajes).  
@@ -34,7 +34,7 @@ Esta sección describe la seguridad de mensaje de WCF al usar <xref:System.Servi
   
  Esta sección explica los diferentes tipos de credenciales y cómo utilizarlos con colas.  
   
-### <a name="certificate"></a>Certificado  
+### <a name="certificate"></a>Certificate  
  El tipo de credencial de certificado utiliza un certificado X.509 para identificar el servicio y el cliente.  
   
  En un escenario típico, una entidad de certificación de confianza emite un certificado válido para el cliente y el servicio. A continuación, se establece la conexión, el cliente autentica la validez del servicio utilizando el certificado del servicio para decidir si puede confiar en el servicio. De forma similar, el servicio utiliza el certificado del cliente para validar la confianza del cliente.  
@@ -48,11 +48,11 @@ Esta sección describe la seguridad de mensaje de WCF al usar <xref:System.Servi
   
  El protocolo Kerberos es un mecanismo de seguridad que autentica a los usuarios en un dominio y permite a los usuarios autenticados establecer contextos seguros con otras entidades en un dominio.  
   
- El problema con el uso del protocolo Kerberos para la comunicación en cola es que las etiquetas que contienen identidad del cliente que el Centro de distribución de claves (KDC) distribuye son relativamente efímeras. Un *duración* está asociado con el vale de Kerberos que indica la validez del vale. Como tal, aunque la latencia sea elevada, no puede estar seguro de que el token todavía sea válido para el servicio que autentica el cliente.  
+ El problema con el uso del protocolo Kerberos para la comunicación en cola es que las etiquetas que contienen identidad del cliente que el Centro de distribución de claves (KDC) distribuye son relativamente efímeras. Una *duración* está asociada al vale de Kerberos que indica la validez del vale. Como tal, aunque la latencia sea elevada, no puede estar seguro de que el token todavía sea válido para el servicio que autentica el cliente.  
   
  Tenga en cuenta que al utilizar este tipo de credencial, el servicio se debe estar ejecutando bajo la cuenta del servicio.  
   
- Se utiliza el protocolo Kerberos de forma predeterminada al elegir la credencial del mensaje. Para obtener más información, consulte [explorar Kerberos, el protocolo para la seguridad distribuida en Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
+ Se utiliza el protocolo Kerberos de forma predeterminada al elegir la credencial del mensaje. Para obtener más información, vea [explorar Kerberos, el protocolo de seguridad distribuida en Windows 2000](https://go.microsoft.com/fwlink/?LinkId=87790).  
   
 ### <a name="username-password"></a>Nombre de usuario/contraseña  
  Con esta propiedad, el cliente puede autenticar al servidor utilizando una contraseña y nombre de usuario en el encabezado de seguridad del mensaje.  

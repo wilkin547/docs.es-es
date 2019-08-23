@@ -2,12 +2,12 @@
 title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 462a06e5a773310b6364838ae2ebc14da0a2ee1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704120"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925886"
 ---
 # <a name="defaultports"></a>\<defaultPorts>
 Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.  
@@ -38,15 +38,15 @@ Colección de puertos predeterminados que enumeran los puntos de conexión de co
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<Agregar > de \<defaultPorts >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.|  
+|[\<Agregar > de \<defaultPorts >](add-of-defaultports.md)|Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<useRequestHeadersForMetadataAddress>](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|Lista de puertos predeterminados.|  
+|[\<useRequestHeadersForMetadataAddress>](userequestheadersformetadataaddress.md)|Lista de puertos predeterminados.|  
   
 ## <a name="see-also"></a>Vea también
 

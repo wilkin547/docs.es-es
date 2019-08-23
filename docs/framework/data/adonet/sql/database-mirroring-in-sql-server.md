@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31fb8af4653cefc8027f4061b46b9a29d8d07f8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877817"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963996"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Creación de reflejo de la base de datos en SQL Server
 La creación de reflejo de base de datos de SQL Server permite mantener una copia, o reflejo, de una base de datos de SQL Server en un servidor en modo de espera. El reflejo garantiza que en todo momento existen dos copias distintas de los datos, lo que proporciona una alta disponibilidad y una completa redundancia de datos. El proveedor de datos .NET para SQL Server ofrece compatibilidad implícita con la creación de reflejo de base de datos; de modo que el desarrollador no tiene que realizar ninguna acción ni escribir ningún código una vez que se ha configurado para una base de datos de SQL Server. Además, el objeto <xref:System.Data.SqlClient.SqlConnection> admite un modo de conexión explícita que permita proporcionar el nombre de un servidor asociado de conmutación por error en la propiedad <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -35,12 +35,12 @@ La creación de reflejo de base de datos de SQL Server permite mantener una copi
  Cuando una <xref:System.Data.SqlClient.SqlConnection> se abre correctamente, el servidor devuelve el nombre del asociado de conmutación por error, que invalida cualquier valor especificado en la cadena de conexión.  
   
 > [!NOTE]
->  Se debe especificar de forma explícita el catálogo o el nombre de la base de datos original en la cadena de conexión para los escenarios de creación de reflejos. Si el cliente recibe información de conmutación por error sobre una conexión para la que no se ha especificado de forma explícita un catálogo o base de datos original, dicha información no se almacena en caché y la aplicación no intenta una conmutación por error si el servidor principal da error. Si una cadena de conexión tiene un valor para el asociado de conmutación por error, pero no para el catálogo o la base de datos original, se produce una excepción `InvalidArgumentException`.  
+> Se debe especificar de forma explícita el catálogo o el nombre de la base de datos original en la cadena de conexión para los escenarios de creación de reflejos. Si el cliente recibe información de conmutación por error sobre una conexión para la que no se ha especificado de forma explícita un catálogo o base de datos original, dicha información no se almacena en caché y la aplicación no intenta una conmutación por error si el servidor principal da error. Si una cadena de conexión tiene un valor para el asociado de conmutación por error, pero no para el catálogo o la base de datos original, se produce una excepción `InvalidArgumentException`.  
   
 ## <a name="retrieving-the-current-server-name"></a>Recuperación del nombre del servidor actual  
  En caso de una conmutación por error, puede recuperar el nombre del servidor al que hay actualmente una conexión mediante la propiedad <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> de un objeto <xref:System.Data.SqlClient.SqlConnection>. El siguiente fragmento de código recupera el nombre del servidor activo, suponiendo que la variable de conexión hace referencia a una <xref:System.Data.SqlClient.SqlConnection> abierta.  
   
- Cuando se produce un evento de conmutación por error y se cambia la conexión al servidor reflejado, la **DataSource** propiedad se actualiza para reflejar el nombre del servidor.  
+ Cuando se produce un evento de conmutación por error y se cambia la conexión al servidor reflejado, la propiedad **DataSource** se actualiza para reflejar el nombre del reflejo.  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -51,17 +51,17 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>Comportamiento del reflejo de SqlClient  
- El cliente siempre intenta conectarse al servidor principal actual. Si da error, prueba con el asociado de conmutación por error. Si se ha cambiado el rol de la base de datos reflejada al de principal en el servidor asociado, la conexión se realiza correctamente y la nueva asignación principal-reflejada se envía al cliente y se almacena en caché durante la vigencia de la llamada a <xref:System.AppDomain>. No se almacena en el almacenamiento persistente y no está disponible para las posteriores conexiones en otra **AppDomain** o proceso. Sin embargo, está disponible para las posteriores conexiones en el mismo **AppDomain**. Tenga en cuenta que otro **AppDomain** o proceso que se ejecuta en el mismo o en otro equipo siempre tiene su grupo de conexiones, y esas conexiones no se restablecen. En ese caso, si la base de datos principal deja de funcionar, cada proceso o **AppDomain** se produce un error una vez y el grupo se borra automáticamente.  
+ El cliente siempre intenta conectarse al servidor principal actual. Si da error, prueba con el asociado de conmutación por error. Si se ha cambiado el rol de la base de datos reflejada al de principal en el servidor asociado, la conexión se realiza correctamente y la nueva asignación principal-reflejada se envía al cliente y se almacena en caché durante la vigencia de la llamada a <xref:System.AppDomain>. No se almacena en el almacenamiento persistente y no está disponible para las conexiones posteriores en un **AppDomain** o proceso diferente. Sin embargo, está disponible para las conexiones posteriores en el mismo **AppDomain**. Tenga en cuenta que otro **AppDomain** o proceso que se ejecute en el mismo equipo o en otro diferente tiene siempre su grupo de conexiones, y esas conexiones no se restablecen. En ese caso, si la base de datos principal deja de funcionar, cada proceso o **AppDomain** produce un error una vez y el grupo se borra automáticamente.  
   
 > [!NOTE]
->  En el servidor, la compatibilidad con el reflejo se configura por cada base de datos. Si se ejecutan operaciones de manipulación de datos en otras bases de datos no incluidas en el conjunto principal/reflejada, o bien con nombres de varias partes o mediante el cambio de la base de datos actual, los cambios en estas otras bases de datos no se propagarán si se produce un error. Cuando los datos se modifican en una base de datos sin reflejo, no se generan errores. El programador deberá valorar los posibles efectos de tales operaciones.  
+> En el servidor, la compatibilidad con el reflejo se configura por cada base de datos. Si se ejecutan operaciones de manipulación de datos en otras bases de datos no incluidas en el conjunto principal/reflejada, o bien con nombres de varias partes o mediante el cambio de la base de datos actual, los cambios en estas otras bases de datos no se propagarán si se produce un error. Cuando los datos se modifican en una base de datos sin reflejo, no se generan errores. El programador deberá valorar los posibles efectos de tales operaciones.  
   
 ## <a name="database-mirroring-resources"></a>Recursos de reflejos de base de datos  
- Para obtener documentación conceptual e información sobre cómo configurar, implementar y administrar la creación de reflejo, vea los siguientes recursos en la documentación de SQL Server.  
+ Para obtener documentación conceptual e información sobre la configuración, implementación y administración de la creación de reflejo, vea los siguientes recursos en SQL Server documentación de.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Creación de reflejo de base de datos](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Describe cómo establecer y configurar la creación de reflejos en SQL Server.|  
+|[Creación de reflejo de la base de datos](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Describe cómo establecer y configurar la creación de reflejos en SQL Server.|  
   
 ## <a name="see-also"></a>Vea también
 

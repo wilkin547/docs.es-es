@@ -5,23 +5,23 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 259594858e96897cb377cde4104e17b748f902c4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 30e8619e70da46cb510fbe28ab2e8bcf27621e19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971806"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963296"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Información general acerca de los patrones de control de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  Esta introducción presenta los patrones de control de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Los patrones de control proporcionan una manera de categorizar y exponer la funcionalidad de un control independientemente de su tipo o apariencia.  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] utiliza patrones de control para representar comportamientos de control comunes. Por ejemplo, utilice el patrón de control Invoke para los controles que se puedan invocar (como los botones) y el patrón de control Scroll para los controles que tengan barras de desplazamiento (como los cuadros de lista, las vistas de lista o los cuadros combinados). Como cada patrón de control representa una funcionalidad independiente, se pueden combinar para describir el conjunto completo de funcionalidad que admite un control determinado.  
   
 > [!NOTE]
->  Los controles agregados, creados con controles secundarios que proporcionan a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] la funcionalidad que expone el objeto primario, deben implementar todos los patrones de control normalmente asociados con cada control secundario. En cambio, no es necesario que los controles secundarios implementen esos mismos patrones de control.  
+> Los controles agregados, creados con controles secundarios que proporcionan a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] la funcionalidad que expone el objeto primario, deben implementar todos los patrones de control normalmente asociados con cada control secundario. En cambio, no es necesario que los controles secundarios implementen esos mismos patrones de control.  
   
 <a name="uiautomation_control_pattern_includes"></a>   
 ## <a name="ui-automation-control-pattern-components"></a>Componentes de los patrones de control de Automatización de la interfaz de usuario  

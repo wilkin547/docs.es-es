@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3b682d4b43ece406ee320d6d4f96ed5cda5f17c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6472f02cf2633d936252bfd2a8daa3ff711a4db8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650351"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967873"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Excepciones de tiempo de ejecución en las aplicaciones nativas de .NET
 Es importante probar las versiones de lanzamiento de la aplicación de la Plataforma universal de Windows en las plataformas de destino, ya que las configuraciones de depuración y de lanzamiento son completamente diferentes. De forma predeterminada, la configuración de depuración utiliza el tiempo de ejecución de .NET Core para compilar la aplicación, pero la configuración de lanzamiento usa .NET Native para compilar la aplicación en código nativo.  
   
 > [!IMPORTANT]
->  Para obtener información sobre cómo tratar el [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), y [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) las excepciones que pueden se produce al probar las versiones de lanzamiento de la aplicación, consulte "paso 4: Resolver manualmente los metadatos que faltan: en el [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md) tema, así como [reflexión y .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) y [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+> Para obtener información sobre cómo tratar las excepciones [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md), [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)y [MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md) que se pueden encontrar al probar las versiones de lanzamiento de la aplicación, vea "paso 4: Resuelva manualmente los metadatos que faltan: en el [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md) tema, así como la [reflexión y .net Native](../../../docs/framework/net-native/reflection-and-net-native.md) y la [Referencia del archivo de configuración de directivas de tiempo de ejecución (Rd. xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="debug-and-release-builds"></a>Compilaciones de depuración y de lanzamiento  
  Cuando se ejecuta la compilación de depuración en el tiempo de ejecución de .NET Core, no se ha compilado en código nativo. Esto hace que todos los servicios que normalmente ofrece el tiempo de ejecución estén disponibles para su aplicación.  
@@ -31,7 +31,7 @@ Es importante probar las versiones de lanzamiento de la aplicación de la Plataf
 - El código está altamente optimizado. Esto significa que la inserción se utiliza siempre que es posible. (La inserción mueve código de rutinas externas a la rutina de llamada).   El hecho de que .NET Native ofrezca un tiempo de ejecución especializado e implemente inserción intensa afecta a la pila de llamadas que se muestra cuando se depura.  Para más información, consulte la sección [Runtime call stack](#CallStack) .  
   
 > [!NOTE]
->  Puede controlar si las compilaciones de depuración y de lanzamiento se compilan con la cadena de herramientas de .NET Native mediante la activación o desactivación del cuadro **Compilar con cadena de herramientas de .NET Native** .   Sin embargo, tenga en cuenta que la Tienda Windows siempre compilará la versión de producción de la aplicación con la cadena de herramientas de .NET Native.  
+> Puede controlar si las compilaciones de depuración y de lanzamiento se compilan con la cadena de herramientas de .NET Native mediante la activación o desactivación del cuadro **Compilar con cadena de herramientas de .NET Native** .   Sin embargo, tenga en cuenta que la Tienda Windows siempre compilará la versión de producción de la aplicación con la cadena de herramientas de .NET Native.  
   
 <a name="Messages"></a>   
 ## <a name="runtime-exception-messages"></a>Runtime exception messages  
@@ -61,5 +61,5 @@ Additional information: Value does not fall within the expected range.
   
 ## <a name="see-also"></a>Vea también
 
-- [Depuración de aplicaciones universales de Windows nativas de .NET](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+- [Depuración .NET Native aplicaciones universales de Windows](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)

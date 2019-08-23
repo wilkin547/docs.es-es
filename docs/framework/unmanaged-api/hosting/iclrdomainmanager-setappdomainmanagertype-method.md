@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28feddffff7dc5dba1860b3d2d1327a17bd08190
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9b142f1a05036eddf44c69d8b7da95091dc8f445
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772951"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963091"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType (Método)
-Especifica el tipo, derivado de la <xref:System.AppDomainManager?displayProperty=nameWithType> (clase), del administrador del dominio de aplicación que se utilizará para inicializar el dominio de aplicación predeterminado.  
+Especifica el tipo, derivado de la <xref:System.AppDomainManager?displayProperty=nameWithType> clase, del administrador del dominio de aplicación que se utilizará para inicializar el dominio de aplicación predeterminado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,13 +37,13 @@ HRESULT SetAppDomainManagerType(
   
 ## <a name="parameters"></a>Parámetros  
  `wszAppDomainManagerAssembly`  
- [in] El nombre para mostrar del ensamblado que contiene el tipo de administrador de dominio de aplicación; Por ejemplo: "AdMgrExample, Version = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3".  
+ de El nombre para mostrar del ensamblado que contiene el tipo de administrador de dominio de aplicación; por ejemplo: "AdMgrExample, version = 1.0.0.0, Culture = neutral, PublicKeyToken = 6856bccf150f00b3".  
   
  `wszAppDomainManagerType`  
- [in] El nombre de tipo de administrador de dominio de aplicación, incluido el espacio de nombres.  
+ de El nombre de tipo del administrador del dominio de aplicación, incluido el espacio de nombres.  
   
  `dwInitializeDomainFlags`  
- [in] Una combinación de [EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md) valores de enumeración que proporcionan información acerca del Administrador de dominio de aplicación.  
+ de Combinación de valores de enumeración de [einitializenewdomainflags (](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md) que proporcionan información sobre el administrador del dominio de aplicación.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
@@ -51,22 +51,22 @@ HRESULT SetAppDomainManagerType(
 |HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |S_OK|El método se completó correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
   
 ## <a name="remarks"></a>Comentarios  
- Actualmente, el único valor definido por el de `dwInitializeDomainFlags` es `eInitializeNewDomainFlags_NoSecurityChanges`, que indica a common language runtime (CLR) que el Administrador de dominio de aplicación no modificará la configuración de seguridad durante la ejecución de la <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> método. Esto permite que el CLR optimizar la carga de ensamblados que tienen el atributo conditional <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributo (APTCA). Esto puede producir una mejora considerable en tiempo de inicio si el cierre transitivo de este conjunto de ensamblados es grande.  
+ Actualmente, el único valor definido para `dwInitializeDomainFlags` es `eInitializeNewDomainFlags_NoSecurityChanges`, que indica al Common Language Runtime (CLR) que el administrador del dominio de aplicación no modificará la configuración de seguridad <xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> durante la ejecución del método. Esto permite que CLR optimice la carga de ensamblados que tienen el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> condicional (APTCA). Esto puede dar lugar a una mejora significativa en el tiempo de inicio si el cierre transitivo de este conjunto de ensamblados es grande.  
   
 > [!IMPORTANT]
->  Si el host especifica `eInitializeNewDomainFlags_NoSecurityChanges` para el Administrador de dominio de aplicación, un <xref:System.InvalidOperationException> se produce si intenta modificar la seguridad del dominio de aplicación.  
+> Si el host especifica `eInitializeNewDomainFlags_NoSecurityChanges` para el administrador del dominio de aplicación <xref:System.InvalidOperationException> , se produce una excepción si se intenta modificar la seguridad del dominio de aplicación.  
   
- Una llamada a la [ICLRControl](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)es equivalente a llamar al método `ICLRDomainManager::SetAppDomainManagerType` con `eInitializeNewDomainFlags_None`.  
+ Llamar al método [ICLRControl:: setappdomainmanagertype (](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)es equivalente a llamar `ICLRDomainManager::SetAppDomainManagerType` a `eInitializeNewDomainFlags_None`con.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: MetaHost.h  
+ **Encabezado**: Metahost. h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

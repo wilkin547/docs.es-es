@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 570b3d382157d4be832f57265ad3a064fcd3df9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ccd30e3d1b0d716b6393fdb093d47cddf7302f8d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743461"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963273"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Recuperación de datos y operaciones CUD en aplicaciones de n niveles (LINQ to SQL)
 Al serializar objetos entidad, como Clientes o Pedidos, con destino a un cliente a través de una red, esas entidades se desasocian de su contexto de datos. El contexto de datos ya no realiza un seguimiento de sus cambios o sus asociaciones con otros objetos. Esto no constituye un problema mientras los clientes solo estén leyendo los datos. También es relativamente sencillo permitir a los clientes agregar nuevas filas a una base de datos. Sin embargo, si su aplicación requiere que los clientes pueden actualizar o eliminar datos, deberá asociar las entidades a un nuevo contexto de datos antes de llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Además, si está utilizando una comprobación de simultaneidad optimista con valores originales, también necesitará un medio para proporcionar a la base de datos la entidad original y la entidad modificada. Los métodos `Attach` se utilizan para colocar las entidades en un nuevo contexto de datos después de haber sido desasociadas.  
   
- Incluso si está serializando objetos proxy en lugar de la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entidades, todavía deberá construir una entidad en la capa de acceso a datos (DAL) y asociarla a un nuevo <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>, con el fin de enviar los datos a la base de datos.  
+ Incluso si está serializando objetos proxy en lugar de las [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entidades, todavía tiene que construir una entidad en la capa de acceso a datos (dal) y asociarla a un nuevo <xref:System.Data.Linq.DataContext?displayProperty=nameWithType>para enviar los datos a la base de datos.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] es completamente indiferente acerca de cómo se serializan las entidades. Para obtener más información sobre cómo usar las herramientas de Object Relational Designer y SQLMetal para generar clases que son serializables mediante el uso de Windows Communication Foundation (WCF), consulte [Cómo: Serializar entidades](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]es completamente diferente de cómo se serializan las entidades. Para obtener más información sobre cómo usar las herramientas Object Relational Designer y SQLMetal para generar clases que se pueden serializar mediante Windows Communication Foundation (WCF), [consulte Cómo: Hacer que las](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)entidades sean serializables.  
   
 > [!NOTE]
->  Solo llame a los métodos `Attach` para entidades nuevas o deserializadas. La única manera de desasociar una entidad de su contexto de datos original es deserializarla. Si intenta asociar una entidad no desasociada a un nuevo contexto de datos, y esa entidad todavía tiene cargadores diferidos procedentes de su contexto de datos anterior, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] producirá una excepción. Una entidad con cargadores diferidos de dos contextos de datos diferentes podría producir resultados no deseados al realizar operaciones de inserción, actualización y eliminación sobre esa entidad. Para obtener más información sobre cargadores diferidos, consulte [carga inmediata y carga diferida](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
+> Solo llame a los métodos `Attach` para entidades nuevas o deserializadas. La única manera de desasociar una entidad de su contexto de datos original es deserializarla. Si intenta asociar una entidad no desasociada a un nuevo contexto de datos, y esa entidad todavía tiene cargadores diferidos procedentes de su contexto de datos anterior, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] producirá una excepción. Una entidad con cargadores diferidos de dos contextos de datos diferentes podría producir resultados no deseados al realizar operaciones de inserción, actualización y eliminación sobre esa entidad. Para obtener más información sobre los cargadores diferidos, vea [carga aplazada frente a carga inmediata](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md).  
   
 ## <a name="retrieving-data"></a>Recuperar datos  
   
@@ -121,7 +121,7 @@ public IEnumerable<Product> GetProductsByCategory(int categoryID)
   
  Una instancia de un contexto de datos debería tener la duración de una "unidad de trabajo". En un entorno débilmente acoplado, una unidad de trabajo es generalmente pequeña, quizá una transacción optimista, incluida una única llamada a `SubmitChanges`. Por consiguiente, el contexto de los datos se crea y se deshace en el ámbito del método. Si la unidad de trabajo incluye llamadas a la lógica de reglas de empresa, entonces generalmente deseará mantener la instancia de `DataContext` para esa operación completa. En cualquier caso, las instancias de `DataContext` no deberían mantenerse activas durante largos períodos de tiempo a lo largo de un número arbitrario de transacciones.  
   
- Este método devolverá objetos Product, pero no la colección de los objetos Order_Detail asociados a cada objeto Product. Use el objeto <xref:System.Data.Linq.DataLoadOptions> para cambiar este comportamiento predeterminado. Para obtener más información, vea [Cómo: Controlar la cantidad de datos relacionado se recupera](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md).  
+ Este método devolverá objetos Product, pero no la colección de los objetos Order_Detail asociados a cada objeto Product. Use el objeto <xref:System.Data.Linq.DataLoadOptions> para cambiar este comportamiento predeterminado. Para obtener más información, consulte [Cómo Controlar la cantidad de datos relacionados que](../../../../../../docs/framework/data/adonet/sql/linq/how-to-control-how-much-related-data-is-retrieved.md)se recuperan.  
   
 ## <a name="inserting-data"></a>Insertar datos  
  Para insertar un nuevo objeto, el nivel de presentación simplemente llama al método pertinente en la interfaz de nivel intermedio y pasa el nuevo objeto que se va a insertar. En algunos casos, puede ser más eficiente para el cliente pasar solo algunos valores y hacer que el nivel intermedio construya el objeto completo.  
@@ -157,7 +157,7 @@ End Sub
 ## <a name="deleting-data"></a>Eliminar datos  
  Para eliminar un objeto existente de la base de datos, el nivel de presentación llama al método pertinente en la interfaz de nivel intermedio y pasa su copia que incluye los valores originales del objeto que se va a eliminar.  
   
- Las operaciones de eliminación implican comprobaciones de simultaneidad optimista, y el objeto que se va a eliminar debe estar primero asociado al nuevo contexto de datos. En este ejemplo, el parámetro `Boolean` está establecido en `false` para indicar que el objeto no tiene marca de tiempo (RowVersion). Si la tabla de la base de datos genera marcas de tiempo para cada registro, entonces las comprobaciones de simultaneidad son mucho más simples, sobre todo para el cliente. Simplemente pase el objeto original o el objeto modificado y establezca el parámetro `Boolean` en `true`. En cualquier caso, en el nivel intermedio es necesario generalmente capturar la excepción <xref:System.Data.Linq.ChangeConflictException>. Para obtener más información sobre cómo controlar los conflictos de simultaneidad optimista, vea [simultaneidad optimista: Información general sobre](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
+ Las operaciones de eliminación implican comprobaciones de simultaneidad optimista, y el objeto que se va a eliminar debe estar primero asociado al nuevo contexto de datos. En este ejemplo, el parámetro `Boolean` está establecido en `false` para indicar que el objeto no tiene marca de tiempo (RowVersion). Si la tabla de la base de datos genera marcas de tiempo para cada registro, entonces las comprobaciones de simultaneidad son mucho más simples, sobre todo para el cliente. Simplemente pase el objeto original o el objeto modificado y establezca el parámetro `Boolean` en `true`. En cualquier caso, en el nivel intermedio es necesario generalmente capturar la excepción <xref:System.Data.Linq.ChangeConflictException>. Para obtener más información sobre cómo controlar los conflictos de simultaneidad optimista, [consulte simultaneidad optimista: Información](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)general.  
   
  Al eliminar entidades que tienen restricciones de clave externa sobre tablas asociadas, deberá eliminar primero todos los objetos en sus colecciones <xref:System.Data.Linq.EntitySet%601>.  
   
@@ -218,7 +218,7 @@ public void DeleteOrder(Order order)
   
  Puede también realizar actualizaciones o eliminaciones conjuntas sobre una entidad y sus relaciones; por ejemplo, un Cliente y una colección de sus objetos Pedido asociados. Cuando realiza modificaciones sobre el cliente en un grafo de objetos entidad y sus colecciones (`EntitySet`) secundarias, y las comprobaciones de simultaneidad optimista requieren valores originales, el cliente debe proporcionar esos valores originales para cada entidad y cada objeto <xref:System.Data.Linq.EntitySet%601>. Si desea permitir a los clientes realizar, en una única llamada al método, un conjunto de actualizaciones, eliminaciones e inserciones relacionadas, deberá proporcionar al cliente una manera de indicar qué tipo de operación va a realizar sobre cada entidad. En el nivel intermedio, deberá llamar al método <xref:System.Data.Linq.ITable.Attach%2A> apropiado y, a continuación, a <xref:System.Data.Linq.ITable.InsertOnSubmit%2A>, <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A> o <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> (sin `Attach`, para las inserciones) para cada entidad antes de llamar a <xref:System.Data.Linq.DataContext.SubmitChanges%2A>. No recupere datos de la base de datos como una manera de obtener valores originales antes de probar las actualizaciones.  
   
- Para obtener más información acerca de la simultaneidad optimista, vea [simultaneidad optimista: Información general sobre](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md). Para obtener información detallada acerca de la simultaneidad optimista de resolución de conflictos de cambios, vea [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ Para obtener más información acerca de la simultaneidad optimista [, consulte simultaneidad optimista: Información](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)general. Para obtener información detallada sobre cómo resolver conflictos de cambios de simultaneidad optimista [, consulte Cómo: Administrar conflictos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)de cambios.  
   
  Los ejemplos siguientes explican los distintos escenarios:  
   
@@ -400,7 +400,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 3. Asociarlo mediante la sobrecarga <xref:System.Data.Linq.Table%601.Attach%2A> que acepta un segundo parámetro booleano (con el valor true). Esto indicará al seguidor de cambios que considere el objeto modificado sin tener que proporcionar ningún valor original. En este enfoque, el objeto debe tener un campo de versión o marca de tiempo.  
   
- Para obtener más información, consulte [Estados de objetos y seguimiento de cambios](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
+ Para obtener más información, vea [Estados de objetos y seguimiento de cambios](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
   
  Si ya existe un objeto entidad en la caché de identificadores con la misma identidad que el objeto que se va a asociar, se producirá la excepción <xref:System.Data.Linq.DuplicateKeyException>.  
   

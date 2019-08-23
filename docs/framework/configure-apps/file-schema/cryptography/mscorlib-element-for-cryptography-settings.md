@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-ms.openlocfilehash: 312db8ea5ae4b66fd00faad1b788eac0356aeaa7
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c780087246ea91846896037a245b82493251e538
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659595"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921064"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>\<Elemento > mscorlib para la configuración de criptografía
 Contiene el [ \<elemento > de cryptographySettings](cryptographysettings-element.md).  
@@ -74,5 +74,5 @@ Contiene el [ \<elemento > de cryptographySettings](cryptographysettings-element
 - <xref:System.Security.Cryptography>
 - [Esquema de los archivos de configuración](../index.md)
 - [Esquema de la configuración de criptografía](index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
 - [Configurar clases de criptografía](../../configure-cryptography-classes.md)

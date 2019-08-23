@@ -2,14 +2,14 @@
 title: <security> de <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: f73634ed-f896-4968-bf74-5e5ac52d3b6b
-ms.openlocfilehash: 1aff79bf5867a3a1ebe05e3f812475dac4b413e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bdd3b236c9bae198f8027c4ca0c0fa5b70d30342
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670500"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936638"
 ---
-# <a name="security-of-peertransport"></a>\<seguridad > de \<peerTransport >
+# <a name="security-of-peertransport"></a>\<> de seguridad \<de peerTransport >
 Contiene la configuración de seguridad asociada con un canal del mismo nivel, incluido el tipo de autenticación utilizado y la seguridad utilizada para el transporte del mensaje.  
   
  \<system.serviceModel>  
@@ -17,7 +17,7 @@ Contiene la configuración de seguridad asociada con un canal del mismo nivel, i
 \<customBinding>  
 \<binding>  
 \<peerTransport>  
-\<security>  
+\<> de seguridad  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -32,13 +32,13 @@ Contiene la configuración de seguridad asociada con un canal del mismo nivel, i
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`mode`|Especifica el tipo de seguridad que se va a aplicar. El valor predeterminado es Mensaje. Este atributo es del tipo <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`None`|La seguridad está deshabilitada.|  
 |`Transport`|La seguridad se proporciona utilizando HTTPS.|  
@@ -47,25 +47,25 @@ Contiene la configuración de seguridad asociada con un canal del mismo nivel, i
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<transport>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-peertransport.md)|Define un transporte del mismo nivel para un enlace personalizado. Este elemento tiene un atributo `clientCredentialType` que especifica las credenciales que se van a usar al interactuar con un servicio. Este atributo es del tipo <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[\<> de transporte](transport-of-peertransport.md)|Define un transporte del mismo nivel para un enlace personalizado. Este elemento tiene un atributo `clientCredentialType` que especifica las credenciales que se van a usar al interactuar con un servicio. Este atributo es del tipo <xref:System.ServiceModel.PeerTransportCredentialType>.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<peerTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/peertransport.md)|Define un transporte del mismo nivel para un enlace personalizado.|  
+|[\<peerTransport>](peertransport.md)|Define un transporte del mismo nivel para un enlace personalizado.|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Seguridad de transporte](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Seguridad de transporte](../../../wcf/feature-details/transport-security.md)
+- [Transportes](../../../wcf/feature-details/transports.md)
+- [Elección del transporte](../../../wcf/feature-details/choosing-a-transport.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

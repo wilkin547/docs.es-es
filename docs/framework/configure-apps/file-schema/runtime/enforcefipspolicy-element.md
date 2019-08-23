@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb28eddf7e9f13bceaf47de28633073f59f3920d
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: f13243ddef7020f4d7a50e519ae8281702b0d261
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663750"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927415"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy >, elemento
 Especifica si se debe exigir un requisito de configuración del equipo que indique que los algoritmos criptográficos deben cumplir con los Estándares federales de procesamiento de la información (FIPS).  
@@ -40,7 +40,7 @@ Especifica si se debe exigir un requisito de configuración del equipo que indiq
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|DESCRIPCIÓN|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`true`|Si el equipo está configurado para requerir que los algoritmos criptográficos sean conformes a FIPS, se aplicará ese requisito. Si una clase implementa un algoritmo que no es compatible con FIPS, los constructores o `Create` métodos de esa clase inician excepciones cuando se ejecutan en ese equipo. Este es el valor predeterminado.|  
 |`false`|No es necesario que los algoritmos criptográficos que usa la aplicación sean compatibles con FIPS, independientemente de la configuración del equipo.|  
@@ -75,4 +75,4 @@ Especifica si se debe exigir un requisito de configuración del equipo que indiq
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Modelo de criptografía](../../../../../docs/standard/security/cryptography-model.md)
+- [Modelo de criptografía](../../../../standard/security/cryptography-model.md)

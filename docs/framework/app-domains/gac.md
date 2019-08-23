@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 37c6e87ea50f3978bb896c7896a41b2faa9798bc
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832843"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566967"
 ---
 # <a name="global-assembly-cache"></a>Caché global de ensamblados
 Cada equipo donde está instalado Common Language Runtime tiene una memoria caché de código denominada caché global de ensamblados. La caché global de ensamblados almacena los ensamblados designados específicamente para ser compartidos por varias aplicaciones del equipo.  
@@ -31,7 +31,7 @@ Cada equipo donde está instalado Common Language Runtime tiene una memoria cach
   
 - Usar un instalador diseñado para funcionar con la caché global de ensamblados. Es la opción preferida para instalar ensamblados en la caché global de ensamblados.  
   
-- Use la herramienta de desarrollador [Caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), que se suministra con el kit de desarrollo de software (SDK) de Windows.  
+- Use la herramienta de desarrollador [Caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), que se suministra con Windows SDK.  
   
     > [!NOTE]
     >  En escenarios de implementación, use Windows Installer para instalar los ensamblados en la caché global de ensamblados. Utilice la herramienta Caché global de ensamblados solo en escenarios de desarrollo, porque no proporciona funciones de recuento de referencias de ensamblados y otras características que se incluyen con Windows Installer.  

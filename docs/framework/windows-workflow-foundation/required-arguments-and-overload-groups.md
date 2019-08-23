@@ -2,12 +2,12 @@
 title: Argumentos necesarios y grupos de sobrecarga
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: a2a5182adf34c6910f75e85505098075ffe7d3c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5249cbb127064ffa5023074481a47decad279128
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649327"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964910"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Argumentos necesarios y grupos de sobrecarga
 Se pueden configurar las actividades de manera que sea necesario enlazar algunos argumentos para que la actividad pueda ejecutarse. El atributo `RequiredArgument` se usa para indicar que se necesitan algunos argumentos en una actividad mientras que el atributo `OverloadGroup` se usa para agrupar categorías de argumentos necesarios. Al usar los atributos, los autores de actividades pueden proporcionar configuraciones simples o complejas de validación de actividades.  
@@ -61,13 +61,13 @@ public sealed class Add : CodeActivity<int>
   
  Si se usa la actividad y no se enlaza ninguno de los argumentos necesarios, se devuelve el siguiente error de validación.  
   
- **No se proporcionó el valor de un argumento de actividad necesario 'Operand1'.**  
+ **No se proporcionó el valor de un argumento de actividad necesario ' Operand1 '.**  
 > [!NOTE]
-> Para obtener más información acerca de la comprobación y administración de advertencias y errores de validación, consulte [invocar la validación de actividad](invoking-activity-validation.md).  
+> Para obtener más información sobre la comprobación y el control de errores y advertencias de validación, consulte invocar la [validación de actividad](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Usar grupos de sobrecargas
 
-Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad. Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>. Cada grupo se asigna un nombre que se especifica mediante el <xref:System.Activities.OverloadGroupAttribute>. La actividad es válida cuando se enlaza sólo un conjunto de argumentos de un grupo de sobrecargas. En el ejemplo siguiente, se define una clase `CreateLocation`.  
+Los grupos de sobrecargas proporcionan un método para indicar qué combinaciones de argumentos son válidas en una actividad. Los argumentos se agrupan mediante <xref:System.Activities.OverloadGroupAttribute>. A cada grupo se le asigna un nombre especificado por <xref:System.Activities.OverloadGroupAttribute>. La actividad es válida cuando solo se enlaza un conjunto de argumentos de un grupo de sobrecargas. En el ejemplo siguiente, se define una clase `CreateLocation`.  
   
 ```csharp  
 class CreateLocation: Activity  
@@ -106,7 +106,7 @@ class CreateLocation: Activity
   
  El objetivo de esta actividad es especificar una ubicación en los EE. UU. Para ello, el usuario de la actividad puede especificar la ubicación con uno de los tres grupos de argumentos. Para especificar las combinaciones válidas de argumentos, se definen tres grupos de sobrecargas. `G1` contiene los argumentos `Latitude` y `Longitude`. `G2` contiene `Street`, `City` y `State`. `G3` contiene `Street` y `Zip`. `Name` también es un argumento necesario, pero no forma parte de un grupo de sobrecargas. Para que esta actividad sea válida, `Name` tendría que estar enlazado con todos los argumentos de uno y solo un grupo de sobrecargas.  
   
- En el ejemplo siguiente, tomado de la [actividades de acceso de la base de datos](./samples/database-access-activities.md) ejemplo, hay dos grupos de sobrecargas: `ConnectionString` y `ConfigFileSectionName`. Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
+ En el ejemplo siguiente, tomado del ejemplo de [actividades de acceso a bases de datos](./samples/database-access-activities.md) , hay dos `ConnectionString` grupos de sobrecargas: y. `ConfigFileSectionName` Para que esta actividad sea válida, los argumentos `ProviderName` y `ConnectionString` deben estar enlazados, o el argumento `ConfigName`, pero no ambos.  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  
@@ -147,7 +147,7 @@ Public class DbUpdate: AsyncCodeActivity
 - Un grupo de sobrecargas no puede ser un subconjunto o un conjunto equivalente de otro grupo de sobrecargas.  
   
     > [!NOTE]
-    >  Hay una excepción para esta regla. Si un grupo de sobrecargas es un subconjunto de otro grupo de sobrecargas y el subconjunto solo contiene argumentos donde `RequiredArgument` es `false`, el grupo de sobrecargas es válido.  
+    > Hay una excepción para esta regla. Si un grupo de sobrecargas es un subconjunto de otro grupo de sobrecargas y el subconjunto solo contiene argumentos donde `RequiredArgument` es `false`, el grupo de sobrecargas es válido.  
   
 - Los grupos de sobrecargas se pueden superponer pero es un error si la intersección de los grupos contiene todos los argumentos necesarios de uno o ambos grupos de sobrecargas. En el ejemplo anterior los grupos de sobrecargas `G2` y `G3` se superponían, pero como la intersección no contenía todos los argumentos de uno o ambos grupos, era válido.  
   

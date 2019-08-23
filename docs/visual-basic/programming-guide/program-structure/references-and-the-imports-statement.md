@@ -9,44 +9,44 @@ helpviewer_keywords:
 - Imports statement [Visual Basic], referencing assemblies
 - assemblies [Visual Basic], references
 ms.assetid: 38149bd4-0a6f-4b31-b5f8-94a8c33f1600
-ms.openlocfilehash: f3396eb3e758dc456d86de80246de24349680f2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99afa42994dd09d0b5faaeaf534fbc4b41816998
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967757"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962479"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a>Referencias y la instrucción Imports (Visual Basic)
-Se pueden objetos externos a disposición del proyecto eligiendo la **Agregar referencia** comando el **proyecto** menú. Las referencias en Visual Basic pueden apuntar a ensamblados, que son similares a las bibliotecas de tipos, pero contienen más información.  
+Puede hacer que los objetos externos estén disponibles para el proyecto eligiendo el comando **Agregar referencia** en el menú **proyecto** . Las referencias en Visual Basic pueden apuntar a ensamblados, que son similares a las bibliotecas de tipos, pero contienen más información.  
   
 ## <a name="the-imports-statement"></a>La instrucción Imports  
- Los ensamblados incluyen uno o varios espacios de nombres. Cuando se agrega una referencia a un ensamblado, también puede agregar un `Imports` instrucción a un módulo que controla la visibilidad de espacios de nombres del ensamblado dentro del módulo. El `Imports` instrucción proporciona un ámbito de contexto que le permite usar sólo la parte del espacio de nombres necesarios para proporcionar una referencia única.  
+ Los ensamblados incluyen uno o varios espacios de nombres. Al agregar una referencia a un ensamblado, también puede Agregar una `Imports` instrucción a un módulo que controla la visibilidad de los espacios de nombres de ese ensamblado en el módulo. La `Imports` instrucción proporciona un contexto de ámbito que le permite usar solo la parte del espacio de nombres necesaria para proporcionar una referencia única.  
   
- El `Imports` instrucción tiene la siguiente sintaxis:  
+ La `Imports` instrucción tiene la siguiente sintaxis:  
   
  `Imports [Aliasname =] Namespace`  
   
- `Aliasname` hace referencia a un nombre corto que se puede usar dentro de código para hacer referencia a un espacio de nombres importado. `Namespace` es un espacio de nombres disponible a través de una referencia de proyecto, mediante una definición dentro del proyecto o una anterior `Imports` instrucción.  
+ `Aliasname`hace referencia a un nombre corto que puede usar en el código para hacer referencia a un espacio de nombres importado. `Namespace`es un espacio de nombres disponible a través de una referencia de proyecto, a través de una definición dentro del `Imports` proyecto o a través de una instrucción anterior.  
   
- Un módulo puede contener cualquier número de `Imports` instrucciones. Deben aparecer después de cualquier `Option` instrucciones, si está presente, pero antes de cualquier otro código.  
+ Un módulo puede contener cualquier número de `Imports` instrucciones. Deben aparecer después de cualquier `Option` instrucción, si está presente, pero antes de cualquier otro código.  
   
 > [!NOTE]
->  No confunda las referencias de proyecto con el `Imports` instrucción o el `Declare` instrucción. Las referencias de proyecto disposición objetos externos, como los objetos de ensamblados, proyectos de Visual Basic. El `Imports` instrucción se usa para simplificar el acceso a las referencias de proyecto, pero no proporciona acceso a estos objetos. El `Declare` instrucción se utiliza para declarar una referencia a un procedimiento externo en una biblioteca de vínculos dinámicos (DLL).  
+> No confunda las referencias de proyecto con la `Imports` instrucción o la `Declare` instrucción. Las referencias de proyecto hacen que los objetos externos, como los objetos de los ensamblados, estén disponibles para proyectos de Visual Basic. La `Imports` instrucción se usa para simplificar el acceso a las referencias del proyecto, pero no proporciona acceso a estos objetos. La `Declare` instrucción se utiliza para declarar una referencia a un procedimiento externo en una biblioteca de vínculos dinámicos (dll).  
   
-## <a name="using-aliases-with-the-imports-statement"></a>Uso de alias con la instrucción Imports  
- El `Imports` instrucción facilita acceso a los métodos de clases por lo que elimina la necesidad de escribir explícitamente los nombres completos de referencias. Los alias permiten asignar un nombre más descriptivo a sólo una parte de un espacio de nombres. Por ejemplo, el retorno de carro/avance la secuencia que produce un único fragmento de texto que se mostrará en varias líneas de línea es parte de la <xref:Microsoft.VisualBasic.ControlChars> módulo en el <xref:Microsoft.VisualBasic?displayProperty=nameWithType> espacio de nombres. Para usar esta constante en un programa sin un alias, se tendría que escribir el código siguiente:  
+## <a name="using-aliases-with-the-imports-statement"></a>Usar alias con la instrucción Imports  
+ La `Imports` instrucción facilita el acceso a los métodos de las clases, ya que elimina la necesidad de escribir explícitamente los nombres completos de las referencias. Los alias permiten asignar un nombre más descriptivo a solo una parte de un espacio de nombres. Por ejemplo, la secuencia de retorno de carro/avance de línea que hace que se muestre un único fragmento de texto en varias líneas es <xref:Microsoft.VisualBasic.ControlChars> parte del módulo <xref:Microsoft.VisualBasic?displayProperty=nameWithType> en el espacio de nombres. Para usar esta constante en un programa sin un alias, debe escribir el código siguiente:  
   
  [!code-vb[VbVbalrApplication#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#3)]  
   
- `Imports` instrucciones siempre deben ser las primeras líneas inmediatamente después de cualquier `Option` las instrucciones de un módulo. El fragmento de código siguiente muestra cómo importar y asignar un alias para el <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> módulo:  
+ `Imports`las instrucciones siempre deben ser las primeras líneas inmediatamente después `Option` de cualquier instrucción de un módulo. En el siguiente fragmento de código se muestra cómo importar y asignar un alias <xref:Microsoft.VisualBasic.ControlChars?displayProperty=nameWithType> al módulo:  
   
  [!code-vb[VbVbalrApplication#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#4)]  
   
- Referencia futura a este espacio de nombres puede ser mucho más breves:  
+ Las referencias futuras a este espacio de nombres pueden ser mucho más cortas:  
   
  [!code-vb[VbVbalrApplication#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#5)]  
   
- Si un `Imports` instrucción no incluye un nombre de alias, se pueden usar elementos definidos en el espacio de nombres importado en el módulo sin calificación. Si se especifica el nombre de alias, debe usarse como calificador para los nombres dentro de ese espacio de nombres.  
+ Si una `Imports` instrucción no incluye un nombre de alias, los elementos definidos en el espacio de nombres importado se pueden usar en el módulo sin calificación. Si se especifica el nombre de alias, se debe usar como calificador para los nombres contenidos dentro de ese espacio de nombres.  
   
 ## <a name="see-also"></a>Vea también
 

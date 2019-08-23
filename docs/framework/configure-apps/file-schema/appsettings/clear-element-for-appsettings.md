@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 5d4d96143dbd1db440de2247a7dc2f0c66f20403
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 5d5da531bff3a0e9e198ba9b5ab6cf2b52bf36b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301294"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921308"
 ---
-# <a name="clear-element-for-appsettings"></a>\<Borrar > (elemento) para \<appSettings >
+# <a name="clear-element-for-appsettings"></a>\<borrar > elemento para \<appSettings >
 
-Borra la configuración de aplicación personalizada.
+Borra la configuración personalizada de la aplicación.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintaxis
@@ -34,21 +34,21 @@ Borra la configuración de aplicación personalizada.
 
 ## <a name="attributes"></a>Atributos
 
-Ninguna
+None
 
 ## <a name="parent-element"></a>Elemento primario
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contiene la configuración de aplicación personalizada, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración de aplicación personalizada. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene la configuración de la aplicación personalizada, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración de la aplicación personalizada. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguna
+None
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo borrar la configuración personalizada:
+En el ejemplo siguiente se muestra cómo borrar las opciones de configuración personalizadas:
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ El ejemplo siguiente muestra cómo borrar la configuración personalizada:
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema del archivo de configuración para el .NET Framework](../index.md)

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: 304499a6d6dd9d9f5fd51fc84044de5e50393762
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e80132a5467f932e5569787f43427044ba2be256
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584730"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929608"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Pintar con imágenes, dibujos y elementos visuales
-Este tema describe cómo usar <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, y <xref:System.Windows.Media.VisualBrush> objetos que se va a pintar un área con una imagen, un <xref:System.Windows.Media.Drawing>, o un <xref:System.Windows.Media.Visual>.  
+En este tema se describe cómo <xref:System.Windows.Media.ImageBrush>utilizar <xref:System.Windows.Media.DrawingBrush>los objetos <xref:System.Windows.Media.VisualBrush> , y para pintar un área con una imagen, <xref:System.Windows.Media.Drawing>un o un <xref:System.Windows.Media.Visual>.  
 
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Requisitos previos  
@@ -28,20 +28,20 @@ Este tema describe cómo usar <xref:System.Windows.Media.ImageBrush>, <xref:Syst
   
 <a name="image"></a>   
 ## <a name="paint-an-area-with-an-image"></a>Pintar un área con una imagen  
- Un <xref:System.Windows.Media.ImageBrush> pinta un área con un <xref:System.Windows.Media.ImageSource>. El tipo más común de <xref:System.Windows.Media.ImageSource> para usar con un <xref:System.Windows.Media.ImageBrush> es un <xref:System.Windows.Media.Imaging.BitmapImage>, que describe un gráfico de mapa de bits. Puede usar un <xref:System.Windows.Media.DrawingImage> para pintar con un <xref:System.Windows.Media.Drawing> objeto, pero es más fácil de usar un <xref:System.Windows.Media.DrawingBrush> en su lugar. Para obtener más información acerca de <xref:System.Windows.Media.ImageSource> objetos, vea el [información general sobre imágenes](imaging-overview.md).  
+ Dibuja un área con un <xref:System.Windows.Media.ImageSource>. <xref:System.Windows.Media.ImageBrush> El tipo más común de <xref:System.Windows.Media.ImageSource> que <xref:System.Windows.Media.ImageBrush> se utiliza con es un <xref:System.Windows.Media.Imaging.BitmapImage>, que describe un gráfico de mapa de bits. Puede usar <xref:System.Windows.Media.DrawingImage> para pintar con un <xref:System.Windows.Media.Drawing> objeto, pero es <xref:System.Windows.Media.DrawingBrush> más sencillo utilizar en su lugar. Para obtener más información <xref:System.Windows.Media.ImageSource> acerca de los objetos, consulte la [información general sobre imágenes](imaging-overview.md).  
   
- Pintar con un <xref:System.Windows.Media.ImageBrush>, cree un <xref:System.Windows.Media.Imaging.BitmapImage> y usarla para cargar el contenido de mapa de bits. A continuación, utilice el <xref:System.Windows.Media.Imaging.BitmapImage> para establecer el <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad de la <xref:System.Windows.Media.ImageBrush>. Por último, aplique el <xref:System.Windows.Media.ImageBrush> para el objeto que desea pintar.  En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], también puede establecer el <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad de la <xref:System.Windows.Media.ImageBrush> con la ruta de acceso de la imagen para cargar.  
+ Para pintar con <xref:System.Windows.Media.ImageBrush>, cree un <xref:System.Windows.Media.Imaging.BitmapImage> y úselo para cargar el contenido del mapa de bits. A continuación, utilice <xref:System.Windows.Media.Imaging.BitmapImage> para establecer la <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad de <xref:System.Windows.Media.ImageBrush>. Por último, aplique <xref:System.Windows.Media.ImageBrush> al objeto que desea pintar.  En [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], también puede establecer la <xref:System.Windows.Media.ImageBrush.ImageSource%2A> propiedad de <xref:System.Windows.Media.ImageBrush> con la ruta de acceso de la imagen que se va a cargar.  
   
- Al igual que todos <xref:System.Windows.Media.Brush> objetos, un <xref:System.Windows.Media.ImageBrush> puede usarse para pintar objetos como formas, paneles, controles y texto. La siguiente ilustración muestra algunos efectos que se pueden lograr con un <xref:System.Windows.Media.ImageBrush>.  
+ Al igual <xref:System.Windows.Media.Brush> que todos los <xref:System.Windows.Media.ImageBrush> objetos, se puede usar para pintar objetos como formas, paneles, controles y texto. En la ilustración siguiente se muestran algunos efectos que se pueden lograr <xref:System.Windows.Media.ImageBrush>con un.  
   
- ![Ejemplos del resultado de ImageBrush](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
+ ![Ejemplos de salida de ImageBrush](./media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 Objetos pintados mediante ImageBrush  
   
- De forma predeterminada, un <xref:System.Windows.Media.ImageBrush> se expande su imagen para rellenar completamente el área pintada, lo que puede distorsionar la imagen si el área pintada tiene una relación de aspecto diferente que la imagen. Puede cambiar este comportamiento cambiando la <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad desde su valor predeterminado de <xref:System.Windows.Media.Stretch.Fill> a <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, o <xref:System.Windows.Media.Stretch.UniformToFill>. Dado que <xref:System.Windows.Media.ImageBrush> es un tipo de <xref:System.Windows.Media.TileBrush>, puede especificar exactamente cómo un pincel de imagen rellena el área de salida e incluso crea patrones. Para obtener más información sobre opciones avanzadas <xref:System.Windows.Media.TileBrush> características, vea el [TileBrush Overview](tilebrush-overview.md).  
+ De forma predeterminada, <xref:System.Windows.Media.ImageBrush> un ajusta su imagen para rellenar completamente el área que se está pintando, lo que posiblemente distorsiona la imagen si el área pintada tiene una relación de aspecto diferente a la imagen. Puede cambiar este comportamiento <xref:System.Windows.Media.TileBrush.Stretch%2A> cambiando la propiedad de su valor predeterminado de <xref:System.Windows.Media.Stretch.Fill> a <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>o <xref:System.Windows.Media.Stretch.UniformToFill>. Dado <xref:System.Windows.Media.ImageBrush> que es un tipo <xref:System.Windows.Media.TileBrush>de, puede especificar exactamente cómo un pincel de imagen rellena el área de salida e incluso crear patrones. Para obtener más información acerca <xref:System.Windows.Media.TileBrush> de las características avanzadas, consulte [información general de TileBrush](tilebrush-overview.md).  
   
 <a name="fillingpanelwithimage"></a>   
 ## <a name="example-paint-an-object-with-a-bitmap-image"></a>Ejemplo: Pintar un objeto con una imagen de mapa de bits  
- En el ejemplo siguiente se usa un <xref:System.Windows.Media.ImageBrush> para pintar el <xref:System.Windows.Controls.Panel.Background%2A> de un <xref:System.Windows.Controls.Canvas>.  
+ <xref:System.Windows.Media.ImageBrush> En el ejemplo siguiente se utiliza para pintar <xref:System.Windows.Controls.Panel.Background%2A> el de <xref:System.Windows.Controls.Canvas>un.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMImageBrushAsCanvasBackgroundExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/ImageBrushExample.xaml#graphicsmmimagebrushascanvasbackgroundexamplewholepage)]  
   
@@ -50,30 +50,30 @@ Objetos pintados mediante ImageBrush
   
 <a name="drawingbrushintro"></a>   
 ## <a name="paint-an-area-with-a-drawing"></a>Pintar un área con un dibujo  
- Un <xref:System.Windows.Media.DrawingBrush> permite pintar un área con formas, texto, imágenes y vídeo. Formas dentro de un pincel con dibujo se pueden pintar con un color sólido, degradado, imagen, o incluso otro <xref:System.Windows.Media.DrawingBrush>. La ilustración siguiente muestra algunos usos de un <xref:System.Windows.Media.DrawingBrush>.  
+ <xref:System.Windows.Media.DrawingBrush> Permite pintar un área con formas, texto, imágenes y vídeo. Las formas que se encuentran dentro de un pincel de dibujo pueden dibujarse a sí mismas con un color sólido <xref:System.Windows.Media.DrawingBrush>, un degradado, una imagen o incluso otro. En la ilustración siguiente se muestran algunos usos <xref:System.Windows.Media.DrawingBrush>de un.  
   
- ![Ejemplos del resultado de DrawingBrush](./media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")  
+ ![Ejemplos de resultados de DrawingBrush](./media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")  
 Objetos pintados mediante DrawingBrush  
   
- Un <xref:System.Windows.Media.DrawingBrush> pinta un área con un <xref:System.Windows.Media.Drawing> objeto. Un <xref:System.Windows.Media.Drawing> objeto describe contenido visible, como una forma, mapa de bits, vídeo o una línea de texto. Distintos tipos de dibujo describen tipos de contenido diferentes. La siguiente lista muestra los distintos tipos de objetos de dibujo.  
+ Dibuja un área con un <xref:System.Windows.Media.Drawing> objeto. <xref:System.Windows.Media.DrawingBrush> Un <xref:System.Windows.Media.Drawing> objeto describe el contenido visible, como una forma, un mapa de bits, un vídeo o una línea de texto. Distintos tipos de dibujo describen tipos de contenido diferentes. La siguiente lista muestra los distintos tipos de objetos de dibujo.  
   
-- <xref:System.Windows.Media.GeometryDrawing> – Dibuja una forma.  
+- <xref:System.Windows.Media.GeometryDrawing>: Dibuja una forma.  
   
-- <xref:System.Windows.Media.ImageDrawing> – Dibuja una imagen.  
+- <xref:System.Windows.Media.ImageDrawing>: Dibuja una imagen.  
   
-- <xref:System.Windows.Media.GlyphRunDrawing> – Dibuja texto.  
+- <xref:System.Windows.Media.GlyphRunDrawing>: Dibuja texto.  
   
-- <xref:System.Windows.Media.VideoDrawing> : Reproduce un archivo de audio o vídeo.  
+- <xref:System.Windows.Media.VideoDrawing>: Reproduce un archivo de audio o de vídeo.  
   
-- <xref:System.Windows.Media.DrawingGroup> : Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
+- <xref:System.Windows.Media.DrawingGroup>: Dibuja otros dibujos. Use un grupo de dibujo para combinar otros dibujos en un solo dibujo compuesto.  
   
- Para obtener más información acerca de <xref:System.Windows.Media.Drawing> objetos, vea el [información general sobre objetos de dibujo](drawing-objects-overview.md).  
+ Para obtener más información <xref:System.Windows.Media.Drawing> sobre los objetos, vea [información general sobre objetos Drawing](drawing-objects-overview.md).  
   
- Al igual que un <xref:System.Windows.Media.ImageBrush>, un <xref:System.Windows.Media.DrawingBrush> ajusta su <xref:System.Windows.Media.DrawingBrush.Drawing%2A> para rellenar su área de salida. Puede invalidar este comportamiento cambiando la <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad desde su valor predeterminado de <xref:System.Windows.Media.Stretch.Fill>. Para obtener más información, vea la propiedad <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
+ Al igual que <xref:System.Windows.Media.DrawingBrush.Drawing%2A> <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.ImageBrush>, un amplía su para rellenar su área de salida. Puede invalidar este comportamiento cambiando la <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad de su configuración predeterminada de. <xref:System.Windows.Media.Stretch.Fill> Para obtener más información, vea la propiedad <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
   
 <a name="fillingareawithdrawingbrushexample"></a>   
 ## <a name="example-paint-an-object-with-a-drawing"></a>Ejemplo: Pintar un objeto con un dibujo  
- En el ejemplo siguiente se muestra cómo pintar un objeto con un dibujo de tres elipses. Un <xref:System.Windows.Media.GeometryDrawing> se usa para describir las elipses.  
+ En el ejemplo siguiente se muestra cómo pintar un objeto con un dibujo de tres elipses. <xref:System.Windows.Media.GeometryDrawing> Se usa para describir los puntos suspensivos.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
   
@@ -82,23 +82,23 @@ Objetos pintados mediante DrawingBrush
   
 <a name="visualbrushsection"></a>   
 ## <a name="paint-an-area-with-a-visual"></a>Pintar un área con un objeto visual  
- La más versátil y eficaz de todos los pinceles, la <xref:System.Windows.Media.VisualBrush> pinta un área con un <xref:System.Windows.Media.Visual>. Un <xref:System.Windows.Media.Visual> es un tipo gráfico de bajo nivel que actúa como el antecesor de muchos componentes gráficos útiles. Por ejemplo, el <xref:System.Windows.Window>, <xref:System.Windows.FrameworkElement>, y <xref:System.Windows.Controls.Control> clases son tipos de <xref:System.Windows.Media.Visual> objetos. Mediante un <xref:System.Windows.Media.VisualBrush>, puede pintar áreas con prácticamente cualquier [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] objeto gráfico.  
+ La más versátil y eficaz de todos los pinceles, <xref:System.Windows.Media.VisualBrush> pinta un área con un <xref:System.Windows.Media.Visual>. Un <xref:System.Windows.Media.Visual> es un tipo gráfico de bajo nivel que actúa como antecesor de muchos componentes gráficos útiles. Por ejemplo, las <xref:System.Windows.Window>clases <xref:System.Windows.FrameworkElement>, y <xref:System.Windows.Controls.Control> son todos los tipos de <xref:System.Windows.Media.Visual> objetos. Con, puede pintar áreas con casi cualquier [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] objeto gráfico. <xref:System.Windows.Media.VisualBrush>  
   
 > [!NOTE]
->  Aunque <xref:System.Windows.Media.VisualBrush> es un tipo de <xref:System.Windows.Freezable> objeto, no se puede inmovilizar (sólo lectura) cuando su <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad se establece en un valor distinto `null`.  
+> Aunque <xref:System.Windows.Media.VisualBrush> es un tipo de <xref:System.Windows.Freezable> objeto, no se puede inmovilizar (hacer de solo lectura) <xref:System.Windows.Media.VisualBrush.Visual%2A> cuando su propiedad se establece en un valor `null`distinto de.  
   
- Hay dos maneras de especificar el <xref:System.Windows.Media.VisualBrush.Visual%2A> contenido de un <xref:System.Windows.Media.VisualBrush>.  
+ Hay dos maneras de especificar el <xref:System.Windows.Media.VisualBrush.Visual%2A> contenido de un. <xref:System.Windows.Media.VisualBrush>  
   
-- Cree un nuevo <xref:System.Windows.Media.Visual> y usarlo para establecer el <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad de la <xref:System.Windows.Media.VisualBrush>. Para obtener un ejemplo, vea el [ejemplo: Pintar un objeto con un objeto Visual](#examplevisualbrush1) la siguiente sección.  
+- Cree un nuevo <xref:System.Windows.Media.Visual> y úselo para establecer la <xref:System.Windows.Media.VisualBrush.Visual%2A> propiedad de <xref:System.Windows.Media.VisualBrush>. Para obtener un ejemplo, vea [el ejemplo: Pinte un objeto con una sección](#examplevisualbrush1) visual que se muestra a continuación.  
   
-- Usar una existente <xref:System.Windows.Media.Visual>, que crea una imagen duplicada del destino <xref:System.Windows.Media.Visual>. A continuación, puede usar el <xref:System.Windows.Media.VisualBrush> para crear efectos interesantes, como reflejo y aumento. Para obtener un ejemplo, vea el [ejemplo: Crear una reflexión](#examplevisualbrush2) sección.  
+- Use un existente <xref:System.Windows.Media.Visual>, que crea una imagen duplicada del destino <xref:System.Windows.Media.Visual>. Después, puede usar <xref:System.Windows.Media.VisualBrush> para crear efectos interesantes, como la reflexión y la ampliación. Para obtener un ejemplo, vea [el ejemplo: Cree una sección](#examplevisualbrush2) de reflexión.  
   
- Al definir un nuevo <xref:System.Windows.Media.VisualBrush.Visual%2A> para un <xref:System.Windows.Media.VisualBrush> y que <xref:System.Windows.Media.Visual> es un <xref:System.Windows.UIElement> (por ejemplo, un panel o control), el sistema de diseño se ejecuta en el <xref:System.Windows.UIElement> y sus elementos secundarios cuando la <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> propiedad está establecida en `true`. Sin embargo, la raíz <xref:System.Windows.UIElement> se queda aislado del resto del sistema: los estilos y el diseño externo no pueden atravesar este límite. Por lo tanto, debe especificar explícitamente el tamaño de la raíz <xref:System.Windows.UIElement>, porque su único elemento primario es el <xref:System.Windows.Media.VisualBrush> y por lo tanto no se puede ajustar automáticamente al área pintada. Para más información sobre el diseño en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], consulte [Diseño](../advanced/layout.md).  
+ Al definir un nuevo <xref:System.Windows.Media.VisualBrush.Visual%2A> para un <xref:System.Windows.Media.VisualBrush> y que <xref:System.Windows.Media.Visual> es un <xref:System.Windows.UIElement> (como un <xref:System.Windows.UIElement> panel o control), el sistema de diseño se ejecuta en y sus elementos secundarios cuando la <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> propiedad está establecida en `true`. Sin embargo, la <xref:System.Windows.UIElement> raíz está esencialmente aislada del resto del sistema: los estilos y el diseño externo no pueden contratar este límite. Por lo tanto, debe especificar explícitamente el tamaño de <xref:System.Windows.UIElement>la raíz, porque su único elemento <xref:System.Windows.Media.VisualBrush> primario es y, por lo tanto, no puede ajustarse automáticamente al área que se está pintando. Para más información sobre el diseño en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], consulte [Diseño](../advanced/layout.md).  
   
- Al igual que <xref:System.Windows.Media.ImageBrush> y <xref:System.Windows.Media.DrawingBrush>, un <xref:System.Windows.Media.VisualBrush> expande su contenido para rellenar su área de salida. Puede invalidar este comportamiento cambiando la <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad desde su valor predeterminado de <xref:System.Windows.Media.Stretch.Fill>. Para obtener más información, vea la propiedad <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
+ Al <xref:System.Windows.Media.ImageBrush> igual <xref:System.Windows.Media.DrawingBrush>que y <xref:System.Windows.Media.VisualBrush> , un ajusta su contenido para rellenar su área de salida. Puede invalidar este comportamiento cambiando la <xref:System.Windows.Media.TileBrush.Stretch%2A> propiedad de su configuración predeterminada de. <xref:System.Windows.Media.Stretch.Fill> Para obtener más información, vea la propiedad <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
   
 <a name="examplevisualbrush1"></a>   
-## <a name="example-paint-an-object-with-a-visual"></a>Ejemplo: Pintar un objeto con un objeto Visual  
+## <a name="example-paint-an-object-with-a-visual"></a>Ejemplo: Pintar un objeto con un objeto visual  
  En el ejemplo siguiente, se usan varios controles y un panel para pintar un rectángulo.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMVisualBrushAsRectangleBackgroundExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/VisualBrushExample.xaml#graphicsmmvisualbrushasrectanglebackgroundexample)]  
@@ -108,9 +108,9 @@ Objetos pintados mediante DrawingBrush
   
 <a name="examplevisualbrush2"></a>   
 ## <a name="example-create-a-reflection"></a>Ejemplo: Crear una reflexión  
- El ejemplo anterior mostraba cómo crear un nuevo <xref:System.Windows.Media.Visual> para su uso como fondo. También puede usar un <xref:System.Windows.Media.VisualBrush> para mostrar un objeto visual existente; esta funcionalidad le permite generar efectos visuales interesantes, como reflejos y aumentos. En el ejemplo siguiente se usa un <xref:System.Windows.Media.VisualBrush> para crear un reflejo de una <xref:System.Windows.Controls.Border> que contiene varios elementos. En la ilustración siguiente se muestra el resultado que genera el ejemplo.  
+ En el ejemplo anterior se mostró cómo crear un <xref:System.Windows.Media.Visual> nuevo para usarlo como fondo. También puede usar un <xref:System.Windows.Media.VisualBrush> para mostrar un visual existente; esta funcionalidad le permite generar efectos visuales interesantes, como reflejos y aumento. <xref:System.Windows.Media.VisualBrush> En el ejemplo siguiente se usa para crear un reflejo de <xref:System.Windows.Controls.Border> un que contiene varios elementos. En la ilustración siguiente se muestra el resultado que genera el ejemplo.  
   
- ![Un objeto Visual de reflejan](./media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
+ ![Objeto visual reflejado](./media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
 Objeto Visual reflejado  
   
  [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
@@ -121,7 +121,7 @@ Objeto Visual reflejado
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>Características de TileBrush  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, y <xref:System.Windows.Media.VisualBrush> son tipos de <xref:System.Windows.Media.TileBrush> objetos. <xref:System.Windows.Media.TileBrush> objetos proporcionan un gran control sobre cómo se pinta un área con una imagen, un dibujo o un visual. Por ejemplo, en lugar de limitarse a dibujar un área con una sola imagen ajustada, puede dibujar un área con una serie de mosaicos de imagen que crean un patrón.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.TileBrush> y <xref:System.Windows.Media.VisualBrush> son tipos de objetos. <xref:System.Windows.Media.TileBrush>los objetos proporcionan un gran control sobre cómo se pinta un área con una imagen, un dibujo o un objeto visual. Por ejemplo, en lugar de limitarse a dibujar un área con una sola imagen ajustada, puede dibujar un área con una serie de mosaicos de imagen que crean un patrón.  
   
  Un <xref:System.Windows.Media.TileBrush> tiene tres componentes principales: contenido, mosaicos y el área de salida.  
   
@@ -131,7 +131,7 @@ Componentes de TileBrush con un solo mosaico
  ![Componentes de TileBrush en mosaico](./media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
 Componentes de TileBrush con varios mosaicos  
   
- Para obtener más información sobre las características de mosaico de <xref:System.Windows.Media.TileBrush> objetos, vea el [TileBrush Overview](tilebrush-overview.md).  
+ Para obtener más información sobre las características de <xref:System.Windows.Media.TileBrush> mosaico de los objetos, vea [información general sobre TileBrush](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Vea también
 
