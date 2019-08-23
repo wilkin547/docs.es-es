@@ -5,12 +5,12 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dce5984882e48c3e62efc44ef00b6256d9eb64e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704302"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919528"
 ---
 # <a name="client"></a>\<client>
 El elemento `client` define una lista de extremos a los que un cliente puede conectarse.  
@@ -35,20 +35,20 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
- Ninguna  
+ None  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Contiene una colección de elementos de extremo, que especifica los extremos a los que este cliente puede conectarse.|  
-|[\<metadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)|Contiene los valores para procesar los metadatos.|  
+|[\<endpoint>](endpoint-of-client.md)|Contiene una colección de elementos de extremo, que especifica los extremos a los que este cliente puede conectarse.|  
+|[\<metadata>](metadata.md)|Contiene los valores para procesar los metadatos.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|El elemento raíz de todos los elementos de configuración de la Windows Communication Foundation (WCF).|  
+|[\<system.serviceModel>](system-servicemodel.md)|El elemento raíz de todos los elementos de configuración de la Windows Communication Foundation (WCF).|  
   
 ## <a name="remarks"></a>Comentarios  
  La sección `client` define una lista de puntos de conexión a los que un cliente puede conectarse. Cada extremo enumerado en la sección de cliente define su propio enlace, comportamiento y contrato. La combinación de los atributos `name` y `contract` identifica singularmente. El código de cliente especifica el `name` para conectar el servicio que el cliente implementa a un extremo. Si se omite el atributo de `name`, el extremo actúa como el extremo predeterminado para el contrato que implementa.  
@@ -76,5 +76,5 @@ El elemento `client` define una lista de extremos a los que un cliente puede con
 
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
-- [Configuración del cliente de WCF](../../../../../docs/framework/wcf/feature-details/client-configuration.md)
-- [Clientes](../../../../../docs/framework/wcf/feature-details/clients.md)
+- [Configuración del cliente de WCF](../../../wcf/feature-details/client-configuration.md)
+- [Clientes](../../../wcf/feature-details/clients.md)

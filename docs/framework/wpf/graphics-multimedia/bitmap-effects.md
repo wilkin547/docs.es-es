@@ -9,18 +9,18 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: 86e42b5d2fcd5bcb23489bd03a6daf8255d0725f
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a52e330147b07f26136380821c392d27eec60fae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457525"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935251"
 ---
 # <a name="bitmap-effects"></a>Efectos de imagen
-Los temas de esta sección describen cómo aplicar efectos visuales a imágenes de mapa de bits mediante [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+En los temas de esta sección se describe cómo aplicar efectos visuales a las imágenes [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]de mapa de bits mediante.  
   
 > [!IMPORTANT]
->  En .NET Framework 4 o posterior, el <xref:System.Windows.Media.Effects.BitmapEffect> clase está obsoleta. Si intenta usar el <xref:System.Windows.Media.Effects.BitmapEffect> (clase), obtendrá una excepción obsoleta. La alternativa no obsoleta a la <xref:System.Windows.Media.Effects.BitmapEffect> clase es el <xref:System.Windows.Media.Effects.Effect> clase. En la mayoría de los casos, la <xref:System.Windows.Media.Effects.Effect> clase es significativamente más rápida.  
+> En el .NET Framework 4 o posterior, la <xref:System.Windows.Media.Effects.BitmapEffect> clase está obsoleta. Si intenta utilizar la <xref:System.Windows.Media.Effects.BitmapEffect> clase, obtendrá una excepción obsoleta. La alternativa no obsoleta a la <xref:System.Windows.Media.Effects.BitmapEffect> clase es la <xref:System.Windows.Media.Effects.Effect> clase. En la mayoría de los <xref:System.Windows.Media.Effects.Effect> casos, la clase es significativamente más rápida.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre efectos de imagen](bitmap-effects-overview.md)  

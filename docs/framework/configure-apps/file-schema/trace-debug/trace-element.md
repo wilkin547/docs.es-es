@@ -10,19 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 5faf352dce2a459a999b3cf54209f6bd9793bde0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fd90d271591a47849b3f70aea50cbe909b6fd613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673802"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920408"
 ---
-# <a name="trace-element"></a>\<seguimiento > elemento
+# <a name="trace-element"></a>\<Elemento > de seguimiento
 Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.  
   
  \<configuration>  
 \<system.diagnostics>  
-\<trace>  
+\<> de seguimiento  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,39 +39,39 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`autoflush`|Atributo opcional.<br /><br /> Especifica si los agentes de escucha de seguimiento automáticamente de vaciar el búfer de salida después de cada operación de escritura.|  
-|`indentsize`|Atributo opcional.<br /><br /> Especifica el número de espacios para la sangría.|  
-|`useGlobalLock`|Atributo opcional.<br /><br /> Indica si se debe utilizar el bloqueo global.|  
+|`autoflush`|Atributo opcional.<br /><br /> Especifica si los agentes de escucha de seguimiento vacían automáticamente el búfer de salida después de cada operación de escritura.|  
+|`indentsize`|Atributo opcional.<br /><br /> Especifica el número de espacios a los que se va a aplicar sangría.|  
+|`useGlobalLock`|Atributo opcional.<br /><br /> Indica si se debe usar el bloqueo global.|  
   
-## <a name="autoflush-attribute"></a>Atributo autoflush  
+## <a name="autoflush-attribute"></a>AutoFlush (atributo)  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|`false`|No realiza automáticamente el vaciado de búfer de salida. Este es el valor predeterminado.|  
-|`true`|Automáticamente se vacía el búfer de salida.|  
+|`false`|No vacía automáticamente el búfer de salida. Este es el valor predeterminado.|  
+|`true`|Vacía automáticamente el búfer de salida.|  
   
 ## <a name="usegloballock-attribute"></a>Atributo useGlobalLock  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|`false`|No utiliza el bloqueo global si el agente de escucha es seguro para subprocesos; en caso contrario, utiliza el bloqueo global.|  
+|`false`|No utiliza el bloqueo global si el agente de escucha es seguro para subprocesos; de lo contrario, utiliza el bloqueo global.|  
 |`true`|Utiliza el bloqueo global independientemente de si el agente de escucha es seguro para subprocesos. Este es el valor predeterminado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|Especifica un agente de escucha que recopila, almacena y enruta los mensajes.|  
+|[\<listeners>](listeners-element-for-trace.md)|Especifica un agente de escucha que recopila, almacena y enruta los mensajes.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo usar el `<trace>` elemento para agregar el agente de escucha `MyListener` a la `Listeners` colección. `MyListener` crea un archivo que se denomina `MyListener.log` y escribe el resultado en el archivo. El `useGlobalLock` atributo está establecido en `false`, lo que hace que el bloqueo global no que se utilizará si el agente de escucha de seguimiento es seguro para subprocesos. El `autoflush` atributo está establecido en `true`, lo que hace que el agente de escucha de seguimiento escribir en el archivo independientemente de si el <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> se llama al método. El `indentsize` atributo está establecido en 0 (cero), lo que hace que el agente de escucha aplicar sangría a cero espacios cuando el <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> se llama al método.  
+ En el ejemplo siguiente se muestra cómo usar `<trace>` el elemento para agregar el `MyListener` agente de escucha `Listeners` a la colección. `MyListener`crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. El `useGlobalLock` atributo se establece en `false`, lo que hace que no se use el bloqueo global si el agente de escucha de seguimiento es seguro para subprocesos. El `autoflush` atributo se establece en `true`, que hace que el agente de escucha de seguimiento escriba en el archivo independientemente de <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> si se llama al método. El `indentsize` atributo se establece en 0 (cero), lo que hace que el agente de escucha Aplique sangría a <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> cero espacios cuando se llama al método.  
   
 ```xml  
 <configuration>  
@@ -91,4 +91,4 @@ Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de s
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Esquema de la configuración de seguimiento y depuración](index.md)

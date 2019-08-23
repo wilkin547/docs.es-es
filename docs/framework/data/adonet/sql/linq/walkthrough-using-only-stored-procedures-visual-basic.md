@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 270b0f2123a20787a8e75d40f56a675c55824243
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 159b65b4b58b9142a168401ea2a881af2714df5f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742572"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946639"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Tutorial: Usar solo procedimientos almacenados (Visual Basic)
 Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos utilizando procedimientos almacenados solamente. Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.  
   
 > [!NOTE]
->  También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, consulte [personalizar Insert, Update y las operaciones de eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+> También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, vea [personalizar las operaciones de inserción, actualización y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
   
- Para fines de este tutorial, utilizará dos métodos que se han asignado a los procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce cuando se ejecuta la herramienta de línea de comandos SqlMetal para generar un archivo de Visual Basic. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
+ Para los fines de este tutorial, usará dos métodos que se han asignado a procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para generar un archivo de Visual Basic. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
   
- En este tutorial no se basa en Object Relational Designer. Los desarrolladores que usan Visual Studio también pueden usar el Object Relational Designer para implementar la funcionalidad de procedimiento almacenado. Consulte [LINQ to SQL Tools en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
+ Este tutorial no se basa en el Object Relational Designer. Los desarrolladores que usan Visual Studio también pueden usar O/R Designer para implementar la funcionalidad de procedimientos almacenados. Consulte [LINQ to SQL herramientas en Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
@@ -32,7 +32,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 - Base de datos de ejemplo Northwind.  
   
-     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest3.  
+     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest3.  
   
 - Archivo de código de Visual Basic generado a partir de la base de datos Northwind.  
   
@@ -45,7 +45,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 ## <a name="overview"></a>Información general  
  Este tutorial se compone de seis tareas principales:  
   
-- Configurar la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
+- Configuración de la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
   
 - Agregar el ensamblado System.Data.Linq al proyecto.  
   
@@ -58,7 +58,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
 - Ejecutar y probar la aplicación.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
- En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
+ En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y ejecutar un proyecto.  
   
 ### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
@@ -68,7 +68,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 3. En el panel **Plantillas** , haga clic en **Aplicación de Windows Forms**.  
   
-4. En el **nombre** , escriba **SprocOnlyApp**.  
+4. En el cuadro **nombre** , escriba **SprocOnlyApp**.  
   
 5. Haga clic en **OK**.  
   
@@ -79,11 +79,11 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 ### <a name="to-add-systemdatalinqdll"></a>Para agregar System.Data.Linq.dll  
   
-1. En **el Explorador de soluciones**, haga clic en **mostrar todos los archivos**.  
+1. En **Explorador de soluciones**, haga clic en **Mostrar todos los archivos**.  
   
-2. En **el Explorador de soluciones**, haga clic en **referencias**y, a continuación, haga clic en **Agregar referencia**.  
+2. En **Explorador de soluciones**, haga clic con el botón secundario en **referencias**y, a continuación, haga clic en **Agregar referencia**.  
   
-3. En el **Agregar referencia** cuadro de diálogo, haga clic en **.NET**, haga clic en el ensamblado System.Data.Linq y, a continuación, haga clic en **Aceptar**.  
+3. En el cuadro de diálogo **Agregar referencia** , haga clic en **.net**, haga clic en el ensamblado System. Data. Linq y, a continuación, haga clic en **Aceptar**.  
   
      El ensamblado se agrega al proyecto.  
   
@@ -92,9 +92,9 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 ### <a name="to-add-the-northwind-code-file-to-the-project"></a>Para agregar el archivo de código de Northwind al proyecto  
   
-1. En el **proyecto** menú, haga clic en **Agregar elemento existente**.  
+1. En el menú **proyecto** , haga clic en **Agregar elemento existente**.  
   
-2. En el **Agregar elemento existente** cuadro de diálogo Mover a c:\linqtest3\northwind.vb y, a continuación, haga clic en **agregar**.  
+2. En el cuadro de diálogo **Agregar elemento existente** , desplácese a c:\linqtest3\northwind.VB y, a continuación, haga clic en **Agregar**.  
   
      El archivo northwind.vb se agrega al proyecto.  
   
@@ -103,7 +103,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 ### <a name="to-create-the-database-connection"></a>Para crear la conexión a la base de datos  
   
-1. En **el Explorador de soluciones**, haga clic en **Form1.vb**y, a continuación, haga clic en **ver código**.  
+1. En **Explorador de soluciones**, haga clic con el botón secundario en **Form1. VB**y, a continuación, haga clic en **Ver código**.  
   
      `Class Form1` aparece en el editor de código.  
   
@@ -116,40 +116,40 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 ### <a name="to-set-up-the-user-interface"></a>Para configurar la interfaz de usuario  
   
-1. Diseñador de vuelta a la Windows Forms (**Form1.vb [Design]** ).  
+1. Vuelva al Diseñador de Windows Forms (**Form1. VB [diseño]** ).  
   
 2. En el menú **Ver** , haga clic en **Cuadro de herramientas**.  
   
      Se abrirá el cuadro de herramientas.  
   
     > [!NOTE]
-    >  Haga clic en el **Ocultar automáticamente** chincheta para mantener el cuadro de herramientas abierto mientras realiza los demás pasos de esta sección.  
+    > Haga clic en el marcador **Ocultar automáticamente** para mantener el cuadro de herramientas abierto mientras realiza los pasos restantes de esta sección.  
   
-3. Arrastre dos etiquetas, dos cuadros de texto y dos botones del cuadro de herramientas **Form1**.  
+3. Arrastre dos botones, dos cuadros de texto y dos etiquetas desde el cuadro de herramientas hasta **Form1**.  
   
-     Organice los controles como en la ilustración anexa. Expanda **Form1** para que los controles se ajustan fácilmente.  
+     Organice los controles como en la ilustración anexa. Expanda **Form1** para que los controles se ajusten fácilmente.  
   
-4. Haga clic en **Label1**y, a continuación, haga clic en **propiedades**.  
+4. Haga clic con el botón secundario en **Label1**y, a continuación, haga clic en **propiedades**.  
   
-5. Cambiar el **texto** propiedad desde **Label1** a **Enter OrderID:** .  
+5. Cambie la propiedad **Text** de **Label1** a **Enter OrderID:** .  
   
-6. En la misma manera para **Label2**, cambie el **texto** propiedad desde **Label2** a **Enter CustomerID:** .  
+6. Del mismo modo para **Label2**, cambie la propiedad **Text** de **Label2** a **Enter CustomerID:** .  
   
-7. En la misma manera, cambie el **texto** propiedad **Button1** a **Order Details**.  
+7. Del mismo modo, cambie la propiedad **Text** de **button1** a **Order**details.  
   
-8. Cambiar el **texto** propiedad **Button2** a **historial de pedidos**.  
+8. Cambie la propiedad **Text** de **BUTTON2** a **Order History**.  
   
      Amplíe los controles de botón para que todo el texto esté visible.  
   
 ### <a name="to-handle-button-clicks"></a>Para administrar los clics de botón  
   
-1. Haga doble clic en **Order Details** en **Form1** para crear el `Button1` controlador de eventos y abra el editor de código.  
+1. Haga doble clic en **Order** details en **Form1** para crear el `Button1` controlador de eventos y abrir el editor de código.  
   
 2. Escriba el código siguiente en el controlador `Button1`:  
   
      [!code-vb[DLinqWalk4VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#2)]  
   
-3. Ahora haga doble clic en **Button2** en Form1 para crear el `Button2` controlador de eventos y abra el editor de código.  
+3. Ahora haga doble clic en **BUTTON2** en Form1 para crear `Button2` el controlador de eventos y abrir el editor de código.  
   
 4. Escriba el código siguiente en el controlador `Button2`:  
   
@@ -164,29 +164,29 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      Aparece Form1.  
   
-2. En el **Enter OrderID** , escriba **10249** y, a continuación, haga clic en **Order Details**.  
+2. En el cuadro **Enter OrderID** , escriba **10249** y, a continuación, haga clic en **Order**details.  
   
      Un cuadro de mensaje muestra los productos incluidos en el pedido 10249.  
   
      Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
   
-3. En el **Enter CustomerID** , escriba `ALFKI`y, a continuación, haga clic en **historial de pedidos**.  
+3. En el cuadro **Escriba CustomerID** , escriba `ALFKI`y, a continuación, haga clic en **historial de pedidos**.  
   
      Aparece un cuadro de mensaje con el historial de pedidos del cliente ALFKI.  
   
      Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
   
-4. En el **Enter OrderID** , escriba `123`y, a continuación, haga clic en **Order Details**.  
+4. En el cuadro **Enter OrderID** , escriba `123`y, a continuación, haga clic en **Order**details.  
   
      Aparece un cuadro de mensaje con el texto "No results".  
   
      Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
   
-5. En el **depurar** menú, haga clic en **detener la depuración**.  
+5. En el menú Depurar, haga clic en **detener**depuración.  
   
      La sesión de depuración se cierra.  
   
-6. Si ha terminado de experimentar, haga clic en **cerrar proyecto** en el **archivo** menú y guarde el proyecto cuando se le pida.  
+6. Si ha terminado de experimentar, puede hacer clic en **cerrar proyecto** en el menú **archivo** y guardar el proyecto cuando se le solicite.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  Puede mejorar este proyecto realizando algunos cambios. Por ejemplo, podría enumerar los procedimientos almacenados disponibles en un cuadro de lista y permitir que el usuario seleccione qué procedimientos debe ejecutar. También podría transmitir el resultado de los informes a un archivo de texto.  

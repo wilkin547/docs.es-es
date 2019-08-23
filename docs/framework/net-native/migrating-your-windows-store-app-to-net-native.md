@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c830b7097d12017348d8669071ec6d7c122bfe44
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: ac21e8aa67eabcb3e837cb5eca02d1145b765946
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68364079"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941732"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrar la aplicación de la Tienda Windows a .NET Native
 
@@ -55,7 +55,7 @@ ms.locfileid: "68364079"
 
 Por ejemplo, el enlace de datos requiere una aplicación para poder asignar los nombres de propiedad a las funciones. En .NET para aplicaciones de la Tienda Windows, Common Language Runtime utiliza automáticamente la reflexión para proporcionar esta capacidad para tipos administrados y tipos nativos disponibles públicamente. En .NET Native, el compilador incluye automáticamente los metadatos de los tipos a los que se enlazan los datos.
 
-El compilador .net Native también puede controlar tipos <xref:System.Collections.Generic.List%601> genéricos usados comúnmente como y <xref:System.Collections.Generic.Dictionary%602>, que funcionan sin necesidad de ninguna sugerencia ni Directiva. La palabra clave [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) también se admite dentro de ciertos límites.
+El compilador .net Native también puede controlar tipos <xref:System.Collections.Generic.List%601> genéricos usados comúnmente como y <xref:System.Collections.Generic.Dictionary%602>, que funcionan sin necesidad de ninguna sugerencia ni Directiva. La palabra clave [dynamic](../../csharp/language-reference/keywords/dynamic.md) también se admite dentro de ciertos límites.
 
 > [!NOTE]
 > Debe probar exhaustivamente todas las rutas de código dinámicas al migrar la aplicación a .NET Native.
@@ -129,7 +129,7 @@ En las secciones siguientes se enumeran varios escenarios e interfaces API no co
 
 - No se admite la creación dinámica de matrices multidimensionales. Estas matrices se crean normalmente mediante una llamada a una sobrecarga del método <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> que incluye un parámetro `lengths` , o mediante una llamada al método <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> .
 
-- No se admiten matrices multidimensionales que tengan cuatro o más dimensiones; es decir, que el valor de su propiedad <xref:System.Array.Rank%2A?displayProperty=nameWithType> sea de cuatro o más. En su lugar, use [matrices escalonadas](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (una matriz de matrices). Por ejemplo, `array[x,y,z]` no es válido, pero `array[x][y][z]` sí lo es.
+- No se admiten matrices multidimensionales que tengan cuatro o más dimensiones; es decir, que el valor de su propiedad <xref:System.Array.Rank%2A?displayProperty=nameWithType> sea de cuatro o más. En su lugar, use [matrices escalonadas](../../csharp/programming-guide/arrays/jagged-arrays.md) (una matriz de matrices). Por ejemplo, `array[x,y,z]` no es válido, pero `array[x][y][z]` sí lo es.
 
 - No se admite varianza en matrices multidimensionales, ya que causa una excepción <xref:System.InvalidCastException> en tiempo de ejecución.
 
@@ -668,4 +668,4 @@ No se admite la habilitación de .NET Native en una biblioteca de pruebas unitar
 - [Introducción](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [Runtime Directives (rd.xml) Configuration File Reference (Referencia del archivo de configuración de directivas en tiempo de ejecución (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Información general de .NET para aplicaciones de la tienda Windows](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
-- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+- [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

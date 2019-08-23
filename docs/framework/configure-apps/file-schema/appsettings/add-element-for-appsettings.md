@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: f8b426dc0e1e180afbfccce50d3b45774991a572
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301351"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927746"
 ---
 # <a name="add-element-for-appsettings"></a>\<Agregar > elemento para \<appSettings >
 
 Agrega una configuración de aplicación personalizada.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>Sintaxis
@@ -34,24 +34,24 @@ Agrega una configuración de aplicación personalizada.
 
 ## <a name="attributes"></a>Atributos
 
-|           | Descripción |
+|           | DESCRIPCIÓN |
 | --------- | ----------- |
-| **key**   | Atributo necesario.<br><br>Especifica el nombre de la clave para agregar. |
-| **value** | Atributo necesario.<br><br>Especifica el valor de la clave para agregar. |
+| **key**   | Atributo necesario.<br><br>Especifica el nombre de la clave que se va a agregar. |
+| **value** | Atributo necesario.<br><br>Especifica el valor de la clave que se va a agregar. |
 
 ## <a name="parent-element"></a>Elemento primario
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguna
+None
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo agregar un valor de configuración personalizado para el nombre de la aplicación:
+En el ejemplo siguiente se muestra cómo agregar un valor de configuración personalizado para el nombre de la aplicación:
 
 ```xml
 <appSettings>
@@ -59,7 +59,7 @@ El ejemplo siguiente muestra cómo agregar un valor de configuración personaliz
 </appSettings>
 ```
 
-En el ejemplo siguiente se usa el `<add>` elemento para definir dos configuraciones de compatibilidad de una aplicación ASP.NET:
+En el ejemplo siguiente se `<add>` usa el elemento para definir dos valores de compatibilidad en una aplicación ASP.net:
 
 ```xml
 <appSettings>
@@ -70,4 +70,4 @@ En el ejemplo siguiente se usa el `<add>` elemento para definir dos configuracio
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema del archivo de configuración para el .NET Framework](../index.md)

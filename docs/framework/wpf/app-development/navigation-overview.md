@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 145c4e33bd601fa61750df56b949bda5d43cc372
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 574449f95ee9632d37f277d61806802457494df0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68818001"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964588"
 ---
 # <a name="navigation-overview"></a>Información general sobre navegación
 
@@ -106,7 +106,7 @@ Un marcado solo <xref:System.Windows.Controls.Page> es útil para mostrar el con
 
 Para permitir que un archivo de marcación y un archivo de código subyacente funcionen juntos, se necesita la configuración siguiente:
 
-- En el marcado, `Page` el elemento debe incluir `x:Class` el atributo. Cuando se compila la aplicación, la existencia de `x:Class` en el archivo de marcado [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] hace que cree `partial` una clase que deriva de <xref:System.Windows.Controls.Page> y tiene el nombre especificado por el `x:Class` atributo. Esto requiere la adición de una [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] declaración de espacio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nombres para `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` el esquema (). La clase `partial` generada `InitializeComponent`implementa, a la que se llama para registrar los eventos y establecer las propiedades que se implementan en el marcado.
+- En el marcado, `Page` el elemento debe incluir `x:Class` el atributo. Cuando se compila la aplicación, la existencia de `x:Class` en el archivo de marcado hace que el motor de compilación de Microsoft ( `partial` MSBuild) cree una clase <xref:System.Windows.Controls.Page> que deriva de y tiene el nombre especificado por `x:Class` el atributo. Esto requiere la adición de una [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] declaración de espacio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nombres para `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` el esquema (). La clase `partial` generada `InitializeComponent`implementa, a la que se llama para registrar los eventos y establecer las propiedades que se implementan en el marcado.
 
 - En el código subyacente, la clase debe ser una `partial` clase con el mismo nombre especificado por el atributo en `x:Class` el marcado y debe derivar de <xref:System.Windows.Controls.Page>. Esto permite asociar el archivo de código subyacente con la `partial` clase que se genera para el archivo de marcado cuando se compila la aplicación (consulte compilar [una aplicación de WPF](building-a-wpf-application-wpf.md)).
 
@@ -123,7 +123,7 @@ Una vez que tenga <xref:System.Windows.Controls.Page>un, puede desplazarse hasta
 
 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] requieren que se hospede una determinada cantidad de infraestructuras de aplicaciones en un explorador. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], la <xref:System.Windows.Application> clase forma parte de una definición de aplicación que establece la infraestructura de aplicación necesaria (consulte [información general sobre la administración de aplicaciones](application-management-overview.md)).
 
-Normalmente, una definición de aplicación se implementa mediante el marcado y el código subyacente, con el archivo de marcado [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] configurado como un `ApplicationDefinition` elemento. La siguiente es una definición de aplicación para [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]un.
+Normalmente, una definición de aplicación se implementa mediante el marcado y el código subyacente, con el archivo de marcado configurado`ApplicationDefinition` como un elemento de MSBuild. La siguiente es una definición de aplicación para [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]un.
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
@@ -527,7 +527,7 @@ Para almacenar una cookie mediante sesiones de la aplicación, debe agregarse un
 
 *NAME* `=` *VALUE* `; expires=DAY, DD-MMM-YYYY HH:MM:SS GMT`
 
-Una cookie con una fecha de expiración se almacena en [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] la carpeta de archivos temporales de Internet de la instalación actual hasta que expire la cookie. Este tipo de cookie se conoce como *cookie persistente* porque se conserva entre las sesiones de la aplicación.
+Una cookie con una fecha de expiración se almacena en la carpeta de archivos temporales de Internet de la instalación actual de Windows hasta que expire la cookie. Este tipo de cookie se conoce como *cookie persistente* porque se conserva entre las sesiones de la aplicación.
 
 Puede recuperar las cookies de sesión y persistentes <xref:System.Windows.Application.GetCookie%2A> llamando al método, <xref:System.Uri> pasando el de la ubicación donde se estableció la cookie <xref:System.Windows.Application.SetCookie%2A> con el método.
 

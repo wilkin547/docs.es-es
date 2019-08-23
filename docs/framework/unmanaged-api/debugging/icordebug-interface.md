@@ -16,47 +16,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 193232ce1006a9cf209db9330343386404948440
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afbf480d69e97662b5963706bb8c192aec0325a2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786339"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966288"
 ---
 # <a name="icordebug-interface"></a>ICorDebug (Interfaz)
-Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en el entorno de common language runtime (CLR).  
+Proporciona métodos que permiten a los desarrolladores depurar aplicaciones en el entorno de Common Language Runtime (CLR).  
   
 > [!NOTE]
->  No se admite la depuración en modo mixto (código administrado y nativo) en Windows 95, Windows 98 o Windows Millennium Edition o en plataformas que no sean x86 (por ejemplo, IA64 y AMD64).  
+> La depuración en modo mixto (código administrado y nativo) no se admite en Windows 95, Windows 98 ni Windows ME, ni en plataformas que no son x86 (como IA64 y AMD64).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[CanLaunchOrAttach (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Determina si inicia un proceso nuevo o asociar al proceso especificado es posible dentro del contexto de la configuración actual de la máquina y en tiempo de ejecución.|  
-|[CreateProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Inicia un proceso y su subproceso principal bajo el control del depurador.|  
-|[DebugActiveProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|Asocia al depurador a un proceso existente.|  
+|[CanLaunchOrAttach (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|Determina si el inicio de un nuevo proceso o la asociación al proceso dado es posible en el contexto del equipo actual y de la configuración en tiempo de ejecución.|  
+|[CreateProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|Inicia un proceso y su subproceso primario bajo el control del depurador.|  
+|[DebugActiveProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|Asocia el depurador a un proceso existente.|  
 |[EnumerateProcesses (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|Obtiene un enumerador para los procesos que se están depurando.|  
-|[GetProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Devuelve el objeto "ICorDebugProcess" con el identificador de proceso determinado.|  
+|[GetProcess (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|Devuelve el objeto "ICorDebugProcess" con el identificador de proceso especificado.|  
 |[Initialize (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|Inicializa el objeto `ICorDebug`.|  
-|[SetManagedHandler (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para eventos administrados.|  
-|[SetUnmanagedHandler (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para eventos no administrados.|  
+|[SetManagedHandler (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para los eventos administrados.|  
+|[SetUnmanagedHandler (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|Especifica el objeto de controlador de eventos para los eventos no administrados.|  
 |[Terminate (método)](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|Finaliza el `ICorDebug` objeto.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebug` Representa un bucle de procesamiento de eventos para un proceso de depuración. El depurador debe esperar el [ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) de todos los procesos que se está depurando antes de liberar esta interfaz de devolución de llamada.  
+ `ICorDebug`representa un bucle de procesamiento de eventos para un proceso del depurador. El depurador debe esperar a la devolución de llamada [ICorDebugManagedCallback:: ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md) de todos los procesos que se están depurando antes de liberar esta interfaz.  
   
- La `ICorDebug` objeto es el objeto inicial para controlar la depuración administrada todo aún más. En las versiones 1.0 y 1.1 de .NET Framework, este objeto era un `CoClass` objeto creado desde COM. En la versión 2.0 de .NET Framework, este objeto ya no es un `CoClass` objeto. Debe crearse mediante el [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) función, que es más consciente de versión. Esta nueva función de creación permite a los clientes obtener una implementación específica de `ICorDebug`, que también emula una versión específica de la API de depuración.  
+ El `ICorDebug` objeto es el objeto inicial para controlar toda la depuración administrada. En las versiones 1,0 y 1,1 de .NET Framework, este objeto era `CoClass` un objeto creado a partir de com. En la versión .NET Framework 2,0, este objeto ya no es un `CoClass` objeto. Debe crearse mediante la función [CreateDebuggingInterfaceFromVersion (](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) , que es más compatible con la versión. Esta nueva función de creación permite a los clientes obtener una implementación `ICorDebug`específica de, que también emula una versión específica de la API de depuración.  
   
 > [!NOTE]
->  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
+> Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

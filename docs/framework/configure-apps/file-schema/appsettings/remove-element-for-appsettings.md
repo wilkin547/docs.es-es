@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 62913face910ae9500aa5e6f2f443db67ffd4240
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921281"
 ---
-# <a name="remove-element-for-appsettings"></a>\<Quitar > (elemento) para \<appSettings >
+# <a name="remove-element-for-appsettings"></a>\<quitar > elemento para \<appSettings >
 
-Quita la configuración de aplicación personalizada.
+Quita la configuración de la aplicación personalizada.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>Sintaxis
@@ -34,23 +34,23 @@ Quita la configuración de aplicación personalizada.
 
 ### <a name="attribute"></a>Atributo
 
-|         | Descripción |
+|         | DESCRIPCIÓN |
 | ------- | ----------- |
-| **key** | Atributo necesario.<br><br>Especifica el nombre de la clave para quitar. |
+| **key** | Atributo necesario.<br><br>Especifica el nombre de la clave que se va a quitar. |
 
 ### <a name="parent-element"></a>Elemento primario
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ----------- |
-| [ **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | Contiene valores de configuración de aplicación personalizados, como rutas de acceso de archivo, direcciones URL del servicio Web XML o cualquier otra información de configuración personalizada para una aplicación. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguna
+None
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo quitar un valor de configuración personalizado para `ApplicationName`:
+En el ejemplo siguiente se muestra cómo quitar un valor de configuración `ApplicationName`personalizado para:
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ El ejemplo siguiente muestra cómo quitar un valor de configuración personaliza
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema del archivo de configuración para el .NET Framework](../index.md)

@@ -24,18 +24,18 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 28a06139275f63571d9528d075946d97a19c9f3c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456204"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912879"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configurar aplicaciones con archivos de configuración
 .NET Framework, a través de archivos de configuración, proporciona a los programadores y administradores control y flexibilidad sobre la manera en que se ejecutan las aplicaciones. Los archivos de configuración son archivos XML que se pueden cambiar según sea necesario. Un administrador puede controlar a qué recursos protegidos puede tener acceso una aplicación, qué versiones de ensamblados utilizará la aplicación y dónde se ubican las aplicaciones y los objetos remotos. Los programadores pueden colocar valores en archivos de configuración, con lo que no es necesario volver a compilar una aplicación cada vez que cambia un valor. En esta sección se describe lo que se puede configurar y por qué es útil configurar una aplicación.  
   
 > [!NOTE]
->  El código administrado puede utilizar las clases del espacio de nombres <xref:System.Configuration> para leer los valores desde los archivos de configuración, pero no para escribir valores de configuración en dichos archivos.  
+> El código administrado puede utilizar las clases del espacio de nombres <xref:System.Configuration> para leer los valores desde los archivos de configuración, pero no para escribir valores de configuración en dichos archivos.  
   
  En este tema se describe la sintaxis de los archivos de configuración y se proporciona información sobre los tres tipos de archivos de configuración: de equipo, de aplicación y de seguridad.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66456204"
   
  Como ocurre con todos los archivos XML, la sintaxis de los archivos de configuración distingue mayúsculas de minúsculas.  
   
- Los valores de configuración se especifican mediante atributos predefinidos, que son los pares de nombre y valor dentro de la etiqueta inicial de un elemento. En el ejemplo siguiente se especifican dos atributos (`version` y `href`) para el elemento `<codeBase>`, que especifica dónde puede ubicar el tiempo de ejecución un ensamblado (para obtener más información, vea [Especificar la ubicación de un ensamblado](../../../docs/framework/configure-apps/specify-assembly-location.md)).  
+ Los valores de configuración se especifican mediante atributos predefinidos, que son los pares de nombre y valor dentro de la etiqueta inicial de un elemento. En el ejemplo siguiente se especifican dos atributos (`version` y `href`) para el elemento `<codeBase>`, que especifica dónde puede ubicar el tiempo de ejecución un ensamblado (para obtener más información, vea [Especificar la ubicación de un ensamblado](specify-assembly-location.md)).  
   
 ```xml  
 <codeBase version="2.0.0.0"  
@@ -54,12 +54,12 @@ ms.locfileid: "66456204"
 ## <a name="machine-configuration-files"></a>Archivos de configuración del equipo  
  El archivo de configuración del equipo, Machine.config, contiene valores que afectan a todo un equipo. Este archivo se encuentra en el directorio %*ruta de instalación en tiempo de ejecución*%\Config. Machine.config contiene valores de configuración para el enlace de ensamblados en todo el equipo, [canales de comunicación remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) integrados y ASP.NET.  
   
- El sistema de configuración busca primero el [elemento **\<appSettings>** ](~/docs/framework/configure-apps/file-schema/appsettings/index.md) en el archivo de configuración del equipo y en otras secciones de configuración que pueda definir un desarrollador. Después, busca en el archivo de configuración de la aplicación. Para que el archivo de configuración del equipo sea siempre manejable, es mejor ubicar estos valores en el archivo de configuración de la aplicación. Sin embargo, si se ubican los valores en el archivo de configuración del equipo, el sistema puede ser más fácil de mantener. Por ejemplo, si se tiene un componente de terceros que utilizan las aplicaciones de cliente y servidor, es más fácil poner los valores de ese componente en un lugar. En este caso, el archivo de configuración del equipo es el lugar adecuado para los valores, para no tener los mismos valores en dos archivos.  
+ El sistema de configuración busca primero el [elemento **\<appSettings>** ](./file-schema/appsettings/index.md) en el archivo de configuración del equipo y en otras secciones de configuración que pueda definir un desarrollador. Después, busca en el archivo de configuración de la aplicación. Para que el archivo de configuración del equipo sea siempre manejable, es mejor ubicar estos valores en el archivo de configuración de la aplicación. Sin embargo, si se ubican los valores en el archivo de configuración del equipo, el sistema puede ser más fácil de mantener. Por ejemplo, si se tiene un componente de terceros que utilizan las aplicaciones de cliente y servidor, es más fácil poner los valores de ese componente en un lugar. En este caso, el archivo de configuración del equipo es el lugar adecuado para los valores, para no tener los mismos valores en dos archivos.  
   
 > [!NOTE]
->  Si se implementa una aplicación mediante XCOPY, no se copiarán los valores en el archivo de configuración del equipo.  
+> Si se implementa una aplicación mediante XCOPY, no se copiarán los valores en el archivo de configuración del equipo.  
   
- Para obtener más información sobre cómo usa Common Language Runtime el archivo de configuración del equipo para el enlace de ensamblados, vea [Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Para obtener más información sobre cómo usa Common Language Runtime el archivo de configuración del equipo para el enlace de ensamblados, vea [Cómo el motor en tiempo de ejecución ubica ensamblados](../deployment/how-the-runtime-locates-assemblies.md).  
   
 ## <a name="application-configuration-files"></a>Archivos de configuración de la aplicación  
  Un archivo de configuración de la aplicación contiene valores específicos de una aplicación. Este archivo incluye valores de configuración que Common Language Runtime lee (como la directiva de enlace de ensamblados, objetos de comunicación remota, etc.) y valores que puede leer la aplicación.  
@@ -72,11 +72,11 @@ ms.locfileid: "66456204"
   
      Al desarrollar en Visual Studio, coloque el archivo de configuración de origen de la aplicación en el directorio de proyecto y establezca su propiedad **Copiar en el directorio de salida** en **Copiar siempre** o **Copiar si es posterior**. El nombre del archivo de configuración es el nombre de la aplicación con la extensión .config. Por ejemplo, una aplicación denominada myApp.exe debe tener un archivo de configuración de origen denominado myApp.exe.config.  
   
-     Visual Studio copia automáticamente el archivo de configuración de origen en el directorio donde se ubica el ensamblado compilado para crear el archivo de configuración de salida, que se implementa con la aplicación. En algunos casos, Visual Studio puede modificar el archivo de configuración de salida. Para obtener más información, vea la sección [Redirecting assembly versions at the app level](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) (Redirigir versiones de ensamblado en el nivel de aplicación) del artículo [Redirecting Assembly Versions](../../../docs/framework/configure-apps/redirect-assembly-versions.md) (Redirigir versiones de ensamblado).  
+     Visual Studio copia automáticamente el archivo de configuración de origen en el directorio donde se ubica el ensamblado compilado para crear el archivo de configuración de salida, que se implementa con la aplicación. En algunos casos, Visual Studio puede modificar el archivo de configuración de salida. Para obtener más información, vea la sección [Redirecting assembly versions at the app level](redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) (Redirigir versiones de ensamblado en el nivel de aplicación) del artículo [Redirecting Assembly Versions](redirect-assembly-versions.md) (Redirigir versiones de ensamblado).  
   
 - Aplicación hospedada en ASP.NET.  
   
-     Para obtener más información sobre los archivos de configuración de ASP.NET, vea [opciones de configuración de ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
+     Para obtener más información sobre los archivos de configuración de ASP.NET, consulte [valores de configuración de ASP.net](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)).
   
 - Aplicación hospedada en Internet Explorer.  
   
@@ -87,10 +87,10 @@ ms.locfileid: "66456204"
      En esta etiqueta, `location` es una dirección URL para el archivo de configuración. Esto establece la base de la aplicación. El archivo de configuración debe estar ubicado en el mismo sitio web que la aplicación.  
   
 ## <a name="security-configuration-files"></a>Archivos de configuración de seguridad  
- Los archivos de configuración de seguridad contienen información sobre la jerarquía de grupos de código y conjuntos de permisos asociados a un nivel de directiva. Se recomienda encarecidamente usar la [herramienta de la directiva de seguridad de acceso a código (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) para modificar la directiva de seguridad y garantizar que los cambios de directiva no dañen los archivos de configuración de seguridad.  
+ Los archivos de configuración de seguridad contienen información sobre la jerarquía de grupos de código y conjuntos de permisos asociados a un nivel de directiva. Se recomienda encarecidamente usar la [herramienta de la directiva de seguridad de acceso a código (Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) para modificar la directiva de seguridad y garantizar que los cambios de directiva no dañen los archivos de configuración de seguridad.  
   
 > [!NOTE]
->  A partir de .NET Framework 4, los archivos de configuración de seguridad solo están presentes si se cambió la directiva de seguridad.  
+> A partir de la .NET Framework 4, los archivos de configuración de seguridad solo están presentes si se ha cambiado la Directiva de seguridad.  
   
  Los archivos de configuración de seguridad están en las ubicaciones siguientes:  
   
@@ -101,30 +101,30 @@ ms.locfileid: "66456204"
 - Archivo de configuración de directiva de usuario: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: Buscar ensamblados mediante DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Cómo: Buscar ensamblados mediante DEVPATH](how-to-locate-assemblies-by-using-devpath.md)  
  Describe cómo indicar al runtime que utilice la variable de entorno DEVPATH al buscar ensamblados.  
   
- [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
+ [Redirigir versiones de ensamblado](redirect-assembly-versions.md)  
  Describe cómo especificar la ubicación de un ensamblado y qué versión de un ensamblado se va a usar.  
   
- [Especificar la ubicación de un ensamblado](../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [Especificar la ubicación de un ensamblado](specify-assembly-location.md)  
  Describe cómo especificar dónde debe buscar un ensamblado el runtime.  
   
- [Configurar clases de criptografía](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Configurar clases de criptografía](configure-cryptography-classes.md)  
  Describe la forma de asignar un nombre de algoritmo a una clase criptográfica y un identificador de objetos a un algoritmo criptográfico.  
   
- [Cómo: Crear una directiva de publicador](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Cómo: Crear una directiva de edición](how-to-create-a-publisher-policy.md)  
  Describe cuándo y cómo debe agregar un archivo de directivas de editor para especificar la redirección del ensamblado y la configuración del código base.  
   
- [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [Esquema de los archivos de configuración](./file-schema/index.md)  
  Describe la jerarquía de esquema para el inicio, el tiempo de ejecución, la red y otros tipos de valores de configuración.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de los archivos de configuración](../../../docs/framework/configure-apps/file-schema/index.md)
-- [Especificar la ubicación de un ensamblado](../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [Redirigir versiones de ensamblado](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Esquema de los archivos de configuración](./file-schema/index.md)
+- [Especificar la ubicación de un ensamblado](specify-assembly-location.md)
+- [Redirigir versiones de ensamblado](redirect-assembly-versions.md)
 - [Administrar sitios web ASP.NET](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
-- [Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
-- [Ensamblados en Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+- [Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [Ensamblados en Common Language Runtime](../app-domains/assemblies-in-the-common-language-runtime.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 463c8e42e76a61eb0820c1af72c20d004161ad25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e1583ba8ecfa461958f96bea6cb2b9d3313349b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967285"
 ---
 # <a name="marshaling-mda"></a>MDA de serialización
 El asistente para la depuración administrada (MDA) `marshaling` se activa cuando el CLR establece la información de cálculo de referencias para un parámetro de método o un campo de una estructura. Este MDA no funciona para los ensamblados con compilación JIT.  
@@ -31,7 +31,7 @@ name="assembly!Namespace.Class::myChar
 ```  
   
 ## <a name="configuration"></a>Configuración  
- La configuración de MDA permite filtrar la información de serialización notificada sobre la base de los nombres de método o campo implicados.  En el ejemplo siguiente, se muestra el uso de los elementos `methodFilter`, `fieldFilter` y `match` para especificar filtros.  Al establecer el atributo `name` en un asterisco (*) coincidirá con todo.  
+ La configuración de MDA permite filtrar la información de serialización notificada sobre la base de los nombres de método o campo implicados.  En el ejemplo siguiente, se muestra el uso de los elementos `methodFilter`, `fieldFilter` y `match` para especificar filtros.  Establecer el `name` atributo en un asterisco (\*) coincidirá con todo.  
   
 ```xml  
 <mdaConfig>  

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: bb486dc210bc2d03be6400e9fe5c80b2a7c1de8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70ee5009e2763348f7c69613a1776e02e82e0391
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659867"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932130"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementar el patrón de control RangeValue de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IRangeValueProvider>, incluida la información sobre eventos y propiedades. Al final del tema se ofrecen vínculos a referencias adicionales.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64659867"
   
 - Los controles que tienen valores de intervalo ambiguos, como las barras de progreso o los controles deslizantes, deben tener dichos valores normalizados.  
   
- ![Barra de progreso. ](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+ ![Barra de progreso.](../../../docs/framework/ui-automation/media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
 Ejemplo de una barra de progreso donde el valor es de tipo entero y los valores de propiedad mínimo y máximo se normalizan en 0 y 100, respectivamente  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
@@ -37,13 +37,13 @@ Ejemplo de una barra de progreso donde el valor es de tipo entero y los valores 
   
 |Miembro requerido|Tipo de miembro|Notas|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Métodos|Ninguna|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Propiedad|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Propiedad|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Propiedad|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Propiedad|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Propiedad|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Propiedad|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Métodos|None|  
   
  Este patrón de control no tiene eventos asociados.  
   

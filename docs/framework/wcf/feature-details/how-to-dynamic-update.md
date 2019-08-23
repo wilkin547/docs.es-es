@@ -2,21 +2,21 @@
 title: Cómo actualización dinámica
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 7e2fbd6c179444ef4c6e1df5e5068dbd1c5d29fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c651bc4ff23b2534e81f190fc8b63771c7587d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773055"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911147"
 ---
 # <a name="how-to-dynamic-update"></a>Cómo actualización dinámica
 Este tema describe los pasos básicos necesarios para crear y actualizar dinámicamente la configuración de enrutamiento. En este ejemplo, la configuración de enrutamiento inicial se obtiene del archivo de configuración y enruta todos los mensajes al servicio de calculadora de regularCalc; sin embargo, se actualiza posteriormente mediante programación para cambiar el punto de conexión de destino del servicio de roundingCalc.  
   
 > [!NOTE]
->  En muchas implementaciones, la configuración será totalmente dinámica y no se basará en una configuración predeterminada; sin embargo, hay algunos casos, como el de este tema, en los que es deseable tener un estado de configuración predeterminada al iniciar el servicio.  
+> En muchas implementaciones, la configuración será totalmente dinámica y no se basará en una configuración predeterminada; sin embargo, hay algunos casos, como el de este tema, en los que es deseable tener un estado de configuración predeterminada al iniciar el servicio.  
   
 > [!NOTE]
->  Las actualizaciones dinámicas solo se llevan a cabo en la memoria y no ocasionan la modificación de los archivos de configuración.  
+> Las actualizaciones dinámicas solo se llevan a cabo en la memoria y no ocasionan la modificación de los archivos de configuración.  
   
  regularCalc y roundingCalc admiten las mismas operaciones de suma, resta, multiplicación y división; sin embargo, roundingCalc redondea todos los cálculos al valor entero más cercano antes de realizar la devolución. Se usa un archivo de configuración para configurar el servicio para enrutar todos los mensajes al servicio de regularCalc. Una vez iniciado el servicio de enrutamiento, <xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A> se utiliza para reconfigurar el servicio para enrutar los mensajes al servicio de roundingCalc.  
   
@@ -64,7 +64,7 @@ Este tema describe los pasos básicos necesarios para crear y actualizar dinámi
     </filterTables>  
     ```  
   
-3. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar "filterTable1" con el punto de conexión de servicio.  
+3. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. En el ejemplo siguiente se muestra cómo asociar "filterTable1" al punto de conexión de servicio.  
   
     ```xml  
     <behaviors>  

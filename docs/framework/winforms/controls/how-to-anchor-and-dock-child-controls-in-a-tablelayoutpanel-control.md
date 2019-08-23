@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child controls [Windows Forms], anchoring and docking
 - TableLayoutPanel control [Windows Forms], child controls
 ms.assetid: 0d267c35-25f1-49b8-8976-c64e8f0ddc0b
-ms.openlocfilehash: 7adbf9a98b25b237ee49d2689154e903d8fc0b5a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0e565b56c31d0776f6e89bbbe0b0681ae184758e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586174"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922818"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>Procedimiento para delimitar y acoplar controles secundarios en un control TableLayoutPanel
 El control <xref:System.Windows.Forms.TableLayoutPanel> admite las propiedades <xref:System.Windows.Forms.Control.Anchor%2A> y <xref:System.Windows.Forms.Control.Dock%2A> en sus controles secundarios.  
@@ -26,25 +26,25 @@ El control <xref:System.Windows.Forms.TableLayoutPanel> admite las propiedades <
   
 1. Cree un control <xref:System.Windows.Forms.TableLayoutPanel> en el formulario.  
   
-2. Establezca el valor de la <xref:System.Windows.Forms.TableLayoutPanel> del control <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> y <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> propiedades a **1**.  
+2. <xref:System.Windows.Forms.TableLayoutPanel> Establezca el valor de las propiedades y <xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A> <xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A> del control en **1**.  
   
 3. Cree un control <xref:System.Windows.Forms.Button> en el control <xref:System.Windows.Forms.TableLayoutPanel>. El <xref:System.Windows.Forms.Button> ocupa la esquina superior izquierda de la celda.  
   
 4. Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Anchor%2A> a `Left`. El control <xref:System.Windows.Forms.Button> se mueve para alinearse con el borde izquierdo de la celda.  
   
     > [!NOTE]
-    >  Este comportamiento difiere del comportamiento de otros controles contenedor. En otros controles contenedor, el control secundario no mueve cuando se establece la propiedad <xref:System.Windows.Forms.Control.Anchor%2A> y la distancia entre el control delimitado y el límite del contenedor primario se fija en el momento de establecer la propiedad <xref:System.Windows.Forms.Control.Anchor%2A>.  
+    > Este comportamiento difiere del comportamiento de otros controles contenedor. En otros controles contenedor, el control secundario no mueve cuando se establece la propiedad <xref:System.Windows.Forms.Control.Anchor%2A> y la distancia entre el control delimitado y el límite del contenedor primario se fija en el momento de establecer la propiedad <xref:System.Windows.Forms.Control.Anchor%2A>.  
   
 5. Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Anchor%2A> a `Top, Left`. El control <xref:System.Windows.Forms.Button> se mueve para ocupar la esquina superior izquierda de la celda.  
   
-6. Repita el paso 5 con un valor de `Top, Right` para mover el <xref:System.Windows.Forms.Button> control a la esquina superior derecha de la celda. Repita con los valores de `Bottom, Left` e `Bottom, Right`.  
+6. Repita el paso 5 con un valor `Top, Right` de para colocar <xref:System.Windows.Forms.Button> el control en la esquina superior derecha de la celda. Repita con los valores de `Bottom, Left` e `Bottom, Right`.  
   
 ### <a name="to-stretch-a-child-control-in-a-tablelayoutpanel-cell"></a>Para ajustar un control secundario en una celda de TableLayoutPanel  
   
 1. Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Anchor%2A> a `Left, Right`. El control <xref:System.Windows.Forms.Button> cambia de tamaño para ajustarse al ancho de la celda.  
   
     > [!NOTE]
-    >  Este comportamiento difiere del comportamiento de otros controles contenedor. En otros controles contenedor, el control secundario no es cambia de tamaño cuando el <xref:System.Windows.Forms.Control.Anchor%2A> propiedad está establecida en `Left, Right` o `Top, Bottom`.  
+    > Este comportamiento difiere del comportamiento de otros controles contenedor. En otros controles contenedor, el control secundario no cambia de tamaño cuando la <xref:System.Windows.Forms.Control.Anchor%2A> propiedad está establecida en `Left, Right` o `Top, Bottom`.  
   
 2. Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Anchor%2A> a `Top, Bottom`. El control <xref:System.Windows.Forms.Button> cambia de tamaño para ajustarse al alto de la celda.  
   
@@ -55,7 +55,7 @@ El control <xref:System.Windows.Forms.TableLayoutPanel> admite las propiedades <
 5. Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Left>. El control <xref:System.Windows.Forms.Button> se mueve para alinearse con el borde izquierdo de la celda. El control <xref:System.Windows.Forms.Button> conserva el ancho, pero el alto cambia para rellenar la celda verticalmente.  
   
     > [!NOTE]
-    >  Este es el mismo comportamiento que se produce en otros controles del contenedor.  
+    > Este es el mismo comportamiento que se produce en otros controles del contenedor.  
   
 6. Cambie el valor de la propiedad <xref:System.Windows.Forms.Button> del control <xref:System.Windows.Forms.Control.Dock%2A> a <xref:System.Windows.Forms.DockStyle.Fill>. El control <xref:System.Windows.Forms.Button> cambia de tamaño para rellenar la celda.  
   

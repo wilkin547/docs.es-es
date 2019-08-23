@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-ms.openlocfilehash: 37d9cb91e28a93b98394620a4385989968700fae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ac4ba64bc4bbec94171cee73625d18330728b66d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964443"
 ---
 # <a name="splitter-control-windows-forms"></a>Splitter (Control, formularios Windows Forms)
-Windows Forms `Splitter` controles se usan para cambiar el tamaño de los controles acoplados en tiempo de ejecución. El `Splitter` control suele utilizarse en formularios con controles que tienen distintas longitudes de datos que se va a presentar, como el Explorador de Windows, cuyos paneles de datos contienen información de diversos anchos en momentos diferentes.  
+Windows Forms `Splitter` controles se usan para cambiar el tamaño de los controles acoplados en tiempo de ejecución. El `Splitter` control se usa a menudo en formularios con controles que tienen diferentes longitudes de datos para presentar, como el explorador de Windows, cuyos paneles de datos contienen información de distintos anchos en momentos distintos.  
   
 > [!NOTE]
->  Aunque el control <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad al control `Splitter` de las versiones anteriores, `Splitter` se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
+> Aunque el control <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad al control `Splitter` de las versiones anteriores, `Splitter` se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre Splitter (Control)](splitter-control-overview-windows-forms.md)  

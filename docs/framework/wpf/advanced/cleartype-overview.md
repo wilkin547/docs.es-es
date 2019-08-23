@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 405d06a8da8ec5c428c1565bcd08236de0f1fa88
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 11019d564e7e658b745aec4254ad9a0c582b8416
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68672057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964926"
 ---
 # <a name="cleartype-overview"></a>Información general sobre ClearType
 En este tema se proporciona información general sobre la tecnología ClearType de Microsoft [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]que se encuentra en la.  
@@ -55,7 +55,7 @@ Texto con función de suavizado de contorno de ClearType en la dirección del ej
 ## <a name="hardware-acceleration"></a>Aceleración de hardware  
  ClearType en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] puede aprovechar la aceleración de hardware para mejorar el rendimiento y reducir los requisitos de carga de CPU y memoria del sistema. Mediante el uso de los sombreadores de píxeles y la memoria de vídeo de una tarjeta gráfica, ClearType proporciona una representación más rápida del texto, especialmente cuando se usa la animación.  
   
- ClearType en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] no modifica la configuración de ClearType en todo el sistema. Deshabilitar ClearType en [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] establece [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] el suavizado de contorno en el modo de escala de grises. Además, ClearType en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] no modifica la configuración del Powertoy del sintonizador [ClearType](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ ClearType en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] no modifica la configuración de ClearType en todo el sistema. Deshabilitar ClearType en Windows establece [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] el suavizado de contorno en el modo de escala de grises. Además, ClearType en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] no modifica la configuración del Powertoy del sintonizador [ClearType](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Una de las decisiones de diseño de arquitectura de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] consiste en mejorar la compatibilidad del diseño independiente de la resolución con monitores de mayor resolución de PPP, cuyo uso se está generalizando. Como consecuencia, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] no admite la representación de texto con alias ni los mapas de bits de algunas fuentes del este asiático, porque ambos dependen de la resolución.  
   

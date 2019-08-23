@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95dbaddc59a80b4f499a629dd00a52be678b4665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868813"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910872"
 ---
 # <a name="securing-exception-handling"></a>Proteger control de excepciones
-En Visual C++ y Visual Basic, se ejecuta una expresión de filtro más arriba en la pila antes de cualquier **finalmente** instrucción. El **catch** bloque asociado con ese filtro se ejecuta después el **finalmente** instrucción. Para obtener más información, consulte [excepciones filtradas por el usuario](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). Esta sección examinan las implicaciones de seguridad de este pedido. Considere el siguiente ejemplo de pseudocódigo que ilustra el orden en que las instrucciones de filtro y **finalmente** ejecutar las instrucciones.  
+En Visual C++ y Visual Basic, una expresión de filtro más arriba en la pila se ejecuta antes que cualquier instrucción Finally. El bloque **catch** asociado a ese filtro se ejecuta después de la instrucción **Finally** . Para obtener más información, consulte [uso de excepciones filtradas por el usuario](../../standard/exceptions/using-user-filtered-exception-handlers.md). En esta sección se examinan las implicaciones de seguridad de este orden. Considere el siguiente ejemplo de pseudocódigo que ilustra el orden en el que se ejecutan las instrucciones de filtro y las instrucciones **Finally** .  
   
 ```cpp  
 void Main()   
@@ -60,7 +60,7 @@ Finally
 Catch  
 ```  
   
- El filtro se ejecuta antes que la **finalmente** instrucción, por lo que se pueden introducir problemas de seguridad en todo aquello que hace que un estado cambie a aprovechar la ejecución de otro código. Por ejemplo:  
+ El filtro se ejecuta antes de la instrucción Finally, por lo que los problemas de seguridad pueden introducirse en cualquier cosa que realice un cambio de estado en el que la ejecución de otro código podría aprovecharse. Por ejemplo:  
   
 ```cpp  
 try   
@@ -79,7 +79,7 @@ finally
 }  
 ```  
   
- Este pseudocódigo permite que un filtro situado más arriba en la pila para ejecutar código arbitrario. Otros ejemplos de operaciones que pueden tener un efecto similar son temporal suplantación de identidad de otro, un marcador interno que omita alguna comprobación de seguridad, o cambiar la referencia cultural asociada al subproceso. La solución recomendada es introducir un controlador de excepciones para aislar los cambios del código para el estado del subproceso de bloques de filtro de los llamadores. Sin embargo, es importante que el controlador de excepciones se ha introducido correctamente o no se corregirá este problema. En el ejemplo siguiente se cambia la referencia cultural de interfaz de usuario, pero cualquier tipo de cambio de estado de subproceso podría mostrarse de forma similar.  
+ Este pseudocódigo permite un filtro más arriba en la pila para ejecutar código arbitrario. Otros ejemplos de operaciones que tendrían un efecto similar son la suplantación temporal de otra identidad, el establecimiento de una marca interna que omita alguna comprobación de seguridad o el cambio de la referencia cultural asociada al subproceso. La solución recomendada consiste en introducir un controlador de excepciones para aislar los cambios del código en el estado de subprocesos de los bloques de filtro de los llamadores. Sin embargo, es importante que el controlador de excepciones se introduzca correctamente o que no se corrija este problema. En el ejemplo siguiente se cambia la referencia cultural de la interfaz de usuario, pero cualquier tipo de cambio de estado del subproceso podría estar expuesto de forma similar.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +116,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- En este caso es la solución adecuada ajustar la existente **intente**/**finalmente** bloquear un **intente**/**catch** bloque. Introducir un **catch throw** cláusula existentes **intente**/**finalmente** bloque no soluciona el problema, tal como se muestra en el ejemplo siguiente.  
+ En este caso **,** la corrección correcta es ajustar el bloque **try**/Finally existente en un bloque **try**/**catch** . Simplemente la introducción de una cláusula **catch-Throw** en el bloque **try**/**Finally** existente no soluciona el problema, tal como se muestra en el ejemplo siguiente.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +136,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- Esto no soluciona el problema porque el **finalmente** instrucción no se ha ejecutado antes el `FilterFunc` obtiene control.  
+ Esto no soluciona el problema porque la instrucción **Finally** no se ha ejecutado antes `FilterFunc` del control obtiene.  
   
- En el ejemplo siguiente se corrige el problema asegurándose de que el **finalmente** cláusula ha ejecutado antes de generar una excepción de los bloques de filtro de excepción de los llamadores.  
+ En el ejemplo siguiente se corrige el problema asegurándose de que la cláusula finally se ha ejecutado antes de ofrecer una excepción a los bloques de filtro de excepciones de los llamadores.  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -162,4 +162,4 @@ YourObject.YourMethod()
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

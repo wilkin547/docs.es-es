@@ -2,12 +2,12 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4ec5cd19ccdc5c21a3caf426520d51442dc5ab3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757916"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938925"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -41,18 +41,18 @@ Representa el elemento raíz para la sección de espacio de nombres <xref:System
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|Permite agregar tipos conocidos que se van a usar al deserializar.|  
+|[\<dataContractSerializer>](datacontractserializer-of-system-runtime-serialization.md)|Permite agregar tipos conocidos que se van a usar al deserializar.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
 |Elemento|Descripción|  
 |-------------|-----------------|  
-|[Elemento \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|El elemento de nivel superior para la configuración.|  
+|[Elemento \<configuration>](../configuration-element.md)|El elemento de nivel superior para la configuración.|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Serialization>
-- [Utilización de contratos de datos](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Tipos conocidos de contratos de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Utilización de contratos de datos](../../../wcf/feature-details/using-data-contracts.md)
+- [Tipos conocidos de contratos de datos](../../../wcf/feature-details/data-contract-known-types.md)

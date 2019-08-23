@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Insertar comillas en una cadena (formularios Windows Forms)
+title: Procedimiento Insertar comillas en una cadena (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 0148f9fde9d69bb1605776f1ab617079be96b59e
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 20828f75eeae9df33fcc22d8558b26a8a1ab2bdc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053467"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910434"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Procedimiento Insertar comillas en una cadena (formularios Windows Forms)
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Procedimiento Insertar comillas en una cadena (Windows Forms)
 A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:  
   
  Me dijo: "¡Te mereces un regalo!"  
@@ -26,7 +26,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Para colocar comillas en una cadena en el código  
   
-1. En Visual Basic, inserte dos comillas en una fila como una comilla incrustada. En Visual C# y Visual C++, inserte la secuencia de escape \\"como una comilla incrustada. Por ejemplo, para crear la cadena anterior, utilice el código siguiente.  
+1. En Visual Basic, inserte dos comillas en una fila como una comilla incrustada. En Visual C# y visual C++, inserte la secuencia \\de escape "como una comilla incrustada. Por ejemplo, para crear la cadena anterior, utilice el código siguiente.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
   
      -o bien-  
   
-2. Inserte el carácter ASCII o Unicode de una comilla. En Visual Basic, utilice el carácter ASCII (34). En Visual C#, use el carácter Unicode (\u0022).  
+2. Inserte el carácter ASCII o Unicode de una comilla. En Visual Basic, use el carácter ASCII (34). En Visual C#, use el carácter Unicode (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -65,7 +65,7 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
     ```  
   
     > [!NOTE]
-    >  En este ejemplo, no puede utilizar \u0022 porque no puede utilizar un nombre de carácter universal que designe un carácter en el juego de caracteres básico. De lo contrario, se produce el error C3851. Para más información, consulte [Error del compilador C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
+    > En este ejemplo, no puede utilizar \u0022 porque no puede utilizar un nombre de carácter universal que designe un carácter en el juego de caracteres básico. De lo contrario, se produce el error C3851. Para más información, consulte [Error del compilador C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).  
   
      -o bien-  
   
@@ -93,9 +93,9 @@ A veces querrá poner comillas ("") en una cadena de texto. Por ejemplo:
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [Información general sobre el control TextBox](textbox-control-overview-windows-forms.md)
-- [Cómo: Controlar el punto de inserción en un Control TextBox de formularios Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Cómo: Crear un cuadro de texto de contraseña con el Control TextBox de Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Procedimientos: Controlar el punto de inserción en un control de cuadro de texto Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Procedimientos: Crear un cuadro de texto de contraseña con el control Windows Forms TextBox](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Cómo: Crear un cuadro de texto de solo lectura](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Cómo: Seleccionar texto en el Control TextBox de Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Cómo: Ver múltiples líneas en el Control TextBox de Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Cómo: Seleccionar texto en el control TextBox Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Cómo: Ver varias líneas en el control TextBox Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Control TextBox](textbox-control-windows-forms.md)
