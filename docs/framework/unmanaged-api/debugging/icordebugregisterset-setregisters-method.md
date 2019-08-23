@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 472e92e4e7a69c437c66cc9f221ab357292c345e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 200ea1b9c046b8743699a549c07c0baaf285be39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769593"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965035"
 ---
-# <a name="icordebugregistersetsetregisters-method"></a><span data-ttu-id="c69cf-102">ICorDebugRegisterSet::SetRegisters (Método)</span><span class="sxs-lookup"><span data-stu-id="c69cf-102">ICorDebugRegisterSet::SetRegisters Method</span></span>
-<span data-ttu-id="c69cf-103">`SetRegisters` no se implementa en la versión 2.0 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c69cf-103">`SetRegisters` is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="c69cf-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="c69cf-104">Do not call this method.</span></span>  
+# <a name="icordebugregistersetsetregisters-method"></a><span data-ttu-id="591bb-102">ICorDebugRegisterSet::SetRegisters (Método)</span><span class="sxs-lookup"><span data-stu-id="591bb-102">ICorDebugRegisterSet::SetRegisters Method</span></span>
+<span data-ttu-id="591bb-103">`SetRegisters`no se implementa en la versión .NET Framework 2,0.</span><span class="sxs-lookup"><span data-stu-id="591bb-103">`SetRegisters` is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="591bb-104">No llame a este método.</span><span class="sxs-lookup"><span data-stu-id="591bb-104">Do not call this method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="c69cf-105">Use las operaciones de nivel superior como [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) o [ICorDebugNativeFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).</span><span class="sxs-lookup"><span data-stu-id="c69cf-105">Use the higher-level operations such as [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) or [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).</span></span>  
+> <span data-ttu-id="591bb-105">Use las operaciones de nivel superior como [ICorDebugILFrame:: setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) o [ICorDebugNativeFrame:: setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).</span><span class="sxs-lookup"><span data-stu-id="591bb-105">Use the higher-level operations such as [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) or [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c69cf-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c69cf-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="591bb-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="591bb-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetRegisters (  
@@ -40,16 +40,16 @@ HRESULT SetRegisters (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c69cf-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c69cf-107">Requirements</span></span>  
- <span data-ttu-id="c69cf-108">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c69cf-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="591bb-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="591bb-107">Requirements</span></span>  
+ <span data-ttu-id="591bb-108">**Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="591bb-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c69cf-109">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c69cf-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="591bb-109">**Encabezado**: Cordebug. idl, Cordebug. h</span><span class="sxs-lookup"><span data-stu-id="591bb-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c69cf-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c69cf-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="591bb-110">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="591bb-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c69cf-111">**Versiones de .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="c69cf-111">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="591bb-111">**.NET Framework versiones:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="591bb-111">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c69cf-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="c69cf-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="591bb-112">Vea también</span><span class="sxs-lookup"><span data-stu-id="591bb-112">See also</span></span>
 
-- [<span data-ttu-id="c69cf-113">ICorDebugRegisterSet (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c69cf-113">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [<span data-ttu-id="c69cf-114">ICorDebugRegisterSet2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c69cf-114">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [<span data-ttu-id="591bb-113">ICorDebugRegisterSet (interfaz)</span><span class="sxs-lookup"><span data-stu-id="591bb-113">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [<span data-ttu-id="591bb-114">ICorDebugRegisterSet2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="591bb-114">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
