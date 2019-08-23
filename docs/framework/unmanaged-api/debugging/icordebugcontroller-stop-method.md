@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bb52f7f2035605914e2fe72ce2daf78de5bc1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 363d8f7d8cf960fb23210225c4545f73d597d663
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749906"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912844"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop (Método)
-Realiza una detención cooperativa de todos los subprocesos que ejecutan código administrado en el proceso.  
+Realiza una detención cooperativa en todos los subprocesos que ejecutan código administrado en el proceso.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,19 +40,19 @@ HRESULT Stop (
  No se utiliza.  
   
 ## <a name="remarks"></a>Comentarios  
- `Stop` realiza un código de detención cooperativa en todos los subprocesos en ejecución administrada en el proceso. Durante una sesión de depuración sólo administrada, pueden continuar ejecutando los subprocesos no administrados (pero se bloqueará al intentar llamar al código administrado). Durante una sesión de depuración de interoperabilidad, también se detendrán los subprocesos no administrados. El `dwTimeoutIgnored` valor actualmente se omite y se tratan como infinito (-1). Si se produce un error en la detención cooperativa debido a un interbloqueo, se suspenden todos los subprocesos y se devuelve E_TIMEOUT.  
+ `Stop`realiza una detención cooperativa en todos los subprocesos que ejecutan código administrado en el proceso. Durante una sesión de depuración solo administrada, los subprocesos no administrados pueden continuar ejecutándose (pero se bloquearán al intentar llamar al código administrado). Durante una sesión de depuración de interoperabilidad, los subprocesos no administrados también se detendrán. El `dwTimeoutIgnored` valor se omite actualmente y se trata como infinito (-1). Si se produce un error en la detención cooperativa debido a un interbloqueo, se suspenden todos los subprocesos y se devuelve E_TIMEOUT.  
   
 > [!NOTE]
->  `Stop` es el único método sincrónico de la API de depuración. Cuando `Stop` devuelve S_OK, el proceso se detiene. No se proporciona ninguna devolución de llamada para notificar a los agentes de escucha de la detención. El depurador debe llamar a [ICorDebugController](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para permitir la reanudación del proceso.  
+> `Stop`es el único método sincrónico de la API de depuración. Cuando `Stop` Devuelve S_OK, el proceso se detiene. No se proporciona ninguna devolución de llamada para notificar a los agentes de escucha de la detención. El depurador debe llamar a [ICorDebugController:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) para permitir que se reanude el proceso.  
   
- El depurador mantiene un contador de detención. Cuando el contador llega a cero, se reanuda el controlador. Cada llamada a `Stop` o cada devolución de llamada enviada incrementa el contador. Cada llamada a `ICorDebugController::Continue` disminuye el contador.  
+ El depurador mantiene un contador de detención. Cuando el contador llega a cero, se reanuda el controlador. Cada llamada a `Stop` o a cada devolución de llamada enviada incrementa el contador. Cada llamada a `ICorDebugController::Continue` disminuye el contador.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
