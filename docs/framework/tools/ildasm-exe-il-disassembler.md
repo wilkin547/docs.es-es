@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025971"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567310"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -100,7 +100,7 @@ El archivo de texto creado por *Ildasm.exe* se puede usar como entrada para el E
 > [!NOTE]
 > Actualmente no se puede usar esta técnica con archivos PE que contienen código nativo incrustado (por ejemplo, archivos PE generados por Visual C++).  
 
-Puede usar la interfaz gráfica de usuario predeterminada en el Desensamblador de IL para ver los metadatos y el código desensamblado de los archivos PE existentes en una vista jerárquica de árbol. Para usar dicha interfaz, escriba **ildasm** en la línea de comandos sin proporcionar el argumento *PEfilename* ni ninguna de las opciones. Desde el menú **Archivo** puede navegar hasta el archivo PE que quiera cargar en *Ildasm.exe*. Para guardar los metadatos y el código desensamblado mostrados para el PE seleccionado, seleccione el comando **Volcar** en el menú **Archivo**. Para guardar únicamente la vista de árbol jerárquica, seleccione el comando **Volcar vista de árbol** en el menú **Archivo**. Para obtener detalles sobre el modo de cargar un archivo en *Ildasm.exe* e interpretar la salida, vea el tutorial de *Ildasm.exe*, ubicado en la carpeta de ejemplos que se incluye con el kit de desarrollo de software (SDK) de Windows.
+Puede usar la interfaz gráfica de usuario predeterminada en el Desensamblador de IL para ver los metadatos y el código desensamblado de los archivos PE existentes en una vista jerárquica de árbol. Para usar dicha interfaz, escriba **ildasm** en la línea de comandos sin proporcionar el argumento *PEfilename* ni ninguna de las opciones. Desde el menú **Archivo** puede navegar hasta el archivo PE que quiera cargar en *Ildasm.exe*. Para guardar los metadatos y el código desensamblado mostrados para el PE seleccionado, seleccione el comando **Volcar** en el menú **Archivo**. Para guardar únicamente la vista de árbol jerárquica, seleccione el comando **Volcar vista de árbol** en el menú **Archivo**. Para obtener detalles sobre el modo de cargar un archivo en *Ildasm.exe* e interpretar la salida, vea el tutorial de *Ildasm.exe*, ubicado en la carpeta de ejemplos que se incluye con Windows SDK.
 
 Si ejecuta *Ildasm.exe* con un argumento *PEfilename* que contiene recursos incrustados, la herramienta creará varios archivos de salida: un archivo de texto que contiene código IL y, para cada recurso administrado incrustado, un nuevo archivo .resources al que asignará el nombre usado para el recurso en los metadatos. Si un recurso no administrado se inserta en el argumento *PEfilename*, se creará un archivo .res con el nombre de archivo especificado por la opción **/output** para la salida de IL.
 

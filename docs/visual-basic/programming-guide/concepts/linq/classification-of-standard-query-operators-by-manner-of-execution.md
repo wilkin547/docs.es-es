@@ -2,12 +2,12 @@
 title: Clasificación de operadores de consulta estándar por modo de ejecución (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e89c58707b4980b208395cce67434a6e5efa5d22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62021770"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939268"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Clasificación de operadores de consulta estándar por modo de ejecución (Visual Basic)
 Las implementaciones de LINQ to Objects de los métodos de operador de consulta estándar se ejecutan de una de dos formas principales: inmediata o aplazada. Los operadores de consulta que usan la ejecución aplazada pueden dividirse además en dos categorías: de streaming y de no streaming. Si sabe cómo se ejecutan los diferentes operadores de consulta, puede servirle para entender los resultados que se obtienen de una consulta determinada. Esto es especialmente cierto si se está cambiando el origen de datos o si se está creando una consulta sobre otra. En este tema se clasifican los operadores de consulta estándar según su modo de ejecución.  
@@ -32,7 +32,7 @@ Las implementaciones de LINQ to Objects de los métodos de operador de consulta 
  En la tabla siguiente se clasifica cada método de operador de consulta estándar según su método de ejecución.  
   
 > [!NOTE]
->  Si un operador se marca en dos columnas, dos secuencias de entrada intervienen en la operación, y cada secuencia se evalúa de manera diferente. En estos casos, siempre es la primera secuencia de la lista de parámetros la que se evalúa en un modo de transmisión diferido.  
+> Si un operador se marca en dos columnas, dos secuencias de entrada intervienen en la operación, y cada secuencia se evalúa de manera diferente. En estos casos, siempre es la primera secuencia de la lista de parámetros la que se evalúa en un modo de transmisión diferido.  
   
 |Operador de consulta estándar|Tipo devuelto|Ejecución inmediata|Ejecución aplazada de streaming|Ejecución aplazada de no streaming|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  

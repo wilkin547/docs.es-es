@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5070dba7e7e1218fedf24d350c0461a1cd3835e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc3ec00f11582ede1dc4b3d481a4eb9dcc4dd1d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755509"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963913"
 ---
 # <a name="icorprofilercallback2survivingreferences-method"></a>ICorProfilerCallback2::SurvivingReferences (Método)
 Informa del diseño de objetos del montón como resultado de una recolección de elementos no utilizados sin compactación.  
@@ -55,7 +55,7 @@ HRESULT SurvivingReferences(
 ## <a name="remarks"></a>Comentarios  
   
 > [!IMPORTANT]
->  Este método notifica tamaños como `MAX_ULONG` para objetos de más de 4 GB en plataformas de 64 bits. Para los objetos que son mayores de 4 GB, use el [ICorProfilerCallback4::SurvivingReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) método en su lugar.  
+> Este método notifica tamaños como `MAX_ULONG` para objetos de más de 4 GB en plataformas de 64 bits. En el caso de objetos mayores de 4 GB, use el método [ICorProfilerCallback4:: survivingreferences2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-survivingreferences2-method.md) en su lugar.  
   
  Los elementos de las matrices `objectIDRangeStart` y `cObjectIDRangeLength` deben interpretarse del siguiente modo para determinar si un objeto ha sobrevivido a la recolección de elementos no utilizados. Supongamos que un valor `ObjectID` (`ObjectID`) se encuentra dentro del intervalo siguiente:  
   
@@ -67,16 +67,16 @@ HRESULT SurvivingReferences(
   
  Una recolección de elementos no utilizados sin compactación recupera la memoria ocupada por objetos "inactivos", pero no compacta ese espacio liberado. Como consecuencia, la memoria se devuelve al montón pero no se mueve ningún objeto "activo".  
   
- Common Language Runtime (CLR) llama a `SurvivingReferences` para las recolecciones de elementos no utilizados sin compactación. Para las colecciones de elementos no utilizados con compactación, [MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) se llama en su lugar. Se puede compactar una única recolección de elementos no utilizados para una generación y no compactar para otra. Para una recolección de elementos no utilizados en una generación determinada, el generador de perfiles recibirá una devolución de llamada `SurvivingReferences` o una devolución de llamada `MovedReferences`, pero no ambas.  
+ Common Language Runtime (CLR) llama a `SurvivingReferences` para las recolecciones de elementos no utilizados sin compactación. Para compactar las recolecciones de elementos no utilizados, se llama a [ICorProfilerCallback:: MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) en su lugar. Se puede compactar una única recolección de elementos no utilizados para una generación y no compactar para otra. Para una recolección de elementos no utilizados en una generación determinada, el generador de perfiles recibirá una devolución de llamada `SurvivingReferences` o una devolución de llamada `MovedReferences`, pero no ambas.  
   
  Se pueden recibir varias devoluciones de llamada `SurvivingReferences` durante una recolección de elementos no utilizados determinada debido a un almacenamiento en búfer interno limitado, a la notificación de varios subprocesos en el caso de la recolección de elementos no utilizados de servidor, y a otros motivos. En el caso de varias devoluciones de llamada durante una recolección de elementos no utilizados, la información es acumulativa. Todas las referencias que se notifican en cualquier devolución de llamada `SurvivingReferences` sobreviven a la recolección de elementos no utilizados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado**: Corprof. idl, Corprof. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

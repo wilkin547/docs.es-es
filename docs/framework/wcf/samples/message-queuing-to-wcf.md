@@ -2,12 +2,12 @@
 title: Message Queuing a Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 2dc0bc3154e2762d3296bf79a6f7245f87aefeb7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74cac9789dc187b4940b67e94d726471f978a472
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664903"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930649"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Message Queuing a Windows Communication Foundation
 Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio de Windows Communication Foundation (WCF). El servicio es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola.  
@@ -60,7 +60,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
  El nombre de cola de MSMQ se especifica en una sección appSettings del archivo de configuración, tal y como se muestra en la configuración de ejemplo siguiente.
 
 > [!NOTE]
->  El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección de extremo WCF especifica un esquema msmq.formatname y utiliza localhost para el equipo local. La dirección de la cola para las directrices de direccionamiento del nombre de formato de MSMQ sigue el esquema msmq.formatname.
+> El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección del extremo de WCF especifica un esquema MSMQ. FormatName y utiliza localhost para el equipo local. La dirección de la cola para las directrices de direccionamiento del nombre de formato de MSMQ sigue el esquema msmq.formatname.
 
 ```xml
 <appSettings>
@@ -114,23 +114,23 @@ Console.ReadLine();
 
 ### <a name="to-setup-build-and-run-the-sample"></a>Para configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1. Abra el administrador del servidor en Visual Studio 2012.
+    1. Abra Administrador del servidor en Visual Studio 2012.
 
-    2. Expanda el **características** ficha.
+    2. Expanda la pestaña **características** .
 
-    3. Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
+    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
 
-    4. Compruebe el **transaccional** cuadro.
+    4. Active la casilla **transaccional** .
 
-    5. Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
+    5. Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Para ejecutar el ejemplo en la configuración de un único equipo, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para ejecutar el ejemplo en una configuración de un solo equipo, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos
 
@@ -149,12 +149,12 @@ Console.ReadLine();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`  
   
 ## <a name="see-also"></a>Vea también
 
 - [Colas en WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [Cómo: Intercambiar mensajes con puntos de conexión WCF y Message Queue Server de las aplicaciones](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Procedimientos: Intercambio de mensajes con extremos de WCF y aplicaciones de Message Queue Server](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Message Queue Server](https://go.microsoft.com/fwlink/?LinkId=94968)

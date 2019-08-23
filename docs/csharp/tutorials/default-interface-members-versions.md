@@ -3,12 +3,12 @@ title: Actualización segura de la interfaz con miembros de la predeterminada en
 description: En este tutorial avanzado se describe cómo agregar de forma segura nuevas capacidades a las definiciones de la interfaz existente sin que ello interrumpa todas las clases y estructuras que implementan esa interfaz.
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d7265b7705fc931d356a3b7fe3504ab7f21c0b3
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877917"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971437"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>Tutorial: Actualización de interfaces con miembros de interfaz predeterminados en C# 8.0
 
@@ -87,6 +87,6 @@ En una implementación de una clase que implementa esta interfaz, la invalidaci�
 
 [!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
-Puede ver todo el código terminado en nuestro [repositorio de ejemplos en GitHub] (puede obtener la aplicación de inicio en nuestro [repositorio de ejemplo en GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship).
+Puede ver todo el código terminado en nuestro [repositorio de ejemplos en GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship). Puede obtener la aplicación de inicio en nuestro [repositorio de ejemplo en GitHub](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship).
 
 Estas nuevas características significan que las interfaces se pueden actualizar de forma segura cuando hay una implementación predeterminada razonable para esos nuevos miembros. Diseñe cuidadosamente las interfaces para expresar ideas funcionales únicas que puedan implementarse con varias clases. Esto facilita la actualización de esas definiciones de interfaz cuando se descubren nuevos requisitos para esa misma idea funcional.

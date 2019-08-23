@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf9ecdeb4df6210805490586f1818298025fc036
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 533e3d715b46b4ef6d473795a010fa3ad297ded2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67749940"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913749"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority (Método)
-Solicita que el host ajuste la prioridad del subproceso de nivel de la tarea representada por el actual [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia.  
+Solicita que el host ajuste el nivel de prioridad del subproceso para la tarea representada por la instancia de [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -37,21 +37,21 @@ HRESULT SetPriority (
   
 ## <a name="parameters"></a>Parámetros  
  `newPriority`  
- [in] Un entero que representa el valor de prioridad de subproceso solicitado para la tarea representada por el actual `IHostTask` instancia.  
+ de Entero que representa el valor de prioridad de subproceso solicitado para la tarea representada `IHostTask` por la instancia actual.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|S_OK|`SetPriority` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`SetPriority`se devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Los subprocesos se usa un sistema de operación por turnos que se basa parcialmente en el nivel de prioridad de un subproceso de tiempo de procesamiento concedido. `SetPriority` permite que el CLR establecer ese nivel de prioridad de subproceso de la tarea actual. La siguiente `newPriority` se admiten los valores.  
+ A los subprocesos se les concede el tiempo de procesamiento mediante un sistema Round Robin que se basa parcialmente en el nivel de prioridad de un subproceso. `SetPriority`permite que CLR establezca el nivel de prioridad de subproceso para la tarea actual. Se admiten los valores siguientes `newPriority` .  
   
 - THREAD_PRIORITY_ABOVE_NORMAL  
   
@@ -67,19 +67,19 @@ HRESULT SetPriority (
   
 - THREAD_PRIORITY_TIME_CRITICAL  
   
- CLR llama a `SetPriority` cuando el valor de la <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> modificado por código de usuario. Un host puede definir sus propios algoritmos para la asignación de prioridad de subproceso y es libre de omitir esta solicitud.  
+ CLR llama a `SetPriority` cuando el valor <xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType> de se modifica mediante código de usuario. Un host puede definir sus propios algoritmos para la asignación de prioridad de subprocesos y es libre de omitir esta solicitud.  
   
 > [!NOTE]
->  `SetPriority` no informa de si se ha cambiado el nivel de prioridad de subproceso. Llame a [IHostTask:: GetPriority](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) para determinar el valor del nivel de prioridad de subproceso de la tarea.  
+> `SetPriority`no informa de si se cambió el nivel de prioridad del subproceso. Llame a [IHostTask:: GetPriority (](../../../../docs/framework/unmanaged-api/hosting/ihosttask-getpriority-method.md) para determinar el valor del nivel de prioridad del subproceso de la tarea.  
   
- Definen los valores de nivel de prioridad de subproceso Win32 `SetThreadPriority` función. Para obtener más información acerca de la prioridad de subproceso, vea la documentación de la plataforma de Windows.  
+ La función de Win32 `SetThreadPriority` define los valores de nivel de prioridad del subproceso. Para obtener más información sobre la prioridad de los subprocesos, vea la documentación de la plataforma Windows.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

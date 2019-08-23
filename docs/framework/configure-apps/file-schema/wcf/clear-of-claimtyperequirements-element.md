@@ -1,22 +1,22 @@
 ---
-title: <clear> de <claimTypeRequirements> elemento
+title: <clear>del <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: 35d0391951204bd352918d3004f0cc4f9480b0e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7e3bebd85decbaa4d216743f9bea9e135b87995
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704276"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926135"
 ---
-# <a name="clear-of-claimtyperequirements-element"></a>\<Borrar > de \<claimTypeRequirements > elemento
+# <a name="clear-of-claimtyperequirements-element"></a>\<borrar > del \<elemento de > claimTypeRequirements
 Especifica que se quiten todos los tipos de notificaciones en la credencial aliada. Esto asegura que la colección se inicia vacía.  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<wsFederatedBinding>  
 \<binding>  
-\<security>  
+\<> de seguridad  
 \<message>  
 \<claimTypeRequirements>  
   
@@ -39,9 +39,9 @@ Especifica que se quiten todos los tipos de notificaciones en la credencial alia
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Especifica una colección de tipos de notificación requeridos. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
+|[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|Especifica una colección de tipos de notificación requeridos. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
   
 ## <a name="see-also"></a>Vea también
 

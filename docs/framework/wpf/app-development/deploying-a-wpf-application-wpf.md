@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 16a0436accfb031ddd0bb413e519d80e550786b4
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: cfb617fde514c93596d52b0ca70da39c6e5be301
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972266"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958647"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Implementar una aplicación de WPF
-Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), deben implementarse. Windows y el .NET Framework incluyen varias tecnologías de implementación. La tecnología de implementación que se usa para implementar una aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] depende del tipo de esta. En este tema se proporciona alguna información general sobre cada tecnología de implementación y su uso, además de los requisitos de implementación de cada tipo de aplicación de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>Tecnologías de implementación  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]y el .NET Framework incluyen varias tecnologías de implementación, entre las que se incluyen:  
+ Windows y el .NET Framework incluyen varias tecnologías de implementación, entre las que se incluyen:  
   
 - Implementación de XCopy.  
   
@@ -39,7 +39,7 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] permite empaquetar las aplicaciones como aplicaciones ejecutables autónomas que se pueden distribuir con facilidad a los clientes y ejecutar. Además, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] se instala con [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] y habilita la integración con el escritorio, el menú Inicio y el panel de control Programas.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] permite empaquetar las aplicaciones como aplicaciones ejecutables autónomas que se pueden distribuir con facilidad a los clientes y ejecutar. Además, [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] se instala con Windows y permite la integración con el escritorio, el menú Inicio y el panel de control programas.  
   
  [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] simplifica la instalación y desinstalación de aplicaciones, pero no proporciona los medios para asegurarse de que las aplicaciones instaladas se mantengan actualizadas desde el punto de vista de su versión.  
   
@@ -96,9 +96,9 @@ Después de compilar las aplicaciones de Windows Presentation Foundation (WPF), 
 - *ApplicationName*.exe.manifest: Manifiesto de aplicación  
   
 > [!NOTE]
->  Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](building-a-wpf-application-wpf.md).  
+> Para obtener más información sobre los manifiestos de implementación y de aplicación, vea [Compilar una aplicación de WPF (WPF)](building-a-wpf-application-wpf.md).  
   
- Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, consulte [Cómo Cree un nuevo proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))de aplicación de explorador de WPF. Al igual que las [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] páginas de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] solo marcado, normalmente se publican en un servidor Web y se ven con Internet Explorer.  
+ Estos archivos se crean al compilar una [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para obtener más información, vea [Cómo: Cree un nuevo proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))de aplicación de explorador de WPF. Al igual que las [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] páginas de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] solo marcado, normalmente se publican en un servidor Web y se ven con Internet Explorer.  
   
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] se puede implementar en los clientes usando cualquiera de las técnicas de implementación. Sin embargo, se recomienda ClickOnce, ya que ofrece las siguientes capacidades:  
   

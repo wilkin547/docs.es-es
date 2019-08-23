@@ -2,12 +2,12 @@
 title: Transacciones y simultaneidad
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: ba857031a54374ee295c2bfd724e7fb8651b7c1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c78031150d9b1209372dece49813dfcf0a03b9d5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933710"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965211"
 ---
 # <a name="transactions-and-concurrency"></a>Transacciones y simultaneidad
 Una transacción consiste en un comando único o en un grupo de comandos que se ejecutan como un paquete. Las transacciones permiten combinar varias operaciones en una sola unidad de trabajo. Si en un punto de la transacción se produjera un error, todas las actualizaciones podrían revertirse y devolverse al estado que tenían antes de la transacción.  
@@ -15,11 +15,11 @@ Una transacción consiste en un comando único o en un grupo de comandos que se 
  Una transacción debe ajustarse a las propiedades ACID (atomicidad, coherencia, aislamiento y durabilidad) para poder garantizar la coherencia de datos. La mayoría de los sistemas de bases de datos relacionales, como Microsoft SQL Server, admiten transacciones, al proporcionar funciones de bloqueo, registro y administración de transacciones cada vez que una aplicación cliente realiza una operación de actualización, inserción o eliminación.  
   
 > [!NOTE]
->  Las transacciones que requieren varios recursos pueden reducir la simultaneidad si la duración del bloqueo es demasiado larga. Por ello, haga la transacción lo más corta posible.  
+> Las transacciones que requieren varios recursos pueden reducir la simultaneidad si la duración del bloqueo es demasiado larga. Por ello, haga la transacción lo más corta posible.  
   
  Las transacciones explícitas en procedimientos almacenados suelen dar mejores resultados cuando una transacción implica el uso de varias tablas en la misma base de datos o servidor. Se pueden crear transacciones en procedimientos almacenados de SQL Server mediante las instrucciones `BEGIN TRANSACTION`, `COMMIT TRANSACTION` o `ROLLBACK TRANSACTION` de Transact-SQL. Para obtener más información, vea los Libros en pantalla de SQL Server.  
   
- Las transacciones que implican a varios administradores de recursos, como una transacción entre SQL Server y Oracle, requieren una transacción distribuida.  
+ Las transacciones que implican diferentes administradores de recursos, como una transacción entre SQL Server y Oracle, requieren una transacción distribuida.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Transacciones locales](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -29,7 +29,7 @@ Una transacción consiste en un comando único o en un grupo de comandos que se 
  Describe cómo realizar transacciones distribuidas en ADO.NET.  
   
  [Integración de System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- Describe <xref:System.Transactions> integración con SQL Server para trabajar con transacciones distribuidas.  
+ Describe <xref:System.Transactions> la integración con SQL Server para trabajar con transacciones distribuidas.  
   
  [Simultaneidad optimista](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Describe la simultaneidad optimista y pesimista, y cómo puede probar las infracciones de simultaneidad.  

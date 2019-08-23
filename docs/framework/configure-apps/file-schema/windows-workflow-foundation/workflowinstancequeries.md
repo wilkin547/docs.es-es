@@ -3,22 +3,22 @@ title: <workflowInstanceQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-ms.openlocfilehash: fc92b030e8f6643a856446142842c492db703253
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0a32e6ee22cdf984e64c1b8fa16836c4c56d0380
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624793"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932741"
 ---
 # <a name="workflowinstancequeries"></a>\<workflowInstanceQueries>
 Representa una colección de elementos de configuración que realizan el seguimiento de los cambios del ciclo de vida de la instancia del flujo de trabajo, como un evento iniciado o completado.  
   
- Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md) .  
   
 \<system.serviceModel>  
-\<tracking>  
+\<> de seguimiento  
 \<trackingProfile>  
-\<flujo de trabajo >  
+\<> de flujo de trabajo  
 \<workflowInstanceQueries>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -47,15 +47,15 @@ Representa una colección de elementos de configuración que realizan el seguimi
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|Una consulta que se utiliza para realizar el seguimiento de los cambios de ciclo de vida de la instancia del flujo de trabajo.|  
+|[\<workflowInstanceQuery>](workflowinstancequery.md)|Una consulta que se utiliza para realizar el seguimiento de los cambios de ciclo de vida de la instancia del flujo de trabajo.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Un elemento de configuración que contiene todas las consultas de un flujo de trabajo concreto identificado por el **activityDefinitionId** propiedad.|  
+|[\<workflow>](workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad **activityDefinitionId** .|  
   
 ## <a name="remarks"></a>Comentarios  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery> se usa para suscribirse a los siguientes objetos <xref:System.Activities.Tracking.TrackingRecord>:  
@@ -87,5 +87,5 @@ Representa una colección de elementos de configuración que realizan el seguimi
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Seguimiento y traza de flujos de trabajo](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md)

@@ -2,12 +2,12 @@
 title: Tokens auxiliares
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: fba9a44342da5b064897b3ab81f34fa39498d379
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: a8464d7f32b52152b5371ff9edbb396578df6a57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425446"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964466"
 ---
 # <a name="supporting-tokens"></a>Tokens auxiliares
 El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a un mensaje que utiliza WS-Security. El ejemplo agrega un token de seguridad binario de X.509 además de un token de seguridad del nombre de usuario. El token se pasa en un encabezado de mensaje de WS-Security desde el cliente al servicio y parte del mensaje se firma con una clave privada asociada con el token de seguridad de X.509 para demostrar la posesión del certificado X.509 al receptor. Esto es útil cuando es un requisito tener varias solicitudes asociadas con un mensaje para autenticar o autorizar el remitente. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.
@@ -22,7 +22,7 @@ El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a u
 - Cómo el certificado X.509 del servidor se utiliza para proteger la clave simétrica utilizada para el cifrado y firma de mensajes.
 
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>El cliente se autentica con el token del nombre de usuario y el token de seguridad X.509 compatible
  El servicio expone un punto de conexión único para comunicarse que se crea mediante programación usando las clases `BindingHelper` y `EchoServiceHost`. El punto de conexión está compuesto por una dirección, un enlace y un contrato. El enlace se configura con un enlace personalizado utilizando `SymmetricSecurityBindingElement` y `HttpTransportBindingElement`. Este ejemplo establece `SymmetricSecurityBindingElement` para utilizar un certificado X.509 de servicio para proteger la clave simétrica durante la transmisión y pasar `UserNameToken` junto con el `X509SecurityToken` compatible en un encabezado de mensaje de WS-Security. La clave simétrica se utiliza para cifrar el cuerpo del mensaje y el token de seguridad del nombre de usuario. El token auxiliar se pasa como un token de seguridad binario adicional en el encabezado de mensaje de WS-Security. La autenticidad del token auxiliar se demuestra firmando parte del mensaje con la clave privada asociada con el token de seguridad X.509 compatible.
@@ -282,7 +282,7 @@ public class EchoService : IEchoService
 ```
 
 ## <a name="displaying-callers-information"></a>Visualización de la información de los autores de la llamada
- Para mostrar la información del autor de la llamada, puede usar `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` tal y como se muestra en el código siguiente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene notificaciones de autorización asociadas con el autor de la llamada actual. Dichas notificaciones se proporcionan automáticamente por Windows Communication Foundation (WCF) para cada token recibido en el mensaje.
+ Para mostrar la información del autor de la llamada, puede usar `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` tal y como se muestra en el código siguiente. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contiene notificaciones de autorización asociadas con el autor de la llamada actual. Windows Communication Foundation (WCF) suministra automáticamente esas notificaciones para cada token recibido en el mensaje.
 
 ```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
@@ -345,7 +345,7 @@ void GetCallerIdentities(ServiceSecurityContext callerSecurityContext, out strin
 ```
 
 ## <a name="running-the-sample"></a>Ejecutar el ejemplo
- Al ejecutar el ejemplo, el cliente le pide primero que proporcione el nombre de usuario y la contraseña para el token del nombre de usuario. No olvide proporcionar valores correctos para la cuenta del sistema, porque WCF en el servicio asigna los valores proporcionados en el token de nombre de usuario en la identidad proporcionada por el sistema. Después de esto, el cliente muestra la respuesta del servicio. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
+ Al ejecutar el ejemplo, el cliente le pide primero que proporcione el nombre de usuario y la contraseña para el token del nombre de usuario. Asegúrese de proporcionar los valores correctos para la cuenta del sistema, porque WCF en el servicio asigna los valores proporcionados en el token de nombre de usuario a la identidad proporcionada por el sistema. Después de esto, el cliente muestra la respuesta del servicio. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
 
 ## <a name="setup-batch-file"></a>Instalar el archivo por lotes
  El archivo por lotes Setup.bat incluido con este ejemplo le permite configurar el servidor con certificados pertinentes para ejecutar la aplicación hospedada por Internet Information Services (IIS) que necesita la seguridad basada en el certificado del servidor. Este archivo por lotes debe modificarse para que funcione a través de los equipos o en un caso no hospedado.
@@ -414,22 +414,22 @@ iisreset
 
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+2. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
 3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, utilice las instrucciones siguientes.
 
 ##### <a name="to-run-the-sample-on-the-same-machine"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1. Ejecute Setup.bat desde la carpeta de instalación de ejemplo en un símbolo del sistema de Visual Studio 2012 ejecutar con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1. Ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 y ejecute con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. El conjunto de variables de entorno de ruta de acceso en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables que requiere el script Setup.bat. Asegúrese de quitar los certificados ejecutando Cleanup.bat cuando termine con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
+    >  El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat. Asegúrese de quitar los certificados ejecutando Cleanup.bat cuando termine con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
   
 2. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-3. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+3. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ##### <a name="to-run-the-sample-across-machines"></a>Para ejecutar el ejemplo en los equipos  
   
@@ -441,13 +441,13 @@ iisreset
   
 4. Copie los archivos de programa del cliente en el directorio del cliente en el equipo cliente. Copie también los archivos Setup.bat, Cleanup.bat e ImportServiceCert.bat en el cliente.  
   
-5. En el servidor, ejecute `setup.bat service` en una línea de comandos para desarrolladores de Visual Studio abierto con privilegios de administrador. Ejecutando `setup.bat` con el `service` argumento crea un certificado de servicio con el nombre de dominio completo de la máquina y exporta el certificado de servicio a un archivo denominado Service.cer.  
+5. En el servidor, ejecute `setup.bat service` en un símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador. Al `setup.bat` ejecutar con `service` el argumento se crea un certificado de servicio con el nombre de dominio completo del equipo y se exporta el certificado del servicio a un archivo denominado Service. cer.  
   
-6. Edite el archivo Web.config para reflejar el nuevo nombre del certificado (en el `findValue` atributo en el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) que es el mismo que el nombre de dominio completo de la máquina.  
+6. Edite el archivo Web. config para reflejar el nuevo nombre del `findValue` certificado (en el atributo [ \<del > serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), que es el mismo que el nombre de dominio completo del equipo.  
   
 7. Copie el archivo Service.cer del directorio de servicio al directorio del cliente en el equipo cliente.  
   
-8. En el cliente, ejecute `setup.bat client` en una línea de comandos para desarrolladores de Visual Studio abierto con privilegios de administrador. Al ejecutar `setup.bat`con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.  
+8. En el cliente, ejecute `setup.bat client` en un símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador. Al ejecutar `setup.bat`con el argumento `client`, se crea un certificado de cliente denominado client.com y se exporta el certificado de cliente a un archivo denominado Client.cer.  
   
 9. En el archivo Client.exe.config del equipo cliente, cambie el valor de la dirección del punto de conexión para que coincida con la nueva dirección de su servicio. Para hacerlo, reemplace el host local con el nombre de dominio completo del servidor.  
   
@@ -457,11 +457,11 @@ iisreset
   
 12. En el servidor, ejecute ImportClientCert.bat. Esto importa el certificado de cliente del archivo Client.cer en el almacén LocalMachine - TrustedPeople.  
   
-13. En el equipo cliente, inicie Client.exe desde la ventana de símbolo del sistema. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+13. En el equipo cliente, inicie Client.exe desde la ventana de símbolo del sistema. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ##### <a name="to-clean-up-after-the-sample"></a>Para realizar una limpieza después de ejecutar el ejemplo  
   
 - Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
 > [!NOTE]
->  Este script no quita los certificados del servicio en un cliente cuando se ejecuta este ejemplo en los equipos. Si ha ejecutado los ejemplos de WCF que usan certificados en varios equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser - trustedpeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+> Este script no quita los certificados del servicio en un cliente cuando se ejecuta este ejemplo en los equipos. Si ha ejecutado ejemplos de WCF que usan certificados entre equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

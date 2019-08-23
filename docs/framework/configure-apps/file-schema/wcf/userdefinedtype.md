@@ -2,12 +2,12 @@
 title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
-ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1a48fa2ed90999a66f4c1f84b7cfaa9a0e79f6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769842"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940578"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
 Representa un tipo definido por el usuario (UDT) que se va a incluir en el contrato del servicio.  
@@ -38,7 +38,7 @@ Representa un tipo definido por el usuario (UDT) que se va a incluir en el contr
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`name`|Un atributo opcional que contiene una cadena que proporciona el nombre de tipo legible. El tiempo de ejecución no lo usa, pero ayuda a que un lector distinga los tipos.|  
 |`TypeDefID`|Una cadena GUID que identifica el tipo UDT concreto dentro de la biblioteca de tipos registrados.|  
@@ -50,7 +50,7 @@ Representa un tipo definido por el usuario (UDT) que se va a incluir en el contr
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`userDefinedTypes`|Una colección de elementos de `userDefinedType`.|  
   
@@ -59,7 +59,7 @@ Representa un tipo definido por el usuario (UDT) que se va a incluir en el contr
   
  Para prevenir este problema, puede agregar los UDT al archivo de configuración para que puedan estar incluidos como tipos conocidos en el contrato del servicio adecuado. Para ello, tiene que identificar de manera unívoca el UDT y los contratos, es decir, las interfaces COM originales que lo utilizan.  
   
- El ejemplo siguiente se muestra cómo agregar dos UDT concretos a la <`userDefinedTypes`> sección del archivo de configuración para este propósito.  
+ En el ejemplo siguiente se muestra cómo agregar dos UDT concretos`userDefinedTypes`a la sección < > del archivo de configuración para este propósito.  
   
 ```xml  
 <comContracts>
@@ -95,6 +95,6 @@ Representa un tipo definido por el usuario (UDT) que se va a incluir en el contr
 - <xref:System.ServiceModel.Configuration.ComContractElement.UserDefinedTypes%2A>
 - <xref:System.ServiceModel.Configuration.ComUdtElementCollection>
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Integración en aplicaciones COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Cómo: Configurar el servicio COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Integración en aplicaciones COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Procedimientos: Configurar el servicio COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -16,51 +16,51 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f1d94ffde71962c848bece808bf2d982093896a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c57b13b05522614ff066b93cb9f6a437cb340576
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652163"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962687"
 ---
 # <a name="icordebugstepper-interface"></a>Interfaz ICorDebugStepper
 Representa un paso en la ejecución del código realizado por un depurador, actúa como identificador entre la emisión y la finalización de un comando, y proporciona un modo de cancelar un paso.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[Deactivate (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Hace que esta `ICorDebugStepper` para cancelar el último comando de paso que recibió.|  
-|[IsActive (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Obtiene un valor que indica si este `ICorDebugStepper` está ejecutando un paso.|  
-|[SetInterceptMask (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Establece un valor CorDebugIntercept que especifica los tipos de código que se ejecutar paso a paso.|  
-|[SetRangeIL (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Establece un valor que indica si las llamadas a [ICorDebugStepper:: StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) pasar los valores de argumento en relación con el código nativo o código de lenguaje intermedio (MSIL) de Microsoft del método que se está ejecutando paso a través.|  
-|[SetUnmappedStopMask (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Establece un valor CorDebugUnmappedStop que especifica el tipo de código no asignado en el que se detendrá la ejecución.|  
-|[Step (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Hace que esta `ICorDebugStepper` paso a paso a través del subproceso que la contiene y, opcionalmente, para continuar pasando solo a través de funciones que se llaman dentro del subproceso.|  
-|[StepOut (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Hace que esta `ICorDebugStepper` paso a paso a través del subproceso que la contiene y a completa cuando el marco actual devuelve el control al marco que realiza la llamada.|  
-|[StepRange (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Hace que esta `ICorDebugStepper` paso a paso a través del subproceso que la contiene y que se devuelve cuando llegue al código más allá del último de los intervalos especificados.|  
+|[Deactivate (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|`ICorDebugStepper` Hace que se cancele el último comando de paso que se ha recibido.|  
+|[IsActive (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Obtiene un valor que indica si este `ICorDebugStepper` está ejecutando actualmente un paso.|  
+|[SetInterceptMask (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Establece un valor Cordebugintercept (que especifica los tipos de código a los que se van a recorrer.|  
+|[SetRangeIL (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Establece un valor que indica si las llamadas a [ICorDebugStepper:: steprange (](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) pasan valores de argumento en relación con el código nativo o con el código del lenguaje intermedio de Microsoft (MSIL) del método que se va a recorrer.|  
+|[SetUnmappedStopMask (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Establece un valor de Cordebugunmappedstop (que especifica el tipo de código no asignado en el que se detendrá la ejecución.|  
+|[Step (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Hace que `ICorDebugStepper` esto pase de un solo paso a través de su subproceso contenedor y, opcionalmente, para continuar con la ejecución paso a paso de las funciones a las que se llama en el subproceso.|  
+|[StepOut (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Hace que `ICorDebugStepper` esto se lleve a cabo de un solo paso a través de su subproceso contenedor y que se complete cuando el fotograma actual devuelva el control al marco que realiza la llamada.|  
+|[StepRange (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Hace que `ICorDebugStepper` esto pase de un solo paso a través de su subproceso contenedor y que devuelva cuando llegue al código más allá del último de los intervalos especificados.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `ICorDebugStepper` interfaz tiene los siguientes objetivos:  
+ La `ICorDebugStepper` interfaz sirve para los siguientes fines:  
   
-- Actúa como identificador entre un comando de paso que se emite y la finalización de ese comando.  
+- Actúa como un identificador entre un comando Step que se emite y la finalización de ese comando.  
   
-- Proporciona una interfaz central para encapsular toda la ejecución paso a paso que se puede realizar.  
+- Proporciona una interfaz central para encapsular todo el paso que se puede realizar.  
   
 - Proporciona una manera de cancelar prematuramente una operación de ejecución paso a paso.  
   
- Puede haber más de un motor paso a paso por subproceso. Por ejemplo, se puede alcanzar un punto de interrupción durante la ejecución paso a paso a través de una función, y el usuario que desee iniciar una nueva operación de ejecución paso a paso dentro de esa función. Es el depurador para determinar cómo controlar esta situación. El depurador desear cancelar la operación de ejecución paso a paso original o anidar las dos operaciones. El `ICorDebugStepper` interfaz admite ambas opciones.  
+ Puede haber más de un stepper por subproceso. Por ejemplo, se puede tener acceso a un punto de interrupción mientras se realiza la ejecución paso a paso por procedimientos y el usuario puede iniciar una nueva operación de ejecución paso a paso dentro de esa función. Depende del depurador determinar cómo tratar esta situación. Es posible que el depurador desee cancelar la operación de ejecución paso a paso original o anidar las dos operaciones. La `ICorDebugStepper` interfaz admite ambas opciones.  
   
- Puede migrar un motor paso a paso entre subprocesos si common language runtime (CLR) realiza una llamada entre subprocesos, cálculo de referencias.  
+ Un stepper se puede migrar entre subprocesos si el Common Language Runtime (CLR) realiza una llamada entre subprocesos y con referencias calculadas.  
   
 > [!NOTE]
->  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
+> Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

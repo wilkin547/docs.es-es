@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 4960740af9637a1743dc86965d7831b76828e58a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52f488bfc77cbe6c0942c0e38c0201fa8d7d2d9c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928893"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 Define un enlace que proporciona la compatibilidad de uso de colas enrutando los mensajes a través de MSMQ.  
@@ -50,33 +50,33 @@ msmqIntegrationBinding
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |closeTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |customDeadLetterQueue|Un URI que contiene la ubicación de la cola de componentes con problemas de entrega por aplicación, donde se colocan los mensajes que han expirado o cuya transferencia o envío han fallado.<br /><br /> La cola de componentes con problemas de entrega es una cola en el administrador de colas de la aplicación de envío para los mensajes caducados que no se hayan entregado.<br /><br /> El URI que es especificado por <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> debe utilizar el esquema de net.msmq.|  
 |deadLetterQueue|<xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>. Valor que especifica qué tipo de cola de componentes con problemas de entrega hay que usar, si hay alguna.<br /><br /> La cola de componentes con problemas de entrega es la ubicación a la que se transfieren los mensajes que no han podido ser entregados a la aplicación.<br /><br /> Para los mensajes que requieren la convicción exactlyOnce (por ejemplo, el atributo `exactlyOnce` está establecido en `true`), este atributo tiene como valor predeterminado la cola de mensajes transaccionales no enviados para todo el sistema en MSMQ.<br /><br /> Para los mensajes que no requieren convicciones, este atributo tiene como valor predeterminado `null`.|  
-|durable|Valor de tipo booleano que indica si el mensaje es duradero o volátil en la cola. Un mensaje duradero sobrevive un bloqueo de administrador de cola, mientras que un mensaje volátil no. Los mensajes volátiles son útiles cuando las aplicaciones requieren la menor latencia y toleran la pérdida de mensajes ocasional. Si el atributo `exactlyOnce` está establecido en `true`, los mensajes deben ser duraderos. De manera predeterminada, es `true`.|  
-|exactlyOnce|Valor de tipo booleano que indica si cada mensaje se entrega sólo una vez. Se notificará al remitente a continuación de los errores de la entrega. Cuando `durable` es `false`, se omite este atributo y los mensajes se transfieren sin convicción de la entrega. De manera predeterminada, es `true`. Para obtener más información, consulta <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
+|durable|Valor de tipo booleano que indica si el mensaje es duradero o volátil en la cola. Un mensaje duradero sobrevive un bloqueo de administrador de cola, mientras que un mensaje volátil no. Los mensajes volátiles son útiles cuando las aplicaciones requieren la menor latencia y toleran la pérdida de mensajes ocasional. Si el atributo `exactlyOnce` está establecido en `true`, los mensajes deben ser duraderos. El valor predeterminado es `true`.|  
+|exactlyOnce|Valor de tipo booleano que indica si cada mensaje se entrega sólo una vez. Se notificará al remitente a continuación de los errores de la entrega. Cuando `durable` es `false`, se omite este atributo y los mensajes se transfieren sin convicción de la entrega. El valor predeterminado es `true`. Para obtener más información, consulta <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
 |maxReceivedMessageSize|Un entero positivo que define el tamaño del mensaje máximo, en bytes, incluyendo encabezados, que está procesado por este enlace. El remitente de un mensaje que supere este límite recibirá un error SOAP. El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento. El valor predeterminado es 65536. Este límite en el tamaño del mensaje tiene como objetivo limitar la exposición a ataques de denegación de servicio (DoS).|  
 |maxRetryCycles|Un entero que indica el número de ciclos de reintento utilizado por la característica de detección de mensaje dudoso. Un mensaje se vuelve un mensaje dudoso cuando produce un error en todos los intentos de entrega de todos los ciclos. El valor predeterminado es 2. Para obtener más información, consulta <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|name|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|Nombre|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |receiveErrorHandling|Un valor <xref:System.ServiceModel.ReceiveErrorHandling> que especifica cómo se administran mensajes dudosos y que no se pueden enviar.|  
 |receiveRetryCount|Un entero que especifica el número máximo de intentos inmediatos que el administrador de cola debería intentar si se produce un error en la transmisión de un mensaje de la cola de aplicación a la aplicación.<br /><br /> Si se alcanza el número máximo de intentos de entrega y la aplicación no tiene acceso al mensaje, a continuación, el mensaje se envía a una cola de reintento para intentar la entrega más tarde. La duración antes de que el mensaje se transfiera de vuelta a la cola emisora es controlada por `retryCycleDelay`. Si los ciclos de reintento alcanzan el valor `maxRetryCycles`, entonces el mensaje se envía a la cola de mensajes dudosos o se envía al remitente una confirmación de que no se pudo realizar la acción.|  
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|  
-|receiveContextEnabled|Valor de tipo booleano que especifica si está habilitado el contexto de recepción para procesar los mensajes en colas. Cuando se establece en `true`, un servicio puede "inspeccionar" un mensaje en la cola para empezar a procesarlo y, si algo sale mal y se produce una excepción, permanece en la cola. Los servicios también pueden "bloquear" los mensajes para reintentar su procesamiento en un momento posterior en el tiempo. ReceiveContext proporciona un mecanismo para "completar" el mensaje una vez procesado de modo que se pueda quitar de la cola. Los mensajes ya no se están leen ni se reescriben en las colas a través de la red y los mensajes individuales no se devuelven a través de distintas instancias de servicio durante el procesamiento.|  
+|receiveContextEnabled|Valor de tipo booleano que especifica si está habilitado el contexto de recepción para procesar los mensajes en colas. Cuando se establece en `true`, un servicio puede "inspeccionar" un mensaje en la cola para empezar a procesarlo y, si algo sale mal y se produce una excepción, permanece en la cola. Los servicios también pueden "bloquear" los mensajes para volver a intentar el procesamiento en un momento posterior. ReceiveContext proporciona un mecanismo para "completar" el mensaje una vez procesado de modo que se pueda quitar de la cola. Los mensajes ya no se leen ni se reescriben en las colas a través de la red, y los mensajes individuales no se devuelven entre las distintas instancias de servicio durante el procesamiento.|  
 |retryCycleDelay|Un valor TimeSpan que especifica el tiempo de retardo entre los ciclos de reintento al intentar entregar un mensaje que no se pudo entregar inmediatamente. El valor define sólo el tiempo de espera mínimo porque el tiempo de espera real puede ser más largo. El valor predeterminado es 00:30:00. Para obtener más información, consulta <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|  
 |serializationFormat|Define el formato usado para la serialización del cuerpo del mensaje. Este atributo es del tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
 |timeToLive|Un valor TimeSpan que especifica cuánto tiempo son válidos los mensajes antes de expirar y ser colocados en la cola de mensajes no enviados. El valor predeterminado es 1.00:00:00.<br /><br /> Este atributo se establece para asegurarse de que los mensajes que dependen del tiempo no se vuelvan obsoletos antes de ser procesados por las aplicaciones receptoras. Un mensaje en una cola expira si no es consumido por la aplicación receptora dentro del intervalo de tiempo especificado. Los mensajes caducados se envían a la cola especial llamada cola de mensajes no enviados. La ubicación de la cola de mensajes no enviados se establece con el atributo `DeadLetterQueue` o con el valor predeterminado adecuado, basado en garantías.|  
-|useMsmqTracing|Valor de tipo booleano que especifica si los mensajes procesados por este enlace se deberían seguir paso a paso. De manera predeterminada, es `false`. Si se habilita la traza, los mensajes de informe se crean y envían a la cola de informes cada vez que el mensaje sale o llega a un equipo Message Queuing.|  
-|useSourceJournal|Valor de tipo booleano que especifica las copias de mensajes procesadas por este enlace debería estar almacenado en el diario de origen. De manera predeterminada, es `false`.<br /><br /> Las aplicaciones en cola que quieran mantener un registro de mensajes que han dejado la cola de salida del equipo pueden copiar los mensajes a una cola del diario. Cuando un mensaje deja la cola de salida y se recibe una confirmación de que se ha recibido el mensaje en el equipo de destino, se mantiene una copia del mensaje en la cola del diario de sistema del equipo remitente.|  
+|useMsmqTracing|Valor de tipo booleano que especifica si los mensajes procesados por este enlace se deberían seguir paso a paso. El valor predeterminado es `false`. Si se habilita la traza, los mensajes de informe se crean y envían a la cola de informes cada vez que el mensaje sale o llega a un equipo Message Queuing.|  
+|useSourceJournal|Valor de tipo booleano que especifica las copias de mensajes procesadas por este enlace debería estar almacenado en el diario de origen. El valor predeterminado es `false`.<br /><br /> Las aplicaciones en cola que quieran mantener un registro de mensajes que han dejado la cola de salida del equipo pueden copiar los mensajes a una cola del diario. Cuando un mensaje deja la cola de salida y se recibe una confirmación de que se ha recibido el mensaje en el equipo de destino, se mantiene una copia del mensaje en la cola del diario de sistema del equipo remitente.|  
   
 ## <a name="serializationformat-attribute"></a>Atributo {serializationFormat}  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|Xml|Formato XML|  
+|xml|Formato XML|  
 |Binary|Formato binario|  
 |ActiveX|Formato ActiveX|  
 |ByteArray|Serializa el objeto a una matriz de bytes.|  
@@ -84,18 +84,18 @@ msmqIntegrationBinding
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-msmqintegrationbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[\<security>](security-of-msmqintegrationbinding.md)|Define la configuración de seguridad del enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
+|[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento de enlace puede utilizarse para habilitar aplicaciones de Windows Communication Foundation (WCF) enviar y recibir mensajes desde aplicaciones MSMQ existentes que utilicen COM, API nativas de MSMQ o los tipos definidos en el <xref:System.Messaging?displayProperty=nameWithType> espacio de nombres Puede usar este elemento de configuración para especificar cómo direccionar la cola, las garantías de transferencia, si los mensajes deben estar almacenados duraderamente y cómo deben proteger y autenticar mensajes. Para obtener más información, vea [Cómo: Intercambiar mensajes con puntos de conexión WCF y aplicaciones de Message Queuing](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+ Este elemento de enlace se puede usar para permitir que las aplicaciones de Windows Communication Foundation (WCF) envíen y reciban mensajes desde aplicaciones MSMQ existentes que utilicen com, API nativas de MSMQ o los tipos <xref:System.Messaging?displayProperty=nameWithType> definidos en el espacio de nombres que puede utilizar este elemento de configuración para especificar las maneras de direccionar la cola, las garantías de transferencia, si los mensajes deben almacenarse de forma duradera y cómo deben protegerse y autenticarse los mensajes. Para obtener más información, consulte [Cómo Intercambie mensajes con extremos de WCF y aplicaciones](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)de Message Queue Server.  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -134,8 +134,8 @@ msmqIntegrationBinding
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Colas en WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
+- [\<binding>](../../../misc/binding.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [Colas en WCF](../../../wcf/feature-details/queues-in-wcf.md)

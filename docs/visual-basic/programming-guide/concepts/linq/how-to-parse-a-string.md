@@ -2,23 +2,23 @@
 title: Procedimiento Analizar una cadena (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: 815e94b3b41c2c0cc1d18d598307ab292919bea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942602"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956378"
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Procedimiento Analizar una cadena (Visual Basic)
-En este tema se muestra cómo crear un árbol XML en C#.  
+En este tema se muestra cómo crear un árbol XML C#en.  
   
 ## <a name="example"></a>Ejemplo  
- Puede analizar una cadena en Visual Basic mediante la `XElement.Parse` método. Sin embargo, resulta más eficaz usar literales XML, tal como se muestra en el código siguiente, ya que dichos literales no sufren las mismas pérdidas de rendimiento que se producen al analizar XML de una cadena.  
+ Puede analizar una cadena en Visual Basic mediante el `XElement.Parse` método. Sin embargo, resulta más eficaz usar literales XML, tal como se muestra en el código siguiente, ya que dichos literales no sufren las mismas pérdidas de rendimiento que se producen al analizar XML de una cadena.  
   
- Mediante literales XML, puede simplemente copiar y pegar el código XML en el programa de Visual Basic.  
+ Mediante el uso de literales XML, solo puede copiar y pegar el archivo XML en el programa de Visual Basic.  
   
 > [!NOTE]
->  Analizar texto o cargar un documento XML de un archivo de texto es menos eficaz que la construcción funcional. Si inicializa un árbol XML a partir de código, el uso de la construcción funcional consume menos tiempo de procesador que el análisis de texto.  
+> Analizar texto o cargar un documento XML de un archivo de texto es menos eficaz que la construcción funcional. Si inicializa un árbol XML a partir de código, el uso de la construcción funcional consume menos tiempo de procesador que el análisis de texto.  
   
 ```vb  
 Dim contacts as XElement = _  

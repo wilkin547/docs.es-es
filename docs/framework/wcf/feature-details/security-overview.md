@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: f1c0fba82761d42324eb53655b36ef7a3570d5b3
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868907"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949353"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Información general sobre seguridad de Windows Communication Foundation
 Windows Communication Foundation (WCF) es una plataforma de programación distribuida basada en mensajes SOAP, y la protección de los mensajes entre clientes y servicios es esencial para proteger los datos. WCF proporciona una plataforma versátil e interoperable para intercambiar mensajes seguros basados en la infraestructura de seguridad existente y en los estándares de seguridad reconocidos para los mensajes SOAP.  
   
 > [!NOTE]
->  Para obtener una guía completa sobre la seguridad de WCF, consulte la [Guía de seguridad de WCF](https://go.microsoft.com/fwlink/?LinkID=158912).  
+> Para obtener una guía completa sobre la seguridad de WCF, consulte la [Guía de seguridad de WCF](https://go.microsoft.com/fwlink/?LinkID=158912).  
   
  WCF usa conceptos que resultan familiares si ha creado aplicaciones seguras y distribuidas con tecnologías existentes, como HTTPS, seguridad integrada de Windows, o nombres de usuario y contraseñas para autenticar a los usuarios. WCF no solo se integra con las infraestructuras de seguridad existentes, sino que también extiende la seguridad distribuida más allá de los dominios solo de Windows mediante mensajes SOAP seguros. Considere WCF una implementación de los mecanismos de seguridad existentes con la principal ventaja de usar SOAP como protocolo, además de los protocolos existentes. Por ejemplo, las credenciales que identifican un cliente o un servicio, como el nombre de usuario y la contraseña, o los certificados X.509, poseen perfiles SOAP interoperables basados en XML. Con estos perfiles, los mensajes se intercambian de manera segura beneficiándose de especificaciones abiertas como las firmas digitales XML y el cifrado XML. Para obtener una lista de especificaciones, consulte [protocolos de servicios Web compatibles con los enlaces de interoperabilidad proporcionados por el sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   

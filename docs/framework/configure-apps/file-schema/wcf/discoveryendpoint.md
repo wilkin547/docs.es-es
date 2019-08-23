@@ -2,12 +2,12 @@
 title: <discoveryEndpoint>
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: d1a3371872f5587a682b8242c29b71808508ca3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6bb5be09ea598296f01e186280c45757dee9405d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704061"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919143"
 ---
 # <a name="discoveryendpoint"></a>\<discoveryEndpoint>
 
@@ -37,9 +37,9 @@ En las siguientes secciones se describen los atributos, los elementos secundario
   
 ### <a name="attributes"></a>Atributos
 
-| Atributo        | Descripción |  
+| Atributo        | DESCRIPCIÓN |  
 | ---------------- | ----------- |  
-| discoveryMode    | Cadena que especifica el modo del protocolo de detección. Los valores válidos son "Adhoc" y "Administrado". En modo administrado, el protocolo se basa en un proxy de detección, que actúa como un repositorio de servicios detectables. El modo Adhoc requiere que el protocolo utilice el mecanismo de multidifusión UDP para buscar servicios disponibles. Para obtener más información sobre la propiedad, vea <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>. |  
+| discoveryMode    | Cadena que especifica el modo del protocolo de detección. Los valores válidos son "Adhoc" y "Managed". En modo administrado, el protocolo se basa en un proxy de detección, que actúa como un repositorio de servicios detectables. El modo Adhoc requiere que el protocolo utilice el mecanismo de multidifusión UDP para buscar servicios disponibles. Para obtener más información sobre la propiedad, <xref:System.ServiceModel.Discovery.DiscoveryEndpoint.DiscoveryMode%2A>vea. |  
 | discoveryVersion | Cadena que especifica una de las dos versiones del protocolo WS-Discovery. Los valores válidos son WSDiscovery11 y WSDiscoveryApril2005. Este valor es del tipo <xref:System.ServiceModel.Discovery.DiscoveryVersion>. |  
 | maxResponseDelay | Un valor Timespan que especifica el valor máximo del tiempo que el protocolo Discovery esperará antes de enviar ciertos mensajes como Probe Match o Resolve Match.<br /><br /> Si se envían todos los ProbeMatches al mismo tiempo, puede producirse una tormenta de la red. Para evitar que esto se produzca, ProbeMatches se envía con un retraso aleatorio entre cada ProbeMatch. El retraso aleatorio se encuentra en el intervalo entre 0 y el valor establecido por este atributo. Si este atributo está establecido en 0, los mensajes ProbeMatches se envían en un bucle ajustado sin ningún retraso. En caso contrario, los mensajes ProbeMatches se envían con cierto retraso aleatorio de modo que el tiempo total empleado en enviar todos los mensajes ProbeMatches no supere maxResponseDelay. Este valor solo es pertinente para los servicios, clientes no lo utilizan. |  
 | `name`           | Cadena que especifica el nombre de la configuración del punto de conexión estándar. El nombre se utiliza en el atributo `endpointConfiguration` del punto de conexión del servicio para vincular un punto de conexión estándar a su configuración. |  
@@ -50,9 +50,9 @@ Ninguno.
   
 ### <a name="parent-elements"></a>Elementos primarios
 
-| Elemento | Descripción |  
+| Elemento | DESCRIPCIÓN |  
 | ------- | ----------- |  
-| [\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Colección de puntos de conexión estándar que son puntos de conexión predefinidos con una o más de sus propiedades (dirección, enlace, contrato) fijas. |  
+| [\<standardEndpoints>](standardendpoints.md) | Colección de puntos de conexión estándar que son puntos de conexión predefinidos con una o más de sus propiedades (dirección, enlace, contrato) fijas. |  
   
 ## <a name="example"></a>Ejemplo
 

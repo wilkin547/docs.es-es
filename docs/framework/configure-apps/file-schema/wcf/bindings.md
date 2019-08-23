@@ -2,16 +2,16 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1292bc38ce1e542086edac5539c1b29e619e2a32
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926382"
 ---
 # <a name="bindings"></a>\<bindings>
 
-Puede usar el `bindings` para configurar una colección de enlaces estándar y personalizados para Windows Communication Foundation (WCF). Cada entrada es un elemento `binding` que se puede identificar por su `name` único. Los servicios usan los enlaces vinculándose a ellos mediante `name`. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+Puede usar el `bindings` elemento para configurar una colección de enlaces estándar y personalizados para Windows Communication Foundation (WCF). Cada entrada es un elemento `binding` que se puede identificar por su `name` único. Los servicios usan los enlaces vinculándose a ellos mediante `name`. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="system-provided-bindings"></a>Enlaces proporcionados por el sistema
  
@@ -19,9 +19,9 @@ Puede usar el `bindings` para configurar una colección de enlaces estándar y p
   
  La sección de configuración para cada enlace proporcionado por el sistema puede definir varias configuraciones utilizadas para configurar el enlace. Un nombre único identifica a cada configuración.  
   
- No es posible agregar elementos o atributos a un enlace proporcionado por el sistema. Para ello, debe implementar un enlace personalizado como se describe en el [enlaces personalizados](#custom-bindings) sección. Es posible definir un enlace personalizado que imita una proporcionado por el sistema de enlace perfectamente y agrega la aplicación de usuario desee tener control sobre algunas opciones de configuración.  
+ No es posible agregar elementos o atributos a un enlace proporcionado por el sistema. Para ello, debe implementar un enlace personalizado como se describe en la sección de [enlaces personalizados](#custom-bindings) . Es posible definir un enlace personalizado que imite perfectamente un enlace proporcionado por el sistema y agrega algunos valores en los que la aplicación de usuario desea tener el control.  
   
- Para obtener una lista de enlaces proporcionados por el sistema, consulte [System-provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md).  
+ Para obtener una lista de los enlaces proporcionados por el sistema, consulte [enlaces proporcionados por el sistema](../../../wcf/system-provided-bindings.md).  
   
 ## <a name="custom-bindings"></a>Enlaces personalizados
 
@@ -31,7 +31,7 @@ Puede usar el `bindings` para configurar una colección de enlaces estándar y p
   
 1. Transacciones (opcional)  
   
-2. Mensajería confiable (opcional)  
+2. Mensajería de confianza (opcional)  
   
 3. Seguridad (opcional)  
   
@@ -39,14 +39,14 @@ Puede usar el `bindings` para configurar una colección de enlaces estándar y p
   
 5. Transporte  
   
- Los enlaces personalizados se identifican mediante su atributo `name`. Para obtener más información sobre los enlaces personalizados, consulte [enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Los enlaces personalizados se identifican mediante su atributo `name`. Para obtener más información sobre los enlaces personalizados, vea [enlaces personalizados](../../../wcf/extending/custom-bindings.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>  
 - <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType>  
 - <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>  
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)  
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Enlaces](../../../wcf/bindings.md)  
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)  
+- [\<customBinding>](custombinding.md)  
+- [\<binding>](../../../misc/binding.md)

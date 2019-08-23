@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: cd7e97559458a4415399488b0fdb96a850033c44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00ce8de53c327324d1056e284f78a40b8597e440
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008077"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930308"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
-El ejemplo muestra el enlace `netNamedPipeBinding`, que proporciona la comunicación entre procesos del mismo equipo. Las canalizaciones con nombre no funcionan entre equipos. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) servicio de calculadora.  
+El ejemplo muestra el enlace `netNamedPipeBinding`, que proporciona la comunicación entre procesos del mismo equipo. Las canalizaciones con nombre no funcionan entre equipos. Este ejemplo se basa en el servicio de calculadora de [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) .  
   
  En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola.  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en el `binding` atributo de la [ \<punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-element.md) o [ \<punto de conexión > de \<cliente >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) elemento, como se muestra en el configuración del ejemplo siguiente:  
+ El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en `binding` el atributo [ \<del extremo >](../../configure-apps/file-schema/wcf/endpoint-element.md) o [ \<extremo > del \<elemento > cliente](../../configure-apps/file-schema/wcf/endpoint-of-client.md) , como se muestra en la configuración del ejemplo siguiente:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -79,17 +79,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de equipo único, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de un solo equipo, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  

@@ -1,26 +1,26 @@
 ---
-title: Limitación de peticiones
+title: Limitaciones
 ms.date: 03/30/2017
 helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: d41270d63d188443207c78a3c55b469e2bd7b482
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5c7c6698be33ba39a8de91104bcdf108f4557169
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006314"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969374"
 ---
-# <a name="throttling"></a>Limitación de peticiones
-El ejemplo de limitación de peticiones muestra el uso de la limitación de controles. Los controles de limitación de peticiones establecen límites en el número de llamadas simultáneas, instancias o sesiones para evitar el consumo excesivo de recursos. El comportamiento de la limitación de peticiones se especifica en los valores del archivo de configuración del servicio. En este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
+# <a name="throttling"></a>Limitaciones
+El ejemplo de limitación de peticiones muestra el uso de la limitación de controles. Los controles de limitación de peticiones establecen límites en el número de llamadas simultáneas, instancias o sesiones para evitar el consumo excesivo de recursos. El comportamiento de la limitación de peticiones se especifica en los valores del archivo de configuración del servicio. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora.  
   
  En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- El archivo de configuración de servicio especifica los controles de limitación en una [ \<serviceThrottling >](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md), como se muestra en el siguiente ejemplo de configuración.  
+ El archivo de configuración de servicio especifica los controles de limitación en un [ \<> serviceThrottling](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md), como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <behaviors>  
@@ -67,17 +67,17 @@ Press any key to continue . . .
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  

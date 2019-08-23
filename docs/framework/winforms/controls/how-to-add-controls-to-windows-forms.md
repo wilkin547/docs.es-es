@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 5c57d86b2f08733dc4a729bf6091eab23c6035f2
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039709"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912624"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procedimiento para agregar controles a formularios Windows Forms
 La mayoría de los formularios se diseñan agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). Un *control* es un componente de un formulario que se usa para mostrar información o para aceptar datos proporcionados por el usuario. Para obtener más información sobre los controles, vea [controles de Windows Forms](index.md).
@@ -30,7 +30,7 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
      El control se agrega al formulario con la ubicación y el tamaño especificados.
 
     > [!NOTE]
-    >  Cada control tiene definido un tamaño predeterminado. Puede Agregar un control al formulario en el tamaño predeterminado del control arrastrándolo desde el **cuadro de herramientas** al formulario.
+    > Cada control tiene definido un tamaño predeterminado. Puede Agregar un control al formulario en el tamaño predeterminado del control arrastrándolo desde el **cuadro de herramientas** al formulario.
 
 ## <a name="to-drag-a-control-to-a-form"></a>Para arrastrar un control a un formulario
 
@@ -41,12 +41,12 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
      El control se agrega al formulario en la ubicación especificada en su tamaño predeterminado.
 
     > [!NOTE]
-    >  Puede hacer doble clic en un control en el **cuadro de herramientas** para agregarlo a la esquina superior izquierda del formulario en su tamaño predeterminado.
+    > Puede hacer doble clic en un control en el **cuadro de herramientas** para agregarlo a la esquina superior izquierda del formulario en su tamaño predeterminado.
 
      También puede Agregar controles de forma dinámica a un formulario en tiempo de ejecución. En el ejemplo de código siguiente, <xref:System.Windows.Forms.TextBox> se agregará un control al formulario cuando se <xref:System.Windows.Forms.Button> haga clic en un control.
 
     > [!NOTE]
-    >  El procedimiento siguiente requiere la existencia de un formulario con un control **botón** , `Button1`, ya colocado en él.
+    > El procedimiento siguiente requiere la existencia de un formulario con un control **botón** , `Button1`, ya colocado en él.
 
 ## <a name="to-add-a-control-to-a-form-programmatically"></a>Para agregar un control a un formulario mediante programación
 
@@ -81,7 +81,7 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
     ```
 
     > [!NOTE]
-    >  También puede agregar código para inicializar otras propiedades del control.
+    > También puede agregar código para inicializar otras propiedades del control.
 
     > [!IMPORTANT]
     >  Puede exponer el equipo local a un riesgo de seguridad a través de la red haciendo referencia `UserControl`a un malintencionado. Esto solo suponer un problema en el caso de que una persona malintencionada cree un control personalizado perjudicial y, después, lo agregue por error a su proyecto.
@@ -90,6 +90,6 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
 
 - [Controles de formularios Windows Forms](index.md)
 - [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
-- [Procedimientos: Cambiar el tamaño de los controles en Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Cómo: Cambiar el tamaño de los controles en Windows Forms](how-to-resize-controls-on-windows-forms.md)
 - [Procedimientos: Establecer el texto mostrado por un control de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

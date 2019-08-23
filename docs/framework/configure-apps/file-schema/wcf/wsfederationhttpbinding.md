@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
-ms.openlocfilehash: 8ed8f62f9415ed556a61ca53f27442a9355d8d7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c4edc17fd669fbe23ec38ff26a61e867c04c561
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698855"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915071"
 ---
 # <a name="wsfederationhttpbinding"></a>\<wsFederationHttpBinding>
 
 Define un enlace que admite WS-Federation.
 
 \<system.ServiceModel>\
-\<bindings>\
+\<Enlaces > \
 wsFederationBinding element
 
 ## <a name="syntax"></a>Sintaxis
@@ -108,58 +108,58 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-|Atributo|Descripción|
+|Atributo|DESCRIPCIÓN|
 |---------------|-----------------|
-|bypassProxyOnLocal|Valor de tipo booleano que indica si se omitirá el servidor proxy para las direcciones locales. De manera predeterminada, es `false`.|
+|bypassProxyOnLocal|Valor de tipo booleano que indica si se omitirá el servidor proxy para las direcciones locales. El valor predeterminado es `false`.|
 |closeTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
 |hostnameComparisonMode|Especifica el modo de comparación de nombres de host HTTP usado para analizar los URI. Este atributo es del tipo <xref:System.ServiceModel.HostNameComparisonMode>, que indica si se va a utilizar el nombre del host para llegar al servicio cuando coincida en el URI. El valor predeterminado es <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, que omite el nombre del host en la coincidencia.|
 |maxBufferPoolSize|Entero que especifica el tamaño máximo del grupo de búferes para este enlace. El valor predeterminado es 524.288 bytes (512x1024). En muchas partes de Windows Communication Foundation (WCF) se utilizan búferes. Crear y destruir búferes cada vez que se usan es caro, y la recolección de elementos no utilizados para los búferes también es cara. Con grupos de búferes, puede tomar un búfer del grupo, usarlo y devolverlo al grupo una vez haya terminado. Así se evita la sobrecarga al crear y destruir búferes.|
 |maxReceivedMessageSize|Entero positivo que especifica el tamaño máximo del mensaje, en bytes, incluidos los encabezados, que se puede recibir en un canal configurado con este enlace. El remitente de un mensaje que supere este límite recibirá un error SOAP. El destinatario quita el mensaje y crea una entrada del evento en el registro de seguimiento. El valor predeterminado es 65536.|
-|messageEncoding|Define el codificador utilizado para codificar el mensaje. Los valores válidos son los siguientes:<br /><br /> -Texto: Usar un codificador de mensajes de texto.<br />-Mtom: Usar un codificador Message Transmission organización Mechanism 1.0 (MTOM).<br /><br /> El valor predeterminado es Text.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.WSMessageEncoding>.|
-|name|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|
+|messageEncoding|Define el codificador utilizado para codificar el mensaje. Los valores válidos son los siguientes:<br /><br /> Negrita Use un codificador de mensajes de texto.<br />MTOM Use un codificador del mecanismo de la organización de transmisión de mensajes 1,0 (MTOM).<br /><br /> El valor predeterminado es Text.<br /><br /> Este atributo es del tipo <xref:System.ServiceModel.WSMessageEncoding>.|
+|name|Cadena que contiene el nombre de configuración del enlace. Este valor debe ser único porque se usa como identificación del enlace. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
 |openTimeout|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
 |privacyNoticeAt|Una cadena que especifica un URI en el que el aviso de privacidad se encuentra.|
 |privacyNoticeVersion|Un entero que especifica la versión del aviso de privacidad actual.|
-|proxyAddress|Un URI que especifica la dirección del proxy HTTP. Si `useDefaultWebProxy` es `true`, este valor debe ser `null`. De manera predeterminada, es `null`.|
+|proxyAddress|Un URI que especifica la dirección del proxy HTTP. Si `useDefaultWebProxy` es `true`, este valor debe ser `null`. El valor predeterminado es `null`.|
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:10:00.|
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
-|textEncoding|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son los siguientes:<br /><br /> -   BigEndianUnicode: Codificación Unicode BigEndian.<br />-Unicode: codificación de 16 bits.<br />-   UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|
-|transactionFlow|Valor booleano que especifica si el enlace admite las transacciones WS del flujo. De manera predeterminada, es `false`.|
-|useDefaultWebProxy|Valor de tipo booleano que indica si se utiliza el proxy HTTP del sistema configurado automáticamente. La dirección de proxy debe ser `null` (es decir, sin establecer) si este atributo es `true`. De manera predeterminada, es `true`.|
+|textEncoding|Establece el codificador del juego de caracteres que se va a usar para emitir los mensajes en el enlace. Los valores válidos son los siguientes:<br /><br /> -   BigEndianUnicode: Codificación Unicode BigEndian.<br />Unicode codificación de 16 bits.<br />-   UTF8: codificación de 8 bits<br /><br /> El valor predeterminado es UTF8. Este atributo es del tipo <xref:System.Text.Encoding>.|
+|transactionFlow|Valor booleano que especifica si el enlace admite las transacciones WS del flujo. El valor predeterminado es `false`.|
+|useDefaultWebProxy|Valor de tipo booleano que indica si se utiliza el proxy HTTP del sistema configurado automáticamente. La dirección de proxy debe ser `null` (es decir, sin establecer) si este atributo es `true`. El valor predeterminado es `true`.|
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Define la configuración de seguridad del mensaje. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|
+|[\<security>](security-of-wsfederationhttpbinding.md)|Define la configuración de seguridad del mensaje. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>.|
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|
 |[\<reliableSession>](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica si se establecen sesiones confiables entre los puntos de conexión del canal.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
-|[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|
+|[\<bindings>](bindings.md)|Este elemento contiene una colección de enlaces estándar y personalizados.|
 
 ## <a name="remarks"></a>Comentarios
 
-La federación es la capacidad de compartir identidades en varios sistemas para la autenticación y autorización. Estas identidades pueden hacer referencia a usuarios o a equipos. El HTTP federado admite la seguridad de SOAP así como la seguridad de modo mixto, pero no permite utilizar únicamente la seguridad de transporte. Este enlace proporciona compatibilidad de Windows Communication Foundation (WCF) para el protocolo WS-Federation. Los servicios configurados con este enlace deben utilizar el transporte de HTTP.
+La federación es la capacidad de compartir identidades en varios sistemas para la autenticación y autorización. Estas identidades pueden hacer referencia a usuarios o a equipos. El HTTP federado admite la seguridad de SOAP así como la seguridad de modo mixto, pero no permite utilizar únicamente la seguridad de transporte. Este enlace proporciona compatibilidad con Windows Communication Foundation (WCF) para el protocolo WS-Federation. Los servicios configurados con este enlace deben utilizar el transporte de HTTP.
 
 Los enlaces están compuestos de una pila de elementos de enlace. La pila de elementos de enlace en
 
 `wsFederationHttpBinding`es la misma que la que contiene `wsHttpBinding`
 
-Cuando [ \<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) se establece en el valor predeterminado de <xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>.
+<xref:System.ServiceModel.WSFederationHttpSecurityMode.Message>cuando [ \<el > de seguridad](security-of-wsfederationhttpbinding.md) se establece en el valor predeterminado de.
 
-El `wsFederationHttpBinding` controla los detalles de la configuración de seguridad de mensaje en [ \<mensaje >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-wsfederationhttpbinding.md). Tenga en cuenta que el [ \<seguridad >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md) elemento proporciona acceso sólo cuando la seguridad utilizada por el enlace no se puede cambiar una vez creado el enlace.
+Controla los detalles de la configuración de seguridad del mensaje en el [ \<> de mensajes.](message-element-of-wsfederationhttpbinding.md) `wsFederationHttpBinding` Tenga en cuenta que el elemento de [ \<> de seguridad](security-of-wsfederationhttpbinding.md) proporciona acceso de solo, ya que no se puede cambiar la seguridad utilizada por el enlace una vez creado el enlace.
 
-El `wsFederationHttpBinding` también proporciona un atributo privacyNoticeAt para establecer y recuperar el URI en el que se encuentra el aviso de privacidad.
+`wsFederationHttpBinding` También proporciona un atributo privacyNoticeAt para establecer y recuperar el URI en el que se encuentra el aviso de privacidad.
 
 Mantener la directiva protegida es especialmente importante en escenarios de federación. Se recomienda utilizar algún formulario de seguridad, como HTTPS, para proteger la directiva de los usuarios malintencionados.
 
 En los escenarios de federación que utilizan este enlace, la directiva del servicio tiene potencialmente información importante como la clave para utilizar para cifrar el token emitido (SAML), el tipo de demandas para introducir el token, etc. Si esta directiva se manipula, un atacante podría detectar la clave del token emitido que conduce a una modificación posterior, divulgación de información y otros comportamientos malintencionados. Para ayudar a evitar esto, la directiva se debe obtener firmemente (utilizando HTTPS, por ejemplo) del servicio.
 
-Para obtener más información sobre este enlace, vea [Cómo: Crear un WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).
+Para obtener más información sobre este enlace, [vea cómo: Cree un WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -198,8 +198,8 @@ Para obtener más información sobre este enlace, vea [Cómo: Crear un WSFederat
 
 - <xref:System.ServiceModel.WSFederationHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement>
-- [Cómo: Create a WSFederationHttpBinding](../../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [Procedimientos: Creación de un WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)

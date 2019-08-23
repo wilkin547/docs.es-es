@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: a7d278dd424fbb3167a30d627379f78d0c65476f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971783"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946776"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Tutorial: Modelo de objetos simple y consultas (Visual Basic)
 
@@ -121,7 +121,7 @@ También declarará `Table(Of Customer)` para que actúe como la tabla lógica c
 
 ## <a name="creating-a-simple-query"></a>Crear una consulta simple
 
-En este paso, creará una consulta para buscar los clientes de la tabla de base de datos Customers que se encuentran en Londres. En este paso, el código de la consulta simplemente la describe. No la ejecuta. Este enfoque se conoce como *ejecución aplazada*. Para obtener más información, vea [Introduction to LINQ queries (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].
+En este paso, creará una consulta para buscar los clientes de la tabla de base de datos Customers que se encuentran en Londres. En este paso, el código de la consulta simplemente la describe. No la ejecuta. Este enfoque se conoce como *ejecución aplazada*. Para obtener más información, vea [Introduction to LINQ queries (C#)](../../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) [Introducción a las consultas LINQ (C#)].
 
 También generará un resultado de registro para mostrar los comandos SQL que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] genera. Esta característica de registro (que utiliza <xref:System.Data.Linq.DataContext.Log%2A>) es útil para la depuración, así como para determinar que los comandos que se envían a la base de datos representan la consulta de manera precisa.
 

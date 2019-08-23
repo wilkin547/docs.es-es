@@ -16,42 +16,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e284f94ad0dac9523bd6267e7bc1034a079503d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 76d1071ddde1509f16fd786afa4c05c05224d051
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380290"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966212"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager (Interfaz)
-Proporciona métodos que permiten a un host interactuar con el sistema de recopilación de elementos no utilizados de common language runtime.  
+Proporciona métodos que permiten a un host interactuar con el sistema de recolección de elementos no utilizados del Common Language Runtime.  
   
 > [!NOTE]
->  A partir de .NET Framework 4.5, puede usar el [Iclrgcmanager2](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) método para establecer el tamaño de un segmento de la colección de elementos no utilizados y el tamaño máximo de la generación del sistema de recopilación de elementos no utilizados 0 a valores mayor que el `DWORD` límite impuesto por el [SetGCStartupLimits](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) método.  
+> A partir del .NET Framework 4,5, puede usar el método [iclrgcmanager2 (:: setgcstartuplimitsex (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md) para establecer el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados en valores mayores que el `DWORD`límite impuesto por el método [setgcstartuplimits (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md) .  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |[Collect (método)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-collect-method.md)|Fuerza una recolección de elementos no utilizados para la generación especificada.|  
-|[GetStats (método)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|Obtiene un conjunto de estadísticas actuales sobre el sistema de recopilación de elementos no utilizados.|  
-|[SetGCStartupLimits (método)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|Establece el tamaño de un segmento de la colección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recopilación de elementos no utilizados.|  
+|[GetStats (método)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md)|Obtiene un conjunto de estadísticas actuales sobre el sistema de recolección de elementos no utilizados.|  
+|[SetGCStartupLimits (método)](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-setgcstartuplimits-method.md)|Establece el tamaño de un segmento de recolección de elementos no utilizados y el tamaño máximo de la generación 0 del sistema de recolección de elementos no utilizados.|  
   
 ## <a name="remarks"></a>Comentarios  
- Common language runtime (CLR) implementa su mecanismo de recopilación de elementos no utilizados con los recursos administrados <xref:System.GC> tipo. Para obtener más información sobre el sistema de recopilación de elementos no utilizados, vea [recolección](../../../../docs/standard/garbage-collection/index.md).  
+ El Common Language Runtime (CLR) implementa su mecanismo de recolección de elementos no utilizados <xref:System.GC> con el tipo administrado. Para obtener más información sobre el sistema de recolección de elementos no utilizados, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Administración automática de la memoria](../../../../docs/standard/automatic-memory-management.md)
+- [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
 - [COR_GC_STATS (estructura)](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [ICLRControl (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [Interfaces de hospedaje de CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)

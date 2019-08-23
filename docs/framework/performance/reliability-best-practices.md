@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 2e24cd05bb1c1ed9425c9be8bc02cb92dc488005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833800"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935723"
 ---
 # <a name="reliability-best-practices"></a>Procedimientos recomendados para la confiabilidad
 
@@ -117,7 +117,7 @@ Use <xref:System.Runtime.InteropServices.SafeHandle> para limpiar los recursos d
 
 El CLR debe saber cuándo el código está en un bloqueo para saber que debe anular el <xref:System.AppDomain> en lugar de limitarse a anular el subproceso.  Anular el subproceso podría ser peligroso dado que los datos en los que opera el subproceso podrían quedar en un estado incoherente. Por tanto, tendría que reciclarse <xref:System.AppDomain> por completo.  Las consecuencias de no poder identificar un bloqueo pueden ser interbloqueos o resultados incorrectos. Use los métodos <xref:System.Threading.Thread.BeginCriticalRegion%2A> y <xref:System.Threading.Thread.EndCriticalRegion%2A> para identificar regiones de bloqueo.  Son métodos estáticos de la clase <xref:System.Threading.Thread> que solo se aplican al subproceso actual, lo que ayuda a impedir que un subproceso edite el recuento de bloqueos de otro.
 
-<xref:System.Threading.Monitor.Enter%2A> y <xref:System.Threading.Monitor.Exit%2A> tienen integrada esta notificación al CLR, por lo que se recomienda su uso, así como el uso de la [instrucción lock](~/docs/csharp/language-reference/keywords/lock-statement.md), que usa estos métodos.
+<xref:System.Threading.Monitor.Enter%2A> y <xref:System.Threading.Monitor.Exit%2A> tienen integrada esta notificación al CLR, por lo que se recomienda su uso, así como el uso de la [instrucción lock](../../csharp/language-reference/keywords/lock-statement.md), que usa estos métodos.
 
 Otros mecanismos de bloqueo, como los bloqueos por subproceso y <xref:System.Threading.AutoResetEvent>, deben llamar a estos métodos para notificar al CLR que se está entrando en una sección crítica.  Estos métodos no toman ningún bloqueo; informan al CLR que se está ejecutando código en una sección crítica y la anulación del subproceso podría dejar un estado compartido incoherente.  Si ha definido su propio tipo de bloqueo, como un clase <xref:System.Threading.ReaderWriterLock> personalizada, use estos métodos de recuento de bloqueos.
 
@@ -143,7 +143,7 @@ Si el código usa un objeto COM, evite el uso compartido de ese objeto COM entre
 
 ### <a name="locks-do-not-work-process-wide-or-between-application-domains"></a>Los bloqueos no funcionan en todo el proceso o entre dominios de aplicación.
 
-En el pasado, <xref:System.Threading.Monitor.Enter%2A> y la [instrucción lock](~/docs/csharp/language-reference/keywords/lock-statement.md) se han usado para crear bloqueos de proceso globales.  Por ejemplo, esto se produce al bloquear en clases ágiles de <xref:System.AppDomain>, como instancias de <xref:System.Type> de ensamblados no compartidos, objetos <xref:System.Threading.Thread>, cadenas internadas y algunas cadenas compartidas entre dominios de aplicación mediante comunicación remota.  Estos bloqueos ya no son de todo el proceso.  Para identificar la presencia de un bloqueo de dominios entre aplicaciones de todo el proceso, determine si el código dentro del bloqueo usa algún recurso persistente externo, como un archivo en disco o, posiblemente, una base de datos.
+En el pasado, <xref:System.Threading.Monitor.Enter%2A> y la [instrucción lock](../../csharp/language-reference/keywords/lock-statement.md) se han usado para crear bloqueos de proceso globales.  Por ejemplo, esto se produce al bloquear en clases ágiles de <xref:System.AppDomain>, como instancias de <xref:System.Type> de ensamblados no compartidos, objetos <xref:System.Threading.Thread>, cadenas internadas y algunas cadenas compartidas entre dominios de aplicación mediante comunicación remota.  Estos bloqueos ya no son de todo el proceso.  Para identificar la presencia de un bloqueo de dominios entre aplicaciones de todo el proceso, determine si el código dentro del bloqueo usa algún recurso persistente externo, como un archivo en disco o, posiblemente, una base de datos.
 
 Tenga en cuenta que tomar un bloqueo en un <xref:System.AppDomain> es posible que cause problemas si el código protegido usa un recurso externo, dado que ese código podría ejecutarse simultáneamente en varios dominios de aplicación.  Esto puede ser un problema al escribir en un archivo de registro o al enlazar a un socket para todo el proceso.  Estos cambios significan que no hay ninguna manera fácil, mediante código administrado, de obtener un bloqueo global del proceso que no sea usar una instancia de <xref:System.Threading.Mutex> o <xref:System.Threading.Semaphore> con nombre.  Cree código que no se ejecute simultáneamente en dos dominios de aplicación, o use las clases <xref:System.Threading.Mutex> o <xref:System.Threading.Semaphore>.  Si no se puede cambiar el código existente, no use una exclusión mutua con nombre de Win32 para conseguir esta sincronización, dado que la ejecución en modo de fibra significa que no se puede garantizar que el mismo subproceso de sistema operativo vaya a adquirir y liberar una exclusión mutua.  Debe usar la clase administrada <xref:System.Threading.Mutex>, <xref:System.Threading.ManualResetEvent> con nombre, <xref:System.Threading.AutoResetEvent> o <xref:System.Threading.Semaphore> para sincronizar el bloqueo de código de forma que el CLR lo sepa en lugar de sincronizar el bloqueo con código no administrado.
 
@@ -241,7 +241,7 @@ Para SQL Server, todos los métodos que se usan para introducir la sincronizaci�
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>No realizar bloqueos indefinidos en código no administrado
 
-El bloqueo en código no administrado en lugar de en código administrado puede provocar un ataque por denegación de servicio porque el CLR no puede anular el subproceso.  Un subproceso bloqueado impide al CLR descargar <xref:System.AppDomain>, al menos sin tener que realizar algunas operaciones extremadamente no seguras.  El bloqueo mediante un Windows primitiva de sincronización es un claro ejemplo de algo que no podemos permitir.  Bloqueo en una llamada a `ReadFile` en un socket debería evitarse si es posible, lo ideal es que la API de Windows debe proporcionar un mecanismo para una operación similar al siguiente tiempo de espera.
+El bloqueo en código no administrado en lugar de en código administrado puede provocar un ataque por denegación de servicio porque el CLR no puede anular el subproceso.  Un subproceso bloqueado impide al CLR descargar <xref:System.AppDomain>, al menos sin tener que realizar algunas operaciones extremadamente no seguras.  El bloqueo mediante una primitiva de sincronización de Windows es un claro ejemplo de algo que no se puede permitir.  El bloqueo en una llamada `ReadFile` a en un socket debe evitarse si es posible; idealmente, la API de Windows debe proporcionar un mecanismo para una operación como esta para agotar el tiempo de espera.
 
 Cualquier método que realice llamadas nativas debería usar idealmente una llamada de Win32 con un tiempo de espera razonable y finito.  Si se permite al usuario especificar el tiempo de espera, el usuario no debería poder especificar un tiempo de espera infinito sin algunos permisos de seguridad específicos.  Como norma, si un método se va a bloquear durante más de 10 segundos, se debe usar una versión que admita tiempos de espera o necesitará soporte adicional del CLR.
 
@@ -265,7 +265,7 @@ Los finalizadores no deben presentar problemas de sincronización. No use un est
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>Evitar la memoria no administrada si es posible
 
-La memoria no administrada puede tener pérdidas, al igual que un identificador del sistema operativo. Si es posible, intente usar memoria de la pila mediante [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) o un objeto administrado anclado, como la [instrucción fixed](~/docs/csharp/language-reference/keywords/fixed-statement.md) o un <xref:System.Runtime.InteropServices.GCHandle> mediante un byte []. El <xref:System.GC> acabará por limpiarlos. Pero si tiene que asignar memoria no administrada, considere el uso de una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> para encapsular la asignación de memoria.
+La memoria no administrada puede tener pérdidas, al igual que un identificador del sistema operativo. Si es posible, intente usar memoria de la pila mediante [stackalloc](../../csharp/language-reference/operators/stackalloc.md) o un objeto administrado anclado, como la [instrucción fixed](../../csharp/language-reference/keywords/fixed-statement.md) o un <xref:System.Runtime.InteropServices.GCHandle> mediante un byte []. El <xref:System.GC> acabará por limpiarlos. Pero si tiene que asignar memoria no administrada, considere el uso de una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> para encapsular la asignación de memoria.
 
 Tenga en cuenta que al menos hay un caso en el que <xref:System.Runtime.InteropServices.SafeHandle> no resulta adecuado.  Para las llamadas a métodos COM que asignan o liberan memoria, es común que un archivo DLL asigne memoria a través de `CoTaskMemAlloc` y después otro archivo DLL libere esa memoria con `CoTaskMemFree`.  Usar <xref:System.Runtime.InteropServices.SafeHandle> en estos casos no sería adecuado porque intentará unir la duración de la memoria no administrada a la duración del <xref:System.Runtime.InteropServices.SafeHandle> en lugar de permitir que el otro archivo DLL controle la duración de la memoria.
 
@@ -277,7 +277,7 @@ Considere la posibilidad de cambiar todos los lugares en que se detectan todas l
 
 #### <a name="code-analysis-rule"></a>Regla de análisis de código
 
-Revise todos los bloques catch en código administrado que detectan todos los objetos o todas las excepciones.  En C#, esto significa marcar tanto `catch` {} y `catch(Exception)` {}.  Considere la posibilidad de hacer que el tipo de excepción sea muy específico, o bien revise el código para asegurarse de que no actúa de forma incorrecta si detecta un tipo de excepción inesperada.
+Revise todos los bloques catch en código administrado que detectan todos los objetos o todas las excepciones.  En C# `catch` , esto significa marcar {} y `catch(Exception)` .{}  Considere la posibilidad de hacer que el tipo de excepción sea muy específico, o bien revise el código para asegurarse de que no actúa de forma incorrecta si detecta un tipo de excepción inesperada.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>No suponer que un subproceso administrado es un subproceso Win32: es una fibra
 

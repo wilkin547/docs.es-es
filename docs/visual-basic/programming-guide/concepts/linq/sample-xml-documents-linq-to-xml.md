@@ -2,22 +2,22 @@
 title: Documentos XML de ejemplo (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
-ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c50abcc6ef4c23bcd78c5ab0e5e5deb4a369b164
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787145"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916540"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Documentos XML de ejemplo (LINQ to XML)
 Los archivos del siguiente ejemplo se usan en los ejemplos de código y en los fragmentos de código de la documentación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 > [!NOTE]
->  Las empresas, las organizaciones, los productos, los nombres de dominio, las direcciones de correo electrónico, los logotipos, los usuarios, las ubicaciones y los eventos que se citan a modo de ejemplo son ficticios. No se pretende indicar, ni debe deducirse, ninguna asociación con compañías, organizaciones, productos, dominios, direcciones de correo electrónico, logotipos, personas, lugares o hechos reales.  
+> Las empresas, las organizaciones, los productos, los nombres de dominio, las direcciones de correo electrónico, los logotipos, los usuarios, las ubicaciones y los eventos que se citan a modo de ejemplo son ficticios. No se pretende indicar, ni debe deducirse, ninguna asociación con compañías, organizaciones, productos, dominios, direcciones de correo electrónico, logotipos, personas, lugares o hechos reales.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Descripción|  
+|Tema|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)|Un documento XML que contiene un pedido de compra típico.|  
 |[Archivo XML de ejemplo: Pedido de compra común en un espacio de nombres](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)|Un documento XML de un espacio de nombres que contiene un pedido de compra típico.|  

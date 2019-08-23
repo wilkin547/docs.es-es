@@ -2,12 +2,12 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 7b147a84a43677afa53f7872f8042f1cf44137cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76a63140668fb1f41cf9e6f901d9a43240a1d098
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774717"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936082"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 Especifica una condición de búsqueda para un grupo o agregado.  
@@ -26,7 +26,7 @@ Especifica una condición de búsqueda para un grupo o agregado.
  La cláusula HAVING se utiliza para especificar una condición de filtrado adicional en el resultado de una agrupación. Si no se especifica una cláusula GROUP BY en la expresión de consulta, se supone un grupo de conjunto único implícito.  
   
 > [!NOTE]
->  HAVING se puede usar solo con el [seleccione](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrucción. Cuando [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) no es usa, HAVING se comporta como una cláusula WHERE.  
+> HAVING solo se puede usar con la instrucción [Select](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) . Cuando no se usa [Group by](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) , having se comporta como una cláusula WHERE.  
   
  La cláusula HAVING funciona como la cláusula WHERE salvo que se aplica después de la operación GROUP BY. Esto significa que la cláusula HAVING solo puede hacer referencias a agrupar alias y agregados, como se muestra en el ejemplo siguiente.  
   
@@ -40,7 +40,7 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza los operadores HAVING y GROUP BY para especificar una condición de búsqueda para un grupo o un agregado. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   

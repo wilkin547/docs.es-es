@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a4f57f27ec92e7977b46ebfa5967b0590674d2a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d02dab01eca3bd4f8ce3ae7ace7f9d4be8233dca
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946476"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917002"
 ---
 # <a name="icordebugilframe2-interface"></a>Interfaz ICorDebugILFrame2
 
-Una extensión lógica de ICorDebugILFrame (interfaz).  
+Extensión lógica de la interfaz ICorDebugILFrame.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[EnumerateTypeParameters (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Obtiene un objeto ICorDebugTypeEnum que contiene el <xref:System.Type> parámetros de este marco.|  
-|[RemapFunction (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Reasigna una función editada especificando el nuevo desplazamiento MSIL.|  
+|[EnumerateTypeParameters (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Obtiene un objeto ICorDebugTypeEnum que contiene los <xref:System.Type> parámetros de este marco.|  
+|[RemapFunction (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Vuelve a asignar una función editada especificando el nuevo desplazamiento de MSIL.|  
   
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
+> Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

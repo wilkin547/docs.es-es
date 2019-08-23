@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 1ffb8101ba0182c8ff11667f59d9bc10c5ffe670
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 45e1cd9bdfcbcf592ce6708496282e2e66a4a2e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629561"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914388"
 ---
 # <a name="ui-automation-providers-overview"></a>Información general sobre proveedores de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  Los proveedores de automatización de la interfaz de usuario permiten a los controles comunicarse con aplicaciones de cliente de automatización de la interfaz de usuario. En general, cada control u otro elemento distinto de un [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] está representado por un proveedor. El proveedor expone información sobre el elemento y, opcionalmente, implementa patrones de control que permiten a la aplicación cliente interactuar con el control.  
   

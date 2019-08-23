@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e91dda9cbc5957768e98db2b2a9e1026d94c03e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9da6aba61382381fc25fe70615976cd0e744ee1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946298"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910006"
 ---
 # <a name="icordebugloadedmodule-interface"></a>Interfaz de ICorDebugLoadedModule
 Proporciona información acerca de un módulo cargado.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |[GetBaseAddress (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getbaseaddress-method.md)|Obtiene la dirección base del módulo cargado.|  
 |[GetName (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getname-method.md)|Obtiene el nombre del módulo cargado.|  
@@ -26,14 +26,14 @@ Proporciona información acerca de un módulo cargado.
  La interfaz `ICorDebugLoadedModule` es implementada por un depurador y utiliza por interfaces de depuración de CLR para obtener información acerca del módulo cargado desde el depurador.  
   
 > [!NOTE]
->  Esta interfaz solo está disponible con .NET Native. Si implementa esta interfaz para escenarios de ICorDebug fuera de .NET Native, Common Language Runtime ignorará esta interfaz.  
+> Esta interfaz solo está disponible con .NET Native. Si implementa esta interfaz para escenarios de ICorDebug fuera de .NET Native, Common Language Runtime ignorará esta interfaz.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

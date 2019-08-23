@@ -2,12 +2,12 @@
 title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
-ms.openlocfilehash: 660497012dd057e4ecf95524833e2573fe03a8b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a982fa87ab84725e36ee913f00200cd34f0b8f6f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670682"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925574"
 ---
 # <a name="headers"></a>\<headers>
 Uno o más encabezados SOAP pueden direccionar un extremo además de su URI básico. Un conjunto de escenarios donde esto es útil es un conjunto de escenarios intermediarios de SOAP donde un extremo requiere que los clientes de ese extremo incluyan encabezados SOAP destinados a intermediarios. Este elemento de configuración se puede usar para definir tales encabezados de dirección personalizados. Las entradas en la colección de encabezado de punto de conexión son los elementos XML definidos por el usuario. Cada elemento tiene que ser XML correcto.  
@@ -36,9 +36,9 @@ Uno o más encabezados SOAP pueden direccionar un extremo además de su URI bás
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-of-client.md)|Configura tipos diferentes de extremos.|  
+|[\<endpoint>](endpoint-of-client.md)|Configura tipos diferentes de extremos.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los encabezados opcionales proporcionan información más detallada de direccionamiento para identificar o interactuar con el punto de conexión. Por ejemplo, los encabezados pueden indicar cómo procesar un mensaje entrante, dónde debería enviar el punto de conexión un mensaje de respuesta o qué instancia de un servicio se va a usar para procesar un mensaje entrante de un usuario determinado cuando hay varias instancias disponibles.  
@@ -49,4 +49,4 @@ Uno o más encabezados SOAP pueden direccionar un extremo además de su URI bás
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Headers%2A>
 - <xref:System.ServiceModel.Channels.AddressHeaderCollection>
-- [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Extremos Direcciones, enlaces y contratos](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)

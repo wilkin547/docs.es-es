@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 4551e8f193ffc9799b57a660f05add888b330484
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 40cdf3efe1ad3ec2db433f68599b87bfeb7908cf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964732"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Especificar valores XML como parámetros
-Si una consulta requiere un parámetro cuyo valor es una cadena XML, los programadores pueden suministrar ese valor mediante una instancia de la **SqlXml** tipo de datos. Realmente no hay ningún truco; Las columnas XML en SQL Server aceptan valores de parámetros exactamente igual que otros tipos de datos.  
+Si una consulta requiere un parámetro cuyo valor es una cadena XML, los desarrolladores pueden proporcionar ese valor mediante una instancia del tipo de datos **SQLXML** . En realidad, no hay trucos; Las columnas XML de SQL Server aceptan valores de parámetro exactamente del mismo modo que otros tipos de datos.  
   
 ## <a name="example"></a>Ejemplo  
- La aplicación de consola siguiente crea una nueva tabla en la **AdventureWorks** base de datos. La nueva tabla incluye una columna denominada **SalesID** y una columna XML llamada **SalesInfo**.  
+ La siguiente aplicación de consola crea una nueva tabla en la base de datos **AdventureWorks** . La nueva tabla incluye una columna denominada **SalesID** y una columna XML denominada **SalesInfo**.  
   
 > [!NOTE]
->  El **AdventureWorks** base de datos de ejemplo no se instala de forma predeterminada al instalar SQL Server. Para instalarla, ejecute el programa de instalación de SQL Server.  
+> La base de datos de ejemplo **AdventureWorks** no se instala de forma predeterminada al instalar SQL Server. Para instalarla, ejecute el programa de instalación de SQL Server.  
   
- En el ejemplo se prepara un objeto <xref:System.Data.SqlClient.SqlCommand> para insertar una fila en la nueva tabla. Un archivo guardado proporciona los datos XML necesarios para la **SalesInfo** columna.  
+ En el ejemplo se prepara un objeto <xref:System.Data.SqlClient.SqlCommand> para insertar una fila en la nueva tabla. Un archivo guardado proporciona los datos XML necesarios para la columna **SalesInfo** .  
   
  Para crear el archivo necesario para el ejemplo que se va a ejecutar, cree un nuevo archivo de texto en la misma carpeta que el proyecto. Asigne al archivo el nombre MyTestStoreData.xml. Abra el archivo en el Bloc de notas y copie y pegue el siguiente texto:  
   

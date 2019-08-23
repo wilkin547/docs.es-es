@@ -3,12 +3,12 @@ title: 'Clases y objetos en C#: un paseo por el lenguaje C#'
 description: ¿Nuevo en C#? Lea esta información general sobre clases, objetos y herencia.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 681ed03661bf54dcb1e7e70735a53a553763c95c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750389"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971457"
 ---
 # <a name="classes-and-objects"></a>Clases y objetos
 
@@ -256,7 +256,7 @@ Los descriptores de acceso de una propiedad pueden ser virtuales. Cuando una dec
 
 ### <a name="indexers"></a>Indizadores
 
-Un *indexador* es un miembro que permite indexar de la misma manera que una matriz. Un indexador se declara como una propiedad, excepto por el hecho que el nombre del miembro va seguido por una lista de parámetros que se escriben entre los delimitadores `[` y `]`. Los parámetros están disponibles en los descriptores de acceso del indexador. De forma similar a las propiedades, los indexadores pueden ser lectura y escritura, de solo lectura y de solo escritura, y los descriptores de acceso de un indexador pueden ser virtuales.
+Un *indexador* es un miembro que permite indexar de la misma manera que una matriz. Un indexador se declara como una propiedad, excepto por el hecho que el nombre del miembro es `this`, seguido por una lista de parámetros que se escriben entre los delimitadores `[` y `]`. Los parámetros están disponibles en los descriptores de acceso del indexador. De forma similar a las propiedades, los indexadores pueden ser lectura y escritura, de solo lectura y de solo escritura, y los descriptores de acceso de un indexador pueden ser virtuales.
 
 La clase `MyList<T>` declara un único indexador de lectura y escritura que toma un parámetro `int`. El indexador permite indexar instancias de `MyList<T>` con valores `int`. Por ejemplo:
 

@@ -2,40 +2,40 @@
 title: Procedimiento para crear una credencial de apoyo
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 2f922f2df424b0ca2a468ae2f6cb8e8753e1d8a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f95748235aa5238193b8869f8330f0a7fc650d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635498"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968898"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Procedimiento para crear una credencial de apoyo
-Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es un *credencial de apoyo*. En este tema se explica cómo implementar dichos credenciales en un cliente de Windows Communication Foundation (WCF).  
+Es posible tener un esquema de seguridad personalizado que requiera más de una credencial. Por ejemplo, un servicio puede solicitar del cliente un nombre de usuario y contraseña, pero también una credencial que demuestre que el cliente tiene más de 18 años. La segunda credencial es una *credencial de apoyo*. En este tema se explica cómo implementar estas credenciales en un cliente de Windows Communication Foundation (WCF).  
   
 > [!NOTE]
->  La especificación para admitir las credenciales forma parte de la especificación WS-SecurityPolicy. Para obtener más información, consulte [las especificaciones de seguridad de servicios Web](https://go.microsoft.com/fwlink/?LinkId=88537).  
+> La especificación para admitir las credenciales forma parte de la especificación WS-SecurityPolicy. Para obtener más información, vea [Especificaciones de seguridad de servicios web](https://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Tokens auxiliares  
- En resumen, cuando se usa seguridad de mensajes, un *credencial principal* siempre se usa para proteger el mensaje (por ejemplo, un certificado X.509 o un vale de Kerberos).  
+ En Resumen, cuando se usa la seguridad de mensajes, siempre se usa una *credencial principal* para proteger el mensaje (por ejemplo, un certificado X. 509 o un vale de Kerberos).  
   
- Tal como se define mediante la especificación, se utiliza un enlace de seguridad *tokens* para proteger el intercambio de mensajes. Un *token* es una representación de una credencial de seguridad.  
+ Tal y como se define en la especificación, un enlace de seguridad utiliza tokens para proteger el intercambio de mensajes. Un *token* es una representación de una credencial de seguridad.  
   
- El enlace de seguridad utiliza un token primario identificado en la directiva de enlace de seguridad para crear una firma. Esta firma se conoce como el *firma del mensaje*.  
+ El enlace de seguridad utiliza un token primario identificado en la directiva de enlace de seguridad para crear una firma. Esta firma se conoce como la *firma del mensaje*.  
   
  Los tokens adicionales se pueden especificar para aumentar las notificaciones proporcionadas por el token asociado a la firma del mensaje.  
   
 ## <a name="endorsing-signing-and-encrypting"></a>Endosar, firmar y cifrar  
- Una credencial de aprobación da como resultado un *token auxiliar* transmitido dentro del mensaje. La especificación de WS-SecurityPolicy define cuatro maneras de adjuntar un token de aprobación al mensaje, tal y como se describe en la tabla siguiente.  
+ Una credencial de apoyo da como resultado un *token auxiliar* que se transmite dentro del mensaje. La especificación de WS-SecurityPolicy define cuatro maneras de adjuntar un token de aprobación al mensaje, tal y como se describe en la tabla siguiente.  
   
-|Finalidad|Descripción|  
+|Propósito|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |Firmado|El token de aprobación está incluido en el encabezado de seguridad y es firmado por la firma del mensaje.|  
-|Endosar|Un *token endosado* firma la firma del mensaje.|  
+|Endosar|Un *token* de aprobación firma la firma del mensaje.|  
 |Firmar y endosar|Los tokens firmados y endosados firman el elemento `ds:Signature` completo generado a partir de la firma del mensaje y están firmados por esa firma del mensaje; es decir, ambos tokens (el token utilizado para la firma del mensaje y el token endosado y firmado) se firman entre sí.|  
 |Firmar y cifrar|Los tokens de aprobación firmados y cifrados son tokens de aprobación firmados que también se cifran cuando aparecen en `wsse:SecurityHeader`.|  
   
 ## <a name="programming-supporting-credentials"></a>Programar credenciales de aprobación  
- Para crear un servicio que usa los tokens auxiliares, debe crear un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obtener más información, vea [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).)  
+ Para crear un servicio que use tokens auxiliares, debe crear un [ \<> customBinding](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md). (Para obtener más información, [consulte Cómo: Cree un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)).  
   
  El primer paso cuando se crea un enlace personalizado es crear un elemento de enlace de seguridad, que puede ser uno de tres tipos:  
   
@@ -58,9 +58,9 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
 #### <a name="scopes"></a>Ámbitos  
  Existen dos ámbitos para admitir las credenciales:  
   
-- *Punto de conexión de los tokens auxiliares* admiten todas las operaciones de un punto de conexión. Es decir, se puede utilizar la credencial que el token de aprobación representa siempre que se invoca una operación de punto de conexión.  
+- Los *tokens auxiliares de extremo* admiten todas las operaciones de un punto de conexión. Es decir, se puede utilizar la credencial que el token de aprobación representa siempre que se invoca una operación de punto de conexión.  
   
-- *Los tokens auxiliares de operación* admiten solo una operación de punto de conexión concreto.  
+- Los *tokens auxiliares de operación* solo admiten una operación de punto de conexión específica.  
   
  Tal y como han indicado los nombres de la propiedad, se puede requerir las credenciales de aprobación o estas pueden ser opcionales. Es decir, si la credencial de aprobación se utiliza si está presente, aunque no es necesario, pero no se producirá un error en la autenticación si no está presente.  
   
@@ -74,7 +74,7 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>DESCRIPCIÓN  
  En el ejemplo siguiente se crea una instancia de<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> y agrega una instancia de la clase <xref:System.ServiceModel.Security.Tokens.KerberosSecurityTokenParameters> a la colección que ha devuelto la propiedad endosada.  
   
 ### <a name="code"></a>Código  
@@ -82,4 +82,4 @@ Es posible tener un esquema de seguridad personalizado que requiera más de una 
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Procedimientos: Crear un enlace personalizado mediante SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

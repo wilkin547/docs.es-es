@@ -16,35 +16,35 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d34a3395605505ca0ebda072e33d8083d51123a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9622716e3a2cca7e3af0b1e1b134458a50ad1bec
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902426"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962978"
 ---
 # <a name="icordebugthread3-interface"></a>ICorDebugThread3 (Interfaz)
-Proporciona el punto de entrada a la [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) y las interfaces correspondientes.  
+Proporciona el punto de entrada a [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) y las interfaces correspondientes.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[CreateStackWalk (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-createstackwalk-method.md)|Crea un [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) objeto para el subproceso cuya pila desea desenredar.|  
-|[GetActiveInternalFrames (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)|Devuelve una matriz de marcos internos ([ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) objetos) en la pila.|  
+|[CreateStackWalk (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-createstackwalk-method.md)|Crea un objeto [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) para el subproceso cuya pila desea desenredar.|  
+|[GetActiveInternalFrames (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)|Devuelve una matriz de Marcos internos (objetos[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md) ) en la pila.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ICorDebugThread3` es una extensión lógica ICorDebugThread (interfaz).  
+ `ICorDebugThread3`es una extensión lógica de la interfaz ICorDebugThread.  
   
 > [!NOTE]
->  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
+> Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

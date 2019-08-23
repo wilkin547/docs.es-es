@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca8db6fd1296420011dcbfbbb0e5682f8a484dc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 38938de335e5f0d7cb8051554c400f16df012362
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768811"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965354"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication (Método)
-Se utiliza en escenarios de implementación de ClickOnce basada en manifiestos para especificar la aplicación que debe activarse en un nuevo dominio. Para obtener más información acerca de estos escenarios, consulte [seguridad e implementación ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
+Se usa en escenarios de implementación ClickOnce basados en manifiesto para especificar la aplicación que se va a activar en un dominio nuevo. Para obtener más información acerca de estos escenarios, consulte [seguridad e implementación de ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,48 +42,48 @@ HRESULT ExecuteApplication(
   
 ## <a name="parameters"></a>Parámetros  
  `pwzAppFullName`  
- [in] El nombre completo de la aplicación, tal como se define para <xref:System.ApplicationIdentity>.  
+ de Nombre completo de la aplicación, tal y como se <xref:System.ApplicationIdentity>define para.  
   
  `dwManifestPaths`  
- [in] El número de cadenas incluidas en el `ppwzManifestPaths` matriz.  
+ de Número de cadenas contenidas en `ppwzManifestPaths` la matriz.  
   
  `ppwzManifestPaths`  
- [in] Opcional. Matriz de cadenas que contiene las rutas de acceso de manifiesto de la aplicación.  
+ [in] Opcional. Matriz de cadenas que contiene las rutas de acceso de manifiesto para la aplicación.  
   
  `dwActivationData`  
- [in] El número de cadenas incluidas en el `ppwzActivationData` matriz.  
+ de Número de cadenas contenidas en `ppwzActivationData` la matriz.  
   
  `ppwzActivationData`  
- [in] Opcional. Matriz de cadenas que contiene los datos de activación de la aplicación, como parte de la cadena de consulta de la dirección URL para las aplicaciones implementadas a través de Internet.  
+ [in] Opcional. Una matriz de cadenas que contiene los datos de activación de la aplicación, como la parte de la cadena de consulta de la dirección URL de las aplicaciones implementadas a través de la Web.  
   
  `pReturnValue`  
- [out] El valor devuelto desde el punto de entrada de la aplicación.  
+ enuncia El valor devuelto desde el punto de entrada de la aplicación.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
 |HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|S_OK|`ExecuteApplication` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Si el método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`ExecuteApplication`se devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Si un método devuelve E_FAIL, CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- `ExecuteApplication` se usa para activar aplicaciones ClickOnce en un dominio de aplicación recién creado.  
+ `ExecuteApplication`se utiliza para activar las aplicaciones ClickOnce en un dominio de aplicación recién creado.  
   
- El `pReturnValue` parámetro de salida se establece en el valor devuelto por la aplicación. Si proporciona un valor null para `pReturnValue`, `ExecuteApplication` no genera ningún error, pero no devuelve un valor.  
+ El `pReturnValue` parámetro de salida se establece en el valor devuelto por la aplicación. Si proporciona un valor null para `pReturnValue`, `ExecuteApplication` no producirá un error, pero no devolverá ningún valor.  
   
 > [!IMPORTANT]
->  No llame a la [método Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) método antes de llamar a la `ExecuteApplication` método para activar una aplicación basada en manifiesto. Si el `Start` se llama al método en primer lugar, el `ExecuteApplication` se producirá un error en la llamada al método.  
+> No llame al método [Start Method](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md) antes de llamar `ExecuteApplication` al método para activar una aplicación basada en manifiesto. Si se `Start` llama primero al método, se `ExecuteApplication` producirá un error en la llamada al método.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

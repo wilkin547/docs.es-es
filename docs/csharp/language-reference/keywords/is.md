@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 45e37dcb15e178fe37907e00cc14ef48c1bf230d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306593"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566309"
 ---
 # <a name="is-c-reference"></a>is (Referencia de C#)
 
-El operador `is` comprueba si el resultado de una expresión es compatible con un tipo determinado o, a partir de C# 7.0, prueba una expresión en un patrón. Para obtener información sobre el operador de prueba de tipos `is`, consulte la sección [operador is](../operators/type-testing-and-conversion-operators.md#is-operator) del artículo [Operadores de conversión y prueba de tipos](../operators/type-testing-and-conversion-operators.md).
+El operador `is` comprueba si el resultado de una expresión es compatible con un tipo determinado o, a partir de C# 7.0, prueba una expresión en un patrón. Para obtener información sobre el operador de prueba de tipos `is`, consulte la sección [operador is](../operators/type-testing-and-cast.md#is-operator) del artículo [Operadores de conversión y prueba de tipos](../operators/type-testing-and-cast.md).
 
 ## <a name="pattern-matching-with-is"></a>Coincidencia de patrones con `is`
 
@@ -128,4 +128,4 @@ Para más información, consulte la sección del [operador is](~/_csharplang/spe
 
 - [Referencia de C#](../index.md)
 - [Palabras clave de C#](index.md)
-- [Operadores de conversión y prueba de tipos](../operators/type-testing-and-conversion-operators.md)
+- [Operadores de conversión y prueba de tipos](../operators/type-testing-and-cast.md)

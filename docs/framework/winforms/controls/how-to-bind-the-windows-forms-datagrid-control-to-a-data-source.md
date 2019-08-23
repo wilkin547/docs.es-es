@@ -14,26 +14,26 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bac24c2dd622ea780408e902d08708ac09561044
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922724"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Procedimiento para enlazar el control DataGrid de formularios Windows Forms a un origen de datos
 > [!NOTE]
->  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
- Los formularios de Windows <xref:System.Windows.Forms.DataGrid> control está diseñado específicamente para mostrar información de un origen de datos. Enlazar el control en tiempo de ejecución mediante una llamada a la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método. Aunque se pueden mostrar datos desde una variedad de orígenes de datos, los orígenes más habituales son las vistas de datos y conjuntos de datos.  
+ El control <xref:System.Windows.Forms.DataGrid> Windows Forms está diseñado específicamente para mostrar información de un origen de datos. Para enlazar el control en tiempo de ejecución, <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> llame al método. Aunque puede mostrar los datos de diversos orígenes de datos, los orígenes más habituales son los conjuntos de datos y las vistas de datos.  
   
-### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Para enlazar el control DataGrid mediante programación  
+### <a name="to-data-bind-the-datagrid-control-programmatically"></a>Para enlazar datos mediante programación al control DataGrid  
   
-1. Escribir código para llenar el conjunto de datos.  
+1. Escriba código para rellenar el conjunto de DataSet.  
   
-     Si el origen de datos es un conjunto de datos o una vista de datos basado en una tabla de conjunto de datos, agregue código al formulario para rellenar el conjunto de datos.  
+     Si el origen de datos es un conjunto de datos o una vista de datos basada en una tabla de conjunto de datos, agregue código al formulario para rellenar el conjunto de datos.  
   
-     El código exacto que utilice depende de donde obtiene datos del conjunto de datos. Si el conjunto de datos se rellena directamente desde una base de datos, normalmente se invoca el `Fill` método de un adaptador de datos, como se muestra en el ejemplo siguiente, que rellena un conjunto de datos denominado `DsCategories1`:  
+     El código exacto que se utiliza depende de la ubicación del conjunto de datos. Si el conjunto de datos se rellena directamente desde una base de datos, normalmente `Fill` se llama al método de un adaptador de datos, como en el ejemplo siguiente, que rellena `DsCategories1`un conjunto de datos denominado:  
   
     ```vb  
     sqlDataAdapter1.Fill(DsCategories1)  
@@ -47,7 +47,7 @@ ms.locfileid: "61666435"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-     Si se llena el conjunto de datos desde un servicio Web XML, normalmente se crea una instancia del servicio en el código y, a continuación, llame a uno de sus métodos devuelvan un conjunto de datos. A continuación, combina el conjunto de datos desde el servicio Web XML en el conjunto de datos local. El ejemplo siguiente muestra cómo puede crear una instancia de un servicio Web XML denominado `CategoriesService`, llame a su `GetCategories` método y mezcla el conjunto de datos resultante en un conjunto de datos local llamado `DsCategories1`:  
+     Si el conjunto de resultados se rellena desde un servicio Web XML, normalmente se crea una instancia del servicio en el código y, a continuación, se llama a uno de sus métodos para devolver un conjunto de resultados. A continuación, combine el conjunto de DataSet del servicio Web XML en el conjunto de DataSet local. En el ejemplo siguiente se muestra cómo se puede crear una instancia de un servicio Web `CategoriesService`XML denominado, `GetCategories` llamar a su método y combinar el conjunto de resultados en un `DsCategories1`conjunto de elementos local denominado:  
   
     ```vb  
     Dim ws As New MyProject.localhost.CategoriesService()  
@@ -68,12 +68,12 @@ ms.locfileid: "61666435"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2. Llame a la <xref:System.Windows.Forms.DataGrid> del control <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método y pásele el origen de datos y un miembro de datos. Si no es necesario pasar explícitamente un miembro de datos, pase una cadena vacía.  
+2. Llame al método del <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> control,pasándoleelorigendedatosyunmiembrodedatos.<xref:System.Windows.Forms.DataGrid> Si no necesita pasar explícitamente un miembro de datos, pase una cadena vacía.  
   
     > [!NOTE]
-    >  Si va a enlazar la cuadrícula por primera vez, puede establecer el control <xref:System.Windows.Forms.DataGrid.DataSource%2A> y <xref:System.Windows.Forms.DataGrid.DataMember%2A> propiedades. Sin embargo, no se puede restablecer estas propiedades una vez que se han establecido. Por lo tanto, se recomienda usar siempre el <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método.  
+    > Si enlaza la cuadrícula por primera vez, puede establecer las propiedades y <xref:System.Windows.Forms.DataGrid.DataSource%2A> <xref:System.Windows.Forms.DataGrid.DataMember%2A> del control. Sin embargo, no puede restablecer estas propiedades una vez que se han establecido. Por lo tanto, se recomienda usar siempre el <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método.  
   
-     El ejemplo siguiente muestra cómo se puede enlazar mediante programación a la tabla Customers en un conjunto de datos denominado `DsCustomers1`:  
+     En el ejemplo siguiente se muestra cómo se puede enlazar mediante programación a la tabla Customers `DsCustomers1`en un conjunto de una llamada:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "Customers")  
@@ -87,7 +87,7 @@ ms.locfileid: "61666435"
     dataGrid1->SetDataBinding(dsCustomers1, "Customers");  
     ```  
   
-     Si la tabla Customers es la única tabla en el conjunto de datos, también puede enlazar la cuadrícula de esta manera:  
+     Si la tabla Customers es la única tabla del conjunto de elementos, puede enlazar la cuadrícula como alternativa de esta manera:  
   
     ```vb  
     DataGrid1.SetDataBinding(DsCustomers1, "")  
@@ -101,11 +101,11 @@ ms.locfileid: "61666435"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3. (Opcional) Agregar los estilos de tabla adecuada y estilos de columna a la cuadrícula. Si no hay ningún estilo de tabla, verá la tabla, pero con un formato mínimo y con todas las columnas visibles.  
+3. Opta Agregue los estilos de tabla y de columna correspondientes a la cuadrícula. Si no hay ningún estilo de tabla, verá la tabla, pero con el formato mínimo y con todas las columnas visibles.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Información general del control DataGrid](datagrid-control-overview-windows-forms.md)
-- [Cómo: Agregar tablas y columnas al Control DataGrid de formularios Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Cómo: Agregar tablas y columnas al control DataGrid de Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid (control)](datagrid-control-windows-forms.md)
 - [Enlace de datos en Windows Forms](../windows-forms-data-binding.md)

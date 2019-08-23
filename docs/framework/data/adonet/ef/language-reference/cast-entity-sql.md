@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 743c90cd9bc77a89051c59a217befa4275b28572
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489950"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935821"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Convierte una expresión de un tipo de datos a otro.  
@@ -48,12 +48,12 @@ CAST( e as T )
  El uso de una expresión de conversión se considera una conversión explícita. Las conversiones explícitas pueden truncar datos o perder precisión.  
   
 > [!NOTE]
->  CAST solo se admite en tipos primitivos y tipos de miembro de enumeración.  
+> CAST solo se admite en tipos primitivos y tipos de miembro de enumeración.  
   
 ## <a name="example"></a>Ejemplo  
  La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa el operador CAST para convertir una expresión de un tipo de datos a otro. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   

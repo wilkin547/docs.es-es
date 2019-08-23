@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3efe80c0442e765274b309e39a79cc867676043
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dbc38d9cf88f2449bbf689e4cf1b4101f47a0577
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763612"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943261"
 ---
 # <a name="iclrsyncmanagergetrwlockownernext-method"></a>ICLRSyncManager::GetRWLockOwnerNext (Método)
-Obtiene el siguiente [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) instancia que está bloqueado en el bloqueo de lector y escritor actual.  
+Obtiene la siguiente instancia de [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) que está bloqueada en el bloqueo de lector-Writer actual.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,34 +38,34 @@ HRESULT GetRWLockOwnerNext (
   
 ## <a name="parameters"></a>Parámetros  
  `Iterator`  
- [in] El iterador que se creó mediante una llamada a [CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).  
+ de Iterador que se creó mediante una llamada a [CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).  
   
  `ppOwnerHostTask`  
- [out] Un puntero a la siguiente `IHostTask` que está esperando el bloqueo, o null si no hay ninguna tarea está esperando.  
+ enuncia Puntero al siguiente `IHostTask` que está esperando en el bloqueo, o null si no hay ninguna tarea en espera.  
   
 ## <a name="return-value"></a>Valor devuelto  
   
-|HRESULT|Descripción|  
+|HRESULT|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|S_OK|`GetRWLockOwnerNext` se devolvió correctamente.|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no se puede ejecutar código administrado o procesar la llamada correctamente.|  
-|HOST_E_TIMEOUT|La llamada ha agotado el tiempo de espera.|  
-|HOST_E_NOT_OWNER|El llamador no posee el bloqueo.|  
-|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso bloqueado o fibra estaba esperando en ella.|  
-|E_FAIL|Se ha producido un error irrecuperable desconocido. Cuando un método devuelve E_FAIL, CLR ya no es utilizable dentro del proceso. Las llamadas posteriores a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
+|S_OK|`GetRWLockOwnerNext`se devolvió correctamente.|  
+|HOST_E_CLRNOTAVAILABLE|El Common Language Runtime (CLR) no se ha cargado en un proceso o el CLR se encuentra en un estado en el que no puede ejecutar código administrado ni procesar la llamada correctamente.|  
+|HOST_E_TIMEOUT|Se agotó el tiempo de espera de la llamada.|  
+|HOST_E_NOT_OWNER|El autor de la llamada no posee el bloqueo.|  
+|HOST_E_ABANDONED|Se canceló un evento mientras un subproceso o fibra bloqueados estaba esperando en él.|  
+|E_FAIL|Se produjo un error grave desconocido. Cuando un método devuelve E_FAIL, el CLR ya no se puede usar en el proceso. Las llamadas subsiguientes a métodos de hospedaje devuelven HOST_E_CLRNOTAVAILABLE.|  
   
 ## <a name="remarks"></a>Comentarios  
- Si `ppOwnerHostTask` está establecido en null, la iteración ha finalizado y el host debe llamar a la [DeleteRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) método.  
+ Si `ppOwnerHostTask` se establece en null, la iteración ha finalizado y el host debe llamar al método [DeleteRWLockOwnerIterator (](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-deleterwlockowneriterator-method.md) .  
   
 > [!NOTE]
->  CLR llama a `AddRef` en el `IHostTask` a la que `ppOwnerHostTask` puntos para evitar que salir de esta tarea mientras el host mantiene el puntero. El host debe llamar a `Release` para reducir el recuento de referencias cuando haya finalizado.  
+> CLR llama `AddRef` a en el `IHostTask` que `ppOwnerHostTask` señala para evitar que esta tarea se salga mientras el host contiene el puntero. El host debe llamar `Release` a para reducir el recuento de referencias cuando termine.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado**: MSCorEE.h  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

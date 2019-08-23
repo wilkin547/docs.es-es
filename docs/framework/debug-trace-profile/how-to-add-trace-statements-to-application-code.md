@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 626e9823bbf7d379a21ae353a9189485259f3c42
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754548"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948008"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Procedimiento para agregar instrucciones de seguimiento al código de una aplicación
-Los métodos que se usan con mayor frecuencia para traza son los métodos para escribir los resultados en agentes de escucha: **Escribir**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, y **producirá un error en**. Estos métodos pueden dividirse en dos categorías: **Escribir**, **WriteLine**, y **producirá un error en** emiten resultados de forma incondicional, mientras que **WriteIf**, **WriteLineIf**y  **Assert** comprueban una condición booleana y escriben o no escriben en función del valor de la condición. **WriteIf** y **WriteLineIf** emiten resultados si la condición es `true` y **Assert** emite resultados si la condición es `false`.  
+Los métodos que se usan con más frecuencia para el seguimiento son los métodos para escribir la salida en los agentes de escucha: **Write**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**y **FAIL**. Estos métodos se pueden dividir en dos categorías: **Write**, **WriteLine**y **FAIL** All emiten la salida de forma incondicional, mientras que **WriteIf**, **WriteLineIf**y Assert prueban una condición booleana y escriben o no escriben en función del valor de la condición. **WriteIf** y **WriteLineIf** emiten resultados si la condición es `true` y **Assert** emite resultados si la condición es `false`.  
   
  Al diseñar la estrategia de depuración y traza, debe pensar cómo desea presentar los resultados. Varias instrucciones **Write** con información no relacionada crearán un registro difícil de leer. Por otro lado, usar **WriteLine** para colocar instrucciones relacionadas en líneas independientes puede hacer que sea difícil distinguir la información del mismo tipo. En general, use varias instrucciones **Write** cuando quiera combinar información de varios orígenes para crear un único mensaje informativo y use la instrucción **WriteLine** cuando quiera crear un único mensaje completo.  
   
@@ -82,7 +82,7 @@ Los métodos que se usan con mayor frecuencia para traza son los métodos para e
     ```  
   
     > [!NOTE]
-    >  Puede usar **Assert** con la depuración y el seguimiento. En este ejemplo se envía la pila de llamadas a cualquier agente de escucha de la colección **Listeners**. Para más información, vea [Aserciones en el código administrado](/visualstudio/debugger/assertions-in-managed-code) y <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
+    > Puede usar **Assert** con la depuración y el seguimiento. En este ejemplo se envía la pila de llamadas a cualquier agente de escucha de la colección **Listeners**. Para más información, vea [Aserciones en el código administrado](/visualstudio/debugger/assertions-in-managed-code) y <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Vea también
 
@@ -91,6 +91,6 @@ Los métodos que se usan con mayor frecuencia para traza son los métodos para e
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Cómo: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Procedimientos: Crear, inicializar y configurar modificadores de seguimiento](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Agentes de escucha de seguimiento](../../../docs/framework/debug-trace-profile/trace-listeners.md)

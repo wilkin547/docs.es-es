@@ -2,12 +2,12 @@
 title: System.DateTimeOffset (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: 288a0d99feecdeccc0d215ec3c14ec31bb3ccb54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a638a4fcc156727f734ff480a18b9997bc9d2e34
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876907"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959084"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset (Métodos)
 LINQ to SQL permite llamar a la mayoría de los métodos, operadores y propiedades de <xref:System.DateTimeOffset?displayProperty=nameWithType> desde las consultas LINQ to SQL, cuando se hayan asignado en el modelo de objetos o en el archivo de asignación externo.  
@@ -15,7 +15,7 @@ LINQ to SQL permite llamar a la mayoría de los métodos, operadores y propiedad
  Los únicos métodos no admitidos son los heredados de <xref:System.Object?displayProperty=nameWithType> que no tienen sentido en el contexto de las consultas LINQ to SQL, como: `Finalize`, `GetHashCode`, `GetType` y `MemberwiseClone`. Estos métodos no se admiten porque LINQ to SQL no puede convertirlos para su ejecución en SQL Server.  
   
 > [!NOTE]
->  La estructura de Common Language Runtime (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> y la funcionalidad de asignarla a una columna `DATETIMEOFFSET` de SQL con LINQ to SQL, requiere .NET Framework 3.5 SP1 o posterior. La columna `DATETIMEOFFSET` de SQL está disponible sólo en Microsoft SQL Server 2008 y posterior.  
+> La estructura de Common Language Runtime (CLR) <xref:System.DateTimeOffset?displayProperty=nameWithType> y la funcionalidad de asignarla a una columna `DATETIMEOFFSET` de SQL con LINQ to SQL, requiere .NET Framework 3.5 SP1 o posterior. La columna `DATETIMEOFFSET` de SQL está disponible sólo en Microsoft SQL Server 2008 y posterior.  
   
 ## <a name="sqlmethods-date-and-time-methods"></a>Métodos Date y Time de SQLMethods  
  Además de los métodos proporcionados por la estructura <xref:System.DateTimeOffset>, LINQ to SQL proporciona los métodos citados en la siguiente tabla desde la clase <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> para trabajar con fechas y horas.  
