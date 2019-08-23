@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Windows Forms]
 - methods [Windows Forms], custom controls
 ms.assetid: 35d14fca-4bb4-4a27-8211-1f7a98ea27de
-ms.openlocfilehash: 38dcad25af31b87afc1cc6ef4f89a1f7903bc0ed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 867bf97ea13654de6f9c0209c64b9320824f9665
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012768"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931753"
 ---
 # <a name="method-implementation-in-custom-controls"></a>Implementación de métodos en controles personalizados
 Un método se implementa en un control de la misma manera que se implementa en cualquier otro componente.  
@@ -48,7 +48,7 @@ public int ConvertMatterToEnergy(int matter)
  Si quiere que los usuarios del control puedan suministrar diferentes combinaciones de parámetros a un método, proporcione varias sobrecargas del método usando tipos de datos explícitos. Evite crear parámetros declarados `As Object` que puedan contener algún tipo de datos, porque esto podría provocar errores que quizás no se capturen en las pruebas.  
   
 > [!NOTE]
->  El tipo de datos universal en Common Language Runtime es `Object` en lugar de `Variant`. `Variant` se ha quitado del lenguaje.  
+> El tipo de datos universal en Common Language Runtime es `Object` en lugar de `Variant`. `Variant` se ha quitado del lenguaje.  
   
  Por ejemplo, el método `Spin` de un control `Widget` hipotético podría permitir especificar directamente la dirección y la velocidad de giro, o especificar otro objeto `Widget` desde el cual se absorba el momento angular:  
   

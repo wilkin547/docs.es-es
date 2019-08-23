@@ -8,15 +8,15 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 889ec7f93d0503edac51652dda217c6a9f654f9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 248f3cf31f686de3af2ea06012aa4a6d4f3f29fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621435"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942920"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Literal de CDATA XML (Visual Basic)
-Un literal que representa un <xref:System.Xml.Linq.XCData> objeto.  
+Literal que representa un <xref:System.Xml.Linq.XCData> objeto.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,33 +26,33 @@ Un literal que representa un <xref:System.Xml.Linq.XCData> objeto.
   
 ## <a name="parts"></a>Elementos  
  `<![CDATA[`  
- Obligatorio. Denota el inicio de la sección XML CDATA.  
+ Necesario. Denota el inicio de la sección XML CDATA.  
   
  `content`  
- Obligatorio. Contenido de texto que aparezca en la sección XML CDATA.  
+ Necesario. Contenido de texto para que aparezca en la sección XML CDATA.  
   
  `]]>`  
- Obligatorio. Denota el final de la sección.  
+ Necesario. Denota el final de la sección.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto <xref:System.Xml.Linq.XCData>.  
   
 ## <a name="remarks"></a>Comentarios  
- Secciones de CDATA XML contienen texto sin formato que debe incluir, pero no puede analizar, con el XML que lo contiene. Una sección CDATA XML puede contener cualquier texto. Esto incluye los caracteres XML reservados. La sección CDATA XML finaliza con la secuencia "]] >". Esto implica los siguientes puntos:  
+ Las secciones CDATA XML contienen texto sin formato que se debe incluir, pero no analizar, con el XML que lo contiene. Una sección CDATA XML puede contener cualquier texto. Esto incluye los caracteres XML reservados. La sección CDATA XML finaliza con la secuencia "]] >". Esto implica los puntos siguientes:  
   
-- No se puede usar una expresión incrustada en un literal de CDATA XML porque los delimitadores de expresión incrustada son contenido de CDATA XML válido.  
+- No se puede usar una expresión insertada en un literal CDATA XML porque los delimitadores de expresión incrustados son contenido XML CDATA válido.  
   
-- No se puede anidar las secciones de CDATA XML porque `content` no puede contener el valor "]] >".  
+- Las secciones CDATA XML no se pueden anidar `content` porque no pueden contener el valor "]] >".  
   
- Puede asignar un literal de CDATA XML a una variable o incluirlo en un literal de elemento XML.  
+ Puede asignar un literal CDATA XML a una variable o incluirlo en un literal de elemento XML.  
   
 > [!NOTE]
->  Un literal XML puede abarcar varias líneas, pero no usa caracteres de continuación de línea. Esto permite copiar el contenido de un documento XML y péguelo directamente en un programa de Visual Basic.  
+> Un literal XML puede abarcar varias líneas, pero no utiliza caracteres de continuación de línea. Esto le permite copiar contenido de un documento XML y pegarlo directamente en un programa de Visual Basic.  
   
- El compilador de Visual Basic convierte el literal de CDATA XML a una llamada a la <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
+ El compilador Visual Basic convierte el literal CDATA XML en una llamada al <xref:System.Xml.Linq.XCData.%23ctor%2A> constructor.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea una sección CDATA que contiene el texto "puede contener literal \<XML > etiquetas".  
+ En el ejemplo siguiente se crea una sección CDATA que contiene el texto "puede \<contener etiquetas de > XML literal".  
   
  [!code-vb[VbXMLSamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#23)]  
   

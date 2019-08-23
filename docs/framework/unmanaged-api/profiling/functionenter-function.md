@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9279e50630ea074b70955ca8ed218cd39a613b58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 354736890a4b042a8da5e747a0ab6ea3777e398e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781288"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952902"
 ---
 # <a name="functionenter-function"></a>FunctionEnter (Función)
-Notifica al generador de perfiles que se pasa a una función de control.  
+Notifica al generador de perfiles que el control se pasa a una función.  
   
 > [!NOTE]
->  El `FunctionEnter` función está en desuso en la versión 2.0 de .NET Framework, y su uso se incurrirá en una penalización de rendimiento. Use la [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) funcione en su lugar.  
+> La `FunctionEnter` función está en desuso en la .NET Framework versión 2,0, y su uso implicará una penalización del rendimiento. En su lugar, use la función [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,29 +39,29 @@ void __stdcall FunctionEnter (
   
 ## <a name="parameters"></a>Parámetros  
  `funcID`  
- [in] El identificador de la función a la que se pasa el control.  
+ de Identificador de la función a la que se pasa el control.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FunctionEnter` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.  
+ La `FunctionEnter` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec`atributo`naked`de clase de almacenamiento ().  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
-- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- En la entrada, debe guardar todos los registros que use, incluidos los de la unidad de punto flotante (FPU).  
   
-- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- Al salir, debe restaurar la pila desactivando todos los parámetros insertados por el autor de la llamada.  
   
- La implementación de `FunctionEnter` no debe bloquearse porque retrasará la recolección de elementos. La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionEnter` devuelve.  
+ La implementación de `FunctionEnter` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el `FunctionEnter` tiempo de ejecución se bloqueará hasta que se devuelva.  
   
- Además, el `FunctionEnter` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ Además, la `FunctionEnter` función no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado**: CorProf.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
- **Versiones de .NET framework:** 1.1, 1.0  
+ **.NET Framework versiones:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Vea también
 

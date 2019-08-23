@@ -10,15 +10,15 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 8008feb91a72353a74a647cf79bcecbf7023f962
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: bf4617d838ba7f02523d7bbdbb57932c033f4a9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410558"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958675"
 ---
 # <a name="dialog-boxes-overview"></a>Información general sobre cuadros de diálogo
-Las aplicaciones independientes tienen normalmente una ventana principal que muestra los datos principales en el que la aplicación funciona y expone la funcionalidad para procesar los datos a través de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mecanismos, como las barras de menús, barras de herramientas y barras de estado. Una aplicación no trivial también puede mostrar ventanas adicionales para realizar lo siguiente:  
+Las aplicaciones independientes suelen tener una ventana principal que muestra los datos principales a través de los cuales funciona la aplicación y expone la funcionalidad para procesar los [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] datos a través de mecanismos como barras de menús, barras de herramientas y barras de estado. Una aplicación no trivial también puede mostrar ventanas adicionales para realizar lo siguiente:  
   
 - Mostrar información específica a los usuarios.  
   
@@ -26,26 +26,26 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
   
 - Mostrar y recopilar información.  
   
- Estos tipos de ventanas se conocen como *cuadros de diálogo*, y hay dos tipos: modales y no modales.  
+ Estos tipos de ventanas se conocen como *cuadros de diálogo*y hay dos tipos: modales y no modales.  
   
- Un *modal* cuadro de diálogo se muestra una función cuando la función necesita datos adicionales de un usuario para continuar. Como la función depende del cuadro de diálogo modal para recopilar datos, el cuadro de diálogo modal también impide que un usuario active otras ventanas de la aplicación mientras permanece abierto. En la mayoría de los casos, un cuadro de diálogo modal permite que un usuario indique cuando ha terminado con el cuadro de diálogo modal presionando un **Aceptar** o **cancelar** botón. Al presionar el **Aceptar** botón indica que el usuario ha especificado los datos y quiere que la función continúe procesando esos datos. Al presionar el **cancelar** botón indica que un usuario desea detener la ejecución de la función. Los ejemplos más comunes de cuadros de diálogo modales se muestran para abrir, guardar e imprimir datos.  
+ Una función muestra un cuadro de diálogo *modal* cuando la función necesita datos adicionales de un usuario para continuar. Como la función depende del cuadro de diálogo modal para recopilar datos, el cuadro de diálogo modal también impide que un usuario active otras ventanas de la aplicación mientras permanece abierto. En la mayoría de los casos, un cuadro de diálogo modal permite a un usuario señalar cuando ha terminado con el cuadro de diálogo modal presionando un botón **Aceptar** o **Cancelar** . Al presionar el botón **Aceptar** se indica que un usuario ha escrito datos y desea que la función siga el procesamiento con esos datos. Al presionar el botón **Cancelar** , se indica que un usuario desea detener la ejecución de la función por completo. Los ejemplos más comunes de cuadros de diálogo modales se muestran para abrir, guardar e imprimir datos.  
   
- Un *no modal* cuadro de diálogo, por otro lado, no impide que un usuario active otras ventanas mientras está abierto. Por ejemplo, si un usuario quiere buscar las repeticiones de una palabra determinada en un documento, a menudo una ventana principal abrirá un cuadro de diálogo para solicitar al usuario la palabra que está buscando. En cambio, como buscar una palabra no impide que un usuario edite el documento, el cuadro de diálogo no necesita ser modal. Un cuadro de diálogo no modal proporciona al menos un **cerrar** botón para cerrar el cuadro de diálogo y puede proporcionar botones adicionales para ejecutar funciones específicas, como un **Buscar siguiente** botón para buscar la siguiente palabra que coincide con los criterios de búsqueda de una búsqueda de palabras.  
+ Por otro lado, un cuadro de diálogo no *modal* no impide que un usuario Active otras ventanas mientras está abierto. Por ejemplo, si un usuario quiere buscar las repeticiones de una palabra determinada en un documento, a menudo una ventana principal abrirá un cuadro de diálogo para solicitar al usuario la palabra que está buscando. En cambio, como buscar una palabra no impide que un usuario edite el documento, el cuadro de diálogo no necesita ser modal. Un cuadro de diálogo no modal proporciona al menos un botón **cerrar** para cerrar el cuadro de diálogo y puede proporcionar botones adicionales para ejecutar funciones específicas, como un botón **Buscar siguiente** para buscar la palabra siguiente que coincida con los criterios de búsqueda de una búsqueda de palabras.  
   
- Windows Presentation Foundation (WPF) le permite crear varios tipos de cuadros de diálogo, incluidos los cuadros de mensaje, cuadros de diálogo comunes y cuadros de diálogo personalizados. Este tema describe cada uno y el [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984) proporciona ejemplos relacionados.  
+ Windows Presentation Foundation (WPF) le permite crear varios tipos de cuadros de diálogo, incluidos cuadros de mensaje, cuadros de diálogo comunes y cuadros de diálogo personalizados. En este tema se describe cada uno de ellos y el [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984) proporciona ejemplos coincidentes.  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>Cuadros de mensaje  
- Un *cuadro de mensaje* es un cuadro de diálogo que puede usarse para mostrar información textual y permitir a los usuarios tomar decisiones con los botones. En la siguiente figura se muestra un cuadro de mensaje que muestra información de texto, realiza una pregunta y proporciona tres botones al usuario para responderla.  
+ Un *cuadro de mensaje* es un cuadro de diálogo que se puede usar para mostrar información textual y permitir a los usuarios tomar decisiones con los botones. En la siguiente figura se muestra un cuadro de mensaje que muestra información de texto, realiza una pregunta y proporciona tres botones al usuario para responderla.  
   
- ![Cierra un cuadro de diálogo procesador de textos que le pregunta si desea guardar los cambios en el documento antes de que la aplicación.](./media/dialog-boxes-overview/word-processor-dialog.png)  
+ ![Un cuadro de diálogo de procesador de textos que le pregunta si desea guardar los cambios en el documento antes de que se cierre la aplicación.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
- Para crear un cuadro de mensaje, utilice el <xref:System.Windows.MessageBox> clase. <xref:System.Windows.MessageBox> le permite configurar el texto del cuadro de mensaje, título, icono y botones, mediante código similar al siguiente.  
+ Para crear un cuadro de mensaje, use la <xref:System.Windows.MessageBox> clase. <xref:System.Windows.MessageBox>permite configurar el texto, el título, el icono y los botones del cuadro de mensaje mediante código como el siguiente.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- Para mostrar un cuadro de mensaje, llame a la `static` <xref:System.Windows.MessageBox.Show%2A> método, como se muestra en el código siguiente.  
+ Para mostrar un cuadro de mensaje, llame al `static` <xref:System.Windows.MessageBox.Show%2A> método, tal y como se muestra en el código siguiente.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -55,98 +55,98 @@ Las aplicaciones independientes tienen normalmente una ventana principal que mue
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- Para obtener más información sobre el uso de los cuadros de mensaje, consulte <xref:System.Windows.MessageBox>, [MessageBox Sample](https://go.microsoft.com/fwlink/?LinkID=160023), y [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984).  
+ Para obtener más información sobre el uso de cuadros <xref:System.Windows.MessageBox>de mensaje, vea, el [ejemplo MessageBox](https://go.microsoft.com/fwlink/?LinkID=160023)y el [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984).  
   
- Aunque <xref:System.Windows.MessageBox> pueden ofrecer una experiencia de usuario del cuadro de diálogo sencillo, la ventaja de usar <xref:System.Windows.MessageBox> es que es el único tipo de ventana que se puede mostrar las aplicaciones que se ejecutan en un recinto de seguridad de confianza parcial (vea [seguridad](../security-wpf.md)), como [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
+ Aunque <xref:System.Windows.MessageBox> puede ofrecer una experiencia de usuario de cuadro de diálogo simple, la <xref:System.Windows.MessageBox> ventaja de usar es que es el único tipo de ventana que pueden mostrar las aplicaciones que se ejecutan en un recinto de seguridad de confianza parcial (vea [seguridad](../security-wpf.md)), como [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
- La mayoría de los cuadros de diálogo muestran y recopilan datos más complejos que el resultado de un cuadro de mensaje, incluidos texto, selección (casillas), selección mutuamente exclusiva (botón de selección) y selección de listas (cuadros de lista, cuadros combinados, cuadros de lista desplegable). En estos casos, Windows Presentation Foundation (WPF) proporciona varios cuadros de diálogo comunes y le permite crear sus propios cuadros de diálogo, aunque el uso de uno de ellos está limitado a aplicaciones que se ejecutan con plena confianza.  
+ La mayoría de los cuadros de diálogo muestran y recopilan datos más complejos que el resultado de un cuadro de mensaje, incluidos texto, selección (casillas), selección mutuamente exclusiva (botón de selección) y selección de listas (cuadros de lista, cuadros combinados, cuadros de lista desplegable). Para ello, Windows Presentation Foundation (WPF) proporciona varios cuadros de diálogo comunes y permite crear sus propios cuadros de diálogo, aunque el uso de cualquiera de ellos se limita a las aplicaciones que se ejecutan con plena confianza.  
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>Cuadros de diálogo comunes  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] implementa una variedad de cuadros de diálogo reutilizables que son comunes a todas las aplicaciones, incluidos los cuadros de diálogo para abrir y guardar archivos, e imprimir. Como estos cuadros de diálogo se implementan mediante el sistema operativo, pueden compartirse entre todas las aplicaciones que se ejecutan en el sistema operativo, que ayuda a la coherencia de la experiencia de usuario; cuando los usuarios están familiarizados con el uso de un cuadro de diálogo proporcionado por el sistema operativo en una aplicación, no necesitan obtener información sobre cómo usar ese cuadro de diálogo en otras aplicaciones. Dado que estos cuadros de diálogo están disponibles para todas las aplicaciones y ya que ayudan a proporcionar una experiencia de usuario coherente, se conocen como *cuadros de diálogo comunes*.  
+ Windows implementa diversos cuadros de diálogo reutilizables que son comunes a todas las aplicaciones, incluidos los cuadros de diálogo para abrir archivos, guardar archivos e imprimir. Como estos cuadros de diálogo se implementan mediante el sistema operativo, pueden compartirse entre todas las aplicaciones que se ejecutan en el sistema operativo, que ayuda a la coherencia de la experiencia de usuario; cuando los usuarios están familiarizados con el uso de un cuadro de diálogo proporcionado por el sistema operativo en una aplicación, no necesitan obtener información sobre cómo usar ese cuadro de diálogo en otras aplicaciones. Dado que estos cuadros de diálogo están disponibles para todas las aplicaciones y porque ayudan a proporcionar una experiencia de usuario coherente, se conocen como *cuadros de diálogo comunes*.  
   
- Windows Presentation Foundation (WPF) encapsula el archivo abierto, guardar archivo y cuadros de diálogo comunes de impresión y los expone como clases administradas para su uso en las aplicaciones independientes. En este tema se proporciona una breve introducción de cada uno.  
+ Windows Presentation Foundation (WPF) encapsula los cuadros de diálogos Abrir archivo, guardar archivo e imprimir comunes y los expone como clases administradas para su uso en aplicaciones independientes. En este tema se proporciona una breve introducción de cada uno.  
   
 <a name="Open_File_Dialog"></a>   
-### <a name="open-file-dialog"></a>Abrir el cuadro de diálogo de archivo  
+### <a name="open-file-dialog"></a>Cuadro de diálogo Abrir archivo  
  El cuadro de diálogo Abrir archivo, que se muestra en la siguiente figura, se usa por la función de apertura de archivos para recuperar el nombre de un archivo que se va a abrir.  
   
- ![Un cuadro de diálogo Abrir que muestra la ubicación para recuperar el archivo.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
+ ![Cuadro de diálogo abierto que muestra la ubicación en la que se va a recuperar el archivo.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
- El cuadro de diálogo Abrir archivo común se implementa como la <xref:Microsoft.Win32.OpenFileDialog> clase y se encuentra en la <xref:Microsoft.Win32> espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno, y cómo procesar el resultado.  
+ El cuadro de diálogo común abrir archivo se implementa como <xref:Microsoft.Win32.OpenFileDialog> la clase y se encuentra en <xref:Microsoft.Win32> el espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno, y cómo procesar el resultado.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#openfiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#OpenFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#openfiledialogboxcodebehind)]  
   
- Para obtener más información sobre el cuadro de diálogo Abrir archivo, consulte <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>.  
+ Para obtener más información sobre el cuadro de diálogo Abrir archivo <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>, vea.  
   
 > [!NOTE]
->  <xref:Microsoft.Win32.OpenFileDialog> puede utilizarse para recuperar los nombres de archivo de manera segura por aplicaciones que se ejecutan con confianza parcial (vea [seguridad](../security-wpf.md)).  
+> <xref:Microsoft.Win32.OpenFileDialog>se puede usar para recuperar de forma segura los nombres de archivo de las aplicaciones que se ejecutan con confianza parcial (vea [seguridad](../security-wpf.md)).  
   
 <a name="Save_File_Dialog"></a>   
 ### <a name="save-file-dialog-box"></a>Guardar archivo (cuadro de diálogo)  
  El cuadro de diálogo Guardar archivo, que se muestra en la siguiente figura, se usa por la función de guardado de archivos para recuperar el nombre de un archivo que se va a guardar.  
   
- ![Guardar como cuadro de diálogo que muestra la ubicación para guardar el archivo.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
+ ![Cuadro de diálogo Guardar como que muestra la ubicación donde se va a guardar el archivo.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
- Guardar el cuadro de diálogo de archivo común se implementa como la <xref:Microsoft.Win32.SaveFileDialog> clase y se encuentra en la <xref:Microsoft.Win32> espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno, y cómo procesar el resultado.  
+ El cuadro de diálogo Guardar archivo común se implementa como <xref:Microsoft.Win32.SaveFileDialog> la clase y se encuentra en el <xref:Microsoft.Win32> espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno, y cómo procesar el resultado.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#savefiledialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#SaveFileDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#savefiledialogboxcodebehind)]  
   
- Para obtener más información sobre la operación de guardar archivo de cuadro de diálogo, consulte <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>.  
+ Para obtener más información sobre el cuadro de diálogo Guardar archivo <xref:Microsoft.Win32.SaveFileDialog?displayProperty=nameWithType>, vea.  
   
 <a name="Print_Dialog"></a>   
 ### <a name="print-dialog-box"></a>Cuadro de diálogo Imprimir
 
 El cuadro de diálogo Imprimir, que se muestra en la siguiente figura, se usa por la función de impresión para elegir y configurar la impresora con la que el usuario quiere imprimir los datos.  
   
-![Captura de pantalla que muestra un cuadro de diálogo Imprimir.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
+![Captura de pantalla que muestra un cuadro de diálogo de impresión.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
-El cuadro de diálogo Imprimir común se implementa como la <xref:System.Windows.Controls.PrintDialog> clase y se encuentra en la <xref:System.Windows.Controls> espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno.  
+El cuadro de diálogo de impresión común se implementa <xref:System.Windows.Controls.PrintDialog> como la clase y se encuentra en <xref:System.Windows.Controls> el espacio de nombres. En el siguiente código se muestra cómo crear, configurar y mostrar uno.  
   
  [!code-csharp[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#printdialogboxcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#PrintDialogBoxCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#printdialogboxcodebehind)]  
   
- Para obtener más información sobre el cuadro de diálogo de impresión, consulte <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>. Para obtener información detallada de la impresión en WPF, vea [información general sobre impresión](../advanced/printing-overview.md).  
+ Para obtener más información sobre el cuadro de diálogo Imprimir <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>, vea. Para obtener información detallada sobre la impresión en WPF, vea [Introducción a la impresión](../advanced/printing-overview.md).  
   
 <a name="Custom_Dialog_Boxes"></a>   
 ## <a name="custom-dialog-boxes"></a>Cuadros de diálogo personalizados
 
-Aunque los cuadros de diálogo comunes son útiles, y deben usarse cuando sea posible, no admiten los requisitos de los cuadros de diálogo específicos de dominio. En estos casos, necesita crear sus propios cuadros de diálogo. Como veremos, un cuadro de diálogo es una ventana con comportamientos especiales. <xref:System.Windows.Window> implementa esos comportamientos y, por lo tanto, utilice <xref:System.Windows.Window> para crear cuadros de diálogo modales y no modales personalizados.  
+Aunque los cuadros de diálogo comunes son útiles, y deben usarse cuando sea posible, no admiten los requisitos de los cuadros de diálogo específicos de dominio. En estos casos, necesita crear sus propios cuadros de diálogo. Como veremos, un cuadro de diálogo es una ventana con comportamientos especiales. <xref:System.Windows.Window>implementa esos comportamientos y, por lo tanto, se usa <xref:System.Windows.Window> para crear cuadros de diálogo modales y no modales personalizados.  
   
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
-### <a name="creating-a-modal-custom-dialog-box"></a>Crear un cuadro de diálogo modal personalizado
+### <a name="creating-a-modal-custom-dialog-box"></a>Crear un cuadro de diálogo personalizado modal
 
-En este tema se muestra cómo usar <xref:System.Windows.Window> para crear una implementación de cuadro de diálogo modal típica, con el `Margins` cuadro de diálogo como ejemplo (consulte [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)). El `Margins` cuadro de diálogo se muestra en la ilustración siguiente.  
+En este tema se muestra cómo <xref:System.Windows.Window> usar para crear una implementación de cuadro de diálogo modal típica `Margins` , mediante el cuadro de diálogo como ejemplo (vea [ejemplo de cuadro de diálogo](https://go.microsoft.com/fwlink/?LinkID=159984)). El `Margins` cuadro de diálogo se muestra en la ilustración siguiente.  
   
  ![Un cuadro de diálogo márgenes con campos para definir el margen izquierdo, el margen superior, el margen derecho y el margen inferior.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
-#### <a name="configuring-a-modal-dialog-box"></a>Configuración de un cuadro de diálogo modal
+#### <a name="configuring-a-modal-dialog-box"></a>Configurar un cuadro de diálogo modal
 
 La interfaz de usuario de un cuadro de diálogo típico incluye lo siguiente:  
   
 - Los distintos controles que se necesitan para recopilar los datos deseados.  
   
-- Un **Aceptar** botón que los usuarios, haga clic en para cerrar el cuadro de diálogo, vuelva a la función y con el procesamiento.  
+- Un botón **Aceptar** en el que los usuarios hacen clic para cerrar el cuadro de diálogo, volver a la función y continuar el procesamiento.  
   
-- Un **cancelar** botón que los usuarios hacen clic para cerrar el cuadro de diálogo y detener la función del procesamiento.  
+- Botón **Cancelar** en el que los usuarios hacen clic para cerrar el cuadro de diálogo y detener el procesamiento de la función.  
   
-- Un **cerrar** botón en la barra de título.  
+- Botón **cerrar** en la barra de título.  
   
 - Un icono.  
   
-- **Minimizar**, **maximizar**, y **restaurar** botones.  
+- Botones para **minimizar**, **maximizar**y **restaurar** .  
   
-- Un **sistema** menú para minimizar, maximizar, restaurar y cerrar el cuadro de diálogo.  
+- Menú **del sistema** para minimizar, maximizar, restaurar y cerrar el cuadro de diálogo.  
   
-- Una posición anterior y en el centro de la ventana que abre el cuadro de diálogo.  
+- Posición por encima y en el centro de la ventana que ha abierto el cuadro de diálogo.  
   
-- La capacidad para cambiar de tamaño que sea posible para evitar que el cuadro de diálogo es demasiado pequeño y para proporcionar al usuario con un tamaño predeterminado útil. Esto requiere que establezca el valor predeterminado y un dimensiones mínimas.  
+- La capacidad de cambiar el tamaño, siempre que sea posible, para evitar que el cuadro de diálogo sea demasiado pequeño y para proporcionar al usuario un tamaño predeterminado útil. Esto requiere que establezca las dimensiones predeterminada y mínima.  
   
-- La tecla ESC como un método abreviado de teclado que provoca la **cancelar** botón presionar. Hacerlo estableciendo la <xref:System.Windows.Controls.Button.IsCancel%2A> propiedad de la **cancelar** botón `true`.  
+- Tecla ESC como método abreviado de teclado que hace que se presione el botón **Cancelar** . Para ello, establezca la <xref:System.Windows.Controls.Button.IsCancel%2A> propiedad del botón **Cancelar** en. `true`  
   
-- La tecla ENTRAR (o retorno) como un método abreviado de teclado que provoca la **Aceptar** botón presionar. Para ello, establezca el <xref:System.Windows.Controls.Button.IsDefault%2A> propiedad de la **Aceptar** botón `true`.  
+- Tecla entrar (o Return) como método abreviado de teclado que hace que se presione el botón **Aceptar** . Para ello, establezca la <xref:System.Windows.Controls.Button.IsDefault%2A> propiedad del botón `true`aceptar.  
   
 El siguiente código muestra esta configuración.  
   
@@ -168,14 +168,14 @@ Un cuadro de diálogo se muestra normalmente como el resultado de un usuario que
 [!code-csharp[Opening a modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-11,78-88,193-195)]
 [!code-vb[Opening a modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58-67,130-132)]  
 
-En este caso, el código pasa información predeterminada (los márgenes actuales) al cuadro de diálogo. También establece la <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> propiedad con una referencia a la ventana que muestra el cuadro de diálogo. En general, siempre se debe establecer el propietario de un cuadro de diálogo para proporcionar comportamientos relacionados con el estado de ventana que son comunes a todos los cuadros de diálogo (vea [WPF Windows Overview](wpf-windows-overview.md) para obtener más información).
+Aquí, el código pasa la información predeterminada (los márgenes actuales) al cuadro de diálogo. También establece la <xref:System.Windows.Window.Owner%2A?displayProperty=nameWithType> propiedad con una referencia a la ventana que muestra el cuadro de diálogo. En general, siempre debe establecer el propietario de un cuadro de diálogo para proporcionar comportamientos relacionados con el estado de la ventana que son comunes a todos los cuadros de diálogo (vea [información general sobre ventanas de WPF](wpf-windows-overview.md) para obtener más información).
 
 > [!NOTE]
-> Debe proporcionar un propietario para admitir la automatización de interfaz de usuario para los cuadros de diálogo (vea [UI Automation Overview](../../ui-automation/ui-automation-overview.md)).
+> Debe proporcionar un propietario para admitir la automatización de la interfaz de usuario (UI) para los cuadros de diálogo (consulte [información general sobre UI Automation](../../ui-automation/ui-automation-overview.md)).
 
-Después de configura el cuadro de diálogo, se muestra modalmente llamando el <xref:System.Windows.Window.ShowDialog%2A> método.  
+Una vez configurado el cuadro de diálogo, se muestra de forma modal llamando al <xref:System.Windows.Window.ShowDialog%2A> método.  
   
-#### <a name="validating-user-provided-data"></a>Validar los datos proporcionados por el usuario
+#### <a name="validating-user-provided-data"></a>Validar datos proporcionados por el usuario
 
 Cuando un cuadro de diálogo se abre y el usuario proporciona los datos necesarios, un cuadro de diálogo es responsable de garantizar que los datos proporcionados sean válidos por los motivos siguientes:  
   
@@ -187,65 +187,65 @@ Cuando un cuadro de diálogo se abre y el usuario proporciona los datos necesari
   
 - Desde una perspectiva de rendimiento, la validación de datos en una aplicación de varios niveles puede reducir el número de recorridos de ida y vuelta entre los niveles de aplicación y cliente, especialmente cuando la aplicación está formada por servicios Web o bases de datos basadas en servidor.  
 
-Para validar un control enlazado en WPF, debe definir una regla de validación y asociarla con el enlace. Una regla de validación es una clase personalizada que deriva de <xref:System.Windows.Controls.ValidationRule>. El ejemplo siguiente muestra una regla de validación, `MarginValidationRule`, que comprueba que un valor enlazado es un <xref:System.Double> y está dentro del intervalo especificado.  
+Para validar un control enlazado en WPF, debe definir una regla de validación y asociarla al enlace. Una regla de validación es una clase personalizada que deriva de <xref:System.Windows.Controls.ValidationRule>. En el ejemplo siguiente se muestra una regla `MarginValidationRule`de validación,, que comprueba que un valor <xref:System.Double> enlazado es un y está dentro de un intervalo especificado.  
 
 [!code-csharp[Margin validation rules](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginValidationRule.cs)]
 [!code-vb[Margin validation rules](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginValidationRule.vb)]  
 
-En este código, se implementa la lógica de validación de una regla de validación invalidando el <xref:System.Windows.Controls.ValidationRule.Validate%2A> método, que valida los datos y devuelve una adecuada <xref:System.Windows.Controls.ValidationResult>.  
+En este código, la lógica de validación de una regla de validación se implementa invalidando el <xref:System.Windows.Controls.ValidationRule.Validate%2A> método, que valida los datos y devuelve un adecuado. <xref:System.Windows.Controls.ValidationResult>  
 
 Para asociar la regla de validación con el control enlazado, use el siguiente marcado.  
   
 [!code-xaml[Associating a validation rule with a control](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml?range=1-16,57-68,111-112)]
 
-Una vez que está asociada la regla de validación, WPF lo aplicará automáticamente cuando se escriben datos en el control enlazado. Cuando un control contiene datos no válidos, WPF mostrará un borde rojo alrededor del control no válido, tal como se muestra en la ilustración siguiente.  
+Una vez asociada la regla de validación, WPF la aplicará automáticamente cuando se escriban datos en el control enlazado. Cuando un control contiene datos no válidos, WPF mostrará un borde rojo alrededor del control no válido, como se muestra en la ilustración siguiente.  
   
-![Un cuadro de diálogo márgenes con un borde rojo alrededor del valor del margen izquierdo no válido.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
+![Un cuadro de diálogo márgenes con un borde rojo alrededor del valor de margen izquierdo no válido.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
 
-WPF no restringe un usuario para el control no válido hasta que haya especificado datos válidos. Este es un buen comportamiento para un cuadro de diálogo; un usuario debe poder navegar libremente por los controles de un cuadro de diálogo sean los datos válidos o no. Sin embargo, esto significa que un usuario puede escribir datos no válidos y presionar el **Aceptar** botón. Por este motivo, el código también necesita validar todos los controles en un cuadro de diálogo cuadro cuando el **Aceptar** está presionado controlando el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+WPF no restringe a un usuario al control no válido hasta que haya escrito datos válidos. Este es un buen comportamiento para un cuadro de diálogo; un usuario debe poder navegar libremente por los controles de un cuadro de diálogo sean los datos válidos o no. Sin embargo, esto significa que un usuario puede escribir datos no válidos y presionar el botón **Aceptar** . Por esta razón, el código también debe validar todos los controles de un cuadro de diálogo cuando se presiona el botón **Aceptar** controlando <xref:System.Windows.Controls.Primitives.ButtonBase.Click> el evento.  
   
 [!code-csharp[Validating all controls in a dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,26-29,33-68)]
 [!code-vb[Validating all controls in a dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27-29,33-62)]  
 
-Este código enumera todos los objetos de dependencia en una ventana y, si alguno no es válido (tal como lo devuelve <xref:System.Windows.Controls.Validation.GetHasError%2A>, el control no válido obtiene el foco, el `IsValid` devuelve del método `false`, y la ventana se considera no válida.  
+Este código enumera todos los objetos de dependencia de una ventana y, si alguno no es válido (tal <xref:System.Windows.Controls.Validation.GetHasError%2A>como lo devuelve, el control no válido obtiene `IsValid` el foco `false`, el método devuelve y la ventana se considera no válida.  
   
 Una vez que un cuadro de diálogo es válido, puede cerrarse y devolverse de manera segura. Como parte del proceso de retorno, necesita devolver un resultado a la función de llamada.  
   
 #### <a name="setting-the-modal-dialog-result"></a>Establecer el resultado del cuadro de diálogo modal
 
-Abrir un cuadro de diálogo mediante <xref:System.Windows.Window.ShowDialog%2A> es prácticamente como llamar a un método: el código que abre el cuadro de diálogo mediante <xref:System.Windows.Window.ShowDialog%2A> espera hasta que <xref:System.Windows.Window.ShowDialog%2A> devuelve. Cuando <xref:System.Windows.Window.ShowDialog%2A> devuelve, el código que realizó la llamada necesita decidir si continuar el procesamiento o detener el procesamiento, en función de si el usuario presionó el **Aceptar** botón o la **cancelar** botón. Para facilitar esta decisión, el cuadro de diálogo necesita devolver la elección del usuario como un <xref:System.Boolean> valor devuelto desde el <xref:System.Windows.Window.ShowDialog%2A> método.  
+Abrir un cuadro de diálogo <xref:System.Windows.Window.ShowDialog%2A> mediante es fundamentalmente como llamar a un método: el código que abrió el cuadro de <xref:System.Windows.Window.ShowDialog%2A> diálogo usando espera <xref:System.Windows.Window.ShowDialog%2A> hasta que devuelve. Cuando <xref:System.Windows.Window.ShowDialog%2A> devuelve, el código que lo llamó debe decidir si continuar el procesamiento o detener el procesamiento, en función de si el usuario presionó el botón **Aceptar** o el botón **Cancelar** . Para facilitar esta decisión, el cuadro de diálogo debe devolver la elección del usuario como un <xref:System.Boolean> valor que se devuelve desde el <xref:System.Windows.Window.ShowDialog%2A> método.  
 
-Cuando el **Aceptar** se hace clic en el botón, <xref:System.Windows.Window.ShowDialog%2A> debe devolver `true`. Esto se consigue estableciendo la <xref:System.Windows.Window.DialogResult%2A> cuadro de propiedad del cuadro de diálogo cuando el **Aceptar** se hace clic en el botón.  
+Cuando se hace clic en el botón Aceptar <xref:System.Windows.Window.ShowDialog%2A> , debe `true`devolver. Esto se consigue estableciendo la <xref:System.Windows.Window.DialogResult%2A> propiedad del cuadro de diálogo cuando se hace clic en el botón **Aceptar** .  
 
 [!code-csharp[Responding to the OK button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,25-27,32-33,67-68)]
 [!code-vb[Responding to the OK button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,27,31-33,61-62)]  
 
-Tenga en cuenta esa configuración la <xref:System.Windows.Window.DialogResult%2A> propiedad también hace que la ventana se cierre automáticamente, lo que alivia la necesidad de llamar explícitamente a <xref:System.Windows.Window.Close%2A>.  
+Tenga en cuenta que <xref:System.Windows.Window.DialogResult%2A> el establecimiento de la propiedad también hace que la ventana se cierre automáticamente, lo que evita <xref:System.Windows.Window.Close%2A>la necesidad de llamar explícitamente a.  
   
-Cuando el **cancelar** se hace clic en el botón, <xref:System.Windows.Window.ShowDialog%2A> debe devolver `false`, que también requiere la configuración de la <xref:System.Windows.Window.DialogResult%2A> propiedad.  
+Cuando se hace clic en el botón Cancelar <xref:System.Windows.Window.ShowDialog%2A> , debe `false`devolver, que también requiere el <xref:System.Windows.Window.DialogResult%2A> establecimiento de la propiedad.  
   
 [!code-csharp[Responding to the Cancel button](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs?range=1-8,19-24,67-68)]
 [!code-vb[Responding to the Cancel button](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb?range=1-8,22-25,61-62)]  
 
-Cuando un botón <xref:System.Windows.Controls.Button.IsCancel%2A> propiedad está establecida en `true` y el usuario presiona el **cancelar** botón o la tecla ESC, <xref:System.Windows.Window.DialogResult%2A> se establece automáticamente en `false`. El siguiente marcado tiene el mismo efecto que el código anterior, sin necesidad de controlar la <xref:System.Windows.Controls.Primitives.ButtonBase.Click> eventos.  
+Cuando la propiedad de <xref:System.Windows.Controls.Button.IsCancel%2A> un botón se establece `true` en y el usuario presiona el botón **Cancelar** o la tecla ESC, <xref:System.Windows.Window.DialogResult%2A> se establece automáticamente en `false`. El marcado siguiente tiene el mismo efecto que el código anterior, sin necesidad de controlar el <xref:System.Windows.Controls.Primitives.ButtonBase.Click> evento.  
   
 [!code-xaml[Markup instead of handling the Click event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml#L109-L109)]  
 
-Un cuadro de diálogo devuelve automáticamente `false` cuando un usuario presiona el **cerrar** situado en la barra de título o elige la **cerrar** elemento de menú de la **sistema** menú.  
+Un cuadro de diálogo vuelve `false` automáticamente cuando un usuario presiona el botón **cerrar** en la barra de título o elige el elemento de menú **cerrar** en el menú **sistema** .  
 
-#### <a name="processing-data-returned-from-a-modal-dialog-box"></a>Procesar los datos devueltos desde un cuadro de diálogo modal  
+#### <a name="processing-data-returned-from-a-modal-dialog-box"></a>Procesar los datos devueltos de un cuadro de diálogo modal  
 
-Cuando <xref:System.Windows.Window.DialogResult%2A> se establece mediante un cuadro de diálogo, la función que se ha abierto puede obtener el resultado del cuadro de diálogo inspeccionando la <xref:System.Windows.Window.DialogResult%2A> propiedad cuando <xref:System.Windows.Window.ShowDialog%2A> devuelve.  
+Cuando <xref:System.Windows.Window.DialogResult%2A> se establece en un cuadro de diálogo, la función que lo abrió puede obtener el resultado del cuadro de diálogo inspeccionando la <xref:System.Windows.Window.ShowDialog%2A> <xref:System.Windows.Window.DialogResult%2A> propiedad cuando devuelve.  
   
 [!code-csharp[Processing data returned from the modal dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,77-79,89-96,194-195)]
 [!code-vb[Processing data returned from the modal dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,58,69-73,131-132)]
 
-Si el resultado del cuadro de diálogo es `true`, la función que utiliza como una indicación para recuperar y procesar los datos proporcionados por el usuario.  
+Si el resultado del cuadro `true`de diálogo es, la función lo utiliza como una indicación para recuperar y procesar los datos proporcionados por el usuario.  
   
 > [!NOTE]
-> Después de <xref:System.Windows.Window.ShowDialog%2A> ha devuelto, no se puede abrir un cuadro de diálogo. En su lugar, necesita crear una instancia nueva.
+> Una <xref:System.Windows.Window.ShowDialog%2A> vez devuelta, no se puede volver a abrir un cuadro de diálogo. En su lugar, necesita crear una instancia nueva.
 
-Si el resultado del cuadro de diálogo es `false`, la función debe finalizar el procesamiento correctamente.  
+Si el resultado del cuadro `false`de diálogo es, la función debe finalizar el procesamiento correctamente.  
   
 <a name="Creating_a_Modeless_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Crear un cuadro de diálogo no modal personalizado
@@ -258,28 +258,28 @@ En cambio, el comportamiento es un poco diferente, como se describe en las secci
   
 #### <a name="opening-a-modeless-dialog-box"></a>Abrir un cuadro de diálogo no modal
 
-Se abre un cuadro de diálogo no modal mediante una llamada a la <xref:System.Windows.Window.Show%2A> método.  
+Se abre <xref:System.Windows.Window.Show%2A> un cuadro de diálogo no modal llamando al método.  
 
 [!code-xaml[XAML to define a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml#L21-L22)]  
  
 [!code-csharp[Opening a modeless dialog box](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MainWindow.xaml.cs?range=1-10,65-76,194-195)]
 [!code-vb[Openng a modeless dialog box](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MainWindow.xaml.vb?range=1-9,18-23,131,132)]  
 
-A diferencia de <xref:System.Windows.Window.ShowDialog%2A>, <xref:System.Windows.Window.Show%2A> devuelve inmediatamente. Por consiguiente, la ventana de llamada no puede indicar cuándo se cierra el cuadro de diálogo no modal y, por lo tanto, no sabe cuándo comprobar el resultado de un cuadro de diálogo u obtener los datos de este para un procesamiento posterior. En su lugar, el cuadro de diálogo necesita crear una manera alternativa de devolver los datos a la ventana de llamada para su procesamiento.  
+A diferencia <xref:System.Windows.Window.ShowDialog%2A>de <xref:System.Windows.Window.Show%2A> , devuelve inmediatamente. Por consiguiente, la ventana de llamada no puede indicar cuándo se cierra el cuadro de diálogo no modal y, por lo tanto, no sabe cuándo comprobar el resultado de un cuadro de diálogo u obtener los datos de este para un procesamiento posterior. En su lugar, el cuadro de diálogo necesita crear una manera alternativa de devolver los datos a la ventana de llamada para su procesamiento.  
   
-#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Procesar los datos devueltos desde un cuadro de diálogo no modal  
+#### <a name="processing-data-returned-from-a-modeless-dialog-box"></a>Procesar los datos devueltos de un cuadro de diálogo no modal  
 
-En este ejemplo, el `FindDialogBox` puede devolver uno o varios resultados de búsqueda a la ventana principal, según el texto que se está buscando sin ninguna frecuencia determinada. Al igual que un cuadro de diálogo modal, un cuadro de diálogo no modal puede devolver resultados mediante propiedades. En cambio, la ventana que tiene el cuadro de diálogo necesita saber cuándo comprobar esas propiedades. Una manera de habilitar esto es que el cuadro de diálogo implemente un evento que se genera cuando se detecta texto. `FindDialogBox` implementa el `TextFoundEvent` para este propósito, que necesita primero un delegado.  
+En este ejemplo, `FindDialogBox` puede devolver uno o más resultados de búsqueda a la ventana principal, dependiendo del texto que se busca sin ninguna frecuencia específica. Al igual que un cuadro de diálogo modal, un cuadro de diálogo no modal puede devolver resultados mediante propiedades. En cambio, la ventana que tiene el cuadro de diálogo necesita saber cuándo comprobar esas propiedades. Una manera de habilitar esto es que el cuadro de diálogo implemente un evento que se genera cuando se detecta texto. `FindDialogBox``TextFoundEvent` implementa para este propósito, que requiere primero un delegado.  
 
 [!code-csharp[The TextFoundEventHandler delegate](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/TextFoundEventHandler.cs)]
 [!code-vb[The TextFoundEventHandler delegate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/TextFoundEventHandler.vb)]  
 
-Mediante el `TextFoundEventHandler` delegar, `FindDialogBox` implementa el `TextFoundEvent`.
+Mediante el `TextFoundEventHandler` delegado, `FindDialogBox` implementa `TextFoundEvent`.
   
 [!code-csharp[The TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-17,125-126)]
 [!code-vb[The TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-15,102-103)]
 
-Por lo tanto, `Find` puede generar el evento cuando se encuentra un resultado de búsqueda.  
+Por consiguiente, `Find` puede generar el evento cuando se encuentra un resultado de búsqueda.  
   
 [!code-csharp[Raising the TextFound event](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,50-52,91-94,124-127)]
 [!code-vb[Raising the TextFound event](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,15,60-64,102-103)]  
@@ -291,15 +291,15 @@ Después, la ventana propietaria necesita registrar y controlar este evento.
 
 #### <a name="closing-a-modeless-dialog-box"></a>Cerrar un cuadro de diálogo no modal
 
-Dado que <xref:System.Windows.Window.DialogResult%2A> no necesita establecerse, un cuadro de diálogo no modal puede cerrarse con sistema proporcionan mecanismos, incluido lo siguiente:  
+Dado <xref:System.Windows.Window.DialogResult%2A> que no es necesario establecer, se puede cerrar un cuadro de diálogo no modal mediante mecanismos de entrega del sistema, incluidos los siguientes:  
   
-- Al hacer clic en el **cerrar** botón en la barra de título.  
+- Haga clic en el botón **cerrar** en la barra de título.  
   
 - Presionar ALT+F4.  
   
-- Elegir **cerrar** desde el **sistema** menú.  
+- Elegir **cerrar** en el menú **sistema** .  
   
-Como alternativa, puede llamar su código <xref:System.Windows.Window.Close%2A> cuando el **cerrar** se hace clic en el botón.  
+Como alternativa, el código puede llamar <xref:System.Windows.Window.Close%2A> al hacer clic en el botón **cerrar** .  
 
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  

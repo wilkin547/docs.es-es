@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DockPanel control [WPF], partitioning space
 - partitioning space [WPF]
 ms.assetid: a219b9e5-b205-4438-89b5-0a137ac463ab
-ms.openlocfilehash: ab51270644bf370944ebc933c765b40c528681c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d22a808ce3ab95e3b351408bf4cc372a335da553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052188"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960196"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Procedimiento Crear una partición del espacio mediante el elemento DockPanel
-En el ejemplo siguiente se crea una sencilla [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] framework usando un <xref:System.Windows.Controls.DockPanel> elemento. El <xref:System.Windows.Controls.DockPanel> divide el espacio disponible en sus elementos secundarios.  
+En el ejemplo siguiente se crea [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] un marco de <xref:System.Windows.Controls.DockPanel> trabajo simple mediante un elemento. El <xref:System.Windows.Controls.DockPanel> espacio disponible de las particiones en sus elementos secundarios.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se usa el <xref:System.Windows.Controls.DockPanel.Dock%2A> propiedad, que es una propiedad adjunta para acoplar dos idénticos <xref:System.Windows.Controls.Border> elementos en el <xref:System.Windows.Controls.Dock.Top> del espacio particionado. Una tercera <xref:System.Windows.Controls.Border> se acopla al elemento el <xref:System.Windows.Controls.Dock.Left>, con un ancho establecido en 200 píxeles. Un cuarto <xref:System.Windows.Controls.Border> está acoplado el <xref:System.Windows.Controls.Dock.Bottom> de la pantalla. La última <xref:System.Windows.Controls.Border> elemento rellena automáticamente el espacio restante.  
+ En este ejemplo se <xref:System.Windows.Controls.DockPanel.Dock%2A> usa la propiedad, que es una propiedad adjunta, para acoplar dos elementos <xref:System.Windows.Controls.Dock.Top> idénticos <xref:System.Windows.Controls.Border> en el espacio con particiones. Un tercer <xref:System.Windows.Controls.Border> elemento está acoplado <xref:System.Windows.Controls.Dock.Left>a, con su ancho establecido en 200 píxeles. Un cuarto <xref:System.Windows.Controls.Border> está acoplado <xref:System.Windows.Controls.Dock.Bottom> al de la pantalla. El último <xref:System.Windows.Controls.Border> elemento rellena automáticamente el espacio restante.  
   
  [!code-cpp[DockPanelOvwSample#1](~/samples/snippets/cpp/VS_Snippets_Wpf/DockPanelOvwSample/CPP/DockPanel_Ovw_Sample.cpp#1)]
  [!code-csharp[DockPanelOvwSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DockPanelOvwSample/CSharp/DockPanel_Ovw_Sample.cs#1)]
@@ -29,7 +29,7 @@ En el ejemplo siguiente se crea una sencilla [!INCLUDE[TLA#tla_ui](../../../../i
  [!code-xaml[DockPanelOvwSample#1](~/samples/snippets/xaml/VS_Snippets_Wpf/DockPanelOvwSample/XAML/default.xaml#1)]  
   
 > [!NOTE]
->  De forma predeterminada, el último elemento secundario de un <xref:System.Windows.Controls.DockPanel> elemento rellena el espacio sin asignar restante. Si no desea este comportamiento, establezca `LastChildFill="False"`.  
+> De forma predeterminada, el último elemento secundario <xref:System.Windows.Controls.DockPanel> de un elemento rellena el espacio restante sin asignar. Si no desea este comportamiento, establezca `LastChildFill="False"`.  
   
  La aplicación compilada genera una nueva interfaz de usuario que tiene esta apariencia.  
   

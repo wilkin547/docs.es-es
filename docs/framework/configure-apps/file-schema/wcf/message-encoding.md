@@ -2,15 +2,15 @@
 title: Codificación de mensajes
 ms.date: 03/30/2017
 ms.assetid: f30ee941-aca9-4c67-82a5-421568496f07
-ms.openlocfilehash: 7fb0d4a994eaf1497841691eb76261329a48599d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e5a71095ba62e0e2e6592c8b7b83b67602ef7e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931595"
 ---
 # <a name="message-encoding"></a>Codificación de mensajes
-Codificar es el proceso de transformar un conjunto de caracteres Unicode en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Texto, binario y mecanismo de optimización de transmisión de mensajes (MTOM).  
+Codificar es el proceso de transformar un conjunto de caracteres Unicode en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Mecanismo de optimización de transmisión de mensajes, binarios y de texto (MTOM).  
   
  La sección de configuración `binaryMessageEncoding` especifica la codificación de caracteres y control de versiones de mensaje usados para los mensajes XML basados en binario. El codificador del mensaje binario codifica los mensajes de Windows Communication Foundation (WCF) en binario en la conexión. Aunque esta codificación realiza transmisiones muy rápidas de mensajes, la interoperabilidad basada en estándares WS-* se pierde.  
   
@@ -22,8 +22,8 @@ Codificar es el proceso de transformar un conjunto de caracteres Unicode en una 
 
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Elección de un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [Elección de un codificador de mensajes](../../../wcf/feature-details/choosing-a-message-encoder.md)

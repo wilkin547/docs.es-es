@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c947dcd3fa3a71d5bbfdf742b106bf56d8444fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b1575d484c58afa3558d9f5b446473b4c89bc51
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596744"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947998"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Procedimiento para crear, inicializar y configurar modificadores de seguimiento
 Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la salida del seguimiento.  
@@ -65,7 +65,7 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
  Además de especificar el nombre de un modificador para configurarlo, también debe especificar un valor para el modificador. El valor es un entero. Para <xref:System.Diagnostics.BooleanSwitch>, un valor de 0 corresponde a **Desactivado**, y cualquier valor distinto de cero corresponde a **Activado**. Para <xref:System.Diagnostics.TraceSwitch>, 0, 1, 2, 3 y 4 corresponden a **Desactivado**, **Error**, **Advertencia**, **Información** y **Detallado**, respectivamente. Todos los números mayores de 4 se tratan como **Detallado**, y todos los números menores de cero se tratan como **Desactivado**.  
   
 > [!NOTE]
->  En la versión 2.0 de .NET Framework, puede utilizar texto para especificar el valor de un modificador. Por ejemplo, `true` para un <xref:System.Diagnostics.BooleanSwitch> o el texto que representa un valor de enumeración como `Error` para un <xref:System.Diagnostics.TraceSwitch>. La línea `<add name="myTraceSwitch" value="Error" />` es equivalente a `<add name="myTraceSwitch" value="1" />`.  
+> En la versión 2.0 de .NET Framework, puede utilizar texto para especificar el valor de un modificador. Por ejemplo, `true` para un <xref:System.Diagnostics.BooleanSwitch> o el texto que representa un valor de enumeración como `Error` para un <xref:System.Diagnostics.TraceSwitch>. La línea `<add name="myTraceSwitch" value="Error" />` es equivalente a `<add name="myTraceSwitch" value="1" />`.  
   
  Para que los usuarios finales puedan configurar los modificadores de seguimiento de una aplicación, debe proporcionar documentación detallada sobre los modificadores de la aplicación. Debe detallar qué modificadores controlan qué y cómo activarlos y desactivarlos. También debe proporcionar al usuario final un archivo .config con una ayuda apropiada en los comentarios.  
   
@@ -75,11 +75,11 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
   
 2. Si el proyecto no contiene un archivo de configuración (app.config o Web.config), en el menú **Proyecto** seleccione **Agregar nuevo elemento**.  
   
-    - **Visual Basic:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo de configuración de aplicación**.  
+    - **Visual Basic:** En el cuadro de diálogo **Agregar nuevo elemento** , elija **archivo de configuración**de la aplicación.  
   
          El archivo de configuración de la aplicación se creará y se abrirá. Se trata de un documento XML cuyo elemento raíz es `<configuration>.`  
   
-    - **Visual C#:** En el **Agregar nuevo elemento** diálogo cuadro, elija **archivo XML**. Asigne el nombre **app.config** a este archivo. En el editor XML, después de la declaración de XML, agregue el siguiente código XML:  
+    - **Objetos C#visuales:** En el cuadro de diálogo **Agregar nuevo elemento** , elija **archivo XML**. Asigne el nombre **app.config** a este archivo. En el editor XML, después de la declaración de XML, agregue el siguiente código XML:  
   
         ```xml  
         <configuration>  
@@ -128,6 +128,6 @@ Los modificadores de seguimiento permiten habilitar, deshabilitar y filtrar la s
 ## <a name="see-also"></a>Vea también
 
 - [Seguimiento e instrumentación de aplicaciones](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Cómo: Agregar instrucciones de seguimiento al código de aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Procedimientos: Agregar instrucciones de seguimiento al código de la aplicación](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Modificadores de seguimiento](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Esquema de la configuración de seguimiento y depuración](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -2,12 +2,12 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 819639eabf0332a34d6a7250159d24e42552f874
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 473d0fbd543a056ec2b152f43a76a0417a18016f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423099"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933201"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 Define un transporte que hace que un canal transfiera mensajes mediante las canalizaciones con nombre cuando está incluido en un enlace personalizado.  
@@ -46,26 +46,26 @@ Ninguno.
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|Obtiene o establece un <xref:System.TimeSpan> que determina el tiempo máximo que un canal puede estar en el estado de inicialización antes de que se desconecte.|  
+|ChannelInitializationTimeout|Obtiene o establece un <xref:System.TimeSpan> valor de que determina el tiempo máximo que un canal puede estar en el estado de inicialización antes de que se desconecte.|  
 |ConnectionBufferSize|Obtiene o establece el tamaño del búfer usado para transmitir un bloque del mensaje serializado en la conexión del cliente o servicio.|  
 |hostNameComparisonMode|Obtiene o establece un valor que indica si el nombre del host se usa para alcanzar el servicio al coincidir con el URI.|  
 |manualAddressing|Obtiene o establece un valor que indica si se requiere la dirección manual del mensaje.|  
 |maxBufferPoolSize|Obtiene o establece el tamaño máximo, en bytes, de cualquier grupo de búferes utilizado por el transporte.|  
 |maxBufferSize|Obtiene o establece el tamaño máximo del búfer que se va a usar. Para mensajes transmitidos por secuencias, este valor debería ser por lo menos el tamaño máximo posible de los encabezados de mensaje, que se leen en modo almacenado en búfer.|  
 |maxOutputDelay|Obtiene o establece el intervalo máximo de tiempo que un bloque de mensaje o un mensaje completo pueden estar almacenados en búfer en memoria antes de que se envíen.|  
-|maxPendingAccepts|Obtiene o establece el número máximo de canales de que un servicio puede tener en espera en un agente de escucha para procesar conexiones entrantes al servicio.|  
+|maxPendingAccepts|Obtiene o establece el número máximo de canales que un servicio puede tener en espera en un agente de escucha para procesar las conexiones entrantes al servicio.|  
 |maxPendingConnections|Obtiene o establece el número máximo de conexiones pendientes de distribución en el servicio.|  
-|maxReceivedMessageSize|Obtiene y establece el tamaño máximo permitido del mensaje, en bytes, que se pueden recibir.|  
+|maxReceivedMessageSize|Obtiene y establece el tamaño máximo permitido del mensaje, en bytes, que se puede recibir.|  
 |transferMode|Obtiene o establece un valor que indica si los mensajes están almacenados en búfer o se transmiten por secuencias mediante el transporte orientado a la conexión.|  
-|[\<connectionPoolSettings > de \<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Especifica valores adicionales del grupo de conexiones para un enlace de canalización con nombre.|  
+|[\<connectionPoolSettings > \<namedPipeTransport >](connectionpoolsettings.md)|Especifica valores adicionales del grupo de conexiones para un enlace de canalización con nombre.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](../../../misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
 Este transporte utiliza los URI del formulario "net.pipe://hostname/path." Otros componentes URI son opcionales.  
@@ -78,9 +78,9 @@ El elemento `namedPipeTransport` es el punto inicial para crear un enlace person
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Transportes](../../../wcf/feature-details/transports.md)
+- [Elección del transporte](../../../wcf/feature-details/choosing-a-transport.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

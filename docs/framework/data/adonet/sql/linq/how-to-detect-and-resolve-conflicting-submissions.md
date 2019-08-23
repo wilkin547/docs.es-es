@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
-ms.openlocfilehash: 606231449263f1c26596ca8606a88053c6aded8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff33196f83e2c0d8d759e4ffc3fb7442e8ba0e3b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877284"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940091"
 ---
 # <a name="how-to-detect-and-resolve-conflicting-submissions"></a>Procedimiento para detectar y resolver envíos con conflictos
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona muchos recursos para detectar y resolver los conflictos que ocasionan los cambios que realizan varios usuarios en la base de datos. Para obtener más información, vea [Cómo: Administrar conflictos de cambios](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proporciona muchos recursos para detectar y resolver los conflictos que ocasionan los cambios que realizan varios usuarios en la base de datos. Para obtener más información, vea [Cómo: Administrar conflictos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)de cambios.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se muestra un `try` / `catch` bloque que detecta un <xref:System.Data.Linq.ChangeConflictException> excepción. La información de entidad y miembro de cada conflicto se muestra en la ventana de la consola.  
+ En el ejemplo siguiente se `try` muestra un / `catch` bloque que detecta <xref:System.Data.Linq.ChangeConflictException> una excepción. La información de entidad y miembro de cada conflicto se muestra en la ventana de la consola.  
   
 > [!NOTE]
->  Debe incluir la directiva `using System.Reflection` (`Imports System.Reflection` en Visual Basic) para habilitar la recuperación de la información. Para obtener más información, consulta <xref:System.Reflection>.  
+> Debe incluir la directiva `using System.Reflection` (`Imports System.Reflection` en Visual Basic) para habilitar la recuperación de la información. Para obtener más información, consulta <xref:System.Reflection>.  
   
  [!code-csharp[DLinqSubmittingChanges#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#2)]
  [!code-vb[DLinqSubmittingChanges#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#2)]  

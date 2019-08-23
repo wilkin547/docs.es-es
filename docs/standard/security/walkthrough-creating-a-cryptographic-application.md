@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 124641ed32dc2ea953202dbc6a73ee066a6c4a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5cdd2f5538be0e39b5dd3a378825ccf81f314c03
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602519"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916279"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Tutorial: Crear una aplicación criptográfica
 En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de código están diseñados para una aplicación de Windows Forms. Esta aplicación no muestra escenarios del mundo real, como el uso de tarjetas inteligentes. En su lugar, muestra los aspectos básicos del cifrado y el descifrado.  
@@ -29,11 +29,11 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
 - Use el <xref:System.Security.Cryptography.RSACryptoServiceProvider>, un algoritmo asimétrico, para cifrar y descifrar la clave en los datos cifrados por <xref:System.Security.Cryptography.RijndaelManaged>. Los algoritmos asimétricos son útiles para pequeñas cantidades de datos, como las claves.  
   
     > [!NOTE]
-    >  Si desea proteger los datos en el equipo en lugar de intercambiar contenido cifrado con otras personas, considere la posibilidad de usar la clase <xref:System.Security.Cryptography.ProtectedData> o <xref:System.Security.Cryptography.ProtectedMemory>.  
+    > Si desea proteger los datos en el equipo en lugar de intercambiar contenido cifrado con otras personas, considere la posibilidad de usar la clase <xref:System.Security.Cryptography.ProtectedData> o <xref:System.Security.Cryptography.ProtectedMemory>.  
   
  En la tabla siguiente se resumen las tareas criptográficas de este tema.  
   
-|Tarea|Descripción|  
+|Tarea|DESCRIPCIÓN|  
 |----------|-----------------|  
 |Crear una aplicación de Windows Forms|Enumera los controles necesarios para ejecutar la aplicación.|  
 |Declarar objetos globales|Declara variables de ruta de acceso de cadena, los <xref:System.Security.Cryptography.CspParameters> y el <xref:System.Security.Cryptography.RSACryptoServiceProvider> para disponer del contexto global de la clase <xref:System.Windows.Forms.Form>.|  
@@ -53,7 +53,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
 ## <a name="creating-a-windows-forms-application"></a>Crear una aplicación de Windows Forms  
  La mayoría de los ejemplos de código de este tutorial están diseñados para actuar como controladores de eventos de los controles de botón. En la tabla siguiente se enumeran los controles necesarios para que la aplicación de ejemplo y los nombres necesarios coincidan con los ejemplos de código.  
   
-|Control|Name|Propiedad de texto (según sea necesario)|  
+|Control|NOMBRE|Propiedad de texto (según sea necesario)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|Cifrar archivo|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|Descifrar archivo|  
@@ -82,7 +82,7 @@ En este tutorial se muestra cómo cifrar y descifrar contenido. Los ejemplos de 
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>Cifrar un archivo  
- Esta tarea implica dos métodos: el método de controlador de eventos para el `Encrypt File` botón (`buttonEncryptFile_Click`) y el `EncryptFile` método. El primer método muestra un cuadro de diálogo para seleccionar un archivo y pasa el nombre del archivo al segundo método, que lleva a cabo el cifrado.  
+ Esta tarea implica dos métodos: el método de control de eventos `Encrypt File` para el`buttonEncryptFile_Click`botón () `EncryptFile` y el método. El primer método muestra un cuadro de diálogo para seleccionar un archivo y pasa el nombre del archivo al segundo método, que lleva a cabo el cifrado.  
   
  El contenido cifrado, la clave y el vector de inicialización (IV) se guardan en un <xref:System.IO.FileStream>, conocido como paquete de cifrado.  
   

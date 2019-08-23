@@ -2,12 +2,12 @@
 title: <add> de <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 53af01a519c244376b262db1f6515a438dcc554f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: c590dbd671807b32e08ad5d871d376a0dc51e611
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663370"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926876"
 ---
 # <a name="add-of-backuplist"></a>\<Agregar > de \<backupList >
 Representa un elemento de configuración que define un elemento de extremo de reserva.  
@@ -37,7 +37,7 @@ Representa un elemento de configuración que define un elemento de extremo de re
   
 |Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|name|Cadena que especifica el nombre del extremo de reserva.|  
+|Nombre|Cadena que especifica el nombre del extremo de reserva.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
@@ -46,7 +46,7 @@ Representa un elemento de configuración que define un elemento de extremo de re
   
 |Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<> de enrutamiento](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Contiene una lista de extremos que le gustaría que usara el servicio de enrutamiento en caso de que no se pudiera alcanzar el punto de conexión principal.|  
+|[\<> de enrutamiento](routing.md)|Contiene una lista de extremos que le gustaría que usara el servicio de enrutamiento en caso de que no se pudiera alcanzar el punto de conexión principal.|  
   
 ## <a name="see-also"></a>Vea también
 

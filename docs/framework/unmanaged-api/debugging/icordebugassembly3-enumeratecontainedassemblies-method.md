@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05c4e2a5c16f11f80cc8356a65b746eab81a3899
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9120119056fda3f16b4a0bf8bad839b74463d633
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959339"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>Método ICorDebugAssembly3::EnumerateContainedAssemblies
 Obtiene un enumerador para los ensamblados contenidos en este ensamblado.  
@@ -24,7 +24,7 @@ HRESULT EnumerateContainedAssemblies(
   
 ## <a name="parameters"></a>Parámetros  
  `ppAssemblies`  
- [out] Un puntero a la dirección de un objeto de interfaz ICorDebugAssemblyEnum que es el enumerador.  
+ enuncia Puntero a la dirección de un objeto de interfaz ICorDebugAssemblyEnum que es el enumerador.  
   
 ## <a name="return-value"></a>Valor devuelto  
  `S_OK` si el objeto `ICorDebugAssembly3` es un contenedor; de lo contrario, `S_FALSE` y la enumeración está vacía.  
@@ -33,14 +33,14 @@ HRESULT EnumerateContainedAssemblies(
  Se necesitan símbolos para enumerar los ensamblados contenidos. Si no existen, el método devuelve `S_FALSE` y no se proporciona un enumerador válido.  
   
 > [!NOTE]
->  Este método solo está disponible con .NET Native.  
+> Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

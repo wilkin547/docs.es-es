@@ -3,12 +3,12 @@ title: <factorySettings>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 202aad17-1b8b-4c87-ad57-4ca5de18ed35
-ms.openlocfilehash: 8ee874d4f92ee398dc9752d3c1d1f22610b17097
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fed7fe192e7bc5cb37347d2eae42f75bbf1b7dee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422912"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946321"
 ---
 # <a name="factorysettings"></a>\<factorySettings>
 Especifica los valores de la memoria caché del generador de canales.  
@@ -41,10 +41,10 @@ Especifica los valores de la memoria caché del generador de canales.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |idleTimeout|Un valor TimeSpan que especifica el intervalo máximo de tiempo durante el cual el objeto puede seguir inactivo en la memoria caché antes de eliminarse.|  
-|leaseTimeout|Un valor TimeSpan que especifica el intervalo de tiempo después del cual se quita un objeto de la memoria caché.|  
+|leaseTimeout|Valor TimeSpan que especifica el intervalo de tiempo después del cual un objeto se quita de la memoria caché.|  
 |maxItemsInCache|Un entero que especifica el número máximo de objetos que pueden almacenarse en la memoria caché.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -52,19 +52,19 @@ Especifica los valores de la memoria caché del generador de canales.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<sendMessageChannelCache>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/sendmessagechannelcache.md)|Un comportamiento de servicio que permite la personalización de la memoria caché compartida niveles, la configuración de la memoria caché de fábrica de canales y la configuración de la memoria caché de canales para los flujos de trabajo que envían mensajes a puntos de conexión de servicio mediante actividades de mensajería de envío.|  
+|[\<sendMessageChannelCache>](sendmessagechannelcache.md)|Un comportamiento del servicio que permite la personalización de los niveles de uso compartido de la memoria caché, la configuración de la memoria caché del generador de canales y la configuración de la memoria caché del canal para los flujos de trabajo que envían mensajes a los puntos de conexión de servicio mediante el envío de actividades de mensajería.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este comportamiento del servicio está orientado para los flujos de trabajo que envían mensajes a los extremos de servicio. Estos flujos de trabajo son normalmente flujos de trabajo del cliente pero podrían ser también servicios de flujo de trabajo que se hospedan en <xref:System.ServiceModel.WorkflowServiceHost>.  
   
  De manera predeterminada, en un flujo de trabajo hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché usada por las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> se comparte en todas las instancias de flujo de trabajo en <xref:System.ServiceModel.WorkflowServiceHost> (el almacenamiento en caché de nivel de host). Para un flujo de trabajo del cliente que no esté hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché está solo disponible para la instancia de flujo de trabajo (almacenamiento en caché en el nivel de instancia). El almacenamiento en la memoria caché está deshabilitado de forma predeterminada para cualquier actividad de envío del flujo de trabajo que tenga definidos extremos en su configuración.  
   
- Para obtener más información sobre cómo cambiar la caché predeterminada de uso compartido de los niveles y opciones de caché para el generador de canales y la memoria caché del canal, consulte [cambiar los niveles de uso compartido de caché para actividades Send](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
+ Para obtener más información sobre cómo cambiar los niveles de uso compartido de caché y la configuración de caché predeterminados para el generador de canales y la memoria caché del canal, consulte [cambiar los niveles de uso compartido de caché para las actividades de envío](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md).  
   
 ## <a name="example"></a>Ejemplo  
- En un servicio de flujo de trabajo hospedado, puede especificar la configuración de la memoria caché del generador y del canal en el archivo de configuración de la aplicación. Para ello, agregue un comportamiento de servicio que contenga los valores de memoria caché para el generador y memoria caché del canal, y agregue este comportamiento de servicio a su servicio. El ejemplo siguiente muestra el contenido de un archivo de configuración que contiene el `MyChannelCacheBehavior` comportamiento del servicio con la configuración de caché de memoria caché y canal de generador personalizado. Este comportamiento del servicio se agrega al servicio mediante el `behaviorConfiguration` atributo.  
+ En un servicio de flujo de trabajo hospedado, puede especificar la configuración de la memoria caché del generador y del canal en el archivo de configuración de la aplicación. Para ello, agregue un comportamiento de servicio que contenga los valores de memoria caché para el generador y memoria caché del canal, y agregue este comportamiento de servicio a su servicio. En el ejemplo siguiente se muestra el contenido de un archivo de configuración `MyChannelCacheBehavior` que contiene el comportamiento del servicio con la configuración personalizada de la memoria caché del generador y del canal. Este comportamiento del servicio se agrega al servicio a través `behaviorConfiguration` del atributo.  
   
 ```xml  
 <configuration>    
@@ -94,4 +94,4 @@ Especifica los valores de la memoria caché del generador de canales.
 - <xref:System.ServiceModel.Activities.Configuration.SendMessageChannelCacheElement>
 - <xref:System.ServiceModel.Activities.Send>
 - <xref:System.ServiceModel.Activities.ChannelCacheSettings>
-- [Cambio de los niveles de uso compartido de caché para actividades Send](../../../../../docs/framework/wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)
+- [Cambio de los niveles de uso compartido de caché para actividades Send](../../../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)

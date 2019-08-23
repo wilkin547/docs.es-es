@@ -2,12 +2,12 @@
 title: Roles de servidor y base de datos en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 97ad04b1d081e5635104bdadb2d1a54402ffcca2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645973"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961116"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Roles de servidor y base de datos en SQL Server
 Todas las versiones de SQL Server usan la seguridad basada en roles, que permite asignar permisos a un rol, o grupo de usuarios, en lugar de asignarlos a usuarios individuales. Los roles fijos de servidor y base de datos cuentan con un conjunto fijo de permisos asignados.  
@@ -16,18 +16,18 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
  Los roles fijos de servidor cuentan con un conjunto fijo de permisos y ámbito de servidor. Están pensadas para su uso en la administración de SQL Server y los permisos asignadas a ellas no se pueden modificar. Se pueden asignar inicios de sesión a los roles fijos de servidor sin necesidad de disponer de una cuenta de usuario en una base de datos.  
   
 > [!IMPORTANT]
->  El rol fijo de servidor `sysadmin` incluye a todos los demás roles y cuenta con un ámbito ilimitado. No agregue entidades de seguridad a este rol a menos que sean de total confianza. Los miembros del rol `sysadmin` disponen de permisos administrativos irrevocables en todas las bases de datos y recursos del servidor.  
+> El rol fijo de servidor `sysadmin` incluye a todos los demás roles y cuenta con un ámbito ilimitado. No agregue entidades de seguridad a este rol a menos que sean de total confianza. Los miembros del rol `sysadmin` disponen de permisos administrativos irrevocables en todas las bases de datos y recursos del servidor.  
   
- Sea selectivo a la hora de agregar usuarios a los roles fijos de servidor. Por ejemplo, el rol `bulkadmin` permite a los usuarios insertar el contenido de cualquier archivo local en una tabla, lo que puede poner en peligro la integridad de los datos. Para obtener una lista completa de los roles fijos de servidor y permisos, vea los libros en pantalla de SQL Server.  
+ Sea selectivo a la hora de agregar usuarios a los roles fijos de servidor. Por ejemplo, el rol `bulkadmin` permite a los usuarios insertar el contenido de cualquier archivo local en una tabla, lo que puede poner en peligro la integridad de los datos. Consulte Libros en pantalla de SQL Server para obtener la lista completa de los permisos y roles fijos de servidor.  
   
 ## <a name="fixed-database-roles"></a>Roles fijos de base de datos  
  Los roles fijos de base de datos incluyen un conjunto predefinido de permisos diseñados para permitir administrar grupos de permisos con facilidad. Los miembros del rol `db_owner` pueden realizar todas las actividades de configuración y mantenimiento de la base de datos.  
   
  Para obtener más información sobre los roles predefinidos en SQL Server, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Funciones de nivel de servidor](/sql/relational-databases/security/authentication-access/server-level-roles)|Describe funciones fijas de servidor y los permisos asociados con ellos en SQL Server.|  
+|[Roles de nivel de servidor](/sql/relational-databases/security/authentication-access/server-level-roles)|Describe los roles fijos de servidor y los permisos asociados a ellos en SQL Server.|  
 |[Roles de nivel de base de datos](/sql/relational-databases/security/authentication-access/database-level-roles)|Describe los roles fijos de base de datos y los permisos asociados a ellas.|  
   
 ## <a name="database-roles-and-users"></a>Roles y usuarios de base de datos  
@@ -42,7 +42,7 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
  `dbo`, o propietario de base de datos, es una cuenta de usuario con permisos implícitos para realizar todas las actividades en la base de datos. Los miembros del rol fijo del servidor `sysadmin` se asignan automáticamente a `dbo`.  
   
 > [!NOTE]
->  `dbo` También es el nombre de un esquema, como se describe en [propiedad y separación usuario-esquema en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+> `dbo`también es el nombre de un esquema, como se describe en [propiedad y separación de esquema de usuario en SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
   
  La cuenta de usuario `dbo` se confunde a menudo con el rol fijo de base de datos `db_owner`. El ámbito de `db_owner` es una base de datos y el ámbito de `sysadmin` es el servidor completo. La pertenencia al rol `db_owner` no proporciona privilegios de usuario `dbo`.  
   
@@ -52,14 +52,14 @@ Todas las versiones de SQL Server usan la seguridad basada en roles, que permite
  La cuenta `guest` es una cuenta integrada en todas las versiones de SQL Server. De forma predeterminada, está deshabilitada en las bases de datos nuevas. Si está habilitada, se puede deshabilitar mediante la revocación de su permiso CONNECT, que se lleva a cabo con la ejecución de la instrucción REVOKE CONNECT FROM GUEST de Transact-SQL.  
   
 > [!IMPORTANT]
->  Se debe evitar el uso de la cuenta `guest`, ya que todos los inicios de sesión que no dispongan de permisos de base de datos propios obtendrán los permisos de base de datos concedidos a esta cuenta. Si debe usar la cuenta `guest`, concédale los permisos mínimos.  
+> Se debe evitar el uso de la cuenta `guest`, ya que todos los inicios de sesión que no dispongan de permisos de base de datos propios obtendrán los permisos de base de datos concedidos a esta cuenta. Si debe usar la cuenta `guest`, concédale los permisos mínimos.  
   
  Para obtener más información sobre los inicios de sesión, los usuarios y los roles de SQL Server, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Introducción a los permisos del motor de base de datos](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene vínculos a temas que describen las entidades de seguridad, los roles, las credenciales, los elementos que pueden protegerse y los permisos.|  
-|[Entidades de seguridad](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
+|[Introducción con permisos de Motor de base de datos](/sql/relational-databases/security/authentication-access/getting-started-with-database-engine-permissions)|Contiene vínculos a temas que describen las entidades de seguridad, los roles, las credenciales, los elementos que pueden protegerse y los permisos.|  
+|[Entidades](/sql/relational-databases/security/authentication-access/principals-database-engine)|Describe las entidades de seguridad y contiene vínculos a temas que describen los roles de servidor y de base de datos.|  
   
 ## <a name="see-also"></a>Vea también
 

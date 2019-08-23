@@ -15,16 +15,16 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 818364ceddb03df51ed656c8ff7b69fd433ac86a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 181d01f6e688b94876f77155bf598aba129e9fbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750882"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949909"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Eventos del mouse (ratón) en formularios Windows Forms
 
-Cuando se controla la entrada de mouse, normalmente desea conocer la ubicación del puntero del mouse y el estado de los botones del mismo. En este tema se describe cómo obtener esta información de los eventos del mouse y explica el orden en que se generan los eventos de clic del mouse en los controles de Windows Forms. Para una lista y descripción de todos los eventos del mouse, consulte [cómo funciona de entrada de mouse (ratón) en Windows Forms](how-mouse-input-works-in-windows-forms.md).  Consulte también [información general sobre controladores de eventos (formularios Windows Forms)](event-handlers-overview-windows-forms.md) y [información general sobre eventos (formularios Windows Forms)](events-overview-windows-forms.md).
+Cuando se controla la entrada de mouse, normalmente desea conocer la ubicación del puntero del mouse y el estado de los botones del mismo. En este tema se describe cómo obtener esta información de los eventos del mouse y explica el orden en que se generan los eventos de clic del mouse en los controles de Windows Forms. Para obtener una lista y una descripción de todos los eventos del mouse, vea [Cómo funciona la entrada del mouse en Windows Forms](how-mouse-input-works-in-windows-forms.md).  Vea también [información general sobre los controladores de eventos (Windows Forms)](event-handlers-overview-windows-forms.md) y la [información general sobre eventos (Windows Forms)](events-overview-windows-forms.md).
 
 ## <a name="mouse-information"></a>Información del mouse
 
@@ -66,7 +66,7 @@ El siguiente es el orden de los eventos generados para un doble clic del botón 
 
 8. Evento<xref:System.Windows.Forms.Control.MouseUp> .
 
-Para obtener un ejemplo de código que muestra el orden del mouse, haga clic en eventos, vea [Cómo: Controles de eventos en Windows Forms de entrada de usuario de identificador](how-to-handle-user-input-events-in-windows-forms-controls.md).
+Para obtener un ejemplo de código que muestra el orden de los eventos de clic [del mouse, consulte Cómo: Controlar los eventos de entrada del usuario](how-to-handle-user-input-events-in-windows-forms-controls.md)en los controles de Windows Forms.
 
 ### <a name="individual-controls"></a>Controles individuales
 
@@ -79,11 +79,11 @@ Los controles siguientes no siguen el comportamiento estándar de los eventos de
 
   - Clic con el botón primario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Haga clic en botón secundario: No hay eventos Click
+  - Clic con el botón derecho: No se generaron eventos de clic
 
   - Doble clic con el botón primario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>; <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Haga doble clic derecho: No hay eventos Click
+  - Doble clic con el botón secundario: No se generaron eventos de clic
 
 - Controles <xref:System.Windows.Forms.TextBox>, <xref:System.Windows.Forms.RichTextBox>, <xref:System.Windows.Forms.ListBox>, <xref:System.Windows.Forms.MaskedTextBox> y <xref:System.Windows.Forms.CheckedListBox>
 
@@ -92,11 +92,11 @@ Los controles siguientes no siguen el comportamiento estándar de los eventos de
 
   - Clic con el botón primario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>
 
-  - Haga clic en botón secundario: No hay eventos Click
+  - Clic con el botón derecho: No se generaron eventos de clic
 
   - Doble clic con el botón primario: <xref:System.Windows.Forms.Control.Click>, <xref:System.Windows.Forms.Control.MouseClick>, <xref:System.Windows.Forms.Control.DoubleClick>, <xref:System.Windows.Forms.Control.MouseDoubleClick>
 
-  - Haga doble clic derecho: No hay eventos Click
+  - Doble clic con el botón secundario: No se generaron eventos de clic
 
 - Control <xref:System.Windows.Forms.ListView>
 
@@ -145,7 +145,7 @@ Los controles de alternancia, como los controles que derivan de la clase <xref:S
 8. Se genera el evento <xref:System.Windows.Forms.Control.MouseUp>.
 
     > [!NOTE]
-    >  Si el usuario mueve el puntero fuera del control de alternancia mientras el botón del mouse está presionado (sacar el mouse del control <xref:System.Windows.Forms.Button> mientras está presionado), el control de alternancia se dibujará en estado no presionado y solo se produce el evento <xref:System.Windows.Forms.Control.MouseUp>. En este caso no se producen los eventos <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick>.
+    > Si el usuario mueve el puntero fuera del control de alternancia mientras el botón del mouse está presionado (sacar el mouse del control <xref:System.Windows.Forms.Button> mientras está presionado), el control de alternancia se dibujará en estado no presionado y solo se produce el evento <xref:System.Windows.Forms.Control.MouseUp>. En este caso no se producen los eventos <xref:System.Windows.Forms.Control.Click> o <xref:System.Windows.Forms.Control.MouseClick>.
 
 ## <a name="see-also"></a>Vea también
 

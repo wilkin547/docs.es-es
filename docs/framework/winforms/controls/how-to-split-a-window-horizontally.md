@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: a43d632a82678f362a1cdf6b3ee4486a8db5adde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7ef3fe1210ae42c52a4fd7f23633d6566bc102a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012937"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956055"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>Procedimiento para dividir una ventana horizontalmente
-El ejemplo de código siguiente hace que el divisor que divide el <xref:System.Windows.Forms.SplitContainer> horizontal del control.  
+En el ejemplo de código siguiente se hace que el divisor que divide el <xref:System.Windows.Forms.SplitContainer> control horizontalmente.  
   
 > [!NOTE]
->  El <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad de la <xref:System.Windows.Forms.SplitContainer> control determina la dirección del divisor, no del propio control.  
+> La <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad<xref:System.Windows.Forms.SplitContainer> del control determina la dirección del divisor, no del propio control.  
   
 ### <a name="to-split-a-window-horizontally"></a>Para dividir una ventana horizontalmente  
   
-1. Dentro de un procedimiento, establecer el <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propiedad de la <xref:System.Windows.Forms.SplitContainer> control <xref:System.Windows.Forms.Orientation.Horizontal>.  
+1. Dentro de un procedimiento, establezca <xref:System.Windows.Forms.SplitContainer.Orientation%2A> la propiedad <xref:System.Windows.Forms.SplitContainer> del control en <xref:System.Windows.Forms.Orientation.Horizontal>.  
   
     ```vb  
     Sub ShowSplitContainer()  

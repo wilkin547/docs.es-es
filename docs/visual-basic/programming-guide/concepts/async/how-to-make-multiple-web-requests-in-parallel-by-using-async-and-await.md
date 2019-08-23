@@ -1,16 +1,16 @@
 ---
-title: Procedimiento Hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)
+title: Procedimiento Hacer varias solicitudes web en paralelo mediante Async y Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
-ms.openlocfilehash: e306722fca4e0215cf7b67d85763858d459a171a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 70eab3fb8014e26435b73e217889ba3e6c58ca92
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642438"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958048"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedimiento Hacer varias solicitudes Web en paralelo utilizando Async y Await (Visual Basic)
-En un método asincrónico, las tareas se inician en el momento de crearse. El [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operador se aplica a la tarea en el momento en el método donde no puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Procedimiento Hacer varias solicitudes web en paralelo mediante Async y Await (Visual Basic)
+En un método asincrónico, las tareas se inician en el momento de crearse. El operador [Await](../../../../visual-basic/language-reference/operators/await-operator.md) se aplica a la tarea en el punto del método en el que el procesamiento no puede continuar hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Dim result = Await someWebAccessMethodAsync(url)  
@@ -36,27 +36,27 @@ Dim result = Await myTask
  El programa siguiente inicia tres descargas web asincrónicas y las espera en el orden en el que se han llamado. Observe que, al ejecutar el programa, las tareas no siempre finalizan en el orden en que se han creado y esperado. Empiezan a ejecutarse en el momento de crearse y una o más tareas podrían finalizar antes de que el método llegue a las expresiones await.  
   
 > [!NOTE]
->  Para llevar a cabo este proyecto, debe tener instalados en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.  
+> Para llevar a cabo este proyecto, debe tener instalados en el equipo Visual Studio 2012 o posterior y .NET Framework 4.5 o posterior.  
   
- Para obtener otro ejemplo que inicia varias tareas al mismo tiempo, vea [Cómo: Ampliar el tutorial de Async usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+ Para obtener otro ejemplo que inicia varias tareas al mismo tiempo, vea [Cómo: Amplíe el tutorial de Async mediante Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
  Puede descargar el código de este ejemplo en [Muestras de código para desarrollador](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Para configurar el proyecto  
   
-1. Para configurar una aplicación WPF, lleve a cabo los siguientes pasos. Puede encontrar instrucciones detalladas para realizar estos pasos en [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
+1. Para configurar una aplicación WPF, lleve a cabo los siguientes pasos. Puede encontrar instrucciones detalladas para realizar estos pasos en [Tutorial: Acceso a la web mediante Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
     - Cree una aplicación WPF que contenga un cuadro de texto y un botón. Asigne al botón el nombre `startButton` y, al cuadro de texto, `resultsTextBox`.  
   
     - Agregue una referencia para <xref:System.Net.Http>.  
   
-    - En el archivo MainWindow.xaml.vb, agregue un `Imports` instrucción para `System.Net.Http`.  
+    - En el archivo MainWindow. Xaml. VB, agregue una `Imports` instrucción para `System.Net.Http`.  
   
 ### <a name="to-add-the-code"></a>Para agregar el código  
   
-1. En la ventana de diseño, MainWindow.xaml, haga doble clic en el botón para crear el `startButton_Click` controlador de eventos en el archivo MainWindow.xaml.vb.  
+1. En la ventana de diseño, MainWindow. XAML, haga doble clic en el botón para `startButton_Click` crear el controlador de eventos en MainWindow. Xaml. VB.  
   
-2. Copie el código siguiente y péguelo en el cuerpo de `startButton_Click` en el archivo MainWindow.xaml.vb.  
+2. Copie el código siguiente y péguelo en el cuerpo de `startButton_Click` en MainWindow. Xaml. VB.  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -72,7 +72,7 @@ Dim result = Await myTask
   
     - `DisplayResults` muestra el número de bytes de la matriz de bytes de cada dirección URL. En esta pantalla se muestra cuándo se ha terminado la descarga de cada tarea.  
   
-     Copie los métodos siguientes y péguelos después el `startButton_Click` controlador de eventos en el archivo MainWindow.xaml.vb.  
+     Copie los métodos siguientes y péguelos después del `startButton_Click` controlador de eventos en MainWindow. Xaml. VB.  
   
     ```vb  
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)  
@@ -205,6 +205,6 @@ End Class
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Acceso a la Web usando Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Tutorial: Acceso a la web mediante Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Programación asincrónica con Async y Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Cómo: Ampliar el tutorial de Async usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Cómo: Extienda el tutorial de Async mediante Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

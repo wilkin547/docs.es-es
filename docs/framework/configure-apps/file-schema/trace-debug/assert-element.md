@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 2f3823265e358976f970cdfa36772d2251894280
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ba781598542d271f41476b1a1e9d61faeb6ff74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701364"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927184"
 ---
 # <a name="assert-element"></a>\<Assert > elemento
 Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; también indica el nombre del archivo para el que se van a escribir los mensajes.  
@@ -35,12 +35,12 @@ Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:S
   
 |Atributo|Descripción|  
 |---------------|-----------------|  
-|`assertuienabled`|Atributo opcional.<br /><br /> Especifica si mostrar un cuadro de mensaje cuando el **Debug.Assert** se evalúa como método **false**.|  
-|`logfilename`|Atributo opcional.<br /><br /> Especifica el nombre de archivo que se escribirá el mensaje como si **Debug.Assert** se evalúa como **false**.|  
+|`assertuienabled`|Atributo opcional.<br /><br /> Especifica si se va a mostrar un cuadro de mensaje cuando el método **Debug. Assert** se evalúe como **false**.|  
+|`logfilename`|Atributo opcional.<br /><br /> Especifica el nombre del archivo en el que se va a escribir el mensaje si **Debug. Assert** se evalúa como **false**.|  
   
-## <a name="assertuienabled-attribute"></a>Atributo AssertUiEnabled  
+## <a name="assertuienabled-attribute"></a>Atributo assertuienabled  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`true`|Muestra el cuadro de mensaje. Este es el valor predeterminado.|  
 |`false`|No muestra el cuadro de mensaje.|  
@@ -50,16 +50,16 @@ Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:S
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Ambos atributos en el  **\<assert >** elemento son opcionales. Puede deshabilitar los cuadros de mensaje sin especificar un archivo para escribir los mensajes a, o puede especificar un archivo para escribir mensajes mientras deja cuadros habilitados del mensaje.  
+ Ambos atributos del  **\<elemento Assert >** son opcionales. Puede deshabilitar los cuadros de mensaje sin especificar un archivo en el que escribir los mensajes, o puede especificar un archivo en el que escribir los mensajes mientras se deshabilitan los cuadros de mensaje.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo deshabilitar la presentación de cuadros de mensaje cuando se llama a **Debug.Assert** y escribir los mensajes a `c:\log.txt`.  
+ En el ejemplo siguiente se muestra cómo deshabilitar la visualización de cuadros de mensaje cuando se llama a **Debug. Assert** y se escriben los mensajes en `c:\log.txt`.  
   
 ```xml  
 <configuration>  
@@ -72,4 +72,4 @@ Especifica si se muestra un cuadro de mensaje cuando se llama al método <xref:S
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.Debug>
-- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Esquema de la configuración de seguimiento y depuración](index.md)

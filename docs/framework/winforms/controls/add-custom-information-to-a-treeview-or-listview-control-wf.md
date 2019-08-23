@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 5f51744878da526147dd742e98117e8e87c94e20
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: f588a00c430eb1ae1f0cdcde6b7dd22f0c8671c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957001"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Procedimiento para agregar información personalizada a los controles TreeView o ListView (formularios Windows Forms)
-Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows.Forms.TreeView> control o un elemento derivado en un <xref:System.Windows.Forms.ListView> control. La derivación permite agregar cualquier campo que se necesite, así como métodos personalizados y constructores para controlarlos. Uno de los usos de esta característica consiste en adjuntar un objeto Customer a cada nodo de árbol o elemento de lista. Los ejemplos siguientes son para un <xref:System.Windows.Forms.TreeView> control, pero el mismo enfoque se puede usar para un <xref:System.Windows.Forms.ListView> control.  
+Puede crear un nodo derivado en un control Windows Forms <xref:System.Windows.Forms.TreeView> o un elemento derivado de un <xref:System.Windows.Forms.ListView> control. La derivación permite agregar cualquier campo que se necesite, así como métodos personalizados y constructores para controlarlos. Uno de los usos de esta característica consiste en adjuntar un objeto Customer a cada nodo de árbol o elemento de lista. Los ejemplos siguientes son para un <xref:System.Windows.Forms.TreeView> control, pero se puede usar el mismo enfoque para un <xref:System.Windows.Forms.ListView> control.  
   
 ### <a name="to-derive-a-tree-node"></a>Para derivar un nodo de árbol  
   
-- Cree una nueva clase de nodo, derivada de la <xref:System.Windows.Forms.TreeNode> (clase), que tiene un campo personalizado para registrar una ruta de acceso de archivo.  
+- Cree una nueva clase de nodo, derivada de <xref:System.Windows.Forms.TreeNode> la clase, que tiene un campo personalizado para registrar una ruta de acceso de archivo.  
   
     ```vb  
     Class myTreeNode  
@@ -100,7 +100,7 @@ Puede crear un nodo derivado en un formulario Windows Forms <xref:System.Windows
        "\\TextFile.txt")));  
     ```  
   
-2. Si se pasa el nodo de árbol y se escribe como un <xref:System.Windows.Forms.TreeNode> clase, a continuación, tendrá que convertirlo a la clase derivada. La conversión de tipos es una conversión explícita de un tipo de objeto a otro. Para obtener más información sobre la conversión, consulte [conversiones implícitas y explícitas](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [conversiones de tipos](~/docs/csharp/programming-guide/types/casting-and-type-conversions.md) (Visual C#), o [operador de conversión: ()](/cpp/cpp/cast-operator-parens) () Visual C++).  
+2. Si se pasa el nodo de árbol y se escribe como una <xref:System.Windows.Forms.TreeNode> clase, tendrá que convertirlo en la clase derivada. La conversión de tipos es una conversión explícita de un tipo de objeto a otro. Para obtener más información sobre la conversión, vea conversiones [implícitas y explícitas](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md) (Visual Basic), [conversión y conversiones](../../../csharp/programming-guide/types/casting-and-type-conversions.md) de tipos C#(visual) o [operador de conversión: ()](/cpp/cpp/cast-operator-parens) (visual C++).  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

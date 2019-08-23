@@ -3,15 +3,15 @@ title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: ae263a4590cc523c64306ff5d53e54b5190ca510
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0a1f8dd0c29aaee56c2ca1162cc70cc1e5ed106
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791651"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942669"
 ---
 # <a name="issuernameregistry"></a>\<issuerNameRegistry>
-Configura el registro de nombre del emisor que se usa los controladores en la colección de controladores de token.  
+Configura el registro de nombres de emisores que usan los controladores de la colección de controladores de tokens.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -40,34 +40,34 @@ Configura el registro de nombre del emisor que se usa los controladores en la co
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|type|Un tipo que deriva la <xref:System.IdentityModel.Tokens.IssuerNameRegistry> clase. Para obtener más información acerca de cómo especificar un personalizado `type`, consulte la sección [referencias de tipo personalizado].|  
+|type|Tipo que se deriva de la <xref:System.IdentityModel.Tokens.IssuerNameRegistry> clase. Para obtener más información sobre cómo especificar un personalizado `type`, vea [referencias de tipo personalizado].|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<trustedIssuers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|Cuando el `type` atributo especifica el registro de nombres de emisores basada en la configuración (el <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> clase), el [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) debe especificarse el elemento. El [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) puede tomar el elemento `<add>`, `<clear>`, o `<remove>` elementos como elementos secundarios.|  
+|[\<trustedIssuers>](trustedissuers.md)|Cuando el `type` atributo especifica el registro del nombre del emisor basado en la configuración <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> (la clase) [ \<](trustedissuers.md) , se debe especificar el elemento > de trustedIssuers. El `<add>` `<clear>` [ \<elemento > trustedIssuers](trustedissuers.md) puede tomar los elementos, `<remove>` o como elementos secundarios.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de seguridad controladores de token.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de controladores de tokens de seguridad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Todos los tokens de emisor se validan mediante un registro de nombre del emisor. Se trata de un objeto que se deriva el <xref:System.IdentityModel.Tokens.IssuerNameRegistry> clase. El registro de nombre del emisor se utiliza para asociar un nombre mnemotécnico al material criptográfico que se necesita para comprobar las firmas de los tokens generados por el emisor correspondiente. El registro de nombre del emisor mantiene una lista de emisores de confianza para la aplicación de confianza (RP) de usuario de confianza. El tipo de registro de nombres de emisor se especifica utilizando el `type` atributo. El `<issuerNameRegistry>` elemento puede tener uno o varios elementos secundarios que proporcionan la configuración para el tipo especificado. Proporcionar la lógica que procesa estos elementos secundarios invalidando el <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> método.  
+ Todos los tokens de emisor se validan mediante un registro de nombres de emisor. Se trata de un objeto que se deriva de <xref:System.IdentityModel.Tokens.IssuerNameRegistry> la clase. El registro de nombres de emisores se usa para asociar un nombre de tecla de cifrado al material criptográfico necesario para comprobar las firmas de los tokens generados por el emisor correspondiente. El registro del nombre del emisor mantiene una lista de emisores de confianza para la aplicación de usuario de confianza (RP). El tipo de registro del nombre del emisor se especifica mediante el `type` atributo. El `<issuerNameRegistry>` elemento puede tener uno o más elementos secundarios que proporcionan la configuración para el tipo especificado. Proporcione la lógica que procesa estos elementos secundarios invalidando el <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> método.  
   
- WIF proporciona un emisor único nombre de tipo de registro de fábrica, el <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> clase. Esta clase usa un conjunto de certificados de emisor de confianza que se especifican en la configuración. Requiere un elemento de configuración secundario, `<trustedIssuers>`, en la que está configurada la colección de certificados de emisor de confianza. Los certificados se especifican utilizando el ASN.1 codificado de formulario de la huella digital del certificado y se agregan o quitan de la colección mediante el uso de confianza `<add>`, `<clear>`, o `<remove>` elementos.  
+ WIF proporciona un tipo de registro de nombre de emisor único fuera del cuadro, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> la clase. Esta clase usa un conjunto de certificados de emisor de confianza que se especifican en la configuración. Requiere un elemento de configuración secundario, `<trustedIssuers>`, en el que se configura la colección de certificados de emisor de confianza. Los certificados de confianza se especifican mediante la forma codificada ASN. 1 de la huella digital del certificado y se agregan o quitan `<clear>`de la `<remove>` colección `<add>`mediante los elementos, o.  
   
- El `<issuerNameRegistry>` elemento representado por la <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> clase.  
+ El elemento se representa mediante la <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> clase. `<issuerNameRegistry>`  
   
 > [!NOTE]
->  Especificar el `<issuerNameRegistry>` como un elemento secundario de la [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento en desuso, pero todavía se admite por compatibilidad con versiones anteriores. Configuración de la `<securityTokenHandlerConfiguration>` elemento invalidan aquellas establecidas en el `<identityConfiguration>` elemento.  
+> Especificar el `<issuerNameRegistry>` elemento como elemento secundario [ \<](identityconfiguration.md) del elemento de > identityConfiguration está en desuso, pero todavía se admite por compatibilidad con versiones anteriores. La `<securityTokenHandlerConfiguration>` configuración del elemento invalida la `<identityConfiguration>` del elemento.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente XML muestra cómo especificar al emisor de la configuración en función de registro de nombres.  
+ El siguiente XML muestra cómo especificar el registro de nombres de emisor basado en la configuración.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

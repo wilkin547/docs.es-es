@@ -5,20 +5,20 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 6c144bddff4e485673dbdc7e218e82808c20aa61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 31c6e0b8bf2b058fbefa76f48ade39ba8e7def69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990280"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961766"
 ---
 # <a name="default-service-behavior"></a>Comportamiento de servicio predeterminado
-Este ejemplo muestra cómo se pueden configurar los valores del comportamiento de servicio. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa el `ICalculator` contrato de servicio. Este ejemplo define explícitamente los comportamientos del servicio y de la operación mediante los atributos <xref:System.ServiceModel.ServiceBehaviorAttribute> y <xref:System.ServiceModel.OperationBehaviorAttribute>. Puede configurar los comportamientos en archivos de configuración o imperativamente en código (como se muestra en este ejemplo).  
+Este ejemplo muestra cómo se pueden configurar los valores del comportamiento de servicio. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa el contrato `ICalculator` de servicio. Este ejemplo define explícitamente los comportamientos del servicio y de la operación mediante los atributos <xref:System.ServiceModel.ServiceBehaviorAttribute> y <xref:System.ServiceModel.OperationBehaviorAttribute>. Puede configurar los comportamientos en archivos de configuración o imperativamente en código (como se muestra en este ejemplo).  
   
  En este ejemplo, el cliente es una aplicación de consola (.exe) y los Servicios de Internet Information Server (IIS) hospedan el servicio.  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
  La clase de servicio especifica comportamientos con <xref:System.ServiceModel.ServiceBehaviorAttribute> y <xref:System.ServiceModel.OperationBehaviorAttribute>, tal y como se muestra en el ejemplo de código siguiente. Todos los valores especificados son valores predeterminados.  
   
@@ -47,7 +47,7 @@ public class CalculatorService : ICalculator
   
  Los comportamientos del servicio se especifican con el atributo <xref:System.ServiceModel.ServiceBehaviorAttribute>. La tabla siguiente describe algunos de estos comportamientos.  
   
-|Comportamiento de servicio|Descripción|  
+|Comportamiento de servicio|DESCRIPCIÓN|  
 |----------------------|-----------------|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|Se cierra automáticamente una sesión cuando lo solicita el cliente.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Especifica el modo de simultaneidad para cada instancia del servicio.|  
@@ -59,7 +59,7 @@ public class CalculatorService : ICalculator
   
  Los comportamientos de la operación se especifican utilizando el atributo <xref:System.ServiceModel.OperationBehaviorAttribute>. La tabla siguiente describe algunos de estos comportamientos.  
   
-|Comportamiento de la operación|Descripción|  
+|Comportamiento de la operación|DESCRIPCIÓN|  
 |------------------------|-----------------|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A>|Determina si la realización de la operación del servicio confirma la transacción actual.|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A>|Determina si la operación del servicio da de alta en una transacción fluida del cliente.|  
@@ -79,17 +79,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  

@@ -2,12 +2,12 @@
 title: Interceptador de mensajes personalizados
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 530c626a1f134190bb90fcee3a4e3bbba91d9516
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dfff099a6bf45911f9327622a84a8803ad7dd0ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878303"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953668"
 ---
 # <a name="custom-message-interceptor"></a>Interceptador de mensajes personalizados
 Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particular, muestra cómo implementar un elemento de enlace personalizado que crea generadores de canales y agentes de escucha de canales para interceptar todos los mensajes entrantes y salientes en un punto concreto en la pila de tiempo de ejecución. El ejemplo también incluye un cliente y un servidor que muestran el uso de estos generadores personalizados.  
@@ -15,18 +15,18 @@ Este ejemplo muestra el uso del modelo de extensibilidad del canal. En particula
  En este ejemplo, el cliente y el servicio son programas de consola (.exe). El cliente y el servicio hacen uso de una biblioteca común (.dll) que contiene el elemento de enlace personalizado y sus objetos en tiempo de ejecución asociados.  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 > [!IMPORTANT]
 >  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- El ejemplo describe el procedimiento recomendado para crear un canal superpuesto personalizado en Windows Communication Foundation (WCF), mediante el marco del canal y procedimientos recomendados WCF. Los pasos para crear un canal superpuesto personalizado son los siguientes:  
+ El ejemplo describe el procedimiento recomendado para crear un canal superpuesto personalizado en Windows Communication Foundation (WCF), mediante el marco del canal y los siguientes procedimientos recomendados de WCF. Los pasos para crear un canal superpuesto personalizado son los siguientes:  
   
 1. Decida cuál de las formas del canal admitirá el generador de canales y el agente de escucha del canal.  
   
@@ -52,7 +52,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Adición de un elemento de enlace  
- El ejemplo define un elemento de enlace personalizado: `InterceptingBindingElement`. `InterceptingBindingElement` toma un `ChannelMessageInterceptor` como entrada y la usa `ChannelMessageInterceptor` para manipular los mensajes que pasan a través de él. Ésta es la única clase que debe ser pública. El generador, agente de escucha y canales pueden ser implementaciones internas de las interfaces en tiempo de ejecución públicas.  
+ El ejemplo define un elemento de enlace personalizado: `InterceptingBindingElement`. `InterceptingBindingElement`toma un `ChannelMessageInterceptor` como una entrada y lo `ChannelMessageInterceptor` utiliza para manipular los mensajes que lo atraviesan. Ésta es la única clase que debe ser pública. El generador, agente de escucha y canales pueden ser implementaciones internas de las interfaces en tiempo de ejecución públicas.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
@@ -68,7 +68,7 @@ public abstract class InterceptingElement : BindingElementExtensionElement { ...
 ## <a name="adding-policy"></a>Adición de directivas  
  Para integrar con nuestro sistema de directivas, `InterceptingBindingElement` implementa IPolicyExportExtension para señalar que deberíamos participar en la generación de directivas. Para permitir importar la directiva en un cliente generado, el usuario puede registrar una clase derivada de `InterceptingBindingElementImporter` e invalidar `CreateMessageInterceptor`() para generar su clase `ChannelMessageInterceptor` habilitada por la directiva.  
   
-## <a name="example-droppable-message-inspector"></a>Ejemplo: Inspector de mensajes que pueden quitarse  
+## <a name="example-droppable-message-inspector"></a>Ejemplo: Inspector de mensaje con preportador  
  En este ejemplo se incluye una implementación de ejemplo de `ChannelMessageInspector` que quita mensajes.  
   
 ```  
@@ -147,16 +147,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Instale ASP.NET 4.0 mediante el siguiente comando.  
+1. Instale ASP.NET 4,0 con el siguiente comando.  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-3. Para compilar la solución, siga las instrucciones de [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+3. Para compilar la solución, siga las instrucciones de [creación de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 5. Ejecute primero Service.exe, a continuación, ejecute Client.exe e inspeccione ambas ventanas de la consola para ver el resultado.  

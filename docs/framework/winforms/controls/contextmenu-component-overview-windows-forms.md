@@ -8,23 +8,23 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ae7817bc158f30fbf55b5f6228ecdf134d6657d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962180"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>Información general sobre ContextMenu (Componente, formularios Windows Forms)
 > [!IMPORTANT]
->  Aunque <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.ContextMenuStrip> reemplazan y agregan funcionalidad a la <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> controles de versiones anteriores, <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> se conservan para compatibilidad con versiones anteriores y uso futuro, si elige.  
+> Aunque <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> reemplazan y agregan funcionalidad a los controles y de versiones anteriores, y se conservan por compatibilidad con versiones anteriores y uso futuro, si así lo decide. <xref:System.Windows.Forms.ContextMenuStrip>  
   
- Con los formularios de Windows <xref:System.Windows.Forms.ContextMenu> componente, puede proporcionar a los usuarios con un menú contextual de comandos usados con frecuencia que están asociados con el objeto seleccionado. Con frecuencia, los elementos de un menú contextual son un subconjunto de los elementos de menús principales que aparecen en otra parte de la aplicación. Normalmente, un usuario puede acceder a un menú contextual haciendo clic con el mouse. En Windows Forms, los menús contextuales se asocian con controles.  
+ Con el componente <xref:System.Windows.Forms.ContextMenu> de Windows Forms, puede proporcionar a los usuarios un menú contextual fácilmente accesible de los comandos usados con frecuencia que están asociados al objeto seleccionado. Los elementos de un menú contextual suelen ser un subconjunto de los elementos de los menús principales que aparecen en otro lugar de la aplicación. Normalmente, un usuario puede tener acceso a un menú contextual si hace clic con el botón secundario del mouse. En Windows Forms, los menús contextuales se asocian a los controles.  
   
 ## <a name="key-properties"></a>Propiedades clave  
- Puede asociar un menú contextual a un control mediante el establecimiento del control <xref:System.Windows.Forms.Control.ContextMenu%2A> propiedad a la <xref:System.Windows.Forms.ContextMenu> componente. Un menú contextual solo se puede asociar con varios controles, pero cada control puede tener solo un menú contextual.  
+ Puede asociar un menú contextual a un control estableciendo la propiedad del <xref:System.Windows.Forms.Control.ContextMenu%2A> control en el <xref:System.Windows.Forms.ContextMenu> componente. Un solo menú contextual se puede asociar a varios controles, pero cada control solo puede tener un menú contextual.  
   
- La propiedad de clave de la <xref:System.Windows.Forms.ContextMenu> componente es el <xref:System.Windows.Forms.Menu.MenuItems%2A> propiedad. Puede agregar elementos de menú mediante la creación mediante programación <xref:System.Windows.Forms.MenuItem> objetos y agregarlos a la <xref:System.Windows.Forms.Menu.MenuItemCollection> del menú contextual. Dado que normalmente se dibujan los elementos de un menú contextual de otros menús, con más frecuencia agregará elementos a un menú contextual mediante su copia.  
+ La propiedad clave del <xref:System.Windows.Forms.ContextMenu> componente es la <xref:System.Windows.Forms.Menu.MenuItems%2A> propiedad. Puede agregar elementos <xref:System.Windows.Forms.Menu.MenuItemCollection> de menú mediante programación para crear <xref:System.Windows.Forms.MenuItem> objetos y agregarlos al del menú contextual. Dado que los elementos de un menú contextual normalmente se dibujan desde otros menús, los elementos se agregan a menudo a un menú contextual copiándolos.  
   
 ## <a name="see-also"></a>Vea también
 

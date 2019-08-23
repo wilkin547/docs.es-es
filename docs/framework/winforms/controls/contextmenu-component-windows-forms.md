@@ -10,25 +10,25 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 760a800e7e7fe0ef13a333525aa45088bea736d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61955957"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962176"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu (Componente, formularios Windows Forms)
 > [!NOTE]
->  Aunque `MenuStrip` y `ContextMenuStrip` reemplazan y agregan funcionalidad a la <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> controles de versiones anteriores, <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> se conservan para compatibilidad con versiones anteriores y uso futuro, si elige.  
+> Aunque `MenuStrip` y <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> reemplazan y agregan funcionalidad a los controles y de versiones anteriores, y se conservan por compatibilidad con versiones anteriores y uso futuro, si así lo decide. `ContextMenuStrip`  
   
- Los formularios de Windows `ContextMenu` componente se utiliza para proporcionar a los usuarios con un menú contextual de comandos usados con frecuencia que están asociados con el objeto seleccionado. Con frecuencia, los elementos de un menú contextual son un subconjunto de los elementos de menús principales que aparecen en otra parte de la aplicación. Menús contextuales normalmente están disponibles haciendo clic con el mouse. En Windows Forms, se asocian con otros controles.  
+ El componente `ContextMenu` de Windows Forms se utiliza para proporcionar a los usuarios un menú contextual fácilmente accesible de los comandos usados con frecuencia que están asociados al objeto seleccionado. Los elementos de un menú contextual suelen ser un subconjunto de los elementos de los menús principales que aparecen en otro lugar de la aplicación. Los menús contextuales suelen estar disponibles al hacer clic con el botón secundario del mouse. En Windows Forms están asociados a otros controles.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Información general sobre ContextMenu](contextmenu-component-overview-windows-forms.md)  
- Presenta los conceptos generales de la `ContextMenu` componente, que permite a los usuarios crear menús de comandos usados con frecuencia asociados con un objeto seleccionado.  
+ Presenta los conceptos generales del `ContextMenu` componente, que permite a los usuarios crear menús de comandos de uso frecuente asociados a un objeto seleccionado.  
   
- [Cómo: Agregar y quitar elementos de menú con el componente ContextMenu de formularios Windows Forms](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
- Explica cómo agregar y quitar elementos del menú contextual en Windows Forms.  
+ [Procedimientos: Agregar y quitar elementos de menú con el Windows Forms componente ContextMenu](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ Explica cómo agregar y quitar elementos de menú contextual en Windows Forms.  
   
 ## <a name="reference"></a>Referencia  
  <xref:System.Windows.Forms.ContextMenu>  

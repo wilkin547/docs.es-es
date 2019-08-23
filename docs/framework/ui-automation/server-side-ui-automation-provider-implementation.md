@@ -6,20 +6,20 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: f888923736d384af2c6d955a126bacacb16113af
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a5fcceb3c39092deaa4a9dca258ba60117019c36
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651151"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961219"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementación del proveedor de UI Automation en el servidor
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  En esta sección se describe cómo implementar un proveedor de automatización de la interfaz de usuario del lado servidor para un control personalizado.  
   
- La implementación para los elementos de Windows Presentation Foundation (WPF) y no-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementos (como los diseñados para [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) es fundamentalmente diferente. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.  
+ La implementación de para los elementos de Windows Presentation Foundation (WPF)[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] y los que no son de ( [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]como los diseñados para) es fundamentalmente diferente. Los elementos de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] son compatibles con la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gracias a una clase derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Los elementos que no son de[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] lo consiguen a través de implementaciones de interfaces de proveedor.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Consideraciones de seguridad  
@@ -47,7 +47,7 @@ ms.locfileid: "64651151"
 ### <a name="provider-interfaces"></a>Interfaces de proveedor  
  Cada proveedor de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] debe implementar una de las interfaces siguientes:  
   
-|Interfaz|Descripción|  
+|Interfaz|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Proporciona funcionalidad para un control simple hospedado en una ventana. Es compatible con las propiedades y los patrones de control.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Se hereda de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Agrega una funcionalidad para un elemento de un control complejo, incluida la navegación por el fragmento, el establecimiento del foco y la devolución del rectángulo delimitador del elemento.|  
@@ -55,7 +55,7 @@ ms.locfileid: "64651151"
   
  Las interfaces siguientes incrementan la funcionalidad, pero no se requiere su implementación.  
   
-|Interfaz|Descripción|  
+|Interfaz|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Habilita al proveedor para realizar un seguimiento de las solicitudes de eventos.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Habilita la reordenación de los elementos basados en ventanas en el árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de un fragmento.|  
@@ -102,7 +102,7 @@ ms.locfileid: "64651151"
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty>  
   
 > [!NOTE]
->  El objeto <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> de un elemento simple o una raíz de fragmento hospedada en una ventana se obtiene de la ventana. No obstante, los elementos del fragmento situados debajo de la raíz (por ejemplo, los elementos de lista de un cuadro de lista) deben proporcionar sus propios identificadores. Para obtener más información, consulta <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.  
+> El objeto <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> de un elemento simple o una raíz de fragmento hospedada en una ventana se obtiene de la ventana. No obstante, los elementos del fragmento situados debajo de la raíz (por ejemplo, los elementos de lista de un cuadro de lista) deben proporcionar sus propios identificadores. Para obtener más información, consulta <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>.  
 >   
 >  Los proveedores hospedados en un control de <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> deben devolver el elemento [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] . En este caso, es posible que el proveedor de ventana predeterminado no consiga recuperar el valor correcto.  
 >   
@@ -114,7 +114,7 @@ ms.locfileid: "64651151"
 ### <a name="events-in-non-wpf-providers"></a>Eventos de proveedores que no son de WPF  
  Los proveedores de[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deben generar eventos para notificar a las aplicaciones cliente los cambios en el estado de la interfaz de usuario. Para generar eventos, se usan los métodos siguientes:  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Genera varios eventos, incluidos los que desencadenan los patrones de control.|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Genera un evento cuando ha cambiado una propiedad de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
@@ -124,7 +124,7 @@ ms.locfileid: "64651151"
   
  Para optimizar el rendimiento, un proveedor puede generar eventos de forma selectiva o no generarlos en absoluto si no se registra ninguna aplicación cliente para recibirlos. Para conseguir esta optimización, se usan los métodos siguientes:  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Esta propiedad estática especifica si alguna aplicación cliente se ha suscrito a eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|La implementación del proveedor de esta interfaz en una raíz de fragmento permite recibir información cuando los clientes registran controladores de eventos o anulan su registro en los eventos del fragmento.|  
@@ -134,7 +134,7 @@ ms.locfileid: "64651151"
  Los proveedores de los controles simples, como los botones personalizados hospedados en ventanas (HWND), no deben resultar compatibles necesariamente con la navegación dentro del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . La navegación hacia y desde el elemento se controla con el proveedor predeterminado de la ventana host, que se especifica en la implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>. Sin embargo, cuando se implementa un proveedor para un control personalizado complejo, sí se debe admitir la navegación entre el nodo raíz del fragmento y sus descendientes, y entre los nodos del mismo nivel.  
   
 > [!NOTE]
->  Los elementos de un fragmento que no sea la raíz deben devolver una referencia `null` desde <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, ya que no se hospedan directamente en una ventana y ningún proveedor predeterminado admite la navegación hacia y desde ellos.  
+> Los elementos de un fragmento que no sea la raíz deben devolver una referencia `null` desde <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, ya que no se hospedan directamente en una ventana y ningún proveedor predeterminado admite la navegación hacia y desde ellos.  
   
  La estructura del fragmento queda determinada por la implementación de <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.Navigate%2A>. Este método devuelve el objeto de proveedor para el elemento en cada dirección posible, desde cada fragmento. Si no hay ningún elemento en una dirección determinada, el método devuelve una referencia `null` .  
   

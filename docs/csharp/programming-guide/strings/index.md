@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 1b80082d10ad9ee760a184f496793ad5c69202da
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588479"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988425"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -68,10 +68,10 @@ Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Intern
 |\x|Secuencia de escape Unicode similar a "\u" excepto con longitud variable|`\xH[H][H][H]` (intervalo: 0 - FFFF; ejemplo: `\x00E7` o `\x0E7` o `\xE7` = "ç")|  
   
 > [!WARNING]
->  Cuando se usa la secuencia de escape `\x` y se especifican menos de 4 dígitos hexadecimales, si los caracteres que van inmediatamente después de la secuencia de escape son dígitos hexadecimales válidos (es decir, 0-9, A-f y a-f), se interpretará que forman parte de la secuencia de escape. Por ejemplo, `\xA1` genera "&#161;", que es el punto de código U+00A1. Sin embargo, si el carácter siguiente es "A" o "a", la secuencia de escape se interpretará como `\xA1A` y producirá "&#x0A1A;", que es el punto de código U+0A1A. En casos así, se pueden especificar los 4 dígitos hexadecimales (por ejemplo, `\x00A1`) para evitar posibles errores de interpretación.  
+> Cuando se usa la secuencia de escape `\x` y se especifican menos de 4 dígitos hexadecimales, si los caracteres que van inmediatamente después de la secuencia de escape son dígitos hexadecimales válidos (es decir, 0-9, A-f y a-f), se interpretará que forman parte de la secuencia de escape. Por ejemplo, `\xA1` genera "&#161;", que es el punto de código U+00A1. Sin embargo, si el carácter siguiente es "A" o "a", la secuencia de escape se interpretará como `\xA1A` y producirá "&#x0A1A;", que es el punto de código U+0A1A. En casos así, se pueden especificar los 4 dígitos hexadecimales (por ejemplo, `\x00A1`) para evitar posibles errores de interpretación.  
   
 > [!NOTE]
->  En tiempo de compilación, las cadenas textuales se convierten en cadenas normales con las mismas secuencias de escape. Por lo tanto, si se muestra una cadena textual en la ventana Inspección del depurador, verá los caracteres de escape agregados por el compilador, no la versión textual del código fuente. Por ejemplo, la cadena textual `@"C:\files.txt"` aparecerá en la ventana Inspección, como "C:\\\files.txt".  
+> En tiempo de compilación, las cadenas textuales se convierten en cadenas normales con las mismas secuencias de escape. Por lo tanto, si se muestra una cadena textual en la ventana Inspección del depurador, verá los caracteres de escape agregados por el compilador, no la versión textual del código fuente. Por ejemplo, la cadena textual `@"C:\files.txt"` aparecerá en la ventana Inspección, como "C:\\\files.txt".  
   
 ## <a name="format-strings"></a>Cadenas de formato  
  Una cadena de formato es una cadena cuyo contenido se determina de manera dinámica en tiempo de ejecución. Las cadenas de formato se crean mediante la inserción de *expresiones interpoladas* o marcadores de posición entre llaves dentro de una cadena. Todo lo incluido entre llaves (`{...}`) se resolverá en un valor y se generará como una cadena con formato en tiempo de ejecución. Existen dos métodos para crear cadenas de formato: interpolación de cadenas y formato compuesto.

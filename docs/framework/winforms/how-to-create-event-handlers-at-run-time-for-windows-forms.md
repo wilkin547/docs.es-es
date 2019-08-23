@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 4d2290622e648030f150d9bb06ce1f3000145759
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 440086bfd5384fc46aec2997dbdd9937f7a1b65f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211456"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964332"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Procedimiento para crear controladores de eventos en tiempo de ejecución para formularios Windows Forms
 
@@ -25,11 +25,11 @@ Además de crear eventos mediante el Diseñador de Windows Forms en Visual Studi
 
 ## <a name="create-an-event-handler-at-run-time"></a>Crear un controlador de eventos en tiempo de ejecución
 
-1. Abra el formulario que desea agregar un controlador de eventos.
+1. Abra el formulario al que desea agregar un controlador de eventos.
 
 2. Agregue un método al formulario con la firma del método para el evento que desee controlar.
 
-     Por ejemplo, si desea controlar la <xref:System.Windows.Forms.Control.Click> eventos de un <xref:System.Windows.Forms.Button> control, debe crear un método como la siguiente:
+     Por ejemplo, si controla el <xref:System.Windows.Forms.Control.Click> evento de un <xref:System.Windows.Forms.Button> control, debe crear un método como el siguiente:
 
     ```vb
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As EventArgs)
@@ -57,7 +57,7 @@ Además de crear eventos mediante el Diseñador de Windows Forms en Visual Studi
 
 4. Determine el formulario o control para el que desea crear un controlador de eventos.
 
-5. En un método de la clase del formulario, agregue código que especifique el controlador de eventos para controlar el evento. Por ejemplo, el código siguiente especifica el controlador de eventos `button1_Click` controla la <xref:System.Windows.Forms.Control.Click> eventos de un <xref:System.Windows.Forms.Button> control:
+5. En un método de la clase del formulario, agregue código que especifique el controlador de eventos para controlar el evento. Por ejemplo, el código siguiente especifica que el controlador `button1_Click` de eventos <xref:System.Windows.Forms.Control.Click> controla el evento <xref:System.Windows.Forms.Button> de un control:
 
     ```vb
     AddHandler Button1.Click, AddressOf Button1_Click
@@ -71,10 +71,10 @@ Además de crear eventos mediante el Diseñador de Windows Forms en Visual Studi
     button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
     ```
 
-     El <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> método mostrado en el código de Visual Basic anterior establece un controlador de eventos click del botón.
+     El <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> método que se muestra en el código Visual Basic anterior establece un controlador de eventos click para el botón.
 
 ## <a name="see-also"></a>Vea también
 
 - [Crear controladores de eventos en Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Información general sobre controladores de eventos](event-handlers-overview-windows-forms.md)
-- [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Solucionar problemas de controladores de eventos heredados en Visual Basic](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

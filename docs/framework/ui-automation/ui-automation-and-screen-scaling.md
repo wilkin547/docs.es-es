@@ -10,16 +10,16 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: a59223bfbe9506aa0028933d55b74e24d5595c32
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 9f6c82144031cb2bf4824985b8211453bb7f51ea
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629550"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959168"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI Automation y ajuste de escala de la pantalla
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]permite a los usuarios cambiar la configuración de puntos por pulgada (PPP) de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] modo que la mayoría de los elementos de la pantalla parezcan más grandes. Aunque esta característica ha estado disponible desde hace mucho tiempo en [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], en las versiones anteriores, el escalado se tenía que implementar por las aplicaciones. En [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], el Administrador de ventanas de escritorio realiza el ajuste de escala predeterminado para todas las aplicaciones que no controlan su propia escala. Las aplicaciones cliente de automatización de la interfaz de usuario deben tener en cuenta esta característica.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "68629550"
  En efecto, cuando el usuario establece el factor de escala en 120 ppp, una pulgada vertical u horizontal en la pantalla aumenta en un 25 por ciento. Todas las dimensiones se escalan en consecuencia. El desplazamiento de una ventana de aplicación desde los bordes superior e izquierdo de la pantalla aumenta en un 25 por ciento. Si el ajuste de escala de aplicación está habilitado y la aplicación no es compatible con los PPP, el tamaño de la ventana aumenta en la misma proporción, junto con los [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] desplazamientos y los tamaños de todos los elementos que contiene.  
   
 > [!NOTE]
->  De forma predeterminada, el DWM no realiza el escalado para las aplicaciones no compatibles con PPP cuando el usuario establece el PPP en 120, pero lo realiza cuando el valor de PPP se establece en un valor personalizado de 144 o superior. Sin embargo, el usuario puede invalidar el comportamiento predeterminado.  
+> De forma predeterminada, el DWM no realiza el escalado para las aplicaciones no compatibles con PPP cuando el usuario establece el PPP en 120, pero lo realiza cuando el valor de PPP se establece en un valor personalizado de 144 o superior. Sin embargo, el usuario puede invalidar el comportamiento predeterminado.  
   
  El escalado de pantalla crea nuevos desafíos para las aplicaciones a las que les preocupa de cualquier manera las coordenadas de pantalla. La pantalla contiene ahora dos sistemas de coordenadas: físico y lógico. Las coordenadas físicas de un punto son el desplazamiento real en píxeles desde la parte superior izquierda del origen. Las coordenadas lógicas son los desplazamientos de la manera que serían si se escalaran los propios píxeles.  
   

@@ -5,36 +5,36 @@ helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9380c23ab6cfdbecd519926229b45ed863f07f9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050443"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947715"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Procedimiento Crear documentación XML en Visual Basic
-En este ejemplo se muestra cómo agregar comentarios de documentación XML en el código.  
+En este ejemplo se muestra cómo agregar comentarios de documentación XML al código.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Para crear documentación XML para un tipo o miembro  
   
-1. En el **Editor de código**, sitúe el cursor a la línea sobre el tipo o miembro para el que desea crear documentación.  
+1. En el **Editor de código**, coloque el cursor en la línea sobre el tipo o miembro para el que desea crear la documentación.  
   
-2. Tipo `'''` (tres comillas simples).  
+2. Escriba `'''` (tres comillas simples).  
   
-     Se agrega un esquema XML para el tipo o miembro en el **Editor de código**.  
+     En el **Editor de código**se agrega un esqueleto XML para el tipo o miembro.  
   
-3. Agregar información descriptiva entre las etiquetas correspondientes.  
+3. Agregue información descriptiva entre las etiquetas adecuadas.  
   
     > [!NOTE]
-    >  Si agrega líneas adicionales dentro del bloque de documentación XML, cada línea debe comenzar con `'''`.  
+    > Si agrega líneas adicionales en el bloque de documentación XML, cada línea debe comenzar por `'''`.  
   
-4. Agregar código adicional que utiliza el tipo o miembro con los nuevos comentarios de documentación XML.  
+4. Agregue código adicional que use el tipo o el miembro con los nuevos comentarios de documentación XML.  
   
-     IntelliSense muestra el texto de la \<resumen > etiqueta para el tipo o miembro.  
+     IntelliSense muestra el texto de la \<etiqueta de > de resumen para el tipo o miembro.  
   
-5. Compile el código para generar un archivo XML que contiene los comentarios de documentación. Para obtener más información, vea [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
+5. Compile el código para generar un archivo XML que contenga los comentarios de documentación. Para obtener más información, vea [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="see-also"></a>Vea también
 

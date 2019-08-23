@@ -2,15 +2,15 @@
 title: Escenarios no admitidos
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: cc40ccbf83e92404dca07344fae0a6f56f92cefa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959956"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955319"
 ---
 # <a name="unsupported-scenarios"></a>Escenarios no admitidos
-Por diversas razones, Windows Communication Foundation (WCF) no es compatible con algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por lo tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como nombre de usuario/contraseña y autenticación de HTTP/HTTPS integrada al ejecutar WCF en Windows XP Home Edition.  
+Por diversas razones, Windows Communication Foundation (WCF) no admite algunos escenarios de seguridad específicos. Por ejemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition no implementa los protocolos de autenticación SSPI o Kerberos y, por tanto, WCF no admite la ejecución de un servicio con la autenticación de Windows en esa plataforma. Se admiten otros mecanismos de autenticación, como el nombre de usuario y la contraseña, y la autenticación integrada HTTP/HTTPS al ejecutar WCF en Windows XP Home Edition.  
   
 ## <a name="impersonation-scenarios"></a>Escenarios de suplantación  
   
@@ -18,7 +18,7 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
  Cuando un cliente realiza llamadas asincrónicas a un servicio WCF usando la autenticación de Windows bajo suplantación, se podría producir la autenticación con la identidad del proceso del cliente en lugar de la identidad suplantada.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP y cookie de token de contexto seguro habilitados  
- WCF no admite la suplantación y un <xref:System.InvalidOperationException> se produce cuando se cumplen las condiciones siguientes:  
+ WCF no admite la suplantación y se <xref:System.InvalidOperationException> produce una excepción cuando se cumplen las condiciones siguientes:  
   
 - El sistema operativo es [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
@@ -28,32 +28,32 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
   
 - Se crea un token de contexto de seguridad (SCT) basado en estado (de forma predeterminada, la creación está deshabilitada).  
   
- El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, vea [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) En código, el token se habilita mediante la creación de un elemento de enlace de seguridad ( <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizando el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> y estableciendo el parámetro `requireCancellation` en `false`. El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.  
+ El SCT basado en estado solo se puede crear mediante un enlace personalizado. Para obtener más información, consulte [Cómo Cree un token de contexto de seguridad para una](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)sesión segura). En código, el token se habilita mediante la creación de un elemento de enlace de seguridad ( <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> o <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) utilizando el método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> y estableciendo el parámetro `requireCancellation` en `false`. El parámetro hace referencia al almacenamiento en caché del SCT. Al establecer el valor en `false`, se habilita la característica del SCT basado en estado.  
   
- Como alternativa, en configuración, el token se habilita mediante la creación de un <`customBinding`>, entonces la adición de un <`security`> elemento y la configuración de la `authenticationMode` atributo en SecureConversation y el `requireSecurityContextCancellation` atribuir a `true`.  
+ Como alternativa, en la configuración, el token se habilita mediante la creación`customBinding`de un > de <,`security`la adición de un elemento de `authenticationMode` > de < y el `requireSecurityContextCancellation` establecimiento del `true`atributo en SecureConversation y el atributo en.  
   
 > [!NOTE]
->  Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por consiguiente, puede utilizarlo con la opción `Required` en [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+> Los requisitos anteriores son específicos. Por ejemplo, <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> crea un elemento de enlace que resulta en una identidad de Windows, pero no establece un SCT. Por consiguiente, puede utilizarlo con la opción `Required` en [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Posible conflicto de ASP.NET  
- WCF y ASP.NET pueden tanto habilitar o deshabilitar la suplantación. Cuando ASP.NET hospeda una aplicación de WCF, es posible que exista un conflicto entre las opciones de configuración de WCF y ASP.NET. En el caso de conflicto, la configuración de WCF tiene prioridad, a menos que el <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> propiedad está establecida en <xref:System.ServiceModel.ImpersonationOption.NotAllowed>, en cuyo caso la configuración de suplantación de ASP.NET tiene prioridad.  
+ WCF y ASP.NET pueden habilitar o deshabilitar la suplantación. Cuando ASP.NET hospeda una aplicación WCF, puede existir un conflicto entre la configuración de WCF y de la configuración de ASP.NET. En caso de conflicto, la configuración de WCF tiene prioridad, a <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> menos que la propiedad <xref:System.ServiceModel.ImpersonationOption.NotAllowed>esté establecida en, en cuyo caso la configuración de suplantación de ASP.net tiene prioridad.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Se puede producir un error en las cargas de ensamblado si se utiliza la suplantación  
  Si el contexto suplantado no tiene los derechos de acceso para cargar un ensamblado y si es la primera vez Common Language Runtime (CLR) intenta cargar el ensamblado para ese AppDomain, el <xref:System.AppDomain> almacena en memoria caché el error. Los siguientes intentos de cargar ese ensamblado (o ensamblados) producirán un error, incluso después de revertir la suplantación e incluso si el contexto revertido tiene derechos de acceso para cargar el ensamblado. Esto se debe a que CLR no vuelve a intentar la carga una vez que el contexto del usuario ha cambiado. Debe reiniciar el dominio de la aplicación para recuperarse del error.  
   
 > [!NOTE]
->  El valor predeterminado de la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la clase <xref:System.ServiceModel.Security.WindowsClientCredential> es <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. En la mayoría de los casos, un contexto de suplantación del nivel de identificación no tiene derechos para cargar ensamblados adicionales. Éste es el valor predeterminado, por lo que esto se trata de una condición muy común a tener en cuenta. La suplantación del nivel de identificación también tiene lugar cuando el proceso de suplantación no tiene el privilegio `SeImpersonate`. Para obtener más información, consulte [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+> El valor predeterminado de la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> de la clase <xref:System.ServiceModel.Security.WindowsClientCredential> es <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. En la mayoría de los casos, un contexto de suplantación del nivel de identificación no tiene derechos para cargar ensamblados adicionales. Éste es el valor predeterminado, por lo que esto se trata de una condición muy común a tener en cuenta. La suplantación del nivel de identificación también tiene lugar cuando el proceso de suplantación no tiene el privilegio `SeImpersonate`. Para obtener más información, consulte [delegación y](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)suplantación.  
   
 ### <a name="delegation-requires-credential-negotiation"></a>La delegación requiere la negociación de las credenciales  
- Para utilizar el protocolo de autenticación Kerberos con la delegación, debe implementar el protocolo Kerberos con negociación de credenciales (a veces denominado Kerberos de autenticación mutua o de varios pasos). Si implementa la autenticación de Kerberos sin la negociación de la credencial (denominada en ocasiones Kerberos de "un disparo" o "fase única"), se producirá una excepción. Para obtener más información sobre cómo implementar la negociación de credenciales, vea [depurar errores de autenticación de Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Para utilizar el protocolo de autenticación Kerberos con la delegación, debe implementar el protocolo Kerberos con negociación de credenciales (a veces denominado Kerberos de autenticación mutua o de varios pasos). Si implementa la autenticación de Kerberos sin la negociación de la credencial (denominada en ocasiones Kerberos de "un disparo" o "fase única"), se producirá una excepción. Para obtener más información sobre cómo implementar la negociación de credenciales, consulte depuración de [errores de autenticación de Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Criptografía  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>SHA-256 compatible solo para usos de claves simétricas  
- WCF admite una variedad de cifrado y algoritmos de creación implícita de firma que se pueden especificar mediante el conjunto de algoritmos en los enlaces proporcionados por el sistema. Para mejorar la seguridad, WCF es compatible con los algoritmos del algoritmo de Hash seguro (SHA) 2, en concreto SHA-256, para crear valores hash de síntesis de firma. Esta versión admite SHA-256 solo para usos de clave simétrica, como las claves de Kerberos, y donde no se usa un certificado X.509 para firmar el mensaje. WCF no admite las firmas RSA (utilizadas en certificados X.509) mediante el hash SHA-256 debido a la falta de compatibilidad actual para RSA-SHA256 en la WinFX.  
+ WCF admite una variedad de algoritmos de creación de resúmenes de firma y cifrado que se pueden especificar con el conjunto de algoritmos en los enlaces proporcionados por el sistema. Para mejorar la seguridad, WCF admite algoritmos de algoritmo hash seguro (SHA) 2, específicamente SHA-256, para crear hashes de Resumen de firmas. Esta versión admite SHA-256 solo para usos de clave simétrica, como las claves de Kerberos, y donde no se usa un certificado X.509 para firmar el mensaje. WCF no admite firmas RSA (usadas en certificados X. 509) mediante el hash SHA-256 debido a la falta de compatibilidad actual con RSA-SHA256 en WinFX.  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>No se admiten hash SHA-256 conformes a FIPS  
- WCF no admite los hash de SHA-256 compatible con FIPS, por lo que WCF no admite los conjuntos de algoritmos que usan SHA-256 en sistemas donde se requiere el uso de algoritmos que cumplan FIPS.  
+ WCF no admite hashes compatibles con FIPS SHA-256, por lo que WCF no admite los conjuntos de algoritmos que usan SHA-256 en los sistemas donde se requiere el uso de algoritmos compatibles con FIPS.  
   
 ### <a name="fips-compliant-algorithms-may-fail-if-registry-is-edited"></a>Los algoritmos conformes a FIPS pueden producir errores si se edita el registro  
  Puede habilitar y deshabilitar los algoritmos conformes a los estándares de procesamiento de información federal (FIPS) utilizando el complemento Microsoft Management Console (MMC) de configuración de seguridad local. También puede tener acceso al valor en el registro. Sin embargo, tenga en cuenta que WCF no admite el uso del registro para restablecer la configuración. Si el valor está establecido en algo distinto de 1 ó 0, pueden producirse resultados incoherentes entre el CLR y el sistema operativo.  
@@ -62,26 +62,26 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
  El cifrado AES conforme a FIPS no funciona en devoluciones de llamada dúplex bajo suplantación del nivel de identificación.  
   
 ### <a name="cngksp-certificates"></a>Certificados CNG/KSP  
- *API de criptografía: Próxima generación (CNG)* es el sustituto a largo plazo de CryptoAPI. Esta API está disponible en código no administrado en [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)] y versiones posteriores de Windows.  
+ *API de criptografía: Next Generation (CNG)* es el sustituto a largo plazo de CryptoAPI. Esta API está disponible en código no administrado en [!INCLUDE[wv](../../../../includes/wv-md.md)] [!INCLUDE[lserver](../../../../includes/lserver-md.md)] y versiones posteriores de Windows.  
   
- .NET framework 4.6.1 y versiones anteriores no admiten estos certificados porque usan CryptoAPI heredada para administrar los certificados CNG/KSP. El uso de estos certificados con .NET Framework 4.6.1 y versiones anteriores producirá una excepción.  
+ .NET Framework 4.6.1 y versiones anteriores no admiten estos certificados porque usan CryptoAPI heredado para administrar los certificados CNG/KSP. El uso de estos certificados con .NET Framework 4.6.1 y versiones anteriores producirá una excepción.  
   
  Hay dos posibles maneras de saber si un certificado utiliza KSP:  
   
 - Ejecute `p/invoke` para `CertGetCertificateContextProperty` e inspeccione `dwProvType` en la `CertGetCertificateContextProperty` devuelta.  
   
-- Use la `certutil` línea de comandos desde la línea de comandos para consultar los certificados. Para obtener más información, consulte [tareas de Certutil para solucionar problemas de certificados](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Use el `certutil` comando desde la línea de comandos para consultar los certificados. Para obtener más información, consulte [tareas de certutil para solucionar problemas de certificados](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Se produce un error en la seguridad del mensaje si se requiere el uso de suplantación de ASP.NET y compatibilidad de ASP.NET  
- WCF no admite la siguiente combinación de valores porque pueden impedir que se produzca la autenticación cliente:  
+ WCF no admite la siguiente combinación de valores de configuración porque puede impedir que se produzca la autenticación del cliente:  
   
-- Suplantación de ASP.NET está habilitada. Esto se hace en el archivo Web.config estableciendo el `impersonate` atributo de la <`identity`> elemento para `true`.  
+- La suplantación de ASP.NET está habilitada. Esto se hace en el archivo Web. config estableciendo el `impersonate` atributo del elemento <`identity`> en `true`.  
   
-- Modo de compatibilidad ASP.NET se habilita estableciendo el `aspNetCompatibilityEnabled` atributo de la [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) a `true`.  
+- El modo de compatibilidad de ASP.net se habilita `aspNetCompatibilityEnabled` estableciendo el atributo de la [ \<> serviceHostingEnvironment](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) en. `true`  
   
 - Se utiliza la seguridad de modo de mensaje.  
   
- La solución alternativa consiste en desactivar el modo de compatibilidad ASP.NET. O bien, si se requiere el modo de compatibilidad ASP.NET, deshabilite la característica de suplantación de ASP.NET y utilizar en su lugar la suplantación de proporcionado por WCF. Para obtener más información, consulte [delegación y suplantación](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+ La solución alternativa consiste en desactivar el modo de compatibilidad de ASP.NET. O bien, si se requiere el modo de compatibilidad ASP.NET, deshabilite la característica de suplantación ASP.NET y use en su lugar la suplantación proporcionada por WCF. Para obtener más información, consulte [delegación y](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)suplantación.  
   
 ## <a name="ipv6-literal-address-failure"></a>Error de dirección literal IPv6  
  Se produce un error en las solicitudes de seguridad cuando el cliente y el servicio están en el mismo equipo y se utilizan direcciones IPv6 literales para el servicio.  
@@ -89,15 +89,15 @@ Por diversas razones, Windows Communication Foundation (WCF) no es compatible co
  Las direcciones IPv6 literales funcionan si el servicio y el cliente están en equipos diferentes.  
   
 ## <a name="wsdl-retrieval-failures-with-federated-trust"></a>Errores de recuperación de WSDL con confianza federada  
- WCF requiere exactamente un documento WSDL para cada nodo en la cadena de confianza federada. Tenga el cuidado de no establecer un bucle al especificar los extremos. Una manera en la que se pueden producir bucles es cuando se utiliza una descarga WSDL de cadenas de confianza federadas con dos o más vínculos en el mismo documento WSDL. Un escenario común donde se puede dar este problema es un servicio federado en el que el servidor de token de seguridad y el servicio se encuentran en el mismo ServiceHost.  
+ WCF requiere exactamente un documento WSDL para cada nodo de la cadena de confianza federada. Tenga el cuidado de no establecer un bucle al especificar los extremos. Una manera en la que se pueden producir bucles es cuando se utiliza una descarga WSDL de cadenas de confianza federadas con dos o más vínculos en el mismo documento WSDL. Un escenario común donde se puede dar este problema es un servicio federado en el que el servidor de token de seguridad y el servicio se encuentran en el mismo ServiceHost.  
   
  Un ejemplo de esta situación sería un servicio con las tres direcciones de punto de conexión siguientes:  
   
-- `http://localhost/CalculatorService/service` (el servicio)  
+- `http://localhost/CalculatorService/service`(el servicio)  
   
-- `http://localhost/CalculatorService/issue_ticket` (STS)  
+- `http://localhost/CalculatorService/issue_ticket`(STS)  
   
-- `http://localhost/CalculatorService/mex` (el extremo de metadatos)  
+- `http://localhost/CalculatorService/mex`(el extremo de metadatos)  
   
  Esto produce una excepción.  
   

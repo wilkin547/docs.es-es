@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034312"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953265"
 ---
 # <a name="handling-datatable-events"></a>Controlar eventos de DataTable
 El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una aplicación puede procesar. En la siguiente tabla se describen los eventos de `DataTable`.  
   
-|evento|Descripción|  
+|Evento|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|Se produce después de haber llamado al método <xref:System.Data.DataTable.EndInit%2A> de un objeto `DataTable`. Este evento está concebido principalmente para admitir escenarios en tiempo de diseño.|  
 |<xref:System.Data.DataTable.ColumnChanged>|Se produce después de cambiar correctamente un valor en un objeto <xref:System.Data.DataColumn>.|  
@@ -30,7 +30,7 @@ El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una 
 |<xref:System.ComponentModel.MarshalByValueComponent.Disposed>|Se produce cuando el objeto `DataTable` se establece en `Disposed`. Se hereda de <xref:System.ComponentModel.MarshalByValueComponent>.|  
   
 > [!NOTE]
->  La mayoría de las operaciones que agregan o eliminan filas no generan eventos `ColumnChanged` ni `ColumnChanging`. Sin embargo, el método `ReadXml` sí genera eventos `ColumnChanged` y `ColumnChanging`, a menos que `XmlReadMode` se establezca en `DiffGram` o se establezca en `Auto` cuando el documento XML que se lee es `DiffGram`.  
+> La mayoría de las operaciones que agregan o eliminan filas no generan eventos `ColumnChanged` ni `ColumnChanging`. Sin embargo, el método `ReadXml` sí genera eventos `ColumnChanged` y `ColumnChanging`, a menos que `XmlReadMode` se establezca en `DiffGram` o se establezca en `Auto` cuando el documento XML que se lee es `DiffGram`.  
   
 > [!WARNING]
 >  Es posible que los datos resulten dañados si se modifican en un `DataSet` desde el que se genera el evento `RowChanged`. No se producirá ninguna excepción si se produce este tipo de daño en los datos.  
@@ -68,7 +68,7 @@ El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una 
 10. Se comprueban las restricciones en las columnas de expresión.  
   
 > [!NOTE]
->  Los cambios en las columnas de expresión nunca generan eventos `DataTable`. Los cambios en las columnas de expresión solo generan eventos `DataView` y `DataRowView`. Las columnas de expresión pueden tener dependencias en otras columnas y se pueden evaluar varias veces durante una única operación de `DataRow`. Cada evaluación de expresión genera eventos, y una sola operación de `DataRow` puede generar varios eventos `ListChanged` y `PropertyChanged` cuando se ven afectadas columnas de expresión, que posiblemente incluyen varios eventos para la misma columna de expresión.  
+> Los cambios en las columnas de expresión nunca generan eventos `DataTable`. Los cambios en las columnas de expresión solo generan eventos `DataView` y `DataRowView`. Las columnas de expresión pueden tener dependencias en otras columnas y se pueden evaluar varias veces durante una única operación de `DataRow`. Cada evaluación de expresión genera eventos, y una sola operación de `DataRow` puede generar varios eventos `ListChanged` y `PropertyChanged` cuando se ven afectadas columnas de expresión, que posiblemente incluyen varios eventos para la misma columna de expresión.  
   
 > [!WARNING]
 >  No inicie una excepción <xref:System.NullReferenceException> dentro del controlador de eventos `RowChanged`. Si se inicia una excepción <xref:System.NullReferenceException> dentro del evento `RowChanged` de un objeto `DataTable`, el objeto `DataTable` resultará dañado.  

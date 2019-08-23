@@ -1,21 +1,21 @@
 ---
-title: Procedimiento Generar manualmente clases de servicio de datos de cliente (WCF Data Services)
+title: Procedimiento Generar manualmente clases del servicio de datos del cliente (WCF Data Services)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, client library
 ms.assetid: b98cb1d6-956a-4e50-add6-67e4f2587346
-ms.openlocfilehash: fdca85360e34d6854604103c9d0ac22c5b829cf5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2a827e4909b18d9cca74fc20a2d83d2730ea0cd9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634013"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952294"
 ---
-# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Procedimiento Generar manualmente clases de servicio de datos de cliente (WCF Data Services)
-WCF Data Services se integra con Visual Studio que le permite generar automáticamente clases de servicio de datos de cliente cuando se usa el **Add Service Reference** cuadro de diálogo para agregar una referencia a un servicio de datos en un proyecto de Visual Studio. Para obtener más información, vea [Cómo: Agregar una referencia de servicio de datos](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md). También puede generar manualmente las mismas clases del servicio de datos del cliente mediante la herramienta de generación de código `DataSvcUtil.exe`. Esta herramienta, que se incluye con WCF Data Services, genera clases de .NET Framework de la definición de servicio de datos. También se puede usar para generar clases del servicio de datos a partir del archivo de modelo conceptual (.csdl) y del archivo .edmx que representa un modelo de Entity Framework en un proyecto Visual Studio.
+# <a name="how-to-manually-generate-client-data-service-classes-wcf-data-services"></a>Procedimiento Generar manualmente clases del servicio de datos del cliente (WCF Data Services)
+WCF Data Services se integra con Visual Studio para permitir la generación automática de las clases del servicio de datos del cliente cuando se usa el cuadro de diálogo **Agregar referencia de servicio** para agregar una referencia a un servicio de datos en un proyecto de Visual Studio. Para obtener más información, consulte [Cómo Agregue una referencia](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)de servicio de datos. También puede generar manualmente las mismas clases del servicio de datos del cliente mediante la herramienta de generación de código `DataSvcUtil.exe`. Esta herramienta, que se incluye con WCF Data Services, genera clases de .NET Framework a partir de la definición del servicio de datos. También se puede usar para generar clases del servicio de datos a partir del archivo de modelo conceptual (.csdl) y del archivo .edmx que representa un modelo de Entity Framework en un proyecto Visual Studio.
 
- El ejemplo usado en este tema crea clases del servicio de datos del cliente basadas en el servicio de datos de ejemplo de Northwind. Este servicio se crea al completar el [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Algunos ejemplos de este tema requieren el archivo de modelo conceptual para el modelo de Northwind. Para obtener más información, vea [Cómo: Usar EdmGen.exe para generar los archivos de asignación y modelo](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md). Algunos ejemplos de este tema requieren el archivo de modelo conceptual .edmx para el modelo de Northwind. Para obtener más información, consulte [información general del archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
+ El ejemplo usado en este tema crea clases del servicio de datos del cliente basadas en el servicio de datos de ejemplo de Northwind. Este servicio se crea cuando se completa la guía de [Inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Algunos ejemplos de este tema requieren el archivo de modelo conceptual para el modelo de Northwind. Para obtener más información, consulte [Cómo Use EdmGen. exe para generar los archivos](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)de asignación y de modelo. Algunos ejemplos de este tema requieren el archivo de modelo conceptual .edmx para el modelo de Northwind. Para obtener más información, vea [información general sobre el archivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100)).
 
 ### <a name="to-generate-c-classes-that-support-data-binding"></a>Para generar clases de C# que admitan el enlace de datos
 
@@ -26,7 +26,7 @@ WCF Data Services se integra con Visual Studio que le permite generar automátic
     ```
 
     > [!NOTE]
-    >  Debe reemplazar el valor proporcionado para el parámetro `/uri:` con el URI de la instancia del servicio de datos de ejemplo de Northwind.
+    > Debe reemplazar el valor proporcionado para el parámetro `/uri:` con el URI de la instancia del servicio de datos de ejemplo de Northwind.
 
 ### <a name="to-generate-visual-basic-classes-that-support-data-binding"></a>Para generar clases Visual Basic que admitan el enlace de datos
 
@@ -37,7 +37,7 @@ WCF Data Services se integra con Visual Studio que le permite generar automátic
     ```
 
     > [!NOTE]
-    >  Debe reemplazar el valor proporcionado para el parámetro `/uri:` con el URI de la instancia del servicio de datos de ejemplo de Northwind.
+    > Debe reemplazar el valor proporcionado para el parámetro `/uri:` con el URI de la instancia del servicio de datos de ejemplo de Northwind.
 
 ### <a name="to-generate-c-classes-based-on-the-service-uri"></a>Para generar clases de C# basadas en el URI de servicio
 
@@ -48,7 +48,7 @@ WCF Data Services se integra con Visual Studio que le permite generar automátic
     ```
 
     > [!NOTE]
-    >  Debe reemplazar el valor proporcionado para el parámetro `/uri:` con el URI de la instancia del servicio de datos de ejemplo de Northwind.
+    > Debe reemplazar el valor proporcionado para el parámetro `/uri:` con el URI de la instancia del servicio de datos de ejemplo de Northwind.
 
 ### <a name="to-generate-visual-basic-classes-based-on-the-service-uri"></a>Para generar clases de Visual Basic basadas en el URI de servicio
 
@@ -59,7 +59,7 @@ WCF Data Services se integra con Visual Studio que le permite generar automátic
     ```
 
     > [!NOTE]
-    >  Debe reemplazar el valor proporcionado para el parámetro `/uri:` con el URI de la instancia del servicio de datos de ejemplo de Northwind.
+    > Debe reemplazar el valor proporcionado para el parámetro `/uri:` con el URI de la instancia del servicio de datos de ejemplo de Northwind.
 
 ### <a name="to-generate-c-classes-based-on-the-conceptual-model-file-csdl"></a>Para generar clases de C# basadas en el archivo de modelo conceptual (CSDL)
 
