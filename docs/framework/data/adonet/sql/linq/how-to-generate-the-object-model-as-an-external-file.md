@@ -2,18 +2,18 @@
 title: Procedimiento para generar el modelo de objetos como un archivo externo
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
-ms.openlocfilehash: 828e92903447b5c7cd3d7d27ed72bfe61d0dc6a9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7451dfbaf85c1cbd4635ae0cce1219853a2b01a3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743291"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911932"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Procedimiento para generar el modelo de objetos como un archivo externo
-Como alternativa a la asignación basada en atributos, puede generar su modelo de objetos como un archivo XML externo mediante la herramienta de línea de comandos SQLMetal. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Utilizando un archivo de asignación XML externo, se reduce el desorden en su código. También puede cambiar el comportamiento modificando el archivo externo sin recompilar los binarios de su aplicación. Para obtener más información, consulte [asignaciones externas](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+Como alternativa a la asignación basada en atributos, puede generar su modelo de objetos como un archivo XML externo mediante la herramienta de línea de comandos SQLMetal. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md). Utilizando un archivo de asignación XML externo, se reduce el desorden en su código. También puede cambiar el comportamiento modificando el archivo externo sin recompilar los binarios de su aplicación. Para obtener más información, consulte [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
 > [!NOTE]
->  Object Relational Designer no admite la generación de un archivo de asignación externo.  
+> La Object Relational Designer no admite la generación de un archivo de asignación externo.  
   
 ## <a name="example"></a>Ejemplo  
  El comando siguiente genera un archivo de asignación externo a partir de la base de datos de ejemplo Northwind.  
@@ -23,7 +23,7 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ```  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente fragmento de un archivo de asignación externo muestra la asignación para la tabla Clientes de la base de datos de ejemplo Northwind. Este fragmento se generó ejecutando SQLMetal con la **/map** opción.  
+ El siguiente fragmento de un archivo de asignación externo muestra la asignación para la tabla Clientes de la base de datos de ejemplo Northwind. Este fragmento se generó ejecutando SQLMetal con la opción **/map** .  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -52,4 +52,4 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 
 - [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Cómo: Generación del modelo de objetos en Visual Basic o C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [Procedimientos: Generación del modelo de objetos en Visual Basic o C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Crear listas principal-detalle con el Control DataGrid de Windows Forms
+title: Procedimiento Crear listas principal-detalle con el control DataGrid Windows Forms
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f0fd95cf0cd66e9a5105c0b8ff77d8c536a5822d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052175"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914762"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>Procedimiento para crear listas maestro y detalle con el control DataGrid de formularios Windows Forms
 > [!NOTE]
->  El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
+> El control <xref:System.Windows.Forms.DataGridView> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.DataGrid>; sin embargo, el control <xref:System.Windows.Forms.DataGrid> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso. Para obtener más información, consulte [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md) (Diferencias entre los controles DataGridView y DataGrid de formularios Windows Forms).  
   
- Si su <xref:System.Data.DataSet> contiene una serie de tablas relacionadas, puede utilizar dos <xref:System.Windows.Forms.DataGrid> controles para mostrar los datos en un formato de maestro y detalles. Una <xref:System.Windows.Forms.DataGrid> se designa como la cuadrícula principal, y el segundo se designa como la cuadrícula de detalles. Cuando se selecciona una entrada en la lista maestra, todas las entradas secundarias relacionadas aparecen en la lista de detalles. Por ejemplo, si su <xref:System.Data.DataSet> contiene una tabla Customers y una tabla de pedidos relacionada, debe especificar la tabla de clientes para la cuadrícula principal y la tabla Orders y cuadrícula de detalles. Cuando se selecciona un cliente en la cuadrícula principal, todos los pedidos asociados a ese cliente en la tabla Orders se mostraría en la cuadrícula de detalles.  
+ Si contiene una serie de tablas relacionadas, puede usar dos <xref:System.Windows.Forms.DataGrid> controles para mostrar los datos en un formato principal/detalle. <xref:System.Data.DataSet> Uno <xref:System.Windows.Forms.DataGrid> se designa como la cuadrícula maestra y el segundo se designa como la cuadrícula de detalles. Al seleccionar una entrada en la lista maestra, todas las entradas secundarias relacionadas se muestran en la lista de detalles. Por ejemplo, si <xref:System.Data.DataSet> contiene una tabla Customers y una tabla Orders relacionada, debe especificar la tabla Customers como cuadrícula maestra y la tabla Orders como cuadrícula de detalles. Cuando se selecciona un cliente en la cuadrícula maestra, todos los pedidos asociados a ese cliente en la tabla Orders se mostrarán en la cuadrícula detalles.  
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>Para establecer una relación principal-detalle mediante programación  
   
-1. Cree dos nuevos <xref:System.Windows.Forms.DataGrid> controla y establecer sus propiedades.  
+1. Cree dos nuevos <xref:System.Windows.Forms.DataGrid> controles y establezca sus propiedades.  
   
-2. Agregar tablas al conjunto de datos.  
+2. Agregar tablas al conjunto de DataSet.  
   
-3. Declarar una variable de tipo <xref:System.Data.DataRelation> para representar la relación que desea crear.  
+3. Declare una variable de <xref:System.Data.DataRelation> tipo para representar la relación que desea crear.  
   
-4. Crear una instancia de la relación especificando un nombre para la relación y especificando la tabla, la columna y el elemento que se asociará a las dos tablas.  
+4. Cree una instancia de la relación especificando un nombre para la relación y especificando la tabla, la columna y el elemento que vinculará las dos tablas.  
   
-5. Agregar la relación con el <xref:System.Data.DataSet> del objeto <xref:System.Data.DataSet.Relations%2A> colección.  
+5. Agregue la relación a la <xref:System.Data.DataSet> colección del <xref:System.Data.DataSet.Relations%2A> objeto.  
   
-6. Use la <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método de la <xref:System.Windows.Forms.DataGrid> para cada una de las cuadrículas para enlazar la <xref:System.Data.DataSet>.  
+6. Utilice el <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> método <xref:System.Windows.Forms.DataGrid> de para enlazar cada una de <xref:System.Data.DataSet>las cuadrículas a.  
   
-     El ejemplo siguiente muestra cómo establecer una relación principal-detalle entre las tablas Customers y Orders en generado anteriormente <xref:System.Data.DataSet> (`ds`).  
+     En el ejemplo siguiente se muestra cómo establecer una relación principal-detalle entre las tablas Customers y Orders de <xref:System.Data.DataSet> un`ds`generado previamente ().  
   
     ```vb  
     Dim myDataRelation As DataRelation  
@@ -74,4 +74,4 @@ ms.locfileid: "62052175"
 
 - [DataGrid (control)](datagrid-control-windows-forms.md)
 - [Información general del control DataGrid](datagrid-control-overview-windows-forms.md)
-- [Cómo: Enlazar el Control DataGrid de Windows Forms a un origen de datos](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Procedimientos: Enlazar el control DataGrid de Windows Forms a un origen de datos](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

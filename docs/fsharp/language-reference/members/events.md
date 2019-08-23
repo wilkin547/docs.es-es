@@ -2,12 +2,12 @@
 title: Events
 description: Obtenga información F# sobre cómo los eventos le permiten asociar las llamadas de función a las acciones del usuario, que son importantes en la programación de la GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: eed2caff569638ea5aa972a000dfa71a3b64f60b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7c3f16204b762609323fc2bcdc05f80e85a298e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627569"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917276"
 ---
 # <a name="events"></a>Events
 
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>Vea también
 
 - [Miembros](index.md)
-- [Control y generación de eventos](../../../../docs/standard/events/index.md)
+- [Control y generación de eventos](../../../standard/events/index.md)
 - [Expresiones lambda: `fun`Palabra clave](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control. event (módulo)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control. event&#60;(&#62; clase)](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

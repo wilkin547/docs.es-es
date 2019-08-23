@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: e1382c4daa513477011a1d1c2132840dfae84de0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 15664da02189dd618784d55c07aaf4db38a2f656
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879572"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929292"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 Trata un objeto de un tipo base determinado como un objeto del tipo derivado especificado.  
@@ -23,13 +23,13 @@ TREAT ( expression as type)
  Cualquier expresión de consulta válida que devuelve una entidad.  
   
 > [!NOTE]
->  El tipo de la expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo del tipo de expresión.  
+> El tipo de la expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo del tipo de expresión.  
   
  `type`  
  Tipo de entidad. El tipo debe estar calificado por un espacio de nombres.  
   
 > [!NOTE]
->  La expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo de la expresión.  
+> La expresión especificada debe ser un subtipo del tipo de datos especificado, o el tipo de datos debe ser un subtipo de la expresión.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un valor del tipo de datos especificado.  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  Este consulta convierte entidades `Person` al tipo `Employee` . Si el valor de p no es realmente de tipo `Employee`, la expresión obtiene el valor `null`.  
   
 > [!NOTE]
->  La expresión especificada `Employee` debe ser un subtipo del tipo de datos especificado `Person`, o el tipo de datos debe ser un subtipo de la expresión. De lo contrario, la expresión producirá un error en tiempo de compilación.  
+> La expresión `Employee` especificada debe ser un subtipo del tipo `Person`de datos especificado, o el tipo de datos debe ser un subtipo de la expresión. De lo contrario, la expresión producirá un error en tiempo de compilación.  
   
  En la tabla siguiente se muestra el comportamiento del tratamiento en algunos patrones típicos y algunos patrones menos comunes. Todas las excepciones se producen en el cliente antes de que se llame al proveedor:  
   

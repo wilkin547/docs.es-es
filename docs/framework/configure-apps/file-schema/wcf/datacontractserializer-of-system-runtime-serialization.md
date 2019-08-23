@@ -1,15 +1,15 @@
 ---
-title: <dataContractSerializer> de < system.runtime.serialization >
+title: <dataContractSerializer>de < System. Runtime. Serialization >
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: c81fdb040f2e0d6c9a3728d8ed3b917443ecb42e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 380d9ba5b8407d78b5045fd34fcdf37c0818d6f9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700987"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919352"
 ---
-# <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer > de \<system.runtime.serialization >
+# <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer > de \<System. Runtime. Serialization >
 Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  \<system.runtime.serialization>  
@@ -40,28 +40,28 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
   
 ### <a name="attributes"></a>Atributos  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |ignoreExtensionDataObject|Un valor booleano que especifica si se omiten los datos proporcionados por el punto de conexión cuando se serializa o deserializa. Este atributo se puede configurar sólo en `<dataContractSerializer>` bajo el elemento `<behavior>`.|  
 |maxItemsInObjectGraph|Un entero que especifica el número máximo de elementos para serializar o deserializar. Este atributo es 65536.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<declaredTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContractSerializer> usa al deserializar.<br /><br /> Para obtener más información acerca de los contratos de datos y los tipos conocidos, consulte [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).|  
+|[\<declaredTypes>](declaredtypes.md)|Contiene los tipos conocidos que <xref:System.Runtime.Serialization.DataContractSerializer> usa al deserializar.<br /><br /> Para obtener más información sobre los contratos de datos y los tipos conocidos, consulte [Data Contract known Types](../../../wcf/feature-details/data-contract-known-types.md).|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[\<system.runtime.serialization>](system-runtime-serialization.md)|Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información sobre los tipos conocidos, consulte <xref:System.Runtime.Serialization.DataContractSerializer> y [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Para obtener más información sobre los tipos conocidos <xref:System.Runtime.Serialization.DataContractSerializer> , vea y [tipos conocidos del contrato de datos](../../../wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
-- [Tipos conocidos de contratos de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [Tipos conocidos de contratos de datos](../../../wcf/feature-details/data-contract-known-types.md)

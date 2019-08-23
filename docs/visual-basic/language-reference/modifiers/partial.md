@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: da5679c3e69a938e9735922bcf4f912428024610
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd7550b8b1e164c55bd97828d395b43a60c87cfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642780"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929949"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 Indica que una declaración de tipo es una definición parcial del tipo.  
@@ -27,7 +27,7 @@ Indica que una declaración de tipo es una definición parcial del tipo.
  Puede dividir la definición de un tipo en varias declaraciones con la palabra clave `Partial`. Puede usar todas las declaraciones parciales que quiera en todos los archivos de código fuente que desee, pero todas las declaraciones deben estar en el mismo ensamblado y en el mismo espacio de nombres.  
   
 > [!NOTE]
->  Visual Basic admite *métodos parciales*, que normalmente se implementan en clases parciales. Para obtener más información, consulte [métodos parciales](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) y [Sub (instrucción)](../../../visual-basic/language-reference/statements/sub-statement.md).  
+> Visual Basic admite *métodos parciales*, que normalmente se implementan en clases parciales. Para obtener más información, vea [métodos parciales](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md) y [Sub Statement](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,17 +45,17 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 |Término|Definición|  
 |---|---|  
-|`attrlist`|Opcional. Lista de atributos que se aplican a este tipo. Debe incluir el [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) en corchetes angulares (`< >`).|  
+|`attrlist`|Opcional. Lista de atributos que se aplican a este tipo. Debe incluir la [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre corchetes angulares`< >`().|  
 |`accessmodifier`|Opcional. Especifica qué código puede tener acceso a este tipo. Vea [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
-|`Shadows`|Opcional. Consulte [sombras](../../../visual-basic/language-reference/modifiers/shadows.md).|  
-|`MustInherit`|Opcional. Consulte [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
-|`NotInheritable`|Opcional. Consulte [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
-|`name`|Obligatorio. Nombre de este tipo. Debe coincidir con el nombre definido en el resto de las declaraciones parciales del mismo tipo.|  
-|`Of`|Opcional. Especifica que se trata de un tipo genérico. Consulte [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
-|`typelist`|Es necesario si se usan [de](../../../visual-basic/language-reference/statements/of-clause.md). Consulte [escriba lista](../../../visual-basic/language-reference/statements/type-list.md).|  
-|`Inherits`|Opcional. Consulte [Inherits (instrucción)](../../../visual-basic/language-reference/statements/inherits-statement.md).|  
+|`Shadows`|Opcional. Vea [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
+|`MustInherit`|Opcional. Vea [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md).|  
+|`NotInheritable`|Opcional. Vea [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md).|  
+|`name`|Necesario. Nombre de este tipo. Debe coincidir con el nombre definido en el resto de las declaraciones parciales del mismo tipo.|  
+|`Of`|Opcional. Especifica que se trata de un tipo genérico. Vea [tipos genéricos en Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).|  
+|`typelist`|Obligatorio si se usa [de](../../../visual-basic/language-reference/statements/of-clause.md). Consulte [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).|  
+|`Inherits`|Opcional. Vea [Inherits (instrucción](../../../visual-basic/language-reference/statements/inherits-statement.md)).|  
 |`classname`|Obligatorio si se usa `Inherits`. El nombre de la clase o la interfaz de la que se deriva esta clase.|  
-|`Implements`|Opcional. Consulte [implementa instrucción](../../../visual-basic/language-reference/statements/implements-statement.md).|  
+|`Implements`|Opcional. Vea [Implements (instrucción](../../../visual-basic/language-reference/statements/implements-statement.md)).|  
 |`interfacenames`|Obligatorio si se usa `Implements`. Los nombres de las interfaces que implementa este tipo.|  
 |`variabledeclarations`|Opcional. Instrucciones que declaran variables adicionales y eventos para el tipo.|  
 |`proceduredeclarations`|Opcional. Instrucciones que declaran y definen procedimientos adicionales para el tipo.|  
@@ -76,7 +76,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
 - **Unión de declaraciones.** El compilador trata el tipo como la unión de todas sus declaraciones parciales. Todos los modificadores de todas las definiciones parciales se aplican a todo el tipo; además, todos los miembros de todas las definiciones parciales están disponibles para todo el tipo.  
   
-- **Promoción de tipos no permitida para los tipos parciales en módulos.** Si una definición parcial está dentro de un módulo, se rechaza automáticamente la promoción de tipos de ese tipo. En este caso, un conjunto de definiciones parciales puede producir resultados inesperados e incluso errores del compilador. Para obtener más información, consulte [promoción de tipos](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
+- **Promoción de tipos no permitida para tipos parciales en módulos.** Si una definición parcial está dentro de un módulo, se rechaza automáticamente la promoción de tipos de ese tipo. En este caso, un conjunto de definiciones parciales puede producir resultados inesperados e incluso errores del compilador. Para obtener más información, consulte [promoción de tipos](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
      El compilador solo combina las definiciones parciales cuando sus rutas de acceso completas son idénticas.  
   

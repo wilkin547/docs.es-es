@@ -2,12 +2,12 @@
 title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
-ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65488c34931f6d7c424ece58a4855e746ea455bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670383"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936421"
 ---
 # <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
 Proporciona un elemento de configuración del flujo de trabajo que establece la validez de una transmisión, un mensaje o un autor en el nivel del servicio.  
@@ -35,7 +35,7 @@ Proporciona un elemento de configuración del flujo de trabajo que establece la 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |serviceAuthenticationManagerType|Cadena que especifica el tipo de la directiva de autenticación para el comportamiento actual.|  
   
@@ -44,9 +44,9 @@ Proporciona un elemento de configuración del flujo de trabajo que establece la 
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<comportamiento >](behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="see-also"></a>Vea también
 

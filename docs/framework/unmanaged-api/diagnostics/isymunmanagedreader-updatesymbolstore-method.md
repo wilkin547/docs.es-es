@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cfc4507557102e19d95f1b746b3a76a231882d7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d84d4fccb2cb4e500f07f6bfbfb93b8c7b81f5d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736748"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939003"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>ISymUnmanagedReader::UpdateSymbolStore (Método)
-Actualiza el almacén de símbolos existente con un almacén de símbolos delta. Este método se utiliza en escenarios de editar y continuar para actualizar el almacén de símbolos delta coincidan con el archivo ejecutable portable (PE) original.  
+Actualiza el almacén de símbolos existente con un almacén de símbolos delta. Este método se usa en escenarios de edición y continuación para actualizar el almacén de símbolos de modo que coincida con las diferencias con el archivo portable ejecutable (PE) original.  
   
 > [!NOTE]
->  Es necesario especificar solo uno de los `filename` o `pIStream` parámetros, no ambos. Si `filename` se especifica, el almacén de símbolos se actualizará con los símbolos de ese archivo. Si `pIStream` se especifica, el almacén se actualizará con los datos de la <xref:System.Runtime.InteropServices.ComTypes.IStream>.  
+> Solo se debe especificar uno de los `filename` parámetros `pIStream` o, no ambos. Si `filename` se especifica, el almacén de símbolos se actualizará con los símbolos de ese archivo. Si `pIStream` se especifica, el almacén se actualizará con los datos <xref:System.Runtime.InteropServices.ComTypes.IStream>de.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,16 +40,16 @@ HRESULT UpdateSymbolStore (
   
 ## <a name="parameters"></a>Parámetros  
  `filename`  
- [in] El nombre del archivo que contiene el almacén de símbolos.  
+ de Nombre del archivo que contiene el almacén de símbolos.  
   
  `pIStream`  
- [in] La secuencia de archivos que se utiliza como una alternativa a la `filename` parámetro.  
+ de El flujo de archivo, que se usa como alternativa `filename` al parámetro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- S_OK si el método se realiza correctamente; en caso contrario, E_FAIL u otro código de error.  
+ S_OK si el método se ejecuta correctamente; de lo contrario, E_FAIL u otro código de error.  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: CorSym.idl, CorSym.h  
+ **Encabezado**: CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Vea también
 

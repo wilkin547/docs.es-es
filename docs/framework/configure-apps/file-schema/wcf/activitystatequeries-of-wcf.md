@@ -1,25 +1,25 @@
 ---
-title: <activityStateQueries> de WCF
+title: <activityStateQueries>de WCF
 ms.date: 10/08/2018
 ms.assetid: 9e45db49-ed85-4fdf-bd65-0d5477e31823
-ms.openlocfilehash: c9c78b6929b4550204a22fe2e2786891b516a818
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 415cd4a75ecab725f91bcd298f8a7966ea6079d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701091"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920295"
 ---
 # <a name="activitystatequeries-of-wcf"></a>\<activityStateQueries > de WCF
 
-Representa una colección de consultas que se usan para realizar el seguimiento de los cambios del ciclo de vida de las actividades que constituyen una instancia de flujo de trabajo. Por ejemplo, desea realizar un seguimiento de cada vez que se complete la actividad "Enviar correo electrónico" dentro de una instancia de flujo de trabajo. Esta consulta es necesaria para que un participante de seguimiento se suscriba a los objetos de registro de estado de actividad. Los estados de suscripción disponibles se especifican en ActivityStates.
+Representa una colección de consultas que se usan para realizar el seguimiento de los cambios del ciclo de vida de las actividades que constituyen una instancia de flujo de trabajo. Por ejemplo, puede que desee realizar un seguimiento de cada vez que se complete la actividad "enviar correo electrónico" dentro de una instancia de flujo de trabajo. Esta consulta es necesaria para que un participante de seguimiento se suscriba a los objetos de registro de estado de actividad. Los estados de suscripción disponibles se especifican en ActivityStates.
 
-Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md).
 
 \<system.serviceModel>  
-\<tracking>  
-\<profiles>  
+\<> de seguimiento  
+\<perfiles >  
 \<trackingProfile>  
-\<flujo de trabajo >  
+\<> de flujo de trabajo  
 \<activityStateQueries>  
 
 ## <a name="syntax"></a>Sintaxis  
@@ -58,19 +58,19 @@ Ninguno.
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
 |[\<activityStateQuery>](activitystatequery-of-wcf.md)|Una consulta que se utiliza para realizar el seguimiento del control de errores que se producen dentro de una actividad.  Este evento se produce cada vez que un FaultHandler procesa un error.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad `activityDefinitionId`.|
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|Un elemento de configuración que contiene todas las consultas para un flujo de trabajo concreto identificado por la propiedad `activityDefinitionId`.|
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElementCollection>
 - <xref:System.Activities.Tracking.ActivityStateQuery>
-- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Seguimiento y traza de flujos de trabajo](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md)

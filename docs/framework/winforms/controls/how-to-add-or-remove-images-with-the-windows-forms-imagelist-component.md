@@ -13,24 +13,24 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: 31ae91958dbc02a2f64945af896b4a2408224d05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 430b7f573b115c21b9e2fa87f0ace74205717285
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925122"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Procedimiento para agregar o quitar imágenes con el componente ImageList de formularios Windows Forms
-Los formularios de Windows <xref:System.Windows.Forms.ImageList> componente normalmente se rellena con las imágenes antes de asociarlo con un control. Sin embargo, puede agregar y quitar imágenes después de asociar la lista de imágenes con un control.  
+El componente <xref:System.Windows.Forms.ImageList> de Windows Forms se rellena normalmente con imágenes antes de asociarse a un control. Sin embargo, puede Agregar y quitar imágenes después de asociar la lista de imágenes con un control.  
   
 > [!NOTE]
->  Al quitar las imágenes, compruebe que la <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> sigue siendo válida la propiedad de los controles asociados.  
+> Al quitar imágenes, compruebe que la <xref:System.Windows.Forms.ButtonBase.ImageIndex%2A> propiedad de los controles asociados todavía es válida.  
   
 ### <a name="to-add-images-programmatically"></a>Para agregar imágenes mediante programación  
   
-- Use la <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> método de la lista de imágenes <xref:System.Windows.Forms.ImageList.Images%2A> propiedad.  
+- Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> método de la <xref:System.Windows.Forms.ImageList.Images%2A> propiedad de la lista de imágenes.  
   
-     En el ejemplo de código siguiente establece la ruta de acceso para la ubicación de la imagen es la **Mis documentos** carpeta. Se utiliza esta ubicación porque se puede suponer que la mayoría de los equipos que ejecuta el sistema operativo Windows incluirá esta carpeta. Al elegir esta ubicación también permite a los usuarios que tienen acceso niveles mínimos más ejecutar de forma segura la aplicación. El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya se ha agregado.  
+     En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta **Mis documentos** . Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta. La elección de esta ubicación también permite a los usuarios con niveles de acceso del sistema mínimos ejecutar la aplicación de forma más segura. El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya agregado.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -74,11 +74,11 @@ Los formularios de Windows <xref:System.Windows.Forms.ImageList> componente norm
        }  
     ```  
   
-### <a name="to-add-images-with-a-key-value"></a>Para agregar las imágenes con un valor de clave.  
+### <a name="to-add-images-with-a-key-value"></a>Para agregar imágenes con un valor de clave.  
   
-- Utilice uno de los <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> métodos de la lista de imágenes <xref:System.Windows.Forms.ImageList.Images%2A> propiedad que toma un valor de clave.  
+- Use uno de los <xref:System.Windows.Forms.ImageList.ImageCollection.Add%2A> métodos de la <xref:System.Windows.Forms.ImageList.Images%2A> propiedad de la lista de imágenes que toma un valor de clave.  
   
-     En el ejemplo de código siguiente establece la ruta de acceso para la ubicación de la imagen es la **Mis documentos** carpeta. Se utiliza esta ubicación porque se puede suponer que la mayoría de los equipos que ejecuta el sistema operativo Windows incluirá esta carpeta. Al elegir esta ubicación también permite a los usuarios que tienen acceso niveles mínimos más ejecutar de forma segura la aplicación. El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya se ha agregado.  
+     En el ejemplo de código siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta **Mis documentos** . Esta ubicación se usa porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán esta carpeta. La elección de esta ubicación también permite a los usuarios con niveles de acceso del sistema mínimos ejecutar la aplicación de forma más segura. El siguiente ejemplo de código requiere que tenga un formulario con un <xref:System.Windows.Forms.ImageList> control ya agregado.  
   
     ```vb  
     Public Sub LoadImage()  
@@ -107,11 +107,11 @@ public void addImage()
   
 ### <a name="to-remove-all-images-programmatically"></a>Para quitar todas las imágenes mediante programación  
   
-- Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> método para quitar una sola imagen  
+- Usar el <xref:System.Windows.Forms.ImageList.ImageCollection.Remove%2A> método para quitar una sola imagen  
   
-     , - o -  
+     , o bien  
   
-     Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> método para borrar todas las imágenes en la lista de imágenes.  
+     Use el <xref:System.Windows.Forms.ImageList.ImageCollection.Clear%2A> método para borrar todas las imágenes de la lista de imágenes.  
   
     ```vb  
     ' Removes the first image in the image list  
@@ -127,7 +127,7 @@ imageList1.Images.Remove(myImage);
 imageList1.Images.Clear();  
 ```  
   
-### <a name="to-remove-images-by-key"></a>Para quitar las imágenes por clave  
+### <a name="to-remove-images-by-key"></a>Para quitar imágenes por clave  
   
 - Use el <xref:System.Windows.Forms.ImageList.ImageCollection.RemoveByKey%2A> método para quitar una sola imagen por su clave.  
   

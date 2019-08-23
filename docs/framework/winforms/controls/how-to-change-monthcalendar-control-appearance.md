@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: 21fa6798c431b71d36c1909937ddad6bf5030782
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 5582624d881b2d8039bcd5e8ac45e548c7b38f57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053097"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929046"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Procedimiento para cambiar la apariencia del control MonthCalendar de formularios Windows Forms
-Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control le permite personalizar la apariencia del calendario de muchas maneras. Por ejemplo, puede establecer la combinación de colores y elegir mostrar u ocultar los números de semana y la fecha actual.  
+El control <xref:System.Windows.Forms.MonthCalendar> Windows Forms permite personalizar la apariencia del calendario de muchas maneras. Por ejemplo, puede establecer la combinación de colores y elegir mostrar u ocultar los números de semana y la fecha actual.  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>Para cambiar la combinación de colores del calendario mensual  
   
-- Establecer propiedades tales como <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> y <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. El <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> propiedad también determina el color de fuente para los días de la semana. El <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propiedad determina el color de las fechas que preceden y siguen el mes que se muestra o meses.  
+- Establezca propiedades como <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A> y <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>. La <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A> propiedad también determina el color de fuente de los días de la semana. La <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propiedad determina el color de las fechas que preceden y siguen al mes o meses que se muestran.  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -42,7 +42,7 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control le 
     ```  
   
     > [!NOTE]
-    >  A partir de Windows Vista y según el tema, establecer algunas propiedades podría no cambiar la apariencia del calendario. Por ejemplo, si Windows está configurado para usar el tema de Aero, al establecer el <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, o <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> propiedades no tiene ningún efecto. Esto es debido a una versión actualizada del calendario se representa con un aspecto que se deriva en tiempo de ejecución del tema actual del sistema operativo. Si desea usar estas propiedades y habilitar la versión anterior del calendario, puede deshabilitar estilos visuales para su aplicación. Deshabilitar estilos visuales podría afectar a la apariencia y comportamiento de otros controles en la aplicación. Para deshabilitar estilos visuales en Visual Basic, abra el Diseñador de proyectos y desactive el **estilos visuales de XP habilitar** casilla de verificación. Para deshabilitar estilos visuales en C#, abra Program.cs y marque como comentario `Application.EnableVisualStyles();`. Para obtener más información sobre los estilos visuales, vea [Enabling Visual Styles](/windows/desktop/controls/cookbook-overview).  
+    > A partir de Windows Vista y según el tema, la configuración de algunas propiedades podría no cambiar la apariencia del calendario. Por ejemplo, si Windows está establecido para usar el tema de Aero, el <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>establecimiento <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>de las propiedades <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> ,, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>o no tiene ningún efecto. Esto se debe a que una versión actualizada del calendario se representa con una apariencia que se deriva en tiempo de ejecución del tema del sistema operativo actual. Si desea usar estas propiedades y habilitar la versión anterior del calendario, puede deshabilitar los estilos visuales para la aplicación. Deshabilitar los estilos visuales puede afectar a la apariencia y el comportamiento de otros controles de la aplicación. Para deshabilitar los estilos visuales en Visual Basic, abra el diseñador de proyectos y desactive la casilla **habilitar estilos visuales de XP** . Para deshabilitar los estilos C#visuales en, abra Program.CS y `Application.EnableVisualStyles();`comente. Para obtener más información sobre los estilos visuales, vea [habilitar estilos visuales](/windows/desktop/controls/cookbook-overview).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Para mostrar la fecha actual en la parte inferior del control  
   
@@ -74,7 +74,7 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control le 
        }  
     ```  
   
-     (Visual C#, Visual C++) Coloque el código siguiente en el constructor del formulario para registrar el controlador de eventos.  
+     (Visual C#, visual C++) Coloque el siguiente código en el constructor del formulario para registrar el controlador de eventos.  
   
     ```csharp  
     this.DoubleClick += new System.EventHandler(this.Form1_DoubleClick);  
@@ -87,9 +87,9 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control le 
   
 ### <a name="to-display-week-numbers"></a>Para mostrar los números de semana  
   
-- Establezca la propiedad <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> en `true`. Puede establecer esta propiedad en el código o en la ventana Propiedades.  
+- Establezca la propiedad <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> en `true`. Puede establecer esta propiedad en el código o en el ventana Propiedades.  
   
-     Números de semana aparecen en una columna independiente a la izquierda del primer día de la semana.  
+     Los números de semana aparecen en una columna independiente a la izquierda del primer día de la semana.  
   
     ```vb  
     MonthCalendar1.ShowWeekNumbers = True  
@@ -106,6 +106,6 @@ Los formularios de Windows <xref:System.Windows.Forms.MonthCalendar> control le 
 ## <a name="see-also"></a>Vea también
 
 - [MonthCalendar (control)](monthcalendar-control-windows-forms.md)
-- [Cómo: Seleccione un intervalo de fechas en el Control MonthCalendar de formularios de Windows](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Cómo: Mostrar días específicos en negrita con el Windows Forms Control MonthCalendar de formularios](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Cómo: Mostrar más de un mes en el Control MonthCalendar de formularios de Windows](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Cómo: Seleccionar un intervalo de fechas en el control MonthCalendar Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Procedimientos: Mostrar días específicos en negrita con el control MonthCalendar Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Procedimientos: Mostrar más de un mes en el control MonthCalendar Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

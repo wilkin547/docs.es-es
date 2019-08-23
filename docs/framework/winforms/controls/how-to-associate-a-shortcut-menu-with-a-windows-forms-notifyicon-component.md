@@ -10,46 +10,46 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf5602d0526fdd97f0cc14382339095a793f13c3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010948"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922766"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Procedimiento para asociar un menú contextual con un componente NotifyIcon de formularios Windows Forms
 > [!NOTE]
->  Aunque <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.ContextMenuStrip> reemplazan y agregan funcionalidad a la <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> controles de versiones anteriores, <xref:System.Windows.Forms.MainMenu> y <xref:System.Windows.Forms.ContextMenu> se conservan para compatibilidad con versiones anteriores y uso futuro, si elige.  
+> Aunque <xref:System.Windows.Forms.MenuStrip> y <xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.MainMenu> <xref:System.Windows.Forms.ContextMenu> reemplazan y agregan funcionalidad a los controles y de versiones anteriores, y se conservan por compatibilidad con versiones anteriores y uso futuro, si así lo decide. <xref:System.Windows.Forms.ContextMenuStrip>  
   
- El <xref:System.Windows.Forms.NotifyIcon> componente muestra un icono en el área de notificación de estado de la barra de tareas. Normalmente, las aplicaciones permiten que hace clic en este icono para enviar comandos a la aplicación que representa. Asociando un <xref:System.Windows.Forms.ContextMenu> componente con el <xref:System.Windows.Forms.NotifyIcon> , componente, puede agregar esta funcionalidad a sus aplicaciones.  
+ El <xref:System.Windows.Forms.NotifyIcon> componente muestra un icono en el área de notificación de estado de la barra de tareas. Normalmente, las aplicaciones permiten hacer clic con el botón secundario en este icono para enviar comandos a la aplicación que representa. Al asociar un <xref:System.Windows.Forms.ContextMenu> componente <xref:System.Windows.Forms.NotifyIcon> al componente, puede Agregar esta funcionalidad a sus aplicaciones.  
   
 > [!NOTE]
->  Si desea que la aplicación que se debe minimizar al inicio mientras se muestra una instancia de la <xref:System.Windows.Forms.NotifyIcon> conjunto de componentes en la barra de tareas, el formulario principal <xref:System.Windows.Forms.Form.WindowState%2A> propiedad <xref:System.Windows.Forms.FormWindowState.Minimized> y asegúrese del <xref:System.Windows.Forms.NotifyIcon> del componente <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedad se establece en `true`.  
+> Si desea que la aplicación se minimice en el inicio mientras se muestra una instancia del <xref:System.Windows.Forms.NotifyIcon> componente en la barra de tareas, establezca la propiedad del <xref:System.Windows.Forms.Form.WindowState%2A> formulario principal en <xref:System.Windows.Forms.FormWindowState.Minimized> y asegúrese de <xref:System.Windows.Forms.NotifyIcon> que la <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedad del componente está establecido en `true`.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Para asociar un menú contextual con el componente NotifyIcon en tiempo de diseño  
   
-1. Agregar un <xref:System.Windows.Forms.NotifyIcon> al formulario y establecer las propiedades importantes, como el <xref:System.Windows.Forms.NotifyIcon.Icon%2A> y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedades.  
+1. Agregue un <xref:System.Windows.Forms.NotifyIcon> componente al formulario y establezca las propiedades importantes, como las <xref:System.Windows.Forms.NotifyIcon.Icon%2A> propiedades y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> .  
   
-     Para obtener más información, vea [Cómo: Agregar iconos de aplicación a la barra de tareas con el Windows Forms control NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
+     Para obtener más información, consulte [Cómo Agregue iconos de aplicación a la barra de tareas con el](app-icons-to-the-taskbar-with-wf-notifyicon.md)Windows Forms componente NotifyIcon.  
   
-2. Agregar un <xref:System.Windows.Forms.ContextMenu> al formulario de Windows.  
+2. Agregue un <xref:System.Windows.Forms.ContextMenu> componente a su Windows Form.  
   
-     Agregar elementos de menú al menú contextual que representan los comandos que desea que estén disponibles en tiempo de ejecución. También es un buen momento para agregar mejoras a estos elementos de menú, como las claves de acceso.  
+     Agregue elementos de menú al menú contextual que representa los comandos que desea que estén disponibles en tiempo de ejecución. También es un buen momento para agregar mejoras de menú a estos elementos de menú, como las teclas de acceso.  
   
-3. Establecer el <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propiedad de la <xref:System.Windows.Forms.NotifyIcon> componente en el menú contextual que agregó.  
+3. Establezca la <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propiedad <xref:System.Windows.Forms.NotifyIcon> del componente en el menú contextual que ha agregado.  
   
-     Con esta propiedad establecida, se mostrará el menú contextual cuando se hace clic en el icono de la barra de tareas.  
+     Con esta propiedad establecida, el menú contextual se mostrará cuando se haga clic en el icono de la barra de tareas.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Para asociar un menú contextual con el componente NotifyIcon mediante programación  
   
-1. Cree una instancia de la <xref:System.Windows.Forms.NotifyIcon> clase y un <xref:System.Windows.Forms.ContextMenu> (clase), con cualquier configuración de propiedad es necesarios para la aplicación (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> propiedades para el <xref:System.Windows.Forms.NotifyIcon> componente, elementos de menú para el <xref:System.Windows.Forms.ContextMenu> componente).  
+1. Cree una instancia de la <xref:System.Windows.Forms.NotifyIcon> clase y una <xref:System.Windows.Forms.ContextMenu> clase, con los valores de propiedad necesarios para la aplicación <xref:System.Windows.Forms.NotifyIcon> (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> y <xref:System.Windows.Forms.NotifyIcon.Visible%2A> las propiedades del componente, elementos de menú para <xref:System.Windows.Forms.ContextMenu> el componente).  
   
-2. Establecer el <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propiedad de la <xref:System.Windows.Forms.NotifyIcon> componente en el menú contextual que agregó.  
+2. Establezca la <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> propiedad <xref:System.Windows.Forms.NotifyIcon> del componente en el menú contextual que ha agregado.  
   
-     Con esta propiedad establecida, se mostrará el menú contextual cuando se hace clic en el icono de la barra de tareas.  
+     Con esta propiedad establecida, el menú contextual se mostrará cuando se haga clic en el icono de la barra de tareas.  
   
     > [!NOTE]
-    >  En el ejemplo de código siguiente se crea una estructura de menú básico. Debe personalizar las opciones de menú a los que se ajusten a la aplicación que está desarrollando. Además, desea escribir código para controlar la <xref:System.Windows.Forms.MenuItem.Click> eventos para estos elementos de menú.  
+    > En el ejemplo de código siguiente se crea una estructura de menú básica. Tendrá que personalizar las opciones de menú a las que se ajustan a la aplicación que está desarrollando. Además, querrá escribir código para controlar los <xref:System.Windows.Forms.MenuItem.Click> eventos de estos elementos de menú.  
   
     ```vb  
     Public ContextMenu1 As New ContextMenu  
@@ -119,7 +119,7 @@ public:
 ```  
   
 > [!NOTE]
->  Se debe inicializar `notifyIcon1` y `contextMenu1,` lo que puede hacer mediante la inclusión de las siguientes instrucciones en el constructor del formulario:  
+> Debe inicializar `notifyIcon1` y `contextMenu1,` lo que puede hacer si incluye las siguientes instrucciones en el constructor del formulario:  
   
 ```cpp  
 notifyIcon1 = gcnew System::Windows::Forms::NotifyIcon();  
@@ -130,6 +130,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Cómo: Agregar iconos de aplicación a la barra de tareas con el componente NotifyIcon de formularios de Windows](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [Cómo: Agregar iconos de aplicación a la barra de tareas con el Windows Forms componente NotifyIcon](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [NotifyIcon (componente)](notifyicon-component-windows-forms.md)
 - [Información general sobre el componente NotifyIcon](notifyicon-component-overview-windows-forms.md)

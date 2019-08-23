@@ -15,25 +15,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: b869898a20008343b6c6cbe4bc7e399fc86fb232
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f361526c44f8fbb9ab282fe15ae109b67e8f01dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054021"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922752"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>Procedimiento para enlazar un control ComboBox o ListBox de formularios Windows Forms a datos
-Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.Forms.ListBox> a datos para realizar tareas como la exploración de datos en una base de datos, escribir nuevos datos o modificar datos existentes.  
+Puede enlazar los <xref:System.Windows.Forms.ComboBox> datos <xref:System.Windows.Forms.ListBox> y a los datos para realizar tareas como la exploración de datos en una base de datos, la entrada de nuevos datos o la edición de datos existentes.  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>Para enlazar un control ComboBox o ListBox  
   
-1. Establecer el `DataSource` propiedad a un objeto de origen de datos. Posibles orígenes de datos incluyen un <xref:System.Windows.Forms.BindingSource> enlazado a datos, una tabla de datos, una vista de datos, un conjunto de datos, la vista de datos de un administrador, una matriz o cualquier clase que implementa el <xref:System.Collections.IList> interfaz. Para obtener más información, consulte [Data Sources Supported by Windows Forms](../data-sources-supported-by-windows-forms.md).  
+1. Establezca la `DataSource` propiedad en un objeto de origen de datos. Entre los orígenes de datos <xref:System.Windows.Forms.BindingSource> posibles se incluyen un enlazado a datos, una tabla de datos, una vista de datos, un conjunto de datos, un administrador de vistas de datos <xref:System.Collections.IList> , una matriz o cualquier clase que implemente la interfaz. Para obtener más información, vea [orígenes de datos compatibles con Windows Forms](../data-sources-supported-by-windows-forms.md).  
   
-2. Si va a enlazar a una tabla, establecer el `DisplayMember` propiedad en el nombre de una columna del origen de datos.  
+2. Si va a enlazar a una tabla, establezca `DisplayMember` la propiedad en el nombre de una columna del origen de datos.  
   
      \- o -  
   
-     Si va a enlazar a un <xref:System.Collections.IList>, establezca el miembro de presentación a una propiedad pública del tipo en la lista.  
+     Si va a enlazar a <xref:System.Collections.IList>, establezca el miembro de presentación en una propiedad pública del tipo en la lista.  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,7 +51,7 @@ Puede enlazar el <xref:System.Windows.Forms.ComboBox> y <xref:System.Windows.For
     ```  
   
     > [!NOTE]
-    >  Si está enlazado a un origen de datos que no implementa la <xref:System.ComponentModel.IBindingList> interfaz, como un <xref:System.Collections.ArrayList>, no se actualizará los datos del control enlazado cuando se actualiza el origen de datos. Por ejemplo, si tiene un cuadro combinado enlazado a un <xref:System.Collections.ArrayList> y se agregan datos a la <xref:System.Collections.ArrayList>, estos nuevos elementos no aparecerán en el cuadro combinado. Sin embargo, puede forzar el cuadro combinado para actualizarse mediante una llamada a la <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> y <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> métodos en la instancia de la <xref:System.Windows.Forms.BindingContext> al que está enlazado el control de clases.  
+    > Si está enlazado a un origen de datos que no implementa la <xref:System.ComponentModel.IBindingList> interfaz, como <xref:System.Collections.ArrayList>, los datos del control enlazado no se actualizarán cuando se actualice el origen de datos. Por ejemplo, si tiene un cuadro combinado enlazado a un <xref:System.Collections.ArrayList> y los <xref:System.Collections.ArrayList>datos se agregan a, estos nuevos elementos no aparecerán en el cuadro combinado. Sin embargo, puede forzar que el cuadro combinado se actualice llamando a <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> los <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> métodos y en la instancia de <xref:System.Windows.Forms.BindingContext> la clase a la que está enlazado el control.  
   
 ## <a name="see-also"></a>Vea también
 

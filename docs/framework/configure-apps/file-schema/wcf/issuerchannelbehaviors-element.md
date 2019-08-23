@@ -2,16 +2,16 @@
 title: <issuerChannelBehaviors> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 7cbd50daa82b0ca937a1bba93786545898b03c8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0e41b4f6d66cd4455c43dda7c77798553f2b58f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760732"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929926"
 ---
-# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors > elemento
+# <a name="issuerchannelbehaviors-element"></a>\<issuerChannelBehaviors >, elemento
 
-Contiene una colección de comportamientos de punto de conexión de cliente de Windows Communication Foundation (WCF) (definido en la configuración) que se usará al comunicarse con los servicios de Token de servicio especificado. Los comportamientos definidos no pueden contener ninguno [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elementos.
+Contiene una colección de comportamientos de extremo de cliente de Windows Communication Foundation (WCF) (definidos en la configuración) que se usarán al comunicarse con los servicios de token de servicio especificados. Los comportamientos definidos no pueden incluir [ \<elementos > clientCredentials](clientcredentials.md) .
 
 ```xml
 <system.ServiceModel>
@@ -42,19 +42,19 @@ Ninguno.
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Agrega un comportamiento a la colección.|
+|[\<add>](add-of-issuerchannelbehaviors.md)|Agrega un comportamiento a la colección.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
-|[\<issuedToken>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Especifica un token personalizado usado para autenticar un cliente en un servicio.|
+|[\<issuedToken>](issuedtoken.md)|Especifica un token personalizado usado para autenticar un cliente en un servicio.|
 
 ## <a name="remarks"></a>Comentarios
 
-Use este elemento cuando se deba utilizar un comportamiento (excepto los comportamientos que incluyen elementos `<clientCredentials>`) para comunicar con un servicio. Por ejemplo, si un [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) debe incluirse el elemento de comportamiento.
+Use este elemento cuando se deba utilizar un comportamiento (excepto los comportamientos que incluyen elementos `<clientCredentials>`) para comunicar con un servicio. Por ejemplo, si se [ \<](datacontractserializer-element.md) debe incluir un elemento de comportamiento dataContractSerializer >.
 
 ## <a name="see-also"></a>Vea también
 
@@ -62,11 +62,11 @@ Use este elemento cuando se deba utilizar un comportamiento (excepto los comport
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElement>
 - <xref:System.ServiceModel.Configuration.IssuedTokenClientBehaviorsElementCollection>
 - <xref:System.ServiceModel.Security.IssuedTokenClientCredential.IssuerChannelBehaviors%2A>
-- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Comportamientos de seguridad](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Cómo: Crear a un cliente federado](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Cómo: Configurar a un emisor Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)
-- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Identidad del servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Comportamientos de seguridad](../../../wcf/feature-details/security-behaviors-in-wcf.md)
+- [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
+- [Protección de clientes](../../../wcf/securing-clients.md)
+- [Procedimientos: Creación de un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Cómo: Configuración de un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)

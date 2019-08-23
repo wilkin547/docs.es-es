@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74678089bb1b19295983064eb7ad54fbf0a1e361
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8ee4df12a017429de333dd4e93df27973b658dad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663389"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920677"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks >, elemento
 Solicita que el Common Language Runtime (CLR) reduzca el uso de memoria especificando tamaños de pila explícitos al crear determinados subprocesos que utiliza internamente, en lugar de usar el tamaño de pila predeterminado para esos subprocesos.  
@@ -38,7 +38,7 @@ Solicita que el Common Language Runtime (CLR) reduzca el uso de memoria especifi
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |true|Solicitar tamaños de pila explícitos.|  
 |false|Use el tamaño de pila predeterminado. Este es el valor predeterminado para el .NET Framework 4.|  
@@ -57,7 +57,7 @@ Solicita que el Common Language Runtime (CLR) reduzca el uso de memoria especifi
  Este elemento de configuración se usa para solicitar el uso reducido de la memoria virtual en un proceso, porque los tamaños de subproceso explícitos que usa CLR para sus subprocesos internos, si se respeta la solicitud, son menores que el tamaño predeterminado.  
   
 > [!IMPORTANT]
->  Este elemento de configuración es una solicitud a CLR en lugar de un requisito absoluto. En el .NET Framework 4, la solicitud solo se admite para la arquitectura x86. Este elemento podría omitirse completamente en versiones futuras de CLR o reemplazarse por tamaños de pila explícitos que siempre se usan para los subprocesos internos seleccionados.  
+> Este elemento de configuración es una solicitud a CLR en lugar de un requisito absoluto. En el .NET Framework 4, la solicitud solo se admite para la arquitectura x86. Este elemento podría omitirse completamente en versiones futuras de CLR o reemplazarse por tamaños de pila explícitos que siempre se usan para los subprocesos internos seleccionados.  
   
  Si se especifica este elemento de configuración, la confiabilidad se usa para reducir el uso de memoria virtual si CLR respeta la solicitud, ya que los tamaños de pila más pequeños podrían provocar desbordamientos de la pila con mayor probabilidad.  
   

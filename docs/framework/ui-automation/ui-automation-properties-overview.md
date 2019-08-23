@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 0468a2f47b9f270e37ad800b83d70c475cbed2c6
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: d7069769d381a1806f28d538319a49e0cc9cce60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796626"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914497"
 ---
 # <a name="ui-automation-properties-overview"></a>Información general acerca de las propiedades de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  Los proveedores de Automatización de la interfaz de usuario exponen propiedades en los elementos [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] . Estas propiedades permiten que las aplicaciones de cliente de Automatización de la interfaz de usuario detecten información sobre partes de la [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)], especialmente los controles, e incluidos los datos estáticos y dinámicos.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68796626"
  En la columna **Property Access** se enumeran los otros descriptores de acceso de cada propiedad, además de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> y <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>. Para más información sobre la obtención de propiedades en una aplicación cliente, consulte [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 > [!NOTE]
->  Para obtener información específica sobre cada propiedad, siga el vínculo de la columna **Property Access** .  
+> Para obtener información específica sobre cada propiedad, siga el vínculo de la columna **Property Access** .  
   
 ### <a name="display-characteristics"></a>Características de presentación  
   

@@ -1,22 +1,22 @@
 ---
-title: <add> de <claimTypeRequirements> elemento
+title: <add>del <claimTypeRequirements> elemento
 ms.date: 03/30/2017
 ms.assetid: 3234cd45-1478-468e-8b19-5c50815c4786
-ms.openlocfilehash: 47eb9f95fd024b7df24a16781b3d89fe6deb0b8c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 249227c20dd1610cba088017ae39e84d6cb683d3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701156"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920207"
 ---
-# <a name="add-of-claimtyperequirements-element"></a>\<Agregar > de \<claimTypeRequirements > elemento
+# <a name="add-of-claimtyperequirements-element"></a>\<Agregar > del \<elemento > claimTypeRequirements
 Especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada. Por ejemplo, los servicios indican los requisitos en las credenciales de entrada, que deben poseer un cierto conjunto de tipos de notificaciones.  
   
  \<system.ServiceModel>  
 \<bindings>  
 \<wsFederatedBinding>  
 \<binding>  
-\<security>  
+\<> de seguridad  
 \<message>  
 \<claimTypeRequirements>  
   
@@ -34,7 +34,7 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |claimType|URI que define el tipo de una notificación. Por ejemplo, para comprar un producto de un sitio web, el usuario debe presentar una tarjeta de crédito válida con límite de crédito suficiente. El tipo de notificación sería el URI de la tarjeta de crédito.|  
 |isOptional|Valor de tipo booleano que especifica si se trata de una notificación opcional. Establezca este atributo en `false` si se trata de una notificación necesaria.<br /><br /> Puede usar este atributo cuando el servicio pregunte para obtener alguna información, pero no lo requiere. Por ejemplo, si le exige al usuario que escriba su nombre, apellido y dirección, pero decide que el número de teléfono es opcional.|  
@@ -44,9 +44,9 @@ Especifica los tipos de notificaciones necesarias y opcionales que se espera que
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Especifica una colección de tipos de notificación requeridos. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
+|[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|Especifica una colección de tipos de notificación requeridos. Cada elemento es del tipo <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Cada elemento de la colección especifica los tipos de notificaciones necesarias y opcionales que se espera que aparezcan en una credencial aliada.|  
   
 ## <a name="remarks"></a>Comentarios  
  En un escenario aliado, los servicios indican los requisitos de las credenciales de entrada. Por ejemplo, las credenciales de entrada deben poseer un determinado conjunto de tipos de notificación. Este requisito se manifiesta en una directiva de seguridad. Cuando un cliente solicita las credenciales de un servicio aliado (por ejemplo, CardSpace), coloca los requisitos en una solicitud del token (RequestSecurityToken) para que el servicio aliado pueda emitir las credenciales que satisfacen según los requisitos.  

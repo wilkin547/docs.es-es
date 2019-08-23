@@ -9,12 +9,12 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: d803c9bec180f45c80e362af49c8eaa12bb9d985
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 07137d03dd9a20d8eab564757618e48e25b45353
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592961"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931766"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Procedimiento para imprimir en formularios Windows Forms a través de la vista previa de impresión
 Es muy habitual en la programación de Windows Forms ofrecer una vista previa de impresión además de los servicios de impresión. Una forma sencilla de agregar servicios de vista previa de impresión a la aplicación es usar un control <xref:System.Windows.Forms.PrintPreviewDialog> en combinación con la lógica de control de eventos de <xref:System.Drawing.Printing.PrintDocument.PrintPage> para imprimir un archivo.  
@@ -34,7 +34,7 @@ Es muy habitual en la programación de Windows Forms ofrecer una vista previa de
 3. Igual que haría para imprimir el documento, en el controlador de eventos <xref:System.Drawing.Printing.PrintDocument.PrintPage> , use la propiedad <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> de la clase <xref:System.Drawing.Printing.PrintPageEventArgs> y el contenido del archivo para calcular las líneas por página y representar el contenido del documento. Una vez dibujada cada página, compruebe si es la última página y establezca la propiedad <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> de <xref:System.Drawing.Printing.PrintPageEventArgs> como corresponda. El evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> se produce hasta que <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> es `false`. Cuando el documento haya terminado de representarse, restablezca la cadena que se va a representar. Además, asegúrese de que el evento <xref:System.Drawing.Printing.PrintDocument.PrintPage> está asociado con su método de control de eventos.  
   
     > [!NOTE]
-    >  Puede que ya haya completado los pasos 2 y 3 si ha implementado la impresión en la aplicación.  
+    > Puede que ya haya completado los pasos 2 y 3 si ha implementado la impresión en la aplicación.  
   
      En el ejemplo de código siguiente, se usa el controlador de eventos para imprimir el archivo "testPage.txt" con la misma fuente que se usa en el formulario.  
   

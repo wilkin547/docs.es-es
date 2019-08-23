@@ -2,14 +2,14 @@
 title: Elemento <endpoint>
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 71ddb3b860870ee8feeeb36c3f64fa7bfebb0f10
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673036"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925828"
 ---
-# <a name="endpoint-element"></a>\<punto de conexión > elemento
+# <a name="endpoint-element"></a>\<elemento Endpoint >
 Especifica enlace, contrato y propiedades de dirección para un extremo de servicio, que se utiliza para exponer los servicios.  
   
  \<system.ServiceModel>  
@@ -39,7 +39,7 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |dirección|Una cadena que contiene la dirección del extremo. La dirección se puede especificar como una dirección absoluta o relativa. Si se proporciona una dirección relativa, se espera que el host proporcione una dirección base adecuada para el esquema de transporte usado en el enlace. Si no se configura una dirección, se supone que la dirección base es la dirección para ese punto de conexión.<br /><br /> El valor predeterminado es una cadena vacía.|  
 |behaviorConfiguration|Una cadena que contiene el nombre del comportamiento que se va a utilizar en el extremo.|  
@@ -51,22 +51,22 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
 |endpointConfiguration|Cadena que especifica el nombre del punto de conexión estándar establecido por el atributo `kind`, que hace referencia a la información de configuración adicional de este punto de conexión estándar. El mismo nombre se debe definir en la sección `<standardEndpoints>`.|  
 |isSystemEndpoint|Valor booleano que especifica si un punto de conexión es un punto de conexión de la infraestructura.|  
 |kind|Cadena que especifica el tipo de extremo estándar aplicado. El tipo se debe registrar en la sección `<extensions>` o en machine.config. Si no se especifica nada, se crea un extremo de servicio común.|  
-|listenUriMode|Especifica cómo el transporte trata el `ListenUri` proporcionado para el servicio en el que se realizan escuchas. Los valores válidos son<br /><br /> -Explícita<br />-Unique<br /><br /> El valor predeterminado es Explicito.|  
+|listenUriMode|Especifica cómo el transporte trata el `ListenUri` proporcionado para el servicio en el que se realizan escuchas. Los valores válidos son<br /><br /> -Explicit<br />-Único<br /><br /> El valor predeterminado es Explicito.|  
 |listenUri|Una cadena que especifica el URI en el que el extremo de servicio realiza escuchas. El valor predeterminado es una cadena vacía.|  
 |name|Atributo opcional. Cadena que especifica el nombre del punto de conexión del servicio. El valor predeterminado es la concatenación del nombre de enlace y el nombre de la descripción de contrato. Los servicios pueden tener varios puntos de conexión, por lo que el atributo `name` del punto de conexión es distinto del nombre del servicio.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Una colección de encabezados de dirección.|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Una identidad que habilita la autenticación de un punto de conexión por otros puntos de conexión que intercambian mensajes con él.|  
+|[\<headers>](headers.md)|Una colección de encabezados de dirección.|  
+|[\<identity>](identity.md)|Una identidad que habilita la autenticación de un punto de conexión por otros puntos de conexión que intercambian mensajes con él.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Una sección de configuración que define una lista de puntos de conexión a los que un cliente puede conectarse.|  
+|[\<service>](service.md)|Una sección de configuración que define una lista de puntos de conexión a los que un cliente puede conectarse.|  
   
 ## <a name="example"></a>Ejemplo  
  Éste es un ejemplo de una configuración del punto de conexión de servicio.  
@@ -89,5 +89,5 @@ Especifica enlace, contrato y propiedades de dirección para un extremo de servi
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [Puntos de conexión: Las direcciones, enlaces y contratos](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Cómo: Crear un punto de conexión de servicio en la configuración](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Extremos Direcciones, enlaces y contratos](../../../wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Cómo: Crear un punto de conexión de servicio en la configuración](../../../wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

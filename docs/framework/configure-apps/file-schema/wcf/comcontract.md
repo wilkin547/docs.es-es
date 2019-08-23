@@ -2,12 +2,12 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 5d6bfb1e4aa1651cd8c3a869f681d71cfb15725c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ef980c86efad4fda86cf62148e50688fd22afe49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751872"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926099"
 ---
 # <a name="comcontract"></a>\<comContract>
 Especifica un contrato de servicio de integración de COM+.  
@@ -47,7 +47,7 @@ Especifica un contrato de servicio de integración de COM+.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |contrato|Una cadena que contiene el tipo de contrato.|  
 |name|Una cadena que contiene el nombre del contrato.|  
@@ -56,7 +56,7 @@ Especifica un contrato de servicio de integración de COM+.
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |persistableTypes|Todos los tipos con persistencia.|  
 |userDefinedTypes|Una colección de tipos definidos por el usuario (UDT) que se va a incluir en el contrato del servicio.|  
@@ -64,12 +64,12 @@ Especifica un contrato de servicio de integración de COM+.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |comContracts|Contiene una colección de elementos `comContract`.|  
   
 ## <a name="remarks"></a>Comentarios  
- Contratos de servicio de integración de COM + están restringidos actualmente a la `http://tempuri.org` espacio de nombres y nombre de contrato se deriva de la interfaz COM de apoyo. Puede, sin embargo, especificar las alternativas utilizando la sección `comContracts`, así como el elemento `comContract` en el archivo de configuración. Por ejemplo, puede utilizar la configuración siguiente para especificar el espacio de nombres, el nombre del contrato y los tipos definidos por el usuario que se van incluir, así como otros valores para un contrato de servicios.  
+ Los contratos de servicio de integración de com+ están `http://tempuri.org` restringidos actualmente al espacio de nombres y el nombre del contrato se deriva de la interfaz com compatible. Puede, sin embargo, especificar las alternativas utilizando la sección `comContracts`, así como el elemento `comContract` en el archivo de configuración. Por ejemplo, puede utilizar la configuración siguiente para especificar el espacio de nombres, el nombre del contrato y los tipos definidos por el usuario que se van incluir, así como otros valores para un contrato de servicios.  
   
 ```xml  
 <comContracts>
@@ -92,6 +92,6 @@ Especifica un contrato de servicio de integración de COM+.
 
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Integración en aplicaciones COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Cómo: Configurar el servicio COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Integración en aplicaciones COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Cómo: Configurar el servicio COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

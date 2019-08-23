@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 5dcdf6a88b12d12e67056657fd532dfa28c40299
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832880"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566818"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Crear y utilizar ensamblados con nombre seguro
 
@@ -38,7 +38,7 @@ En el siguiente escenario se firma un ensamblado con un nombre seguro y después
 
     - Usar un entorno de desarrollo que admita la creación de nombres seguros, como Visual Studio.
 
-    - Crear un par de claves criptográficas mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) y asignar ese par de claves al ensamblado con un compilador de línea de comandos o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). El Kit de desarrollo de Software (SDK) de Windows proporciona ambas utilidades Sn.exe y Al.exe.
+    - Crear un par de claves criptográficas mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) y asignar ese par de claves al ensamblado con un compilador de línea de comandos o [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md). Windows SDK proporciona ambas utilidades Sn.exe y Al.exe.
 
 2. El entorno de desarrollo o la herramienta firma el hash del archivo que contiene el manifiesto del ensamblado con la clave privada del programador. Esta firma digital se almacena en el archivo portable ejecutable (PE) que contiene el manifiesto del ensamblado A.
 

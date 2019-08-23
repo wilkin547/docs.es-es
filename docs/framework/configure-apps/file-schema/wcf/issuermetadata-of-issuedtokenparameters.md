@@ -2,19 +2,19 @@
 title: <issuerMetadata> de <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: e46e56c6285af24941a550b2c4f7dec3b441db69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d7d41277eff1de43f717816b35fdc10d52192e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764106"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928875"
 ---
-# <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata > de \<issuedTokenParameters >
+# <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata > \<issuedTokenParameters >
 \<system.serviceModel>  
 \<bindings>  
 \<customBinding>  
 \<binding>  
-\<security>  
+\<> de seguridad  
 \<issuedTokenParameters>  
 \<issuerMetadata>  
   
@@ -29,35 +29,35 @@ ms.locfileid: "61764106"
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|dirección|Obligatorio. Cadena que especifica la dirección del punto de conexión. La dirección debe ser un URI absoluto. El valor predeterminado es una cadena vacía.|  
+|dirección|Necesario. Cadena que especifica la dirección del punto de conexión. La dirección debe ser un URI absoluto. El valor predeterminado es una cadena vacía.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<headers>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|Una colección de encabezados de dirección.|  
-|[\<identity>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Una identidad que habilita la autenticación de un punto de conexión por otros puntos de conexión que intercambian mensajes con él.|  
+|[\<headers>](headers-element.md)|Una colección de encabezados de dirección.|  
+|[\<identity>](identity.md)|Una identidad que habilita la autenticación de un punto de conexión por otros puntos de conexión que intercambian mensajes con él.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Especifica los parámetros para un símbolo (token) de seguridad emitido en un escenario de seguridad aliado.|  
+|[\<issuedTokenParameters>](issuedtokenparameters.md)|Especifica los parámetros para un símbolo (token) de seguridad emitido en un escenario de seguridad aliado.|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Funcionalidades de seguridad con enlaces personalizados](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [Seguridad de enlace personalizado](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [Identidad del servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Funcionalidades de seguridad con enlaces personalizados](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [Cómo: Crear un enlace personalizado mediante SecurityBindingElement](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [Seguridad de enlace personalizado](../../../wcf/samples/custom-binding-security.md)

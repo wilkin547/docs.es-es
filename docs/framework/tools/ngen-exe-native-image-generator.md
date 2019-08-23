@@ -20,16 +20,19 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fb7758a3e59806b246a98c343d78500263433efc
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832822"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971471"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generador de imágenes nativas)
 
 El Generador de imágenes nativas (Ngen.exe) es una herramienta que mejora el rendimiento de las aplicaciones administradas. Ngen.exe crea imágenes nativas, que son archivos que contienen código máquina compilado específicamente para un procesador, e instala estas imágenes en la memoria caché de imágenes nativas del equipo local. El runtime puede usar imágenes nativas de la memoria caché en lugar de usar el compilador Just-In-Time (JIT) para compilar el ensamblado original.
+
+> [!NOTE]
+> Ngen.exe compila las imágenes nativas de los ensamblados que tienen como destino solo .NET Framework. El generador de imágenes nativas equivalente para .NET Core es [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
 
 Cambios en Ngen.exe en .NET Framework 4:
 
@@ -62,11 +65,11 @@ En el símbolo del sistema, escriba lo siguiente:
 
 ## <a name="syntax"></a>Sintaxis
 
-```
+```console
 ngen action [options]
 ```
 
-```
+```console
 ngen /? | /help
 ```
 
@@ -429,7 +432,7 @@ Luego puede aplicar el atributo a cada método. En el ejemplo siguiente se indic
 
 El siguiente comando genera una imagen nativa para `ClientApp.exe`, que se encuentra en el directorio actual, e instala la imagen en la memoria caché de imágenes nativas. Si existe un archivo de configuración para el ensamblado, Ngen.exe usará dicho archivo. Además, se generarán imágenes nativas para cualquier archivo .dll al que haga referencia `ClientApp.exe`.
 
-```
+```console
 ngen install ClientApp.exe
 ```
 
@@ -437,7 +440,7 @@ Una imagen instalada con Ngen.exe también recibe el nombre de raíz. Una raíz 
 
 El siguiente comando genera una imagen nativa para `MyAssembly.exe` con la ruta de acceso especificada.
 
-```
+```console
 ngen install c:\myfiles\MyAssembly.exe
 ```
 
@@ -448,7 +451,7 @@ A la hora de buscar los ensamblados y sus dependencias, Ngen.exe usa la misma l�
 
 Un ensamblado puede disponer de una dependencia sin referencia alguna; por ejemplo, si carga un archivo .dll mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>. Se puede crear una imagen nativa de este archivo .dll usando la información de configuración del ensamblado de aplicación, con la opción `/ExeConfig`. El siguiente comando genera una imagen nativa de `MyLib.dll,` usando la información de configuración de `MyApp.exe`.
 
-```
+```console
 ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
@@ -456,20 +459,20 @@ Los ensamblados instalados de esta manera no se quitan cuando se quita la aplica
 
 Para desinstalar una dependencia, use las mismas opciones de línea de comandos que se usaron para su instalación. El siguiente comando desinstala el archivo `MyLib.dll` del ejemplo anterior.
 
-```
+```console
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
 Para crear una imagen nativa de un ensamblado en la caché global de ensamblados, use el nombre para mostrar del ensamblado. Por ejemplo:
 
-```
+```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ```
 
 NGen.exe generará un conjunto independiente de imágenes para cada escenario que se instale. Por ejemplo, el siguiente comando instala un conjunto completo de imágenes nativas para el funcionamiento normal, otro conjunto completo para la depuración, y un tercer conjunto para la creación de perfiles:
 
-```
+```console
 ngen install MyApp.exe
 ngen install MyApp.exe /debug
 ngen install MyApp.exe /profile
@@ -479,7 +482,7 @@ ngen install MyApp.exe /profile
 
 Una vez instaladas en la memoria caché las imágenes nativas, se pueden mostrar mediante Ngen.exe. El siguiente comando muestra todas las imágenes nativas que contiene la memoria caché de imágenes nativas.
 
-```
+```console
 ngen display
 ```
 
@@ -487,7 +490,7 @@ La acción `display` muestra primero todos los ensamblados raíz, seguidos de un
 
 Use el nombre simple de un ensamblado para mostrar únicamente información de dicho ensamblado. El siguiente comando muestra todas las imágenes nativas de la memoria caché de imágenes nativas que coinciden con el nombre parcial `MyAssembly`, sus dependencias y todas las raíces que tienen una dependencia en `MyAssembly`:
 
-```
+```console
 ngen display MyAssembly
 ```
 
@@ -495,13 +498,13 @@ Conocer las raíces que dependen de un ensamblado de componente compartido resul
 
 Si especifica la extensión de archivo de un ensamblado, deberá especificar la ruta de acceso o ejecutar Ngen.exe desde el directorio que contiene el ensamblado:
 
-```
+```console
 ngen display c:\myApps\MyAssembly.exe
 ```
 
 El siguiente comando muestra todas las imágenes nativas de la memoria caché de imágenes nativas con el nombre `MyAssembly` y la versión 1.0.0.0.
 
-```
+```console
 ngen display "myAssembly, version=1.0.0.0"
 ```
 
@@ -509,13 +512,13 @@ ngen display "myAssembly, version=1.0.0.0"
 
 Normalmente, las imágenes se actualizan tras la actualización de un componente compartido. Para actualizar todas las imágenes nativas que hayan cambiado o cuyas dependencias hayan cambiado, use la acción `update` sin ningún argumento.
 
-```
+```console
 ngen update
 ```
 
 Actualizar todas las imágenes puede ser un proceso largo. La opción `/queue` pone en cola las actualizaciones para que las ejecute el servicio de imágenes nativas. Para más información sobre la opción `/queue` y las prioridades de instalación, consulte [Servicio de imágenes nativas](#native-image-service).
 
-```
+```console
 ngen update /queue
 ```
 
@@ -525,13 +528,13 @@ Ngen.exe mantiene una lista de dependencias; de este modo, los componentes compa
 
 El siguiente comando desinstala todos los escenarios de la raíz `ClientApp.exe`:
 
-```
+```console
 ngen uninstall ClientApp
 ```
 
 Se puede usar la acción `uninstall` para quitar escenarios concretos. El siguiente comando desinstala todos los escenarios de depuración de `ClientApp.exe`:
 
-```
+```console
 ngen uninstall ClientApp /debug
 ```
 
@@ -540,13 +543,13 @@ ngen uninstall ClientApp /debug
 
 El siguiente comando desinstala todos los escenarios de una versión concreta de `ClientApp.exe`:
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0"
 ```
 
 Los siguientes comandos desinstalan todos los escenarios de `"ClientApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL",` o simplemente el escenario de depuración de dicho ensamblado:
 
-```
+```console
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   PublicKeyToken=3c7ba247adcd2081, processorArchitecture=MSIL"
 ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -591,19 +594,19 @@ El servicio también interactúa con el comando Ngen.exe manual. Los comandos ma
 
 Antes de comenzar una instalación o una actualización, se recomienda pausar el servicio. Así, el servicio no se ejecutará mientras el instalador copia archivos o coloca ensamblados en la caché global de ensamblados. La siguiente línea de comandos de Ngen.exe pausa el servicio:
 
-```
+```console
 ngen queue pause
 ```
 
 Después de poner en cola todas las operaciones aplazadas, el siguiente comando permite reanudar el servicio:
 
-```
+```console
 ngen queue continue
 ```
 
 Para aplazar la generación de imágenes nativas al instalar una nueva aplicación o al actualizar un componente compartido, utilice la opción `/queue` con las acciones `install` o `update`. Las siguientes líneas de comandos de Ngen.exe instalan una imagen nativa de un componente compartido y realizan una actualización de todas las raíces a las que puede que afectaran:
 
-```
+```console
 ngen install MyComponent /queue
 ngen update /queue
 ```
@@ -612,7 +615,7 @@ La acción `update` vuelve a generar todas las imágenes nativas invalidadas, no
 
 Si la aplicación está formada por muchas raíces, puede controlar la prioridad de las acciones aplazadas. Los siguientes comandos ponen en cola la instalación de tres raíces. `Assembly1` se instala en primer lugar, sin esperar al tiempo de inactividad. `Assembly2` también se instala sin esperar al tiempo de inactividad, pero una vez que finalizan todas las acciones de prioridad 1. `Assembly3` se instala cuando el servicio detecta que el equipo se encuentra inactivo.
 
-```
+```console
 ngen install Assembly1 /queue:1
 ngen install Assembly2 /queue:2
 ngen install Assembly3 /queue:3
@@ -620,7 +623,7 @@ ngen install Assembly3 /queue:3
 
 Puede forzar la ejecución sincrónica de las acciones en cola con la acción `executeQueuedItems`. Si especifica la prioridad (opcional), esta acción afecta solo a las acciones en cola que tienen una prioridad igual o menor. La prioridad predeterminada es 3, por lo que el siguiente comando de Ngen.exe procesa todas las acciones en cola inmediatamente y no vuelve hasta que finalizan:
 
-```
+```console
 ngen executeQueuedItems
 ```
 

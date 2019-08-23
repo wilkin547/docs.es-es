@@ -2,12 +2,12 @@
 title: Seguimiento de actividades en la seguridad de mensajes
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
-ms.openlocfilehash: 65b2842c57da8e17c7280a2becd755ba2aae8364
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb8a4c6782cc52de393eacc2458e216d0f069866
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933517"
 ---
 # <a name="activity-tracing-in-message-security"></a>Seguimiento de actividades en la seguridad de mensajes
 En este tema se describe el seguimiento de actividades para el procesamiento de seguridad, que pasa en las tres fases siguientes.  
@@ -19,9 +19,9 @@ En este tema se describe el seguimiento de actividades para el procesamiento de 
 - Autorización y comprobación. Esto puede pasar localmente o en la comunicación entre extremos.  
   
 ## <a name="negotiationsct-exchange"></a>Intercambio de SCT/negociación.  
- En la fase de intercambio de SCT/negociación, se crean dos tipos de actividad en el cliente: "Configurar sesión segura" y "Cerrar sesión segura". “Configurar sesión segura” abarca los seguimientos de los intercambios de mensajes RST/RSTR/SCT, mientras que “Cerrar sesión segura” incluye los seguimientos para el mensaje de cancelación.  
+ En la fase de negociación/intercambio de SCT, se crean dos tipos de actividad en el cliente: "Configurar sesión segura" y "cerrar sesión segura". “Configurar sesión segura” abarca los seguimientos de los intercambios de mensajes RST/RSTR/SCT, mientras que “Cerrar sesión segura” incluye los seguimientos para el mensaje de cancelación.  
   
- En el servidor, cada solicitud/responda para RST/RSTR/SCT aparece en su propia actividad. Si `propagateActivity` = `true` en el servidor y cliente, las actividades del servidor tienen el mismo identificador y aparecen juntas en el "Configurar sesión segura" cuando se ven a través de Service Trace Viewer.  
+ En el servidor, cada solicitud/responda para RST/RSTR/SCT aparece en su propia actividad. Si `propagateActivity` tantoenel`true` servidor como en el cliente, las actividades del servidor tienen el mismo identificador y aparecen juntas en "configurar sesión segura" cuando se ven a través del visor de seguimiento de servicio. =  
   
  Esta modelo de seguimiento de actividades es válido para la autenticación de nombre de usuario/contraseña, autenticación de certificado y autenticación NTLM.  
   
@@ -29,11 +29,11 @@ En este tema se describe el seguimiento de actividades para el procesamiento de 
   
 ||Hora en la que sucede el intercambio SCT/negociación|Actividades|Seguimientos|  
 |-|-------------------------------------------------|----------------|------------|  
-|Transporte Seguro<br /><br /> (HTTPS, SSL)|En primer mensaje recibido.|Los seguimientos se emiten en la actividad ambiente.|: Realiza un seguimiento de Exchange<br />-Canal seguro establecido<br />-Secretos obtenidos del recurso compartido.|  
-|Capa de mensajes segura<br /><br /> (WSHTTP)|En primer mensaje recibido.|En el cliente:<br /><br /> -"Configurar sesión segura" de "Acción de proceso" de ese primer mensaje, para cada solicitud/respuesta para RST/RSTR/SCT.<br />-"Cerrar sesión segura" para el intercambio Cancelar, fuera de la "actividad cerrar Proxy". Esta actividad puede pasar debido a alguna otra actividad ambiente, dependiendo de cuándo se cierre la sesión segura.<br /><br /> En el servidor:<br /><br /> : Actividad "Procesar acción" una para cada solicitud/respuesta para RST/SCT/Cancelar en el servidor. Si `propagateActivity` = `true`, las actividades RST/RSTR/SCT se combinan con "Configurar sesión de seguridad" y Cancelar se combina con la actividad "Cerrar" desde el cliente.<br /><br /> Hay dos fases para “Configurar sesión segura”:<br /><br /> 1.  Negociación de autenticación. Esto es opcional si el cliente ya tiene las credenciales apropiadas. Esta fase se puede hacer a través de transporte seguro o a través de intercambios de mensajes. En el caso último, pueden tener lugar 1 ó 2 intercambios RST/RSTR. Para estos intercambios, los seguimientos se emiten en nuevas actividades de solicitud/respuesta como se diseñó previamente.<br />2.  Establecimiento de sesión segura (SCT), en la que tiene lugar un intercambio RST/RSTR. Esto tiene las mismas actividades de ambiente, tal y como se describió previamente.|: Realiza un seguimiento de Exchange<br />-Canal seguro establecido<br />-Secretos obtenidos del recurso compartido.|  
+|Transporte Seguro<br /><br /> (HTTPS, SSL)|En primer mensaje recibido.|Los seguimientos se emiten en la actividad ambiente.|-Seguimientos de Exchange<br />-Canal seguro establecido<br />-Secretos de recursos compartidos obtenidos.|  
+|Capa de mensajes segura<br /><br /> (WSHTTP)|En primer mensaje recibido.|En el cliente:<br /><br /> -"Configurar sesión segura" fuera de "acción de proceso" de ese primer mensaje, para cada solicitud/respuesta para RST/RSTR/SCT.<br />-"Cerrar sesión segura" para cancelar Exchange, fuera de la "actividad cerrar proxy". Esta actividad puede pasar debido a alguna otra actividad ambiente, dependiendo de cuándo se cierre la sesión segura.<br /><br /> En el servidor:<br /><br /> -Una actividad "procesar acción" para cada solicitud/respuesta para RST/SCT/cancelar en el servidor. Si `propagateActivity` es,las`true`actividades RST/RSTR/SCT se combinan con "configurar sesión de seguridad" y la cancelación se combina con la actividad "cerrar" del cliente. =<br /><br /> Hay dos fases para “Configurar sesión segura”:<br /><br /> 1.  Negociación de autenticación. Esto es opcional si el cliente ya tiene las credenciales apropiadas. Esta fase se puede hacer a través de transporte seguro o a través de intercambios de mensajes. En el caso último, pueden tener lugar 1 ó 2 intercambios RST/RSTR. Para estos intercambios, los seguimientos se emiten en nuevas actividades de solicitud/respuesta como se diseñó previamente.<br />2.  Establecimiento de sesión segura (SCT), en la que tiene lugar un intercambio RST/RSTR. Esto tiene las mismas actividades de ambiente, tal y como se describió previamente.|-Seguimientos de Exchange<br />-Canal seguro establecido<br />-Secretos de recursos compartidos obtenidos.|  
   
 > [!NOTE]
->  En modo de seguridad mixta, la autenticación de la negociación tiene lugar en intercambios binarios, pero SCT sucede en intercambio de mensajes. En modo de transporte puro, la negociación solo sucede en transporte sin actividades adicionales.  
+> En modo de seguridad mixta, la autenticación de la negociación tiene lugar en intercambios binarios, pero SCT sucede en intercambio de mensajes. En modo de transporte puro, la negociación solo sucede en transporte sin actividades adicionales.  
   
 ## <a name="message-encryption-and-decryption"></a>Cifrado y descifrado de mensajes  
  La tabla siguiente hace una lista de las actividades y seguimientos para el cifrado/descifrado de mensajes, así como la autenticación de la firma.  
@@ -42,10 +42,10 @@ En este tema se describe el seguimiento de actividades para el procesamiento de 
 |-|---------------------------------------------------------------------------------|  
 |Hora en la que tiene lugar el cifrado/descifrado y la autenticación de la firma|En mensaje recibido|  
 |Actividades|Los seguimientos se emiten en la actividad ProcessAction en el cliente y servidor.|  
-|Seguimientos|-   sendSecurityHeader (sender):<br />: Mensaje de inicio de sesión<br />-Cifrar los datos de solicitud<br />-   receiveSecurityHeader (receiver):<br />-Comprobar firma<br />-Descifrar los datos de respuesta<br />-Autenticación|  
+|Seguimientos|-sendSecurityHeader (remitente):<br />-Firmar mensaje<br />-Cifrar datos de solicitud<br />-receiveSecurityHeader (receptor):<br />-Comprobar la firma<br />-Descifrar datos de respuesta<br />-Autenticación|  
   
 > [!NOTE]
->  En modo de transporte puro, el cifrado/descifrado del mensaje solo sucede en transporte sin actividades adicionales.  
+> En modo de transporte puro, el cifrado/descifrado del mensaje solo sucede en transporte sin actividades adicionales.  
   
 ## <a name="authorization-and-verification"></a>Autorización y comprobación  
  La tabla siguiente hace una lista de las actividades y seguimiento para la autorización.  

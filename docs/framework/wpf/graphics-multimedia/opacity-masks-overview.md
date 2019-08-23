@@ -6,12 +6,12 @@ helpviewer_keywords:
 - masks [WPF], opacity
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
-ms.openlocfilehash: 76ec595b1d2cc732e1c8bc2dc2ca6def904bf94c
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: d0fea1aac4efb17811404ce45769615bb2e7234f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545345"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929659"
 ---
 # <a name="opacity-masks-overview"></a>Información general sobre las máscaras de opacidad
 Las máscaras de opacidad permiten hacer que partes de un elemento o un objeto visual sea total o parcialmente transparentes. Para crear una máscara de opacidad, aplique <xref:System.Windows.Media.Brush> a la <xref:System.Windows.UIElement.OpacityMask%2A> propiedad de un elemento o <xref:System.Windows.Media.Visual>.  El pincel se asigna al elemento o al objeto visual, y el valor de opacidad de cada píxel del pincel se usa para determinar la opacidad resultante de cada píxel correspondiente del elemento o objeto visual.  
@@ -25,7 +25,7 @@ Las máscaras de opacidad permiten hacer que partes de un elemento o un objeto v
  Una máscara de opacidad funciona asignado su contenido al elemento o al objeto visual. Luego, el canal alfa de cada uno de los píxeles del pincel se usa para determinar la opacidad resultante de los píxeles correspondientes del elemento o el objeto visual y se omite el color real del pincel. Si una parte determinada del pincel es transparente, la parte correspondiente del elemento o del objeto visual se vuelve transparente. Si una parte determinada del pincel es opaca, no se modifica la parte correspondiente del elemento o del objeto visual. La opacidad que la máscara de opacidad especifica se combina con cualquier ajuste de opacidad existente en el elemento o el objeto visual. Por ejemplo, si un elemento es opaco en un 25 por ciento y se le aplica una máscara de opacidad que realiza la transición desde totalmente opaco a totalmente transparente, el resultado es un elemento que hace una transición desde el 25 por ciento de opacidad a totalmente transparente.  
   
 > [!NOTE]
->  Aunque en los ejemplos de esta información general se muestra el uso de las máscaras de opacidad en los elementos de imagen, una máscara de <xref:System.Windows.Media.Visual>opacidad se puede aplicar a cualquier elemento o, incluidos los paneles y controles.  
+> Aunque en los ejemplos de esta información general se muestra el uso de las máscaras de opacidad en los elementos de imagen, una máscara de <xref:System.Windows.Media.Visual>opacidad se puede aplicar a cualquier elemento o, incluidos los paneles y controles.  
   
  Las máscaras de opacidad se usan para crear efectos visuales interesantes, como crear imágenes o botones que se desvanecen mediante un fundido, agregar texturas a los elementos o combinar degradados para generar superficies cristalinas. En la ilustración siguiente se muestra el uso de una máscara de opacidad. Se usa un fondo de cuadros para mostrar los elementos transparentes de la máscara.  
   

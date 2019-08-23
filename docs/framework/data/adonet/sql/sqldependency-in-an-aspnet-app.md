@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a93cb9da44985fa29a4975875564b384117ce76f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780294"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938456"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>SqlDependency en una aplicación ASP.NET
 En el ejemplo de esta sección se muestra cómo utilizar <xref:System.Data.SqlClient.SqlDependency> de forma indirecta aprovechando el objeto <xref:System.Web.Caching.SqlCacheDependency> de ASP:NET. El objeto <xref:System.Web.Caching.SqlCacheDependency> utiliza <xref:System.Data.SqlClient.SqlDependency> para escuchar notificaciones y de actualizar correctamente la caché.  
   
 > [!NOTE]
->  El código de ejemplo se da por supuesto que ha habilitado las notificaciones de consulta mediante la ejecución de las secuencias de comandos en [habilitar las notificaciones de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
+> En el código de ejemplo se supone que ha habilitado las notificaciones de consulta ejecutando los scripts en habilitando las notificaciones de [consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md).  
   
 ## <a name="about-the-sample-application"></a>Acerca de la aplicación de ejemplo  
- La aplicación de ejemplo usa una única página Web de ASP.NET para mostrar información de producto desde la **AdventureWorks** base de datos de SQL Server en un <xref:System.Web.UI.WebControls.GridView> control. Cuando se carga la página, el código escribe la hora actual en un control <xref:System.Web.UI.WebControls.Label>. A continuación, se define un objeto <xref:System.Web.Caching.SqlCacheDependency> y se establecen las propiedades del objeto <xref:System.Web.Caching.Cache> para almacenar los datos de la caché durante tres minutos como máximo. Entonces el código se conecta a la base de datos y recupera los datos. Cuando la página está cargada y la aplicación se está ejecutando, ASP.NET recuperará datos de la caché, lo cual podrá comprobar si observa que la hora de la página no cambia. Si los datos que se supervisan cambian, ASP.NET invalida la caché y vuelve a llenar el control `GridView` con datos nuevos, actualizando la hora que se muestra en el control `Label`.  
+ La aplicación de ejemplo utiliza una única página web de ASP.net para mostrar información de productos de la base de <xref:System.Web.UI.WebControls.GridView> datos de SQL Server AdventureWorks en un control. Cuando se carga la página, el código escribe la hora actual en un control <xref:System.Web.UI.WebControls.Label>. A continuación, se define un objeto <xref:System.Web.Caching.SqlCacheDependency> y se establecen las propiedades del objeto <xref:System.Web.Caching.Cache> para almacenar los datos de la caché durante tres minutos como máximo. Entonces el código se conecta a la base de datos y recupera los datos. Cuando la página está cargada y la aplicación se está ejecutando, ASP.NET recuperará datos de la caché, lo cual podrá comprobar si observa que la hora de la página no cambia. Si los datos que se supervisan cambian, ASP.NET invalida la caché y vuelve a llenar el control `GridView` con datos nuevos, actualizando la hora que se muestra en el control `Label`.  
   
 ## <a name="creating-the-sample-application"></a>Crear la aplicación de ejemplo  
  Para crear y ejecutar la aplicación de ejemplo, siga estos pasos:  
@@ -47,7 +47,7 @@ En el ejemplo de esta sección se muestra cómo utilizar <xref:System.Data.SqlCl
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5. Agregue dos métodos del asistente: `GetConnectionString` y `GetSQL`. La cadena de conexión definida utiliza seguridad integrada. Deberá comprobar que la cuenta que está usando tiene los permisos de base de datos necesarios y que la base de datos de ejemplo, **AdventureWorks**, tiene habilitadas las notificaciones.
+5. Agregue dos métodos del asistente: `GetConnectionString` y `GetSQL`. La cadena de conexión definida utiliza seguridad integrada. Tendrá que comprobar que la cuenta que está usando tiene los permisos de base de datos necesarios y que la base de datos de ejemplo, **AdventureWorks**, tiene habilitadas las notificaciones.
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

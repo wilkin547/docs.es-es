@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acb4d3820d06845834b127d8f03763e7dd346f53
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 080ef48ade496a55f414b64158a40fe0e551c2aa
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833696"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567302"
 ---
 # <a name="deploying-an-interop-application"></a>Implementar una aplicación interoperativa
-Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .NET, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados. Visual Studio y el kit de desarrollo de software (SDK) de Windows proporcionan herramientas para importar y convertir una biblioteca de tipos en un ensamblado de interoperabilidad, como se describe en [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md). Hay dos maneras de implementar una aplicación de interoperabilidad:  
+Una aplicación de interoperabilidad suele incluir un ensamblado de cliente de .NET, uno o varios ensamblados de interoperabilidad que representan diferentes bibliotecas de tipos COM, y uno o varios componentes COM registrados. Visual Studio y Windows SDK proporcionan herramientas para importar y convertir una biblioteca de tipos en un ensamblado de interoperabilidad, tal como se describe en [Importar una biblioteca de tipos como un ensamblado](importing-a-type-library-as-an-assembly.md). Hay dos maneras de implementar una aplicación de interoperabilidad:  
   
 - Mediante tipos de interoperabilidad insertados: A partir de .NET Framework 4, se puede indicar al compilador que inserte información de tipos de un ensamblado de interoperabilidad en el archivo ejecutable. El compilador solo inserta la información de tipos que la aplicación usa. No es necesario implementar el ensamblado de interoperabilidad con la aplicación. Esta es la técnica recomendada.  
   

@@ -16,37 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cea8f6827d3e361b3f6498e6612d8b11a2357285
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a662185bb84e9a66573b43b26ffcd256ecb943f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916674"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909853"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA (Interfaz)
 Representa un mensaje del asistente para la depuración administrada (MDA).  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |[GetDescription (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|Obtiene una cadena que contiene una descripción de este MDA.|  
 |[GetFlags (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|Obtiene las marcas asociadas a este MDA.|  
 |[GetName (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|Obtiene una cadena que contiene el nombre de este MDA.|  
-|[GetOSThreadId (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Obtiene el identificador de subproceso del sistema operativo en el que se está ejecutando este MDA.|  
+|[GetOSThreadId (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|Obtiene el identificador del subproceso del sistema operativo en el que se ejecuta este MDA.|  
 |[GetXML (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|Obtiene la secuencia XML completa asociada a este MDA.|  
   
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
+> Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

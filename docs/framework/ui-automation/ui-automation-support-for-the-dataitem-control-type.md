@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Data Item control type
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
-ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 7ba338a2eeb222dc8c807bc3a2bb4d1baf7de39d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125216"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912008"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Compatibilidad de UI Automation para el tipo de control DataItem
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  En este tema se ofrece información sobre la compatibilidad de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] con el tipo de control DataItem. En [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , un tipo de control es un conjunto de condiciones que debe cumplir un control para poder usar la propiedad <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Entre las condiciones se incluyen instrucciones específicas para la estructura de árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , valores de propiedad [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] y patrones de control.  
   
@@ -23,7 +23,6 @@ ms.locfileid: "59125216"
   
  En las secciones siguientes se definen la estructura del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , las propiedades, los patrones de control y los eventos necesarios para el tipo de control DataItem. Los requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplican a todos los controles de elemento de datos, ya sean [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]o [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estructura de árbol de automatización de interfaz de usuario necesaria  
  En la tabla siguiente se detallan la vista de control y la vista de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece a los controles de elemento de datos y se describe lo que puede incluirse en cada vista. Para más información sobre el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md).  
   
@@ -33,11 +32,10 @@ ms.locfileid: "59125216"
   
  Un elemento de datos de una cuadrícula de datos puede hospedar diversos objetos, entre los que se incluye otra capa de elementos de datos o elementos de cuadrícula concretos como controles de edición, texto o imágenes. Si el elemento de datos tiene un rol de objeto concreto, el elemento debe exponerse como un tipo de control concreto; por ejemplo, un tipo de control ListItem para un elemento de datos seleccionable de la cuadrícula.  
   
-<a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Propiedades de Automatización de la interfaz de usuario necesarias  
  En la tabla siguiente se muestran las propiedades que tienen un valor o una definición que es especialmente relevante para los controles de elemento de datos. Para más información sobre las propiedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , vea [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|Propiedad|Valor|Notas|  
+|Propiedad|Value|Notas|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Vea las notas.|El valor de esta propiedad debe ser único en todos los controles de una aplicación.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Vea las notas.|El rectángulo exterior que contiene el control completo.|  
@@ -52,7 +50,6 @@ ms.locfileid: "59125216"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|"elemento de datos"|Cadena localizada que corresponde al tipo de control DataItem.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Vea las notas.|El control de elemento de datos siempre contiene un elemento de texto principal que está relacionado con lo que el usuario asociaría como el identificador más semántico para el elemento.|  
   
-<a name="_Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Patrones de control necesarios para la automatización de la interfaz de usuario  
  En la tabla siguiente se muestran los patrones de control de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] necesarios para que todos los controles de elemento de datos los admitan. Para más información sobre los patrones de control, vea [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md).  
   
@@ -66,43 +63,40 @@ ms.locfileid: "59125216"
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Depende|Si el elemento de datos contiene un estado que se puede recorrer cíclicamente.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Si el texto primario del elemento de datos es editable, se debe admitir el patrón Value.|  
   
-<a name="Working_with_Data_Items_in_Large_Lists"></a>   
 ## <a name="working-with-data-items-in-large-lists"></a>Trabajar con elementos de datos en listas grandes  
  Las listas grandes suelen ser datos virtualizados dentro de marcos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] para ayudar al rendimiento. Debido a esto, un cliente de Automatización de la interfaz de usuario no puede usar la característica de consulta [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para extraer el contenido del árbol completo de la misma manera en que lo hace con otros contenedores de elementos. Un cliente debe desplazar el elemento a la vista (o expandir el control para mostrar todas las opciones importantes) antes de acceder al conjunto completo de información del elemento de datos.  
   
  Al llamar a `SetFocus` en la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del elemento de datos, el caso [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)] devolverá correctamente y el foco se establecerá en la edición dentro del subárbol del elemento de datos.  
   
-<a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automatización de la interfaz de usuario necesarios  
  En la siguiente tabla se muestran los eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que deben admitir todos los controles de elemento de datos. Para más información sobre eventos, vea [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Soporte técnico|Notas|  
+|o[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Soporte técnico|Notas|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Requerido|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obligatorio|Ninguna|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatorio|Ninguna|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Depende|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|Depende|Ninguna|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Obligatorio|Ninguna|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obligatorio|Ninguna|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obligatorio|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|Depende|Ninguna|  
-|Evento cambiado por propiedad<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|Depende|Ninguna|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Requerido|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> .|Obligatorio|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatorio|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatorio|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> .|Obligatorio|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatorio|None|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Depende|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> .|Depende|None|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Obligatorio|None|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obligatorio|None|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obligatorio|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> .|Depende|None|  
+|Evento cambiado por propiedad<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> .|Depende|None|  
   
-<a name="Data_Item_Control_Type_Example"></a>   
 ## <a name="dataitem-control-type-example"></a>Ejemplo de tipo de control DataItem  
  En la imagen siguiente se muestra un tipo de control DataItem en un control List View con compatibilidad con información completa para las columnas.  
   
- ![Gráfico de un control List View con dos elementos de datos](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
+ ![Gráfico de un control de vista de lista con dos elementos de datos](../../../docs/framework/ui-automation/media/uiauto-data-grid-detailed.GIF "uiauto_data_grid_detailed")  
   
  Las vistas de control y de contenido del árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertenece al control del elemento de datos se muestran a continuación. Los patrones de control de cada elemento de automatización se muestran entre paréntesis. El grupo "Contoso" también forma parte de la cuadrícula del control de host Data Grid.  
   
 |Árbol[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Vista de control|Árbol[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] - Vista de contenido|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Grupo "Contoso" (tabla, cuadrícula)<br />-DataItem "cuentas Receivable.doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-Image "Accounts Receivable.doc"<br />-Modificar "Name" (TableItem, GridItem, el valor "Accounts Receivable.doc")<br />-Modificar "Fecha de modificación" (valor TableItem, GridItem, "25/8/2006 3:29 PM")<br />-Modificar "Size" (valor GridItem, TableItem, "11.0 KB)<br />-DataItem "cuentas Payable.doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-   ...|-Grupo "Contoso" (tabla, cuadrícula)<br />-DataItem "cuentas Receivable.doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-Image "Accounts Receivable.doc"<br />-Modificar "Name" (TableItem, GridItem, el valor "Accounts Receivable.doc")<br />-Modificar "Fecha de modificación" (valor TableItem, GridItem, "25/8/2006 3:29 PM")<br />-Modificar "Size" (valor GridItem, TableItem, "11.0 KB)<br />-DataItem "cuentas Payable.doc" (Invoke TableItem, GridItem, SelectionItem,)<br />-   …|  
+|-Grupo "Contoso" (tabla, cuadrícula)<br />-DataItem "Accounts Receivable. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts Receivable. doc"<br />-Edite "Name" (TableItem, GridItem, Value "Accounts Receivable. doc")<br />-Edite "fecha de modificación" (TableItem, GridItem, valor "8/25/2006 3:29 PM")<br />-Edite "size" (GridItem, TableItem, Value "11,0 KB)<br />-DataItem "Accounts Payable. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   ...|-Grupo "Contoso" (tabla, cuadrícula)<br />-DataItem "Accounts Receivable. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-Image "Accounts Receivable. doc"<br />-Edite "Name" (TableItem, GridItem, Value "Accounts Receivable. doc")<br />-Edite "fecha de modificación" (TableItem, GridItem, valor "8/25/2006 3:29 PM")<br />-Edite "size" (GridItem, TableItem, Value "11,0 KB)<br />-DataItem "Accounts Payable. doc" (TableItem, GridItem, SelectionItem, Invoke)<br />-   …|  
   
  Si una cuadrícula representa una lista de elementos seleccionables, los elementos de la interfaz de usuario correspondientes se pueden exponer con el tipo de control ListItem en lugar del tipo de control DataItem. En el ejemplo anterior, los elementos DataItem ("Accounts Receivable.doc" y "Accounts Payable.doc") de Group ("Contoso") se pueden mejorar si se exponen como tipos de control ListItem, porque ese tipo ya admite el patrón de control SelectionItem.  
   

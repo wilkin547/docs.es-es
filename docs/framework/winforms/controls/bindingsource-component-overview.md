@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: 9c9c9fb574b9f3e687b2d8d5c4606bfb66ebfa64
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: bd1b38b434f9932a575745d7a1761ff18b009115
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917810"
 ---
 # <a name="bindingsource-component-overview"></a>Información general sobre el componente BindingSource
 El componente <xref:System.Windows.Forms.BindingSource> está diseñado para simplificar el proceso de enlazar controles a un origen de datos subyacente. El componente <xref:System.Windows.Forms.BindingSource> actúa como canalización y como origen de datos al que se enlazarán otros controles. Proporciona una abstracción de la conexión de datos de su formulario al pasar comandos a la lista de datos subyacente. Además, puede agregar datos directamente a él para que el propio componente funcione como un origen de datos.  
@@ -25,7 +25,7 @@ El componente <xref:System.Windows.Forms.BindingSource> está diseñado para sim
  ![Arquitectura de origen de enlace y enlace de datos](./media/net-bindsrcdatabindarch.gif "NET_BindSrcDataBindArch")  
   
 > [!NOTE]
->  En tiempo de diseño, algunas acciones, como arrastrar una tabla de base de datos desde una ventana de datos en un formulario en blanco, crearán el componente <xref:System.Windows.Forms.BindingSource>, lo enlazarán al origen de datos subyacente y agregarán controles compatibles con datos en una sola operación. Vea también [Enlazar controles de Windows Forms a datos en Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
+> En tiempo de diseño, algunas acciones, como arrastrar una tabla de base de datos desde una ventana de datos en un formulario en blanco, crearán el componente <xref:System.Windows.Forms.BindingSource>, lo enlazarán al origen de datos subyacente y agregarán controles compatibles con datos en una sola operación. Vea también [Enlazar controles de Windows Forms a datos en Visual Studio](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio).  
   
 ## <a name="bindingsource-component-as-a-data-source"></a>Componente BindingSource como origen de datos  
  Si comienza agregando elementos al componente <xref:System.Windows.Forms.BindingSource> sin especificar primero la lista a la que se enlazará, el componente actuará como un origen de datos de estilo de lista y aceptará estos elementos agregados.  

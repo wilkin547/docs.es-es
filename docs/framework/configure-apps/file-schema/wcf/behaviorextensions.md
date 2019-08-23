@@ -2,14 +2,14 @@
 title: <behaviorExtensions>
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: 81ce9bb0e55fe4570f8a21187d9df80ea22393fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcf1f1dcdba50c3e7fba8eb170132d0cf47c4271
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673464"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919814"
 ---
-# <a name="behaviorextensions"></a>\<behaviorExtensions>
+# <a name="behaviorextensions"></a>\<> behaviorExtensions
 Las extensiones de comportamiento le permiten al usuario crear los elementos de comportamiento definidos por el usuario. Estos elementos se pueden utilizar junto a los elementos de comportamiento de Windows Communication Foundation (WCF) estándares. La sección `behaviorExtensions` define el elemento tal como se puede utilizar en configuración. Éste es un ejemplo de una extensión de comportamiento típica.  
   
 ```xml  
@@ -49,9 +49,9 @@ Las extensiones de comportamiento le permiten al usuario crear los elementos de 
   
  Un atacante se puede aprovechar del orden de búsqueda de CLR y ejecutar un código desautorizado. Al utilizar los nombres completos (seguros) sólo se identifica un tipo y aumenta la seguridad de su sistema.  
   
- Para obtener más información, consulte [How the Runtime Locates Assemblies](https://go.microsoft.com/fwlink/?LinkId=95336) y <xref:System.AppDomain.TypeResolve>.  
+ Para obtener más información, vea [cómo el motor en tiempo de ejecución ubica ensamblados](https://go.microsoft.com/fwlink/?LinkId=95336) y <xref:System.AppDomain.TypeResolve>.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>
-- [Configuración y extensión del tiempo de ejecución con comportamientos](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+- [Configuración y extensión del tiempo de ejecución con comportamientos](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

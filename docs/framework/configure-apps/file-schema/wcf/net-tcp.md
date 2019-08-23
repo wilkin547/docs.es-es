@@ -2,12 +2,12 @@
 title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 589bae5d1f91e0424eb19cee62fe758aa7846191
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 63cef2b85aa57b5c1c0e0add1794ebedc73d96c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772338"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933051"
 ---
 # <a name="nettcp"></a>\<net.tcp>
 Especifica la configuración del servicio de uso compartido de puertos NET.TCP, que permite que varios procesos compartan el mismo puerto TCP.  
@@ -42,7 +42,7 @@ Especifica la configuración del servicio de uso compartido de puertos NET.TCP, 
 </configuration>
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -50,31 +50,31 @@ Especifica la configuración del servicio de uso compartido de puertos NET.TCP, 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`listenBacklog`|Un entero que especifica las conexiones pendientes máximas que se aceptan desde la conexión compartida, pero todavía no se envían a los servicios de Windows Communication Foundation (WCF). El valor predeterminado es 10.|  
+|`listenBacklog`|Un entero que especifica las conexiones pendientes máximas que se aceptan desde la conexión compartida, pero que todavía no se envían a los servicios Windows Communication Foundation (WCF). El valor predeterminado es 10.|  
 |`maxPendingAccepts`|Un entero que especifica el mayor número de subprocesos de aceptación simultáneos pendientes en el extremo de escucha para el servicio de uso compartido. El valor predeterminado es 2.|  
 |`MaxPendingConnections`|Número máximo de conexiones que el agente de escucha puede tener en espera de aceptación por parte de la aplicación. Cuando se supera este valor de cuota, se pierden las nuevas conexiones entrantes en lugar de esperar a ser aceptadas. Características de conexión como la seguridad de mensaje pueden hacer que un cliente abra más de una conexión. Los administradores de servicio deberían tener en cuenta estas conexiones adicionales al establecer este valor de cuota. El valor predeterminado es 10.|  
 |`receiveTimeout`|Un <xref:System.TimeSpan> que especifica el tiempo de espera para la lectura de datos de trama y para la conexión mediante el envío desde las conexiones subyacentes. El valor predeterminado es "00:00:10".|  
-|`teredoEnabled`|Un valor booleano que indica si el servicio de uso compartido de puerto utiliza el servicio Microsoft Teredo para realizar escuchas en puertos TCP en nombre de los servicios de WCF. De manera predeterminada, es `false`.|  
+|`teredoEnabled`|Valor booleano que indica si el servicio de uso compartido de puertos utiliza el servicio Microsoft Teredo para realizar escuchas en puertos TCP en nombre de los servicios WCF. El valor predeterminado es `false`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|Una colección de elementos de configuración que contienen un `securityIdentifier` atributo para especificar las cuentas de usuario para los procesos que hospedan servicios WCF y tienen concedidos acceso de conexión al servicio de uso compartido.|  
+|[\<allowAccounts>](allowaccounts.md)|Colección de elementos de configuración que contienen un `securityIdentifier` atributo para especificar las cuentas de usuario para los procesos que hospedan servicios WCF y tienen concedido acceso de conexión al servicio de uso compartido.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contiene la configuración para el proceso de agente de escucha SMSvcHost.exe.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Contiene la configuración para el proceso de agente de escucha SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información sobre el uso compartido de puertos, consulte [uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Para comprender cómo configurar el puerto de servicio de uso compartido, consulte [configurar el servicio de uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
+ Para obtener más información sobre el uso compartido de puertos, consulte [uso compartido de puertos net. TCP](../../../wcf/feature-details/net-tcp-port-sharing.md). Para saber cómo configurar el servicio de uso compartido de puertos, vea [configurar el servicio de uso compartido de puertos net. TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>
-- [Uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [Configuración del servicio de uso compartido de puertos Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
+- [Uso compartido de puertos Net.TCP](../../../wcf/feature-details/net-tcp-port-sharing.md)
+- [Configuración del servicio de uso compartido de puertos Net.TCP](../../../wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

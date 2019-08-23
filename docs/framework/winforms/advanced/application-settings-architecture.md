@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: b5d5a4456bef925cd8093fe9c696145aff83660e
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: c3858cfab59b63761f43f6b3eaad9bf8ca4c1dbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039415"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916691"
 ---
 # <a name="application-settings-architecture"></a>Arquitectura de configuración de la aplicación
 Este tema describe cómo funciona la arquitectura de la configuración de la aplicación y explora las características avanzadas de la arquitectura, como valores de configuración agrupados y claves de configuración.
@@ -142,7 +142,7 @@ Este tema describe cómo funciona la arquitectura de la configuración de la apl
  Se puede llamar a un proveedor simultáneamente desde varios subprocesos, pero siempre se escribe en la misma ubicación de almacenamiento; por tanto, la arquitectura de la Configuración de la aplicación solo creará una única instancia de la clase del proveedor.
 
 > [!IMPORTANT]
->  Debería asegurarse de que su proveedor es seguro para subprocesos y que solo permite un subproceso al mismo tiempo que escribe en los archivos de configuración.
+> Debería asegurarse de que su proveedor es seguro para subprocesos y que solo permite un subproceso al mismo tiempo que escribe en los archivos de configuración.
 
  El proveedor no necesita admitir todos los atributos de configuración <xref:System.Configuration?displayProperty=nameWithType> definidos en el espacio de nombres, aunque debe tener como mínimo compatibilidad con <xref:System.Configuration.ApplicationScopedSettingAttribute> y <xref:System.Configuration.UserScopedSettingAttribute>, y también debe admitir. <xref:System.Configuration.DefaultSettingValueAttribute> Para esos atributos que no admite, el proveedor solo debería enviar un mensaje de error sin notificación, no producir una excepción. Sin embargo, si la clase de configuración usa una combinación no válida de atributos, <xref:System.Configuration.ApplicationScopedSettingAttribute> como <xref:System.Configuration.UserScopedSettingAttribute> aplicar y al mismo valor, el proveedor debe iniciar una excepción y dejar de funcionar.
 

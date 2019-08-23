@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cf997c8ff13e0a6a4664ea3b538ac0def1baacf
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da01d0dac2e67d6c0131a2b5965472bbd19213fe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663624"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927325"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy >, elemento
 Especifica que la identidad de Windows no fluye por puntos asincrónicos, independientemente de la configuración del flujo del contexto de ejecución del subproceso actual.  
@@ -42,7 +42,7 @@ Especifica que la identidad de Windows no fluye por puntos asincrónicos, indepe
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`false`|<xref:System.Security.Principal.WindowsIdentity>fluye a través de puntos asincrónicos en función <xref:System.Threading.ExecutionContext> de la configuración de flujo para el subproceso actual. Este es el valor predeterminado.|  
 |`true`|<xref:System.Security.Principal.WindowsIdentity>no fluye por puntos asincrónicos, independientemente de la <xref:System.Threading.ExecutionContext> configuración de Flow en el subproceso actual.|  
@@ -63,7 +63,7 @@ Especifica que la identidad de Windows no fluye por puntos asincrónicos, indepe
  A partir de la .NET Framework 2,0, puede usar el `<legacyImpersonationPolicy>` elemento para especificar que <xref:System.Security.Principal.WindowsIdentity> no fluye por puntos asincrónicos.  
   
 > [!NOTE]
->  El Common Language Runtime (CLR) es consciente de las operaciones de suplantación realizadas con solo código administrado, no de la suplantación realizada fuera del código administrado, como a través de la invocación de plataforma a código no administrado o a través de llamadas directas a funciones de Win32. Solo los <xref:System.Security.Principal.WindowsIdentity> objetos administrados pueden fluir por puntos asincrónicos, `alwaysFlowImpersonationPolicy` a menos que el elemento se haya`<alwaysFlowImpersonationPolicy enabled="true"/>`establecido en true (). Al establecer `alwaysFlowImpersonationPolicy` el elemento en true, se especifica que la identidad de Windows siempre fluye por puntos asincrónicos, independientemente de cómo se haya realizado la suplantación. Para obtener más información sobre cómo fluir la suplantación no administrada a través de puntos asincrónicos, vea [ \<alwaysFlowImpersonationPolicy > elemento](alwaysflowimpersonationpolicy-element.md).  
+> El Common Language Runtime (CLR) es consciente de las operaciones de suplantación realizadas con solo código administrado, no de la suplantación realizada fuera del código administrado, como a través de la invocación de plataforma a código no administrado o a través de llamadas directas a funciones de Win32. Solo los <xref:System.Security.Principal.WindowsIdentity> objetos administrados pueden fluir por puntos asincrónicos, `alwaysFlowImpersonationPolicy` a menos que el elemento se haya`<alwaysFlowImpersonationPolicy enabled="true"/>`establecido en true (). Al establecer `alwaysFlowImpersonationPolicy` el elemento en true, se especifica que la identidad de Windows siempre fluye por puntos asincrónicos, independientemente de cómo se haya realizado la suplantación. Para obtener más información sobre cómo fluir la suplantación no administrada a través de puntos asincrónicos, vea [ \<alwaysFlowImpersonationPolicy > elemento](alwaysflowimpersonationpolicy-element.md).  
   
  Puede modificar este comportamiento predeterminado de otras dos maneras:  
   

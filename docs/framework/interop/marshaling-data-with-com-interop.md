@@ -6,17 +6,17 @@ helpviewer_keywords:
 - marshaling data, COM interop
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16f94e8b85a1bedb8b7791c2b7fcaf6d154ba1b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 279310fe7aa17a73d129edf98f3477a00fd50767
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833525"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567247"
 ---
 # <a name="marshaling-data-with-com-interop"></a>serialización de datos con la interoperabilidad COM
 La interoperabilidad COM proporciona compatibilidad para usar objetos COM desde código administrado y para exponer objetos administrados en COM. La compatibilidad con el cálculo de referencias de datos desde y hacia COM es exhaustiva y el comportamiento de serialización casi siempre es correcto.  
   
- El kit de desarrollo de Software (SDK) de Windows incluye las siguientes herramientas de interoperabilidad COM:  
+ Windows SDK incluye las siguientes herramientas de interoperabilidad COM:  
   
 - [Importador de la biblioteca de tipos (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), que convierte una biblioteca de tipos COM en un ensamblado de interoperabilidad. Desde este ensamblado, el servicio de cálculo de referencias de interoperabilidad genera contenedores que realizan el cálculo de referencias de datos entre la memoria administrada y la no administrada.  
   

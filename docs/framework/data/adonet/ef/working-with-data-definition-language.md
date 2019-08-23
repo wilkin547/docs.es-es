@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 788388b93a00cf5393174d35b8a160b4991da3bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c2812e261278af7763bc6b2e1a493b97cb35e3ab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67743719"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911633"
 ---
 # <a name="working-with-data-definition-language"></a>Trabajar con lenguaje de definición de datos
-A partir de .NET Framework versión 4, el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con el lenguaje de definición de datos (DDL). Esto le permite crear o eliminar una instancia de la base de datos basada en la cadena de conexión y los metadatos del modelo de almacenamiento (SSDL).  
+A partir de la versión 4 de .NET Framework [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] , admite el lenguaje de definición de datos (DDL). Esto le permite crear o eliminar una instancia de la base de datos basada en la cadena de conexión y los metadatos del modelo de almacenamiento (SSDL).  
   
  Los siguientes métodos de <xref:System.Data.Objects.ObjectContext> utilizan la cadena de conexión y el contenido SSDL para crear o eliminar la base de datos, comprobar si la base de datos existe y ver el script DDL generado:  
   
@@ -26,7 +26,7 @@ A partir de .NET Framework versión 4, el [!INCLUDE[adonet_ef](../../../../../in
 - <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
   
 > [!NOTE]
->  La ejecución de los comandos DDL supone que se cuenta con los permisos necesarios.  
+> La ejecución de los comandos DDL supone que se cuenta con los permisos necesarios.  
   
  Los métodos enumerados anteriormente delegan la mayoría del trabajo en el proveedor de datos de ADO.NET subyacente. Es responsabilidad del proveedor asegurarse de que la convención de nomenclatura utilizada para generar los objetos de base de datos es coherente con las convenciones utilizadas para las consultas y las actualizaciones.  
   
@@ -40,11 +40,11 @@ A partir de .NET Framework versión 4, el [!INCLUDE[adonet_ef](../../../../../in
   
 2. Agregue un modelo existente a la aplicación.  
   
-    1. Agregar un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, consulte el [Cómo: Crear un nuevo archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) tema.  
+    1. Agregue un modelo vacío denominado `SchoolModel`. Para crear un modelo vacío, vea el [procedimiento: Cree un nuevo tema del archivo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) . edmx.  
   
      El archivo SchoolModel.edmx se añade al proyecto.  
   
-    1. Copie el conceptual, almacenamiento y la asignación de contenido para el modelo School desde el [modelo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) tema.  
+    1. Copie el contenido conceptual, de almacenamiento y de asignación para el modelo School en el tema [School Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100)) .  
   
     2. Abra el archivo SchoolModel.edmx y pegue el contenido dentro de las etiquetas `edmx:Runtime`.  
   

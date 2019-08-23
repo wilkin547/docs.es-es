@@ -1,5 +1,5 @@
 ---
-title: <clear> elemento para NameValueSectionHandler y DictionarySectionHandler
+title: <clear>elemento para NameValueSectionHandler y DictionarySectionHandler
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301245"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927704"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<Borrar > elemento para NameValueSectionHandler y DictionarySectionHandler
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<borrar > elemento de NameValueSectionHandler y DictionarySectionHandler
 
-Borra todos los valores definidos anteriormente en una sección.
+Borra todos los valores de configuración definidos previamente en una sección.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintaxis
@@ -32,27 +32,27 @@ Borra todos los valores definidos anteriormente en una sección.
 
 ## <a name="attributes"></a>Atributos
 
-Ninguna
+None
 
 ## <a name="parent-element"></a>Elemento primario
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ------------|
-| [ **\<sectionName >** elemento](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | Define los valores de las secciones de configuración personalizada que utilicen el <xref:System.Configuration.NameValueSectionHandler> y <xref:System.Configuration.DictionarySectionHandler> clases. |
+| [ **sectionName>\<** elemento](custom-element-2.md) | Define la configuración de las secciones de configuración personalizadas <xref:System.Configuration.NameValueSectionHandler> que <xref:System.Configuration.DictionarySectionHandler> utilizan las clases y. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-Ninguna
+None
 
 ## <a name="remarks"></a>Comentarios
 
-Puede usar el  **\<borrar >** elemento para quitar toda la configuración de la aplicación que se han definido en un nivel superior de la jerarquía del archivo de configuración.
+Puede usar el  **\<elemento Clear >** para quitar toda la configuración de la aplicación que se definió en un nivel superior en la jerarquía del archivo de configuración.
 
 ## <a name="example"></a>Ejemplo
 
-Este ejemplo define un archivo de configuración del equipo y un archivo de configuración de aplicación y se muestra cómo usar el  **\<borrar >** elemento en un archivo de configuración de aplicación para borrar las secciones definidas anteriormente en el archivo de configuración del equipo.
+En este ejemplo se define un archivo de configuración del equipo y un archivo de configuración de la aplicación y se muestra cómo usar el  **\<elemento Clear >** en un archivo de configuración de la aplicación para borrar las secciones definidas anteriormente en la configuración del equipo. filesystem.
 
-El siguiente código de archivo de configuración del equipo declara la sección  **\<mySection >** :
+El siguiente código de archivo de configuración de máquina declara la sección  **\<>** :
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ El siguiente código de archivo de configuración del equipo declara la sección
 </configuration>
 ```
 
-El siguiente código de archivo de configuración de la aplicación quita todos los valores de  **\<mySection >** . La aplicación no puede recuperar la configuración que se han declarado en la en la  **\<mySection >** sección del archivo de configuración del equipo.
+El siguiente código de archivo de configuración de la aplicación quita todos los valores de  **\<la sección >** . La aplicación no puede recuperar ninguno de los valores de configuración que se declararon en la sección de la  **\<sección >** del archivo de configuración del equipo.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ El siguiente código de archivo de configuración de la aplicación quita todos 
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema del archivo de configuración para el .NET Framework](index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f76b1f0a09be2f745156437919f43ebaa8840519
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938480"
 ---
 # <a name="sql-server-express-user-instances"></a>Instancias de usuario de SQL Server Express
 Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva característica de instancia de usuario, que solo está disponible cuando se usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`). Una instancia de usuario es una instancia independiente del motor de base de datos de SQL Server Express que se genera mediante una instancia primaria. Las instancias de usuario permiten a los usuarios que no son administradores en sus equipos locales adjuntar y conectarse a bases de datos de SQL Server Express. Cada instancia se ejecuta en el contexto de seguridad del usuario individual, ya que solo se puede ejecutar una instancia por usuario.  
@@ -21,10 +21,10 @@ Microsoft SQL Server Express Edition (SQL Server Express) incorpora una nueva ca
  Para obtener más información, vea "Instancias de usuario" en los Libros en línea de SQL Server.  
   
 > [!NOTE]
->  Las instancias de usuario no son necesarias para los usuarios que ya son administradores en sus propios equipos o en casos en los que están implicados varios usuarios de bases de datos.  
+> Las instancias de usuario no son necesarias para los usuarios que ya son administradores en sus propios equipos o en casos en los que están implicados varios usuarios de bases de datos.  
   
 ## <a name="enabling-user-instances"></a>Habilitar instancias de usuario  
- Para generar instancias de usuario, debe estar ejecutándose una instancia primaria de SQL Server Express. Las instancias de usuario están habilitadas de forma predeterminada cuando se instala SQL Server Express, y puede ser habilitados o deshabilitados por un administrador del sistema ejecutando explícitamente la **sp_configure** procedimiento almacenado del sistema en la instancia primaria.  
+ Para generar instancias de usuario, debe estar ejecutándose una instancia primaria de SQL Server Express. Las instancias de usuario están habilitadas de forma predeterminada cuando se instala SQL Server Express y se pueden habilitar o deshabilitar explícitamente un administrador del sistema ejecutando el procedimiento almacenado del sistema **sp_configure** en la instancia primaria.  
   
 ```  
 -- Enable user instances.  
@@ -37,7 +37,7 @@ sp_configure 'user instances enabled','0'
  El protocolo de red para las instancias de usuario debe ser el de Canalizaciones con nombre locales. No se puede iniciar una instancia de usuario en una instancia remota de SQL Server y los inicios de sesión de SQL Server no están permitidos.  
   
 ## <a name="connecting-to-a-user-instance"></a>Conectarse a una instancia de usuario  
- El `User Instance` y `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> palabras clave permiten un <xref:System.Data.SqlClient.SqlConnection> para conectarse a una instancia de usuario. Las instancias de usuario también funcionan con las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` y `AttachDBFilename`.  
+ Las `User Instance` palabras `AttachDBFilename` clave y <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> permiten <xref:System.Data.SqlClient.SqlConnection> que un se conecte a una instancia de usuario. Las instancias de usuario también funcionan con las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` y `AttachDBFilename`.  
   
  Tenga en cuenta lo siguiente sobre la cadena de conexión de ejemplo que se muestra a continuación:  
   
@@ -58,9 +58,9 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  También puede usar las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> y <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> para compilar una cadena de conexión en tiempo de ejecución.  
+> También puede usar las propiedades <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> y <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> para compilar una cadena de conexión en tiempo de ejecución.  
   
-### <a name="using-the-124datadirectory124-substitution-string"></a>Mediante el &#124;DataDirectory&#124; cadena de sustitución  
+### <a name="using-the-124datadirectory124-substitution-string"></a>Usar la &#124;cadena de&#124; sustitución DataDirectory  
  `AttachDbFileName` se amplió en ADO.NET 2.0 con la incorporación de la cadena de sustitución `|DataDirectory|` (entre barras verticales). `DataDirectory` se usa junto con `AttachDbFileName` para indicar una ruta de acceso relativa a un archivo de datos, lo que permite a los desarrolladores crear cadenas de conexión basadas en una ruta relativa al origen de datos en lugar de tener que especificar la ruta completa.  
   
  La ubicación física que indica `DataDirectory` depende del tipo de aplicación. En este ejemplo, el archivo Northwind.mdf que se va a adjuntar se encuentra en la carpeta \app_data de la aplicación.  
@@ -77,12 +77,12 @@ Initial Catalog=Northwind;
  Si la cadena de conexión tiene una cadena de sustitución con formato incorrecto, se producirá una <xref:System.ArgumentException>.  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> resuelve las cadenas de sustitución en rutas de acceso completas del sistema de archivos del equipo local. Por eso, no se admiten rutas de acceso a servidores remotos, HTTP ni UNC. Si el servidor no se encuentra en el equipo local, se produce una excepción.  
+> <xref:System.Data.SqlClient> resuelve las cadenas de sustitución en rutas de acceso completas del sistema de archivos del equipo local. Por eso, no se admiten rutas de acceso a servidores remotos, HTTP ni UNC. Si el servidor no se encuentra en el equipo local, se produce una excepción.  
   
  Cuando se abre <xref:System.Data.SqlClient.SqlConnection>, se redirige desde la instancia de SQL Server Express predeterminada a una instancia iniciada en tiempo de ejecución que se ejecuta en la cuenta del llamador.  
   
 > [!NOTE]
->  Puede ser necesario aumentar el valor de <xref:System.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> porque las instancias de usuario pueden tardar más en cargar que las instancias normales.  
+> Puede ser necesario aumentar el valor de <xref:System.Data.SqlClient.SqlConnection.ConnectionTimeout%2A> porque las instancias de usuario pueden tardar más en cargar que las instancias normales.  
   
  El siguiente fragmento de código abre una nueva `SqlConnection`, muestra la cadena de conexión en la ventana de la consola y después cierra la conexión cuando sale del bloque de código `using`.  
   
@@ -116,23 +116,23 @@ private static void OpenSqlConnection()
 ```  
   
 > [!NOTE]
->  No se admiten las instancias de usuario en código de Common Language Runtime (CLR) cuando se está ejecutando dentro de SQL Server. Se producirá una <xref:System.InvalidOperationException> si se llama a `Open` en una conexión <xref:System.Data.SqlClient.SqlConnection> que tiene `User Instance=true` en la cadena de conexión.  
+> No se admiten las instancias de usuario en código de Common Language Runtime (CLR) cuando se está ejecutando dentro de SQL Server. Se producirá una <xref:System.InvalidOperationException> si se llama a `Open` en una conexión <xref:System.Data.SqlClient.SqlConnection> que tiene `User Instance=true` en la cadena de conexión.  
   
 ## <a name="lifetime-of-a-user-instance-connection"></a>Duración de la conexión a una instancia de usuario  
- A diferencia de las versiones de SQL Server que se ejecutan como un servicio, no es necesario iniciar y detener manualmente las instancias de SQL Server. Cada vez que un usuario inicia sesión y se conecta a una instancia de usuario, ésta se inicia si no se está ejecutando ya. Las bases de datos de instancias de usuario tienen establecida la opción `AutoClose` para que la base de datos se cierre automáticamente después de un período de inactividad. El proceso sqlser.exe que se ha iniciado se mantiene en ejecución durante un período de espera limitado después de que se cierre la última conexión a la instancia, de modo que no es necesario volver a iniciarla si se abre otra conexión antes de que pase el tiempo de espera. La instancia de usuario se cierra automáticamente si no se abre ninguna conexión nueva antes de que haya expirado el período de espera. Un administrador del sistema en la instancia primaria puede establecer la duración del período de tiempo de espera para una instancia de usuario mediante el uso de **sp_configure** para cambiar la **tiempo de espera de instancia de usuario** opción. El valor predeterminado es de 60 minutos.  
+ A diferencia de las versiones de SQL Server que se ejecutan como un servicio, no es necesario iniciar y detener manualmente las instancias de SQL Server. Cada vez que un usuario inicia sesión y se conecta a una instancia de usuario, ésta se inicia si no se está ejecutando ya. Las bases de datos de instancias de usuario tienen establecida la opción `AutoClose` para que la base de datos se cierre automáticamente después de un período de inactividad. El proceso sqlser.exe que se ha iniciado se mantiene en ejecución durante un período de espera limitado después de que se cierre la última conexión a la instancia, de modo que no es necesario volver a iniciarla si se abre otra conexión antes de que pase el tiempo de espera. La instancia de usuario se cierra automáticamente si no se abre ninguna conexión nueva antes de que haya expirado el período de espera. Un administrador del sistema en la instancia primaria puede establecer la duración del período de tiempo de espera para una instancia de usuario mediante **sp_configure** para cambiar la opción de tiempo de espera de la **instancia de usuario** . El valor predeterminado es de 60 minutos.  
   
 > [!NOTE]
->  Si en la cadena de conexión se utiliza `Min Pool Size` con un valor mayor de cero, el concentrador de conexión siempre mantendrá unas cuantas conexiones abiertas y la instancia de usuario no se cerrará automáticamente.  
+> Si en la cadena de conexión se utiliza `Min Pool Size` con un valor mayor de cero, el concentrador de conexión siempre mantendrá unas cuantas conexiones abiertas y la instancia de usuario no se cerrará automáticamente.  
   
 ## <a name="how-user-instances-work"></a>Cómo funcionan las instancias de usuario  
- La primera vez que se genera una instancia de usuario para cada usuario, el **maestro** y **msdb** las bases de datos del sistema se copian desde la carpeta de datos de la plantilla en una ruta de acceso en el repositorio de datos de aplicación local del usuario directorio para uso exclusivo por la instancia de usuario. La ruta de acceso suele ser `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Cuando se inicia una instancia de usuario, el **tempdb**, registro y seguimiento de archivos también se escriben en este directorio. Se genera un nombre para la instancia cuya exclusividad está garantizada para cada usuario.  
+ La primera vez que se genera una instancia de usuario para cada usuario, las bases de datos del sistema **maestra** y **msdb** se copian de la carpeta de datos de plantilla en una ruta de acceso en el directorio del repositorio de datos de la aplicación local del usuario para que la instancia de usuario la use exclusivamente. La ruta de acceso suele ser `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Cuando se inicia una instancia de usuario, los archivos **tempdb**, log y trace también se escriben en este directorio. Se genera un nombre para la instancia cuya exclusividad está garantizada para cada usuario.  
   
  De forma predeterminada, se concede permisos a todos los miembros del grupo Builtin\Users de Windows para conectarse a la instancia local, así como permisos de lectura y ejecución para los binarios de SQL Server. Una vez comprobadas las credenciales del usuario que llama y que hospeda la instancia de usuario, éste se convierte en el `sysadmin` de esa instancia. Solo hay habilitada memoria compartida para las instancias de usuario, lo que significa que solo es posible realizar operaciones en el equipo local.  
   
  Los usuarios deben recibir permisos tanto de lectura como de escritura para los archivos .mdf y .ldf especificados en la cadena de conexión.  
   
 > [!NOTE]
->  Los archivos .mdf y .ldf son los archivos de la base de datos y del registro, respectivamente. Estos dos archivos forman un conjunto, así que hay que prestar mucha atención durante las operaciones de copia de seguridad y restauración. El archivo de la base de datos contiene información sobre la versión exacta del archivo de registro, y no será posible abrir la base de datos si está unida al archivo de registro incorrecto.  
+> Los archivos .mdf y .ldf son los archivos de la base de datos y del registro, respectivamente. Estos dos archivos forman un conjunto, así que hay que prestar mucha atención durante las operaciones de copia de seguridad y restauración. El archivo de la base de datos contiene información sobre la versión exacta del archivo de registro, y no será posible abrir la base de datos si está unida al archivo de registro incorrecto.  
   
  Para evitar que se corrompan datos, las bases de datos en las instancias de usuario se abren con acceso exclusivo. Si dos instancias de usuario diferentes comparten la misma base de datos en el mismo equipo, el usuario de la primera instancia debe cerrar la base de datos para que se pueda abrir en una segunda instancia.  
   
@@ -140,13 +140,13 @@ private static void OpenSqlConnection()
  Las instancias de usuario proporcionan a los desarrolladores de aplicaciones de base de datos un almacén de datos de SQL Server que no depende de que los desarrolladores tengan cuentas administrativas en sus equipos de desarrollo. Las instancias de usuario se basan en el modelo Access/Jet, en el que la aplicación de base de datos simplemente se conecta a un archivo y automáticamente el usuario tiene todos los permisos sobre los objetos de la base de datos sin necesidad de que intervenga un administrador del sistema para concedérselos. Resulta muy práctico en situaciones en las que el usuario está utilizando una cuenta de privilegios mínimos, no tiene permisos de administrador para el servidor o el equipo local y necesita crear objetos y aplicaciones de base de datos. Las instancias de usuario permiten a los usuarios crear instancias en tiempo de ejecución que se ejecutan en el propio contexto de seguridad del usuario y no en el contexto de seguridad de un servicio del sistema con más privilegios.  
   
 > [!IMPORTANT]
->  Las instancias de usuario solo se deberían utilizar cuando todas las aplicaciones que las usen sean de plena confianza.  
+> Las instancias de usuario solo se deberían utilizar cuando todas las aplicaciones que las usen sean de plena confianza.  
   
  Los escenarios de instancias de usuario incluyen:  
   
 - Cualquier aplicación de un único usuario en la que no sea necesario compartir datos  
   
-- Implementación ClickOnce Si .NET Framework 2.0, o posterior, y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y utilizar el paquete de instalación que se descargó como resultado de una acción ClickOnce. Un administrador debe instalar SQL Server Express si forma parte de la instalación. Para obtener más información, consulte [implementación de ClickOnce para formularios Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- Implementación ClickOnce Si .NET Framework 2.0, o posterior, y SQL Server Express ya están instalados en el equipo de destino, los usuarios que no sean administradores pueden instalar y utilizar el paquete de instalación que se descargó como resultado de una acción ClickOnce. Un administrador debe instalar SQL Server Express si forma parte de la instalación. Para obtener más información, vea [ClickOnce Deployment for Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
 - Hospedaje de ASP.NET dedicado con autenticación de Windows. Una sola instancia de SQL Express Server se puede hospedar en una intranet. La aplicación se conecta usando la cuenta de Windows ASPNET, sin que haya suplantación. No se debería utilizar instancias de usuario en escenarios de hospedaje compartido o de terceros en los que todas las aplicaciones compartirían la misma instancia de usuario y dejarían de permanecer aisladas las unas de las otras.  
   

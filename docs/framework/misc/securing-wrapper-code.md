@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487896"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910750"
 ---
 # <a name="securing-wrapper-code"></a>Insertar en el repositorio código de contenedor
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -35,8 +35,8 @@ ms.locfileid: "66487896"
   
  Siempre que su código tome un <xref:System.Delegate> de un código de menor confianza que pueda llamarlo, asegúrese de que no habilita al código de menor confianza para que aumente sus permisos. Si toma un delegado y lo usa más adelante, el código que creó el delegado no está en la pila de llamadas y sus permisos no se probarán si el código que está en el delegado o bajo el delegado intenta una operación protegida. Si su código y el código del llamador tienen privilegios más elevados que el creador, el creador puede organizar la ruta de la llamada sin formar parte de la pila de llamadas.  
   
-### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>En la versión 2.0 y versiones posteriores de .NET Framework  
- A diferencia de las versiones anteriores, versión 2.0 y versiones posteriores de .NET Framework realiza la acción de seguridad con el creador del delegado cuando se crea y se llama al delegado.  
+### <a name="in-version-20-and-later-versions-of-the-net-framework"></a>En la versión 2,0 y versiones posteriores del .NET Framework  
+ A diferencia de las versiones anteriores, la versión 2,0 y las versiones posteriores del .NET Framework realiza una acción de seguridad en el creador del delegado cuando se crea y se llama al delegado.  
   
 - Cuando se crea un delegado, las peticiones de vínculo de seguridad en el método de destino del delegado se realizan en el conjunto de permisos del creador del delegado.  El incumplimiento de la acción de seguridad produce un <xref:System.Security.SecurityException>.  
   
@@ -47,14 +47,14 @@ ms.locfileid: "66487896"
 ## <a name="link-demands-and-wrappers"></a>Peticiones de vínculo y contenedores  
  Se ha reforzado un caso especial de protección con peticiones de vínculo en la infraestructura de seguridad, pero sigue siendo una fuente de posibles vulnerabilidades en el código.  
   
- Si el código de plena confianza llama a una propiedad, evento o método protegido por un [LinkDemand](../../../docs/framework/misc/link-demands.md), la llamada se realiza correctamente si el **LinkDemand** se satisface la comprobación del permiso para que el llamador. Además, si el código de plena confianza expone una clase que toma el nombre de una propiedad y llama a su **obtener** descriptor de acceso mediante reflexión, esa llamada a la **obtener** descriptor de acceso se realiza correctamente, aunque hace el código de usuario no tiene el derecho de acceso a esta propiedad. Esto es porque el **LinkDemand** comprueba sólo el llamador inmediato, que es el código de plena confianza. Básicamente, el código de plena confianza realiza una llamada privilegiada en nombre del código de usuario sin comprobar si el código de usuario tiene derecho a hacer esa llamada.  
+ Si el código de plena confianza llama a una propiedad, un evento o un método protegido por [LinkDemand](../../../docs/framework/misc/link-demands.md), la llamada se realiza correctamente si se cumple la comprobación del permiso **LinkDemand** para el llamador. Además, si el código de plena confianza expone una clase que toma el nombre de una propiedad y llama a su descriptor de acceso **Get** mediante reflexión, esa llamada al descriptor de acceso **Get** se realiza correctamente aunque el código de usuario no tenga el derecho a obtener acceso a esta propiedad. Esto se debe a que **LinkDemand** comprueba solo el llamador inmediato, que es el código de plena confianza. Básicamente, el código de plena confianza realiza una llamada privilegiada en nombre del código de usuario sin comprobar si el código de usuario tiene derecho a hacer esa llamada.  
   
- Para ayudar a evitar esas carencias de seguridad, common language runtime extiende la comprobación a una petición de recorrido de pila completo en cualquier llamada indirecta a un método, constructor, propiedad o evento protegido por un **LinkDemand**. Esta protección conlleva algunos costos de rendimiento y cambia la semántica de la comprobación de seguridad; la petición de recorrido de pila completo puede provocar errores que no se producirían en la comprobación rápida de un nivel.  
+ Para ayudar a evitar este tipo de carencias de seguridad, el Common Language Runtime extiende la comprobación a una demanda completa de recorrido de pila en cualquier llamada indirecta a un método, constructor, propiedad o evento protegido por una **LinkDemand**. Esta protección conlleva algunos costos de rendimiento y cambia la semántica de la comprobación de seguridad; la petición de recorrido de pila completo puede provocar errores que no se producirían en la comprobación rápida de un nivel.  
   
 ## <a name="assembly-loading-wrappers"></a>Contenedores de carga de ensamblados  
  Varios de los métodos usados para cargar código administrado, incluido <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>, cargan ensamblados con la evidencia del llamador. Si encapsula cualquiera de estos métodos, el sistema de seguridad podría usar, para cargar los ensamblados, el permiso concedido al código en lugar de los permisos del llamador para el contenedor. No permita que un código de menor confianza cargue código que tenga permisos superiores a los del llamador en el contenedor.  
   
- Cualquier código que tenga plena confianza o una confianza significativamente mayor que la de un posible llamador (incluido un llamador con nivel de permisos de Internet) podría debilitar la seguridad de esta manera. Si el código tiene un método público que toma una matriz de bytes y lo pasa al **Assembly.Load**, lo que crea un ensamblado en nombre del llamador, podría romper la seguridad.  
+ Cualquier código que tenga plena confianza o una confianza significativamente mayor que la de un posible llamador (incluido un llamador con nivel de permisos de Internet) podría debilitar la seguridad de esta manera. Si el código tiene un método público que toma una matriz de bytes y la pasa a **Assembly. Load**, con lo que se crea un ensamblado en nombre del llamador, se podría interrumpir la seguridad.  
   
  Este problema se aplica a los siguientes elementos de la API:  
   
@@ -71,18 +71,18 @@ ms.locfileid: "66487896"
   
  La seguridad declarativa ofrece las siguientes comprobaciones de seguridad:  
   
-- <xref:System.Security.Permissions.SecurityAction.Demand> especifica el recorrido de pila de seguridad de acceso del código. Todos los llamadores de la pila deben tener el permiso o la identidad especificados para pasar. **Demanda** se produce en cada llamada porque la pila puede contener distintos llamadores. Si llama a un método repetidas veces, esta comprobación de seguridad se realiza cada vez. **Demanda** es una buena protección contra los ataques; se detectará el código no autorizado al intentar obtener a través de él.  
+- <xref:System.Security.Permissions.SecurityAction.Demand> especifica el recorrido de pila de seguridad de acceso del código. Todos los llamadores de la pila deben tener el permiso o la identidad especificados para pasar. La **demanda** se produce en cada llamada porque la pila puede contener diferentes llamadores. Si llama a un método repetidas veces, esta comprobación de seguridad se realiza cada vez. La **demanda** es una buena protección contra los ataques por Señuelos; se detectará un código no autorizado que intente obtener acceso a través de él.  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md) se produce en tiempo de compilación just-in-time (JIT) y comprueba sólo el llamador inmediato. Esta comprobación de seguridad no comprueba el llamador del llamador. Una vez que se supera esta comprobación, no hay ninguna seguridad adicional posterior independientemente de las veces que el llamador pueda llamar. Sin embargo, tampoco hay protección contra los ataques por señuelo. Con **LinkDemand**, cualquier código que pasa la prueba y puede hacer referencia al código potencialmente puede romper la seguridad al permitir que el código malintencionado llamar mediante el código autorizado. Por lo tanto, no use **LinkDemand** a menos que se puedan evitar completamente todos los posibles puntos débiles.  
+- [LinkDemand](../../../docs/framework/misc/link-demands.md) se produce en el momento de la compilación Just-in-Time (JIT) y comprueba solo el llamador inmediato. Esta comprobación de seguridad no comprueba el llamador del llamador. Una vez que se supera esta comprobación, no hay ninguna seguridad adicional posterior independientemente de las veces que el llamador pueda llamar. Sin embargo, tampoco hay protección contra los ataques por señuelo. Con **LinkDemand**, cualquier código que pase la prueba y puede hacer referencia a su código podría interrumpir la seguridad permitiendo que el código malintencionado llame a mediante el código autorizado. Por lo tanto, no use **LinkDemand** a menos que todos los puntos débiles posibles se puedan evitar con detalle.  
   
     > [!NOTE]
-    >  En .NET Framework 4, las peticiones de vínculo se han reemplazado por la <xref:System.Security.SecurityCriticalAttribute> atributo <xref:System.Security.SecurityRuleSet.Level2> ensamblados. El <xref:System.Security.SecurityCriticalAttribute> es equivalente a una petición de vínculo de plena confianza; sin embargo, también afecta a las reglas de herencia. Para obtener más información sobre este cambio, consulte [código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    > En el .NET Framework 4, las peticiones de vínculo se han reemplazado por <xref:System.Security.SecurityRuleSet.Level2> el <xref:System.Security.SecurityCriticalAttribute> atributo de los ensamblados. <xref:System.Security.SecurityCriticalAttribute> Es equivalente a una petición de vínculo para la plena confianza; sin embargo, también afecta a las reglas de herencia. Para obtener más información sobre este cambio, vea [código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
   
- Las precauciones adicionales necesarias cuando se usa **LinkDemand** deben programarse por separado; el sistema de seguridad puede ayudar con la aplicación. Cualquier error abre una vulnerabilidad en la seguridad. Todo código autorizado que use su código debe hacerse responsable de implementar seguridad adicional mediante lo siguiente:  
+ Las precauciones adicionales necesarias cuando se usa **LinkDemand** deben programarse individualmente. el sistema de seguridad puede ayudar en la aplicación. Cualquier error abre una vulnerabilidad en la seguridad. Todo código autorizado que use su código debe hacerse responsable de implementar seguridad adicional mediante lo siguiente:  
   
 - Restringir el acceso del código de llamada a la clase o al ensamblado.  
   
-- Colocar en el código de llamada las mismas comprobaciones de seguridad que aparecen en el código al que se llama y obligar a sus llamadores a hacer lo mismo. Por ejemplo, si escribe código que llama a un método que está protegido con un **LinkDemand** para el <xref:System.Security.Permissions.SecurityPermission> con el <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especifica la marca, el método debe generar también un **LinkDemand** (o **Demanda**, que es más seguro) para este permiso. La excepción es si el código utiliza el **LinkDemand**-método protegido de forma limitada que decida es seguro, proporcionan otros mecanismos de protección de seguridad (como peticiones) en el código. En este caso excepcional, el llamador es el responsable de debilitar la protección de seguridad en el código subyacente.  
+- Colocar en el código de llamada las mismas comprobaciones de seguridad que aparecen en el código al que se llama y obligar a sus llamadores a hacer lo mismo. Por ejemplo, si escribe código que llama a un método que está protegido con una **LinkDemand** para el <xref:System.Security.Permissions.SecurityPermission> con la <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> marca especificada, el método debe realizar también una **LinkDemand** (o **Demand**, que es más fuerte) para este. permiso. La excepción es si el código usa el método protegido con **LinkDemand**de una forma limitada que decida que es seguro, dados otros mecanismos de protección de seguridad (como las demandas) en el código. En este caso excepcional, el llamador es el responsable de debilitar la protección de seguridad en el código subyacente.  
   
 - Garantizar que los llamadores de su código no pueden engañar al código para que llame al código protegido en su nombre. En otras palabras, los llamadores no pueden forzar al código autorizado para pasar parámetros específicos al código protegido o para obtener resultados de él.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66487896"
   
  Es conveniente proteger las implementaciones de método con peticiones de vínculo cuando los métodos de interfaz también tienen peticiones de vínculo. Tenga en cuenta los siguientes aspectos sobre el uso de las peticiones de vínculo con interfaces:  
   
-- Si coloca un **LinkDemand** en un método público de una clase que implementa un método de interfaz, el **LinkDemand** no se aplicará si, a continuación, se convierte a la interfaz y llame al método. En este caso, como se ha vinculado con la interfaz, sólo el **LinkDemand** en la interfaz se cumplirá.  
+- Si coloca una **LinkDemand** en un método público de una clase que implementa un método de interfaz, **LinkDemand** no se aplicará si después convierte en la interfaz y llama al método. En este caso, dado que se ha vinculado a la interfaz, solo se respeta el **LinkDemand** de la interfaz.  
   
  Revise los elementos siguientes para comprobar si hay problemas de seguridad:  
   
@@ -103,4 +103,4 @@ ms.locfileid: "66487896"
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], child
 - child controls [Windows Forms], anchoring and docking
 ms.assetid: a2bcdfca-9b63-45e6-9c0e-3411015cba98
-ms.openlocfilehash: f67733b89d2bde652449e2338362868fdb84bcf3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a00fcd53211dd126c0e9203d6d577959b971e70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592939"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922906"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control"></a>Procedimiento para delimitar y acoplar controles secundarios en un control FlowLayoutPanel
 El control <xref:System.Windows.Forms.FlowLayoutPanel> admite las propiedades <xref:System.Windows.Forms.Control.Anchor%2A> y <xref:System.Windows.Forms.Control.Dock%2A> en sus controles secundarios.  
@@ -21,16 +21,16 @@ El control <xref:System.Windows.Forms.FlowLayoutPanel> admite las propiedades <x
   
 1. Cree un control <xref:System.Windows.Forms.FlowLayoutPanel> en el formulario.  
   
-2. Establecer el <xref:System.Windows.Forms.Control.Width%2A> de la <xref:System.Windows.Forms.FlowLayoutPanel> el control a **300**y establezca su <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> a <xref:System.Windows.Forms.FlowDirection.TopDown>.  
+2. Establezca el <xref:System.Windows.Forms.Control.Width%2A> <xref:System.Windows.Forms.FlowLayoutPanel> valor del control en **300**y establezca su <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> en. <xref:System.Windows.Forms.FlowDirection.TopDown>  
   
 3. Cree dos controles <xref:System.Windows.Forms.Button> y colóquelos en el control <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-4. Establecer el <xref:System.Windows.Forms.Control.Width%2A> del primer botón en **200**.  
+4. Establezca el <xref:System.Windows.Forms.Control.Width%2A> valor del primer botón en **200**.  
   
 5. Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del segundo botón en <xref:System.Windows.Forms.DockStyle.Fill>.  
   
     > [!NOTE]
-    >  El segundo botón toma el mismo ancho que el primer botón. No se ajusta a lo ancho del control <xref:System.Windows.Forms.FlowLayoutPanel>.  
+    > El segundo botón toma el mismo ancho que el primer botón. No se ajusta a lo ancho del control <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
 6. Establezca la propiedad <xref:System.Windows.Forms.Control.Dock%2A> del segundo botón en `None`. Esto hace que el botón tome su ancho original.  
   
