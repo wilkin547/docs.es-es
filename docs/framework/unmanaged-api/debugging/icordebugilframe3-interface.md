@@ -12,37 +12,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b46c74ec0bfc1fc44bcaca07439c472b0fd8393f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8d35e0f27968b2649a63b035759a6e72d53b2b94
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946450"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928191"
 ---
-# <a name="icordebugilframe3-interface"></a><span data-ttu-id="b2b20-102">ICorDebugILFrame3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="b2b20-102">ICorDebugILFrame3 Interface</span></span>
-<span data-ttu-id="b2b20-103">Proporciona un método que encapsula el valor devuelto de una función.</span><span class="sxs-lookup"><span data-stu-id="b2b20-103">Provides a method that encapsulates the return value of a function.</span></span> <span data-ttu-id="b2b20-104">`ICorDebugILFrame3` es una extensión lógica de las interfaces ICorDebugILFrame y ICorDebugILFrame2.</span><span class="sxs-lookup"><span data-stu-id="b2b20-104">`ICorDebugILFrame3` is a logical extension of the ICorDebugILFrame and ICorDebugILFrame2 interfaces.</span></span>  
+# <a name="icordebugilframe3-interface"></a><span data-ttu-id="9905f-102">ICorDebugILFrame3 (Interfaz)</span><span class="sxs-lookup"><span data-stu-id="9905f-102">ICorDebugILFrame3 Interface</span></span>
+<span data-ttu-id="9905f-103">Proporciona un método que encapsula el valor devuelto de una función.</span><span class="sxs-lookup"><span data-stu-id="9905f-103">Provides a method that encapsulates the return value of a function.</span></span> <span data-ttu-id="9905f-104">`ICorDebugILFrame3`es una extensión lógica de las interfaces ICorDebugILFrame e ICorDebugILFrame2.</span><span class="sxs-lookup"><span data-stu-id="9905f-104">`ICorDebugILFrame3` is a logical extension of the ICorDebugILFrame and ICorDebugILFrame2 interfaces.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="b2b20-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="b2b20-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="9905f-105">Métodos</span><span class="sxs-lookup"><span data-stu-id="9905f-105">Methods</span></span>  
   
-|<span data-ttu-id="b2b20-106">Método</span><span class="sxs-lookup"><span data-stu-id="b2b20-106">Method</span></span>|<span data-ttu-id="b2b20-107">Descripción</span><span class="sxs-lookup"><span data-stu-id="b2b20-107">Description</span></span>|  
+|<span data-ttu-id="9905f-106">Método</span><span class="sxs-lookup"><span data-stu-id="9905f-106">Method</span></span>|<span data-ttu-id="9905f-107">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="9905f-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="b2b20-108">GetReturnValueForILOffset (método)</span><span class="sxs-lookup"><span data-stu-id="b2b20-108">GetReturnValueForILOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|<span data-ttu-id="b2b20-109">Obtiene un objeto ICorDebugValue que encapsula el valor devuelto de una función.</span><span class="sxs-lookup"><span data-stu-id="b2b20-109">Gets an ICorDebugValue object that encapsulates the return value of a function.</span></span>|  
+|[<span data-ttu-id="9905f-108">GetReturnValueForILOffset (método)</span><span class="sxs-lookup"><span data-stu-id="9905f-108">GetReturnValueForILOffset Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|<span data-ttu-id="9905f-109">Obtiene un objeto ICorDebugValue que encapsula el valor devuelto de una función.</span><span class="sxs-lookup"><span data-stu-id="9905f-109">Gets an ICorDebugValue object that encapsulates the return value of a function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b2b20-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="b2b20-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9905f-110">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9905f-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b2b20-111">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="b2b20-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+> <span data-ttu-id="9905f-111">Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.</span><span class="sxs-lookup"><span data-stu-id="9905f-111">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b2b20-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b2b20-112">Requirements</span></span>  
- <span data-ttu-id="b2b20-113">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b2b20-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9905f-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9905f-112">Requirements</span></span>  
+ <span data-ttu-id="9905f-113">**Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9905f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b2b20-114">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2b20-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="9905f-114">**Encabezado**: Cordebug. idl, Cordebug. h</span><span class="sxs-lookup"><span data-stu-id="9905f-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b2b20-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2b20-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="9905f-115">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9905f-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b2b20-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2b20-116">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
+ <span data-ttu-id="9905f-116">**Versiones de .NET Framework:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9905f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b2b20-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="b2b20-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9905f-117">Vea también</span><span class="sxs-lookup"><span data-stu-id="9905f-117">See also</span></span>
 
-- [<span data-ttu-id="b2b20-118">ICorDebugCode3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b2b20-118">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [<span data-ttu-id="b2b20-119">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="b2b20-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="9905f-118">ICorDebugCode3 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="9905f-118">ICorDebugCode3 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [<span data-ttu-id="9905f-119">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="9905f-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
