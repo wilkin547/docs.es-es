@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 6ab547951b00cc4a479034129254e4060486348d
-ms.sourcegitcommit: 10736f243dd2296212e677e207102c463e5f143e
+ms.openlocfilehash: 16f4155cefea20868185febb3d2a566dc1524cc4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817945"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956287"
 ---
 # <a name="wpf-windows-overview"></a>Información general sobre ventanas de WPF
 Los usuarios interactúan con aplicaciones independientes de Windows Presentation Foundation (WPF) a través de Windows. El propósito principal de una ventana es hospedar contenido que permita visualizar datos y que permita a los usuarios interactuar con estos. Las [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicaciones independientes proporcionan sus propias ventanas mediante la <xref:System.Windows.Window> clase. En este tema <xref:System.Windows.Window> se explica antes de tratar los aspectos básicos de la creación y administración de Windows en aplicaciones independientes.  
   
 > [!NOTE]
->  Las aplicaciones hospedadas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en el explorador, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] incluidas [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] y páginas sueltas, no proporcionan sus propias ventanas. En su lugar, se hospedan en Windows proporcionado por Windows Internet Explorer. Vea [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
+> Las aplicaciones hospedadas [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] en el explorador, [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] incluidas [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] y páginas sueltas, no proporcionan sus propias ventanas. En su lugar, se hospedan en Windows proporcionado por Windows Internet Explorer. Vea [información general sobre las aplicaciones de explorador XAML de WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Clase de la ventana  
@@ -88,14 +88,14 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  Para permitir que [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] un archivo de marcado y un archivo de código subyacente funcionen juntos, se requiere lo siguiente:  
   
-- En el marcado, `Window` el elemento debe incluir `x:Class` el atributo. Cuando se compila la aplicación, la existencia de `x:Class` en el archivo de marcado [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] hace que cree `partial` una clase que deriva de <xref:System.Windows.Window> y tiene el nombre especificado por el `x:Class` atributo. Esto requiere la adición de una [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] declaración de espacio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nombres para `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` el esquema (). La clase `partial` generada implementa el `InitializeComponent` método, al que se llama para registrar los eventos y establecer las propiedades que se implementan en el marcado.  
+- En el marcado, `Window` el elemento debe incluir `x:Class` el atributo. Cuando se compila la aplicación, la existencia de `x:Class` en el archivo de marcado hace que el motor de compilación de Microsoft ( `partial` MSBuild) cree una clase <xref:System.Windows.Window> que deriva de y tiene el nombre especificado por `x:Class` el atributo. Esto requiere la adición de una [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] declaración de espacio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nombres para `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` el esquema (). La clase `partial` generada implementa el `InitializeComponent` método, al que se llama para registrar los eventos y establecer las propiedades que se implementan en el marcado.  
   
 - En el código subyacente, la clase debe ser una `partial` clase con el mismo nombre especificado por el atributo en `x:Class` el marcado y debe derivar de <xref:System.Windows.Window>. Esto permite asociar el archivo de código subyacente con la `partial` clase que se genera para el archivo de marcado cuando se compila la aplicación (consulte compilar [una aplicación de WPF](building-a-wpf-application-wpf.md)).  
   
 - En el código subyacente, la <xref:System.Windows.Window> clase debe implementar un constructor que llame al `InitializeComponent` método. `InitializeComponent`se implementa mediante la clase generada `partial` por el archivo de marcado para registrar eventos y establecer las propiedades que se definen en el marcado.  
   
 > [!NOTE]
->  Cuando agrega un nuevo <xref:System.Windows.Window> a su proyecto [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]mediante, <xref:System.Windows.Window> se implementa mediante el marcado y el código subyacente, e incluye la configuración necesaria para crear la asociación entre el marcado y los archivos de código subyacente como se describe aquí.  
+> Cuando agrega un nuevo <xref:System.Windows.Window> a su proyecto [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]mediante, <xref:System.Windows.Window> se implementa mediante el marcado y el código subyacente, e incluye la configuración necesaria para crear la asociación entre el marcado y los archivos de código subyacente como se describe aquí.  
   
  Con esta configuración en su lugar, puede centrarse en definir el aspecto de la ventana [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] en el marcado e implementar su comportamiento en el código subyacente. En el ejemplo siguiente se muestra una ventana con un botón, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] implementado en el marcado y un controlador de eventos <xref:System.Windows.Controls.Primitives.ButtonBase.Click> para el evento del botón, implementado en el código subyacente.  
   
@@ -106,13 +106,13 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
 <a name="ConfiguringWindowForMSBuild"></a>   
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Configuración de una definición de ventana para MSBuild  
- Cómo se implementa la ventana determina cómo se configura para [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Para una ventana definida mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado y código subyacente:  
+ Cómo se implementa la ventana determina cómo se configura para MSBuild. Para una ventana definida mediante [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcado y código subyacente:  
   
-- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]los archivos de marcado se [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] configuran como `Page` elementos.  
+- Los archivos de marcado XAML se configuran como elementos de MSBuild `Page` .  
   
-- Los archivos de código subyacente se configuran como [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementos.  
+- Los archivos de código subyacente se configuran como elementos de MSBuild `Compile` .  
   
- Esto se muestra en el siguiente [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] archivo de proyecto.  
+ Esto se muestra en el siguiente archivo de proyecto de MSBuild.  
   
 ```xml  
 <Project ...  
@@ -149,7 +149,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
  Una ventana que se abre mediante una <xref:System.Windows.Window.Show%2A> llamada a es una ventana no modal, lo que significa que la aplicación funciona en un modo que permite a los usuarios activar otras ventanas en la misma aplicación.  
   
 > [!NOTE]
->  <xref:System.Windows.Window.ShowDialog%2A>se llama a para abrir ventanas como cuadros de diálogo de forma modal. Vea [información general sobre cuadros de diálogo](dialog-boxes-overview.md) para obtener más información.  
+> <xref:System.Windows.Window.ShowDialog%2A>se llama a para abrir ventanas como cuadros de diálogo de forma modal. Vea [información general sobre cuadros de diálogo](dialog-boxes-overview.md) para obtener más información.  
   
  Cuando <xref:System.Windows.Window.Show%2A> se llama a, una ventana realiza el trabajo de inicialización antes de que se muestre para establecer la infraestructura que le permite recibir datos proporcionados por el usuario. Cuando se inicializa la ventana, se genera <xref:System.Windows.Window.SourceInitialized> el evento y se muestra la ventana.  
   
@@ -205,7 +205,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
  Cuando se abre una ventana por primera vez, se convierte en la ventana activa (a menos <xref:System.Windows.Window.ShowActivated%2A> que se `false`muestre con establecido en). La *ventana activa* es la ventana que está capturando datos proporcionados por el usuario, como pulsaciones de teclas y clics del mouse. Cuando se activa una ventana, se genera el <xref:System.Windows.Window.Activated> evento.  
   
 > [!NOTE]
->  Cuando se abre una ventana por primera vez <xref:System.Windows.FrameworkElement.Loaded> , <xref:System.Windows.Window.ContentRendered> los eventos y se generan solo <xref:System.Windows.Window.Activated> después de que se genere el evento. Teniendo esto en cuenta, se puede considerar que una ventana se abre <xref:System.Windows.Window.ContentRendered> cuando se genera.  
+> Cuando se abre una ventana por primera vez <xref:System.Windows.FrameworkElement.Loaded> , <xref:System.Windows.Window.ContentRendered> los eventos y se generan solo <xref:System.Windows.Window.Activated> después de que se genere el evento. Teniendo esto en cuenta, se puede considerar que una ventana se abre <xref:System.Windows.Window.ContentRendered> cuando se genera.  
   
  Después de que se activa una ventana, un usuario puede activar otra ventana de la misma aplicación o activar otra aplicación. Cuando esto sucede, la ventana activa actualmente se desactiva y genera el <xref:System.Windows.Window.Deactivated> evento. Del mismo modo, cuando el usuario selecciona una ventana actualmente desactivada, la ventana vuelve <xref:System.Windows.Window.Activated> a estar activa y se genera.  
   
@@ -221,7 +221,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
  Si una tarea en segundo plano se completa, es posible que una ventana desee notificar al usuario de <xref:System.Windows.Window.Activate%2A> forma más urgente llamando al método. Si el usuario está interactuando con otra aplicación activada cuando <xref:System.Windows.Window.Activate%2A> se llama a, el botón de la barra de tareas de la ventana parpadea. Si un usuario está interactuando con la aplicación actual, al <xref:System.Windows.Window.Activate%2A> llamar a, se abrirá la ventana en primer plano.  
   
 > [!NOTE]
->  Puede controlar la activación del ámbito de la aplicación <xref:System.Windows.Application.Activated?displayProperty=nameWithType> mediante <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> los eventos y.  
+> Puede controlar la activación del ámbito de la aplicación <xref:System.Windows.Application.Activated?displayProperty=nameWithType> mediante <xref:System.Windows.Application.Deactivated?displayProperty=nameWithType> los eventos y.  
   
 <a name="Closing_a_Window"></a>   
 ### <a name="closing-a-window"></a>Cerrar una ventana  
@@ -262,9 +262,9 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
  Si <xref:System.Windows.Window.Closing> no se controla, o si se controla pero no se cancela, la ventana se cerrará. Justo antes de que una ventana se cierre <xref:System.Windows.Window.Closed> realmente, se genera. En este momento, ya no se puede impedir el cierre de la ventana.  
   
 > [!NOTE]
->  Se puede configurar una aplicación para que se cierre automáticamente cuando se cierre la ventana principal de la aplicación <xref:System.Windows.Application.MainWindow%2A>(vea) o se cierre la última ventana. Para obtener información detallada, vea <xref:System.Windows.Application.ShutdownMode%2A>.  
+> Se puede configurar una aplicación para que se cierre automáticamente cuando se cierre la ventana principal de la aplicación <xref:System.Windows.Application.MainWindow%2A>(vea) o se cierre la última ventana. Para obtener información detallada, vea <xref:System.Windows.Application.ShutdownMode%2A>.  
   
- Aunque una ventana se puede cerrar explícitamente a través de los mecanismos proporcionados en las áreas cliente y no cliente, una ventana también se puede cerrar implícitamente como resultado de un comportamiento en otras partes [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]de la aplicación o, incluido lo siguiente:  
+ Aunque una ventana se puede cerrar explícitamente a través de los mecanismos proporcionados en las áreas cliente y no cliente, una ventana también se puede cerrar implícitamente como resultado de un comportamiento en otras partes de la aplicación o Windows, incluidas las siguientes:  
   
 - Un usuario cierra la sesión o apaga Windows.  
   
@@ -275,7 +275,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
 - Se llama a <xref:System.Windows.Application.Shutdown%2A>.  
   
 > [!NOTE]
->  No se puede volver a abrir una ventana cuando se ha cerrado.  
+> No se puede volver a abrir una ventana cuando se ha cerrado.  
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Eventos de vigencia de ventanas  
@@ -325,9 +325,9 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
   
  Si desea que el ancho y el alto de la ventana tengan un tamaño que se ajuste al tamaño del contenido de la ventana, puede usar la <xref:System.Windows.Window.SizeToContent%2A> propiedad, que tiene los valores siguientes:  
   
-- <xref:System.Windows.SizeToContent.Manual>. Ningún efecto (valor predeterminado).  
+- <xref:System.Windows.SizeToContent.Manual> Ningún efecto (valor predeterminado).  
   
-- <xref:System.Windows.SizeToContent.Width> Ajustar al ancho del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
+- <xref:System.Windows.SizeToContent.Width>. Ajustar al ancho del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinWidth%2A> y <xref:System.Windows.FrameworkElement.MaxWidth%2A> en el ancho del contenido.  
   
 - <xref:System.Windows.SizeToContent.Height> Ajustar al alto del contenido, que tiene el mismo efecto que establecer <xref:System.Windows.FrameworkElement.MinHeight%2A> y <xref:System.Windows.FrameworkElement.MaxHeight%2A> en el alto del contenido.  
   
@@ -377,7 +377,7 @@ Los usuarios interactúan con aplicaciones independientes de Windows Presentatio
  Una ventana con un estado maximizado se expande hasta el tamaño máximo que puede ser, que solo será tan grande como <xref:System.Windows.FrameworkElement.MaxWidth%2A>las propiedades, <xref:System.Windows.FrameworkElement.MaxHeight%2A>y <xref:System.Windows.Window.SizeToContent%2A> determinan. Al igual que una ventana minimizada, no puede cambiarse el tamaño de una ventana maximizada mediante un control de cambio de tamaño ni arrastrando el borde.  
   
 > [!NOTE]
->  Los valores de las <xref:System.Windows.Window.Top%2A>propiedades <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, y <xref:System.Windows.FrameworkElement.Height%2A> de una ventana siempre representan los valores para el estado normal, incluso cuando la ventana está maximizada o minimizada actualmente.  
+> Los valores de las <xref:System.Windows.Window.Top%2A>propiedades <xref:System.Windows.Window.Left%2A>, <xref:System.Windows.FrameworkElement.Width%2A>, y <xref:System.Windows.FrameworkElement.Height%2A> de una ventana siempre representan los valores para el estado normal, incluso cuando la ventana está maximizada o minimizada actualmente.  
   
  El estado de una ventana se puede configurar estableciendo su <xref:System.Windows.Window.WindowState%2A> propiedad, que puede tener uno de los siguientes <xref:System.Windows.WindowState> valores de enumeración:  
   

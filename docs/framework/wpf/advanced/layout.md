@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 648adb34664ccb2a475e32aba4d0d76d99cf49d8
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb254503f5ce2240a03179da693c66f7ada876be
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666763"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918299"
 ---
 # <a name="layout"></a>Diseño
 En este tema se describe el sistema de diseño de Windows Presentation Foundation (WPF). Comprender cómo y cuándo se producen los cálculos de diseño es esencial para crear interfaces de usuario en WPF.  
@@ -89,7 +89,7 @@ En este tema se describe el sistema de diseño de Windows Presentation Foundatio
  En segundo lugar, se procesan <xref:System.Windows.FrameworkElement> las propiedades de marco de trabajo definidas en `constraintSize`, lo que afecta al valor de. Normalmente, estas propiedades describen las características de ajuste de <xref:System.Windows.UIElement>tamaño del subyacente, <xref:System.Windows.FrameworkElement.Height%2A>como <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, y <xref:System.Windows.FrameworkElement.Style%2A>. Cada una de estas propiedades puede cambiar el espacio necesario para mostrar el elemento. <xref:System.Windows.FrameworkElement.MeasureOverride%2A>a continuación, se `constraintSize` llama a con como parámetro.  
   
 > [!NOTE]
->  Existe una diferencia entre las <xref:System.Windows.FrameworkElement.Height%2A> propiedades de <xref:System.Windows.FrameworkElement.ActualHeight%2A> y <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualWidth%2A>y y. Por ejemplo, la <xref:System.Windows.FrameworkElement.ActualHeight%2A> propiedad es un valor calculado basado en otras entradas de alto y en el sistema de diseño. El propio sistema de diseño establece el valor en función de un paso de representación real y, por tanto, se puede retrasar ligeramente detrás del valor establecido de <xref:System.Windows.FrameworkElement.Height%2A>las propiedades, como, que son la base del cambio de entrada.  
+> Existe una diferencia entre las <xref:System.Windows.FrameworkElement.Height%2A> propiedades de <xref:System.Windows.FrameworkElement.ActualHeight%2A> y <xref:System.Windows.FrameworkElement.Width%2A> <xref:System.Windows.FrameworkElement.ActualWidth%2A>y y. Por ejemplo, la <xref:System.Windows.FrameworkElement.ActualHeight%2A> propiedad es un valor calculado basado en otras entradas de alto y en el sistema de diseño. El propio sistema de diseño establece el valor en función de un paso de representación real y, por tanto, se puede retrasar ligeramente detrás del valor establecido de <xref:System.Windows.FrameworkElement.Height%2A>las propiedades, como, que son la base del cambio de entrada.  
 >   
 >  Dado <xref:System.Windows.FrameworkElement.ActualHeight%2A> que es un valor calculado, debe tener en cuenta que puede haber varios cambios o informes incrementales en él como resultado de varias operaciones realizadas por el sistema de diseño. El sistema de diseño puede calcular el espacio de medida necesario para los elementos secundarios, las restricciones impuestas por el elemento primario y así sucesivamente.  
   

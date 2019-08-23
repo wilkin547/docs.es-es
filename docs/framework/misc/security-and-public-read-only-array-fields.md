@@ -6,25 +6,25 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d36009fa4fc7b9299708768fe34a75f1fde6797
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869751"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910736"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>Seguridad y campos de matriz públicos de sólo lectura
-Nunca use los campos de matriz públicos de sólo lectura de las bibliotecas administradas para definir el comportamiento de límite o la seguridad de las aplicaciones porque se pueden modificar los campos de matriz públicos de sólo lectura.  
+Nunca use campos de matriz pública de solo lectura de las bibliotecas administradas para definir el comportamiento del límite o la seguridad de las aplicaciones, ya que se pueden modificar los campos de matriz pública de solo lectura.  
   
 ## <a name="remarks"></a>Comentarios  
- Algunas clases de .NET framework incluyen campos públicos de sólo lectura que contienen los parámetros de los límites específicos de la plataforma.  Por ejemplo, el <xref:System.IO.Path.InvalidPathChars> campo es una matriz que describe los caracteres que no se permiten en una cadena de ruta de acceso de archivo.  Existen muchos campos similares a lo largo de .NET Framework.  
+ Algunas clases de .NET Framework incluyen campos públicos de solo lectura que contienen parámetros de límite específicos de la plataforma.  Por ejemplo, el <xref:System.IO.Path.InvalidPathChars> campo es una matriz que describe los caracteres que no están permitidos en una cadena de ruta de acceso de archivo.  Muchos campos similares están presentes en el .NET Framework.  
   
- Al igual que los valores de campos públicos de sólo lectura <xref:System.IO.Path.InvalidPathChars> puede modificarse mediante el código o el código que comparte el dominio de aplicación de su código.  No debe usar los campos de matriz públicos de sólo lectura similar al siguiente para definir el comportamiento de límite de sus aplicaciones.  Si lo hace, código malintencionado puede modificar las definiciones de límite y usar el código de manera inesperada.  
+ Los valores de los campos públicos de solo lectura <xref:System.IO.Path.InvalidPathChars> como pueden ser modificados por el código o el código que comparte el dominio de aplicación del código.  No debe utilizar campos de matriz pública de solo lectura como este para definir el comportamiento de los límites de las aplicaciones.  Si lo hace, el código malintencionado puede modificar las definiciones de límite y usar el código de maneras inesperadas.  
   
- En la versión 2.0 y versiones posteriores de .NET Framework, debe usar los métodos que devuelven una nueva matriz en lugar de usar campos de matriz públicos.  Por ejemplo, en lugar de usar el <xref:System.IO.Path.InvalidPathChars> campo, debe usar el <xref:System.IO.Path.GetInvalidPathChars%2A> método.  
+ En la versión 2,0 y posteriores de la .NET Framework, debe utilizar métodos que devuelvan una nueva matriz en lugar de usar campos de matriz públicos.  Por ejemplo, en lugar de utilizar el <xref:System.IO.Path.InvalidPathChars> campo, debe utilizar el <xref:System.IO.Path.GetInvalidPathChars%2A> método.  
   
- Tenga en cuenta que los tipos de .NET Framework no utilizan los campos públicos para definir tipos de límites internamente.  En su lugar, .NET Framework utiliza campos privados separados.  Cambiar los valores de estos campos públicos no modifica el comportamiento de los tipos de .NET Framework.  
+ Tenga en cuenta que los tipos de .NET Framework no utilizan los campos públicos para definir tipos de límites internamente.  En su lugar, el .NET Framework utiliza campos privados independientes.  El cambio de los valores de estos campos públicos no altera el comportamiento de los tipos de .NET Framework.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Instrucciones de codificación segura](../../../docs/standard/security/secure-coding-guidelines.md)
+- [Instrucciones de codificación segura](../../standard/security/secure-coding-guidelines.md)

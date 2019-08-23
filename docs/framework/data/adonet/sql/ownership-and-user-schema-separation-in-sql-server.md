@@ -2,18 +2,18 @@
 title: Propiedad y separación de esquemas de usuario en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 2702f56e8b3b339487ffacf7bc1ceb077d4d8b30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 520772acc5edd812f64c61cc7fdda9db3441c87c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645733"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961111"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propiedad y separación de esquemas de usuario en SQL Server
 Un concepto básico en la seguridad de SQL Server es que los propietarios de los objetos disponen de permisos irrevocables para administrarlos. No puede quitar privilegios de un propietario del objeto y no puede eliminar usuarios de una base de datos si en ella existen objetos que les pertenezcan.  
   
 ## <a name="user-schema-separation"></a>Separación usuario-esquema  
- La separación del esquema de usuario permite disponer de más flexibilidad en la administración de los permisos de objeto de base de datos. Un *esquema* es un contenedor con nombre para los objetos de base de datos, que le permite agrupar objetos en espacios de nombres independientes. Por ejemplo, la base de datos de ejemplo de AdventureWorks contiene esquemas para Production, Sales y HumanResources.  
+ La separación del esquema de usuario permite disponer de más flexibilidad en la administración de los permisos de objeto de base de datos. Un *esquema* es un contenedor con nombre para los objetos de base de datos, que permite agrupar los objetos en espacios de nombres independientes. Por ejemplo, la base de datos de ejemplo de AdventureWorks contiene esquemas para Production, Sales y HumanResources.  
   
  La sintaxis de asignación de nombres de cuatro partes para hacer referencia a los objetos especifica el nombre de esquema.  
   
@@ -40,7 +40,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  Si los quita de la base de datos modelo, no aparecerán en las nuevas bases de datos.  
   
 > [!NOTE]
->  Los esquemas `sys` y `INFORMATION_SCHEMA` están reservados para los objetos del sistema. No puede crear objetos en ellos ni quitarlos.  
+> Los esquemas `sys` y `INFORMATION_SCHEMA` están reservados para los objetos del sistema. No puede crear objetos en ellos ni quitarlos.  
   
 #### <a name="the-dbo-schema"></a>Esquema dbo  
  `dbo` es el esquema predeterminado en una base de datos recién creada. El esquema `dbo` pertenece a la cuenta de usuario `dbo`. De forma predeterminada, los usuarios creados con el comando CREATE USER de Transact-SQL usan `dbo` como esquema predeterminado.  
@@ -48,14 +48,14 @@ Server.Database.DatabaseSchema.DatabaseObject
  Los usuarios a los que se asigna el esquema `dbo` no heredan los permisos de la cuenta de usuario `dbo`. Los usuarios no heredan ningún permiso de un esquema; los permisos de esquema se heredan en los objetos de base de datos incluidos en el esquema.  
   
 > [!NOTE]
->  Cuando se hace referencia a objetos de base de datos con un nombre de una sola parte, SQL Server busca en primer lugar en el esquema predeterminado del usuario. Si no se encuentra el objeto, SQL Server busca a continuación en el esquema `dbo`. Si el objeto tampoco se encuentra en el esquema `dbo`, se muestra un error.  
+> Cuando se hace referencia a objetos de base de datos con un nombre de una sola parte, SQL Server busca en primer lugar en el esquema predeterminado del usuario. Si no se encuentra el objeto, SQL Server busca a continuación en el esquema `dbo`. Si el objeto tampoco se encuentra en el esquema `dbo`, se muestra un error.  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información sobre la propiedad de objetos y los esquemas, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
-|[Separación usuario-esquema](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Describe los cambios que introduce la separación usuario-esquema. Incluye el nuevo comportamiento, así como su impacto en la propiedad, las vistas de catálogo y los permisos.|  
+|[Separación de esquema de usuario](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Describe los cambios que introduce la separación usuario-esquema. Incluye el nuevo comportamiento, así como su impacto en la propiedad, las vistas de catálogo y los permisos.|  
   
 ## <a name="see-also"></a>Vea también
 

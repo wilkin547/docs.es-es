@@ -17,18 +17,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8043ae8a3d384ab0936ae96e39174a7afc80a636
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776212"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964622"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed (Método)
-Notifica al generador de perfiles que se está destruyendo un vtable de interoperabilidad COM.  
+Notifica al generador de perfiles que se está destruyendo una vtable de interoperabilidad COM.  
   
 > [!NOTE]
->  Esta devolución de llamada es probable que nunca se producen, ya que se produce la destrucción de vtables muy cerca de apagado.  
+> Es probable que esta devolución de llamada nunca se produzca, porque la destrucción de vtables se produce muy cerca del cierre.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,25 +41,25 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>Parámetros  
  `wrappedClassId`  
- [in] El identificador de la clase para el que se creó esta tabla virtual.  
+ de IDENTIFICADOR de la clase para la que se creó esta vtable.  
   
  `implementedIID`  
- [in] El identificador de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz es solo interna.  
+ de IDENTIFICADOR de la interfaz implementada por la clase. Este valor puede ser NULL si la interfaz solo es interna.  
   
  `pVTable`  
- [in] Un puntero al principio de la tabla vtable.  
+ de Puntero al principio de la tabla vtable.  
   
 ## <a name="remarks"></a>Comentarios  
- El generador de perfiles no debe bloquearse en su implementación de este método porque la pila no puede estar en un estado que permita la recolección de elementos y, por lo tanto, no se puede habilitar la recolección preferente. Si el generador de perfiles se bloquea aquí y se intenta realizar la recolección de elementos, el tiempo de ejecución se bloqueará hasta que devuelve esta devolución de llamada.  
+ El generador de perfiles no debe bloquear en su implementación de este método porque la pila puede no estar en un estado que permita la recolección de elementos no utilizados y, por tanto, no se puede habilitar la recolección de elementos no utilizados preferente. Si el generador de perfiles se bloquea aquí y se intenta la recolección de elementos no utilizados, el tiempo de ejecución se bloqueará hasta que esta devolución de llamada vuelva.  
   
- Implementación del generador de perfiles de este método no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ La implementación del generador de perfiles de este método no debe llamar a código administrado ni provocar una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado**: Corprof. idl, Corprof. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

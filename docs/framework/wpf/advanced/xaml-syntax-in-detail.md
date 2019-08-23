@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c4e7213ddcffdb026d3d6e6b339bfc91b3c27c6
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400776"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958785"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 En este tema se definen los términos que se usan para describir los elementos de la sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente como para los otros marcos de trabajo que usan XAML o los conceptos básicos de XAML habilitados por la compatibilidad del lenguaje XAML en el nivel System. Xaml. En este tema se amplía la terminología básica introducida en el tema [información general sobre XAML (WPF)](xaml-overview-wpf.md).  
@@ -86,7 +86,7 @@ En este tema se definen los términos que se usan para describir los elementos d
  La sintaxis de atributo es la sintaxis de marcado XAML que establece un valor para una propiedad declarando un atributo en un elemento de objeto existente. El nombre del atributo debe coincidir con el nombre del miembro CLR de la propiedad de la clase que respalda el elemento de objeto pertinente. El nombre del atributo va seguido de un operador de asignación (=). El valor de atributo debe ser una cadena entre comillas.  
   
 > [!NOTE]
->  Puede usar comillas alternas para colocar una comilla literal dentro de un atributo. Por ejemplo, puede usar comillas simples como medio para declarar una cadena que contenga un carácter de comilla doble dentro de ella. Tanto si usa comillas simples como dobles, debe utilizar un par coincidente para abrir y cerrar la cadena de valor de atributo. También hay secuencias de escape u otras técnicas disponibles para trabajar en torno a las restricciones de caracteres impuesta por cualquier sintaxis XAML determinada. Vea [entidades de caracteres XML y XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
+> Puede usar comillas alternas para colocar una comilla literal dentro de un atributo. Por ejemplo, puede usar comillas simples como medio para declarar una cadena que contenga un carácter de comilla doble dentro de ella. Tanto si usa comillas simples como dobles, debe utilizar un par coincidente para abrir y cerrar la cadena de valor de atributo. También hay secuencias de escape u otras técnicas disponibles para trabajar en torno a las restricciones de caracteres impuesta por cualquier sintaxis XAML determinada. Vea [entidades de caracteres XML y XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
   
  Para establecerse mediante la sintaxis de atributo, una propiedad debe ser pública y debe poder escribirse. El valor de la propiedad en el sistema de tipo de respaldo debe ser un tipo de valor, o debe ser un tipo de referencia al que se pueda crear una instancia o hacer referencia a él mediante un procesador XAML al tener acceso al tipo de respaldo pertinente.  
   
@@ -169,7 +169,7 @@ En este tema se definen los términos que se usan para describir los elementos d
  Un elemento de colección implícito crea un miembro en la representación del árbol lógico, aunque no aparece en el marcado como un elemento. Normalmente, el constructor del tipo primario realiza la creación de instancias para la colección que es una de sus propiedades, y la colección inicialmente vacía se convierte en parte del árbol de objetos.  
   
 > [!NOTE]
->  La lista genérica y las interfaces de<xref:System.Collections.Generic.IList%601> diccionario <xref:System.Collections.Generic.IDictionary%602>(y) no se admiten para la detección de colecciones. Sin embargo, puede usar la <xref:System.Collections.Generic.List%601> clase como una clase base, porque <xref:System.Collections.IList> implementa directamente, o <xref:System.Collections.Generic.Dictionary%602> como <xref:System.Collections.IDictionary> una clase base, porque implementa directamente.  
+> La lista genérica y las interfaces de<xref:System.Collections.Generic.IList%601> diccionario <xref:System.Collections.Generic.IDictionary%602>(y) no se admiten para la detección de colecciones. Sin embargo, puede usar la <xref:System.Collections.Generic.List%601> clase como una clase base, porque <xref:System.Collections.IList> implementa directamente, o <xref:System.Collections.Generic.Dictionary%602> como <xref:System.Collections.IDictionary> una clase base, porque implementa directamente.  
   
  En las páginas de referencia de .NET para los tipos de colección, en ocasiones se anota esta sintaxis con la omisión intencional del elemento de objeto de una colección en las secciones de sintaxis de XAML como sintaxis de colección implícita.  
   

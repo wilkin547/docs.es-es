@@ -8,14 +8,14 @@ helpviewer_keywords:
 - configuration element
 - container tags, <configuration> element
 ms.assetid: 2ec1c9dc-2e5c-4ef0-9958-81670ab88449
-ms.openlocfilehash: 9a7b25c74763c020c0e19c3f6099db9001acf773
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e09ec49024b769c516fd97085904781f64b4486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705420"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921246"
 ---
-# <a name="configuration-element"></a>\<Configuración > elemento
+# <a name="configuration-element"></a>\<elemento Configuration >
 
 Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.
 
@@ -31,32 +31,32 @@ Elemento raíz de cada archivo de configuración usado por las aplicaciones de C
 
 ## <a name="attributes"></a>Atributos
 
-Ninguna
+None
 
 ## <a name="parent-element"></a>Elemento primario
 
-Ninguna
+None
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ----------- |
-| [ **\<assemblyBinding>** ](~/docs/framework/configure-apps/file-schema/assemblybinding-element-for-configuration.md) | Especifica la directiva de enlace del ensamblado en el nivel de configuración.|
-| [ **\<Inicio >** esquema de configuración](~/docs/framework/configure-apps/file-schema/startup/index.md) | Todos los elementos en el esquema de configuración de inicio. |
-| [ **\<en tiempo de ejecución >** esquema de configuración](~/docs/framework/configure-apps/file-schema/runtime/index.md) | Todos los elementos en el esquema de configuración en tiempo de ejecución. |
-| [ **\<System.Runtime.Remoting >** esquema de configuración](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Todos los elementos en el esquema de configuración de comunicación remota. |
-| [ **\<system.Net >** esquema de configuración](~/docs/framework/configure-apps/file-schema/network/index.md) | Todos los elementos en el esquema de configuración de red. |
-| [ **\<cryptographySettings >** esquema de configuración](~/docs/framework/configure-apps/file-schema/cryptography/index.md) | Todos los elementos en el esquema de configuración de criptografía. |
-| [ **\<Configuración >** esquema de secciones](~/docs/framework/configure-apps/file-schema/configuration-sections-schema.md) | Todos los elementos en el esquema de configuración de la sección de configuración. |
-| [Esquema de la configuración de seguimiento y depuración](~/docs/framework/configure-apps/file-schema/trace-debug/index.md) | Todos los elementos en el esquema de configuración de seguimiento y depuración. |
-| [Esquema de configuración de la configuración de ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | Todos los elementos en el esquema de configuración de ASP.NET, que incluye elementos de configuración de aplicaciones y sitios Web de ASP.NET. Utilizado en *Web.config* archivos. |
-| [ **\<webServices >** esquema de configuración](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Todos los elementos en el esquema de configuración de servicios Web. |
-| [Esquema de configuración web](~/docs/framework/configure-apps/file-schema/web/index.md) | Describe todos los elementos del esquema de configuración web, que incluye elementos para configurar cómo funciona ASP.NET con una aplicación host como IIS. Utilizado en *aspnet.config* archivos. |
+| [ **\<assemblyBinding>** ](assemblybinding-element-for-configuration.md) | Especifica la directiva de enlace del ensamblado en el nivel de configuración.|
+| [esquema de configuración de > de inicio  **\<** ](./startup/index.md) | Todos los elementos del esquema de configuración de inicio. |
+| [esquema de configuración de **> en tiempo de ejecución \<** ](./runtime/index.md) | Todos los elementos del esquema de configuración de tiempo de ejecución. |
+| [esquema de configuración de **System. Runtime. Remoting > \<** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/z415cf9a(v=vs.100)) | Todos los elementos del esquema de configuración de comunicación remota. |
+| [esquema de configuración de **> .net del sistema \<** ](./network/index.md) | Todos los elementos del esquema de configuración de red. |
+| [cryptographySettings esquema de configuración de >  **\<** ](./cryptography/index.md) | Todos los elementos del esquema de configuración de cifrado. |
+| [esquema de secciones de Configuration >  **\<** ](configuration-sections-schema.md) | Todos los elementos del esquema de configuración de la sección de configuración. |
+| [Esquema de la configuración de seguimiento y depuración](./trace-debug/index.md) | Todos los elementos del esquema de configuración de seguimiento y depuración. |
+| [Esquema de opciones de configuración de ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100)) | Todos los elementos del esquema de configuración ASP.NET, que incluye elementos para configurar sitios web y aplicaciones de ASP.NET. Se usa en los archivos *Web. config* . |
+| [esquema de configuración de > de servicios WebService  **\<** ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cctwteet(v=vs.100)) | Todos los elementos del esquema de configuración de servicios Web. |
+| [Esquema de configuración web](./web/index.md) | Describe todos los elementos del esquema de configuración web, que incluye elementos para configurar cómo funciona ASP.NET con una aplicación host como IIS. Se usa en los archivos *Aspnet. config* . |
 
 ## <a name="remarks"></a>Comentarios
 
-Cada archivo de configuración debe contener exactamente un  **\<configuración >** elemento.
+Cada archivo de configuración debe contener exactamente  **\<** un elemento de > de configuración.
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema del archivo de configuración para el .NET Framework](index.md)

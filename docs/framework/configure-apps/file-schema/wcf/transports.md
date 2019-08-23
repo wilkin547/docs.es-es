@@ -2,12 +2,12 @@
 title: Transportes
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
-ms.openlocfilehash: dd141ab5f8ea3ae8bafad830777af75a452f4f95
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c89e0b8ea124919956d07d51b52bf6e878eef166
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788237"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941148"
 ---
 # <a name="transports"></a>Transportes
 El nivel de transporte está en el nivel más bajo de la pila del canal. Los transportes principales utilizados en Windows Communication Foundation (WCF) son HTTP, HTTPS, TCP y canalizaciones con nombre. En esta sección se enumeran todos los elementos de configuración que le permiten configurar tipos diferentes de transportes.  
@@ -17,9 +17,9 @@ El nivel de transporte está en el nivel más bajo de la pila del canal. Los tra
 - <xref:System.ServiceModel.Configuration.TransportElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Transportes](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Elección del transporte](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Transportes](../../../wcf/feature-details/transports.md)
+- [Elección del transporte](../../../wcf/feature-details/choosing-a-transport.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

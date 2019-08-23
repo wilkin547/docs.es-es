@@ -2,17 +2,17 @@
 title: Variables y argumentos
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 251641c924bbf33c176f519f8fc4f9dec59e2eb8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669490"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962190"
 ---
 # <a name="variables-and-arguments"></a>Variables y argumentos
 En Windows Workflow Foundation (WF), las variables representan el almacenamiento de datos y los argumentos representan el flujo de datos dentro y fuera de una actividad. Una actividad tiene un conjunto de argumentos y constituyen la firma de la actividad. Además, una actividad puede mantener una lista de variables a las que un desarrollador de software puede agregar o quitar variables durante el diseño de un flujo de trabajo. Los argumentos se enlazan mediante una expresión que devuelve un valor.  
   
-## <a name="variables"></a>Variables  
+## <a name="variables"></a>variables  
  Las variables son las ubicaciones de almacenamiento para los datos. Las variables se declaran como parte de la definición de un flujo de trabajo. Las variables asumen los valores en el tiempo de ejecución y estos valores se almacenan como parte del estado de una instancia de flujo de trabajo. La definición de variable especifica el tipo de la variable y, opcionalmente, el nombre. El siguiente código muestra cómo declarar una variable, asignar un valor a él mediante una actividad <xref:System.Activities.Statements.Assign%601> y, a continuación, muestra su valor en la consola usando una actividad <xref:System.Activities.Statements.WriteLine>.  
   
 ```csharp  
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2. Cuando se llama a <xref:System.Activities.InOutArgument%601.Set%2A>, el tiempo de ejecución establece el valor inmediatamente.  
   
-3. Los argumentos pueden opcionalmente tener especificado su <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A>es un valor basado en cero que especifica el orden en el que se evalúa el argumento. De forma predeterminada, el orden de evaluación del argumento no está especificado y es igual al valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Para especificar un orden de evaluación para este argumento, establezca la propiedad <xref:System.Activities.Argument.EvaluationOrder%2A> con un valor mayor o igual que cero. Windows Workflow Foundation evalúa argumentos con un orden de evaluación especificada en orden ascendente. Tenga en cuenta que los argumentos que no tienen orden de evaluación especificada se evalúan antes que los que tienen especificado un orden de evaluación.  
+3. Los argumentos pueden opcionalmente tener especificado su <xref:System.Activities.Argument.EvaluationOrder%2A>. <xref:System.Activities.Argument.EvaluationOrder%2A>es un valor basado en cero que especifica el orden en el que se evalúa el argumento. De forma predeterminada, el orden de evaluación del argumento no está especificado y es igual al valor de <xref:System.Activities.Argument.UnspecifiedEvaluationOrder>. Para especificar un orden de evaluación para este argumento, establezca la propiedad <xref:System.Activities.Argument.EvaluationOrder%2A> con un valor mayor o igual que cero. Windows Workflow Foundation evalúa los argumentos con un orden de evaluación especificado en orden ascendente. Tenga en cuenta que los argumentos que no tienen orden de evaluación especificada se evalúan antes que los que tienen especificado un orden de evaluación.  
   
  Un autor de actividad puede usar un mecanismo fuertemente tipado para exponer sus argumentos. Esto se logra declarando propiedades de tipo <xref:System.Activities.InArgument%601>, <xref:System.Activities.OutArgument%601> y <xref:System.Activities.InOutArgument%601>. De esta forma se permite que un autor de actividad establezca un contrato concreto sobre la entrada y salida de datos de una actividad.  
   
@@ -84,7 +84,7 @@ public class Prompt : Activity
 ```  
   
 > [!NOTE]
->  Las actividades que devuelven un valor único pueden derivar de <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601> o <xref:System.Activities.CodeActivity%601>. Estas actividades tienen una clase <xref:System.Activities.OutArgument%601> bien definida denominada <xref:System.Activities.Activity%601.Result%2A> que contiene el valor devuelto de la actividad.  
+> Las actividades que devuelven un valor único pueden derivar de <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601> o <xref:System.Activities.CodeActivity%601>. Estas actividades tienen una clase <xref:System.Activities.OutArgument%601> bien definida denominada <xref:System.Activities.Activity%601.Result%2A> que contiene el valor devuelto de la actividad.  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>Usar variables y argumentos en flujos de trabajo  
  El siguiente ejemplo muestra cómo se usan las variables y argumentos en un flujo de trabajo. El flujo de trabajo es una secuencia que declara tres variables: `var1`, `var2` y `var3`. La primera actividad en el flujo de trabajo es una actividad `Assign` que asigna el valor de la variable `var1` a la variable `var2`. A esto le sigue una actividad `WriteLine` que imprime el valor de la variable `var2`. A continuación, verá otra actividad `Assign` que asigna el valor de la variable `var2` a la variable `var3`. Finalmente, hay otra actividad `WriteLine` que imprime el valor de la variable `var3`. La primera actividad `Assign` usa `InArgument<string>` y los objetos `OutArgument<string>` que explícitamente representan los enlaces para los argumentos de la actividad. `InArgument<string>` se usa para <xref:System.Activities.Statements.Assign.Value%2A> porque el valor está fluyendo en la actividad <xref:System.Activities.Statements.Assign%601> a través de su argumento <xref:System.Activities.Statements.Assign.Value%2A> y `OutArgument<string>` se usa para <xref:System.Activities.Statements.Assign.To%2A> porque el valor está fluyendo del argumento <xref:System.Activities.Statements.Assign.To%2A> hacia la variable. La segunda actividad `Assign` consigue lo mismo gracias a una sintaxis más compacta, pero equivalente, que usa conversiones implícitas. Las actividades `WriteLine` también usan la sintaxis compacta.  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Para obtener más información sobre cómo trabajar con argumentos, variables y expresiones en el código, consulte [creación de flujos de trabajo, actividades y expresiones mediante código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) y [argumentos necesarios y grupos de sobrecarga](required-arguments-and-overload-groups.md).
+ Para obtener más información sobre cómo trabajar con argumentos, variables y expresiones en el código, vea [crear flujos de trabajo, actividades y expresiones mediante código imperativo](authoring-workflows-activities-and-expressions-using-imperative-code.md) y [argumentos necesarios y grupos de](required-arguments-and-overload-groups.md)sobrecargas.

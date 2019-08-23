@@ -2,19 +2,19 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b6f26c7b9e9d02b3ff20b53f42b09d671699ea5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673191"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919388"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
 Proporciona el control completo sobre la pila de la mensajería para el usuario.
 
 \<system.serviceModel>\
-\<bindings>\
+\<Enlaces > \
 \<customBinding>
 
 ## <a name="syntax"></a>Sintaxis
@@ -178,29 +178,29 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-|Atributo|Descripción|
+|Atributo|DESCRIPCIÓN|
 |---------------|-----------------|
 |closeTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de cierre para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
-|name|Cadena que contiene el nombre de configuración del enlace. Este valor es una cadena definida por el usuario que actúa como cadena de identificación para el enlace personalizado. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información acerca de la configuración predeterminada y sin especificar enlaces y comportamientos, consulte [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) y [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|
+|Nombre|Cadena que contiene el nombre de configuración del enlace. Este valor es una cadena definida por el usuario que actúa como cadena de identificación para el enlace personalizado. A partir de [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], no es necesario que los enlaces y los comportamientos tengan nombre. Para obtener más información sobre la configuración predeterminada y los enlaces y comportamientos sin nombre, vea [configuración simplificada](../../../wcf/simplified-configuration.md) y [configuración simplificada para servicios WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
 |openTimeout|Valor de la estructura <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de apertura para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
 |receiveTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de recepción para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
 |sendTimeout|Un valor <xref:System.TimeSpan> que especifica el intervalo de tiempo del que dispone una operación de envío para completarse. Este valor debe ser mayor o igual que <xref:System.TimeSpan.Zero>. El valor predeterminado es 00:01:00.|
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
-|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Especifica la mensajería bidireccional para el enlace personalizado. Se usa con los transportes que no permiten comunicaciones dúplex de manera nativa, como, por ejemplo, HTTP. TCP, en cambio, permite comunicaciones dúplex de manera nativa y no requiere el uso de este elemento de enlace para que el servicio devuelva los mensajes a un cliente.<br /><br /> El cliente debe exponer una dirección para que el servicio haga contacto y establezca una conexión. El atributo `ClientBaseAddress` proporciona esta dirección del cliente.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
-|[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Especifica una resolución de nombre de mismo nivel de protocolo de resolución de nombres de mismo nivel (PNRP). Este elemento es del tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
-|[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Especifica el valor para la mensajería de confianza de WS. Cuando este elemento se agrega a un enlace personalizado, el canal resultante puede admitir las convicciones de la entrega exactamente una vez. Este elemento es del tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Especifica las opciones de seguridad del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
-|[\<sslStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|Especifica la configuración de seguridad para un enlace de secuencia SSL. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
-|[\<transactionFlow>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|Especifica que el enlace soporta el flujo de transacción, y el protocolo que va a ser utilizado por el atributo `transactionProtocol`. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
-|[\<windowsStreamSecurity>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|Especifica las opciones de seguridad de transmisión del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
+|[\<compositeDuplex>](compositeduplex.md)|Especifica la mensajería bidireccional para el enlace personalizado. Se usa con los transportes que no permiten comunicaciones dúplex de manera nativa, como, por ejemplo, HTTP. TCP, en cambio, permite comunicaciones dúplex de manera nativa y no requiere el uso de este elemento de enlace para que el servicio devuelva los mensajes a un cliente.<br /><br /> El cliente debe exponer una dirección para que el servicio haga contacto y establezca una conexión. El atributo `ClientBaseAddress` proporciona esta dirección del cliente.<br /><br /> Este elemento es del tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
+|[\<pnrpPeerResolver>](pnrppeerresolver.md)|Especifica una resolución de nombre de mismo nivel de protocolo de resolución de nombres de mismo nivel (PNRP). Este elemento es del tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
+|[\<reliableSession>](reliablesession.md)|Especifica el valor para la mensajería de confianza de WS. Cuando este elemento se agrega a un enlace personalizado, el canal resultante puede admitir las convicciones de la entrega exactamente una vez. Este elemento es del tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
+|[\<security>](security-of-custombinding.md)|Especifica las opciones de seguridad del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
+|[\<sslStreamSecurity>](sslstreamsecurity.md)|Especifica la configuración de seguridad para un enlace de secuencia SSL. Este elemento es del tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
+|[\<transactionFlow>](transactionflow.md)|Especifica que el enlace soporta el flujo de transacción, y el protocolo que va a ser utilizado por el atributo `transactionProtocol`. Este elemento es del tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
+|[\<windowsStreamSecurity>](windowsstreamsecurity.md)|Especifica las opciones de seguridad de transmisión del enlace personalizado. Este elemento es del tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
 |enlaces|Contiene todos los enlaces para las aplicaciones de Windows Communication Foundation.|
 
@@ -230,7 +230,7 @@ Un enlace personalizado se construye utilizando uno de <xref:System.ServiceModel
 
 - A continuación hay un <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> opcional que proporciona una sesión y un mecanismo de orden, como se define en la especificación WS-ReliableMessaging. Esta noción de sesión puede cruzar SOAP y transportar intermediarios.
 
-- A continuación hay un elemento de enlace de seguridad opcional que proporciona las características de seguridad como la autorización, autenticación, protección y confidencialidad. Los elementos de enlace de seguridad siguientes se proporcionan por Windows Communication Foundation (WCF):
+- A continuación hay un elemento de enlace de seguridad opcional que proporciona las características de seguridad como la autorización, autenticación, protección y confidencialidad. Windows Communication Foundation (WCF) proporciona los siguientes elementos de enlace de seguridad:
 
   - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 
@@ -260,7 +260,7 @@ Un enlace personalizado se construye utilizando uno de <xref:System.ServiceModel
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-- En la parte inferior hay un elemento de transporte necesario. Puede usar su propio transporte o utilice uno de los elementos proporcionados por Windows Communication Foundation (WCF) de enlace de transporte:
+- En la parte inferior hay un elemento de transporte necesario. Puede utilizar su propio transporte o usar uno de los elementos de enlace de transporte proporcionados por Windows Communication Foundation (WCF):
 
   - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -280,17 +280,17 @@ La tabla siguiente resume las opciones de cada nivel.
 
 |Capa|Opciones|Obligatorio|
 |-----------|-------------|--------------|
-|Flujo de transacciones|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
-|Confiabilidad|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
-|Seguridad|Simétrico, Asimétrico, Nivel de transporte|No|
-|Cambiar forma|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|No|
-|Actualizaciones de transporte|Secuencia de SSL, secuencia de Windows, Resolución del mismo nivel|No|
-|Codificación|Texto, binario, MTOM, personalizado|Sí|
+|Flujo de transacciones|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Sin|
+|Confiabilidad|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Sin|
+|Seguridad|Simétrico, Asimétrico, Nivel de transporte|Sin|
+|Cambiar forma|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|Sin|
+|Actualizaciones de transporte|Secuencia de SSL, secuencia de Windows, Resolución del mismo nivel|Sin|
+|Encoding|Texto, binario, MTOM, personalizado|Sí|
 |Transporte|TCP, canalizaciones con nombre, http, HTTPS, versiones de MSMQ, personalizado|Sí|
 
 Además, puede definir sus propios elementos de enlace e insertarlos entre cualquiera de las capas definidas anteriores.
 
-Para obtener información sobre cómo usar un enlace personalizado para modificar un enlace proporcionado por el sistema, consulte [Cómo: Personalización de un enlace proporcionado por el sistema](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).
+Para obtener información sobre cómo utilizar un enlace personalizado para modificar un enlace proporcionado por el sistema, consulte [How to: Personalizar un enlace](../../../wcf/extending/how-to-customize-a-system-provided-binding.md)proporcionado por el sistema.
 
 ## <a name="see-also"></a>Vea también
 
@@ -298,11 +298,11 @@ Para obtener información sobre cómo usar un enlace personalizado para modifica
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [Elemento customBinding](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Configuración de enlaces proporcionados por el sistema](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [Utilización de enlaces para configurar servicios y clientes](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [customBinding (elemento)](custombinding.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Configuración de enlaces proporcionados por el sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [Utilización de enlaces para configurar servicios y clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)

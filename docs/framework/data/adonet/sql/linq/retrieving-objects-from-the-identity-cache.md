@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: a8e4fc9b83e11aef4347ab4765f6a2e75c526387
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: ef771d924d9b508c29061f75a45808b5f81abb53
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963836"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Recuperar objetos de la memoria caché de identidades
 En este tema se describen los tipos de consultas LINQ to SQL que devuelven un objeto desde la memoria caché de identidad que está administrado por el <xref:System.Data.Linq.DataContext>.  
@@ -20,7 +20,7 @@ En este tema se describen los tipos de consultas LINQ to SQL que devuelven un ob
  En general, para que una consulta LINQ to SQL devuelva un objeto desde la memoria caché de identidad, la consulta debe estar basada en la clave principal de un objeto y debe devolver un único objeto. En particular, la consulta debe estar en uno de los formatos generales indicados a continuación.  
   
 > [!NOTE]
->  Las consultas precompiladas no devolverán objetos desde la memoria caché de identidad. Para obtener más información acerca de las consultas precompiladas, vea <xref:System.Data.Linq.CompiledQuery> y [Cómo: Store y reutilizar consultas](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).  
+> Las consultas precompiladas no devolverán objetos desde la memoria caché de identidad. Para obtener más información acerca de las consultas compiladas [previamente, vea <xref:System.Data.Linq.CompiledQuery> y cómo: Almacenar y reutilizar](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md)consultas.  
   
  Para recuperar un objeto de la memoria caché de identidad, una consulta debe tener uno de los formatos generales siguientes:  
   

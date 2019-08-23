@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
 author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 750708483f9680745eef4531d86fa7ecaa329f51
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4e28e8ccea1090e6a5704b541e09dc11681278ed
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301191"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920650"
 ---
-# <a name="sectiongroup-element-for-configsections"></a>\<sectionGroup > (elemento) para \<configSections >
+# <a name="sectiongroup-element-for-configsections"></a>\<elemento > sectionGroup para \<configSections >
 
 Define un espacio de nombres para las secciones de configuración.
 
-[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
 &nbsp;&nbsp;&nbsp;&nbsp; **\<sectionGroup>**
 
 ## <a name="syntax"></a>Sintaxis
@@ -34,29 +34,29 @@ Define un espacio de nombres para las secciones de configuración.
 
 ## <a name="attribute"></a>Atributo
 
-|           | Descripción |
+|           | DESCRIPCIÓN |
 | --------- | ----------- |
 | **name**  | Atributo necesario.<br><br>Especifica el nombre del grupo de sección que se está definiendo. |
 
 ## <a name="parent-element"></a>Elemento primario
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ----------- |
-| [ **\<configSections>** Element](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Contiene las declaraciones de espacio de nombres y la sección de configuración. |
+| [configSections (elemento >)  **\<** ](configsections-element-for-configuration.md) | Contiene la sección de configuración y las declaraciones de espacio de nombres. |
 
 ## <a name="child-elements"></a>Elementos secundarios
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ----------- |
-| [ **\<sección >** ](~/docs/framework/configure-apps/file-schema/section-element.md) | Contiene una declaración de la sección de configuración. |
+| [ **\<> de la sección**](section-element.md) | Contiene una declaración de sección de configuración. |
 
 ## <a name="remarks"></a>Comentarios
 
-Declarar un grupo de sección crea una etiqueta de contenedor para secciones de configuración y garantiza que no hay ningún conflicto de nomenclatura con secciones de configuración definidas por otra persona. Puede anidar  **\<sectionGroup >** elementos dentro de otros.
+Al declarar un grupo de secciones, se crea una etiqueta de contenedor para las secciones de configuración y se garantiza que no hay conflictos de nomenclatura con las secciones de configuración definidas por otro usuario. Puede anidar  **\<elementos > sectionGroup** dentro de otros.
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo declarar un grupo de secciones y declarar secciones dentro de un grupo de sección:
+En el ejemplo siguiente se muestra cómo declarar un grupo de secciones y declarar secciones dentro de un grupo de secciones:
 
 ```xml
 <configuration>
@@ -76,8 +76,8 @@ El ejemplo siguiente muestra cómo declarar un grupo de secciones y declarar sec
 
 ## <a name="configuration-file"></a>Archivo de configuración
 
-Este elemento se puede usar en el archivo de configuración de aplicación, archivo de configuración del equipo (*Machine.config*), y *Web.config* archivos que no están en el nivel de directorio de aplicación.
+Este elemento puede usarse en el archivo de configuración de la aplicación, el archivo de configuración del equipo (*Machine. config*) y los archivos *Web. config* que no están en el nivel de directorio de la aplicación.
 
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de archivo de configuración de .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Esquema del archivo de configuración para el .NET Framework](index.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 9d38d7db33b44f22cf9e8f714581cce1d271ce96
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5eceafee4d02478c9e011a473ee1d036df91075d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622973"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69932179"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementar el patrón de control Grid de UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  En este tema se presentan las directrices y convenciones para implementar <xref:System.Windows.Automation.Provider.IGridProvider>, incluida la información sobre propiedades, métodos y eventos. Al final de la información general se proporcionan vínculos a referencias adicionales.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64622973"
   
 - Si una celda está vacía, todavía debe devolverse un elemento de Automatización de la interfaz de usuario para admitir la propiedad <xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A> en esa celda. Esto es posible si el diseño de elementos secundarios de la cuadrícula es similar a una matriz irregular (consulte el ejemplo siguiente).  
   
- ![Explorador de Windows Vista que muestra un diseño irregular. ](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
+ ![Vista del explorador de Windows que muestra el diseño irregular.](../../../docs/framework/ui-automation/media/uia-gridpattern-ragged-array.PNG "UIA_GridPattern_Ragged_Array")  
 Ejemplo de un control Grid con coordenadas vacías  
   
 - Sigue siendo necesaria una cuadrícula con un elemento único para implementar <xref:System.Windows.Automation.Provider.IGridProvider> si lógicamente se considera una cuadrícula. El número de elementos secundarios de la cuadrícula es irrelevante.  
@@ -46,11 +46,11 @@ Ejemplo de un control Grid con coordenadas vacías
 ## <a name="required-members-for-igridprovider"></a>Miembros requeridos para IGridProvider  
  Se requieren los métodos y propiedades siguientes para implementar la interfaz de IGridProvider.  
   
-|Miembros requeridos|Tipo|Notas|  
+|Miembros requeridos|Type|Notas|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Propiedad|Ninguna|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Método|Ninguna|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Propiedad|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Método|None|  
   
  Este patrón de control no tiene eventos asociados.  
   
@@ -60,8 +60,8 @@ Ejemplo de un control Grid con coordenadas vacías
   
 |Tipo de excepción|Condición|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Si la coordenada de la fila solicitada es mayor que el <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> o la coordenada de la columna es mayor que el <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -Si cualquiera de la fila o columna solicitadas coordenadas es menor que cero.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> : Si la coordenada de la fila solicitada <xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A> es mayor que o la coordenada de <xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>columna es mayor que.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> : Si alguna de las coordenadas de columna o fila solicitada es menor que cero.|  
   
 ## <a name="see-also"></a>Vea también
 

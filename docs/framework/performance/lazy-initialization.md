@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef3105844ee61607bbc85332a76611c91a4198a
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 1c13445b8b7c72d1c66efe5a9db3aaa027001ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364050"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943817"
 ---
 # <a name="lazy-initialization"></a>Inicialización diferida
 La *inicialización diferida* de un objeto implica que su creación se aplaza hasta que se usa por primera vez. (En este tema, los términos *inicialización diferida* y *creación diferida de instancias* son sinónimos). La inicialización diferida se usa principalmente para mejorar el rendimiento, evitar la pérdida de tiempo en los cálculos y reducir los requisitos de memoria de los programas. Estos son los escenarios más comunes:  
@@ -62,7 +62,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
  De forma predeterminada, los objetos <xref:System.Lazy%601> son seguros para subprocesos. Es decir, si el constructor no especifica el tipo de seguridad para subprocesos, los objetos <xref:System.Lazy%601> que crea son seguros para subprocesos. En escenarios multiproceso, el primer subproceso que tiene acceso a la propiedad <xref:System.Lazy%601.Value%2A> de un objeto <xref:System.Lazy%601> seguro para subprocesos lo inicializa para todos los accesos siguientes en todos los subprocesos, y todos los subprocesos comparten los mismos datos. Por lo tanto, no importa qué subproceso inicializa el objeto y las condiciones de carrera son benignas.  
   
 > [!NOTE]
->  Puede ampliar esta coherencia a las condiciones de error mediante el uso del almacenamiento en caché de excepciones. Para obtener más información, vea la próxima sección titulada [Excepciones en objetos diferidos](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
+> Puede ampliar esta coherencia a las condiciones de error mediante el uso del almacenamiento en caché de excepciones. Para obtener más información, vea la próxima sección titulada [Excepciones en objetos diferidos](../../../docs/framework/performance/lazy-initialization.md#ExceptionsInLazyObjects).  
   
  En el ejemplo siguiente se muestra que la instancia `Lazy<int>` tiene el mismo valor para tres subprocesos independientes.  
   
@@ -89,10 +89,10 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
 ## <a name="exceptions-in-lazy-objects"></a>Excepciones en objetos diferidos  
  Como ya se ha indicado, un objeto <xref:System.Lazy%601> siempre devuelve el mismo objeto o valor con el que se ha inicializado y, por tanto, la propiedad <xref:System.Lazy%601.Value%2A> es de solo lectura. Si habilita el almacenamiento en caché de excepciones, esta inmutabilidad también se aplica al comportamiento de las excepciones. Si un objeto con inicialización diferida tiene habilitado el almacenamiento en caché de excepciones y produce una excepción desde <xref:System.Lazy%601.Value%2A> su método de inicialización cuando se obtiene acceso por primera vez a la propiedad, se produce <xref:System.Lazy%601.Value%2A> la misma excepción en cada intento posterior de acceder a la propiedad. . En otras palabras, el constructor del tipo encapsulado nunca se vuelve a invocar, ni siquiera en escenarios multiproceso. Por lo tanto, el objeto <xref:System.Lazy%601> no puede producir una excepción en un acceso y devolver un valor en un acceso posterior.  
   
- El almacenamiento en caché de excepciones se habilita cuando se usa cualquier constructor <xref:System.Lazy%601?displayProperty=nameWithType> que toma un método de inicialización (un parámetro `valueFactory`); por ejemplo, se habilita cuando se usa el constructor `Lazy(T)(Func(T))`. Si el constructor también toma un valor <xref:System.Threading.LazyThreadSafetyMode> (un parámetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> o <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Al especificar un método de inicialización, se permite el almacenamiento en caché de excepciones para estos dos modos. El método de inicialización puede ser muy simple. Por ejemplo, podría llamar al constructor sin parámetros `T`para: `new Lazy<Contents>(() => new Contents(), mode)` in C#o `New Lazy(Of Contents)(Function() New Contents())` en Visual Basic. Si usa un <xref:System.Lazy%601?displayProperty=nameWithType> constructor que no especifica un método de inicialización, las excepciones producidas por el constructor sin parámetros para `T` no se almacenan en caché. Para obtener más información, vea la enumeración <xref:System.Threading.LazyThreadSafetyMode>.  
+ El almacenamiento en caché de excepciones se habilita cuando se usa cualquier constructor <xref:System.Lazy%601?displayProperty=nameWithType> que toma un método de inicialización (un parámetro `valueFactory`); por ejemplo, se habilita cuando se usa el constructor `Lazy(T)(Func(T))`. Si el constructor también toma un valor <xref:System.Threading.LazyThreadSafetyMode> (un parámetro `mode`), especifique <xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication?displayProperty=nameWithType> o <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>. Al especificar un método de inicialización, se permite el almacenamiento en caché de excepciones para estos dos modos. El método de inicialización puede ser muy simple. Por ejemplo, podría llamar al constructor sin parámetros `T`para: `new Lazy<Contents>(() => new Contents(), mode)` in C#o `New Lazy(Of Contents)(Function() New Contents())` en Visual Basic. Si usa un constructor <xref:System.Lazy%601?displayProperty=nameWithType> que no especifica un método de inicialización, las excepciones que inicie el constructor sin parámetros para `T` no se almacenarán en caché. Para obtener más información, vea la enumeración <xref:System.Threading.LazyThreadSafetyMode>.  
   
 > [!NOTE]
->  Si crea un objeto <xref:System.Lazy%601> con el parámetro de constructor `isThreadSafe` establecido en `false` o el parámetro de constructor `mode` establecido en <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, debe tener acceso al objeto <xref:System.Lazy%601> desde un subproceso o proporcionar su propia sincronización. Esto se aplica a todos los aspectos del objeto, incluido el almacenamiento en caché de excepciones.  
+> Si crea un objeto <xref:System.Lazy%601> con el parámetro de constructor `isThreadSafe` establecido en `false` o el parámetro de constructor `mode` establecido en <xref:System.Threading.LazyThreadSafetyMode.None?displayProperty=nameWithType>, debe tener acceso al objeto <xref:System.Lazy%601> desde un subproceso o proporcionar su propia sincronización. Esto se aplica a todos los aspectos del objeto, incluido el almacenamiento en caché de excepciones.  
   
  Como ya se ha indicado en la sección anterior, los objetos <xref:System.Lazy%601> creados al especificar <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly?displayProperty=nameWithType> tratan las excepciones de forma diferente. Con <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly>, varios subprocesos pueden competir para inicializar la instancia <xref:System.Lazy%601>. En este caso, las excepciones no se almacenan en caché y los intentos para obtener acceso a la propiedad <xref:System.Lazy%601.Value%2A> pueden continuar hasta que se complete la inicialización.  
   
@@ -140,7 +140,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Variables locales de subproceso en Parallel.For y ForEach  
- Cuando se usa el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar en los orígenes de datos en paralelo, puede usar las sobrecargas que tienen compatibilidad integrada con datos locales de subproceso. En estos métodos, la localidad del subproceso se logra mediante el uso de delegados locales para crear los datos, obtener acceso a ellos y limpiarlos. Para obtener más información, vea [Cómo: Escribir un bucle Parallel.For con variables locales de subproceso](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) y [Cómo: Escribir un bucle Parallel.ForEach con variables locales de partición](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
+ Cuando se usa el método <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> o <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> para iterar en los orígenes de datos en paralelo, puede usar las sobrecargas que tienen compatibilidad integrada con datos locales de subproceso. En estos métodos, la localidad del subproceso se logra mediante el uso de delegados locales para crear los datos, obtener acceso a ellos y limpiarlos. Para obtener más información, consulte [Cómo Escribir un bucle Parallel.For con variables locales de subproceso](../../standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) y [Cómo: Escribir un bucle Parallel.ForEach con variables locales de partición](../../standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Usar la inicialización diferida para escenarios con poca sobrecarga  
  En los escenarios en los que tiene que inicializar de forma diferida un gran número de objetos, podría decidir que el proceso de encapsular cada objeto en un objeto <xref:System.Lazy%601> requiere demasiada memoria o demasiados recursos informáticos. O bien, es posible que tenga requisitos estrictos sobre cómo se expone la inicialización diferida. En tales casos, puede usar los métodos `static` (`Shared` en Visual Basic) de la clase <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> para inicializar de forma diferida cada objeto sin encapsularlo en una instancia de <xref:System.Lazy%601>.  
@@ -154,7 +154,7 @@ La *inicialización diferida* de un objeto implica que su creación se aplaza ha
   
 ## <a name="see-also"></a>Vea también
 
-- [Principios básicos del subprocesamiento administrado](../../../docs/standard/threading/managed-threading-basics.md)
-- [Subprocesos y subprocesamiento](../../../docs/standard/threading/threads-and-threading.md)
-- [Biblioteca TPL](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [Principios básicos del subprocesamiento administrado](../../standard/threading/managed-threading-basics.md)
+- [Subprocesos y subprocesamiento](../../standard/threading/threads-and-threading.md)
+- [Biblioteca TPL](../../standard/parallel-programming/task-parallel-library-tpl.md)
 - [Cómo: Realizar la inicialización diferida de objetos](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

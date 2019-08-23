@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: d9d50433e3bc24df7cda137a145ab3f0f0302a1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3bfafaa696955422c381aa1c17bc96591b44985
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608677"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961999"
 ---
 # <a name="await-operator-visual-basic"></a>Await (Operador) (Visual Basic)
 El operador `Await` se aplica a un operando de un método asincrónico o a una expresión lambda para suspender la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.  
   
- El método en el que `Await` sirve debe tener un [Async](../../../visual-basic/language-reference/modifiers/async.md) modificador. Este tipo de método, que se define mediante el modificador `Async` y que generalmente contiene una o más expresiones `Await`, se denomina *método asincrónico*.  
+ El método en el `Await` que se utiliza debe tener un modificador [Async](../../../visual-basic/language-reference/modifiers/async.md) . Este tipo de método, que se define mediante el modificador `Async` y que generalmente contiene una o más expresiones `Await`, se denomina *método asincrónico*.  
   
 > [!NOTE]
->  Las palabras clave `Async` y `Await` se incluyeron en Visual Studio 2012. Para obtener una introducción a la programación asincrónica, vea [programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
+> Las palabras clave `Async` y `Await` se incluyeron en Visual Studio 2012. Para obtener una introducción a la programación asincrónica, vea [programación asincrónica con Async y Await](../../../visual-basic/programming-guide/concepts/async/index.md).  
   
- Normalmente, la tarea a la que se aplican los `Await` operador es el valor devuelto de una llamada a un método que implementa el [Task-Based Asynchronous Pattern](https://go.microsoft.com/fwlink/?LinkId=204847), es decir, un <xref:System.Threading.Tasks.Task> o un <xref:System.Threading.Tasks.Task%601>.  
+ Normalmente, la tarea a la que se aplica `Await` el operador es el valor devuelto de una llamada a un método que implementa el [modelo asincrónico basado en tareas](https://go.microsoft.com/fwlink/?LinkId=204847), es <xref:System.Threading.Tasks.Task> decir <xref:System.Threading.Tasks.Task%601>, o.  
   
  En el código siguiente, el método <xref:System.Net.Http.HttpClient><xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> devuelve `getContentsTask`, un tipo `Task(Of Byte())`. La tarea garantiza que la matriz de bytes real se generará cuando finalice la operación. El operador `Await` se aplica a `getContentsTask` para suspender la ejecución en `SumPageSizesAsync` hasta que se complete `getContentsTask`. Mientras tanto, el control vuelve al llamador de `SumPageSizesAsync`. Cuando `getContentsTask` haya finalizado, la expresión `Await` se evalúa como una matriz de bytes.  
   
@@ -43,7 +43,7 @@ End Function
 ```  
   
 > [!IMPORTANT]
->  Para obtener el ejemplo completo, consulte [Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede descargar el ejemplo desde [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) en el sitio web de Microsoft. El ejemplo está en el proyecto AsyncWalkthrough_HttpClient.  
+> Para obtener el ejemplo completo, consulte [Tutorial: Acceso a web usando Async y Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede descargar el ejemplo desde [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) en el sitio web de Microsoft. El ejemplo está en el proyecto AsyncWalkthrough_HttpClient.  
   
  Si `Await` se aplica al resultado de una llamada al método que devuelve `Task(Of TResult)`, el tipo de la expresión `Await` será TResult. Si `Await` se aplica al resultado de una llamada al método que devuelve `Task`, la expresión `Await` no devuelve un valor. En el siguiente ejemplo se ilustra la diferencia.  
   
@@ -57,7 +57,7 @@ Await AsyncMethodThatReturnsTask()
   
  Una expresión o instrucción `Await` no bloquea el subproceso en el que se ejecuta. En su lugar, hace que el compilador suscriba el resto del método asincrónico, después de la expresión `Await`, como una continuación de la tarea esperada. A continuación, el control vuelve al llamador del método asincrónico. Cuando la tarea se completa, invoca su continuación y la ejecución del método asincrónico se reanuda donde se quedó.  
   
- Una expresión `Await` solo puede aparecer en el cuerpo de un método envolvente inmediato o una expresión lambda marcados con el modificador `Async`. El término *Await* actúa como una palabra clave solo en ese contexto. En cualquier otra parte, se interpretará como identificador. Dentro de la expresión lambda o de método asincrónico, un `Await` expresión no puede aparecer en una expresión de consulta, en el `catch` o `finally` block de un [intente... Catch... Por último](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) instrucción, en la expresión de variable de control de bucle de un `For` o `For Each` bucle, o en el cuerpo de un [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) instrucción.  
+ Una expresión `Await` solo puede aparecer en el cuerpo de un método envolvente inmediato o una expresión lambda marcados con el modificador `Async`. El término *Await* solo sirve como palabra clave en ese contexto. En cualquier otra parte, se interpretará como identificador. Dentro del método asincrónico o de la expresión lambda `Await` , una expresión no puede aparecer en una expresión de `catch` consulta `finally` , en el bloque o de una [instrucción try... Detectar... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) , en la expresión de variable de control de `For` bucle `For Each` de un bucle o, o en el cuerpo de una instrucción [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) .  
   
 ## <a name="exceptions"></a>Excepciones  
  La mayoría de los métodos asincrónicos devuelven un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Las propiedades de la tarea devuelta llevan información acerca de su estado e historial, por ejemplo, si la tarea se ha completado, si el método asincrónico produjo una excepción o si se ha cancelado y cuál es el resultado final. El operador `Await` tiene acceso a esas propiedades.  
@@ -68,7 +68,7 @@ Await AsyncMethodThatReturnsTask()
   
  Una única tarea en estado de error puede reflejar varias excepciones.  Por ejemplo, la tarea podría ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Cuando espera dicha tarea, la operación await vuelve a generar únicamente una de las excepciones. Sin embargo, no se puede predecir cuál de las excepciones se vuelve a generar.  
   
- Para obtener ejemplos de control de errores en métodos asincrónicos, vea [intente... Catch... Finally (instrucción)](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
+ Para obtener ejemplos de control de errores en métodos asincrónicos, vea [try... Detectar... Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente de Windows Forms muestra el uso de `Await` en un método asincrónico, `WaitAsynchronouslyAsync`. Compare el comportamiento de dicho método con el de `WaitSynchronously`. Sin un operador `Await`, `WaitSynchronously` se ejecuta sincrónicamente a pesar del uso del modificador `Async` en su definición y una llamada a <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> en el cuerpo.  

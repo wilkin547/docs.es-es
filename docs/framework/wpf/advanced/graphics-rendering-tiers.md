@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: fa59621aaf73922af957961af5401170c2872aa9
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972345"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937519"
 ---
 # <a name="graphics-rendering-tiers"></a>Niveles de representación de gráficos
 Un nivel de representación define un nivel de funcionalidad y rendimiento de hardware gráfico para un dispositivo que ejecuta un aplicación [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -48,7 +48,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
 ### <a name="rendering-tier-1-and-rendering-tier-2"></a>Nivel de representación 1 y nivel de representación 2  
   
 > [!NOTE]
->  A partir de la .NET Framework 4, el nivel de representación 1 se ha redefinido para incluir solo el hardware gráfico compatible con DirectX 9,0 o superior. El hardware gráfico que admite DirectX 7 u 8 ahora está definido como el nivel de representación 0.  
+> A partir de la .NET Framework 4, el nivel de representación 1 se ha redefinido para incluir solo el hardware gráfico compatible con DirectX 9,0 o superior. El hardware gráfico que admite DirectX 7 u 8 ahora está definido como el nivel de representación 0.  
   
  Un valor de nivel de representación de 1 o 2 significa que la mayoría de las características gráficas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilizará la aceleración de hardware si los recursos necesarios del sistema están disponibles y no se han agotado. Esto corresponde a una versión de DirectX que es mayor o igual que 9,0.  
   
@@ -105,7 +105,7 @@ Un nivel de representación define un nivel de funcionalidad y rendimiento de ha
 |**Configuración obligatoria de fecha del controlador de vídeo**|Especifica si el sistema deshabilita la aceleración de hardware para los controladores publicados antes de noviembre de 2004.|  
 |**Opción de uso del rasterizador de referencia**|Especifica si [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] debe utilizar el rasterizador de referencia.|  
   
- Es posible acceder a estos parámetros mediante una utilidad de configuración externa que pueda hacer referencia a la configuración del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Estos valores de configuración también pueden crearse o modificarse mediante el acceso a los valores directamente a través del Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Para obtener más información, consulte [Configuración del Registro en la representación de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md).  
+ Es posible acceder a estos parámetros mediante una utilidad de configuración externa que pueda hacer referencia a la configuración del Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esta configuración también se puede crear o modificar si se obtiene acceso a los valores directamente mediante el editor del registro de Windows. Para obtener más información, consulte [Configuración del Registro en la representación de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Herramientas de generación de perfiles de rendimiento para WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ofrece un conjunto de herramientas de generación de perfiles de rendimiento que le permiten analizar el comportamiento en tiempo de ejecución de la aplicación y determinar los tipos de optimizaciones de rendimiento que puede aplicar. En la tabla siguiente se enumeran las herramientas de generación de perfiles de rendimiento que se incluyen en la herramienta Windows SDK, WPF Performance Suite:  

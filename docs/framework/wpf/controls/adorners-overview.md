@@ -7,29 +7,29 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: b5788b3ddb14b1acae9c6661420ab439205d000b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8e6e53edc92a2847c001377706d313cf97cced5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591252"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956096"
 ---
 # <a name="adorners-overview"></a>Información general sobre adornos
-Los Adorners son un tipo especial de <xref:System.Windows.FrameworkElement>, que se usa para proporcionar indicaciones visuales a un usuario. Entre otros usos, los Adorners se pueden utilizar para agregar controladores funcionales a los elementos o proporcionar información de estado sobre un control.  
+Los adornos son un tipo especial <xref:System.Windows.FrameworkElement>de, que se usa para proporcionar indicaciones visuales a un usuario. Entre otros usos, los Adorners se pueden utilizar para agregar controladores funcionales a los elementos o proporcionar información de estado sobre un control.  
 
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>Acerca de Adorners  
- Un <xref:System.Windows.Documents.Adorner> es personalizada <xref:System.Windows.FrameworkElement> que está enlazado a un <xref:System.Windows.UIElement>. Los Adorners se representan en un <xref:System.Windows.Documents.AdornerLayer>, que es una superficie de representación que siempre está encima del elemento adornado o una colección de elementos adornados. La representación de un adorno es independiente de la representación de la <xref:System.Windows.UIElement> que está enlazado el adorno. Un adorno se suele colocar respecto al elemento al que se enlaza, utilizando el origen de coordenadas 2D estándar situado en la parte superior izquierda del elemento adornado.  
+ Es un personalizado <xref:System.Windows.FrameworkElement> que está enlazado a un <xref:System.Windows.UIElement>. <xref:System.Windows.Documents.Adorner> Los adornos se representan en un <xref:System.Windows.Documents.AdornerLayer>, que es una superficie de representación que siempre está encima del elemento adornado o una colección de elementos adornados. La representación de un adorno es independiente de la representación de a la <xref:System.Windows.UIElement> que está enlazado el adorno. Un adorno se suele colocar respecto al elemento al que se enlaza, utilizando el origen de coordenadas 2D estándar situado en la parte superior izquierda del elemento adornado.  
   
  Algunas aplicaciones comunes de adornos son:  
   
-- Agregar controladores funcionales a un <xref:System.Windows.UIElement> que permiten al usuario manipular el elemento de alguna manera (cambio de tamaño, girar, cambiar de posición, etcetera.).  
+- Agregar manipuladores funcionales a <xref:System.Windows.UIElement> que permiten a un usuario manipular el elemento de alguna manera (cambiar el tamaño, girar, cambiar de posición, etc.).  
   
 - Proporcionar comentarios visuales para indicar diversos estados, o en respuesta a distintos eventos.  
   
-- Superponer etiquetas contextuales visuales en un <xref:System.Windows.UIElement>.  
+- Superponer decoraciones visuales <xref:System.Windows.UIElement>en un.  
   
-- Invalidar la totalidad o parte de o enmascarar visualmente un <xref:System.Windows.UIElement>.  
+- Enmascara o invalida visualmente una parte o la totalidad <xref:System.Windows.UIElement>de un.  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] proporciona un marco básico para adornar elementos visuales. En la tabla siguiente se muestra una lista de los tipos principales utilizados al adornar objetos y su finalidad. A continuación se presentan varios ejemplos de uso.  
   
@@ -41,32 +41,32 @@ Los Adorners son un tipo especial de <xref:System.Windows.FrameworkElement>, que
   
 <a name="implement_custom_Adorner"></a>   
 ## <a name="implementing-a-custom-adorner"></a>Implementación de un adorno personalizado  
- El marco de adornos que proporciona [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado principalmente para admitir la creación de adornos personalizados. Un adorno personalizado se crea implementando una clase que hereda de la clase abstracta <xref:System.Windows.Documents.Adorner> clase.  
+ El marco de adornos que proporciona [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] está diseñado principalmente para admitir la creación de adornos personalizados. Un adorno personalizado se crea implementando una clase que hereda de la clase abstracta <xref:System.Windows.Documents.Adorner> .  
   
 > [!NOTE]
->  El elemento primario de un <xref:System.Windows.Documents.Adorner> es el <xref:System.Windows.Documents.AdornerLayer> que representa el <xref:System.Windows.Documents.Adorner>, no el elemento adornado.  
+> El elemento primario de <xref:System.Windows.Documents.Adorner> es el <xref:System.Windows.Documents.AdornerLayer> que representa el <xref:System.Windows.Documents.Adorner>, no el elemento que se va a adornar.  
   
- En el ejemplo siguiente se muestra una clase que implementa un adorno simple. El adorno del ejemplo se limita adorna las esquinas de un <xref:System.Windows.UIElement> con círculos.  
+ En el ejemplo siguiente se muestra una clase que implementa un adorno simple. El adorno de ejemplo simplemente adorna las esquinas de un <xref:System.Windows.UIElement> con círculos.  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
  [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
- La siguiente imagen muestra el adorno SimpleCircleAdorner aplicada a un <xref:System.Windows.Controls.TextBox>.  
+ En la imagen siguiente se muestra el adorno simplecircleadorner aplicado <xref:System.Windows.Controls.TextBox>a un.  
   
  ![Captura de pantalla que muestra un cuadro de texto adornado.](./media/adorners-overview/simplecircleadorner-textbox.png)  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>Comportamiento de representación de los adornos  
- Es importante tener en cuenta que los adornos no incluyen ningún comportamiento de representación inherente; asegurarse de que un adorno se representa es responsabilidad del implementador del adorno.   Una manera común de implementar el comportamiento de representación es invalidar el <xref:System.Windows.UIElement.OnRender%2A> método y el uso de uno o más <xref:System.Windows.Media.DrawingContext> objetos para representar elementos de visuales del adorno según sea necesario (como se muestra en el ejemplo anterior).  
+ Es importante tener en cuenta que los adornos no incluyen ningún comportamiento de representación inherente; asegurarse de que un adorno se representa es responsabilidad del implementador del adorno.   Una manera común de implementar el comportamiento de representación es invalidar <xref:System.Windows.UIElement.OnRender%2A> el método y usar uno o <xref:System.Windows.Media.DrawingContext> varios objetos para representar los elementos visuales del adorno según sea necesario (como se muestra en el ejemplo anterior).  
   
 > [!NOTE]
->  Todo aquello que se coloca en la capa de los adornos se representa encima del resto de estilos que se han establecido. En otras palabras, los adornos siempre están visualmente encima y no pueden invalidar utilizando el orden z.  
+> Todo aquello que se coloca en la capa de los adornos se representa encima del resto de estilos que se han establecido. En otras palabras, los adornos siempre están visualmente encima y no pueden invalidar utilizando el orden z.  
   
 <a name="adorner_events_hittest"></a>   
 ## <a name="events-and-hit-testing"></a>Eventos y pruebas de posicionamiento  
- Los adornos reciben eventos de entrada como cualquier otro <xref:System.Windows.FrameworkElement>.  Dado que un adorno siempre tiene un orden z más alto que el elemento al que adorna, dicho adorno recibe los eventos de entrada (como <xref:System.Windows.UIElement.Drop> o <xref:System.Windows.UIElement.MouseMove>) que podrían estar pensados para el elemento adornado subyacente.  Un adorno puede realizar escuchas para ciertos eventos de entrada y pasárselos al elemento adornado subyacente volviendo a provocar el evento.  
+ Los adornos reciben eventos de entrada como cualquier <xref:System.Windows.FrameworkElement>otro.  Dado que un adorno siempre tiene un orden z mayor que el elemento que adorna, el adorno recibe eventos de entrada (como <xref:System.Windows.UIElement.Drop> o <xref:System.Windows.UIElement.MouseMove>) que pueden estar destinados al elemento adornado subyacente.  Un adorno puede realizar escuchas para ciertos eventos de entrada y pasárselos al elemento adornado subyacente volviendo a provocar el evento.  
   
- Para habilitar paso a través la prueba de posicionamiento de elementos en un adorno, establezca la prueba de posicionamiento <xref:System.Windows.UIElement.IsHitTestVisible%2A> propiedad **false** en el adorno.  Para más información sobre pruebas de posicionamiento, consulte  
+ Para habilitar la prueba de posicionamiento de paso a través de los elementos de un adorno, establezca <xref:System.Windows.UIElement.IsHitTestVisible%2A> la propiedad de la prueba de posicionamiento en **false** en el adorno.  Para más información sobre pruebas de posicionamiento, consulte  
   
  [Realizar pruebas de posicionamiento en la capa visual](../graphics-multimedia/hit-testing-in-the-visual-layer.md).  
   
@@ -74,27 +74,27 @@ Los Adorners son un tipo especial de <xref:System.Windows.FrameworkElement>, que
 ## <a name="adorning-a-single-uielement"></a>Adorno de un solo elemento de la interfaz de usuario  
  Para enlazar un adorno a un determinado <xref:System.Windows.UIElement>, siga estos pasos:  
   
-1. Llame al método estático <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> para obtener un <xref:System.Windows.Documents.AdornerLayer> de objeto para el <xref:System.Windows.UIElement> que se va a adornar. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> recorre el árbol visual, empezando en el índice especificado <xref:System.Windows.UIElement>y devuelve la primera capa de adornos que encuentra. (Si no se encuentra ninguna capa de adornos, el método devuelve null).  
+1. Llame al método <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> estático para obtener un <xref:System.Windows.Documents.AdornerLayer> objeto para el <xref:System.Windows.UIElement> que se va a adornar. <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>avanza el árbol visual, comenzando en el especificado <xref:System.Windows.UIElement>, y devuelve la primera capa de adornos que encuentra. (Si no se encuentra ninguna capa de adornos, el método devuelve null).  
   
-2. Llame a la <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para enlazar el adorno al destino <xref:System.Windows.UIElement>.  
+2. Llame al <xref:System.Windows.UIElement>método para enlazar el adorno al destino. <xref:System.Windows.Documents.AdornerLayer.Add%2A>  
   
- El ejemplo siguiente enlaza el adorno SimpleCircleAdorner (mostrado anteriormente) a un <xref:System.Windows.Controls.TextBox> denominado *myTextBox*.  
+ En el ejemplo siguiente se enlaza un adorno simplecircleadorner (mostrado anteriormente) a <xref:System.Windows.Controls.TextBox> un denominado *mytextbox*.  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornsingleelement)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornSingleElement](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornsingleelement)]  
   
 > [!NOTE]
->  En la actualidad, no se admite el uso de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para enlazar un adorno a otro elemento.  
+> En la actualidad, no se admite el uso de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para enlazar un adorno a otro elemento.  
   
 <a name="adorn_children_panel"></a>   
 ## <a name="adorning-the-children-of-a-panel"></a>Adornamiento de elementos secundarios de un panel  
- Para enlazar un adorno a los elementos secundarios de un <xref:System.Windows.Controls.Panel>, siga estos pasos:  
+ Para enlazar un adorno a los elementos secundarios de <xref:System.Windows.Controls.Panel>, siga estos pasos:  
   
-1. Llame a la `static` método <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> para buscar una capa de adornos para el elemento cuyos elementos secundarios desea adornar.  
+1. Llame al <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> método para buscar una capa de adornos para el elemento cuyos elementos secundarios se van a adornar. `static`  
   
-2. Enumere los elementos secundarios del elemento primario y llamada la <xref:System.Windows.Documents.AdornerLayer.Add%2A> método para enlazar un adorno a cada elemento secundario.  
+2. Enumere los elementos secundarios del elemento primario y llame <xref:System.Windows.Documents.AdornerLayer.Add%2A> al método para enlazar un adorno a cada elemento secundario.  
   
- El ejemplo siguiente enlaza el adorno SimpleCircleAdorner (mostrado anteriormente) a los elementos secundarios de un <xref:System.Windows.Controls.StackPanel> denominado *myStackPanel*.  
+ En el ejemplo siguiente se enlaza un adorno simplecircleadorner (mostrado anteriormente) a los elementos secundarios <xref:System.Windows.Controls.StackPanel> de un *myStackPanel*con nombre.  
   
  [!code-csharp[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_adornchildren)]
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  

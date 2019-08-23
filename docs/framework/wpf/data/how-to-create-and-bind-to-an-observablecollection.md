@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 0fd851ac413b54769bf6606b2220cf38934902be
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 8db9f2051a0401e01f233f9c959e015eb657bdac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401428"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965475"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Procedimiento Crear y enlazar a una colección ObservableCollection
 En este ejemplo se muestra cómo crear y enlazar a una colección que se deriva <xref:System.Collections.ObjectModel.ObservableCollection%601> de la clase, que es una clase de colección que proporciona notificaciones cuando se agregan o quitan elementos.  
@@ -136,7 +136,7 @@ End Class
  La definición de `NameItemTemplate` no se muestra aquí.  
   
 > [!NOTE]
->  Los objetos de la colección deben cumplir los requisitos descritos en la [Información general sobre orígenes de enlaces](binding-sources-overview.md). En concreto, si usa <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (por [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ejemplo, desea que actualice cuando las propiedades de origen cambian dinámicamente), debe implementar un mecanismo de notificación de cambio de propiedad adecuado como el <xref:System.ComponentModel.INotifyPropertyChanged>interfaz.  
+> Los objetos de la colección deben cumplir los requisitos descritos en la [Información general sobre orígenes de enlaces](binding-sources-overview.md). En concreto, si usa <xref:System.Windows.Data.BindingMode.OneWay> o <xref:System.Windows.Data.BindingMode.TwoWay> (por [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ejemplo, desea que actualice cuando las propiedades de origen cambian dinámicamente), debe implementar un mecanismo de notificación de cambio de propiedad adecuado como el <xref:System.ComponentModel.INotifyPropertyChanged>interfaz.  
   
  Para más información, consulte la sección Enlace a colecciones en [Información general sobre el enlace de datos](data-binding-overview.md).  
   

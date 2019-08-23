@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 2f907d097f52f13e733713d8ad68cc2390b051ed
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: a264ec3fa1232a058a3bfbabbe8b84712cf87322
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364234"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956413"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atributos de CLR relacionados con XAML para los tipos y bibliotecas personalizados
 En este tema se describen los atributos de Common Language Runtime (CLR) que se definen en .NET Framework servicios XAML. También se describen otros atributos CLR que se definen en el .NET Framework que tienen un escenario relacionado con XAML para la aplicación a ensamblados o tipos. La atribución de ensamblados, tipos o miembros con estos atributos CLR proporciona información del sistema de tipos XAML relacionada con los tipos. Se proporciona información a cualquier consumidor XAML que use .NET Framework servicios XAML para procesar el flujo de nodo XAML directamente o a través de los lectores XAML y escritores de XAML dedicados.  
@@ -266,7 +266,7 @@ En este tema se describen los atributos de Common Language Runtime (CLR) que se 
 - Puede definir la compatibilidad del lenguaje XAML en el ensamblado <xref:System.Windows.Markup.XmlnsDefinitionAttribute> y `http://schemas.microsoft.com/winfx/2006/xaml`tener un para. En este caso, normalmente debe promover el prefijo `x`.  
   
 > [!NOTE]
->  .NET Framework servicios XAML también define el atributo <xref:System.Windows.Markup.RootNamespaceAttribute>relacionado con XAML. Este atributo es un atributo de nivel de ensamblado para la compatibilidad del sistema del proyecto y no es relevante para los tipos personalizados de XAML.  
+> .NET Framework servicios XAML también define el atributo <xref:System.Windows.Markup.RootNamespaceAttribute>relacionado con XAML. Este atributo es un atributo de nivel de ensamblado para la compatibilidad del sistema del proyecto y no es relevante para los tipos personalizados de XAML.  
   
 ## <a name="see-also"></a>Vea también
 

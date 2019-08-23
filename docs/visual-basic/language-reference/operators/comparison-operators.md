@@ -30,12 +30,12 @@ helpviewer_keywords:
 - Is operator [Visual Basic]
 - comparison operators [Visual Basic], Visual Basic
 ms.assetid: d6cb12a8-e52e-46a7-8aaf-f804d634a825
-ms.openlocfilehash: 10558563b528ce0bae3f77f31a97a217018f455f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ddb07bdf5f67e281847082ba4487568e9ba3c9f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666822"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962230"
 ---
 # <a name="comparison-operators-visual-basic"></a>Operadores de comparación (Visual Basic)
 A continuación se muestran los operadores de comparación definidos en Visual Basic.
@@ -100,7 +100,7 @@ result = string Like pattern
 |`<>`(No es igual a)|`expression1` <> `expression2`|`expression1` = `expression2`|
 
 > [!NOTE]
->  El [operador =](../../../visual-basic/language-reference/operators/assignment-operator.md) también se usa como operador de asignación.
+> El [operador =](../../../visual-basic/language-reference/operators/assignment-operator.md) también se usa como operador de asignación.
 
  El `Is` operador, el `IsNot` operador y el `Like` operador tienen funcionalidades de comparación específicas que difieren de los operadores de la tabla anterior.
 

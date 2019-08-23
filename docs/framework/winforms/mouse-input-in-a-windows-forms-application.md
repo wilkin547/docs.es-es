@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, mouse input
 ms.assetid: 743c2f3c-219e-4a52-b6b8-2657096a2da6
-ms.openlocfilehash: 3b4e9eff3f5c4c032e75ded0913ce2cc6051498d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91bbf61029d52cf1d434136ee72ef389ca499ebc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949897"
 ---
 # <a name="mouse-input-in-a-windows-forms-application"></a>Entradas mediante el mouse (ratón) en una aplicación de Windows Forms
 Windows Forms incluye una variedad de eventos del mouse y compatibilidad adicional con cursores personalizados del mouse, captura del mouse y comportamiento de arrastrar y soltar.  
@@ -21,7 +21,7 @@ Windows Forms incluye una variedad de eventos del mouse y compatibilidad adicion
  [Eventos del mouse en Windows Forms](mouse-events-in-windows-forms.md)  
  Proporciona información sobre el orden en que se producen los eventos del mouse y cómo se generan dentro de controles específicos.  
   
- [Cómo: Distinguir entre los clics y hace doble clic en](how-to-distinguish-between-clicks-and-double-clicks.md)  
+ [Cómo: Distinguir entre los clics y los dos clics](how-to-distinguish-between-clicks-and-double-clicks.md)  
  Muestra cómo usar clics únicos y dobles para iniciar acciones no compatibles.  
   
  [Punteros del mouse en Windows Forms](mouse-pointers-in-windows-forms.md)  
@@ -34,5 +34,5 @@ Windows Forms incluye una variedad de eventos del mouse y compatibilidad adicion
  Describe cómo implementar el comportamiento de arrastrar y soltar.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Acceso al mouse](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
+ [Acceso al mouse](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
  Muestra los temas para obtener acceso al mouse con Visual Basic.

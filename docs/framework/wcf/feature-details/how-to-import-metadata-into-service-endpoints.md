@@ -2,15 +2,15 @@
 title: Procedimiento para importar metadatos a puntos de conexión de servicio
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: afee3f2236db99b14c0e840d987e4862a260568e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dce65c31134c211c134cbae2b9bd8296f74b1627
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047833"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930725"
 ---
 # <a name="how-to-import-metadata-into-service-endpoints"></a>Procedimiento para importar metadatos a puntos de conexión de servicio
-En este tema se explica cómo importar los metadatos en una colección de extremos de servicio y usar el servicio definido en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este tema se muestra cómo crear una aplicación cliente que importa los metadatos desde el servicio y, a continuación, llama al método `Add` en el servicio.  
+En este tema se explica cómo importar metadatos en una colección de puntos de conexión de servicio y usar el servicio definido en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md). En este tema se muestra cómo crear una aplicación cliente que importa los metadatos desde el servicio y, a continuación, llama al método `Add` en el servicio.  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>Para importar metadatos a puntos de conexión de servicio  
   
@@ -27,7 +27,7 @@ En este tema se explica cómo importar los metadatos en una colección de extrem
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  Después de haber importado los metadatos, no podrá crear un canal de cliente o exportar los metadatos. Esto es porque ninguna información de tipo está disponible en este punto. Se exige información de tipo para interactuar realmente con el servicio o exportar los metadatos. Para generar la información de tipo, necesita generar el código, tal como se muestra en los pasos 4 y 5. También podría utilizar la clase del asistente <xref:System.ServiceModel.Description.MetadataResolver>. Para obtener más información, vea [Cómo: Utilizar MetadataResolver para obtener dinámicamente metadatos de enlace](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md).  
+    > Después de haber importado los metadatos, no podrá crear un canal de cliente o exportar los metadatos. Esto es porque ninguna información de tipo está disponible en este punto. Se exige información de tipo para interactuar realmente con el servicio o exportar los metadatos. Para generar la información de tipo, necesita generar el código, tal como se muestra en los pasos 4 y 5. También podría utilizar la clase del asistente <xref:System.ServiceModel.Description.MetadataResolver>. Para obtener más información, consulte [Cómo Use MetadataResolver para obtener dinámicamente](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)los metadatos de enlace.  
   
 4. Genere información de tipo para cada contrato.  
   

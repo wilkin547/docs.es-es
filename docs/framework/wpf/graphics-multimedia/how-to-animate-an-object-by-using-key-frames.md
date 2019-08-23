@@ -5,29 +5,29 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ffbe1845b634c8f94eb6a10dfa44fcf9903e0cd5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020158"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933909"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Procedimiento Animar un objeto mediante fotogramas clave
-En este ejemplo se muestra cómo animar un objeto, que en este ejemplo es el <xref:System.Windows.Controls.Page.Background%2A> propiedad de un <xref:System.Windows.Controls.Page> control mediante fotogramas clave.  
+En este ejemplo se muestra cómo animar un objeto, que en este ejemplo <xref:System.Windows.Controls.Page.Background%2A> es la propiedad <xref:System.Windows.Controls.Page> de un control, mediante fotogramas clave.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa el <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> clase se va a animar el color cambia para el <xref:System.Windows.Controls.Page.Background%2A> propiedad de un <xref:System.Windows.Controls.Page> control. La animación en el ejemplo se cambia a un pincel de fondo diferente a intervalos regulares. Esta animación usa el <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> clase para crear tres fotogramas clave diferentes. La animación utiliza fotogramas clave en la siguiente manera:  
+ En el ejemplo siguiente se <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> usa la clase para animar los <xref:System.Windows.Controls.Page.Background%2A> cambios de color <xref:System.Windows.Controls.Page> de la propiedad de un control. La animación de ejemplo cambia a un pincel de fondo diferente a intervalos regulares. Esta animación usa la <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> clase para crear tres fotogramas clave diferentes. La animación utiliza fotogramas clave de la siguiente manera:  
   
-1. Al final del primer segundo, anima una instancia de la <xref:System.Windows.Media.LinearGradientBrush> clase. En esta sección del ejemplo aplica un degradado lineal al color de fondo para que el color pasa de amarillo a naranja a rojo.  
+1. Al final del primer segundo, anima una instancia de la <xref:System.Windows.Media.LinearGradientBrush> clase. En esta sección del ejemplo se aplica un degradado lineal al color de fondo para que el color pase de amarillo a rojo.  
   
-2. Al final del segundo siguiente, anima una instancia de la <xref:System.Windows.Media.RadialGradientBrush> clase. En esta sección del ejemplo aplica un degradado radial al color de fondo para que el color pasa de negro a azul a negro.  
+2. Al final del siguiente segundo, anima una instancia de la <xref:System.Windows.Media.RadialGradientBrush> clase. En esta sección del ejemplo se aplica un degradado radial al color de fondo para que el color pase de blanco a azul a negro.  
   
-3. Al final del tercer segundo, anima una instancia de la <xref:System.Windows.Media.DrawingBrush> clase. En esta sección del ejemplo se aplica un patrón de tablero a segundo plano.  
+3. Al final del tercer segundo, anima una instancia de la <xref:System.Windows.Media.DrawingBrush> clase. En esta sección del ejemplo se aplica un patrón de tablero de ajedrez al fondo.  
   
 4. La animación comienza de nuevo y se repite indefinidamente.  
   
 > [!NOTE]
->  <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> es el único tipo de fotograma clave que puede usar con el <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> clase. Fotogramas clave como <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> crean cambios súbitos en valores, es decir, los cambios de color en este ejemplo se producen de repente.  
+> <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>es el único tipo de fotograma clave que se puede utilizar con <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> la clase. Fotogramas <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> clave, como crear cambios súbitos en valores, es decir, los cambios de color de este ejemplo se producen repentinamente.  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   

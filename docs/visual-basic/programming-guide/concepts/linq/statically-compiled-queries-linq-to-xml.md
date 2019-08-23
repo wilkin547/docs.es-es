@@ -2,12 +2,12 @@
 title: Consultas compiladas estáticamente (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
-ms.openlocfilehash: b26e0e21ae88ae0a40de1593294c004d394e38ed
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f9e703e65b333c0fd0c2a3219d537466c686af10
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610664"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961894"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>Consultas compiladas estáticamente (LINQ to XML) (Visual Basic)
 Una de las ventajas de rendimiento más importantes de LINQ to XML, a diferencia de <xref:System.Xml.XmlDocument>, es que las consultas LINQ to XML se compilan estáticamente, mientras que las consultas XPath deben interpretarse durante la ejecución. Esta característica está incorporada en LINQ to XML, de modo que no tiene que efectuar pasos adicionales para aprovecharla, pero resulta útil comprender la distinción a la hora de elegir entre las dos tecnologías. Este tema explica la diferencia.  
@@ -56,10 +56,10 @@ For Each el In list1
 Next  
 ```  
   
- Este ejemplo produce exactamente los mismos resultados que los dos ejemplos anteriores. Esto ilustra el hecho de que las consultas se compilan de forma efectiva en llamadas a método vinculadas estáticamente. Esto, combinado con la semántica de ejecución aplazada de los iteradores, mejora el rendimiento. Para obtener más información sobre la semántica de ejecución aplazada de iteradores, vea [ejecución aplazada y evaluación diferida en LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
+ Este ejemplo produce exactamente los mismos resultados que los dos ejemplos anteriores. Esto ilustra el hecho de que las consultas se compilan de forma efectiva en llamadas a método vinculadas estáticamente. Esto, combinado con la semántica de ejecución aplazada de los iteradores, mejora el rendimiento. Para obtener más información sobre la semántica de ejecución aplazada de los iteradores, vea [ejecución aplazada y evaluación diferida en LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 > [!NOTE]
->  Estos ejemplos son representativos del código que el compilador podría escribir. La implementación real podría diferir ligeramente de estos ejemplos, pero el rendimiento será el mismo o similar a estos ejemplos.  
+> Estos ejemplos son representativos del código que el compilador podría escribir. La implementación real podría diferir ligeramente de estos ejemplos, pero el rendimiento será el mismo o similar a estos ejemplos.  
   
 ## <a name="executing-xpath-expressions-with-xmldocument"></a>Ejecutar expresiones XPath con XmlDocument  
  En el ejemplo de código siguiente se usa <xref:System.Xml.XmlDocument> para lograr los mismos resultados que en los ejemplos anteriores:  
@@ -79,13 +79,13 @@ reader.Close()
   
  No obstante, el enfoque de <xref:System.Xml.XmlDocument> generalmente no funciona tan bien como LINQ to XML, porque el método <xref:System.Xml.XmlNode.SelectNodes%2A> debe realizar lo siguiente internamente cada vez que se le llama:  
   
-- Analiza la cadena que contiene la expresión XPath, y divide la cadena en tokens.  
+-   Analiza la cadena que contiene la expresión XPath, y divide la cadena en tokens.  
   
-- Valida los tokens para asegurarse de que la expresión XPath es válida.  
+-   Valida los tokens para asegurarse de que la expresión XPath es válida.  
   
-- Traduce la expresión a un árbol de expresión interno.  
+-   Traduce la expresión a un árbol de expresión interno.  
   
-- Recorre en iteración los nodos, y selecciona de forma adecuada los nodos del conjunto de resultados basándose en la evaluación de la expresión.  
+-   Recorre en iteración los nodos, y selecciona de forma adecuada los nodos del conjunto de resultados basándose en la evaluación de la expresión.  
   
  Esto es bastante más que el trabajo realizado por la consulta LINQ to XML correspondiente. La diferencia de rendimiento específica varía para distintos tipos de consultas, pero en general las consultas LINQ to XML efectúan menos operaciones y, por lo tanto, se ejecutan mejor, que si se evalúan las expresiones XPath con <xref:System.Xml.XmlDocument>.  
   

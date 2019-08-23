@@ -2,18 +2,18 @@
 title: Cambiar los niveles de uso compartido de caché para actividades Send
 ms.date: 03/30/2017
 ms.assetid: 03926a64-753d-460e-ac06-2a4ff8e1bbf5
-ms.openlocfilehash: ac4f2e4fe85d6b243999add6bda65f4fb202f79c
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 587440bd343513aeff51f1ed0947573fbe612f22
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363844"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952587"
 ---
 # <a name="changing-the-cache-sharing-levels-for-send-activities"></a>Cambiar los niveles de uso compartido de caché para actividades Send
 La extensión <xref:System.ServiceModel.Activities.SendMessageChannelCache> le permite personalizar los niveles de uso compartido de la memoria caché, la configuración de la memoria caché del generador de canales y la de la memoria caché del canal para los flujos de trabajo que envían mensajes a los puntos de conexión de servicio utilizando las actividades de mensajería de <xref:System.ServiceModel.Activities.Send>. Estos flujos de trabajo son normalmente flujos de trabajo del cliente pero podrían ser también servicios de flujo de trabajo que se hospedan en <xref:System.ServiceModel.WorkflowServiceHost>. La memoria caché del generador de canales contiene objetos <xref:System.ServiceModel.ChannelFactory%601> almacenados en caché. La memoria caché del canal contiene canales almacenados en memoria caché.  
   
 > [!NOTE]
->  Los flujos de trabajo pueden usar las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> para enviar mensajes o parámetros. El tiempo de ejecución del flujo de trabajo agrega los generadores de canales a la memoria caché que crean canales de tipo <xref:System.ServiceModel.Channels.IRequestChannel> cuando se usa una actividad <xref:System.ServiceModel.Activities.ReceiveReply> con una actividad <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Channels.IOutputChannel> cuando se usa solo una actividad <xref:System.ServiceModel.Activities.Send> (sin <xref:System.ServiceModel.Activities.ReceiveReply>).  
+> Los flujos de trabajo pueden usar las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> para enviar mensajes o parámetros. El tiempo de ejecución del flujo de trabajo agrega los generadores de canales a la memoria caché que crean canales de tipo <xref:System.ServiceModel.Channels.IRequestChannel> cuando se usa una actividad <xref:System.ServiceModel.Activities.ReceiveReply> con una actividad <xref:System.ServiceModel.Activities.Send> y <xref:System.ServiceModel.Channels.IOutputChannel> cuando se usa solo una actividad <xref:System.ServiceModel.Activities.Send> (sin <xref:System.ServiceModel.Activities.ReceiveReply>).  
   
 ## <a name="the-cache-sharing-levels"></a>Niveles de uso compartido de memoria caché  
  De manera predeterminada, en un flujo de trabajo hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché usada por las actividades de mensajería de <xref:System.ServiceModel.Activities.Send> se comparte en todas las instancias de flujo de trabajo en <xref:System.ServiceModel.WorkflowServiceHost> (el almacenamiento en caché de nivel de host). Para un flujo de trabajo del cliente que no esté hospedado por <xref:System.ServiceModel.WorkflowServiceHost>, la memoria caché está solo disponible para la instancia de flujo de trabajo (almacenamiento en caché en el nivel de instancia). La memoria caché solo está disponible para las actividades <xref:System.ServiceModel.Activities.Send> que no usan puntos de conexión definidos en la configuración a menos que esté habilitado el almacenamiento en memoria caché no seguro.  

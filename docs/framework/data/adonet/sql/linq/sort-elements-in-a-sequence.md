@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 8f645232d2ae9d9bad8c26a5b9fec2243c6cf9d0
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: f6f112a63dd976a1d6ae91f2fafd6678a9f40846
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380020"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945089"
 ---
 # <a name="sort-elements-in-a-sequence"></a>Ordenar los elementos de una secuencia
 Utilice el operador <xref:System.Linq.Enumerable.OrderBy%2A> para ordenar una secuencia según una o más claves.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] está diseñado para permitir la ordenación según tipos primitivos simples, tales como `string`, `int`, y así sucesivamente. No admite la ordenación de clases complejas con valores múltiples, como los tipos anónimos. Tampoco admite los tipos de datos `byte`.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]está diseñado para admitir la ordenación por tipos primitivos simples `string`, `int`como,, etc. No admite la ordenación de clases complejas con valores múltiples, como los tipos anónimos. Tampoco admite los tipos de datos `byte`.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se ordena `Employees` por fecha de contratación.  
@@ -43,7 +43,7 @@ Utilice el operador <xref:System.Linq.Enumerable.OrderBy%2A> para ordenar una se
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente ordena los pedidos de `EmployeeID 1` por `ShipCountry`y, a continuación, por flete mayor a menor.  
+ En el ejemplo siguiente se ordenan `ShipCountry`los pedidos de `EmployeeID 1` por y, a continuación, de mayor a menor.  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  

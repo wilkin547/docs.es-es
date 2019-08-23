@@ -2,17 +2,17 @@
 title: Proceso de compra corporativa
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d019c1915e691fcba00fa8f1b0884a898ce02fab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876170"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951523"
 ---
 # <a name="corporate-purchase-process"></a>Proceso de compra corporativa
 En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básicas en función del proceso de compra con selección automática de la mejor propuesta. Combina <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> y una actividad personalizada <xref:System.Activities.Statements.ForEach%601> para crear un flujo de trabajo que representa el proceso.
 
- Este ejemplo contiene una aplicación de cliente ASP.NET que permite interactuar con el proceso como diferentes participantes (como el solicitante original o un proveedor en particular).
+ Este ejemplo contiene una aplicación cliente de ASP.NET que permite interactuar con el proceso como participantes diferentes (como el solicitante original o un proveedor determinado).
 
 ## <a name="requirements"></a>Requisitos
 
@@ -36,19 +36,19 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 
 - Seguimiento
 
-- Hospedaje [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en clientes diferentes (aplicaciones Web ASP.NET y aplicaciones de WinForms).
+- Hospedaje [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en diferentes clientes (aplicaciones Web ASP.net y aplicaciones de WinForms).
 
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Descripción del proceso  
- En este ejemplo se muestra una implementación de un programa de Windows Workflow Foundation (WF) para recopilar las propuestas de los proveedores para una compañía genérica.  
+ En este ejemplo se muestra una implementación de un programa de Windows Workflow Foundation (WF) para recopilar propuestas de proveedores para una empresa genérica.  
   
 1. Un empleado de la compañía X crea una solicitud de propuestas (RFP).  
   
@@ -78,17 +78,17 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 ## <a name="projects-in-this-sample"></a>Proyectos en este ejemplo  
  Este ejemplo contiene los siguientes proyectos.  
   
-|Proyecto|Descripción|  
+|Proyecto|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |Común|Los objetos entidad utilizados dentro del proceso (solicitud de propuesta, proveedor y propuesta del proveedor).|  
 |WfDefinition|La definición del proceso (como un programa [!INCLUDE[wf1](../../../../includes/wf1-md.md)]) y el host (`PurchaseProcessHost`) utilizado por las aplicaciones cliente para crear y utilizar instancias del flujo de trabajo del proceso de compra.|  
-|WebClient|Una aplicación de cliente ASP.NET que permite a los usuarios crear y participar en instancias del proceso de compra. Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.|  
+|WebClient|Una aplicación cliente de ASP.NET que permite a los usuarios crear y participar en instancias del proceso de compra. Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.|  
 |WinFormsClient|Una aplicación cliente de Windows Forms que permite a los usuarios crear y participar en instancias del proceso de compra. Utiliza un host creado de forma personalizada para interactuar con el motor del flujo de trabajo.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
  La siguiente tabla contiene una descripción de los archivos más importantes dentro del proyecto WfDefinition.  
   
-|Archivo|Descripción|  
+|Archivo|DESCRIPCIÓN|  
 |----------|-----------------|  
 |IPurchaseProcessHost.cs|Interfaz del host del flujo de trabajo.|  
 |PurchaseProcessHost.cs|Implementación de un host para el flujo de trabajo. El host resume los detalles del tiempo de ejecución del flujo de trabajo y se utiliza en todas las aplicaciones cliente para cargar, ejecutar e interactuar con instancias de flujo de trabajo `PurchaseProcess`.|  
@@ -102,7 +102,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 ### <a name="common"></a>Común  
  La siguiente tabla contiene una descripción de las clases más importantes dentro del proyecto Común.  
   
-|Clase|Descripción|  
+|Clase|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |Vendor|Un proveedor que envía propuestas en una solicitud de propuestas.|  
 |RequestForProposal|Una solicitud de propuestas (RFP) es una invitación para que los proveedores envíen propuestas para un artículo o un servicio concretos.|  
@@ -114,7 +114,7 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 ### <a name="web-client"></a>Cliente web  
  La siguiente tabla contiene una descripción de las páginas web más importantes dentro del proyecto Cliente web.  
   
-|Archivo|Descripción|  
+|Archivo|DESCRIPCIÓN|  
 |-|-|  
 |CreateRfp.aspx|Crea y envía nuevas solicitudes de propuestas.|  
 |Default.aspx|Muestra todas las solicitudes de propuestas activas y completas.|  
@@ -124,17 +124,17 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
 ### <a name="winforms-client"></a>Cliente de WinForms  
  La siguiente tabla contiene una descripción de los formularios más importantes dentro del proyecto de WinForms.  
   
-|Form|Descripción|  
+|Form|DESCRIPCIÓN|  
 |-|-|  
 |NewRfp|Crea y envía nuevas solicitudes de propuestas.|  
-|ShowProposals|Muestra todas las solicitudes de propuestas activas y finalizadas. **Nota:**  Es posible que deba haga clic en el **actualizar** botón en la interfaz de usuario para ver los cambios en esa pantalla después de crear o modificar una solicitud de propuesta.|  
+|ShowProposals|Muestra todas las solicitudes de propuestas activas y finalizadas. **Nota:**  Es posible que tenga que hacer clic en el botón **Actualizar** en la interfaz de usuario para ver los cambios en la pantalla después de crear o modificar una solicitud de propuesta.|  
 |SubmitProposal|Recibe una propuesta de un proveedor en una solicitud de propuestas concreta. Esta ventana solo la usan los proveedores.|  
 |ViewRfp|Muestra toda la información sobre una solicitud de propuestas (propuestas recibidas, fechas, valores y otra información). Esta ventana solo la usa el creador de la solicitud de propuestas.|  
   
 ### <a name="persistence-files"></a>Archivos de persistencia  
  La siguiente tabla muestra los archivos generados por el proveedor de persistencia (`XmlPersistenceProvider`) que se encuentran en la ruta de acceso de la carpeta temporal del sistema actual (utilizando <xref:System.IO.Path.GetTempPath%2A>). El archivo de traza se crea en la ruta de acceso de ejecución actual.  
   
-|Nombre de archivo|Descripción|Ruta de acceso|  
+|Nombre de archivo|DESCRIPCIÓN|Ruta de acceso|  
 |-|-|-|  
 |rfps.xml|El archivo XML con todas las solicitudes de propuestas activas y finalizadas.|<xref:System.IO.Path.GetTempPath%2A>|  
 |[instanceid]|Este archivo contiene toda la información sobre una instancia de flujo de trabajo.<br /><br /> La implementación de la persistencia esquematizada (PersistenceParticipant en XmlPersistenceProvider) genera este archivo.|<xref:System.IO.Path.GetTempPath%2A>|  
@@ -143,11 +143,11 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo  
   
-1. Con Visual Studio 2010, abra el archivo de solución PurchaseProcess.sln.  
+1. Con Visual Studio 2010, abra el archivo de solución PurchaseProcess. sln.  
   
-2. Para ejecutar el proyecto de cliente Web, abra **el Explorador de soluciones** y haga clic en el **Web cliente** proyecto. Seleccione **establecer como proyecto de inicio**.  
+2. Para ejecutar el proyecto de cliente web, Abra **Explorador de soluciones** y haga clic con el botón secundario en el proyecto de **cliente web** . Seleccione **establecer como proyecto de inicio**.  
   
-3. Para ejecutar el proyecto de cliente de WinForms, abra **el Explorador de soluciones** y haga clic en el **cliente de WinForms** proyecto. Seleccione **establecer como proyecto de inicio**.  
+3. Para ejecutar el proyecto de cliente de WinForms, Abra **Explorador de soluciones** y haga clic con el botón secundario en el proyecto de **cliente de WinForms** . Seleccione **establecer como proyecto de inicio**.  
   
 4. Para compilar la solución, presione Ctrl+MAYÚS+B.  
   
@@ -155,20 +155,20 @@ En este ejemplo se muestra cómo crear solicitudes de propuesta (RFP) muy básic
   
 ### <a name="web-client-options"></a>Opciones del cliente web  
   
-- **Crear un nuevo RFP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
+- **Cree una nueva PDP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
   
-- **Actualizar**: Actualiza la lista de activas y finalizadas en la ventana principal.  
+- **Actualizar**: Actualiza la lista de propuestas activos y finalizados en la ventana principal.  
   
-- **Vista**: Muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
+- **Vista**: Muestra el contenido de una PDP existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
   
-- Ver como: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.  
+- Ver como: El usuario puede tener acceso a la PDP mediante identidades diferentes seleccionando el participante deseado en el cuadro combinado **ver como** en la cuadrícula de propuestas activa.  
   
 ### <a name="winforms-client-options"></a>Opciones del cliente de WinForms  
   
-- **Crear RFP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
+- **Crear PDP**: Crea una nueva solicitud de propuestas (RFP) e inicia un flujo de trabajo de proceso de compra.  
   
-- **Actualizar**: Actualiza la lista de activas y finalizadas en la ventana principal.  
+- **Actualizar**: Actualiza la lista de propuestas activos y finalizados en la ventana principal.  
   
-- **Ver RFP**: Muestra el contenido de una solicitud de propuestas existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
+- **Ver PDP**: Muestra el contenido de una PDP existente. Los proveedores pueden enviar sus propuestas (si están invitados o la solicitud de propuestas no finaliza).  
   
-- **Conectar como**: El usuario puede tener acceso a la solicitud de propuestas utilizando diferentes identidades seleccionando el participante deseado en el **ver como** cuadro combinado en la cuadrícula de la solicitud de propuestas activa.
+- **Conectar como**: El usuario puede tener acceso a la PDP mediante identidades diferentes seleccionando el participante deseado en el cuadro combinado **ver como** en la cuadrícula de propuestas activa.

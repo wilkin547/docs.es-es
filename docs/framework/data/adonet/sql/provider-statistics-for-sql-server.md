@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: de05a8783fa957c459006e3ec27d9e8668e7226c
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e13c4df87909629a45830e3b7950551434ed5ab1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422639"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946588"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Estadísticas de proveedor de SQL Server
 Desde .NET Framework versión 2.0, el proveedor de datos .NET Framework para servidor SQL Server admite estadísticas en tiempo de ejecución. Para habilitar las estadísticas, establezca la propiedad <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> del objeto <xref:System.Data.SqlClient.SqlConnection> en `True` después de que haya creado un objeto de conexión válido. Una vez habilitadas las estadísticas, puede revisarlas como una "instantánea en el tiempo" si recupera una referencia <xref:System.Collections.IDictionary> mediante el método <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> del objeto <xref:System.Data.SqlClient.SqlConnection>. La enumeración tiene lugar a través de la lista como un conjunto de entradas de diccionario de pares de nombre y valor. Estos pares de nombre y valor están sin ordenar. En cualquier momento, puede llamar al método <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> del objeto <xref:System.Data.SqlClient.SqlConnection> para restablecer los contadores. Si la recopilación de estadísticas no se ha habilitado, no se genera una excepción. Además, si se llama a <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> sin haber llamado primero a <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>, los valores recuperados son los valores iniciales de cada entrada. Si habilita las estadísticas, ejecuta la aplicación durante un rato y, a continuación, deshabilita las estadísticas, los valores recuperados reflejarán los valores recopilados hasta el momento en que se deshabilitaron las estadísticas. Todos los valores estadísticos recuperados son por cada conexión.  
   
 ## <a name="statistical-values-available"></a>Valores estadísticos disponibles  
- Actualmente, hay 18 elementos diferentes disponibles con el proveedor de Microsoft SQL Server. El número de elementos disponibles que puede obtenerse a través de la **recuento** propiedad de la <xref:System.Collections.IDictionary> referencia devuelto por la interfaz <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>. Todos los contadores para estadísticas de proveedor utilizan common language runtime <xref:System.Int64> tipo (**largo** en C# y Visual Basic), que es el ancho de 64 bits. El valor máximo de la **int64** tipo de datos, como se define en el **int64. MaxValue** campo, es ((2^63)-1)). Cuando los valores de los contadores alcanzan este valor máximo, ya no se deben considerar precisos. Esto significa que **int64. MaxValue**-1((2^63)-2) es realmente el valor válido para cualquier estadística.  
+ Actualmente, hay 18 elementos diferentes disponibles con el proveedor de Microsoft SQL Server. Se puede tener acceso al número de elementos disponibles a través de la propiedad Count <xref:System.Collections.IDictionary> de la referencia de <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>interfaz devuelta por. Todos los contadores para las estadísticas de proveedor usan el <xref:System.Int64> tipo de Common Language Runtime ( C# **Long** en y Visual Basic), que es de 64 bits de ancho. El valor máximo del tipo de datos **Int64** , tal como se define en **Int64.** El campo MaxValue es ((2 ^ 63)-1)). Cuando los valores de los contadores alcanzan este valor máximo, ya no se deben considerar precisos. Esto significa que **Int64. MaxValue**-1 ((2 ^ 63)-2) es realmente el valor válido más alto para cualquier estadística.  
   
 > [!NOTE]
->  Para devolver estadísticas de proveedor se emplea un diccionario, dado que el número, los nombres y el orden de las estadísticas devueltas podrían cambiar en el futuro. Las aplicaciones no deben depender de que se encuentre un valor específico en el diccionario, sino que, por el contrario, deben comprobar si el valor está ahí y bifurcarse en consecuencia.  
+> Para devolver estadísticas de proveedor se emplea un diccionario, dado que el número, los nombres y el orden de las estadísticas devueltas podrían cambiar en el futuro. Las aplicaciones no deben depender de que se encuentre un valor específico en el diccionario, sino que, por el contrario, deben comprobar si el valor está ahí y bifurcarse en consecuencia.  
   
  En la siguiente tabla se describen los valores estadísticos actuales disponibles. Tenga en cuenta que los nombres de claves de los valores individuales no se localizan en las versiones regionales de Microsoft .NET Framework.  
   
-|Nombre de clave|Descripción|  
+|Nombre de clave|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |`BuffersReceived`|Devuelve el número de paquetes de flujo de datos en tabla (TDS) recibidos por el proveedor de SQL Server una vez que se ha iniciado la aplicación con el proveedor y se han habilitado las estadísticas.|  
 |`BuffersSent`|Devuelve el número de paquetes TDS enviados a SQL Server por el proveedor una vez que se han habilitado las estadísticas. Los comandos grandes pueden necesitar varios búferes. Por ejemplo, si se envía un comando largo al servidor y necesita seis paquetes, `ServerRoundtrips` aumenta en uno y `BuffersSent` aumenta en seis.|  
@@ -48,7 +48,7 @@ Desde .NET Framework versión 2.0, el proveedor de datos .NET Framework para ser
  La siguiente aplicación de consola muestra cómo habilitar las estadísticas en una conexión, recuperar cuatro valores estadísticos individuales y escribirlos en la ventana de la consola.  
   
 > [!NOTE]
->  En el ejemplo siguiente se usa el ejemplo **AdventureWorks** incluido con SQL Server de la base de datos. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.  
+> En el ejemplo siguiente se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.  
   
 ```vb  
 Option Strict On  
@@ -204,7 +204,7 @@ namespace CS_Stats_Console_GetValue
  La siguiente aplicación de consola muestra cómo habilitar las estadísticas en una conexión, recuperar todos los valores estadísticos disponibles y escribirlos en la ventana de la consola.  
   
 > [!NOTE]
->  En el ejemplo siguiente se usa el ejemplo **AdventureWorks** incluido con SQL Server de la base de datos. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.  
+> En el ejemplo siguiente se usa la base de datos de ejemplo **AdventureWorks** que se incluye con SQL Server. La cadena de conexión proporcionada en el código de ejemplo asume que la base de datos está instalada y disponible en el equipo local. Modifique la cadena de conexión según sea necesario para su entorno.  
   
 ```vb  
 Option Strict On  

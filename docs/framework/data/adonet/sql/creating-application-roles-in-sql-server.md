@@ -2,18 +2,18 @@
 title: Crear roles de aplicación en SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e7060e1b171ee1791b9986250fe6f2050ec77acd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910712"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961164"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Crear roles de aplicación en SQL Server
 Los roles de aplicación proporcionan un método para asignar permisos a una aplicación sin necesidad de utilizar un rol o o un usuario de base de datos. Los usuarios se pueden conectar a la base de datos, activar el rol de aplicación y asumir los permisos concedidos a la aplicación. Los permisos concedidos al rol de aplicación se mantienen mientras dura la conexión.  
   
 > [!IMPORTANT]
->  Los roles de aplicación se activan cuando una aplicación cliente proporciona un nombre de rol de aplicación y una contraseña en la cadena de conexión. Presentan una vulnerabilidad de seguridad en las aplicaciones de dos niveles, ya que la contraseña se debe almacenar en el equipo cliente. En una aplicación de tres niveles, puede almacenar la contraseña de forma que los usuarios de la aplicación no tengan acceso a ella.  
+> Los roles de aplicación se activan cuando una aplicación cliente proporciona un nombre de rol de aplicación y una contraseña en la cadena de conexión. Presentan una vulnerabilidad de seguridad en las aplicaciones de dos niveles, ya que la contraseña se debe almacenar en el equipo cliente. En una aplicación de tres niveles, puede almacenar la contraseña de forma que los usuarios de la aplicación no tengan acceso a ella.  
   
 ## <a name="application-role-features"></a>Características de los roles de aplicación  
  Los roles de aplicación tienen las siguientes características:  
@@ -47,14 +47,14 @@ Los roles de aplicación proporcionan un método para asignar permisos a una apl
   
  Puede tener en cuenta las alternativas siguientes.  
   
-- Usar el cambio de contexto con la instrucción EXECUTE AS y sus cláusulas NO REVERT y WITH COOKIE. Puede crear una cuenta de usuario en una base de datos que no esté asignada a un inicio de sesión. Posteriormente asignará permisos a esta cuenta. El uso de EXECUTE AS con un usuario sin inicio de sesión resulta más seguro, ya que se basa en los permisos y no en una contraseña. Para obtener más información, consulte [personalizar permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+- Usar el cambio de contexto con la instrucción EXECUTE AS y sus cláusulas NO REVERT y WITH COOKIE. Puede crear una cuenta de usuario en una base de datos que no esté asignada a un inicio de sesión. Posteriormente asignará permisos a esta cuenta. El uso de EXECUTE AS con un usuario sin inicio de sesión resulta más seguro, ya que se basa en los permisos y no en una contraseña. Para obtener más información, consulte [Personalización de permisos con suplantación en SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
-- Firmar procedimientos almacenados con certificados y conceder únicamente permiso para ejecutar los procedimientos. Para obtener más información, consulte [firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
+- Firmar procedimientos almacenados con certificados y conceder únicamente permiso para ejecutar los procedimientos. Para obtener más información, vea [firmar procedimientos almacenados en SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
 ## <a name="external-resources"></a>Recursos externos  
  Para obtener más información, vea los siguientes recursos.  
   
-|Recurso|Descripción|  
+|Recurso|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |[Roles de aplicación](/sql/relational-databases/security/authentication-access/application-roles)|Describe cómo crear y usar roles de aplicación en SQL Server 2008.|  
   

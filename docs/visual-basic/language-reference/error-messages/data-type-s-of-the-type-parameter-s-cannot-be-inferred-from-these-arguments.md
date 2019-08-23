@@ -10,20 +10,20 @@ helpviewer_keywords:
 - BC36644
 - BC36647
 ms.assetid: 0e0050f2-2039-4311-b260-f0ebfde84189
-ms.openlocfilehash: 4167905ca6ddab66b2cbc6c8c40dc7c984e94b8b
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 81535e3272eaed587288c26c4a4b9649467abed8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913191"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963560"
 ---
 # <a name="data-types-of-the-type-parameters-cannot-be-inferred-from-these-arguments"></a>Los tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos
-Tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos. Especificar los tipos de datos explícitamente puede corregir este error.  
+Los tipos de datos de los parámetros de tipo no se pueden inferir de estos argumentos. Especificar los tipos de datos explícitamente puede corregir este error.  
   
  Este error se produce cuando en caso de error en la resolución de sobrecarga. Se produce como un mensaje subordinado que indica por qué se ha eliminado un candidato de sobrecarga determinado. El mensaje de error explica que el compilador no puede usar la inferencia de tipos para buscar tipos de datos para los parámetros de tipo.  
   
 > [!NOTE]
->  Al especificar argumentos no es una opción (por ejemplo, para operadores de consulta en expresiones de consulta), el mensaje de error aparece sin la segunda oración.  
+> Al especificar argumentos no es una opción (por ejemplo, para operadores de consulta en expresiones de consulta), el mensaje de error aparece sin la segunda oración.  
   
  El código siguiente muestra el error.  
   
@@ -51,7 +51,7 @@ Interface InterfaceExample(Of T)
 End Interface  
 ```  
   
- **Identificador de error:** BC36647 y BC36644  
+ **IDENTIFICADOR de error:** BC36647 y BC36644  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   

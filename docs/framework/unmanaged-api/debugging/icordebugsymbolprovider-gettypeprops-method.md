@@ -1,17 +1,17 @@
 ---
-title: Gettypeprops (método)
+title: 'ICorDebugSymbolProvider:: Gettypeprops ((método)'
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 435a814d20e039c794f4f9eeb024d5afbfcd6dbd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c8ea3a201cc94ef7bdf679371ef43ab2641b791
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771190"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955550"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a>Gettypeprops (método)
+# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider:: Gettypeprops ((método)
 Devuelve información acerca de las propiedades de un tipo, como el número de firmas de sus parámetros genéricos, dada una dirección virtual relativa (RVA) en una tabla virtual.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -39,17 +39,17 @@ HRESULT GetTypeProps(
  [out] Búfer que contiene las firmas de Typespec de todos los parámetros genéricos.  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener el tamaño necesario del tipo `signature` de matriz, establezca el `cbSignature` argumento en 0 y `signature` a **null**. Con la devolución del método, `pcbSignature` contendrá el número de bytes necesarios para la matriz `signature`.  
+ Para obtener el tamaño necesario de la matriz del `signature` tipo, establezca el `cbSignature` argumento en 0 y `signature` en **null**. Con la devolución del método, `pcbSignature` contendrá el número de bytes necesarios para la matriz `signature`.  
   
 > [!NOTE]
->  Este método solo está disponible con .NET Native.  
+> Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

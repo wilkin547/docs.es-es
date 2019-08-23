@@ -2,12 +2,12 @@
 title: Procedimiento para crear un servicio transaccional
 ms.date: 03/30/2017
 ms.assetid: 1bd2e4ed-a557-43f9-ba98-4c70cb75c154
-ms.openlocfilehash: 7f7f060db5a4ffd66524e220e3e3291debd8a3fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be364e7638394a30c199b05dd15ef4c44e18e688
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787600"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964015"
 ---
 # <a name="how-to-create-a-transactional-service"></a>Procedimiento para crear un servicio transaccional
 Este ejemplo muestra varios aspectos sobre la creación de un servicio transaccional y el uso de una transacción iniciada por el cliente para coordinar las operaciones de servicio.  
@@ -65,7 +65,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
     }  
     ```  
   
-3. Configure los enlaces en el archivo de configuración, especificando que debería fluir el contexto de la transacción, y los protocolos que se van a utilizar para ello. Para obtener más información, consulte [configuración de transacción de ServiceModel](servicemodel-transaction-configuration.md). Concretamente, se especifica el tipo de enlace en el atributo `binding` del elemento del punto de conexión. El [ \<punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento contiene un `bindingConfiguration` atributo que hace referencia a una configuración de enlace denominada `transactionalOleTransactionsTcpBinding`, como se muestra en el siguiente ejemplo de configuración.  
+3. Configure los enlaces en el archivo de configuración, especificando que debería fluir el contexto de la transacción, y los protocolos que se van a utilizar para ello. Para obtener más información, vea [configuración de transacciones de ServiceModel](servicemodel-transaction-configuration.md). Concretamente, se especifica el tipo de enlace en el atributo `binding` del elemento del punto de conexión. El elemento de [ \<extremo >](../../configure-apps/file-schema/wcf/endpoint-element.md) contiene `bindingConfiguration` un atributo que hace referencia a una `transactionalOleTransactionsTcpBinding`configuración de enlace denominada, como se muestra en la configuración del ejemplo siguiente.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -91,7 +91,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 ### <a name="supporting-multiple-transaction-protocols"></a>Compatibilidad de varios protocolos de transacción  
   
-1. Para obtener un rendimiento óptimo, debe usar el protocolo OleTransactions para escenarios que implican un cliente y servicio escritos con Windows Communication Foundation (WCF). Sin embargo, el protocolo WS-AtomicTransaction (WS-AT) es útil para los escenarios cuando se requiere la interoperabilidad con pilas de protocolo de otro fabricante. Puede configurar los servicios WCF para aceptar ambos protocolos al proporcionar varios puntos de conexión con los enlaces específicos del protocolo adecuados, como se muestra en el siguiente ejemplo de configuración.  
+1. Para obtener un rendimiento óptimo, debe usar el protocolo OleTransactions en escenarios que impliquen un cliente y un servicio escritos mediante Windows Communication Foundation (WCF). Sin embargo, el protocolo WS-AtomicTransaction (WS-AT) es útil para los escenarios cuando se requiere la interoperabilidad con pilas de protocolo de otro fabricante. Puede configurar los servicios WCF para que acepten ambos protocolos al proporcionar varios puntos de conexión con los enlaces específicos del protocolo adecuados, tal como se muestra en la configuración del ejemplo siguiente.  
   
     ```xml  
     <service name="CalculatorService">  
@@ -126,7 +126,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 ### <a name="controlling-the-completion-of-a-transaction"></a>Control de la realización de una transacción  
   
-1. De forma predeterminada, las operaciones de WCF completan automáticamente las transacciones si se produce ninguna excepción no controlada. Puede modificar este comportamiento mediante la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> y el método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>. Cuando es necesario que se produzca una operación dentro de la misma transacción como otra operación (por ejemplo, una operación de débito y crédito), puede deshabilitar el comportamiento de autocompletar definiendo la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> en `false` tal y como se muestra en el ejemplo de operación `Debit` siguiente. La transacción que la operación `Debit` utiliza no se completa hasta que se llama a un método con la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> definida en `true`, tal y como se muestra en la operación `Credit1` o cuando se llama al método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> para marcar explícitamente la transacción como completada, tal y como se muestra en la operación `Credit2`. Tenga en cuenta que las dos operaciones de crédito se muestran para fines informativos, y que una operación de crédito única sería más típica.  
+1. De forma predeterminada, las operaciones de WCF completan automáticamente las transacciones si no se produce ninguna excepción no controlada. Puede modificar este comportamiento mediante la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> y el método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A>. Cuando es necesario que se produzca una operación dentro de la misma transacción como otra operación (por ejemplo, una operación de débito y crédito), puede deshabilitar el comportamiento de autocompletar definiendo la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> en `false` tal y como se muestra en el ejemplo de operación `Debit` siguiente. La transacción que la operación `Debit` utiliza no se completa hasta que se llama a un método con la propiedad <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionAutoComplete%2A> definida en `true`, tal y como se muestra en la operación `Credit1` o cuando se llama al método <xref:System.ServiceModel.OperationContext.SetTransactionComplete%2A> para marcar explícitamente la transacción como completada, tal y como se muestra en la operación `Credit2`. Tenga en cuenta que las dos operaciones de crédito se muestran para fines informativos, y que una operación de crédito única sería más típica.  
   
     ```csharp
     [ServiceBehavior]  
@@ -182,7 +182,7 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
   
 ### <a name="controlling-the-lifetime-of-a-transactional-service-instance"></a>Control de la duración de una instancia de servicio transaccional  
   
-1. WCF usa la <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propiedad para especificar si la instancia del servicio subyacente se libera cuando se completa una transacción. Puesto que el valor predeterminado es `true`, a menos que configure de otra manera, comportamiento de activación de WCF exhibiciones una eficaz y predecible "just-in-time". Las llamadas a un servicio en una transacción subsiguiente aseguran una nueva instancia del servicio sin restos del estado de la transacción anterior. Aunque esto resulta a menudo útil, a veces puede querer mantener el estado dentro de la instancia del servicio más allá de la realización de la transacción. Algunos ejemplos de ello serían cuándo resulta costoso recuperar o volver a constituir el estado necesario o los controladores a los recursos. Puede hacer esto al definir la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> en `false`. Con ese valor, la instancia y cualquier estado asociado estarán disponibles en llamadas subsiguientes. Al utilizar esto, proporcione la consideración adecuada a cuándo y cómo se borrarán y completarán las transacciones y el estado. El ejemplo siguiente muestra cómo hacer esto manteniendo la instancia con la variable `runningTotal`.  
+1. WCF usa la <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> propiedad para especificar si se libera la instancia del servicio subyacente cuando se completa una transacción. Dado que el valor predeterminado `true`es, a menos que se configure de otra forma, WCF exhibe un comportamiento de activación "Just-in-Time" eficaz y predecible. Las llamadas a un servicio en una transacción subsiguiente aseguran una nueva instancia del servicio sin restos del estado de la transacción anterior. Aunque esto resulta a menudo útil, a veces puede querer mantener el estado dentro de la instancia del servicio más allá de la realización de la transacción. Algunos ejemplos de ello serían cuándo resulta costoso recuperar o volver a constituir el estado necesario o los controladores a los recursos. Puede hacer esto al definir la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute.ReleaseServiceInstanceOnTransactionComplete%2A> en `false`. Con ese valor, la instancia y cualquier estado asociado estarán disponibles en llamadas subsiguientes. Al utilizar esto, proporcione la consideración adecuada a cuándo y cómo se borrarán y completarán las transacciones y el estado. El ejemplo siguiente muestra cómo hacer esto manteniendo la instancia con la variable `runningTotal`.  
   
     ```csharp
     [ServiceBehavior(TransactionIsolationLevel = [ServiceBehavior(  
@@ -217,4 +217,4 @@ Este ejemplo muestra varios aspectos sobre la creación de un servicio transacci
     ```  
   
     > [!NOTE]
-    >  Desde que la duración de la instancia es un comportamiento que es interno al servicio y controlado a través de la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute>, no se requiere ninguna modificación en la configuración de servicio ni en el contrato de servicio para establecer el comportamiento de la instancia. Además, la conexión no contendrá ninguna representación de esto.
+    > Desde que la duración de la instancia es un comportamiento que es interno al servicio y controlado a través de la propiedad <xref:System.ServiceModel.ServiceBehaviorAttribute>, no se requiere ninguna modificación en la configuración de servicio ni en el contrato de servicio para establecer el comportamiento de la instancia. Además, la conexión no contendrá ninguna representación de esto.

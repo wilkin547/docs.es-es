@@ -2,20 +2,20 @@
 title: 'Modelos de diseño: suscripción-publicación basada en la lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 1b99908c1b83bb0d75e295b7a12e8c5933fe86a1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf6fe2da3101918e25aa9548fd18973088f348a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650122"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961742"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Modelos de diseño: suscripción-publicación basada en la lista
-Este ejemplo muestra el patrón basado en lista suscripción-publicación implementado como un programa de Windows Communication Foundation (WCF).  
+Este ejemplo muestra el patrón de publicación-suscripción basado en lista implementado como un programa Windows Communication Foundation (WCF).  
   
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
- Se describe el patrón de diseño de lista-suscripción-publicación basada en la publicación de Microsoft Patterns & Practices, [patrones de integración](https://go.microsoft.com/fwlink/?LinkId=95894). El patrón suscripción-publicación pasa información a una colección de destinatarios que se han suscrito a un tema de la información. La suscripción-publicación basada en la lista mantiene una lista de suscriptores. Cuando hay información para compartir, se envía una copia a cada suscriptor en la lista. Este ejemplo muestra un patrón dinámico de suscripción-publicación basada en la lista, donde los clientes pueden suscribirse o cancelar su suscripción tan a menudo como sea necesario.  
+ El modelo de diseño de publicación-suscripción basado en lista se describe en la publicación Microsoft Patterns & Practices, [patrones de integración](https://go.microsoft.com/fwlink/?LinkId=95894). El patrón suscripción-publicación pasa información a una colección de destinatarios que se han suscrito a un tema de la información. La suscripción-publicación basada en la lista mantiene una lista de suscriptores. Cuando hay información para compartir, se envía una copia a cada suscriptor en la lista. Este ejemplo muestra un patrón dinámico de suscripción-publicación basada en la lista, donde los clientes pueden suscribirse o cancelar su suscripción tan a menudo como sea necesario.  
   
  El ejemplo de suscripción-publicación basada en la lista está compuesto de un cliente, un servicio y un programa de origen de datos. Puede haber más de un cliente y más de un funcionamiento de programa de origen de datos. Los clientes se suscriben al servicio, reciben las notificaciones y cancelan su suscripción. Los programas de origen de datos envían información al servicio para a compartir con todos los suscriptores actuales.  
   
@@ -112,25 +112,25 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>Para configurar y compilar el ejemplo  
   
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Para ejecutar el ejemplo en el mismo equipo  
   
-1. Pruebe que puede tener acceso el servicio utilizando un explorador escribiendo la siguiente dirección: `http://localhost/servicemodelsamples/service.svc`. Como respuesta se debe mostrar una página de confirmación.  
+1. Pruebe que puede tener acceso al servicio mediante un explorador escribiendo la dirección siguiente: `http://localhost/servicemodelsamples/service.svc`. Como respuesta se debe mostrar una página de confirmación.  
   
-2. Ejecute Client.exe desde \client\bin\\, desde la carpeta específica del lenguaje. La actividad del cliente se muestra en la ventana de consola del cliente. Inicie varios clientes.  
+2. Ejecute Client. exe desde \client\bin\\\, desde la carpeta específica del lenguaje. La actividad del cliente se muestra en la ventana de consola del cliente. Inicie varios clientes.  
   
-3. Ejecute Datasource.exe desde \datasource\bin\\, desde la carpeta específica del lenguaje. La actividad del origen de los datos se muestra en la ventana de la consola. Cuando el origen de datos envía la información al servicio, se debería pasar a cada cliente.  
+3. Ejecute DataSource. exe desde \datasource\bin\\, desde la carpeta específica del lenguaje. La actividad del origen de los datos se muestra en la ventana de la consola. Cuando el origen de datos envía la información al servicio, se debería pasar a cada cliente.  
   
-4. Si el cliente, el origen de datos y los programas de servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Si el cliente, el origen de datos y los programas de servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Para ejecutar el ejemplo en los equipos  
   
 1. Preparar el equipo del servicio:  
   
-    1. En el equipo del servicio, cree un directorio virtual denominado ServiceModelSamples. El archivo de información Setupvroot.bat desde el [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) puede usarse para crear el directorio de disco y el directorio virtual.  
+    1. En el equipo del servicio, cree un directorio virtual denominado ServiceModelSamples. El archivo por lotes Setupvroot. bat del [procedimiento de instalación único para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) se puede usar para crear el directorio de disco y el directorio virtual.  
   
     2. Copie los archivos de programa de servicio del directorio %SystemDrive%\Inetpub \wwwroot\servicemodelsamples al directorio virtual ServiceModelSamples del equipo de servicio. Asegúrese de incluir los archivos en el directorio \bin.  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

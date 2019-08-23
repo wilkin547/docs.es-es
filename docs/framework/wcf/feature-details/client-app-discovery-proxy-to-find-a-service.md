@@ -2,15 +2,15 @@
 title: Procedimiento para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 9f04c3ba59b67f2f19a3f65ce96d4d9f624a0e82
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 30db2bfc6191b1703f6d63ec2a925df42ecc93e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630697"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963874"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>Procedimiento para implementar una aplicación cliente que usa el proxy de detección para buscar un servicio
-Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [Cómo: Implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), implementa un servicio WCF que se registra con el proxy de detección. En este tema se creará a un cliente WCF que usa al proxy de detección para encontrar el servicio WCF.  
+Este tema es el tercero de tres temas y describe cómo implementar un proxy de detección. En el tema anterior, [cómo: Implementar un servicio reconocible que se registra con el proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)de detección, ha implementado un servicio WCF que se registra a sí mismo con el proxy de detección. En este tema se crea un cliente de WCF que usa el proxy de detección para encontrar el servicio WCF.  
   
 ### <a name="implement-the-client"></a>Implementar el cliente  
   
@@ -25,7 +25,7 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
 3. Agregue al proyecto GeneratedClient.cs, que se encuentra en la parte inferior de este tema.  
   
     > [!NOTE]
-    >  Este archivo se suele generar mediante una herramienta como Svcutil.exe. Dicha herramienta se proporciona en este tema para simplificar la tarea.  
+    > Este archivo se suele generar mediante una herramienta como Svcutil.exe. Dicha herramienta se proporciona en este tema para simplificar la tarea.  
   
 4. Abra el archivo Program.cs y agregue el siguiente método. Este método toma una dirección del extremo y lo utiliza para inicializar el cliente del servicio (proxy).  
   
@@ -101,7 +101,7 @@ Este tema es el tercero de tres temas y describe cómo implementar un proxy de d
     }  
     ```  
   
- Ha completado la implementación de la aplicación cliente. Continúe con [Cómo: Probar el Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).  
+ Ha completado la implementación de la aplicación cliente. Continúe con [el procedimiento: Pruebe el proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)de detección.  
   
 ## <a name="example"></a>Ejemplo  
  Esta es la lista de códigos completa de este tema.  
@@ -284,5 +284,5 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>Vea también
 
 - [Información general de Detección de WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [Cómo: Implementar a un Proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Cómo: Implementar un servicio reconocible que se registra con el Proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Procedimientos: Implementación de un proxy de detección](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [Cómo: Implementación de un servicio reconocible que se registra con el proxy de detección](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

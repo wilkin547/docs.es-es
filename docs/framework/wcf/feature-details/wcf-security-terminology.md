@@ -6,17 +6,17 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1194a8e340504ce02c0a5daec7074fc34d962f3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768620"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951637"
 ---
 # <a name="wcf-security-terminology"></a>Terminología de seguridad en WCF
 Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco familiar. Este tema proporciona breves explicaciones sobre algunos términos de seguridad, pero no está diseñado para proporcionar una documentación completa sobre cada elemento.  
   
- Para obtener más información acerca de los términos usados en la documentación de Windows Communication Foundation (WCF), consulte [fundamentales Windows Communication Foundation conceptos](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ Para obtener más información sobre los términos usados en la documentación de Windows Communication Foundation (WCF), vea [conceptos básicos de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  lista de control de acceso (ACL)  
  Lista de protecciones de seguridad que se aplica a un objeto. (Un objeto puede ser un archivo, un proceso, un evento, o cualquier elemento que tenga un descriptor de seguridad.) Una entrada en ACL es una entrada de control de acceso (ACE). Hay dos tipos de ACL: discrecional y de sistema.  
@@ -24,14 +24,14 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  autenticación  
  El proceso para comprobar que un usuario, equipo, servicio o proceso es quién o lo que dice ser.  
   
- autorización  
+ authorization  
  El acto de controlar el acceso y los derechos a un recurso. Por ejemplo, permitir a los miembros de un grupo leer un archivo, pero permitir solo a los miembros de otro grupo modificar el archivo.  
   
  certificado de la entidad de certificación (CA)  
- Identifica la CA emisora de certificados de autenticación de cliente y servidor a los servidores y clientes que los solicitan. Dado que contiene una clave pública utilizada en firmas digitales, también se conoce como un *certificado de firma*. Si la CA es una entidad emisora raíz, el certificado de CA es posible que se denomina un *certificado raíz*. A veces también se conoce como un *certificado de sitio*.  
+ Identifica la CA emisora de certificados de autenticación de cliente y servidor a los servidores y clientes que los solicitan. Dado que contiene una clave pública que se utiliza en firmas digitales, también se conoce como certificado de *firma*. Si la entidad de certificación es una entidad raíz, el certificado de entidad de certificación se puede denominar *certificado raíz*. También se conoce como *certificado de sitio*.  
   
  Jerarquía de la CA  
- Una jerarquía de la CA contiene varias CA. Se organiza de forma que cada CA esté certificada por otra entidad de certificación en un nivel superior de la jerarquía hasta la parte superior de la jerarquía, también conocido como el *entidad emisora raíz*, se alcanza.  
+ Una jerarquía de la CA contiene varias CA. Está organizada de modo que cada CA esté certificada por otra CA en un nivel superior de la jerarquía hasta que se alcance la parte superior de la jerarquía, también conocida como *entidad de certificación raíz*.  
   
  certificado  
  Una instrucción firmada digitalmente que contiene información sobre una entidad y la clave pública de la entidad, enlazando, por tanto, estas dos partes de información. Una organización de confianza (o entidad) emite un certificado, llamada “entidad emisora de certificados”, después de que la autoridad haya comprobado que la entidad es quién dice ser.  
@@ -63,7 +63,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Un par de claves pública/privada usada para cifrar claves de sesión para que se puedan almacenar e intercambiar con otros usuarios de forma segura.  
   
  hash  
- Un valor numérico de tamaño fijo obtenido aplicando una función matemática (vea algoritmo hash) a una cantidad arbitraria de datos. Los datos incluyen normalmente datos aleatorios, conocidos como un *nonce*. El servicio y cliente aportan nonces de intercambio para aumentar la complejidad del resultado. El resultado es también se denomina un *síntesis del mensaje*. Enviar un valor hash es más seguro que enviar datos confidenciales, como una contraseña, aun cuando la contraseña esté cifrada. El remitente y receptor del hash deben usar el mismo algoritmo hash y nonces para que, una vez recibido, se pueda comprobar el hash.  
+ Un valor numérico de tamaño fijo obtenido aplicando una función matemática (vea algoritmo hash) a una cantidad arbitraria de datos. Normalmente, los datos incluyen datos aleatorios, conocido como un *nonce*. El servicio y cliente aportan nonces de intercambio para aumentar la complejidad del resultado. El resultado también se conoce como una *síntesis del mensaje*. Enviar un valor hash es más seguro que enviar datos confidenciales, como una contraseña, aun cuando la contraseña esté cifrada. El remitente y receptor del hash deben usar el mismo algoritmo hash y nonces para que, una vez recibido, se pueda comprobar el hash.  
   
  algoritmo de hash  
  Un algoritmo utilizado para generar un valor hash de una parte de datos, como un mensaje o clave de sesión. Entre los algoritmos más comunes de hash se incluyen: MD2, MD4, MD5 y SHA-1.  
@@ -90,7 +90,7 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  Estándar de sintaxis de mensajes criptográficos. Una sintaxis general para los datos a los que se puede aplicar la criptografía, como cifrado y firmas digitales. También proporciona la sintaxis para difundir certificados o listas de certificados revocados y otros atributos de mensaje, como marcas de tiempo, al mensaje.  
   
  texto simple  
- Un mensaje no cifrado. Mensajes de texto simple se conocen a veces como *cleartext* mensajes.  
+ Un mensaje no cifrado. Los mensajes de texto no cifrado a veces se denominan mensajes de *texto* no cifrado.  
   
  privilegio  
  El derecho de un usuario para realizar varias operaciones relacionadas con el sistema, como apagar el sistema, cargar los controles de dispositivos o cambiar la hora del sistema. Un token de acceso del usuario contiene una lista de los privilegios que el usuario o los grupos de usuarios tienen.  
@@ -173,10 +173,10 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
  El software que decide si un archivo determinado es o no de confianza. Esta decisión se basa en el certificado asociado al archivo.  
   
  nombre principal del usuario (UPN)  
- Un nombre de cuenta de usuario (a veces se denomina el *nombre de inicio de sesión de usuario*) y un nombre de dominio que identifica el dominio donde se encuentra la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (como en una dirección de correo electrónico).  
+ Un nombre de cuenta de usuario (a veces denominado *nombre de inicio de sesión de usuario*) y un nombre de dominio que identifica el dominio en el que se encuentra la cuenta de usuario. Éste es el uso estándar para iniciar sesión en un dominio de Windows. El formato es: someone@example.com (como para una dirección de correo electrónico).  
   
 > [!NOTE]
->  Además de formulario UPN estándar, WCF acepta UPN en forma de nivel inferior, por ejemplo, com\someone.  
+> Además del formulario de UPN estándar, WCF acepta los UPN en formato de nivel inferior, por ejemplo, cohowinery. com\someone.  
   
  X.509  
  Un estándar reconocido internacionalmente para los certificados que define sus partes necesarias.  
@@ -185,4 +185,4 @@ Alguna de la terminología utilizada al hablar sobre seguridad puede ser poco fa
 
 - [Conceptos básicos de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Conceptos de seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

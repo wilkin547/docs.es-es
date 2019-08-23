@@ -6,15 +6,15 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75c3e5842447a8f0812d5a90d7157f7a6a496936
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590633"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962442"
 ---
 # <a name="-bugreport"></a>-bugreport
-Crea un archivo que puede usar cuando se archiva un informe de errores.  
+Crea un archivo que se puede usar al archivar un informe de errores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -26,35 +26,35 @@ Crea un archivo que puede usar cuando se archiva un informe de errores.
   
 |Término|Definición|  
 |---|---|  
-|`file`|Obligatorio. El nombre del archivo que contendrá el informe de errores. Ponga el nombre de archivo entre comillas ("") si el nombre contiene un espacio.|  
+|`file`|Necesario. Nombre del archivo que contendrá el informe de errores. Escriba el nombre de archivo entre comillas ("") si el nombre contiene un espacio.|  
   
 ## <a name="remarks"></a>Comentarios  
  La siguiente información se agrega a `file`:  
   
-- Una copia de todos los archivos de código fuente de la compilación.  
+- Una copia de todos los archivos de código fuente en la compilación.  
   
 - Una lista de las opciones del compilador utilizadas en la compilación.  
   
-- Información de versión sobre su compilador, el common language runtime y el sistema operativo.  
+- Información de versión sobre el compilador, el Common Language Runtime y el sistema operativo.  
   
 - Resultados del compilador, si los hay.  
   
-- Una descripción del problema, para el que se le pedirá.  
+- Una descripción del problema, para el que se le solicita.  
   
-- Una descripción de cómo cree que el problema debe corregirse para que se le pedirá.  
+- Una descripción de cómo cree que el problema debe corregirse, para lo que se le solicita.  
   
- Dado que una copia de todos los archivos de código fuente se incluye en `file`, que es posible que desee reproducir el defecto de código (sospechado) en el programa más corto posible.  
+ Dado que se incluye una copia de todos los archivos de código `file`fuente en, puede que desee reproducir el defecto de código (sospechoso) en el programa más corto posible.  
   
 > [!IMPORTANT]
->  El `-bugreport` opción genera un archivo que contiene información potencialmente confidencial. Esto incluye la hora actual, la versión de compilador, versión de .NET Framework, versión del sistema operativo, nombre de usuario, los argumentos de línea de comandos con la que se ejecutó el compilador, todo el código fuente y el formato binario de cualquier ensamblado que se hace referencia. Esta opción puede obtenerse mediante la especificación de opciones de línea de comandos en el archivo Web.config para una compilación de servidor de una aplicación ASP.NET. Para evitar esto, modifique el archivo Machine.config para impedir que los usuarios realizar la compilación en el servidor.  
+> La `-bugreport` opción genera un archivo que contiene información potencialmente confidencial. Esto incluye la hora actual, la versión del compilador, la versión .NET Framework, la versión del sistema operativo, el nombre de usuario, los argumentos de línea de comandos con los que se ejecutó el compilador, todo el código fuente y el formato binario de cualquier ensamblado al que se hace referencia. Se puede tener acceso a esta opción si se especifican las opciones de línea de comandos en el archivo Web. config para una compilación del lado servidor de una aplicación ASP.NET. Para evitarlo, modifique el archivo Machine. config para que no permita a los usuarios compilar en el servidor.  
   
- Si esta opción se utiliza con `-errorreport:prompt`, `-errorreport:queue`, o `-errorreport:send`, y la aplicación detecta un error interno del compilador, la información de `file` se envía a Microsoft Corporation. Esta información le ayudará a los ingenieros de Microsoft a identificar la causa del error y puede ayudar a mejorar la próxima versión de Visual Basic. De forma predeterminada, no se envía ninguna información a Microsoft. Sin embargo, cuando se compila una aplicación mediante el uso de `-errorreport:queue`, que está habilitado de forma predeterminada, la aplicación recopila los informes de errores. A continuación, cuando el administrador del equipo inicia sesión, el sistema de informes de errores muestra una ventana emergente que permite al administrador enviar a Microsoft los informes de errores producidos desde el inicio de sesión.  
+ Si esta opción se usa con `-errorreport:prompt`, `-errorreport:queue`o `-errorreport:send`, y la aplicación encuentra un error interno del compilador, la información de `file` se envía a Microsoft Corporation. Esa información ayudará a los ingenieros de Microsoft a identificar la causa del error y puede ayudar a mejorar la próxima versión de Visual Basic. De forma predeterminada, no se envía información a Microsoft. Sin embargo, al compilar una aplicación `-errorreport:queue`mediante, que está habilitada de forma predeterminada, la aplicación recopila sus informes de errores. A continuación, cuando el administrador del equipo inicia sesión, el sistema de informes de errores muestra una ventana emergente que permite al administrador reenviar a Microsoft los informes de errores que se produjeron desde el inicio de sesión.  
   
 > [!NOTE]
->  El `/bugreport` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible solo cuando se compila desde la línea de comandos.  
+> La `/bugreport` opción no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible cuando se compila desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se compila `T2.vb` y coloca toda la información de informes de errores en el archivo `Problem.txt`.  
+ En el ejemplo siguiente se compila `T2.vb` y se coloca toda la información de informes de errores `Problem.txt`en el archivo.  
   
 ```  
 vbc -bugreport:problem.txt t2.vb  
@@ -66,4 +66,4 @@ vbc -bugreport:problem.txt t2.vb
 - [-debug (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
 - [Líneas de comandos de compilación de ejemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Elemento trustLevel para securityPolicy (esquema de configuración de ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))
+- [trustLevel (elemento) para securityPolicy (esquema de configuración de ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))

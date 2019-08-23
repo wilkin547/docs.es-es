@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61b4076a72dbc17ffc800a1a8d37a22d1435e02b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 19ebad32ad8c7018b910a3d230f43031008dcdc7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663680"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927381"
 ---
 # <a name="gcserver-element"></a>\<gcServer >, elemento
 Especifica si Common Language Runtime ejecuta la recopilación de elementos no utilizados de servidor.  
@@ -65,7 +65,7 @@ Especifica si Common Language Runtime ejecuta la recopilación de elementos no u
  Este elemento se puede usar solo en el archivo de configuración de la aplicación; se omite si se encuentra en el archivo de configuración del equipo.  
   
 > [!NOTE]
->  En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de la .NET Framework 4,5, la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección de elementos no utilizados de servidor no simultánea `<gcServer>` , establezca `true` el elemento en y el [ \<elemento > de gcConcurrent](gcconcurrent-element.md) en. `false`  
+> En .NET Framework 4 y versiones anteriores, la recolección de elementos no utilizados simultánea no está disponible si la recolección de elementos no utilizados de servidor está habilitada. A partir de la .NET Framework 4,5, la recolección de elementos no utilizados de servidor es simultánea. Para usar la recolección de elementos no utilizados de servidor no simultánea `<gcServer>` , establezca `true` el elemento en y el [ \<elemento > de gcConcurrent](gcconcurrent-element.md) en. `false`  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se habilita la recolección de elementos no utilizados de servidor.  

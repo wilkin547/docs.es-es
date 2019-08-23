@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4d4efa7cb3bc98c54be2889855c3b756fdbf2847
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63ad2532240c9f18a00421281fae0d111dbfaec5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782242"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963791"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout (Método)
-Obtiene información sobre la distribución de un objeto de cadena. Este método está en desuso en .NET Framework 4 y se ha reemplazado por la [ICorProfilerInfo3:: Getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) método.  
+Obtiene información sobre la distribución de un objeto de cadena. Este método está en desuso en el .NET Framework 4 y se ha sustituido por el método [ICorProfilerInfo3:: GetStringLayout2 (](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,34 +38,34 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parámetros  
  `pBufferLengthOffset`  
- [out] Un puntero para el desplazamiento de la ubicación, relativa a la `ObjectID` puntero, que almacena la longitud de la cadena. La longitud se almacena como un `DWORD`.  
+ enuncia Puntero al desplazamiento de la ubicación, en relación con el `ObjectID` puntero, que almacena la longitud de la cadena. La longitud se almacena como un `DWORD`.  
   
 > [!NOTE]
->  Este parámetro devuelve la longitud de la cadena, no la longitud del búfer. La longitud del búfer ya no está disponible.  
+> Este parámetro devuelve la longitud de la cadena en sí, no la longitud del búfer. La longitud del búfer ya no está disponible.  
   
  `PStringLengthOffset`  
- [out] Un puntero para el desplazamiento de la ubicación, relativa a la `ObjectID` puntero, que almacena la longitud de la propia cadena. La longitud se almacena como un `DWORD`.  
+ enuncia Puntero al desplazamiento de la ubicación, en relación con el `ObjectID` puntero, que almacena la longitud de la propia cadena. La longitud se almacena como un `DWORD`.  
   
  `pBufferOffset`  
- [out] Un puntero al desplazamiento del búfer, relativo a la `ObjectID` puntero, que almacena la cadena de caracteres anchos.  
+ enuncia Puntero al desplazamiento del búfer, relativo al `ObjectID` puntero, que almacena la cadena de caracteres anchos.  
   
 ## <a name="remarks"></a>Comentarios  
- El `GetStringLayout` método obtiene los desplazamientos, relativa a la `ObjectID` puntero, de las ubicaciones donde se almacenan los siguientes:  
+ El `GetStringLayout` método obtiene los desplazamientos, con relación `ObjectID` al puntero, de las ubicaciones en las que se almacenan los elementos siguientes:  
   
-- La longitud de búfer de la cadena.  
+- Longitud del búfer de la cadena.  
   
 - La longitud de la propia cadena.  
   
 - Búfer que contiene la cadena real de caracteres anchos.  
   
- Pueden ser cadenas terminadas en null.  
+ Las cadenas pueden terminar en NULL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorProf.idl, CorProf.h  
+ **Encabezado**: Corprof. idl, Corprof. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

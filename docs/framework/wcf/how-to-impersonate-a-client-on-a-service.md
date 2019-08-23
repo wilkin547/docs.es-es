@@ -9,18 +9,18 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 3dd40efe27687b048984c4592db0d3787d061eeb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 918cbba30cbb997a1f029a250adbdc4ed6310299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402321"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951056"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Procedimiento para suplantar a un cliente en un servicio
-Suplantar a un cliente en un servicio de Windows Communication Foundation (WCF) permite que el servicio realizar acciones en nombre del cliente. Para las acciones sujetas a las comprobaciones de la lista de control de acceso (ACL), como el acceso a los directorios y archivos de un equipo o el acceso a una base de datos de SQL Server, ACL realiza una comprobación frente a la cuenta de usuario del cliente. Este tema muestra los pasos básicos requeridos para permitir a un cliente de un dominio de Windows establecer un nivel de la suplantación del cliente. Para obtener un ejemplo ilustrativo, consulte [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener más información sobre la suplantación del cliente, consulte [delegación y suplantación](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+La suplantación de un cliente en un servicio de Windows Communication Foundation (WCF) permite al servicio realizar acciones en nombre del cliente. Para las acciones sujetas a las comprobaciones de la lista de control de acceso (ACL), como el acceso a los directorios y archivos de un equipo o el acceso a una base de datos de SQL Server, ACL realiza una comprobación frente a la cuenta de usuario del cliente. Este tema muestra los pasos básicos requeridos para permitir a un cliente de un dominio de Windows establecer un nivel de la suplantación del cliente. Para obtener un ejemplo ilustrativo, consulte [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Para obtener más información sobre la suplantación de clientes, consulte [delegación y](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)suplantación.  
   
 > [!NOTE]
->  Cuando el cliente y el servicio se están ejecutando en el mismo equipo y el cliente se está ejecutando bajo una cuenta del sistema (por ejemplo, `Local System` o `Network Service`), no se puede suplantar el cliente cuando se establece una sesión segura con tokens de contexto de seguridad con estado. Un WinForms o una aplicación de consola se ejecuta normalmente con la cuenta con la que haya iniciado la sesión, de manera que la cuenta pueda suplantarse de manera predeterminada. Sin embargo, cuando el cliente es una página ASP.NET y esa página se hospeda en IIS 6.0 o IIS 7.0, el cliente ejecutará el `Network Service` cuenta predeterminada. Todos los enlaces proporcionados por el sistema que admiten sesiones seguras utilizan de forma predeterminada un token de contexto de seguridad sin estado. Sin embargo, si el cliente es una página ASP.NET y se utilizan sesiones seguras con tokens de contexto de seguridad con estado, no se puede suplantar al cliente. Para obtener más información sobre el uso de tokens de contexto de seguridad con estado en una sesión segura, consulte [Cómo: Crear un contexto de seguridad para una sesión segura Token](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
+> Cuando el cliente y el servicio se están ejecutando en el mismo equipo y el cliente se está ejecutando bajo una cuenta del sistema (por ejemplo, `Local System` o `Network Service`), no se puede suplantar el cliente cuando se establece una sesión segura con tokens de contexto de seguridad con estado. Un WinForms o una aplicación de consola se ejecuta normalmente con la cuenta con la que haya iniciado la sesión, de manera que la cuenta pueda suplantarse de manera predeterminada. Sin embargo, cuando el cliente es una página de ASP.net y esa página se hospeda en IIS 6,0 o IIS 7,0, el cliente se ejecuta en `Network Service` la cuenta de forma predeterminada. Todos los enlaces proporcionados por el sistema que admiten sesiones seguras utilizan de forma predeterminada un token de contexto de seguridad sin estado. Sin embargo, si el cliente es una página de ASP.NET y se usan sesiones seguras con tokens de contexto de seguridad con estado, el cliente no se puede suplantar. Para obtener más información sobre el uso de tokens de contexto de seguridad con estado en [una sesión segura, consulte How to: Cree un token de contexto de seguridad para una](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)sesión segura.  
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>Para habilitar la suplantación de un cliente desde un token de Windows almacenado en memoria caché en un servicio  
   
@@ -35,12 +35,12 @@ Suplantar a un cliente en un servicio de Windows Communication Foundation (WCF) 
   
 ### <a name="to-set-the-allowed-impersonation-level-on-the-client"></a>Para establecer el nivel de suplantación permitido en el cliente  
   
-1. Cree el código de cliente del servicio mediante [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información, consulte [servicios de acceso mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
+1. Cree el código de cliente del servicio mediante [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Para obtener más información, vea [obtener acceso a servicios mediante un cliente WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md).  
   
-2. Después de crear el cliente de WCF, establezca el <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propiedad de la <xref:System.ServiceModel.Security.WindowsClientCredential> clase a uno de los <xref:System.Security.Principal.TokenImpersonationLevel> valores de enumeración.  
+2. Después de crear el cliente de WCF, <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> establezca la propiedad <xref:System.ServiceModel.Security.WindowsClientCredential> de la clase en uno <xref:System.Security.Principal.TokenImpersonationLevel> de los valores de enumeración.  
   
     > [!NOTE]
-    >  Para usar <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, la autenticación de Kerberos negociada (a veces conocida como Kerberos *multibifurcación* o *multipaso* ) se ha de usar. Para obtener una descripción de cómo realizar la implementación, consulte [prácticas recomendadas de seguridad](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
+    > Para usar <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>, la autenticación de Kerberos negociada (a veces conocida como Kerberos *multibifurcación* o *multipaso* ) se ha de usar. Para obtener una descripción de cómo implementarlo, consulte [prácticas recomendadas para la seguridad](../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).  
   
      [!code-csharp[c_SimpleImpersonation#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_simpleimpersonation/cs/source.cs#1)]
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  

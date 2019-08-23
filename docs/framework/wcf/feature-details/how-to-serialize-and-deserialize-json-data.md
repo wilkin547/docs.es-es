@@ -2,28 +2,28 @@
 title: Procedimiento para serializar y deserializar datos JSON
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 0c56b298737dc9b9902f13c586edffb3d05257f8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0bebdbb3d74d58db093c4ec1e0e88138c7080335
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947897"
 ---
-# <a name="how-to-serialize-and-deserialize-json-data"></a>Procedimiento Serializar y deserializar datos JSON
+# <a name="how-to-serialize-and-deserialize-json-data"></a>Procedimiento Serialización y deserialización de datos JSON
 JSON (notación de objetos JavaScript) es un formato de codificación de datos eficaz que permite intercambios rápidos de cantidades pequeñas de datos entre los exploradores de cliente y servicios web con AJAX (JavaScript asincrónico y XML) habilitado.  
   
- Este artículo muestra cómo serializar objetos de tipo .NET en datos codificados por JSON y, a continuación, deserializar los datos en el formato JSON en instancias de tipos. NET. Este ejemplo utiliza un contrato de datos para mostrar la serialización y deserialización de definido por el usuario `Person` tipo y usa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+ En este artículo se muestra cómo serializar objetos de tipo .NET en datos codificados con JSON y, a continuación, deserializar los datos en formato JSON en instancias de tipos .NET. En este ejemplo se usa un contrato de datos para mostrar la serialización y la deserialización `Person` de un tipo <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>definido por el usuario y se utiliza.  
   
- Normalmente, deserialización y serialización de JSON se controlan automáticamente por Windows Communication Foundation (WCF) al usar tipos de contrato de datos en las operaciones de servicio que se exponen a través de puntos de conexión habilitada para AJAX. Sin embargo, en algunos casos es posible que deba trabajar directamente con datos JSON.   
+ Normalmente, Windows Communication Foundation (WCF) administra automáticamente la serialización y deserialización de JSON cuando se usan tipos de contrato de datos en operaciones de servicio que se exponen a través de puntos de conexión habilitados para AJAX. Sin embargo, en algunos casos puede que necesite trabajar directamente con datos JSON.   
   
 > [!NOTE]
->  Si se produce un error durante la serialización de una respuesta saliente en el servidor o por algún otro motivo, no obtener devolver al cliente como un error.  
+> Si se produce un error durante la serialización de una respuesta saliente en el servidor o por algún otro motivo, puede que no se devuelva al cliente como un error.  
   
- En este artículo se basa en el [serialización JSON](../samples/json-serialization.md) ejemplo.  
+ Este artículo se basa en el ejemplo de serialización de [JSON](../samples/json-serialization.md) .  
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>Para definir el contrato de datos para un tipo de persona 
   
-1. Defina el contrato de datos para `Person` adjuntando <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros que desee serializar. Para obtener más información acerca de los contratos de datos, vea [diseño de contratos de servicio](../designing-service-contracts.md).  
+1. Defina el contrato de datos para `Person` adjuntando <xref:System.Runtime.Serialization.DataContractAttribute> a la clase y el atributo <xref:System.Runtime.Serialization.DataMemberAttribute> a los miembros que desee serializar. Para obtener más información sobre los contratos de datos, consulte [diseño de contratos de servicio](../designing-service-contracts.md).  
   
     ```csharp  
     [DataContract]  
@@ -47,7 +47,7 @@ JSON (notación de objetos JavaScript) es un formato de codificación de datos e
     p.age = 42;  
     ```  
   
-2. Serializar el `Person` objeto a una secuencia de memoria mediante el uso de la <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+2. Serialice el `Person` objeto en una secuencia <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>de memoria mediante.  
   
     ```csharp  
     var stream1 = new MemoryStream();  
@@ -117,7 +117,7 @@ public static User ReadToObject(string json)
 ```  
   
 > [!NOTE]
->  El serializador de JSON inicia una excepción de serialización para los contratos de datos que tienen varios miembros con el mismo nombre, tal y como se muestra en el siguiente código de ejemplo.  
+> El serializador de JSON inicia una excepción de serialización para los contratos de datos que tienen varios miembros con el mismo nombre, tal y como se muestra en el siguiente código de ejemplo.  
   
 ```csharp  
 [DataContract]  
@@ -137,5 +137,5 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
   
 ## <a name="see-also"></a>Vea también
 
-- [Serialización independiente de JSON](stand-alone-json-serialization.md)
-- [Compatibilidad con JSON y otros datos de formatos de transferencia](support-for-json-and-other-data-transfer-formats.md)
+- [Serialización de JSON independiente](stand-alone-json-serialization.md)
+- [Compatibilidad con JSON y otros formatos de transferencia de datos](support-for-json-and-other-data-transfer-formats.md)
