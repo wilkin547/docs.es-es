@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a983561f34bee96f5de1e05d608bff930c7ec8c0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5445fb223e34aa82d4b93032bb059093978f6bd1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750235"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910329"
 ---
-# <a name="icordebugdatatarget2createvirtualunwinder-method"></a><span data-ttu-id="d8574-102">Método ICorDebugDataTarget2::CreateVirtualUnwinder</span><span class="sxs-lookup"><span data-stu-id="d8574-102">ICorDebugDataTarget2::CreateVirtualUnwinder Method</span></span>
-<span data-ttu-id="d8574-103">Crea un nuevo desenredador de pila que inicia el desenredo desde un contexto inicial (que no tiene por qué ser la hoja de un subproceso).</span><span class="sxs-lookup"><span data-stu-id="d8574-103">Creates a new stack unwinder that starts unwinding from an initial context (which isn't necessarily the leaf of a thread).</span></span>  
+# <a name="icordebugdatatarget2createvirtualunwinder-method"></a><span data-ttu-id="5e299-102">Método ICorDebugDataTarget2::CreateVirtualUnwinder</span><span class="sxs-lookup"><span data-stu-id="5e299-102">ICorDebugDataTarget2::CreateVirtualUnwinder Method</span></span>
+<span data-ttu-id="5e299-103">Crea un nuevo desenredador de pila que inicia el desenredo desde un contexto inicial (que no tiene por qué ser la hoja de un subproceso).</span><span class="sxs-lookup"><span data-stu-id="5e299-103">Creates a new stack unwinder that starts unwinding from an initial context (which isn't necessarily the leaf of a thread).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8574-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d8574-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e299-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5e299-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateVirtualUnwinder(  
@@ -26,40 +26,40 @@ HRESULT CreateVirtualUnwinder(
 };  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8574-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d8574-105">Parameters</span></span>  
- <span data-ttu-id="d8574-106">nativeThreadID</span><span class="sxs-lookup"><span data-stu-id="d8574-106">nativeThreadID</span></span>  
- <span data-ttu-id="d8574-107">[in] Identificador de subproceso nativo del subproceso cuya pila se va a desenredar.</span><span class="sxs-lookup"><span data-stu-id="d8574-107">[in] The native thread ID of the thread whose stack is to be unwound.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e299-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5e299-105">Parameters</span></span>  
+ <span data-ttu-id="5e299-106">nativeThreadID</span><span class="sxs-lookup"><span data-stu-id="5e299-106">nativeThreadID</span></span>  
+ <span data-ttu-id="5e299-107">[in] Identificador de subproceso nativo del subproceso cuya pila se va a desenredar.</span><span class="sxs-lookup"><span data-stu-id="5e299-107">[in] The native thread ID of the thread whose stack is to be unwound.</span></span>  
   
- <span data-ttu-id="d8574-108">contextFlags</span><span class="sxs-lookup"><span data-stu-id="d8574-108">contextFlags</span></span>  
- <span data-ttu-id="d8574-109">[in] Marcas que indican qué partes del contexto se definen en `initialContext`.</span><span class="sxs-lookup"><span data-stu-id="d8574-109">[in] Flags that specify which parts of the context are defined in `initialContext`.</span></span>  
+ <span data-ttu-id="5e299-108">contextFlags</span><span class="sxs-lookup"><span data-stu-id="5e299-108">contextFlags</span></span>  
+ <span data-ttu-id="5e299-109">[in] Marcas que indican qué partes del contexto se definen en `initialContext`.</span><span class="sxs-lookup"><span data-stu-id="5e299-109">[in] Flags that specify which parts of the context are defined in `initialContext`.</span></span>  
   
- <span data-ttu-id="d8574-110">cbContext</span><span class="sxs-lookup"><span data-stu-id="d8574-110">cbContext</span></span>  
- <span data-ttu-id="d8574-111">[in] Tamaño de `initialContext`.</span><span class="sxs-lookup"><span data-stu-id="d8574-111">[in] The size of `initialContext`.</span></span>  
+ <span data-ttu-id="5e299-110">cbContext</span><span class="sxs-lookup"><span data-stu-id="5e299-110">cbContext</span></span>  
+ <span data-ttu-id="5e299-111">[in] Tamaño de `initialContext`.</span><span class="sxs-lookup"><span data-stu-id="5e299-111">[in] The size of `initialContext`.</span></span>  
   
- <span data-ttu-id="d8574-112">initialContext</span><span class="sxs-lookup"><span data-stu-id="d8574-112">initialContext</span></span>  
- <span data-ttu-id="d8574-113">[in] Los datos en el contexto.</span><span class="sxs-lookup"><span data-stu-id="d8574-113">[in] The data in the context.</span></span>  
+ <span data-ttu-id="5e299-112">initialContext</span><span class="sxs-lookup"><span data-stu-id="5e299-112">initialContext</span></span>  
+ <span data-ttu-id="5e299-113">[in] Los datos en el contexto.</span><span class="sxs-lookup"><span data-stu-id="5e299-113">[in] The data in the context.</span></span>  
   
- <span data-ttu-id="d8574-114">ppUnwinder</span><span class="sxs-lookup"><span data-stu-id="d8574-114">ppUnwinder</span></span>  
- <span data-ttu-id="d8574-115">[out] Puntero a la dirección de un objeto de la interfaz ICorDebugVirtualUnwinder.</span><span class="sxs-lookup"><span data-stu-id="d8574-115">[out] A pointer to the address of an ICorDebugVirtualUnwinder interface object.</span></span>  
+ <span data-ttu-id="5e299-114">ppUnwinder</span><span class="sxs-lookup"><span data-stu-id="5e299-114">ppUnwinder</span></span>  
+ <span data-ttu-id="5e299-115">[out] Puntero a la dirección de un objeto de la interfaz ICorDebugVirtualUnwinder.</span><span class="sxs-lookup"><span data-stu-id="5e299-115">[out] A pointer to the address of an ICorDebugVirtualUnwinder interface object.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d8574-116">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="d8574-116">Return Value</span></span>  
- <span data-ttu-id="d8574-117">`S_OK` si se realiza correctamente.</span><span class="sxs-lookup"><span data-stu-id="d8574-117">`S_OK` if successful.</span></span> <span data-ttu-id="d8574-118">Cualquier otro `HRESULT` indica un error.</span><span class="sxs-lookup"><span data-stu-id="d8574-118">Any other `HRESULT` indicates failure.</span></span> <span data-ttu-id="d8574-119">Cualquier error `HRESULT` recibido por mscordbi es irrecuperable y hace que [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) métodos devuelvan `CORDBG_E_DATA_TARGET_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="d8574-119">Any failing `HRESULT` received by mscordbi is considered fatal and causes [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) methods to return `CORDBG_E_DATA_TARGET_ERROR`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5e299-116">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5e299-116">Return Value</span></span>  
+ <span data-ttu-id="5e299-117">`S_OK` si se realiza correctamente.</span><span class="sxs-lookup"><span data-stu-id="5e299-117">`S_OK` if successful.</span></span> <span data-ttu-id="5e299-118">Cualquier otro `HRESULT` indica un error.</span><span class="sxs-lookup"><span data-stu-id="5e299-118">Any other `HRESULT` indicates failure.</span></span> <span data-ttu-id="5e299-119">Cualquier error `HRESULT` recibido por mscordbi se considera fatal y hace que los métodos [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) devuelvan `CORDBG_E_DATA_TARGET_ERROR`.</span><span class="sxs-lookup"><span data-stu-id="5e299-119">Any failing `HRESULT` received by mscordbi is considered fatal and causes [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) methods to return `CORDBG_E_DATA_TARGET_ERROR`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d8574-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="d8574-120">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5e299-120">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5e299-120">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d8574-121">Este método solo está disponible con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="d8574-121">This method is available with .NET Native only.</span></span>  
+> <span data-ttu-id="5e299-121">Este método solo está disponible con .NET Native.</span><span class="sxs-lookup"><span data-stu-id="5e299-121">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8574-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d8574-122">Requirements</span></span>  
- <span data-ttu-id="d8574-123">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d8574-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e299-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5e299-122">Requirements</span></span>  
+ <span data-ttu-id="5e299-123">**Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5e299-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8574-124">**Encabezado**: CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d8574-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5e299-124">**Encabezado**: Cordebug. idl, Cordebug. h</span><span class="sxs-lookup"><span data-stu-id="5e299-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d8574-125">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d8574-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5e299-125">**Biblioteca** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5e299-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d8574-126">**Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d8574-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ <span data-ttu-id="5e299-126">**Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e299-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8574-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="d8574-127">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e299-127">Vea también</span><span class="sxs-lookup"><span data-stu-id="5e299-127">See also</span></span>
 
-- [<span data-ttu-id="d8574-128">ICorDebugDataTarget2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d8574-128">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [<span data-ttu-id="d8574-129">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="d8574-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5e299-128">ICorDebugDataTarget2 (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5e299-128">ICorDebugDataTarget2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
+- [<span data-ttu-id="5e299-129">Interfaces de depuración</span><span class="sxs-lookup"><span data-stu-id="5e299-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
