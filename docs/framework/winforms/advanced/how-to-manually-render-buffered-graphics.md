@@ -8,22 +8,22 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: 48dd1d76a42661df6ba642c032c991be4d6a2900
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6655652a7c5dedb8e183356688972c07a705cbc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756590"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931846"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Procedimiento para representar manualmente gráficos almacenados en búfer
 Si administra sus propios gráficos almacenados en búfer, deberá poder crear y representar búferes de gráficos. Puede crear instancias de la clase <xref:System.Drawing.BufferedGraphics> que está asociada con las superficies de dibujo en pantalla mediante llamadas al método <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>. Este método crea una instancia <xref:System.Drawing.BufferedGraphics> que está asociada a una superficie de representación determinada, como un formulario o un control. Después de crear una instancia de <xref:System.Drawing.BufferedGraphics>, puede dibujar gráficos en el búfer que se representan mediante la propiedad <xref:System.Drawing.BufferedGraphics.Graphics%2A>. Después de haber realizado todas las operaciones de gráficos, puede copiar el contenido del búfer en la pantalla llamando al método <xref:System.Drawing.BufferedGraphics.Render%2A>.  
   
 > [!NOTE]
->  Si realiza su propia representación, aumentará el consumo de memoria, aunque este aumento puede ser ligero.  
+> Si realiza su propia representación, aumentará el consumo de memoria, aunque este aumento puede ser ligero.  
   
 ### <a name="to-manually-display-buffered-graphics"></a>Para mostrar manualmente los gráficos almacenados en búfer  
   
-1. Obtenga una referencia a una instancia de la clase <xref:System.Drawing.BufferedGraphicsContext>. Para obtener más información, vea [Cómo: Administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md).  
+1. Obtenga una referencia a una instancia de la clase <xref:System.Drawing.BufferedGraphicsContext>. Para obtener más información, consulte [Cómo Administrar manualmente gráficos](how-to-manually-manage-buffered-graphics.md)almacenados en búfer.  
   
 2. Cree una instancia de la clase <xref:System.Drawing.BufferedGraphics> llamando al método <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>, tal y como se muestra en el ejemplo de código siguiente.  
   
@@ -50,4 +50,4 @@ Si administra sus propios gráficos almacenados en búfer, deberá poder crear y
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [Gráficos de doble búfer](double-buffered-graphics.md)
-- [Cómo: Administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)
+- [Procedimientos: Administrar manualmente gráficos almacenados en búfer](how-to-manually-manage-buffered-graphics.md)

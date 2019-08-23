@@ -10,21 +10,21 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801571"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959966"
 ---
 # <a name="keywords-visual-basic"></a>Palabras clave de Visual Basic
-Las siguientes tablas enumeran todas las palabras clave del lenguaje Visual Basic.  
+En las tablas siguientes se enumeran todas las palabras clave del lenguaje Visual Basic.  
   
 ## <a name="reserved-keywords"></a>Palabras clave reservadas  
  Las palabras clave siguientes están *reservadas*, lo que significa que no se pueden usar como nombres para elementos de programación, como variables o procedimientos. Para omitir esta restricción, incluya el nombre entre corchetes (`[]`). Para obtener más información, vea "Escaped Names" (Nombres con carácter de escape) en [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md) (Nombres de elementos declarados).  
   
 > [!NOTE]
->  No se recomienda usar nombres con carácter de escape, ya que puede hacer que el código sea complicado de leer y producir pequeños errores difíciles de detectar.  
+> No se recomienda usar nombres con carácter de escape, ya que puede hacer que el código sea complicado de leer y producir pequeños errores difíciles de detectar.  
   
 |||||  
 |---|---|---|---|  
@@ -37,7 +37,7 @@ Las siguientes tablas enumeran todas las palabras clave del lenguaje Visual Basi
 |[CObj](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|[Continue](../../../visual-basic/language-reference/statements/continue-statement.md)|[CSByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
 |[CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CType](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|  
 |[CUInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CULng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[CUShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)|[Date](../../../visual-basic/language-reference/data-types/date-data-type.md)|  
-|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|[Declare](../../../visual-basic/language-reference/statements/declare-statement.md)|[Predetermiado](../../../visual-basic/language-reference/modifiers/default.md)|[Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)|  
+|[Decimal](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|[Declare](../../../visual-basic/language-reference/statements/declare-statement.md)|[Valor predeterminado](../../../visual-basic/language-reference/modifiers/default.md)|[Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md)|  
 |[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|[DirectCast](../../../visual-basic/language-reference/operators/directcast-operator.md)|[Do](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Double](../../../visual-basic/language-reference/data-types/double-data-type.md)|  
 |[Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[ElseIf](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[End (instrucción)](../../../visual-basic/language-reference/statements/end-statement.md)|  
 |[End \<palabra clave>](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|`EndIf`|[Enum](../../../visual-basic/language-reference/statements/enum-statement.md)|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md)|  
@@ -57,7 +57,7 @@ Las siguientes tablas enumeran todas las palabras clave del lenguaje Visual Basi
 |[Objeto](../../../visual-basic/language-reference/data-types/object-data-type.md)|[Of](../../../visual-basic/language-reference/statements/of-clause.md)|[On](../../../visual-basic/misc/on.md)|[Operator](../../../visual-basic/language-reference/statements/operator-statement.md)|  
 |[Opción](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Opcional](../../../visual-basic/language-reference/modifiers/optional.md)|[Or](../../../visual-basic/language-reference/operators/or-operator.md)|[OrElse](../../../visual-basic/language-reference/operators/orelse-operator.md)|  
 |[Out (modificador genérico)](../../../visual-basic/language-reference/modifiers/out-generic-modifier.md)|[Sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md)|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|  
-|[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|  
+|[ParamArray](../../../visual-basic/language-reference/modifiers/paramarray.md)|[Partial](../../../visual-basic/language-reference/modifiers/partial.md)|[Private](../../../visual-basic/language-reference/modifiers/private.md)|[Propiedad](../../../visual-basic/language-reference/statements/property-statement.md)|  
 |[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|[Public](../../../visual-basic/language-reference/modifiers/public.md)|[RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md)|[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)|  
 |[ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|[REM](../../../visual-basic/language-reference/statements/rem-statement.md)|[RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md)|[Resume](../../../visual-basic/language-reference/statements/resume-statement.md)|  
 |[Return](../../../visual-basic/language-reference/statements/return-statement.md)|[SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|[Seleccionar](../../../visual-basic/language-reference/statements/select-case-statement.md)|[Set](../../../visual-basic/language-reference/statements/set-statement.md)|  
@@ -77,7 +77,7 @@ Las siguientes tablas enumeran todas las palabras clave del lenguaje Visual Basi
 |[Operador >>](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[Operador >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf`, `GoSub`, `Variant`, y `Wend` se conservan como palabras clave reservadas, aunque ya no se usan en Visual Basic. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../../../visual-basic/language-reference/queries/let-clause.md) (Cláusula Let).  
+> `EndIf`, `GoSub`, `Variant` y`Wend` se conservan como palabras clave reservadas, aunque ya no se usan en Visual Basic. El significado de la palabra clave `Let` ha cambiado. Ahora se usa `Let` en las consultas LINQ. Para obtener más información, vea [Let Clause](../../../visual-basic/language-reference/queries/let-clause.md) (Cláusula Let).  
   
 ## <a name="unreserved-keywords"></a>Palabras clave no reservadas  
  Las palabras clave siguientes no están reservadas, lo que significa que puede usarlas como nombres para los elementos de programación. Aun así, no se recomienda que lo haga, ya que puede hacer que el código sea complicado de leer y producir pequeños errores difíciles de detectar.  
@@ -97,7 +97,7 @@ Las siguientes tablas enumeran todas las palabras clave del lenguaje Visual Basi
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Título|Descripción|  
+|Título|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Resumen de matrices](../../../visual-basic/language-reference/keywords/arrays-summary.md)|Enumera los elementos del lenguaje que se usan para crear, definir y usar matrices.|  
 |[Resumen de objetos de colección](../../../visual-basic/language-reference/keywords/collection-object-summary.md)|Enumera los elementos del lenguaje que se usan para las colecciones.|  

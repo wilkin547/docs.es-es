@@ -2,12 +2,12 @@
 title: <add> de <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
-ms.openlocfilehash: c29e47f688118e34fbdb4deb396c930d478f0582
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b190cb72e21d47bdc62aab2daba0f6eea1ee04ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673607"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926629"
 ---
 # <a name="add-of-scopes"></a>\<Agregar > de \<ámbitos >
 Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los extremos de servicio durante la consulta.  
@@ -17,7 +17,7 @@ Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los ex
 \<endpointBehaviors>  
 \<comportamiento >  
 \<endpointDiscovery>  
-\<scopes>  
+\<ámbitos >  
 \<add>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,18 +41,18 @@ Agrega un Uri de ámbito personalizado que se puede utilizar para filtrar los ex
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|ámbito|URI que contiene información sobre el ámbito del punto de conexión que se puede usar en los criterios de coincidencia para buscar los servicios.|  
+|scope|URI que contiene información sobre el ámbito del punto de conexión que se puede usar en los criterios de coincidencia para buscar los servicios.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Contiene una colección de elementos de configuración que especifican URI del ámbito personalizado que se pueden usar para filtrar puntos de conexión de servicio durante la consulta.|  
+|[\<scopes>](scopes.md)|Contiene una colección de elementos de configuración que especifican URI del ámbito personalizado que se pueden usar para filtrar puntos de conexión de servicio durante la consulta.|  
   
 ## <a name="see-also"></a>Vea también
 

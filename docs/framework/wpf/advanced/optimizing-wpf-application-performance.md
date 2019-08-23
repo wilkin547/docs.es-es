@@ -7,18 +7,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4724e6264c0108924629055525e46d84e86a6e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772988"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953419"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optimizar WPF: Rendimiento de aplicaciones
-En esta sección sirve como referencia para [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] los desarrolladores de aplicaciones que están buscando maneras de mejorar el rendimiento de sus aplicaciones. Si es un desarrollador que está familiarizado con Microsoft .NET Framework y [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], primero debe familiarizarse con ambas plataformas. En esta sección se da por supuesto conocimientos prácticos de ambos y se escribe para los programadores que ya sabe lo suficiente para ponerse en marcha sus aplicaciones.  
+Esta sección está pensada como una referencia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] para los desarrolladores de aplicaciones que buscan maneras de mejorar el rendimiento de sus aplicaciones. Si es un desarrollador que es nuevo en el marco de trabajo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Microsoft .net y, primero debe familiarizarse con ambas plataformas. En esta sección se da por supuesto que tiene conocimientos prácticos de ambos y está escrito para los programadores que ya saben lo suficiente para poner en marcha sus aplicaciones.  
   
 > [!NOTE]
->  Los datos de rendimiento proporcionados en esta sección se basan en [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicaciones que se ejecutan en un PC a 2,8 GHz con 512 RAM y una ATI Radeon 9700 tarjeta gráfica.  
+> Los datos de rendimiento que se proporcionan en esta sección [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se basan en aplicaciones que se ejecutan en un equipo 2,8 GHz con 512 de RAM y una tarjeta gráfica ATI Radeon 9700.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Planear para mejorar el rendimiento de aplicaciones](planning-for-application-performance.md)  
@@ -62,4 +62,4 @@ En esta sección sirve como referencia para [!INCLUDE[TLA#tla_winclient](../../.
 - [Información general sobre el enlace de datos](../data/data-binding-overview.md)
 - [Información general sobre navegación](../app-development/navigation-overview.md)
 - [Sugerencias y trucos para animaciones](../graphics-multimedia/animation-tips-and-tricks.md)
-- [Tutorial: Almacenamiento en caché datos de la aplicación en una aplicación WPF](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [Tutorial: Almacenar en caché datos de la aplicación en una aplicación WPF](walkthrough-caching-application-data-in-a-wpf-application.md)

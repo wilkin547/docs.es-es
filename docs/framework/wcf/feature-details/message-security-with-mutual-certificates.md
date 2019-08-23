@@ -5,34 +5,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: 263ec73af7f4a6f52c4570e17cd140b6afb53601
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd64531116b1588683c2f5c8964e78e41e371ecf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637831"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955340"
 ---
 # <a name="message-security-with-mutual-certificates"></a>Seguridad de mensajes con certificados mutuos
-El escenario siguiente muestra un servicio de Windows Communication Foundation (WCF) y el cliente protegido utilizando el modo de seguridad de mensajes. El cliente y el servicio se autentican con certificados.  
+En el siguiente escenario se muestra un servicio de Windows Communication Foundation (WCF) y un cliente protegido mediante el modo de seguridad de mensajes. El cliente y el servicio se autentican con certificados.  
   
  Este escenario es interoperable porque utiliza WS-Security con el perfil de token de certificado X.509.  
   
 > [!NOTE]
->  Este escenario no realiza negociación del certificado del servicio. El certificado del servicio debe ser proporcionado de antemano al cliente de cualquier comunicación. El certificado de servidor se puede distribuir con la aplicación o puede ser proporcionado en una comunicación fuera de banda.  
+> Este escenario no realiza negociación del certificado del servicio. El certificado del servicio debe ser proporcionado de antemano al cliente de cualquier comunicación. El certificado de servidor se puede distribuir con la aplicación o puede ser proporcionado en una comunicación fuera de banda.  
   
- ![Modo de seguridad con certificados mutuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![Seguridad de mensajes con certificados mutuos](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
-|Característica|Descripción|  
+|Característica|DESCRIPCIÓN|  
 |--------------------|-----------------|  
-|Modo de seguridad|Mensaje|  
+|Modo de seguridad|Message|  
 |Interoperabilidad|Sí, clientes y servicios compatibles con WS-Security y el perfil de token de certificado X.509.|  
-|Autenticación|Autenticación mutua del servidor y el cliente.|  
+|Authentication|Autenticación mutua del servidor y el cliente.|  
 |Integridad|Sí|  
 |Confidencialidad|Sí|  
 |Transporte|HTTP|  
-|Enlaces|<xref:System.ServiceModel.WSHttpBinding>|  
+|Enlace|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>web de Office  
+## <a name="service"></a>Servicio  
  El código y la configuración siguientes están diseñados para ejecutarse de forma independiente. Realice una de las siguientes acciones:  
   
 - Cree un servicio independiente mediante el código sin configuración.  
@@ -107,7 +107,7 @@ El escenario siguiente muestra un servicio de Windows Communication Foundation (
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
 ### <a name="configuration"></a>Configuración  
- Lo siguiente configura el cliente. Se debe especificar un certificado de cliente mediante el [ \<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Además, el certificado del servicio se especifica utilizando el [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
+ Lo siguiente configura el cliente. Se debe especificar un certificado de cliente mediante el [ \<> clientCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md). Además, el certificado del servicio se especifica mediante el [ \<> defaultCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -161,5 +161,5 @@ El escenario siguiente muestra un servicio de Windows Communication Foundation (
 ## <a name="see-also"></a>Vea también
 
 - [Información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de seguridad de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de seguridad para Windows Server App fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
 - [Cómo: Crear e instalar certificados temporales en WCF para la seguridad de transporte durante el desarrollo](https://go.microsoft.com/fwlink/?LinkId=244264)

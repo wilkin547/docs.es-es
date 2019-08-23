@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: da13f9989b427da047c4a94f77907847ed2ae4d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0736f94b1fe1a91b20ee76da673e0bc139aa802a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932631"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959557"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>Devoluciones de llamadas en la serialización tolerante a versiones
 El modelo de programación del contrato de datos admite totalmente los métodos de devolución de llamada de serialización tolerante a versiones que las clases <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> y <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> admiten.  
@@ -33,7 +33,7 @@ El modelo de programación del contrato de datos admite totalmente los métodos 
   
  Los métodos deben aceptar un parámetro <xref:System.Runtime.Serialization.StreamingContext>.  
   
- Estos métodos están pensados principalmente para utilizarlos con controlador de versiones o inicialización. No se llama a ningún constructor durante la deserialización. Por lo tanto, puede que no se puedan inicializar correctamente los miembros de datos (en valores predeterminados intencionales), si los datos de estos miembros faltan en la secuencia de entrada, por ejemplo, si los datos proceden de una versión anterior de un tipo al cual le faltan algunos miembros de datos.  Para corregirlo, utilice el método de devolución de llamada marcado con <xref:System.Runtime.Serialization.OnDeserializingAttribute>, tal y como se muestra en el siguiente ejemplo.  
+ Estos métodos están pensados principalmente para utilizarlos con controlador de versiones o inicialización. No se llama a ningún constructor durante la deserialización. Por lo tanto, puede que no se puedan inicializar correctamente los miembros de datos (en valores predeterminados intencionales), si los datos de estos miembros faltan en la secuencia de entrada, por ejemplo, si los datos proceden de una versión anterior de un tipo al cual le faltan algunos miembros de datos. Para corregirlo, utilice el método de devolución de llamada marcado con <xref:System.Runtime.Serialization.OnDeserializingAttribute>, tal y como se muestra en el siguiente ejemplo.  
   
  Puede marcar sólo un método por tipo con cada uno de los atributos de devolución de llamada anteriores.  
   
@@ -48,4 +48,4 @@ El modelo de programación del contrato de datos admite totalmente los métodos 
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
-- [Serialización tolerante a versiones](../../../../docs/standard/serialization/version-tolerant-serialization.md)
+- [Serialización tolerante a versiones](../../../standard/serialization/version-tolerant-serialization.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: abfb91c61ef72bfc1626b4cc4dcea42b75e2ab35
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: cb54ef372e6da551b95f1edf61e3844b9dcba4c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040238"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950043"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Tutorial: Crear un control compuesto con Visual Basic
 Los controles compuestos proporcionan una forma de crear y reutilizar interfaces gráficas personalizadas. Un control compuesto es esencialmente un componente con una representación visual. Como tal, puede constar de uno o varios controles de Windows Forms, componentes o bloques de código que pueden extender funcionalidad al validar la entrada del usuario, modificar propiedades de presentación o realizar otras tareas requeridas por el autor. Los controles compuestos se pueden colocar en Windows Forms de la misma manera que otros controles. En la primera parte de este tutorial, creará un control compuesto simple denominado `ctlClock`. En la segunda parte, extenderá la funcionalidad de `ctlClock` mediante herencia.
@@ -37,7 +37,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
 3. En el Explorador de soluciones, haga clic con el botón derecho en **UserControl1.vb** y haga clic en **Cambiar nombre**. Cambie el nombre del archivo a `ctlClock.vb`. Haga clic en el botón **Sí** cuando se le pregunte si desea cambiar el nombre de todas las referencias al elemento de código "UserControl1".
 
     > [!NOTE]
-    >  De forma predeterminada, un control compuesto hereda de la <xref:System.Windows.Forms.UserControl> clase proporcionada por el sistema. La <xref:System.Windows.Forms.UserControl> clase proporciona la funcionalidad requerida por todos los controles compuestos e implementa métodos y propiedades estándar.
+    > De forma predeterminada, un control compuesto hereda de la <xref:System.Windows.Forms.UserControl> clase proporcionada por el sistema. La <xref:System.Windows.Forms.UserControl> clase proporciona la funcionalidad requerida por todos los controles compuestos e implementa métodos y propiedades estándar.
 
 4. En el menú **Archivo**, haga clic en **Guardar todo** para guardar el proyecto.
 
@@ -184,7 +184,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
 5. En el Explorador de soluciones, examine los proyectos actuales.
 
     > [!NOTE]
-    >  Se ha agregado un archivo denominado **ctlAlarmClock.vb** al proyecto actual.
+    > Se ha agregado un archivo denominado **ctlAlarmClock.vb** al proyecto actual.
 
 ### <a name="adding-the-alarm-properties"></a>Agregar las propiedades de alarma
  Las propiedades se agregan a un control heredado de la misma forma que si fuera un control compuesto. Ahora utilizará la sintaxis de declaración de propiedades para agregar dos propiedades al control: `AlarmTime`, que almacenará el valor de la fecha y la hora en que debe activarse la alarma, y `AlarmSet`, que indicará si la alarma está definida.
@@ -230,10 +230,10 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
 2. Haga clic en `lblDisplay` (la parte de visualización del control) y observe la ventana Propiedades.
 
     > [!NOTE]
-    >  Aunque se muestran todas las propiedades, están atenuadas. Esto indica que estas propiedades son nativas de `lblDisplay` y no se pueden modificar ni se puede acceder a ellas en la ventana Propiedades. De forma predeterminada, los controles contenidos en un control compuesto son `Private`, y sus propiedades no son accesibles por ningún medio.
+    > Aunque se muestran todas las propiedades, están atenuadas. Esto indica que estas propiedades son nativas de `lblDisplay` y no se pueden modificar ni se puede acceder a ellas en la ventana Propiedades. De forma predeterminada, los controles contenidos en un control compuesto son `Private`, y sus propiedades no son accesibles por ningún medio.
 
     > [!NOTE]
-    >  Si desea que los posteriores usuarios de su control compuesto tengan acceso a sus controles internos, declárelos como `Public` o `Protected`. Esto le permitirá establecer y modificar las propiedades de los controles contenidos en el control compuesto mediante el código adecuado.
+    > Si desea que los posteriores usuarios de su control compuesto tengan acceso a sus controles internos, declárelos como `Public` o `Protected`. Esto le permitirá establecer y modificar las propiedades de los controles contenidos en el control compuesto mediante el código adecuado.
 
 3. Agregue un <xref:System.Windows.Forms.Label> control al control compuesto.
 
@@ -298,7 +298,7 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
      Con la adición de este código, se llevan a cabo varias tareas. La instrucción `Overrides` indica al control que utilice este método en lugar del que heredó del control base. Cuando se llama a este método, llama al método que reemplaza invocando la instrucción `MyBase.Timer1_Tick`, lo que garantiza que toda la funcionalidad incorporada en el control original se reproduzca en este control. A continuación, ejecuta código adicional para incorporar la funcionalidad de alarma. Aparecerá un control de etiqueta parpadeante cuando se active la alarma, y se oirá un pitido.
 
     > [!NOTE]
-    >  Dado que va a reemplazar un controlador de eventos heredado, no es necesario especificar el evento con la palabra clave `Handles`. El evento ya está enlazado. Lo que se va a reemplazar es la implementación del controlador.
+    > Dado que va a reemplazar un controlador de eventos heredado, no es necesario especificar el evento con la palabra clave `Handles`. El evento ya está enlazado. Lo que se va a reemplazar es la implementación del controlador.
 
      El control de reloj despertador está casi completado. Lo único que queda es implementar una forma de desactivarlo. Para ello, agregará código al método `lblAlarm_Click`.
 
@@ -395,5 +395,5 @@ Los controles compuestos proporcionan una forma de crear y reutilizar interfaces
 ## <a name="see-also"></a>Vea también
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
-- [Procedimientos: Crear controles compuestos](how-to-author-composite-controls.md)
+- [Cómo: Crear controles compuestos](how-to-author-composite-controls.md)
 - [Cómo: Mostrar un control en el cuadro de diálogo Elegir elementos del cuadro de herramientas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

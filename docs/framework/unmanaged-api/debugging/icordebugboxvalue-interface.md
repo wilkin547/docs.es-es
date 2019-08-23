@@ -16,34 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a9a647a9c77a3c1f82ae3691e2a5e5b2f544cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c21e5bb70815fa54d1b458894ca33becde204758
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912920"
 ---
 # <a name="icordebugboxvalue-interface"></a>Interfaz ICorDebugBoxValue
 
-Una subclase del ICorDebugHeapValue"" que representa un objeto de clase de valor con conversión boxing.  
+Subclase de "ICorDebugHeapValue" que representa un objeto de clase de valor con conversión boxing.  
   
 ## <a name="methods"></a>Métodos  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[GetObject (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Obtiene un puntero de interfaz a la instancia "ICorDebugObjectValue" conversión boxing.|  
+|[GetObject (método)](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|Obtiene un puntero de interfaz a la instancia "ICorDebugObjectValue" con conversión boxing.|  
   
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
+> Esta interfaz no admite que se la llame de forma remota, ya sea entre procesos o entre equipos.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,19 +1,19 @@
 ---
-title: <diagnostics> para la activación
+title: <diagnostics>para la activación
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 543c41936921eda39017e07f1c97294b268a9141
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704263"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919217"
 ---
-# <a name="diagnostics-for-activation"></a>\<diagnósticos > para la activación
-Configura las funcionalidades del diagnóstico del agente de escucha de Windows Communication Foundation (WCF).  
+# <a name="diagnostics-for-activation"></a>\<diagnóstico > para la activación
+Configura las funcionalidades de diagnóstico del agente de escucha de Windows Communication Foundation (WCF).  
   
  \<system.serviceModel.activation>  
-\<diagnostics>  
+\<diagnóstico >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -25,7 +25,7 @@ Configura las funcionalidades del diagnóstico del agente de escucha de Windows 
 </configuration>
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -33,7 +33,7 @@ Configura las funcionalidades del diagnóstico del agente de escucha de Windows 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`performanceCountersEnabled`|Un valor booleano que indica si los contadores de rendimiento están habilitados para el diagnóstico.|  
   
@@ -42,9 +42,9 @@ Configura las funcionalidades del diagnóstico del agente de escucha de Windows 
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contiene la configuración para el proceso de agente de escucha SMSvcHost.exe.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|Contiene la configuración para el proceso de agente de escucha SMSvcHost.exe.|  
   
 ## <a name="see-also"></a>Vea también
 

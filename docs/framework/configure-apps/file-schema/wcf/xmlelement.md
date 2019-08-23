@@ -2,12 +2,12 @@
 title: <xmlElement>
 ms.date: 03/30/2017
 ms.assetid: 395205c2-d8c0-4a5e-90f3-7ce3c085fccd
-ms.openlocfilehash: a72641b438801cfd493c322297e7c384e83e687c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cc178dcc3684ab338282acc369e0ab5c789c15e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941436"
 ---
 # <a name="xmlelement"></a>\<xmlElement>
 Especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de token de seguridad cuando se solicita un token.  
@@ -16,7 +16,7 @@ Especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de
 \<bindings>  
 \<wsFederatedBinding>  
 \<binding>  
-\<security>  
+\<> de seguridad  
 \<message>  
 \<tokenRequestParameters>  
   
@@ -33,7 +33,7 @@ Especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |xmlElement|Cadena que especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de token de seguridad cuando se solicita un token.|  
   
@@ -42,16 +42,16 @@ Especifica un elemento XML que se envía en el cuerpo del mensaje al servicio de
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<tokenRequestParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
+|[\<tokenRequestParameters>](tokenrequestparameters.md)|Una colección de parámetros de solicitud de token. Cada parámetro es un elemento XML.|  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.TokenRequestParameters%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.TokenRequestParameters%2A>
-- [Identidad del servicio y autenticación](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Funcionalidades de seguridad con enlaces personalizados](../../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [Federación y tokens emitidos](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
+- [Identidad del servicio y autenticación](../../../wcf/feature-details/service-identity-and-authentication.md)
+- [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Funcionalidades de seguridad con enlaces personalizados](../../../wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
+- [Enlaces](../../../wcf/bindings.md)

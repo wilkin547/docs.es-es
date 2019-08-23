@@ -2,15 +2,15 @@
 title: UriTemplate y UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: b0dc3b2b747bc08da239490db7db3ba77d1e7ed8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f51d6fa5c78d97cf11a3c0005be7656013b30e90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918637"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955283"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate y UriTemplateTable
-Los desarrolladores web necesitan poder describir la forma y el diseño de los URI a los que sus servicios responden. Windows Communication Foundation (WCF) agrega dos nuevas clases para proporcionar a los desarrolladores control sobre sus URI. <xref:System.UriTemplate> y <xref:System.UriTemplateTable> forman la base del motor de distribución basado en URI en WCF. Estas clases también se pueden usar en su propios, lo que permite a los desarrolladores aprovechar las ventajas de las plantillas y el URI del mecanismo de asignación sin necesidad de implementar un servicio WCF.  
+Los desarrolladores web necesitan poder describir la forma y el diseño de los URI a los que sus servicios responden. Windows Communication Foundation (WCF) agrega dos clases nuevas para ofrecer a los desarrolladores el control sobre sus URI. <xref:System.UriTemplate>y <xref:System.UriTemplateTable> forman la base del motor de distribución basado en URI en WCF. Estas clases también se pueden utilizar por sí mismas, lo que permite a los desarrolladores aprovechar las plantillas y el mecanismo de asignación de URI sin necesidad de implementar un servicio WCF.  
   
 ## <a name="templates"></a>Plantillas  
  Una plantilla es una manera de describir un conjunto de URI relativos. El conjunto de plantillas URI de la tabla siguiente muestra cómo se podría definir un sistema que recupera varios tipos de información meteorológica.  
@@ -22,7 +22,7 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
 |Previsión de la ciudad|tiempo/{estado}/{ciudad}|  
 |Previsión de Actividad|tiempo/{estado}/{ciudad}/{actividad}|  
   
- Esta tabla describe un conjunto de URI estructuralmente similares. Cada entrada es una plantilla URI. Los segmentos entre llaves describen las variables. Los segmentos que no están entre llaves describen cadenas literales. Las clases de plantilla WCF permiten a un desarrollador tomar un URI de entrada, por ejemplo, "/ tiempo/wa/seattle/ciclismo", y hacerla coincidir con una plantilla que describe, "/ tiempo / {estado} / {ciudad} / {actividad}".  
+ Esta tabla describe un conjunto de URI estructuralmente similares. Cada entrada es una plantilla URI. Los segmentos entre llaves describen las variables. Los segmentos que no están entre llaves describen cadenas literales. Las clases de plantilla de WCF permiten a un desarrollador tomar un URI de entrada, por ejemplo, "/Weather/wa/Seattle/Cycling", y hacer que coincida con una plantilla que lo describe, "/Weather/{State}/{City}/{Activity}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> es una clase que encapsula una plantilla URI. El constructor toma un parámetro de cadena que define la plantilla. Esta cadena contiene la plantilla en el formato descrito en la sección siguiente. La clase <xref:System.UriTemplate> proporciona métodos que le permiten igualar un URI de entrada a una plantilla, generar un URI a partir de una plantilla, recuperar una colección de nombres de variables usadas en la plantilla, determinar si dos plantillas son equivalentes, y devolver la cadena de la plantilla.  
@@ -30,7 +30,7 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
  <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> toma una dirección base y un candidato a identificador URI e intenta asociar el URI a la plantilla. Si la coincidencia se realiza correctamente, se devuelve una instancia <xref:System.UriTemplateMatch>. El objeto <xref:System.UriTemplateMatch> contiene una dirección URI base, el URI candidato, una colección de nombres/valores de los parámetros de consulta, una matriz de segmentos de ruta de acceso relativa, una colección de nombres/valores de variables comparadas, la instancia de <xref:System.UriTemplate> utilizada para la comparación, una cadena que contiene cualquier parte no coincidente del URI candidato (se usa cuando la plantilla tiene un carácter comodín) y un objeto que está asociado a la plantilla.  
   
 > [!NOTE]
->  La clase <xref:System.UriTemplate> omite el esquema y número de puerto al comparar un URI candidato con una plantilla.  
+> La clase <xref:System.UriTemplate> omite el esquema y número de puerto al comparar un URI candidato con una plantilla.  
   
  Hay dos métodos que le permiten generar un URI a partir de una plantilla: <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> y <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> toma una dirección base y una colección de nombre y valor de parámetros. Estos parámetros se sustituyen por variables cuando se enlaza la plantilla. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> toma los pares de nombre/valor y los sustituye de izquierda a derecha.  
   
@@ -38,7 +38,7 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
   
  La propiedad <xref:System.UriTemplate.PathSegmentVariableNames%2A> contiene una colección de los nombres de las variables usadas dentro de segmentos de ruta de acceso en la cadena de la plantilla.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> toma <xref:System.UriTemplate> como parámetro y devuelve un valor booleano que especifica si las dos plantillas son equivalentes. Para obtener más información, consulte la sección equivalencia de plantillas más adelante en este tema.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> toma <xref:System.UriTemplate> como parámetro y devuelve un valor booleano que especifica si las dos plantillas son equivalentes. Para obtener más información, vea la sección equivalencia de plantillas más adelante en este tema.  
   
  <xref:System.UriTemplate> está diseñado para funcionar con cualquier esquema de URI que cumpla la gramática de URI de HTTP. A continuación se ofrecen ejemplos de esquemas de URI compatibles.  
   
@@ -63,9 +63,9 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
   
  La ruta de acceso consiste de "/tiempo/{estado}/{ciudad}", la consulta consiste de"? previsión={longitud} y el fragmento consiste de "#frag1."  
   
- Las barras diagonales iniciales y finales son opcionales en la expresión de la ruta de acceso. Se pueden omitir completamente las expresiones de consulta y fragmento. Una ruta de acceso consta de una serie de segmentos delimitados por '/', cada segmento puede tener un valor literal, un nombre de variable (escrito en {llaves}) o un carácter comodín (escrito como\*'). En la plantilla anterior el segmento “\tiempo\” es un valor literal mientras que “{estado}” y “{ciudad}” son las variables. Las variables toman su nombre a partir del contenido de sus llaves y posterior puedan reemplazarse con un valor concreto para crear un *URI cerrado*. El carácter comodín es opcional, pero solo puede aparecer al final del URI, donde coincide lógicamente con "el resto de la ruta de acceso".  
+ Las barras diagonales iniciales y finales son opcionales en la expresión de la ruta de acceso. Se pueden omitir completamente las expresiones de consulta y fragmento. Una ruta de acceso consta de una serie de segmentos delimitados por '/', cada segmento puede tener un valor literal, un nombre de variable (escrito en {llaves}) o un carácter comodín (escrito\*como ' '). En la plantilla anterior el segmento “\tiempo\” es un valor literal mientras que “{estado}” y “{ciudad}” son las variables. Las variables toman el nombre del contenido de sus llaves y, posteriormente, se pueden reemplazar por un valor concreto para crear un *URI cerrado*. El carácter comodín es opcional, pero solo puede aparecer al final del URI, donde coincide lógicamente con "el resto de la ruta de acceso".  
   
- La expresión de consulta, si está presente, especifica una serie de pares de nombre-valor no ordenados delimitados por '&'. Los elementos de la expresión de consulta pueden ser pares literales (x=2) o un par de variables (x = {var}). Solo el lado derecho de la consulta puede tener una expresión variable. ({someName} = {someValue} no está permitido. No se permiten los valores no emparejados (? x). No hay ninguna diferencia entre una expresión de consulta vacía y una expresión de consulta compuesta de un único '?' (ambos significan “cualquier consulta”).  
+ La expresión de consulta, si está presente, especifica una serie de pares de nombre/valor desordenados delimitados por ' & '. Los elementos de la expresión de consulta pueden ser pares literales (x=2) o un par de variables (x = {var}). Solo el lado derecho de la consulta puede tener una expresión variable. ({someName} = {someValue} no está permitido. No se permiten los valores no emparejados (? x). No hay ninguna diferencia entre una expresión de consulta vacía y una expresión de consulta compuesta de un único '?' (ambos significan “cualquier consulta”).  
   
  La expresión de fragmento puede estar compuesta de un valor literal; no se permiten variables.  
   
@@ -77,21 +77,21 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
   
 - "/zapato"  
   
-- "/shoe/\*"  
+- "/Shoe/\*"  
   
 - "{zapato}/barco"  
   
-- "{zapato} / {barco} /bed/ {tejido}"  
+- "{zapatos}/{Boat}/Bed/{quilt}"  
   
-- "shoe/{boat}"  
+- "zapatos/{barco}"  
   
-- "zapato / {barco} /\*"  
+- "zapatos/{barco}/\*"  
   
-- "shoe/boat?x=2"  
+- "zapatos/barco? x = 2"  
   
 - "shoe/{boat}?x={bed}"  
   
-- "shoe/{boat}?x={bed}&y=band"  
+- "zapatos/{barco}? x = {cama} & y = banda"  
   
 - "?x={shoe}"  
   
@@ -99,17 +99,17 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
   
  Ejemplos de cadenas de plantillas no válidas:  
   
-- "{zapato} / {ZAPATO} / x = 2": nombres de variables duplicados.  
+- "{zapatos}/{SHOE}/x = 2": nombres de variables duplicados.  
   
-- "{zapato} ¿/ barco /? cama = {zapato}": nombres de variables duplicados.  
+- "{zapatos}/Boat/? cama = {zapatos}": nombres de variables duplicados.  
   
-- "? x = 2 & x = 3": los pares nombre/valor dentro de una cadena de consulta deben ser únicos, incluso si son literales.  
+- "? x = 2 & x = 3": los pares de nombre y valor dentro de una cadena de consulta deben ser únicos, aunque sean literales.  
   
-- "? x = 2 &": cadena de consulta tiene un formato incorrecta.  
+- "? x = 2 &": la cadena de consulta tiene un formato incorrecto.  
   
-- "? 2 & x = {zapato}": cadena de consulta debe ser pares nombre/valor.  
+- "? 2 & x = {zapatos}": la cadena de consulta debe ser un par de nombre y valor.  
   
-- "? y = 2 & & X = 3": cadena de consulta debe ser pares nombre-valor, nombres no pueden comenzar con '&'.  
+- "? y = 2 & & X = 3": la cadena de consulta debe ser pares nombre-valor, los nombres no pueden comenzar con "&".  
   
 ### <a name="compound-path-segments"></a>Segmentos de ruta de acceso compuestos  
  Los segmentos de ruta de acceso compuestos permiten que un solo segmento de ruta de acceso de URI contenga varias variables y variables combinadas con literales. A continuación, se ofrecen ejemplos de segmentos de ruta de acceso compuestos válidos.  
@@ -124,15 +124,15 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
   
  A continuación, se ofrecen ejemplos de segmentos de ruta de acceso no válidos.  
   
-- /{} -Se deben denominar variables.  
+- Las{} variables/-deben tener nombre.  
   
 - /{zapato}{barco}: las variables deben estar separadas por un literal.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmentos de ruta de acceso coincidentes y compuestos  
- Los segmentos de ruta de acceso permiten definir un UriTemplate que tenga varias variables en un solo segmento de ruta de acceso. Por ejemplo, en la siguiente cadena de plantilla: "Direcciones / {state}. {Ciudad} "se definen dos variables (estado y ciudad) en el mismo segmento. Esta plantilla coincidiría con una dirección URL como `http://example.com/Washington.Redmond` pero también coincide con una dirección URL como `http://example.com/Washington.Redmond.Microsoft`. En el último caso, la variable de estado contendrá a "Washington" y la variable de ciudad contendrá "Redmond.Microsoft". En este caso, cualquier texto (salvo ‘/’) coincidirá con la variable {ciudad}. Si desea que una plantilla que no coincida con el texto "extra", coloque la variable en un segmento de plantilla independiente, por ejemplo: "Direcciones / {estado} / {ciudad}.  
+ Los segmentos de ruta de acceso permiten definir un UriTemplate que tenga varias variables en un solo segmento de ruta de acceso. Por ejemplo, en la siguiente cadena de plantilla: "Direcciones/{estado}. {City} "se definen dos variables (State y City) dentro del mismo segmento. Esta plantilla coincidiría con una dirección URL `http://example.com/Washington.Redmond` como, pero también coincidirá con una `http://example.com/Washington.Redmond.Microsoft`dirección URL como. En el último caso, la variable de estado contendrá "Washington" y la variable City contendrá "Redmond. Microsoft". En este caso, cualquier texto (salvo ‘/’) coincidirá con la variable {ciudad}. Si desea que una plantilla no coincida con el texto "extra", coloque la variable en un segmento de plantilla independiente, por ejemplo: "Direcciones/{estado}/{ciudad}.  
   
 ### <a name="named-wildcard-segments"></a>Segmentos de carácter comodín con nombre  
- Un segmento de carácter comodín con nombre es cualquier segmento de la variable de ruta de acceso cuyo nombre de variable comienza con el carácter comodín '\*'. La cadena de plantilla siguiente contiene un segmento de carácter comodín con nombre denominado "zapato".  
+ Un segmento de carácter comodín con nombre es cualquier segmento de variable de ruta de acceso cuyo nombre\*de variable comienza con el carácter comodín ' '. La cadena de plantilla siguiente contiene un segmento de carácter comodín con nombre denominado "zapato".  
   
 ```  
 "literal/{*shoe}"  
@@ -150,7 +150,7 @@ Los desarrolladores web necesitan poder describir la forma y el diseño de los U
   
 - Los segmentos de carácter comodín con nombre no pueden tener valores predeterminados.  
   
-- Segmentos de carácter comodín con nombre no pueden terminar con "/".  
+- Los segmentos comodín con nombre no pueden terminar con "/".  
   
 ### <a name="default-variable-values"></a>Valores de variable predeterminados  
  Los valores de variable predeterminados permiten especificar valores predeterminados para las variables de una plantilla. Las variables predeterminadas se pueden especificar con las llaves que declaran la variable o como una colección pasada al constructor UriTemplate. La plantilla siguiente muestra dos maneras de especificar <xref:System.UriTemplate> con variables con valores predeterminados.  
@@ -162,7 +162,7 @@ UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");
  Esta plantilla declara una variable denominada `a` con un valor predeterminado de `1` y una variable denominada `b` con un valor predeterminado de `5`.  
   
 > [!NOTE]
->  Solo las variables de segmento de ruta de acceso pueden tener valores predeterminados. No se permite que tengan valores predeterminados las variables de cadena de consulta, las variables de segmentos compuestos y las variables de carácter comodín con nombre.  
+> Solo las variables de segmento de ruta de acceso pueden tener valores predeterminados. No se permite que tengan valores predeterminados las variables de cadena de consulta, las variables de segmentos compuestos y las variables de carácter comodín con nombre.  
   
  En el código siguiente se muestra cómo se administran los valores de variable predeterminados cuando se buscan coincidencias con un URI candidato.  
   
@@ -192,7 +192,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
-> Un URI como `http://localhost:8000///` no coincide con la plantilla aparece en el código anterior, pero un URI como `http://localhost:8000/` does.  
+> Un URI como `http://localhost:8000///` no coincide con la plantilla indicada en el código anterior, pero un URI `http://localhost:8000/` como sí.  
   
  En el código siguiente se muestra cómo se administran los valores de variable predeterminados al crear un URI con una plantilla.  
   
@@ -230,7 +230,7 @@ Cuando se proporciona a una variable un valor predeterminado de `null`, hay algu
   
 - `UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");`
 
- Los siguientes son cadenas de plantilla no válido con los valores predeterminados de `null`:  
+ Las siguientes son cadenas de plantilla no válidas con `null`valores predeterminados de:  
   
 - `UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment`
   
@@ -240,9 +240,9 @@ Cuando se proporciona a una variable un valor predeterminado de `null`, hay algu
  Al comparar un URI candidato con una plantilla que tiene valores predeterminados, si los valores no se especifican en el URI candidato, los valores predeterminados se colocan en la colección <xref:System.UriTemplateMatch.BoundVariables%2A>.  
   
 ### <a name="template-equivalence"></a>Equivalencia de plantillas  
- Se consideran dos plantillas *estructuralmente equivalentes* cuando todos los literales de las plantillas coinciden y tienen variables en los mismos segmentos. Por ejemplo, las siguientes plantillas son estructuralmente equivalentes:  
+ Se dice que dos plantillas son *estructuralmente equivalentes* cuando todos los literales de las plantillas coinciden y tienen variables en los mismos segmentos. Por ejemplo, las siguientes plantillas son estructuralmente equivalentes:  
   
-- /a/{var1}/b b/{var2}?x=1&y=2  
+- /a/{Var1}/b b/{Var2}? x = 1 & y = 2  
   
 - a/{x}/b%20b/{var1}?y=2&x=1  
   
@@ -266,7 +266,7 @@ Cuando se proporciona a una variable un valor predeterminado de `null`, hay algu
  Si un conjunto de objetos <xref:System.UriTemplate> agregados a <xref:System.UriTemplateTable> contienen cadenas de consulta, no deben ser ambiguas. Se permiten cadenas de consulta idénticas.  
   
 > [!NOTE]
->  Mientras <xref:System.UriTemplateTable> permite direcciones base que utilizan esquemas que no sean HTTP, se omiten el esquema y el número de puerto al comparar los URI candidatos con las plantillas.  
+> Mientras <xref:System.UriTemplateTable> permite direcciones base que utilizan esquemas que no sean HTTP, se omiten el esquema y el número de puerto al comparar los URI candidatos con las plantillas.  
   
 ### <a name="query-string-ambiguity"></a>Ambigüedad de cadenas de consulta  
  Las plantillas que comparten una ruta de acceso equivalente contienen cadenas de consulta ambiguas si hay un URI que coincida con más de una plantilla.  
@@ -293,13 +293,13 @@ Cuando se proporciona a una variable un valor predeterminado de `null`, hay algu
   
 - ?  
   
-- ?m=get&c=rss  
+- ? m = Get & c = RSS  
   
 - ?m=put&c=rss  
   
-- ?m=get&c=atom  
+- ? m = Get & c = Atom  
   
-- ?m=put&c=atom  
+- ? m = Put & c = Atom  
   
  Los siguientes conjuntos de plantillas de cadenas de consulta no son ambiguas entre ellas:  
   
@@ -321,7 +321,7 @@ Cuando se proporciona a una variable un valor predeterminado de `null`, hay algu
   
  "x = 1 & y = 3" coincide con ambas plantillas.  
   
-- ?x=3&y=4  
+- ? x = 3 & y = 4  
   
 - ?x=3&z=5  
   

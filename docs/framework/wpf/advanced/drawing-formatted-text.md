@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 3b410bcf609aca2cb201042247b8768f243ac93a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: eeba54ebd63b26a50c8c01a2478e847b3e660a3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629743"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937692"
 ---
 # <a name="drawing-formatted-text"></a>Dibujar texto con formato
 En este tema se proporciona información general sobre las características <xref:System.Windows.Media.FormattedText> del objeto. Este objeto proporciona control de nivel bajo para dibujar texto en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -26,7 +26,7 @@ En este tema se proporciona información general sobre las características <xre
  ![Texto mostrado mediante un objeto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
->  Para aquellos desarrolladores que migran desde la API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], la tabla en la sección [migración de Win32](#win32_migration) enumera las marcas DrawText de [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] y el equivalente aproximado en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
+> Para aquellos desarrolladores que migran desde la API [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], la tabla en la sección [migración de Win32](#win32_migration) enumera las marcas DrawText de [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] y el equivalente aproximado en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ### <a name="reasons-for-using-formatted-text"></a>Razones para utilizar el texto con formato  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] incluye varios controles para dibujar texto en la pantalla. Cada control se destina a un escenario diferente y tiene su propia lista de características y limitaciones. En general, el <xref:System.Windows.Controls.TextBlock> elemento se debe usar cuando se requiere compatibilidad de texto limitada, como una frase breve en un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label>se puede usar cuando se requiere compatibilidad de texto mínima. Para obtener más información, consulte [Documentos en WPF](documents-in-wpf.md).  
@@ -78,7 +78,7 @@ En este tema se proporciona información general sobre las características <xre
  ![Esfera que sigue la geometría de trayecto de texto](./media/drawing-formatted-text/sphere-following-geometry-path.gif)  
 Esfera que sigue la geometría de trayecto de texto  
   
- Para obtener más información, vea [Cómo: Cree una animación PathGeometry para el](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))texto.  
+ Para obtener más información, consulte [Cómo Cree una animación PathGeometry para el](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))texto.  
   
  Puede crear otros usos interesantes para el texto con formato una vez que se haya convertido <xref:System.Windows.Media.PathGeometry> en un objeto. Por ejemplo, puede recortar vídeo para que se muestre dentro de él.  
   

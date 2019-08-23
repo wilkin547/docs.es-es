@@ -8,27 +8,27 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 8e8f1bf193a41530a19e1046e3907b4c926b779f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8821f6170b8ba588e3197ef54eab14c2719a6cc3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637032"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947817"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>Procedimiento para establecer posiciones de tabulación en texto dibujado
-Puede establecer posiciones de tabulación para el texto mediante una llamada a la <xref:System.Drawing.StringFormat.SetTabStops%2A> método de un <xref:System.Drawing.StringFormat> objeto y, a continuación, pasando que <xref:System.Drawing.StringFormat> de objeto para el <xref:System.Drawing.Graphics.DrawString%2A> método de la <xref:System.Drawing.Graphics> clase.  
+Puede establecer las tabulaciones para el texto llamando al <xref:System.Drawing.StringFormat.SetTabStops%2A> método de un <xref:System.Drawing.StringFormat> objeto y, a continuación <xref:System.Drawing.StringFormat> , <xref:System.Drawing.Graphics.DrawString%2A> pasando ese objeto al método <xref:System.Drawing.Graphics> de la clase.  
   
 > [!NOTE]
->  El <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> hace que no admiten la incorporación de posiciones de tabulación en texto dibujado, aunque puede expandir la pestaña existente dejará de utilizar el <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> marca.  
+> No <xref:System.Windows.Forms.TextRenderer?displayProperty=nameWithType> admite la adición de tabulaciones al texto dibujado, aunque se pueden expandir las tabulaciones existentes mediante <xref:System.Windows.Forms.TextFormatFlags.ExpandTabs?displayProperty=nameWithType> la marca.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente establece las posiciones de tabulación en 150, 250 y 350. A continuación, el código muestra una lista de nombres y las puntuaciones de pruebas con pestañas.  
+ En el ejemplo siguiente se establecen tabulaciones en 150, 250 y 350. Después, el código muestra una lista con pestañas de nombres y puntuaciones de pruebas.  
   
- La siguiente ilustración muestra el texto con pestañas:  
+ En la ilustración siguiente se muestra el texto con pestañas:  
   
- ![Captura de pantalla que muestra una lista de nombres y las puntuaciones con pestañas.](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
+ ![Captura de pantalla que muestra una lista con pestañas de nombres y puntuaciones.](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
   
- El código siguiente pasa dos argumentos de la <xref:System.Drawing.StringFormat.SetTabStops%2A> método. El segundo argumento es una matriz que contiene los desplazamientos de ficha. El primer argumento pasado a <xref:System.Drawing.StringFormat.SetTabStops%2A> es 0, lo que indica que el primer desplazamiento de la matriz se mide desde la posición 0, el borde izquierdo del rectángulo delimitador.  
+ En el código siguiente se pasan dos argumentos <xref:System.Drawing.StringFormat.SetTabStops%2A> al método. El segundo argumento es una matriz que contiene desplazamientos de tabulación. El primer argumento pasado a <xref:System.Drawing.StringFormat.SetTabStops%2A> es 0, que indica que el primer desplazamiento de la matriz se mide desde la posición 0, el borde izquierdo del rectángulo delimitador.  
   
  [!code-csharp[System.Drawing.FontsAndText#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.FontsAndText#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#41)]  

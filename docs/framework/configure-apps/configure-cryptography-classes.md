@@ -9,26 +9,26 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: 77f26405792ac782f2a04e174e8165a09b7f22f6
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e53f4c5c9e24fb25b43b7f27b80ab984214eeac2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567337"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927766"
 ---
 # <a name="configuring-cryptography-classes"></a>Configurar clases de criptografía
 El Windows SDK permite a los administradores del equipo configurar los algoritmos criptográficos y las implementaciones de algoritmo predeterminados que usan las aplicaciones .NET Framework y escritas correctamente.  Por ejemplo, una empresa que tenga su propia implementación de un algoritmo criptográfico puede hacer que esa implementación sea la predeterminada en lugar de la implementación incluida en el Windows SDK. Aunque las aplicaciones administradas que usan criptografía siempre pueden optar por enlazar explícitamente a una implementación concreta, se recomienda que creen objetos criptográficos mediante el sistema de configuración de criptografía.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Asignar nombres de algoritmo a clases de criptografía](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  
+ [Asignar nombres de algoritmo a clases de criptografía](map-algorithm-names-to-cryptography-classes.md)  
  Describe cómo asignar un nombre de algoritmo a una clase de criptografía.  
   
- [Asignar identificadores de objeto a algoritmos de criptografía](../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)  
+ [Asignar identificadores de objeto a algoritmos de criptografía](map-object-identifiers-to-cryptography-algorithms.md)  
  Describe cómo asignar un identificador de objeto a un algoritmo criptográfico.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
+ [Cryptographic Services](../../standard/security/cryptographic-services.md)  
  Proporciona información general sobre los servicios criptográficos proporcionados por el Windows SDK.  
   
- [Esquema de la configuración de criptografía](../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+ [Esquema de la configuración de criptografía](./file-schema/cryptography/index.md)  
  Describe los elementos que asignan nombres de algoritmo descriptivos a las clases que implementan algoritmos criptográficos.

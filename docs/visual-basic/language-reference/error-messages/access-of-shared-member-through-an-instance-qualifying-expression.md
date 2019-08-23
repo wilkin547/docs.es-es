@@ -7,29 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 311f4c025072162e0cfb6b87587f8602d33fcd19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3174d463744303e8c90ed0b2e1a4d86ed08fbcfb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64646876"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947700"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Acceso de miembro compartido mediante una instancia; la expresión calificadora no se evaluará
-Una variable de instancia de una clase o estructura se usa para tener acceso a un `Shared` variable, propiedad, procedimiento o evento definido en esa clase o estructura. Esta advertencia puede producirse también si se usa una variable de instancia para tener acceso a un miembro implícitamente compartido de una clase o estructura, como una constante o enumeración, o una clase anidada o estructura.  
+Una variable de instancia de una clase o estructura se utiliza para tener `Shared` acceso a una variable, propiedad, procedimiento o evento definidos en esa clase o estructura. Esta advertencia también puede producirse si se usa una variable de instancia para tener acceso a un miembro compartido implícitamente de una clase o estructura, como una constante o una enumeración, o una clase o estructura anidada.  
   
- El propósito de compartir a un miembro es crear una sola copia de dicho miembro y que dicha copia solo esté disponible para todas las instancias de la clase o estructura en la que se ha declarado. Es coherente con este fin para tener acceso a un `Shared` miembro mediante el nombre de su clase o estructura, en lugar de una variable que contiene una instancia individual de esa clase o estructura.  
+ El propósito de compartir un miembro es crear una sola copia de ese miembro y hacer que esa copia única esté disponible para cada instancia de la clase o estructura en la que se declara. Es coherente con este propósito para tener acceso a `Shared` un miembro mediante el nombre de su clase o estructura, en lugar de una variable que contiene una instancia individual de esa clase o estructura.  
   
- Obtener acceso a un `Shared` miembro a través de una variable de instancia puede hacer que su código más difícil de entender ocultando el hecho de que el miembro es `Shared`. Además, si el acceso forma parte de una expresión que lleva a cabo otras acciones, como un `Function` procedimiento que devuelve una instancia del miembro compartido, Visual Basic omite la expresión y todas las demás acciones realizaría en caso contrario.  
+ El acceso a `Shared` un miembro a través de una variable de instancia puede hacer que el código sea más difícil de entender ocultando el `Shared`hecho de que el miembro es. Además, si dicho acceso forma parte de una expresión que realiza otras acciones, como un `Function` procedimiento que devuelve una instancia del miembro compartido, Visual Basic omite la expresión y otras acciones que, de otro modo, realizarían.  
   
  Para obtener más información y un ejemplo, vea [Shared](../../../visual-basic/language-reference/modifiers/shared.md).  
   
  De forma predeterminada, este mensaje es una advertencia. Para más información sobre cómo ocultar las advertencias o cómo tratarlas como errores, vea [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
- **Identificador de error:** BC42025  
+ **IDENTIFICADOR de error:** BC42025  
   
 ## <a name="to-correct-this-error"></a>Para corregir este error  
   
-- Use el nombre de la clase o estructura que define el `Shared` miembro para acceder a él, como se muestra en el ejemplo siguiente.  
+- Use el nombre de la clase o estructura que define el `Shared` miembro para tener acceso a él, tal como se muestra en el ejemplo siguiente.  
   
 ```vb  
 Public Class testClass  
@@ -53,7 +53,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Esté alerta para los efectos de ámbito cuando dos elementos de programación tienen el mismo nombre. En el ejemplo anterior, si declara una instancia mediante el uso de `Dim testClass as testClass = Nothing`, el compilador trata una llamada a `testClass.sayHello()` tal como se produce el acceso del método mediante el nombre de clase y ninguna advertencia.  
+> Debe alertar sobre los efectos del ámbito cuando dos elementos de programación tienen el mismo nombre. En el ejemplo anterior, si declara una instancia `Dim testClass as testClass = Nothing`de mediante, el compilador trata una llamada a `testClass.sayHello()` como un acceso al método mediante el nombre de clase y no se produce ninguna advertencia.  
   
 ## <a name="see-also"></a>Vea también
 

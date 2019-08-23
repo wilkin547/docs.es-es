@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: 07e1bb4bcdcaa99635db293f23e5ecb689b6063e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd858279a4d8a3509a91bcd1c62fb1f61d6d2bb9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621327"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69931788"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>Procedimiento para imprimir un archivo de texto de varias páginas en formularios Windows Forms
 Es muy común que las aplicaciones basadas en Windows impriman texto. La clase <xref:System.Drawing.Graphics> proporciona métodos para dibujar objetos (gráficos o texto) en un dispositivo, como una pantalla o una impresora.  
   
 > [!NOTE]
->  No se admiten los métodos <xref:System.Windows.Forms.TextRenderer.DrawText%2A> de <xref:System.Windows.Forms.TextRenderer> para la impresión. Debe usar siempre los métodos <xref:System.Drawing.Graphics.DrawString%2A> de <xref:System.Drawing.Graphics>, tal y como se muestra en el siguiente ejemplo de código, para dibujar texto para impresión.  
+> No se admiten los métodos <xref:System.Windows.Forms.TextRenderer.DrawText%2A> de <xref:System.Windows.Forms.TextRenderer> para la impresión. Debe usar siempre los métodos <xref:System.Drawing.Graphics.DrawString%2A> de <xref:System.Drawing.Graphics>, tal y como se muestra en el siguiente ejemplo de código, para dibujar texto para impresión.  
   
 ### <a name="to-print-text"></a>Para imprimir texto  
   
@@ -58,7 +58,7 @@ Es muy común que las aplicaciones basadas en Windows impriman texto. La clase <
   
 - Referencias a los ensamblados System, System.Windows.Forms, System.Drawing.  
   
-- Para obtener información sobre cómo compilar este ejemplo desde la línea de comandos para Visual Basic o Visual C#, vea [compilar desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o [de línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
+- Para obtener información sobre cómo compilar este ejemplo desde la línea de C#comandos para Visual Basic o visual, vea compilar [desde la línea de comandos](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) o compilar desde la línea de comandos [con CSC. exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). También puede compilar este ejemplo en Visual Studio pegando el código en un nuevo proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

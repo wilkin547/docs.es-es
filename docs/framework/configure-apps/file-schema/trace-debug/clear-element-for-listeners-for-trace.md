@@ -1,5 +1,5 @@
 ---
-title: <clear> Elemento para <listeners> para <trace>
+title: <clear>(Elemento <listeners> ) para<trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/clear
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - clear element for <listeners> for <trace>
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
-ms.openlocfilehash: 97b18f9d6baa618b0f535955b232e2119c758b11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9816ba0f8e4ddd4c38537eb4e014a4240ff20407
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701325"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927169"
 ---
-# <a name="clear-element-for-listeners-for-trace"></a>\<Borrar > (elemento) para \<los agentes de escucha > para \<seguimiento >
+# <a name="clear-element-for-listeners-for-trace"></a>\<borrar > elemento de \<los agentes de escucha \<> para el seguimiento >
 Borra la colección `Listeners` de un seguimiento.  
   
  \<configuration>  
 \<system.diagnostics>  
-\<trace>  
+\<> de seguimiento  
 \<listeners>  
 \<clear>  
   
@@ -40,25 +40,25 @@ Borra la colección `Listeners` de un seguimiento.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
-|`listeners`|Contiene los agentes de escucha que recopilarán, almacenan y enrutan los mensajes. Los agentes de escucha dirigen los resultados de seguimiento a un destino apropiado.|  
+|`listeners`|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes. Los agentes de escucha dirigen los resultados del seguimiento a un destino adecuado.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `<clear>` elemento quita todos los agentes de escucha desde el `Listeners` colección de seguimiento. Puede usar el `<clear>` elemento antes de usar el `<add>` elemento que esté seguro de que no hay ningún otros agentes de escucha activos en la colección.  
+ El `<clear>` elemento quita todos los agentes de escucha `Listeners` de la colección para el seguimiento. Puede usar el `<clear>` elemento antes de usar el `<add>` elemento para estar seguro de que no hay ningún otro agente de escucha activo en la colección.  
   
- Puede borrar el `Listeners` colección mediante programación mediante una llamada a la <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método en el <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> propiedad (`System.Diagnostics.Trace.Listeners.Clear()`).  
+ Puede borrar la `Listeners` colección mediante programación llamando al <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> método en la <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> propiedad (`System.Diagnostics.Trace.Listeners.Clear()`).  
   
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 > [!NOTE]
->  El `<clear>` elemento quita el <xref:System.Diagnostics.DefaultTraceListener> desde el `Listeners` colección, alterar el comportamiento de la <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, y <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> métodos. Una llamada a un `Assert` o `Fail` método normalmente da como resultado de la presentación de un cuadro de mensaje. Sin embargo, no se muestra el cuadro de mensaje si el <xref:System.Diagnostics.DefaultTraceListener> no está en el `Listeners` colección.  
+> El `<clear>` elemento `Listeners` <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>quita de la colección, modificando el comportamiento de los <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>métodos,, y. <xref:System.Diagnostics.DefaultTraceListener> La llamada `Assert` a `Fail` un método o suele tener como resultado la presentación de un cuadro de mensaje. Sin embargo, el cuadro de mensaje no se muestra <xref:System.Diagnostics.DefaultTraceListener> si no está en `Listeners` la colección.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el `<clear>` elemento antes de usar el `<add>` elemento para agregar el agente de escucha `console` a la `Listeners` recopilación para el seguimiento.  
+ En el ejemplo siguiente se muestra cómo usar `<clear>` el elemento antes de `<add>` usar el elemento `console` para agregar el agente de `Listeners` escucha a la colección para el seguimiento.  
   
 ```xml  
 <configuration>  
@@ -83,6 +83,6 @@ Borra la colección `Listeners` de un seguimiento.
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - <xref:System.Diagnostics.TraceSource>
-- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)
-- [Agentes de escucha de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [\<remove>](remove-element-for-listeners-for-trace.md)
+- [Agentes de escucha de seguimiento](../../../debug-trace-profile/trace-listeners.md)

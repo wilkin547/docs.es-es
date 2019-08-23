@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ebc4bf703bc22b642b0950fd60471342a615a5c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e3a348ac8da855e458b6208c51f9c51b48da3134
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663849"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927446"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion >, elemento
 Especifica que el runtime debe usar criterios de ordenación heredados al realizar comparaciones de cadenas.  
@@ -42,7 +42,7 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|DESCRIPCIÓN|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |4096|El identificador de configuración regional que representa un criterio de ordenación alternativo. En este caso, 4096 representa el criterio de ordenación de los .NET Framework 3,5 y versiones anteriores.|  
   
@@ -60,7 +60,7 @@ Especifica que el runtime debe usar criterios de ordenación heredados al realiz
  Dado que las operaciones de comparación de cadenas, ordenación y uso <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> de mayúsculas y minúsculas realizadas por la clase en el .NET Framework 4 se ajustan al estándar Unicode <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> 5,1 <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> , los resultados de los métodos de comparación de cadenas como y pueden diferir de versiones anteriores de la .NET Framework. Si su aplicación depende del comportamiento heredado, puede restaurar las reglas de comparación y ordenación de cadenas usadas en el .NET Framework 3,5 y versiones anteriores incluyendo `<CompatSortNLSVersion>` el elemento en el archivo de configuración de la aplicación.  
   
 > [!IMPORTANT]
->  La restauración de reglas de comparación y ordenación de cadenas heredadas también requiere que la biblioteca de vínculos dinámicos sort00001000.dll esté disponible en el sistema local.  
+> La restauración de reglas de comparación y ordenación de cadenas heredadas también requiere que la biblioteca de vínculos dinámicos sort00001000.dll esté disponible en el sistema local.  
   
  También puede usar reglas de ordenación y comparación de cadenas heredadas en un dominio de aplicación concreto. Para ello, pase la cadena "NetFx40_Legacy20SortingBehavior" al método <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> al crear el dominio de aplicación.  
   

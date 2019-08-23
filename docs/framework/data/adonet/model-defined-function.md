@@ -2,15 +2,15 @@
 title: función definida por el modelo
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 4f98bbc9fdc19159354ec3e414c1a1c26029cb47
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 05a44e86a118b649490cde849c8ca2c2bb0d2f15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645846"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934523"
 ---
 # <a name="model-defined-function"></a>función definida por el modelo
-Un *función definida por modelo* es una función que se define en un modelo conceptual. El cuerpo de una función definida por el modelo se expresa en [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), lo que permite que se expresa con independencia de la función de reglas o lenguajes admitidos en el origen de datos.  
+Una *función definida por el modelo* es una función que se define en un modelo conceptual. El cuerpo de una función definida por el modelo se expresa en [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), lo que permite expresar la función independientemente de las reglas o los lenguajes admitidos en el origen de datos.  
   
  La definición para una función definida por el modelo contiene la información siguiente:  
   
@@ -19,11 +19,11 @@ Un *función definida por modelo* es una función que se define en un modelo con
 - El tipo del valor devuelto. (Opcional)  
   
     > [!NOTE]
-    >  Si no se especifica ningún tipo de valor devuelto, este es void.  
+    > Si no se especifica ningún tipo de valor devuelto, este es void.  
   
 - Información de parámetros. (Opcional)  
   
-- Un [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) expresión que define el cuerpo de la función.  
+- Expresión [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) que define el cuerpo de la función.  
   
  Tenga en cuenta que las funciones definidas por el modelo no admiten parámetros de salida. Esta restricción se aplica para que las funciones definidas por el modelo puedan ser compuestas.  
   
@@ -32,7 +32,7 @@ Un *función definida por modelo* es una función que se define en un modelo con
   
  ![Captura de pantalla que muestra un modelo con fecha de publicación.](./media/model-defined-function/model-published-date-three-entity-types.gif)  
   
- El [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define una función en el modelo conceptual que devuelve el número de años transcurridos desde la publicación de una instancia de `Book` (en el diagrama anterior).  
+ El [Entity Framework ADO.net](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. El código CSDL siguiente define una función en el modelo conceptual que devuelve el número de años transcurridos desde la publicación de una instancia de `Book` (en el diagrama anterior).  
   
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   

@@ -9,26 +9,26 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 1f6312f9ac8520b2131e1d2d7a7fb996aee6060e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0dba318e6aa35761f4e9471fdb13b65644747b57
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651595"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966503"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>Procedimiento para usar la plantilla de filas para personalizar filas en el control DataGridView de formularios Windows Forms
-El <xref:System.Windows.Forms.DataGridView> control usa la plantilla de fila como base para todas las filas que agregan al control mediante enlace de datos o cuando se llama a la <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> método sin especificar una fila existente para usar.  
+El <xref:System.Windows.Forms.DataGridView> control utiliza la plantilla de fila como base para todas las filas que se agregan al control mediante el enlace de datos o cuando se <xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType> llama al método sin especificar una fila existente que se va a usar.  
   
- La plantilla de fila ofrece un mayor control sobre la apariencia y comportamiento de las filas que el <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> proporciona la propiedad. Con la plantilla de fila, puede establecer cualquiera <xref:System.Windows.Forms.DataGridViewRow> propiedades, incluyendo <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
+ La plantilla de fila proporciona un mayor control sobre la apariencia y el comportamiento de las <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> filas que proporciona la propiedad. Con la plantilla de fila, puede establecer cualquier <xref:System.Windows.Forms.DataGridViewRow> propiedad, incluida <xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>.  
   
- Existen algunas situaciones donde debe usar la plantilla de fila para lograr un efecto en particular. Por ejemplo, la información de alto de fila no pueden almacenarse en un <xref:System.Windows.Forms.DataGridViewCellStyle>, por lo que debe usar una plantilla de fila para cambiar el alto predeterminado utilizado por todas las filas. La plantilla de fila también es útil al crear sus propias clases derivadas de <xref:System.Windows.Forms.DataGridViewRow> y desea que el tipo personalizado que se utiliza cuando se agregan nuevas filas al control.  
+ Hay algunas situaciones en las que debe usar la plantilla de fila para lograr un efecto determinado. Por ejemplo, la información de alto de fila no se <xref:System.Windows.Forms.DataGridViewCellStyle>puede almacenar en un, por lo que debe usar una plantilla de fila para cambiar el alto predeterminado utilizado por todas las filas. La plantilla de fila también es útil cuando crea sus propias clases derivadas <xref:System.Windows.Forms.DataGridViewRow> de y desea que el tipo personalizado se use cuando se agreguen nuevas filas al control.  
   
 > [!NOTE]
->  La plantilla de fila solo se usa cuando se agregan filas. No se puede cambiar las filas existentes cambiando la plantilla de fila.  
+> La plantilla de fila solo se usa cuando se agregan filas. No se pueden cambiar las filas existentes cambiando la plantilla de fila.  
   
 ### <a name="to-use-the-row-template"></a>Para usar la plantilla de fila  
   
-- Establecer propiedades en el objeto recuperado desde el <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> propiedad.  
+- Establezca las propiedades en el objeto recuperado <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType> de la propiedad.  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]

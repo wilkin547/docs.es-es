@@ -2,12 +2,12 @@
 title: <useManagedPresentation>
 ms.date: 03/30/2017
 ms.assetid: 17a0dd77-af54-41db-a9d0-4b17ff42878f
-ms.openlocfilehash: eedf0ce6cf75b8fb56daf98f2005e66162ce10d8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e67cc316b8747ee785055ceb4f954988fa82a44c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769855"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940610"
 ---
 # <a name="usemanagedpresentation"></a>\<useManagedPresentation>
 Elemento de enlace utilizado para comunicarse con un Servicio de token de seguridad de CardSpace que admite el perfil CardSpace de WS-Trust. Este elemento no tiene ningún atributo y está presente como modificador vacío.  
@@ -31,13 +31,13 @@ Elemento de enlace utilizado para comunicarse con un Servicio de token de seguri
  Ninguno.  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguna  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](../../../misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Un proveedor de identidad utiliza este elemento para expresar en su directiva el hecho de que admite el perfil CardSpace de WS-Trust. Los proveedores de identidad que publican este tipo de aserción de directiva deberían poder emitir tokens basados en ese perfil CardSpace.  
@@ -47,7 +47,7 @@ Elemento de enlace utilizado para comunicarse con un Servicio de token de seguri
 - <xref:System.ServiceModel.Configuration.UseManagedPresentationElement>
 - <xref:System.ServiceModel.Channels.UseManagedPresentationBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

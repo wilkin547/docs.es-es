@@ -3,15 +3,15 @@ title: <caches>
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-ms.openlocfilehash: b1d04280ef993297102d446ba5a7db54e8404dd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ad75ae18772d6e7c724f2cbf40c1e3083d5c345
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750792"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941964"
 ---
 # <a name="caches"></a>\<caches>
-Registra las memorias caché utilizadas para la detección de reproducción de tokens y los tokens de sesión.  
+Registra las cachés utilizadas para los tokens de sesión y la detección de reproducción de tokens.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -32,29 +32,29 @@ Registra las memorias caché utilizadas para la detección de reproducción de t
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
- Ninguna  
+ None  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<sessionSecurityTokenCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|Registra una memoria caché de tokens de sesión con un servicio o una colección de controladores de token de seguridad.|  
-|[\<tokenReplayCache>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|Registra una caché de reproducción de tokens con un servicio o una colección de controladores de token de seguridad.|  
+|[\<sessionSecurityTokenCache>](sessionsecuritytokencache.md)|Registra una memoria caché para los tokens de sesión con un servicio o una colección de controladores de tokens de seguridad.|  
+|[\<tokenReplayCache>](tokenreplaycache.md)|Registra una memoria caché de reproducción de tokens con un servicio o una colección de controladores de tokens de seguridad.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica los valores de identidad de nivel de servicio.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de seguridad controladores de token.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Especifica la configuración de identidad de nivel de servicio.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de controladores de tokens de seguridad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un `<caches>` elemento puede especificarse en el nivel de servicio bajo la `<identityConfiguration>` elemento o en el nivel de colección de controladores de token de seguridad bajo el `<securityTokenHandlerConfiguration>` elemento. La configuración en una colección de controladores de token invalida las especificadas en el servicio.  
+ Un `<caches>` elemento se puede especificar en el nivel de servicio bajo `<identityConfiguration>` el elemento o en el nivel de colección de controladores de `<securityTokenHandlerConfiguration>` tokens de seguridad bajo el elemento. La configuración de una colección de controladores de tokens invalida las especificadas en el servicio.  
   
- El `<caches>` elemento representado por la <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> clase. Memorias caché configuradas se representan mediante el <xref:System.IdentityModel.Configuration.IdentityModelCaches> clase.  
+ El elemento se representa mediante la <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> clase. `<caches>` La <xref:System.IdentityModel.Configuration.IdentityModelCaches> clase representa las memorias caché configuradas.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente XML muestra la configuración de una caché personalizada para almacenar los tokens de seguridad de sesión (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). La configuración se toma de la `ClaimsAwareWebFarm` ejemplo.  
+ El siguiente XML muestra la configuración de una caché personalizada para contener los tokens de seguridad<xref:System.IdentityModel.Tokens.SessionSecurityToken>de la sesión (). La configuración se toma `ClaimsAwareWebFarm` del ejemplo.  
   
 ```xml  
 <caches>  

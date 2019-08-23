@@ -2,18 +2,18 @@
 title: Protección de mensajes utilizando la seguridad de transporte
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: a8a7e9422679927636ae2dc9b6a2ab34202ee74c
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: b0507590914e2e8cda7e5e599914a9e3d7b0acd0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331517"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911708"
 ---
 # <a name="securing-messages-using-transport-security"></a>Protección de mensajes utilizando la seguridad de transporte
 En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ) que puede utilizar para proteger los mensajes enviados a una cola.  
   
 > [!NOTE]
->  Antes de leer este tema, se recomienda leer los conceptos de [seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+> Antes de leer este tema, se recomienda leer los conceptos de [seguridad](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
  En la ilustración siguiente se proporciona un modelo conceptual de comunicación en cola mediante Windows Communication Foundation (WCF). La ilustración y la terminología se utilizan para explicar los conceptos de la seguridad de transporte.  
   
@@ -53,7 +53,7 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
  La opción de usar la seguridad de Windows necesita la integración de Active Directory. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> es el modo de seguridad de transporte predeterminado. Cuando se establece, el canal de WCF adjunta el SID de Windows al mensaje de MSMQ y usa su certificado interno Obtenido de Active Directory. MSMQ utiliza este certificado interno para proteger el mensaje. El administrador de la cola receptora utiliza Active Directory para buscar y encontrar un certificado correspondiente para autenticar el cliente y comprueba que el SID también coincida con el del cliente. Este paso de autenticación se ejecuta si un certificado, generado internamente en el caso de modo de autenticación `WindowsDomain` o generado externamente en el caso de modo de autenticación `Certificate`, está adjunto al mensaje aun cuando la cola de destino no esté marcada como autenticación necesaria.  
   
 > [!NOTE]
->  Al crear una cola, puede marcar la cola como una cola autenticada para indicar que la cola requiere autenticación del cliente que envía los mensajes a la cola. Esto garantiza que no se acepte ningún mensaje no autenticado en la cola.  
+> Al crear una cola, puede marcar la cola como una cola autenticada para indicar que la cola requiere autenticación del cliente que envía los mensajes a la cola. Esto garantiza que no se acepte ningún mensaje no autenticado en la cola.  
   
  El SID adjunto con el mensaje también se utiliza para compararlo con el ACL de la cola de destino para asegurarse de que el cliente tenga la autoridad para enviar los mensajes a la cola.  
   
@@ -76,13 +76,13 @@ En esta sección se discute la seguridad de transporte de Message Queuing (MSMQ)
  Además de la firma del mensaje, el mensaje de MSMQ se cifra utilizando la clave pública del certificado obtenido de Active Directory que pertenece al administrador de la cola receptora que hospeda la cola de destino. El administrador de la cola emisora garantiza que el mensaje de MSMQ esté cifrado en tránsito. El administrador de la cola receptora descifra el mensaje de MSMQ mediante la clave privada de su certificado interno y almacena el mensaje en la cola (si se autentica y autoriza) en texto no cifrado.  
   
 > [!NOTE]
->  Para cifrar el mensaje, se requiere acceso a Active Directory (la propiedad `UseActiveDirectory` de <xref:System.ServiceModel.NetMsmqBinding> debe estar establecida en `true`) y se puede utilizar tanto con <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> como <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
+> Para cifrar el mensaje, se requiere acceso a Active Directory (la propiedad `UseActiveDirectory` de <xref:System.ServiceModel.NetMsmqBinding> debe estar establecida en `true`) y se puede utilizar tanto con <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> como <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="none-protection-level"></a>Ningún nivel de protección  
  Esto sucede cuando <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> está establecido en <xref:System.Net.Security.ProtectionLevel.None>. Éste no puede ser un valor válido para cualquier otro modo de autenticación.  
   
 > [!NOTE]
->  Si el mensaje de MSMQ está firmado, MSMQ comprueba si el mensaje está firmado con el certificado adjunto (interno o externo) independiente del estado de la cola, es decir, cola autenticada o no.  
+> Si el mensaje de MSMQ está firmado, MSMQ comprueba si el mensaje está firmado con el certificado adjunto (interno o externo) independiente del estado de la cola, es decir, cola autenticada o no.  
   
 ### <a name="msmq-encryption-algorithm"></a>Algoritmo de cifrado de MSMQ  
  El algoritmo de cifrado especifica el algoritmo a utilizar para cifrar el mensaje MSMQ durante la conexión. Esta propiedad solo se utiliza si <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> se define como <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>.  

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: b9a43c5f5141e364ab9aac1cfdff577a8fb8a161
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 41a638afa93e605221d5ef8172e243b1c61676bf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67486679"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941383"
 ---
-# <a name="systemweb-element-web-settings"></a>\<System.Web > elemento (configuración Web)
-Contiene información sobre cómo administra el comportamiento de todo el proceso de la capa de hospedaje de ASP.NET.  
+# <a name="systemweb-element-web-settings"></a>\<Elemento System. Web > (configuración Web)
+Contiene información sobre cómo el nivel de hospedaje de ASP.NET administra el comportamiento de todo el proceso.  
   
  \<configuration>  
-\<System.Web > elemento (configuración Web)  
+\<Elemento System. Web > (configuración Web)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,21 +36,21 @@ Contiene información sobre cómo administra el comportamiento de todo el proces
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Especifica la configuración para grupos de aplicaciones de IIS en un archivo aspnet.config.|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica los valores de configuración para los grupos de aplicaciones de IIS en un archivo Aspnet. config.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Especifica el elemento raíz de cada archivo de configuración que usa el common language runtime y aplicaciones de .NET Framework.|  
+|[\<configuration>](../configuration-element.md)|Especifica el elemento raíz de cada archivo de configuración usado por las aplicaciones Common Language Runtime y .NET Framework.|  
   
 ## <a name="remarks"></a>Comentarios  
- El `system.web` elemento y su elemento secundario `applicationPool` elemento se han agregado a .NET Framework a partir de .NET Framework 3.5 SP1. Cuando se ejecuta en modo integrado de IIS 7.0 o versiones posteriores, esta combinación de elementos permite configurar cómo administra los subprocesos de ASP.NET y cómo pone en cola las solicitudes cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS. Si se ejecutan IIS 7.0 o versiones posteriores en modo ISAPI o clásico, se omiten estos valores.  
+ El `system.web` elemento y su elemento `applicationPool` secundario se agregaron a la .NET Framework a partir de .NET Framework 3,5 SP1. Al ejecutar IIS 7,0 o versiones posteriores en el modo integrado, esta combinación de elementos le permite configurar el modo en que ASP.NET administra los subprocesos y cómo pone en cola las solicitudes cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS. Si ejecuta IIS 7,0 o versiones posteriores en el modo clásico o ISAPI, se omiten estos valores de configuración.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo configurar el comportamiento de todo el proceso ASP.NET en el archivo aspnet.config cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS. El ejemplo se supone que se está ejecutando IIS en integrado modo y que la aplicación está utilizando .NET Framework 3.5 SP1 o una versión posterior. Este comportamiento no se produce en las versiones de .NET Framework anteriores a .NET Framework 3.5 SP1. Los valores en el ejemplo son los valores predeterminados.  
+ En el ejemplo siguiente se muestra cómo configurar el comportamiento de todo el proceso de ASP.NET en el archivo Aspnet. config cuando ASP.NET se hospeda en un grupo de aplicaciones de IIS. En el ejemplo se da por supuesto que IIS se ejecuta en modo integrado y que la aplicación está usando .NET Framework 3,5 SP1 o una versión posterior. Este comportamiento no se produce en las versiones de .NET Framework anteriores al .NET Framework 3,5 SP1. Los valores del ejemplo son los valores predeterminados.  
   
 ```xml  
 <configuration>  
@@ -74,4 +74,4 @@ Contiene información sobre cómo administra el comportamiento de todo el proces
   
 ## <a name="see-also"></a>Vea también
 
-- [Elemento \<applicationPool> (configuración web)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+- [Elemento \<applicationPool> (configuración web)](applicationpool-element-web-settings.md)

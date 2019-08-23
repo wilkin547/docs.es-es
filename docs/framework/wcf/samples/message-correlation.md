@@ -2,15 +2,15 @@
 title: Correlación del mensaje
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 630afb728726fb81bbefa2f2cd34b9481b788f6f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f476e94ec3229ee7f5433d54d286165d108e5e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930747"
 ---
 # <a name="message-correlation"></a>Correlación del mensaje
-Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio de Windows Communication Foundation (WCF) y cómo se pueden correlacionar los mensajes entre las aplicaciones de remitente y receptor en un escenario de solicitud/respuesta. Este ejemplo utiliza el enlace msmqIntegrationBinding. El servicio en este caso es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola. k  
+Este ejemplo muestra cómo una aplicación de Message Queuing (MSMQ) puede enviar un mensaje de MSMQ a un servicio de Windows Communication Foundation (WCF) y cómo se pueden correlacionar los mensajes entre las aplicaciones del remitente y el receptor en un escenario de solicitud/respuesta. Este ejemplo utiliza el enlace msmqIntegrationBinding. El servicio en este caso es una aplicación de consola autohospedada que le permite observar el servicio que recibe los mensajes en cola. k  
   
  El servicio procesa el mensaje recibido del remitente y envía de vuelta un mensaje de respuesta al remitente. El remitente pone en correlación la respuesta que recibió con la solicitud que envió en un principio. Las propiedades `MessageID` y `CorrelationID` del mensaje se utilizan para poner en correlación los mensajes de respuesta y solicitud.  
   
@@ -65,9 +65,9 @@ public class OrderProcessorService : IOrderProcessor
 }
 ```
 
- El servicio utiliza un `OrderResponseClient` de cliente personalizado para enviar el mensaje de MSMQ a la cola. Dado que la aplicación que recibe y procesa el mensaje es una aplicación MSMQ y no es una aplicación de WCF, no hay ningún contrato de servicios implícito entre las dos aplicaciones. Así que no podemos crear ningún proxy utilizando la herramienta Svcutil.exe en este escenario.
+ El servicio utiliza un `OrderResponseClient` de cliente personalizado para enviar el mensaje de MSMQ a la cola. Dado que la aplicación que recibe y procesa el mensaje es una aplicación MSMQ y no una aplicación WCF, no hay ningún contrato de servicio implícito entre las dos aplicaciones. Así que no podemos crear ningún proxy utilizando la herramienta Svcutil.exe en este escenario.
 
- El proxy personalizado es esencialmente el mismo para todas las aplicaciones de WCF que usan el `msmqIntegrationBinding` enlace para enviar mensajes. A diferencia de otros servidores proxy, no incluye ningún intervalo de operaciones de servicio. Solo es una operación de envío de mensaje.
+ El proxy personalizado es esencialmente el mismo para todas las aplicaciones WCF que usan `msmqIntegrationBinding` el enlace para enviar mensajes. A diferencia de otros servidores proxy, no incluye ningún intervalo de operaciones de servicio. Solo es una operación de envío de mensaje.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -213,7 +213,7 @@ static void PlaceOrder()
  La cola de MSMQ de la que se reciben las respuestas del pedido se especifica en una sección appSettings del archivo de configuración, tal y como se muestra en la configuración de ejemplo siguiente.
 
 > [!NOTE]
->  El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección de extremo WCF especifica un esquema msmq.formatname y utiliza "localhost" para el equipo local. Un nombre con el formato correcto sigue el esquema msmq.formatname en el URI según especifica MSMQ.
+> El nombre de la cola utiliza un punto (.) para el equipo local y separadores con barra diagonal inversa en su ruta de acceso. La dirección del extremo WCF especifica un esquema MSMQ. FormatName y utiliza "localhost" para el equipo local. Un nombre con el formato correcto sigue el esquema msmq.formatname en el URI según especifica MSMQ.
 
 ```xml
 <appSettings>
@@ -267,27 +267,27 @@ static void DisplayOrderStatus()
  Al ejecutar el ejemplo, las actividades del servicio y del cliente se muestran en las ventanas de la consola del cliente y del servicio. Podrá observar que el servicio recibe los mensajes del cliente y envía una respuesta a éste. El cliente muestra la respuesta recibida del servicio. Presione Entrar en cada ventana de la consola para cerrar el servicio y el cliente.
 
 > [!NOTE]
->  Este ejemplo requiere la instalación de Message Queuing (MSMQ). Vea las instrucciones de instalación de MSMQ en el sección Vea también.
+> Este ejemplo requiere la instalación de Message Queuing (MSMQ). Vea las instrucciones de instalación de MSMQ en el sección Vea también.
 
 ### <a name="to-setup-build-and-run-the-sample"></a>Para configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Si se ejecuta el servicio primero, comprobará que la cola esté presente. Si la cola no está presente, el servicio creará una. Puede ejecutar primero el servicio para crear la cola, o puede crear una a través del administrador de cola de MSMQ. Siga estos pasos para crear una cola en Windows 2008.
 
-    1. Abra el administrador del servidor en Visual Studio 2012.
+    1. Abra Administrador del servidor en Visual Studio 2012.
 
-    2. Expanda el **características** ficha.
+    2. Expanda la pestaña **características** .
 
-    3. Haga clic en **cola de mensajes privados**y seleccione **New**, **cola privada**.
+    3. Haga clic con el botón secundario en **colas de mensajes privadas**y seleccione **nuevo**, **cola privada**.
 
-    4. Compruebe el **transaccional** cuadro.
+    4. Active la casilla **transaccional** .
 
-    5. Escriba `ServiceModelSamplesTransacted` como el nombre de la nueva cola.
+    5. Escriba `ServiceModelSamplesTransacted` como nombre de la nueva cola.
 
 3. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-4. Para ejecutar el ejemplo en la configuración de un único equipo, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. Para ejecutar el ejemplo en una configuración de un solo equipo, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos
 
@@ -308,7 +308,7 @@ static void DisplayOrderStatus()
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+>  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   

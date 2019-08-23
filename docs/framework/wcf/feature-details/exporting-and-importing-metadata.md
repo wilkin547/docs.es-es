@@ -4,28 +4,28 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 692382de81459ad52d306ca7fd05546b4e36294d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856471"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963664"
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportación e importación de metadatos
-En Windows Communication Foundation (WCF), exportación de metadatos es el proceso de describir puntos de conexión de servicio y proyectarlos en una representación paralela y estandarizada que los clientes pueden usar para aprender a usar el servicio. Importar los metadatos de servicio es el proceso de generar instancias de <xref:System.ServiceModel.Description.ServiceEndpoint> o partes de los metadatos de servicio.  
+En Windows Communication Foundation (WCF), la exportación de metadatos es el proceso de describir puntos de conexión de servicio y proyectarlos en una representación paralela y estandarizada que pueden usar los clientes para entender cómo utilizar el servicio. Importar los metadatos de servicio es el proceso de generar instancias de <xref:System.ServiceModel.Description.ServiceEndpoint> o partes de los metadatos de servicio.  
   
 ## <a name="exporting-metadata"></a>Exportación de metadatos  
- Para exportar metadatos desde instancias de <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>, utilice una implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataExporter>. El <xref:System.ServiceModel.Description.WsdlExporter> es de tipo de la implementación de la <xref:System.ServiceModel.Description.MetadataExporter> clase incluida con WCF abstracta.  
+ Para exportar metadatos desde instancias de <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>, utilice una implementación de la clase abstracta <xref:System.ServiceModel.Description.MetadataExporter>. El <xref:System.ServiceModel.Description.WsdlExporter> tipo es la implementación de la <xref:System.ServiceModel.Description.MetadataExporter> clase abstracta incluida con WCF.  
   
  El tipo <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> genera los metadatos del Lenguaje de descripción de servicios Web (WSDL) con expresiones de directiva adjuntas encapsuladas en una instancia de <xref:System.ServiceModel.Description.MetadataSet>. Puede utilizar una instancia <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType> para exportar de manera iterativa metadatos para los objetos <xref:System.ServiceModel.Description.ContractDescription> y  <xref:System.ServiceModel.Description.ServiceEndpoint>. Puede exportar también una colección de objetos <xref:System.ServiceModel.Description.ServiceEndpoint> y asociarlos a un nombre de servicios concreto.  
   
 > [!NOTE]
->  `WsdlExporter` solo puede utilizarse para exportar los metadatos desde las instancias `ContractDescription` que contienen el tipo de información Common Language Runtime (CLR), como, por ejemplo, una instancia de `ContractDescription` creada mediante el método `ContractDescription.GetContract`, o como parte de `ServiceDescription` de una instancia `ServiceHost`. No puede utilizar `WsdlExporter` para exportar metadatos a partir de las instancias `ContractDescription` importadas desde los metadatos del servicio o construidas sin información del tipo.  
+> `WsdlExporter` solo puede utilizarse para exportar los metadatos desde las instancias `ContractDescription` que contienen el tipo de información Common Language Runtime (CLR), como, por ejemplo, una instancia de `ContractDescription` creada mediante el método `ContractDescription.GetContract`, o como parte de `ServiceDescription` de una instancia `ServiceHost`. No puede utilizar `WsdlExporter` para exportar metadatos a partir de las instancias `ContractDescription` importadas desde los metadatos del servicio o construidas sin información del tipo.  
   
 ## <a name="importing-metadata"></a>Importación de metadatos  
   
 ### <a name="importing-wsdl-documents"></a>Importación de documentos WSDL  
- Para importar los metadatos del servicio de WCF, utilice una implementación de la <xref:System.ServiceModel.Description.MetadataImporter> clase abstracta. El <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> es de tipo de la implementación de la <xref:System.ServiceModel.Description.MetadataImporter> clase incluida con WCF abstracta. El tipo <xref:System.ServiceModel.Description.WsdlImporter> importa metadatos de WSDL con directivas adjuntas empaquetadas en un objeto <xref:System.ServiceModel.Description.MetadataSet>.  
+ Para importar metadatos de servicio en WCF, use una implementación <xref:System.ServiceModel.Description.MetadataImporter> de la clase abstracta. El <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> tipo es la implementación de la <xref:System.ServiceModel.Description.MetadataImporter> clase abstracta incluida con WCF. El tipo <xref:System.ServiceModel.Description.WsdlImporter> importa metadatos de WSDL con directivas adjuntas empaquetadas en un objeto <xref:System.ServiceModel.Description.MetadataSet>.  
   
  El tipo <xref:System.ServiceModel.Description.WsdlImporter> le da control sobre cómo importar los metadatos. Puede importar todos los puntos de conexión, todos los enlaces o todos los contratos. Puede importar todos los puntos de conexión asociados a un servicio específico de WSDL, enlace o tipo de puerto. También puede importar el extremo de un puerto WSDL concreto, el enlace para un enlace de WSDL concreto o el contrato para un tipo de puerto de WSDL concreto.  
   
@@ -48,16 +48,16 @@ En Windows Communication Foundation (WCF), exportación de metadatos es el proce
  El tipo vuelve a producir <xref:System.ServiceModel.Description.WsdlExporter> cualquier excepción detectada durante el proceso de exportación. Estas excepciones no se capturan como errores en la propiedad `Errors`. Cuando <xref:System.ServiceModel.Description.WsdlExporter> produce una excepción, está en un estado de error y no se puede reutilizar. <xref:System.ServiceModel.Description.WsdlExporter> agrega advertencias a su propiedad `Errors` cuando no se puede exportar una operación porque utiliza acciones de carácter comodín y cuando se encuentran nombres de enlace duplicados.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Cómo: Importar los metadatos en los puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Procedimientos: Importación de metadatos en puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Describe cómo importar los metadatos descargados en objetos de descripción.  
   
- [Cómo: Exportar metadatos desde puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Procedimientos: Exportación de metadatos desde puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Describe cómo exportar objetos de descripción en metadatos.  
   
  [ServiceDescription y referencias WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Describe la asignación entre los objetos de descripción y WSDL.  
   
- [Cómo: Utilice Svcutil.exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Cómo: Usar SvcUtil. exe para exportar metadatos desde el código de servicio compilado](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Describe el uso de Svcutil.exe para exportar metadatos para los servicios, contratos y tipos de datos en ensamblados compilados.  
   
  [Referencia de esquema de contrato de datos](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

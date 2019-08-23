@@ -10,47 +10,47 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 372d5fdd2702d6f85f784ee5addea91abe46d3bd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a2813b81490e7c2fcf1abcf5fd36ca89d9d7929
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639021"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933853"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Matrices de parámetros (Visual Basic)
-Por lo general, no se puede llamar a un procedimiento con más argumentos de la declaración de procedimiento especifica. Cuando se necesita un número indefinido de argumentos, se puede declarar un *matriz de parámetros*, lo que permite que un procedimiento aceptar una matriz de valores para un parámetro. No es necesario saber el número de elementos de la matriz de parámetros cuando se define el procedimiento. El tamaño de la matriz se determina individualmente por cada llamada al procedimiento.  
+Normalmente, no se puede llamar a un procedimiento con más argumentos de los especificados en la declaración de procedimiento. Si necesita un número indefinido de argumentos, puede declarar una *matriz de parámetros*, que permite que un procedimiento acepte una matriz de valores para un parámetro. No es necesario conocer el número de elementos de la matriz de parámetros al definir el procedimiento. Cada llamada al procedimiento determina el tamaño de la matriz de forma individual.  
   
-## <a name="declaring-a-paramarray"></a>Declarar una matriz de parámetros  
- Usa el [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) palabra clave para denotar una matriz de parámetros en la lista de parámetros. Se aplican las siguientes reglas:  
+## <a name="declaring-a-paramarray"></a>Declaración de ParamArray  
+ La palabra clave [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) se utiliza para denotar una matriz de parámetros en la lista de parámetros. Se aplican las siguientes reglas:  
   
-- Un procedimiento puede definir solo una matriz de parámetros y debe ser el último parámetro en la definición del procedimiento.  
+- Un procedimiento solo puede definir una matriz de parámetros y debe ser el último parámetro de la definición de procedimiento.  
   
-- La matriz de parámetros debe pasarse por valor. Lo programación es recomendable incluir explícitamente el [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) palabra clave en la definición del procedimiento.  
+- La matriz de parámetros debe pasarse por valor. Se recomienda incluir explícitamente la palabra clave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) en la definición de procedimiento.  
   
 - La matriz de parámetros es opcional de forma automática. Su valor predeterminado es una matriz unidimensional vacía del tipo de elemento de la matriz de parámetros.  
   
-- Todos los parámetros que precede a la matriz de parámetros deben ser obligatorios. La matriz de parámetros debe ser el único parámetro opcional.  
+- Deben ser necesarios todos los parámetros que preceden a la matriz de parámetros. La matriz de parámetros debe ser el único parámetro opcional.  
   
-## <a name="calling-a-paramarray"></a>Una llamada a una matriz de parámetros  
- Cuando se llama a un procedimiento que se define una matriz de parámetros, puede proporcionar el argumento en cualquiera de las maneras siguientes:  
+## <a name="calling-a-paramarray"></a>Llamar a ParamArray  
+ Cuando se llama a un procedimiento que define una matriz de parámetros, se puede proporcionar el argumento de cualquiera de las maneras siguientes:  
   
-- Nada, es decir, puede omitir el [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) argumento. En este caso, se pasa una matriz vacía para el procedimiento. También puede pasar la [nada](../../../../visual-basic/language-reference/nothing.md) palabra clave, con el mismo efecto.  
+- Nothing, es decir, puede omitir el argumento [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) . En este caso, se pasa una matriz vacía al procedimiento. También puede pasar la palabra clave [Nothing](../../../../visual-basic/language-reference/nothing.md) , con el mismo efecto.  
   
-- Una lista de un número arbitrario de argumentos, separados por comas. El tipo de datos de cada argumento debe ser implícitamente convertible a la `ParamArray` tipo de elemento.  
+- Una lista de un número arbitrario de argumentos, separados por comas. El tipo de datos de cada argumento se debe poder convertir implícitamente `ParamArray` al tipo de elemento.  
   
-- Una matriz con el mismo tipo de elemento como tipo de elemento de la matriz de parámetros.  
+- Matriz con el mismo tipo de elemento que el tipo de elemento de la matriz de parámetros.  
   
- En todos los casos, el código dentro del procedimiento considera la matriz de parámetros como una matriz unidimensional con elementos del mismo tipo de datos como el `ParamArray` tipo de datos.  
+ En todos los casos, el código del procedimiento trata la matriz de parámetros como una matriz unidimensional con elementos del mismo tipo de datos que el `ParamArray` tipo de datos.  
   
 > [!IMPORTANT]
->  Si se trabaja con una matriz que puede ser excesivamente grande, hay un riesgo de sobrecargar alguna capacidad interna de la aplicación. Si acepta una matriz de parámetros, se debe comprobar el tamaño de la matriz que el código que realiza la llamada pasa a él. Si es demasiado grande para su aplicación, tome medidas oportunas. Para obtener más información, consulte [matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+> Siempre que se trata de una matriz que puede ser indefinidamente grande, existe el riesgo de que se produzca una gran cantidad de capacidad interna de la aplicación. Si acepta una matriz de parámetros, debe probar el tamaño de la matriz que le ha pasado el código de llamada. Siga los pasos adecuados si es demasiado grande para la aplicación. Para más información, consulte [Matrices](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente se define y llama a la función `calcSum`. El `ParamArray` modificador para el parámetro `args` permite que la función que acepte un número variable de argumentos.  
+ En el ejemplo siguiente se define y se `calcSum`llama a la función. El `ParamArray` modificador del parámetro `args` permite que la función acepte un número variable de argumentos.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   
- El ejemplo siguiente define un procedimiento con una matriz de parámetros y genera los valores de todos los elementos de matriz que se pasa a la matriz de parámetros.  
+ En el ejemplo siguiente se define un procedimiento con una matriz de parámetros y se generan los valores de todos los elementos de matriz pasados a la matriz de parámetros.  
   
  [!code-vb[VbVbcnProcedures#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#48)]  
   

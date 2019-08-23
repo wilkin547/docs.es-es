@@ -2,12 +2,12 @@
 title: <transactedBatching>
 ms.date: 03/30/2017
 ms.assetid: 2f790a0d-8f03-4b86-81b5-ce1bc1a6c575
-ms.openlocfilehash: 43415d9eac5e61f42006aecb3248dec9811eb3e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12369f1053638583a3864fab396869d0e7045732
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758137"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918676"
 ---
 # <a name="transactedbatching"></a>\<transactedBatching>
 
@@ -31,7 +31,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-|Atributo|Descripción|
+|Atributo|DESCRIPCIÓN|
 |---------------|-----------------|
 |`maxBatchSize`|Un entero que especifica el número máximo de operaciones de recepción que pueden encontrarse por lotes en una transacción. El valor predeterminado es 0.|
 
@@ -41,9 +41,9 @@ Ninguno.
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión.|
+|[\<comportamiento >](behavior-of-endpointbehaviors.md)|Especifica el comportamiento de un punto de conexión.|
 
 ## <a name="remarks"></a>Comentarios
 

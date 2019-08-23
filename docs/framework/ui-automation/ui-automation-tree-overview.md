@@ -5,20 +5,20 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7dd799b32d51c7e24e6717561aab549e7e7f1fbe
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033025"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69954008"
 ---
 # <a name="ui-automation-tree-overview"></a>Información general sobre el árbol de la UI Automation
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  Los productos de tecnología de asistencia y los scripts de prueba navegan por el árbol [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para reunir información sobre [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] y sus elementos.  
   
- Dentro de la [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] hay árbol es un elemento raíz (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>) que representa el escritorio actual y cuyos elementos secundarios representan ventanas de la aplicación. Cada uno de estos elementos secundarios puede contener elementos que representan partes de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], como menús, botones, barras de herramientas y cuadros de lista. A su vez, estos elementos pueden contener elementos, como elementos de lista.  
+ En el [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árbol hay un elemento raíz (<xref:System.Windows.Automation.AutomationElement.RootElement%2A>) que representa el escritorio actual y cuyos elementos secundarios representan las ventanas de la aplicación. Cada uno de estos elementos secundarios puede contener elementos que representan partes de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], como menús, botones, barras de herramientas y cuadros de lista. A su vez, estos elementos pueden contener elementos, como elementos de lista.  
   
  El árbol de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] no es una estructura fija y casi nunca se presenta en su totalidad, ya que podría contener miles de elementos. Partes de él se crean conforme se necesitan y pueden experimentar cambios a medida que se agregan, mueven o quitan elementos.  
   

@@ -8,26 +8,26 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68c9653e616388374aad2ad33ac7dab68446241d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051057"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923414"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>Procedimiento Crear un cuadro de diálogo estándar de interfaz de usuario mediante Grid
-En este ejemplo se muestra cómo crear un estándar [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] cuadro de diálogo mediante el uso de la <xref:System.Windows.Controls.Grid> elemento.  
+En este ejemplo se muestra cómo crear un [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] cuadro de diálogo estándar mediante <xref:System.Windows.Controls.Grid> el elemento.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea un cuadro de diálogo como el **ejecutar** cuadro de diálogo en el [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] del sistema operativo.  
+ En el ejemplo siguiente se crea un cuadro de diálogo como el cuadro de diálogo **Ejecutar** en el sistema operativo Windows.  
   
- El ejemplo se crea un <xref:System.Windows.Controls.Grid> y usa el <xref:System.Windows.Controls.ColumnDefinition> y <xref:System.Windows.Controls.RowDefinition> las clases para definir las cinco columnas y cuatro filas.  
+ En el ejemplo se <xref:System.Windows.Controls.Grid> crea un y <xref:System.Windows.Controls.ColumnDefinition> se <xref:System.Windows.Controls.RowDefinition> usan las clases y para definir cinco columnas y cuatro filas.  
   
- En el ejemplo, a continuación, agrega y coloca un <xref:System.Windows.Controls.Image>, `RunIcon.png`, para representar la imagen que se encuentra en el cuadro de diálogo. La imagen se coloca en la primera columna y fila de la <xref:System.Windows.Controls.Grid> (la esquina superior izquierda).  
+ A continuación, el ejemplo agrega y <xref:System.Windows.Controls.Image>coloca `RunIcon.png`un,, para representar la imagen que se encuentra en el cuadro de diálogo. La imagen se coloca en la primera columna y fila de <xref:System.Windows.Controls.Grid> (la esquina superior izquierda).  
   
- A continuación, en el ejemplo se agrega un <xref:System.Windows.Controls.TextBlock> elemento a la primera columna, que abarca las columnas restantes de la primera fila. También agrega otro <xref:System.Windows.Controls.TextBlock> elemento a la segunda fila de la primera columna, para representar el **abierto** cuadro de texto. Un <xref:System.Windows.Controls.TextBlock> siguiente, que representa el área de entrada de datos.  
+ A continuación, el ejemplo agrega <xref:System.Windows.Controls.TextBlock> un elemento a la primera columna, que abarca las columnas restantes de la primera fila. Agrega otro <xref:System.Windows.Controls.TextBlock> elemento a la segunda fila de la primera columna para representar el cuadro de texto **abrir** . A <xref:System.Windows.Controls.TextBlock> continuación, que representa el área de entrada de datos.  
   
- Por último, el ejemplo agrega tres <xref:System.Windows.Controls.Button> elementos a la fila final, que representan el **Aceptar**, **cancelar**, y **examinar** eventos.  
+ Por último, en el ejemplo <xref:System.Windows.Controls.Button> se agregan tres elementos a la fila final, que representan los eventos **OK**, **Cancel**y **Browse** .  
   
  [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  

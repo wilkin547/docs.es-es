@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: f40ab6fe000f9104b10d5841f52eadf102a91a6b
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: e0b0b01a3c6da0680a3ec5fcd591344e04658a37
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040478"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917621"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>Procedimiento para cambiar el tipo de una columna DataGridView de formularios Windows Forms mediante el diseñador
 A veces, querrá cambiar el tipo de una columna que ya se ha agregado a un control de <xref:System.Windows.Forms.DataGridView> Windows Forms. Por ejemplo, puede que desee modificar los tipos de algunas de las columnas que se generan automáticamente al enlazar el control a un origen de datos. Esto resulta útil cuando la tabla que se muestra tiene columnas que contienen claves externas en las filas de una tabla relacionada. En este caso, puede que desee reemplazar las columnas de cuadro de texto que muestran estas claves externas por columnas de cuadro combinado que muestran valores más significativos de la tabla relacionada.
@@ -28,7 +28,7 @@ A veces, querrá cambiar el tipo de una columna que ya se ha agregado a un contr
 3. En la cuadrícula **propiedades de columna** , establezca `ColumnType` la propiedad en el nuevo tipo de columna.
 
     > [!NOTE]
-    >  La `ColumnType` propiedad es una propiedad de solo tiempo de diseño que indica la clase que representa el tipo de columna. No es una propiedad real definida en una clase de columna.
+    > La `ColumnType` propiedad es una propiedad de solo tiempo de diseño que indica la clase que representa el tipo de columna. No es una propiedad real definida en una clase de columna.
 
 ## <a name="see-also"></a>Vea también
 

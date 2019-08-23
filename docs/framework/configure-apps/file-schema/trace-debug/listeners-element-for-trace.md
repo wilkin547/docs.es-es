@@ -7,20 +7,20 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: f9f12d9e61e2472b897169727bbb4fbf9833efd6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4550d4c4cd9ff37c5937ad366cccf91387c0e3f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701351"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927017"
 ---
-# <a name="listeners-element-for-trace"></a>\<los agentes de escucha > (elemento) para \<seguimiento >
-Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Los agentes de escucha dirigen los resultados de seguimiento a un destino apropiado.  
+# <a name="listeners-element-for-trace"></a>\<agentes de escucha > elemento \<de > de seguimiento
+Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Los agentes de escucha dirigen los resultados del seguimiento a un destino adecuado.  
   
- \<Configuración > elemento  
-\<System.Diagnostics > elemento  
-\<seguimiento > elemento  
-\<los agentes de escucha > (elemento) para \<seguimiento >  
+ \<Elemento Configuration >  
+\<Elemento System. Diagnostics >  
+\<Elemento > de seguimiento  
+\<agentes de escucha > elemento \<de > de seguimiento  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,28 +40,28 @@ Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Lo
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `Listeners`.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|Borra la colección `Listeners` de un seguimiento.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Quita un agente de escucha el `Listeners` colección.|  
+|[\<add>](add-element-for-listeners-for-trace.md)|Agrega un agente de escucha a la colección `Listeners`.|  
+|[\<clear>](clear-element-for-listeners-for-trace.md)|Borra la colección `Listeners` de un seguimiento.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Quita un agente de escucha de `Listeners` la colección.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica el elemento raíz de la sección de configuración de ASP.NET.|  
 |`trace`|Contiene agentes de escucha que recopilan, almacenan y enrutan los mensajes de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- El <xref:System.Diagnostics.Debug> y <xref:System.Diagnostics.Trace> clases comparten el mismo **los agentes de escucha** colección. Si agrega un objeto de escucha a la colección en una de estas clases, la otra clase usa el mismo agente de escucha. Las clases de agente de escucha incluidas en .NET Framework se derivan de la <xref:System.Diagnostics.TraceListener> clase.  
+ Las <xref:System.Diagnostics.Debug> clases <xref:System.Diagnostics.Trace> y comparten la misma colección Listeners. Si agrega un objeto de escucha a la colección en una de estas clases, la otra clase utiliza el mismo agente de escucha. Las clases de agente de escucha incluidas con el .NET Framework derivan de la <xref:System.Diagnostics.TraceListener> clase.  
   
 ## <a name="configuration-file"></a>Archivo de configuración  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo usar el  **\<los agentes de escucha >** elemento para agregar los agentes de escucha `MyListener` y `MyEventListener` a la **los agentes de escucha** colección. `MyListener` crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener` crea una entrada en el registro de eventos.  
+ En el ejemplo siguiente se muestra cómo usar  **\<** el elemento Listeners > para `MyListener` agregar los agentes de `MyEventListener` escucha y a la colección Listeners. `MyListener`crea un archivo denominado `MyListener.log` y escribe el resultado en el archivo. `MyEventListener`crea una entrada en el registro de eventos.  
   
 ```xml  
 <configuration>  
@@ -87,4 +87,4 @@ Especifica un agente de escucha que recopila, almacena y enruta los mensajes. Lo
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Diagnostics.TraceListener>
-- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Esquema de la configuración de seguimiento y depuración](index.md)

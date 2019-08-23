@@ -9,15 +9,15 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6b44b13c-7a23-4df2-8f9f-45e2b1430002
-ms.openlocfilehash: 0ce9be30182f9181bcb6449529d9b9796aadbc2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 99f2eb9447bdf43cb57cfe86f35d2c09044ed470
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794529"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947628"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderctor"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder..ctor
-Crea una instancia de la [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md) clase.  
+Crea una instancia de la clase [Microsoft. VisualStudio. Activities. ASR. ClientActivityBuilder](microsoft-visualstudio-activities-asr-clientactivitybuilder.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -34,12 +34,12 @@ public ClientActivityBuilder(OperationDescription operationDescription, string c
   
  *configurationName*  
   
- Especifica el nombre de configuración del extremo. El valor de este parámetro no debe ser **null** o está vacío. Si estas condiciones no se cumplen, el resultado del tiempo de ejecución de usar el constructor y los otros métodos de esta clase es indefinido.  
+ Especifica el nombre de configuración del extremo. El valor de este parámetro no debe ser **null** ni estar vacío. Si estas condiciones no se cumplen, el resultado del tiempo de ejecución de usar el constructor y los otros métodos de esta clase es indefinido.  
   
  *proxyNamespace*  
   
- Especifica el espacio de nombres de servicio para la operación. El valor de este parámetro no debe ser **null** o está vacío. Si estas condiciones no se cumplen, el resultado del tiempo de ejecución de usar el constructor y los otros métodos de esta clase es indefinido.  
+ Especifica el espacio de nombres de servicio para la operación. El valor de este parámetro no debe ser **null** ni estar vacío. Si estas condiciones no se cumplen, el resultado del tiempo de ejecución de usar el constructor y los otros métodos de esta clase es indefinido.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
+- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

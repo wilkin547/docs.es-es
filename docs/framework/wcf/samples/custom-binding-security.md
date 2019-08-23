@@ -2,12 +2,12 @@
 title: Seguridad de enlace personalizado
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 71bc3d463330b893e8b415892a9bdcc2dae88a2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99fa1e7dea09601de5efff9ef8d8c6a66eae1bac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616039"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953777"
 ---
 # <a name="custom-binding-security"></a>Seguridad de enlace personalizado
 Este ejemplo muestra cómo configurar la seguridad mediante un enlace personalizado. Muestra cómo utilizar un enlace personalizado para habilitar la seguridad de nivel de mensaje junto con un transporte seguro. Esto es útil cuando se exige un transporte seguro que transmita los mensajes entre el cliente y servicio y simultáneamente los mensajes deben ser seguros en el nivel de mensaje. Los enlaces proporcionados por el sistema no admiten esta configuración.
@@ -15,7 +15,7 @@ Este ejemplo muestra cómo configurar la seguridad mediante un enlace personaliz
  Este ejemplo está compuesto por un programa de consola de cliente (EXE) y un programa de consola de servicio (EXE). El servicio implementa un contrato dúplex. La interfaz `ICalculatorDuplex`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato. La interfaz `ICalculatorDuplex` permite al cliente realizar las operaciones de matemática, calculando un resultado en ejecución sobre una sesión. Independientemente, el servicio puede devolver resultados en la interfaz `ICalculatorDuplexCallback`. Un contrato dúplex requiere una sesión, porque se debe establecer un contexto para poner en correlación el conjunto de mensajes que se envían entre el cliente y el servicio. Se define un enlace personalizado que admite la comunicación dúplex y es seguro.
 
 > [!NOTE]
->  El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
+> El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
  La configuración del servicio define un enlace personalizado que admite lo siguiente:
 
@@ -23,7 +23,7 @@ Este ejemplo muestra cómo configurar la seguridad mediante un enlace personaliz
 
 - Seguridad de mensaje de Windows.
 
- La configuración de enlace personalizado permite el transporte seguro, habilitando simultáneamente la seguridad de nivel de mensaje. El orden de los elementos de enlace es importante para definir un enlace personalizado, porque cada uno representa una capa en la pila de canales (consulte [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). El enlace personalizado se define en los archivos de configuración de cliente y servicio, como se muestra en la configuración del ejemplo siguiente.
+ La configuración de enlace personalizado permite el transporte seguro, habilitando simultáneamente la seguridad de nivel de mensaje. El orden de los elementos de enlace es importante en la definición de un enlace personalizado, ya que cada uno representa una capa en la pila del canal (vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). El enlace personalizado se define en los archivos de configuración de cliente y servicio, como se muestra en la configuración del ejemplo siguiente.
 
 ```xml
 <bindings>
@@ -105,24 +105,24 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Para ejecutar el ejemplo en el mismo equipo
 
-1. Abra un símbolo del sistema para desarrolladores para la ventana de Visual Studio con privilegios de administrador y ejecute Setup.bat desde la carpeta de instalación del ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
+1. Abra un Símbolo del sistema para desarrolladores para la ventana de Visual Studio con privilegios de administrador y ejecute setup. bat desde la carpeta de instalación de ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. El conjunto de variables de entorno de ruta de acceso en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables que requiere el script Setup.bat.  
+    >  El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.  
   
 2. Inicie Service.exe desde \service\bin.  
   
 3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   
-4. Si el cliente y el servicio no se pueden comunicar, vea [sugerencias de solución de problemas para obtener ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
+4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
   
@@ -134,12 +134,12 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
     3. Copie los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
   
-    4. Ejecute el siguiente comando en un símbolo del sistema de desarrollador para Visual Studio abierto con privilegios de administrador: `Setup.bat service`. Así se crea el certificado del servicio con un nombre de sujeto que coincide con el nombre del equipo en el que se ejecutó el archivo por lotes.  
+    4. Ejecute el siguiente comando en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador `Setup.bat service`:. Así se crea el certificado del servicio con un nombre de sujeto que coincide con el nombre del equipo en el que se ejecutó el archivo por lotes.  
   
         > [!NOTE]
         >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio 2010. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio 2010.
 
-    5. Cambiar el [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) dentro del archivo Service.exe.config para reflejar el nombre de sujeto del certificado generado en el paso anterior.
+    5. Cambie el [ \<> serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) en el archivo Service. exe. config para que refleje el nombre de sujeto del certificado generado en el paso anterior.
 
     6. Ejecute Service.exe desde un símbolo del sistema.
 
@@ -149,7 +149,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     2. Ejecute Cleanup.bat para quitar cualquier certificado antiguo de ejemplos anteriores.
 
-    3. Exporte el certificado del servicio abriendo un símbolo del sistema para desarrolladores de Visual Studio con privilegios de administrador y ejecute el comando siguiente en el equipo del servicio (sustituya `%SERVER_NAME%` con el nombre completo del equipo donde el servicio se ejecuta):
+    3. Exporte el certificado del servicio abriendo un símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecutando el siguiente comando en el equipo del servicio `%SERVER_NAME%` (sustituya por el nombre completo del equipo donde el servicio se está ejecutando):
 
         ```
         certmgr -put -r LocalMachine -s My -c -n %SERVER_NAME% %SERVER_NAME%.cer
@@ -157,7 +157,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     4. Copie % SERVER_NAME%.cer en el equipo cliente (sustituya % SERVER_NAME% con el nombre completo del equipo donde se está ejecutando el servicio).
 
-    5. Importe el certificado del servicio abriendo un símbolo del sistema para desarrolladores de Visual Studio con privilegios de administrador y ejecutando el comando siguiente en el equipo cliente (sustituya % SERVER_NAME % con el nombre completo del equipo donde el se ejecuta el servicio):
+    5. Importe el certificado del servicio abriendo un Símbolo del sistema para desarrolladores para Visual Studio con privilegios de administrador y ejecutando el siguiente comando en el equipo cliente (sustituya% SERVER_NAME% por el nombre completo del equipo donde el servicio se está ejecutando):
 
         ```
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
@@ -178,7 +178,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         </client>
         ```
 
-    7. Si el servicio se está ejecutando con una cuenta que no es NetworkService o LocalSystem en un entorno de dominio, puede que sea necesario modificar la identidad del extremo de servicio en el archivo App.config del cliente para establecer el UPN o SPN adecuado en función de la cuenta que se utilice para ejecutar el servicio. Para obtener más información acerca de la identidad del punto de conexión, vea el [autenticación e identidad de servicio](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) tema.
+    7. Si el servicio se está ejecutando con una cuenta que no es NetworkService o LocalSystem en un entorno de dominio, puede que sea necesario modificar la identidad del extremo de servicio en el archivo App.config del cliente para establecer el UPN o SPN adecuado en función de la cuenta que se utilice para ejecutar el servicio. Para obtener más información acerca de la identidad del punto de conexión, consulte el tema [identidad de servicio y autenticación](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md) .
 
     8. Ejecute Client.exe desde un símbolo del sistema.
 

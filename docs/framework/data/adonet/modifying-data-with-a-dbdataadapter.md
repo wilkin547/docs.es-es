@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec4f0527b73a506b3c98675f77f8f49a1eeb1e1f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772182"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934453"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Modificar datos con un objeto DbDataAdapter
 El método <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> de un objeto <xref:System.Data.Common.DbProviderFactory> proporciona un objeto <xref:System.Data.Common.DbDataAdapter> fuertemente tipado en el proveedor de datos subyacente especificado en el momento de crear el generador. Se puede utilizar <xref:System.Data.Common.DbCommandBuilder> para crear comandos para insertar, actualizar y eliminar datos desde <xref:System.Data.DataSet> a un origen de datos.  
@@ -40,7 +40,7 @@ El método <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> de u
  El modelo de generador no es útil para la creación de objetos `DbCommand` y `DbDataAdapter` con parámetros. Es necesario bifurcar en el código para crear parámetros que se adapten al proveedor de datos.  
   
 > [!IMPORTANT]
->  Por razones de seguridad, no es recomendable evitar totalmente parámetros específicos del proveedor mediante el uso de concatenación de cadenas para construir instrucciones SQL directas. El uso de cadenas de concatenación en lugar de parámetros expone a la aplicación a ataques por inyección de SQL.  
+> Por razones de seguridad, no es recomendable evitar totalmente parámetros específicos del proveedor mediante el uso de concatenación de cadenas para construir instrucciones SQL directas. El uso de cadenas de concatenación en lugar de parámetros expone a la aplicación a ataques por inyección de SQL.  
   
 ## <a name="see-also"></a>Vea también
 

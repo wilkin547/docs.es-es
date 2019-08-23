@@ -2,22 +2,22 @@
 title: 'Tutorial: Realizar consultas en varias relaciones (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a9e0583b14c07df2b1de23ba37fa88552a4c5c7c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742649"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946942"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>Tutorial: Realizar consultas en varias relaciones (C#)
-Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *asociaciones* para representar relaciones de clave externa en la base de datos.  
+En este tutorial se muestra el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uso de *asociaciones* para representar relaciones de clave externa en la base de datos.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Este tutorial se escribió con la configuración de desarrollo de Visual C#.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Debe haber completado [Tutorial: Modelo de objetos simple y consultas (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md). Este tutorial se basa en el tutorial mencionado, incluida la presencia del archivo northwnd.mdf en c:\linqtest5.  
+ Debe haber completado [el tutorial: Modelo de objetos simple y consultaC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)). Este tutorial se basa en el tutorial mencionado, incluida la presencia del archivo northwnd.mdf en c:\linqtest5.  
   
 ## <a name="overview"></a>Información general  
  Este tutorial conlleva tres tareas principales:  
@@ -47,7 +47,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Crear y ejecutar una consulta en la relación Customer-Order  
- Ahora puede tener acceso a los objetos `Order` directamente desde los objetos `Customer`, o a la inversa. No es necesario explícita *combinación* entre clientes y pedidos.  
+ Ahora puede tener acceso a los objetos `Order` directamente desde los objetos `Customer`, o a la inversa. No necesita una *combinación* explícita entre clientes y pedidos.  
   
 ### <a name="to-access-order-objects-by-using-customer-objects"></a>Para tener acceso a los objetos Order a través de los objetos Customer  
   
@@ -58,7 +58,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
 2. Presione F5 para depurar la aplicación.  
   
     > [!NOTE]
-    >  Puede eliminar el código de SQL en la ventana Consola marcando como comentario `db.Log = Console.Out;`.  
+    > Puede eliminar el código de SQL en la ventana Consola marcando como comentario `db.Log = Console.Out;`.  
   
 3. Presione Entrar en la ventana Consola para detener la depuración.  
   
@@ -86,7 +86,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
 4. Presione Entrar en la ventana de la consola para detener la depuración.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- El tutorial siguiente ([Tutorial: Manipular datos (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) se muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
+ El siguiente tutorial ([Tutorial: La manipulación de datosC#(](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md))) muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
   
 ## <a name="see-also"></a>Vea también
 

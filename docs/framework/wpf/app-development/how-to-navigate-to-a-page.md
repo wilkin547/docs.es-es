@@ -8,18 +8,18 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: 458769355521c8a3653e3bc80a6ab8a0d0f7c6dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 38814268c9bb271ad3d88d549fb6ec4c6cbfed40
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622823"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966027"
 ---
 # <a name="how-to-navigate-to-a-page"></a>Procedimiento Navegar a una página
-En este ejemplo se muestra varias maneras en que una página se puede navegar desde un <xref:System.Windows.Navigation.NavigationWindow>.  
+En este ejemplo se muestran varias maneras en las que se puede navegar a una página desde <xref:System.Windows.Navigation.NavigationWindow>un.  
   
 ## <a name="example"></a>Ejemplo  
- Es posible que un <xref:System.Windows.Navigation.NavigationWindow> para navegar a una página mediante uno de los siguientes:  
+ Es posible que un <xref:System.Windows.Navigation.NavigationWindow> navegue a una página mediante una de las siguientes acciones:  
   
 - Propiedad <xref:System.Windows.Navigation.NavigationWindow.Source%2A>  
   
@@ -29,7 +29,7 @@ En este ejemplo se muestra varias maneras en que una página se puede navegar de
  [!code-vb[HOWTONavigationSnippets#NavigateToPageCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatetopagecode)]  
   
 > [!NOTE]
->  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] puede ser relativa o absoluta. Para obtener más información, vea [Empaquetar URI en WPF](pack-uris-in-wpf.md).  
+> [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)]puede ser relativo o absoluto. Para obtener más información, vea [Empaquetar URI en WPF](pack-uris-in-wpf.md).  
   
 ## <a name="see-also"></a>Vea también
 

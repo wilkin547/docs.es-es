@@ -14,23 +14,23 @@ helpviewer_keywords:
 - text boxes [Windows Forms], formatting text
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
-ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4919e94c23b1a67680ea0f360304ee0f75c7f425
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013275"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963220"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>Procedimiento para establecer atributos de fuente para el control RichTextBox de formularios Windows Forms
-Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene numerosas opciones para dar formato al texto que muestra. Puede realizar los caracteres seleccionados en negrita, subrayado o cursiva, utilizando el <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> propiedad. También puede usar esta propiedad para cambiar el tamaño y el tipo de letra de los caracteres seleccionados. El <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> propiedad le permite cambiar el color de los caracteres seleccionados.  
+El control <xref:System.Windows.Forms.RichTextBox> Windows Forms tiene numerosas opciones para dar formato al texto que muestra. Puede poner los caracteres seleccionados en negrita, subrayados o cursiva, con la <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> propiedad. También puede usar esta propiedad para cambiar el tamaño y el tipo de letra de los caracteres seleccionados. La <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> propiedad permite cambiar el color de los caracteres seleccionados.  
   
 ### <a name="to-change-the-appearance-of-characters"></a>Para cambiar la apariencia de los caracteres  
   
-1. Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> propiedad en una fuente adecuada.  
+1. Establezca la <xref:System.Windows.Forms.RichTextBox.SelectionFont%2A> propiedad en una fuente adecuada.  
   
-     Para permitir que los usuarios establezcan la familia de fuentes, el tamaño y tipo de letra en una aplicación, normalmente usaría el <xref:System.Windows.Forms.FontDialog> componente. Para obtener información general al respecto, consulte [Información general sobre el componente FontDialog](fontdialog-component-overview-windows-forms.md).  
+     Para permitir que los usuarios establezcan la familia de fuentes, el tamaño y el tipo de letra en una aplicación <xref:System.Windows.Forms.FontDialog> , normalmente usaría el componente. Para obtener información general al respecto, consulte [Información general sobre el componente FontDialog](fontdialog-component-overview-windows-forms.md).  
   
-2. Establecer el <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> propiedad en un color adecuado.  
+2. Establezca la <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A> propiedad en un color adecuado.  
   
      Para permitir que los usuarios establezcan el color en una aplicación, normalmente usaría el <xref:System.Windows.Forms.ColorDialog> componente. Para obtener información general al respecto, consulte [Información general sobre el componente ColorDialog](colordialog-component-overview-windows-forms.md).  
   
@@ -51,7 +51,7 @@ Los formularios de Windows <xref:System.Windows.Forms.RichTextBox> control tiene
     ```  
   
     > [!NOTE]
-    >  Estas propiedades solo afectan al texto seleccionado o, si no hay texto seleccionado, al texto que se escriba en la posición actual del punto de inserción. Para obtener información sobre cómo seleccionar texto mediante programación, vea <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
+    > Estas propiedades solo afectan al texto seleccionado o, si no hay texto seleccionado, al texto que se escriba en la posición actual del punto de inserción. Para obtener información sobre cómo seleccionar texto mediante programación <xref:System.Windows.Forms.TextBoxBase.Select%2A>, vea.  
   
 ## <a name="see-also"></a>Vea también
 

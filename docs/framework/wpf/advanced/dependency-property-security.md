@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: 2f9de32eb8637e58c17aba2309eed33dcfdd42a7
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: d9dd9306980b80f7845c10e8c0ccb59f29821245
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400770"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940840"
 ---
 # <a name="dependency-property-security"></a>Seguridad de las propiedades de dependencia
 Por lo general, las propiedades de dependencia deben considerarse propiedades públicas. La naturaleza del sistema de propiedades de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] impide realizar garantías de seguridad sobre un valor de propiedad de dependencia.  
@@ -29,7 +29,7 @@ Por lo general, las propiedades de dependencia deben considerarse propiedades p�
  En el caso de una propiedad de dependencia personalizada, puede registrar la propiedad como una propiedad de dependencia de solo lectura, lo que proporciona un medio eficaz para impedir que una propiedad sea establecida por cualquier persona que no contenga una referencia a <xref:System.Windows.DependencyPropertyKey> para esa propiedad. Para obtener más información, consulte [Propiedades de dependencia de solo lectura](read-only-dependency-properties.md).  
   
 > [!NOTE]
->  Declarar un campo <xref:System.Windows.DependencyProperty> de identificador Private no está prohibido y se puede usar para ayudar a reducir el espacio de nombres expuesto inmediatamente de una clase personalizada, pero dicha propiedad no se debe considerar "Private" en el mismo sentido que Common Language las definiciones de lenguaje en tiempo de ejecución (CLR) definen ese nivel de acceso, por las razones descritas en la sección siguiente.  
+> Declarar un campo <xref:System.Windows.DependencyProperty> de identificador Private no está prohibido y se puede usar para ayudar a reducir el espacio de nombres expuesto inmediatamente de una clase personalizada, pero dicha propiedad no se debe considerar "Private" en el mismo sentido que Common Language las definiciones de lenguaje en tiempo de ejecución (CLR) definen ese nivel de acceso, por las razones descritas en la sección siguiente.  
   
 <a name="PropertySystemExposure"></a>   
 ## <a name="property-system-exposure-of-dependency-properties"></a>Exposición del sistema de propiedades de las propiedades de dependencia  

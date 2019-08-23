@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26dbd7cb5f0dc3a385fe15d6c417d6fb8e1c9bc4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a3a4e6ccb8a43f9bde5aa7a447e28c30f8d72f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67738353"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965134"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary (Método)
-Obtiene a un proveedor de la biblioteca de interfaz de devolución de llamada que permite a common language runtime (CLR) específicos de la versión a bibliotecas de depuración se puede buscar y cargar a petición.  
+Obtiene una interfaz de devolución de llamada del proveedor de bibliotecas que permite localizar y cargar a petición bibliotecas de depuración específicas de la versión de Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,16 +39,16 @@ HRESULT ProvideLibrary(
   
 ## <a name="parameters"></a>Parámetros  
  `pwszFilename`  
- [in] El nombre del módulo que se solicita.  
+ de Nombre del módulo que se está solicitando.  
   
  `dwTimestamp`  
- [in] La marca de tiempo de fecha almacenada en el encabezado del archivo COFF de archivos PE.  
+ de Marca de fecha y hora almacenada en el encabezado de archivo COFF de archivos PE.  
   
  `pLibraryProvider`  
- [in] El `SizeOfImage` campo almacenada en el encabezado de archivo opcional COFF de archivos PE.  
+ de El `SizeOfImage` campo almacenado en el encabezado de archivo COFF opcional de los archivos PE.  
   
  `hModule`  
- [out] El identificador de módulo solicitado.  
+ enuncia Identificador del módulo solicitado.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.  
@@ -60,21 +60,21 @@ HRESULT ProvideLibrary(
 ## <a name="exceptions"></a>Excepciones  
   
 ## <a name="remarks"></a>Comentarios  
- `ProvideLibrary` permite al depurador proporcionar módulos que son necesarios para depurar los archivos específicos de CLR como mscordbi.dll y mscordacwks.dll. Los identificadores de módulo tienen que siguen siendo válidas hasta que una llamada a la [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) método indica que se pueden liberar, momento en que es responsabilidad del llamante liberar los identificadores.  
+ `ProvideLibrary`permite al depurador proporcionar los módulos necesarios para depurar archivos CLR específicos como mscordbi. dll y mscordacwks. dll. Los identificadores de módulo deben seguir siendo válidos hasta que una llamada al método [ICLRDebugging:: canunloadnow (](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) indica que se pueden liberar, momento en el que es responsabilidad del llamador liberar los identificadores.  
   
- El depurador puede usar cualquier medio disponible para buscar u obtener el módulo de depuración.  
+ El depurador puede utilizar cualquier medio disponible para buscar o adquirir el módulo de depuración.  
   
 > [!IMPORTANT]
->  Esta característica permite al llamador de API proporcionar módulos que contienen código ejecutable y posiblemente malintencionado. Como precaución de seguridad, el llamador no debe usar `ProvideLibrary` para distribuir cualquier código que no está dispuesto a ejecutar por sí mismo.  
+> Esta característica permite al llamador de la API proporcionar módulos que contienen código ejecutable y posiblemente malintencionado. Como medida de seguridad, el autor de la llamada no debe `ProvideLibrary` usar para distribuir ningún código que no esté dispuesto a ejecutarse.  
 >   
->  Si se detecta un problema de seguridad grave en una biblioteca ya se ha publicado, por ejemplo, el archivo mscordbi.dll o mscordacwks.dll, se pueden revisar las correcciones de compatibilidad para que reconozca las versiones de los archivos incorrectas. La corrección de compatibilidad puede emitir solicitudes para las versiones de los archivos de revisión y rechazar las versiones incorrectas si se proporcionan en respuesta a cualquier solicitud. Esto puede ocurrir solamente si el usuario ha aplicado revisiones a una nueva versión de la corrección de compatibilidad. Las versiones sin revisiones seguirá siendo vulnerables.  
+>  Si se detecta un problema de seguridad grave en una biblioteca ya publicada, como mscordbi. dll o mscordacwks. dll, se pueden aplicar revisiones a las correcciones de compatibilidad para reconocer las versiones incorrectas de los archivos. A continuación, la corrección de compatibilidad puede emitir solicitudes para las versiones revisadas de los archivos y rechazar las versiones incorrectas Si se proporcionan como respuesta a cualquier solicitud. Esto solo puede ocurrir si el usuario ha revisado una nueva versión de la corrección de compatibilidad (shim). Las versiones sin revisar seguirán siendo vulnerables.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

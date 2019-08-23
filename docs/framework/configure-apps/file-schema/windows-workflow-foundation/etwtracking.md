@@ -3,15 +3,15 @@ title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: e7614f158826e3522ac8e17d60c1ea65fefc8612
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 653693fef92072cb1e6e23234359b765f0f18fc9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790200"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940232"
 ---
 # <a name="etwtracking"></a>\<etwTracking>
-Un comportamiento del servicio que permite que un servicio usar el seguimiento de ETW utilizando un <xref:System.Activities.Tracking.EtwTrackingParticipant>.  
+Un comportamiento del servicio que permite a un servicio usar el seguimiento de <xref:System.Activities.Tracking.EtwTrackingParticipant>ETW mediante.  
   
 \<system.ServiceModel>  
 \<comportamientos >  
@@ -36,7 +36,7 @@ Un comportamiento del servicio que permite que un servicio usar el seguimiento d
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |profileName|Una cadena que especifica el nombre del perfil de seguimiento asociado a este comportamiento.|  
   
@@ -45,9 +45,9 @@ Un comportamiento del servicio que permite que un servicio usar el seguimiento d
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<comportamiento > de \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|Especifica un elemento de comportamiento.|  
+|[\<comportamiento > de \<serviceBehaviors >](behavior-of-servicebehaviors-of-workflow.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando se agrega a la configuración de comportamiento del servicio, este elemento de configuración configura un participante de seguimiento en un servicio de flujo de trabajo.  
@@ -57,7 +57,7 @@ Un comportamiento del servicio que permite que un servicio usar el seguimiento d
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de configuración muestra el participante de seguimiento de ETW estándar que se está configurando en el archivo Web.config.  
   
- El identificador del proveedor que el participante de seguimiento de ETW usa para escribir los registros de seguimiento en ETW se define en el  **\<diagnósticos >** sección. El participante de seguimiento tiene un perfil asociado para especificar los registros de seguimiento a los que se ha suscrito. Esto viene definido por el **profileName** atributo de la  **\<Agregar >** elemento. Una vez que se definen, el participante de seguimiento se agrega a la  **\<etwTracking >** comportamiento del servicio. Esto agregará los participantes de seguimiento seleccionados a las extensiones de la instancia de flujo de trabajo para que puedan empezar a recibir los registros de seguimiento.  
+ El identificador de proveedor que el participante de seguimiento de ETW usa para escribir los registros de seguimiento en ETW  **\<** se define en la sección Diagnostics >. El participante de seguimiento tiene un perfil asociado para especificar los registros de seguimiento a los que se ha suscrito. Se define mediante el atributo **ProfileName** del  **\<elemento Add >** . Una vez definidos, el participante de seguimiento se agrega al comportamiento del  **\<servicio etwTracking >** . Esto agregará los participantes de seguimiento seleccionados a las extensiones de la instancia de flujo de trabajo para que puedan empezar a recibir los registros de seguimiento.  
   
 ```xml  
 <configuration>   
@@ -88,5 +88,5 @@ Un comportamiento del servicio que permite que un servicio usar el seguimiento d
 
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Participantes de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)
+- [Seguimiento y traza de flujos de trabajo](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Participantes de seguimiento](../../../windows-workflow-foundation/tracking-participants.md)

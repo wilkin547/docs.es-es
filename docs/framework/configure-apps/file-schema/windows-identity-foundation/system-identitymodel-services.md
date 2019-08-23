@@ -3,12 +3,12 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bef061c5c982fb0e740f889336a3b334bc19225e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793788"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943660"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 Sección de configuración para la autenticación mediante el protocolo WS-Federation.  
@@ -28,27 +28,27 @@ Sección de configuración para la autenticación mediante el protocolo WS-Feder
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
- Ninguna  
+ None  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Contiene la configuración que establece el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y el <xref:System.IdentityModel.Services.SessionAuthenticationModule> módulos HTTP (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Contiene la configuración que configura los <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> módulos http (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule> y (SAM).|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
- Ninguna  
+ None  
   
 ## <a name="remarks"></a>Comentarios  
- Agregar un `<system.identityModel.services>` sección al archivo de configuración de la aplicación para proporcionar la configuración de SAM y WSFAM.  
+ Agregue una `<system.identityModel.services>` sección al archivo de configuración de la aplicación para proporcionar la configuración de Sam y WSFAM.  
   
 > [!IMPORTANT]
->  Cuando se usa el <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> o <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> clase para proporcionar control de acceso basado en notificaciones en el código, el Administrador de autorización de notificaciones (<xref:System.Security.Claims.ClaimsAuthorizationManager>) y la directiva que se usa para tomar decisiones de autorización se configuran a través de un `<identityConfiguration>` elemento al que hace referencia implícita o explícitamente desde un `<federationConfiguration>` elemento en esta sección. Para obtener más información, consulte el **comentarios** bajo el [ \<federationConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md) elemento.  
+> Cuando se usa <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> la <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> clase o para proporcionar control de acceso basado en notificaciones en el código, el administrador de<xref:System.Security.Claims.ClaimsAuthorizationManager>autorización de notificaciones () y la Directiva que se usa para tomar `<identityConfiguration>` decisiones de autorización se configuran mediante un elemento al que se hace referencia de forma implícita o explícita `<federationConfiguration>` desde un elemento de esta sección. Para obtener más información, vea las **notas** en el [ \<elemento > de federationConfiguration](federationconfiguration.md) .  
   
- El `<system.identityModel.services>` sección representada por la <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> clase. La colección del elemento secundario `<federationConfiguration>` configurados en la sección de elementos está representado por la <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> clase.  
+ La sección se representa mediante la <xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection> clase. `<system.identityModel.services>` La colección de elementos `<federationConfiguration>` secundarios configurada en la sección se representa <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection> mediante la clase.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente XML muestra cómo agregar un `<system.identityModel.services>` sección a un archivo de configuración. En primer lugar debe agregar las declaraciones de sección tanto para el `<system.identityModel.services>` sección y la `<system.identityModel>` secciones. (Cuando se agrega un `<system.identityModel.services>` sección, también debe agregar una declaración para el `<system.identityModel>` sección para asegurarse de que un valor predeterminado `<identityConfiguration>` sección puede crearse mediante el tiempo de ejecución si es necesario.) Después de han agregado las declaraciones de sección, puede configurar opciones de autenticación federada en el `<system.identityModel.services>` elemento.  
+ El siguiente XML muestra cómo agregar una `<system.identityModel.services>` sección a un archivo de configuración. Primero debe agregar declaraciones de sección para la `<system.identityModel.services>` sección y las `<system.identityModel>` secciones. (Al agregar una `<system.identityModel.services>` sección, también debe agregar una declaración para la `<system.identityModel>` sección para asegurarse de que el tiempo de `<identityConfiguration>` ejecución puede crear una sección predeterminada, si es necesario). Una vez agregadas las declaraciones de sección, puede configurar las opciones de autenticación federada en `<system.identityModel.services>` el elemento.  
   
 ```xml  
 <configuration>  

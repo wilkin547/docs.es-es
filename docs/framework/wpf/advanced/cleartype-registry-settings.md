@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 8f1c4415a834f7eb7c3048a89ab81de6921b7bf6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: f4b5a0c3764c173afe03adb67fd3df9d17d9fdcb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629942"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964890"
 ---
 # <a name="cleartype-registry-settings"></a>Configuración del Registro de ClearType
 En este tema se proporciona información general sobre la configuración del registro de ClearType de Microsoft que usan las aplicaciones de WPF.  
@@ -36,12 +36,12 @@ En este tema se proporciona información general sobre la configuración del reg
 |Estructura de píxeles|Describe la distribución de píxeles de una pantalla.|  
 |Nivel de contraste del texto|Describe el nivel de contraste del texto que se muestra.|  
   
- Se puede tener acceso a esta configuración mediante una utilidad de configuración externa que sabe cómo hacer referencia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a la configuración del registro de ClearType identificada. Estos valores de configuración también pueden crearse o modificarse mediante el acceso a los valores directamente a través del Editor del Registro de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)].  
+ Se puede tener acceso a esta configuración mediante una utilidad de configuración externa que sabe cómo hacer referencia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]a la configuración del registro de ClearType identificada. Esta configuración también se puede crear o modificar si se obtiene acceso a los valores directamente mediante el editor del registro de Windows.  
   
- Si no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]se establece la configuración del registro ClearType (que es el estado predeterminado), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] la aplicación consulta [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] la información de parámetros del sistema para la configuración de suavizado de fuentes.  
+ Si no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]se establece la configuración del registro de ClearType (que es el estado predeterminado) [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , la aplicación consulta la información de parámetros del sistema de Windows para obtener la configuración de suavizado de fuentes.  
   
 > [!NOTE]
->  Para obtener información sobre cómo enumerar los nombres de los `SystemParametersInfo` dispositivos de pantalla, consulte la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] función.  
+> Para obtener información sobre cómo enumerar los nombres de los `SystemParametersInfo` dispositivos de pantalla, consulte la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] función.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Nivel de ClearType  
@@ -59,7 +59,7 @@ En este tema se proporciona información general sobre la configuración del reg
  ![Configuración de ClearType en el editor del registro.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones representan texto en uno de estos dos modos, con y sin ClearType. Cuando el texto se representa sin ClearType, se conoce como representación de escala de grises.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones representan texto en uno de estos dos modos, con y sin ClearType. Cuando el texto se representa sin ClearType, se conoce como representación de escala de grises.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Nivel de gamma  
@@ -89,7 +89,7 @@ En este tema se proporciona información general sobre la configuración del reg
  La estructura de píxeles corresponde a un valor entero comprendido entre 0 y 2. El nivel predeterminado es 0, que representa una estructura de píxeles plana.  
   
 > [!NOTE]
->  Para obtener información sobre cómo enumerar los nombres de los `EnumDisplayDevices` dispositivos de pantalla, consulte la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] función.  
+> Para obtener información sobre cómo enumerar los nombres de los `EnumDisplayDevices` dispositivos de pantalla, consulte la [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] función.  
   
 ### <a name="registry-setting"></a>Configuración del Registro  
  La ubicación de la configuración del Registro para la estructura de píxeles es una configuración de equipo local que corresponde a un nombre de pantalla específico:  

@@ -3,15 +3,15 @@ title: <audienceUris>
 ms.date: 03/30/2017
 ms.assetid: 7a3d8515-d756-4afe-a22d-07cbe2217ee3
 author: BrucePerlerMS
-ms.openlocfilehash: 556c444d5e48e27036c4b49338f6e70de7ef5c5d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 003221ed4dc7f4ccf72d2e0d3a91265e13172813
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750753"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941953"
 ---
 # <a name="audienceuris"></a>\<audienceUris>
-Especifica el conjunto de URI que son aceptables identificadores del usuario de confianza (RP). No se aceptarán tokens a menos que tengan el ámbito de uno de lo URI de público permitido.  
+Especifica el conjunto de URI que son identificadores aceptables del usuario de confianza (RP). No se aceptarán tokens a menos que estén en el ámbito de uno de los URI de audiencia permitidos.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -42,34 +42,34 @@ Especifica el conjunto de URI que son aceptables identificadores del usuario de 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|modo|Un <xref:System.IdentityModel.Selectors.AudienceUriMode> valor que especifica si se debe aplicar la restricción de audiencia para un token entrante. Los valores posibles son "Siempre", "Nunca" y "BearerKeyOnly". El valor predeterminado es "Siempre". Opcional.|  
+|modo|<xref:System.IdentityModel.Selectors.AudienceUriMode> Valor que especifica si la restricción de audiencia debe aplicarse a un token de entrada. Los valores posibles son "always", "Never" y "BearerKeyOnly". El valor predeterminado es "always". Opcional.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|`<add value=xs:string>`|Agrega el URI especificado por el `value` atributo a la colección de audienceUris. El atributo `value` es necesario. El URI distingue mayúsculas de minúsculas.|  
-|`<clear>`|Borra la colección de audienceUris. Se quitan todos los identificadores de la colección.|  
-|`<remove value=xs:string>`|Quita el URI especificado por el `value` atributo de la colección de audienceUris. El atributo `value` es necesario. El URI distingue mayúsculas de minúsculas.|  
+|`<add value=xs:string>`|Agrega el URI especificado por el `value` atributo a la colección audienceUris. El atributo `value` es necesario. El URI distingue entre mayúsculas y minúsculas.|  
+|`<clear>`|Borra la colección audienceUris. Todos los identificadores se quitan de la colección.|  
+|`<remove value=xs:string>`|Quita el URI especificado por el `value` atributo de la colección audienceUris. El atributo `value` es necesario. El URI distingue entre mayúsculas y minúsculas.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de seguridad controladores de token.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de controladores de tokens de seguridad.|  
   
 ## <a name="remarks"></a>Comentarios  
- De forma predeterminada, la colección está vacía; usar `<add>`, `<clear>`, y `<remove>` elementos para modificar la colección. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> y <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> por los objetos de los valores de la colección de URI de audiencia para configurar cualquiera permiten audiencia las restricciones de URI en <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> objetos.  
+ De forma predeterminada, la colección está vacía; Use `<add>`los `<clear>`elementos, `<remove>` y para modificar la colección. <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>los <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> objetos y usan los valores de la colección de URI de audiencia para configurar las restricciones de <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> URI de audiencia permitidas en los objetos.  
   
- El `<audienceUris>` elemento representado por la <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> clase. Un URI individual agregado a la colección representado por el <xref:System.IdentityModel.Configuration.AudienceUriElement> clase.  
+ El elemento se representa mediante la <xref:System.IdentityModel.Configuration.AudienceUriElementCollection> clase. `<audienceUris>` Una dirección URI individual agregada a la colección se representa <xref:System.IdentityModel.Configuration.AudienceUriElement> mediante la clase.  
   
 > [!NOTE]
->  El uso de la `<audienceUris>` como un elemento secundario de la [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) elemento en desuso, pero todavía se admite por compatibilidad con versiones anteriores. Configuración de la `<securityTokenHandlerConfiguration>` elemento invalidan aquellas establecidas en el `<identityConfiguration>` elemento.  
+> El uso del `<audienceUris>` elemento como elemento secundario [ \<del elemento > identityConfiguration](identityconfiguration.md) está en desuso, pero todavía se admite por compatibilidad con versiones anteriores. La `<securityTokenHandlerConfiguration>` configuración del elemento invalida la `<identityConfiguration>` del elemento.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente XML muestra cómo configurar el URI de audiencia aceptables para una aplicación. Este ejemplo configura un URI único. Se aceptarán tokens con ámbito de este identificador URI, se rechazarán todas las demás.  
+ El siguiente XML muestra cómo configurar los URI de audiencia aceptables para una aplicación. En este ejemplo se configura un URI único. Se aceptarán los tokens con ámbito para este URI; se rechazarán todos los demás.  
   
 ```xml  
 <audienceUris>  
