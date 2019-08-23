@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb055285af7365536f7e1ad7c7d9290e51be50db
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: fc4ff8f914f0e049a0fdf27b5008b1e39bc40116
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832863"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566783"
 ---
 # <a name="delay-signing-an-assembly"></a>Retrasar la firma de un ensamblado
 Una organización podría tener un par de claves muy bien guardado al que los desarrolladores no tuvieran acceso cada día. La clave pública suele estar disponible, pero el acceso a la clave privada estaría restringido a algunas personas. Al desarrollar ensamblados con nombres seguros, cada ensamblado que hace referencia al ensamblado de destino con nombre seguro contiene el token de la clave pública usada para asignar un nombre seguro al ensamblado de destino. Esto requiere que la clave pública esté disponible durante el proceso de desarrollo.  
@@ -28,7 +28,7 @@ Una organización podría tener un par de claves muy bien guardado al que los de
   
  En los pasos siguientes se describe el proceso para retrasar la firma de un ensamblado:  
   
-1. Se obtiene la parte de la clave pública del par de claves de la organización que se encargará de la firma. Normalmente, esta clave tiene la forma de un archivo .snk, que se puede crear mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) proporcionada por el kit de desarrollo de software (SDK) de Windows.  
+1. Se obtiene la parte de la clave pública del par de claves de la organización que se encargará de la firma. Normalmente, esta clave tiene la forma de un archivo .snk, que se puede crear mediante la [herramienta de nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) proporcionada por Windows SDK.  
   
 2. Se anota el código fuente del ensamblado con dos atributos personalizados de <xref:System.Reflection>:  
   

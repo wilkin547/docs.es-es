@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7da023c5ab9247cde0ccd1126d4d639c6f355e7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771870"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910969"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implementar .NET Framework y aplicaciones
 
-Este artículo le ayuda a empezar a implementar .NET Framework con la aplicación. La mayoría de la información está destinada a desarrolladores, OEM y administradores de empresa. Los usuarios que deseen instalar .NET Framework en sus equipos deben leer [Instalar .NET Framework](~/docs/framework/install/index.md).
+Este artículo le ayuda a empezar a implementar .NET Framework con la aplicación. La mayoría de la información está destinada a desarrolladores, OEM y administradores de empresa. Los usuarios que deseen instalar .NET Framework en sus equipos deben leer [Instalar .NET Framework](../install/index.md).
 
 ## <a name="key-deployment-resources"></a>Recursos de implementación clave
 
@@ -32,9 +32,9 @@ Use los siguientes vínculos a otros temas de MSDN para obtener información esp
 
   - Opciones del instalador:
 
-    - [Instalador web](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Instalador web](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [Instalador sin conexión](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Instalador sin conexión](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - Modos de instalación:
 
@@ -44,7 +44,7 @@ Use los siguientes vínculos a otros temas de MSDN para obtener información esp
 
   - [Reducir los reinicios del sistema durante las instalaciones de .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [Solución de problemas en instalaciones y desinstalaciones bloqueadas de .NET Framework](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - Implementar .NET Framework con una aplicación cliente (para desarrolladores):
 
@@ -160,7 +160,7 @@ Las cuestiones de seguridad pueden afectar también al modo en que se implementa
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Title|DESCRIPCIÓN|
 |-----------|-----------------|
 |[Cómo el motor en tiempo de ejecución ubica ensamblados](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Describe la forma en que Common Language Runtime determina el ensamblado que se va a utilizar para llevar a cabo una solicitud de enlace.|
 |[Procedimientos recomendados para cargar ensamblados](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|Aborda formas de evitar problemas de identidad de tipos que pueden causar errores como <xref:System.InvalidCastException> o <xref:System.MissingMethodException>, entre otros.|

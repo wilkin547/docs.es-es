@@ -3,12 +3,12 @@ title: Cómo mostrar el estado "Firmado" mediante WIF
 ms.date: 03/30/2017
 ms.assetid: 4d1174e4-5397-4962-9a5f-3b1ad7b3fc14
 author: BrucePerlerMS
-ms.openlocfilehash: 6d81bd2023886799f939fc9851db516a00aa92df
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e44dc80260e46b81ac723ada32085390a18a153a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742454"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945701"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>Cómo mostrar el estado "Firmado" mediante WIF
 ## <a name="applies-to"></a>Se aplica a  
@@ -117,7 +117,7 @@ ms.locfileid: "67742454"
 3. Guarde **Default.aspx** y abra su archivo de código subyacente denominado **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** puede estar oculto bajo **Default.aspx** en el Explorador de soluciones. Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo que se encuentra al lado.  
+    > **Default.aspx.cs** puede estar oculto bajo **Default.aspx** en el Explorador de soluciones. Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo que se encuentra al lado.  
   
 4. Reemplace el código existente en **Default.aspx.cs** por el código siguiente:  
   
@@ -153,4 +153,4 @@ ms.locfileid: "67742454"
   
 1. En Visual Studio, presione **F5** para iniciar la depuración de la aplicación. Si no se encuentra ningún error, se abrirá una nueva ventana del explorador.  
   
-2. Puede observar que el explorador redirige de manera silenciosa la solicitud al STS y abre a continuación la página Default.aspx. Si WIF está configurado correctamente, debería ver el sitio para mostrar el texto siguiente: **"Ha iniciado sesión"** .
+2. Puede observar que el explorador redirige de manera silenciosa la solicitud al STS y abre a continuación la página Default.aspx. Si WIF está configurado correctamente, debería ver que el sitio muestra el texto siguiente: **"Ha iniciado sesión"** .

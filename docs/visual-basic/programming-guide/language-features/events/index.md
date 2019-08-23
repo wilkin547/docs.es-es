@@ -5,20 +5,20 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 65b4f5633e589ae02e9ed495074000181864428a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586710"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956357"
 ---
 # <a name="events-visual-basic"></a>Eventos (Visual Basic)
-Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas está dirigidos por eventos, lo que significa que el flujo de ejecución está determinado por elementos externos denominados *eventos*.  
+Aunque podría visualizar un proyecto de Visual Studio como una serie de procedimientos que se ejecutan en una secuencia, en realidad, la mayoría de los programas están controlados por eventos, lo que significa que el flujo de ejecución viene determinado por repeticiones externas denominadas *eventos*.  
   
  Un evento es una señal que comunica a una aplicación que ha sucedido algo importante. Por ejemplo, cuando un usuario hace clic en un control en un formulario, el formulario puede provocar un evento `Click` y llamar a un procedimiento que controla el evento. Los eventos también permiten que las tareas independientes se comuniquen. Por ejemplo, supongamos que la aplicación realiza una tarea de ordenación de manera independiente a la aplicación principal. Si un usuario cancela la ordenación, la aplicación puede enviar un evento de cancelación que indica al proceso de ordenación que se detenga.  
   
 ## <a name="event-terms-and-concepts"></a>Conceptos y términos de eventos  
- Esta sección describen los términos y conceptos que se usan con eventos en Visual Basic.  
+ En esta sección se describen los términos y conceptos que se usan con los eventos de Visual Basic.  
   
 ### <a name="declaring-events"></a>Declarar eventos  
  Puede declarar eventos dentro de clases, estructuras, módulos e interfaces con la palabra clave `Event`, como en el ejemplo siguiente:  
@@ -26,7 +26,7 @@ Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimi
  [!code-vb[VbVbalrEvents#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#24)]  
   
 ### <a name="raising-events"></a>Generación de eventos  
- Un evento es como un mensaje que anuncia que ha sucedido algo importante. La acción de difundir el mensaje se denomina *generar* el evento. En Visual Basic, los eventos se producen con el `RaiseEvent` instrucción, como en el ejemplo siguiente:  
+ Un evento es como un mensaje que anuncia que ha sucedido algo importante. La acción de difundir el mensaje se denomina *generar* el evento. En Visual Basic, se generan eventos con la `RaiseEvent` instrucción, como en el ejemplo siguiente:  
   
  [!code-vb[VbVbalrEvents#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#25)]  
   
@@ -38,10 +38,10 @@ Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimi
 ### <a name="event-handlers"></a>Controladores de eventos  
  Los *controladores de eventos* son procedimientos que se invocan cuando se produce un evento correspondiente. Puede utilizar cualquier subrutina válida con una firma coincidente como un controlador de eventos. Sin embargo, no se puede utilizar una función como un controlador de eventos, porque no devolverá un valor al origen del evento.  
   
- Visual Basic utiliza una convención de nomenclatura estándar para controladores de eventos que combina el nombre del remitente del evento, un carácter de subrayado y el nombre del evento. Por ejemplo, el evento `Click` de un botón con nombre `button1` se denominaría `Sub button1_Click`.  
+ Visual Basic usa una Convención de nomenclatura estándar para los controladores de eventos que combina el nombre del remitente del evento, un carácter de subrayado y el nombre del evento. Por ejemplo, el evento `Click` de un botón con nombre `button1` se denominaría `Sub button1_Click`.  
   
 > [!NOTE]
->  Se recomienda utilizar esta convención de nomenclatura al definir controladores de eventos para sus propios eventos, pero no es necesario; puede utilizar cualquier nombre de subrutina válido.  
+> Se recomienda utilizar esta convención de nomenclatura al definir controladores de eventos para sus propios eventos, pero no es necesario; puede utilizar cualquier nombre de subrutina válido.  
   
 ## <a name="associating-events-with-event-handlers"></a>Asociación de eventos con controladores de eventos  
  Antes de poder utilizar un controlador de eventos, primero debe asociarlo con un evento mediante la utilización de la instrucción `Handles` o `AddHandler`.  
@@ -55,7 +55,7 @@ Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimi
   
 - No puede usar una variable `WithEvents` como una variable de objeto. Es decir, no puede declararla como `Object`: debe especificar el nombre de clase al declarar la variable.  
   
-- Dado que los eventos compartidos no están asociados a instancias de clase, no puede usar `WithEvents` para controlar eventos compartidos de forma declarativa. De forma similar, no puede usar `WithEvents` o `Handles` para controlar eventos desde `Structure`. En ambos casos, puede usar la instrucción `AddHandler` para controlar dichos eventos.  
+- Dado que los eventos compartidos no están asociados a instancias de `WithEvents` clase, no se puede usar para controlar mediante declaración los eventos compartidos. De forma similar, no puede usar `WithEvents` o `Handles` para controlar eventos desde `Structure`. En ambos casos, puede usar la instrucción `AddHandler` para controlar dichos eventos.  
   
 - No puede crear matrices de las variables `WithEvents`.  
   
@@ -63,7 +63,7 @@ Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimi
   
  Aunque la cláusula `Handles` es la forma estándar de asociar un evento con un controlador de eventos, tiene la limitación de que solo puede asociar eventos con controladores de eventos en tiempo de compilación.  
   
- En algunos casos, como con eventos asociados con formularios o controles, Visual Basic automáticamente stubs de un controlador de eventos vacío y lo asocia con un evento. Por ejemplo, cuando hace doble clic en un botón de comando en un formulario en modo de diseño, Visual Basic crea un controlador de eventos vacío y un `WithEvents` variable para el botón de comando, como se muestra en el código siguiente:  
+ En algunos casos, como en el caso de los eventos asociados a formularios o controles, Visual Basic crea automáticamente un controlador de eventos vacío y lo asocia a un evento. Por ejemplo, al hacer doble clic en un botón de comando de un formulario en modo de diseño, Visual Basic crea un controlador de eventos `WithEvents` vacío y una variable para el botón de comando, como en el código siguiente:  
   
  [!code-vb[VbVbalrEvents#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#26)]  
   
@@ -97,12 +97,12 @@ Aunque puede visualizar un proyecto de Visual Studio como una serie de procedimi
   
 ## <a name="related-sections"></a>Secciones relacionadas  
   
-|Título|Descripción|  
+|Título|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|[Tutorial: Declarar y provocar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Proporciona una descripción detallada de cómo declarar y generar eventos para una clase.|  
-|[Tutorial: Control de eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Muestra cómo escribir un procedimiento de controlador de eventos.|  
-|[Cómo: Declarar eventos personalizados para evitar el bloqueo](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Muestra cómo definir un evento personalizado que permite invocar a sus controladores de eventos de forma asincrónica.|  
-|[Cómo: Declarar eventos personalizados para conservar memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Muestra cómo definir un evento personalizado que utiliza la memoria solo cuando se controla el evento.|  
+|[Tutorial: Declarar y generar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)|Proporciona una descripción detallada de cómo declarar y generar eventos para una clase.|  
+|[Tutorial: Controlar eventos](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)|Muestra cómo escribir un procedimiento de controlador de eventos.|  
+|[Cómo: Declarar eventos personalizados para evitar bloqueos](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|Muestra cómo definir un evento personalizado que permite invocar a sus controladores de eventos de forma asincrónica.|  
+|[Procedimientos: Declarar eventos personalizados para conservar memoria](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Muestra cómo definir un evento personalizado que utiliza la memoria solo cuando se controla el evento.|  
 |[Solucionar problemas de controladores de eventos heredados en Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Enumera los problemas habituales que se producen con los controladores de eventos en componentes heredados.|  
 |[Eventos](../../../../standard/events/index.md)|Proporciona una descripción general del modelo de eventos de .NET Framework.|  
 |[Crear controladores de eventos en Windows Forms](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Describe cómo trabajar con eventos asociados a objetos de Windows Forms.|  

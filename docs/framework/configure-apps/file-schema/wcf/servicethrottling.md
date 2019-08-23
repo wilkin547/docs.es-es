@@ -2,12 +2,12 @@
 title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
-ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ed5e91f09d9e658deeb7996baaca445b4e0c90
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758111"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937107"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 Especifica el mecanismo de limitación de peticiones de un servicio de Windows Communication Foundation (WCF).  
@@ -31,7 +31,7 @@ Especifica el mecanismo de limitación de peticiones de un servicio de Windows C
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |maxConcurrentCalls|Entero positivo que limita el número de mensajes que actualmente procesan en <xref:System.ServiceModel.ServiceHost>. Las llamadas que superan el límite se ponen en cola. Establecer este valor en 0 es equivalente a establecerlo en Int32.MaxValue. El valor predeterminado es 16 * número de procesadores.|  
 |maxConcurrentInstances|Entero positivo que limita el número de los objetos <xref:System.ServiceModel.InstanceContext> que se ejecutan a la vez en <xref:System.ServiceModel.ServiceHost>. Las solicitudes para crear instancias adicionales se ponen en cola y se completan cuando queda disponible una ranura por debajo del límite. El valor predeterminado es la suma de maxConcurrentSessions y MaxConcurrentCalls|  
@@ -42,9 +42,9 @@ Especifica el mecanismo de limitación de peticiones de un servicio de Windows C
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<comportamiento >](behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los controles de limitación de peticiones establecen límites en el número de llamadas simultáneas, instancias o sesiones para evitar el consumo excesivo de recursos.  
@@ -52,7 +52,7 @@ Especifica el mecanismo de limitación de peticiones de un servicio de Windows C
  Se escribe un seguimiento cada vez que se alcanza el valor de los atributos. El primer seguimiento se escribe como una advertencia.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo de configuración siguiente especifica que el servicio limita el máximo de llamadas simultáneas a 2, y el número máximo de instancias simultáneas a 10. Para obtener un ejemplo detallado de la ejecución de este ejemplo, vea [limitación](../../../../../docs/framework/wcf/samples/throttling.md).  
+ El ejemplo de configuración siguiente especifica que el servicio limita el máximo de llamadas simultáneas a 2, y el número máximo de instancias simultáneas a 10. Para obtener un ejemplo detallado de cómo ejecutar este ejemplo, vea [limitación](../../../wcf/samples/throttling.md).  
   
 ```xml  
 <behaviors>
@@ -72,4 +72,4 @@ Especifica el mecanismo de limitación de peticiones de un servicio de Windows C
 
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.Configuration.ServiceThrottlingElement>
-- [Utilización de ServiceThrottlingBehavior para controlar el rendimiento de los servicios WCF](../../../../../docs/framework/wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)
+- [Utilización de ServiceThrottlingBehavior para controlar el rendimiento de los servicios WCF](../../../wcf/feature-details/using-servicethrottlingbehavior-to-control-wcf-service-performance.md)

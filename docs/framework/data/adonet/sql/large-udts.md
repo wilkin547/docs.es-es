@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 2114efcc4d39cb4d2ea9ca33d7ff244c81a7097f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 97df0bee10440dd03f07b980589d9dda85ce121e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650580"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909879"
 ---
 # <a name="large-udts"></a>UDT grandes
 Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe el sistema de tipos escalares del servidor mediante el almacenamiento de objetos Common Language Runtime (CLR) en una base de datos de SQL Server. Los UDT pueden contener varios elementos y presentar diversos comportamientos, a diferencia de los tipos de datos de alias tradicionales, que constan de un solo tipo de datos del sistema SQL Server.  
   
 > [!NOTE]
->  Debe instalar .NET Framework 3.5 SP1 (o posterior) para aprovechar la compatibilidad de SqlClient mejorada para UDT grandes.  
+> Debe instalar .NET Framework 3.5 SP1 (o posterior) para aprovechar la compatibilidad de SqlClient mejorada para UDT grandes.  
   
  Anteriormente, los UDT tenían un tamaño máximo de 8 kilobytes. En SQL Server 2008, se ha quitado esta restricción para los UDT que tiene un formato de <xref:Microsoft.SqlServer.Server.Format.UserDefined>.  
   
@@ -27,7 +27,7 @@ Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe e
 1. [Tipos CLR definidos por el usuario](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Recuperar los esquemas UDT mediante GetSchema  
- El método <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:System.Data.SqlClient.SqlConnection> devuelve la información de un esquema de base de datos de un elemento <xref:System.Data.DataTable>. Para obtener más información, consulte [colecciones de esquemas de SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
+ El método <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:System.Data.SqlClient.SqlConnection> devuelve la información de un esquema de base de datos de un elemento <xref:System.Data.DataTable>. Para obtener más información, vea [SQL Server colecciones](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)de esquemas.  
   
 ### <a name="getschematable-column-values-for-udts"></a>Valores de columna de GetSchemaTable para los UDT  
  El método <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> de <xref:System.Data.SqlClient.SqlDataReader> devuelve <xref:System.Data.DataTable> que describe los metadatos de columna. La siguiente tabla describe las diferencias de los metadatos de columna para UDT grandes entre SQL Server 2005 y SQL Server 2008.  
@@ -41,7 +41,7 @@ Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe e
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|Instancia de UDT|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|Especificado como el nombre de tres partes *Database.SchemaName.TypeName*.|  
+|`DataTypeName`|`SqlDbType.VarBinary`|El nombre de tres partes especificado como *Database. SchemaName. TypeName*.|  
 |`IsLong`|Varía|Varía|  
   
 ## <a name="sqldatareader-considerations"></a>Consideraciones de SqlDataReader  
@@ -70,7 +70,7 @@ Los tipos definidos por el usuario (UDT) permiten que el desarrollador amplíe e
 ## <a name="specifying-sqlparameters"></a>Especificar SqlParameters  
  Las siguientes propiedades de <xref:System.Data.SqlClient.SqlParameter> se han ampliado para trabajar con UDT grandes.  
   
-|Propiedad de SqlParameter|Descripción|  
+|Propiedad de SqlParameter|DESCRIPCIÓN|  
 |---------------------------|-----------------|  
 |<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Obtiene o establece un objeto que representa el valor del parámetro. El valor predeterminado es null. La propiedad puede ser `SqlBinary`, `Byte[]` o un objeto administrado.|  
 |<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Obtiene o establece un objeto que representa el valor del parámetro. El valor predeterminado es null. La propiedad puede ser `SqlBinary`, `Byte[]` o un objeto administrado.|  

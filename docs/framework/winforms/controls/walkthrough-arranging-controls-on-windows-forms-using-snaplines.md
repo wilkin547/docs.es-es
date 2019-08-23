@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: 3ce6c250fadbb56b341d5e8dec3a9cb9d28940fe
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
-ms.translationtype: MT
+ms.openlocfilehash: 8ac1ba6b8121aabea3c992ca5b943f231fc19ce2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040257"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950071"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación
 La posición precisa de los controles del formulario es de alta prioridad para muchas aplicaciones. El Diseñador de Windows Forms ofrece muchas herramientas de diseño para lograr esto. Una de las más importantes es la <xref:System.Windows.Forms.Design.Behavior.SnapLine> característica.
@@ -87,7 +87,7 @@ La posición precisa de los controles del formulario es de alta prioridad para m
 1. Seleccione uno de los <xref:System.Windows.Forms.Button> controles y muévalo cerca del borde derecho del formulario hasta que aparezca una guía de alineación. La distancia de la guía de alineación desde el borde derecho es la suma de <xref:System.Windows.Forms.Control.Margin%2A> la propiedad del control y <xref:System.Windows.Forms.Control.Padding%2A> los valores de propiedad del formulario.
 
 > [!NOTE]
->  Si el <xref:System.Windows.Forms.Control.Padding%2A> valor de <xref:System.Windows.Forms.Control.Padding%2A> la propiedad del formulario se establece en 0, 0, 0, 0, el diseñador de Windows Forms proporciona el formato con el que se ha prevalecido 9, 9, 9, 9. Para invalidar este comportamiento, asigne un valor distinto de 0, 0, 0,0.
+> Si el <xref:System.Windows.Forms.Control.Padding%2A> valor de <xref:System.Windows.Forms.Control.Padding%2A> la propiedad del formulario se establece en 0, 0, 0, 0, el diseñador de Windows Forms proporciona el formato con el que se ha prevalecido 9, 9, 9, 9. Para invalidar este comportamiento, asigne un valor distinto de 0, 0, 0,0.
 
 1. Para cambiar el valor de <xref:System.Windows.Forms.Button> la propiedad <xref:System.Windows.Forms.Control.Margin%2A> del control, expanda la <xref:System.Windows.Forms.Control.Margin%2A> entrada en la ventana **propiedades** y <xref:System.Windows.Forms.Padding.All%2A> establezca la propiedad en 0. Para obtener más información [, consulte Tutorial: Diseñar Windows Forms controles con relleno, márgenes y la propiedad](windows-forms-controls-padding-autosize.md)AutoSize.
 

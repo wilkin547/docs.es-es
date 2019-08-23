@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36993a13ed085f59fd6002f33e7884bdb1b5db8d
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 499a64362f7a23f0c4c595469fceaa1612bf44dd
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832892"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567347"
 ---
 # <a name="assembly-names"></a>Nombres de ensamblado
 Un nombre de ensamblado se almacena en los metadatos y tiene un importante impacto en el ámbito del ensamblado y en su uso por parte de una aplicación. Un ensamblado con nombre seguro tiene un nombre completo que incluye nombre, referencia cultural, clave pública y número de versión. Se conoce como el nombre para mostrar y en los ensamblados cargados puede obtenerse mediante la propiedad <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -45,7 +45,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 ```  
   
 > [!NOTE]
->  El runtime trata los nombres de ensamblado sin distinción entre mayúsculas y minúsculas al enlazar a un ensamblado, pero conserva las minúsculas y mayúsculas que se usan en un nombre de ensamblado. Varias herramientas del kit de desarrollo de Software (SDK) de Windows controlan los nombres de ensamblado distinguiendo mayúsculas de minúsculas. Para obtener mejores resultados, administre los nombres de ensamblado con distinción entre mayúsculas y minúsculas.  
+>  El runtime trata los nombres de ensamblado sin distinción entre mayúsculas y minúsculas al enlazar a un ensamblado, pero conserva las minúsculas y mayúsculas que se usan en un nombre de ensamblado. Varias herramientas de Windows SDK controlan los nombres de ensamblado sin distinción entre mayúsculas y minúsculas. Para obtener mejores resultados, administre los nombres de ensamblado con distinción entre mayúsculas y minúsculas.  
   
 ## <a name="naming-application-components"></a>Nombre de los componentes de la aplicación  
  El runtime no tiene en cuenta el nombre de archivo a la hora de determinar la identidad de un ensamblado. La identidad del ensamblado, que se compone del nombre del ensamblado, la versión, la referencia cultural y el nombre seguro, debe ser clara para el runtime.  

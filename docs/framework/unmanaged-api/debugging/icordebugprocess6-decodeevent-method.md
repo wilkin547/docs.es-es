@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1453bc0c-6e0d-4d5a-b176-22607f8a3e6c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30df2d4a958b82a5a877b5d3efe5936f6498433b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f81c513447b7c63fb16ff20ae6f83c3e6ef359b1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67736460"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964042"
 ---
 # <a name="icordebugprocess6decodeevent-method"></a>Método ICorDebugProcess6::DecodeEvent
 Descodifica los eventos de depuración administrados encapsulados en la carga de los eventos de depuración de excepción nativos especialmente diseñados.  
@@ -35,28 +35,28 @@ HRESULT DecodeEvent(
  [in] Número de elementos en la matriz de bytes `pRecord`.  
   
  `format`  
- [in] Un [CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md) miembro de enumeración que especifica el formato del evento de depuración no administrada.  
+ de Miembro de la enumeración [CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md) que especifica el formato del evento de depuración no administrada.  
   
  `dwFlags`  
- [in] Campo de bits que depende de la arquitectura de destino y que especifica más información sobre el evento de depuración. Para los sistemas de Windows, puede ser un miembro de la [CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md) enumeración.  
+ [in] Campo de bits que depende de la arquitectura de destino y que especifica más información sobre el evento de depuración. En el caso de los sistemas Windows, puede ser un miembro de la enumeración [CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md) .  
   
  `dwThreadId`  
  [in] Identificador del sistema operativo del subproceso en el que se produjo la excepción.  
   
  `ppEvent`  
- [out] Un puntero a la dirección de un [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) objeto que representa un evento de depuración administrado descodificado.  
+ enuncia Puntero a la dirección de un objeto [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) que representa un evento de depuración administrada descodificada.  
   
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Este método solo está disponible con .NET Native.  
+> Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

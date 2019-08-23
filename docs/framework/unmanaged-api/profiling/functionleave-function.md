@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80d82e26fe54c5422d1140bba84830879f0b5c2d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 238a5f19bd8cbd89a5537b2b9297bfa9e1f54613
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781284"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952884"
 ---
 # <a name="functionleave-function"></a>FunctionLeave (Función)
-Notifica al generador de perfiles que una función está a punto de devolver al llamador.  
+Notifica al generador de perfiles que una función está a punto de volver al llamador.  
   
 > [!NOTE]
->  El `FunctionLeave` función está en desuso en .NET Framework 2.0. Seguirán funcionando, pero se incurrirá en una penalización de rendimiento. Use la [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) funcione en su lugar.  
+> La `FunctionLeave` función está en desuso en el .NET Framework 2,0. Continuará funcionando, pero se producirá una reducción del rendimiento. En su lugar, use la función [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,29 +39,29 @@ void __stdcall FunctionLeave (
   
 ## <a name="parameters"></a>Parámetros  
  `funcID`  
- [in] El identificador de la función que devuelve.  
+ de El identificador de la función que devuelve.  
   
 ## <a name="remarks"></a>Comentarios  
- El `FunctionLeave` función es una devolución de llamada; debe implementar. La implementación debe usar el `__declspec`(`naked`) el atributo de clase de almacenamiento.  
+ La `FunctionLeave` función es una devolución de llamada; debe implementarla. La implementación debe usar el `__declspec`atributo`naked`de clase de almacenamiento ().  
   
  El motor de ejecución no guarda ningún registro antes de llamar a esta función.  
   
-- En la entrada, debe guardar todos los registros que utilice, incluidos los de la unidad de punto flotante (FPU).  
+- En la entrada, debe guardar todos los registros que use, incluidos los de la unidad de punto flotante (FPU).  
   
-- En la salida, debe restaurar la pila debe extraer todos los parámetros que se insertaron su llamador.  
+- Al salir, debe restaurar la pila desactivando todos los parámetros insertados por el autor de la llamada.  
   
- La implementación de `FunctionLeave` no debe bloquearse porque retrasará la recolección de elementos. La implementación no debe intentar una recolección porque la pila no puede estar en un estado compatible con la colección de elementos no utilizados. Si se intenta realizar una recolección, el tiempo de ejecución se bloqueará hasta que `FunctionLeave` devuelve.  
+ La implementación de `FunctionLeave` no debe bloquearse porque retrasará la recolección de elementos no utilizados. La implementación no debe intentar una recolección de elementos no utilizados porque es posible que la pila no esté en un estado reconocible para la recolección de elementos no utilizados. Si se intenta realizar una recolección de elementos no utilizados, el `FunctionLeave` tiempo de ejecución se bloqueará hasta que se devuelva.  
   
- Además, el `FunctionLeave` función no debe llamar a código administrado o en modo alguno provocar una asignación de memoria administrada.  
+ Además, la `FunctionLeave` función no debe llamar a código administrado ni producir una asignación de memoria administrada.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado**: CorProf.idl  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
- **Versiones de .NET framework:** 1.1, 1.0  
+ **.NET Framework versiones:** 1.1, 1.0  
   
 ## <a name="see-also"></a>Vea también
 

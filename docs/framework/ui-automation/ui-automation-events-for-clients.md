@@ -5,16 +5,16 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 9da2f125b7b373d81014150c0d67a1422c932516
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 3bb41fa476f15c5fc16a942cc0c82fd8e0aba7bb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196364"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911667"
 ---
 # <a name="ui-automation-events-for-clients"></a>Eventos de UI Automation para clientes
 > [!NOTE]
->  Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).  
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.  
   
  En este tema se describe cómo usan los clientes de UI Automation los eventos [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
@@ -23,9 +23,9 @@ ms.locfileid: "59196364"
  La eficacia también mejora gracias a la capacidad para realizar escuchas de eventos que solo se encuentran dentro de un ámbito definido. Por ejemplo, un cliente puede estar a la escucha de eventos de cambio de foco en todos los elementos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] del árbol o solo en un elemento y sus descendientes.  
   
 > [!NOTE]
->  No dé por hecho que todos los eventos posibles los genera un proveedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por ejemplo, no todos los cambios de propiedad provocan que los proveedores de proxy estándares generen eventos para los controles [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
+> No dé por hecho que todos los eventos posibles los genera un proveedor de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]. Por ejemplo, no todos los cambios de propiedad provocan que los proveedores de proxy estándares generen eventos para los controles [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] y [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
   
- Para obtener una vista más amplia de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] los eventos, vea [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
+ Para obtener una vista más amplia [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de los eventos, vea [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
 <a name="Subscribing_to_Events"></a>   
 ## <a name="subscribing-to-events"></a>Suscripción a eventos  
@@ -41,21 +41,21 @@ ms.locfileid: "59196364"
  Antes de llamar al método, debe crear un método delegado para controlar el evento. Si lo prefiere, puede controlar tipos diferentes de eventos en un solo método y pasar este método en varias llamadas a uno de los métodos de la tabla. Por ejemplo, es posible configurar un único elemento <xref:System.Windows.Automation.AutomationEventHandler> para controlar varios eventos de manera diferente, según el elemento <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A>.  
   
 > [!NOTE]
->  Para procesar eventos de ventana cerrada, convierta el tipo de argumento que se pasa al controlador de eventos a <xref:System.Windows.Automation.WindowClosedEventArgs>. Como el elemento [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para la ventana ya no es válido, no puede utilizar el parámetro `sender` para recuperar información; utilice <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> en su lugar.  
+> Para procesar eventos de ventana cerrada, convierta el tipo de argumento que se pasa al controlador de eventos a <xref:System.Windows.Automation.WindowClosedEventArgs>. Como el elemento [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para la ventana ya no es válido, no puede utilizar el parámetro `sender` para recuperar información; utilice <xref:System.Windows.Automation.WindowClosedEventArgs.GetRuntimeId%2A> en su lugar.  
   
 > [!CAUTION]
 >  Si la aplicación podría recibir eventos de su propia [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], no utilice el subproceso [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] de la aplicación para suscribirse a eventos o para cancelar la suscripción. Si lo hace, podría provocar un comportamiento imprevisible. Para obtener más información, consulta [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
  Al apagar el equipo, o si los eventos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ya no son de interés para la aplicación, los clientes de UI Automation deben llamar a uno de los métodos siguientes.  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|Anula el registro de un controlador de eventos que se registró mediante <xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|Anula el registro de un controlador de eventos que se registró mediante <xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|Anula el registro de un controlador de eventos que se registró mediante <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>.|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|Anula el registro de todos los controladores de eventos registrados.|  
   
- Por ejemplo de código, consulte [suscribirse a eventos de UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
+ Para ver un ejemplo de código, vea [suscribirse a eventos de UI Automation](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Vea también
 

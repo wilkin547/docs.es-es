@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 381b8ba08db6ff5bb817c9c89008dacb1085ac1b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785832"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956035"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Procedimiento para desencadenar eventos de menú para los botones de la barra de herramientas
 > [!NOTE]
->  El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
+> El control <xref:System.Windows.Forms.ToolStrip> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.ToolBar>; sin embargo, el control <xref:System.Windows.Forms.ToolBar> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, en su caso.  
   
- Si las características de Windows forma un <xref:System.Windows.Forms.ToolBar> control con los botones de barra de herramientas, le interesará saber en qué botón hace clic el usuario.  
+ Si Windows Forms incluye un <xref:System.Windows.Forms.ToolBar> control con botones de barra de herramientas, querrá saber en qué botón hace clic el usuario.  
   
- En el <xref:System.Windows.Forms.ToolBar.ButtonClick> eventos de la <xref:System.Windows.Forms.ToolBar> control, puede evaluar la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> propiedad de la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> clase. En el ejemplo siguiente se muestra un cuadro de mensaje que indica en qué botón se hizo clic. Para obtener información detallada, vea <xref:System.Windows.Forms.MessageBox>.  
+ En el <xref:System.Windows.Forms.ToolBar.ButtonClick> <xref:System.Windows.Forms.ToolBar> caso del control, puede evaluar la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> propiedad de la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> clase. En el ejemplo siguiente se muestra un cuadro de mensaje que indica en qué botón se hizo clic. Para obtener información detallada, vea <xref:System.Windows.Forms.MessageBox>.  
   
- El ejemplo siguiente se da por supuesto un <xref:System.Windows.Forms.ToolBar> control se ha agregado a un formulario de Windows.  
+ En el ejemplo siguiente se <xref:System.Windows.Forms.ToolBar> supone que se ha agregado un control a un formulario de Windows Forms.  
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>Controlar el evento de clic en una barra de herramientas  
   
-1. En un procedimiento, agregue botones de barra de herramientas para el <xref:System.Windows.Forms.ToolBar> control.  
+1. En un procedimiento, agregue botones de barra de <xref:System.Windows.Forms.ToolBar> herramientas al control.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,10 +70,10 @@ ms.locfileid: "61785832"
        }  
     ```  
   
-2. Agregar un controlador de eventos para el <xref:System.Windows.Forms.ToolBar> del control <xref:System.Windows.Forms.ToolBar.ButtonClick> eventos. Un instrucción de conmutación de caso de uso y la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> clase para determinar el botón de barra de herramientas que se hizo clic. En función de esto, muestre un cuadro de mensaje adecuado.  
+2. Agregue un controlador de eventos para <xref:System.Windows.Forms.ToolBar> el evento <xref:System.Windows.Forms.ToolBar.ButtonClick> del control. Use una instrucción de cambio de mayúsculas y minúsculas y la <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> clase para determinar el botón de la barra de herramientas en el que se hizo clic. En función de esto, muestre un cuadro de mensaje adecuado.  
   
     > [!NOTE]
-    >  Un cuadro de mensaje solo se usa como marcador de posición en este ejemplo. Puede agregar código que se ejecutará cuando se haga clic en los botones de la barra de herramientas.  
+    > Un cuadro de mensaje solo se usa como marcador de posición en este ejemplo. Puede agregar código que se ejecutará cuando se haga clic en los botones de la barra de herramientas.  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -137,6 +137,6 @@ ms.locfileid: "61785832"
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.ToolBar>
-- [Cómo: Agregar botones a un Control de barra de herramientas](how-to-add-buttons-to-a-toolbar-control.md)
-- [Cómo: Definir un icono para un botón de barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Cómo: Agregar botones a un control ToolBar](how-to-add-buttons-to-a-toolbar-control.md)
+- [Procedimientos: Definir un icono para un botón de la barra de herramientas](how-to-define-an-icon-for-a-toolbar-button.md)
 - [ToolBar (control)](toolbar-control-windows-forms.md)

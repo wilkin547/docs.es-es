@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91a97807d45d3cafdac0c0608dc9590533b185dc
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 67ead643afd34b4c3422d85e6f7876879de477ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663429"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927241"
 ---
 # <a name="systemruntimecaching-element-cache-settings"></a>\<Elemento > de System. Runtime. Caching (configuración de caché)
 
@@ -55,7 +55,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 Las clases de este espacio de nombres proporcionan una manera de usar las funciones de almacenamiento en caché, como las de ASP.NET, pero sin una dependencia en el ensamblado `System.Web` . Para obtener más información, consulta [Caching in .NET Framework Applications](../../../performance/caching-in-net-framework-applications.md).  
   
 > [!NOTE]
->  La funcionalidad de almacenamiento en caché de resultados <xref:System.Runtime.Caching> y los tipos del espacio de nombres son nuevos en .NET Framework 4.  
+> La funcionalidad de almacenamiento en caché de resultados <xref:System.Runtime.Caching> y los tipos del espacio de nombres son nuevos en .NET Framework 4.  
   
 ## <a name="example"></a>Ejemplo
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - processes, interrupting
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
-ms.openlocfilehash: 80d6734945324f3f517b256051486273f6b687ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a617038ec51d98c62b6cf7e3c124c8af01305bac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783857"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957619"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop (Instrucción, Visual Basic)
 Suspende la ejecución.  
@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Puede colocar `Stop` instrucciones en cualquier parte de los procedimientos para suspender la ejecución. Mediante el `Stop` instrucción es similar a la configuración de un punto de interrupción en el código.  
+ Puede colocar `Stop` instrucciones en cualquier parte de los procedimientos para suspender la ejecución. El uso `Stop` de la instrucción es similar al establecimiento de un punto de interrupción en el código.  
   
- El `Stop` instrucción suspende la ejecución, pero, a diferencia `End`, no cierre los archivos ni borrar las variables, a menos que se encuentre en un archivo ejecutable compilado (.exe).  
+ La `Stop` instrucción suspende la ejecución, pero, a `End`diferencia de, no cierra ningún archivo ni borra ninguna variable, a menos que se encuentre en un archivo ejecutable (. exe) compilado.  
   
 > [!NOTE]
->  Si el `Stop` instrucción se encuentra en el código que se ejecuta fuera del entorno de desarrollo integrado (IDE), se invoca el depurador. Esto es cierto independientemente de si se ha compilado el código en modo de depuración o comercial.  
+> Si la `Stop` instrucción se encuentra en el código que se está ejecutando fuera del entorno de desarrollo integrado (IDE), se invoca al depurador. Esto es así independientemente de si el código se compiló en modo de depuración o comercial.  
   
 ## <a name="example"></a>Ejemplo  
- Este ejemplo se usa el `Stop` instrucción suspenda la ejecución para cada iteración a través de la `For...Next` bucle.  
+ En este ejemplo se `Stop` utiliza la instrucción para suspender la ejecución de `For...Next` cada iteración a través del bucle.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

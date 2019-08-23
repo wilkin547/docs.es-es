@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 9bb77146a55bae4aed17bdd3ef48eca7890d4807
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401437"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944682"
 ---
 # <a name="binding-sources-overview"></a>Información general sobre orígenes de enlaces
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. En este tema se describen los tipos de objetos que se pueden usar como origen de enlace.  
@@ -76,7 +76,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 |------------------------------------------------|-----------------------------|-----------------------------|------------------|------------------|-------------------------|-------------------------|  
 |**Nivel de confianza**|**Plena confianza**|**Confianza parcial**|**Plena confianza**|**Confianza parcial**|**Plena confianza**|**Confianza parcial**|  
 |Clase pública|Sí|Sí|Sí|Sí|Sí|Sí|  
-|Clase no pública|Sí|No|Sí|No|Sí|Sí|  
+|Clase no pública|Sí|Sin|Sí|Sin|Sí|Sí|  
   
  En esta tabla se describen los siguientes puntos importantes acerca de los requisitos de permisos en el enlace de datos:  
   
@@ -88,7 +88,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
   
  El requisito de permiso para el enlace [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] es similar. En un espacio aislado de confianza parcial <xref:System.Windows.Data.XmlDataProvider> , produce un error cuando no tiene permisos para obtener acceso a los datos especificados.  
   
- Los objetos con un tipo anónimo son internos. Puede enlazar a propiedades de tipos anónimos solo cuando se ejecutan en plena confianza. Para más información acerca de los tipos anónimos, consulte [Tipos anónimos (Guía de programación de C#)](~/docs/csharp/programming-guide/classes-and-structs/anonymous-types.md) o [Tipos anónimos (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
+ Los objetos con un tipo anónimo son internos. Puede enlazar a propiedades de tipos anónimos solo cuando se ejecutan en plena confianza. Para más información acerca de los tipos anónimos, consulte [Tipos anónimos (Guía de programación de C#)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) o [Tipos anónimos (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).  
   
  Para más información sobre la seguridad de confianza parcial, consulte [Seguridad de confianza parcial de WPF](../wpf-partial-trust-security.md).  
   

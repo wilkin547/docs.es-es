@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd0611cc8a6d257192b389b023c4dcda8f1b7ec3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634419"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69567480"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 El motor de expresiones regulares de .NET Framework es un buscador de coincidencias de expresiones regulares con retroceso que incorpora un motor NFA (autómata finito no determinista) tradicional, como el que usa Perl, Python, Emacs y Tcl. Esto lo distingue de los motores DFA (autómatas finitos deterministas) de expresiones regulares puras, más rápidos pero más limitados, como los de awk, egrep o lex. Esto también lo distingue de los NFA POSIX, estandarizados pero más lentos. En la sección siguiente se describen los tres tipos de motores de expresiones regulares y se explica por qué las expresiones regulares de .NET Framework se implementan mediante un motor NFA tradicional.  
@@ -43,9 +43,9 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]  
   
-     Las versiones expansiva y diferida de esta expresión regular se definen como se muestra en la tabla siguiente.  
+     Las versiones expansiva y diferida de esta expresión regular se definen como se muestra en la tabla siguiente:
   
-    |Modelo|Descripción|  
+    |Modelo|DESCRIPCIÓN|  
     |-------------|-----------------|  
     |`.+` (cuantificador expansivo)|Buscar al menos una repetición de cualquier carácter. Esto hace que el motor de expresiones regulares busque una coincidencia con la cadena completa y, después, retroceda según sea necesario para coincidir con el resto del patrón.|  
     |`.+?` (cuantificador diferido)|Coincide con al menos una repetición de cualquier carácter, pero el menor número posible.|  
@@ -93,7 +93,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
      El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-    |Modelo|Descripción|  
+    |Modelo|DESCRIPCIÓN|  
     |-------------|-----------------|  
     |`^`|Inicia la búsqueda de coincidencias al principio de una línea.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Coincide con cero o una repetición de la cadena `<PRIVATE>` seguida de un carácter de espacio en blanco. Asigna la coincidencia a un grupo de capturas denominado `Pvt`.|  
@@ -129,13 +129,13 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]  
   
-     La expresión regular `^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$` se define como se muestra en la siguiente tabla.  
+     La expresión regular ``^[A-Z0-9]([-!#$%&'.*+/=?^`{}|~\w])*(?<=[A-Z0-9])$`` se define como se muestra en la tabla siguiente.  
   
     |Modelo|Descripción|  
     |-------------|-----------------|  
     |`^`|Empieza la búsqueda de coincidencias en el principio de la cadena.|  
     |`[A-Z0-9]`|Coincide con cualquier carácter numérico o alfanumérico. (La comparación no distingue mayúsculas de minúsculas).|  
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Match zero or more occurrences of any word character, or any of the following characters:  -, !, #, $, %, &, ', ., *, +, /, =, ?, ^, \`, {, }, &#124;, or ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|Coincide con cero o más repeticiones de cualquier carácter de palabra o de cualquiera de los caracteres siguientes: -, !, #, $, %, &, ', ., \*, +, /, =, ?, ^, \`, {, }, &#124; o ~.|  
     |`(?<=[A-Z0-9])`|Realiza una búsqueda tardía en el carácter anterior, que debe ser numérico o alfanumérico. (La comparación no distingue mayúsculas de minúsculas).|  
     |`$`|Finalizar la búsqueda al final de la cadena.|  
   
@@ -143,7 +143,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Title|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Proporciona información sobre la manera en que el retroceso de expresiones regulares se bifurca para buscar coincidencias alternativas.|  
 |[Compilar y reutilizar](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Proporciona información sobre cómo compilar y reutilizar expresiones regulares para aumentar el rendimiento.|  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: f2fc69867ae1659a342161b00dfd91852441fa5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772013"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929238"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidad optimista
 En un entorno multiusuario existen dos modelos para actualizar datos en una base de datos: simultaneidad optimista y simultaneidad pesimista. El objeto <xref:System.Data.DataSet> está diseñado para fomentar el uso de la simultaneidad optimista en actividades cuya ejecución tiene una larga duración, como cuando se trabaja con interacción remota y cuando los usuarios interactúan con datos.  
@@ -20,7 +20,7 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
  Por tanto, en un modelo de simultaneidad pesimista, un usuario que actualiza una fila establece un bloqueo. Hasta que el usuario no haya terminado la actualización y liberado el bloqueo, nadie más podrá modificar dicha fila. Por este motivo, la simultaneidad pesimista resulta más adecuada cuando los tiempos de bloqueo son cortos, como ocurre en el procesamiento de registros mediante programación. La simultaneidad pesimista no es una opción escalable cuando los usuarios interactúan con los datos y hacen que los registros queden bloqueados durante períodos de tiempo relativamente largos.  
   
 > [!NOTE]
->  Si necesita actualizar varias filas en una misma operación, entonces crear una transacción es una opción más escalable que utilizar el bloqueo pesimista.  
+> Si necesita actualizar varias filas en una misma operación, entonces crear una transacción es una opción más escalable que utilizar el bloqueo pesimista.  
   
  Por el contrario, los usuarios que utilizan la simultaneidad optimista no bloquean una fila cuando la leen. Cuando un usuario desea actualizar una fila, la aplicación debe determinar si otro usuario la ha modificado o no desde que se leyó. La simultaneidad optimista suele utilizarse en entornos con poca contención de datos. Esto mejora el rendimiento porque no es necesario bloquear registros, a la vez que el bloqueo de registros requiere recursos adicionales del servidor. Además, para mantener bloqueos de registros es necesaria una conexión persistente con el servidor de bases de datos. Como éste no es el caso en un modelo de simultaneidad optimista, las conexiones con el servidor pueden atender a un mayor número de clientes en menos tiempo.  
   
@@ -30,11 +30,11 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
   
  A la 1:00 p.m., el Usuario1 lee una fila de la base de datos con los valores siguientes:  
   
- **CustID LastName FirstName**  
+ **IdCliente LastName FirstName**  
   
- 101          Smith             Bob  
+ 101 Smith Bob  
   
-|Nombre de columna|Valor original|Valor actual|Valor en la base de datos|  
+|Nombre de la columna|Valor original|Valor actual|Valor en la base de datos|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
 |LastName|Martínez|Martínez|Martínez|  
@@ -42,9 +42,9 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
   
  A la 1:01 p.m., el Usuario2 lee la misma fila.  
   
- A la 1:03 p.m., el Usuario2 cambia **FirstName** de "Cris" a "Cristina" y actualiza la base de datos.  
+ A las 1:03 p.m., el usuario2 cambia el **nombre** de "Bob" a "Robert" y actualiza la base de datos.  
   
-|Nombre de columna|Valor original|Valor actual|Valor en la base de datos|  
+|Nombre de la columna|Valor original|Valor actual|Valor en la base de datos|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
 |LastName|Martínez|Martínez|Martínez|  
@@ -54,7 +54,7 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
   
  A la 1:05 p.m., el Usuario1 cambia el nombre de "Cris" a "Jaime" e intenta actualizar la fila.  
   
-|Nombre de columna|Valor original|Valor actual|Valor en la base de datos|  
+|Nombre de la columna|Valor original|Valor actual|Valor en la base de datos|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |IdCliente|101|101|101|  
 |LastName|Martínez|Martínez|Martínez|  
@@ -71,7 +71,7 @@ En un entorno multiusuario existen dos modelos para actualizar datos en una base
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- Para comprobar una infracción de simultaneidad optimista al actualizar una fila en **Table1**, se utilizaría la siguiente instrucción UPDATE:  
+ Para probar una infracción de la simultaneidad optimista al actualizar una fila en **Table1**, debe emitir la siguiente instrucción UPDATE:  
   
 ```  
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  También se puede decidir la aplicación de criterios menos restrictivos al utilizar un modelo de simultaneidad optimista. Por ejemplo, si solo se utilizan las columnas de clave principal en la cláusula WHERE se sobrescribirán los datos, independientemente de que las otras columnas se hayan actualizado o no desde la última consulta. También se puede aplicar una cláusula WHERE solo a determinadas columnas, lo que hará que se sobrescriban los datos a menos que se hayan actualizado ciertos campos desde que se consultaron por última vez.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
- El **RowUpdated** eventos de la <xref:System.Data.Common.DataAdapter> objeto puede utilizarse junto con las técnicas descritas anteriormente, para informar a la aplicación de las infracciones de simultaneidad optimista. **RowUpdated** se produce después de cada intento de actualizar un **Modified** fila de un **DataSet**. Esto permite agregar código especial de control, incluyendo el procesamiento cuando se produce una excepción, agregar información de error personalizada, agregar lógica de reintento, etc. El <xref:System.Data.Common.RowUpdatedEventArgs> objeto devuelve un **RecordsAffected** propiedad que contiene el número de filas afectadas por un determinado comando de actualización para una fila modificada en una tabla. Estableciendo el comando update para comprobar la simultaneidad optimista, la **RecordsAffected** propiedad, como resultado, devolverá un valor de 0 cuando se ha producido una infracción de simultaneidad optimista, porque se actualizó ningún registro. En tal caso se inicia una excepción. El **RowUpdated** eventos le permite controlar este caso y evitar la excepción al establecer un **RowUpdatedEventArgs.Status** valor, como  **UpdateStatus.SkipCurrentRow**. Para obtener más información sobre la **RowUpdated** eventos, consulte [controlar eventos de DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ El evento **RowUpdated** del <xref:System.Data.Common.DataAdapter> objeto se puede usar junto con las técnicas descritas anteriormente para proporcionar una notificación a la aplicación de infracciones de simultaneidad optimista. **RowUpdated** se produce después de cada intento de actualizar una fila modificada de un **conjunto de DataSet**. Esto permite agregar código especial de control, incluyendo el procesamiento cuando se produce una excepción, agregar información de error personalizada, agregar lógica de reintento, etc. El <xref:System.Data.Common.RowUpdatedEventArgs> objeto devuelve una propiedad **RecordsAffected** que contiene el número de filas afectadas por un comando UPDATE determinado para una fila modificada de una tabla. Al establecer el comando de actualización para comprobar la simultaneidad optimista, la propiedad **RecordsAffected** , como resultado, devolverá un valor de 0 cuando se haya producido una infracción de simultaneidad optimista, ya que no se ha actualizado ningún registro. En tal caso se inicia una excepción. El evento **RowUpdated** permite controlar esta aparición y evitar la excepción estableciendo un valor **RowUpdatedEventArgs. status** adecuado, como **updateStatus. SkipCurrentRow**. Para obtener más información acerca del evento **RowUpdated** , vea [controlar eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
- Opcionalmente, puede establecer **DataAdapter.ContinueUpdateOnError** a **true**, antes de llamar a **actualización**y responder a la información de error almacenada en la **RowError** propiedad de una determinada fila cuando la **actualización** completada. Para obtener más información, consulte [información de Error de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Opcionalmente, puede establecer **DataAdapter. ContinueUpdateOnError** en **true**antes de llamar a **Update**y responder a la información de error almacenada en la propiedad **RowError** de una fila determinada cuando se complete la **actualización** . Para obtener más información, vea [información sobre los errores de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Ejemplo de simultaneidad optimista  
- Lo siguiente es un ejemplo sencillo que establece el **UpdateCommand** de un **DataAdapter** para comprobar la simultaneidad optimista y, a continuación, usa el **RowUpdated** evento va a comprobar infracciones de simultaneidad optimista. Cuando se encuentra una infracción de simultaneidad optimista, la aplicación establece el **RowError** de la fila que se emitió la actualización para reflejar una infracción de simultaneidad optimista.  
+ A continuación se facilita un ejemplo sencillo en el que se establece el **UpdateCommand** de un **DataAdapter** para probar la simultaneidad optimista y, a continuación, se usa el evento **RowUpdated** para comprobar las infracciones de la simultaneidad optimista. Cuando se encuentra una infracción de simultaneidad optimista, la aplicación establece el **RowError** de la fila para la que se emitió la actualización para reflejar una infracción de simultaneidad optimista.  
   
- Tenga en cuenta que los valores de parámetro pasados a la cláusula WHERE del comando UPDATE se asignan a la **Original** los valores de sus respectivas columnas.  
+ Tenga en cuenta que los valores de parámetro que se pasan a la cláusula WHERE del comando UPDATE se asignan a los valores **originales** de sus respectivas columnas.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

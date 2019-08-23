@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 11aa71f82af5a1bd764a4cc9e3514a795d559fc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82095f397195fbf333bab8d043da18114e2a5dba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000862"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968468"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Procedimiento para crear una fuente Atom básica
-Windows Communication Foundation (WCF) le permite crear un servicio que expone una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de distribución Atom.  
+Windows Communication Foundation (WCF) le permite crear un servicio que exponga una fuente de distribución. En este tema se discute cómo crear un servicio de distribución que exponga una fuente de distribución Atom.  
   
 ### <a name="to-create-a-basic-syndication-service"></a>Creación de un servicio de distribución básico  
   
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
      [!code-vb[htAtomBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatombasic/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  Todas las operaciones de servicio que apliquen el <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes HTTP GET. Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información, vea [Cómo: Crear un servicio Web HTTP de WCF básico](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md).  
+    > Todas las operaciones de servicio que apliquen el <xref:System.ServiceModel.Web.WebGetAttribute> se asignan a solicitudes HTTP GET. Para asignar su operación a un método HTTP diferente, utilice en su lugar <xref:System.ServiceModel.Web.WebInvokeAttribute>. Para obtener más información, consulte [Cómo Cree un servicio](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)básico http Web de WCF.  
   
 2. Implemente el contrato de servicios.  
   
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) le permite crear un servicio que expone u
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Realización de llamadas a GetBlog() mediante HTTP GET  
   
-1. Abra Internet Explorer, escriba la dirección URL siguiente y presione ENTRAR: `http://localhost:8000/BlogService/GetBlog`  
+1. Abra Internet Explorer, escriba la siguiente dirección URL y presione ENTRAR:`http://localhost:8000/BlogService/GetBlog`  
   
-     La dirección URL contiene la dirección base del servicio (`http://localhost:8000/BlogService`), la dirección relativa del extremo y para llamar a la operación de servicio.  
+     La dirección URL contiene la dirección base del servicio (`http://localhost:8000/BlogService`), la dirección relativa del punto de conexión y la operación de servicio que se va a llamar.  
   
 ### <a name="to-call-getblog-from-code"></a>Llamar a GetBlog() mediante código  
   

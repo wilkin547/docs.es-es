@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 711b4c79b32aa3db4d3681d29e08dbd3d2ddbd02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1cb53818d0e12d625b0609a80b4d8473713525d0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660267"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941643"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native y compilación
 Las aplicaciones de Windows 8.1 y del escritorio de Windows destinadas a.NET Framework se escriben en un lenguaje de programación determinado y se compilan en lenguaje intermedio (IL). En runtime, el compilador Just-In-Time (JIT) es el responsable de compilar el IL en código nativo para la máquina local antes de que un método se ejecute por primera vez. En cambio, la cadena de herramientas de .NET Native convierte código fuente en código nativo en tiempo de compilación. En este tema se compara .NET Native con otras tecnologías de compilación disponibles para las aplicaciones de .NET Framework. Asimismo, también se proporciona información general práctica sobre el modo en que .NET Native genera código nativo que sirve para comprender por qué las excepciones que se producen en el código compilado con .NET Native no se producen en código compilado JIT.  
   
-## <a name="net-native-generating-native-binaries"></a>.NET native: Generar archivos binarios nativos  
+## <a name="net-native-generating-native-binaries"></a>.NET Native: Generar archivos binarios nativos  
  Una aplicación que está destinada a .NET Framework y no se compila mediante la cadena de herramientas de .NET Native se compone del ensamblado de aplicación, que incluye lo siguiente:  
   
-- Los [metadatos](../../../docs/standard/metadata-and-self-describing-components.md) que describen el ensamblado, sus dependencias, los tipos que contiene y sus miembros. Los metadatos se usan para la reflexión y acceso en tiempo de ejecución y en algunos casos también por el compilador y las herramientas de compilación.  
+- Los [metadatos](../../standard/metadata-and-self-describing-components.md) que describen el ensamblado, sus dependencias, los tipos que contiene y sus miembros. Los metadatos se usan para la reflexión y acceso en tiempo de ejecución y en algunos casos también por el compilador y las herramientas de compilación.  
   
 - Código de implementación Se compone de códigos de operación de lenguaje intermedio (IL). En runtime, el compilador de Just-In-Time (JIT) lo convierte en código nativo para la plataforma de destino.  
   
@@ -50,16 +50,16 @@ Las aplicaciones de Windows 8.1 y del escritorio de Windows destinadas a.NET Fra
 - Reemplaza el CLR completo con un tiempo de ejecución refactorizado contiene principalmente el recolector de elementos no utilizados. El tiempo de ejecución refactorizado se encuentra en una biblioteca denominada mrt100_app.dll que es local a la aplicación y que solo tiene unos cientos de kilobytes de tamaño. Esto es posible porque la vinculación estática elimina la necesidad de muchos de los servicios realizados por Common Language Runtime.  
   
     > [!NOTE]
-    >  .NET Native usa el mismo recolector de elementos no utilizados que Common Language Runtime. En el recolector de elementos no utilizados de .NET Native, la recolección en segundo plano está habilitada de forma predeterminada. Para obtener más información sobre la recolección de elementos no utilizados, vea [Fundamentals of Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md) (Conceptos básicos de la recolección de elementos no utilizados).  
+    > .NET Native usa el mismo recolector de elementos no utilizados que Common Language Runtime. En el recolector de elementos no utilizados de .NET Native, la recolección en segundo plano está habilitada de forma predeterminada. Para obtener más información sobre la recolección de elementos no utilizados, vea [Fundamentals of Garbage Collection](../../standard/garbage-collection/fundamentals.md) (Conceptos básicos de la recolección de elementos no utilizados).  
   
 > [!IMPORTANT]
->  .NET Native compila una aplicación completa en una aplicación nativa. No permite compilar un único ensamblado que contiene una biblioteca de clases en código nativo, por lo que se puede llamar de forma independiente desde el código administrado.  
+> .NET Native compila una aplicación completa en una aplicación nativa. No permite compilar un único ensamblado que contiene una biblioteca de clases en código nativo, por lo que se puede llamar de forma independiente desde el código administrado.  
   
  La aplicación resultante generada por la cadena de herramientas de .NET Native se escribe en un directorio denominado ilc.out en el directorio Debug o Release del directorio del proyecto. Consta de los siguientes archivos:  
   
-- *\<nombreDeAplicación>*.exe, que es un ejecutable de código auxiliar que simplemente transfiere el control a una exportación `Main` especial en *\<nombreDeAplicación>*.dll.  
+- *\<nombreDeAplicación>* .exe, que es un ejecutable de código auxiliar que simplemente transfiere el control a una exportación `Main` especial en *\<nombreDeAplicación>* .dll.  
   
-- *\<nombreDeAplicación>*.dll, que es una biblioteca de vínculos dinámicos de Windows que contiene todo el código de la aplicación, así como el código de la biblioteca de clases de .NET Framework y de cualquier biblioteca de terceros en la que tenga una dependencia.  También contiene el código de soporte, como el código necesario para interactuar con Windows y para serializar objetos en la aplicación.  
+- *\<nombreDeAplicación>* .dll, que es una biblioteca de vínculos dinámicos de Windows que contiene todo el código de la aplicación, así como el código de la biblioteca de clases de .NET Framework y de cualquier biblioteca de terceros en la que tenga una dependencia.  También contiene el código de soporte, como el código necesario para interactuar con Windows y para serializar objetos en la aplicación.  
   
 - mrt100_app.dll, que es un runtime refactorizado que proporciona servicios de runtime como la recolección de elementos no utilizados.  
   
@@ -102,7 +102,7 @@ Las aplicaciones de Windows 8.1 y del escritorio de Windows destinadas a.NET Fra
   
 ## <a name="see-also"></a>Vea también
 
-- [Metadatos y componentes autodescriptivos](../../../docs/standard/metadata-and-self-describing-components.md)
-- [Buceando en .NET Native (vídeo de Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
+- [Metadatos y componentes autodescriptivos](../../standard/metadata-and-self-describing-components.md)
+- [Dentro de .NET Native (vídeo de Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
 - [Reflection and .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md) (Reflexión y .NET Native)
 - [Solución de problemas generales de .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

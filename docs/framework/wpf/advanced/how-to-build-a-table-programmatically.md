@@ -7,27 +7,27 @@ dev_langs:
 helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-ms.openlocfilehash: 315154b37218c0a6845f0a46149fc056780ee650
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c9061d3c4d6b3de5e1ab42a6b98c20813835ba8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051317"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964161"
 ---
 # <a name="how-to-build-a-table-programmatically"></a>Procedimiento Compilar una tabla mediante programación
-Los ejemplos siguientes muestran cómo crear mediante programación un <xref:System.Windows.Documents.Table> y rellenarla con contenido. El contenido de la tabla se distribuye en cinco filas (representados por <xref:System.Windows.Documents.TableRow> objetos incluidos en un <xref:System.Windows.Documents.Table.RowGroups%2A> objeto) y seis columnas (representado por <xref:System.Windows.Documents.TableColumn> objetos). Las filas se usan para distintos fines de presentación, e incluyen una fila de título usada para dar título a toda la tabla, una fila de encabezado para describir las columnas de datos de la tabla, y una fila de pie de página con información de resumen.  Tenga en cuenta que los conceptos de filas de "título", "encabezado" y "pie de página" no son inherentes a la tabla; se trata simplemente de filas con características diferentes. Las celdas de tabla incluyen el contenido real, que puede estar formado por texto, imágenes o casi cualquier otro [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] elemento.  
+En los siguientes ejemplos se muestra cómo crear un <xref:System.Windows.Documents.Table> y rellenarlo con contenido mediante programación. El contenido de la tabla se distribuye en cinco filas (representadas por <xref:System.Windows.Documents.TableRow> objetos contenidos en un <xref:System.Windows.Documents.Table.RowGroups%2A> objeto) y seis columnas ( <xref:System.Windows.Documents.TableColumn> representadas por objetos). Las filas se usan para distintos fines de presentación, e incluyen una fila de título usada para dar título a toda la tabla, una fila de encabezado para describir las columnas de datos de la tabla, y una fila de pie de página con información de resumen.  Tenga en cuenta que los conceptos de filas de "título", "encabezado" y "pie de página" no son inherentes a la tabla; se trata simplemente de filas con características diferentes. Las celdas de la tabla contienen el contenido real, que puede estar formado por texto, imágenes o casi cualquier [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] otro elemento.  
   
 ## <a name="example"></a>Ejemplo  
- En primer lugar, un <xref:System.Windows.Documents.FlowDocument> se crea al host la <xref:System.Windows.Documents.Table>y un nuevo <xref:System.Windows.Documents.Table> se crea y agrega al contenido de la <xref:System.Windows.Documents.FlowDocument>.  
+ En primer lugar <xref:System.Windows.Documents.FlowDocument> , se crea un para <xref:System.Windows.Documents.Table>hospedar el, <xref:System.Windows.Documents.Table> y se <xref:System.Windows.Documents.FlowDocument>crea un nuevo y se agrega al contenido de.  
   
  [!code-csharp[TableSnippets#_TableCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
 ## <a name="example"></a>Ejemplo  
- A continuación, seis <xref:System.Windows.Documents.TableColumn> objetos se crean y se agregan a la tabla <xref:System.Windows.Documents.Table.Columns%2A> colección aplicarles formato.  
+ A continuación, <xref:System.Windows.Documents.TableColumn> se crean seis objetos y se agregan a <xref:System.Windows.Documents.Table.Columns%2A> la colección de la tabla, con el formato aplicado.  
   
 > [!NOTE]
->  Tenga en cuenta que la tabla <xref:System.Windows.Documents.Table.Columns%2A> colección utiliza la indización de base cero estándar.  
+> Tenga en cuenta que la <xref:System.Windows.Documents.Table.Columns%2A> colección de la tabla utiliza una indización de base cero estándar.  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  

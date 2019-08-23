@@ -1,15 +1,15 @@
 ---
-title: <windows> de <clientCredentials> elemento
+title: <windows>del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f0ed9879cc42ea25b83e6b626139a40a593112
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769725"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940307"
 ---
-# <a name="windows-of-clientcredentials-element"></a>\<Windows > de \<clientCredentials > elemento
+# <a name="windows-of-clientcredentials-element"></a>\<Windows > de \<elemento > clientCredentials
 Especifica los valores para una credencial de Windows que se va a utilizar para representar al cliente.  
   
  \<system.ServiceModel>  
@@ -31,19 +31,19 @@ Especifica los valores para una credencial de Windows que se va a utilizar para 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|`allowedImpersonationLevel`|Establece la preferencia de suplantación que el cliente comunica al servidor. El modo de suplantación que el cliente elige no se exige en el servidor. Los valores válidos son los siguientes:<br /><br /> -Identificación: El servidor puede obtener la identidad y los privilegios del cliente, pero no puede suplantar al cliente.<br />-Suplantación: El servidor puede suplantar el contexto de seguridad del cliente en el sistema local.<br />-Delegación: El servidor puede suplantar el contexto de seguridad del cliente en sistemas remotos.<br />-Anónimo: El servidor no puede suplantar o identificar al cliente.<br />-None: No se asigna un nivel de suplantación.<br /><br /> El valor predeterminado es Identification. Este atributo es del tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
-|`allowNtlm`|Establecer esta propiedad en `true` permite a la autenticación degradar a NTLM si Kerberos no está disponible.<br /><br /> Establecer esta propiedad en `false` hace que Windows Communication Foundation (WCF) para realizar un mayor esfuerzo para producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.|  
+|`allowedImpersonationLevel`|Establece la preferencia de suplantación que el cliente comunica al servidor. El modo de suplantación que el cliente elige no se exige en el servidor. Los valores válidos son los siguientes:<br /><br /> Identificado El servidor puede obtener la identidad y los privilegios del cliente, pero no puede suplantar al cliente.<br />Suplantación El servidor puede suplantar el contexto de seguridad del cliente en el sistema local.<br />Delegado El servidor puede suplantar el contexto de seguridad del cliente en sistemas remotos.<br />Anonymous El servidor no puede suplantar o identificar al cliente.<br />Ninguna No se ha asignado un nivel de suplantación.<br /><br /> El valor predeterminado es Identification. Este atributo es del tipo <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`allowNtlm`|Establecer esta propiedad en `true` permite a la autenticación degradar a NTLM si Kerberos no está disponible.<br /><br /> Establecer esta propiedad en `false` hace que Windows Communication Foundation (WCF) realice un mejor esfuerzo para producir una excepción si se utiliza NTLM. Tenga en cuenta que, aunque se establezca esta propiedad en `false`, es posible que se envíen igualmente las credenciales NTLM a través de la conexión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Especifica las credenciales utilizadas para autenticar el cliente al servicio.|  
+|[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales utilizadas para autenticar el cliente al servicio.|  
   
 ## <a name="see-also"></a>Vea también
 
@@ -54,6 +54,6 @@ Especifica los valores para una credencial de Windows que se va a utilizar para 
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
-- [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Protección de clientes](../../../wcf/securing-clients.md)
+- [Trabajo con certificados](../../../wcf/feature-details/working-with-certificates.md)
+- [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)

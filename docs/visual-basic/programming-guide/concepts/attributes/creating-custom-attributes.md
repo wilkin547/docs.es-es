@@ -2,12 +2,12 @@
 title: Crear atributos personalizados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4b55f92466fde47011937d08c946c9c75ca07b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903557"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966333"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Crear atributos personalizados (Visual Basic)
 Para crear sus propios atributos personalizados, defina una clase de atributo derivada directa o indirectamente de <xref:System.Attribute>, que agiliza y facilita la identificación de las definiciones de atributos en los metadatos. Imagínese que desea etiquetar tipos con el nombre del programador que los escribió. Puede definir una clase de atributos `Author` personalizada:  
@@ -60,7 +60,7 @@ End Class
 ```  
   
 > [!NOTE]
->  Si la clase de atributo contiene una propiedad, dicha propiedad debe ser de lectura y escritura.  
+> Si la clase de atributo contiene una propiedad, dicha propiedad debe ser de lectura y escritura.  
   
 ## <a name="see-also"></a>Vea también
 

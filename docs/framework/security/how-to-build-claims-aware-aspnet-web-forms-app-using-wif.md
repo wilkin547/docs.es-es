@@ -3,12 +3,12 @@ title: Cómo compilar aplicaciones de formularios Web Forms de ASP.NET con recon
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 0d334faabb342ea351c2418c79a86443cb0ce98d
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 82b0649a7324987581cc3c97570a0fc42ffdf6d6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910581"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941296"
 ---
 # <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>Cómo compilar aplicaciones de formularios Web Forms de ASP.NET con reconocimiento de notificaciones mediante WIF
 ## <a name="applies-to"></a>Se aplica a  
@@ -62,7 +62,7 @@ ms.locfileid: "64910581"
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>Para configurar la aplicación ASP.NET para la autenticación basada en notificaciones  
   
-1. Agregue las siguientes entradas de la sección de configuración al archivo de configuración *Web.config* inmediatamente después del elemento de apertura **\<configuration>**:  
+1. Agregue las siguientes entradas de la sección de configuración al archivo de configuración *Web.config* inmediatamente después del elemento de apertura **\<configuration>** :  
   
     ```xml  
     <configSections>  
@@ -103,7 +103,7 @@ ms.locfileid: "64910581"
     </system.webServer>  
     ```  
   
-5. Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>**, el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>**. También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
+5. Agregue las siguientes entradas de configuración relacionadas con Windows Identity Foundation y asegúrese de que su URL de la aplicación ASP.NET y el número de puerto coinciden con los valores de la entrada **\<audienceUris>** , el atributo **realm** del elemento **\<wsFederation>** y el atributo **reply** del elemento **\<wsFederation>** . También asegúrese de que el valor **issuer** se adapta a su URL del servicio de token de seguridad (STS).  
   
     ```xml  
     <system.identityModel>  
@@ -161,7 +161,7 @@ ms.locfileid: "64910581"
 2. Guarde **Default.aspx** y abra su archivo de código subyacente denominado **Default.aspx.cs**.  
   
     > [!NOTE]
-    >  **Default.aspx.cs** puede estar oculto bajo **Default.aspx** en el Explorador de soluciones. Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo que se encuentra al lado.  
+    > **Default.aspx.cs** puede estar oculto bajo **Default.aspx** en el Explorador de soluciones. Si **Default.aspx.cs** no está visible, expanda **Default.aspx** haciendo clic en el triángulo que se encuentra al lado.  
   
 3. Reemplace el código existente en el método **Page_Load** de **Default.aspx.cs** por el código siguiente:  
   

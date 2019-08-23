@@ -2,15 +2,15 @@
 title: Configurar la traza de flujo de mensajes
 ms.date: 03/30/2017
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
-ms.openlocfilehash: 02c43b152cb1aef1684185e56eb7f172036ac46b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01a06a50fbb5962fe87c3426957b3294b1bf3ab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61999523"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917933"
 ---
 # <a name="configuring-message-flow-tracing"></a>Configurar la traza de flujo de mensajes
-Cuando se habilita el seguimiento de la actividad de Windows Communication Foundation (WCF), los identificadores de actividad de End-To-End se asignan a las actividades lógicas a lo largo de la pila de WCF. En [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], hay ahora una versión con un rendimiento más alto de esta característica que funciona con Seguimiento de eventos para Windows (ETW) denominada traza de flujo de mensajes. Cuando se habilita, los identificadores de actividad de un extremo a otro se toman (o se asignan si están vacíos) de los mensajes entrantes y se propagan a todos los eventos de traza que se emiten una vez que el canal ha descodificado el mensaje. Los clientes pueden utilizar esta característica para reconstruir flujos de mensajes con registros de seguimiento de distintos servicios tras la descodificación.  
+Cuando está habilitada la traza de la actividad Windows Communication Foundation (WCF), los identificadores de actividad de un extremo a otro se asignan a las actividades lógicas en toda la pila de WCF. En [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], hay ahora una versión con un rendimiento más alto de esta característica que funciona con Seguimiento de eventos para Windows (ETW) denominada traza de flujo de mensajes. Cuando se habilita, los identificadores de actividad de un extremo a otro se toman (o se asignan si están vacíos) de los mensajes entrantes y se propagan a todos los eventos de traza que se emiten una vez que el canal ha descodificado el mensaje. Los clientes pueden utilizar esta característica para reconstruir flujos de mensajes con registros de seguimiento de distintos servicios tras la descodificación.  
   
  Se puede habilitar la traza al detectar un problema con la aplicación y, a continuación, deshabilitarla una vez resuelto el problema.  
   
@@ -26,7 +26,7 @@ Cuando se habilita el seguimiento de la actividad de Windows Communication Found
 ```  
   
 > [!NOTE]
->  Dado que el elemento de configuración `endToEndTracing` reside en un archivo Web.config, no se puede configurar dinámicamente de la misma manera que ETW. Para que el elemento de configuración `endToEndTracing` surta efecto, hay que reciclar la aplicación.  
+> Dado que el elemento de configuración `endToEndTracing` reside en un archivo Web.config, no se puede configurar dinámicamente de la misma manera que ETW. Para que el elemento de configuración `endToEndTracing` surta efecto, hay que reciclar la aplicación.  
   
  Las actividades se correlacionan mediante el intercambio de un identificador denominado de actividad. Este identificador es un GUID y lo genera la clase System.Diagnostics.CorrelationManager. Si manipula el System.Diagnostics.Trace.CorrelationManager.ActivityID, asegúrese de que el valor se establece en el valor original cuando el control de la ejecución se vuelve a transferir al código WCF.  Además, si usa un modelo de programación WCF asincrónico, se asegura de que el System.Diagnostics.Trace.CorrelationManager.ActivityID se transfiere entre los subprocesos.  
   

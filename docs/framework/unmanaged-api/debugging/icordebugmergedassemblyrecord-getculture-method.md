@@ -1,17 +1,17 @@
 ---
-title: Getculture (método)
+title: 'ICorDebugMergedAssemblyRecord:: getCulture ((método)'
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0472a52d0893bfd487cd6daa6548ec1ce0c44a9b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f0f3ecee5a003587771871a178356d6dbfd8a636
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762209"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936842"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>Getculture (método)
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord:: getCulture ((método)
 Obtiene la cadena de nombre de referencia cultural del ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -38,14 +38,14 @@ HRESULT GetCulture(
  El nombre de referencia cultural es una cadena única que identifica una referencia cultural, como "en-US" [para la referencia cultural inglés (Estados Unidos)] o "neutral" (para una referencia cultural neutra).  
   
 > [!NOTE]
->  Este método solo está disponible con .NET Native.  
+> Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

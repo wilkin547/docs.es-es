@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <network> element
 - network element
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
-ms.openlocfilehash: 40d89f7bd7a1f4a38a1c4030a86405e09c497899
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: ee60b990bc749dbb9c5d0e7426c57e9392ddf9d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659313"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920972"
 ---
 # <a name="network-element-network-settings"></a>\<Elemento > de red (configuración de red)
 Configura las opciones de red para un servidor de Protocolo simple de transferencia de correo (SMTP) externo.  
@@ -70,7 +70,7 @@ Configura las opciones de red para un servidor de Protocolo simple de transferen
  También puede usar la autenticación básica (un nombre de usuario y una contraseña) para autenticarse en el servidor SMTP. Para usar esta opción, debe especificar un nombre de usuario y una contraseña válidos para el servidor SMTP especificado.  
   
 > [!NOTE]
->  La autenticación básica envía `userName` los `password` valores y al servidor sin cifrar. Cualquier persona que supervise el tráfico de red puede ver sus credenciales y usarlas para conectarse al servidor. Considere la posibilidad de usar un mecanismo de autenticación más seguro, como Kerberos o NT LAN Manager (NTLM). Si `defaultCredentials` es`true`, se utilizará Kerberos o NTLM si el servidor admite estos protocolos.  
+> La autenticación básica envía `userName` los `password` valores y al servidor sin cifrar. Cualquier persona que supervise el tráfico de red puede ver sus credenciales y usarlas para conectarse al servidor. Considere la posibilidad de usar un mecanismo de autenticación más seguro, como Kerberos o NT LAN Manager (NTLM). Si `defaultCredentials` es`true`, se utilizará Kerberos o NTLM si el servidor admite estos protocolos.  
   
  Las opciones de autenticación básica y de credenciales de red predeterminadas son mutuamente excluyentes; Si establece `defaultCredentials` en `true` y especifica un nombre de usuario y una contraseña, se usa la credencial de red predeterminada y se omiten los datos de autenticación básicos.  
   

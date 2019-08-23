@@ -2,12 +2,12 @@
 title: 'Tutorial: Manipular datos (C#)'
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 2d45861569bc4a8b57427b01e107f87809203e11
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7921f0aa7582e70967f7fec633f37ef0dbc766de
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742735"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946972"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>Tutorial: Manipular datos (C#)
 Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para agregar, modificar y eliminar datos en una base de datos. Utilizará una copia de la base de datos de ejemplo Northwind para agregar un cliente, cambiar el nombre de un cliente y eliminar un pedido.  
@@ -23,20 +23,20 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 - Base de datos de ejemplo Northwind.  
   
-     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest6.  
+     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest6.  
   
 - Un archivo de código de C# generado a partir de la base de datos Northwind.  
   
-     Este archivo se puede generar mediante el uso de Object Relational Designer o la herramienta SQLMetal. Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:  
+     Puede generar este archivo mediante el Object Relational Designer o la herramienta SQLMetal. Este tutorial se escribió utilizando la herramienta SQLMetal con la línea de comandos siguiente:  
   
-     **sqlmetal /code:"c:\linqtest6\northwind.cs" /language:csharp "C:\linqtest6\northwnd.mdf" /pluralize**  
+     **SqlMetal/Code: "c:\linqtest6\northwind.cs"/Language: CSharp "C:\linqtest6\northwnd.MDF"/pluralize**  
   
      Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Información general  
  Este tutorial se compone de seis tareas principales:  
   
-- Crear el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
+- Crear la [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solución en Visual Studio.  
   
 - Agregar el archivo de código de la base de datos al proyecto.  
   
@@ -49,19 +49,19 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
 - Enviar estos cambios a la base de datos Northwind.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Crear una solución LINQ to SQL  
- En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar y ejecutar un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] proyecto.  
+ En esta primera tarea, creará una solución de Visual Studio que contiene las referencias necesarias para compilar [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] y ejecutar un proyecto.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Para crear una solución LINQ to SQL  
   
-1. En Visual Studio **archivo** menú, elija **New**y, a continuación, haga clic en **proyecto**.  
+1. En el menú **archivo** de Visual Studio, elija **nuevo**y, a continuación, haga clic en **proyecto**.  
   
-2. En el **tipos de proyecto** panel en el **nuevo proyecto** cuadro de diálogo, haga clic en **Visual C#** .  
+2. En el panel **tipos de proyecto** del cuadro de diálogo **nuevo proyecto** , haga clic en **Visual C#** .  
   
 3. En el panel **Plantillas**, haga clic en **Aplicación de consola**.  
   
-4. En el **nombre** , escriba **LinqDataManipulationApp**.  
+4. En el cuadro **nombre** , escriba **LinqDataManipulationApp**.  
   
-5. En el **ubicación** Compruebe dónde desea almacenar los archivos de proyecto.  
+5. En el cuadro **Ubicación** , compruebe dónde desea almacenar los archivos del proyecto.  
   
 6. Haga clic en **OK**.  
   
@@ -70,9 +70,9 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 #### <a name="to-add-systemdatalinq"></a>Para agregar System.Data.Linq  
   
-1. En **el Explorador de soluciones**, haga clic en **referencias**y, a continuación, haga clic en **Agregar referencia**.  
+1. En **Explorador de soluciones**, haga clic con el botón secundario en **referencias**y, a continuación, haga clic en **Agregar referencia**.  
   
-2. En el **Agregar referencia** cuadro de diálogo, haga clic en **.NET**, haga clic en el ensamblado System.Data.Linq y, a continuación, haga clic en **Aceptar**.  
+2. En el cuadro de diálogo **Agregar referencia** , haga clic en **.net**, haga clic en el ensamblado System. Data. Linq y, a continuación, haga clic en **Aceptar**.  
   
      El ensamblado se agrega al proyecto.  
   
@@ -85,9 +85,9 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>Para agregar el archivo de código de Northwind al proyecto  
   
-1. En el **proyecto** menú, haga clic en **Agregar elemento existente**.  
+1. En el menú **proyecto** , haga clic en **Agregar elemento existente**.  
   
-2. En el **Agregar elemento existente** cuadro de diálogo, vaya a c:\linqtest6\northwind.cs y, a continuación, haga clic en **agregar**.  
+2. En el cuadro de diálogo **Agregar elemento existente** , desplácese a c:\linqtest6\northwind.CS y, a continuación, haga clic en **Agregar**.  
   
      El archivo northwind.cs se agrega al proyecto.  
   
@@ -102,9 +102,9 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 2. Presione F5 para probar la aplicación en este punto.  
   
-     Un **consola** abre la ventana.  
+     Se abre una ventana de **consola** .  
   
-     Puede cerrar la aplicación, presione ENTRAR en el **consola** ventana, o haga clic en **Detener depuración** en Visual Studio **depurar** menú.  
+     Para cerrar la aplicación, presione Entrar en la ventana de la **consola** o haga clic en **detener** depuración en el menú Depurar de Visual Studio.  
   
 ## <a name="creating-a-new-entity"></a>Crear una nueva entidad  
  Crear entidades es sencillo. Puede crear objetos (como `Customer`) mediante la palabra clave `new`.  
@@ -119,7 +119,7 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 2. Presione F5 para depurar la solución.  
   
-3. Presione ENTRAR en el **consola** ventana para detener la depuración y continuar con el tutorial.  
+3. Presione entrar en la ventana de la **consola** para detener la depuración y continuar con el tutorial.  
   
 ## <a name="updating-an-entity"></a>Actualizar una entidad  
  En los pasos siguientes, recuperará un objeto `Customer` y modificará una de sus propiedades.  
@@ -156,10 +156,10 @@ Este tutorial proporciona un escenario completo fundamental de [!INCLUDE[vbtecdl
   
 3. Presione F5 para depurar la solución.  
   
-4. Presione ENTRAR en el **consola** ventana para cerrar la aplicación.  
+4. Presione entrar en la ventana de la **consola** para cerrar la aplicación.  
   
 > [!NOTE]
->  Después de haber agregado el nuevo cliente al enviar los cambios, no puede ejecutar de nuevo esta solución tal como está. Para ejecutar de nuevo la solución, cambie el nombre del cliente y el identificador de cliente que se debe agregar.  
+> Después de haber agregado el nuevo cliente al enviar los cambios, no puede ejecutar de nuevo esta solución tal como está. Para ejecutar de nuevo la solución, cambie el nombre del cliente y el identificador de cliente que se debe agregar.  
   
 ## <a name="see-also"></a>Vea también
 

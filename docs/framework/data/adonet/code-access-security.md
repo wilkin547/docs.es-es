@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: ee633e2488611417f72a9d51ab6b0fe2d9ddfa27
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b288ffe6346ac8260756115b50c253c42b596f96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583563"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948261"
 ---
 # <a name="code-access-security-and-adonet"></a>Seguridad de acceso del código y ADO.NET
 .NET Framework ofrece seguridad basada en roles y seguridad de acceso del código (CAS); ambas se implementan utilizando una infraestructura común proporcionada por Common Language Runtime (CLR). En el mundo del código no administrado, la mayoría de las aplicaciones se ejecutan mediante los permisos del usuario o de la entidad de seguridad. Por consiguiente, los sistemas de equipos pueden resultar dañados y se pueden poner en peligro los datos privados si un usuario con un nivel elevado de privilegios ejecuta software malintencionado o que contenga errores.  
@@ -23,7 +23,7 @@ ms.locfileid: "64583563"
  CLR permite que el código realice únicamente las operaciones para las que tiene permiso. El código puede solicitar permisos y las peticiones se aceptan en función de la directiva de seguridad que haya establecido un administrador.  
   
 > [!NOTE]
->  El código que se ejecuta en el CLR no se puede conceder permisos a sí mismo. Por ejemplo, el código puede solicitar y que se le asignen menos permisos de los que concede una directiva de seguridad, pero no se le concederán más permisos. A la hora de conceder permisos, comience sin ningún permiso y agregue los mínimos permisos necesarios para la tarea concreta que se lleva a cabo. Si se comienza con todos los permisos y posteriormente se deniegan permisos de forma individual, se obtienen aplicaciones poco seguras que pueden contener vulnerabilidades de seguridad no intencionadas debido a la concesión de más permisos de los que son necesarios. Para obtener más información, consulte [configurar la directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) y [administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
+> El código que se ejecuta en el CLR no se puede conceder permisos a sí mismo. Por ejemplo, el código puede solicitar y que se le asignen menos permisos de los que concede una directiva de seguridad, pero no se le concederán más permisos. A la hora de conceder permisos, comience sin ningún permiso y agregue los mínimos permisos necesarios para la tarea concreta que se lleva a cabo. Si se comienza con todos los permisos y posteriormente se deniegan permisos de forma individual, se obtienen aplicaciones poco seguras que pueden contener vulnerabilidades de seguridad no intencionadas debido a la concesión de más permisos de los que son necesarios. Para obtener más información, consulte [configuración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100)) y administración de directivas de [seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)).  
   
  Hay tres tipos de permisos de acceso a código:  
   
@@ -45,9 +45,9 @@ ms.locfileid: "64583563"
   
  La seguridad basada en roles permite que un componente identifique los usuarios actuales y sus roles asociados en tiempo de ejecución. Esta información se asigna a continuación mediante una directiva CAS para determinar el conjunto de permisos que se conceden en tiempo de ejecución. En un dominio de aplicación especificado, el host puede cambiar la directiva de seguridad predeterminada basada en roles y establecer una entidad de seguridad que represente a un usuario y a los roles asociados al usuario.  
   
- CLR usa permisos para implementar su mecanismo a fin de aplicar restricciones en el código administrado. Los permisos de seguridad basada en roles proporcionan un mecanismo para descubrir si un usuario (o el agente que actúa en su nombre) tiene una identidad concreta o es miembro de una función especificada. Para obtener más información, consulte [permisos de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
+ CLR usa permisos para implementar su mecanismo a fin de aplicar restricciones en el código administrado. Los permisos de seguridad basada en roles proporcionan un mecanismo para descubrir si un usuario (o el agente que actúa en su nombre) tiene una identidad concreta o es miembro de una función especificada. Para obtener más información, vea [permisos de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100)).  
   
- En función del tipo de aplicación que cree, deberá considerar también la posibilidad de implementar permisos basados en roles en la base de datos. Para obtener más información sobre la seguridad basada en roles en SQL Server, vea [seguridad de SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
+ En función del tipo de aplicación que cree, deberá considerar también la posibilidad de implementar permisos basados en roles en la base de datos. Para obtener más información sobre la seguridad basada en roles en SQL Server, consulte [SQL Server Security](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
 ## <a name="assemblies"></a>Ensamblados  
  Los ensamblados componen la unidad fundamental de implementación, control de versiones, reutilización, ámbito de activación y permisos de seguridad en una aplicación de .NET Framework. Un ensamblado proporciona una colección de tipos y recursos creados para funcionar en conjunto y formar una unidad lógica de funcionalidad. En CLR, un tipo no existe si no es en el contexto de un ensamblado. Para obtener más información sobre la creación e implementación de ensamblados, vea [programar con ensamblados](../../../../docs/framework/app-domains/programming-with-assemblies.md).  
@@ -67,18 +67,18 @@ ms.locfileid: "64583563"
   
  En la siguiente tabla se muestran y se describen las propiedades <xref:System.Data.SqlClient.SqlClientPermissionAttribute> disponibles:  
   
-|Propiedad de atributo de permiso|Descripción|  
+|Propiedad de atributo de permiso|DESCRIPCIÓN|  
 |-----------------------------------|-----------------|  
 |`Action`|Obtiene o establece una acción de seguridad. Se hereda de <xref:System.Security.Permissions.SecurityAttribute>.|  
 |`AllowBlankPassword`|Habilita o deshabilita el uso de una contraseña en blanco en una cadena de conexión. Los valores válidos son `true` (para habilitar el uso de contraseñas en blanco) y `false` (para deshabilitarlo). Se hereda de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`ConnectionString`|Identifica una cadena de conexión admitida. Se pueden identificar varias cadenas de conexión. **Nota:**  No incluya un id. de usuario o una contraseña en la cadena de conexión. En esta versión no se pueden modificar las restricciones de las cadenas de conexión mediante la herramienta Configuración de .NET Framework. <br /><br /> Se hereda de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictions`|Identifica qué parámetros de las cadenas de conexión están permitidos o no lo están. Los parámetros de cadena de conexión se identifican en el formulario  *\<nombre de parámetro > =*. Se pueden especificar varios parámetros separados por punto y coma (;). **Nota:**  Si no especifica `KeyRestrictions`, pero establece la propiedad `KeyRestrictionBehavior` en `AllowOnly` o `PreventUsage`, no se permitirán parámetros de cadena de conexión adicionales. Se hereda de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictionBehavior`|Identifica los parámetros de cadenas de conexión como los únicos parámetros adicionales permitidos (`AllowOnly`) o bien identifica los parámetros adicionales no permitidos (`PreventUsage`). `AllowOnly` es el valor predeterminado. Se hereda de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictions`|Identifica qué parámetros de las cadenas de conexión están permitidos o no lo están. Los parámetros de la cadena de conexión se identifican en el nombre del parámetro de formulario  *\<> =* . Se pueden especificar varios parámetros separados por punto y coma (;). **Nota:**  Si no especifica `KeyRestrictions`, pero establece la propiedad `KeyRestrictionBehavior` en `AllowOnly` o `PreventUsage`, no se permitirán parámetros de cadena de conexión adicionales. Se hereda de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictionBehavior`|Identifica los parámetros de cadenas de conexión como los únicos parámetros adicionales permitidos (`AllowOnly`) o bien identifica los parámetros adicionales no permitidos (`PreventUsage`). `AllowOnly`es el valor predeterminado. Se hereda de <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Obtiene un identificador único para el atributo cuando se implementa en una clase derivada. Se hereda de <xref:System.Attribute>.|  
 |`Unrestricted`|Indica si se declaran permisos protegidos para el origen. Se hereda de <xref:System.Security.Permissions.SecurityAttribute>.|  
   
 #### <a name="connectionstring-syntax"></a>Sintaxis de ConnectionString  
- En el siguiente ejemplo se muestra cómo se utiliza el elemento `connectionStrings` de un archivo de configuración para permitir únicamente el uso de una determinada cadena de conexión. Consulte [las cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md) para obtener más información acerca de almacenar y recuperar cadenas de conexión de archivos de configuración.  
+ En el siguiente ejemplo se muestra cómo se utiliza el elemento `connectionStrings` de un archivo de configuración para permitir únicamente el uso de una determinada cadena de conexión. Vea [cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md) para obtener más información sobre cómo almacenar y recuperar cadenas de conexión de archivos de configuración.  
   
 ```xml  
 <connectionStrings>  
@@ -89,7 +89,7 @@ ms.locfileid: "64583563"
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>Sintaxis de KeyRestrictions  
- El siguiente ejemplo se habilita la misma cadena de conexión, se habilita el uso de la `Encrypt` y `Packet Size` las opciones de cadena de conexión, pero restringe el uso de otras opciones de cadena de conexión.  
+ En el ejemplo siguiente se habilita la misma cadena de conexión, se habilita `Encrypt` el `Packet Size` uso de las opciones de cadena de conexión y, pero se restringe el uso de otras opciones de cadena de conexión.  
   
 ```xml  
 <connectionStrings>  
@@ -136,10 +136,10 @@ ms.locfileid: "64583563"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>Habilitar confianza parcial con un conjunto de permisos personalizados  
- Para habilitar el uso de permisos <xref:System.Data.SqlClient> para una zona determinada, un administrador del sistema debe crear un conjunto de permisos personalizados y establecerlo como el conjunto de permisos de dicha zona. Los conjuntos de permisos predeterminados, como `LocalIntranet`, no se pueden modificar. Por ejemplo, para incluir <xref:System.Data.SqlClient> permisos para el código que tiene un <xref:System.Security.Policy.Zone> de `LocalIntranet`, un administrador del sistema podría copiar el conjunto de permisos `LocalIntranet`, cámbiele el nombre a "CustomLocalIntranet", agregue el <xref:System.Data.SqlClient> permisos, importar lo permisos CustomLocalIntranet mediante el [Caspol.exe (herramienta de directiva de seguridad de acceso de código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)y establezca el conjunto de permisos de `LocalIntranet_Zone` en CustomLocalIntranet.  
+ Para habilitar el uso de permisos <xref:System.Data.SqlClient> para una zona determinada, un administrador del sistema debe crear un conjunto de permisos personalizados y establecerlo como el conjunto de permisos de dicha zona. Los conjuntos de permisos predeterminados, como `LocalIntranet`, no se pueden modificar. Por ejemplo, para incluir <xref:System.Data.SqlClient> permisos para el código que tiene <xref:System.Security.Policy.Zone> un `LocalIntranet`de, un administrador del sistema puede copiar el conjunto `LocalIntranet`de permisos para, cambiarle el nombre a "CustomLocalIntranet <xref:System.Data.SqlClient> ", agregar los permisos, importar el conjunto de permisos CustomLocalIntranet mediante [Caspol. exe (herramienta de la Directiva de seguridad de acceso del código)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)y `LocalIntranet_Zone` establece el conjunto de permisos de en CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Conjunto de permisos de ejemplo  
- A continuación se muestra un ejemplo de un conjunto de permisos para el proveedor de datos .NET Framework para SQL Server en un escenario que no es de plena confianza. Para obtener información sobre la creación de conjuntos de permisos personalizados, vea [configurar permisos establece mediante Caspol.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
+ A continuación se muestra un ejemplo de un conjunto de permisos para el proveedor de datos .NET Framework para SQL Server en un escenario que no es de plena confianza. Para obtener información sobre cómo crear conjuntos de permisos personalizados, vea [configurar conjuntos de permisos mediante Caspol. exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100)).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -160,13 +160,13 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Comprobar el acceso a código de ADO.NET mediante permisos de seguridad  
- En las situaciones de confianza parcial, puede solicitar privilegios de seguridad de acceso del código para determinados métodos en el código mediante la especificación de <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Si la directiva de seguridad restringida no permite el privilegio, se inicia una excepción antes de ejecutarse el código. Para obtener más información sobre la directiva de seguridad, consulte [administración de directivas de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) y [recomendaciones de directiva de seguridad](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100)).  
+ En las situaciones de confianza parcial, puede solicitar privilegios de seguridad de acceso del código para determinados métodos en el código mediante la especificación de <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Si la directiva de seguridad restringida no permite el privilegio, se inicia una excepción antes de ejecutarse el código. Para obtener más información sobre la Directiva de seguridad, consulte [prácticas recomendadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))para la Directiva de seguridad y [Administración de directivas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100)) de seguridad.  
   
 ### <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se muestra cómo escribir código que requiera una determinada cadena de conexión. Simula la denegación de permisos sin restricciones para <xref:System.Data.SqlClient>, que podría implementar un administrador del sistema en una situación real mediante una directiva de seguridad CAS.  
   
 > [!IMPORTANT]
->  Al diseñar permisos de seguridad CAS en ADO.NET, el procedimiento correcto es comenzar con el caso más restrictivo (sin ningún permiso) y agregar a continuación los permisos específicos necesarios para la tarea determinada que el código debe realizar. El patrón opuesto, que comienza con todos los permisos y deniega a continuación un permiso concreto, no es seguro puesto que existen muchas formas de expresar la misma cadena de conexión. Por ejemplo, si comienza con todos los permisos y después intenta denegar el uso de la cadena de conexión "servidor=unServidor", la cadena "servidor=unServidor.miEmpresa.com" seguirá obteniendo permiso. Al comenzar siempre por no conceder ningún permiso, se reduce la posibilidad de que haya lagunas en el conjunto de permisos.  
+> Al diseñar permisos de seguridad CAS en ADO.NET, el procedimiento correcto es comenzar con el caso más restrictivo (sin ningún permiso) y agregar a continuación los permisos específicos necesarios para la tarea determinada que el código debe realizar. El patrón opuesto, que comienza con todos los permisos y deniega a continuación un permiso concreto, no es seguro puesto que existen muchas formas de expresar la misma cadena de conexión. Por ejemplo, si comienza con todos los permisos y después intenta denegar el uso de la cadena de conexión "servidor=unServidor", la cadena "servidor=unServidor.miEmpresa.com" seguirá obteniendo permiso. Al comenzar siempre por no conceder ningún permiso, se reduce la posibilidad de que haya lagunas en el conjunto de permisos.  
   
  En el siguiente código se muestra cómo `SqlClient` realiza la petición de seguridad, que inicia <xref:System.Security.SecurityException> si los permisos de seguridad CAS adecuados no se encuentran en su lugar. El resultado <xref:System.Security.SecurityException> se muestra en la ventana de la consola.  
   
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilidad de código no administrado  
  El código que se ejecuta fuera de CLR se denomina código no administrado. Por lo tanto, los mecanismos de seguridad como CAS no se pueden aplicar en código no administrado. Los componentes COM, las interfaces ActiveX y las funciones de la API de Windows son ejemplos de código no administrado. Cuando se ejecuta código no administrado se aplican consideraciones de seguridad especiales, de forma que no se ponga en peligro la seguridad global de la aplicación. Para más información, consulte [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md) (Interoperar con código no administrado)  
   
- .NET Framework también es compatible con versiones anteriores de componentes COM existentes mediante el acceso a través de la interoperabilidad COM. Se pueden incluir componentes COM en una aplicación de .NET Framework usando las herramientas de la interoperabilidad COM para importar los tipos COM necesarios. Una vez que se han importado, los tipos COM están listos para su uso. La interoperabilidad COM también permite que los clientes COM tengan acceso a código administrado mediante la exportación de metadatos de ensamblado a una biblioteca de tipos y mediante el registro del componente administrado como un componente COM. Para obtener más información, consulte [interoperabilidad COM avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
+ .NET Framework también es compatible con versiones anteriores de componentes COM existentes mediante el acceso a través de la interoperabilidad COM. Se pueden incluir componentes COM en una aplicación de .NET Framework usando las herramientas de la interoperabilidad COM para importar los tipos COM necesarios. Una vez que se han importado, los tipos COM están listos para su uso. La interoperabilidad COM también permite que los clientes COM tengan acceso a código administrado mediante la exportación de metadatos de ensamblado a una biblioteca de tipos y mediante el registro del componente administrado como un componente COM. Para obtener más información, consulte interoperabilidad [com avanzada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Vea también
 
 - [Proteger aplicaciones de ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Seguridad del código nativo y código de .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
-- [Seguridad basada en roles](../../../../docs/standard/security/role-based-security.md)
+- [Seguridad en código nativo y .NET Framework](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Seguridad basada en roles](../../../standard/security/role-based-security.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

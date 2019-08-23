@@ -3,12 +3,12 @@ title: WIF y granjas de servidores web
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 656e7b116b9da68dbb38a5a2fc3d1ed90fda576a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e6806971bd2260785d66bfdb54a3e2938043c746
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592277"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967187"
 ---
 # <a name="wif-and-web-farms"></a>WIF y granjas de servidores web
 Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de una aplicación de usuario de confianza (RP) implementada en una granja de servidores web, debe realizar determinados pasos para garantizar que WIF pueda procesar tokens de instancias de la aplicación de RP que se ejecutan en equipos diferentes de la granja de servidores. Este proceso implica la validación de firmas de token de sesión, el cifrado y descifrado de tokens de sesión, el almacenamiento en caché de tokens de sesión y la detección de tokens de seguridad reproducidos.  
@@ -55,10 +55,10 @@ Cuando se usa Windows Identity Foundation (WIF) para proteger los recursos de un
 - Si la aplicación detecta tokens reproducidos, debe seguir una estrategia similar de almacenamiento en caché distribuido para la memoria caché de reproducción de tokens al derivar de <xref:System.IdentityModel.Tokens.TokenReplayCache> y apuntar al servicio de almacenamiento en caché de reproducción de tokens del elemento de configuración [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
->  Todos los XML de ejemplo y el código de este tema procede de la [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) ejemplo.  
+> Todo el código y XML de ejemplo de este tema se toma del ejemplo [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) .  
   
 > [!IMPORTANT]
->  Los ejemplos de este tema se proporcionan tal cual y no están diseñados para usarse en código de producción sin modificación.  
+> Los ejemplos de este tema se proporcionan tal cual y no están diseñados para usarse en código de producción sin modificación.  
   
 <a name="BKMK_TheWCFCachingService"></a>   
 ## <a name="the-wcf-caching-service"></a>Servicio de almacenamiento en caché de WCF  

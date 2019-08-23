@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: 968d34a5f79d469ef62beaa8ac96742d73391b22
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 0e1cd7d1868adabd4d3eec9510f6ee567ba3867d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039747"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966614"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Procedimiento para ocultar ToolStripMenuItems mediante el diseñador
 Ocultar elementos de menú es una manera de controlar la interfaz de usuario (UI) de la aplicación y restringir los comandos de usuario. A menudo, querrá ocultar un menú completo cuando no estén disponibles todos los elementos de menú que hay en él. Esto supone menos distracciones para el usuario. Además, es posible que desee ocultar y deshabilitar el menú o el elemento de menú, ya que ocultar solo no impide que el usuario tenga acceso a un comando de menú mediante una tecla de método abreviado. Para obtener más información acerca de cómo deshabilitar elementos [de menú, consulte Cómo: Deshabilite ToolStripMenuItems mediante el](how-to-disable-toolstripmenuitems-using-the-designer.md)diseñador.
@@ -23,7 +23,7 @@ Ocultar elementos de menú es una manera de controlar la interfaz de usuario (UI
      Cuando se oculta el elemento de menú de nivel superior, todos los elementos de menú de ese menú también se ocultan. Si hace clic en algún lugar distinto de <xref:System.Windows.Forms.MenuStrip> en el <xref:System.Windows.Forms.ToolStripItem.Visible%2A> `false`valor de después de, el elemento de menú de nivel superior completo y sus elementos de submenú desaparecen del formulario, lo que muestra el efecto en tiempo de ejecución de la acción. Para mostrar el elemento de menú de nivel superior oculto en tiempo de diseño, haga <xref:System.Windows.Forms.MenuStrip> clic en en la **bandeja de componentes**, en **esquema de documento**o en la parte superior de la cuadrícula de propiedades.
 
 > [!NOTE]
->  Rara vez ocultará un menú completo, excepto los menús secundarios de la interfaz de múltiples documentos (MDI) en un escenario de combinación.
+> Rara vez ocultará un menú completo, excepto los menús secundarios de la interfaz de múltiples documentos (MDI) en un escenario de combinación.
 
 ## <a name="to-hide-a-submenu-item"></a>Para ocultar un elemento de submenú
 

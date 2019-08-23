@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6663b4875fc2c3698b612a4958140ba199ea2669
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631922"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966875"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Mejorar la depuración con los atributos de visualización del depurador
 
-Los atributos de visualización del depurador permiten al desarrollador del tipo, que especifica y mejor comprende el comportamiento del runtime de ese tipo, que especifique también el aspecto que tendrá ese tipo cuando se muestre en un depurador. Además, los atributos de visualización del depurador que proporcionan una propiedad `Target` pueden aplicarse en el nivel de ensamblado por usuarios sin conocimiento del código fuente. El atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla la forma en que se muestra un tipo o un miembro en las ventanas de variables del depurador. El atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina si un campo o propiedad se muestra en las ventanas de variables del depurador y cómo se muestra. El atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica un tipo sustitutivo, o un proxy, para un tipo y cambia la forma en que se muestra el tipo en las ventanas del depurador. Cuando ve una variable que tiene un proxy, o un tipo sustitutivo, el proxy reemplaza al tipo original en la ventana de visualización del depurador. En la ventana de las variables del depurador se muestran sólo los miembros públicos del tipo de servidor proxy. No se muestran los miembros privados.  
+Los atributos de visualización del depurador permiten al desarrollador del tipo, que especifica y mejor comprende el comportamiento del runtime de ese tipo, que especifique también el aspecto que tendrá ese tipo cuando se muestre en un depurador. Además, los atributos de visualización del depurador que proporcionan una propiedad `Target` pueden aplicarse en el nivel de ensamblado por usuarios sin conocimiento del código fuente. El atributo <xref:System.Diagnostics.DebuggerDisplayAttribute> controla la forma en que se muestra un tipo o un miembro en las ventanas de variables del depurador. El atributo <xref:System.Diagnostics.DebuggerBrowsableAttribute> determina si un campo o propiedad se muestra en las ventanas de variables del depurador y cómo se muestra. El atributo <xref:System.Diagnostics.DebuggerTypeProxyAttribute> especifica un tipo sustitutivo, o un proxy, para un tipo y cambia la forma en que se muestra el tipo en las ventanas del depurador. Cuando se ve una variable que tiene un proxy, o un tipo de sustitución, el proxy se corresponde con el tipo original en la ventana de presentación del depurador. En la ventana de las variables del depurador se muestran sólo los miembros públicos del tipo de servidor proxy. No se muestran los miembros privados.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>Usar el atributo DebuggerDisplayAttribute  
 
@@ -52,7 +52,7 @@ Por ejemplo, si un objeto de C# tiene un `ToString()` invalidado, el depurador l
 - <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> indica que el propio miembro no se muestra, pero sus objetos constituyentes se muestran si es una matriz o una colección.
 
 > [!NOTE]
->  <xref:System.Diagnostics.DebuggerBrowsableAttribute> no es compatible con Visual Basic en la versión 2.0 de .NET Framework.
+> <xref:System.Diagnostics.DebuggerBrowsableAttribute> no es compatible con Visual Basic en la versión 2.0 de .NET Framework.
 
 En el siguiente ejemplo de código se muestra el uso de <xref:System.Diagnostics.DebuggerBrowsableAttribute> para evitar que la propiedad que lo sigue aparezca en la ventana del depurador para la clase.
 
@@ -95,9 +95,9 @@ class MyHashtable : Hashtable
 
 ## <a name="example"></a>Ejemplo
 
-### <a name="description"></a>Descripción
+### <a name="description"></a>DESCRIPCIÓN
 
-El siguiente ejemplo de código se puede ver en Visual Studio para ver los resultados de aplicar el <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>, y <xref:System.Diagnostics.DebuggerTypeProxyAttribute> atributos.
+El siguiente ejemplo de código se puede ver en Visual Studio para ver los resultados de aplicar <xref:System.Diagnostics.DebuggerDisplayAttribute>los <xref:System.Diagnostics.DebuggerBrowsableAttribute>atributos, <xref:System.Diagnostics.DebuggerTypeProxyAttribute> y.
 
 ### <a name="code"></a>Código
 

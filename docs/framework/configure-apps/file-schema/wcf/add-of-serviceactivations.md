@@ -2,16 +2,16 @@
 title: <add> de <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
-ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 929773fcb6b6a3ee5c75aa970147277d9dbe7b45
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701468"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920022"
 ---
 # <a name="add-of-serviceactivations"></a>\<Agregar > de \<serviceActivations >
 
-Un elemento de configuración que le permite definir la configuración de activación de servicio virtual que se asignan a tipos de servicio Windows Communication Foundation (WCF). Esto hace posible activar servicios hospedados en WAS/IIS sin un archivo .svc.
+Un elemento de configuración que le permite definir la configuración de activación de servicio virtual que se asigna a los tipos de servicio Windows Communication Foundation (WCF). Esto hace posible activar servicios hospedados en WAS/IIS sin un archivo .svc.
 
 \<system.ServiceModel>\
 \<serviceHostingEnvironment>
@@ -33,7 +33,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-|Atributo|Descripción|
+|Atributo|DESCRIPCIÓN|
 |---------------|-----------------|
 |factory|Cadena que especifica el nombre de tipo de CLR del generador que genera un elemento de activación de servicio.|
 |service|ServiceType que implementa el servicio (Typename calificado completo o Typename corto (cuando se coloca en la carpeta App_Code).|
@@ -45,9 +45,9 @@ Ninguno.
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
-|[\<serviceHostingEnvironment>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|Sección de configuración que describe la configuración de activación.|
+|[\<serviceHostingEnvironment>](servicehostingenvironment.md)|Sección de configuración que describe la configuración de activación.|
 
 ## <a name="remarks"></a>Comentarios
 
@@ -67,9 +67,9 @@ En el siguiente ejemplo se muestra cómo configurar los valores de activación d
 
 Con esta configuración, puede activar GreetingService sin usar un archivo .svc.
 
-Observe que `<serviceHostingEnvironment>` es una configuración de nivel de aplicación. Tiene que colocar el archivo `web.config` que contiene la configuración en la raíz de la aplicación virtual. Además, `serviceHostingEnvironment` es una sección heredable de machineToApplication. Si registra un solo servicio en la raíz del equipo, cada servicio de la aplicación heredará este servicio.
+Observe que `<serviceHostingEnvironment>` es una configuración de nivel de aplicación. Tiene que colocar el archivo `web.config` que contiene la configuración en la raíz de la aplicación virtual. Además, `serviceHostingEnvironment` es una sección machineToApplication heredable. Si registra un solo servicio en la raíz del equipo, cada servicio de la aplicación heredará este servicio.
 
-La activación basada en la configuración admite la activación a través de protocolos http y distintos de http. Requiere extensiones en el relativeAddress, es decir .svc, .xoml o xamlx. Puede asignar sus propias extensiones al buildProviders conocido, que le permitirá activar el servicio a través de cualquier extensión. Si existe conflicto, la sección `<serviceActivations>` invalida los registros de .svc.
+La activación basada en la configuración admite la activación a través de protocolos http y distintos de http. Requiere extensiones en relativeAddress, es decir,. SVC,. xoml o. xamlx. Puede asignar sus propias extensiones al buildProviders conocido, que le permitirá activar el servicio a través de cualquier extensión. Si existe conflicto, la sección `<serviceActivations>` invalida los registros de .svc.
 
 ## <a name="see-also"></a>Vea también
 

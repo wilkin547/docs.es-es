@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768137"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965054"
 ---
-# <a name="corgcstats-structure"></a>COR_GC_STATS (Estructura)
-Proporciona estadísticas sobre el mecanismo de recopilación de elementos no utilizados de common language runtime (CLR).  
+# <a name="cor_gc_stats-structure"></a>COR_GC_STATS (Estructura)
+Proporciona estadísticas sobre el mecanismo de recolección de elementos no utilizados del Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,28 +48,28 @@ typedef struct _COR_GC_STATS {
   
 |Member|DESCRIPCIÓN|  
 |------------|-----------------|  
-|`Flags`|Indica qué valores de campo deben ser calcula y devuelve.|  
-|`ExplicitGCCount`|Indica el número de recolecciones forzadas por solicitud externa.|  
-|`GenCollectionsTaken`|Indica el número de recolecciones realizadas para cada generación.|  
-|`CommittedKBytes`|El número total de kilobytes confirmado en todos los montones.|  
-|`ReservedKBytes`|El número total de kilobytes reservados en todos los montones.|  
-|`Gen0HeapSizeKBytes`|El tamaño, en kilobytes, del montón de generación de cero.|  
-|`Gen1HeapSizeKBytes`|El tamaño, en kilobytes, del montón de generación 1.|  
-|`Gen2HeapSizeKBytes`|El tamaño, en kilobytes, del montón de generación de dos.|  
-|`LargeObjectHeapSizeKBytes`|El tamaño, en kilobytes, del montón de objetos grandes.|  
-|`KBytesPromotedFromGen0`|El tamaño, en kilobytes, de los objetos que se promueven de generación 0 a generación uno.|  
-|`KBytesPromotedFromGen1`|El tamaño, en kilobytes, de los objetos que se promueven de generación 1 a la generación 2.|  
+|`Flags`|Indica qué valores de campo deben calcularse y devolverse.|  
+|`ExplicitGCCount`|Indica el número de recolecciones de elementos no utilizados forzadas por la solicitud externa.|  
+|`GenCollectionsTaken`|Indica el número de recolecciones de elementos no utilizados realizadas para cada generación.|  
+|`CommittedKBytes`|Número total de kilobytes confirmados en todos los montones.|  
+|`ReservedKBytes`|Número total de kilobytes reservados en todos los montones.|  
+|`Gen0HeapSizeKBytes`|Tamaño, en kilobytes, del montón de generación cero.|  
+|`Gen1HeapSizeKBytes`|Tamaño, en kilobytes, del montón de generación uno.|  
+|`Gen2HeapSizeKBytes`|Tamaño, en kilobytes, del montón de generación 2.|  
+|`LargeObjectHeapSizeKBytes`|Tamaño, en kilobytes, del montón de objetos grandes.|  
+|`KBytesPromotedFromGen0`|Tamaño, en kilobytes, de los objetos promovidos de la generación cero a la generación uno.|  
+|`KBytesPromotedFromGen1`|Tamaño, en kilobytes, de los objetos promovidos de la generación de uno a la generación dos.|  
   
 ## <a name="remarks"></a>Comentarios  
- El [ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) método requiere el `Flags` campo de la `COR_GC_STATS` estructura debe establecerse en uno o más valores de la [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeración para especificar qué las estadísticas que se van a establecer.  
+ El método [ICLRGCManager:: getstats (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) requiere que `Flags` el campo de `COR_GC_STATS` la estructura se establezca en uno o más valores de la enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) para especificar qué estadísticas se van a establecer.  
   
- En la tabla siguiente asigna las estadísticas proporcionadas por esta estructura a los dos [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) valores de enumeración, `COR_GC_COUNTS` y `COR_GC_MEMORYUSAGE`.  
+ En la tabla siguiente se asignan las estadísticas proporcionadas por esta estructura a los dos `COR_GC_COUNTS` valores `COR_GC_MEMORYUSAGE`de enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) , y.  
   
-|Especifica COR_GC_COUNTS|Especifica COR_GC_MEMORYUSAGE|  
+|Especificado por COR_GC_COUNTS|Especificado por COR_GC_MEMORYUSAGE|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- Un ejemplo de uso es como sigue:  
+ A continuación se muestra un ejemplo de uso:  
   
 ```cpp  
 COR_GC_STATS GCStats;  
@@ -78,16 +78,16 @@ pCLRGCManager->GetStats(&GCStats);
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Encabezado**: GCHost.idl  
   
- **Biblioteca:** Incluye como recurso en MSCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MSCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
 - [Estructuras de hospedaje](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [Administración automática de la memoria](../../../../docs/standard/automatic-memory-management.md)
-- [Recolección de elementos no utilizados](../../../../docs/standard/garbage-collection/index.md)
+- [Administración automática de la memoria](../../../standard/automatic-memory-management.md)
+- [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)

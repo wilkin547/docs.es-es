@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - IsNot operator [Visual Basic]
 ms.assetid: 8dd2bcdb-0166-48a2-9094-60dfb448f36c
-ms.openlocfilehash: e07a775eec003a3e488f6909181aed3f742b4b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a83b48e5e415bd6ca0c777cef6d34f7127691b5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966937"
 ---
 # <a name="isnot-operator-visual-basic"></a>IsNot (Operador) (Visual Basic)
 Compara dos variables de referencia de objeto.  
@@ -24,26 +24,26 @@ result = object1 IsNot object2
   
 ## <a name="parts"></a>Elementos  
  `result`  
- Obligatorio. Valor `Boolean`.  
+ Necesario. Valor `Boolean`.  
   
  `object1`  
- Obligatorio. Cualquier `Object` variable o expresión.  
+ Necesario. Cualquier `Object` variable o expresión.  
   
  `object2`  
- Obligatorio. Cualquier `Object` variable o expresión.  
+ Necesario. Cualquier `Object` variable o expresión.  
   
 ## <a name="remarks"></a>Comentarios  
- El `IsNot` operador determina si dos referencias de objeto hacen referencia a objetos diferentes. Sin embargo, no realiza las comparaciones de valores. Si `object1` y `object2` ambos hacen referencia a la instancia exacta del objeto mismo, `result` es `False`; si no, es `result` es `True`.  
+ El `IsNot` operador determina si dos referencias de objeto hacen referencia a objetos diferentes. Sin embargo, no realiza comparaciones de valores. Si `object1` y `object2` ambos hacen referencia a la misma instancia de objeto `result` exacta `False`, es; si no es `result` así `True`, es.  
   
- `IsNot` es el opuesto de la `Is` operador. La ventaja de `IsNot` es que puede evitar sintaxis extraña con `Not` y `Is`, que puede ser difícil de leer.  
+ `IsNot`es lo contrario del `Is` operador. La ventaja de `IsNot` es que puede evitar una sintaxis complicada con `Not` y `Is`, que puede ser difícil de leer.  
   
- Puede usar el `Is` y `IsNot` operadores a los objetos con enlace anticipado y en tiempo de ejecución de prueba.  
+ Puede usar los `Is` operadores y `IsNot` para probar los objetos enlazados en tiempo de compilación y en tiempo de ejecución.  
   
 > [!NOTE]
->  El `IsNot` operador no puede utilizarse para comparar expresiones devueltas desde el `TypeOf` operador. En su lugar, debe usar el `Not` y `Is` operadores.  
+> No `IsNot` se puede usar el operador para comparar expresiones devueltas por el `TypeOf` operador. En su lugar, debe usar los `Not` operadores `Is` y.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de código siguiente se usa tanto el `Is` operador y el `IsNot` operador para realizar la comparación de la misma.  
+ En el ejemplo de código siguiente se `Is` usa el operador `IsNot` y el operador para realizar la misma comparación.  
   
  [!code-vb[VbVbalrOperators#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#29)]  
   
@@ -52,4 +52,4 @@ result = object1 IsNot object2
 - [Is (operador)](../../../visual-basic/language-reference/operators/is-operator.md)
 - [TypeOf (operador)](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [Prioridad de operador en Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Cómo: Probar si dos objetos son iguales](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)
+- [Cómo: Comprobar si dos objetos son iguales](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-test-whether-two-objects-are-the-same.md)

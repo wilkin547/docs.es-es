@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - Splitter control [Windows Forms], about Splitter control
 ms.assetid: e2b6ab83-dfdd-40ec-9762-850702c82dcb
-ms.openlocfilehash: 0477f68aaf67d4b29c491052999ff7784e736669
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 934efd707f2a52da5ba604139c8e4510aad4606b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009713"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964457"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Información general sobre Splitter (Control, formularios Windows Forms)
 > [!IMPORTANT]
->  Aunque el control <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.Splitter> de las versiones anteriores, <xref:System.Windows.Forms.Splitter> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
+> Aunque el control <xref:System.Windows.Forms.SplitContainer> reemplaza y agrega funcionalidad al control <xref:System.Windows.Forms.Splitter> de las versiones anteriores, <xref:System.Windows.Forms.Splitter> se conserva a efectos de compatibilidad con versiones anteriores y uso futuro, si se desea.  
   
- Windows Forms <xref:System.Windows.Forms.Splitter> controles se usan para cambiar el tamaño de los controles acoplados en tiempo de ejecución. El <xref:System.Windows.Forms.Splitter> control suele utilizarse en formularios con controles que tienen distintas longitudes de datos que se va a presentar, como el Explorador de Windows, cuyos paneles de datos contienen información de diversos anchos en momentos diferentes.  
+ Windows Forms <xref:System.Windows.Forms.Splitter> controles se usan para cambiar el tamaño de los controles acoplados en tiempo de ejecución. El <xref:System.Windows.Forms.Splitter> control se usa a menudo en formularios con controles que tienen diferentes longitudes de datos para presentar, como el explorador de Windows, cuyos paneles de datos contienen información de distintos anchos en momentos distintos.  
   
-## <a name="working-with-the-splitter-control"></a>Trabajar con el Control divisor  
- Cuando el usuario sitúa el puntero del mouse sobre el borde de un control que se puede cambiar el tamaño de un control divisor desacoplado, el puntero cambia de apariencia para indicar que se puede cambiar el tamaño del control. Con el control divisor, el usuario puede cambiar el tamaño del control acoplado inmediatamente anterior. Por lo tanto, para permitir al usuario cambiar el tamaño de un control acoplado en tiempo de ejecución, acople el control para cambiar de tamaño a un borde de un contenedor y, a continuación, acoplar un control divisor en el mismo lado de ese contenedor.  
+## <a name="working-with-the-splitter-control"></a>Trabajar con el control divisor  
+ Cuando el usuario apunta el puntero del mouse en el borde desacoplado de un control cuyo tamaño se puede cambiar por un control divisor, el puntero cambia su apariencia para indicar que se puede cambiar el tamaño del control. Con el control divisor, el usuario puede cambiar el tamaño del control acoplado inmediatamente antes. Por lo tanto, para permitir al usuario cambiar el tamaño de un control acoplado en tiempo de ejecución, acople el control cuyo tamaño se va a cambiar a un borde de un contenedor y, a continuación, acople un control divisor al mismo lado de dicho contenedor.  
   
 ## <a name="see-also"></a>Vea también
 

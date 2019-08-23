@@ -11,23 +11,23 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4bdb2035906b9383342201017b58d1d0050113b5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d5709e4ef883ba2750f1efd0ae2e9a72f1cf43b0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754497"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967301"
 ---
 # <a name="invalidoverlappedtopinvoke-mda"></a>MDA de invalidOverlappedToPinvoke
 El asistente para la depuración administrada (MDA) `invalidOverlappedToPinvoke` se activa cuando un puntero superpuesto que no se ha creado en el montón de recolección de elementos no utilizados se pasa a funciones de Win32 específicas.  
   
 > [!NOTE]
->  De forma predeterminada, este MDA solo se activa si se define la llamada de invocación de plataforma en el código y el depurador informa del estado de JustMyCode de cada método. Un depurador que no entienda JustMyCode (como MDbg.exe sin extensiones) no activará este MDA, Este MDA se puede habilitar en este tipo de depuradores utilizando un archivo de configuración y estableciendo explícitamente `justMyCode="false"` en el archivo .mda.config (`(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).  
+> De forma predeterminada, este MDA solo se activa si se define la llamada de invocación de plataforma en el código y el depurador informa del estado de JustMyCode de cada método. Un depurador que no entienda JustMyCode (como MDbg.exe sin extensiones) no activará este MDA, Este MDA se puede habilitar en este tipo de depuradores utilizando un archivo de configuración y estableciendo explícitamente `justMyCode="false"` en el archivo .mda.config (`(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).  
   
 ## <a name="symptoms"></a>Síntomas  
  Bloqueos o daños inexplicables del montón.  
   
-## <a name="cause"></a>Motivo  
+## <a name="cause"></a>Causa  
  Se pasa un puntero superpuesto que no se ha creado en el montón de recolección de elementos no utilizados a funciones de sistema operativo concretas.  
   
  En la tabla siguiente se muestran las funciones de las que realiza el seguimiento este MDA.  
