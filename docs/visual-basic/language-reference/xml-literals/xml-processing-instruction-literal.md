@@ -8,61 +8,61 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c589d3f4ac6bbb9aa9b2b8f2535888bddbf9c934
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938611"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69958481"
 ---
-# <a name="xml-processing-instruction-literal-visual-basic"></a><span data-ttu-id="2440e-102">Literal de instrucción de procesamiento XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2440e-102">XML Processing Instruction Literal (Visual Basic)</span></span>
-<span data-ttu-id="2440e-103">Un literal que representa un <xref:System.Xml.Linq.XProcessingInstruction> objeto.</span><span class="sxs-lookup"><span data-stu-id="2440e-103">A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.</span></span>  
+# <a name="xml-processing-instruction-literal-visual-basic"></a><span data-ttu-id="9db8d-102">Literal de instrucción de procesamiento XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9db8d-102">XML Processing Instruction Literal (Visual Basic)</span></span>
+<span data-ttu-id="9db8d-103">Literal que representa un <xref:System.Xml.Linq.XProcessingInstruction> objeto.</span><span class="sxs-lookup"><span data-stu-id="9db8d-103">A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2440e-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2440e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9db8d-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9db8d-104">Syntax</span></span>  
   
 ```xml  
 <?piName [ = piData ] ?>  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="2440e-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="2440e-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="9db8d-105">Elementos</span><span class="sxs-lookup"><span data-stu-id="9db8d-105">Parts</span></span>  
  `<?`  
- <span data-ttu-id="2440e-106">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="2440e-106">Required.</span></span> <span data-ttu-id="2440e-107">Denota el inicio de la instrucción de procesamiento XML literal.</span><span class="sxs-lookup"><span data-stu-id="2440e-107">Denotes the start of the XML processing instruction literal.</span></span>  
+ <span data-ttu-id="9db8d-106">Necesario.</span><span class="sxs-lookup"><span data-stu-id="9db8d-106">Required.</span></span> <span data-ttu-id="9db8d-107">Denota el inicio del literal de instrucción de procesamiento XML.</span><span class="sxs-lookup"><span data-stu-id="9db8d-107">Denotes the start of the XML processing instruction literal.</span></span>  
   
  `piName`  
- <span data-ttu-id="2440e-108">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="2440e-108">Required.</span></span> <span data-ttu-id="2440e-109">Asigne un nombre que indica qué aplicación los destinos de la instrucción de procesamiento.</span><span class="sxs-lookup"><span data-stu-id="2440e-109">Name indicating which application the processing instruction targets.</span></span> <span data-ttu-id="2440e-110">No puede empezar por "xml" o "XML".</span><span class="sxs-lookup"><span data-stu-id="2440e-110">Cannot begin with "xml" or "XML".</span></span>  
+ <span data-ttu-id="9db8d-108">Necesario.</span><span class="sxs-lookup"><span data-stu-id="9db8d-108">Required.</span></span> <span data-ttu-id="9db8d-109">Nombre que indica la aplicación a la que se destina la instrucción de procesamiento.</span><span class="sxs-lookup"><span data-stu-id="9db8d-109">Name indicating which application the processing instruction targets.</span></span> <span data-ttu-id="9db8d-110">No puede comenzar por "XML" o "XML".</span><span class="sxs-lookup"><span data-stu-id="9db8d-110">Cannot begin with "xml" or "XML".</span></span>  
   
  `piData`  
- <span data-ttu-id="2440e-111">Opcional.</span><span class="sxs-lookup"><span data-stu-id="2440e-111">Optional.</span></span> <span data-ttu-id="2440e-112">Cadena que indica cómo la aplicación de destino de `piName` debe procesar el documento XML.</span><span class="sxs-lookup"><span data-stu-id="2440e-112">String indicating how the application targeted by `piName` should process the XML document.</span></span>  
+ <span data-ttu-id="9db8d-111">Opcional.</span><span class="sxs-lookup"><span data-stu-id="9db8d-111">Optional.</span></span> <span data-ttu-id="9db8d-112">Cadena que indica cómo la aplicación de `piName` destino debe procesar el documento XML.</span><span class="sxs-lookup"><span data-stu-id="9db8d-112">String indicating how the application targeted by `piName` should process the XML document.</span></span>  
   
  `?>`  
- <span data-ttu-id="2440e-113">Obligatorio.</span><span class="sxs-lookup"><span data-stu-id="2440e-113">Required.</span></span> <span data-ttu-id="2440e-114">Denota el final de la instrucción de procesamiento.</span><span class="sxs-lookup"><span data-stu-id="2440e-114">Denotes the end of the processing instruction.</span></span>  
+ <span data-ttu-id="9db8d-113">Necesario.</span><span class="sxs-lookup"><span data-stu-id="9db8d-113">Required.</span></span> <span data-ttu-id="9db8d-114">Denota el final de la instrucción de procesamiento.</span><span class="sxs-lookup"><span data-stu-id="9db8d-114">Denotes the end of the processing instruction.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2440e-115">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="2440e-115">Return Value</span></span>  
- <span data-ttu-id="2440e-116">Un objeto <xref:System.Xml.Linq.XProcessingInstruction>.</span><span class="sxs-lookup"><span data-stu-id="2440e-116">An <xref:System.Xml.Linq.XProcessingInstruction> object.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9db8d-115">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="9db8d-115">Return Value</span></span>  
+ <span data-ttu-id="9db8d-116">Un objeto <xref:System.Xml.Linq.XProcessingInstruction>.</span><span class="sxs-lookup"><span data-stu-id="9db8d-116">An <xref:System.Xml.Linq.XProcessingInstruction> object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2440e-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2440e-117">Remarks</span></span>  
- <span data-ttu-id="2440e-118">Los literales de instrucción de procesamiento XML indican cómo las aplicaciones deben procesar un documento XML.</span><span class="sxs-lookup"><span data-stu-id="2440e-118">XML processing instruction literals indicate how applications should process an XML document.</span></span> <span data-ttu-id="2440e-119">Cuando una aplicación carga un documento XML, la aplicación puede comprobar las instrucciones de procesamiento XML para determinar cómo procesar el documento.</span><span class="sxs-lookup"><span data-stu-id="2440e-119">When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document.</span></span> <span data-ttu-id="2440e-120">La aplicación interpreta el significado de `piName` y `piData`.</span><span class="sxs-lookup"><span data-stu-id="2440e-120">The application interprets the meaning of `piName` and `piData`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9db8d-117">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9db8d-117">Remarks</span></span>  
+ <span data-ttu-id="9db8d-118">Los literales de instrucciones de procesamiento XML indican cómo deben procesar las aplicaciones un documento XML.</span><span class="sxs-lookup"><span data-stu-id="9db8d-118">XML processing instruction literals indicate how applications should process an XML document.</span></span> <span data-ttu-id="9db8d-119">Cuando una aplicación carga un documento XML, la aplicación puede comprobar las instrucciones de procesamiento XML para determinar cómo procesar el documento.</span><span class="sxs-lookup"><span data-stu-id="9db8d-119">When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document.</span></span> <span data-ttu-id="9db8d-120">La aplicación interpreta el significado de `piName` y. `piData`</span><span class="sxs-lookup"><span data-stu-id="9db8d-120">The application interprets the meaning of `piName` and `piData`.</span></span>  
   
- <span data-ttu-id="2440e-121">El literal de documento XML usa la sintaxis que es similar de la instrucción de procesamiento de XML.</span><span class="sxs-lookup"><span data-stu-id="2440e-121">The XML document literal uses syntax that is similar to that of the XML processing instruction.</span></span> <span data-ttu-id="2440e-122">Para obtener más información, consulte [Literal de documento XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).</span><span class="sxs-lookup"><span data-stu-id="2440e-122">For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="2440e-123">El `piName` elemento no puede comenzar con las cadenas "xml" o "XML", ya que los identificadores de reserva de la especificación XML 1.0.</span><span class="sxs-lookup"><span data-stu-id="2440e-123">The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.</span></span>  
-  
- <span data-ttu-id="2440e-124">Puede asignar un literal de instrucción de procesamiento de XML a una variable o incluirlo en un literal de documento XML.</span><span class="sxs-lookup"><span data-stu-id="2440e-124">You can assign an XML processing instruction literal to a variable or include it in an XML document literal.</span></span>  
+ <span data-ttu-id="9db8d-121">El literal de documento XML utiliza una sintaxis similar a la de la instrucción de procesamiento XML.</span><span class="sxs-lookup"><span data-stu-id="9db8d-121">The XML document literal uses syntax that is similar to that of the XML processing instruction.</span></span> <span data-ttu-id="9db8d-122">Para obtener más información, vea [literal de documento XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).</span><span class="sxs-lookup"><span data-stu-id="9db8d-122">For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="2440e-125">Un literal XML puede abarcar varias líneas sin necesidad de caracteres de continuación de línea.</span><span class="sxs-lookup"><span data-stu-id="2440e-125">An XML literal can span multiple lines without needing line continuation characters.</span></span> <span data-ttu-id="2440e-126">Esto permite copiar el contenido de un documento XML y péguelo directamente en un programa de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2440e-126">This enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
+> <span data-ttu-id="9db8d-123">El `piName` elemento no puede comenzar con las cadenas "XML" o "XML", ya que la especificación XML 1,0 reserva esos identificadores.</span><span class="sxs-lookup"><span data-stu-id="9db8d-123">The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.</span></span>  
   
- <span data-ttu-id="2440e-127">El compilador de Visual Basic convierte el literal de instrucción de procesamiento XML en una llamada a la <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.</span><span class="sxs-lookup"><span data-stu-id="2440e-127">The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.</span></span>  
+ <span data-ttu-id="9db8d-124">Puede asignar un literal de instrucción de procesamiento XML a una variable o incluirlo en un literal de documento XML.</span><span class="sxs-lookup"><span data-stu-id="9db8d-124">You can assign an XML processing instruction literal to a variable or include it in an XML document literal.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2440e-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="2440e-128">Example</span></span>  
- <span data-ttu-id="2440e-129">El ejemplo siguiente crea una instrucción de procesamiento que identifica una hoja de estilos para un documento XML.</span><span class="sxs-lookup"><span data-stu-id="2440e-129">The following example creates a processing instruction identifying a style-sheet for an XML document.</span></span>  
+> [!NOTE]
+> <span data-ttu-id="9db8d-125">Un literal XML puede abarcar varias líneas sin necesidad de caracteres de continuación de línea.</span><span class="sxs-lookup"><span data-stu-id="9db8d-125">An XML literal can span multiple lines without needing line continuation characters.</span></span> <span data-ttu-id="9db8d-126">Esto le permite copiar contenido de un documento XML y pegarlo directamente en un programa de Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9db8d-126">This enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
+  
+ <span data-ttu-id="9db8d-127">El compilador Visual Basic convierte el literal de instrucción de procesamiento XML en una <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> llamada al constructor.</span><span class="sxs-lookup"><span data-stu-id="9db8d-127">The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="9db8d-128">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="9db8d-128">Example</span></span>  
+ <span data-ttu-id="9db8d-129">En el ejemplo siguiente se crea una instrucción de procesamiento que identifica una hoja de estilos para un documento XML.</span><span class="sxs-lookup"><span data-stu-id="9db8d-129">The following example creates a processing instruction identifying a style-sheet for an XML document.</span></span>  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
-## <a name="see-also"></a><span data-ttu-id="2440e-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="2440e-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9db8d-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="9db8d-130">See also</span></span>
 
 - <xref:System.Xml.Linq.XProcessingInstruction>
-- [<span data-ttu-id="2440e-131">Literal de documento XML</span><span class="sxs-lookup"><span data-stu-id="2440e-131">XML Document Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
-- [<span data-ttu-id="2440e-132">Literales XML</span><span class="sxs-lookup"><span data-stu-id="2440e-132">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="2440e-133">Crear XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="2440e-133">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="9db8d-131">Literal de documento XML</span><span class="sxs-lookup"><span data-stu-id="9db8d-131">XML Document Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [<span data-ttu-id="9db8d-132">Literales XML</span><span class="sxs-lookup"><span data-stu-id="9db8d-132">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
+- [<span data-ttu-id="9db8d-133">Crear XML en Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9db8d-133">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
