@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 630c365c8710388ae3e913bedece0fb710da7cd9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1085bec812d797d3fbe4ea63ef447d4c466149f2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67768137"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965054"
 ---
-# <a name="corgcstats-structure"></a><span data-ttu-id="ec8d8-102">COR_GC_STATS (Estructura)</span><span class="sxs-lookup"><span data-stu-id="ec8d8-102">COR_GC_STATS Structure</span></span>
-<span data-ttu-id="ec8d8-103">Proporciona estadísticas sobre el mecanismo de recopilación de elementos no utilizados de common language runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="ec8d8-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
+# <a name="cor_gc_stats-structure"></a><span data-ttu-id="9a60f-102">COR_GC_STATS (Estructura)</span><span class="sxs-lookup"><span data-stu-id="9a60f-102">COR_GC_STATS Structure</span></span>
+<span data-ttu-id="9a60f-103">Proporciona estadísticas sobre el mecanismo de recolección de elementos no utilizados del Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="9a60f-103">Provides statistics about the garbage collection mechanism of the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec8d8-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="ec8d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9a60f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="9a60f-104">Syntax</span></span>  
   
 ```cpp  
 typedef struct _COR_GC_STATS {  
@@ -44,32 +44,32 @@ typedef struct _COR_GC_STATS {
 } COR_GC_STATS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ec8d8-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="ec8d8-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9a60f-105">Miembros</span><span class="sxs-lookup"><span data-stu-id="9a60f-105">Members</span></span>  
   
-|<span data-ttu-id="ec8d8-106">Member</span><span class="sxs-lookup"><span data-stu-id="ec8d8-106">Member</span></span>|<span data-ttu-id="ec8d8-107">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="ec8d8-107">Description</span></span>|  
+|<span data-ttu-id="9a60f-106">Member</span><span class="sxs-lookup"><span data-stu-id="9a60f-106">Member</span></span>|<span data-ttu-id="9a60f-107">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="9a60f-107">Description</span></span>|  
 |------------|-----------------|  
-|`Flags`|<span data-ttu-id="ec8d8-108">Indica qué valores de campo deben ser calcula y devuelve.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-108">Indicates which field values should be calculated and returned.</span></span>|  
-|`ExplicitGCCount`|<span data-ttu-id="ec8d8-109">Indica el número de recolecciones forzadas por solicitud externa.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
-|`GenCollectionsTaken`|<span data-ttu-id="ec8d8-110">Indica el número de recolecciones realizadas para cada generación.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
-|`CommittedKBytes`|<span data-ttu-id="ec8d8-111">El número total de kilobytes confirmado en todos los montones.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-111">The total number of kilobytes committed in all heaps.</span></span>|  
-|`ReservedKBytes`|<span data-ttu-id="ec8d8-112">El número total de kilobytes reservados en todos los montones.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-112">The total number of kilobytes reserved in all heaps.</span></span>|  
-|`Gen0HeapSizeKBytes`|<span data-ttu-id="ec8d8-113">El tamaño, en kilobytes, del montón de generación de cero.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
-|`Gen1HeapSizeKBytes`|<span data-ttu-id="ec8d8-114">El tamaño, en kilobytes, del montón de generación 1.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
-|`Gen2HeapSizeKBytes`|<span data-ttu-id="ec8d8-115">El tamaño, en kilobytes, del montón de generación de dos.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
-|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="ec8d8-116">El tamaño, en kilobytes, del montón de objetos grandes.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-116">The size, in kilobytes, of the large object heap.</span></span>|  
-|`KBytesPromotedFromGen0`|<span data-ttu-id="ec8d8-117">El tamaño, en kilobytes, de los objetos que se promueven de generación 0 a generación uno.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
-|`KBytesPromotedFromGen1`|<span data-ttu-id="ec8d8-118">El tamaño, en kilobytes, de los objetos que se promueven de generación 1 a la generación 2.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
+|`Flags`|<span data-ttu-id="9a60f-108">Indica qué valores de campo deben calcularse y devolverse.</span><span class="sxs-lookup"><span data-stu-id="9a60f-108">Indicates which field values should be calculated and returned.</span></span>|  
+|`ExplicitGCCount`|<span data-ttu-id="9a60f-109">Indica el número de recolecciones de elementos no utilizados forzadas por la solicitud externa.</span><span class="sxs-lookup"><span data-stu-id="9a60f-109">Indicates the number of garbage collections that were forced by external request.</span></span>|  
+|`GenCollectionsTaken`|<span data-ttu-id="9a60f-110">Indica el número de recolecciones de elementos no utilizados realizadas para cada generación.</span><span class="sxs-lookup"><span data-stu-id="9a60f-110">Indicates the number of garbage collections performed for each generation.</span></span>|  
+|`CommittedKBytes`|<span data-ttu-id="9a60f-111">Número total de kilobytes confirmados en todos los montones.</span><span class="sxs-lookup"><span data-stu-id="9a60f-111">The total number of kilobytes committed in all heaps.</span></span>|  
+|`ReservedKBytes`|<span data-ttu-id="9a60f-112">Número total de kilobytes reservados en todos los montones.</span><span class="sxs-lookup"><span data-stu-id="9a60f-112">The total number of kilobytes reserved in all heaps.</span></span>|  
+|`Gen0HeapSizeKBytes`|<span data-ttu-id="9a60f-113">Tamaño, en kilobytes, del montón de generación cero.</span><span class="sxs-lookup"><span data-stu-id="9a60f-113">The size, in kilobytes, of the generation-zero heap.</span></span>|  
+|`Gen1HeapSizeKBytes`|<span data-ttu-id="9a60f-114">Tamaño, en kilobytes, del montón de generación uno.</span><span class="sxs-lookup"><span data-stu-id="9a60f-114">The size, in kilobytes, of the generation-one heap.</span></span>|  
+|`Gen2HeapSizeKBytes`|<span data-ttu-id="9a60f-115">Tamaño, en kilobytes, del montón de generación 2.</span><span class="sxs-lookup"><span data-stu-id="9a60f-115">The size, in kilobytes, of the generation-two heap.</span></span>|  
+|`LargeObjectHeapSizeKBytes`|<span data-ttu-id="9a60f-116">Tamaño, en kilobytes, del montón de objetos grandes.</span><span class="sxs-lookup"><span data-stu-id="9a60f-116">The size, in kilobytes, of the large object heap.</span></span>|  
+|`KBytesPromotedFromGen0`|<span data-ttu-id="9a60f-117">Tamaño, en kilobytes, de los objetos promovidos de la generación cero a la generación uno.</span><span class="sxs-lookup"><span data-stu-id="9a60f-117">The size, in kilobytes, of the objects promoted from generation zero to generation one.</span></span>|  
+|`KBytesPromotedFromGen1`|<span data-ttu-id="9a60f-118">Tamaño, en kilobytes, de los objetos promovidos de la generación de uno a la generación dos.</span><span class="sxs-lookup"><span data-stu-id="9a60f-118">The size, in kilobytes, of the objects promoted from generation one to generation two.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="ec8d8-119">Comentarios</span><span class="sxs-lookup"><span data-stu-id="ec8d8-119">Remarks</span></span>  
- <span data-ttu-id="ec8d8-120">El [ICLRGCManager](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) método requiere el `Flags` campo de la `COR_GC_STATS` estructura debe establecerse en uno o más valores de la [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeración para especificar qué las estadísticas que se van a establecer.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9a60f-119">Comentarios</span><span class="sxs-lookup"><span data-stu-id="9a60f-119">Remarks</span></span>  
+ <span data-ttu-id="9a60f-120">El método [ICLRGCManager:: getstats (](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) requiere que `Flags` el campo de `COR_GC_STATS` la estructura se establezca en uno o más valores de la enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) para especificar qué estadísticas se van a establecer.</span><span class="sxs-lookup"><span data-stu-id="9a60f-120">The [ICLRGCManager::GetStats](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-getstats-method.md) method requires the `Flags` field of the `COR_GC_STATS` structure to be set to one or more values of the [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration to specify which statistics are to be set.</span></span>  
   
- <span data-ttu-id="ec8d8-121">En la tabla siguiente asigna las estadísticas proporcionadas por esta estructura a los dos [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) valores de enumeración, `COR_GC_COUNTS` y `COR_GC_MEMORYUSAGE`.</span><span class="sxs-lookup"><span data-stu-id="ec8d8-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
+ <span data-ttu-id="9a60f-121">En la tabla siguiente se asignan las estadísticas proporcionadas por esta estructura a los dos `COR_GC_COUNTS` valores `COR_GC_MEMORYUSAGE`de enumeración [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) , y.</span><span class="sxs-lookup"><span data-stu-id="9a60f-121">The following table maps the statistics provided by this structure to the two [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md) enumeration values, `COR_GC_COUNTS` and `COR_GC_MEMORYUSAGE`.</span></span>  
   
-|<span data-ttu-id="ec8d8-122">Especifica COR_GC_COUNTS</span><span class="sxs-lookup"><span data-stu-id="ec8d8-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="ec8d8-123">Especifica COR_GC_MEMORYUSAGE</span><span class="sxs-lookup"><span data-stu-id="ec8d8-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
+|<span data-ttu-id="9a60f-122">Especificado por COR_GC_COUNTS</span><span class="sxs-lookup"><span data-stu-id="9a60f-122">Specified by COR_GC_COUNTS</span></span>|<span data-ttu-id="9a60f-123">Especificado por COR_GC_MEMORYUSAGE</span><span class="sxs-lookup"><span data-stu-id="9a60f-123">Specified by COR_GC_MEMORYUSAGE</span></span>|  
 |----------------------------------|---------------------------------------|  
 |`ExplicitGCCount`<br /><br /> `GenCollectionsTaken`|`CommittedKBytes`<br /><br /> `ReservedKBytes`<br /><br /> `Gen0HeapSizeKBytes`<br /><br /> `Gen1HeapSizeKBytes`<br /><br /> `Gen2HeapSizeKBytes`<br /><br /> `LargeObjectHeapSizeKBytes`<br /><br /> `KBytesPromotedFromGen0`<br /><br /> `KBytesPromotedFromGen1`|  
   
- <span data-ttu-id="ec8d8-124">Un ejemplo de uso es como sigue:</span><span class="sxs-lookup"><span data-stu-id="ec8d8-124">An example of the usage is as follows:</span></span>  
+ <span data-ttu-id="9a60f-124">A continuación se muestra un ejemplo de uso:</span><span class="sxs-lookup"><span data-stu-id="9a60f-124">An example of the usage is as follows:</span></span>  
   
 ```cpp  
 COR_GC_STATS GCStats;  
@@ -77,17 +77,17 @@ GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="ec8d8-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ec8d8-125">Requirements</span></span>  
- <span data-ttu-id="ec8d8-126">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ec8d8-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9a60f-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9a60f-125">Requirements</span></span>  
+ <span data-ttu-id="9a60f-126">**Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9a60f-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ec8d8-127">**Encabezado**: GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="ec8d8-127">**Header:** GCHost.idl</span></span>  
+ <span data-ttu-id="9a60f-127">**Encabezado**: GCHost.idl</span><span class="sxs-lookup"><span data-stu-id="9a60f-127">**Header:** GCHost.idl</span></span>  
   
- <span data-ttu-id="ec8d8-128">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ec8d8-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9a60f-128">**Biblioteca** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="9a60f-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ec8d8-129">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec8d8-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="9a60f-129">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9a60f-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec8d8-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="ec8d8-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a60f-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="9a60f-130">See also</span></span>
 
-- [<span data-ttu-id="ec8d8-131">Estructuras de hospedaje</span><span class="sxs-lookup"><span data-stu-id="ec8d8-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [<span data-ttu-id="ec8d8-132">Administración automática de la memoria</span><span class="sxs-lookup"><span data-stu-id="ec8d8-132">Automatic Memory Management</span></span>](../../../../docs/standard/automatic-memory-management.md)
-- [<span data-ttu-id="ec8d8-133">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="ec8d8-133">Garbage Collection</span></span>](../../../../docs/standard/garbage-collection/index.md)
+- [<span data-ttu-id="9a60f-131">Estructuras de hospedaje</span><span class="sxs-lookup"><span data-stu-id="9a60f-131">Hosting Structures</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [<span data-ttu-id="9a60f-132">Administración automática de la memoria</span><span class="sxs-lookup"><span data-stu-id="9a60f-132">Automatic Memory Management</span></span>](../../../standard/automatic-memory-management.md)
+- [<span data-ttu-id="9a60f-133">Recolección de elementos no utilizados</span><span class="sxs-lookup"><span data-stu-id="9a60f-133">Garbage Collection</span></span>](../../../standard/garbage-collection/index.md)

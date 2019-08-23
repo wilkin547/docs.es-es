@@ -17,23 +17,23 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20c7d6a1fd9c1f75f43e42ece59b7fbabd150564
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a886106e5da49e7124dac5c8ea7416859aa441da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67765497"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929855"
 ---
-# <a name="iclrruntimeinfogetversionstring-method"></a><span data-ttu-id="d3ca4-102">ICLRRuntimeInfo::GetVersionString (Método)</span><span class="sxs-lookup"><span data-stu-id="d3ca4-102">ICLRRuntimeInfo::GetVersionString Method</span></span>
-<span data-ttu-id="d3ca4-103">Obtiene la información de versión de common language runtime (CLR) asociado a un determinado [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaz.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-103">Gets common language runtime (CLR) version information associated with a given [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
+# <a name="iclrruntimeinfogetversionstring-method"></a><span data-ttu-id="c121a-102">ICLRRuntimeInfo::GetVersionString (Método)</span><span class="sxs-lookup"><span data-stu-id="c121a-102">ICLRRuntimeInfo::GetVersionString Method</span></span>
+<span data-ttu-id="c121a-103">Obtiene la información de versión de Common Language Runtime (CLR) asociada a una interfaz [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) especificada.</span><span class="sxs-lookup"><span data-stu-id="c121a-103">Gets common language runtime (CLR) version information associated with a given [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface.</span></span>  
   
- <span data-ttu-id="d3ca4-104">Este método reemplaza las siguientes funciones:</span><span class="sxs-lookup"><span data-stu-id="d3ca4-104">This method supersedes the following functions:</span></span>  
+ <span data-ttu-id="c121a-104">Este método sustituye a las siguientes funciones:</span><span class="sxs-lookup"><span data-stu-id="c121a-104">This method supersedes the following functions:</span></span>  
   
-- [<span data-ttu-id="d3ca4-105">GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="d3ca4-105">GetRequestedRuntimeInfo</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
+- [<span data-ttu-id="c121a-105">GetRequestedRuntimeInfo</span><span class="sxs-lookup"><span data-stu-id="c121a-105">GetRequestedRuntimeInfo</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)  
   
-- [<span data-ttu-id="d3ca4-106">GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="d3ca4-106">GetRequestedRuntimeVersion</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
+- [<span data-ttu-id="c121a-106">GetRequestedRuntimeVersion</span><span class="sxs-lookup"><span data-stu-id="c121a-106">GetRequestedRuntimeVersion</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)  
   
-## <a name="syntax"></a><span data-ttu-id="d3ca4-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="d3ca4-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c121a-107">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="c121a-107">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersionString(  
@@ -41,38 +41,38 @@ HRESULT GetVersionString(
     [in, out]  DWORD *pcchBuffer);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d3ca4-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="d3ca4-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c121a-108">Parámetros</span><span class="sxs-lookup"><span data-stu-id="c121a-108">Parameters</span></span>  
  `pwzBuffer`  
- <span data-ttu-id="d3ca4-109">[out] La versión de compilación de .NET Framework en el formato "v*A*. *B*[. *X*] ".</span><span class="sxs-lookup"><span data-stu-id="d3ca4-109">[out] The .NET Framework compilation version in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="d3ca4-110">*Un*, *B*, y *X* son números decimales que corresponden a la versión principal, la versión secundaria y el número de compilación.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-110">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="d3ca4-111">*X* es opcional.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-111">*X* is optional.</span></span> <span data-ttu-id="d3ca4-112">Si *X* es no está presente, no hay ningún punto final.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-112">If *X* is not present, there is no trailing period.</span></span>  
+ <span data-ttu-id="c121a-109">enuncia La versión de compilación de .NET Framework con el formato "v*A*. *B* [. *X*] ".</span><span class="sxs-lookup"><span data-stu-id="c121a-109">[out] The .NET Framework compilation version in the format "v*A*.*B*[.*X*]".</span></span> <span data-ttu-id="c121a-110">*A*, *B*y *X* son números decimales que corresponden a la versión principal, la versión secundaria y el número de compilación.</span><span class="sxs-lookup"><span data-stu-id="c121a-110">*A*, *B*, and *X* are decimal numbers that correspond to the major version, the minor version, and the build number.</span></span> <span data-ttu-id="c121a-111">*X* es opcional.</span><span class="sxs-lookup"><span data-stu-id="c121a-111">*X* is optional.</span></span> <span data-ttu-id="c121a-112">Si *X* no está presente, no hay ningún punto final.</span><span class="sxs-lookup"><span data-stu-id="c121a-112">If *X* is not present, there is no trailing period.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="d3ca4-113">Este parámetro debe coincidir con el nombre del directorio para la versión de .NET Framework, tal y como aparece bajo C:\Windows\Microsoft.NET\Framework.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-113">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
+> <span data-ttu-id="c121a-113">Este parámetro debe coincidir con el nombre de directorio de la versión de .NET Framework, tal y como aparece en C:\Windows\Microsoft.NET\Framework.</span><span class="sxs-lookup"><span data-stu-id="c121a-113">This parameter must match the directory name for the .NET Framework version, as it appears under C:\Windows\Microsoft.NET\Framework.</span></span>  
   
- <span data-ttu-id="d3ca4-114">Los valores de ejemplo son "v1.0.3705", "v1.1.4322", "v2.0.50727" y "v4.0. *x*", donde *x* depende del número de compilación instalado.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-114">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*x*", where *x* depends on the build number installed.</span></span> <span data-ttu-id="d3ca4-115">Tenga en cuenta que el prefijo "v" es obligatorio.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-115">Note that the "v" prefix is mandatory.</span></span>  
+ <span data-ttu-id="c121a-114">Los valores de ejemplo son "v 1.0.3705", "v 1.1.4322", "v 2.0.50727" y "v 4.0. *x*", donde *x* depende del número de compilación instalado.</span><span class="sxs-lookup"><span data-stu-id="c121a-114">Example values are "v1.0.3705", "v1.1.4322", "v2.0.50727", and "v4.0.*x*", where *x* depends on the build number installed.</span></span> <span data-ttu-id="c121a-115">Tenga en cuenta que el prefijo "v" es obligatorio.</span><span class="sxs-lookup"><span data-stu-id="c121a-115">Note that the "v" prefix is mandatory.</span></span>  
   
  `pchBuffer`  
- <span data-ttu-id="d3ca4-116">[in, out] Especifica el tamaño de `pwzBuffer` para evitar saturaciones de búfer.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-116">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="d3ca4-117">Si `pwzBuffer` es `null`, `pchBuffer` devuelve el tamaño necesario de `pwzBuffer` para permitir la preasignación.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-117">If `pwzBuffer` is `null`, `pchBuffer` returns the required size of `pwzBuffer` to allow preallocation.</span></span>  
+ <span data-ttu-id="c121a-116">[in, out] Especifica el tamaño de `pwzBuffer` para evitar las saturaciones del búfer.</span><span class="sxs-lookup"><span data-stu-id="c121a-116">[in, out] Specifies the size of `pwzBuffer` to avoid buffer overruns.</span></span> <span data-ttu-id="c121a-117">Si `pwzBuffer` es `null` `pwzBuffer` , devuelve`pchBuffer` el tamaño necesario de para permitir la asignación previa.</span><span class="sxs-lookup"><span data-stu-id="c121a-117">If `pwzBuffer` is `null`, `pchBuffer` returns the required size of `pwzBuffer` to allow preallocation.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d3ca4-118">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="d3ca4-118">Return Value</span></span>  
- <span data-ttu-id="d3ca4-119">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-119">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c121a-118">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="c121a-118">Return Value</span></span>  
+ <span data-ttu-id="c121a-119">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="c121a-119">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="d3ca4-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d3ca4-120">HRESULT</span></span>|<span data-ttu-id="d3ca4-121">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="d3ca4-121">Description</span></span>|  
+|<span data-ttu-id="c121a-120">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c121a-120">HRESULT</span></span>|<span data-ttu-id="c121a-121">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="c121a-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="d3ca4-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="d3ca4-122">S_OK</span></span>|<span data-ttu-id="d3ca4-123">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-123">The method completed successfully.</span></span>|  
-|<span data-ttu-id="d3ca4-124">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="d3ca4-124">E_POINTER</span></span>|<span data-ttu-id="d3ca4-125">`pwzBuffer` o `pchBuffer` es null.</span><span class="sxs-lookup"><span data-stu-id="d3ca4-125">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
+|<span data-ttu-id="c121a-122">S_OK</span><span class="sxs-lookup"><span data-stu-id="c121a-122">S_OK</span></span>|<span data-ttu-id="c121a-123">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="c121a-123">The method completed successfully.</span></span>|  
+|<span data-ttu-id="c121a-124">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="c121a-124">E_POINTER</span></span>|<span data-ttu-id="c121a-125">`pwzBuffer` o `pchBuffer` es null.</span><span class="sxs-lookup"><span data-stu-id="c121a-125">`pwzBuffer` or `pchBuffer` is null.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="d3ca4-126">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d3ca4-126">Requirements</span></span>  
- <span data-ttu-id="d3ca4-127">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d3ca4-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c121a-126">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c121a-126">Requirements</span></span>  
+ <span data-ttu-id="c121a-127">**Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c121a-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d3ca4-128">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="d3ca4-128">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="c121a-128">**Encabezado**: Metahost. h</span><span class="sxs-lookup"><span data-stu-id="c121a-128">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="d3ca4-129">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d3ca4-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c121a-129">**Biblioteca** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="c121a-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="d3ca4-130">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d3ca4-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c121a-130">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c121a-130">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d3ca4-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="d3ca4-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c121a-131">Vea también</span><span class="sxs-lookup"><span data-stu-id="c121a-131">See also</span></span>
 
-- [<span data-ttu-id="d3ca4-132">ICLRRuntimeInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="d3ca4-132">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [<span data-ttu-id="d3ca4-133">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="d3ca4-133">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="d3ca4-134">Interfaces de hospedaje de CLR agregadas en .NET Framework 4 y 4.5</span><span class="sxs-lookup"><span data-stu-id="d3ca4-134">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
-- [<span data-ttu-id="d3ca4-135">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="d3ca4-135">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="c121a-132">ICLRRuntimeInfo (interfaz)</span><span class="sxs-lookup"><span data-stu-id="c121a-132">ICLRRuntimeInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
+- [<span data-ttu-id="c121a-133">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="c121a-133">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="c121a-134">Interfaces de hospedaje de CLR agregadas en .NET Framework 4 y 4.5</span><span class="sxs-lookup"><span data-stu-id="c121a-134">CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5</span></span>](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [<span data-ttu-id="c121a-135">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="c121a-135">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
