@@ -2,12 +2,12 @@
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: e02ed6ef79fcf52bbe9c33bd9b36a14113e19d1d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b6b74200c807e6523ed3f7250945040bd12658d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673451"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919793"
 ---
 # <a name="binarymessageencoding"></a>\<binaryMessageEncoding>
 Define un codificador del mensaje binario que codifica los mensajes de la Windows Communication Foundation (WCF) en binario en la conexión.  
@@ -32,7 +32,7 @@ Define un codificador del mensaje binario que codifica los mensajes de la Window
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |maxReadPoolSize|Entero que define cuántos mensajes pueden leerse simultáneamente sin asignar nuevos lectores. Los tamaños de grupo más grandes hacen que el sistema sea más tolerante a picos de actividad a costa de un espacio de trabajo mayor. El valor predeterminado es 64.|  
 |maxSessionSize|Un entero positivo que establece el tamaño, en bytes, del búfer utilizado para codificar. Un búfer mayor aumenta la velocidad de codificación a costa del tamaño del espacio de trabajo. El valor predeterminado es 2048.|  
@@ -41,18 +41,18 @@ Define un codificador del mensaje binario que codifica los mensajes de la Window
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define las restricciones en la complejidad de los mensajes SOAP que pueden ser procesados por los puntos de conexión configurados con este enlace. Este elemento es del tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](../../../misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
- La codificación es el proceso de transformación de un mensaje en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Texto, binario y mecanismo de optimización de transmisión de mensajes (MTOM).  
+ La codificación es el proceso de transformación de un mensaje en una secuencia de bytes. La descodificación es el proceso inverso. Windows Communication Foundation (WCF) incluye tres tipos de codificación para los mensajes SOAP: Mecanismo de optimización de transmisión de mensajes, binarios y de texto (MTOM).  
   
  El elemento `binaryMessageEncoding` especifica el formato binario de .NET para XML y tiene las opciones para especificar la codificación de caracteres, así como la versión de SOAP y WS-Addressing que se va a utilizar. El codificador del mensaje binario codifica los mensajes de Windows Communication Foundation (WCF) en binario en la conexión. Aunque esta codificación realiza transmisiones muy rápidas de mensajes, la interoperabilidad basada en estándares WS-* se pierde.  
   
@@ -70,9 +70,9 @@ Define un codificador del mensaje binario que codifica los mensajes de la Window
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
-- [Codificación de mensajes](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [Elección de un codificador de mensajes](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Codificación de mensajes](message-encoding.md)
+- [Elección de un codificador de mensajes](../../../wcf/feature-details/choosing-a-message-encoder.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

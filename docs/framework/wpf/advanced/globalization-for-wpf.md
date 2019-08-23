@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: bcd0a11aef2372cc6e5830892eb3b71fa841ba2f
-ms.sourcegitcommit: 43761fcee10aeefcf851ea81cea3f3c691420856
+ms.openlocfilehash: 8b33ac800144577ba5f8610afdc50a1ba56eec0f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69545252"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937705"
 ---
 # <a name="globalization-for-wpf"></a>Globalización de WPF
 En este tema se presentan los problemas que debe tener en cuenta [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] al escribir aplicaciones para el mercado mundial. Los elementos de programación de globalización se [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] definen `System.Globalization`en en.
@@ -152,7 +152,7 @@ En el ejemplo siguiente se muestra una referencia de carácter hexadecimal. Obse
  Desde el punto de vista de los recursos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , un archivo diseñado para describir un dependiente [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] del lenguaje es un elemento de recurso y, por tanto, su formato de distribución final debe ser localizable para admitir idiomas internacionales. Dado [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que no puede controlar [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] eventos, muchas aplicaciones contienen bloques de código para hacerlo. Para obtener más información, vea [información general sobre XAML (WPF)](xaml-overview-wpf.md). El código se quita y se compila en distintos archivos binarios cuando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] un archivo se acorta en la forma BAML de XAML. Los archivos, imágenes y otros tipos de objetos de recursos administrados con formato BAML de XAML se insertan en el ensamblado de recursos satélite, que se puede localizar a otros idiomas, o en el ensamblado principal, cuando no se requiere la localización.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones admiten [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]todos los recursos de CLR, como tablas de cadenas, imágenes, etc.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]las aplicaciones admiten [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]todos los recursos de CLR, como tablas de cadenas, imágenes, etc.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Compilar aplicaciones localizables

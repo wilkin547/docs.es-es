@@ -3,15 +3,15 @@ title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 328d074f9edc5ddf871308a7e3d694bf94adea78
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3aba5618855f7225dc8a427516eaa72b45f6e8b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793827"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69942410"
 ---
 # <a name="servicecertificate"></a>\<serviceCertificate>
-Configura el certificado X.509 que se usa para cifrar y descifrar los tokens.  
+Configura el certificado X. 509 que se usa para cifrar y descifrar los tokens.  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
@@ -32,22 +32,22 @@ Configura el certificado X.509 que se usa para cifrar y descifrar los tokens.
  En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
- Ninguna  
+ None  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<certificateReference>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|Especifica la configuración que se usa para buscar y validar un certificado X.509 en un almacén de certificados.|  
+|[\<certificateReference>](certificatereference.md)|Especifica los valores que se usan para buscar y validar un certificado X. 509 en un almacén de certificados.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Contiene la configuración que establece el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y la <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|Contiene la configuración que configura el <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) y el <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente XML muestra el uso de la \<serviceCertificate > elemento. El XML procede de la `CustomToken` ejemplo.  
+ El siguiente XML muestra el uso del elemento \<> de serviceCertificate. El XML se toma `CustomToken` del ejemplo.  
   
 ```xml  
 <serviceCertificate>  

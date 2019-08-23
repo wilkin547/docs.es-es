@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8e8663bf9d119007eb7d3771d16d55b1aa54856
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2268d07fb643621c944ef9bf561156b5332aaafc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663607"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920716"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources >, elemento
 Especifica si se debe conceder plena confianza a los ensamblados cargados desde orígenes remotos en .NET Framework 4 y versiones posteriores.
   
 > [!NOTE]
->  Si se le dirigió a este artículo debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un [error de compilación, consulte Cómo: Usar un ensamblado desde la web en Visual](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))Studio.  
+> Si se le dirigió a este artículo debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un [error de compilación, consulte Cómo: Usar un ensamblado desde la web en Visual](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))Studio.  
   
  \<configuration>  
 \<> en tiempo de ejecución  
@@ -118,7 +118,7 @@ En el ejemplo siguiente se muestra cómo conceder plena confianza a los ensambla
 ## <a name="see-also"></a>Vea también
 
 - [Usos más implícitos de la Directiva CAS: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
-- [Procedimientos: Ejecutar código de confianza parcial en un espacio aislado](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [Cómo: Ejecutar código de confianza parcial en un espacio aislado](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

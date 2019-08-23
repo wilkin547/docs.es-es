@@ -2,12 +2,12 @@
 title: Agrupación de conexiones de OLE DB, ODBC y Oracle
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7552f4a95af51774071f0a4017637570d648dd86
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772039"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929253"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Agrupación de conexiones de OLE DB, ODBC y Oracle
 La agrupación de conexiones puede mejorar de forma considerable el rendimiento y la escalabilidad de la aplicación. En esta sección se describe la agrupación de conexiones en los proveedores de datos .NET Framework para OLE DB, ODBC y Oracle.  
@@ -21,12 +21,12 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Se recomienda cerrar siempre o eliminar una conexión cuando termine de utilizarla, para que la conexión pueda regresar al grupo. Es posible que las conexiones que no se cierran explícitamente no puedan regresar al grupo. Por ejemplo, una conexión que se ha salido del ámbito pero que no se ha cerrado explícitamente solo se devolverá al grupo de conexión si se ha alcanzado el tamaño máximo del grupo y la conexión aún es válida.  
   
- Para obtener más información acerca de la sesión de OLE DB o agrupación de recursos, así como cómo deshabilitar la agrupación invalidando los valores predeterminados de servicio de proveedor OLE DB, consulte el [Guía del programador de OLE DB](https://go.microsoft.com/fwlink/?linkid=45232).  
+ Para obtener más información sobre OLE DB la agrupación de sesiones o de recursos, y cómo deshabilitar la agrupación invalidando los valores predeterminados del servicio de proveedor de OLE DB, consulte la [Guía del programador de OLE DB](https://go.microsoft.com/fwlink/?linkid=45232).  
   
 ## <a name="connection-pooling-for-odbc"></a>Agrupación de conexiones para ODBC  
  La agrupación de conexiones para el proveedor de datos .NET Framework para ODBC se administra a través del Administrador de controladores ODBC que se utiliza en la conexión, y que no está influido por dicho proveedor.  
   
- Para habilitar o deshabilitar la agrupación de conexiones, abra **Administrador de orígenes de datos ODBC** en la carpeta Herramientas administrativas del Panel de Control. El **agrupación de conexiones** pestaña le permite especificar los parámetros para cada controlador ODBC instalado de agrupación de conexiones. Tenga en cuenta que los cambios en la agrupación de conexiones de un controlador ODBC específico afectarán a todas las aplicaciones que utilicen dicho controlador.  
+ Para habilitar o deshabilitar la agrupación de conexiones, abra el **Administrador de orígenes de datos ODBC** en la carpeta Herramientas administrativas del panel de control. La pestaña agrupación de **conexiones** permite especificar parámetros de agrupación de conexiones para cada controlador ODBC instalado. Tenga en cuenta que los cambios en la agrupación de conexiones de un controlador ODBC específico afectarán a todas las aplicaciones que utilicen dicho controlador.  
   
 ## <a name="connection-pooling-for-oracleclient"></a>Agrupación de conexiones para OracleClient  
  El proveedor de datos .NET Framework para Oracle ofrece agrupación automática de conexiones para la aplicación cliente de ADO.NET. También puede suministrar varios modificadores de cadena de conexión para controlar el comportamiento de agrupación de conexiones (vea "Control de la agrupación de conexiones con palabras clave de cadena de conexión", más adelante en este tema).  
@@ -48,10 +48,10 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Si existe una conexión a un servidor que ha desaparecido, se puede extraer del grupo si el concentrador de conexión no ha detectado la conexión rota y la ha marcado como no válida. Cuando esto se produce, se genera una excepción. No obstante, aun así deberá cerrar la conexión para liberarla de nuevo en el grupo.  
   
- No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte [recolección](../../../../docs/standard/garbage-collection/index.md).  
+ No llame a `Close` o a `Dispose` en un objeto `Connection`, un objeto `DataReader` o cualquier otro objeto administrado en el método `Finalize` de la clase. En un finalizador, libere solo los recursos no administrados que pertenezcan directamente a su clase. Si la clase no dispone de recursos no administrados, no incluya un método `Finalize` en la definición de clase. Para obtener más información, consulte recolección de [elementos no utilizados](../../../standard/garbage-collection/index.md).  
   
 ### <a name="transaction-support"></a>Compatibilidad con transacciones  
- Las conexiones se extraen del grupo y se asignan en función del contexto de transacción. Es necesario que el subproceso solicitante y la conexión asignada coincidan. Por lo tanto, cada grupo de conexiones se divide realmente en conexiones ningún contexto de transacción asociada a ellos y en *N* subdivisiones que contienen conexiones con un contexto de transacción particular.  
+ Las conexiones se extraen del grupo y se asignan en función del contexto de transacción. Es necesario que el subproceso solicitante y la conexión asignada coincidan. Por lo tanto, cada grupo de conexiones se subdivide realmente en conexiones que no tienen asociado ningún contexto de transacción y en *N* subdivisiones, cada una de las cuales contiene conexiones con un contexto de transacción determinado.  
   
  Cuando se cierra una conexión, se libera de nuevo en el grupo y en la subdivisión adecuada en función de su contexto de transacción. Por lo tanto, puede cerrar la conexión sin generar un error, incluso aunque aún haya pendiente una transacción distribuida. Esto le permite confirmar o anular la transacción distribuida más adelante.  
   
@@ -60,7 +60,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  En la siguiente tabla se describen los valores <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> que puede utilizar para ajustar el comportamiento de agrupación de conexiones.  
   
-|Name|Default|Descripción|  
+|NOMBRE|Valor predeterminado|DESCRIPCIÓN|  
 |----------|-------------|-----------------|  
 |`Connection Lifetime`|0|Cuando una conexión se devuelve al grupo, su hora de creación se compara con la hora actual y, si ese marco temporal (en segundos) supera el valor especificado por `Connection Lifetime`, la conexión se destruye. Esto resulta de utilidad en configuraciones agrupadas para forzar el equilibrio de carga entre un servidor en ejecución y uno que acaba de conectarse.<br /><br /> Un valor de cero (0) hará que las conexiones agrupadas tengan el tiempo de espera máximo.|  
 |`Enlist`|'true'|Cuando es `true`, el concentrador inscribe automáticamente la conexión en el contexto de transacción actual del subproceso de creación, si existe un contexto de transacción.|  

@@ -2,12 +2,12 @@
 title: <endpointDiscovery>
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 125baba917a49135aaa426df2cfa1a4dbe8ac1e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cb64c54067ba695f67d86c0026db77ebbe7d5ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700915"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919048"
 ---
 # <a name="endpointdiscovery"></a>\<endpointDiscovery>
 Especifica las distintas configuraciones de detección para un punto de conexión, como su detectabilidad, ámbitos y cualquier extensión personalizada a sus metadatos.  
@@ -40,29 +40,29 @@ Especifica las distintas configuraciones de detección para un punto de conexió
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|enabled|Un valor booleano que especifica si la detectabilidad está habilitada en este punto de conexión. De manera predeterminada, es `false`.|  
+|enabled|Valor booleano que especifica si la detectabilidad está habilitada en este extremo. El valor predeterminado es `false`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<scopes>](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Colección de URI de ámbito para el extremo. Se puede asociar más de un URI de ámbito a un único punto de conexión.|  
-|[\<Extensiones >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [de \<endpointDiscovery >]|Colección de elementos XML que le permite especificar metadatos personalizados que se van a publicar para un extremo.|  
-|\<types>|Una colección de interfaces para buscar.|  
+|[\<scopes>](scopes.md)|Colección de URI de ámbito para el extremo. Se puede asociar más de un URI de ámbito a un único punto de conexión.|  
+|Extensiones > [de \<endpointDiscovery >] [ \<](extensions.md)|Colección de elementos XML que le permite especificar metadatos personalizados que se van a publicar para un extremo.|  
+|\<tipos >|Una colección de interfaces para buscar.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
+|[\<comportamiento >](behavior-of-endpointbehaviors.md)|Especifica un elemento de comportamiento.|  
 |||  
   
 ## <a name="remarks"></a>Comentarios  
- Cuando se agrega a la configuración de comportamiento del punto de conexión y con el atributo `enabled` establecido en `true`, este elemento de configuración habilita su detectabilidad. Además, puede usar el [ \<ámbitos >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)elemento secundario que se va a especificar los identificadores URI que se pueden usar para filtrar los puntos de conexión de servicio durante la consulta, de ámbito personalizada, así como la [ \<extensiones >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) elemento secundario que se va a especificar metadatos personalizados que se deberían publicar junto con los metadatos detectables estándar (EPR, ContractTypeName, BindingName, ámbito y ListenURI).  
+ Cuando se agrega a la configuración de comportamiento del punto de conexión y con el atributo `enabled` establecido en `true`, este elemento de configuración habilita su detectabilidad. Además, puede utilizar los [ \<ámbitos >](scopes.md)elemento secundario para especificar los URI de ámbito personalizado que se pueden usar para filtrar los extremos de servicio durante la consulta, así como las [ \<extensiones >](extensions.md) elemento secundario para especificar el personalizado. metadatos que se deben publicar junto con los metadatos detectables estándar (EPR, ContractTypeName, BindingName, Scope y ListenURI).  
   
- Este elemento de configuración es dependiente de la [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) elemento que proporciona el control de nivel de servicio de detectabilidad. Esto significa que la configuración de este elemento se omite si [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) no está presente en la configuración.  
+ Este elemento de configuración depende [ \<del elemento > serviceDiscovery](servicediscovery.md) que proporciona el control de nivel de servicio de detectabilidad. Esto significa que la configuración de este elemento se omite si [ \<serviceDiscovery >](servicediscovery.md) no está presente en la configuración.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de configuración especifica los ámbitos del filtrado y metadatos de la extensión que se van a publicar para un punto de conexión.  

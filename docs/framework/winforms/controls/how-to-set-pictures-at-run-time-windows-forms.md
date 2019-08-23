@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer imágenes en tiempo de ejecución (formularios Windows Forms)
+title: Procedimiento Establecer imágenes en tiempo de ejecución (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 8275961a8f11332a04f89561fac779f4cdf9f8d8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 99d78a275c8ad8f55d9b0832a794545b65da7e20
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609410"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917526"
 ---
-# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedimiento Establecer imágenes en tiempo de ejecución (formularios Windows Forms)
-Puede establecer mediante programación la imagen que muestra un formulario Windows Forms <xref:System.Windows.Forms.PictureBox> control.  
+# <a name="how-to-set-pictures-at-run-time-windows-forms"></a>Procedimiento Establecer imágenes en tiempo de ejecución (Windows Forms)
+Puede establecer mediante programación la imagen mostrada por un control <xref:System.Windows.Forms.PictureBox> Windows Forms.  
   
 ### <a name="to-set-a-picture-programmatically"></a>Para establecer una imagen mediante programación  
   
-- Establecer el <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad utilizando el <xref:System.Drawing.Image.FromFile%2A> método de la <xref:System.Drawing.Image> clase.  
+- Establezca la <xref:System.Windows.Forms.PictureBox.Image%2A> propiedad mediante el <xref:System.Drawing.Image.FromFile%2A> método de la <xref:System.Drawing.Image> clase.  
   
-     En el ejemplo siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta Mis documentos. Hecho esto, ya que puede asumir que la mayoría de los equipos que ejecutan el sistema operativo de Windows tendrán este directorio. Esto permite también a los usuarios con niveles de acceso mínimos ejecutar la aplicación de forma segura. El ejemplo siguiente se da por supuesto un formulario con un <xref:System.Windows.Forms.PictureBox> control ya se ha agregado.  
+     En el ejemplo siguiente, la ruta de acceso establecida para la ubicación de la imagen es la carpeta Mis documentos. Esto se hace porque puede suponer que la mayoría de los equipos que ejecutan el sistema operativo Windows incluirán este directorio. Esto permite también a los usuarios con niveles de acceso mínimos ejecutar la aplicación de forma segura. En el ejemplo siguiente se supone que ya <xref:System.Windows.Forms.PictureBox> se ha agregado un formulario con un control.  
   
     ```vb  
     Private Sub LoadNewPict()  
@@ -67,7 +67,7 @@ Puede establecer mediante programación la imagen que muestra un formulario Wind
   
 ### <a name="to-clear-a-graphic"></a>Para borrar un gráfico  
   
-- En primer lugar, liberar la memoria utilizada por la imagen y, a continuación, desactive el gráfico. Colección de elementos no utilizados liberará la memoria más adelante si la administración de memoria se convierte en un problema.  
+- En primer lugar, libere la memoria que está usando la imagen y, a continuación, borre el gráfico. La recolección de elementos no utilizados liberará la memoria más adelante si la administración de memoria se convierte en un problema.  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  
@@ -93,15 +93,15 @@ Puede establecer mediante programación la imagen que muestra un formulario Wind
     ```  
   
     > [!NOTE]
-    >  Para obtener más información sobre por qué debería usar el <xref:System.Drawing.Image.Dispose%2A> método de este modo, consulte [limpiar recursos no administrados](../../../standard/garbage-collection/unmanaged.md).  
+    > Para obtener más información sobre por qué se debe <xref:System.Drawing.Image.Dispose%2A> usar el método de esta manera, vea [limpiar recursos no administrados](../../../standard/garbage-collection/unmanaged.md).  
   
-     Este código borrará la imagen incluso si se ha cargado un gráfico en el control en tiempo de diseño.  
+     Este código borrará la imagen incluso si un gráfico se cargó en el control en tiempo de diseño.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [Información general del control PictureBox](picturebox-control-overview-windows-forms.md)
-- [Cómo: Cargar una imagen mediante el diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [Cómo: Modificar el tamaño o la ubicación de una imagen en tiempo de ejecución](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [Procedimientos: Cargar una imagen mediante el diseñador](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [Procedimientos: Modificar el tamaño o la posición de una imagen en tiempo de ejecución](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [PictureBox (control)](picturebox-control-windows-forms.md)

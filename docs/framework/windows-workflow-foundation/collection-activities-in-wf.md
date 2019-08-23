@@ -2,18 +2,18 @@
 title: Actividades de colección en WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b14d6f8bdebd349467004a8fa950927f848d0f21
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945982"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935459"
 ---
 # <a name="collection-activities-in-wf"></a>Actividades de colección en WF
-Las actividades de colección se usan para trabajar con objetos de colección en un flujo de trabajo. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene actividades proporcionadas por el sistema para agregar y quitar elementos de una colección, probar la existencia de un elemento en una colección y borrar una colección. `ExistsInCollection` y `RemoveFromCollection` tiene un <xref:System.Activities.OutArgument%601> de tipo <xref:System.Boolean>, lo que indica el resultado.  
+Las actividades de colección se usan para trabajar con objetos de colección en un flujo de trabajo. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] tiene actividades proporcionadas por el sistema para agregar y quitar elementos de una colección, probar la existencia de un elemento en una colección y borrar una colección. `ExistsInCollection`y `RemoveFromCollection` tienen un <xref:System.Activities.OutArgument%601> de tipo <xref:System.Boolean>, que indica el resultado.  
   
 > [!IMPORTANT]
->  Si se ejecuta una actividad de colección antes de establecer el objeto de colección subyacente, se inicia una excepción <xref:System.InvalidOperationException> y se produce un error en la actividad.  
+> Si se ejecuta una actividad de colección antes de establecer el objeto de colección subyacente, se inicia una excepción <xref:System.InvalidOperationException> y se produce un error en la actividad.  
   
 ## <a name="collection-activities"></a>Actividades de colección  
   

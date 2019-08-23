@@ -2,12 +2,12 @@
 title: <add> de <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 483ede53df13c896b88171910031dbe9793d66dc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701442"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920031"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<Agregar > de \<transportConfigurationType >
 Este elemento es una par clave-valor, que identifica el tipo de un transporte determinado.  
@@ -33,19 +33,19 @@ Este elemento es una par clave-valor, que identifica el tipo de un transporte de
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |name|Atributo de cadena necesario.<br /><br /> Contiene una clave definida por el usuario que identifica de forma única el tipo de transporte.|  
 |transportConfigurationType|Una cadena que contiene el tipo que implementa el transporte concreto.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguna  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|Una colección de tipos que implementan el transporte concreto.|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|Una colección de tipos que implementan el transporte concreto.|  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -63,4 +63,4 @@ Este elemento es una par clave-valor, que identifica el tipo de un transporte de
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [Hospedar aplicaciones de WPF](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [Hospedar aplicaciones de WPF](../../../wcf/feature-details/hosting.md)

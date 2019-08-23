@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: 8b47c43e897004a6c7eb3d2f8b2a2b9bb625e158
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 9fe53ed4d677f5604911c02d0426ed1b567d51e1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68400834"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917319"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Clases XAML y personalizadas para WPF
 XAML tal como se implementa en marcos de Common Language Runtime (CLR) admite la capacidad de definir una clase o estructura personalizada en cualquier lenguaje de Common Language Runtime (CLR) y, a continuación, tener acceso a esa clase mediante el marcado XAML. Puede usar una mezcla de tipos definidos por [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] y sus tipos personalizados dentro del mismo archivo de marcado, normalmente asignando los tipos personalizados a un prefijo de espacio de nombres de XAML. En este tema se describen los requisitos que debe satisfacer una clase personalizada para que se pueda usar como elemento XAML.  
@@ -69,7 +69,7 @@ XAML tal como se implementa en marcos de Common Language Runtime (CLR) admite la
  Para que se pueda usar como un evento CLR, el evento se debe exponer como un evento público en una clase que admita un constructor sin parámetros o en una clase abstracta en la que se pueda tener acceso al evento en las clases derivadas. Para que se pueda usar de forma cómoda como un evento enrutado, el evento CLR debe `add` implementar `remove` métodos y explícitos, que agregan y quitan Controladores para la firma de eventos CLR y reenvían <xref:System.Windows.UIElement.AddHandler%2A> esos controladores a y <xref:System.Windows.UIElement.RemoveHandler%2A> modalidades. Estos métodos agregan o quitan controladores del almacén del controlador de eventos enrutados en la instancia a la que está asociado el evento.  
   
 > [!NOTE]
->  Es posible registrar controladores directamente para eventos enrutados mediante <xref:System.Windows.UIElement.AddHandler%2A>y para no definir deliberadamente un evento CLR que exponga el evento enrutado. Esto no suele ser recomendable porque el evento no habilitará la sintaxis de atributo de XAML para asociar controladores, y la clase resultante ofrecerá una vista menos transparente XAML de las capacidades de ese tipo.  
+> Es posible registrar controladores directamente para eventos enrutados mediante <xref:System.Windows.UIElement.AddHandler%2A>y para no definir deliberadamente un evento CLR que exponga el evento enrutado. Esto no suele ser recomendable porque el evento no habilitará la sintaxis de atributo de XAML para asociar controladores, y la clase resultante ofrecerá una vista menos transparente XAML de las capacidades de ese tipo.  
   
 <a name="Collection_Properties"></a>   
 ## <a name="writing-collection-properties"></a>Escribir propiedades de colección  
@@ -92,7 +92,7 @@ XAML tal como se implementa en marcos de Common Language Runtime (CLR) admite la
  Cada uno de estos tipos de CLR tiene un método de `Add`, usado por el procesador XAML para agregar elementos a la colección subyacente al crear el gráfico de objetos.  
   
 > [!NOTE]
->  El procesador `List` XAML `Dictionary` no admite<xref:System.Collections.Generic.IList%601> las <xref:System.Collections.Generic.IDictionary%602>interfaces y genéricas (y) para la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] detección de colecciones. Sin embargo, puede usar la <xref:System.Collections.Generic.List%601> clase como una clase base, porque <xref:System.Collections.IList> implementa directamente, o <xref:System.Collections.Generic.Dictionary%602> como <xref:System.Collections.IDictionary> una clase base, porque implementa directamente.  
+> El procesador `List` XAML `Dictionary` no admite<xref:System.Collections.Generic.IList%601> las <xref:System.Collections.Generic.IDictionary%602>interfaces y genéricas (y) para la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] detección de colecciones. Sin embargo, puede usar la <xref:System.Collections.Generic.List%601> clase como una clase base, porque <xref:System.Collections.IList> implementa directamente, o <xref:System.Collections.Generic.Dictionary%602> como <xref:System.Collections.IDictionary> una clase base, porque implementa directamente.  
   
  Al declarar una propiedad que toma una colección, tenga cuidado con el modo en el que se inicializa ese valor de propiedad en las nuevas instancias del tipo. Si no está implementando la propiedad como una propiedad de dependencia, es aconsejable hacer que la propiedad use un campo de respaldo que llame al constructor del tipo de colección. Si la propiedad es una propiedad de dependencia, quizá necesite inicializar la propiedad de colección como parte del constructor de tipo predeterminado. Esto se debe a que una propiedad de dependencia toma su valor predeterminado de los metadatos y, normalmente, no es conveniente que el valor inicial de una propiedad de colección sea una colección estática compartida. Debería haber una instancia de colección por cada instancia del tipo contenedor. Para obtener más información, vea [Propiedades de dependencia personalizadas](custom-dependency-properties.md).  
   

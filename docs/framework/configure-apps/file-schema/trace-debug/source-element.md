@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 55120e292ac2a2c822c5510563d1aa167ca921e4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673711"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69920451"
 ---
-# <a name="source-element"></a>\<origen > elemento
+# <a name="source-element"></a>\<Elemento > de origen
 Contiene un origen de seguimiento que inicia mensajes de seguimiento.  
   
  \<configuration>  
 \<system.diagnostics>  
 \<orígenes >  
-\<source>  
+\<> de origen  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,29 +38,29 @@ Contiene un origen de seguimiento que inicia mensajes de seguimiento.
 |Atributo|Descripción|  
 |---------------|-----------------|  
 |`name`|Atributo opcional.<br /><br /> Especifica el nombre del origen de seguimiento.|  
-|`switchName`|Atributo opcional.<br /><br /> Especifica el nombre de una instancia de conmutador de seguimiento en la aplicación. Si el conmutador no se identifica en un `<switches>` elemento, el valor especifica el nivel del modificador.|  
+|`switchName`|Atributo opcional.<br /><br /> Especifica el nombre de una instancia del modificador de seguimiento en la aplicación. Si no se identifica el modificador en `<switches>` un elemento, el valor especifica el nivel del modificador.|  
 |`switchType`|Atributo opcional.<br /><br /> Especifica el tipo del modificador de seguimiento. Si está presente, el tipo debe ser un nombre de clase válido y no puede ser una cadena vacía.|  
-|`extraAttribute`|Atributo opcional.<br /><br /> Especifica el valor de un atributo específico del origen de seguimiento identificado por el <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> método para ese origen de seguimiento.|  
+|`extraAttribute`|Atributo opcional.<br /><br /> Especifica el valor de un atributo específico del origen de seguimiento identificado por <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> el método para ese origen de seguimiento.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|Contiene los agentes de escucha que recopilarán, almacenan y enrutan los mensajes.|  
+|[\<listeners>](listeners-element-for-source.md)|Contiene agentes de escucha que recopilan, almacenan y enrutan mensajes.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`configuration`|Elemento raíz de cada archivo de configuración usado por las aplicaciones de Common Language Runtime y .NET Framework.|  
 |`system.diagnostics`|Especifica los agentes de escucha de seguimiento que recopilan, almacenan y enrutan mensajes, así como el nivel en el que está establecido un modificador de seguimiento.|  
 |`sources`|Contiene orígenes de seguimiento que inician mensajes de seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento se puede usar en el archivo de configuración del equipo (Machine.config) y el archivo de configuración de la aplicación.  
+ Este elemento se puede usar en el archivo de configuración del equipo (Machine. config) y en el archivo de configuración de la aplicación.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo usar el `<source>` elemento va a agregar el origen de seguimiento `mySource` y establecer el nivel del modificador de origen denominado `sourceSwitch`. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
+ En el ejemplo siguiente se muestra cómo utilizar `<source>` el elemento para agregar el origen `mySource` de seguimiento y establecer el nivel para el modificador `sourceSwitch`de origen denominado. Se agrega un agente de escucha de seguimiento de consola que escribe información de seguimiento en la consola.  
   
 ```xml  
 <configuration>  
@@ -84,5 +84,5 @@ Contiene un origen de seguimiento que inicia mensajes de seguimiento.
   
 ## <a name="see-also"></a>Vea también
 
-- [Esquema de la configuración de seguimiento y depuración](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Modificadores de seguimiento](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+- [Esquema de la configuración de seguimiento y depuración](index.md)
+- [Modificadores de seguimiento](../../../debug-trace-profile/trace-switches.md)

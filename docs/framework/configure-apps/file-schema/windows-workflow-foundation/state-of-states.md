@@ -3,26 +3,26 @@ title: <state> de <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: ff75895949c50cd369e4297ea77dc21106994067
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c7326b2fd5ae39ca4c0f39fac05444802fa3d49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794414"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947493"
 ---
 # <a name="state-of-states"></a>\<estado > de \<Estados >
 Un elemento de configuración que contiene el estado de la actividad suscrita para la que se debería emitir un registro de seguimiento.  
   
- Para obtener más información sobre las consultas de perfil de seguimiento, vea [perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
+ Para obtener más información sobre las consultas de Perfil de seguimiento, consulte [perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md).  
   
 \<system.serviceModel>  
-\<tracking>  
+\<> de seguimiento  
 \<trackingProfile>  
-\<flujo de trabajo >  
+\<> de flujo de trabajo  
 \<activityStateQueries>  
 \<activityStateQuery>  
 \<states>  
-\<state>  
+\<> de estado  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,21 +46,21 @@ Un elemento de configuración que contiene el estado de la actividad suscrita pa
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|name|Una cadena que especifica el estado de la actividad suscrita para la que se debería emitir un registro de seguimiento.|  
+|Nombre|Una cadena que especifica el estado de la actividad suscrita para la que se debería emitir un registro de seguimiento.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<states>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states-of-activitystatequery.md)|Una colección de elementos de configuración que contienen los estados de la actividad suscrita para la que se debería emitir un registro del seguimiento.|  
+|[\<states>](states-of-activitystatequery.md)|Una colección de elementos de configuración que contienen los estados de la actividad suscrita para la que se debería emitir un registro del seguimiento.|  
   
 ## <a name="remarks"></a>Comentarios  
- Una característica única de ActivityStateQuery es la capacidad de extraer los datos al realizar el seguimiento de la ejecución de un flujo de trabajo. Esto proporciona contexto adicional al tener acceso a los registros de seguimiento tras la ejecución. Puede usar el [ \<argumentos >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<Estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) y [ \<Estados >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) para extraer cualquier variable o argumento de cualquier actividad de un flujo de trabajo. El siguiente ejemplo muestra una consulta de estado de actividad que extrae variables y argumentos cuando se emite el registro de seguimiento de la actividad `Closed`. Variables y argumentos se pueden extraer con ActivityStateRecord y, por tanto, se suscriben dentro de un seguimiento de generar perfiles usando [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
+ Una característica única de ActivityStateQuery es la capacidad de extraer los datos al realizar el seguimiento de la ejecución de un flujo de trabajo. Esto proporciona contexto adicional al tener acceso a los registros de seguimiento tras la ejecución. Puede usar los [ \<argumentos >](arguments.md), [ \<Estados >](states.md) y [ \<Estados >](states.md) elementos para extraer cualquier variable o argumento de cualquier actividad de un flujo de trabajo. El siguiente ejemplo muestra una consulta de estado de actividad que extrae variables y argumentos cuando se emite el registro de seguimiento de la actividad `Closed`. Las variables y los argumentos solo se pueden extraer con un ActivityStateRecord y, por lo tanto, se suscriben [ \<](activitystatequery.md)a dentro de un perfil de seguimiento mediante el > de activityStateQuery.  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -80,5 +80,5 @@ Un elemento de configuración que contiene el estado de la actividad suscrita pa
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [Seguimiento y traza de flujos de trabajo](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [Perfiles de seguimiento](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [Seguimiento y traza de flujos de trabajo](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Perfiles de seguimiento](../../../windows-workflow-foundation/tracking-profiles.md)

@@ -3,15 +3,15 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 0c575e02862884e8f7ecf062138c36fe731f8e19
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 254d34149892abeaf31b9227f7567eb0a66ec0b6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943676"
 ---
 # <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
-Proporciona la configuración de la <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> clase o clases derivadas.  
+Proporciona la configuración para <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> la clase o las clases derivadas.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -39,18 +39,18 @@ Proporciona la configuración de la <xref:System.IdentityModel.Tokens.SessionSec
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |duración|Especifica la duración de los tokens de sesión.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguna  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Agrega el controlador de token de seguridad especificado a la colección de controladores de token.|  
+|[\<add>](add.md)|Agrega el controlador de tokens de seguridad especificado a la colección de controladores de tokens.|  
   
 ## <a name="example"></a>Ejemplo  
   

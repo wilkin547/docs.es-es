@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: dd8790efa14018817c9e51e688b17c22d31d482f
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: da234402c6ec7e2c1f85e4bd674517b1147f0d18
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659568"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927490"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<Agregar > elemento para BypassList (configuración de red)
 Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.  
@@ -59,7 +59,7 @@ Agrega una dirección IP o un nombre DNS a la lista de omisión de proxy.
   
  Debe tener precaución al especificar una expresión regular para este elemento. La expresión regular "[a-z] +\\. contoso\\. com" coincide con cualquier host del dominio contoso.com, pero también coincide con cualquier host del dominio contoso.com.CPANDL.com. Para que solo coincida con un host del dominio contoso.com, use un delimitador ("$"): "[a-\\z]\\+. contoso. com $".  
   
- Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../../docs/standard/base-types/regular-expressions.md).  
+ Para obtener más información acerca de las expresiones regulares, vea. [.NET Framework expresiones regulares](../../../../standard/base-types/regular-expressions.md).  
   
 ## <a name="configuration-files"></a>Archivos de configuración  
  Este elemento se puede usar en el archivo de configuración de la aplicación o en el archivo de configuración del equipo (Machine.config).  

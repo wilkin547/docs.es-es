@@ -2,14 +2,14 @@
 title: <defaultCertificate> (Elemento)
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 93410e815a156f91db1962f05fb1aa6baca7f955
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644466"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919257"
 ---
-# <a name="defaultcertificate-element"></a>\<defaultCertificate > elemento
+# <a name="defaultcertificate-element"></a>\<defaultCertificate >, elemento
 Especifica un certificado X.509 que se usará cuando un servicio o STS no proporcione uno a través de un protocolo de negociación.  
   
  \<system.ServiceModel>  
@@ -34,7 +34,7 @@ sección endpointBehaviors
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |findValue|Cadena. Valor que se va a buscar.|  
 |x509FindType|Enumeración. Uno de los campos de certificado en que buscar.|  
@@ -43,42 +43,42 @@ sección endpointBehaviors
   
 ## <a name="findvalue-attribute"></a>AtributofindValue  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|String|El valor depende del campo (se especifica por el atributo X509FindType) en que se busca. Por ejemplo, si se busca una huella digital, el valor debe ser una cadena de números hexadecimales.|  
+|string|El valor depende del campo (se especifica por el atributo X509FindType) en que se busca. Por ejemplo, si se busca una huella digital, el valor debe ser una cadena de números hexadecimales.|  
   
 ## <a name="x509findtype-attribute"></a>Atributo x509FindType  
   
-|Valor|Descripción|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |Enumeración|Estos valores incluyen: FindByThumbprint, FindBySubjectName, FindBySubjectDistinguishedName, FindByIssuerName, FindByIssuerDistinguishedName, FindBySerialNumber, FindByTimeValid, FindByTimeNotYetValid, FindBySerialNumber, FindByTimeExpired, FindByTemplateName , FindByApplicationPolicy, FindByCertificatePolicy, FindByExtension, FindByKeyUsage, FindBySubjectKeyIdentifier.|  
   
 ## <a name="storelocation-attribute"></a>Atributo storeLocation  
   
-|Valor|Descripción|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |Enumeración|CurrentUser o LocalMachine.|  
   
 ## <a name="storename-attribute"></a>Atributo storeName  
   
-|Valor|Descripción|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|Enumeración|Estos valores incluyen: AddressBook, AuthRoot, CertificateAuthority, Disallowed, My, Root, TrustedPeople y TrustedPublisher.|  
+|Enumeración|Estos valores incluyen: AddressBook, AuthRoot, CertificateAuthority, no permitido, My, root, TrustedPeople y TrustedPublisher.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)|Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.|  
+|[\<serviceCertificate>](servicecertificate-of-clientcredentials-element.md)|Especifica el certificado que se va a utilizar al autenticar un servicio al cliente.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para los enlaces que utilizan la seguridad del mensaje basada en certificados, el certificado especificado por este elemento de configuración se utiliza para cifrar los mensajes del servicio y se espera que sea utilizado por el servicio para firmar las respuestas para el cliente. Almacena un certificado único que se va a utilizar cuando un servicio no especifica ningún certificado.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se especifica un certificado que se usará para los extremos cuyo URI comienza con `http://www.contoso.com` y un certificado que se usará para todos los demás extremos que no realizan la negociación de certificado.  
+ En el ejemplo siguiente se especifica un certificado que se va a usar para los `http://www.contoso.com` puntos de conexión cuyo URI comienza con y un certificado que se va a usar para todos los demás extremos que no realizan la negociación de certificados.  
   
 ```xml  
 <serviceCertificate>
@@ -103,7 +103,7 @@ sección endpointBehaviors
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [Trabajo con certificados](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
-- [Protección de clientes](../../../../../docs/framework/wcf/securing-clients.md)
-- [Protección de servicios y clientes](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Trabajo con certificados](../../../wcf/feature-details/working-with-certificates.md)
+- [\<authentication>](authentication-of-clientcertificate-element.md)
+- [Protección de clientes](../../../wcf/securing-clients.md)
+- [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)

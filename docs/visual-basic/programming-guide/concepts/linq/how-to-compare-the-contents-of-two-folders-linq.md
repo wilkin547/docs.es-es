@@ -2,12 +2,12 @@
 title: Procedimiento Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 75283faf25e7a26055b1122eb45e23c510fc6b39
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5db73b57cfa21de4f1d14299ed7956a322876898
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593007"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69940685"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Procedimiento Comparar el contenido de dos carpetas (LINQ) (Visual Basic)
 En este ejemplo se muestran tres maneras de comparar dos listados de archivos:  
@@ -19,7 +19,7 @@ En este ejemplo se muestran tres maneras de comparar dos listados de archivos:
 - Mediante la consulta de la diferencia de conjuntos para recuperar los archivos que se encuentran en una carpeta, pero no en la otra.  
   
     > [!NOTE]
-    >  Las técnicas que se mencionan aquí pueden adaptarse para comparar secuencias de objetos de cualquier tipo.  
+    > Las técnicas que se mencionan aquí pueden adaptarse para comparar secuencias de objetos de cualquier tipo.  
   
  La clase `FileComparer` que aparece a continuación muestra cómo usar una clase de comparador personalizada junto con los operadores de consulta estándar. La clase no está diseñada para su uso en escenarios reales. Simplemente usa el nombre y la longitud en bytes de cada archivo para determinar si el contenido de cada una de las carpetas es idéntico o no. En un escenario real, debería modificar este comparador para realizar una comprobación de igualdad más rigurosa.  
   
@@ -114,7 +114,7 @@ End Module
 ```  
   
 ## <a name="compiling-the-code"></a>Compilar el código  
- Cree un proyecto de aplicación de consola VB.NET, con un `Imports` instrucción del espacio de nombres System.Linq.
+ Cree un proyecto de aplicación de consola de VB.net `Imports` con una instrucción para el espacio de nombres System. Linq.
  
 ## <a name="see-also"></a>Vea también
 

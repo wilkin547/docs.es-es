@@ -2,14 +2,14 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 032139b714aa11079c7ee8610c332e404b3981ac
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644321"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69919002"
 ---
-# <a name="exposedmethod"></a>\<exposedMethod >
+# <a name="exposedmethod"></a>\<> exposedMethod
 Representa un método de COM+ que se expone cuando la interfaz en un componente COM+ se expone como un servicio web.  
   
  \<system.ServiceModel>  
@@ -34,18 +34,18 @@ Representa un método de COM+ que se expone cuando la interfaz en un componente 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|name|Una cadena que contiene el método de COM+ que se expone cuando la interfaz de un componente COM+ se expone como servicio Web.|  
+|Nombre|Una cadena que contiene el método de COM+ que se expone cuando la interfaz de un componente COM+ se expone como servicio Web.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
  Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<exposedMethods>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethods.md)|Una colección de [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementos.|  
+|[\<exposedMethods>](exposedmethods.md)|Colección de [ \<elementos > exposedMethod](exposedmethod.md) .|  
   
 ## <a name="remarks"></a>Comentarios  
  La herramienta de configuración de integración (ComSvcConfig.exe) de COM+ se puede usar para agregar métodos concretos de una interfaz COM para que aparezca en el contrato del servicio generado.  
@@ -54,7 +54,7 @@ Representa un método de COM+ que se expone cuando la interfaz en un componente 
   
  `ComSvcConfig.exe /i /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{TransferFunds,AddFunds,RemoveFunds} /hosting:complus`  
   
- Al ejecutar también la ComSvcConfig.exe, se genera el siguiente contrato de servicio lista de los métodos mencionados anteriormente como [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementos.  
+ Al ejecutar también el archivo ComSvcConfig. exe, se genera el contrato de servicio siguiente que hace una lista de los métodos previamente mencionados como [ \<exposedMethod >](exposedmethod.md) elementos.  
   
 ```xml  
 <comContract contractType="{C551FBA9-E3AA-4272-8C2A-84BD8D290AC7}"
@@ -66,12 +66,12 @@ Representa un método de COM+ que se expone cuando la interfaz en un componente 
 </comContract>
 ```  
   
- En el momento de inicialización del servicio, el tiempo de ejecución intenta generar un contrato de servicio reflejando y agregando sólo los métodos incluidos en la lista de [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) elementos. Un seguimiento se genera para cada método de interfaz que no está incluido en el contrato del servicio.  
+ En el momento de la inicialización del servicio, el tiempo de ejecución intenta generar un contrato de servicio reflejando y agregando solo los métodos incluidos en la lista de [ \<elementos > exposedMethod](exposedmethod.md) . Un seguimiento se genera para cada método de interfaz que no está incluido en el contrato del servicio.  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
-- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [Integración en aplicaciones COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [Cómo: Configurar el servicio COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [\<comContracts>](comcontracts.md)
+- [Integración en aplicaciones COM+](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [Cómo: Configurar el servicio COM+](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: b635f03d1e4a6628a76d678f7366482717276376
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7e440810fee1dddb7025d1385b1edb4838d98a39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704146"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925913"
 ---
 # <a name="datacontractserializer"></a>\<dataContractSerializer>
 Contiene los datos de configuración para <xref:System.Runtime.Serialization.DataContractSerializer>. Este elemento se produce en dos jerarquías diferentes. Uno aparece en la lista de la siguiente sección, Jerarquía del esquema, y el otro se enumera en la sección Comentarios.  
@@ -35,7 +35,7 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
   
 ### <a name="attributes"></a>Atributos  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |ignoreExtensionDataObject|Un valor booleano que especifica si se omiten los datos proporcionados por el punto de conexión cuando se serializa o deserializa. Este atributo se puede configurar sólo en `<dataContractSerializer>` bajo el elemento `<behavior>`.|  
 |maxItemsInObjectGraph|Un entero que especifica el número máximo de elementos para serializar o deserializar. Este atributo es 65536.|  
@@ -45,17 +45,17 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)|Una colección de valores para el comportamiento de un servicio.|  
-|[\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)|Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.|  
+|[\<comportamiento >](behavior-of-servicebehaviors.md)|Una colección de valores para el comportamiento de un servicio.|  
+|[\<system.runtime.serialization>](system-runtime-serialization.md)|Representa el elemento raíz para la sección de espacio de nombres <xref:System.Runtime.Serialization> y contiene elementos para establecer opciones de <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Comentarios  
- Como se indicó en la introducción de este tema, se trata de la segunda jerarquía en la que el \<X509Extension > se produce el elemento.  
+ Como se indica en la introducción de este tema, esta es la segunda jerarquía en la \<que se produce el elemento > de X509Extension.  
   
- [\<system.runtime.serialization>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-runtime-serialization.md)  
+ [\<system.runtime.serialization>](system-runtime-serialization.md)  
   
- [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [\<dataContractSerializer>](datacontractserializer-element.md)  
   
  Para obtener más información sobre los tipos conocidos, consulte <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
@@ -64,5 +64,5 @@ Contiene los datos de configuración para <xref:System.Runtime.Serialization.Dat
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [Tipos conocidos de contratos de datos](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
-- [Transferencia y serialización de datos](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [Tipos conocidos de contratos de datos](../../../wcf/feature-details/data-contract-known-types.md)
+- [Transferencia y serialización de datos](../../../wcf/feature-details/data-transfer-and-serialization.md)

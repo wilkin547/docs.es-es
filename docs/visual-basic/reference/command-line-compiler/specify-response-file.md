@@ -4,15 +4,15 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: 6b993a6399eec4e203821109db153aadf246cbac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b84d50334e56305c27c5c0bc54578ba871a28365
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61639027"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937292"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (Especificar archivo de respuesta, Visual Basic)
-Especifica un archivo que contiene las opciones del compilador y archivos de código fuente para compilar.  
+Especifica un archivo que contiene las opciones del compilador y los archivos de código fuente que se van a compilar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -22,28 +22,28 @@ Especifica un archivo que contiene las opciones del compilador y archivos de có
   
 ## <a name="arguments"></a>Argumentos  
  `response_file`  
- Obligatorio. Un archivo que se enumera las opciones del compilador o archivos de código fuente para compilar. Ponga el nombre de archivo entre comillas ("") si contiene un espacio.  
+ Necesario. Archivo que muestra las opciones del compilador o los archivos de código fuente que se van a compilar. Escriba el nombre de archivo entre comillas ("") si contiene un espacio.  
   
 ## <a name="remarks"></a>Comentarios  
- El compilador procesa las opciones del compilador y archivos de código fuente especificados en un archivo de respuesta como si hubieran sido especificados en la línea de comandos.  
+ El compilador procesa las opciones del compilador y los archivos de código fuente especificados en un archivo de respuesta como si hubieran sido especificados en la línea de comandos.  
   
- Para especificar más de un archivo de respuesta en una compilación, especifique varias opciones de archivo de respuesta, como el siguiente.  
+ Para especificar más de un archivo de respuesta en una compilación, especifique varias opciones de archivo de respuesta, como las siguientes.  
   
 ```  
 @file1.rsp @file2.rsp  
 ```  
   
- En una respuesta de archivo, varias opciones del compilador y archivos de código fuente pueden aparecer en una sola línea. Una especificación de opción del compilador solo debe aparecer en una sola línea (no puede abarcar varias líneas). Los archivos de respuesta pueden tener comentarios que comienzan con la `#` símbolos.  
+ En un archivo de respuesta, pueden aparecer varias opciones del compilador y archivos de código fuente en una sola línea. Una única especificación de opción de compilador debe aparecer en una línea (no puede abarcar varias líneas). Los archivos de respuesta pueden tener comentarios que comienzan `#` por el símbolo.  
   
- Puede combinar las opciones especificadas en la línea de comandos con las opciones especificadas en uno o varios archivos de respuesta. El compilador procesa las opciones de comando de medida que las encuentra. Por lo tanto, los argumentos de línea de comandos pueden invalidar las opciones enumeradas anteriormente en los archivos de respuesta. Por el contrario, las opciones en un archivo de respuesta invalidan las opciones enumeradas anteriormente en la línea de comandos o en otros archivos de respuesta.  
+ Puede combinar las opciones especificadas en la línea de comandos con las opciones especificadas en uno o varios archivos de respuesta. El compilador procesa las opciones de comando a medida que las encuentra. Por lo tanto, los argumentos de la línea de comandos pueden reemplazar las opciones enumeradas anteriormente en archivos de respuesta. Por el contrario, las opciones de un archivo de respuesta invalidan las opciones enumeradas anteriormente en la línea de comandos o en otros archivos de respuesta.  
   
- Visual Basic proporciona el archivo Vbc.rsp, que se encuentra en el mismo directorio que el archivo Vbc.exe. El archivo Vbc.rsp se incluye de forma predeterminada a menos que el `-noconfig` se usa la opción. Para obtener más información, consulte [- noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
+ Visual Basic proporciona el archivo Vbc. RSP, que se encuentra en el mismo directorio que el archivo Vbc. exe. El archivo Vbc. rsp se incluye de forma predeterminada a `-noconfig` menos que se use la opción. Para obtener más información, vea [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).  
   
 > [!NOTE]
->  El `@` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible solo cuando se compila desde la línea de comandos.  
+> La `@` opción no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible al compilar desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
- Las líneas siguientes son de un archivo de respuesta de ejemplo.  
+ Las líneas siguientes proceden de un archivo de respuesta de ejemplo.  
   
 ```console
 # build the first output file  
@@ -54,7 +54,7 @@ source2.vb
 ```  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra cómo usar el `@` opción con el archivo de respuesta denominado `File1.rsp`.  
+ En el ejemplo siguiente se muestra cómo usar `@` la opción con el archivo de `File1.rsp`respuesta denominado.  
   
 ```console
 vbc @file1.rsp  

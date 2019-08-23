@@ -6,12 +6,12 @@ helpviewer_keywords:
 - utf8output compiler option [Visual Basic]
 - /utf8output compiler option [Visual Basic]
 ms.assetid: 8ab36b1e-027a-49ac-85b4-f48997d9e4d6
-ms.openlocfilehash: 75369c3bcb19afbf98bfb80bc3e439f996d2a9d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 789df84bb4011d1ad128c50a9c689d1217be6694
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796083"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937270"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
 Muestra los resultados del compilador en codificación UTF-8.  
@@ -24,16 +24,16 @@ Muestra los resultados del compilador en codificación UTF-8.
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Opcional. El valor predeterminado para esta opción es `-utf8output-`, lo que significa que el resultado del compilador no utiliza la codificación UTF-8. Especificar `-utf8output` es lo mismo que especificar `-utf8output+`.  
+ Opcional. El valor predeterminado para esta opción `-utf8output-`es, lo que significa que la salida del compilador no utiliza la codificación UTF-8. Especificar `-utf8output` es lo mismo que especificar `-utf8output+`.  
   
 ## <a name="remarks"></a>Comentarios  
- En algunas configuraciones internacionales, resultados del compilador no pueden mostrarse correctamente en la consola. En tales situaciones, utilice `-utf8output` y redirigir los resultados del compilador a un archivo.  
+ En algunas configuraciones internacionales, los resultados del compilador no se pueden mostrar correctamente en la consola. En tales situaciones, use `-utf8output` y redirija el resultado del compilador a un archivo.  
   
 > [!NOTE]
->  El `-utf8output` opción no está disponible en el entorno de desarrollo de Visual Studio; está disponible solo cuando se compila desde la línea de comandos.  
+> La `-utf8output` opción no está disponible en el entorno de desarrollo de Visual Studio; solo está disponible al compilar desde la línea de comandos.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente código compila `In.vb` y hace que el compilador para mostrar resultados con la codificación UTF-8.  
+ En el código siguiente se compila `In.vb` y se indica al compilador que muestre la salida mediante la codificación UTF-8.  
   
 ```console  
 vbc -utf8output in.vb  

@@ -2,12 +2,12 @@
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: 1e5ecc2b937aa0cdb159a6cbd1222fe6d4af79fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e79b3e1aeecc52bf41ae759dc15ebf1c8211beb2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704185"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926064"
 ---
 # <a name="compositeduplex"></a>\<compositeDuplex>
 Define el elemento de enlace que se usa cuando el cliente debe exponer un punto de conexión para que el servicio devuelva los mensajes al cliente.  
@@ -29,18 +29,18 @@ Define el elemento de enlace que se usa cuando el cliente debe exponer un punto 
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|clientBaseAddress|Un URI que establece la dirección del canal secundario en modo de dúplex. El servicio usa esta dirección para hacer contacto y establecer una conexión con el cliente.<br /><br /> Si este atributo no se establece, una dirección predeterminada "`full qualified name+default port\TemporaryIndigoAddress\guid`" se genera. De manera predeterminada, es `null`.|  
+|clientBaseAddress|Un URI que establece la dirección del canal secundario en modo de dúplex. El servicio usa esta dirección para hacer contacto y establecer una conexión con el cliente.<br /><br /> Si no se establece este atributo, se genera una dirección`full qualified name+default port\TemporaryIndigoAddress\guid`predeterminada "". El valor predeterminado es `null`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguna  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
+|[\<binding>](../../../misc/binding.md)|Define todas las funcionalidades de enlace del enlace personalizado.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este elemento de configuración se utiliza con los transportes que no permiten nativamente las comunicaciones dúplex, por ejemplo, HTTP. TCP, en cambio, permite comunicaciones dúplex de manera nativa y no requiere el uso de este elemento de enlace para que el servicio devuelva los mensajes a un cliente.  
@@ -58,7 +58,7 @@ Define el elemento de enlace que se usa cuando el cliente debe exponer un punto 
 - <xref:System.ServiceModel.Configuration.CompositeDuplexElement>
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [Enlaces](../../../../../docs/framework/wcf/bindings.md)
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [Enlaces personalizados](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [Enlaces](../../../wcf/bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)
+- [Enlaces personalizados](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: d38c8d73bc70e7e521b476ca78c8f102d003c538
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 7ebdf7a1598ac3cd61005ae607e5bfbe7cb49059
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040332"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933712"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Procedimiento para inmovilizar columnas en el control DataGridView de formularios Windows Forms mediante el diseñador
 Cuando los usuarios ven los datos mostrados en un control <xref:System.Windows.Forms.DataGridView> de Windows Forms, a veces deben hacer referencia a una sola columna o a un conjunto de columnas con frecuencia. Por ejemplo, cuando se muestra una tabla de información del cliente que contiene muchas columnas, resulta útil mostrar el nombre del cliente en todo momento mientras se habilitan otras columnas para desplazarse fuera del área visible.
@@ -30,14 +30,14 @@ Cuando los usuarios ven los datos mostrados en un control <xref:System.Windows.F
 3. En la cuadrícula **propiedades de columna** , establezca <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A> la propiedad `true`en.
 
     > [!NOTE]
-    >  También puede inmovilizar una columna al agregarla seleccionando el cuadro inmovilizado en el cuadro de diálogo **Agregar columna** .
+    > También puede inmovilizar una columna al agregarla seleccionando el cuadro inmovilizado en el cuadro de diálogo **Agregar columna** .
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - [Cómo: Agregar y quitar columnas en el control DataGridView Windows Forms mediante el diseñador](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [Cómo: Habilitar la reordenación de columnas en el control DataGridView Windows Forms mediante el diseñador](enable-column-reordering-in-the-datagrid-using-the-designer.md)
-- [Cómo: Mostrar texto de derecha a izquierda en Windows Forms para la globalización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
-- [Procedimientos: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [Procedimientos: Habilitar la reordenación de columnas en el control DataGridView Windows Forms mediante el diseñador](enable-column-reordering-in-the-datagrid-using-the-designer.md)
+- [Procedimientos: Mostrar texto de derecha a izquierda en Windows Forms para la globalización](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
+- [Cómo: Crear un proyecto de aplicación de Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
 - [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)

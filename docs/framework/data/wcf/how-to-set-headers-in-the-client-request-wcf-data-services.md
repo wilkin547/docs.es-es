@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Establecer los encabezados en la solicitud de cliente (WCF Data Services)
+title: Procedimiento Establecer encabezados en la solicitud de cliente (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,23 +7,23 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: bbf306b31dd2bc9cfcfb877351205970fc63706f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a72b349526d5cbba229cba627c23b1b1b889678
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788783"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69943934"
 ---
-# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Procedimiento Establecer los encabezados en la solicitud de cliente (WCF Data Services)
+# <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Procedimiento Establecer encabezados en la solicitud de cliente (WCF Data Services)
 Cuando use la biblioteca cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para acceder a un servicio de datos compatible con [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)], la biblioteca establece automáticamente los encabezados HTTP necesarios en los mensajes de solicitud enviados al servicio de datos. Sin embargo, la biblioteca cliente no sabe establecer los encabezados de mensaje necesarios en ciertos casos, como cuando el servicio de datos necesita cookies o autenticación basada en notificaciones. Para obtener más información, consulta [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md#clientAuthentication). En estos casos, debe establecer manualmente los encabezados de mensaje del mensaje de solicitud antes de enviarlo. En el ejemplo de este tema se muestra cómo controla el evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> para agregar un nuevo encabezado al mensaje de solicitud antes de que se envíe al servicio de datos.  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). También puede usar el [servicio de datos de ejemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) que se publica en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ; estos datos de ejemplo de sitio Web de servicio es de solo lectura y se intentan guardar los cambios devuelve un error. Los datos de ejemplo de servicios en la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sitio Web de permitir la autenticación anónima.  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). También puede usar el [servicio de datos de ejemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) que se publica en [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] el sitio web de; este servicio de datos de ejemplo es de solo lectura y si se intentan guardar los cambios, se devuelve un error. Los servicios de datos de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ejemplo del sitio web permiten la autenticación anónima.  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se registra un controlador del evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> y, a continuación, se ejecuta una consulta en el servicio de datos.  
   
 > [!NOTE]
->  Cuando un servicio de datos necesita que se establezca manualmente el encabezado del mensaje de todas las solicitudes, plantéese registrar el controlador del evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> mediante la invalidación del método parcial `OnContextCreated` del contenedor de entidades que represente el servicio de datos, que en este caso es `NorthwindEntities`.  
+> Cuando un servicio de datos necesita que se establezca manualmente el encabezado del mensaje de todas las solicitudes, plantéese registrar el controlador del evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> mediante la invalidación del método parcial `OnContextCreated` del contenedor de entidades que represente el servicio de datos, que en este caso es `NorthwindEntities`.  
   
 [!code-csharp[Astoria Northwind Client#RegisterHeadersQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#registerheadersquery)]   
 [!code-vb[Astoria Northwind Client#RegisterHeadersQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#registerheadersquery)]

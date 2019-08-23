@@ -9,28 +9,28 @@ helpviewer_keywords:
 - radial gradients [WPF], painting with
 - painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
-ms.openlocfilehash: c3bcc11dea4b1f223f629415591ab03588881dde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5762ef1a1526ba6f004917c8a947e35ce731c86d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921840"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916098"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Procedimiento Pintar un área con un degradado radial
-En este ejemplo se muestra cómo usar el <xref:System.Windows.Media.RadialGradientBrush> clase para pintar un área con un degradado radial.  
+En este ejemplo se muestra cómo utilizar <xref:System.Windows.Media.RadialGradientBrush> la clase para pintar un área con un degradado radial.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se usa un <xref:System.Windows.Media.RadialGradientBrush> para pintar un rectángulo con un degradado radial que realiza la transición de amarillo a rojo a azul para verde lima.  
+ <xref:System.Windows.Media.RadialGradientBrush> En el ejemplo siguiente se usa para pintar un rectángulo con un degradado radial que realiza la transición de amarillo a rojo a azul a verde lima.  
   
  [!code-csharp[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/RadialGradientBrushSnippet.cs#simpleradialgradientexamplewholepage)]
  [!code-vb[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/radialgradientbrushsnippet.vb#simpleradialgradientexamplewholepage)]
  [!code-xaml[BrushesIntroduction_snip#SimpleRadialGradientExampleWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/RadialGradientBrushSnippet.xaml#simpleradialgradientexamplewholepage)]  
   
- La siguiente ilustración muestra el degradado del ejemplo anterior. Se resaltan los delimitadores de degradado.  
+ En la ilustración siguiente se muestra el degradado del ejemplo anterior. Los topes del degradado se han resaltado.  
   
  ![Delimitadores de degradado en un degradado radial](./media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
 > [!NOTE]
->  Los ejemplos de este tema usan el sistema de coordenadas predeterminado para establecer puntos de control. El sistema de coordenadas predeterminado está relacionado con un rectángulo: 0 indica 0 por ciento del rectángulo, y 1 indica un 100 por cien del rectángulo. Puede cambiar este sistema de coordenadas estableciendo el <xref:System.Windows.Media.GradientBrush.MappingMode%2A> valor para la propiedad <xref:System.Windows.Media.BrushMappingMode.Absolute>. Un sistema de coordenadas absoluto no está relacionado con un rectángulo de selección. Los valores se interpretan directamente en el espacio local.  
+> En los ejemplos de este tema se usa el sistema de coordenadas predeterminado para establecer los puntos de control. El sistema de coordenadas predeterminado es relativo a un cuadro de límite: 0 indica un 0 por ciento del rectángulo de selección, mientras que 1 indica un 100 por cien del rectángulo de selección. Puede cambiar este sistema de coordenadas estableciendo la <xref:System.Windows.Media.GradientBrush.MappingMode%2A> propiedad en el valor. <xref:System.Windows.Media.BrushMappingMode.Absolute> Un sistema de coordenadas absoluto no está relacionado con un rectángulo de selección. Los valores se interpretan directamente en el espacio local.  
   
- Para más <xref:System.Windows.Media.RadialGradientBrush> ejemplos, vea el [Brushes Sample](https://go.microsoft.com/fwlink/?LinkID=159973). Para obtener más información acerca de los degradados y otros tipos de pinceles, vea [el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md).
+ Para obtener <xref:System.Windows.Media.RadialGradientBrush> más ejemplos, vea el [ejemplo brushes](https://go.microsoft.com/fwlink/?LinkID=159973). Para obtener más información sobre los degradados y otros tipos de pinceles, consulte [información general sobre el dibujo con colores sólidos y degradados](painting-with-solid-colors-and-gradients-overview.md).

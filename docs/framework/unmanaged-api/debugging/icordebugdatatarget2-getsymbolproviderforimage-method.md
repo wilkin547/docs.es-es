@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 817103e4aa5b3f56d0601382bbc268b969a919e6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2e5a6e70d5148756a5ed8d17c56577da920d1b69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750039"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911447"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>Método ICorDebugDataTarget2::GetSymbolProviderForImage
 Devuelve el proveedor de símbolos de un módulo a partir de la dirección base de ese módulo.  
@@ -25,22 +25,22 @@ HRESULT GetSymbolProviderForImage(
   
 ## <a name="parameters"></a>Parámetros  
  `imageBaseAddress`  
- [in] Un [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) valor que representa la dirección base de un módulo.  
+ de Valor de [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md) que representa la dirección base de un módulo.  
   
  `ppSymProvider`  
- [out] Un puntero a la dirección de un [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) objeto.  
+ enuncia Puntero a la dirección de un objeto [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) .  
   
 ## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]
->  Este método solo está disponible con .NET Native.  
+> Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

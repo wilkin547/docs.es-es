@@ -2,18 +2,18 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69f3c70514fc2bcab1b4ef6a45036de98d1af7b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61670408"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936526"
 ---
 # <a name="service"></a>\<service>
 El elemento `service` contiene los valores para un servicio de Windows Communication Foundation (WCF). También contiene puntos de conexión que exponen el servicio.  
   
  \<system.ServiceModel>  
-\<services>  
+\<> de servicios  
 \<service>  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,23 +29,23 @@ El elemento `service` contiene los valores para un servicio de Windows Communica
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |behaviorConfiguration|Una cadena que contiene el nombre de comportamiento que se va a usar para instanciar el servicio. El nombre de comportamiento debe estar en el ámbito en el punto definido del servicio. El valor predeterminado es una cadena vacía.|  
-|name|Atributo String necesario que especifica el tipo del servicio del que se van a crear instancias. Este valor debe equivaler a un tipo válido. El formato debería ser `Namespace.Class.`.|  
+|Nombre|Atributo String necesario que especifica el tipo del servicio del que se van a crear instancias. Este valor debe equivaler a un tipo válido. El formato debería ser `Namespace.Class.`.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)|Una colección de elementos `endpoint` que exponen este servicio.|  
-|[\<host>](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|Especifica el host de esta instancia del servicio. Este elemento es del tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
+|[\<endpoint>](endpoint-element.md)|Una colección de elementos `endpoint` que exponen este servicio.|  
+|[\<> host](host.md)|Especifica el host de esta instancia del servicio. Este elemento es del tipo <xref:System.ServiceModel.Configuration.HostElement>.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<services>](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md)|Elemento raíz de todos los elementos de configuración de WCF.|  
+|[\<services>](services.md)|Elemento raíz de todos los elementos de configuración de WCF.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los servicios se definen en la sección de `services` del archivo de configuración. Un ensamblado puede contener cualquier número de servicios. Cada servicio tiene su propia sección de configuración de `service`. Esta sección y su contenido definen el contrato de servicios, comportamiento y puntos de conexión del servicio determinado.  
@@ -71,4 +71,4 @@ El elemento `service` contiene los valores para un servicio de Windows Communica
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.ServiceElement>
-- [Configuración de servicios](../../../../../docs/framework/wcf/configuring-services.md)
+- [Configuración de servicios](../../../wcf/configuring-services.md)

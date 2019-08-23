@@ -2,22 +2,22 @@
 title: Cómo Particionar datos de servicio
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49aefd88d73732a139a79f8c53d5beca44d4d4ba
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047534"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69947873"
 ---
 # <a name="how-to-service-data-partitioning"></a>Cómo Particionar datos de servicio
-Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, los mensajes de gran importancia o clientes "Oro" que deba procesarse con una prioridad más alta que los mensajes de un cliente estándar.  
+Este tema describe los pasos básicos necesarios para realizar particiones de los mensajes en múltiples instancias de un mismo servicio de destino. La partición de datos de servicio se suele utilizar cuando hay que ajustar un servicio para proporcionar una mayor calidad del servicio, o cuando hay que administrar solicitudes de diversos clientes de una manera determinada. Por ejemplo, es posible que los mensajes de clientes de gran valor o "oro" deban procesarse con una prioridad más alta que los mensajes de un cliente estándar.  
   
  En este ejemplo, los mensajes se enrutan a una de las dos instancias del servicio de regularCalc. Ambas instancias del servicio son idénticas; sin embargo, el servicio representado por el extremo de calculator1 procesa mensajes recibidos de los clientes importantes, y el extremo de calculator2 procesa los mensajes de otros clientes.  
   
  El mensaje enviado del cliente no tiene ningún dato único que se pueda usar para identificar a qué instancia de servicio debería enrutarse el mensaje. Para permitir que cada cliente enrute datos a un destino concreto, implementaremos dos puntos de conexión de servicio que se usarán para recibir mensajes.  
   
 > [!NOTE]
->  Aunque este ejemplo utiliza puntos de conexión concretos para crear una partición de los datos, esto también se puede lograr mediante la información incluida en el propio mensaje, como el encabezado o la información del cuerpo del mensaje.  
+> Aunque este ejemplo utiliza puntos de conexión concretos para crear una partición de los datos, esto también se puede lograr mediante la información incluida en el propio mensaje, como el encabezado o la información del cuerpo del mensaje.  
   
 ### <a name="implement-service-data-partitioning"></a>Implementación de partición de datos de servicio  
   
@@ -85,7 +85,7 @@ Este tema describe los pasos básicos necesarios para realizar particiones de lo
     </filterTables>  
     ```  
   
-4. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla, debe asociar la tabla de filtros a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar "filterTable1" a los puntos de conexión de servicio:  
+4. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla, debe asociar la tabla de filtros a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. En el ejemplo siguiente se muestra cómo asociar "filterTable1" a los puntos de conexión de servicio:  
   
     ```xml  
     <behaviors>  

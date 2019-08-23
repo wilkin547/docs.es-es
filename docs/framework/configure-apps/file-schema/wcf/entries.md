@@ -2,21 +2,21 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 5561cf61cef2258ec61bd32770538add1c69f5c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 610ba29ec98f4b1f2a9b1db3542bcb3aefb46457
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704211"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69925651"
 ---
-# <a name="entries"></a>\<entries>
+# <a name="entries"></a>\<entradas >
 Una entrada del enrutamiento que contiene las asignaciones entre los filtros del enrutamiento y los extremos de destino a los que enviar mensajes cuando coincida el filtro.  
   
  \<system.serviceModel>  
-\<routing>  
+\<> de enrutamiento  
 \<routingTables>  
-\<table>  
-\<entries>  
+\<> de tabla  
+\<entradas >  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,15 +43,15 @@ Una entrada del enrutamiento que contiene las asignaciones entre los filtros del
   
 ### <a name="child-elements"></a>Elementos secundarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Asigna un filtro a un punto de conexión de cliente que se definió previamente. Los mensajes que coincidan con este filtro se enviarán a este destino.|  
+|[\<filters>](filters-of-routing.md)|Asigna un filtro a un punto de conexión de cliente que se definió previamente. Los mensajes que coincidan con este filtro se enviarán a este destino.|  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Sección de configuración que contiene una tabla de enrutamiento.|  
+|[\<> de enrutamiento](routing.md)|Sección de configuración que contiene una tabla de enrutamiento.|  
   
 ## <a name="see-also"></a>Vea también
 

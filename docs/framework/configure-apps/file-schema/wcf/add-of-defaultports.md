@@ -2,12 +2,12 @@
 title: <add> de <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 5200c8893a89488b72c2c71d1a3703bf2aad1235
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2723dad14a63c4b05fdb70157f7eb21d193d3ab
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704562"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926706"
 ---
 # <a name="add-of-defaultports"></a>\<Agregar > de \<defaultPorts >
 Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.  
@@ -36,9 +36,9 @@ Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|puerto|Entero que especifica el número del puerto de comunicaciones predeterminado.|  
+|port|Entero que especifica el número del puerto de comunicaciones predeterminado.|  
 |scheme|Cadena que especifica el grupo de configuración del protocolo asociado a un puerto de comunicaciones.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
@@ -46,9 +46,9 @@ Extremo de las comunicaciones predeterminado que escucha la aplicación cliente.
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<defaultPorts>](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.|  
+|[\<defaultPorts>](defaultports.md)|Colección de puertos predeterminados que enumeran los puntos de conexión de comunicaciones predeterminados que escucha la aplicación cliente.|  
   
 ## <a name="see-also"></a>Vea también
 

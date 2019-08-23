@@ -3,15 +3,15 @@ title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: 4deeb1d84f2621adb7ff1b649a505138b6856ec1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e2159a73ca79fc362a8138eea95dbd173dafb11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790499"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944295"
 ---
 # <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
-Habilita la detección de reproducción de tokens y especifica la hora de expiración de tokens.  
+Habilita la detección de reproducción de tokens y especifica la hora de expiración de los tokens.  
   
  \<system.identityModel>  
 \<identityConfiguration>  
@@ -28,7 +28,7 @@ Habilita la detección de reproducción de tokens y especifica la hora de expira
 </system.identityModel>  
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Type  
  <xref:System.IdentityModel.Configuration.TokenReplayDetectionElement>  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
@@ -36,22 +36,22 @@ Habilita la detección de reproducción de tokens y especifica la hora de expira
   
 ### <a name="attributes"></a>Atributos  
   
-|Atributo|Descripción|  
+|Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|enabled|Un valor que especifica si está habilitada la detección de reproducción de tokens; "true" para habilitar el token de la detección de reproducción.|  
-|expirationPeriod|Un <xref:System.TimeSpan> que especifica la cantidad máxima de tiempo antes de que un elemento se considerará caducado y quita de la caché.  Para obtener más información sobre cómo especificar <xref:System.TimeSpan> valores, vea [valores Timespan](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
+|enabled|Valor que especifica si está habilitada la detección de reproducción de tokens; "true" para habilitar la detección de reproducción de tokens.|  
+|expirationPeriod|<xref:System.TimeSpan> Que especifica la cantidad máxima de tiempo antes de que un elemento se considere expirado y se quite de la memoria caché.  Para obtener más información sobre cómo especificar <xref:System.TimeSpan> valores, vea [valores TimeSpan](../windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguna  
+ None  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
-|Elemento|Descripción|  
+|Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Especifica los valores de identidad de nivel de servicio.|  
-|[\<securityTokenHandlerConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de seguridad controladores de token.|  
+|[\<identityConfiguration>](identityconfiguration.md)|Especifica la configuración de identidad de nivel de servicio.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|Proporciona la configuración para una colección de controladores de tokens de seguridad.|  
   
 ## <a name="remarks"></a>Comentarios  
- Un `<tokenReplayDetection>` elemento puede especificarse en el nivel de servicio bajo la `<identityConfiguration>` elemento o en el nivel de colección de controladores de token de seguridad bajo el `<securityTokenHandlerConfiguration>` elemento. La configuración en una colección de controladores de token invalida las especificadas en el servicio.  
+ Un `<tokenReplayDetection>` elemento se puede especificar en el nivel de servicio bajo `<identityConfiguration>` el elemento o en el nivel de colección de controladores de `<securityTokenHandlerConfiguration>` tokens de seguridad bajo el elemento. La configuración de una colección de controladores de tokens invalida las especificadas en el servicio.  
   
- El tipo de la caché de reproducción de tokens especificado por el [ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) elemento.
+ El tipo de la memoria caché de reproducción de tokens se [ \<](tokenreplaycache.md) especifica mediante el elemento > de tokenReplayCache.

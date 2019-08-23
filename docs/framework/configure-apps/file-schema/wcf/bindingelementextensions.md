@@ -2,12 +2,12 @@
 title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c323a65ace332d2ecd1e03330dddbe7ca17ff5bd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701000"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69926366"
 ---
 # <a name="bindingelementextensions"></a>\<bindingElementExtensions>
 En esta sección se habilita el uso de un elemento de enlace personalizado de un equipo o archivo de configuración de la aplicación. Puede agregar un elemento de enlace personalizado a esta colección utilizando la palabra clave `add` y estableciendo el atributo de `type` del elemento en una extensión de elemento de enlace, así como el atributo de `name` al elemento de enlace personalizado.  
@@ -46,4 +46,4 @@ En esta sección se habilita el uso de un elemento de enlace personalizado de un
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
-- [Extensión de enlaces](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [Extensión de enlaces](../../../wcf/extending/extending-bindings.md)

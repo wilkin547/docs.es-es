@@ -2,19 +2,19 @@
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: cc7c1a64f9481a7ab41cf35241ade04bd690dae0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c7e9cb1284ab55c8dd199d9fb47a223698814f0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786391"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934127"
 ---
-# <a name="routing"></a>\<routing>
+# <a name="routing"></a>\<> de enrutamiento
 
-Representa una sección de configuración para definir un conjunto de filtros de enrutamiento, que determinan el tipo de Windows Communication Foundation (WCF) <xref:System.ServiceModel.Dispatcher.MessageFilter> que se usará al evaluar los mensajes entrantes, así como el enrutamiento de las tablas que definen los extremos de destino enviar mensajes cuando coincida un filtro.
+Representa una sección de configuración para definir un conjunto de filtros de enrutamiento, que determinan el tipo de <xref:System.ServiceModel.Dispatcher.MessageFilter> Windows Communication Foundation (WCF) que se va a usar al evaluar los mensajes entrantes, así como las tablas de enrutamiento que definen los extremos de destino. enviar mensajes a cuando coincida un filtro.
 
-[**\<system.serviceModel>**](system-servicemodel.md)   
-&nbsp;&nbsp;**\<enrutamiento >**
+[ **\<system.serviceModel>** ](system-servicemodel.md)   
+&nbsp;&nbsp; **\<> de enrutamiento**
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,18 +46,18 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ### <a name="attributes"></a>Atributos
 
-Ninguna
+None
 
 ### <a name="child-elements"></a>Elementos secundarios
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ----------- |
-| [**\<filters>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md) | Contiene un conjunto de filtros de enrutamiento que determinan el tipo de MessageFilter de Windows Communication Foundation (WCF) que se usará al evaluar los mensajes entrantes. |
-| [**\<filterTables>**](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md) | Contiene asignaciones entre los filtros de enrutamiento y los puntos de conexión de destino para especificar qué punto de conexión usar cuando coincide el filtro. |
+| [ **\<filters>** ](filters-of-routing.md) | Contiene un conjunto de filtros de enrutamiento que determinan el tipo de Windows Communication Foundation (WCF) MessageFilter se usará al evaluar los mensajes entrantes. |
+| [ **\<filterTables>** ](filtertables.md) | Contiene asignaciones entre los filtros de enrutamiento y los puntos de conexión de destino para especificar qué punto de conexión usar cuando coincide el filtro. |
 
 ### <a name="parent-elements"></a>Elementos primarios
 
-|     | Descripción |
+|     | DESCRIPCIÓN |
 | --- | ----------- |
 | **\<system.ServiceModel>** | Elemento raíz de todos los elementos de configuración de WCF. |
 
