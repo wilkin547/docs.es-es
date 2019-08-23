@@ -17,53 +17,53 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19aced41860002081caaf6436bad08f5f9a09e9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7d02478c2421823ce2acb533d2abea2ea8b13c74
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67766658"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950289"
 ---
-# <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a><span data-ttu-id="2b3d6-102">ICLRAppDomainResourceMonitor::GetCurrentAllocated (Método)</span><span class="sxs-lookup"><span data-stu-id="2b3d6-102">ICLRAppDomainResourceMonitor::GetCurrentAllocated Method</span></span>
-<span data-ttu-id="2b3d6-103">Obtiene el tamaño total, en bytes, de todas las asignaciones de memoria que el dominio de aplicación se han realizado desde que se creó, sin restar la memoria que se ha recopilado de elementos no utilizados.</span><span class="sxs-lookup"><span data-stu-id="2b3d6-103">Gets the total size, in bytes, of all memory allocations that have been made by the application domain since it was created, without subtracting memory that has been garbage-collected.</span></span>  
+# <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a><span data-ttu-id="13855-102">ICLRAppDomainResourceMonitor::GetCurrentAllocated (Método)</span><span class="sxs-lookup"><span data-stu-id="13855-102">ICLRAppDomainResourceMonitor::GetCurrentAllocated Method</span></span>
+<span data-ttu-id="13855-103">Obtiene el tamaño total, en bytes, de todas las asignaciones de memoria realizadas por el dominio de aplicación desde que se creó, sin restar la memoria que se ha recolectado como elemento no utilizado.</span><span class="sxs-lookup"><span data-stu-id="13855-103">Gets the total size, in bytes, of all memory allocations that have been made by the application domain since it was created, without subtracting memory that has been garbage-collected.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2b3d6-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="2b3d6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13855-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="13855-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,  
                             [out] ULONGLONG* pBytesAllocated);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2b3d6-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="2b3d6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13855-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="13855-105">Parameters</span></span>  
  `dwAppDomainId`  
- <span data-ttu-id="2b3d6-106">[in] El Id. del dominio de aplicación solicitado.</span><span class="sxs-lookup"><span data-stu-id="2b3d6-106">[in] The ID of the requested application domain.</span></span>  
+ <span data-ttu-id="13855-106">de IDENTIFICADOR del dominio de aplicación solicitado.</span><span class="sxs-lookup"><span data-stu-id="13855-106">[in] The ID of the requested application domain.</span></span>  
   
  `pBytesAllocated`  
- <span data-ttu-id="2b3d6-107">[out] Un puntero al tamaño total de todas las asignaciones de memoria.</span><span class="sxs-lookup"><span data-stu-id="2b3d6-107">[out] A pointer to the total size of all memory allocations.</span></span>  
+ <span data-ttu-id="13855-107">enuncia Puntero al tamaño total de todas las asignaciones de memoria.</span><span class="sxs-lookup"><span data-stu-id="13855-107">[out] A pointer to the total size of all memory allocations.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2b3d6-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="2b3d6-108">Return Value</span></span>  
- <span data-ttu-id="2b3d6-109">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="2b3d6-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="13855-108">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="13855-108">Return Value</span></span>  
+ <span data-ttu-id="13855-109">Este método devuelve los siguientes HRESULT específicos y los errores HRESULT que indican un error del método.</span><span class="sxs-lookup"><span data-stu-id="13855-109">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="2b3d6-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2b3d6-110">HRESULT</span></span>|<span data-ttu-id="2b3d6-111">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="2b3d6-111">Description</span></span>|  
+|<span data-ttu-id="13855-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="13855-110">HRESULT</span></span>|<span data-ttu-id="13855-111">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="13855-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2b3d6-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="2b3d6-112">S_OK</span></span>|<span data-ttu-id="2b3d6-113">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="2b3d6-113">The method completed successfully.</span></span>|  
-|<span data-ttu-id="2b3d6-114">COR_E_APPDOMAINUNLOADED</span><span class="sxs-lookup"><span data-stu-id="2b3d6-114">COR_E_APPDOMAINUNLOADED</span></span>|<span data-ttu-id="2b3d6-115">El dominio de aplicación se ha descargado o no existe.</span><span class="sxs-lookup"><span data-stu-id="2b3d6-115">The application domain has been unloaded or does not exist.</span></span>|  
+|<span data-ttu-id="13855-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="13855-112">S_OK</span></span>|<span data-ttu-id="13855-113">El método se completó correctamente.</span><span class="sxs-lookup"><span data-stu-id="13855-113">The method completed successfully.</span></span>|  
+|<span data-ttu-id="13855-114">COR_E_APPDOMAINUNLOADED</span><span class="sxs-lookup"><span data-stu-id="13855-114">COR_E_APPDOMAINUNLOADED</span></span>|<span data-ttu-id="13855-115">El dominio de aplicación se ha descargado o no existe.</span><span class="sxs-lookup"><span data-stu-id="13855-115">The application domain has been unloaded or does not exist.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2b3d6-116">Comentarios</span><span class="sxs-lookup"><span data-stu-id="2b3d6-116">Remarks</span></span>  
- <span data-ttu-id="2b3d6-117">Este método es el equivalente administrado de los recursos administrados <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> propiedad.</span><span class="sxs-lookup"><span data-stu-id="2b3d6-117">This method is the unmanaged equivalent of the managed <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13855-116">Comentarios</span><span class="sxs-lookup"><span data-stu-id="13855-116">Remarks</span></span>  
+ <span data-ttu-id="13855-117">Este método es el equivalente no administrado de la propiedad administrada <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> .</span><span class="sxs-lookup"><span data-stu-id="13855-117">This method is the unmanaged equivalent of the managed <xref:System.AppDomain.MonitoringTotalAllocatedMemorySize%2A?displayProperty=nameWithType> property.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2b3d6-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2b3d6-118">Requirements</span></span>  
- <span data-ttu-id="2b3d6-119">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b3d6-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13855-118">Requisitos</span><span class="sxs-lookup"><span data-stu-id="13855-118">Requirements</span></span>  
+ <span data-ttu-id="13855-119">**Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13855-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2b3d6-120">**Encabezado**: MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="2b3d6-120">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="13855-120">**Encabezado**: Metahost. h</span><span class="sxs-lookup"><span data-stu-id="13855-120">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="2b3d6-121">**Biblioteca:** Incluye como recurso en MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2b3d6-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="13855-121">**Biblioteca** Se incluye como recurso en MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="13855-121">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2b3d6-122">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b3d6-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="13855-122">**Versiones de .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13855-122">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2b3d6-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="2b3d6-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13855-123">Vea también</span><span class="sxs-lookup"><span data-stu-id="13855-123">See also</span></span>
 
-- [<span data-ttu-id="2b3d6-124">ICLRAppDomainResourceMonitor (interfaz)</span><span class="sxs-lookup"><span data-stu-id="2b3d6-124">ICLRAppDomainResourceMonitor Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [<span data-ttu-id="2b3d6-125">Supervisión de recursos de dominio de aplicación</span><span class="sxs-lookup"><span data-stu-id="2b3d6-125">Application Domain Resource Monitoring</span></span>](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
-- [<span data-ttu-id="2b3d6-126">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="2b3d6-126">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [<span data-ttu-id="2b3d6-127">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="2b3d6-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [<span data-ttu-id="13855-124">ICLRAppDomainResourceMonitor (interfaz)</span><span class="sxs-lookup"><span data-stu-id="13855-124">ICLRAppDomainResourceMonitor Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
+- [<span data-ttu-id="13855-125">Supervisión de recursos de dominio de aplicación</span><span class="sxs-lookup"><span data-stu-id="13855-125">Application Domain Resource Monitoring</span></span>](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
+- [<span data-ttu-id="13855-126">Interfaces de hospedaje</span><span class="sxs-lookup"><span data-stu-id="13855-126">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="13855-127">Hospedar aplicaciones de WPF</span><span class="sxs-lookup"><span data-stu-id="13855-127">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
