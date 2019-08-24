@@ -6,44 +6,47 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: dc514fd8b9b7a17bf07a878e42729db4187d2b82
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 58b61af306385a245bedf16e370e6830c370a622
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963626"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987479"
 ---
-# <a name="how-to-dock-controls-on-windows-forms"></a><span data-ttu-id="81379-102">Procedimiento para acoplar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="81379-102">How to: Dock Controls on Windows Forms</span></span>
-<span data-ttu-id="81379-103">Puede acoplar controles a los bordes del formulario o hacer que rellenen el contenedor del control (ya sea un formulario o un control contenedor).</span><span class="sxs-lookup"><span data-stu-id="81379-103">You can dock controls to the edges of your form or have them fill the control's container (either a form or a container control).</span></span> <span data-ttu-id="81379-104">Por ejemplo, el explorador de Windows acopla <xref:System.Windows.Forms.TreeView> su control en el lado izquierdo de la ventana y <xref:System.Windows.Forms.ListView> su control en el lado derecho de la ventana.</span><span class="sxs-lookup"><span data-stu-id="81379-104">For example, Windows Explorer docks its <xref:System.Windows.Forms.TreeView> control to the left side of the window and its <xref:System.Windows.Forms.ListView> control to the right side of the window.</span></span> <span data-ttu-id="81379-105">Use la <xref:System.Windows.Forms.Control.Dock%2A> propiedad para todos los controles de Windows Forms visibles para definir el modo de acoplamiento.</span><span class="sxs-lookup"><span data-stu-id="81379-105">Use the <xref:System.Windows.Forms.Control.Dock%2A> property for all visible Windows Forms controls to define the docking mode.</span></span>  
-  
-> [!NOTE]
-> <span data-ttu-id="81379-106">Los controles se acoplan en orden z inverso.</span><span class="sxs-lookup"><span data-stu-id="81379-106">Controls are docked in reverse z-order.</span></span>  
-  
- <span data-ttu-id="81379-107">La <xref:System.Windows.Forms.Control.Dock%2A> propiedad interactúa con la <xref:System.Windows.Forms.Control.AutoSize%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="81379-107">The <xref:System.Windows.Forms.Control.Dock%2A> property interacts with the <xref:System.Windows.Forms.Control.AutoSize%2A> property.</span></span> <span data-ttu-id="81379-108">Para obtener más información, vea [información general sobre la propiedad AutoSize](autosize-property-overview.md).</span><span class="sxs-lookup"><span data-stu-id="81379-108">For more information, see [AutoSize Property Overview](autosize-property-overview.md).</span></span>  
-  
-### <a name="to-dock-a-control"></a><span data-ttu-id="81379-109">Para acoplar un control</span><span class="sxs-lookup"><span data-stu-id="81379-109">To dock a control</span></span>  
-  
-1. <span data-ttu-id="81379-110">Seleccione el control que desea acoplar.</span><span class="sxs-lookup"><span data-stu-id="81379-110">Select the control that you want to dock.</span></span>  
-  
-2. <span data-ttu-id="81379-111">En el ventana Propiedades, haga clic en la flecha situada a la <xref:System.Windows.Forms.Control.Dock%2A> derecha de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="81379-111">In the Properties window, click the arrow to the right of the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span>  
-  
-     <span data-ttu-id="81379-112">Se muestra un editor que muestra una serie de cuadros que representan los bordes y el centro del formulario.</span><span class="sxs-lookup"><span data-stu-id="81379-112">An editor is displayed that shows a series of boxes representing the edges and the center of the form.</span></span>  
-  
-3. <span data-ttu-id="81379-113">Haga clic en el botón que representa el borde del formulario en el que desea acoplar el control.</span><span class="sxs-lookup"><span data-stu-id="81379-113">Click the button that represents the edge of the form where you want to dock the control.</span></span> <span data-ttu-id="81379-114">Para rellenar el contenido del control de formulario o contenedor del control, haga clic en el cuadro central.</span><span class="sxs-lookup"><span data-stu-id="81379-114">To fill the contents of the control's form or container control, click the center box.</span></span> <span data-ttu-id="81379-115">Haga clic en **(ninguno)** para deshabilitar el acoplamiento.</span><span class="sxs-lookup"><span data-stu-id="81379-115">Click **(none)** to disable docking.</span></span>  
-  
-     <span data-ttu-id="81379-116">El control cambia automáticamente de tamaño para ajustarse a los límites del borde acoplado.</span><span class="sxs-lookup"><span data-stu-id="81379-116">The control is automatically resized to fit the boundaries of the docked edge.</span></span>  
-  
-    > [!NOTE]
-    > <span data-ttu-id="81379-117">Los controles heredados `Protected` deben ser capaces de acoplarse.</span><span class="sxs-lookup"><span data-stu-id="81379-117">Inherited controls must be `Protected` to be able to be docked.</span></span> <span data-ttu-id="81379-118">Para cambiar el nivel de acceso de un control, establezca su propiedad modificador en el ventana Propiedades.</span><span class="sxs-lookup"><span data-stu-id="81379-118">To change the access level of a control, set its **Modifier** property in the Properties window.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="81379-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="81379-119">See also</span></span>
+# <a name="how-to-dock-controls-on-windows-forms"></a><span data-ttu-id="47744-102">Procedimiento Acoplar controles en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="47744-102">How to: Dock controls on Windows Forms</span></span>
 
-- [<span data-ttu-id="81379-120">Controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="81379-120">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="81379-121">Organizar controles en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="81379-121">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="81379-122">Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos</span><span class="sxs-lookup"><span data-stu-id="81379-122">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [<span data-ttu-id="81379-123">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="81379-123">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
-- [<span data-ttu-id="81379-124">Controles de formularios Windows Forms por función</span><span class="sxs-lookup"><span data-stu-id="81379-124">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
-- [<span data-ttu-id="81379-125">Procedimientos: Delimitar y acoplar controles secundarios en un control FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="81379-125">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [<span data-ttu-id="81379-126">Cómo: Delimitar y acoplar controles secundarios en un control TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="81379-126">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [<span data-ttu-id="81379-127">Información general sobre la propiedad AutoSize</span><span class="sxs-lookup"><span data-stu-id="81379-127">AutoSize Property Overview</span></span>](autosize-property-overview.md)
-- [<span data-ttu-id="81379-128">Cómo: Delimitar controles en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="81379-128">How to: Anchor Controls on Windows Forms</span></span>](how-to-anchor-controls-on-windows-forms.md)
+<span data-ttu-id="47744-103">Puede acoplar controles a los bordes del formulario o hacer que rellenen el contenedor del control (ya sea un formulario o un control contenedor).</span><span class="sxs-lookup"><span data-stu-id="47744-103">You can dock controls to the edges of your form or have them fill the control's container (either a form or a container control).</span></span> <span data-ttu-id="47744-104">Por ejemplo, el explorador de Windows acopla <xref:System.Windows.Forms.TreeView> su control en el lado izquierdo de la ventana y <xref:System.Windows.Forms.ListView> su control en el lado derecho de la ventana.</span><span class="sxs-lookup"><span data-stu-id="47744-104">For example, Windows Explorer docks its <xref:System.Windows.Forms.TreeView> control to the left side of the window and its <xref:System.Windows.Forms.ListView> control to the right side of the window.</span></span> <span data-ttu-id="47744-105">Use la <xref:System.Windows.Forms.Control.Dock%2A> propiedad para todos los controles de Windows Forms visibles para definir el modo de acoplamiento.</span><span class="sxs-lookup"><span data-stu-id="47744-105">Use the <xref:System.Windows.Forms.Control.Dock%2A> property for all visible Windows Forms controls to define the docking mode.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="47744-106">Los controles se acoplan en orden z inverso.</span><span class="sxs-lookup"><span data-stu-id="47744-106">Controls are docked in reverse z-order.</span></span>
+
+<span data-ttu-id="47744-107">La <xref:System.Windows.Forms.Control.Dock%2A> propiedad interactúa con la <xref:System.Windows.Forms.Control.AutoSize%2A> propiedad.</span><span class="sxs-lookup"><span data-stu-id="47744-107">The <xref:System.Windows.Forms.Control.Dock%2A> property interacts with the <xref:System.Windows.Forms.Control.AutoSize%2A> property.</span></span> <span data-ttu-id="47744-108">Para obtener más información, vea [información general sobre la propiedad AutoSize](autosize-property-overview.md).</span><span class="sxs-lookup"><span data-stu-id="47744-108">For more information, see [AutoSize Property Overview](autosize-property-overview.md).</span></span>
+
+## <a name="to-dock-a-control"></a><span data-ttu-id="47744-109">Para acoplar un control</span><span class="sxs-lookup"><span data-stu-id="47744-109">To dock a control</span></span>
+
+1. <span data-ttu-id="47744-110">En Visual Studio, seleccione el control que desea acoplar.</span><span class="sxs-lookup"><span data-stu-id="47744-110">In Visual Studio, select the control that you want to dock.</span></span>
+
+2. <span data-ttu-id="47744-111">En la ventana **propiedades** , haga clic en la flecha situada a la <xref:System.Windows.Forms.Control.Dock%2A> derecha de la propiedad.</span><span class="sxs-lookup"><span data-stu-id="47744-111">In the **Properties** window, click the arrow to the right of the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span>
+
+   <span data-ttu-id="47744-112">Se muestra un editor que muestra una serie de cuadros que representan los bordes y el centro del formulario.</span><span class="sxs-lookup"><span data-stu-id="47744-112">An editor is displayed that shows a series of boxes representing the edges and the center of the form.</span></span>
+
+3. <span data-ttu-id="47744-113">Haga clic en el botón que representa el borde del formulario en el que desea acoplar el control.</span><span class="sxs-lookup"><span data-stu-id="47744-113">Click the button that represents the edge of the form where you want to dock the control.</span></span> <span data-ttu-id="47744-114">Para rellenar el contenido del control de formulario o contenedor del control, haga clic en el cuadro central.</span><span class="sxs-lookup"><span data-stu-id="47744-114">To fill the contents of the control's form or container control, click the center box.</span></span> <span data-ttu-id="47744-115">Haga clic en **(ninguno)** para deshabilitar el acoplamiento.</span><span class="sxs-lookup"><span data-stu-id="47744-115">Click **(none)** to disable docking.</span></span>
+
+   <span data-ttu-id="47744-116">El control cambia automáticamente de tamaño para ajustarse a los límites del borde acoplado.</span><span class="sxs-lookup"><span data-stu-id="47744-116">The control is automatically resized to fit the boundaries of the docked edge.</span></span>
+
+   > [!NOTE]
+   > <span data-ttu-id="47744-117">Los controles heredados `Protected` deben ser capaces de acoplarse.</span><span class="sxs-lookup"><span data-stu-id="47744-117">Inherited controls must be `Protected` to be able to be docked.</span></span> <span data-ttu-id="47744-118">Para cambiar el nivel de acceso de un control, establezca su propiedad modificador en la ventana **propiedades** .</span><span class="sxs-lookup"><span data-stu-id="47744-118">To change the access level of a control, set its **Modifier** property in the **Properties** window.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="47744-119">Vea también</span><span class="sxs-lookup"><span data-stu-id="47744-119">See also</span></span>
+
+- [<span data-ttu-id="47744-120">Controles de formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="47744-120">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="47744-121">Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos</span><span class="sxs-lookup"><span data-stu-id="47744-121">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="47744-122">Controles que se utilizan en formularios Windows Forms</span><span class="sxs-lookup"><span data-stu-id="47744-122">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+- [<span data-ttu-id="47744-123">Controles de formularios Windows Forms por función</span><span class="sxs-lookup"><span data-stu-id="47744-123">Windows Forms Controls by Function</span></span>](windows-forms-controls-by-function.md)
+- [<span data-ttu-id="47744-124">Procedimientos: Delimitar y acoplar controles secundarios en un control FlowLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="47744-124">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [<span data-ttu-id="47744-125">Procedimientos: Delimitar y acoplar controles secundarios en un control TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="47744-125">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [<span data-ttu-id="47744-126">Información general sobre la propiedad AutoSize</span><span class="sxs-lookup"><span data-stu-id="47744-126">AutoSize Property Overview</span></span>](autosize-property-overview.md)
+- [<span data-ttu-id="47744-127">Procedimientos: Delimitar controles en Windows Forms</span><span class="sxs-lookup"><span data-stu-id="47744-127">How to: Anchor Controls on Windows Forms</span></span>](how-to-anchor-controls-on-windows-forms.md)
