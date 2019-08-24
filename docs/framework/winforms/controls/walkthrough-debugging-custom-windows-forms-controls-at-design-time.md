@@ -15,60 +15,47 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 824d8a7de8e9e37899cb84d6cee9621f84a5bc65
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882462"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015698"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Tutorial: Depurar controles personalizados de formularios Windows Forms en tiempo de diseño
+# <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>Tutorial: Depurar controles de Windows Forms personalizados en tiempo de diseño
 
-Cuando se crea un control personalizado, a menudo encontrará lo necesario para depurar su comportamiento en tiempo de diseño. Esto es especialmente cierto si va a crear un diseñador personalizado para el control personalizado. Para obtener más información, consulte [Tutorial: Crear un Windows Forms Control que aprovecha las características de tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md).
+Al crear un control personalizado, a menudo es necesario depurar su comportamiento en tiempo de diseño. Esto es especialmente cierto si va a crear un diseñador personalizado para el control personalizado. Para obtener más información [, consulte Tutorial: Crear un control de Windows Forms que aprovecha las características](creating-a-wf-control-design-time-features.md)en tiempo de diseño de Visual Studio.
 
-Puede depurar sus controles personalizados mediante Visual Studio, simplemente como lo haría cualquier otras clases de .NET Framework. La diferencia es que desea depurar una instancia independiente de Visual Studio que se está ejecutando código del control personalizado
-
-Las tareas ilustradas en este tutorial incluyen:
-
-- Crear un proyecto de Windows Forms para hospedar el control personalizado
-
-- Crear un proyecto de biblioteca de controles
-
-- Agregar una propiedad al control personalizado
-
-- Agregar el control personalizado al formulario de host
-
-- Configurar el proyecto para la depuración de tiempo de diseño
-
-- Depurar el control personalizado en tiempo de diseño
-
-Cuando haya terminado, tendrá una comprensión de las tareas necesarias para depurar el comportamiento en tiempo de diseño de un control personalizado.
+Puede depurar los controles personalizados mediante Visual Studio, tal y como lo haría con cualquier otra clase de .NET Framework. La diferencia es que se depurará una instancia independiente de Visual Studio que ejecute el código del control personalizado.
 
 ## <a name="create-the-project"></a>Crear el proyecto
 
-El primer paso es crear el proyecto de aplicación. Este proyecto se utilizará para compilar la aplicación que hospeda el control personalizado.
+El primer paso es crear el proyecto de la aplicación. Usará este proyecto para compilar la aplicación que hospeda el control personalizado.
 
-En Visual Studio, cree un proyecto de aplicación de Windows denominado "DebuggingExample" (**archivo** > **New** > **proyecto**  >  **Visual C#**  o **Visual Basic** > **escritorio clásico de** > **deaplicacióndeformulariosdeWindows**).
+En Visual Studio, cree un proyecto de aplicación para Windows y asígnele el nombre **DebuggingExample**.
 
 ## <a name="create-the-control-library-project"></a>Crear el proyecto de biblioteca de controles
 
-1. Agregar un **biblioteca de controles de Windows** proyecto a la solución.
+1. Agregue un proyecto de **biblioteca de controles de Windows** a la solución.
 
-2. Agregue un nuevo **UserControl** al proyecto DebugControlLibrary. Para obtener más detalles, vea [Cómo: Agregar nuevos elementos de proyecto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Asigne el nuevo archivo de origen en un nombre de base de "DebugControl".
+2. Agregue un nuevo elemento **UserControl** al proyecto DebugControlLibrary. Asígnele el nombre **DebugControl**.
 
-3. Mediante el **el Explorador de soluciones**, elimine el control predeterminado del proyecto eliminando el archivo de código con el nombre de base "`UserControl1`". Para obtener más detalles, vea [Cómo: Quitar, eliminar y excluir elementos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).
+3. Para eliminar el control predeterminado del proyecto en **Explorador de soluciones**, elimine el archivo de código con un nombre base de UserControl1.
 
 4. Compile la solución.
 
 ## <a name="checkpoint"></a>Punto de control
 
-En este momento, podrá ver el control personalizado en el **cuadro de herramientas**.
+Llegados a este punto, podrá ver el control personalizado en el cuadro de **herramientas**.
 
-Para comprobar el progreso, busque la nueva ficha denominada **DebugControlLibrary componentes** y haga clic para seleccionarlo. Cuando se abre, verá el control aparece como **DebugControl** con el icono predeterminado junto a él.
+Para comprobar el progreso, busque la nueva pestaña denominada **componentes de DebugControlLibrary** y haga clic para seleccionarla. Cuando se abra, verá que el control aparece como **DebugControl** con el icono predeterminado situado junto a él.
 
-## <a name="add-a-property-to-your-custom-control"></a>Agregar una propiedad al control personalizado
+## <a name="add-a-property-to-your-custom-control"></a>Agregar una propiedad a un control personalizado
 
-Para demostrar que se está ejecutando código del control personalizado en tiempo de diseño, agregará una propiedad y establecer un punto de interrupción en el código que implementa la propiedad.
+Para demostrar que el código del control personalizado se está ejecutando en tiempo de diseño, agregará una propiedad y establecerá un punto de interrupción en el código que implementa la propiedad.
 
 1. Abra **DebugControl** en el **Editor de código**. Agregue el código siguiente a la definición de clase:
 
@@ -108,62 +95,60 @@ Para demostrar que se está ejecutando código del control personalizado en tiem
 
 ## <a name="add-your-custom-control-to-the-host-form"></a>Agregar el control personalizado al formulario de host
 
-Para depurar el comportamiento en tiempo de diseño del control personalizado, colocará una instancia de la clase de control personalizado en un formulario de host.
+Para depurar el comportamiento en tiempo de diseño del control personalizado, colocará una instancia de la clase de control personalizada en un formulario host.
 
 1. En el proyecto "DebuggingExample", abra Form1 en el **Diseñador de Windows Forms**.
 
-2. En el **cuadro de herramientas**, abra el **DebugControlLibrary componentes** pestaña y arrastre un **DebugControl** instancia hasta el formulario.
+2. En el **cuadro de herramientas**, abra la pestaña **componentes de DebugControlLibrary** y arrastre una instancia de **DebugControl** al formulario.
 
-3. Buscar el `DemoString` propiedad personalizada en el **propiedades** ventana. Tenga en cuenta que puede cambiar su valor como lo haría con cualquier otra propiedad. Tenga en cuenta también que, cuando el `DemoString` propiedad está seleccionada, la cadena de descripción de la propiedad aparece en la parte inferior de la **propiedades** ventana.
+3. Busque la `DemoString` propiedad personalizada en la ventana **propiedades** . Tenga en cuenta que puede cambiar su valor como lo haría con cualquier otra propiedad. Tenga en cuenta también que `DemoString` cuando se selecciona la propiedad, la cadena de descripción de la propiedad aparece en la parte inferior de la ventana **propiedades** .
 
-## <a name="set-up-the-project-for-design-time-debugging"></a>Configurar el proyecto para la depuración de tiempo de diseño
+## <a name="set-up-the-project-for-design-time-debugging"></a>Configurar el proyecto para la depuración en tiempo de diseño
 
-Para depurar el comportamiento en tiempo de diseño del control personalizado, que desea depurar una instancia independiente de Visual Studio que se está ejecutando código del control personalizado.
+Para depurar el comportamiento en tiempo de diseño del control personalizado, depurará una instancia independiente de Visual Studio que ejecute el código del control personalizado.
 
-1. Haga doble clic en el **DebugControlLibrary** del proyecto en el **el Explorador de soluciones** y seleccione **propiedades**.
+1. Haga clic con el botón derecho en el proyecto **DebugControlLibrary** en el **Explorador de soluciones** y seleccione **propiedades**.
 
-2. En el **DebugControlLibrary** hoja de propiedades, seleccione la **depurar** ficha.
+2. En la hoja de propiedades **DebugControlLibrary** , seleccione la pestaña depurar.
 
-     En el **acción de inicio** sección, seleccione **iniciar programa externo**. Puede depurar una instancia independiente de Visual Studio, haga clic en el botón de puntos suspensivos (![los puntos suspensivos (...) en la ventana Propiedades de Visual Studio.](./media/visual-studio-ellipsis-button.png)) botón para buscar el IDE de Visual Studio. El nombre del archivo ejecutable es **devenv.exe**, y si ha instalado en la ubicación predeterminada, su ruta de acceso es %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe.
+     En la sección **acción de inicio** , seleccione **programa externo de inicio**. Va a depurar una instancia independiente de Visual Studio, por lo que debe hacer![clic en los puntos suspensivos (el botón de puntos suspensivos (..](./media/visual-studio-ellipsis-button.png).) del botón ventana Propiedades de Visual Studio) para buscar el IDE de Visual Studio. El nombre del archivo ejecutable es **devenv. exe**y, si lo instaló en la ubicación predeterminada, su ruta de acceso es *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\\\<Edition > \Common7\IDE*.
 
 3. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.
 
-4. Haga clic en el **DebugControlLibrary** del proyecto y seleccione **establecer como proyecto de inicio** para habilitar esta configuración de depuración.
+4. Haga clic con el botón derecho en el proyecto **DebugControlLibrary** y seleccione **establecer como proyecto de inicio** para habilitar esta configuración de depuración.
 
 ## <a name="debug-your-custom-control-at-design-time"></a>Depurar el control personalizado en tiempo de diseño
 
-Ahora está listo para depurar el control personalizado mientras se ejecuta en modo de diseño. Al iniciar la sesión de depuración, se creará una nueva instancia de Visual Studio y se usará para cargar la solución "DebuggingExample". Cuando se abre Form1 en el **Diseñador de formularios**, una instancia del control personalizado se crea y se volverá a ejecutarse.
+Ahora está listo para depurar el control personalizado mientras se ejecuta en modo de diseño. Al iniciar la sesión de depuración, se creará una nueva instancia de Visual Studio y se usará para cargar la solución "DebuggingExample". Cuando abra Form1 en el **Diseñador de formularios**, se creará una instancia del control personalizado y comenzará a ejecutarse.
 
-1. Abra el **DebugControl** archivo de código fuente en el **Editor de código** y coloque un punto de interrupción en el `Set` descriptor de acceso de la `DemoString` propiedad.
+1. Abra el archivo de origen **DebugControl** en el **Editor de código** y coloque un punto `Set` de interrupción en `DemoString` el descriptor de acceso de la propiedad.
 
-2. Presione F5 para iniciar la sesión de depuración. Tenga en cuenta que se crea una nueva instancia de Visual Studio. Puede distinguir entre las instancias de dos maneras:
+2. Presione **F5** para iniciar la sesión de depuración. Se crea una nueva instancia de Visual Studio. Puede distinguir entre las instancias de dos maneras:
 
-    - La instancia de depuración con la palabra **ejecutando** en su barra de título
+    - La instancia de depuración tiene la palabra en **ejecución** en la barra de título
 
-    - La instancia de depuración tiene el **iniciar** situado en su **depurar** deshabilitado de la barra de herramientas
+    - La instancia de depuración tiene el botón **iniciar** en la barra de herramientas de depuración deshabilitada
 
-     El punto de interrupción se establece en la instancia de depuración.
+   El punto de interrupción se establece en la instancia de depuración.
 
-3. En la nueva instancia de Visual Studio, abra la solución "DebuggingExample". Puede encontrar fácilmente la solución seleccionando **proyectos recientes** desde el **archivo** menú. El archivo de solución "DebuggingExample.sln" se mostrará como los archivos usados recientemente.
+3. En la nueva instancia de Visual Studio, abra la solución "DebuggingExample". Puede encontrar fácilmente la solución seleccionando **proyectos recientes** en el menú **archivo** . El archivo de solución "DebuggingExample. sln" se mostrará como el archivo usado más recientemente.
 
-4. Abra Form1 en el **Diseñador de formularios** y seleccione el **DebugControl** control.
+4. Abra Form1 en el **Diseñador de formularios** y seleccione el control **DebugControl** .
 
-5. Cambie el valor de la propiedad `DemoString` . Tenga en cuenta que cuando se confirma el cambio, la instancia de depuración de Visual Studio adquiere el foco y la ejecución se detiene en el punto de interrupción. Puede paso a paso a través del descriptor de acceso de propiedad al igual que su cualquier otro código.
+5. Cambie el valor de la propiedad `DemoString` . Al confirmar el cambio, la instancia de depuración de Visual Studio adquiere el foco y la ejecución se detiene en el punto de interrupción. Puede recorrer el descriptor de acceso de la propiedad de la misma forma que cualquier otro código.
 
-6. Cuando haya terminado con la sesión de depuración, puede salir descartando la instancia hospedada de Visual Studio o haciendo clic en el **Detener depuración** botón en la instancia de depuración.
+6. Para detener la depuración, salga de la instancia hospedada de Visual Studio o seleccione el botón **detener** depuración en la instancia de depuración.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que puede depurar controles personalizados en tiempo de diseño, hay muchas posibilidades para expandir la interacción del control con el IDE de Visual Studio.
+Ahora que puede depurar los controles personalizados en tiempo de diseño, hay muchas posibilidades de expandir la interacción del control con el IDE de Visual Studio.
 
-- Puede usar el <xref:System.ComponentModel.Component.DesignMode%2A> propiedad de la <xref:System.ComponentModel.Component> clase para escribir código que solo se ejecutará en tiempo de diseño. Para obtener información detallada, vea <xref:System.ComponentModel.Component.DesignMode%2A>.
+- Puede usar la <xref:System.ComponentModel.Component.DesignMode%2A> propiedad de la <xref:System.ComponentModel.Component> clase para escribir código que solo se ejecutará en tiempo de diseño. Para obtener información detallada, vea <xref:System.ComponentModel.Component.DesignMode%2A>.
 
-- Hay varios atributos puede aplicar a las propiedades del control para manipular la interacción del control personalizado con el diseñador. Puede encontrar estos atributos en el <xref:System.ComponentModel?displayProperty=nameWithType> espacio de nombres.
+- Hay varios atributos que se pueden aplicar a las propiedades del control para manipular la interacción del control personalizado con el diseñador. Estos atributos se pueden encontrar en el <xref:System.ComponentModel?displayProperty=nameWithType> espacio de nombres.
 
-- Puede escribir un diseñador personalizado para el control personalizado. Esto le ofrece control completo sobre la experiencia de diseño mediante la infraestructura del diseñador extensible expuesta por Visual Studio. Para obtener más información, consulte [Tutorial: Crear un Windows Forms Control que aprovecha las características de tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md).
+- Puede escribir un diseñador personalizado para el control personalizado. Esto le proporciona un control completo sobre la experiencia de diseño mediante la infraestructura de diseñador extensible expuesta por Visual Studio. Para obtener más información [, consulte Tutorial: Crear un control de Windows Forms que aprovecha las características](creating-a-wf-control-design-time-features.md)en tiempo de diseño de Visual Studio.
 
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Crear un Control de Windows Forms que aproveche las características de tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)
-- [Cómo: Acceso a servicios en tiempo de diseño](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
-- [Cómo: Compatibilidad de tiempo de diseño de acceso en Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))
+- [Tutorial: Crear un control de Windows Forms que aprovecha las características en tiempo de diseño de Visual Studio](creating-a-wf-control-design-time-features.md)

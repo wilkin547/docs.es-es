@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 43b0ddc8f683e7069207bbb1c47af73976bc4a5a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958552"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70016107"
 ---
 # <a name="printing-overview"></a>Información general sobre impresión
 Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windows Presentation Foundation (WPF) tienen un nuevo conjunto de API de impresión y administración del sistema de impresión. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean aplicaciones de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], así como para los que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] y la ruta de impresión [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
@@ -64,7 +64,7 @@ Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windo
   
  Para habilitar el uso de las impresoras basadas en XPSDrv [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] por parte de y Windows Forms aplicaciones, el controlador de impresora XPS (XPSDrv) admite la conversión de GDI al formato XPS. El modelo XPSDrv también proporciona un convertidor para el formato de XPS a GDI [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] para que las [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] aplicaciones puedan imprimir documentos. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] el caso de las aplicaciones, los <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> métodos y <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> de la <xref:System.Windows.Xps.XpsDocumentWriter> clase realizan automáticamente la conversión del formato XPS a GDI siempre que la cola de impresión de destino de la operación de escritura no tenga un controlador XPSDrv. (Windows Forms aplicaciones no pueden [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] imprimir documentos).  
   
- En la ilustración siguiente se muestra el subsistema de impresión y se definen las [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]partes proporcionadas por y las partes definidas por los proveedores de software y hardware:  
+ En la ilustración siguiente se muestra el subsistema de impresión y se definen las partes proporcionadas por Microsoft y las partes definidas por los proveedores de software y hardware:  
   
  ![Captura de pantalla que muestra el sistema de impresión XPS.](./media/printing-overview/xml-paper-specification-print-system.png)  
   

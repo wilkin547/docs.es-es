@@ -7,21 +7,25 @@ helpviewer_keywords:
 - user controls [Windows Forms], creating
 - composite controls [Windows Forms], creating
 ms.assetid: 67713625-e2e4-4f6a-bce7-0855ee5043d9
-ms.openlocfilehash: 77233517203989f188a2b3ddf436656bc8da82a6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 7f4055c2374103b7df941d9a9bef24ed5e6cb27c
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966563"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015840"
 ---
 # <a name="how-to-inherit-from-the-usercontrol-class"></a>Procedimiento para heredar de la clase UserControl
+
 Para combinar la funcionalidad de uno o más controles de Windows Forms con código personalizado, puede crear un *control de usuario*. Los controles de usuario combinan el desarrollo rápido de controles, la funcionalidad de los controles de Windows Forms estándar y la versatilidad de los métodos y las propiedades personalizados. Al comenzar a crear un control de usuario, se le presentará un diseñador visible en el que puede colocar los controles de Windows Forms estándar. Estos controles conservan toda su funcionalidad inherente, así como la apariencia y el comportamiento (apariencia) de los controles estándar. Una vez que estos controles están integrados en el control de usuario, dejan de estar disponibles en el código. El control de usuario realiza su propio dibujo y controla también toda la funcionalidad básica asociada a los controles.
 
 ## <a name="to-create-a-user-control"></a>Crear un control de usuario
 
-1. Cree un nuevo proyecto de tipo **Biblioteca de controles de Windows**.
+1. Cree un nuevo proyecto de **biblioteca de controles de Windows** en Visual Studio.
 
-     Se crea un nuevo proyecto con un control de usuario en blanco.
+   Se crea un nuevo proyecto con un control de usuario en blanco.
 
 2. Arrastre controles desde la pestaña **Windows Forms** de **Cuadro de herramientas** en el diseñador.
 
@@ -29,13 +33,13 @@ Para combinar la funcionalidad de uno o más controles de Windows Forms con cód
 
 4. Implemente los métodos o propiedades personalizados que vaya a incorporar el control.
 
-5. Presione F5 para compilar el proyecto y ejecutar el control en **UserControl Test Container**. Para obtener más información, vea [Cómo: Pruebe el comportamiento en tiempo de ejecución de un](how-to-test-the-run-time-behavior-of-a-usercontrol.md)control UserControl.
+5. Presione **F5** para compilar el proyecto y ejecutar el control en **UserControl Test Container**. Para obtener más información, consulte [Cómo Pruebe el comportamiento en tiempo de ejecución de un](how-to-test-the-run-time-behavior-of-a-usercontrol.md)control UserControl.
 
 ## <a name="see-also"></a>Vea también
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
 - [Cómo: Heredar de la clase control](how-to-inherit-from-the-control-class.md)
 - [Cómo: Heredar de controles de Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Procedimientos: Controles de autor para Windows Forms](how-to-author-controls-for-windows-forms.md)
-- [Solucionar problemas de controladores de eventos heredados en Visual Basic](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
+- [Cómo: Controles de autor para Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Cómo: Probar el comportamiento en tiempo de ejecución de un control UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)

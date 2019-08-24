@@ -6,16 +6,19 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 1cc854d735ba88a301d6e2f6a83fe5c8bf881380
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+author: gewarren
+ms.author: gewarren
+manager: jillfra
+ms.openlocfilehash: 34c14c0afd9632b06947fd72e46ddbda070cfb0f
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211419"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015765"
 ---
-# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>Tutorial: Realizar tareas comunes con etiquetas inteligentes en controles de formularios Windows Forms
+# <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>Tutorial: Realizar tareas comunes con etiquetas inteligentes
 
-Como construir formularios y controles para la aplicación de Windows Forms, hay muchas tareas que llevará a cabo varias veces. Estas son algunas de las tareas realizadas normalmente que encontrará:
+A medida que crea formularios y controles para la aplicación de Windows Forms, hay muchas tareas que realizará repetidamente. Estas son algunas de las tareas que se realizan con frecuencia:
 
 - Agregar o quitar una pestaña en un <xref:System.Windows.Forms.TabControl>.
 
@@ -23,43 +26,33 @@ Como construir formularios y controles para la aplicación de Windows Forms, hay
 
 - Cambiar la orientación de un <xref:System.Windows.Forms.SplitContainer> control.
 
-Para acelerar el desarrollo, muchos controles ofrecen etiquetas inteligentes, que son menús contextuales que le permiten realizar tareas comunes como éstas en un solo gesto en tiempo de diseño. Estas tareas se denominan *verbos de etiquetas inteligentes*.
+Para agilizar el desarrollo, muchos controles ofrecen etiquetas inteligentes, que son menús contextuales que le permiten realizar tareas comunes como estas en un solo gesto en tiempo de diseño. Estas tareas se denominan *verbos de etiqueta inteligente*.
 
-Las etiquetas inteligentes permanecen adjuntas a una instancia del control de su duración en el diseñador y siempre están disponibles.
-
-Las tareas ilustradas en este tutorial incluyen:
-
-- Crear un proyecto de Windows Forms
-
-- Uso de etiquetas inteligentes
-
-- Habilitación y deshabilitación de etiquetas inteligentes
-
-Cuando termine, comprenderá el rol de estas importantes características de diseño.
+Las etiquetas inteligentes permanecen adjuntas a una instancia de control para su duración en el diseñador y siempre están disponibles.
 
 ## <a name="create-the-project"></a>Crear el proyecto
 
 El primer paso es crear el proyecto y configurar el formulario.
 
-1. En Visual Studio, cree un proyecto de aplicación basada en Windows llamado "SmartTagsExample" (**archivo** > **New** > **proyecto**  >  **Visual C#**  o **Visual Basic** > **escritorio clásico de** > **Windows Forms Aplicación**).
+1. En Visual Studio, cree un proyecto de aplicación basada en Windows llamado **SmartTagsExample**.
 
 2. Seleccione el formulario en el **Diseñador de Windows Forms**.
 
-## <a name="use-smart-tags"></a>Utilizar etiquetas inteligentes
+## <a name="use-smart-tags"></a>Usar etiquetas inteligentes
 
-Las etiquetas inteligentes están siempre disponibles en tiempo de diseño de los controles que les ofrece.
+Las etiquetas inteligentes siempre están disponibles en tiempo de diseño en los controles que las ofrecen.
 
-1. Arrastre un <xref:System.Windows.Forms.TabControl> desde el **cuadro de herramientas** hasta su formulario. Tenga en cuenta el glifo de etiqueta inteligente (![glifo de etiqueta inteligente](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) que aparece en la en paralelo de la <xref:System.Windows.Forms.TabControl>.
+1. Arrastre un <xref:System.Windows.Forms.TabControl> desde el **cuadro de herramientas** hasta el formulario. Observe el glifo de etiqueta inteligente (![glifo](./media/vs-winformsmttagglyph.gif)de etiqueta inteligente) que aparece <xref:System.Windows.Forms.TabControl>en el lado de.
 
-2. Haga clic en el glifo de etiqueta inteligente. En el menú contextual que aparece al lado del glifo, seleccione el **Agregar pestaña** elemento. Observe que una nueva página de ficha se agrega a la <xref:System.Windows.Forms.TabControl>.
+2. Haga clic en el glifo de etiqueta inteligente. En el menú contextual que aparece junto al glifo, seleccione el elemento de **pestaña agregar** . Observe que se agrega una nueva página de pestañas <xref:System.Windows.Forms.TabControl>a.
 
 3. Arrastre un control <xref:System.Windows.Forms.TableLayoutPanel> del **cuadro de herramientas** al formulario.
 
-4. Haga clic en el glifo de etiqueta inteligente. En el menú contextual que aparece al lado del glifo, seleccione el **Agregar columna** elemento. Observe que se agrega una nueva columna a la <xref:System.Windows.Forms.TableLayoutPanel> control.
+4. Haga clic en el glifo de etiqueta inteligente. En el menú contextual que aparece junto al glifo, seleccione el elemento **Agregar columna** . Observe que se agrega una nueva columna al <xref:System.Windows.Forms.TableLayoutPanel> control.
 
 5. Arrastre un control <xref:System.Windows.Forms.SplitContainer> del **cuadro de herramientas** al formulario.
 
-6. Haga clic en el glifo de etiqueta inteligente. En el menú contextual que aparece al lado del glifo, seleccione el **orientación del divisor Horizontal** elemento. Observe que el <xref:System.Windows.Forms.SplitContainer> barra divisora del control ahora está orientado horizontalmente.
+6. Haga clic en el glifo de etiqueta inteligente. En el menú contextual que aparece junto al glifo, seleccione el elemento de **orientación divisor horizontal** . Observe que la <xref:System.Windows.Forms.SplitContainer> barra divisora del control ahora está orientada horizontalmente.
 
 ## <a name="see-also"></a>Vea también
 
@@ -67,4 +60,3 @@ Las etiquetas inteligentes están siempre disponibles en tiempo de diseño de lo
 - <xref:System.Windows.Forms.TabControl>
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.ComponentModel.Design.DesignerActionList>
-- [Tutorial: Incorporación de etiquetas inteligentes a un componente de Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171829(v=vs.120))

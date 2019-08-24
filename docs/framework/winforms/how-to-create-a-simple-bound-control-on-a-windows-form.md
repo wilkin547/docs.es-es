@@ -5,22 +5,22 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: ed1d0e423a3cdf77a242ec3214720f1466f65897
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: df87f00e6e03de67c3fb1adc28472c96f4a47ef4
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039504"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015630"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedimiento para crear un control con enlace simple en formularios Windows Forms
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Procedimiento Crear un control de enlace simple en Windows Forms
 
 Con el *enlace simple*, puede mostrar un único elemento de datos, como un valor de columna de una tabla de conjunto de datos, en un control. Puede enlazar de forma sencilla cualquier propiedad de un control con un valor de datos.
 
-### <a name="to-simple-bind-a-control"></a>Para enlazar un control de forma simple
+## <a name="to-simple-bind-a-control"></a>Para enlazar un control de forma simple
 
 1. Conéctese a un origen de datos. Para obtener más información, vea [conectarse a un origen de datos](../data/adonet/connecting-to-a-data-source.md).
 
-2. En el formulario, seleccione el control y muestre la ventana **propiedades** .
+2. En Visual Studio, seleccione el control en el formulario y muestre la ventana **propiedades** .
 
 3. Expanda la propiedad **(DataBindings)** .
 
