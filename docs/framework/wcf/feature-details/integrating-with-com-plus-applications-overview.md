@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 75711ea534907e5692d97e0ec5f290e03fb75235
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590538"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69988688"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Integración en la información general de las aplicaciones COM+
-Windows Communication Foundation (WCF) proporciona un entorno rico para crear aplicaciones distribuidas. Si ya usa lógica de la aplicación basada en componentes alojada en COM +, puede usar WCF para extender su lógica existente en lugar de tener que rescribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
+Windows Communication Foundation (WCF) proporciona un entorno completo para crear aplicaciones distribuidas. Si ya usa la lógica de aplicación basada en componentes hospedada en COM+, puede usar WCF para ampliar la lógica existente en lugar de tener que volver a escribirla. Un escenario común es cuando se quiere exponer una lógica de negocio de Enterprise Services o COM+ mediante servicios web.  
   
  Cuando una interfaz en un componente COM+ se expone como un servicio web, la especificación y contrato de estos servicios se determina por una asignación automática realizada cuando se inicia la aplicación. La lista siguiente muestra el modelo conceptual para esta asignación:  
   
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
  Las direcciones y enlaces de transporte predeterminados para el servicio son proporcionadas en un archivo de configuración de servicio, pero se pueden reconfigurar si se necesita.  
   
 > [!NOTE]
->  Los contratos para los servicios web expuestos siguen siendo constantes siempre que las interfaces COM+ y la configuración no se modifiquen. Una modificación a varias interfaces no actualiza automáticamente los servicios disponibles y requiere que se ejecute de nuevo la herramienta COM+ Service Model Configuration (ComSvcConfig.exe).  
+> Los contratos para los servicios web expuestos siguen siendo constantes siempre que las interfaces COM+ y la configuración no se modifiquen. Una modificación a varias interfaces no actualiza automáticamente los servicios disponibles y requiere que se ejecute de nuevo la herramienta COM+ Service Model Configuration (ComSvcConfig.exe).  
   
  Los requisitos de autorización y autenticación de la aplicación COM+ y sus componentes se siguen necesitando cuando se usan como un servicio web.  
   
@@ -40,16 +40,16 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
   
 2. Seleccione un modo de alojamiento adecuado.  
   
-3. Use la herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para agregar un servicio web para la interfaz. Para obtener más información sobre cómo usar ComSvcConfig.exe, vea [Cómo: Use la herramienta de configuración del modelo de servicio COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3. Use la herramienta de configuración del modelo de servicio COM+ (ComSvcConfig.exe) para agregar un servicio web para la interfaz. Para obtener más información acerca de cómo usar ComSvcConfig. exe, [consulte Cómo: Use la herramienta](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)de configuración del modelo de servicio com+.  
   
-4. Configure las opciones de servicio adicionales en el archivo de configuración de la aplicación. Para obtener más información sobre cómo configurar un componente, vea [Cómo: Configuración de COM + Service](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4. Configure las opciones de servicio adicionales en el archivo de configuración de la aplicación. Para obtener más información acerca de cómo configurar un componente, [consulte Cómo: Configure los valores](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)del servicio com+.  
   
 ## <a name="supported-interfaces"></a>Interfaces admitidas  
  Hay algunas restricciones en el tipo de interfaces que se pueden exponer como un servicio web. No se admiten los siguientes tipos de interfaz:  
   
 - Interfaces que pasan referencias de objeto como parámetros: el siguiente enfoque de referencia de objeto limitado se describe en la sección Compatibilidad de referencia de objeto limitado.  
   
-- Las interfaces que pasan a tupos que no son compatibles con las conversiones de interoperabilidad COM de .NET Framework.  
+- Interfaces que pasan tipos que no son compatibles con las conversiones de interoperabilidad de COM .NET Framework.  
   
 - Interfaces para las aplicaciones que tienen la agrupación de aplicaciones habilitadas cuando lo hospedan COM+.  
   
@@ -64,14 +64,14 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
 ### <a name="limited-object-reference-support"></a>Compatibilidad limitada de referencia de objeto  
  Dado que varios componentes implementados de COM+ utilizan objetos por parámetros de referencia, como devolver un objeto ADO Recordset, la integración de COM+ incluye compatibilidad limitada para los parámetros de referencia de objeto. La compatibilidad se limita a los objetos que implementan la interfaz COM `IPersistStream`. Esto incluye los objetos ADO Recordset y se puede implementar para objetos COM específicos de la aplicación.  
   
- Para habilitar esta compatibilidad, la herramienta ComSvcConfig.exe proporciona el **allowreferences** switch que deshabilita el parámetro de firma de método normal y comprueba que se ejecuta la herramienta para asegurarse de que no se usan parámetros de referencia de objeto . Además, se deben denominados e identifica en los tipos de objeto que pasan como parámetros el <`persistableTypes`> elemento de configuración que es un elemento secundario de la <`comContract`> elemento.  
+ Para habilitar esta compatibilidad, la herramienta ComSvcConfig. exe proporciona el modificador **allowreferences** que deshabilita el parámetro de firma de método normal y comprueba que la herramienta se ejecuta para asegurarse de que no se utilizan parámetros de referencia de objeto. Además, los tipos de objeto que se pasan como parámetros se deben denominar e identificar en el`persistableTypes`< > elemento de configuración que es un elemento secundario`comContract`del elemento de > <.  
   
  Cuando se usa esta característica, el servicio de integración de COM+ utiliza la interfaz `IPersistStream` para serializar o deserializar la instancia de objeto. Si la instancia de objeto no es compatible con `IPersistStream`, se producirá una excepción.  
   
  Dentro de una aplicación de cliente, los métodos en el objeto <xref:System.ServiceModel.ComIntegration.PersistStreamTypeWrapper> se pueden utilizar para pasar un objeto a un servicio y de igual forma recuperar un objeto.  
   
 > [!NOTE]
->  Dada la naturaleza personalizada y específica de la plataforma del enfoque de serialización, esto es más adecuado para su uso entre los clientes de WCF y los servicios WCF.  
+> Debido a la naturaleza personalizada y específica de la plataforma del enfoque de serialización, es más adecuado para su uso entre clientes de WCF y servicios WCF.  
   
 ## <a name="selecting-the-hosting-mode"></a>Seleccionar el modo de hospedaje  
  COM+ expone servicios web en uno de los modos de hospedaje siguientes:  
@@ -82,22 +82,22 @@ Windows Communication Foundation (WCF) proporciona un entorno rico para crear ap
   
 - Hospedado por Web  
   
-     El servicio web se hospeda dentro de un proceso de trabajo de servidor web. Este modo no le exige a COM+ que esté activo cuando se recibe la solicitud inicial. Si la aplicación no está activa cuando se recibe esta solicitud, se activa automáticamente antes de procesar la solicitud. Este modo también proporciona acceso a la aplicación de servidor tanto al servicio web como a DCOM, pero produce un salto del proceso para las solicitudes del servicio web. Esto exige normalmente que el cliente habilite la suplantación. En WCF, esto puede hacerse con el <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propiedad de la <xref:System.ServiceModel.Security.WindowsClientCredential> (clase), que se obtiene acceso como una propiedad de la clase genérica <xref:System.ServiceModel.ChannelFactory%601> (clase), así como el <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> valor de enumeración.  
+     El servicio web se hospeda dentro de un proceso de trabajo de servidor web. Este modo no le exige a COM+ que esté activo cuando se recibe la solicitud inicial. Si la aplicación no está activa cuando se recibe esta solicitud, se activa automáticamente antes de procesar la solicitud. Este modo también proporciona acceso a la aplicación de servidor tanto al servicio web como a DCOM, pero produce un salto del proceso para las solicitudes del servicio web. Esto exige normalmente que el cliente habilite la suplantación. En WCF, esto se puede hacer con la <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propiedad de la <xref:System.ServiceModel.Security.WindowsClientCredential> clase, a la que se tiene acceso como una propiedad de <xref:System.ServiceModel.ChannelFactory%601> la clase genérica, así como <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> el valor de enumeración.  
   
 - Hospedaje en web en proceso  
   
      La lógica del servicio web y de la aplicación COM+ se hospedan dentro del proceso de trabajo del servidor web. Esto proporciona la activación automática del modo de hospedaje en web sin producir un salto del proceso para las solicitudes del servicio web. El inconveniente es que no se puede tener acceso a la aplicación de servidor a través de DCOM.  
   
 ### <a name="security-considerations"></a>Consideraciones de seguridad  
- Al igual que otros servicios WCF, la configuración de seguridad para el servicio expuesto se administra a través de los valores de configuración para el canal WCF. No se exige la configuración de seguridad de DCOM tradicional, como los valores de permisos de  equipo de DCOM. Para exigir las funciones de aplicación COM+, la autorización de “comprobaciones de acceso de nivel de componente” ha de estar habilitada para el componente.  
+ Al igual que otros servicios de WCF, la configuración de seguridad para el servicio expuesto se administra a través de los valores de configuración del canal de WCF. No se exige la configuración de seguridad de DCOM tradicional, como los valores de permisos de  equipo de DCOM. Para exigir las funciones de aplicación COM+, la autorización de “comprobaciones de acceso de nivel de componente” ha de estar habilitada para el componente.  
   
  El uso de un enlace no seguro hace vulnerable la comunicación a manipulaciones o a divulgación de información. Para evitar esto, se recomienda que utilice un enlace seguro.  
   
- Para los modos de hospedaje en COM+ y web, las aplicaciones de cliente deben permitir al proceso de servidor suplantar al usuario del cliente. Esto puede hacerse en los clientes de WCF estableciendo nivel a la suplantación <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
+ Para los modos de hospedaje en COM+ y web, las aplicaciones de cliente deben permitir al proceso de servidor suplantar al usuario del cliente. Esto puede realizarse en los clientes de WCF estableciendo el nivel de suplantación en <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>.  
   
  Si Internet Information Server (IIS) o el Servicio de activación de procesos de Windows (WAS) utilizan transporte HTTP, la herramienta Httpcfg.exe se puede utilizar para reservar una dirección de punto de conexión de transporte. En otras configuraciones es importante proteger contra servicios maliciosos que actúan como el servicio intencional. Para evitar que un servicio malicioso se inicie en el punto de conexión deseado, el servicio legítimo se puede configurar para que se ejecute como un servicio NT. Esto permite que el servicio legítimo exija la dirección del punto de conexión antes que cualquier servicio malicioso.  
   
- Al exponer una aplicación COM + con funciones COM + configuradas como un servicio hospedado en Web, la "cuenta Iniciar proceso de IIS" debe agregarse a uno de los roles de la aplicación. Esta cuenta, que suele tener el nombre IWAM_machinename, se debe agregar para habilitar el apagado limpio de objetos después del uso. No se le deberían otorgar permisos adicionales a esta cuenta.  
+ Al exponer una aplicación COM+ con roles COM+ configurados como un servicio hospedado en Web, se debe agregar la "iniciar cuenta de proceso de IIS" a uno de los roles de la aplicación. Esta cuenta, que suele tener el nombre IWAM_machinename, se debe agregar para habilitar el apagado limpio de objetos después del uso. No se le deberían otorgar permisos adicionales a esta cuenta.  
   
  Las características de reciclaje de proceso de COM+ no se pueden utilizar en aplicaciones integradas. Si la aplicación se configura para utilizar reciclaje de proceso y los componentes se ejecutan en un proceso hospedado por COM+, el servicio no se inicia. Este requisito no incluye servicios del modo en proceso de hospedaje en web porque no se aplica la configuración de reciclaje de proceso.  
   

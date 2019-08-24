@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: d9c3492e50a5eba741fa6e241f6b2c57fde35ef0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 14bf9c89fd7142746b93cc45af6c2152e8700571
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952922"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988534"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operaciones sincrónicas y asincrónicas
 Este tema explica cómo implementar y llamar a operaciones de servicio asincrónicas.  
@@ -76,7 +76,7 @@ public class SampleService:ISampleService
  La operación SampleMethodTaskAsync devuelve Task\<string> porque la operación lógica devuelve una cadena. Para obtener más información sobre el patrón asincrónico basado en tareas, [Información general sobre el patrón asincrónico basado en tareas](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
->  Cuando se usa el patrón asincrónico basado en tareas, se puede iniciar T:System.AggregateException si se produce una excepción mientras se espera la finalización de la operación. Esta excepción puede producirse en el cliente o servicios  
+> Cuando se usa el patrón asincrónico basado en tareas, se puede iniciar T:System.AggregateException si se produce una excepción mientras se espera la finalización de la operación. Esta excepción puede producirse en el cliente o servicios  
   
 #### <a name="event-based-asynchronous-pattern"></a>Patrón asincrónico basado en eventos  
  Todo servicio que admita el modelo asincrónico basado en eventos tendrá una o varias operaciones denominadas MethodNameAsync. Estos métodos pueden reflejar versiones sincrónicas, que desempeñan la misma operación en el subproceso actual. La clase también puede tener un evento MethodNameCompleted y un método MethodNameAsyncCancel (o simplemente CancelAsync). Un cliente que desea llamar a la operación definirá un controlador de eventos para que se llame cuando la operación se complete,  

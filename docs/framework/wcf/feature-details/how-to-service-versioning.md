@@ -2,18 +2,18 @@
 title: Cómo Control de versiones del servicio
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 4e2f5cb01ac2c7f49bf93538b3c4b1f0fb4fab2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654537"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988710"
 ---
 # <a name="how-to-service-versioning"></a>Cómo Control de versiones del servicio
 Este tema describe los pasos básicos necesarios para crear una configuración de enrutamiento que enrute mensajes a las diferentes versiones del mismo servicio. En este ejemplo, los mensajes se enrutan a dos versiones diferentes de un servicio de la calculadora, `roundingCalc` (v1) y `regularCalc` (v2). Ambas implementaciones admiten las mismas operaciones; sin embargo, el servicio más antiguo, `roundingCalc`, redondea todos los cálculos al valor entero más cercano antes de devolverlos. Una aplicación cliente debe poder indicar cuándo se debe usar el servicio `regularCalc` más reciente.  
   
 > [!WARNING]
->  Para enrutar un mensaje a una versión de servicio concreta, el servicio de enrutamiento debe poder determinar el destino del mensaje en función del contenido del mensaje. En el método mostrado a continuación, el cliente especificará la versión insertando información en un encabezado del mensaje. Existen métodos de control de versiones del servicio que no requieren que los clientes pasen datos adicionales. Por ejemplo, un mensaje se podría enrutar a la versión más reciente o más compatible de un servicio, o el enrutador podría usar una parte del sobre SOAP estándar.  
+> Para enrutar un mensaje a una versión de servicio concreta, el servicio de enrutamiento debe poder determinar el destino del mensaje en función del contenido del mensaje. En el método mostrado a continuación, el cliente especificará la versión insertando información en un encabezado del mensaje. Existen métodos de control de versiones del servicio que no requieren que los clientes pasen datos adicionales. Por ejemplo, un mensaje se podría enrutar a la versión más reciente o más compatible de un servicio, o el enrutador podría usar una parte del sobre SOAP estándar.  
   
  Las operaciones expuestas por ambos servicios son:  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, el filtro de XPath se utiliza para detectar el valor del encabezado personalizado "CalcVer" para determinar qué versión debe enrutarse el mensaje a. También se utiliza un filtro de XPath para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
+2. Defina los filtros usados para enrutar mensajes a los extremos del destino.  En este ejemplo, se usa el filtro XPath para detectar el valor del encabezado personalizado "CalcVer" para determinar a qué versión se debe enrutar el mensaje. Un filtro XPath también se utiliza para detectar mensajes que no contienen el encabezado "CalcVer". En el siguiente ejemplo, se definen los filtros necesarios y la tabla de espacio de nombres.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > El prefijo de espacio de nombres s12 se define de forma predeterminada en la tabla de espacio de nombres y representa el espacio de nombres `http://www.w3.org/2003/05/soap-envelope`.
+    > El prefijo de espacio de nombres S12 se define de forma predeterminada en la tabla de `http://www.w3.org/2003/05/soap-envelope`espacio de nombres y representa el espacio de nombres.
   
-3. Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio de regularCalc. Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc. Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.  
+3. Defina la tabla de filtro, que asocia cada filtro a un punto de conexión del cliente. Si el mensaje contiene el encabezado "CalcVer" con un valor de 1, se enviará al servicio regularCalc. Si el encabezado contiene un valor de 2, se enviará al servicio de roundingCalc. Si no hay ningún encabezado, el mensaje se enrutará a regularCalc.  
   
      El procedimiento siguiente define la tabla de filtros y agrega los filtros definidos anteriormente.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. El ejemplo siguiente se muestra cómo asociar `filterTable1` con los puntos de conexión de servicio:  
+4. Para evaluar los mensajes entrantes con respecto a los filtros incluidos en la tabla de filtros, debe asociar esta a los puntos de conexión de servicio mediante el comportamiento de enrutamiento. `filterTable1` En el ejemplo siguiente se muestra cómo asociar con los puntos de conexión de servicio:  
   
     ```xml  
     <behaviors>  

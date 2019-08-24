@@ -1,17 +1,17 @@
 ---
-title: Getstartaddress (método)
+title: 'ICorDebugMemoryBuffer:: Getstartaddress ((método)'
 ms.date: 03/30/2017
 ms.assetid: f804d9ab-8c88-44f0-b278-5fcca7f87726
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9208d07b697c3bb8a99e13582eda70dcb8dd826b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1394624051baa9e7dd21e29788d5fab28332081b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752772"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987548"
 ---
-# <a name="icordebugmemorybuffergetstartaddress-method"></a>Getstartaddress (método)
+# <a name="icordebugmemorybuffergetstartaddress-method"></a>ICorDebugMemoryBuffer:: Getstartaddress ((método)
 Obtiene la dirección de inicio del búfer de memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -29,14 +29,14 @@ HRESULT GetStartAddress(
 ## <a name="remarks"></a>Comentarios  
   
 > [!WARNING]
->  Este método solo está disponible con .NET Native.  
+> Este método solo está disponible con .NET Native.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Encabezado**: CorDebug.idl, CorDebug.h  
+ **Encabezado**: Cordebug. idl, Cordebug. h  
   
- **Biblioteca:** CorGuids.lib  
+ **Biblioteca** CorGuids.lib  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   

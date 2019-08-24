@@ -3,12 +3,12 @@ title: <cookieHandler>
 ms.date: 03/30/2017
 ms.assetid: bfdc127f-8d94-4566-8bef-f583c6ae7398
 author: BrucePerlerMS
-ms.openlocfilehash: 6c62100b2445ae10a83ebd9e7d154a6e2aa14e0b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1c044f7346fabc77d7744f42c5bfd3d86d72402e
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69942798"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988345"
 ---
 # <a name="cookiehandler"></a>\<cookieHandler>
 Configura el <xref:System.IdentityModel.Services.CookieHandler> <xref:System.IdentityModel.Services.SessionAuthenticationModule> que usa (SAM) para leer y escribir cookies.  
@@ -43,7 +43,7 @@ Configura el <xref:System.IdentityModel.Services.CookieHandler> <xref:System.Ide
   
 |Atributo|DESCRIPCIÓN|  
 |---------------|-----------------|  
-|name|Especifica el nombre base para las cookies escritas. El valor predeterminado es "FedAuth".|  
+|Nombre|Especifica el nombre base para las cookies escritas. El valor predeterminado es "FedAuth".|  
 |path|Especifica el valor de la ruta de acceso de las cookies escritas. El valor predeterminado es "HttpRuntime. AppDomainAppVirtualPath".|  
 |modo|Uno de los <xref:System.IdentityModel.Services.CookieHandlerMode> valores de que especifica el tipo de controlador de cookies utilizado por el SAM. Se pueden usar los valores siguientes:<br /><br /> -"Predeterminado": igual que "fragmentada".<br />-"Fragmentado": utiliza una instancia de la <xref:System.IdentityModel.Services.ChunkedCookieHandler> clase. Este controlador de cookies garantiza que las cookies individuales no superen un tamaño máximo establecido. Para ello, podría "fragmentar" una cookie lógica en varias cookies en el cable.<br />-"Custom": utiliza una instancia de una clase personalizada derivada de <xref:System.IdentityModel.Services.CookieHandler>. El `<customCookieHandler>` elemento secundario hace referencia a la clase derivada.<br /><br /> El valor predeterminado es "default".|  
 |persistentSessionLifetime|Especifica la duración de las sesiones persistentes. Si es cero, siempre se usan sesiones transitorias. El valor predeterminado es "0:0:0", que especifica una sesión transitoria. El valor máximo es "365:0:0", que especifica una sesión de 365 días. El valor debe especificarse según la restricción siguiente: `<xs:pattern value="([0-9.]+:){0,1}([0-9]+:){0,1}[0-9.]+" />`, donde el valor más a la izquierda especifica los días, el valor medio (si está presente) especifica las horas y el valor más a la derecha (si está presente) especifica minutos.|  
@@ -77,7 +77,7 @@ Configura el <xref:System.IdentityModel.Services.CookieHandler> <xref:System.Ide
  El siguiente código XML muestra `<cookieHandler>` un elemento. En este ejemplo, dado que `mode` no se especifica el atributo, el SAM usará el controlador de cookies predeterminado. Se trata de una instancia de <xref:System.IdentityModel.Services.ChunkedCookieHandler> la clase. Dado que `<chunkedCookieHandler>` no se especifica el elemento secundario, se usará el tamaño de fragmento predeterminado. HTTPS no será necesario porque el `requireSsl` atributo está establecido. `false`  
   
 > [!WARNING]
->  En este ejemplo, no se requiere HTTPS para escribir cookies de sesión. Esto se debe a `requireSsl` que el atributo `<cookieHandler>` del elemento se establece `false`en. Esta configuración no se recomienda para la mayoría de los entornos de producción, ya que puede suponer un riesgo para la seguridad.  
+> En este ejemplo, no se requiere HTTPS para escribir cookies de sesión. Esto se debe a `requireSsl` que el atributo `<cookieHandler>` del elemento se establece `false`en. Esta configuración no se recomienda para la mayoría de los entornos de producción, ya que puede suponer un riesgo para la seguridad.  
   
 ```xml  
 <cookieHandler requireSsl="false" />  

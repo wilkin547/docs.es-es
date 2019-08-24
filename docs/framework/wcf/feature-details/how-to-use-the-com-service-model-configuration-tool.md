@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 9677e516ef6c91ef344e10bc8f608a397a4ed157
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9dabb5e1410427940db911299e66f82ec009cce9
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966138"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988683"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>Procedimiento para usar la herramienta configuración de modelos de servicio COM+
 Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de línea de comandos de configuración de modelos de servicio COM+ (ComSvcConfig.exe) para configurar las interfaces de aplicaciones que se expondrán como servicios web.  
@@ -29,7 +29,7 @@ Cuando ha seleccionado un modo de hospedaje adecuado, utilice la herramienta de 
 > Es importante revertir esta clave del Registro. Se trata de una clave de compatibilidad. Si no se revierte este cambio, se pueden producir problemas con otras aplicaciones .NET activas en el equipo.  
   
 > [!WARNING]
->  Al usar ComSvcConfig. exe/Install en un equipo con Windows 8, se muestra un cuadro de diálogo que indica "una aplicación de su equipo necesita la siguiente característica de Windows: .NET Framework 3,5 (incluye .NET 2,0 y .NET 3,0" si .NET Framework 3,5 no está instalado. Se puede omitir este cuadro de diálogo. También puede establecer la clave del Registro OnlyUseLatestCLR a un valor DWORD de 0x00000001  
+> Al usar ComSvcConfig. exe/Install en un equipo con Windows 8, se muestra un cuadro de diálogo que indica "una aplicación de su equipo necesita la siguiente característica de Windows: .NET Framework 3,5 (incluye .NET 2,0 y .NET 3,0" si .NET Framework 3,5 no está instalado. Se puede omitir este cuadro de diálogo. También puede establecer la clave del Registro OnlyUseLatestCLR a un valor DWORD de 0x00000001  
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>Para agregar una interfaz al conjunto de interfaces que se expondrán como servicios web, utilizando el modo de hospedaje de COM+  
   

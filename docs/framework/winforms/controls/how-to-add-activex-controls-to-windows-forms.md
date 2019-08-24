@@ -6,37 +6,36 @@ helpviewer_keywords:
 - forms [Windows Forms], adding ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
-ms.openlocfilehash: 17311adade187ef3c8e4e639299e6c5cbbcd98a9
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8c4c6c3f96c49401b032e360314794cc800c0551
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210388"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987062"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Procedimiento para agregar controles ActiveX a formularios Windows Forms
 
-Aunque el Diseñador de Windows Forms en Visual Studio está optimizado para hospedar controles de Windows Forms, también puede colocar controles ActiveX en Windows Forms.
+Aunque el Diseñador de Windows Forms de Visual Studio está optimizado para hospedar controles de Windows Forms, también puede colocar controles ActiveX en Windows Forms.
 
 > [!CAUTION]
-> Existen limitaciones de rendimiento de Windows Forms cuando se agregan controles ActiveX a ellos.
+> Existen limitaciones de rendimiento para Windows Forms cuando se agregan controles ActiveX a ellos.
 
-Antes de agregar controles ActiveX a un formulario, debe agregarlos al cuadro de herramientas. Para obtener más información, consulte [componentes COM, Personalizar cuadro de diálogo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cby6tzh5(v=vs.100)).
+Antes de agregar controles ActiveX al formulario, debe agregarlos al cuadro de herramientas. Para obtener más información, vea [componentes com, cuadro de diálogo Personalizar cuadro de herramientas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cby6tzh5(v=vs.100)).
 
-## <a name="add-an-activex-control-to-your-windows-form"></a>Agregue un control ActiveX a un formulario de Windows
+## <a name="add-an-activex-control-to-your-windows-form"></a>Agregar un control ActiveX a Windows Forms
 
-Para agregar un control ActiveX a un formulario de Windows, haga doble clic en el control en el cuadro de herramientas.
+Para agregar un control ActiveX a Windows Forms, haga doble clic en el control en el cuadro de herramientas.
 
-Visual Studio agrega todas las referencias al control en el proyecto. Para obtener más información acerca de las cosas a tener en cuenta al usar controles ActiveX en Windows Forms, consulte [consideraciones al hospedar un ActiveX Control en un formulario de Windows](considerations-when-hosting-an-activex-control-on-a-windows-form.md).
+Visual Studio agrega todas las referencias al control en el proyecto. Para obtener más información sobre los aspectos que se deben tener en cuenta al utilizar controles ActiveX en Windows Forms, vea [consideraciones al hospedar un control ActiveX en Windows Forms](considerations-when-hosting-an-activex-control-on-a-windows-form.md).
 
 > [!NOTE]
-> El importador de controles de ActiveX de Windows Forms (AxImp.exe) crea argumentos de evento de un tipo diferente del esperado en las importaciones de bibliotecas de vínculos dinámicos de ActiveX. Los argumentos creados por AxImp.exe son similares a lo siguiente: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, cuando `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` se espera. Tenga en cuenta que este irregularidad no evita que código funciona con normalidad. Para obtener más información, consulte [importador de controles ActiveX de Windows Forms (Aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md).
+> El Windows Forms importador de controles ActiveX (AxImp. exe) crea argumentos de evento de un tipo diferente del esperado al importar las bibliotecas de vínculos dinámicos de ActiveX. Los argumentos creados por Aximp. exe son similares a los siguientes: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, cuando `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` se espera. Tenga en cuenta que esta irregularidad no impide que el código funcione con normalidad. Para obtener más información, vea Windows Forms el importador de [controles ActiveX (Aximp. exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md).
 
 ## <a name="see-also"></a>Vea también
 
 - [Controles de formularios Windows Forms](index.md)
 - [Comparación de los controles y objetos programables de distintos lenguajes y bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Cómo: Agregar controles a Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
 - [Asignar etiquetas a controles individuales de formularios Windows Forms y proporcionar accesos directos a los mismos](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles de formularios Windows Forms por función](windows-forms-controls-by-function.md)

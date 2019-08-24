@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 4007a04bf3bd2b130e978415722b0e5b7769cc25
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 210d15187cd539cdae6e38fdcb708b4b9f81c073
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953265"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988300"
 ---
 # <a name="handling-datatable-events"></a>Controlar eventos de DataTable
 El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una aplicación puede procesar. En la siguiente tabla se describen los eventos de `DataTable`.  
@@ -33,7 +33,7 @@ El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una 
 > La mayoría de las operaciones que agregan o eliminan filas no generan eventos `ColumnChanged` ni `ColumnChanging`. Sin embargo, el método `ReadXml` sí genera eventos `ColumnChanged` y `ColumnChanging`, a menos que `XmlReadMode` se establezca en `DiffGram` o se establezca en `Auto` cuando el documento XML que se lee es `DiffGram`.  
   
 > [!WARNING]
->  Es posible que los datos resulten dañados si se modifican en un `DataSet` desde el que se genera el evento `RowChanged`. No se producirá ninguna excepción si se produce este tipo de daño en los datos.  
+> Es posible que los datos resulten dañados si se modifican en un `DataSet` desde el que se genera el evento `RowChanged`. No se producirá ninguna excepción si se produce este tipo de daño en los datos.  
   
 ## <a name="additional-related-events"></a>Eventos relacionados adicionales  
  La propiedad <xref:System.Data.DataTable.Constraints%2A> contiene una instancia de <xref:System.Data.ConstraintCollection>. La clase <xref:System.Data.ConstraintCollection> expone un evento <xref:System.Data.ConstraintCollection.CollectionChanged>. Este evento se activa cuando se agrega, modifica o quita una restricción de `ConstraintCollection`.  
@@ -71,7 +71,7 @@ El objeto <xref:System.Data.DataTable> proporciona una serie de eventos que una 
 > Los cambios en las columnas de expresión nunca generan eventos `DataTable`. Los cambios en las columnas de expresión solo generan eventos `DataView` y `DataRowView`. Las columnas de expresión pueden tener dependencias en otras columnas y se pueden evaluar varias veces durante una única operación de `DataRow`. Cada evaluación de expresión genera eventos, y una sola operación de `DataRow` puede generar varios eventos `ListChanged` y `PropertyChanged` cuando se ven afectadas columnas de expresión, que posiblemente incluyen varios eventos para la misma columna de expresión.  
   
 > [!WARNING]
->  No inicie una excepción <xref:System.NullReferenceException> dentro del controlador de eventos `RowChanged`. Si se inicia una excepción <xref:System.NullReferenceException> dentro del evento `RowChanged` de un objeto `DataTable`, el objeto `DataTable` resultará dañado.  
+> No inicie una excepción <xref:System.NullReferenceException> dentro del controlador de eventos `RowChanged`. Si se inicia una excepción <xref:System.NullReferenceException> dentro del evento `RowChanged` de un objeto `DataTable`, el objeto `DataTable` resultará dañado.  
   
 ### <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo crear controladores de eventos para los eventos `RowChanged`, `RowChanging`, `RowDeleted`, `RowDeleting`, `ColumnChanged`, `ColumnChanging`, `TableNewRow`, `TableCleared` y `TableClearing`. Cada controlador de eventos muestra resultado en la ventana de la consola cuando se activa.  

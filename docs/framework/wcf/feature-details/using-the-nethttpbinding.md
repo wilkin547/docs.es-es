@@ -2,26 +2,26 @@
 title: Usar NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 5090cfdfeb068acda1e1092e408f3cd747c574c2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f908361c5f9152d333daaf5e3ee90de3b1b89e9
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932566"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988623"
 ---
 # <a name="using-the-nethttpbinding"></a>Usar NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding> es un enlace diseñado para consumir servicios HTTP o WebSocket y usa la codificación binaria de forma predeterminada. <xref:System.ServiceModel.NetHttpBinding> detectará si se usa con un contrato de solicitud-respuesta o dúplex y cambiará su comportamiento para que coincida; usará HTTP para los contratos de solicitud-respuesta y WebSockets para los contratos dúplex. Este comportamiento puede invalidarse mediante la configuración <xref:System.ServiceModel.Channels.WebSocketTransportUsage>:  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always> -Esto fuerza WebSockets incluso para los contratos de solicitud-respuesta.  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>: Fuerza el uso de WebSockets incluso para los contratos de solicitud-respuesta.  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never> -Esto impide que se utilice WebSockets. Si se intenta usar un contrato dúplex con este valor se producirá una excepción.  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>: Esto impide que se usen WebSockets. Si se intenta usar un contrato dúplex con este valor se producirá una excepción.  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex> -Éste es el valor predeterminado y se comporta como se describió anteriormente.  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>: Este es el valor predeterminado y se comporta como se ha descrito anteriormente.  
   
  <xref:System.ServiceModel.NetHttpBinding> admite sesiones confiables en modo HTTP y en modo WebSocket. En el modo WebSocket, el transporte proporciona las sesiones.  
   
 > [!WARNING]
->  Cuando se usa <xref:System.ServiceModel.NetHttpBinding> y TransferMode de enlace está establecido en TransferMode.Streamed, las grandes transmisiones pueden provocar un bloqueo interno y la llamada expirará. Para solucionar este problema envíe mensajes de menor tamaño o use TransferMode.Buffered.  
+> Cuando se usa <xref:System.ServiceModel.NetHttpBinding> y TransferMode de enlace está establecido en TransferMode.Streamed, las grandes transmisiones pueden provocar un bloqueo interno y la llamada expirará. Para solucionar este problema envíe mensajes de menor tamaño o use TransferMode.Buffered.  
   
 ## <a name="configuring-a-service-to-use-nethttpbinding"></a>Configurar un servicio para usar NetHttpBinding  
  <xref:System.ServiceModel.NetHttpBinding> se puede configurar igual que cualquier otro enlace. El siguiente fragmento de código de configuración muestra cómo configurar un servicio WCF con <xref:System.ServiceModel.NetHttpBinding>.  

@@ -2,18 +2,18 @@
 title: <baseAddressPrefixFilters>
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 8a59f651318e18411b1485fc4eebeb7a550afca0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 55ffcfb5c0c84d68033d082cbe451696bd3c9dc2
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919856"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988358"
 ---
 # <a name="baseaddressprefixfilters"></a>\<baseAddressPrefixFilters>
 Representa una colección de elementos de configuración que especifican los filtros de paso a través, que proporcionan un mecanismo para seleccionar los enlaces de Internet Information Services (IIS) adecuados al hospedar la aplicación Windows Communication Foundation (WCF) en IIS.  
   
 > [!WARNING]
->  \<baseAddressPrefixFilters > no reconoce "localhost", use en su lugar el nombre completo de la máquina.  
+> \<baseAddressPrefixFilters > no reconoce "localhost", use en su lugar el nombre completo de la máquina.  
   
  \<system.ServiceModel>  
 \<ServiceHostingEnvironment>  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 7ee603fa5350ef81c6d32d2f22119bbe526295df
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d20afc6e8a950035cc3c0bf010504d42f401bfbb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912624"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987509"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Procedimiento para agregar controles a formularios Windows Forms
 La mayoría de los formularios se diseñan agregando controles a la superficie del formulario para definir una interfaz de usuario (UI). Un *control* es un componente de un formulario que se usa para mostrar información o para aceptar datos proporcionados por el usuario. Para obtener más información sobre los controles, vea [controles de Windows Forms](index.md).
@@ -34,7 +34,7 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
 
 ## <a name="to-drag-a-control-to-a-form"></a>Para arrastrar un control a un formulario
 
-1. Abra el formulario. Para obtener más información, consulte [Cómo Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
+1. Abra el formulario. Para obtener más información, vea [Cómo: Mostrar Windows Forms en el diseñador](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).
 
 2. En el **cuadro de herramientas**, haga clic en el control que desee y arrástrelo al formulario.
 
@@ -89,7 +89,6 @@ La mayoría de los formularios se diseñan agregando controles a la superficie d
 ## <a name="see-also"></a>Vea también
 
 - [Controles de formularios Windows Forms](index.md)
-- [Organizar controles en formularios Windows Forms](arranging-controls-on-windows-forms.md)
-- [Cómo: Cambiar el tamaño de los controles en Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Procedimientos: Establecer el texto mostrado por un control de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Procedimientos: Cambiar el tamaño de los controles en Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Cómo: Establecer el texto mostrado por un control de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Controles que se utilizan en formularios Windows Forms](controls-to-use-on-windows-forms.md)

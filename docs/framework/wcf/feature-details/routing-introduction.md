@@ -2,12 +2,12 @@
 title: Introducción al enrutamiento
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: cc9298c96a5d1dc60ae1f9982b21ce7a160aacbd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: eaf09c0d724521c3c69fde0e90ecd7cd5aadb253
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933968"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988663"
 ---
 # <a name="routing-introduction"></a>Introducción al enrutamiento
 El servicio de enrutamiento proporciona un intermediario de SOAP conectable genérico que es capaz de enrutar mensajes en función de su contenido. Con el servicio de enrutamiento, puede crear una lógica de enrutamiento compleja que le permita implementar escenarios como la agregación de servicios, el control de versiones del servicio, el enrutamiento de prioridad y el enrutamiento de multidifusión. El servicio de enrutamiento también proporciona un control de errores, que le permite preparar listas de puntos de conexión de reserva a los que se envían los mensajes si se produce un error al realizar un envío al punto de conexión de destino principal.  
@@ -395,7 +395,7 @@ using (ServiceHost serviceHost =
  La suplantación con el servicio de enrutamiento necesita tanto el uso de la suplantación de ASP.NET mientras está en modo de compatibilidad de ASP.NET como el uso de credenciales de Windows que se han configurado para permitir la suplantación. Para obtener más información sobre el modo de compatibilidad de ASP.NET, consulte [servicios WCF y ASP.net](wcf-services-and-aspnet.md).  
   
 > [!WARNING]
->  El Servicio de enrutamiento de WCF no admite la suplantación con la autenticación básica.  
+> El Servicio de enrutamiento de WCF no admite la suplantación con la autenticación básica.  
   
  Para usar la suplantación de ASP.NET con el servicio de enrutamiento, habilite el modo de compatibilidad de ASP.NET en el entorno de hospedaje del servicio. El servicio de enrutamiento se ha ya marcado como que permite el modo de compatibilidad de ASP.NET y la suplantación se habilitará automáticamente. La suplantación es el único uso admitido de la integración de ASP.NET con el servicio de enrutamiento.  
   

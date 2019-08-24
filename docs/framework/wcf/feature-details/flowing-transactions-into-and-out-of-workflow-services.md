@@ -2,18 +2,18 @@
 title: Flujo de las transacciones en los servicios de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7926c5a8ce1ca1ba3e24c4d1681ae12c18039924
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ae99c53bbb859f3ade075d4d60ad2ae7e5e7272b
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963342"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988806"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Flujo de las transacciones en los servicios de flujo de trabajo
 Los servicios y clientes de flujo de trabajo pueden participar en las transacciones.  Para que una operación de servicio se convierta en parte de una transacción de ambiente, coloque una actividad de <xref:System.ServiceModel.Activities.Receive> dentro de una actividad de <xref:System.ServiceModel.Activities.TransactedReceiveScope>. En cualquier llamada realizada por un objeto <xref:System.ServiceModel.Activities.Send> o una actividad de <xref:System.ServiceModel.Activities.SendReply> dentro de <xref:System.ServiceModel.Activities.TransactedReceiveScope> también se realizará dentro de la transacción de ambiente. Una aplicación cliente del flujo de trabajo puede crear una transacción de ambiente utilizando la actividad de <xref:System.Activities.Statements.TransactionScope> y operaciones de servicio de llamada que usen la transacción de ambiente. Este tema sirve de guía para crear un servicio de flujo de trabajo y un cliente de flujo de trabajo que participan en transacciones.  
   
 > [!WARNING]
->  Si una instancia de servicio de flujo de trabajo se carga dentro de una transacción <xref:System.Activities.Statements.Persist> y el flujo de trabajo contiene una actividad, la instancia de flujo de trabajo se bloqueará hasta que se agote el tiempo de espera de la transacción.  
+> Si una instancia de servicio de flujo de trabajo se carga dentro de una transacción <xref:System.Activities.Statements.Persist> y el flujo de trabajo contiene una actividad, la instancia de flujo de trabajo se bloqueará hasta que se agote el tiempo de espera de la transacción.  
   
 > [!IMPORTANT]
 > Siempre que use un objeto <xref:System.ServiceModel.Activities.TransactedReceiveScope> se recomienda que coloque todas las recepciones en el flujo de trabajo dentro de actividades <xref:System.ServiceModel.Activities.TransactedReceiveScope>.  
@@ -115,7 +115,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 8. Arrastre y coloque una actividad de <xref:System.Activities.Statements.Sequence> en la sección Cuerpo de <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Dentro de la actividad de <xref:System.Activities.Statements.Sequence>, arrastre las dos actividades de <xref:System.Activities.Statements.WriteLine> y establezca las propiedades <xref:System.Activities.Statements.WriteLine.Text%2A> como se muestra en la siguiente tabla.  
   
-    |Actividad|Value|  
+    |Actividad|Valor|  
     |--------------|-----------|  
     |Primera propiedad WriteLine|Servicio Recepción completada "|  
     |Segunda propiedad WriteLine|Servicio Received = "+ requestMessage|  
@@ -179,7 +179,7 @@ Los servicios y clientes de flujo de trabajo pueden participar en las transaccio
   
 8. Arrastre y coloque una actividad de <xref:System.ServiceModel.Activities.Send> después de la actividad de <xref:System.Activities.Statements.Assign> y establezca las siguientes propiedades:  
   
-    |Propiedad|Valor|  
+    |Propiedad|Value|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
     |nombreOperación|StartSample|  

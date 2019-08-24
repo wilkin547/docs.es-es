@@ -2,24 +2,24 @@
 title: Opciones de hospedaje de flujo de trabajo
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: b0cd9748c28cd6206e1fedffc5772b2849462dba
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: b85f656d6262c850c81833d5c4fe4d1fb5b1ec55
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487365"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988508"
 ---
 # <a name="workflow-hosting-options"></a>Opciones de hospedaje de flujo de trabajo
-La mayoría de los ejemplos de Windows Workflow Foundation (WF) usan los flujos de trabajo que se hospedan en una aplicación de consola, pero esto no es un escenario realista para flujos de trabajo reales. Los flujos de trabajo de aplicaciones empresariales reales se hospedará en procesos persistentes: un servicio de Windows creado por el desarrollador o una aplicación de servidor como IIS 7.0 o AppFabric. Las diferencias entre estas aproximaciones son las que se indican a continuación.  
+La mayoría de los ejemplos de Windows Workflow Foundation (WF) usan flujos de trabajo que se hospedan en una aplicación de consola, pero no es un escenario realista para los flujos de trabajo del mundo real. Los flujos de trabajo de las aplicaciones empresariales reales se hospedarán en procesos persistentes, ya sea un servicio de Windows creado por el desarrollador o una aplicación de servidor como IIS 7,0 o AppFabric. Las diferencias entre estas aproximaciones son las que se indican a continuación.  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>Hospedar flujos de trabajo en IIS con Windows AppFabric  
  Usar IIS con AppFabric es el host preferido para los flujos de trabajo. Windows Activation Service, que quita la dependencia de HTTP a través de IIS solamente, es la aplicación de host para flujos de trabajo que usan AppFabric.  
   
 ## <a name="hosting-workflows-in-iis-alone"></a>Hospedar flujos de trabajo solo en IIS  
- No se recomienda utilizar IIS 7.0 por sí solo, como administración y supervisión de las herramientas disponibles en AppFabric que facilitan el mantenimiento de aplicaciones en ejecución. Los flujos de trabajo solo deben estar hospedados en IIS 7.0 si hay problemas de infraestructura al cambiar a AppFabric.  
+ No se recomienda usar IIS 7,0 por sí mismo, ya que existen herramientas de administración y supervisión disponibles con AppFabric que facilitan el mantenimiento de las aplicaciones en ejecución. Los flujos de trabajo solo se deben hospedar en IIS 7,0 solo si hay problemas de infraestructura con el cambio a AppFabric.  
   
 > [!WARNING]
->  IIS 7.0 recicla grupos de aplicaciones periódicamente por diversos motivos. Cuando se recicla un grupo de aplicaciones, IIS deja de aceptar mensajes en el grupo anterior y crea instancias en un grupo de aplicaciones nuevo para aceptar las nuevas solicitudes. Si un flujo de trabajo sigue funcionando después de enviar una respuesta, IIS 7.0 no será consciente de que el trabajo realizado y puede reciclar el grupo de aplicaciones de hospedaje. Si esto sucede, se anulará el flujo de trabajo y servicios de seguimiento se grabará un [1004: WorkflowInstanceAborted](1004-workflowinstanceaborted.md) mensaje con un campo motivo vacío.  
+> IIS 7,0 recicla los grupos de aplicaciones periódicamente por varias razones. Cuando se recicla un grupo de aplicaciones, IIS deja de aceptar mensajes en el grupo anterior y crea instancias en un grupo de aplicaciones nuevo para aceptar las nuevas solicitudes. Si un flujo de trabajo sigue funcionando después de enviar una respuesta, IIS 7,0 no será consciente del trabajo que se realiza y puede reciclar el grupo de aplicaciones de hospedaje. Si esto ocurre, el flujo de trabajo se anulará y los servicios de seguimiento registrarán un mensaje [1004-WorkflowInstanceAborted](1004-workflowinstanceaborted.md) con un campo motivo vacío.  
 >   
 >  Si se usa la persistencia, el host debe reiniciar explícitamente las instancias anuladas desde el último punto de persistencia.  
 >   
