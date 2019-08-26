@@ -2,24 +2,24 @@
 title: Procedimiento para buscar atributos de elementos del mismo nivel con un nombre específico (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 0c62ecb7660a012af556515ba5e7de330d5ab5e7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 78795f164490dddd6bdc8dae04961c028228ab0c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486793"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593519"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a><span data-ttu-id="5538b-102">Procedimiento para buscar atributos de elementos del mismo nivel con un nombre específico (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="5538b-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="5538b-103">En este tema se muestra cómo buscar todos los atributos de los elementos secundarios del nodo de contexto.</span><span class="sxs-lookup"><span data-stu-id="5538b-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="5538b-104">Sólo se devuelven los atributos con un nombre específico en la recopilación.</span><span class="sxs-lookup"><span data-stu-id="5538b-104">Only attributes with a specific name are returned in the collection.</span></span>  
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a><span data-ttu-id="277ca-102">Procedimiento para buscar atributos de elementos del mismo nivel con un nombre específico (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="277ca-102">How to: Find Attributes of Siblings with a Specific Name (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="277ca-103">En este tema se muestra cómo buscar todos los atributos de los elementos secundarios del nodo de contexto.</span><span class="sxs-lookup"><span data-stu-id="277ca-103">This topic shows how to find all attributes of the siblings of the context node.</span></span> <span data-ttu-id="277ca-104">Sólo se devuelven los atributos con un nombre específico en la recopilación.</span><span class="sxs-lookup"><span data-stu-id="277ca-104">Only attributes with a specific name are returned in the collection.</span></span>  
   
- <span data-ttu-id="5538b-105">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="5538b-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="277ca-105">La expresión XPath es:</span><span class="sxs-lookup"><span data-stu-id="277ca-105">The XPath expression is:</span></span>  
   
  `../Book/@id`  
   
-## <a name="example"></a><span data-ttu-id="5538b-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="5538b-106">Example</span></span>  
- <span data-ttu-id="5538b-107">Este ejemplo primero busca un elemento `Book`, después busca todos los elementos secundarios con el nombre `Book` y después busca todos los atributos con el nombre `id`.</span><span class="sxs-lookup"><span data-stu-id="5538b-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="5538b-108">El resultado es una colección de atributos.</span><span class="sxs-lookup"><span data-stu-id="5538b-108">The result is a collection of attributes.</span></span>  
+## <a name="example"></a><span data-ttu-id="277ca-106">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="277ca-106">Example</span></span>  
+ <span data-ttu-id="277ca-107">Este ejemplo primero busca un elemento `Book`, después busca todos los elementos secundarios con el nombre `Book` y después busca todos los atributos con el nombre `id`.</span><span class="sxs-lookup"><span data-stu-id="277ca-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`, and then finds all attributes named `id`.</span></span> <span data-ttu-id="277ca-108">El resultado es una colección de atributos.</span><span class="sxs-lookup"><span data-stu-id="277ca-108">The result is a collection of attributes.</span></span>  
   
- <span data-ttu-id="5538b-109">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Libros (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5538b-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="277ca-109">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Libros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="277ca-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
@@ -47,7 +47,7 @@ foreach (XAttribute el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="5538b-110">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="5538b-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="277ca-110">Este ejemplo produce el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="277ca-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  

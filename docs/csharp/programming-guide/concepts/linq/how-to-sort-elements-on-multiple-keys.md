@@ -2,22 +2,22 @@
 title: Procedimiento para ordenar elementos por varias claves (C#)
 ms.date: 07/20/2015
 ms.assetid: 3b2760b6-d607-4ac7-b784-5c6524e2a0e0
-ms.openlocfilehash: 2325417fa2ed8a6c3ca13504cada4d4e1a49be42
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 4029e88ced11cdc2e95fdfd212fecb3e3b194436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68709909"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592443"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="3489f-102">Procedimiento para ordenar elementos por varias claves (C#)</span><span class="sxs-lookup"><span data-stu-id="3489f-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
+# <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="d9875-102">Procedimiento para ordenar elementos por varias claves (C#)</span><span class="sxs-lookup"><span data-stu-id="d9875-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
 
-<span data-ttu-id="3489f-103">En este tema se describe cómo ordenar en varias claves.</span><span class="sxs-lookup"><span data-stu-id="3489f-103">This topic shows how to sort on multiple keys.</span></span>
+<span data-ttu-id="d9875-103">En este tema se describe cómo ordenar en varias claves.</span><span class="sxs-lookup"><span data-stu-id="d9875-103">This topic shows how to sort on multiple keys.</span></span>
 
-## <a name="example"></a><span data-ttu-id="3489f-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3489f-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d9875-104">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d9875-104">Example</span></span>
 
-<span data-ttu-id="3489f-105">En este ejemplo los resultados se ofrecen primero por código postal de envío y después por fecha de ordenación.</span><span class="sxs-lookup"><span data-stu-id="3489f-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
+<span data-ttu-id="d9875-105">En este ejemplo los resultados se ofrecen primero por código postal de envío y después por fecha de ordenación.</span><span class="sxs-lookup"><span data-stu-id="d9875-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>
 
-<span data-ttu-id="3489f-106">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="3489f-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
+<span data-ttu-id="d9875-106">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span><span class="sxs-lookup"><span data-stu-id="d9875-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrders.xml");
@@ -36,7 +36,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="3489f-107">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="3489f-107">This code produces the following output:</span></span>
+<span data-ttu-id="d9875-107">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="d9875-107">This code produces the following output:</span></span>
 
 ```
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
@@ -63,11 +63,11 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```
 
-## <a name="example"></a><span data-ttu-id="3489f-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="3489f-108">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d9875-108">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="d9875-108">Example</span></span>
 
-<span data-ttu-id="3489f-109">El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="3489f-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="3489f-110">Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="3489f-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
+<span data-ttu-id="d9875-109">El siguiente ejemplo muestra la misma consulta sobre un XML que se encuentra en un espacio de nombres.</span><span class="sxs-lookup"><span data-stu-id="d9875-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="d9875-110">Para más información, consulte [Información general sobre los espacios de nombres (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="d9875-110">For more information, see [Namespaces Overview (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md).</span></span>
 
-<span data-ttu-id="3489f-111">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="3489f-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
+<span data-ttu-id="d9875-111">Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Clientes y pedidos en un espacio de nombres](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="d9875-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](./sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>
 
 ```csharp
 XElement co = XElement.Load("CustomersOrdersInNamespace.xml");
@@ -88,7 +88,7 @@ foreach (var r in sortedElements)
         r.CustomerID, r.EmployeeID, r.ShipPostalCode, r.OrderDate);
 ```
 
-<span data-ttu-id="3489f-112">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="3489f-112">This code produces the following output:</span></span>
+<span data-ttu-id="d9875-112">Este código genera el siguiente resultado:</span><span class="sxs-lookup"><span data-stu-id="d9875-112">This code produces the following output:</span></span>
 
 ```
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997
