@@ -1,33 +1,28 @@
 - name: Controles de Windows Forms
   href: index.md
   items:
-    - name: Organizar controles en formularios Windows Forms
-      href: arranging-controls-on-windows-forms.md
+    - name: Organización de los controles en Windows Forms
       items:
-        - name: Procedimiento para alinear varios controles en formularios Windows Forms
+        - name: Procedimiento para alinear varios controles
           href: how-to-align-multiple-controls-on-windows-forms.md
-        - name: Procedimiento para delimitar controles en formularios Windows Forms
+        - name: Procedimiento para controles de anclado
           href: how-to-anchor-controls-on-windows-forms.md
-        - name: Procedimiento para copiar controles entre formularios Windows Forms
-          href: how-to-copy-controls-between-windows-forms.md
-        - name: Procedimiento para acoplar controles en formularios Windows Forms
+        - name: Procedimiento para controles de acoplamiento
           href: how-to-dock-controls-on-windows-forms.md
-        - name: Procedimiento para disponer objetos en capas en formularios Windows Forms
+        - name: Procedimiento para objetos de capa
           href: how-to-layer-objects-on-windows-forms.md
-        - name: Procedimiento para bloquear controles en formularios Windows Forms
+        - name: Procedimiento para controles de bloqueo
           href: how-to-lock-controls-to-windows-forms.md
-        - name: Procedimiento para colocar controles en formularios Windows Forms
+        - name: Procedimiento para controles de posición
           href: how-to-position-controls-on-windows-forms.md
-        - name: Procedimiento para cambiar el tamaño de los controles en formularios Windows Forms
+        - name: Procedimiento para controles de cambio de tamaño
           href: how-to-resize-controls-on-windows-forms.md
         - name: Procedimiento para establecer opciones de cuadrícula para todos los formularios Windows Forms
           href: how-to-set-grid-options-for-all-windows-forms.md
-        - name: Procedimiento para establecer el orden de tabulación en formularios Windows Forms
+        - name: Procedimiento para establecer el orden de tabulación
           href: how-to-set-the-tab-order-on-windows-forms.md
-        - name: 'Tutorial: Organizar controles en formularios Windows Forms mediante guías de alineación'
+        - name: 'Tutorial: Organizar los controles mediante guías de alineación'
           href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
-        - name: Procedimiento para organizar controles con las guías de alineación y la cuadrícula en formularios Windows Forms
-          href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
         - name: Procedimiento para reasignar los controles existentes en un elemento primario diferente
           href: how-to-reassign-existing-controls-to-a-different-parent.md
         - name: 'Tutorial: Diseñar controles de formularios Windows Forms con relleno, márgenes y la propiedad AutoSize'
@@ -35,15 +30,15 @@
     - name: Insertar controles en formularios Windows Forms
       href: putting-controls-on-windows-forms.md
       items:
-        - name: Procedimiento para agregar controles a formularios Windows Forms
+        - name: Procedimiento para agregar controles
           href: how-to-add-controls-to-windows-forms.md
-        - name: Procedimiento para agregar controles sin una interfaz de usuario a formularios Windows Forms
+        - name: Procedimiento para agregar controles sin una interfaz de usuario
           href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
         - name: Procedimiento para agregar o quitar controles de una colección en tiempo de ejecución
           href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
         - name: 'Tutorial: Rellenar automáticamente el cuadro de herramientas con componentes personalizados'
           href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
-        - name: Procedimiento para agregar controles ActiveX a formularios Windows Forms
+        - name: Procedimiento para agregar controles de ActiveX
           href: how-to-add-activex-controls-to-windows-forms.md
         - name: Consideraciones al alojar un control ActiveX en Windows Forms
           href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
@@ -140,7 +135,7 @@
               href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
             - name: Procedimiento para designar un botón de formularios Windows Forms como botón para cancelar mediante el diseñador
               href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
-            - name: Procedimiento para responder a clics de botones en formularios Windows Forms
+            - name: Procedimiento para responder a clics de botón
               href: how-to-respond-to-windows-forms-button-clicks.md
             - name: Maneras de seleccionar un control Button de formularios Windows Forms
               href: ways-to-select-a-windows-forms-button-control.md
@@ -149,9 +144,9 @@
           items:
             - name: Información general sobre el control CheckBox
               href: checkbox-control-overview-windows-forms.md
-            - name: Procedimiento para responder a clics en casillas de formularios Windows Forms
+            - name: Procedimiento para responder a clics en casillas
               href: how-to-respond-to-windows-forms-checkbox-clicks.md
-            - name: Procedimiento para establecer opciones con los controles CheckBox de formularios Windows Forms
+            - name: Procedimiento para establecer opciones con controles de casilla
               href: how-to-set-options-with-windows-forms-checkbox-controls.md
         - name: Control CheckedListBox
           href: checkedlistbox-control-windows-forms.md
@@ -330,9 +325,9 @@
                   href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
                 - name: Procedimiento para agregar una columna sin enlazar a un control DataGridView de formularios Windows Forms enlazado a datos
                   href: unbound-column-to-a-data-bound-datagridview.md
-                - name: Procedimiento para enlazar objetos a controles DataGridView de formularios Windows Forms
+                - name: Procedimiento para enlazar objetos a controles DataGridView
                   href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
-                - name: Procedimiento para obtener acceso a objetos enlazados a filas DataGridView de formularios Windows Forms
+                - name: Procedimiento para acceder a objetos enlazados a filas DataGridView
                   href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
                 - name: Procedimiento para obtener acceso a objetos de una lista desplegable DataGridViewComboBoxCell en formularios Windows Forms
                   href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
@@ -462,7 +457,7 @@
           items:
             - name: Información general sobre el control DomainUpDown
               href: domainupdown-control-overview-windows-forms.md
-            - name: Procedimiento para agregar elementos a controles DomainUpDown de formularios Windows Forms mediante programación
+            - name: Procedimiento para agregar elementos a controles DomainUpDown mediante programación
               href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
             - name: Procedimiento para quitar elementos de los controles DomainUpDown de formularios Windows Forms
               href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
