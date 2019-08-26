@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8527f5f4a52c02744b02fea7ffaf833c223fa3f1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 544d04236a8f1b824a15c6ee7912020346841076
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586210"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912528"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Procedimiento para definir un tipo genérico con emisión de reflexión
 En este tema se muestra cómo crear un tipo genérico simple con dos parámetros de tipo, cómo aplicar restricciones de clase, restricciones de interfaz y restricciones especiales a los parámetros de tipo, y cómo crear miembros que usen los parámetros de tipo de la clase como tipos de parámetro y tipos de valor devuelto.  
   
 > [!IMPORTANT]
->  Un método no es genérico sólo porque pertenece a un tipo genérico y utiliza los parámetros de tipo de ese tipo genérico. Un método sólo es genérico si tiene su propia lista de parámetros de tipo. La mayoría de los métodos de los tipos genéricos no son genéricos, como en este ejemplo. Para obtener un ejemplo de emisión de un método genérico, vea [Procedimiento para definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
+> Un método no es genérico sólo porque pertenece a un tipo genérico y utiliza los parámetros de tipo de ese tipo genérico. Un método sólo es genérico si tiene su propia lista de parámetros de tipo. La mayoría de los métodos de los tipos genéricos no son genéricos, como en este ejemplo. Para obtener un ejemplo de emisión de un método genérico, vea [Procedimiento para definir un tipo genérico con emisión de reflexión](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-method-with-reflection-emit.md).  
   
 ### <a name="to-define-a-generic-type"></a>Para definir un tipo genérico  
   
@@ -84,7 +84,7 @@ En este tema se muestra cómo crear un tipo genérico simple con dos parámetros
      El constructor usado para este ejemplo de código toma un tipo `IEnumerable<T>`. Pero tenga en cuenta que no es la definición de tipo genérico de la interfaz genérica <xref:System.Collections.Generic.IEnumerable%601>; en su lugar, debe sustituirse el parámetro de tipo `T` de `List<T>` por el parámetro de tipo `T` de `IEnumerable<T>`. (Esto parece confuso solo porque ambos tipos tienen parámetros de tipo con el nombre `T`. Por eso este ejemplo de código usa los nombres `TFirst` y `TSecond`). Para obtener el tipo del argumento del constructor, comience con la definición de tipo genérico `IEnumerable<T>` y llame a <xref:System.Type.MakeGenericType%2A> con el primer parámetro de tipo genérico de `List<T>`. La lista de argumentos del constructor se debe pasar como matriz, con un único argumento en este caso.  
   
     > [!NOTE]
-    >  La definición de tipo genérico se expresa como `IEnumerable<>` cuando se usa el operador `typeof` de C#, o como `IEnumerable(Of )` cuando se usa el operador `GetType` de Visual Basic.  
+    > La definición de tipo genérico se expresa como `IEnumerable<>` cuando se usa el operador `typeof` de C#, o como `IEnumerable(Of )` cuando se usa el operador `GetType` de Visual Basic.  
   
      Ahora es posible obtener el constructor de `List<T>` con una llamada a <xref:System.Type.GetConstructor%2A> en la definición de tipo genérico. Para convertir este constructor en el constructor correspondiente de `List<TFirst>`, pase `List<TFirst>` y el constructor de `List<T>` al método estático <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29?displayProperty=nameWithType>.  
   

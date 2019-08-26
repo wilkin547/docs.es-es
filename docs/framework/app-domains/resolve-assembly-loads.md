@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 350cc91a2d423bc40cc44466e679db769daac1d8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3844f3f1f4135167ac5575dafb4ba63a19b8b55e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486976"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927915"
 ---
 # <a name="resolving-assembly-loads"></a>resolver cargas de ensamblado
 .NET Framework proporciona el evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para aplicaciones que requieren un mayor control sobre la carga de ensamblados. Al controlar este evento, la aplicación puede cargar un ensamblado en el contexto de carga desde fuera de las rutas de acceso de sondeo normales, seleccionar qué versión de ensamblado cargar, emitir un ensamblado dinámico y devolverlo, etc. En este tema se proporcionan instrucciones para controlar el evento <xref:System.AppDomain.AssemblyResolve>.  
   
 > [!NOTE]
->  Para resolver cargas de ensamblado en el contexto de solo reflexión, use en su lugar el evento <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType>.  
+> Para resolver cargas de ensamblado en el contexto de solo reflexión, use en su lugar el evento <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType>.  
   
 ## <a name="how-the-assemblyresolve-event-works"></a>Cómo funciona el evento AssemblyResolve  
  Al registrar un controlador para el evento <xref:System.AppDomain.AssemblyResolve>, se invoca el controlador si se produce un error cuando el tiempo de ejecución enlaza a un ensamblado por nombre. Por ejemplo, si se llama a los métodos siguientes desde el código de usuario, puede producirse el evento <xref:System.AppDomain.AssemblyResolve>:  
@@ -50,7 +50,7 @@ ms.locfileid: "66486976"
 - El controlador puede generar un ensamblado dinámico y devolverlo.  
   
 > [!NOTE]
->  El controlador debe cargar el ensamblado en el contexto de origen de carga, en el contexto de carga o sin contexto. Si el controlador carga el ensamblado en el contexto de solo reflexión mediante el método <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, se produce un error en el intento de carga que ha provocado el evento <xref:System.AppDomain.AssemblyResolve>.  
+> El controlador debe cargar el ensamblado en el contexto de origen de carga, en el contexto de carga o sin contexto. Si el controlador carga el ensamblado en el contexto de solo reflexión mediante el método <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType>, se produce un error en el intento de carga que ha provocado el evento <xref:System.AppDomain.AssemblyResolve>.  
   
  El controlador de eventos se encarga de devolver un ensamblado adecuado. El controlador puede analizar el nombre para mostrar del ensamblado solicitado. Para ello, pasa el valor de propiedad <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> al constructor <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29>. A partir de .NET Framework 4, el controlador puede usar la propiedad <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> para determinar si la solicitud actual es una dependencia de otro ensamblado. Esta información puede ayudar a identificar un ensamblado que cumplirá la dependencia.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66486976"
  La regla principal que debe observar para controlar el evento <xref:System.AppDomain.AssemblyResolve> es que no debe intentar devolver un ensamblado que no reconozca. Cuando se escribe el controlador, debe saber qué ensamblados pueden hacer que se produzca el evento. El controlador debe devolver NULL para otros ensamblados.  
   
 > [!IMPORTANT]
->  A partir de .NET Framework 4, se genera el evento <xref:System.AppDomain.AssemblyResolve> para los ensamblados satélite. Este cambio afecta a los controladores de eventos escritos para versiones anteriores de .NET Framework si intentan resolver todas las solicitudes de carga del ensamblado. Los controladores de eventos que omiten los ensamblados que no reconocen no se ven afectados por este cambio: devuelven NULL y se siguen los mecanismos normales de reserva.  
+> A partir de .NET Framework 4, se genera el evento <xref:System.AppDomain.AssemblyResolve> para los ensamblados satélite. Este cambio afecta a los controladores de eventos escritos para versiones anteriores de .NET Framework si intentan resolver todas las solicitudes de carga del ensamblado. Los controladores de eventos que omiten los ensamblados que no reconocen no se ven afectados por este cambio: devuelven NULL y se siguen los mecanismos normales de reserva.  
   
  Al cargar un ensamblado, el controlador de eventos no debe usar las sobrecargas del método <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> que pueden hacer que se produzca el evento <xref:System.AppDomain.AssemblyResolve> de forma recursiva, ya que esto puede provocar un desbordamiento de pila. (Vea la lista proporcionada anteriormente en este tema). Esto ocurre incluso si proporciona el control de excepciones para la solicitud de carga, porque no se produce ninguna excepción hasta que se hayan devuelto todos los controladores de eventos. Así pues, el código siguiente produce un desbordamiento de pila si no se encuentra `MyAssembly`:  
   

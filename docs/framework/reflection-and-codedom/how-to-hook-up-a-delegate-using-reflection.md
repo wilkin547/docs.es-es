@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b07c3eb9d96bb6f675a6a2ca742cc9bdf3c3826
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: c3fa2238976df9f570fad9eb6947790565a4b0c5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364066"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935713"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>Procedimiento para enlazar un delegado mediante la reflexión
-Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usar características del lenguaje como el operador `+=` de C# o la [instrucción AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md) de Visual Basic para enlazar eventos. Los procedimientos siguientes muestran cómo enlazar un método existente a un evento obteniendo todos los tipos necesarios mediante reflexión y cómo crear un método dinámico utilizando la emisión de la reflexión y enlazarlo a un evento.  
+Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usar características del lenguaje como el operador `+=` de C# o la [instrucción AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md) de Visual Basic para enlazar eventos. Los procedimientos siguientes muestran cómo enlazar un método existente a un evento obteniendo todos los tipos necesarios mediante reflexión y cómo crear un método dinámico utilizando la emisión de la reflexión y enlazarlo a un evento.  
   
 > [!NOTE]
->  Para conocer otra manera de enlazar un delegado de control de eventos, vea el ejemplo de código del método <xref:System.Reflection.EventInfo.AddEventHandler%2A> de la clase <xref:System.Reflection.EventInfo>.  
+> Para conocer otra manera de enlazar un delegado de control de eventos, vea el ejemplo de código del método <xref:System.Reflection.EventInfo.AddEventHandler%2A> de la clase <xref:System.Reflection.EventInfo>.  
   
 ### <a name="to-hook-up-a-delegate-using-reflection"></a>Para enlazar un delegado mediante la reflexión  
   
@@ -57,7 +57,7 @@ Cuando se usa la reflexión para cargar y ejecutar ensamblados, no se pueden usa
      [!code-csharp[HookUpDelegate#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#7)]
      [!code-vb[HookUpDelegate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#7)]  
   
-6. Obtenga el método del descriptor de acceso `add` e invóquelo para enlazar el evento. Todos los eventos tienen un descriptor de acceso `add` y un descriptor de acceso `remove`, que son ocultados por la sintaxis de los lenguajes de alto nivel. Por ejemplo, C# usa el operador `+=` para enlazar eventos y Visual Basic usa la [instrucción AddHandler](~/docs/visual-basic/language-reference/statements/addhandler-statement.md). El código siguiente obtiene el descriptor de acceso `add` del evento <xref:System.Windows.Forms.Control.Click> y lo invoca enlazado en tiempo de ejecución, pasando la instancia del delegado. Los argumentos se deben pasar como una matriz.  
+6. Obtenga el método del descriptor de acceso `add` e invóquelo para enlazar el evento. Todos los eventos tienen un descriptor de acceso `add` y un descriptor de acceso `remove`, que son ocultados por la sintaxis de los lenguajes de alto nivel. Por ejemplo, C# usa el operador `+=` para enlazar eventos y Visual Basic usa la [instrucción AddHandler](../../visual-basic/language-reference/statements/addhandler-statement.md). El código siguiente obtiene el descriptor de acceso `add` del evento <xref:System.Windows.Forms.Control.Click> y lo invoca enlazado en tiempo de ejecución, pasando la instancia del delegado. Los argumentos se deben pasar como una matriz.  
   
      [!code-cpp[HookUpDelegate#8](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#8)]
      [!code-csharp[HookUpDelegate#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#8)]

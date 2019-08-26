@@ -3,12 +3,12 @@ title: 'Tipos de tupla: Guía de C#'
 description: Más información sobre tipos de tupla con nombre y sin nombre en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: dc02fceb2901fb9cb7bf71869213d8b178520900
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882060"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988408"
 ---
 # <a name="c-tuple-types"></a>Tipos de tupla de C#
 
@@ -53,7 +53,7 @@ Cree una tupla con nombre especificando los nombres de cada elemento. Una forma 
 
 Estos sinónimos los controlan el compilador y el lenguaje para que se puedan usar tuplas con nombre de manera eficaz. Los IDE y los editores pueden leer estos nombres semánticos con las API de Roslyn. Puede hacer referencia a los elementos de una tupla con nombre por esos nombres semánticos en cualquier lugar de un mismo ensamblado. El compilador reemplaza los nombres que ha definido con `Item*` equivalentes al generar la salida compilada. El Lenguaje Intermedio de Microsoft (MSIL) compilado no incluye los nombres que se hayan asignado a estos elementos.
 
-A partir de C# 7.1, se pueden proporcionar nombres de campo a una tupla desde las variables que se utilizan para inicializar la tupla. Esto se conoce como **[inicializadores de proyección de tupla](#tuple-projection-initializers)**. El código siguiente crea una tupla denominada `accumulation` con elementos `count` (un entero) y `sum` (un doble).
+A partir de C# 7.1, se pueden proporcionar nombres de campo a una tupla desde las variables que se utilizan para inicializar la tupla. Esto se conoce como **[inicializadores de proyección de tupla](#tuple-projection-initializers)** . El código siguiente crea una tupla denominada `accumulation` con elementos `count` (un entero) y `sum` (un doble).
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -245,7 +245,7 @@ public class Point
 ```
 
 > [!WARNING]
->  No se pueden mezclar declaraciones existentes con declaraciones incluidas en paréntesis. Por ejemplo, no se permite lo siguiente: `(var x, y) = MyMethod();`. Esto produce el error CS8184 porque *x* se declara dentro de los paréntesis e *y* se ha declarado previamente en otro lugar.
+> No se pueden mezclar declaraciones existentes con declaraciones incluidas en paréntesis. Por ejemplo, no se permite lo siguiente: `(var x, y) = MyMethod();`. Esto produce el error CS8184 porque *x* se declara dentro de los paréntesis e *y* se ha declarado previamente en otro lugar.
 
 ### <a name="deconstructing-user-defined-types"></a>Deconstruir tipos definidos por el usuario
 

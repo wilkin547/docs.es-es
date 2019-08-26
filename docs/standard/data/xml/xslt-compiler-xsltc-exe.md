@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8480e2d6817d0367e89542c0e6c89cd26183dd5e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8a0c34eebda789f6561195c89e2660ae77603dc0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774900"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923284"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Compilador XSLT (xsltc.exe)
 El compilador XSLT (xsltc.exe) compila hojas de estilo XSLT y genera un ensamblado. La hoja de estilos compilada se puede pasar directamente al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. No se pueden generar ensamblados firmados con xsltc.exe.  
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
  Las soluciones XSLT puede estar compuestas por múltiples módulos de hojas de estilos. La herramienta xsltc.exe genera ensamblados a partir de hojas de estilos. Dichos ensamblados se pueden pasar al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Esto puede ayudar a reducir los costos de implementación en ciertos escenarios de XSLT.  
   
 > [!NOTE]
->  Por otro lado, deberá incluir en su aplicación el ensamblado compilado como una referencia.  
+> Por otro lado, deberá incluir en su aplicación el ensamblado compilado como una referencia.  
   
  La herramienta xsltc.exe no valida los nombres de la clase (`/class:`*nombre*) o del ensamblado (`/out:`*nombreDelEnsamblado*). En caso de que estos nombres no sean válidos, el CLR se encargará de generar los errores correspondientes.  
   

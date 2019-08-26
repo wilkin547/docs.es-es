@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e6086772b807440570b94cfff268aa1d78fa048
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5ead6db2c3df3662c4d689bd6ac2466c99b02a15
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490003"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968258"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procedimiento para determinar qué versiones de .NET Framework están instaladas
 
@@ -26,7 +26,7 @@ Los usuarios pueden [instalar](https://docs.microsoft.com/dotnet/framework/insta
 
 - Un conjunto de ensamblados, que son colecciones de tipos y recursos que proporcionan funciones a las aplicaciones. .NET Framework y los ensamblados comparten el mismo número de versión.
 
-- Common Language Runtime (CLR), que administra y ejecuta el código de la aplicación. El CLR se identifica mediante su propio número de versión (consulte [Versiones y dependencias](~/docs/framework/migration-guide/versions-and-dependencies.md)).
+- Common Language Runtime (CLR), que administra y ejecuta el código de la aplicación. El CLR se identifica mediante su propio número de versión (consulte [Versiones y dependencias](versions-and-dependencies.md)).
 
 > [!NOTE]
 > Cada versión de .NET Framework contiene características de versiones anteriores e incorpora nuevas características. Puede cargar varias versiones de .NET Framework en un equipo al mismo tiempo, lo que significa que puede instalarlo sin tener que eliminar las versiones anteriores. En general, no debe desinstalar ninguna versión anterior de .NET Framework, ya que una determinada aplicación puede depender de una versión concreta y puede dejar de funcionar si se quita esa versión.
@@ -162,7 +162,7 @@ Para comprobar si hay una versión mínima requerida de .NET Framework diferent
 
     En la siguiente ilustración se muestra la subclave y su entrada **Version** para .NET Framework 3.5.
 
-    ![Entrada del Registro de .NET Framework 3.5. ] (media/net-4-and-earlier.png ".NET Framework 3.5 y versiones anteriores")
+    ![Entrada del Registro de .NET Framework 3.5. ](media/net-4-and-earlier.png ".NET Framework 3.5 y versiones anteriores")
 
 <a name="net_c"></a>
 

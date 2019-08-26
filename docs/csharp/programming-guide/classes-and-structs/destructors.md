@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: 87755eadeaebb72c5a8ce147ba2e6faf109e6c12
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9936d56582afd160bf3464d18efd3acf47c7af60
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584383"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924497"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finalizadores (Guía de programación de C#)
 Los finalizadores (también denominados **destructores**) se usan para realizar cualquier limpieza final necesaria cuando el recolector de elementos no utilizados recopila una instancia de clase.  
@@ -56,7 +56,7 @@ protected override void Finalize()
  Esto significa que se realizan llamadas al método `Finalize` de manera recursiva para todas las instancias de la cadena de herencia, desde la más a la menos derivada.  
   
 > [!NOTE]
->  Los finalizadores vacíos no deben usarse. Cuando una clase contiene un finalizador, se crea una entrada en la cola `Finalize`. Cuando se llama al finalizador, se invoca al recolector de elementos no utilizados para procesar la cola. Un finalizador vacío simplemente produce una pérdida de rendimiento innecesaria.  
+> Los finalizadores vacíos no deben usarse. Cuando una clase contiene un finalizador, se crea una entrada en la cola `Finalize`. Cuando se llama al finalizador, se invoca al recolector de elementos no utilizados para procesar la cola. Un finalizador vacío simplemente produce una pérdida de rendimiento innecesaria.  
   
  El programador no puede controlar cuándo se llama al finalizador, porque esto lo determina el recolector de elementos no utilizados. El recolector de elementos no utilizados comprueba si hay objetos que ya no están siendo usados por ninguna aplicación. Si considera un objeto elegible para su finalización, llama al finalizador (si existe) y reclama la memoria usada para almacenar el objeto. 
  
@@ -76,7 +76,7 @@ protected override void Finalize()
   
 - [Implementación de un método Dispose](../../../standard/garbage-collection/implementing-dispose.md)  
   
-- [using (instrucción)](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using (instrucción)](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se crean tres clases que forman una cadena de herencia. La clase `First` es la clase base, `Second` se deriva de `First` y `Third` se deriva de `Second`. Los tres tienen finalizadores. En `Main`, se crea una instancia de la clase más derivada. Cuando ejecute el programa, observe que se llama a los finalizadores de las tres clases automáticamente y en orden, desde la más derivada hasta la menos derivada.  
@@ -90,6 +90,6 @@ Para más información, vea la sección sobre [destructores](~/_csharplang/spec/
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.IDisposable>
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Guía de programación de C#](../index.md)
+- [Constructores](./constructors.md)
 - [Recolección de elementos no utilizados](../../../standard/garbage-collection/index.md)

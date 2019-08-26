@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 451893cf09b0d1ebdfb33d0020376aa35240b6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650998"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962025"
 ---
 # <a name="building-xml-schemas"></a>Compilar esquemas XML
 Las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWithType> se asignan a las estructuras definidas en la recomendación de esquemas XML del W3C (World Wide Web Consortium) y se pueden utilizar para compilar esquemas XML en memoria.  
@@ -35,14 +35,14 @@ Las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWi
  El contenido de los elementos y atributos está definido por sus tipos. Para crear elementos y atributos cuyos tipos sean uno de los tipos de esquemas integrados, la propiedad <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> de las clases <xref:System.Xml.Schema.XmlSchemaElement> o <xref:System.Xml.Schema.XmlSchemaAttribute> se establece con el nombre completo correspondiente del tipo integrado utilizando la clase <xref:System.Xml.XmlQualifiedName>. Para crear un tipo definido por el usuario para elementos y atributos, se crea un nuevo tipo simple o complejo utilizando la clase <xref:System.Xml.Schema.XmlSchemaSimpleType> o <xref:System.Xml.Schema.XmlSchemaComplexType>.  
   
 > [!NOTE]
->  Para crear tipos simples o complejos sin nombre que sean elementos secundarios anónimos de un elemento o atributo (para los atributos sólo se aplican tipos simples), establezca la propiedad <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> de las clases <xref:System.Xml.Schema.XmlSchemaElement> o <xref:System.Xml.Schema.XmlSchemaAttribute> en el tipo simple o complejo sin nombre, en lugar de la propiedad <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> de las clases <xref:System.Xml.Schema.XmlSchemaElement> o <xref:System.Xml.Schema.XmlSchemaAttribute>.  
+> Para crear tipos simples o complejos sin nombre que sean elementos secundarios anónimos de un elemento o atributo (para los atributos sólo se aplican tipos simples), establezca la propiedad <xref:System.Xml.Schema.XmlSchemaElement.SchemaType%2A> de las clases <xref:System.Xml.Schema.XmlSchemaElement> o <xref:System.Xml.Schema.XmlSchemaAttribute> en el tipo simple o complejo sin nombre, en lugar de la propiedad <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> de las clases <xref:System.Xml.Schema.XmlSchemaElement> o <xref:System.Xml.Schema.XmlSchemaAttribute>.  
   
  Los esquemas XML permiten derivar por restricción tipos simples con nombre y anónimos de otros tipos simples (integrados o definidos por el usuario) o crearlos como una lista o unión de otros tipos simples. La clase <xref:System.Xml.Schema.XmlSchemaSimpleTypeRestriction> se utiliza para crear un tipo simple restringiendo el tipo `xs:string` integrado. Puede utilizar también las clases <xref:System.Xml.Schema.XmlSchemaSimpleTypeList> o <xref:System.Xml.Schema.XmlSchemaSimpleTypeUnion> para crear tipos de lista o unión. La propiedad <xref:System.Xml.Schema.XmlSchemaSimpleType.Content%2A?displayProperty=nameWithType> indica si se trata de una unión, lista o restricción de tipo simple.  
   
  En el siguiente código de ejemplo, el tipo del elemento `FirstName` es el tipo integrado `xs:string`, el tipo del elemento `LastName` es un tipo simple con nombre que es una restricción del tipo integrado `xs:string`, con un valor de faceta `MaxLength` de 20 y el tipo del atributo `CustomerId` es el tipo integrado `xs:positiveInteger`. El elemento `Customer` es un tipo complejo anónimo cuya partícula es la secuencia de los elementos `FirstName` y `LastName` y cuyos atributos contienen el atributo `CustomerId`.  
   
 > [!NOTE]
->  También puede utilizar las clases <xref:System.Xml.Schema.XmlSchemaChoice> o <xref:System.Xml.Schema.XmlSchemaAll> como partícula del tipo complejo para replicar la semántica de `<xs:choice />` o `<xs:all />`.  
+> También puede utilizar las clases <xref:System.Xml.Schema.XmlSchemaChoice> o <xref:System.Xml.Schema.XmlSchemaAll> como partícula del tipo complejo para replicar la semántica de `<xs:choice />` o `<xs:all />`.  
   
  [!code-cpp[XmlSchemaCreateExample#3](../../../../samples/snippets/cpp/VS_Snippets_Data/XmlSchemaCreateExample/CPP/XmlSchemaCreateExample.cpp#3)]
  [!code-csharp[XmlSchemaCreateExample#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XmlSchemaCreateExample/CS/XmlSchemaCreateExample.cs#3)]
@@ -58,7 +58,7 @@ Las clases del espacio de nombres <xref:System.Xml.Schema?displayProperty=nameWi
  El método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A?displayProperty=nameWithType> valida el esquema del cliente con las reglas de un esquema XML y hace que las propiedades posteriores a la compilación del esquema estén disponibles.  
   
 > [!NOTE]
->  Todas las propiedades posteriores a la compilación del esquema de la API del SOM son diferentes a las del conjunto de información posterior a la validación del esquema.  
+> Todas las propiedades posteriores a la compilación del esquema de la API del SOM son diferentes a las del conjunto de información posterior a la validación del esquema.  
   
  El <xref:System.Xml.Schema.ValidationEventHandler> que se agrega al <xref:System.Xml.Schema.XmlSchemaSet> es un delegado que llama al método de devolución de llamada `ValidationCallback` para controlar los errores y advertencias de validación de esquemas.  
   

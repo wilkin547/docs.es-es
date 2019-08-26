@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4ae9710b99c85cfcbe3de2669c7ee85d0d24ef4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 7a6af73a5251cdc52589967178218f8675cac869
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629342"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946472"
 ---
 # <a name="how-to-create-com-wrappers"></a>Procedimiento para crear contenedores COM
 
 Puede crear contenedores del Modelo de objetos componentes (COM) mediante características de Visual Studio 2005 o las herramientas Tlbimp.exe y Regasm.exe de .NET Framework. Ambos métodos generan dos tipos de contenedores COM:
 
-- Un [contenedor RCW](../../../docs/standard/native-interop/runtime-callable-wrapper.md) desde una biblioteca de tipos para ejecutar un objeto COM en código administrado.
+- Un [contenedor RCW](../../standard/native-interop/runtime-callable-wrapper.md) desde una biblioteca de tipos para ejecutar un objeto COM en código administrado.
 
-- Un [contenedor CCW](../../../docs/standard/native-interop/com-callable-wrapper.md) con la configuración del Registro necesaria para ejecutar un objeto administrado en una aplicación nativa.
+- Un [contenedor CCW](../../standard/native-interop/com-callable-wrapper.md) con la configuración del Registro necesaria para ejecutar un objeto administrado en una aplicación nativa.
 
 En Visual Studio 2005, puede agregar el contenedor COM como una referencia al proyecto.
 
@@ -75,5 +75,5 @@ Puede ejecutar Regasm.exe en un ensamblado que se encuentre en cualquier directo
   
 ## <a name="see-also"></a>Vea también
 
-- [Contenedor al que se puede llamar en tiempo de ejecución](../../../docs/standard/native-interop/runtime-callable-wrapper.md)
-- [Contenedor CCW (COM callable wrapper)](../../../docs/standard/native-interop/com-callable-wrapper.md)
+- [Contenedor al que se puede llamar en tiempo de ejecución](../../standard/native-interop/runtime-callable-wrapper.md)
+- [Contenedor CCW (COM callable wrapper)](../../standard/native-interop/com-callable-wrapper.md)

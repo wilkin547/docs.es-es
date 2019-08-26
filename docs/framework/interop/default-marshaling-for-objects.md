@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c694a9d0ba0d6c7d41a9ce3b932b88519fcddfeb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9bc165c6f1a7cdc6b8a03db0b7648583d75cd7a0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626331"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946660"
 ---
 # <a name="default-marshaling-for-objects"></a>Serialización predeterminada para objetos
 Los parámetros y campos de tipo <xref:System.Object?displayProperty=nameWithType> pueden exponerse a código no administrado como uno de los siguientes tipos:  
@@ -87,7 +87,7 @@ interface MarshalObject {
 ```  
   
 > [!NOTE]
->  El serializador de interoperabilidad libera automáticamente cualquier objeto asignado dentro de la variante tras la llamada.  
+> El serializador de interoperabilidad libera automáticamente cualquier objeto asignado dentro de la variante tras la llamada.  
   
  En el ejemplo siguiente se muestra un tipo de valor con formato.  
   
@@ -266,7 +266,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|  
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|  
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
-|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
+|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|Tipo de valor de conversión boxing correspondiente.|  
 |**VT_VARIANT**|No se admite.|  
@@ -287,7 +287,7 @@ Variantes pasadas por valor y por referencia
   
  **Comportamiento predeterminado para la serialización de objetos y variantes por referencia**  
   
- Para propagar los cambios de vuelta al autor de la llamada, los parámetros deben pasarse por referencia. Por ejemplo, puede usar la palabra clave **ref** de C# (o **ByRef** en código administrado de Visual Basic) para pasar parámetros por referencia. En COM, los parámetros de referencia se pasan con un puntero como una **variante \***.  
+ Para propagar los cambios de vuelta al autor de la llamada, los parámetros deben pasarse por referencia. Por ejemplo, puede usar la palabra clave **ref** de C# (o **ByRef** en código administrado de Visual Basic) para pasar parámetros por referencia. En COM, los parámetros de referencia se pasan con un puntero como una **variante \*** .  
   
 - Cuando se pasa un objeto a COM por referencia, el serializador crea una variante y copia el contenido de la referencia de objeto en la variante antes de que se realice la llamada. La variante se pasa a la función no administrada, donde el usuario tiene libertad para cambiar el contenido de la variante. En la devolución de la llamada, los cambios realizados en la variante en el lado no administrado se propagan al objeto original. Si el tipo de la variante difiere del tipo de la variante que se pasa a la llamada, los cambios se propagan a un objeto de un tipo diferente. Es decir, el tipo del objeto pasado en la llamada puede diferir del tipo del objeto devuelto de la llamada.  
   

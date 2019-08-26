@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 3cc04d9a0504e7cd79703b97441caa5ac84eda94
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c07f058eb081fa1c9e0a3756959570d1ba9e47f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978116"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924524"
 ---
 # <a name="fields-c-programming-guide"></a>Campos (Guía de programación de C#)
-Un *campo* es una variable de cualquier tipo que se declara directamente en una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md). Los campos son *miembros* de su tipo contenedor.  
+Un *campo* es una variable de cualquier tipo que se declara directamente en una [clase](../../language-reference/keywords/class.md) o [struct](../../language-reference/keywords/struct.md). Los campos son *miembros* de su tipo contenedor.  
   
  Una clase o struct puede tener campos de instancia o campos estáticos, o ambos. Los campos de instancia son específicos de una instancia de un tipo. Si tiene una clase T, con un campo de instancia F, puede crear dos objetos de tipo T y modificar el valor de F en cada objeto sin afectar el valor del otro objeto. Por el contrario, un campo estático pertenece a la propia clase y se comparte entre todas las instancias de esa clase. Los cambios realizados desde la instancia A serán visibles inmediatamente para las instancias B y C, si tienen acceso al campo.  
   
- Por lo general, solo se deben usar campos para las variables que tienen accesibilidad privada o protegida. Los datos que la clase expone al código de cliente deben proporcionarse a través de [métodos](../../../csharp/programming-guide/classes-and-structs/methods.md), [propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md) e [indizadores](../../../csharp/programming-guide/indexers/index.md). Mediante estas construcciones para el acceso indirecto a los campos internos, se puede proteger de los valores de entrada no válidos. Un campo privado que almacena los datos expuestos por una propiedad pública se denomina *memoria auxiliar* o *campo de respaldo*.  
+ Por lo general, solo se deben usar campos para las variables que tienen accesibilidad privada o protegida. Los datos que la clase expone al código de cliente deben proporcionarse a través de [métodos](./methods.md), [propiedades](./properties.md) e [indizadores](../indexers/index.md). Mediante estas construcciones para el acceso indirecto a los campos internos, se puede proteger de los valores de entrada no válidos. Un campo privado que almacena los datos expuestos por una propiedad pública se denomina *memoria auxiliar* o *campo de respaldo*.  
   
  Los campos almacenan habitualmente los datos que deben ser accesibles para más de un método de clase y que deben almacenarse durante más tiempo de lo que dura un único método. Por ejemplo, es posible que una clase que representa una fecha de calendario tenga tres campos enteros: uno para el mes, otro para el día y otro para el año. Las variables que no se usan fuera del ámbito de un único método se deben declarar como *variables locales* dentro del campo del método.  
   
@@ -33,25 +33,25 @@ Un *campo* es una variable de cualquier tipo que se declara directamente en una 
   
  [!code-csharp[csProgGuideObjects#63](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#63)]  
   
- Los campos se inicializan inmediatamente antes de que se llame al constructor para la instancia del objeto. Si el constructor asigna el valor de un campo, sobrescribirá cualquier valor dado durante la declaración del campo. Para obtener más información, vea [Using Constructors](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) (Uso de constructores).  
+ Los campos se inicializan inmediatamente antes de que se llame al constructor para la instancia del objeto. Si el constructor asigna el valor de un campo, sobrescribirá cualquier valor dado durante la declaración del campo. Para obtener más información, vea [Using Constructors](./using-constructors.md) (Uso de constructores).  
   
 > [!NOTE]
->  Un inicializador de campo no puede hacer referencia a otros campos de instancia.  
+> Un inicializador de campo no puede hacer referencia a otros campos de instancia.  
   
- Se pueden marcar campos como [público](../../../csharp/language-reference/keywords/public.md), [privado](../../../csharp/language-reference/keywords/private.md), [protegido](../../../csharp/language-reference/keywords/protected.md), [interno](../../../csharp/language-reference/keywords/internal.md), [protegido interno](../../../csharp/language-reference/keywords/protected-internal.md) o [privado protegido](../../../csharp/language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden obtener acceso a los campos. Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+ Se pueden marcar campos como [público](../../language-reference/keywords/public.md), [privado](../../language-reference/keywords/private.md), [protegido](../../language-reference/keywords/protected.md), [interno](../../language-reference/keywords/internal.md), [protegido interno](../../language-reference/keywords/protected-internal.md) o [privado protegido](../../language-reference/keywords/private-protected.md). Estos modificadores de acceso definen cómo los usuarios de la clase pueden obtener acceso a los campos. Para obtener más información, consulte [Modificadores de acceso](./access-modifiers.md).  
   
- Opcionalmente, un campo se puede declarar como [static](../../../csharp/language-reference/keywords/static.md). Esto hace que el campo esté disponible para los llamadores en cualquier momento, aunque no exista ninguna instancia de la clase. Para más información, vea [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
+ Opcionalmente, un campo se puede declarar como [static](../../language-reference/keywords/static.md). Esto hace que el campo esté disponible para los llamadores en cualquier momento, aunque no exista ninguna instancia de la clase. Para más información, vea [Clases estáticas y sus miembros](./static-classes-and-static-class-members.md).  
   
- Se puede declarar un campo como [readonly](../../../csharp/language-reference/keywords/readonly.md). Solamente se puede asignar un valor a un campo de solo lectura durante la inicialización o en un constructor. Un campo `static readonly` es muy similar a una constante, salvo que el compilador de C# no tiene acceso al valor de un campo estático de solo lectura en tiempo de compilación, solo en tiempo de ejecución. Para obtener más información, vea [Constants](../../../csharp/programming-guide/classes-and-structs/constants.md) (Constantes).  
+ Se puede declarar un campo como [readonly](../../language-reference/keywords/readonly.md). Solamente se puede asignar un valor a un campo de solo lectura durante la inicialización o en un constructor. Un campo `static readonly` es muy similar a una constante, salvo que el compilador de C# no tiene acceso al valor de un campo estático de solo lectura en tiempo de compilación, solo en tiempo de ejecución. Para obtener más información, vea [Constants](./constants.md) (Constantes).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Utilizar constructores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [Guía de programación de C#](../index.md)
+- [Clases y structs](./index.md)
+- [Utilizar constructores](./using-constructors.md)
+- [Herencia](./inheritance.md)
+- [Modificadores de acceso](./access-modifiers.md)
+- [Clases y miembros de clase abstractos y sellados](./abstract-and-sealed-classes-and-class-members.md)

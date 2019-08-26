@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 269d3b9ae5eec4412540b9b659cb287b3d26a482
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626363"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946703"
 ---
 # <a name="default-marshaling-for-arrays"></a>Cálculo de referencias predeterminado para matrices
 En una aplicación que consta únicamente de código administrado, Common Language Runtime pasa los tipos de matriz como parámetros In/Out. En cambio, el serializador de interoperabilidad pasa una matriz como parámetros In de forma predeterminada.  
@@ -175,7 +175,7 @@ void New3(ref String ar);
  Al serializar matrices desde código no administrado a código administrado, el serializador comprueba el atributo **MarshalAsAttribute** asociado con el parámetro para determinar el tamaño de la matriz. Si no se especifica el tamaño de la matriz, solo se serializa un elemento.  
   
 > [!NOTE]
->  El atributo **MarshalAsAttribute** no tiene ningún efecto sobre la serialización de matrices administradas en código no administrado. En esa dirección, el tamaño de la matriz se determina mediante examen. No hay ninguna manera de serializar un subconjunto de una matriz administrada.  
+> El atributo **MarshalAsAttribute** no tiene ningún efecto sobre la serialización de matrices administradas en código no administrado. En esa dirección, el tamaño de la matriz se determina mediante examen. No hay ninguna manera de serializar un subconjunto de una matriz administrada.  
   
  El serializador de interoperabilidad usa los métodos **CoTaskMemAlloc** y **CoTaskMemFree** para asignar y recuperar memoria. La asignación de memoria realizada por el código no administrado también debe usar estos métodos.  
   
@@ -185,12 +185,12 @@ void New3(ref String ar);
 |Tipo de matriz administrada|Exportado como|  
 |------------------------|-----------------|  
 |**ELEMENT_TYPE_SZARRAY** **\<** *tipo* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *tipo* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo se proporciona en la firma. El rango siempre es 1, el límite inferior es siempre 0. El tamaño siempre se conoce en tiempo de ejecución.|  
-|**ELEMENT_TYPE_ARRAY** **\<** *tipo* **>** **\<** *rango* **>**[**\<** *límites* **>**]|**UnmanagedType.SafeArray(** *tipo* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo, el rango y los límites se proporcionan en la firma. El tamaño siempre se conoce en tiempo de ejecución.|  
-|**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *tipo* **)**<br /><br /> El tipo, el rango, los límites y el tamaño siempre se conocen en tiempo de ejecución.|  
+|**ELEMENT_TYPE_ARRAY** **\<** *tipo* **>** **\<** *rango* **>** [ **\<** *límites* **>** ]|**UnmanagedType.SafeArray(** *tipo* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> El tipo, el rango y los límites se proporcionan en la firma. El tamaño siempre se conoce en tiempo de ejecución.|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *tipo* **)**<br /><br /> El tipo, el rango, los límites y el tamaño siempre se conocen en tiempo de ejecución.|  
   
  Hay una limitación en la automatización OLE relacionada con las matrices de estructuras que contienen LPSTR o LPWSTR.  Por tanto, los campos **String** tienen que serializarse como **UnmanagedType.BSTR**. De lo contrario, se producirá una excepción.  
   
-### <a name="elementtypeszarray"></a>ELEMENT_TYPE_SZARRAY  
+### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  Cuando un método que contiene un parámetro **ELEMENT_TYPE_SZARRAY** (matriz unidimensional) se exporta desde un ensamblado de .NET a una biblioteca de tipos, el parámetro de matriz se convierte en una **SAFEARRAY** de un tipo determinado. Las mismas reglas de conversión se aplican a los tipos de elemento de matriz. El contenido de la matriz administrada se copia automáticamente de la memoria administrada a **SAFEARRAY**. Por ejemplo:  
   
 #### <a name="managed-signature"></a>Firma administrada  
@@ -248,7 +248,7 @@ HRESULT New(LPStr ar[]);
   
  Aunque el serializador no tiene la información de longitud necesaria para serializar la matriz, la longitud de la matriz normalmente se pasa como argumento independiente para transmitir la longitud al destinatario de la llamada.  
   
-### <a name="elementtypearray"></a>ELEMENT_TYPE_ARRAY  
+### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
  Cuando un método que contiene un parámetro **ELEMENT_TYPE_ARRAY** se exporta desde un ensamblado de .NET a una biblioteca de tipos, el parámetro de matriz se convierte en una **SAFEARRAY** de un tipo determinado. El contenido de la matriz administrada se copia automáticamente de la memoria administrada a **SAFEARRAY**. Por ejemplo:  
   
 #### <a name="managed-signature"></a>Firma administrada  
@@ -311,7 +311,7 @@ Sub [New](ar()()() As Long)
 void New(long [][][] ar );  
 ```  
   
-### <a name="elementtypeclass-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
+### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
  Cuando un método que contiene un parámetro <xref:System.Array?displayProperty=nameWithType> se exporta desde un ensamblado de .NET a una biblioteca de tipos, el parámetro de matriz se convierte en una interfaz **_Array**. El contenido de la matriz administrada es accesible a través de los métodos y propiedades de la interfaz **_Array**. **System.Array** también se puede serializar como una **SAFEARRAY** mediante el atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute>. Cuando se serializa como una matriz segura, los elementos de matriz se calculan como variantes. Por ejemplo:  
   
 #### <a name="managed-signature"></a>Firma administrada  

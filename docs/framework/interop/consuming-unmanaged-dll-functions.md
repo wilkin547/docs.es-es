@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9e9308d6bf0eefaa60af17a721cd1c26827469eb
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340040"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946844"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consumir funciones DLL no administradas
 La invocación de plataforma es un servicio que permite al código administrado llamar a funciones no administradas implementadas en bibliotecas de vínculos dinámicos (DLL), como los de la API de Windows. Busca y llama a una función exportada y calcula las referencias de sus argumentos (enteros, cadenas, matrices, estructuras etc.) a través de los límites de interoperación según sea necesario.  
@@ -43,7 +43,7 @@ La invocación de plataforma es un servicio que permite al código administrado 
   
      [C#] Use **DllImportAttribute** para identificar el archivo DLL y la función. Marque el método con los modificadores **static** y **extern**.  
   
-     [C++] Use **DllImportAttribute** para identificar el archivo DLL y la función. Marque la función o el método contenedor con **extern "C"**.  
+     [C++] Use **DllImportAttribute** para identificar el archivo DLL y la función. Marque la función o el método contenedor con **extern "C"** .  
   
 4. [Llamar a una función DLL](../../../docs/framework/interop/calling-a-dll-function.md).  
   
@@ -65,7 +65,7 @@ La invocación de plataforma es un servicio que permite al código administrado 
 3. Busca la dirección de la función en la memoria, inserta sus argumentos en la pila y calcula las referencias de los datos si es necesario.  
   
     > [!NOTE]
-    >  La búsqueda y carga del archivo DLL y la búsqueda de la dirección de la función en memoria solo se realiza en la primera llamada a la función.  
+    > La búsqueda y carga del archivo DLL y la búsqueda de la dirección de la función en memoria solo se realiza en la primera llamada a la función.  
   
 4. Transfiere el control a la función no administrada.  
   

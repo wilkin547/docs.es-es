@@ -2,12 +2,12 @@
 title: Tipos de valor devueltos asincrónicos (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: ca429db9b3ad81555df3c7e02d8827136734e26c
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f40592038ce16173e6dced5e8bcb914cfeb1b1f5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347737"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922038"
 ---
 # <a name="async-return-types-c"></a>Tipos de valor devueltos asincrónicos (C#)
 Los métodos asincrónicos pueden tener los siguientes tipos de valor devuelto:
@@ -20,23 +20,23 @@ Los métodos asincrónicos pueden tener los siguientes tipos de valor devuelto:
 
 - A partir de C# 7.0, cualquier tipo que tenga un método `GetAwaiter` accesible. El objeto devuelto por el método `GetAwaiter` debe implementar la interfaz <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType>.
   
-Para más información sobre los métodos async, vea [Programación asincrónica con async y await 8C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
+Para más información sobre los métodos async, vea [Programación asincrónica con async y await 8C#)](./index.md).  
   
 Cada tipo de valor devuelto se examina en una de las siguientes secciones, y puede encontrar un ejemplo completo que usa los tres tipos al final del tema.  
   
 ## Tipo de valor devuelto<a name="BKMK_TaskTReturnType"></a> Task\<TResult\>  
-El tipo de valor devuelto <xref:System.Threading.Tasks.Task%601> se usa para un método asincrónico que contiene una instrucción [return](../../../../csharp/language-reference/keywords/return.md) (C#) en la que el operando tiene el tipo `TResult`.  
+El tipo de valor devuelto <xref:System.Threading.Tasks.Task%601> se usa para un método asincrónico que contiene una instrucción [return](../../../language-reference/keywords/return.md) (C#) en la que el operando tiene el tipo `TResult`.  
   
 En el ejemplo siguiente, el método asincrónico `GetLeisureHours` contiene una instrucción `return` que devuelve un entero. Por tanto, la declaración del método debe tener un tipo de valor devuelto de `Task<int>`.  El método asincrónico <xref:System.Threading.Tasks.Task.FromResult%2A> es un marcador de posición para una operación que devuelve una cadena.
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
 
-Cuando se llama a `GetLeisureHours` desde una expresión await en el método `ShowTodaysInfo`, esta recupera el valor entero (el valor de `leisureHours`) que está almacenado en la tarea que devuelve el método `GetLeisureHours`. Para más información sobre las expresiones await, vea [await](../../../../csharp/language-reference/keywords/await.md).  
+Cuando se llama a `GetLeisureHours` desde una expresión await en el método `ShowTodaysInfo`, esta recupera el valor entero (el valor de `leisureHours`) que está almacenado en la tarea que devuelve el método `GetLeisureHours`. Para más información sobre las expresiones await, vea [await](../../../language-reference/keywords/await.md).  
   
 Comprenderá mejor cómo sucede esto separando la llamada a `GetLeisureHours` de la aplicación de `await`, como se muestra en el código siguiente. Una llamada al método `GetLeisureHours` que no se espera inmediatamente devuelve `Task<int>`, como se podría esperar de la declaración del método. La tarea se asigna a la variable `integerTask` en el ejemplo. Dado que `integerTask` es <xref:System.Threading.Tasks.Task%601>, contiene una propiedad <xref:System.Threading.Tasks.Task%601.Result> de tipo `TResult`. En este caso, `TResult` representa un tipo entero. Cuando `await` se aplica a `integerTask`, la expresión await se evalúa en el contenido de la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> de `integerTask`. El valor se asigna a la variable `ret`.  
   
 > [!IMPORTANT]
->  La propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> es una propiedad de bloqueo. Si se intenta acceder a ella antes de que termine su tarea, se bloquea el subproceso que está activo actualmente hasta que finaliza la tarea y el valor está disponible. En la mayoría de los casos, se debe tener acceso al valor usando `await` en lugar de tener acceso directamente a la propiedad. <br/> En el ejemplo anterior se ha recuperado el valor de la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> para bloquear el subproceso principal de manera que el método `ShowTodaysInfo` pueda terminar la ejecución antes de que finalice la aplicación.  
+> La propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> es una propiedad de bloqueo. Si se intenta acceder a ella antes de que termine su tarea, se bloquea el subproceso que está activo actualmente hasta que finaliza la tarea y el valor está disponible. En la mayoría de los casos, se debe tener acceso al valor usando `await` en lugar de tener acceso directamente a la propiedad. <br/> En el ejemplo anterior se ha recuperado el valor de la propiedad <xref:System.Threading.Tasks.Task%601.Result%2A> para bloquear el subproceso principal de manera que el método `ShowTodaysInfo` pueda terminar la ejecución antes de que finalice la aplicación.  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
@@ -80,7 +80,7 @@ Como <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [Tutorial: Acceso a web usando Async y Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Flujos de control en programas asincrónicos [C#])
-- [async](../../../../csharp/language-reference/keywords/async.md)
-- [await](../../../../csharp/language-reference/keywords/await.md)
+- [Tutorial: Acceso a web usando Async y Await (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Control Flow in Async Programs (C#)](./control-flow-in-async-programs.md) (Flujos de control en programas asincrónicos [C#])
+- [async](../../../language-reference/keywords/async.md)
+- [await](../../../language-reference/keywords/await.md)

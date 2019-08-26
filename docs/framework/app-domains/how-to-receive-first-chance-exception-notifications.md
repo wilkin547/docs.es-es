@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862a224c696ebafb23b30add7c8e8d66e1846b4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a17fae64f8cad58b09908212bae4cf62a156ed95
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584462"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921517"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>Procedimiento para recibir notificaciones de excepciones de primera oportunidad
 El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.AppDomain> permite recibir una notificación de que se ha producido una excepción antes de que Common Language Runtime empiece a buscar controladores de excepciones.
@@ -91,7 +91,7 @@ El evento <xref:System.AppDomain.FirstChanceException> de la clase <xref:System.
  Cada vez que el método `Thrower` inicia una excepción en `AD1`, se genera el evento <xref:System.AppDomain.FirstChanceException> en `AD1` y el controlador de eventos muestra un mensaje. Luego el runtime busca un controlador de excepciones. En el primer caso, el controlador de excepciones se encuentra en `AD1`. En el segundo caso, la excepción no se controla en `AD1` y se captura en el dominio de aplicación predeterminado.
 
 > [!NOTE]
->  El nombre del dominio de aplicación predeterminado es el mismo que el nombre del ejecutable.
+> El nombre del dominio de aplicación predeterminado es el mismo que el nombre del ejecutable.
 
  Si agrega un controlador para el evento <xref:System.AppDomain.FirstChanceException> al dominio de aplicación predeterminado, el evento se genera y se controla antes de que el dominio de aplicación predeterminado controle la excepción. Para verlo, agregue el código de C# `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (en Visual Basic, `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) al principio de `Main()`.
 

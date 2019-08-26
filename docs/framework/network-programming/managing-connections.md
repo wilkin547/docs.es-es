@@ -17,12 +17,12 @@ helpviewer_keywords:
 - downloading Internet resources, connections
 - ServicePointManager class, about ServicePointManager class
 ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
-ms.openlocfilehash: 9c434ce0f5934509489a7deeced9e9e579d9cf7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b7b54ab569a3f03363b2f30bf595c2087b9fe70
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152911"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963951"
 ---
 # <a name="managing-connections"></a>Administrar conexiones
 Las aplicaciones que usan HTTP para conectarse a los recursos de datos pueden usar las clases <xref:System.Net.ServicePoint> y <xref:System.Net.ServicePointManager> de .NET Framework para administrar las conexiones a Internet y lograr una escala y un rendimiento óptimos.  
@@ -36,7 +36,7 @@ Las aplicaciones que usan HTTP para conectarse a los recursos de datos pueden us
  El número de conexiones entre un cliente y un servidor puede afectar considerablemente al rendimiento de la aplicación. De forma predeterminada, una aplicación que usa la clase <xref:System.Net.HttpWebRequest> emplea un máximo de dos conexiones persistentes con un servidor determinado, pero es posible establecer el número máximo de conexiones según la aplicación.  
   
 > [!NOTE]
->  La especificación HTTP/1.1 limita el número de conexiones desde una aplicación a dos conexiones por servidor.  
+> La especificación HTTP/1.1 limita el número de conexiones desde una aplicación a dos conexiones por servidor.  
   
  El número óptimo de conexiones depende de las condiciones reales en las que se ejecuta la aplicación. Si aumenta el número de conexiones disponibles para la aplicación, el rendimiento de la aplicación podría no verse afectado. Para determinar el impacto de más conexiones, ejecute pruebas de rendimiento al variar el número de conexiones. Puede cambiar el número de conexiones que usa una aplicación. Para ello, cambie la propiedad estática <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> en la clase **ServicePointManager** durante la inicialización de la aplicación, como se muestra en el ejemplo de código siguiente.  
   

@@ -6,18 +6,18 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: efbb99027004221bff1985bba8372c4415c02d4f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052732"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950301"
 ---
 # <a name="net-framework-development-guide"></a>Guía de desarrollo para .NET Framework
 En esta sección se explica cómo crear, configurar, depurar, proteger e implementar aplicaciones de .NET Framework. Esta sección contiene también información sobre diversas áreas tecnológicas, como programación dinámica, interoperabilidad, extensibilidad, administración de memoria y subprocesamiento.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Elementos esenciales de aplicaciones](../../docs/standard/application-essentials.md)  
+ [Elementos esenciales de aplicaciones](../standard/application-essentials.md)  
  Proporciona información sobre las tareas básicas de desarrollo de aplicaciones, como la programación con dominios de aplicación y ensamblados, el uso de tipos base de análisis, formato y atributos, el uso de colecciones, el control de eventos y excepciones, el uso de archivos y secuencias de datos y el uso de genéricos.  
   
  [Datos y modelado](../../docs/framework/data/index.md)  
@@ -38,7 +38,7 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  [Aplicaciones de servicios de Windows](../../docs/framework/windows-services/index.md)  
  Explica cómo puede utilizar Visual Studio y .NET Framework para crear una aplicación que se instala como servicio, iniciarla, detenerla y controlar su comportamiento de cualquier otro modo.  
   
- [Procesamiento paralelo, simultaneidad y programación asincrónica en .NET](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [Procesamiento paralelo, simultaneidad y programación asincrónica en .NET](../standard/parallel-processing-and-concurrency.md)  
  Proporciona información sobre el subprocesamiento administrado, la programación paralela y patrones asincrónicos de diseño de programación.  
   
  [Programación para redes en .NET Framework](../../docs/framework/network-programming/index.md)  
@@ -50,13 +50,13 @@ En esta sección se explica cómo crear, configurar, depurar, proteger e impleme
  [Compilar aplicaciones con .NET Native](../../docs/framework/net-native/index.md)  
  Explica cómo usar la tecnología de precompilación de .NET Native para compilar e implementar aplicaciones de la Tienda Windows. .NET Native compila aplicaciones escritas en código administrado (C#) y que destinan .NET Framework a código nativo.  
   
- [Seguridad](../../docs/standard/security/index.md)  
+ [Seguridad](../standard/security/index.md)  
  Proporciona información sobre las clases y servicios en .NET Framework que proporcionan un desarrollo seguro para aplicaciones.  
   
  [Depurar, trazar y generar perfiles](../../docs/framework/debug-trace-profile/index.md)  
  Explica cómo probar, optimizar y generar perfiles de aplicaciones de .NET Framework y el entorno de la aplicación. En esta sección se incluye información tanto para administradores como para programadores.  
   
- [Desarrollo de varias plataformas](../../docs/standard/cross-platform/index.md)  
+ [Desarrollo de varias plataformas](../standard/cross-platform/index.md)  
  Proporciona información sobre cómo usar .NET Framework para compilar ensamblados que se pueden compartir entre varias plataformas y varios dispositivos, como teléfonos, escritorio y web.  
   
  [Implementación](../../docs/framework/deployment/index.md)  

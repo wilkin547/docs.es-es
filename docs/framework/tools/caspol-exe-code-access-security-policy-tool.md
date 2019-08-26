@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccb1d78f939d2faf90013392fc60d5597bc3922e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: f70682150905c411be5618ab368a87e71d0e8e13
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489679"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959065"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Herramienta de la directiva de seguridad de acceso del código)
 La herramienta de la directiva de seguridad de acceso del código (CAS), o herramienta Caspol.exe, permite a los usuarios y administradores modificar las directivas de seguridad correspondientes a los niveles de equipo, usuario y empresa.  
   
 > [!IMPORTANT]
->  A partir de .NET Framework 4, Caspol.exe no afecta a la directiva CAS, a menos que el elemento [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Las configuraciones mostradas o modificadas por CasPol.exe solo afectarán a las aplicaciones que opten por usar la directiva CAS. Para más información, consulte [Cambios de seguridad](../../../docs/framework/security/security-changes.md).  
+> A partir de .NET Framework 4, Caspol.exe no afecta a la directiva CAS, a menos que el elemento [\<legacyCasPolicy>](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md) esté establecido en `true`. Las configuraciones mostradas o modificadas por CasPol.exe solo afectarán a las aplicaciones que opten por usar la directiva CAS. Para más información, consulte [Cambios de seguridad](../../../docs/framework/security/security-changes.md).  
   
 > [!NOTE]
->  Los equipos de 64 bits incluyen las versiones de 64 bits y de 32 bits de la directiva de seguridad. Para asegurarse de que los cambios en la directiva se aplican a las aplicaciones de 32 bits y 64 bits, ejecute las dos versiones de Caspol.exe, la 32 bits y la de 64 bits.  
+> Los equipos de 64 bits incluyen las versiones de 64 bits y de 32 bits de la directiva de seguridad. Para asegurarse de que los cambios en la directiva se aplican a las aplicaciones de 32 bits y 64 bits, ejecute las dos versiones de Caspol.exe, la 32 bits y la de 64 bits.  
   
  La herramienta de la directiva de seguridad de acceso del código se instala automáticamente con .NET Framework y con Visual Studio. Puede encontrar Caspol.exe en %windir%\Microsoft.NET\Framework\\*versión* en los sistemas de 32 bits o en %windir%\Microsoft.NET\Framework64\\*versión* en los sistemas de 64 bits. (Por ejemplo, la ubicación es %windir%\Microsoft.NET\Framework64\v4.030319\caspol.exe para .NET Framework 4 en un sistema de 64 bits). Si en el equipo se ejecutan varias versiones de .NET Framework en paralelo, es posible que haya varias versiones de la herramienta instaladas. Puede ejecutar la herramienta desde el directorio de instalación. Sin embargo, se recomienda usar los [símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md), que no requiere navegar hasta la carpeta de instalación.  
   
@@ -45,7 +45,7 @@ caspol [options]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**-addfulltrust** *archivo_ensamblado*<br /><br /> o<br /><br /> **-af** *archivo_ensamblado*|Agrega un ensamblado que implementa un objeto de seguridad personalizado (como un permiso personalizado o una condición de pertenencia personalizada) a la lista de ensamblados de plena confianza para un nivel de directiva específico. El argumento *archivo_ensamblado* especifica el ensamblado que se va a agregar. Este archivo debe estar firmado con un [nombre seguro](../../../docs/framework/app-domains/strong-named-assemblies.md). Puede firmar un ensamblado con un nombre seguro mediante la herramienta [Nombre seguro (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md).<br /><br /> Cada vez que se agrega a la directiva un conjunto de permisos que contiene un permiso personalizado, se debe agregar el ensamblado que implementa el permiso personalizado a la lista de plena confianza para dicho nivel de directiva. Los ensamblados que implementan objetos de seguridad personalizados (como grupos de código personalizados o condiciones de pertenencia personalizadas) que se utilizan en una directiva de seguridad (como la directiva de equipo) siempre deben agregarse a la lista de ensamblados de plena confianza. **Advertencia:**  Si el ensamblado que implementa el objeto de seguridad personalizado hace referencia a otros ensamblados, debe agregar primero los ensamblados a los que se hace referencia a la lista de ensamblados de plena confianza. Los objetos de seguridad personalizados creados con Visual Basic, C++ y JScript hacen referencia a Microsoft.VisualBasic.dll, Microsoft.VisualC.dll o Microsoft.JScript.dll, respectivamente. Estos ensamblados no se encuentran en la lista de ensamblados de plena confianza de forma predeterminada. Debe agregar el ensamblado adecuado a la lista de plena confianza antes de agregar un objeto de seguridad personalizado. Si se produce un error al realizar esta operación, el sistema de seguridad se interrumpirá y los ensamblados no se cargarán. En caso de que se produzca esta situación, la opción **-all -reset** de la herramienta Caspol.exe no reparará la seguridad. Para reparar la seguridad, debe editar manualmente los archivos de seguridad a fin de quitar el objeto de seguridad personalizado.|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> o<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|Agrega un grupo de código nuevo a la jerarquía de grupos de código. Puede especificar el argumento *parent_label* o el argumento *parent_name*. El argumento *parent_label* especifica la etiqueta (como 1. o 1.1) del nombre del grupo de código que es el elemento primario del grupo de código que se va a agregar. El argumento *parent_name* especifica el nombre del grupo de código que es el elemento primario del grupo de código que se va a agregar. Dado que los argumentos *parent_label* y *parent_name* se pueden usar indistintamente, Caspol.exe debe poder distinguir entre ellos. Por tanto, el argumento *parent_name* no puede empezar con un número. Además, *parent_name* solo puede contener caracteres de A a Z, de 0 a 9 y de subrayado.<br /><br /> El argumento *mship* especifica la condición de pertenencia para el nuevo grupo de código. Para más información, consulte la tabla de los argumentos *mship* más adelante en esta sección.<br /><br /> El argumento *pset_name* es el nombre del conjunto de permisos que se asociará al grupo de código nuevo. También se pueden establecer uno o varios argumentos *flags* para el nuevo grupo. Para más información, consulte la tabla de argumentos *flags* más adelante en esta sección.|  
@@ -81,12 +81,12 @@ caspol [options]
   
  El argumento *mship*, que especifica la condición de pertenencia de un grupo de código, se puede usar con las opciones **-addgroup** y **-chggroup**. Cada argumento *mship* se implementa como una clase de .NET Framework. Para especificar el argumento *mship*, use uno de los argumentos siguientes.  
   
-|Argumento|Descripción|  
+|Argumento|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |**-allcode**|Especifica todo el código. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
 |**-appdir**|Especifica el directorio de la aplicación. Si especifica **–appdir** como condición de pertenencia, la evidencia de dirección URL del código se compara con la evidencia de directorio de aplicación de dicho código. Si ambos valores de evidencia coinciden, se cumple la condición de pertenencia. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
 |**-custom**  *xmlfile*|Agrega una condición de pertenencia personalizada. El argumento *xmlfile* obligatorio especifica el archivo .xml que contiene la serialización en formato XML de la condición de pertenencia personalizada.|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *archivo_ensamblado* }|Especifica el código que tiene el hash de ensamblado especificado. Para usar un hash como condición de pertenencia de grupo de código, debe especificar el valor hash o el archivo de ensamblado. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
+|**-hash** *hashAlg* { **-hex** *hashValue* &#124; **-file** *archivo_ensamblado* }|Especifica el código que tiene el hash de ensamblado especificado. Para usar un hash como condición de pertenencia de grupo de código, debe especificar el valor hash o el archivo de ensamblado. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Especifica el código que tiene el editor de software especificado, indicado por un archivo de certificado, una firma en un archivo o la representación hexadecimal de un certificado X509. Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Especifica el código que tiene el sitio de origen especificado. Por ejemplo:<br /><br /> `-site** www.proseware.com`<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Especifica el código que tiene un nombre seguro determinado, que se indica por el nombre de archivo, el nombre de ensamblado en forma de cadena y la versión del ensamblado con el formato *major*.*minor*.*build*.*revision*. Por ejemplo:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Para obtener más información sobre esta condición de pertenencia, vea <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
@@ -95,7 +95,7 @@ caspol [options]
   
  El argumento *flags*, que se puede usar con las opciones **–addgroup** y **–chggroup**, se especifica mediante uno de los argumentos siguientes.  
   
-|Argumento|Descripción|  
+|Argumento|DESCRIPCIÓN|  
 |--------------|-----------------|  
 |**-description** "*descripción*"|Si se usa con la opción **–addgroup**, especifica la descripción del grupo de código que se va a agregar. Si se usa con la opción **–chggroup**, especifica la descripción del grupo de código que se va a modificar. El argumento *descripción* debe ir entre comillas dobles.|  
 |**-exclusive** {**on**&#124;**off**}|Cuando esta opción se establece en **on**, indica que solo se tiene en cuenta el conjunto de permisos asociado al grupo de código que se va a agregar o a modificar cuando parte del código satisface la condición de pertenencia del grupo de código. Cuando esta opción se establece en **off**, Caspol.exe tiene en cuenta los conjuntos de permisos de todos los grupos de código coincidentes en el nivel de directiva.|  

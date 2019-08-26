@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204895"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965891"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Controlar eventos en un documento XML mediante XmlNodeChangedEventArgs
 **XmlNodeChangedEventArgs** encapsula los argumentos que se pasan a los controladores de eventos registrados en el objeto **XmlDocument** para controlar eventos. En la tabla siguiente se proporcionan los eventos y una descripción de cuándo se activan.  
@@ -28,7 +28,7 @@ ms.locfileid: "44204895"
 |<xref:System.Xml.XmlDocument.NodeChanged>|Cuando se ha cambiado el valor de un nodo.|  
   
 > [!NOTE]
->  Si el uso de la memoria de **XmlDataDocument** está totalmente optimizado para utilizar el almacenamiento **DataSet**, **XmlDataDocument** puede no generar ninguno de los eventos enumerados anteriormente si los cambios se realizan en la clase **DataSet** subyacente. Si necesita estos eventos, deberá recorrer el objeto **XmlDocument** para hacer que la memoria no esté totalmente optimizada.  
+> Si el uso de la memoria de **XmlDataDocument** está totalmente optimizado para utilizar el almacenamiento **DataSet**, **XmlDataDocument** puede no generar ninguno de los eventos enumerados anteriormente si los cambios se realizan en la clase **DataSet** subyacente. Si necesita estos eventos, deberá recorrer el objeto **XmlDocument** para hacer que la memoria no esté totalmente optimizada.  
   
  En el ejemplo de código siguiente se muestra cómo definir un controlador de eventos y cómo agregarlo a un evento.  
   
@@ -206,7 +206,7 @@ public class Sample
 } // End class   
 ```  
   
- Para obtener más información, consulte <xref:System.Xml.XmlNodeChangedEventArgs> y <xref:System.Xml.XmlNodeChangedEventHandler>.  
+ Para obtener más información, vea <xref:System.Xml.XmlNodeChangedEventArgs> y <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="see-also"></a>Vea también
 

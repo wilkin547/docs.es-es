@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 519ce34fc1f86220dfd0f3f7e19e3a50fba06087
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: e2cdaa312c037714a34e25e62ad318c9bc745ea7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469455"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69953189"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Tipos que pueden o que no pueden transferirse en bloque de bits
 La mayoría de los tipos de datos tienen una representación común en la memoria administrada y no administrada, y no requieren un tratamiento especial por parte del serializador de interoperabilidad. Estos tipos se denominan *tipos que pueden transferirse en bloque de bits* porque no requieren conversión cuando se pasan entre código administrado y código no administrado.  
@@ -71,7 +71,7 @@ La mayoría de los tipos de datos tienen una representación común en la memori
 |[System.Valuetype](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0t2cwe11(v=vs.100))|Se convierte a una estructura con un diseño de memoria fijo.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Se convierte a una matriz de estilo de C o a una `SAFEARRAY`.|  
   
- Solo se admiten los tipos de clase y objeto con la interoperabilidad COM. Para obtener los tipos correspondientes en Visual Basic, C# y C++, vea el artículo de [introducción a la biblioteca de clases](../../../docs/standard/class-library-overview.md).  
+ Solo se admiten los tipos de clase y objeto con la interoperabilidad COM. Para obtener los tipos correspondientes en Visual Basic, C# y C++, vea el artículo de [introducción a la biblioteca de clases](../../standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Vea también
 

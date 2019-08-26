@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c6e87ea50f3978bb896c7896a41b2faa9798bc
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: e5b99597a857f4c7926f783a6531f44fdb1fb7bc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566967"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921587"
 ---
 # <a name="global-assembly-cache"></a>Caché global de ensamblados
 Cada equipo donde está instalado Common Language Runtime tiene una memoria caché de código denominada caché global de ensamblados. La caché global de ensamblados almacena los ensamblados designados específicamente para ser compartidos por varias aplicaciones del equipo.  
@@ -25,7 +25,7 @@ Cada equipo donde está instalado Common Language Runtime tiene una memoria cach
  Se recomienda compartir los ensamblados mediante su instalación en la caché global de ensamblados solo cuando sea necesario. Como norma general, mantenga las dependencias de los ensamblados privadas y coloque los ensamblados en el directorio de la aplicación, a menos que sea explícitamente necesario compartir un ensamblado en concreto. Además, no es necesario instalar los ensamblados en la caché global de ensamblados para que el código de interoperabilidad COM o el código no administrado puedan acceder a ellos.  
   
 > [!NOTE]
->  Hay algunos escenarios en los que no se quiere instalar explícitamente un ensamblado en la caché global de ensamblados. Si coloca uno de los ensamblados que forman una aplicación en la caché global de ensamblados, ya no puede replicar ni instalar la aplicación mediante el comando **xcopy** para copiar su directorio. Además debe mover el ensamblado en la caché global de ensamblados.  
+> Hay algunos escenarios en los que no se quiere instalar explícitamente un ensamblado en la caché global de ensamblados. Si coloca uno de los ensamblados que forman una aplicación en la caché global de ensamblados, ya no puede replicar ni instalar la aplicación mediante el comando **xcopy** para copiar su directorio. Además debe mover el ensamblado en la caché global de ensamblados.  
   
  Existen dos formas de implementar un ensamblado en la caché global de ensamblados:  
   
@@ -34,7 +34,7 @@ Cada equipo donde está instalado Common Language Runtime tiene una memoria cach
 - Use la herramienta de desarrollador [Caché global de ensamblados (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md), que se suministra con Windows SDK.  
   
     > [!NOTE]
-    >  En escenarios de implementación, use Windows Installer para instalar los ensamblados en la caché global de ensamblados. Utilice la herramienta Caché global de ensamblados solo en escenarios de desarrollo, porque no proporciona funciones de recuento de referencias de ensamblados y otras características que se incluyen con Windows Installer.  
+    > En escenarios de implementación, use Windows Installer para instalar los ensamblados en la caché global de ensamblados. Utilice la herramienta Caché global de ensamblados solo en escenarios de desarrollo, porque no proporciona funciones de recuento de referencias de ensamblados y otras características que se incluyen con Windows Installer.  
   
  A partir de .NET Framework 4, la ubicación predeterminada de la caché global de ensamblados es **%windir%\Microsoft.NET\assembly**. En versiones anteriores de .NET Framework, la ubicación predeterminada es **%windir%\assembly**.  
   

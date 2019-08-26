@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 080d05a27b9e0b6ad4ff52d67ef8d9209dc1c697
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301027"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927953"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Procedimiento para hacer referencia a un ensamblado con nombre seguro
 El proceso para hacer referencia a tipos o recursos en un ensamblado con nombre seguro suele ser transparente. Puede hacer referencia en tiempo de compilación (enlace anticipado) o en tiempo de ejecución.  
@@ -26,13 +26,13 @@ El proceso para hacer referencia a tipos o recursos en un ensamblado con nombre 
  Una referencia en tiempo de compilación se produce cuando se le indica al compilador que el ensamblado hace referencia explícitamente a otro ensamblado. Cuando se usan referencias en tiempo de compilación, el compilador obtiene automáticamente la clave pública del ensamblado con nombre seguro de destino y la coloca en la referencia del ensamblado que se está compilando.  
   
 > [!NOTE]
->  Un ensamblado con nombre seguro solo puede usar tipos de otros ensamblados con nombre seguro. De lo contrario, se pondría en peligro la seguridad del ensamblado con nombre seguro.  
+> Un ensamblado con nombre seguro solo puede usar tipos de otros ensamblados con nombre seguro. De lo contrario, se pondría en peligro la seguridad del ensamblado con nombre seguro.  
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>Para hacer referencia en tiempo de compilación a un ensamblado con nombre seguro  
   
 1. En el símbolo del sistema, escriba el siguiente comando:  
   
-     \<*compiler command*> **/reference:**\<*assembly name*>  
+     \<*compiler command*>  **/reference:** \<*assembly name*>  
   
      En este comando, *compiler command* es el comando del compilador para el lenguaje que está usando, y *assembly name* es el nombre del ensamblado con nombre seguro al que se hace referencia. También puede usar otras opciones de compilador, como la opción **/t:library** para crear un ensamblado de biblioteca.  
   
@@ -46,7 +46,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 1. Cuando se hace referencia en tiempo de ejecución a un ensamblado con nombre seguro (por ejemplo, mediante el método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>), debe usar el nombre para mostrar del ensamblado con nombre seguro al que se hace referencia. La sintaxis de un nombre para mostrar es la siguiente:  
   
-     \<*assembly name*>**,** \<*version number*>**,** \<*culture*>**,** \<*public key token*>  
+     \<*assembly name*> **,** \<*version number*> **,** \<*culture*> **,** \<*public key token*>  
   
      Por ejemplo:  
   

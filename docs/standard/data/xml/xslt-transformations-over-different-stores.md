@@ -5,16 +5,16 @@ ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 70b22dbc3facdf0e36dea64074fc8284b9b18a67
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6a967ffe5db0b8b08adacff9085c7573867f21a4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170903"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910361"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>Transformaciones XSLT en distintos almacenes
 > [!NOTE]
->  La clase <xref:System.Xml.Xsl.XslTransform> está obsoleta en .NET Framework 2.0. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
+> La clase <xref:System.Xml.Xsl.XslTransform> está obsoleta en .NET Framework 2.0. Puede llevar a cabo Extensible Stylesheet Language for Transformations (XSLT) mediante la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Consulte [Uso de la clase XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md) y [Migración desde la clase XslTransform](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md) para obtener más información.  
   
  Las clases de XML y ADO.NET de .NET Framework proporcionan un modelo de programación unificado para acceder a datos. Los datos se representan como datos XML, compuestos por texto delimitado por etiquetas, y datos relacionales, que son tablas formadas por filas y columnas. El XML de .NET Framework lee los datos XML de cualquier flujo de datos en árboles de nodos de Document Object Model (DOM) de XML, donde se puede acceder a los datos mediante programación, mientras que ADO.NET proporciona los medios para acceder a los datos relacionales de un objeto <xref:System.Data.DataSet> y manipularlos.  
   

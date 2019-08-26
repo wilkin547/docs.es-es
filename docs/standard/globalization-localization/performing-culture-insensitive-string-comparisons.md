@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7726164e998ea917c8f539b5768aa7e3f1ae12c
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7b68d079413168b042412a67e8732e8afed66ffa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053198"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915875"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Realizar comparaciones de cadenas que no tienen en cuenta las referencias culturales
 De manera predeterminada, el método <xref:System.String.Compare%2A?displayProperty=nameWithType> realiza comparaciones que tienen en cuenta las referencias culturales y las mayúsculas y minúsculas. Este método también incluye varias sobrecargas que proporcionan un parámetro `culture` que permite especificar la referencia cultural que se va a utilizar y un parámetro `comparisonType` que permite especificar las reglas de comparación que se van a usar. Al llamar a estos métodos en lugar de a la sobrecarga predeterminada, se quita cualquier ambigüedad sobre las reglas que se utilizan en una determinada llamada al método y se establece claramente si una determinada comparación tiene en cuenta o no la referencia cultural.  
   
 > [!NOTE]
->  Las dos sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> realizan comparaciones que tienen en cuenta la referencia cultural y que distinguen mayúsculas de minúsculas, así que no puede usar este método para realizar comparaciones que no tengan en cuenta la referencia cultural. Para lograr claridad en el código, recomendamos utilizar el método <xref:System.String.Compare%2A?displayProperty=nameWithType> en su lugar.  
+> Las dos sobrecargas del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> realizan comparaciones que tienen en cuenta la referencia cultural y que distinguen mayúsculas de minúsculas, así que no puede usar este método para realizar comparaciones que no tengan en cuenta la referencia cultural. Para lograr claridad en el código, recomendamos utilizar el método <xref:System.String.Compare%2A?displayProperty=nameWithType> en su lugar.  
   
  En operaciones que tienen en cuenta las referencias culturales, especifique el valor de enumeración <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> o <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> como parámetro `comparisonType`. Si desea realizar una comparación que tenga en cuenta la referencia cultural utilizando una referencia cultural designada distinta de la referencia cultural actual, especifique el objeto <xref:System.Globalization.CultureInfo> que representa esa referencia cultural como parámetro `culture`.  
   

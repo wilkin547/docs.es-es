@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: bf5c603dfc6668f8378ba7997df543889b733482
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 2bfb33944007f84992d95ebc35c04ab9b97b3a7d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422441"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963978"
 ---
 # <a name="making-asynchronous-requests"></a>Realizar solicitudes asincrónicas
 Las clases <xref:System.Net> usan el modelo de programación asincrónica estándar de .NET Framework para obtener acceso asincrónico a recursos de Internet. Los métodos <xref:System.Net.WebRequest.BeginGetResponse%2A> y <xref:System.Net.WebRequest.EndGetResponse%2A> de la clase <xref:System.Net.WebRequest> inician y completan las solicitudes asincrónicas para un recurso de Internet.  
   
 > [!NOTE]
->  El uso de llamadas sincrónicas en métodos de devolución de llamada asincrónica puede afectar gravemente al rendimiento. Las solicitudes de Internet realizadas con **WebRequest** y sus descendientes deben usar <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> para leer la secuencia devuelta por el método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>.  
+> El uso de llamadas sincrónicas en métodos de devolución de llamada asincrónica puede afectar gravemente al rendimiento. Las solicitudes de Internet realizadas con **WebRequest** y sus descendientes deben usar <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> para leer la secuencia devuelta por el método <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType>.  
   
  En el código de ejemplo siguiente se muestra cómo usar llamadas asincrónicas con la clase **WebRequest**. El ejemplo es un programa de consola que toma un URI de la línea de comandos, solicita el recurso en el URI y, después, imprime datos en la consola cuando se reciben desde Internet.  
   
@@ -43,7 +43,7 @@ Las clases <xref:System.Net> usan el modelo de programación asincrónica están
 - El método `ReadCallBack()` implementa el método de devolución de llamada asincrónica para leer la secuencia de respuesta. Transfiere los datos recibidos del recurso de Internet a la propiedad **ResponseData** de la instancia **RequestState** y, después, comienza otra lectura asincrónica de la secuencia de respuesta hasta que no se devuelvan más datos. Una vez que se han leído todos los datos, `ReadCallBack()` cierra la secuencia de respuesta y llama al método `allDone.Set()` para indicar que la respuesta completa está presente en **ResponseData**.  
   
     > [!NOTE]
-    >  Es fundamental que todas las secuencias de red estén cerradas. Si no cierra todas las secuencias de solicitud y respuesta, la aplicación se quedará sin conexiones con el servidor y no podrá procesar más solicitudes.  
+    > Es fundamental que todas las secuencias de red estén cerradas. Si no cierra todas las secuencias de solicitud y respuesta, la aplicación se quedará sin conexiones con el servidor y no podrá procesar más solicitudes.  
   
 ```csharp  
 using System;  

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 3a5915d23fea02a031cedd9063018fffbdc34180
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 13adfbb96cea2c192b84931b529bf92fd2b50116
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633775"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922322"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Restricciones en el uso de los niveles de accesibilidad (Referencia de C#)
 
@@ -34,7 +34,7 @@ En la tabla siguiente se resumen las restricciones en los niveles de accesibilid
 |[Propiedades](../../programming-guide/classes-and-structs/properties.md)|El tipo de una propiedad debe ser al menos igual de accesible que la misma propiedad.|
 |[Eventos](../../programming-guide/events/index.md)|El tipo de un evento debe ser al menos igual de accesible que el propio evento.|
 |[Indizadores](../../programming-guide/indexers/index.md)|Los tipos de parámetro y el tipo de un indexador deben ser al menos igual de accesibles que el propio indexador.|
-|[Operadores](../../programming-guide/statements-expressions-operators/operators.md)|El tipo de valor devuelto y los tipos de parámetro de un operador deben ser al menos igual de accesibles que el propio operador.|
+|[Operadores](../operators/index.md)|El tipo de valor devuelto y los tipos de parámetro de un operador deben ser al menos igual de accesibles que el propio operador.|
 |[Constructores](../../programming-guide/classes-and-structs/constructors.md)|Los tipos de parámetro de un constructor deben ser al menos igual de accesibles que el propio constructor.|
 
 ## <a name="example"></a>Ejemplo

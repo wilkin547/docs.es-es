@@ -17,34 +17,34 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 4200b3bfc14918b46c16b8f6a1007624c6c23f70
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 013e1960e6c5721e0bd7ce6998848ddce15a4e4d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486282"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924390"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operaciones básicas de consulta LINQ (C#)
 En este tema se ofrece una breve introducción a las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] y algunas de las clases de operaciones típicas que se realizan en una consulta. En los temas siguientes se ofrece información más detallada:  
   
- [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+ [Expresiones de consulta LINQ](../../linq-query-expressions/index.md)  
   
- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))  
+ [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))  
   
- [Tutorial: Creación de consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
+ [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
->  Si ya está familiarizado con un lenguaje de consultas como SQL o XQuery, puede omitir la mayoría de este tema. Lea la parte dedicada a la "cláusula `from`" en la sección siguiente para obtener información sobre el orden de las cláusulas en las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+> Si ya está familiarizado con un lenguaje de consultas como SQL o XQuery, puede omitir la mayoría de este tema. Lea la parte dedicada a la "cláusula `from`" en la sección siguiente para obtener información sobre el orden de las cláusulas en las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
 ## <a name="obtaining-a-data-source"></a>Obtener un origen de datos  
  En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], el primer paso es especificar el origen de datos. En C#, como en la mayoría de los lenguajes de programación, se debe declarar una variable antes de poder usarla. En una consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la cláusula `from` aparece en primer lugar para introducir el origen de datos (`customers`) y la *variable de rango* (`cust`).  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
- La variable de rango es como la variable de iteración en un bucle `foreach`, con la diferencia de que en una expresión de consulta realmente no se produce ninguna iteración. Cuando se ejecuta la consulta, la variable de rango actúa como referencia para cada elemento sucesivo de `customers`. Dado que el compilador puede deducir el tipo de `cust`, no tiene que especificarlo explícitamente. Una cláusula `let` puede introducir variables de rango adicionales. Para obtener más información, vea [let (Cláusula)](../../../../csharp/language-reference/keywords/let-clause.md).  
+ La variable de rango es como la variable de iteración en un bucle `foreach`, con la diferencia de que en una expresión de consulta realmente no se produce ninguna iteración. Cuando se ejecuta la consulta, la variable de rango actúa como referencia para cada elemento sucesivo de `customers`. Dado que el compilador puede deducir el tipo de `cust`, no tiene que especificarlo explícitamente. Una cláusula `let` puede introducir variables de rango adicionales. Para obtener más información, vea [let (Cláusula)](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
->  Para los orígenes de datos no genéricos, como <xref:System.Collections.ArrayList>, el tipo de la variable de rango debe establecerse explícitamente. Para obtener más información, vea [Cómo: Consultar un objeto ArrayList con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md) y la [cláusula from](../../../../csharp/language-reference/keywords/from-clause.md).  
+> Para los orígenes de datos no genéricos, como <xref:System.Collections.ArrayList>, el tipo de la variable de rango debe establecerse explícitamente. Para obtener más información, vea [Cómo: Consultar un objeto ArrayList con LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) y la [cláusula from](../../../language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtrado  
  Probablemente la operación de consulta más común es aplicar un filtro en forma de expresión booleana. El filtro hace que la consulta devuelva solo los elementos para los que la expresión es verdadera. El resultado se genera mediante la cláusula `where`. El filtro aplicado especifica qué elementos se deben excluir de la secuencia de origen. En el ejemplo siguiente, solo se devuelven los `customers` cuya dirección se encuentra en Londres.  
@@ -59,7 +59,7 @@ En este tema se ofrece una breve introducción a las expresiones de consulta [!I
   
  [!code-csharp[csLINQGettingStarted#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#26)]  
   
- Para obtener más información, vea [where (Cláusula)](../../../../csharp/language-reference/keywords/where-clause.md).  
+ Para obtener más información, vea [where (Cláusula)](../../../language-reference/keywords/where-clause.md).  
   
 ## <a name="ordering"></a>Ordenación  
  A menudo es necesario ordenar los datos devueltos. La cláusula `orderby` hará que los elementos de la secuencia devuelta se ordenen según el comparador predeterminado del tipo que se va a ordenar. Por ejemplo, la consulta siguiente se puede extender para ordenar los resultados según la propiedad `Name`. Dado que `Name` es una cadena, el comparador predeterminado realiza una ordenación alfabética de la A a la Z.  
@@ -68,7 +68,7 @@ En este tema se ofrece una breve introducción a las expresiones de consulta [!I
   
  Para ordenar los resultados en orden inverso, de la Z a la A, use la cláusula `orderby…descending`.  
   
- Para obtener más información, vea [orderby (Cláusula)](../../../../csharp/language-reference/keywords/orderby-clause.md).  
+ Para obtener más información, vea [orderby (Cláusula)](../../../language-reference/keywords/orderby-clause.md).  
   
 ## <a name="grouping"></a>Agrupar  
  La cláusula `group` permite agrupar los resultados según la clave que se especifique. Por ejemplo, podría especificar que los resultados se agrupen por `City` para que todos los clientes de London o París estén en grupos individuales. En este caso, la clave es `cust.City`.  
@@ -81,7 +81,7 @@ En este tema se ofrece una breve introducción a las expresiones de consulta [!I
   
  [!code-csharp[csLINQGettingStarted#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#29)]  
   
- Para obtener más información, vea [group (Cláusula)](../../../../csharp/language-reference/keywords/group-clause.md).  
+ Para obtener más información, vea [group (Cláusula)](../../../language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Combinación  
  Las operaciones de combinación crean asociaciones entre las secuencias que no se modelan explícitamente en los orígenes de datos. Por ejemplo, puede realizar una combinación para buscar todos los clientes y distribuidores que tengan la misma ubicación. En [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], la cláusula `join` funciona siempre con colecciones de objetos, en lugar de con tablas de base de datos directamente.  
@@ -94,14 +94,14 @@ En este tema se ofrece una breve introducción a las expresiones de consulta [!I
 from order in Customer.Orders...  
 ```  
   
- Para obtener más información, vea [join (Cláusula, Referencia de C#)](../../../../csharp/language-reference/keywords/join-clause.md).  
+ Para obtener más información, vea [join (Cláusula, Referencia de C#)](../../../language-reference/keywords/join-clause.md).  
   
 ## <a name="selecting-projections"></a>Selección (proyecciones)  
- La cláusula `select` genera resultados de consulta y especifica la "forma" o el tipo de cada elemento devuelto. Por ejemplo, puede especificar si sus resultados estarán compuestos de objetos `Customer` completos, un solo miembro, un subconjunto de miembros o algún tipo de resultado completamente diferente basado en un cálculo o en un objeto nuevo. Cuando la cláusula `select` genera algo distinto de una copia del elemento de origen, la operación se denomina *proyección*. El uso de proyecciones para transformar los datos es una función eficaz de las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información, vea [Transformaciones de datos con LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md) y [select (cláusula)](../../../../csharp/language-reference/keywords/select-clause.md).  
+ La cláusula `select` genera resultados de consulta y especifica la "forma" o el tipo de cada elemento devuelto. Por ejemplo, puede especificar si sus resultados estarán compuestos de objetos `Customer` completos, un solo miembro, un subconjunto de miembros o algún tipo de resultado completamente diferente basado en un cálculo o en un objeto nuevo. Cuando la cláusula `select` genera algo distinto de una copia del elemento de origen, la operación se denomina *proyección*. El uso de proyecciones para transformar los datos es una función eficaz de las expresiones de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información, vea [Transformaciones de datos con LINQ (C#)](./data-transformations-with-linq.md) y [select (cláusula)](../../../language-reference/keywords/select-clause.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [Tutorial: Creación de consultas en C#](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [Palabras clave para consultas (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)
-- [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Expresiones de consulta LINQ](../../linq-query-expressions/index.md)
+- [Tutorial: Creación de consultas en C#](./walkthrough-writing-queries-linq.md)
+- [Palabras clave para consultas (LINQ)](../../../language-reference/keywords/query-keywords.md)
+- [Tipos anónimos](../../classes-and-structs/anonymous-types.md)

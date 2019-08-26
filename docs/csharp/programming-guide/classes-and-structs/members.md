@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: affe2752712bfd40516861abf84bdee11528168c
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: acd992cba67a79f2a63c28c1d9d9ac70e4f4d029
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609490"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922160"
 ---
 # <a name="members-c-programming-guide"></a>Miembros (Guía de programación de C#)
 
@@ -21,27 +21,18 @@ Las clases y structs tienen miembros que representan sus datos y comportamiento.
   
 |Miembro|DESCRIPCIÓN|  
 |------------|-----------------|  
-|[Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)|Los campos son variables declaradas en el ámbito de clase. Un campo puede ser un tipo numérico integrado o una instancia de otra clase. Por ejemplo, una clase de calendario puede tener un campo con la fecha actual.|  
-|[Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)|Las constantes son campos cuyo valor se establece en tiempo de compilación y no se puede cambiar.|  
-|[Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)|Las propiedades son métodos de una clase a los que se obtiene acceso como si fueran campos de esa clase. Una propiedad puede proporcionar protección a un campo de clase con el fin de evitar que se cambie sin el conocimiento del objeto.|  
-|[Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)|Los métodos definen las acciones que una clase puede realizar. Los métodos pueden aceptar parámetros que proporcionan datos de entrada y devolver datos de salida a través de parámetros. Los métodos también pueden devolver un valor directamente, sin usar ningún parámetro.|  
-|[Eventos](../../../csharp/programming-guide/events/index.md)|Los eventos proporcionan a otros objetos notificaciones sobre lo que ocurre, como clics en botones o la realización correcta de un método. Los eventos se definen y desencadenan mediante delegados.|  
-|[Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)|Los operadores sobrecargados se consideran miembros de tipo. Si se sobrecarga un operador, se define como método estático público en un tipo. Para obtener más información, vea [Sobrecarga de operadores](../../../csharp/language-reference/operators/operator-overloading.md).|  
-|[Indizadores](../../../csharp/programming-guide/indexers/index.md)|Los indizadores permiten indizar un objeto de manera similar a como se hace con las matrices.|  
-|[Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)|Los constructores son métodos a los que se llama cuando el objeto se crea por primera vez. Se usan a menudo para inicializar los datos de un objeto.|  
-|[Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)|En C#, los finalizadores se usan en raras ocasiones. Son métodos a los que llama el motor de ejecución del runtime cuando el objeto está a punto de quitarse de la memoria. Generalmente se utilizan para asegurarse de que los recursos que se deben liberar se controlan apropiadamente.|  
-|[Tipos anidados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Los tipos anidados son tipos declarados dentro de otro tipo. Los tipos anidados se usan a menudo para describir objetos utilizados únicamente por los tipos que los contienen.|  
+|[Campos](./fields.md)|Los campos son variables declaradas en el ámbito de clase. Un campo puede ser un tipo numérico integrado o una instancia de otra clase. Por ejemplo, una clase de calendario puede tener un campo con la fecha actual.|  
+|[Constantes](./constants.md)|Las constantes son campos cuyo valor se establece en tiempo de compilación y no se puede cambiar.|  
+|[Propiedades](./properties.md)|Las propiedades son métodos de una clase a los que se obtiene acceso como si fueran campos de esa clase. Una propiedad puede proporcionar protección a un campo de clase con el fin de evitar que se cambie sin el conocimiento del objeto.|  
+|[Métodos](./methods.md)|Los métodos definen las acciones que una clase puede realizar. Los métodos pueden aceptar parámetros que proporcionan datos de entrada y devolver datos de salida a través de parámetros. Los métodos también pueden devolver un valor directamente, sin usar ningún parámetro.|  
+|[Eventos](../events/index.md)|Los eventos proporcionan a otros objetos notificaciones sobre lo que ocurre, como clics en botones o la realización correcta de un método. Los eventos se definen y desencadenan mediante delegados.|  
+|[Operadores](../../language-reference/operators/index.md)|Los operadores sobrecargados se consideran miembros de tipo. Si se sobrecarga un operador, se define como método estático público en un tipo. Para obtener más información, vea [Sobrecarga de operadores](../../language-reference/operators/operator-overloading.md).|  
+|[Indizadores](../indexers/index.md)|Los indizadores permiten indizar un objeto de manera similar a como se hace con las matrices.|  
+|[Constructores](./constructors.md)|Los constructores son métodos a los que se llama cuando el objeto se crea por primera vez. Se usan a menudo para inicializar los datos de un objeto.|  
+|[Finalizadores](./destructors.md)|En C#, los finalizadores se usan en raras ocasiones. Son métodos a los que llama el motor de ejecución del runtime cuando el objeto está a punto de quitarse de la memoria. Generalmente se utilizan para asegurarse de que los recursos que se deben liberar se controlan apropiadamente.|  
+|[Tipos anidados](./nested-types.md)|Los tipos anidados son tipos declarados dentro de otro tipo. Los tipos anidados se usan a menudo para describir objetos utilizados únicamente por los tipos que los contienen.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
-- [Eventos](../../../csharp/programming-guide/events/index.md)
-- [Tipos anidados](../../../csharp/programming-guide/classes-and-structs/nested-types.md)
-- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Guía de programación de C#](../index.md)
+- [Clases](./classes.md)

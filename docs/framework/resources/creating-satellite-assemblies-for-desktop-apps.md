@@ -25,18 +25,18 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 843b61257229bb3bf8c3852554f19c34dccc7496
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77dff7af6a5d869c6635d5fe0caaf70bc31c3ff8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592347"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949403"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Crear ensamblados satélite para aplicaciones de escritorio
 Los archivos de recursos desempeñan un papel fundamental en las aplicaciones localizadas. Permiten que una aplicación muestre cadenas, imágenes y otros datos en el idioma y la referencia cultural del usuario, y que proporcione datos alternativos si los recursos para el idioma o la referencia cultural del usuario no están disponibles. .NET Framework usa un modelo de concentrador y radio para buscar y recuperar recursos localizados. El concentrador es el ensamblado principal que contiene el código ejecutable no localizable y los recursos de una referencia cultural única, denominada referencia cultural neutra o predeterminada. La referencia cultural predeterminada es la referencia cultural de reserva de la aplicación y se usa si no hay recursos localizados disponibles. El atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> se usa para designar la referencia cultural predeterminada de la aplicación. Cada radio se conecta a un ensamblado satélite que contiene los recursos de una única referencia cultural localizada, pero no contiene código. Debido a que los ensamblados satélite no forman parte del ensamblado principal, los recursos correspondientes a una referencia cultural específica se pueden actualizar o reemplazar fácilmente sin reemplazar el ensamblado principal de la aplicación.  
   
 > [!NOTE]
->  Los recursos de la referencia cultural predeterminada de una aplicación también se pueden almacenar en un ensamblado satélite. Para ello, asigne al atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> un valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
+> Los recursos de la referencia cultural predeterminada de una aplicación también se pueden almacenar en un ensamblado satélite. Para ello, asigne al atributo <xref:System.Resources.NeutralResourcesLanguageAttribute> un valor de <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty=nameWithType>.  
   
 ## <a name="satellite-assembly-name-and-location"></a>Nombre y ubicación del ensamblado satélite  
  El modelo de concentrador y radio requiere colocar recursos en ubicaciones específicas para que sea fácil ubicarlos y usarlos. Si no compila los recursos y les asigna el nombre de la manera prevista, o si no los coloca en las ubicaciones correctas, Common Language Runtime no podrá encontrarlos y usará en su lugar los recursos de la referencia cultural predeterminada. Para tener acceso automáticamente a los recursos localizados se usa el Administrador de recursos de .NET Framework, representado por un objeto <xref:System.Resources.ResourceManager>. El Administrador de recursos requiere lo siguiente:  
@@ -46,7 +46,7 @@ Los archivos de recursos desempeñan un papel fundamental en las aplicaciones lo
 - Debe haber un subdirectorio independiente en el directorio de la aplicación para cada referencia cultural localizada que almacena los recursos de esa referencia cultural. El nombre del subdirectorio debe ser el mismo que el nombre de la referencia cultural. Como alternativa, puede almacenar los ensamblados satélite en la caché global de ensamblados. En este caso, el componente de información de referencia cultural del nombre seguro del ensamblado debe indicar su referencia cultural. (Vea la sección [Instalar ensamblados satélite en la caché global de ensamblados](#SN) más adelante en este tema).  
   
     > [!NOTE]
-    >  Si la aplicación incluye recursos para referencias culturales secundarias, coloque cada una de ellas en un subdirectorio independiente bajo el directorio de la aplicación. No coloque las referencias culturales secundarias en subdirectorios bajo el directorio de la referencia cultural principal.  
+    > Si la aplicación incluye recursos para referencias culturales secundarias, coloque cada una de ellas en un subdirectorio independiente bajo el directorio de la aplicación. No coloque las referencias culturales secundarias en subdirectorios bajo el directorio de la referencia cultural principal.  
   
 - El ensamblado satélite debe tener el mismo nombre que la aplicación y debe usar la extensión de nombre de archivo ".resources.dll". Por ejemplo, si una aplicación se denomina Example.exe, el nombre de cada ensamblado satélite debe ser Example.resources.dll. Tenga en cuenta que el nombre del ensamblado satélite no indica la referencia cultural de sus archivos de recursos. Aun así, el ensamblado satélite aparece en un directorio que especifica la referencia cultural.  
   
@@ -75,7 +75,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
  En la tabla siguiente se describen detalladamente las opciones de Al.exe usadas en estos comandos.  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**-target:** lib|Especifica que el ensamblado satélite se compila en un archivo de biblioteca (.dll). Dado que un ensamblado satélite no contiene código ejecutable y no es el ensamblado principal de la aplicación, debe guardar los ensamblados satélite como archivos DLL.|  
 |**-embed:** strings.de.resources|Especifica el nombre del archivo de recursos que se va a insertar cuando Al.exe compile el ensamblado. Puede insertar varios archivos .resources en un ensamblado satélite, pero si sigue el modelo de concentrador y radio, debe compilar un ensamblado satélite para cada referencia cultural. Aun así, puede crear archivos .resources independientes para cadenas y objetos.|  

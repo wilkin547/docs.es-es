@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dededed9bcd4558296323532c0ecbfb60bf5b311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b2edf1f06873796bd63fceaca9a4bb99e509589
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567924"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910345"
 ---
 # <a name="mutexes"></a>Mutexes
 Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso exclusivo a un recurso. La clase <xref:System.Threading.Mutex> usa más recursos del sistema que la clase <xref:System.Threading.Monitor>, pero se pueden calcular sus referencias a través de los límites de dominio de aplicación, se puede usar con varias esperas y se puede usar para sincronizar subprocesos en distintos procesos. Para ver una comparación de los mecanismos de sincronización administrados, consulte [Información general sobre los primitivos de sincronización](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -35,7 +35,7 @@ Puede usar un objeto <xref:System.Threading.Mutex> para proporcionar acceso excl
  Si un subproceso finaliza sin liberar <xref:System.Threading.Mutex>, la exclusión mutua se considera abandonada. A menudo, esto indica un grave error de programación porque el recurso al que protege la exclusión mutua podría quedar con un estado no coherente. En la versión 2.0 de .NET Framework, se genera <xref:System.Threading.AbandonedMutexException> en el subproceso siguiente que adquiere la exclusión mutua.  
   
 > [!NOTE]
->  En las versiones 1.0 y 1.1 de .NET Framework, una clase <xref:System.Threading.Mutex> abandonada se establece en el estado señalado y el siguiente subproceso en espera obtiene la propiedad. Si no hay ningún subproceso en espera, <xref:System.Threading.Mutex> se mantiene en un estado señalado. No se inicia ninguna excepción.  
+> En las versiones 1.0 y 1.1 de .NET Framework, una clase <xref:System.Threading.Mutex> abandonada se establece en el estado señalado y el siguiente subproceso en espera obtiene la propiedad. Si no hay ningún subproceso en espera, <xref:System.Threading.Mutex> se mantiene en un estado señalado. No se inicia ninguna excepción.  
   
  En el caso de una exclusión mutua en todo el sistema, una exclusión mutua abandonada podría indicar que una aplicación finalizó inesperadamente (por ejemplo, con el Administrador de tareas de Windows).  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2028bc8d9f160daef8afcdf881e1dfd514b4c94f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e658b2c86eecdbc45a9adde8d28cfb890dd591b9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190409"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956658"
 ---
 # <a name="viewing-type-information"></a>Ver información de tipos
 La clase <xref:System.Type?displayProperty=nameWithType> es fundamental para la reflexión. Common Language Runtime crea el objeto **Type** para un tipo cargado cuando lo solicita la reflexión. Puede usar los métodos, los campos, las propiedades y las clases anidadas de un objeto **Type** para averiguarlo todo sobre dicho tipo.  
@@ -26,7 +26,7 @@ La clase <xref:System.Type?displayProperty=nameWithType> es fundamental para la 
  Use <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> o <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> para obtener objetos **Type** de ensamblados no cargados y pasar el nombre de los tipos que quiera. Use <xref:System.Type.GetType%2A?displayProperty=nameWithType> para obtener objetos **Type** de un ensamblado que ya está cargado. Use <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> y <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> para obtener objetos **Type** de módulo.  
   
 > [!NOTE]
->  Si quiere examinar y manipular tipos y métodos genéricos, vea la información adicional proporcionada en [Reflexión y tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) y [Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
+> Si quiere examinar y manipular tipos y métodos genéricos, vea la información adicional proporcionada en [Reflexión y tipos genéricos](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) y [Cómo: Examinar y crear instancias de tipos genéricos mediante la reflexión](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md).  
   
  En el ejemplo siguiente se muestra la sintaxis necesaria para obtener el objeto <xref:System.Reflection.Assembly> y el módulo de un ensamblado.  
   

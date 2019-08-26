@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9570578e8ae4397f060805b891f86d7d4f273cd4
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 09e9a51fe9c1fd25a6791cf924180329718138c8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487046"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915889"
 ---
 # <a name="generic-interfaces"></a>Interfaces genéricas
 Este tema ofrece una introducción a las interfaces genéricas que proporcionan funcionalidad común a distintas familias de tipos genéricos.  
@@ -24,7 +24,7 @@ Este tema ofrece una introducción a las interfaces genéricas que proporcionan 
  Las interfaces genéricas proporcionan homólogas con seguridad de tipos a las interfaces no genéricas para realizar comparaciones de ordenación y de igualdad, y para obtener funcionalidad compartida por los tipos de colección genéricos.  
   
 > [!NOTE]
->  A partir de .NET Framework 4, los parámetros de tipo de varias interfaces genéricas están marcados como covariantes o contravariantes, y ofrecen una mayor flexibilidad para asignar y usar tipos que implementan estas interfaces. Vea [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
+> A partir de .NET Framework 4, los parámetros de tipo de varias interfaces genéricas están marcados como covariantes o contravariantes, y ofrecen una mayor flexibilidad para asignar y usar tipos que implementan estas interfaces. Vea [Covarianza y contravarianza](../../../docs/standard/generics/covariance-and-contravariance.md).  
   
 ### <a name="equality-and-ordering-comparisons"></a>Comparaciones de igualdad y ordenación  
  En el espacio de nombres <xref:System>, las interfaces genéricas <xref:System.IComparable%601?displayProperty=nameWithType> y <xref:System.IEquatable%601?displayProperty=nameWithType>, igual que sus homólogas no genéricas, definen métodos para realizar comparaciones de ordenación y comparaciones de igualdad, respectivamente. Los tipos implementan estas interfaces para proporcionar la capacidad de desempeñar dichas comparaciones.  

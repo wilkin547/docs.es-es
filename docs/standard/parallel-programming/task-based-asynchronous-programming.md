@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: ab754da005dcc16fc71c3a59728e4ff6848fbbb1
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300638"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666302"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programación asincrónica basada en tareas
 
@@ -97,7 +97,7 @@ Cada tarea recibe un identificador entero que la identifica de manera inequívoc
 
 La mayoría de las API que crean tareas proporcionan sobrecargas que aceptan un parámetro <xref:System.Threading.Tasks.TaskCreationOptions>. Al especificar una de estas opciones, se le está indicando al programador cómo se programa la tarea en el grupo de subprocesos. En la tabla siguiente se muestran las diversas opciones de creación de tareas.
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> valor de parámetro|Descripción|
+|<xref:System.Threading.Tasks.TaskCreationOptions> valor de parámetro|DESCRIPCIÓN|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|Es la opción predeterminada si no se especifica ninguna opción. El programador usa su heurística predeterminada para programar la tarea.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|Especifica que la tarea debe programarse de modo que las tareas creadas anteriormente tengan más posibilidades de ejecutarse antes y que las tareas posteriormente tengan más posibilidades de ejecutarse después.|
@@ -256,11 +256,11 @@ Al objeto <xref:System.Threading.Tasks.TaskFactory> predeterminado se puede tene
 
 ## <a name="tasks-without-delegates"></a>Tareas sin delegados
 
-En algunos casos, es posible que desee usar un objeto <xref:System.Threading.Tasks.Task> para encapsular alguna operación asincrónica ejecutada por un componente externo en lugar de su propio usuario delegado. Si la operación se basa en el patrón Begin/End del modelo de programación asincrónica, puede usar los métodos <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. Si no es este el caso, puede usar el objeto <xref:System.Threading.Tasks.TaskCompletionSource%601> para encapsular la operación en una tarea y, de este modo, aprovechar algunas de las ventajas de programación de <xref:System.Threading.Tasks.Task>, como por ejemplo, su compatibilidad con la propagación de excepciones y el uso de continuaciones. Para obtener más información, vea <xref:System.Threading.Tasks.TaskCompletionSource%601>.
+En algunos casos, es posible que desee usar un objeto <xref:System.Threading.Tasks.Task> para encapsular alguna operación asincrónica ejecutada por un componente externo en lugar de su propio usuario delegado. Si la operación se basa en el patrón Begin/End del modelo de programación asincrónica, puede usar los métodos <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A>. Si no es este el caso, puede usar el objeto <xref:System.Threading.Tasks.TaskCompletionSource%601> para encapsular la operación en una tarea y, de este modo, aprovechar algunas de las ventajas de programación de <xref:System.Threading.Tasks.Task>, como por ejemplo, su compatibilidad con la propagación de excepciones y el uso de continuaciones. Para más información, consulte <xref:System.Threading.Tasks.TaskCompletionSource%601>.
 
 ## <a name="custom-schedulers"></a>Programadores personalizados
 
-La mayoría de los desarrolladores de aplicaciones o bibliotecas no prestan atención al procesador en el que se ejecuta la tarea, al modo en que la tarea sincroniza su trabajo con otras tareas o al modo en que se programa la tarea en el objeto <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Solo necesitan que la ejecución en el equipo host sea lo más eficaz posible. Si necesita tener un control más minucioso sobre los detalles de programación, la biblioteca TPL permite configurar algunos valores del programador de tareas predeterminado e incluso permite proporcionar un programador personalizado. Para obtener más información, vea <xref:System.Threading.Tasks.TaskScheduler>.
+La mayoría de los desarrolladores de aplicaciones o bibliotecas no prestan atención al procesador en el que se ejecuta la tarea, al modo en que la tarea sincroniza su trabajo con otras tareas o al modo en que se programa la tarea en el objeto <xref:System.Threading.ThreadPool?displayProperty=nameWithType>. Solo necesitan que la ejecución en el equipo host sea lo más eficaz posible. Si necesita tener un control más minucioso sobre los detalles de programación, la biblioteca TPL permite configurar algunos valores del programador de tareas predeterminado e incluso permite proporcionar un programador personalizado. Para más información, consulte <xref:System.Threading.Tasks.TaskScheduler>.
 
 ## <a name="related-data-structures"></a>Estructuras de datos relacionados
 
@@ -268,13 +268,13 @@ TPL tiene varios tipos públicos nuevos que resultan útiles tanto en escenarios
 
 ## <a name="custom-task-types"></a>Tipos de tarea personalizados
 
-Se recomienda no heredar de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ni de <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. En su lugar, se recomienda usar la propiedad <xref:System.Threading.Tasks.Task.AsyncState%2A> para asociar los datos adicionales o el estado a un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. También puede usar métodos de extensión para extender la funcionalidad de las clases <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>. Para más información sobre los métodos de extensión, consulte [Extension Methods](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) (Métodos de extensión) y [Extension Methods](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md) (Métodos de extensión).
+Se recomienda no heredar de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ni de <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. En su lugar, se recomienda usar la propiedad <xref:System.Threading.Tasks.Task.AsyncState%2A> para asociar los datos adicionales o el estado a un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. También puede usar métodos de extensión para extender la funcionalidad de las clases <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>. Para más información sobre los métodos de extensión, consulte [Extension Methods](../../csharp/programming-guide/classes-and-structs/extension-methods.md) (Métodos de extensión) y [Extension Methods](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md) (Métodos de extensión).
 
 Si debe heredar de <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>, no puede usar las clases <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.Task.Run%2A>, o <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>, o <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> para crear instancias del tipo de tarea personalizada porque estos mecanismos solo crean objetos <xref:System.Threading.Tasks.Task> y objetos <xref:System.Threading.Tasks.Task%601>. Además, no puede usar los mecanismos de continuación de tarea proporcionados por <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> y <xref:System.Threading.Tasks.TaskFactory%601> para crear instancias del tipo de tarea personalizada porque también estos mecanismos crean solo objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>.
 
 ## <a name="related-topics"></a>Temas relacionados
 
-|Title|Descripción|
+|Title|DESCRIPCIÓN|
 |-|-|
 |[Chaining Tasks by Using Continuation Tasks](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md) (Encadenar tareas mediante tareas de continuación)|Describe el funcionamiento de las continuaciones.|
 |[Attached and Detached Child Tasks](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md) (Tareas secundarias asociadas y desasociadas)|Describe la diferencia entre las tareas secundarias asociadas y desasociadas.|

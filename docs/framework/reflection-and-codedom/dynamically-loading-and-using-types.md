@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db985bec-5942-40ec-b13a-771ae98623dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 085b89de8180a216288e8f547af5b73eaf004457
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 0246f429b396a2606bbb827b7ae2a9034af00f11
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469677"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915475"
 ---
 # <a name="dynamically-loading-and-using-types"></a>Cargar y utilizar tipos dinámicamente
 La reflexión facilita la infraestructura que utilizan los compiladores de lenguaje para implementar el enlace en tiempo de ejecución implícito. El enlace es el proceso de buscar la declaración (es decir, la implementación) que corresponde a un tipo especificado de manera exclusiva. Cuando este proceso se produce en tiempo de ejecución, en lugar de en tiempo de compilación, se denomina enlace en tiempo de ejecución. Visual Basic le permite usar el enlace en tiempo de ejecución implícito en el código; el compilador de Visual Basic llama a un método auxiliar que usa la reflexión para obtener el tipo de objeto. Los argumentos pasados al método del asistente hacen que se invoque el método adecuado en tiempo de ejecución. Estos argumentos son la instancia (un objeto) en la que se invoca el método, el nombre del método invocado (una cadena) y los argumentos pasados al método invocado (una matriz de objetos).  
@@ -44,7 +44,7 @@ End Module
 ## <a name="custom-binding"></a>Enlace personalizado  
  Además de usarla implícitamente los compiladores para el enlace en tiempo de ejecución, la reflexión puede usarse explícitamente en el código para realizar el enlace en tiempo de ejecución.  
   
- [Common Language Runtime](../../../docs/standard/clr.md) admite varios lenguajes de programación, y las reglas de enlace de estos lenguajes son diferentes. En el caso del enlace anticipado, los generadores de código pueden controlar completamente este enlace. Pero en el caso del enlace en tiempo de ejecución mediante reflexión, es necesario controlarlo mediante un enlace personalizado. La clase <xref:System.Reflection.Binder> proporciona un control personalizado de la selección e invocación de miembros.  
+ [Common Language Runtime](../../standard/clr.md) admite varios lenguajes de programación, y las reglas de enlace de estos lenguajes son diferentes. En el caso del enlace anticipado, los generadores de código pueden controlar completamente este enlace. Pero en el caso del enlace en tiempo de ejecución mediante reflexión, es necesario controlarlo mediante un enlace personalizado. La clase <xref:System.Reflection.Binder> proporciona un control personalizado de la selección e invocación de miembros.  
   
  Mediante el enlace personalizado, puede cargar un ensamblado en tiempo de ejecución, obtener información sobre los tipos del ensamblado, especificar el tipo que quiera y, después, invocar métodos u obtener acceso a campos o propiedades de dicho tipo. Esta técnica es útil si no conoce el tipo de un objeto en tiempo de compilación, como cuando el tipo de objeto depende de la entrada del usuario.  
   
@@ -67,7 +67,7 @@ End Module
   
  **BindToMethod** devuelve el <xref:System.Reflection.MethodBase> que se va a invocar o una referencia nula (**Nothing** en Visual Basic) si la invocación no es posible. No es necesario que el valor devuelto de **MethodBase** sea uno de los contenidos en el parámetro *match*, aunque esto es lo habitual.  
   
- Cuando hay argumentos ByRef, el llamador podría querer recuperarlos. Por lo tanto, **Binder** permite que un cliente asigne la matriz de argumentos de nuevo a su forma original si **BindToMethod** ha manipulado la matriz de argumentos. Para ello, debe garantizarse al llamador que el orden de los argumentos no se ha modificado. Cuando los argumentos se pasan por nombre, **Binder** reordena la matriz de argumentos, y esto es lo que ve el llamador. Para obtener más información, vea <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
+ Cuando hay argumentos ByRef, el llamador podría querer recuperarlos. Por lo tanto, **Binder** permite que un cliente asigne la matriz de argumentos de nuevo a su forma original si **BindToMethod** ha manipulado la matriz de argumentos. Para ello, debe garantizarse al llamador que el orden de los argumentos no se ha modificado. Cuando los argumentos se pasan por nombre, **Binder** reordena la matriz de argumentos, y esto es lo que ve el llamador. Para más información, consulte <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>.  
   
  El conjunto de miembros disponibles está integrado por los miembros definidos en el tipo o en cualquier tipo base. Si se especifica <xref:System.Reflection.BindingFlags>, se devolverán en el conjunto miembros de cualquier tipo de accesibilidad. Si no se especifica **BindingFlags.NonPublic**, el enlazador deberá imponer reglas de accesibilidad. Cuando especifique la marca de enlace **Public** o **NonPublic**, también debe especificar la marca de enlace **Instance** o **Static**. En caso contrario, no se devolverá ningún miembro.  
   
@@ -79,7 +79,7 @@ End Module
   
  En el caso 3 del ejemplo de código, se pasa un argumento real de tipo **String** con un valor de "5.5" a un método con un argumento formal de tipo **Double**. Para que la invocación se realice correctamente, el valor de cadena "5.5" se debe convertir a un valor doble. **ChangeType** realiza esta conversión.  
   
- **ChangeType** solo realiza [conversiones de ampliación](../../../docs/standard/base-types/type-conversion.md) o sin pérdida de información, como se muestra en la tabla siguiente.  
+ **ChangeType** solo realiza [conversiones de ampliación](../../standard/base-types/type-conversion.md) o sin pérdida de información, como se muestra en la tabla siguiente.  
   
 |Tipo de origen|Tipo de destino|  
 |-----------------|-----------------|  
@@ -104,4 +104,4 @@ End Module
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
-- [Conversión de tipos en .NET Framework](../../../docs/standard/base-types/type-conversion.md)
+- [Conversión de tipos en .NET Framework](../../standard/base-types/type-conversion.md)

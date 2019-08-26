@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22c98e41624abc931bd03e4ddea09ed55d0d3f39
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6df750872e90572b00cdf427461b4a9782c47d63
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648485"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968521"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>Mitigación: Nuevo compilador JIT de 64 bits
 A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilador JIT de 64 bits para la compilación Just-In-Time. Este cambio no afecta a la compilación con el compilador JIT de 32 bits.  
@@ -22,7 +22,7 @@ A partir de .NET Framework 4.6, el tiempo d ejecución incluye un nuevo compilad
  En algunos casos, la compilación con el nuevo compilador JIT de 64 bits provoca una excepción en tiempo de ejecución o en el comportamiento que no se observa al ejecutar el código compilado por el compilador JIT de 64 bits antiguo. Las diferencias conocidas incluyen lo siguiente:  
   
 > [!IMPORTANT]
->  Todos estos problemas conocidos se han solucionado en el nuevo compilador de 64 bits publicado con .NET Framework 4.6.2. También se han abordado la mayoría en las versiones de servicio de .NET Framework 4.6 y 4.6.1 que se incluyen con Windows Update. Puede eliminar estos problemas asegurándose de que la versión de Windows está actualizada o actualizando a .NET Framework 4.6.2.  
+> Todos estos problemas conocidos se han solucionado en el nuevo compilador de 64 bits publicado con .NET Framework 4.6.2. También se han abordado la mayoría en las versiones de servicio de .NET Framework 4.6 y 4.6.1 que se incluyen con Windows Update. Puede eliminar estos problemas asegurándose de que la versión de Windows está actualizada o actualizando a .NET Framework 4.6.2.  
   
 - En determinadas condiciones, una operación de conversión unboxing puede producir una <xref:System.NullReferenceException> en versiones de lanzamiento con la optimización activada.  
   

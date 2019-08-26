@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969029"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>XmlSchemaSet para compilación de esquemas
 Describe la clase <xref:System.Xml.Schema.XmlSchemaSet>, una caché en la que se pueden almacenar y validar esquemas del lenguaje de definición de esquemas XML (XSD).  
@@ -133,12 +133,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  Los esquemas de <xref:System.Xml.Schema.XmlSchemaSet> se compilan en un solo esquema lógico por medio del método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de <xref:System.Xml.Schema.XmlSchemaSet>.  
   
 > [!NOTE]
->  A diferencia de la clase <xref:System.Xml.Schema.XmlSchemaCollection> obsoleta, los esquemas no se compilan cuando se llama al método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>.  
+> A diferencia de la clase <xref:System.Xml.Schema.XmlSchemaCollection> obsoleta, los esquemas no se compilan cuando se llama al método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>.  
   
  Si el método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> se ejecuta correctamente, la propiedad <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> de <xref:System.Xml.Schema.XmlSchemaSet> se establece en `true`.  
   
 > [!NOTE]
->  La propiedad <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> no resulta afectada si se editan los esquemas mientras está en <xref:System.Xml.Schema.XmlSchemaSet>. No se realiza un seguimiento de las actualizaciones de los esquemas individuales en <xref:System.Xml.Schema.XmlSchemaSet>. Como resultado, la propiedad <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> puede ser `true` aunque se haya modificado uno de los esquemas contenidos en <xref:System.Xml.Schema.XmlSchemaSet>, siempre y cuando no se hayan agregado ni quitado esquemas de <xref:System.Xml.Schema.XmlSchemaSet>.  
+> La propiedad <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> no resulta afectada si se editan los esquemas mientras está en <xref:System.Xml.Schema.XmlSchemaSet>. No se realiza un seguimiento de las actualizaciones de los esquemas individuales en <xref:System.Xml.Schema.XmlSchemaSet>. Como resultado, la propiedad <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> puede ser `true` aunque se haya modificado uno de los esquemas contenidos en <xref:System.Xml.Schema.XmlSchemaSet>, siempre y cuando no se hayan agregado ni quitado esquemas de <xref:System.Xml.Schema.XmlSchemaSet>.  
   
  En el siguiente ejemplo, se agrega el archivo `books.xsd` a <xref:System.Xml.Schema.XmlSchemaSet> y, a continuación, se llama al método <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04ef2ea6bf9d10baabea39133b2e0a9a72a6ce4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da32d514b19424487cebc1d113388cfa9a2dbdf0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674851"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69913227"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Subprocesamiento administrado y no administrado en Windows
 
@@ -27,7 +27,7 @@ La administración de todos los subprocesos se realiza mediante la clase <xref:S
  En los subprocesos administrados, <xref:System.Threading.Thread.GetHashCode%2A?displayProperty=nameWithType> es la identificación del subproceso administrado estable. En cuanto a la duración de su subproceso, no estará en conflicto con el valor de ningún otro subproceso, independientemente del dominio de la aplicación del que obtiene este valor.  
   
 > [!NOTE]
->  Un **ThreadId** de sistema operativo no tiene una relación fija con un subproceso administrado, ya que un host no administrado puede controlar la relación entre subprocesos administrados y no administrados. En concreto, un host sofisticado puede usar la API de fibras para programar muchos subprocesos administrados en el mismo subproceso de sistema operativo o para mover un subproceso administrado entre distintos subprocesos de sistema operativo.  
+> Un **ThreadId** de sistema operativo no tiene una relación fija con un subproceso administrado, ya que un host no administrado puede controlar la relación entre subprocesos administrados y no administrados. En concreto, un host sofisticado puede usar la API de fibras para programar muchos subprocesos administrados en el mismo subproceso de sistema operativo o para mover un subproceso administrado entre distintos subprocesos de sistema operativo.  
   
 ## <a name="mapping-from-win32-threading-to-managed-threading"></a>Asignación de subprocesos de Win32 a subprocesos administrados
 
@@ -57,7 +57,7 @@ Un subproceso administrado se puede marcar para indicar que hospedará un conten
  Si el estado de contenedor no se establece antes de que se inicie el subproceso, el subproceso se inicializa como un contenedor multiproceso (MTA). El subproceso de finalizador y todos los subprocesos controlados por <xref:System.Threading.ThreadPool> son MTA.  
   
 > [!IMPORTANT]
->  Para el código de inicio de aplicación, la única manera de controlar el estado de contenedor es aplicar <xref:System.MTAThreadAttribute> o <xref:System.STAThreadAttribute> al procedimiento de punto de entrada. En .NET Framework 1.0 y 1.1, la propiedad <xref:System.Threading.Thread.ApartmentState%2A> se puede establecer como la primera línea de código. Esto no está permitido en .NET Framework 2.0.  
+> Para el código de inicio de aplicación, la única manera de controlar el estado de contenedor es aplicar <xref:System.MTAThreadAttribute> o <xref:System.STAThreadAttribute> al procedimiento de punto de entrada. En .NET Framework 1.0 y 1.1, la propiedad <xref:System.Threading.Thread.ApartmentState%2A> se puede establecer como la primera línea de código. Esto no está permitido en .NET Framework 2.0.  
   
  Los objetos administrados que están expuestos a COM se comportan como si tuviesen agregado el cálculo de referencias con subprocesamiento libre. En otras palabras, se pueden llamar desde cualquier apartamento COM en un modo de subprocesamiento libre. Los únicos objetos administrados que no muestran este comportamiento de subprocesamiento libre son aquellos que derivan de <xref:System.EnterpriseServices.ServicedComponent> o <xref:System.Runtime.InteropServices.StandardOleMarshalObject>.  
   

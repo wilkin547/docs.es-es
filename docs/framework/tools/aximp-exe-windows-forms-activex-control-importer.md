@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69cc2459f1944c8101be9c58b1462217ee7ac78f
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: cd3d7ea4d9639c5c68ecf977b4e95e816d99a4f6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629569"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915418"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de controles ActiveX de Windows Forms)
 El Importador de controles ActiveX convierte definiciones de tipos de una biblioteca de tipos COM para un control ActiveX en un control de Windows Forms.  
@@ -49,7 +49,7 @@ aximp [options]{file.dll | file.ocx}
 |`/nologo`|Suprime la presentación de la portada de inicio de Microsoft.|  
 |`/out:` *filename*|Especifica el nombre del ensamblado que se va a crear.|  
 |`/publickey:` *filename*|Firma el control resultante con un nombre seguro mediante la clave pública que se encuentra en el archivo especificado por *filename*.|  
-|`/rcw:` *filename*|Utiliza el contenedor invocable en tiempo de ejecución especificado en lugar de generar uno nuevo. Puede especificar varias instancias. El directorio actual se utiliza para las rutas de acceso relativas. Para más información, vea [Runtime Callable Wrapper](../../../docs/standard/native-interop/runtime-callable-wrapper.md).|  
+|`/rcw:` *filename*|Utiliza el contenedor invocable en tiempo de ejecución especificado en lugar de generar uno nuevo. Puede especificar varias instancias. El directorio actual se utiliza para las rutas de acceso relativas. Para más información, vea [Runtime Callable Wrapper](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Suprime la presentación de mensajes de aprobación.|  
 |`/source`|Genera código fuente de C# para el contenedor de Windows Forms.|  
 |`/verbose`|Especifica el modo detallado; muestra información adicional del progreso.|  
@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
  Proxy de Windows Forms para controles ActiveX (donde Ax significa ActiveX): Ax*progid*.dll  
   
 > [!NOTE]
->  Si el nombre de un miembro del control ActiveX coincide con un nombre definido en .NET Framework, Aximp.exe agregará el prefijo "Ctl" al nombre del miembro al crear la clase derivada AxHost. Por ejemplo, si el control ActiveX tiene un miembro denominado "Layout", el nombre de este se cambia a "CtlLayout" en la clase derivada AxHost porque el evento Layout está definido en .NET Framework.  
+> Si el nombre de un miembro del control ActiveX coincide con un nombre definido en .NET Framework, Aximp.exe agregará el prefijo "Ctl" al nombre del miembro al crear la clase derivada AxHost. Por ejemplo, si el control ActiveX tiene un miembro denominado "Layout", el nombre de este se cambia a "CtlLayout" en la clase derivada AxHost porque el evento Layout está definido en .NET Framework.  
   
  Puede examinar estos archivos generados con herramientas como [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   

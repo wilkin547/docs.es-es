@@ -2,17 +2,17 @@
 title: Usar la varianza para los delegados genéricos Func y Action (C#)
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
-ms.openlocfilehash: f517eea07588bb01ef903c8311126eab872bd735
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbfc41fb8ab3e7d800f1eb03098e02056e694872
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540603"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69659908"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Usar la varianza para los delegados genéricos Func y Action (C#)
 En estos ejemplos se muestra cómo usar la covarianza y la contravarianza en los delegados genéricos `Func` y `Action` para habilitar la reutilización de métodos y proporcionar más flexibilidad en el código.  
   
- Para obtener más información sobre la covarianza y la contravarianza, vea [Varianza en delegados (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+ Para obtener más información sobre la covarianza y la contravarianza, vea [Varianza en delegados (C#)](./variance-in-delegates.md)  
   
 ## <a name="using-delegates-with-covariant-type-parameters"></a>Usar delegados con parámetros de tipo covariante  
  En el ejemplo siguiente se muestran las ventajas de la compatibilidad con la covarianza en los delegados `Func` genéricos. El método `FindByTitle` toma un parámetro del tipo `String` y devuelve un objeto del tipo `Employee`. Pero este método se puede asignar al delegado `Func<String, Person>` porque `Employee` hereda `Person`.  
@@ -83,5 +83,5 @@ class Program
   
 ## <a name="see-also"></a>Vea también
 
-- [Covarianza y contravarianza (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
-- [Genéricos](~/docs/standard/generics/index.md)
+- [Covarianza y contravarianza (C#)](./index.md)
+- [Genéricos](../../../../standard/generics/index.md)

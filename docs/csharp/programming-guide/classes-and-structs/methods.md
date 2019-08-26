@@ -6,24 +6,24 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: b97ce10cfb2e35beecf2c96acbac9c4ac8462c1d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6e7a1dfc739278eecfa8582bb0a9f8938c561acf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201171"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924459"
 ---
 # <a name="methods-c-programming-guide"></a>Métodos (Guía de programación de C#)
 Un método es un bloque de código que contiene una serie de instrucciones. Un programa hace que se ejecuten las instrucciones al llamar al método y especificando los argumentos de método necesarios. En C#, todas las instrucciones ejecutadas se realizan en el contexto de un método. El método Main es el punto de entrada para cada aplicación de C# y se llama mediante Common Language Runtime (CLR) cuando se inicia el programa.  
   
 > [!NOTE]
->  En este tema se analizan los métodos denominados. Para obtener información sobre las funciones anónimas, vea [Funciones anónimas (Guía de programación de C#)](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md).  
+> En este tema se analizan los métodos denominados. Para obtener información sobre las funciones anónimas, vea [Funciones anónimas (Guía de programación de C#)](../statements-expressions-operators/anonymous-functions.md).  
   
 ## <a name="method-signatures"></a>Firmas de método  
- Los métodos se declaran en una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md) especificando el nivel de acceso, como `public` o `private`, modificadores opcionales como `abstract` o `sealed`, el valor de retorno, el nombre del método y cualquier parámetro de método. Todas estas partes forman la firma del método.  
+ Los métodos se declaran en una [clase](../../language-reference/keywords/class.md) o [struct](../../language-reference/keywords/struct.md) especificando el nivel de acceso, como `public` o `private`, modificadores opcionales como `abstract` o `sealed`, el valor de retorno, el nombre del método y cualquier parámetro de método. Todas estas partes forman la firma del método.  
   
 > [!NOTE]
->  Un tipo de valor devuelto de un método no forma parte de la firma del método con el objetivo de sobrecargar el método. Sin embargo, forma parte de la firma del método al determinar la compatibilidad entre un delegado y el método que señala.  
+> Un tipo de valor devuelto de un método no forma parte de la firma del método con el objetivo de sobrecargar el método. Sin embargo, forma parte de la firma del método al determinar la compatibilidad entre un delegado y el método que señala.  
   
  Los parámetros de método se encierran entre paréntesis y se separan por comas. Los paréntesis vacíos indican que el método no requiere parámetros. Esta clase contiene cuatro métodos:  
   
@@ -40,7 +40,7 @@ Un método es un bloque de código que contiene una serie de instrucciones. Un p
  [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]  
   
 ## <a name="passing-by-reference-vs-passing-by-value"></a>Pasar por referencia frente a Pasar por valor  
- De forma predeterminada, cuando un tipo de valor se pasa a un método, se pasa una copia en lugar del propio objeto. Por lo tanto, los cambios realizados en el argumento no tienen ningún efecto en la copia original del método de llamada. Puede pasar un tipo de valor por referencia mediante la palabra clave ref. Para obtener más información, vea [Pasar parámetros de tipo de valor (Guía de programación de C#)](../../../csharp/programming-guide/classes-and-structs/passing-value-type-parameters.md). Para obtener una lista de tipos de valor integrados, vea [Tabla de tipos de valor (Referencia de C#)](../../../csharp/language-reference/keywords/value-types-table.md).  
+ De forma predeterminada, cuando un tipo de valor se pasa a un método, se pasa una copia en lugar del propio objeto. Por lo tanto, los cambios realizados en el argumento no tienen ningún efecto en la copia original del método de llamada. Puede pasar un tipo de valor por referencia mediante la palabra clave ref. Para obtener más información, vea [Pasar parámetros de tipo de valor (Guía de programación de C#)](./passing-value-type-parameters.md). Para obtener una lista de tipos de valor integrados, vea [Tabla de tipos de valor (Referencia de C#)](../../language-reference/keywords/value-types-table.md).  
   
  Cuando se pasa un objeto de un tipo de referencia a un método, se pasa una referencia al objeto. Es decir, el método no recibe el objeto concreto, recibe un argumento que indica la ubicación del objeto. Si cambia un miembro del objeto mediante esta referencia, el cambio se refleja en el argumento del método de llamada, incluso si pasa el objeto por valor.  
   
@@ -54,7 +54,7 @@ Un método es un bloque de código que contiene una serie de instrucciones. Un p
   
  Fundamentalmente, el ejemplo hace lo mismo que el ejemplo anterior en el que se pasa un argumento por valor a un método. Pero, debido a que se utiliza un tipo de referencia, el resultado es diferente. La modificación que se lleva a cabo en `ModifyObject` al campo `value` del parámetro, `obj`, también cambia el campo `value` del argumento, `rt`, en el método `TestRefType` . El método `TestRefType` muestra 33 como salida.  
   
- Para obtener más información sobre cómo pasar tipos de referencia por valor y por referencia, vea [Pasar parámetros Reference-Type (Guía de programación de C#)](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md) y [Tipos de referencia (Referencia de C#)](../../../csharp/language-reference/keywords/reference-types.md).  
+ Para obtener más información sobre cómo pasar tipos de referencia por valor y por referencia, vea [Pasar parámetros Reference-Type (Guía de programación de C#)](./passing-reference-type-parameters.md) y [Tipos de referencia (Referencia de C#)](../../language-reference/keywords/reference-types.md).  
   
 ## <a name="return-values"></a>Valores devueltos  
 Los métodos pueden devolver un valor al autor de llamada. Si el tipo de valor devuelto, el tipo enumerado antes del nombre de método, no es `void`, el método puede devolver el valor mediante la utilización de la palabra clave `return` . Una instrucción con la palabra clave `return` seguida de un valor que coincide con el tipo de valor devuelto devolverá este valor al autor de llamada del método. 
@@ -108,15 +108,15 @@ public static void FillMatrix(int[,] matrix)
 }
 ```  
   
- Para obtener más información, consulta [return](../../../csharp/language-reference/keywords/return.md).  
+ Para obtener más información, consulta [return](../../language-reference/keywords/return.md).  
   
 ## <a name="async-methods"></a>Métodos asincrónicos  
  Mediante la característica asincrónica, puede invocar métodos asincrónicos sin usar definiciones de llamada explícitas ni dividir manualmente el código en varios métodos o expresiones lambda. 
   
- Si marca un método con el modificador [async](../../../csharp/language-reference/keywords/async.md) , puede usar el operador [await](../../../csharp/language-reference/keywords/await.md) en el método. Cuando el control alcanza una expresión await en el método asincrónico, el control se devuelve al autor de llamada y se progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.  
+ Si marca un método con el modificador [async](../../language-reference/keywords/async.md) , puede usar el operador [await](../../language-reference/keywords/await.md) en el método. Cuando el control alcanza una expresión await en el método asincrónico, el control se devuelve al autor de llamada y se progreso del método se suspende hasta que se completa la tarea esperada. Cuando se completa la tarea, la ejecución puede reanudarse en el método.  
   
 > [!NOTE]
->  Un método asincrónico vuelve al autor de llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.  
+> Un método asincrónico vuelve al autor de llamada cuando encuentra el primer objeto esperado que aún no se ha completado o cuando llega al final del método asincrónico, lo que ocurra primero.  
   
  Un método asincrónico puede tener un tipo de valor devuelto de <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, o nulo. El tipo de valor devuelto nulo se utiliza principalmente para definir controladores de eventos, donde se requiere un tipo de valor devuelto nulo. No se puede esperar un método asincrónico que devuelve nulo, y el autor de llamada de un método con tipo de devolución nulo no puede capturar ninguna excepción producida por este.  
   
@@ -126,9 +126,9 @@ public static void FillMatrix(int[,] matrix)
   
  [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]  
   
- Un método aisncrónico no puede declarar ningún parámetro [ref](../../../csharp/language-reference/keywords/ref.md) u [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) , pero puede llamar a los métodos que tienen estos parámetros.  
+ Un método aisncrónico no puede declarar ningún parámetro [ref](../../language-reference/keywords/ref.md) u [out](../../language-reference/keywords/out-parameter-modifier.md) , pero puede llamar a los métodos que tienen estos parámetros.  
   
- Para obtener más información sobre los métodos asincrónicos, vea [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md), [Flujo de control en programas asincrónicos](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) y [Tipos de valor devuelto de Async](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
+ Para obtener más información sobre los métodos asincrónicos, vea [Programación asincrónica con Async y Await](../concepts/async/index.md), [Flujo de control en programas asincrónicos](../concepts/async/control-flow-in-async-programs.md) y [Tipos de valor devuelto de Async](../concepts/async/async-return-types.md).  
   
 ## <a name="expression-body-definitions"></a>Definiciones de cuerpos de expresión  
  Es habitual tener definiciones de método que simplemente hacen las devoluciones de forma inmediata con el resultado de una expresión, o que tienen una sola instrucción como cuerpo del método.  Hay un acceso directo de sintaxis para definir este método mediante `=>`:  
@@ -145,27 +145,27 @@ public Customer this[long id] => store.LookupCustomer(id);
  Si el método devuelve `void` o si es un método asincrónico, el cuerpo del método debe ser una expresión de instrucción (igual que con las expresiones lambda).  Para las propiedades y los indexadores, solo deben leerse, y no usa la palabra clave de descriptor de acceso `get`.  
   
 ## <a name="iterators"></a>Iterators  
- Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador utiliza la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) , se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.  
+ Un iterador realiza una iteración personalizada en una colección, como una lista o matriz. Un iterador utiliza la instrucción [yield return](../../language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza la instrucción [yield return](../../language-reference/keywords/yield.md) , se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama el iterador.  
   
- Llame a un iterador a partir del código de cliente mediante una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md) .  
+ Llame a un iterador a partir del código de cliente mediante una instrucción [foreach](../../language-reference/keywords/foreach-in.md) .  
   
  El tipo de valor devuelto de un iterador puede ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>o <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Para obtener más información, consulta [Iteradores](../../../csharp/programming-guide/concepts/iterators.md).  
+ Para obtener más información, consulta [Iteradores](../concepts/iterators.md).  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Guía de programación de C#](../index.md)
 - [Clases y structs](index.md)
 - [Modificadores de acceso](access-modifiers.md)
 - [Clases estáticas y sus miembros](static-classes-and-static-class-members.md)
 - [Herencia](inheritance.md)
 - [Clases y miembros de clase abstractos y sellados](abstract-and-sealed-classes-and-class-members.md)
-- [params](../../../csharp/language-reference/keywords/params.md)
-- [return](../../../csharp/language-reference/keywords/return.md)
-- [out](../../../csharp/language-reference/keywords/out.md)
-- [ref](../../../csharp/language-reference/keywords/ref.md)
+- [params](../../language-reference/keywords/params.md)
+- [return](../../language-reference/keywords/return.md)
+- [out](../../language-reference/keywords/out.md)
+- [ref](../../language-reference/keywords/ref.md)
 - [Pasar parámetros](passing-parameters.md)

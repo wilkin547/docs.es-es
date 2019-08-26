@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 361a6669d5d638bbb39bc646607cce212bbb3bfa
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 995362667ed0a203112744f03a036eabbcb784c8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67504035"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608303"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introducción al lenguaje C# y .NET Framework
 
@@ -44,9 +44,9 @@ C# es un lenguaje elegante, con seguridad de tipos y orientado a objetos que per
   
  Los siguientes son recursos adicionales de C#:  
   
-- Para obtener una buena introducción general al lenguaje, consulte el capítulo 1 de la [especificación del lenguaje C#](../../csharp/language-reference/language-specification/index.md).  
+- Para obtener una buena introducción general al lenguaje, consulte el capítulo 1 de la [especificación del lenguaje C#](../language-reference/language-specification/index.md).  
   
-- Para más información sobre aspectos específicos del lenguaje C#, consulte la [referencia de C#](../../csharp/language-reference/index.md).  
+- Para más información sobre aspectos específicos del lenguaje C#, consulte la [referencia de C#](../language-reference/index.md).  
   
 - Para más información sobre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], consulte [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md).  
 
@@ -68,5 +68,5 @@ C# es un lenguaje elegante, con seguridad de tipos y orientado a objetos que per
   
 ## <a name="see-also"></a>Vea también
 
-- [C#](../../csharp/index.md)
+- [C#](../index.md)
 - [Introducción a Visual C# y Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

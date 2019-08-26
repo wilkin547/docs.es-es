@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 46dd9c0c1f9f5759bc9160aadeb0538b5403fb52
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878037"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69917968"
 ---
 # <a name="overview-of-the-net-framework"></a>Información general acerca de .NET Framework
 
@@ -75,7 +75,7 @@ Por ejemplo, las clases de colección de .NET Framework implementan un conjunto 
 
 Como en cualquier biblioteca de clases orientada a objetos, los tipos de .NET Framework permiten realizar diversas tareas de programación comunes, como son la administración de cadenas, recolección de datos, conectividad de bases de datos y acceso a archivos. Además de estas tareas habituales, la biblioteca de clases incluye tipos adecuados para diversos escenarios de desarrollo especializados. Use .NET Framework para desarrollar los siguientes tipos de aplicaciones y servicios:
 
-- Aplicaciones de consola. Consulte [Compilar aplicaciones de consola](../../../docs/standard/building-console-apps.md).
+- Aplicaciones de consola. Consulte [Compilar aplicaciones de consola](../../standard/building-console-apps.md).
 
 - Aplicaciones de GUI de Windows (Windows Forms). Consulte [Windows Forms](../../../docs/framework/winforms/index.md).
 

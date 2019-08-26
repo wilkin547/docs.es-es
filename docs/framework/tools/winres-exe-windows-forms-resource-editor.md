@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 775a8b63a0ba7cd021c9e5072ef98c20f6ab2e81
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296659"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937920"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Editor de recursos para localización de Windows)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>Argumentos
 
-|Argumento|Descripción|
+|Argumento|DESCRIPCIÓN|
 |--------------|-----------------|
 |`resourceFile`|Archivo de recursos que se va a adaptar. Este archivo debe ser un archivo .resx o .resources de Windows Forms generado por el diseñador de Visual Studio. Winres.exe no puede abrir archivos .resx o .resources genéricos.|
 
-|Opción|Descripción|
+|Opción|DESCRIPCIÓN|
 |------------|-----------------|
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|
 
@@ -110,7 +110,7 @@ Debe utilizar la versión de Winres.exe que se comercializó con la versión de 
 
 2. Para abrir los recursos predeterminados de un formulario que quiera adaptar, haga clic en el comando **Abrir** del menú **Archivo** y navegue hasta el archivo que quiera abrir.
 
-     o bien
+     O bien
 
      Especifique el archivo que desee abrir en la línea de comandos al iniciar Winres.exe.
 
@@ -146,4 +146,4 @@ Debe utilizar la versión de Winres.exe que se comercializó con la versión de 
 - <xref:System.Resources.ResourceWriter>
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [Recursos de aplicaciones de escritorio](../../../docs/framework/resources/index.md)
-- [Globalización y localización](../../../docs/standard/globalization-localization/index.md)
+- [Globalización y localización](../../standard/globalization-localization/index.md)

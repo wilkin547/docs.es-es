@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ceae33501330719a27e2d0015c21249dca62d551
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 2ddec748dc400418c21bfa8fab6fd2735d74af6d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566857"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69941781"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Cómo el motor en tiempo de ejecución ubica ensamblados
 Para implementar correctamente una aplicación de .NET Framework, debe entender la manera en que Common Language Runtime busca y enlaza los ensamblados que componen la aplicación. De forma predeterminada, runtime intenta enlazar con la versión exacta de un ensamblado con el que se creó la aplicación. Este comportamiento predeterminado puede reemplazarse con los valores del archivo de configuración.  
@@ -24,7 +24,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
  Common Language Runtime realiza una serie de pasos cuando intenta buscar un ensamblado y resolver una referencia de ensamblado. Cada paso se explica en las secciones siguientes. El sondeo de términos suele usarse cuando se describe la manera en que el tiempo de ejecución busca ensamblados; hace referencia al conjunto de heurística que se usa para buscar el ensamblado en función de su nombre y referencia cultural.  
   
 > [!NOTE]
->  Puede ver la información de enlace en el archivo de registro usando el [visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que se incluye en Windows SDK.  
+> Puede ver la información de enlace en el archivo de registro usando el [visor de registro de enlaces de ensamblados (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md), que se incluye en Windows SDK.  
   
 ## <a name="initiating-the-bind"></a>Iniciar el enlace  
  El proceso de buscar y enlazar a un ensamblado comienza cuando el tiempo de ejecución intenta resolver una referencia a otro ensamblado. Esta referencia puede ser estática o dinámica. El compilador registra las referencias estáticas en los metadatos del manifiesto del ensamblado en tiempo de compilación. Las referencias dinámicas se construyen sobre la marcha como resultado de llamar a varios métodos, como <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>.  
@@ -36,7 +36,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
  Por último, puede hacer una referencia dinámica mediante un método como <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> y facilitar solo información parcial. Después, califique la referencia mediante el elemento [\<qualifyAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/qualifyassembly-element.md) en el archivo de configuración de la aplicación. Este elemento permite proporcionar información de referencia completa (nombre, versión, referencia cultural y, si procede, el token de clave pública) en el archivo de configuración de la aplicación, en lugar de en el código. Use esta técnica si desea completar una referencia a un ensamblado fuera del directorio de la aplicación, o si desea hacer referencia a un ensamblado en la caché global de ensamblados pero prefiere la comodidad de especificar la referencia completa en el archivo de configuración en lugar de en el código.  
   
 > [!NOTE]
->  Este tipo de referencia parcial no debe usarse con ensamblados que se comparten entre varias aplicaciones. Como los valores de configuración se aplican por aplicación y no por ensamblado, un ensamblado compartido que use este tipo de referencia parcial requerirá que cada aplicación que use el ensamblado compartido tenga la información calificadora en su archivo de configuración.  
+> Este tipo de referencia parcial no debe usarse con ensamblados que se comparten entre varias aplicaciones. Como los valores de configuración se aplican por aplicación y no por ensamblado, un ensamblado compartido que use este tipo de referencia parcial requerirá que cada aplicación que use el ensamblado compartido tenga la información calificadora en su archivo de configuración.  
   
  El tiempo de ejecución sigue estos pasos para resolver una referencia de ensamblado:  
   
@@ -45,7 +45,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
 2. [Comprueba si el nombre de ensamblado ya estuvo enlazado](#step2) y, si es así, usa el ensamblado cargado previamente. Si una solicitud anterior para cargar el ensamblado produjo un error, la solicitud produce un error inmediatamente sin intentar cargar el ensamblado.  
   
     > [!NOTE]
-    >  El almacenamiento en caché de errores de enlace de ensamblados es nuevo en .NET Framework versión 2.0.  
+    > El almacenamiento en caché de errores de enlace de ensamblados es nuevo en .NET Framework versión 2.0.  
   
 3. [Comprueba la caché global de ensamblados](#step3). Si el ensamblado se encuentra allí, el tiempo de ejecución usa este ensamblado.  
   
@@ -73,7 +73,7 @@ Para implementar correctamente una aplicación de .NET Framework, debe entender 
  Estos archivos tienen la misma sintaxis y proporcionan información como las redirecciones de enlaces, la ubicación del código y los modos de enlace de ensamblados concretos. Cada archivo de configuración puede contener un [elemento \<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) que redirige el proceso de enlace. Los elementos secundarios del [elemento \<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) incluyen el [elemento \<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md). Los elementos secundarios del [elemento \<dependentAssembly>](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) incluyen el [elemento \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment), el [elemento \<bindingRedirect>](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) y el [elemento \<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
 > [!NOTE]
->  Puede encontrarse información de configuración en los tres archivos de configuración; no todos los elementos son válidos en todos los archivos de configuración. Por ejemplo, la información sobre el modo de enlace y la ruta de acceso privada solo puede estar en el archivo de configuración de la aplicación. Para obtener una lista completa de la información contenida en cada archivo, consulte [Configurar aplicaciones con archivos de configuración](../../../docs/framework/configure-apps/index.md).  
+> Puede encontrarse información de configuración en los tres archivos de configuración; no todos los elementos son válidos en todos los archivos de configuración. Por ejemplo, la información sobre el modo de enlace y la ruta de acceso privada solo puede estar en el archivo de configuración de la aplicación. Para obtener una lista completa de la información contenida en cada archivo, consulte [Configurar aplicaciones con archivos de configuración](../../../docs/framework/configure-apps/index.md).  
   
 ### <a name="application-configuration-file"></a>Archivo de configuración de aplicación  
  En primer lugar, Common Language Runtime comprueba el archivo de configuración de la aplicación en busca de información que reemplace la información de versión almacenada en el manifiesto del ensamblado que realiza la llamada. El archivo de configuración de la aplicación puede implementarse con una aplicación, pero no es necesario para la ejecución de la aplicación. Normalmente, la recuperación de este archivo es casi instantánea, pero en los casos en que la base de la aplicación se encuentra en un equipo remoto, como en un escenario basado en web de Internet Explorer, el archivo de configuración debe estar descargado.  
@@ -123,7 +123,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  `compatkey.dat` es un archivo de clave de nombre seguro. Este comando crea un ensamblado con nombre seguro que se puede colocar en la caché global de ensamblados.  
   
 > [!NOTE]
->  La directiva de edición afecta a todas las aplicaciones que usan un componente compartido.  
+> La directiva de edición afecta a todas las aplicaciones que usan un componente compartido.  
   
  El archivo de configuración de directiva de edición reemplaza la información de versión que procede de la aplicación (es decir, que procede del manifiesto del ensamblado o del archivo de configuración de la aplicación). Si no hay ninguna instrucción en el archivo de configuración de la aplicación para redirigir la versión especificada en el manifiesto del ensamblado, el archivo de directiva de edición reemplaza la versión especificada en el manifiesto del ensamblado. Sin embargo, si hay una instrucción de redirección en el archivo de configuración de la aplicación, la directiva de edición reemplaza esa versión, en lugar de la especificada en el manifiesto.  
   
@@ -144,7 +144,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Si una solicitud anterior para el ensamblado produjo un error, las solicitudes posteriores para el ensamblado producen un error inmediatamente sin intentar cargar el ensamblado. A partir de .NET Framework versión 2.0, los errores de enlace de ensamblado se almacenan en caché y la información en caché se usa para determinar si se intenta cargar el ensamblado.  
   
 > [!NOTE]
->  Para revertir al comportamiento de .NET Framework versiones 1.0 y 1.1, que no almacenaban en caché los errores de enlace, incluya el [elemento \<disableCachingBindingFailures>](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) en el archivo de configuración.  
+> Para revertir al comportamiento de .NET Framework versiones 1.0 y 1.1, que no almacenaban en caché los errores de enlace, incluya el [elemento \<disableCachingBindingFailures>](../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md) en el archivo de configuración.  
   
 <a name="step3"></a>   
 ## <a name="step-3-checking-the-global-assembly-cache"></a>Paso 3: Comprobación de la memoria caché global de ensamblados  
@@ -159,7 +159,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 2. Entonces, el tiempo de ejecución sondea el ensamblado al que se hace referencia usando las reglas que se especifican más adelante en esta sección.  
   
 > [!NOTE]
->  Si tiene varias versiones de un ensamblado en un directorio y desea hacer referencia a una versión concreta de dicho ensamblado, debe usar el elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en lugar del atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md). Si usa el elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), el tiempo de ejecución detiene el sondeo la primera vez que encuentra un ensamblado que coincida con el nombre sencillo de ensamblado al que se hace referencia, tanto si es una coincidencia correcta como si no. Si es una coincidencia correcta, se usa dicho ensamblado. Si no es una coincidencia correcta, detiene el sondeo y el enlace produce un error.  
+> Si tiene varias versiones de un ensamblado en un directorio y desea hacer referencia a una versión concreta de dicho ensamblado, debe usar el elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en lugar del atributo `privatePath` del elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md). Si usa el elemento [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md), el tiempo de ejecución detiene el sondeo la primera vez que encuentra un ensamblado que coincida con el nombre sencillo de ensamblado al que se hace referencia, tanto si es una coincidencia correcta como si no. Si es una coincidencia correcta, se usa dicho ensamblado. Si no es una coincidencia correcta, detiene el sondeo y el enlace produce un error.  
   
 ### <a name="locating-the-assembly-through-codebases"></a>Ubicar el ensamblado a través de códigos base  
  Se puede proporcionar información de código base mediante un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en un archivo de configuración. Este código base siempre se comprueba antes de que el tiempo de ejecución intente sondear el ensamblado al que se hace referencia. Si un archivo de directiva de edición que contiene la redirección de versión final también contiene un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), dicho elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) es el que se usa. Por ejemplo, si el archivo de configuración de la aplicación especifica un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) y un archivo de directiva de edición que está reemplazando la información de la aplicación también especifica un elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), se usa el elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) del archivo de directiva de edición.  
@@ -167,7 +167,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Si no se encuentra ninguna coincidencia en la ubicación especificada por el elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md), se produce un error en la solicitud de enlace y no se realizan más acciones. Si el tiempo de ejecución determina que un ensamblado coincide con los criterios del ensamblado que realiza la llamada, usa dicho ensamblado. Cuando se carga el archivo especificado por el elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) determinado, el tiempo de ejecución realiza una comprobación para asegurarse de que el nombre, la versión, la referencia cultural y la clave pública coinciden con la referencia del ensamblado de llamada.  
   
 > [!NOTE]
->  Los ensamblados a los que se hace referencia fuera del directorio raíz de la aplicación deben tener nombres seguros y deben estar instalados en la caché global de ensamblados o especificarse usando el elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
+> Los ensamblados a los que se hace referencia fuera del directorio raíz de la aplicación deben tener nombres seguros y deben estar instalados en la caché global de ensamblados o especificarse usando el elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md).  
   
 ### <a name="locating-the-assembly-through-probing"></a>Ubicar el ensamblado a través del sondeo  
  Si no hay ningún elemento [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) en el archivo de configuración de la aplicación, el tiempo de ejecución sondea el ensamblado usando cuatro criterios:  

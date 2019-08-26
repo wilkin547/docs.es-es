@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: c8a744337803a7a26397c999a6d9c6d10f69a1c5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffc698910fe722fe761c62b87b059068d5f243f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591652"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935520"
 ---
 # <a name="how-to-log-information-about-services"></a>Procedimiento para registrar información sobre servicios
 De forma predeterminada, todos los proyectos de servicio de Windows tienen la capacidad de interactuar con el registro de eventos de la aplicación y escriben información y excepciones en él. Utilice la propiedad <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> para indicar si quiere esta funcionalidad en la aplicación. De forma predeterminada, el registro está activado para cualquier servicio que se cree con la plantilla de proyecto de servicio de Windows. Puede utilizar una forma estática de la clase <xref:System.Diagnostics.EventLog> para escribir información de servicio en un registro sin tener que crear una instancia de un componente <xref:System.Diagnostics.EventLog> ni registrar manualmente un origen.  
@@ -28,14 +28,14 @@ De forma predeterminada, todos los proyectos de servicio de Windows tienen la ca
  Si quiere escribir en un registro de eventos distinto del registro de aplicaciones, debe establecer la propiedad <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> en `false`, crear su propio registro de eventos personalizado dentro del código de servicios y registrar el servicio como un origen válido de entradas para este registro. Después, debe escribir código para registrar las entradas en el registro cada vez que se produzca una acción que le interese.  
   
 > [!NOTE]
->  Si utiliza un registro de eventos personalizado y configura la aplicación de servicio para escribir en él, no debe intentar acceder al registro de eventos antes de establecer la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> del servicio en el código. El registro de eventos necesita el valor de esta propiedad para registrar el servicio como un origen válido de eventos.  
+> Si utiliza un registro de eventos personalizado y configura la aplicación de servicio para escribir en él, no debe intentar acceder al registro de eventos antes de establecer la propiedad <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> del servicio en el código. El registro de eventos necesita el valor de esta propiedad para registrar el servicio como un origen válido de eventos.  
   
 ### <a name="to-enable-default-event-logging-for-your-service"></a>Para habilitar el registro de eventos predeterminado para el servicio  
   
 - Establezca la propiedad <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> del componente a `true`.  
   
     > [!NOTE]
-    >  De manera predeterminada, esta propiedad está establecida en `true`. No necesitará establecerla explícitamente a menos que esté creando procesamientos más complejos, tales como la evaluación de una condición y el posterior establecimiento de la propiedad <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> según el resultado de esa condición.  
+    > De manera predeterminada, esta propiedad está establecida en `true`. No necesitará establecerla explícitamente a menos que esté creando procesamientos más complejos, tales como la evaluación de una condición y el posterior establecimiento de la propiedad <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> según el resultado de esa condición.  
   
 ### <a name="to-disable-event-logging-for-your-service"></a>Para deshabilitar el registro de eventos para el servicio  
   
@@ -49,7 +49,7 @@ De forma predeterminada, todos los proyectos de servicio de Windows tienen la ca
 1. Establezca la propiedad <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> en `false`.  
   
     > [!NOTE]
-    >  Debe establecer el valor de <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> en false para poder utilizar un registro personalizado.  
+    > Debe establecer el valor de <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> en false para poder utilizar un registro personalizado.  
   
 2. Configure una instancia de un componente <xref:System.Diagnostics.EventLog> en la aplicación de servicio de Windows.  
   
@@ -62,7 +62,7 @@ De forma predeterminada, todos los proyectos de servicio de Windows tienen la ca
      El código siguiente muestra cómo configurar el registro en un registro personalizado.  
   
     > [!NOTE]
-    >  En este ejemplo de código, una instancia de un componente <xref:System.Diagnostics.EventLog> se denomina `eventLog1` (`EventLog1` en Visual Basic). Si ha creado una instancia con otro nombre en el paso 2, cambie el código de forma acorde.  
+    > En este ejemplo de código, una instancia de un componente <xref:System.Diagnostics.EventLog> se denomina `eventLog1` (`EventLog1` en Visual Basic). Si ha creado una instancia con otro nombre en el paso 2, cambie el código de forma acorde.  
   
      [!code-csharp[VbRadconService#14](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#14)]
      [!code-vb[VbRadconService#14](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#14)]  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d6ddc2978078fd307ad79cffe14d53619d8be9e
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 20766f4f7971d8aa304c7c3eead94f089f059d64
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469717"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946714"
 ---
 # <a name="interop-marshaling"></a>Serialización de interoperabilidad
 <a name="top"></a> La serialización de interoperabilidad rige cómo se pasan los datos en argumentos de método y valores devueltos entre la memoria administrada y la no administrada durante las llamadas. La serialización de interoperabilidad es una actividad en tiempo de ejecución realizada por el servicio de serialización de Common Language Runtime.  
@@ -91,7 +91,7 @@ ms.locfileid: "65469717"
 - Establecer el subproceso de cliente en STA o MTA para alterar el subproceso principal. Por ejemplo, si el cliente de C# llama a muchos componentes COM de STA, puede evitar la serialización entre apartamentos si establece el subproceso principal en STA.  
   
     > [!NOTE]
-    >  Una vez que se establece el subproceso de un cliente C# en STA, las llamadas a componentes COM de MTA requerirán la serialización entre apartamentos.  
+    > Una vez que se establece el subproceso de un cliente C# en STA, las llamadas a componentes COM de MTA requerirán la serialización entre apartamentos.  
   
  Para obtener instrucciones sobre cómo seleccionar explícitamente un modelo de contenedor, vea [Subprocesamiento administrado y no administrado](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100)).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "65469717"
 - Un cliente administrado obtiene una referencia a un objeto administrado de un objeto COM que obtiene esta referencia de un host remoto. El mecanismo de comunicación remota es DCOM.  
   
     > [!NOTE]
-    >  La biblioteca de tipos exportada del servidor administrado debe estar registrada.  
+    > La biblioteca de tipos exportada del servidor administrado debe estar registrada.  
   
  El número de límites de procesos entre llamador y destinatario es irrelevante; la misma referencia directa se produce para las llamadas en proceso y fuera de proceso.  
   
@@ -138,7 +138,7 @@ Llamadas remotas a través de firewalls que usan SOAP o la clase TcpChannel
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Title|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Comportamiento predeterminado del cálculo de referencias](default-marshaling-behavior.md)|Describe las reglas que usa el servicio de serialización de interoperabilidad para serializar datos.|  
 |[Serialización de datos con invocación de plataforma](marshaling-data-with-platform-invoke.md)|Describe cómo se declaran parámetros de método y se pasan argumentos a funciones exportadas por bibliotecas no administradas.|  

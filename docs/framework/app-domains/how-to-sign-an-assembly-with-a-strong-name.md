@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 458b18ad34cfff6ab136408ab8e8b2e7953b35cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0b109ec82d139e3b3eb321c90d5f41dd1eae216f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593561"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927934"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Procedimiento Firma de un ensamblado con un nombre seguro
 Existen varias formas de firmar un ensamblado con un nombre seguro:  
@@ -44,13 +44,13 @@ Existen varias formas de firmar un ensamblado con un nombre seguro:
 4. En la casilla **Elija un archivo de clave de nombre seguro**, elija **\<Examinar...>** y, a continuación, navegue hasta el archivo de claves. Para crear un nuevo archivo de claves, elija **\<Nuevo...>** y escriba su nombre en el cuadro de diálogo **Crear clave de nombre seguro**.  
   
 > [!NOTE]
->  Para [retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md), elija un archivo de clave pública.  
+> Para [retrasar la firma de un ensamblado](../../../docs/framework/app-domains/delay-sign-assembly.md), elija un archivo de clave pública.  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Para crear y firmar un ensamblado con un nombre seguro utilizando la herramienta Assembly Linker  
   
 - En [Símbolo del sistema para desarrolladores de Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md), escriba el comando siguiente:  
   
-     **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
+     **al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
   
      donde:  
   
@@ -78,7 +78,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 2. Compile el archivo de código fuente normalmente.  
   
 > [!NOTE]
->  Los compiladores de C# y Visual Basic emiten advertencias del compilador (CS1699 y BC41008, respectivamente) cuando encuentran el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> en el código fuente. Las advertencias se pueden omitir.  
+> Los compiladores de C# y Visual Basic emiten advertencias del compilador (CS1699 y BC41008, respectivamente) cuando encuentran el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> o <xref:System.Reflection.AssemblyKeyNameAttribute> en el código fuente. Las advertencias se pueden omitir.  
   
  En el ejemplo siguiente se usa el atributo <xref:System.Reflection.AssemblyKeyFileAttribute> con un archivo de claves denominado `keyfile.snk`, ubicado en el directorio en el que se compila el ensamblado.  
   

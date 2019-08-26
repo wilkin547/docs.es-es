@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b78b770417b9599719ea219041a9fd6adaf5a84
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 53b33bdc70f00d5c824d502043a69f4ee05acc71
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423407"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927963"
 ---
 # <a name="assembly-security-considerations"></a>Consideraciones de seguridad sobre ensamblados
 <a name="top"></a> Cuando se compila un ensamblado, se puede especificar el conjunto de permisos que son necesarios para la ejecución del mismo. La concesión de permisos específicos para un ensamblado se basa en la evidencia.  
@@ -40,7 +40,7 @@ ms.locfileid: "67423407"
 - No utilizar una solicitud de permiso para obtener los permisos que pueda necesitar su código, pero estar preparado para controlar las excepciones de seguridad que se pueden producir si no se conceden los permisos.  
   
     > [!NOTE]
-    >  La seguridad es una cuestión compleja, con muchas opciones posibles entre las que elegir. Para más información, consulte [Conceptos clave de seguridad](../../../docs/standard/security/key-security-concepts.md).  
+    > La seguridad es una cuestión compleja, con muchas opciones posibles entre las que elegir. Para más información, consulte [Conceptos clave de seguridad](../../standard/security/key-security-concepts.md).  
   
  En el momento de la carga, se utiliza la evidencia del ensamblado como entrada para la directiva de seguridad. El administrador del equipo y la empresa y la configuración de directivas de usuario establecen la directiva de seguridad, que determina el conjunto de permisos que se concede a todo el código administrado cuando se ejecuta. La directiva de seguridad se puede establecer para la compañía del ensamblado (si tiene una firma generada utilizando la herramienta de firma), para el sitio y la zona Web (en términos de Internet Explorer) de los que se descargó el ensamblado o para el nombre seguro del ensamblado. Por ejemplo, el administrador de un equipo puede establecer una directiva de seguridad que permita que todo el código descargado desde un sitio Web y firmado por una compañía de software dada pueda tener acceso a una base de datos del equipo, pero no le otorga permiso para escribir en el disco del equipo.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67423407"
  Es posible asignar un nombre seguro y una firma digital creadas mediante la utilización de [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) en un ensamblado, o se puede utilizar cualquiera de las dos opciones por separado. Ambas herramientas de firma sólo pueden firmar archivos de uno en uno; en el caso de un ensamblado de múltiples archivos, se firma el archivo que contiene el manifiesto del ensamblado. Se almacena un nombre seguro en el archivo que contiene el manifiesto del ensamblado, pero la firma creada mediante la utilización de [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) se almacena en una ranura reservada del archivo ejecutable portable (PE) que contiene el manifiesto. Se puede utilizar la firma de un ensamblado (con o sin nombre seguro) mediante [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) cuando ya se disponga de una jerarquía de confianza que se base en firmas generadas de [SignTool.exe (Sign Tool)](../../../docs/framework/tools/signtool-exe.md) o cuando una determinada directiva utilice solo la parte de la clave y no compruebe una cadena de confianza.  
   
 > [!NOTE]
->  Cuando se utilicen tanto un nombre seguro como una firma de la herramienta de firma en un ensamblado, primero se debe asignar el nombre seguro.  
+> Cuando se utilicen tanto un nombre seguro como una firma de la herramienta de firma en un ensamblado, primero se debe asignar el nombre seguro.  
   
  Common Language Runtime también realiza una comprobación de código hash; el manifiesto del ensamblado contiene una lista de todos los archivos que componen el ensamblado, incluido el código hash de cada archivo que existía cuando se compiló el manifiesto. A medida que se carga cada uno de los archivos, se aplica un algoritmo hash a su contenido y se compara con el valor hash almacenado en el manifiesto. Si los dos valores hash no coinciden, el ensamblado no se carga.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 74cfc6a425e82014bbcf5093f52f476ff09db130
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ad3f7949e01a387c3c7de2a0702d11b106ea0040
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796560"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922207"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumentos opcionales y con nombre (Guía de programación de C#)
 C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* permiten especificar un argumento para un parámetro concreto asociando el argumento al nombre del parámetro y no a la posición del parámetro en la lista de parámetros. Los *argumentos opcionales* permiten omitir argumentos para algunos parámetros. Ambas técnicas se pueden usar con métodos, indexadores, constructores y delegados.  
@@ -47,7 +47,7 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _a partir de C# 7.2_ , se usen en la posición correcta. En este ejemplo, el parámetro `orderNum` está en la posición correcta pero no se le asigna un nombre de manera explícita.
+- _a partir de C# 7.2_, se usen en la posición correcta. En este ejemplo, el parámetro `orderNum` está en la posición correcta pero no se le asigna un nombre de manera explícita.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
@@ -70,9 +70,9 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
   
 - una expresión constante;  
   
-- una expresión con el formato `new ValType()`, donde `ValType` es un tipo de valor, como [enum](../../../csharp/language-reference/keywords/enum.md) o [struct](../../../csharp/programming-guide/classes-and-structs/structs.md);  
+- una expresión con el formato `new ValType()`, donde `ValType` es un tipo de valor, como [enum](../../language-reference/keywords/enum.md) o [struct](./structs.md);  
   
-- una expresión con el formato [default(ValType)](../../../csharp/language-reference/operators/default.md), donde `ValType` es un tipo de valor.  
+- una expresión con el formato [default(ValType)](../../language-reference/operators/default.md), donde `ValType` es un tipo de valor.  
   
  Los parámetros opcionales se definen al final de la lista de parámetros después de los parámetros necesarios. Si el autor de la llamada proporciona un argumento para algún parámetro de una sucesión de parámetros opcionales, debe proporcionar argumentos para todos los parámetros opcionales anteriores. No se admiten espacios separados por comas en la lista de argumentos. Por ejemplo, en el código siguiente, el método de instancia `ExampleMethod` se define con un parámetro necesario y dos opcionales.  
   
@@ -91,7 +91,7 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
  ![Captura de pantalla en la que se muestra información rápida de IntelliSense para el método ExampleMethod.](./media/named-and-optional-arguments/optional-examplemethod-parameters.png)  
   
 > [!NOTE]
->  También puede declarar parámetros opcionales con la clase <xref:System.Runtime.InteropServices.OptionalAttribute> de .NET. Los parámetros `OptionalAttribute` no requieren un valor predeterminado.  
+> También puede declarar parámetros opcionales con la clase <xref:System.Runtime.InteropServices.OptionalAttribute> de .NET. Los parámetros `OptionalAttribute` no requieren un valor predeterminado.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente, el constructor de `ExampleClass` tiene un solo parámetro, que es opcional. El método de instancia `ExampleMethod` tiene un parámetro necesario, `required`, y dos parámetros opcionales, `optionalstr` y `optionalint`. El código de `Main` muestra las distintas formas en que se pueden invocar el constructor y el método.  
@@ -113,7 +113,7 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- Para obtener más información y ejemplos, vea [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md) y [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md).  
+ Para obtener más información y ejemplos, vea [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](./how-to-use-named-and-optional-arguments-in-office-programming.md) y [Cómo: Tener acceso a objetos de interoperabilidad de Office mediante las características de Visual C#](../interop/how-to-access-office-onterop-objects.md).  
   
 ## <a name="overload-resolution"></a>Overload Resolution  
  El uso de argumentos opcionales y con nombre afecta a la resolución de sobrecarga de las maneras siguientes:  
@@ -129,7 +129,7 @@ C# 4 introduce argumentos opcionales y con nombre. Los *argumentos con nombre* p
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
-- [Uso de tipo dinámico](../../../csharp/programming-guide/types/using-type-dynamic.md)
-- [Utilizar constructores](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)
-- [Utilizar indizadores](../../../csharp/programming-guide/indexers/using-indexers.md)
+- [Cómo: Usar argumentos opcionales y con nombre en la programación de Office](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [Uso de tipo dinámico](../types/using-type-dynamic.md)
+- [Utilizar constructores](./using-constructors.md)
+- [Utilizar indizadores](../indexers/using-indexers.md)

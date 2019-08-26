@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13f1b2c3e3e651cb6c25b966d778cb436967509e
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6de6091b8970fde4a958148acf32dcefe1a6726
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68629417"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946556"
 ---
 # <a name="default-marshaling-behavior"></a>Comportamiento de serialización predeterminado
 La serialización de interoperabilidad funciona con reglas que dictan cómo se comportan los datos asociados con parámetros de método cuando pasan entre memoria administrada y no administrada. Estas reglas integradas controlan las actividades de serialización como transformaciones de tipos de datos, si un destinatario puede cambiar los datos que recibe y devolver esos cambios al llamador, y en qué circunstancias el serializador proporciona optimizaciones de rendimiento.  
@@ -24,7 +24,7 @@ La serialización de interoperabilidad funciona con reglas que dictan cómo se c
  En esta sección se identifican las características predeterminadas de comportamiento del servicio de serialización de interoperabilidad, y se muestra información detallada sobre la serialización de matrices, tipos booleanos, tipos de caracteres, delegados, clases, objetos, cadenas y estructuras.  
   
 > [!NOTE]
->  No se admite la serialización de tipos genéricos. Para más información, vea [Interoperar mediante tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
+> No se admite la serialización de tipos genéricos. Para más información, vea [Interoperar mediante tipos genéricos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Administración de memoria con el serializador de interoperabilidad  
  El serializador de interoperabiliad siempre intenta liberar memoria asignada por código no administrado. Este comportamiento cumple con las reglas de administración de memoria COM, pero difiere de las reglas que rigen C++ nativo.  
@@ -117,7 +117,7 @@ interface DelegateTest : IDispatch {
 En este ejemplo, al serializar los dos delegados como <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, el resultado es un elemento `int` y un puntero a un elemento `int`. Como los tipos de delegado se serializan, aquí `int` representa un puntero a un valor void (`void*`), que es la dirección del delegado en la memoria. En otras palabras, este resultado es específico para los sistemas Windows de 32 bits, ya que `int` aquí representa el tamaño del puntero de función.
 
 > [!NOTE]
->  Una referencia al puntero de función para un delegado administrado mantenido por código no administrado no impide que Common Language Runtime realice la recolección de elementos no utilizados en el objeto administrado.  
+> Una referencia al puntero de función para un delegado administrado mantenido por código no administrado no impide que Common Language Runtime realice la recolección de elementos no utilizados en el objeto administrado.  
   
  Por ejemplo, el código siguiente es incorrecto porque la referencia al objeto `cb`, que se pasa al método `SetChangeHandler`, no mantiene a `cb` activo más allá de la vida del método `Test`. Una vez recopilados los elementos no utilizados del objeto `cb`, el puntero de función pasado a `SetChangeHandler` deja de ser válido.  
   
@@ -246,12 +246,12 @@ internal static class NativeMethods
  El tipo de valor `Rect` se debe pasar por referencia porque la API no administrada espera que un puntero a un `RECT` se pase a la función. El tipo de valor `Point` se pasa por valor porque la API no administrada espera que `POINT` se pase en la pila. Esta diferencia sutil es muy importante. Las referencias se pasan a código no administrado como punteros. Los valores se pasan a código no administrado en la pila.  
   
 > [!NOTE]
->  Cuando un tipo con formato se serializa como una estructura, solo son accesibles los campos dentro del tipo. Si el tipo tiene métodos, propiedades o eventos, son inaccesibles desde código no administrado.  
+> Cuando un tipo con formato se serializa como una estructura, solo son accesibles los campos dentro del tipo. Si el tipo tiene métodos, propiedades o eventos, son inaccesibles desde código no administrado.  
   
  Las clases también se pueden serializar a código no administrado como estructuras de estilo C, a condición de que tengan una distribución de miembros fija. La información de distribución de miembros para una clase también se proporciona con el atributo <xref:System.Runtime.InteropServices.StructLayoutAttribute>. La diferencia principal entre los tipos de valor con distribución fija y las clases con distribución fija es la forma en la que se serializan a código no administrado. Los tipos de valor se pasan por valor (en la pila) y, por consiguiente, el llamador no ve los cambios realizados por el destinatario en los miembros del tipo. Los tipos de referencia se pasan por referencia (se pasa una referencia al tipo en la pila); en consecuencia, el llamador ve todos los cambios realizados por el destinatario en miembros de un tipo que pueden transferirse en bloque de bits.  
   
 > [!NOTE]
->  Si un tipo de referencia tiene miembros de tipos que no pueden transferirse en bloque de bits, se requiere una conversión doble: la primera vez cuando se pasa un argumento al lado no administrado y la segunda vez en la devolución de la llamada. Debido a esta sobrecarga adicional, los parámetros In/Out deben aplicarse explícitamente a un argumento si el llamador desea ver los cambios realizados por el destinatario.  
+> Si un tipo de referencia tiene miembros de tipos que no pueden transferirse en bloque de bits, se requiere una conversión doble: la primera vez cuando se pasa un argumento al lado no administrado y la segunda vez en la devolución de la llamada. Debido a esta sobrecarga adicional, los parámetros In/Out deben aplicarse explícitamente a un argumento si el llamador desea ver los cambios realizados por el destinatario.  
   
  En el ejemplo siguiente, la clase `SystemTime` tiene distribución de miembros secuencial y puede pasarse a la función **GetSystemTime** de la API de Windows.  
   
@@ -351,7 +351,7 @@ interface _Graphics {
  Las mismas reglas usadas para serializar valores y referencias para llamadas de invocación de plataforma se usan al serializar a través de interfaces COM. Por ejemplo, cuando una instancia del tipo de valor `Point` se pasa de .NET Framework a COM, `Point` se pasa por valor. Si el tipo de valor `Point` se pasa por referencia, un puntero a un `Point` se pasa en la pila. El serializador de interoperabilidad no admite niveles superiores de direccionamiento indirecto (**Point** \*\*) en ninguna dirección.  
   
 > [!NOTE]
->  Las estructuras que tienen el valor de enumeración <xref:System.Runtime.InteropServices.LayoutKind> establecido en **Explicit** no se pueden usar en la interoperabilidad COM porque la biblioteca de tipos exportada no puede expresar una distribución explícita.  
+> Las estructuras que tienen el valor de enumeración <xref:System.Runtime.InteropServices.LayoutKind> establecido en **Explicit** no se pueden usar en la interoperabilidad COM porque la biblioteca de tipos exportada no puede expresar una distribución explícita.  
   
 ### <a name="system-value-types"></a>Tipos de valor System  
  El espacio de nombres <xref:System> tiene varios tipos de valor que representan la forma de conversión boxing de los tipos primitivos en runtime. Por ejemplo, la estructura <xref:System.Int32?displayProperty=nameWithType> de tipo de valor representa la forma de conversión boxing de **ELEMENT_TYPE_I4**. En lugar de serializar estos tipos como estructuras, como otros tipos con formato, se serializan de la misma forma que los tipos primitivos a los que aplican conversión boxing. Por tanto, **System.Int32** se serializa como **ELEMENT_TYPE_I4** en lugar de como una estructura que contiene un único miembro de tipo **long**. La tabla siguiente contiene una lista de los tipos de valor en el espacio de nombres **System** que son representaciones de conversión boxing de tipos primitivos.  

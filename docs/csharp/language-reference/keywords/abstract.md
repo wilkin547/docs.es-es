@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 3a4d29ae4814ccceb7b405d9c1749150059a24a0
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859590"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606148"
 ---
 # <a name="abstract-c-reference"></a>abstract (Referencia de C#)
 El modificador `abstract` indica que lo que se modifica carece de implementación o tiene una implementación incompleta. El modificador abstract puede usarse con clases, métodos, propiedades, indexadores y eventos. Use el modificador `abstract` en una declaración de clase para indicar que una clase está diseñada como clase base de otras clases, no para crear instancias por sí misma. Los miembros marcados como abstractos deben implementarse con clases no abstractas derivadas de la clase abstracta.
@@ -29,7 +29,7 @@ El modificador `abstract` indica que lo que se modifica carece de implementació
   
 - Una clase abstracta puede contener descriptores de acceso y métodos abstractos.  
   
-- No es posible modificar una clase abstracta con el modificador [sealed](../../../csharp/language-reference/keywords/sealed.md) porque los dos modificadores tienen significados opuestos. El modificador `sealed` impide que una clase se herede y el modificador `abstract` requiere que una clase se herede.  
+- No es posible modificar una clase abstracta con el modificador [sealed](./sealed.md) porque los dos modificadores tienen significados opuestos. El modificador `sealed` impide que una clase se herede y el modificador `abstract` requiere que una clase se herede.  
   
 - Una clase no abstracta que derive de una clase abstracta debe incluir implementaciones reales de todos los descriptores de acceso y métodos abstractos heredados.  
   
@@ -47,17 +47,17 @@ El modificador `abstract` indica que lo que se modifica carece de implementació
     public abstract void MyMethod();  
     ```  
   
-     La implementación la proporciona un método, [override](../../../csharp/language-reference/keywords/override.md), que es miembro de una clase no abstracta.  
+     La implementación la proporciona un método, [override](./override.md), que es miembro de una clase no abstracta.  
   
-- Es un error usar los modificadores [static](../../../csharp/language-reference/keywords/static.md) o [virtual](../../../csharp/language-reference/keywords/virtual.md) en una declaración de método abstracto.  
+- Es un error usar los modificadores [static](./static.md) o [virtual](./virtual.md) en una declaración de método abstracto.  
   
  Las propiedades abstractas se comportan como métodos abstractos, salvo por las diferencias en la sintaxis de declaración e invocación.  
   
 - Es un error usar el modificador `abstract` en una propiedad estática.  
   
-- Una propiedad abstracta heredada se puede invalidar en una clase derivada incluyendo una declaración de propiedad que use el modificador [override](../../../csharp/language-reference/keywords/override.md).  
+- Una propiedad abstracta heredada se puede invalidar en una clase derivada incluyendo una declaración de propiedad que use el modificador [override](./override.md).  
   
- Para obtener más información sobre las clases abstractas, vea [Abstract and Sealed Classes and Class Members](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md) (Clases y miembros de clase abstractos y sellados [Guía de programación de C#]).  
+ Para obtener más información sobre las clases abstractas, vea [Abstract and Sealed Classes and Class Members](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md) (Clases y miembros de clase abstractos y sellados [Guía de programación de C#]).  
   
  Una clase abstracta debe proporcionar implementación para todos los miembros de interfaz.  
   
@@ -83,9 +83,9 @@ Se mostrará un mensaje de error en el que se indica que el compilador no puede 
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Modificadores](../../../csharp/language-reference/keywords/modifiers.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
-- [override](../../../csharp/language-reference/keywords/override.md)
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Modificadores](./modifiers.md)
+- [virtual](./virtual.md)
+- [override](./override.md)
+- [Palabras clave de C#](./index.md)

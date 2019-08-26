@@ -17,12 +17,12 @@ ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68bce927c6426fc32cd2fe26dcc488432199612d
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648977"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69987201"
 ---
 # <a name="changing-case-in-net"></a>Cambiar mayúsculas y minúsculas en .NET
 Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá estar seguro de si usará mayúsculas o minúsculas para escribir los datos. Normalmente querrá que las cadenas usen mayúsculas y minúsculas de forma coherente, especialmente si se van a mostrar en la interfaz de usuario. En la tabla siguiente se describen tres métodos para cambiar las mayúsculas y minúsculas. Los dos primeros métodos proporcionan una sobrecarga que acepta una referencia cultural.  
@@ -34,7 +34,7 @@ Si escribe una aplicación que acepta la entrada de un usuario, nunca podrá est
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|Convierte una cadena a mayúsculas de tipo título.|  
   
 > [!WARNING]
->  Tenga en cuenta que los métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> y <xref:System.String.ToLower%2A?displayProperty=nameWithType> no deben usarse para convertir cadenas para compararlas ni para comprobar su igualdad. Para más información, vea la sección [Comparar cadenas con mayúsculas y minúsculas mezcladas](#Comparing).  
+> Tenga en cuenta que los métodos <xref:System.String.ToUpper%2A?displayProperty=nameWithType> y <xref:System.String.ToLower%2A?displayProperty=nameWithType> no deben usarse para convertir cadenas para compararlas ni para comprobar su igualdad. Para más información, vea la sección [Comparar cadenas con mayúsculas y minúsculas mezcladas](#Comparing).  
   
 <a name="Comparing"></a>   
 ## <a name="comparing-strings-of-mixed-case"></a>Comparar cadenas con mayúsculas y minúsculas mezcladas  
