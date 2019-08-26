@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583060"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596154"
 ---
 # <a name="properties-c-programming-guide"></a>Propiedades (Guía de programación de C#)
 
@@ -23,12 +23,12 @@ Una propiedad es un miembro que proporciona un mecanismo flexible para leer, esc
   
 - Las propiedades permiten que una clase exponga una manera pública de obtener y establecer valores, a la vez que se oculta el código de implementación o verificación.  
   
-- Para devolver el valor de la propiedad se usa un descriptor de acceso de propiedad [get](../../../csharp/language-reference/keywords/get.md), mientras que para asignar un nuevo valor se emplea un descriptor de acceso de propiedad [set](../../../csharp/language-reference/keywords/set.md). Estos descriptores de acceso pueden tener diferentes niveles de acceso. Para más información, vea [Restringir la accesibilidad del descriptor de acceso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
+- Para devolver el valor de la propiedad se usa un descriptor de acceso de propiedad [get](../../language-reference/keywords/get.md), mientras que para asignar un nuevo valor se emplea un descriptor de acceso de propiedad [set](../../language-reference/keywords/set.md). Estos descriptores de acceso pueden tener diferentes niveles de acceso. Para más información, vea [Restringir la accesibilidad del descriptor de acceso](./restricting-accessor-accessibility.md).  
   
-- La palabra clave [value](../../../csharp/language-reference/keywords/value.md) se usa para definir el valor que va a asignar el descriptor de acceso `set`.  
+- La palabra clave [value](../../language-reference/keywords/value.md) se usa para definir el valor que va a asignar el descriptor de acceso `set`.  
 - Las propiedades pueden ser *de lectura y escritura* (en ambos casos tienen un descriptor de acceso `get` y `set`), *de solo lectura* (tienen un descriptor de acceso `get`, pero no `set`) o *de solo escritura* (tienen un descriptor de acceso `set`, pero no `get`). Las propiedades de solo escritura son poco frecuentes y se suelen usar para restringir el acceso a datos confidenciales.
 
-- Las propiedades simples que no necesitan ningún código de descriptor de acceso personalizado se pueden implementar como definiciones de cuerpos de expresión o como [propiedades implementadas automáticamente](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).
+- Las propiedades simples que no necesitan ningún código de descriptor de acceso personalizado se pueden implementar como definiciones de cuerpos de expresión o como [propiedades implementadas automáticamente](./auto-implemented-properties.md).
  
 ## <a name="properties-with-backing-fields"></a>Propiedades con campos de respaldo
 
@@ -60,15 +60,15 @@ Si una propiedad tiene un descriptor de acceso `get` y `set`, ambos deben ser im
 
 ## <a name="related-sections"></a>Secciones relacionadas  
   
-- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [Utilizar propiedades](./using-properties.md)  
   
-- [Propiedades de interfaz](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [Propiedades de interfaz](./interface-properties.md)  
   
-- [Comparación entre propiedades e indizadores](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [Comparación entre propiedades e indizadores](../indexers/comparison-between-properties-and-indexers.md)  
   
-- [Restringir la accesibilidad del descriptor de acceso](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [Restringir la accesibilidad del descriptor de acceso](./restricting-accessor-accessibility.md)  
   
-- [Propiedades autoimplementadas](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Propiedades autoimplementadas](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#  
 
@@ -76,8 +76,8 @@ Para obtener más información, vea la sección [Propiedades](~/_csharplang/spec
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Utilizar propiedades](../../../csharp/programming-guide/classes-and-structs/using-properties.md)
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
-- [get (Palabra clave)](../../../csharp/language-reference/keywords/get.md)
-- [set (palabra clave)](../../../csharp/language-reference/keywords/set.md)
+- [Guía de programación de C#](../index.md)
+- [Utilizar propiedades](./using-properties.md)
+- [Indizadores](../indexers/index.md)
+- [get (Palabra clave)](../../language-reference/keywords/get.md)
+- [set (palabra clave)](../../language-reference/keywords/set.md)

@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 4a634f99542b2cf1a2cca9314c5eb648e841b158
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: bc3ce4b94bfc72e058d4660d01eb16ef0e0f11db
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661182"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588717"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Comparaciones de igualdad (guía de programación de C#)
 
@@ -24,11 +24,11 @@ A veces es necesario comparar si dos valores son iguales. En algunos casos, se p
   
  En este código, se crean dos objetos, pero después de la instrucción de asignación, ambas referencias hacen referencia al mismo objeto. Por consiguiente, presentan igualdad de referencia. Use el método <xref:System.Object.ReferenceEquals%2A> para determinar si dos referencias hacen referencia al mismo objeto.  
   
- El concepto de igualdad de la referencia solo se aplica a los tipos de referencia. Los objetos de tipo de valor no pueden presentar igualdad de referencia porque al asignar una instancia de un tipo de valor a una variable, se realiza una copia del valor. Por consiguiente, nunca puede haber dos structs con conversión unboxing que hagan referencia a la misma ubicación de la memoria. Además, si se usa <xref:System.Object.ReferenceEquals%2A> para comparar dos tipos de valor, el resultado siempre será `false`, aunque todos los valores que contengan los objetos sean idénticos. Esto se debe a que a cada variable se aplica la conversión boxing en una instancia de objeto independiente. Para obtener más información, vea [Cómo: Probar la igualdad de referencia (Identidad)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).  
+ El concepto de igualdad de la referencia solo se aplica a los tipos de referencia. Los objetos de tipo de valor no pueden presentar igualdad de referencia porque al asignar una instancia de un tipo de valor a una variable, se realiza una copia del valor. Por consiguiente, nunca puede haber dos structs con conversión unboxing que hagan referencia a la misma ubicación de la memoria. Además, si se usa <xref:System.Object.ReferenceEquals%2A> para comparar dos tipos de valor, el resultado siempre será `false`, aunque todos los valores que contengan los objetos sean idénticos. Esto se debe a que a cada variable se aplica la conversión boxing en una instancia de objeto independiente. Para obtener más información, vea [Cómo: Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md).  
 
 ## <a name="value-equality"></a>Igualdad de valores
 
- La igualdad de valores significa que dos objetos contienen el mismo valor o valores. Para los tipos de valor primitivos, como [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) o [bool](../../../csharp/language-reference/keywords/bool.md), las pruebas de igualdad de valores son sencillas. Puede usar el operador [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-), como se muestra en el ejemplo siguiente.  
+ La igualdad de valores significa que dos objetos contienen el mismo valor o valores. Para los tipos de valor primitivos, como [int](../../language-reference/builtin-types/integral-numeric-types.md) o [bool](../../language-reference/keywords/bool.md), las pruebas de igualdad de valores son sencillas. Puede usar el operador [==](../../language-reference/operators/equality-operators.md#equality-operator-), como se muestra en el ejemplo siguiente.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -43,21 +43,21 @@ if( b == a)
   
  Para la mayoría de los otros tipos, las pruebas de igualdad de valores son más complejas, porque es preciso entender cómo la define el tipo. Para las clases y los structs que tienen varios campos o propiedades, la igualdad de valores suele definirse de modo que significa que todos los campos o propiedades tienen el mismo valor. Por ejemplo, podrían definirse dos objetos `Point` que fueran equivalentes si pointA.X es igual a pointB.X y pointA.Y es igual a pointB.Y.  
   
- En cambio, no hay ningún requisito que exija que la equivalencia se base en todos los campos de un tipo. Se puede basar en un subconjunto. Al comparar tipos que no sean de su propiedad, es importante asegurarse concretamente de cómo se define la equivalencia para ese tipo. Para obtener más información sobre cómo definir la igualdad de valores en sus propias clases y structs, vea [Cómo: Definir la igualdad de valores para un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
+ En cambio, no hay ningún requisito que exija que la equivalencia se base en todos los campos de un tipo. Se puede basar en un subconjunto. Al comparar tipos que no sean de su propiedad, es importante asegurarse concretamente de cómo se define la equivalencia para ese tipo. Para obtener más información sobre cómo definir la igualdad de valores en sus propias clases y structs, vea [Cómo: Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md).  
   
 ### <a name="value-equality-for-floating-point-values"></a>Igualdad de valores en valores de número de punto flotante
 
- Las comparaciones de igualdad de valores de punto flotante ([double](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md) y [float](../../../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) son problemáticas debido a la imprecisión de la aritmética de número de punto flotante en los equipos binarios. Para obtener más información, vea los comentarios en el tema <xref:System.Double?displayProperty=nameWithType>.  
+ Las comparaciones de igualdad de valores de punto flotante ([double](../../language-reference/builtin-types/floating-point-numeric-types.md) y [float](../../language-reference/builtin-types/floating-point-numeric-types.md)) son problemáticas debido a la imprecisión de la aritmética de número de punto flotante en los equipos binarios. Para obtener más información, vea los comentarios en el tema <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
 |Title|DESCRIPCIÓN|  
 |-----------|-----------------|  
-|[Cómo: Probar la igualdad de referencia (Identidad)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md)|Describe cómo determinar si dos variables presentan igualdad de referencia.|  
-|[Cómo: Definir la igualdad de valores para un tipo](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)|Describe cómo proporcionar una definición personalizada de igualdad de valores para un tipo.|  
-|[Guía de programación de C#](../../../csharp/programming-guide/index.md)|Proporciona vínculos a información detallada sobre importantes características del lenguaje C# y características que están disponibles para C# a través de .NET Framework.|  
-|[Tipos](../../../csharp/programming-guide/types/index.md)|Proporciona información sobre el sistema de tipos de C# y vínculos a información adicional.|  
+|[Cómo: Probar la igualdad de referencia (Identidad)](./how-to-test-for-reference-equality-identity.md)|Describe cómo determinar si dos variables presentan igualdad de referencia.|  
+|[Cómo: Definir la igualdad de valores para un tipo](./how-to-define-value-equality-for-a-type.md)|Describe cómo proporcionar una definición personalizada de igualdad de valores para un tipo.|  
+|[Guía de programación de C#](../index.md)|Proporciona vínculos a información detallada sobre importantes características del lenguaje C# y características que están disponibles para C# a través de .NET Framework.|  
+|[Tipos](../types/index.md)|Proporciona información sobre el sistema de tipos de C# y vínculos a información adicional.|  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
+- [Guía de programación de C#](../index.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 02b27270c93550278308900382ae05091edb2543
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: ac04ba72ed0c25aa576bf10150fc80410890eda0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661534"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608365"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Operadores aritméticos (referencia de C#)
 
@@ -45,7 +45,7 @@ Estos operadores admiten todos los tipos numéricos [integrales](../builtin-type
 
 ## <a name="increment-operator-"></a>Operador de incremento ++
 
-El operador de incremento unario `++` incrementa su operando en 1. El operando debe ser una variable, un acceso de [propiedad](../../programming-guide/classes-and-structs/properties.md) o un acceso de [indexador](../../../csharp/programming-guide/indexers/index.md).
+El operador de incremento unario `++` incrementa su operando en 1. El operando debe ser una variable, un acceso de [propiedad](../../programming-guide/classes-and-structs/properties.md) o un acceso de [indexador](../../programming-guide/indexers/index.md).
 
 El operador de incremento se admite en dos formas: el operador de incremento posfijo (`x++`) y el operador de incremento prefijo (`++x`).
 
@@ -63,7 +63,7 @@ El resultado de `++x` es el valor de `x` *después* de la operación, tal y como
 
 ## <a name="decrement-operator---"></a>Operador de decremento --
 
-El operador de decremento unario `--` disminuye su operando en 1. El operando debe ser una variable, un acceso de [propiedad](../../programming-guide/classes-and-structs/properties.md) o un acceso de [indexador](../../../csharp/programming-guide/indexers/index.md).
+El operador de decremento unario `--` disminuye su operando en 1. El operando debe ser una variable, un acceso de [propiedad](../../programming-guide/classes-and-structs/properties.md) o un acceso de [indexador](../../programming-guide/indexers/index.md).
 
 El operador de decremento se admite en dos formas: el operador de decremento posfijo (`x--`) y el operador de decremento prefijo (`--x`).
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: affdbb357cac14f258822591c3817c93ce6077f8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033485"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69915898"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Optimización de hospedaje web compartido
 Si es el administrador de un servidor compartido que hospeda varios sitios web pequeños, puede optimizar el rendimiento y aumentar la capacidad del sitio si agrega la siguiente configuración `gcTrimCommitOnLowMemory` al nodo `runtime` en el archivo Aspnet.config del directorio de .NET:  
@@ -22,7 +22,7 @@ Si es el administrador de un servidor compartido que hospeda varios sitios web p
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   
 > [!NOTE]
->  Esta configuración solo se recomienda para escenarios de hospedaje web compartido.  
+> Esta configuración solo se recomienda para escenarios de hospedaje web compartido.  
   
  Dado que el recolector de elementos no utilizados conserva la memoria para asignaciones futuras, su espacio confirmado puede ser mayor que el estrictamente necesario. Puede reducir este espacio para dar cabida a las veces en que haya una carga pesada en la memoria del sistema. Reducir este espacio confirmado mejora el rendimiento y amplía la capacidad de hospedar varios sitios.  
   

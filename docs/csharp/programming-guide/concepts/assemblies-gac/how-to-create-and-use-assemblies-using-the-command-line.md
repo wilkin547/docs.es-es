@@ -2,12 +2,12 @@
 title: Procedimiento para crear y usar ensamblados mediante la línea de comandos (C#)
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0a8db22a05d834d15f6e6b7f049f59f86bc1fe1d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586027"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595969"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>Procedimiento para crear y usar ensamblados mediante la línea de comandos (C#)
 Un ensamblado, o una biblioteca de vínculos dinámicos (DLL), se vincula al programa en tiempo de ejecución. Para ilustrar la creación y uso de una DLL, considere el siguiente escenario:  
@@ -105,6 +105,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+- [Guía de programación de C#](../../index.md)
 - [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Creación de una clase para contener funciones de archivos DLL](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

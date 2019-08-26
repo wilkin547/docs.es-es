@@ -2,12 +2,12 @@
 title: Agrupar datos (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15dafdb144ee9fd4184d4c8281d041e03161a16b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753921"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594203"
 ---
 # <a name="grouping-data-c"></a>Agrupar datos (C#)
 El agrupamiento hace referencia a la operación de colocar los datos en grupos de manera que los elementos de cada grupo compartan un atributo común.  
@@ -20,9 +20,9 @@ El agrupamiento hace referencia a la operación de colocar los datos en grupos d
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|DESCRIPCIÓN|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|GroupBy|Agrupa los elementos que comparten un atributo común. Cada grupo se representa mediante un objeto <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> o bien<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
+|GroupBy|Agrupa los elementos que comparten un atributo común. Cada grupo se representa mediante un objeto <xref:System.Linq.IGrouping%602>.|`group … by`<br /><br /> O bien<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|Inserta elementos a una <xref:System.Linq.Lookup%602> (un diccionario uno a varios) basándose en una función de selector de claves.|No es aplicable.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Ejemplo de sintaxis de expresiones de consulta  
@@ -62,10 +62,10 @@ foreach (var group in query)
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
-- [group (cláusula)](../../../../csharp/language-reference/keywords/group-clause.md)
-- [Cómo: Crear un grupo anidado](../../../../csharp/programming-guide/linq-query-expressions/how-to-create-a-nested-group.md)
-- [Cómo: Agrupar archivos por extensión (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [Cómo: Agrupar los resultados de consultas](../../../../csharp/programming-guide/linq-query-expressions/how-to-group-query-results.md)
-- [Cómo: Realizar una subconsulta en una operación de agrupación](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
-- [Cómo: Dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
+- [group (cláusula)](../../../language-reference/keywords/group-clause.md)
+- [Cómo: Crear un grupo anidado](../../linq-query-expressions/how-to-create-a-nested-group.md)
+- [Cómo: Agrupar archivos por extensión (LINQ) (C#)](./how-to-group-files-by-extension-linq.md)
+- [Cómo: Agrupar los resultados de consultas](../../linq-query-expressions/how-to-group-query-results.md)
+- [Cómo: Realizar una subconsulta en una operación de agrupación](../../linq-query-expressions/how-to-perform-a-subquery-on-a-grouping-operation.md)
+- [Cómo: Dividir un archivo en varios mediante el uso de grupos (LINQ) (C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

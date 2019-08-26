@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 8b39d6760a5e30986d5d4bbe9bb1281dbf6742a2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 65ca38ff6993117b6ed9f716d4ac93ba2d4a9ddf
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471018"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605669"
 ---
 # <a name="pragma-c-reference"></a>#pragma (Referencia de C#)
 `#pragma` proporciona al compilador instrucciones especiales para la compilación del archivo en el que aparece. Las instrucciones deben ser compatibles con el compilador. En otras palabras, no puede usar `#pragma` para crear instrucciones de preprocesamiento personalizadas. El compilador de Microsoft C# admite las siguientes dos instrucciones `#pragma`:  
   
- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
+ [#pragma warning](./preprocessor-pragma-warning.md)  
   
- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)  
+ [#pragma checksum](./preprocessor-pragma-checksum.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,8 +36,8 @@ ms.locfileid: "57471018"
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [#pragma warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)
-- [#pragma checksum](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-checksum.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Directivas de preprocesador de C#](./index.md)
+- [#pragma warning](./preprocessor-pragma-warning.md)
+- [#pragma checksum](./preprocessor-pragma-checksum.md)

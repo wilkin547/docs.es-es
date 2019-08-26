@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596145"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590038"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Procedimiento para crear una clave en el Registro (Visual C#)
 En este ejemplo se agrega el par de valores "Name" e "Isabella" al Registro del usuario actual en la clave "Names".  
@@ -58,6 +58,6 @@ key.Close();
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
+- [Guía de programación de C#](../index.md)
+- [Registro y sistema de archivos (Guía de programación de C#)](./index.md)
 - [Read, write and delete from the registry with C# (Leer, escribir y eliminar en el Registro con C#)](https://www.codeproject.com/Articles/3389/Read-write-and-delete-from-registry-with-C)

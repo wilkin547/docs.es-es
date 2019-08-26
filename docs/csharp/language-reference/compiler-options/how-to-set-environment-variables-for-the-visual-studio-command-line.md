@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 9eea7f76d386816aad060e9b99cea6b906a09ab9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9b26f6b80488ad4043054cd23f0f351773e8d6d1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612126"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602858"
 ---
 # <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Procedimiento Establecer variables de entorno para la línea de comandos de Visual Studio
 
@@ -52,4 +52,4 @@ VsDevCmd.bat -help
 
 ## <a name="see-also"></a>Vea también
 
-- [Compilar la línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+- [Compilar la línea de comandos con csc.exe](./command-line-building-with-csc-exe.md)

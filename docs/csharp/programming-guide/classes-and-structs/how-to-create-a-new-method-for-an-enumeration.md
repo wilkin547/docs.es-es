@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extension methods [C#], for enums
 - enum extensibility [C#]
 ms.assetid: 100106f9-1e54-462c-8ebe-3892fe23b6eb
-ms.openlocfilehash: 2ca388d19c0e4e1b098076caa5baa0a83cc0dd4c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 99a2005e1a64fa214776145a903341fb162f0633
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585881"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597045"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a>Procedimiento Crear un método nuevo para una enumeración (Guía de programación de C#)
 Puede usar métodos de extensión para agregar funcionalidad a un tipo de enumeración concreto.  
@@ -26,5 +26,5 @@ Puede usar métodos de extensión para agregar funcionalidad a un tipo de enumer
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Guía de programación de C#](../index.md)
+- [Métodos de extensión](./extension-methods.md)

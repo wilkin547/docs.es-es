@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: a37109ab2712ea824baab95ca0b175cfa82aab3a
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 27001d1697def083580ecdc742b4b8db924545aa
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267906"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589414"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>Convenciones de código de C# (Guía de programación de C#)
  Las convenciones de codificación tienen los objetivos siguientes:  
@@ -29,7 +29,7 @@ ms.locfileid: "67267906"
   
 ## <a name="naming-conventions"></a>Convenciones de nomenclatura  
   
-- En ejemplos breves que no incluyen [directivas using](../../../csharp/language-reference/keywords/using-directive.md), use calificaciones de espacio de nombres. Si sabe que un espacio de nombres se importa en un proyecto de forma predeterminada, no es necesario completar los nombres de ese espacio de nombres. Los nombres completos pueden partirse después de un punto (.) si son demasiado largos para una sola línea, como se muestra en el ejemplo siguiente.  
+- En ejemplos breves que no incluyen [directivas using](../../language-reference/keywords/using-directive.md), use calificaciones de espacio de nombres. Si sabe que un espacio de nombres se importa en un proyecto de forma predeterminada, no es necesario completar los nombres de ese espacio de nombres. Los nombres completos pueden partirse después de un punto (.) si son demasiado largos para una sola línea, como se muestra en el ejemplo siguiente.  
   
      [!code-csharp[csProgGuideCodingConventions#1](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#1)]  
   
@@ -81,11 +81,11 @@ ms.locfileid: "67267906"
   
 ### <a name="implicitly-typed-local-variables"></a>Variables locales con asignación implícita de tipos  
   
-- Use [tipos implícitos](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) para las variables locales cuando el tipo de la variable sea obvio desde el lado derecho de la asignación, o cuando el tipo exacto no sea importante.  
+- Use [tipos implícitos](../classes-and-structs/implicitly-typed-local-variables.md) para las variables locales cuando el tipo de la variable sea obvio desde el lado derecho de la asignación, o cuando el tipo exacto no sea importante.  
   
      [!code-csharp[csProgGuideCodingConventions#8](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#8)]  
   
-- No use [var](../../../csharp/language-reference/keywords/var.md) cuando el tipo no sea evidente desde el lado derecho de la asignación.  
+- No use [var](../../language-reference/keywords/var.md) cuando el tipo no sea evidente desde el lado derecho de la asignación.  
   
      [!code-csharp[csProgGuideCodingConventions#9](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#9)]  
   
@@ -93,9 +93,9 @@ ms.locfileid: "67267906"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- Evite el uso de `var` en lugar de [dynamic](../../../csharp/language-reference/keywords/dynamic.md).  
+- Evite el uso de `var` en lugar de [dynamic](../../language-reference/keywords/dynamic.md).  
   
-- Use tipos implícitos para determinar el tipo de la variable de bucle en bucles [for](../../../csharp/language-reference/keywords/for.md) y [foreach](../../../csharp/language-reference/keywords/foreach-in.md).  
+- Use tipos implícitos para determinar el tipo de la variable de bucle en bucles [for](../../language-reference/keywords/for.md) y [foreach](../../language-reference/keywords/foreach-in.md).  
   
      En el ejemplo siguiente se usan tipos implícitos en una instrucción `for`.  
   
@@ -125,11 +125,11 @@ ms.locfileid: "67267906"
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>Instrucciones try-catch y using en el control de excepciones  
   
-- Use una instrucción [try-catch](../../../csharp/language-reference/keywords/try-catch.md) en la mayoría de casos de control de excepciones.  
+- Use una instrucción [try-catch](../../language-reference/keywords/try-catch.md) en la mayoría de casos de control de excepciones.  
   
      [!code-csharp[csProgGuideCodingConventions#16](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#16)]  
   
-- Simplifique el código mediante la [instrucción using](../../../csharp/language-reference/keywords/using-statement.md) de C#. Si tiene una instrucción [try-finally](../../../csharp/language-reference/keywords/try-finally.md) en la que el único código del bloque `finally` es una llamada al método <xref:System.IDisposable.Dispose%2A>, use en su lugar una instrucción `using`.  
+- Simplifique el código mediante la [instrucción using](../../language-reference/keywords/using-statement.md) de C#. Si tiene una instrucción [try-finally](../../language-reference/keywords/try-finally.md) en la que el único código del bloque `finally` es una llamada al método <xref:System.IDisposable.Dispose%2A>, use en su lugar una instrucción `using`.  
   
      [!code-csharp[csProgGuideCodingConventions#17](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#17)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "67267906"
   
 ### <a name="static-members"></a>Miembros estáticos  
   
-- Llame a miembros [estáticos](../../../csharp/language-reference/keywords/static.md) con el nombre de clase: *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
+- Llame a miembros [estáticos](../../language-reference/keywords/static.md) con el nombre de clase: *ClassName.StaticMember*. Esta práctica hace que el código sea más legible al clarificar el acceso estático.  No califique un miembro estático definido en una clase base con el nombre de una clase derivada.  Mientras el código se compila, su legibilidad se presta a confusión, y puede interrumpirse en el futuro si se agrega a un miembro estático con el mismo nombre a la clase derivada.  
   
 ### <a name="linq-queries"></a>Consultas LINQ  
   
@@ -183,13 +183,13 @@ ms.locfileid: "67267906"
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
-- Alinee las cláusulas de consulta bajo la cláusula [from](../../../csharp/language-reference/keywords/from-clause.md), como se muestra en los ejemplos anteriores.  
+- Alinee las cláusulas de consulta bajo la cláusula [from](../../language-reference/keywords/from-clause.md), como se muestra en los ejemplos anteriores.  
   
-- Use cláusulas [where](../../../csharp/language-reference/keywords/where-clause.md) antes de otras cláusulas de consulta para asegurarse de que las cláusulas de consulta posteriores operan en un conjunto de datos reducido y filtrado.  
+- Use cláusulas [where](../../language-reference/keywords/where-clause.md) antes de otras cláusulas de consulta para asegurarse de que las cláusulas de consulta posteriores operan en un conjunto de datos reducido y filtrado.  
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- Use varias cláusulas `from` en lugar de una cláusula [join](../../../csharp/language-reference/keywords/join-clause.md) para obtener acceso a colecciones internas. Por ejemplo, una colección de objetos `Student` podría contener cada uno un conjunto de resultados de exámenes. Cuando se ejecuta la siguiente consulta, devuelve cada resultado superior a 90, además del apellido del alumno que recibió la puntuación.  
+- Use varias cláusulas `from` en lugar de una cláusula [join](../../language-reference/keywords/join-clause.md) para obtener acceso a colecciones internas. Por ejemplo, una colección de objetos `Student` podría contener cada uno un conjunto de resultados de exámenes. Cuando se ejecuta la siguiente consulta, devuelve cada resultado superior a 90, además del apellido del alumno que recibió la puntuación.  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

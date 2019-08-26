@@ -8,20 +8,20 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2f6fb9fb8c29013165298c186ec072aa1e750ab9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122894"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602302"
 ---
 # <a name="await-c-reference"></a>await (Referencia de C#)
 El operador `await` se aplica a una tarea de un método asincrónico para insertar un punto de suspensión en la ejecución del método hasta que la tarea en espera se complete. La tarea representa el trabajo en curso.  
   
-`await` solo puede usarse en un método asincrónico que se ha modificado mediante la palabra clave [async](../../../csharp/language-reference/keywords/async.md). Este tipo de método, que se define mediante el modificador `async` y que generalmente contiene una o más expresiones `await`, se denomina *método asincrónico*.  
+`await` solo puede usarse en un método asincrónico que se ha modificado mediante la palabra clave [async](./async.md). Este tipo de método, que se define mediante el modificador `async` y que generalmente contiene una o más expresiones `await`, se denomina *método asincrónico*.  
   
 > [!NOTE]
-> Las palabras clave `async` y `await` se han incluido en C# 5. Para obtener una introducción a la programación asincrónica, vea [Programación asincrónica con async y await](../../../csharp/programming-guide/concepts/async/index.md).  
+> Las palabras clave `async` y `await` se han incluido en C# 5. Para obtener una introducción a la programación asincrónica, vea [Programación asincrónica con async y await](../../programming-guide/concepts/async/index.md).  
   
 La tarea a la que se aplica el operador `await` se devuelve normalmente mediante una llamada a un método que implementa el [patrón asincrónico basado en tareas](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md). Incluyen métodos que devuelven objetos <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> y <xref:System.Threading.Tasks.ValueTask%601>.  
 
@@ -30,7 +30,7 @@ En el siguiente ejemplo, el método <xref:System.Net.Http.HttpClient.GetByteArra
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
-> Para obtener el ejemplo completo, consulte [Tutorial: Acceso a web usando Async y Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede descargar el ejemplo desde [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) en el sitio web de Microsoft. El ejemplo está en el proyecto AsyncWalkthrough_HttpClient.  
+> Para obtener el ejemplo completo, consulte [Tutorial: Acceso a web usando Async y Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Puede descargar el ejemplo desde [Ejemplos de código para desarrolladores](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) en el sitio web de Microsoft. El ejemplo está en el proyecto AsyncWalkthrough_HttpClient.  
   
 Tal y como se muestra en el ejemplo anterior, si `await` se aplica al resultado de una llamada al método que devuelve `Task<TResult>`, el tipo de la expresión `await` es `TResult`. Si `await` se aplica al resultado de una llamada al método que devuelve `Task`, el tipo de la expresión `await` es `void`. En el siguiente ejemplo se ilustra la diferencia.  
   
@@ -47,7 +47,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
   
 Una expresión `await` no bloquea el subproceso en el que se ejecuta. En su lugar, hace que el compilador suscriba el resto del método asincrónico como una continuación de la tarea esperada. A continuación, el control vuelve al llamador del método asincrónico. Cuando la tarea se completa, invoca su continuación y la ejecución del método asincrónico se reanuda donde se quedó.  
   
-Una expresión `await` solo puede aparecer en el cuerpo de su método envolvente, en una expresión lambda o en un método anónimo que debe marcarse con un modificador `async`. El término *await* solo sirve como palabra clave en ese contexto. En cualquier otra parte, se interpretará como identificador. Dentro del método, expresión lambda o método anónimo, una expresión `await` no se puede producir en el cuerpo de una función sincrónica, en una expresión de consulta, en el bloque de una [instrucción lock](../../../csharp/language-reference/keywords/lock-statement.md), ni en un contexto [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
+Una expresión `await` solo puede aparecer en el cuerpo de su método envolvente, en una expresión lambda o en un método anónimo que debe marcarse con un modificador `async`. El término *await* solo sirve como palabra clave en ese contexto. En cualquier otra parte, se interpretará como identificador. Dentro del método, expresión lambda o método anónimo, una expresión `await` no se puede producir en el cuerpo de una función sincrónica, en una expresión de consulta, en el bloque de una [instrucción lock](./lock-statement.md), ni en un contexto [unsafe](./unsafe.md).  
   
 ## <a name="exceptions"></a>Excepciones  
 La mayoría de los métodos asincrónicos devuelven un objeto <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>. Las propiedades de la tarea devuelta llevan información acerca de su estado e historial, por ejemplo, si la tarea se ha completado, si el método asincrónico produjo una excepción o si se ha cancelado y cuál es el resultado final. El operador `await` tiene acceso a esas propiedades llamando a métodos en el objeto devuelto mediante el método `GetAwaiter`.  
@@ -58,7 +58,7 @@ Si espera un método asincrónico que devuelve una tarea y se cancela, el operad
   
 Una única tarea en estado de error puede reflejar varias excepciones. Por ejemplo, la tarea podría ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Cuando espera dicha tarea, la operación await vuelve a generar únicamente una de las excepciones. Sin embargo, no se puede predecir cuál de las excepciones se vuelve a generar.  
   
-Para obtener ejemplos de control de errores en métodos asincrónicos, vea [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
+Para obtener ejemplos de control de errores en métodos asincrónicos, vea [try-catch](./try-catch.md).  
   
 ## <a name="example"></a>Ejemplo  
 En el ejemplo siguiente se devuelve el número total de caracteres en las páginas cuyas direcciones URL se pasan como argumentos de línea de comandos. En el ejemplo se llama al método `GetPageLengthsAsync`, que se marca con la palabra clave `async`. El método `GetPageLengthsAsync` a su vez usa la palabra clave `await` para esperar llamadas del método <xref:System.Net.Http.HttpClient.GetStringAsync%2A?displayProperty=nameWithType>.  
@@ -69,6 +69,6 @@ El ejemplo anterior utiliza C# 7.1, que admite el método [`async` `Main`](../..
 
 ## <a name="see-also"></a>Vea también
 
-- [Programación asincrónica con Async y Await](../../../csharp/programming-guide/concepts/async/index.md)
-- [Tutorial: Acceso a web usando Async y Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [async](../../../csharp/language-reference/keywords/async.md)
+- [Programación asincrónica con Async y Await](../../programming-guide/concepts/async/index.md)
+- [Tutorial: Acceso a web usando Async y Await](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [async](./async.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 0ec661e5fb0e13eaf8c3c8e4a7b274ab58853f58
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6adbb864b0450cdd1dbfcc56abdbad2034c5c7a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978090"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590247"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Procedimiento Ejecutar código de limpieza mediante finally (Guía de programación de C#)
 El propósito de una instrucción `finally` es asegurarse de que la limpieza necesaria de los objetos, por lo general objetos que contienen recursos externos, se produzca inmediatamente, incluso si se produce una excepción. Un ejemplo de esta limpieza es llamar a <xref:System.IO.Stream.Close%2A> en un <xref:System.IO.FileStream> inmediatamente después de su uso en lugar de esperar a que el objeto sea recolectado por el Common Language Runtime, de esta forma:  
@@ -30,10 +30,10 @@ El propósito de una instrucción `finally` es asegurarse de que la limpieza nec
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)
-- [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)
-- [using (instrucción)](../../../csharp/language-reference/keywords/using-statement.md)
-- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)
-- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)
-- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+- [Guía de programación de C#](../index.md)
+- [Excepciones y control de excepciones](./index.md)
+- [Control de excepciones](./exception-handling.md)
+- [using (instrucción)](../../language-reference/keywords/using-statement.md)
+- [try-catch](../../language-reference/keywords/try-catch.md)
+- [try-finally](../../language-reference/keywords/try-finally.md)
+- [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)

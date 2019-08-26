@@ -2,12 +2,12 @@
 title: Procedimiento para cargar y descargar ensamblados (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: 52f7173efe497ab286c607db681f256983adc077
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3f3c244a74e029eeaead77f561cd4c1adfca519a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342049"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595844"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Procedimiento para cargar y descargar ensamblados (C#)
 Los ensamblados a los que hace referencia el programa se cargarán automáticamente en tiempo de compilación, pero también es posible cargar ensamblados específicos en el dominio de aplicación actual en tiempo de ejecución. Para obtener más información, vea [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -26,6 +26,6 @@ Los ensamblados a los que hace referencia el programa se cargarán automáticame
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+- [Guía de programación de C#](../../index.md)
 - [Ensamblados de .NET](../../../../standard/assembly/index.md)
 - [Cómo: Cargar ensamblados en un dominio de aplicación](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

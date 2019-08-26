@@ -2,12 +2,12 @@
 title: Clasificación de operadores de consulta estándar por modo de ejecución (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711777"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924293"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>Clasificación de operadores de consulta estándar por modo de ejecución (C#)
 Las implementaciones de LINQ to Objects de los métodos de operador de consulta estándar se ejecutan de una de dos formas principales: inmediata o aplazada. Los operadores de consulta que usan la ejecución aplazada pueden dividirse además en dos categorías: de streaming y de no streaming. Si sabe cómo se ejecutan los diferentes operadores de consulta, puede servirle para entender los resultados que se obtienen de una consulta determinada. Esto es especialmente cierto si se está cambiando el origen de datos o si se está creando una consulta sobre otra. En este tema se clasifican los operadores de consulta estándar según su modo de ejecución.  
@@ -32,7 +32,7 @@ Las implementaciones de LINQ to Objects de los métodos de operador de consulta 
  En la tabla siguiente se clasifica cada método de operador de consulta estándar según su método de ejecución.  
   
 > [!NOTE]
->  Si un operador se marca en dos columnas, dos secuencias de entrada intervienen en la operación, y cada secuencia se evalúa de manera diferente. En estos casos, siempre es la primera secuencia de la lista de parámetros la que se evalúa en un modo de transmisión diferido.  
+> Si un operador se marca en dos columnas, dos secuencias de entrada intervienen en la operación, y cada secuencia se evalúa de manera diferente. En estos casos, siempre es la primera secuencia de la lista de parámetros la que se evalúa en un modo de transmisión diferido.  
   
 |Operador de consulta estándar|Tipo devuelto|Ejecución inmediata|Ejecución aplazada de streaming|Ejecución aplazada de no streaming|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
@@ -90,6 +90,6 @@ Las implementaciones de LINQ to Objects de los métodos de operador de consulta 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq.Enumerable>
-- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
-- [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
+- [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

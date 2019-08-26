@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: fcfe2dafe588dce57628bff63e3519f70d7a7725
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566258"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69604211"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referencia integrados (referencia de C#)
 
@@ -172,7 +172,7 @@ El ejemplo siguiente usa `dynamic` en varias declaraciones. El método `Main` ta
 
 - [Referencia de C#](../index.md)
 - [Palabras clave de C#](../keywords/index.md)
-- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Eventos](../../programming-guide/events/index.md)
 - [Uso de tipo dinámico](../../programming-guide/types/using-type-dynamic.md)
 - [Procedimientos recomendados para el uso de cadenas](../../../standard/base-types/best-practices-strings.md)
 - [Operaciones básicas de cadenas](../../../standard/base-types/basic-string-operations.md)

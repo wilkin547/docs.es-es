@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 90fd73346d255d195fa7384ebc2f60ebc4f32fba
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e292e116ac468246bfe81e1eb5d5c5819a506701
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480682"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587690"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (Guía de programación de C#)
 ## <a name="syntax"></a>Sintaxis  
@@ -30,9 +30,9 @@ ms.locfileid: "57480682"
  Referencia a un miembro o campo al cual se puede llamar desde el entorno de compilación actual. El compilador comprueba si el elemento de código dado existe y pasa `member` al nombre de elemento en el resultado XML. Agregue *member* entre comillas dobles (" ").  
   
 ## <a name="remarks"></a>Comentarios  
- La etiqueta \<see> permite especificar un vínculo desde el texto. Use [\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md) para indicar que el texto debe colocarse en una sección Vea también. Use el [atributo cref](../../../csharp/programming-guide/xmldoc/cref-attribute.md) para crear hipervínculos internos a las páginas de documentación de los elementos de código.  
+ La etiqueta \<see> permite especificar un vínculo desde el texto. Use [\<seealso>](./seealso.md) para indicar que el texto debe colocarse en una sección Vea también. Use el [atributo cref](./cref-attribute.md) para crear hipervínculos internos a las páginas de documentación de los elementos de código.  
   
- Compile con [-doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.  
+ Compile con [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para procesar los comentarios de documentación de un archivo.  
   
  En el ejemplo siguiente, se muestra una etiqueta \<see> dentro de una sección de resumen.  
   
@@ -40,5 +40,5 @@ ms.locfileid: "57480682"
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Etiquetas recomendadas para los comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [Guía de programación de C#](../index.md)
+- [Etiquetas recomendadas para los comentarios de documentación](./recommended-tags-for-documentation-comments.md)

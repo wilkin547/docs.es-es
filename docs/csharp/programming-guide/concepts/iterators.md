@@ -2,20 +2,20 @@
 title: Procesar una iteración mediante colecciones en C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 931f0662b71b4dd99ac4a419c279be5058c61e92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635520"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594965"
 ---
 # <a name="iterators-c"></a>Iteradores (C#)
 
 Un *iterador* puede usarse para recorrer colecciones como listas y matrices.
 
-Un método iterador o un descriptor de acceso `get` realiza una iteración personalizada en una colección. Un iterador usa la instrucción [yield return](../../../csharp/language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza una instrucción `yield return`, se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama a la función del iterador.
+Un método iterador o un descriptor de acceso `get` realiza una iteración personalizada en una colección. Un iterador usa la instrucción [yield return](../../language-reference/keywords/yield.md) para devolver cada elemento de uno en uno. Cuando se alcanza una instrucción `yield return`, se recuerda la ubicación actual en el código. La ejecución se reinicia desde esa ubicación la próxima vez que se llama a la función del iterador.
 
-Para consumir un método iterador desde código de cliente, use una instrucción [foreach](../../../csharp/language-reference/keywords/foreach-in.md) o una consulta de LINQ.
+Para consumir un método iterador desde código de cliente, use una instrucción [foreach](../../language-reference/keywords/foreach-in.md) o una consulta de LINQ.
 
 En el ejemplo siguiente, la primera iteración del bucle `foreach` hace que continúe la ejecución del método de iterador `SomeNumbers` hasta que se alcance la primera instrucción `yield return`. Esta iteración devuelve un valor de 3, y la ubicación actual del método de iterador se conserva. En la siguiente iteración del bucle, la ejecución del método iterador continúa desde donde se dejó, deteniéndose de nuevo al alcanzar una instrucción `yield return`. Esta iteración devuelve un valor de 5, y la ubicación actual del método de iterador se vuelve a conservar. El bucle se completa al alcanzar el final del método iterador.
 
@@ -43,11 +43,11 @@ El tipo de valor devuelto de un método de iterador o descriptor de acceso `get`
 Puede usar una instrucción `yield break` para finalizar la iteración.
 
 > [!NOTE]
-> En todos los ejemplos de este tema, excepto en el ejemplo de iterador simple, incluya directivas [using](../../../csharp/language-reference/keywords/using-directive.md) para los espacios de nombres `System.Collections` y `System.Collections.Generic`.
+> En todos los ejemplos de este tema, excepto en el ejemplo de iterador simple, incluya directivas [using](../../language-reference/keywords/using-directive.md) para los espacios de nombres `System.Collections` y `System.Collections.Generic`.
 
 ## <a name="simple-iterator"></a>Iterador simple
 
-El ejemplo siguiente tiene una única instrucción `yield return` que está dentro de un bucle [for](../../../csharp/language-reference/keywords/for.md). En `Main`, cada iteración del cuerpo de la instrucción `foreach` crea una llamada a la función de iterador, que continúa a la instrucción `yield return` siguiente.
+El ejemplo siguiente tiene una única instrucción `yield return` que está dentro de un bucle [for](../../language-reference/keywords/for.md). En `Main`, cada iteración del cuerpo de la instrucción `foreach` crea una llamada a la función de iterador, que continúa a la instrucción `yield return` siguiente.
 
 ```csharp
 static void Main()
@@ -336,7 +336,7 @@ Aunque un iterador se escribe como un método, el compilador lo traduce a una cl
 
 Para ver lo que hace el compilador, puede usar la herramienta Ildasm.exe para ver el código de lenguaje intermedio de Microsoft que se genera para un método de iterador.
 
-Cuando crea un iterador para una [clase](../../../csharp/language-reference/keywords/class.md) o [struct](../../../csharp/language-reference/keywords/struct.md), no necesita implementar la interfaz <xref:System.Collections.IEnumerator> completa. Cuando el compilador detecta el iterador, genera automáticamente los métodos `Current`, `MoveNext` y `Dispose` de la interfaz <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
+Cuando crea un iterador para una [clase](../../language-reference/keywords/class.md) o [struct](../../language-reference/keywords/struct.md), no necesita implementar la interfaz <xref:System.Collections.IEnumerator> completa. Cuando el compilador detecta el iterador, genera automáticamente los métodos `Current`, `MoveNext` y `Dispose` de la interfaz <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601>.
 
 En cada iteración sucesiva del bucle `foreach` (o la llamada directa a `IEnumerator.MoveNext`), el cuerpo de código del iterador siguiente se reanuda después de la instrucción `yield return` anterior. Después continúa con la siguiente instrucción `yield return` hasta que se alcanza el final del cuerpo del iterador, o hasta que se encuentra una instrucción `yield break`.
 
@@ -358,7 +358,7 @@ Los iteradores permiten mantener la simplicidad de un bucle `foreach` cuando se 
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)
-- [yield](../../../csharp/language-reference/keywords/yield.md)
-- [Utilizar foreach con matrices](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)
-- [Genéricos](../../../csharp/programming-guide/generics/index.md)
+- [foreach, in](../../language-reference/keywords/foreach-in.md)
+- [yield](../../language-reference/keywords/yield.md)
+- [Utilizar foreach con matrices](../arrays/using-foreach-with-arrays.md)
+- [Genéricos](../generics/index.md)

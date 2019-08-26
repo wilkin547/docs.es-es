@@ -2,12 +2,12 @@
 title: Información general de la clase XAttribute (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 0440e8271edcf54d00a56e2987235afd260f9156
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 79ef00aa79be0c743423cfba1a911b238ff9a7ca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483196"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590926"
 ---
 # <a name="xattribute-class-overview-c"></a>Información general de la clase XAttribute (C#)
 Los atributos son pares de nombre y valor asociados a un elemento. La clase <xref:System.Xml.Linq.XAttribute> representa los atributos XML.  
@@ -20,7 +20,7 @@ Los atributos son pares de nombre y valor asociados a un elemento. La clase <xre
 ## <a name="the-xattribute-constructor"></a>El constructor XAttribute  
  El siguiente constructor de la clase <xref:System.Xml.Linq.XAttribute> es el que usará normalmente:  
   
-|Constructor|Descripción|  
+|Constructor|DESCRIPCIÓN|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|Crea un objeto <xref:System.Xml.Linq.XAttribute>. El argumento `name` especifica el nombre del atributo; `content` especifica el contenido del atributo.|  
   
@@ -81,4 +81,4 @@ Console.WriteLine(c);
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la programación de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Información general sobre la programación de LINQ to XML (C#)](./linq-to-xml-overview.md)

@@ -5,27 +5,27 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 2fe07f8e4311417980caccc9c286b4f94c7ea994
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 26ad1d2251388237e186d1ba0e885fd7def66467
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585966"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596881"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Procedimiento Implementar e invocar un método de extensión personalizado (Guía de programación de C#)
-En este tema se muestra cómo implementar sus propios métodos de extensión para cualquier tipo de .NET. El código de cliente puede usar los métodos de extensión agregando una referencia a la DLL que los contiene y agregando una directiva [using](../../../csharp/language-reference/keywords/using-directive.md) que especifique el espacio de nombres en el que se definen los métodos de extensión.  
+En este tema se muestra cómo implementar sus propios métodos de extensión para cualquier tipo de .NET. El código de cliente puede usar los métodos de extensión agregando una referencia a la DLL que los contiene y agregando una directiva [using](../../language-reference/keywords/using-directive.md) que especifique el espacio de nombres en el que se definen los métodos de extensión.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Para definir y llamar al método de extensión  
   
-1. Defina una [class](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md) estática que contenga el método de extensión.  
+1. Defina una [class](./static-classes-and-static-class-members.md) estática que contenga el método de extensión.  
   
-     La clase debe estar visible para el código de cliente. Para obtener más información sobre las reglas de accesibilidad, vea [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
+     La clase debe estar visible para el código de cliente. Para obtener más información sobre las reglas de accesibilidad, vea [Modificadores de acceso](./access-modifiers.md).  
   
 2. Implemente el método de extensión como un método estático con al menos la misma visibilidad que la clase contenedora.  
   
-3. El primer parámetro del método especifica el tipo en el que opera el método; debe ir precedido del modificador [this](../../../csharp/language-reference/keywords/this.md).  
+3. El primer parámetro del método especifica el tipo en el que opera el método; debe ir precedido del modificador [this](../../language-reference/keywords/this.md).  
   
-4. En el código de llamada, agregue una directiva `using` para especificar el [espacio de nombres](../../../csharp/language-reference/keywords/namespace.md) que contiene la clase del método de extensión.  
+4. En el código de llamada, agregue una directiva `using` para especificar el [espacio de nombres](../../language-reference/keywords/namespace.md) que contiene la clase del método de extensión.  
   
 5. Llame a los métodos como si fueran métodos de instancia del tipo.  
   
@@ -41,12 +41,12 @@ En este tema se muestra cómo implementar sus propios métodos de extensión par
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [LINQ (Language Integrated Query)](../../../csharp/linq/linq-in-csharp.md)
-- [Clases estáticas y sus miembros](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [this](../../../csharp/language-reference/keywords/this.md)
-- [namespace](../../../csharp/language-reference/keywords/namespace.md)
+- [Guía de programación de C#](../index.md)
+- [Métodos de extensión](./extension-methods.md)
+- [LINQ (Language Integrated Query)](../../linq/linq-in-csharp.md)
+- [Clases estáticas y sus miembros](./static-classes-and-static-class-members.md)
+- [protected](../../language-reference/keywords/protected.md)
+- [internal](../../language-reference/keywords/internal.md)
+- [public](../../language-reference/keywords/public.md)
+- [this](../../language-reference/keywords/this.md)
+- [namespace](../../language-reference/keywords/namespace.md)

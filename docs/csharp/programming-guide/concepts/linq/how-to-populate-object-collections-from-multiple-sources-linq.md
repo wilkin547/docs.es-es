@@ -2,12 +2,12 @@
 title: Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 0789dee28cc2be5e72d2f99e2265e0181e351d8a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584393"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593056"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Procedimiento para rellenar colecciones de objetos de varios orígenes (LINQ) (C#)
 
@@ -18,7 +18,7 @@ En este ejemplo se muestra cómo combinar datos de orígenes diferentes en una s
 
 ## <a name="to-create-the-data-file"></a>Para crear el archivo de datos
 
-Copie los archivos names.csv y scores.csv en la carpeta del proyecto, como se describe en [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md).
+Copie los archivos names.csv y scores.csv en la carpeta del proyecto, como se describe en [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Ejemplo
 
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-En la cláusula [select](../../../../csharp/language-reference/keywords/select-clause.md) se usa un inicializador de objeto para crear una instancia de cada objeto `Student` nuevo usando los datos de los dos orígenes.
+En la cláusula [select](../../../language-reference/keywords/select-clause.md) se usa un inicializador de objeto para crear una instancia de cada objeto `Student` nuevo usando los datos de los dos orígenes.
 
 Si no tiene que almacenar los resultados de una consulta, los tipos anónimos pueden ser más convenientes que los tipos con nombre. Los tipos con nombre son necesarios si pasa los resultados de la consulta fuera del método en el que se ejecuta la consulta. En el ejemplo siguiente se ejecuta la misma tarea que en el ejemplo anterior, con la diferencia de que se usan tipos anónimos en lugar de tipos con nombre:
 
@@ -141,6 +141,6 @@ foreach (var student in queryNamesScores2)
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ y cadenas (C#)](./linq-and-strings.md)
+- [Inicializadores de objeto y colección](../../classes-and-structs/object-and-collection-initializers.md)
+- [Tipos anónimos](../../classes-and-structs/anonymous-types.md)

@@ -2,12 +2,12 @@
 title: Procedimiento para modificar árboles de expresión (C#)
 ms.date: 07/20/2015
 ms.assetid: 9b0cd8c2-457e-4833-9e36-31e79545f442
-ms.openlocfilehash: 26c00f3acc7ab44e74a81e346ab1c017d95d53b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7875cf1ccca8866cc87ebec80701ad77ad2bea2d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308645"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595056"
 ---
 # <a name="how-to-modify-expression-trees-c"></a>Procedimiento para modificar árboles de expresión (C#)
 En este tema se muestra cómo modificar un árbol de expresión. Los árboles de expresiones son inmutables, lo que significa que no pueden modificarse directamente. Para cambiar un árbol de expresión, debe crear una copia de un árbol de expresión existente y, una vez creada la copia, realizar los cambios necesarios. Puede usar la clase <xref:System.Linq.Expressions.ExpressionVisitor> para recorrer un árbol de expresión existente y copiar cada nodo que visita.  
@@ -72,5 +72,5 @@ En este tema se muestra cómo modificar un árbol de expresión. Los árboles de
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Ejecutar árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Cómo: Ejecutar árboles de expresión (C#)](./how-to-execute-expression-trees.md)
+- [Árboles de expresión (C#)](./index.md)

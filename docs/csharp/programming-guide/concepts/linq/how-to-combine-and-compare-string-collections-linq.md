@@ -2,12 +2,12 @@
 title: Procedimiento para combinar y comparar colecciones de cadenas (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: cdddf0aaac4264ae70c89590ef61e7b1bbf4cb9b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3fe1f9dbac864f4eca8ea92f84c35d290ab14642
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585950"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594093"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Procedimiento para combinar y comparar colecciones de cadenas (LINQ) (C#)
 En este ejemplo se muestra cómo combinar archivos que contienen líneas de texto y después ordenar los resultados. En concreto, se muestra cómo realizar una concatenación simple, una unión y una intersección en los dos conjuntos de líneas de texto.  
@@ -173,5 +173,5 @@ class MergeStrings
   
 ## <a name="see-also"></a>Vea también
 
-- [LINQ y cadenas (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ y directorios de archivos (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ y cadenas (C#)](./linq-and-strings.md)
+- [LINQ y directorios de archivos (C#)](./linq-and-file-directories.md)

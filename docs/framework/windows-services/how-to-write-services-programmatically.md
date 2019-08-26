@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 29e0b95ad91c93f3a23246daf2be128b10d7e2ce
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591427"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952404"
 ---
 # <a name="how-to-write-services-programmatically"></a>Procedimiento para escribir servicios mediante programación
 Si decide no utilizar la plantilla de proyecto de servicio de Windows, puede escribir sus propios servicios configurando la herencia y otros elementos de infraestructura. Al crear un servicio mediante programación, debe realizar varios pasos que, de lo contrario, la plantilla los controlaría:  
@@ -64,7 +64,7 @@ Si decide no utilizar la plantilla de proyecto de servicio de Windows, puede esc
 8. En el menú **Compilar**, seleccione **Compilar solución** para compilar el proyecto.  
   
     > [!NOTE]
-    >  No presione F5 para ejecutar el proyecto: no se puede ejecutar un proyecto de servicio de esta manera.  
+    > No presione F5 para ejecutar el proyecto: no se puede ejecutar un proyecto de servicio de esta manera.  
   
 9. Cree un proyecto de instalación y las acciones personalizadas para instalar el servicio. Para obtener un ejemplo, vea [Tutorial: Creación de una aplicación de servicios de Windows en el Diseñador de componentes](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md).  
   

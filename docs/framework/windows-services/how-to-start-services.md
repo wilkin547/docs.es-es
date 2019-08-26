@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3544f7d846ecf68ed5ed01812b9c69b295c63c69
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952424"
 ---
 # <a name="how-to-start-services"></a>Procedimiento para iniciar servicios
 Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> en la clase de servicio. Normalmente, el método <xref:System.ServiceProcess.ServiceBase.OnStart%2A> define el trabajo útil que realizará el servicio. Después de que se inicia un servicio, este permanece activo hasta que se pausa o se detiene manualmente.  
@@ -19,7 +19,7 @@ Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método
  Los servicios se pueden configurar para que se inicien automática o manualmente. Un servicio que se inicia automáticamente se iniciará cuando se reinicie o encienda por primera vez el equipo en el que está instalado. El usuario debe iniciar un servicio que se inicia manualmente.  
   
 > [!NOTE]
->  De forma predeterminada, los servicios creados con Visual Studio se inician manualmente.  
+> De forma predeterminada, los servicios creados con Visual Studio se inician manualmente.  
   
  Hay varias maneras de iniciar un servicio manualmente: desde el **Explorador de servidores**, desde el **Administrador de control de servicios** o desde el código con un componente llamado <xref:System.ServiceProcess.ServiceController>.  
   
@@ -42,7 +42,7 @@ Después de instalar un servicio, debe iniciarse. Al iniciarse, llama al método
     >  Para evitar que se inicie el servicio, puede establecer la propiedad <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> en **Deshabilitado**. Puede hacer esto si va a reiniciar un servidor varias veces y quiere ahorrar tiempo evitando que se inicien los servicios que normalmente se iniciarían.  
   
     > [!NOTE]
-    >  Estas y otras propiedades se pueden cambiar después de instalar el servicio.  
+    > Estas y otras propiedades se pueden cambiar después de instalar el servicio.  
   
      Hay varias formas de iniciar un servicio que tiene el proceso <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> establecido en **Manual**: desde el **Explorador de servidores**, desde el **Administrador de control de servicios**, o desde el código. Es importante indicar que no todos estos métodos inician realmente el servicio en el contexto del **Administrador de control de servicios**, **Explorador de servidores** y los métodos mediante programación para iniciar el servicio manipulan realmente el controlador.  
   

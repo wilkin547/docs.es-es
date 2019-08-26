@@ -2,12 +2,12 @@
 title: Información general de la clase XDocument (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
-ms.openlocfilehash: bf666a95cbb31a3ac808b5c10a37dffdaeed939f
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: de49dc071d22dd77dddea29ca114663261e3edda
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483166"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590843"
 ---
 # <a name="xdocument-class-overview-c"></a>Información general de la clase XDocument (C#)
 En este tema se presenta la clase <xref:System.Xml.Linq.XDocument>.  
@@ -88,4 +88,4 @@ d.Save("test.xml");
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la programación de LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Información general sobre la programación de LINQ to XML (C#)](./linq-to-xml-overview.md)

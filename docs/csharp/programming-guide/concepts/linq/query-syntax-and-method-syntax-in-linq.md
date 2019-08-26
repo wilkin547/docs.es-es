@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8351661bdb7eaf841577eb128a8fec12efed2360
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484101"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591421"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Sintaxis de consultas y sintaxis de métodos en LINQ (C#)
 La mayoría de las consultas de la documentación introductoria de Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) se escribe con la sintaxis de consulta declarativa de LINQ. Pero la sintaxis de consulta debe traducirse en llamadas de método para .NET Common Language Runtime (CLR) al compilar el código. Estas llamadas de método invocan los operadores de consulta estándar, que tienen nombres tales como `Where`, `Select`, `GroupBy`, `Join`, `Max` y `Average`. Puede llamarlas directamente con la sintaxis de método en lugar de la sintaxis de consulta.  
@@ -32,12 +32,12 @@ La mayoría de las consultas de la documentación introductoria de Language Inte
   
  Para empezar a usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], lo único que realmente debe saber sobre los métodos de extensión es cómo incluirlos en el ámbito de la aplicación mediante el uso correcto de directivas `using`. Desde el punto de vista de la aplicación, un método de extensión y un método de instancia normal son iguales.  
   
- Para obtener más información sobre los métodos de extensión, vea [Extension Methods](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md) (Métodos de extensión). Para obtener más información sobre los operadores de consulta estándar, vea [Información general sobre operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md). Algunos proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], implementan sus propios operadores de consulta estándar y otros métodos de extensión además de <xref:System.Collections.Generic.IEnumerable%601>.  
+ Para obtener más información sobre los métodos de extensión, vea [Extension Methods](../../classes-and-structs/extension-methods.md) (Métodos de extensión). Para obtener más información sobre los operadores de consulta estándar, vea [Información general sobre operadores de consulta estándar (C#)](./standard-query-operators-overview.md). Algunos proveedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], como [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] y [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], implementan sus propios operadores de consulta estándar y otros métodos de extensión además de <xref:System.Collections.Generic.IEnumerable%601>.  
   
 ## <a name="lambda-expressions"></a>Expresiones lambda  
  En el ejemplo anterior, observe que la expresión condicional (`num % 2 == 0`) se pasa como argumento insertado al método `Where`: `Where(num => num % 2 == 0).` Esta expresión insertada se denomina expresión lambda. Se trata de una forma cómoda de escribir código que, de lo contrario, tendría que escribirse de forma más compleja como un método anónimo, un delegado genérico o un árbol de expresión. En C#, `=>` es el operador lambda, que se lee como "va a". La `num` situada a la izquierda del operador es la variable de entrada que corresponde a `num` en la expresión de consulta. El compilador puede deducir el tipo de `num` porque sabe que `numbers` es un tipo <xref:System.Collections.Generic.IEnumerable%601> genérico. El cuerpo de la expresión lambda es exactamente igual que la expresión de la sintaxis de consulta o de cualquier otra expresión o instrucción de C#; puede incluir llamadas de método y otra lógica compleja. El "valor devuelto" es simplemente el resultado de la expresión.  
   
- Para empezar a usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no es necesario emplear muchas expresiones lambda. Pero determinadas consultas solo se pueden expresar en sintaxis de método y algunas requieren expresiones lambda. Cuando esté más familiarizado con las expresiones lambda, verá que se trata de una herramienta eficaz y flexible del cuadro de herramientas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información, vea [Expresiones lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ Para empezar a usar [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], no es necesario emplear muchas expresiones lambda. Pero determinadas consultas solo se pueden expresar en sintaxis de método y algunas requieren expresiones lambda. Cuando esté más familiarizado con las expresiones lambda, verá que se trata de una herramienta eficaz y flexible del cuadro de herramientas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obtener más información, vea [Expresiones lambda](../../statements-expressions-operators/lambda-expressions.md).  
   
 ## <a name="composability-of-queries"></a>Capacidad de composición de consultas  
  En el ejemplo de código anterior, tenga en cuenta que el método `OrderBy` se invoca mediante el operador de punto en la llamada a `Where`. `Where` crea una secuencia filtrada y, luego, `Orderby` actúa en dicha secuencia ordenándola. Dado que las consultas devuelven un `IEnumerable`, redáctelas con la sintaxis de método encadenando las llamadas de método. Es lo que el compilador hace en segundo plano cuando se escriben consultas con la sintaxis de consulta. Y dado que una variable de consulta no almacena los resultados de la consulta, puede modificarla o usarla como base para una nueva consulta en cualquier momento, incluso después de que se haya ejecutado.  

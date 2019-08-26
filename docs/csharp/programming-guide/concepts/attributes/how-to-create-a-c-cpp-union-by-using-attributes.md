@@ -2,12 +2,12 @@
 title: Procedimiento para crear una unión de C-C++ mediante atributos (C#)
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: a8b902536cd09ac732bf2144536605a66b5bbc56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdadc9505b93f40c66001ac36345efada2edd270
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599041"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595376"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>Procedimiento para crear una unión de C o C++ mediante atributos (C#)
 Mediante el uso de atributos, puede personalizar la manera en que los structs se disponen en la memoria. Por ejemplo, puede crear lo que se conoce como una unión en C/ C++ mediante los atributos `StructLayout(LayoutKind.Explicit)` y `FieldOffset`.  
@@ -70,9 +70,9 @@ Mediante el uso de atributos, puede personalizar la manera en que los structs se
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
-- [Atributos](../../../../../docs/standard/attributes/index.md)
-- [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Crear atributos personalizados (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
-- [Acceder a atributos mediante reflexión (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Guía de programación de C#](../../index.md)
+- [Atributos](../../../../standard/attributes/index.md)
+- [Reflexión (C#)](../reflection.md)
+- [Atributos (C#)](./index.md)
+- [Crear atributos personalizados (C#)](./creating-custom-attributes.md)
+- [Acceder a atributos mediante reflexión (C#)](./accessing-attributes-by-using-reflection.md)

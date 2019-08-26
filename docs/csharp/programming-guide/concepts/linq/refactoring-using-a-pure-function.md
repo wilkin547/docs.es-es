@@ -2,20 +2,20 @@
 title: Refactorización mediante una función pura (C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 093374c848a9792d8c184ddc210bbcc8171d3374
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: d1c4b1fc59e52fbd72dec1ee0e73e7198a083868
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484000"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591309"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>Refactorización mediante una función pura (C#)
-En el siguiente ejemplo se refactoriza el ejemplo anterior, [Refactorizar mediante un método de extensión (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), para usar una función pura. En este ejemplo, el código encargado de buscar el texto de un párrafo pasa a formar parte del método estático puro `ParagraphText`.  
+En el siguiente ejemplo se refactoriza el ejemplo anterior, [Refactorizar mediante un método de extensión (C#)](./refactoring-using-an-extension-method.md), para usar una función pura. En este ejemplo, el código encargado de buscar el texto de un párrafo pasa a formar parte del método estático puro `ParagraphText`.  
   
 ## <a name="example"></a>Ejemplo  
  Este ejemplo procesa un documento WordprocessingML, recuperando los nodos de párrafo a partir de dicho documento. También identifica el estilo de cada uno de los párrafos. Este ejemplo se basa en los ejemplos anteriormente vistos en este tutorial. En los comentarios del siguiente código se menciona dónde se encuentra el código refactorizado.  
   
- Para obtener instrucciones sobre cómo crear el documento de origen para este ejemplo, vea [Creating the Source Office Open XML Document (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML (C#)).  
+ Para obtener instrucciones sobre cómo crear el documento de origen para este ejemplo, vea [Creating the Source Office Open XML Document (C#)](./creating-the-source-office-open-xml-document.md) (Creación del documento de origen de Office Open XML (C#)).  
   
  Este ejemplo utiliza las clases que se encuentran en el ensamblado WindowsBase. Utiliza los tipos del espacio de nombres <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -177,10 +177,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>Pasos siguientes  
  El siguiente ejemplo muestra cómo proyectar un XML con un aspecto diferente:  
   
-- [Proyectar XML en una forma distinta (C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [Proyectar XML en una forma distinta (C#)](./projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md)
-- [Refactorizar mediante un método de extensión (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Tutorial: Manipulación de contenido en un documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
+- [Refactorizar mediante un método de extensión (C#)](./refactoring-using-an-extension-method.md)
+- [Refactorizar en funciones puras (C#)](./refactoring-into-pure-functions.md)

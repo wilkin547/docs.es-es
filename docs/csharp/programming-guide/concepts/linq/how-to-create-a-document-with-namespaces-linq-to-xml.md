@@ -2,12 +2,12 @@
 title: Procedimiento para crear un documento con espacios de nombres (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9b9e81a131d4e17ce2d87dd3f511ed66e370d884
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: 180dc5138f8f21b3e52e4a8b3cee4748cafdd0f5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710007"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593882"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Procedimiento para crear un documento con espacios de nombres (C#) (LINQ to XML)
 En este tema se muestra cómo crear documentos con espacios de nombres.  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  Este método tiene implicaciones en el rendimiento. Cada vez que pasa una cadena que contiene un nombre expandido a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] debe analizar el nombre, buscar el espacio de nombres atomizado y buscar el nombre atomizado. Este proceso consume tiempo de la CPU. Si el rendimiento es importante, tal vez quiera declarar y usar explícitamente un objeto <xref:System.Xml.Linq.XNamespace>.  
   
- Si el rendimiento es un problema importante, vea [Atomización previa de objetos XName (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md) para obtener más información.  
+ Si el rendimiento es un problema importante, vea [Atomización previa de objetos XName (LINQ to XML) (C#)](./pre-atomization-of-xname-objects-linq-to-xml.md) para obtener más información.  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  

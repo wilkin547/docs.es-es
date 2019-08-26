@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: bf9af90c9695ad9428a887a901a95282672a4f75
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 1029d34ae8823fe91c7e4bc92e168fcc1061c707
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722541"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594403"
 ---
 # <a name="c-features-that-support-linq"></a>Características de C# compatibles con LINQ
 
@@ -26,11 +26,11 @@ var query = from str in stringArray
             select stringGroup;
 ```
 
-Para obtener más información, vea [Expresiones de consulta LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md).
+Para obtener más información, vea [Expresiones de consulta LINQ](../../linq-query-expressions/index.md).
 
 ## <a name="implicitly-typed-variables-var"></a>Variables con asignación implícita de tipos (var)
 
-En lugar de especificar explícitamente un tipo al declarar e inicializar una variable, se puede usar el modificador [var](../../../../csharp/language-reference/keywords/var.md) para indicar al compilador que deduzca y asigne el tipo, como se muestra aquí:
+En lugar de especificar explícitamente un tipo al declarar e inicializar una variable, se puede usar el modificador [var](../../../language-reference/keywords/var.md) para indicar al compilador que deduzca y asigne el tipo, como se muestra aquí:
 
 ```csharp
 var number = 5;
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 Las variables declaradas como `var` son tan fuertemente tipadas como las variables cuyo tipo se especifica explícitamente. El uso de `var` hace posible crear tipos anónimos, pero solo se puede usar para variables locales. También se pueden declarar matrices con asignación implícita de tipos.
 
-Para más información, vea [Variables locales con asignación implícita de tipos](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).
+Para más información, vea [Variables locales con asignación implícita de tipos](../../classes-and-structs/implicitly-typed-local-variables.md).
 
 ## <a name="object-and-collection-initializers"></a>Inicializadores de objeto y colección
 
@@ -68,9 +68,9 @@ var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y
 
 Para obtener más información, consulte:
 
-- [Inicializadores de objeto y colección](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Inicializadores de objeto y colección](../../classes-and-structs/object-and-collection-initializers.md)
 
-- [Sintaxis de las expresiones de consulta para operadores de consulta estándar](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Sintaxis de las expresiones de consulta para operadores de consulta estándar](./query-expression-syntax-for-standard-query-operators.md)
 
 ## <a name="anonymous-types"></a>Tipos anónimos
 
@@ -80,13 +80,13 @@ Un tipo anónimo se construye por el compilador y el nombre del tipo solo está 
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-Para obtener más información, vea [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).
+Para obtener más información, vea [Tipos anónimos](../../classes-and-structs/anonymous-types.md).
 
 ## <a name="extension-methods"></a>Métodos de extensión.
 
 Un método de extensión es un método estático que se puede asociar con un tipo, por lo que puede llamarse como si fuera un método de instancia en el tipo. Esta característica permite, en efecto, "agregar" nuevos métodos a los tipos existentes sin tener que modificarlos realmente. Los operadores de consulta estándar son un conjunto de métodos de extensión que proporcionan funciones de consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para cualquier tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.
 
-Para obtener más información, vea [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).
+Para obtener más información, vea [Métodos de extensión](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Expresiones lambda
 
@@ -94,12 +94,12 @@ Una expresión lambda es una función insertada que usa el operador => para sepa
 
 Para obtener más información, consulte:
 
-- [Funciones anónimas](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+- [Funciones anónimas](../../statements-expressions-operators/anonymous-functions.md)
 
-- [Expresiones lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Expresiones lambda](../../statements-expressions-operators/lambda-expressions.md)
 
-- [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Árboles de expresión (C#)](../expression-trees/index.md)
 
 ## <a name="see-also"></a>Vea también
 
-- [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ) (C#)](./index.md)

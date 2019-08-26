@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4579e00bdaf89b4cf5d0da24a343fb5070609863
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: f7b1f6798f1aaa778eaf95de996584848c672351
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956680"
 ---
 # <a name="security-issues-in-reflection-emit"></a>Problemas de seguridad en la emisión de la reflexión
 .NET Framework proporciona tres maneras para emitir Lenguaje Intermedio de Microsoft (MSIL), cada una con sus propios problemas de seguridad:  
@@ -32,19 +32,19 @@ ms.locfileid: "67347311"
  Independientemente de la manera en que se genere código dinámico, la ejecución del código generado exige todos los permisos requeridos por los tipos y métodos que usa el código generado.  
   
 > [!NOTE]
->  Los permisos necesarios para la reflexión en código y la emisión de código han cambiado en las sucesivas versiones de .NET Framework. Vea el apartado [Información de versión](#Version_Information) más adelante en este tema.  
+> Los permisos necesarios para la reflexión en código y la emisión de código han cambiado en las sucesivas versiones de .NET Framework. Vea el apartado [Información de versión](#Version_Information) más adelante en este tema.  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>Ensamblados dinámicos  
  Los ensamblados dinámicos se crean mediante sobrecargas del método <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType>. La mayoría de las sobrecargas de este método quedaron obsoletas en .NET Framework 4 debido a la eliminación de la directiva de seguridad de toda la máquina. (Vea [Security Changes](../../../docs/framework/security/security-changes.md) (Cambios de seguridad)). Las sobrecargas restantes se pueden ejecutar con cualquier código, independientemente del nivel de confianza. Estas sobrecargas se dividen en dos grupos: las que especifican una lista de atributos que se aplican al ensamblado dinámico cuando este se crea y las que no lo hacen. Si no se especifica el modelo de transparencia para el ensamblado durante su creación, mediante la aplicación del atributo <xref:System.Security.SecurityRulesAttribute>, el modelo de transparencia se hereda del ensamblado emisor.  
   
 > [!NOTE]
->  Los atributos que se aplican al ensamblado dinámico después de crearlo —mediante el método <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>— no serán efectivos hasta que el ensamblado se guarde en el disco y se vuelva a cargar en la memoria.  
+> Los atributos que se aplican al ensamblado dinámico después de crearlo —mediante el método <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A>— no serán efectivos hasta que el ensamblado se guarde en el disco y se vuelva a cargar en la memoria.  
   
  El código de un ensamblado dinámico puede tener acceso a los tipos visibles y a los miembros de otros ensamblados.  
   
 > [!NOTE]
->  Los ensamblados dinámicos no usan las marcas <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> y <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> que permiten a los métodos dinámicos tener acceso a los tipos y miembros.  
+> Los ensamblados dinámicos no usan las marcas <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> y <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> que permiten a los métodos dinámicos tener acceso a los tipos y miembros.  
   
  Los ensamblados dinámicos transitorios se crean en la memoria y nunca se guardan en el disco, por lo que no requieren ningún permiso de acceso de archivo. Guardar un ensamblado dinámico en el disco requiere <xref:System.Security.Permissions.FileIOPermission> con las marcas apropiadas.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "67347311"
  En su lugar, cuando se crea un método dinámico hospedado de forma anónima, se captura la pila de llamadas. Cuando se construye el método, las peticiones de seguridad se realizan en la pila de llamadas capturadas.  
   
 > [!NOTE]
->  Desde el punto de vista conceptual, las peticiones se hacen durante la construcción del método. Es decir, las peticiones se pueden realizar al emitirse cada instrucción MSIL. En la implementación actual, todas las solicitudes se realizan cuando se llama al método <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> o cuando se invoca el compilador Just-In-Time (JIT), si el método se invoca sin llamar a <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
+> Desde el punto de vista conceptual, las peticiones se hacen durante la construcción del método. Es decir, las peticiones se pueden realizar al emitirse cada instrucción MSIL. En la implementación actual, todas las solicitudes se realizan cuando se llama al método <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A?displayProperty=nameWithType> o cuando se invoca el compilador Just-In-Time (JIT), si el método se invoca sin llamar a <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A>.  
   
  Si el dominio de aplicación lo permite, los métodos dinámicos hospedados de forma anónima pueden omitir las comprobaciones de visibilidad de JIT, con la restricción siguiente: Los tipos y miembros no públicos a los que accede un método dinámico hospedado de forma anónima deben estar en ensamblados cuyos conjuntos de permisos sean iguales (o sean subconjuntos) al conjunto de permisos de la pila de llamadas emisora. Esta capacidad restringida para omitir las comprobaciones de visibilidad JIT está habilitada si el dominio de aplicación concede <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "67347311"
 - Los permisos requeridos por todos los tipos y miembros usados por el método dinámico se incluyen en el conjunto de permisos del ensamblado de confianza parcial.  
   
 > [!NOTE]
->  Los métodos dinámicos no admiten símbolos de depuración.  
+> Los métodos dinámicos no admiten símbolos de depuración.  
   
 <a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>Métodos dinámicos asociados a ensamblados existentes  
@@ -113,7 +113,7 @@ ms.locfileid: "67347311"
 - Si asocia el método dinámico con un tipo o módulo de otro ensamblado, el constructor exige dos cosas: <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> y el conjunto de permisos del ensamblado que contiene el otro módulo. Es decir, la pila de llamadas debe incluir todos los permisos del conjunto de permisos del módulo de destino, además de <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>.  
   
     > [!NOTE]
-    >  Por motivos de compatibilidad con versiones anteriores, si se produce un error en la petición del conjunto de permisos más <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, el constructor exige <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
+    > Por motivos de compatibilidad con versiones anteriores, si se produce un error en la petición del conjunto de permisos más <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>, el constructor exige <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionFlag.ControlEvidence?displayProperty=nameWithType>.  
   
  Aunque los elementos de esta lista se describen en términos del conjunto de permisos concedidos del ensamblado emisor, recuerde que las peticiones se realizan en la pila de llamadas completa, incluido el límite del dominio de aplicación.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "67347311"
 ### <a name="generating-dynamic-methods-from-partially-trusted-code"></a>Generación de métodos dinámicos a partir de código de confianza parcial  
   
 > [!NOTE]
->  La manera recomendada para generar métodos dinámicos a partir de código de confianza parcial es usar [métodos dinámicos hospedados de forma anónima](#Anonymously_Hosted_Dynamic_Methods).  
+> La manera recomendada para generar métodos dinámicos a partir de código de confianza parcial es usar [métodos dinámicos hospedados de forma anónima](#Anonymously_Hosted_Dynamic_Methods).  
   
  Tenga en cuenta las condiciones en las que un ensamblado con permisos de Internet puede generar un método dinámico y ejecutarlo:  
   
@@ -135,7 +135,7 @@ ms.locfileid: "67347311"
 - El método dinámico no omite las comprobaciones de visibilidad JIT.  
   
 > [!NOTE]
->  Los métodos dinámicos no admiten símbolos de depuración.  
+> Los métodos dinámicos no admiten símbolos de depuración.  
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>Información de versión  
@@ -144,7 +144,7 @@ ms.locfileid: "67347311"
  A partir de .NET Framework 2.0 Service Pack 1, ya no es obligatorio usar <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> al emitir ensamblados y métodos dinámicos. Esta marca es necesaria en todas las versiones anteriores de .NET Framework.  
   
 > [!NOTE]
->  <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> se incluye de forma predeterminada en los conjuntos de permisos `FullTrust` y `LocalIntranet`, pero no en el conjunto de permisos `Internet`. Por consiguiente, en versiones anteriores de .NET Framework se puede usar una biblioteca con permisos de Internet, pero solo si ejecuta un <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Estas bibliotecas requieren una revisión cuidadosa de la seguridad porque los errores de codificación pueden provocar vulnerabilidades de seguridad. .NET Framework 2.0 SP1 permite emitir código en escenarios de confianza parcial sin emitir ninguna petición de seguridad, porque la generación de código no es en sí una operación que requiera privilegios. Es decir, el código generado no tiene más permisos que el ensamblado que lo emite. Esto permite que las bibliotecas que emiten código sean transparentes en seguridad y elimina la necesidad de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, lo que simplifica la tarea de escribir una biblioteca segura.  
+> <xref:System.Security.Permissions.ReflectionPermission> con la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> se incluye de forma predeterminada en los conjuntos de permisos `FullTrust` y `LocalIntranet`, pero no en el conjunto de permisos `Internet`. Por consiguiente, en versiones anteriores de .NET Framework se puede usar una biblioteca con permisos de Internet, pero solo si ejecuta un <xref:System.Security.PermissionSet.Assert%2A> para <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>. Estas bibliotecas requieren una revisión cuidadosa de la seguridad porque los errores de codificación pueden provocar vulnerabilidades de seguridad. .NET Framework 2.0 SP1 permite emitir código en escenarios de confianza parcial sin emitir ninguna petición de seguridad, porque la generación de código no es en sí una operación que requiera privilegios. Es decir, el código generado no tiene más permisos que el ensamblado que lo emite. Esto permite que las bibliotecas que emiten código sean transparentes en seguridad y elimina la necesidad de declarar <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit>, lo que simplifica la tarea de escribir una biblioteca segura.  
   
  Además, .NET Framework 2.0 SP1 presenta la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> para el acceso a los tipos y miembros no públicos desde métodos dinámicos de confianza parcial. Las versiones anteriores de .NET Framework requieren la marca <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> para los métodos dinámicos que acceden a tipos y miembros no públicos; es un permiso que nunca debe concederse al código de confianza parcial.  
   

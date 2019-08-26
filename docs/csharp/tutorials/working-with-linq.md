@@ -3,12 +3,12 @@ title: Trabajar con LINQ
 description: En este tutorial se enseña cómo generar secuencias con LINQ, escribir métodos para su uso en consultas LINQ y distinguir entre la evaluación diligente y diferida.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 3cbafbb6aeed3abdd6d83ead613b29de738d5604
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67609307"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587182"
 ---
 # <a name="working-with-linq"></a>Trabajar con LINQ
 
@@ -142,7 +142,7 @@ public static void Main(string[] args)
 
 Pero no existe ningún método de orden aleatorio en la biblioteca estándar que pueda aprovechar, por lo que tendrá que escribir el suyo propio. El método de orden aleatorio que cree mostrará varias técnicas que se utilizan con programas basados en LINQ, por lo que cada parte de este proceso se explica en pasos.
 
-Para agregar alguna funcionalidad a la forma de interactuar con el elemento <xref:System.Collections.Generic.IEnumerable%601> que obtendrá de las consultas LINQ, tendrá que escribir algunos tipos especiales de métodos llamados [métodos de extensión](../../csharp/programming-guide/classes-and-structs/extension-methods.md). En resumen, un método de extensión es un *método estático* con una finalidad específica que agrega nueva funcionalidad a un tipo existente sin tener que modificar el tipo original al que quiere agregar la funcionalidad.
+Para agregar alguna funcionalidad a la forma de interactuar con el elemento <xref:System.Collections.Generic.IEnumerable%601> que obtendrá de las consultas LINQ, tendrá que escribir algunos tipos especiales de métodos llamados [métodos de extensión](../programming-guide/classes-and-structs/extension-methods.md). En resumen, un método de extensión es un *método estático* con una finalidad específica que agrega nueva funcionalidad a un tipo existente sin tener que modificar el tipo original al que quiere agregar la funcionalidad.
 
 Proporcione un nuevo espacio a sus métodos de extensión agregando un nuevo archivo de clase *estática* al programa denominado `Extensions.cs` y comience a compilar el primer método de extensión:
 

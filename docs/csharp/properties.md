@@ -2,12 +2,12 @@
 title: Propiedades
 description: Obtenga información sobre las propiedades de C#, que incluyen características para la validación, valores calculados, evaluación diferida y notificaciones de cambio de propiedad.
 ms.date: 04/25/2018
-ms.openlocfilehash: e8b6955da1f36673962339785b0bfb012343acf8
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878274"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587403"
 ---
 # <a name="properties"></a>Propiedades
 
@@ -104,7 +104,7 @@ Una propiedad no tiene por qué devolver únicamente el valor de un campo de mie
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-En el ejemplo anterior se usa la característica de [interpolación de cadenas](../csharp/language-reference/tokens/interpolated.md) para crear la cadena con formato para el nombre completo.
+En el ejemplo anterior se usa la característica de [interpolación de cadenas](./language-reference/tokens/interpolated.md) para crear la cadena con formato para el nombre completo.
 
 También se pueden usar un *miembro con forma de expresión*, que proporciona una manera más concisa de crear la propiedad `FullName` calculada:
 

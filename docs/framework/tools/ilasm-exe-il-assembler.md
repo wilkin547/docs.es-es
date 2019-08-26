@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36de7dd2d97eb532717d52bd3903d3e5acd19d2d
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 13b0ab04eba75a322d584bcc20cc6e90a54fb6fc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567066"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933665"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Ensamblador de IL)
 
-El Ensamblador de IL genera un archivo portable ejecutable (PE) a partir del lenguaje intermedio (IL). Para obtener información sobre IL, consulte [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md). Se puede ejecutar el archivo ejecutable resultante, que contiene IL y los metadatos requeridos, para determinar si IL se comporta de acuerdo con lo esperado.
+El Ensamblador de IL genera un archivo portable ejecutable (PE) a partir del lenguaje intermedio (IL). Para obtener información sobre IL, consulte [Proceso de ejecución administrada](../../standard/managed-execution-process.md). Se puede ejecutar el archivo ejecutable resultante, que contiene IL y los metadatos requeridos, para determinar si IL se comporta de acuerdo con lo esperado.
 
 Esta herramienta se instala automáticamente con Visual Studio. Para ejecutar la herramienta, use Símbolo del sistema para desarrolladores de Visual Studio (o Símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -231,5 +231,5 @@ El siguiente ejemplo de código IL se corresponde con el ejemplo de código de C
 
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [*Ildasm.exe* (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)
-- [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md)
+- [Proceso de ejecución administrada](../../standard/managed-execution-process.md)
 - [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

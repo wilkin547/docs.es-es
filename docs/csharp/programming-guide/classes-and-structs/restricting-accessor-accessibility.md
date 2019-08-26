@@ -10,28 +10,28 @@ helpviewer_keywords:
 - asymmetric accessor accessibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: cde196c2bf0b40443c6b497a6a73863e5f89dd0a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca990693d29f8c8abd2e4ba2488a429a797afaec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64582988"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596176"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Restringir la accesibilidad del descriptor de acceso (Guía de programación de C#)
-Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../../../csharp/language-reference/keywords/set.md) de una propiedad o un indexador se denominan *descriptores de acceso*. De forma predeterminada, estos descriptores de acceso tienen la misma visibilidad o nivel de acceso de la propiedad o el indexador al que pertenecen. Para obtener más información, vea [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md). En cambio, a veces resulta útil restringir el acceso a uno de estos descriptores de acceso. Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, mientras que se mantiene el descriptor de acceso `get` accesible públicamente. Por ejemplo:  
+Las partes [get](../../language-reference/keywords/get.md) y [set](../../language-reference/keywords/set.md) de una propiedad o un indexador se denominan *descriptores de acceso*. De forma predeterminada, estos descriptores de acceso tienen la misma visibilidad o nivel de acceso de la propiedad o el indexador al que pertenecen. Para obtener más información, vea [Niveles de accesibilidad](../../language-reference/keywords/accessibility-levels.md). En cambio, a veces resulta útil restringir el acceso a uno de estos descriptores de acceso. Normalmente, esto implica restringir la accesibilidad del descriptor de acceso `set`, mientras que se mantiene el descriptor de acceso `get` accesible públicamente. Por ejemplo:  
   
  [!code-csharp[csProgGuideIndexers#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#6)]  
   
- En este ejemplo, una propiedad denominada `Name` define un descriptor de acceso `get` y `set`. El descriptor de acceso `get` recibe el nivel de accesibilidad de la propiedad, `public` en este caso, mientras que el descriptor de acceso `set` se restringe explícitamente al aplicar el modificador de acceso [protected](../../../csharp/language-reference/keywords/protected.md) al propio descriptor de acceso.  
+ En este ejemplo, una propiedad denominada `Name` define un descriptor de acceso `get` y `set`. El descriptor de acceso `get` recibe el nivel de accesibilidad de la propiedad, `public` en este caso, mientras que el descriptor de acceso `set` se restringe explícitamente al aplicar el modificador de acceso [protected](../../language-reference/keywords/protected.md) al propio descriptor de acceso.  
   
 ## <a name="restrictions-on-access-modifiers-on-accessors"></a>Restricciones en los modificadores de acceso en descriptores de acceso  
  Usar los modificadores de descriptor de acceso en propiedades o indexadores está sujeto a estas condiciones:  
   
-- No puede usar los modificadores de descriptor de acceso en una interfaz o en una implementación explícita del miembro [interface](../../../csharp/language-reference/keywords/interface.md).  
+- No puede usar los modificadores de descriptor de acceso en una interfaz o en una implementación explícita del miembro [interface](../../language-reference/keywords/interface.md).  
   
 - Puede usar modificadores de descriptor de acceso solo si la propiedad o el indexador tienen los descriptores de acceso `set` y `get`. En este caso, se permite el modificador solo en uno de los dos descriptores de acceso.  
   
-- Si la propiedad o el indexador tienen un modificador [override](../../../csharp/language-reference/keywords/override.md), el modificador de descriptor de acceso debe coincidir con el descriptor de acceso del descriptor de acceso invalidado, si lo hay.  
+- Si la propiedad o el indexador tienen un modificador [override](../../language-reference/keywords/override.md), el modificador de descriptor de acceso debe coincidir con el descriptor de acceso del descriptor de acceso invalidado, si lo hay.  
   
 - El nivel de accesibilidad del descriptor de acceso debe ser más restrictivo que el nivel de accesibilidad de la propiedad o el indexador.  
   
@@ -46,12 +46,12 @@ Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../
  [!code-csharp[csProgGuideIndexers#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#8)]  
   
 ## <a name="accessor-accessibility-domain"></a>Dominio de accesibilidad de descriptor de acceso  
- Si usa un modificador de acceso en el descriptor de acceso, el [dominio de accesibilidad](../../../csharp/language-reference/keywords/accessibility-domain.md) del descriptor de acceso viene determinado por este modificador.  
+ Si usa un modificador de acceso en el descriptor de acceso, el [dominio de accesibilidad](../../language-reference/keywords/accessibility-domain.md) del descriptor de acceso viene determinado por este modificador.  
   
  Si no ha usado un modificador de acceso en el descriptor de acceso, el dominio de accesibilidad del descriptor de acceso viene determinado por el nivel de accesibilidad de la propiedad o el indexador.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se incluyen tres clases: `BaseClass`, `DerivedClass` y `MainClass`. Hay dos propiedades en `BaseClass`, `Name` y `Id` en ambas clases. En el ejemplo, se muestra cómo la propiedad `Id` en `DerivedClass` se puede ocultar con la propiedad `Id` en `BaseClass` al usar un modificador de acceso restrictivo como [protected](../../../csharp/language-reference/keywords/protected.md) o [private](../../../csharp/language-reference/keywords/private.md). Por tanto, cuando asigna valores a esta propiedad, se llama en su lugar a la propiedad en la clase `BaseClass`. Si se reemplaza el modificador de acceso por [public](../../../csharp/language-reference/keywords/public.md), la propiedad será accesible.  
+ En el ejemplo siguiente, se incluyen tres clases: `BaseClass`, `DerivedClass` y `MainClass`. Hay dos propiedades en `BaseClass`, `Name` y `Id` en ambas clases. En el ejemplo, se muestra cómo la propiedad `Id` en `DerivedClass` se puede ocultar con la propiedad `Id` en `BaseClass` al usar un modificador de acceso restrictivo como [protected](../../language-reference/keywords/protected.md) o [private](../../language-reference/keywords/private.md). Por tanto, cuando asigna valores a esta propiedad, se llama en su lugar a la propiedad en la clase `BaseClass`. Si se reemplaza el modificador de acceso por [public](../../language-reference/keywords/public.md), la propiedad será accesible.  
   
  En el ejemplo, también se muestra que un modificador de acceso restrictivo, como `private` o `protected`, en el descriptor de acceso `set` de la propiedad `Name` en `DerivedClass` impide el acceso al descriptor de acceso y genera un error al asignárselo.  
   
@@ -66,7 +66,7 @@ Las partes [get](../../../csharp/language-reference/keywords/get.md) y [set](../
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
-- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+- [Guía de programación de C#](../index.md)
+- [Propiedades](./properties.md)
+- [Indizadores](../indexers/index.md)
+- [Modificadores de acceso](./access-modifiers.md)

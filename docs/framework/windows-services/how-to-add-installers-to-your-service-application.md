@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 335bff660e401d8fbaf531f1c1f3ccc166d1c70a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307270"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952507"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Procedimiento para agregar instaladores a una aplicación de servicio
 Visual Studio incluye componentes de instalación que pueden instalar recursos asociados con sus aplicaciones de servicios. Los componentes de la instalación registran un servicio individual en el sistema en el que se está instalando e informan al Administrador de control de servicios que el servicio existe. Cuando trabaje con una aplicación de servicio, puede seleccionar un vínculo en la ventana Propiedades para agregar automáticamente los instaladores apropiados a su proyecto.  
   
 > [!NOTE]
->  Los valores de propiedad de su servicio se copian de la clase de servicio a la clase de instalador. Si actualiza los valores de las propiedades en la clase de servicio, no se actualizan automáticamente en el instalador.  
+> Los valores de propiedad de su servicio se copian de la clase de servicio a la clase de instalador. Si actualiza los valores de las propiedades en la clase de servicio, no se actualizan automáticamente en el instalador.  
   
  Cuando agrega un instalador a su proyecto, se crea una nueva clase (que, de forma predeterminada, se llama `ProjectInstaller`) en el proyecto, y se crean instancias de los componentes de instalación apropiados dentro de él. Esta clase actúa como un punto central para todos los componentes de instalación que el proyecto necesita. Por ejemplo, si agrega un segundo servicio a la aplicación y hace clic en el vínculo Agregar instalador, no se creará una segunda clase de instalador; en su lugar, el componente de instalación adicional necesario para el segundo servicio se agregará a la clase existente.  
   
  No necesita hacer ninguna codificación especial dentro de los instaladores para que los servicios se instalen correctamente. Sin embargo, es posible que ocasionalmente tenga que modificar el contenido de los instaladores si necesita agregar funciones especiales al proceso de instalación.  
   
 > [!NOTE]
->  Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
+> Los cuadros de diálogo y comandos de menú que se ven pueden diferir de los descritos en la Ayuda, en función de los valores de configuración o de edición activos. Para cambiar la configuración, elija la opción **Importar y exportar configuraciones** del menú **Herramientas** . Para más información, vea [Personalizar el IDE de Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Para agregar instaladores a la aplicación de servicio  
   
@@ -58,7 +58,7 @@ Visual Studio incluye componentes de instalación que pueden instalar recursos a
 8. Realice los pasos del 1 al 7 para cada servicio adicional en el proyecto.  
   
     > [!NOTE]
-    >  Por cada servicio adicional en el proyecto, debe agregar un componente adicional <xref:System.ServiceProcess.ServiceInstaller> a la clase `ProjectInstaller` del proyecto. El componente <xref:System.ServiceProcess.ServiceProcessInstaller> agregado en el paso tres funciona con todos los instaladores de servicio individuales del proyecto.  
+    > Por cada servicio adicional en el proyecto, debe agregar un componente adicional <xref:System.ServiceProcess.ServiceInstaller> a la clase `ProjectInstaller` del proyecto. El componente <xref:System.ServiceProcess.ServiceProcessInstaller> agregado en el paso tres funciona con todos los instaladores de servicio individuales del proyecto.  
   
 ## <a name="see-also"></a>Vea también
 

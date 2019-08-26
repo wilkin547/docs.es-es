@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: acff804d87d67bf8758b97ad04805359bb3f2e32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9238e2e312021958ad62eeba89fe8b72c113e0d7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586067"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596835"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Procedimiento Devolver subconjuntos de propiedades de elementos en una consulta (Guía de programación de C#)
 Use un tipo anónimo en una expresión de consulta cuando se cumplan estas dos condiciones:  
@@ -48,6 +48,6 @@ Para ejecutar este código, copie y pegue la clase en una aplicación de consola
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Guía de programación de C#](../index.md)
+- [Tipos anónimos](./anonymous-types.md)
+- [Expresiones de consulta LINQ](../linq-query-expressions/index.md)

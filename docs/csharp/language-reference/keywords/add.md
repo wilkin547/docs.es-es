@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 1f699e5729354d13bfbe29810bf2c4baf91d2382
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1cf82e3d048e465d533e87dc639a13071b41544a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147919"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606041"
 ---
 # <a name="add-c-reference"></a>add (Referencia de C#)
-La palabra clave contextual `add` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe a su [evento](../../../csharp/language-reference/keywords/event.md). Si proporciona un descriptor de acceso `add` personalizado, también debe proporcionar un descriptor de acceso [remove](../../../csharp/language-reference/keywords/remove.md).  
+La palabra clave contextual `add` se usa para definir un descriptor de acceso de eventos personalizado que se invoca cuando el código de cliente se suscribe a su [evento](./event.md). Si proporciona un descriptor de acceso `add` personalizado, también debe proporcionar un descriptor de acceso [remove](./remove.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra un evento que tiene descriptores de acceso `add` y [remove](../../../csharp/language-reference/keywords/remove.md) personalizados. Para obtener el ejemplo completo, vea [Cómo:  Implementar eventos de interfaz](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
+ En el ejemplo siguiente se muestra un evento que tiene descriptores de acceso `add` y [remove](./remove.md) personalizados. Para obtener el ejemplo completo, vea [Cómo:  Implementar eventos de interfaz](../../programming-guide/events/how-to-implement-interface-events.md).  
   
 [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
   
@@ -26,4 +26,4 @@ La palabra clave contextual `add` se usa para definir un descriptor de acceso de
   
 ## <a name="see-also"></a>Vea también
 
-- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Eventos](../../programming-guide/events/index.md)

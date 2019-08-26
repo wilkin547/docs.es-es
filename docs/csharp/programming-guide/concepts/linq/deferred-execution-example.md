@@ -2,12 +2,12 @@
 title: Ejemplo de ejecución diferida (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
-ms.openlocfilehash: c9ac87cf2b2af4114e5a20c211b4a6b3f7fced6b
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: a934645d0d7ad807e1524031ca3f023f7b11c5b4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486111"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594545"
 ---
 # <a name="deferred-execution-example-c"></a>Ejemplo de ejecución diferida (C#)
 En este tema se muestra cómo la ejecución aplazada y la evaluación diferid afectan a la ejecución de las consultas de LINQ to XML.  
@@ -61,8 +61,8 @@ Main: str GHI
   
  En el siguiente tema de este tutorial se ilustra el encadenado de cadenas juntas:  
   
-- [Chaining Queries Example (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-queries-example.md) (Ejemplo de encadenamiento de consultas (C#))  
+- [Chaining Queries Example (C#)](./chaining-queries-example.md) (Ejemplo de encadenamiento de consultas (C#))  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Encadenar cadenas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Tutorial: Encadenar cadenas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

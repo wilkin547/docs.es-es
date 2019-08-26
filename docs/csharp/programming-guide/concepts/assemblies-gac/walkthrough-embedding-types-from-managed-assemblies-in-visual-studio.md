@@ -2,12 +2,12 @@
 title: 'Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: ca1acab5dc08bc7790d86b0dda3b9c7f58cab10c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 5e6494f133128e3982aa07323d2c65b9fa5de47b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844890"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595794"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Tutorial: Incrustar los tipos de los ensamblados administrados en Visual Studio (C#)
 
@@ -61,7 +61,7 @@ En este tutorial, se realizarán las siguientes tareas:
 
 4. Haga clic con el botón derecho en el proyecto TypeEquivalenceInterface y haga clic en **Propiedades**. Haga clic en la pestaña **Compilar**. Establezca la ruta de acceso de salida en una ubicación válida en el equipo de desarrollo, como `C:\TypeEquivalenceSample`. Esta ubicación también se usará en un paso posterior en este tutorial.
 
-5. Mientras sigue editando las propiedades del proyecto, haga clic en la pestaña **Firma**. Seleccione la opción **Firmar el ensamblado**. En la lista **Elija un archivo de clave de nombre seguro**, haga clic en **\<Nuevo...>**. En el cuadro **Nombre del archivo de clave**, escriba `key.snk`. Desactive la casilla **Proteger mi archivo de clave mediante contraseña**. Haga clic en **Aceptar**.
+5. Mientras sigue editando las propiedades del proyecto, haga clic en la pestaña **Firma**. Seleccione la opción **Firmar el ensamblado**. En la lista **Elija un archivo de clave de nombre seguro**, haga clic en **\<Nuevo...>** . En el cuadro **Nombre del archivo de clave**, escriba `key.snk`. Desactive la casilla **Proteger mi archivo de clave mediante contraseña**. Haga clic en **Aceptar**.
 
 6. Abra el archivo ISampleInterface.cs. Agregue el código siguiente al archivo de clase ISampleInterface para crear la interfaz ISampleInterface.
 
@@ -109,7 +109,7 @@ En este tutorial, se realizarán las siguientes tareas:
 
 4. Haga clic con el botón derecho en el proyecto TypeEquivalenceRuntime y haga clic en **Propiedades**. Haga clic en la pestaña **Compilar**. Establezca la ruta de acceso de salida en la misma ubicación que se usa en el proyecto TypeEquivalenceInterface, por ejemplo, `C:\TypeEquivalenceSample`.
 
-5. Mientras sigue editando las propiedades del proyecto, haga clic en la pestaña **Firma**. Seleccione la opción **Firmar el ensamblado**. En la lista **Elija un archivo de clave de nombre seguro**, haga clic en **\<Nuevo...>**. En el cuadro **Nombre del archivo de clave**, escriba `key.snk`. Desactive la casilla **Proteger mi archivo de clave mediante contraseña**. Haga clic en **Aceptar**.
+5. Mientras sigue editando las propiedades del proyecto, haga clic en la pestaña **Firma**. Seleccione la opción **Firmar el ensamblado**. En la lista **Elija un archivo de clave de nombre seguro**, haga clic en **\<Nuevo...>** . En el cuadro **Nombre del archivo de clave**, escriba `key.snk`. Desactive la casilla **Proteger mi archivo de clave mediante contraseña**. Haga clic en **Aceptar**.
 
 6. Haga clic con el botón derecho en el proyecto TypeEquivalenceRuntime y haga clic en **Agregar referencia**. Haga clic en la pestaña **Examinar** y vaya a la carpeta de la ruta de acceso de salida. Seleccione el archivo TypeEquivalenceInterface.dll y haga clic en **Aceptar**.
 
@@ -235,7 +235,7 @@ En este tutorial, se realizarán las siguientes tareas:
 
 ## <a name="see-also"></a>Vea también
 
-- [/link (Opciones del compilador de C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+- [/link (Opciones del compilador de C#)](../../../language-reference/compiler-options/link-compiler-option.md)
+- [Guía de programación de C#](../../index.md)
 - [Programar con ensamblados](../../../../framework/app-domains/programming-with-assemblies.md)
 - [Ensamblados de .NET](../../../../standard/assembly/index.md)

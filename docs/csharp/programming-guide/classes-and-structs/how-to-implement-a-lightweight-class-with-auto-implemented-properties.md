@@ -6,22 +6,22 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: f9884f353e58ff6119e3bc3b95aa55f0f60d0ad5
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 4cbed8145487325d8b06882bbab843321a49d0d3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398498"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596904"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Procedimiento Implementar una clase ligera con propiedades autoimplementadas (Guía de programación de C#)
 
 En este ejemplo se muestra cómo crear una clase ligera inmutable que solo sirve para encapsular un conjunto de propiedades autoimplementadas. Use este tipo de construcción en lugar de un struct cuando deba utilizar una semántica de tipo de referencia.
 
 Puede crear una propiedad inmutable de dos maneras:
-- Puede declarar el descriptor de acceso [set](../../../csharp/language-reference/keywords/set.md) como [private](../../../csharp/language-reference/keywords/private.md).  La propiedad solo se puede establecer dentro del tipo, pero es inmutable a los consumidores.
+- Puede declarar el descriptor de acceso [set](../../language-reference/keywords/set.md) como [private](../../language-reference/keywords/private.md).  La propiedad solo se puede establecer dentro del tipo, pero es inmutable a los consumidores.
 
   Cuando se declara un descriptor de acceso `set` privado, no se puede usar un inicializador de objeto para inicializar la propiedad. Se debe utilizar un constructor o un método factory.
-- Puede declarar solo el descriptor de acceso [get](../../../csharp/language-reference/keywords/get.md), que hace que la propiedad sea inmutable en cualquier lugar excepto en el constructor del tipo.
+- Puede declarar solo el descriptor de acceso [get](../../language-reference/keywords/get.md), que hace que la propiedad sea inmutable en cualquier lugar excepto en el constructor del tipo.
 
 ## <a name="example"></a>Ejemplo
 
@@ -120,6 +120,6 @@ El compilador crea campos de respaldo para cada propiedad autoimplementada. No s
 
 ## <a name="see-also"></a>Vea también
 
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [struct](../../../csharp/language-reference/keywords/struct.md)
-- [Inicializadores de objeto y colección](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Propiedades](./properties.md)
+- [struct](../../language-reference/keywords/struct.md)
+- [Inicializadores de objeto y colección](./object-and-collection-initializers.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: 89139867cb0a207dbe82168015629fcb9e2fa6eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601901"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602443"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (Opciones del compilador de C#)
 Esta opción hace que el compilador no genere un manifiesto del ensamblado.  
@@ -27,9 +27,9 @@ Esta opción hace que el compilador no genere un manifiesto del ensamblado.
 ## <a name="remarks"></a>Comentarios  
  De forma predeterminada, el archivo de salida creado al compilar con esta opción tendrá una extensión de .netmodule.  
   
- Common Language Runtime de .NET Framework no puede cargar un archivo que no tiene un manifiesto del ensamblado. En cambio, este archivo se puede incorporar en el manifiesto de un ensamblado mediante [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ Common Language Runtime de .NET Framework no puede cargar un archivo que no tiene un manifiesto del ensamblado. En cambio, este archivo se puede incorporar en el manifiesto de un ensamblado mediante [-addmodule](./addmodule-compiler-option.md).  
   
- Si se crea más de un módulo en una única compilación, los tipos [internal](../../../csharp/language-reference/keywords/internal.md) que haya en un módulo estarán disponibles para otros módulos de la compilación. Cuando el código de un módulo hace referencia a tipos `internal` de otro módulo, se deben incorporar ambos módulos en un manifiesto del ensamblado, mediante **-addmodule**.  
+ Si se crea más de un módulo en una única compilación, los tipos [internal](../keywords/internal.md) que haya en un módulo estarán disponibles para otros módulos de la compilación. Cuando el código de un módulo hace referencia a tipos `internal` de otro módulo, se deben incorporar ambos módulos en un manifiesto del ensamblado, mediante **-addmodule**.  
   
  No se admite la creación de un módulo en el entorno de desarrollo de Visual Studio.  
   
@@ -44,5 +44,5 @@ csc -target:module in.cs
   
 ## <a name="see-also"></a>Vea también
 
-- [-target (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (Opciones del compilador de C#)](./target-compiler-option.md)
+- [Opciones del compilador de C#](./index.md)

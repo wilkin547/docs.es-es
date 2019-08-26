@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5aa778477abf3b91e32d9cb8ffdf50baaca5f001
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: 171f6fd5a8b55d2e96a90a90d011a8166be6759d
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68362907"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666415"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Instrucciones de uso de Memory\<T> y Span\<T>
 
@@ -78,7 +78,7 @@ Usa la interfaz <xref:System.Buffers.IMemoryOwner%601?displayProperty=nameWithTy
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-También podemos escribir este ejemplo con [`using`](~/docs/csharp/language-reference/keywords/using-statement.md):
+También podemos escribir este ejemplo con [`using`](../../csharp/language-reference/keywords/using-statement.md):
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -138,7 +138,7 @@ De hecho, si se combinan esta regla y la 1, podemos hacerlo incluso mejor y rees
 void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 ```
 
-El método `DisplayBufferToConsole` ahora funciona con prácticamente cualquier tipo de búfer imaginable: `T[]`, almacenamiento asignable con [stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) y así sucesivamente. Incluso puede pasar una clase <xref:System.String> directamente.
+El método `DisplayBufferToConsole` ahora funciona con prácticamente cualquier tipo de búfer imaginable: `T[]`, almacenamiento asignable con [stackalloc](../../csharp/language-reference/operators/stackalloc.md) y así sucesivamente. Incluso puede pasar una clase <xref:System.String> directamente.
 
 **Regla 3: Si el método acepta Memory\<T> y devuelve `void`, no debe usar la instancia de Memory\<T> después de que se devuelva el método.**
 
@@ -246,7 +246,7 @@ Cualquier componente que transfiere la propiedad de la instancia de <xref:System
 
 **Regla 9: Si está encapsulando un método p/invoke sincrónico, la API debe aceptar Span\<T> como parámetro.**
 
-Según la regla 1, <xref:System.Span%601> es normalmente el tipo correcto que se usará para las API sincrónicas. Puede anclar instancias de <xref:System.Span%601> a través de la palabra clave [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md), como en el ejemplo siguiente.
+Según la regla 1, <xref:System.Span%601> es normalmente el tipo correcto que se usará para las API sincrónicas. Puede anclar instancias de <xref:System.Span%601> a través de la palabra clave [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md), como en el ejemplo siguiente.
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -286,7 +286,7 @@ public unsafe int ManagedWrapper(Span<byte> data)
 
 **Regla 10: Si está encapsulando un método p/invoke asincrónico, la API debe aceptar Memory\<T> como parámetro.**
 
-Puesto que no se puede utilizar la palabra clave [`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) en las operaciones asincrónicas, use el método <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> para anclar instancias de <xref:System.Memory%601>, independientemente del tipo de memoria contigua que represente la instancia. En el ejemplo siguiente se muestra cómo utilizar esta API para realizar una llamada p/invoke asincrónica.
+Puesto que no se puede utilizar la palabra clave [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md) en las operaciones asincrónicas, use el método <xref:System.Memory%601.Pin%2A?displayProperty=nameWithType> para anclar instancias de <xref:System.Memory%601>, independientemente del tipo de memoria contigua que represente la instancia. En el ejemplo siguiente se muestra cómo utilizar esta API para realizar una llamada p/invoke asincrónica.
 
 ```csharp
 using System.Runtime.InteropServices;

@@ -2,12 +2,12 @@
 title: Información general sobre operadores de consulta estándar (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 7ce3a13c98bf08eae79906f1806427741568155e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537964"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590974"
 ---
 # <a name="standard-query-operators-overview-c"></a>Información general sobre operadores de consulta estándar (C#)
 Los *operadores de consulta estándar* son los métodos que constituyen el modelo LINQ. La mayoría de estos métodos funciona en secuencias; donde una secuencia es un objeto cuyo tipo implementa la interfaz <xref:System.Collections.Generic.IEnumerable%601> o la interfaz <xref:System.Linq.IQueryable%601>. Los operadores de consulta estándar ofrecen funcionalidades de consulta, como las funciones de filtrado, proyección, agregación y ordenación, entre otras.  
@@ -67,7 +67,7 @@ foreach (var obj in query)
 ```  
   
 ## <a name="query-expression-syntax"></a>Sintaxis de expresiones de consulta  
- Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis especial de palabras clave dedicadas de lenguaje C# y Visual Basic para que se puedan invocar como parte de una *expresión* *de consulta*. Para obtener más información sobre los operadores de consulta estándar que incluyen palabras clave dedicadas y sus sintaxis correspondientes, vea [Query Expression Syntax for Standard Query Operators (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md) (Sintaxis de las expresiones de consulta para operadores de consulta estándar [C#]).  
+ Algunos de los operadores de consulta estándar que se usan con más frecuencia tienen una sintaxis especial de palabras clave dedicadas de lenguaje C# y Visual Basic para que se puedan invocar como parte de una *expresión* *de consulta*. Para obtener más información sobre los operadores de consulta estándar que incluyen palabras clave dedicadas y sus sintaxis correspondientes, vea [Query Expression Syntax for Standard Query Operators (C#)](./query-expression-syntax-for-standard-query-operators.md) (Sintaxis de las expresiones de consulta para operadores de consulta estándar [C#]).  
   
 ## <a name="extending-the-standard-query-operators"></a>Extender los operadores de consulta estándar  
  Puede aumentar el conjunto de operadores de consulta estándar creando métodos específicos de dominio que sean adecuados para su tecnología o dominio de destino. También puede reemplazar los operadores de consulta estándar con sus propias implementaciones que proporcionen otros servicios tales como evaluación remota, traducción de consultas y optimización. Vea <xref:System.Linq.Enumerable.AsEnumerable%2A> para obtener un ejemplo.  
@@ -75,39 +75,39 @@ foreach (var obj in query)
 ## <a name="related-sections"></a>Secciones relacionadas  
  Los vínculos siguientes le llevan a temas que ofrecen información adicional sobre los distintos operadores de consulta estándar según la funcionalidad.  
   
- [Sorting Data (C#)](../../../../csharp/programming-guide/concepts/linq/sorting-data.md) (Ordenación de datos [C#])  
+ [Sorting Data (C#)](./sorting-data.md) (Ordenación de datos [C#])  
   
- [Set Operations (C#)](../../../../csharp/programming-guide/concepts/linq/set-operations.md) (Operaciones set [C#])  
+ [Set Operations (C#)](./set-operations.md) (Operaciones set [C#])  
   
- [Filtering Data (C#)](../../../../csharp/programming-guide/concepts/linq/filtering-data.md) (Filtrado de datos [C#])  
+ [Filtering Data (C#)](./filtering-data.md) (Filtrado de datos [C#])  
   
- [Quantifier Operations (C#)](../../../../csharp/programming-guide/concepts/linq/quantifier-operations.md) (Operaciones cuantificadoras [C#])  
+ [Quantifier Operations (C#)](./quantifier-operations.md) (Operaciones cuantificadoras [C#])  
   
- [Projection Operations (C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md) (Operaciones de proyección [C#])  
+ [Projection Operations (C#)](./projection-operations.md) (Operaciones de proyección [C#])  
   
- [Partitioning Data](../../../../csharp/programming-guide/concepts/linq/partitioning-data.md) (Realizar particiones de datos [C#])  
+ [Partitioning Data](./partitioning-data.md) (Realizar particiones de datos [C#])  
   
- [Join Operations (C#)](../../../../csharp/programming-guide/concepts/linq/join-operations.md) (Operaciones de combinación [C#])  
+ [Join Operations (C#)](./join-operations.md) (Operaciones de combinación [C#])  
   
- [Grouping Data (C#)](../../../../csharp/programming-guide/concepts/linq/grouping-data.md) (Agrupar datos [C#])  
+ [Grouping Data (C#)](./grouping-data.md) (Agrupar datos [C#])  
   
- [Generation Operations (C#)](../../../../csharp/programming-guide/concepts/linq/generation-operations.md) (Operaciones de generación [C#])  
+ [Generation Operations (C#)](./generation-operations.md) (Operaciones de generación [C#])  
   
- [Equality Operations (C#)](../../../../csharp/programming-guide/concepts/linq/equality-operations.md) (Operaciones de igualdad [C#])  
+ [Equality Operations (C#)](./equality-operations.md) (Operaciones de igualdad [C#])  
   
- [Element Operations (C#)](../../../../csharp/programming-guide/concepts/linq/element-operations.md) (Operaciones de elementos [C#])  
+ [Element Operations (C#)](./element-operations.md) (Operaciones de elementos [C#])  
   
- [Converting Data Types (C#)](../../../../csharp/programming-guide/concepts/linq/converting-data-types.md) (Convertir tipos de datos [C#])  
+ [Converting Data Types (C#)](./converting-data-types.md) (Convertir tipos de datos [C#])  
   
- [Concatenation Operations (C#)](../../../../csharp/programming-guide/concepts/linq/concatenation-operations.md) (Operaciones de concatenación [C#])  
+ [Concatenation Operations (C#)](./concatenation-operations.md) (Operaciones de concatenación [C#])  
   
- [Aggregation Operations (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md) (Operaciones de agregación [C#])  
+ [Aggregation Operations (C#)](./aggregation-operations.md) (Operaciones de agregación [C#])  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [Introducción a las consultas LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
-- [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Clasificación de operadores de consulta estándar por modo de ejecución (C#)](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [Métodos de extensión](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+- [Introducción a las consultas LINQ (C#)](./introduction-to-linq-queries.md)
+- [Sintaxis de las expresiones de consulta para operadores de consulta estándar (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [Clasificación de operadores de consulta estándar por modo de ejecución (C#)](./classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Métodos de extensión](../../classes-and-structs/extension-methods.md)

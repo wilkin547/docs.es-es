@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
-ms.openlocfilehash: 3aa31ce7e189684bd60c238905df3bcbd1818ed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f18dbd007e80397b815256231a1d56e5ca50010e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559348"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608558"
 ---
 # <a name="error-c-reference"></a>#error (Referencia de C#)
 `#error` permite generar un error [CS1029](../compiler-messages/cs1029.md) definido por el usuario desde una ubicación específica en el código. Por ejemplo:  
@@ -24,7 +24,7 @@ ms.locfileid: "54559348"
 ## <a name="remarks"></a>Comentarios  
  Un uso común de `#error` es en una directiva condicional.  
   
- También es posible generar una advertencia definida por el usuario con [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).  
+ También es posible generar una advertencia definida por el usuario con [#warning](./preprocessor-warning.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -45,6 +45,6 @@ class MainClass
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Directivas de preprocesador de C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Directivas de preprocesador de C#](./index.md)

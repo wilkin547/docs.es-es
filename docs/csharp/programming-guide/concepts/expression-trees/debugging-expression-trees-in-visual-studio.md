@@ -2,12 +2,12 @@
 title: Depuración de árboles de expresión en Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 1369fa25-0fbd-4b92-98d0-8df79c49c27a
-ms.openlocfilehash: 93b1b660181cd81c31055f5d30d43e535171bb55
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 19d00aaa99c7ef08e291337f38bf74a3beac12b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195986"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595231"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-c"></a>Depuración de árboles de expresión en Visual Studio (C#)
 Se puede analizar la estructura y el contenido de los árboles de expresión cuando se depuran las aplicaciones. Para obtener una introducción rápida a la estructura del árbol de expresión, puede usar la propiedad `DebugView`, que representa los árboles de expresión [con una sintaxis especial](debugview-syntax.md). Observe que `DebugView` solo está disponible en modo de depuración.  
@@ -40,7 +40,7 @@ Como alternativa, puede instalar y usar [un visualizador personalizado](https://
   
 ## <a name="see-also"></a>Vea también
 
-- [Árboles de expresión (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+- [Árboles de expresión (C#)](./index.md)
 - [Depurar en Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 - [Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data) (Crear visualizadores personalizados)
 - [Sintaxis `DebugView`](debugview-syntax.md)

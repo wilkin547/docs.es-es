@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 049d1ce7a27a812b58fb09802e1ce520e96ed925
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 724a848d4c31b2c4f6fc3427d70fc84f4fd944c6
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586017"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924758"
 ---
 # <a name="-link-c-compiler-options"></a>-link (Opciones del compilador de C#)
 Hace que el compilador facilite al proyecto que se está compilando información de tipos COM en los ensamblados especificados.  
@@ -41,7 +41,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
  La opción `-link` incrusta únicamente interfaces, estructuras y delegados. No se admite la incrustación de clases COM.  
   
 > [!NOTE]
->  Cuando se crea una instancia de un tipo COM incrustado en el código, hay que crear la instancia mediante la interfaz adecuada. Si se intenta crear una instancia de un tipo COM incrustado mediante la coclase, se produce un error.  
+> Cuando se crea una instancia de un tipo COM incrustado en el código, hay que crear la instancia mediante la interfaz adecuada. Si se intenta crear una instancia de un tipo COM incrustado mediante la coclase, se produce un error.  
   
  Para establecer la opción `-link` en Visual Studio, agregue una referencia de ensamblado y establezca la propiedad `Embed Interop Types` en **true**. El valor predeterminado de la propiedad `Embed Interop Types` es **false**.  
   
@@ -51,7 +51,7 @@ Hace que el compilador facilite al proyecto que se está compilando información
   
 - Se invoca a un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
- Al igual que la opción del compilador [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md), la opción del compilador `-link` usa el archivo de respuesta Csc.rsp, que hace referencia a ensamblados de .NET Framework usados con frecuencia. Use la opción del compilador [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) si no quiere que el compilador emplee el archivo Csc.rsp.  
+ Al igual que la opción del compilador [-reference](./reference-compiler-option.md), la opción del compilador `-link` usa el archivo de respuesta Csc.rsp, que hace referencia a ensamblados de .NET Framework usados con frecuencia. Use la opción del compilador [-noconfig](./noconfig-compiler-option.md) si no quiere que el compilador emplee el archivo Csc.rsp.  
   
  La forma abreviada de `-link` es `-l`.  
   
@@ -83,9 +83,9 @@ csc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.cs
   
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opciones del compilador de C#](./index.md)
 - [Tutorial: Inserción de tipos de ensamblados administrados](../../programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [-reference (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)
-- [-noconfig (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md)
-- [Compilar la línea de comandos con csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
-- [Información general sobre interoperabilidad](../../../csharp/programming-guide/interop/interoperability-overview.md)
+- [-reference (Opciones del compilador de C#)](./reference-compiler-option.md)
+- [-noconfig (Opciones del compilador de C#)](./noconfig-compiler-option.md)
+- [Compilar la línea de comandos con csc.exe](./command-line-building-with-csc-exe.md)
+- [Información general sobre interoperabilidad](../../programming-guide/interop/interoperability-overview.md)

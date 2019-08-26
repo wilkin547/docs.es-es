@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bfa0cd7041f61e9848804f74d59b85a60450ea92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 66df15f7a33acac85804d6abf2e2878c1132f5d4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593578"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921470"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Procedimiento para quitar un ensamblado de la memoria caché global de ensamblados
 Hay dos formas de quitar un ensamblado de la caché global de ensamblados (GAC):  
@@ -49,7 +49,7 @@ gacutil -u hello
 1. En la aplicación **Programas y características** del **Panel de Control**, seleccione la aplicación que quiere desinstalar. Si el paquete de instalación colocó ensamblados en la GAC, Windows Installer los quitará si otra aplicación no lo está usando.  
   
     > [!NOTE]
-    >  Windows Installer mantiene un recuento de referencias para los ensamblados instalados en la GAC. Un ensamblado se quita de la GAC solo cuando su recuento de referencias llega a cero, lo que indica que no lo está usando ninguna aplicación instalada por un paquete de Windows Installer.  
+    > Windows Installer mantiene un recuento de referencias para los ensamblados instalados en la GAC. Un ensamblado se quita de la GAC solo cuando su recuento de referencias llega a cero, lo que indica que no lo está usando ninguna aplicación instalada por un paquete de Windows Installer.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -2,12 +2,12 @@
 title: Nombres de identificador
 description: Obtenga información sobre las reglas de los nombres de identificador válidos en el lenguaje de programación C#.
 ms.date: 08/21/2018
-ms.openlocfilehash: 2147b3846d4ba6d5471b81448489c6d716e3cd61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606957"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589356"
 ---
 # <a name="identifier-names"></a>Nombres de identificador
 
@@ -35,7 +35,7 @@ Además de las reglas, hay una serie de [convenciones de nomenclatura](../../../
 ## <a name="see-also"></a>Vea también
 
 - [Guía de programación de C#](../index.md)
-- [Dentro de un programa de C#](../inside-a-program/index.md)
+- [Dentro de un programa de C#](./index.md)
 - [Referencia de C#](../../language-reference/index.md)
 - [Clases](../classes-and-structs/classes.md)
 - [Structs](../classes-and-structs/structs.md)

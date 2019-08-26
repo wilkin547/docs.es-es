@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e476e92ba4a9366a8a380c53d7dcd0d4dddb16e4
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 38a6b27ea0ba8b9d9e2af883db1fc3350d60494a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567310"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912488"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (Desensamblador de IL)
 
@@ -53,7 +53,7 @@ Las siguientes opciones adicionales se pueden usar con archivos *.exe*, *.dll* y
 |**/linenum**|Incluye referencias a líneas de código fuente originales.|
 |**/nobar**|Suprime la ventana emergente del indicador de progreso del desensamblado.|
 |**/noca**|Suprime la salida de atributos personalizados.|
-|**/project**|Muestra los metadatos en la forma en que aparecen en el código administrado, no de la forma en que aparecen en el entorno de Windows Runtime nativo. Si `PEfilename` no es un archivo de metadatos de Windows ( *.winmd*), esta opción no tiene ningún efecto. Consulte [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
+|**/project**|Muestra los metadatos en la forma en que aparecen en el código administrado, no de la forma en que aparecen en el entorno de Windows Runtime nativo. Si `PEfilename` no es un archivo de metadatos de Windows ( *.winmd*), esta opción no tiene ningún efecto. Consulte [Compatibilidad de .NET Framework con las aplicaciones de la Tienda Windows y Windows en tiempo de ejecución](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md).|
 |**/pubonly**|Desensambla únicamente tipos y miembros públicos. Equivale a **/visibility:PUB**.|
 |**/quoteallnames**|Incluye todos los nombres entre comillas simples.|
 |**/raweh**|Muestra sin formato las cláusulas de control de excepciones.|
@@ -188,5 +188,5 @@ Un tipo anidado debe ir precedido de su clase contenedora delimitada por una bar
 
 - [Herramientas](../../../docs/framework/tools/index.md)
 - [Ilasm.exe (Ensamblador de IL)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Proceso de ejecución administrada](../../../docs/standard/managed-execution-process.md)
+- [Proceso de ejecución administrada](../../standard/managed-execution-process.md)
 - [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

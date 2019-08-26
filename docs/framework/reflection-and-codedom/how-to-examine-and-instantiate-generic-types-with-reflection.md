@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41070b5d51f0b613d7a6bbbc72b24a8c1793964d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d6517edcc2784b7d70c08c4d15d837fc1f209c49
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586114"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69928235"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>Procedimiento para examinar y crear instancias de tipos genéricos mediante la reflexión
 La información sobre los tipos genéricos se obtiene de la misma manera que la información sobre otros tipos: mediante el examen de un objeto <xref:System.Type> que representa el tipo genérico. La diferencia principal es que un tipo genérico tiene una lista de objetos <xref:System.Type> que representan sus parámetros de tipo genérico. En el primer procedimiento de esta sección se examinan tipos genéricos.  
@@ -121,4 +121,4 @@ La información sobre los tipos genéricos se obtiene de la misma manera que la 
 - <xref:System.Reflection.MethodInfo>
 - [Reflection and Generic Types](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) (Reflexión y tipos genéricos)
 - [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
-- [Genéricos](../../../docs/standard/generics/index.md)
+- [Genéricos](../../standard/generics/index.md)

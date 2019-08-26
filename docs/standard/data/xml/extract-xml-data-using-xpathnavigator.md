@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f25fa9706d43dd69da233e474127543dfdf83fb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595635"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966998"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Extraer datos XML con XPathNavigator
 Existen varias formas de representar un documento XML en Microsoft .NET Framework. Entre ellas se incluye el uso de <xref:System.String> o de las clases <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> o <xref:System.Xml.XPath.XPathDocument>. Para que sea más fácil moverse entre estas diferentes representaciones de un documento XML, la clase <xref:System.Xml.XPath.XPathNavigator> incluye una serie de métodos y propiedades para extraer el código XML como un objeto <xref:System.String>, <xref:System.Xml.XmlReader> o <xref:System.Xml.XmlWriter>.  
@@ -22,7 +22,7 @@ Existen varias formas de representar un documento XML en Microsoft .NET Framewor
  La propiedad <xref:System.Xml.XPath.XPathNavigator.OuterXml%2A> de la clase <xref:System.Xml.XPath.XPathNavigator> se utiliza para obtener el marcado de todo el documento XML o tan sólo el de un nodo y sus nodos secundarios.  
   
 > [!NOTE]
->  La propiedad <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> obtiene solamente el marcado de los nodos secundarios de un nodo.  
+> La propiedad <xref:System.Xml.XPath.XPathNavigator.InnerXml%2A> obtiene solamente el marcado de los nodos secundarios de un nodo.  
   
  El siguiente código muestra cómo guardar todo un documento XML contenido en un objeto <xref:System.Xml.XPath.XPathNavigator> como <xref:System.String>, así como un solo nodo y sus nodos secundarios.  
   

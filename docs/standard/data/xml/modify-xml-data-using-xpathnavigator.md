@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72cbcf1294f3d13f406d8db177f66fdc367c0758
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724452"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967350"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>Modificación de datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para modificar nodos y valores en un documento XML. Para utilizar estos métodos, el objeto <xref:System.Xml.XPath.XPathNavigator> debe ser editable, es decir, su propiedad <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> debe ser `true`.  
@@ -39,7 +39,7 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos 
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|No admitido.|  
   
 > [!NOTE]
->  No se permite editar los nodos <xref:System.Xml.XPath.XPathNodeType.Namespace> ni el nodo <xref:System.Xml.XPath.XPathNodeType.Root>.  
+> No se permite editar los nodos <xref:System.Xml.XPath.XPathNodeType.Namespace> ni el nodo <xref:System.Xml.XPath.XPathNodeType.Root>.  
   
  La clase <xref:System.Xml.XPath.XPathNavigator> también incluye un conjunto de métodos que se utilizan para insertar y quitar nodos. Para más información sobre cómo insertar y quitar nodos de un documento XML, vea los temas [Inserción de datos XML con XPathNavigator](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) y [Cómo quitar datos XML con XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md).  
   
@@ -109,7 +109,7 @@ navigator.SetTypedValue(DateTime.Now);
  La clase <xref:System.Xml.XPath.XPathNavigator> utiliza el esquema XML del W3C como base para describir XML fuertemente tipado. Se pueden anotar los elementos y atributos con la información de tipos basándose en la validación realizada en un documento de esquema XML del W3C. Los elementos que pueden contener otros elementos o atributos se denominan tipos complejos, mientras que los que solo pueden incluir contenido textual, se denominan tipos simples.  
   
 > [!NOTE]
->  Los atributos solo pueden tener tipos simples.  
+> Los atributos solo pueden tener tipos simples.  
   
  Se considera que un elemento o atributo tiene un esquema válido si cumple todas las normas específicas a la definición de su tipo. Un elemento que tenga el tipo simple `xs:int` debe contener un valor numérico entre -2147483648 y 2147483647 para que su esquema sea válido. En los tipos complejos, la validez del esquema del elemento depende de la validez del esquema de sus elementos y atributos secundarios. De esta manera, si un elemento es válido de acuerdo con la definición de su tipo complejo, todos sus elementos y atributos secundarios son válidos de acuerdo con las definiciones de sus tipos. De igual forma, si tan solo uno de los elementos o atributos secundarios de un elemento no es válido de acuerdo con la definición de su tipo, o tiene una validez desconocida, dicho elemento tampoco es válido o también tiene una validez desconocida.  
   
@@ -243,7 +243,7 @@ Console.WriteLine(navigator.OuterXml);
  Si se utiliza un objeto <xref:System.Xml.XPath.XPathNavigator> para agregar contenido a un elemento válido con un atributo `xsi:nil` que tiene un valor de `true`, el valor de su atributo `xsi:nil` se establece en `false`.  
   
 > [!NOTE]
->  Si se elimina el contenido de un elemento con un atributo `xsi:nil` establecido en `false`, el valor del atributo no se cambia por `true`.  
+> Si se elimina el contenido de un elemento con un atributo `xsi:nil` establecido en `false`, el valor del atributo no se cambia por `true`.  
   
 ## <a name="saving-an-xml-document"></a>Cómo guardar un documento XML  
  Para guardar los cambios realizados en un objeto <xref:System.Xml.XmlDocument> como resultado de los métodos de edición que se describen en este tema, se utilizan los métodos de la clase <xref:System.Xml.XmlDocument>. Para obtener más información sobre cómo guardar los cambios realizados en un objeto <xref:System.Xml.XmlDocument>, vea [Guardar y escribir un documento](../../../../docs/standard/data/xml/saving-and-writing-a-document.md).  

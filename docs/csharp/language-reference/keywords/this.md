@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: af39ba6e20fb1a7c9e1a356ef5015afd885dbbca
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4a3342e73fef3effd54f72e68283eb6085eef5b5
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241173"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608448"
 ---
 # <a name="this-c-reference"></a>this (Referencia de C#)
 
 La palabra clave `this` hace referencia a la instancia actual de la clase y también se usa como modificador del primer parámetro de un método de extensión.
 
 > [!NOTE]
-> En este artículo se describe el uso de `this` con instancias de clase. Para obtener más información sobre su uso en métodos de extensión, vea [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).
+> En este artículo se describe el uso de `this` con instancias de clase. Para obtener más información sobre su uso en métodos de extensión, vea [Métodos de extensión](../../programming-guide/classes-and-structs/extension-methods.md).
 
 A continuación se indican usos habituales de `this`:
 

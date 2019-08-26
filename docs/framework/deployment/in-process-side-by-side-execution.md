@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7964b2a59c67380d7f19077c01efa0a4a636cff
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 5d9d77ef20090e007e22a0d2f90b29f32ff94b46
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170513"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911113"
 ---
 # <a name="in-process-side-by-side-execution"></a>Ejecución en paralelo y en proceso
 A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo proceso para ejecutar varias versiones de Common Language Runtime (CLR) en un único proceso. De forma predeterminada, los componentes COM administrados se ejecutan con la versión de .NET Framework con la que se han compilado, independientemente de la versión de .NET Framework que se haya cargado para el proceso.  
@@ -45,7 +45,7 @@ A partir de .NET Framework 4, puede usar el hospedaje en paralelo en el mismo 
     |4|Sí|Sí|No es aplicable|  
   
 > [!NOTE]
->  Las versiones 3.0 y 3.5 de .NET Framework se compilan de forma incremental en la versión 2.0 y no es necesario ejecutarlas en paralelo. Se trata básicamente de la misma versión.  
+> Las versiones 3.0 y 3.5 de .NET Framework se compilan de forma incremental en la versión 2.0 y no es necesario ejecutarlas en paralelo. Se trata básicamente de la misma versión.  
   
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>Escenarios comunes de hospedaje en paralelo  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: f45afd277818d7e1658751f2aae0b2153c940eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2fae0be3ba958dc9776ed253c178933e4f76024
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617517"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69607047"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (Opciones del compilador de C#)
 Esta opción agrega un módulo que se ha creado con el modificador target:module para la compilación actual.  
@@ -31,9 +31,9 @@ Esta opción agrega un módulo que se ha creado con el modificador target:module
 ## <a name="remarks"></a>Comentarios  
  Todos los módulos agregados mediante **-addmodule** deben encontrarse en el mismo directorio que el archivo de salida en tiempo de ejecución. Es decir, puede especificar un módulo de cualquier directorio en el momento de la compilación, pero el módulo debe encontrarse en el directorio de la aplicación en tiempo de ejecución. Si dicho módulo no se encuentra en el directorio de la aplicación en tiempo de ejecución, obtendrá <xref:System.TypeLoadException>.  
   
- `file` no puede contener ningún ensamblado. Por ejemplo, si el archivo de salida se ha creado con [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), se pueden importar sus metadatos con **-addmodule**.  
+ `file` no puede contener ningún ensamblado. Por ejemplo, si el archivo de salida se ha creado con [-target:module](./target-module-compiler-option.md), se pueden importar sus metadatos con **-addmodule**.  
   
- Si se ha creado el archivo de salida con una opción **-target** diferente de **-target:module**, no se podrán importar sus metadatos con **-addmodule**, pero sí con [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+ Si se ha creado el archivo de salida con una opción **-target** diferente de **-target:module**, no se podrán importar sus metadatos con **-addmodule**, pero sí con [-reference](./reference-compiler-option.md).  
   
  Esta opción del compilador no está disponible en Visual Studio; en un proyecto no se puede hacer referencia a un módulo. Además, esta opción del compilador no se puede modificar mediante programación.  
   
@@ -46,7 +46,7 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
   
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opciones del compilador de C#](./index.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)
 - [Ensamblados de múltiples archivos](../../../framework/app-domains/multifile-assemblies.md)
 - [Cómo: Compilar un ensamblado de varios archivos](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)

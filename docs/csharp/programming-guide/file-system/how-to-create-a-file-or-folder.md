@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c29d0638e2429119020fee5317d40a95b00e40ef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595640"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590104"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Procedimiento Crear archivos o carpetas (Guía de programación de C#)
 Puede crear una carpeta en el equipo mediante programación, crear una subcarpeta, crear un archivo en la subcarpeta y escribir datos en el archivo.  
@@ -71,5 +71,5 @@ Puede crear una carpeta en el equipo mediante programación, crear una subcarpet
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Registro y sistema de archivos (Guía de programación de C#)](../../../csharp/programming-guide/file-system/index.md)
+- [Guía de programación de C#](../index.md)
+- [Registro y sistema de archivos (Guía de programación de C#)](./index.md)

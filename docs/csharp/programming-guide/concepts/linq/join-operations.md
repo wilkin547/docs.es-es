@@ -2,12 +2,12 @@
 title: Operaciones de combinación (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: db42874becaf9760b7060d7f306cc20f950f143a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 95661e2d0d7f4f0e75c1fa1b10e1f322923189b1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411465"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592081"
 ---
 # <a name="join-operations-c"></a>Operaciones de combinación (C#)
 Una *combinación* de dos orígenes de datos es la asociación de objetos de un origen de datos con los objetos que comparten un atributo común en otro origen de datos.  
@@ -22,7 +22,7 @@ Una *combinación* de dos orígenes de datos es la asociación de objetos de un 
   
 ## <a name="methods"></a>Métodos  
   
-|Nombre del método|Descripción|Sintaxis de la expresión de consulta de C#|Más información|  
+|Nombre del método|DESCRIPCIÓN|Sintaxis de la expresión de consulta de C#|Más información|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |Join|Combina dos secuencias según las funciones de selector de claves y extrae pares de valores.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Combina dos secuencias según las funciones de selector de claves y agrupa los resultados coincidentes para cada elemento.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
@@ -30,15 +30,15 @@ Una *combinación* de dos orígenes de datos es la asociación de objetos de un 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Linq>
-- [Standard Query Operators Overview (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
-- [Tipos anónimos](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [Standard Query Operators Overview (C#)](./standard-query-operators-overview.md) (Información general sobre operadores de consulta estándar (C#))
+- [Tipos anónimos](../../classes-and-structs/anonymous-types.md)
 - [Formulación de combinaciones y consultas entre productos](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
-- [join (cláusula)](../../../../csharp/language-reference/keywords/join-clause.md)
-- [Cómo: Realizar una unión usando claves compuestas](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)
-- [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
-- [Cómo: Ordenar los resultados de una cláusula join](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [Cómo: Realizar operaciones de combinación personalizadas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)
-- [Cómo: Realizar combinaciones agrupadas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)
-- [Cómo: Realizar combinaciones internas](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)
-- [Cómo: Realizar operaciones de combinación externa izquierda](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)
-- [Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [join (cláusula)](../../../language-reference/keywords/join-clause.md)
+- [Cómo: Realizar una unión usando claves compuestas](../../linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [Cómo: Combinar contenido de archivos no similares (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [Cómo: Ordenar los resultados de una cláusula join](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [Cómo: Realizar operaciones de combinación personalizadas](../../linq-query-expressions/how-to-perform-custom-join-operations.md)
+- [Cómo: Realizar combinaciones agrupadas](../../linq-query-expressions/how-to-perform-grouped-joins.md)
+- [Cómo: Realizar combinaciones internas](../../linq-query-expressions/how-to-perform-inner-joins.md)
+- [Cómo: Realizar operaciones de combinación externa izquierda](../../linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [Cómo: Rellenar colecciones de objetos de varios orígenes (LINQ) (C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

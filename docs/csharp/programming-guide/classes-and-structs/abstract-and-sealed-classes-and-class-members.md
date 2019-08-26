@@ -8,17 +8,17 @@ helpviewer_keywords:
 - C# language, abstract classes
 - C# language, sealed
 ms.assetid: 99aa52f7-b435-43f9-936e-2470af734c4e
-ms.openlocfilehash: fc3e29ad606cf8a60318a320e8ebc65b0d7f6e48
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c98e2979ee96d4bcc885b8cc797eaac28c8d2ed
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965259"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597294"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a>Clases y miembros de clase abstractos y sellados (Guía de programación de C#)
-La palabra clave [abstract](../../../csharp/language-reference/keywords/abstract.md) permite crear clases y miembros [class](../../../csharp/language-reference/keywords/class.md) que están incompletos y se deben implementar en una clase derivada.  
+La palabra clave [abstract](../../language-reference/keywords/abstract.md) permite crear clases y miembros [class](../../language-reference/keywords/class.md) que están incompletos y se deben implementar en una clase derivada.  
   
- La palabra clave [sealed](../../../csharp/language-reference/keywords/sealed.md) permite impedir la herencia de una clase o de ciertos miembros de clase marcados previamente como [virtual](../../../csharp/language-reference/keywords/virtual.md).  
+ La palabra clave [sealed](../../language-reference/keywords/sealed.md) permite impedir la herencia de una clase o de ciertos miembros de clase marcados previamente como [virtual](../../language-reference/keywords/virtual.md).  
   
 ## <a name="abstract-classes-and-class-members"></a>Clases y miembros de clase abstractos  
  Las clases se pueden declarar como abstractas si se incluye la palabra clave `abstract` antes de la definición de clase. Por ejemplo:  
@@ -38,21 +38,21 @@ La palabra clave [abstract](../../../csharp/language-reference/keywords/abstract
  Si un método `virtual` se declara como `abstract`, sigue siendo virtual para cualquier clase que herede de la clase abstracta. Una clase que hereda un método abstracto no puede tener acceso a la implementación original del método: en el ejemplo anterior, `DoWork` en la clase F no puede llamar a `DoWork` en la clase D. De esta manera, una clase abstracta puede exigir a las clases derivadas que proporcionen nuevas implementaciones de método para los métodos virtuales.  
   
 ## <a name="sealed-classes-and-class-members"></a>Clases y miembros de clase sellados  
- Las clases se pueden declarar como [selladas](../../../csharp/language-reference/keywords/sealed.md) si se incluye la palabra clave `sealed` antes de la definición de clase. Por ejemplo:  
+ Las clases se pueden declarar como [selladas](../../language-reference/keywords/sealed.md) si se incluye la palabra clave `sealed` antes de la definición de clase. Por ejemplo:  
   
  [!code-csharp[csProgGuideInheritance#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#16)]  
   
  Una clase sellada no se puede utilizar como clase base. Por esta razón, tampoco puede ser una clase abstracta. Las clases selladas evitan la derivación. Puesto que nunca se pueden utilizar como clase base, algunas optimizaciones en tiempo de ejecución pueden hacer que sea un poco más rápido llamar a miembros de clase sellada.  
   
- Un método, indizador, propiedad o evento de una clase derivada que reemplaza a un miembro virtual de la clase base puede declarar ese miembro como sellado. Esto niega el aspecto virtual del miembro para cualquier clase derivada adicional. Esto se logra colocando la palabra clave `sealed` antes de la palabra clave [override](../../../csharp/language-reference/keywords/override.md) en la declaración del miembro de clase. Por ejemplo:  
+ Un método, indizador, propiedad o evento de una clase derivada que reemplaza a un miembro virtual de la clase base puede declarar ese miembro como sellado. Esto niega el aspecto virtual del miembro para cualquier clase derivada adicional. Esto se logra colocando la palabra clave `sealed` antes de la palabra clave [override](../../language-reference/keywords/override.md) en la declaración del miembro de clase. Por ejemplo:  
   
  [!code-csharp[csProgGuideInheritance#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#17)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)
-- [Cómo: Definir las propiedades abstractas](../../../csharp/programming-guide/classes-and-structs/how-to-define-abstract-properties.md)
+- [Guía de programación de C#](../index.md)
+- [Clases y structs](./index.md)
+- [Herencia](./inheritance.md)
+- [Métodos](./methods.md)
+- [Campos](./fields.md)
+- [Cómo: Definir las propiedades abstractas](./how-to-define-abstract-properties.md)

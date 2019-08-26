@@ -2,12 +2,12 @@
 title: Rendimiento de consultas encadenadas (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: 1ccb7dfec57a4aeea8329456084ca99f5ca3124d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: dfd7698d0bdd24a75458a581dfd42c3d21325e6f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689997"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591570"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Rendimiento de consultas encadenadas (LINQ to XML) (C#)
 
@@ -53,6 +53,6 @@ Esta consulta encadenada proporciona el mismo perfil de rendimiento que si se re
 
 Por lo tanto, la iteración por `query2` es directamente proporcional al número de elementos del origen de la primera consulta, es decir, tiempo lineal. Un ejemplo de Visual Basic correspondiente tendría el mismo perfil de rendimiento.
 
-Para más información sobre iteradores, vea [yield](../../../../csharp/language-reference/keywords/yield.md).
+Para más información sobre iteradores, vea [yield](../../../language-reference/keywords/yield.md).
 
-Para obtener un tutorial más detallado sobre el encadenamiento de consultas, vea [Tutorial: Encadenar consultas juntas](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).
+Para obtener un tutorial más detallado sobre el encadenamiento de consultas, vea [Tutorial: Encadenar consultas juntas](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 47f211256b4820e3fb25339de2fe4db962171056
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641035"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911007"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Ejecución en paralelo en .NET Framework
 La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de una aplicación o componente en el mismo equipo. Se pueden tener varias versiones de Common Language Runtime y varias versiones de las aplicaciones y componentes que utilice una versión del motor en tiempo de ejecución, de forma simultánea y en el mismo equipo.  
@@ -75,17 +75,17 @@ La ejecución en paralelo es la capacidad de ejecutar múltiples versiones de un
   
  Si hay un archivo de configuración de la aplicación, Common Language Runtime determina la versión que debe cargar en función de los resultados del proceso siguiente:  
   
-1. El tiempo de ejecución examina el [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) en el archivo de configuración de la aplicación. Si hay una o varias de las versiones del tiempo de ejecución admitidas especificadas en el elemento **\<supportedRuntime>**, el tiempo de ejecución carga la versión del tiempo de ejecución especificada por el primer elemento **\<supportedRuntime>**. Si esta versión no está disponible, el tiempo de ejecución examina el siguiente elemento **\<supportedRuntime>** e intenta cargar la versión del tiempo de ejecución especificada. Si esta versión del tiempo de ejecución no está disponible, se examinan los siguientes elementos **\<supportedRuntime>**. Si ninguna de las versiones del tiempo de ejecución admitidas está disponible, Common Language Runtime no puede cargar una versión del tiempo de ejecución y muestra un mensaje al usuario (consulte el paso 3).  
+1. El tiempo de ejecución examina el [elemento \<supportedRuntime>](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) en el archivo de configuración de la aplicación. Si hay una o varias de las versiones del tiempo de ejecución admitidas especificadas en el elemento **\<supportedRuntime>** , el tiempo de ejecución carga la versión del tiempo de ejecución especificada por el primer elemento **\<supportedRuntime>** . Si esta versión no está disponible, el tiempo de ejecución examina el siguiente elemento **\<supportedRuntime>** e intenta cargar la versión del tiempo de ejecución especificada. Si esta versión del tiempo de ejecución no está disponible, se examinan los siguientes elementos **\<supportedRuntime>** . Si ninguna de las versiones del tiempo de ejecución admitidas está disponible, Common Language Runtime no puede cargar una versión del tiempo de ejecución y muestra un mensaje al usuario (consulte el paso 3).  
   
 2. Common Language Runtime lee el encabezado del archivo PE del archivo ejecutable de la aplicación. Si la versión del tiempo de ejecución especificada por el encabezado del archivo PE está disponible, Common Language Runtime carga esa versión. Si la versión del tiempo de ejecución especificada no está disponible, Common Language Runtime busca una versión del tiempo de ejecución que Microsoft determine que es compatible con la versión del tiempo de ejecución del encabezado PE. Si no se encuentra esa versión, el proceso continúa en el paso 3.  
   
 3. Common Language Runtime muestra un mensaje que indica que la versión del tiempo de ejecución admitida por la aplicación no está disponible. El tiempo de ejecución no se carga.  
   
     > [!NOTE]
-    >  Para suprimir la presentación de este mensaje, use el valor NoGuiFromShim en la clave del Registro HKLM\Software\Microsoft\\.NETFramework o use la variable de entorno COMPLUS_NoGuiFromShim. Por ejemplo, puede suprimir el mensaje para las aplicaciones que normalmente no interactúan con el usuario, como las instalaciones desatendidas o los servicios de Windows. Cuando se suprime la presentación de este mensaje, el tiempo de ejecución escribe un mensaje en el registro de eventos.  Establezca el valor del Registro NoGuiFromShim en 1 para suprimir este mensaje para todas las aplicaciones en un equipo. También puede establecer la variable de entorno COMPLUS_NoGuiFromShim en 1 para suprimir el mensaje para las aplicaciones que se ejecutan en un contexto de usuario determinado.  
+    > Para suprimir la presentación de este mensaje, use el valor NoGuiFromShim en la clave del Registro HKLM\Software\Microsoft\\.NETFramework o use la variable de entorno COMPLUS_NoGuiFromShim. Por ejemplo, puede suprimir el mensaje para las aplicaciones que normalmente no interactúan con el usuario, como las instalaciones desatendidas o los servicios de Windows. Cuando se suprime la presentación de este mensaje, el tiempo de ejecución escribe un mensaje en el registro de eventos.  Establezca el valor del Registro NoGuiFromShim en 1 para suprimir este mensaje para todas las aplicaciones en un equipo. También puede establecer la variable de entorno COMPLUS_NoGuiFromShim en 1 para suprimir el mensaje para las aplicaciones que se ejecutan en un contexto de usuario determinado.  
   
 > [!NOTE]
->  Después de que se cargue una versión del tiempo de ejecución, las redirecciones de enlace de ensamblados pueden especificar que se cargue una versión distinta de un ensamblado de .NET Framework individual. Estas redirecciones de enlace afectan solo al ensamblado específico que se redirige.  
+> Después de que se cargue una versión del tiempo de ejecución, las redirecciones de enlace de ensamblados pueden especificar que se cargue una versión distinta de un ensamblado de .NET Framework individual. Estas redirecciones de enlace afectan solo al ensamblado específico que se redirige.  
   
 ## <a name="partially-qualified-assembly-names-and-side-by-side-execution"></a>Nombres de ensamblados parciales y ejecución en paralelo  
  Dado que son un posible origen de problemas en paralelo, las referencias de ensamblados parciales solo pueden usarse para enlazar a ensamblados dentro de un directorio de aplicación. Evite las referencias de ensamblados parciales en el código.  
@@ -107,11 +107,11 @@ publicKeyToken=...,
  Cada vez que una instrucción de carga de ensamblado hace referencia a `myAssembly`, estos valores del archivo de configuración hacen que el tiempo de ejecución convierta automáticamente la referencia parcial a `myAssembly` en una referencia completa. Por ejemplo, Assembly.Load("myAssembly") se convierte en Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral").  
   
 > [!NOTE]
->  Puede usar el método **LoadWithPartialName** para omitir la restricción de Common Language Runtime que prohíbe cargar ensamblados con referencia parcial desde la caché global de ensamblados. Este método solo se debe usar en escenarios de acceso remoto que pueden producir problemas fácilmente en la ejecución en paralelo.  
+> Puede usar el método **LoadWithPartialName** para omitir la restricción de Common Language Runtime que prohíbe cargar ensamblados con referencia parcial desde la caché global de ensamblados. Este método solo se debe usar en escenarios de acceso remoto que pueden producir problemas fácilmente en la ejecución en paralelo.  
   
 ## <a name="related-topics"></a>Temas relacionados  
   
-|Title|Descripción|  
+|Title|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |[Cómo: Habilitar y deshabilitar redireccionamiento de enlaces automático](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Describe cómo enlazar una aplicación a una versión específica de un ensamblado.|  
 |[Configurar el redireccionamiento del enlace de ensamblados](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Explica cómo redirigir referencias a enlaces de ensamblados a una versión específica de los ensamblados de .NET Framework.|  

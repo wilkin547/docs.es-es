@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 35e89584f3916d748809960d33a31eb4e8fb9c6a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191892"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69938018"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Herramienta de nombre seguro)
 La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres seguros](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe proporciona opciones para la administración de claves, así como para la generación y comprobación de firmas.  
@@ -30,7 +30,7 @@ La herramienta de nombre seguro (Sn.exe) permite firmar ensamblados con [nombres
  La herramienta Nombre seguro se instala automáticamente con Visual Studio. Para iniciar la herramienta, utilice el símbolo del sistema para desarrolladores (o el símbolo del sistema de Visual Studio en Windows 7). Para más información, consulte [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
 
 > [!NOTE]
->  En los equipos de 64 bits, ejecute la versión de Sn.exe de 32 bits mediante Símbolo del sistema para desarrolladores de Visual Studio y la versión de 64 bits mediante el símbolo del sistema de Visual Studio x64 Win64. 
+> En los equipos de 64 bits, ejecute la versión de Sn.exe de 32 bits mediante Símbolo del sistema para desarrolladores de Visual Studio y la versión de 64 bits mediante el símbolo del sistema de Visual Studio x64 Win64. 
   
  En el símbolo del sistema, escriba lo siguiente:  
   
@@ -42,7 +42,7 @@ sn [-quiet][option [parameter(s)]]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**-a** *identityKeyPairFile* *signaturePublicKeyFile*|Genera datos de <xref:System.Reflection.AssemblySignatureKeyAttribute> para migrar la clave de identidad a la clave de firma desde un archivo.|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|Genera datos de <xref:System.Reflection.AssemblySignatureKeyAttribute> para migrar la clave de identidad a la clave de firma desde un contenedor de claves.|  
@@ -77,13 +77,13 @@ sn [-quiet][option [parameter(s)]]
 |**-?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 > [!NOTE]
->  Todas las opciones de Sn.exe distinguen entre mayúsculas y minúsculas, y se deben escribir exactamente como se muestra en esta tabla para que la herramienta pueda reconocerlas.  
+> Todas las opciones de Sn.exe distinguen entre mayúsculas y minúsculas, y se deben escribir exactamente como se muestra en esta tabla para que la herramienta pueda reconocerlas.  
   
 ## <a name="remarks"></a>Comentarios  
  Las opciones **-R** y **–Rc** son útiles con ensamblados firmados con retraso. En este escenario, únicamente se ha establecido en tiempo de compilación la clave pública, y la firma se agrega más tarde, cuando se conoce la clave privada.  
   
 > [!NOTE]
->  Para parámetros (por ejemplo, –**Vr**) que escriben en recursos protegidos, como el Registro, ejecute SN.exe como un administrador.  
+> Para parámetros (por ejemplo, –**Vr**) que escriben en recursos protegidos, como el Registro, ejecute SN.exe como un administrador.  
   
 La herramienta Nombre seguro asume que los pares de claves pública y privada se generan con el identificador del algoritmo `AT_SIGNATURE`. Los pares de claves pública y privada generados con el algoritmo `AT_KEYEXCHANGE` producen un error. 
 

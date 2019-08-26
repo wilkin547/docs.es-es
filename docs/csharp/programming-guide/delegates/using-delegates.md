@@ -5,25 +5,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 1e77c994062c7ac9ee009bc0e12d39e530e8af80
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 6f4044591c2cd8d59970d8d2f6e65c51ce7498ff
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868836"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590559"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilizar delegados (Guía de programación de C#)
-Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tipo que encapsula de forma segura un método, similar a un puntero de función en C y C++. A diferencia de los punteros de función de C, los delegados están orientados a objetos, proporcionan seguridad de tipos y son seguros. El tipo de un delegado se define por el nombre del delegado. En el ejemplo siguiente, se declara un delegado denominado `Del` que puede encapsular un método que toma una [string](../../../csharp/language-reference/keywords/string.md) como argumento y devuelve [void](../../../csharp/language-reference/keywords/void.md):  
+Un [delegado](../../language-reference/keywords/delegate.md) es un tipo que encapsula de forma segura un método, similar a un puntero de función en C y C++. A diferencia de los punteros de función de C, los delegados están orientados a objetos, proporcionan seguridad de tipos y son seguros. El tipo de un delegado se define por el nombre del delegado. En el ejemplo siguiente, se declara un delegado denominado `Del` que puede encapsular un método que toma una [string](../../language-reference/keywords/string.md) como argumento y devuelve [void](../../language-reference/keywords/void.md):  
   
  [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]  
   
- Normalmente, un objeto delegado se construye al proporcionar el nombre del método que el delegado encapsulará o con una [función anónima](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md). Una vez que se crea una instancia de delegado, el delegado pasará al método una llamada de método realizada al delegado. Los parámetros pasados al delegado por el autor de la llamada se pasan a su vez al método, y el valor devuelto desde el método, si lo hubiera, es devuelto por el delegado al autor de la llamada. Esto se conoce como invocar al delegado. Un delegado con instancias se puede invocar como si fuera el propio método encapsulado. Por ejemplo:  
+ Normalmente, un objeto delegado se construye al proporcionar el nombre del método que el delegado encapsulará o con una [función anónima](../statements-expressions-operators/anonymous-functions.md). Una vez que se crea una instancia de delegado, el delegado pasará al método una llamada de método realizada al delegado. Los parámetros pasados al delegado por el autor de la llamada se pasan a su vez al método, y el valor devuelto desde el método, si lo hubiera, es devuelto por el delegado al autor de la llamada. Esto se conoce como invocar al delegado. Un delegado con instancias se puede invocar como si fuera el propio método encapsulado. Por ejemplo:  
   
  [!code-csharp[csProgGuideDelegates#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#22)]  
   
  [!code-csharp[csProgGuideDelegates#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#23)]  
   
- Los tipos de delegado se derivan de la clase <xref:System.Delegate> en .NET Framework. Los tipos de delegados son [sealed](../../../csharp/language-reference/keywords/sealed.md) (no se pueden derivar) y no se pueden derivar clases personalizadas de <xref:System.Delegate>. Dado que el delegado con instancias es un objeto, puede pasarse como parámetro o asignarse a una propiedad. De este modo, un método puede aceptar un delegado como parámetro y llamar al delegado en algún momento posterior. Esto se conoce como devolución de llamada asincrónica y es un método común para notificar a un llamador que un proceso largo ha finalizado. Cuando se utiliza un delegado de esta manera, el código que usa al delegado no necesita ningún conocimiento de la implementación del método empleado. La funcionalidad es similar a la encapsulación que proporcionan las interfaces.  
+ Los tipos de delegado se derivan de la clase <xref:System.Delegate> en .NET Framework. Los tipos de delegados son [sealed](../../language-reference/keywords/sealed.md) (no se pueden derivar) y no se pueden derivar clases personalizadas de <xref:System.Delegate>. Dado que el delegado con instancias es un objeto, puede pasarse como parámetro o asignarse a una propiedad. De este modo, un método puede aceptar un delegado como parámetro y llamar al delegado en algún momento posterior. Esto se conoce como devolución de llamada asincrónica y es un método común para notificar a un llamador que un proceso largo ha finalizado. Cuando se utiliza un delegado de esta manera, el código que usa al delegado no necesita ningún conocimiento de la implementación del método empleado. La funcionalidad es similar a la encapsulación que proporcionan las interfaces.  
   
  Otro uso común de devoluciones de llamada es definir un método de comparación personalizado y pasar ese delegado a un método de ordenación. Permite que el código del llamador se convierta en parte del algoritmo de ordenación. En el siguiente método de ejemplo se usa el tipo `Del` como parámetro:  
   
@@ -59,7 +59,7 @@ Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tip
   
  Los delegados con más de un método en su lista de invocación derivan de <xref:System.MulticastDelegate>, que es una subclase de `System.Delegate`. El código anterior funciona en ambos casos porque las dos clases admiten `GetInvocationList`.  
   
- Los delegados de multidifusión se utilizan mucho en el control de eventos. Los objetos de origen de evento envían notificaciones de evento a los objetos de destinatario que se han registrado para recibir ese evento. Para suscribirse a un evento, el destinatario crea un método diseñado para controlar el evento; a continuación, crea a un delegado para dicho método y pasa el delegado al origen de eventos. El origen llama al delegado cuando se produce el evento. Después, el delegado llama al método que controla los eventos en el destinatario y entrega los datos del evento. El origen del evento define el tipo de delegado para un evento determinado. Para obtener más información, consulte [Eventos](../../../csharp/programming-guide/events/index.md).  
+ Los delegados de multidifusión se utilizan mucho en el control de eventos. Los objetos de origen de evento envían notificaciones de evento a los objetos de destinatario que se han registrado para recibir ese evento. Para suscribirse a un evento, el destinatario crea un método diseñado para controlar el evento; a continuación, crea a un delegado para dicho método y pasa el delegado al origen de eventos. El origen llama al delegado cuando se produce el evento. Después, el delegado llama al método que controla los eventos en el destinatario y entrega los datos del evento. El origen del evento define el tipo de delegado para un evento determinado. Para obtener más información, consulte [Eventos](../events/index.md).  
   
  La comparación de delegados de dos tipos distintos asignados en tiempo de compilación generará un error de compilación. Si las instancias de delegado son estáticamente del tipo `System.Delegate`, entonces se permite la comparación, pero devolverá false en tiempo de ejecución. Por ejemplo:  
   
@@ -67,9 +67,9 @@ Un [delegado](../../../csharp/language-reference/keywords/delegate.md) es un tip
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)
-- [Uso de varianza en delegados](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
-- [Varianza en delegados](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
-- [Uso de varianza para los delegados genéricos Func y Action](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
-- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Guía de programación de C#](../index.md)
+- [Delegados](./index.md)
+- [Uso de varianza en delegados](../concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [Varianza en delegados](../concepts/covariance-contravariance/variance-in-delegates.md)
+- [Uso de varianza para los delegados genéricos Func y Action](../concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Eventos](../events/index.md)

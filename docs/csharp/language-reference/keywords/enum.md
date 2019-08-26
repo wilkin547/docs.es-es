@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: e33877d2a5e79866bbef12cd9fec5cb11b044240
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433872"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605820"
 ---
 # <a name="enum-c-reference"></a>enum (Referencia de C#)
 
@@ -99,7 +99,7 @@ Si quita `Flags`, el ejemplo muestra los siguientes valores:
 - [Referencia de C#](../index.md)
 - [Tipos de enumeración](../../programming-guide/enumeration-types.md)
 - [Palabras clave de C#](index.md)
-- [Tipos enteros](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
+- [Tipos enteros](../builtin-types/integral-numeric-types.md)
 - [Tabla de tipos integrados](built-in-types-table.md)
 - [Tabla de conversiones numéricas implícitas](implicit-numeric-conversions-table.md)
 - [Tabla de conversiones numéricas explícitas](explicit-numeric-conversions-table.md)

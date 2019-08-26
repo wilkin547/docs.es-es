@@ -5,20 +5,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#], how to use
 ms.assetid: 6b7354d2-af79-427a-b6a8-f74eb8fd0b91
-ms.openlocfilehash: 8e3534abf961ba7b8a41eed592455962e5b551e7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5003e03b488a16d53e4e3d20a0b0b0e09630b46f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979039"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596710"
 ---
 # <a name="how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression-c-programming-guide"></a>Procedimiento Usar matrices y variables locales con tipo implícito en expresiones de consulta (Guía de programación de C#)
 Puede usar variables locales con tipo implícito siempre que quiera que el compilador determine el tipo de una variable local. Debe usar variables locales con tipo implícito para almacenar tipos anónimos, que a menudo se usan en las expresiones de consulta. En los ejemplos siguientes, se muestran los usos obligatorios y opcionales de las variables locales con tipo implícito en las consultas.  
   
- Las variables locales con tipo implícito se declaran mediante la palabra clave contextual [var](../../../csharp/language-reference/keywords/var.md). Para obtener más información, vea [Variables locales con asignación implícita de tipos](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) y [Matrices con asignación implícita de tipos](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
+ Las variables locales con tipo implícito se declaran mediante la palabra clave contextual [var](../../language-reference/keywords/var.md). Para obtener más información, vea [Variables locales con asignación implícita de tipos](./implicitly-typed-local-variables.md) y [Matrices con asignación implícita de tipos](../arrays/implicitly-typed-arrays.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente, se muestra un escenario común en el que la palabra clave `var` es necesaria: una expresión de consulta que genera una secuencia de tipos anónimos. En este escenario, la variable de consulta y la variable de iteración en la instrucción `foreach` deben escribirse de forma implícita mediante el uso de `var` porque no se tiene acceso a un nombre de tipo para el tipo anónimo. Para obtener más información sobre los tipos anónimos, vea [Tipos anónimos](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
+ En el ejemplo siguiente, se muestra un escenario común en el que la palabra clave `var` es necesaria: una expresión de consulta que genera una secuencia de tipos anónimos. En este escenario, la variable de consulta y la variable de iteración en la instrucción `foreach` deben escribirse de forma implícita mediante el uso de `var` porque no se tiene acceso a un nombre de tipo para el tipo anónimo. Para obtener más información sobre los tipos anónimos, vea [Tipos anónimos](./anonymous-types.md).  
   
  [!code-csharp[csProgGuideLINQ#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#32)]  
   
@@ -29,8 +29,8 @@ Puede usar variables locales con tipo implícito siempre que quiera que el compi
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Métodos de extensión](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
-- [LINQ (Language Integrated Query)](../../../csharp/linq/index.md)
-- [var](../../../csharp/language-reference/keywords/var.md)
-- [Expresiones de consulta LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [Guía de programación de C#](../index.md)
+- [Métodos de extensión](./extension-methods.md)
+- [LINQ (Language Integrated Query)](../../linq/index.md)
+- [var](../../language-reference/keywords/var.md)
+- [Expresiones de consulta LINQ](../linq-query-expressions/index.md)

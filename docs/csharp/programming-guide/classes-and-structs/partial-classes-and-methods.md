@@ -7,16 +7,16 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 53c3ac6e4fa6313488c47d851e0897bd512521b7
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398379"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596278"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Clases y métodos parciales (Guía de programación de C#)
 
-Es posible dividir la definición de una [clase](../../../csharp/language-reference/keywords/class.md), un [struct](../../../csharp/language-reference/keywords/struct.md), una [interfaz](../../../csharp/language-reference/keywords/interface.md) o un método en dos o más archivos de código fuente. Cada archivo de código fuente contiene una sección de la definición de tipo o método, y todos los elementos se combinan cuando se compila la aplicación.
+Es posible dividir la definición de una [clase](../../language-reference/keywords/class.md), un [struct](../../language-reference/keywords/struct.md), una [interfaz](../../language-reference/keywords/interface.md) o un método en dos o más archivos de código fuente. Cada archivo de código fuente contiene una sección de la definición de tipo o método, y todos los elementos se combinan cuando se compila la aplicación.
 
 ## <a name="partial-classes"></a>Clases parciales
 
@@ -26,7 +26,7 @@ Es recomendable dividir una definición de clase en varias situaciones:
 
 - Cuando se trabaja con código fuente generado automáticamente, se puede agregar código a la clase sin tener que volver a crear el archivo de código fuente. Visual Studio usa este enfoque al crear formularios Windows Forms, código de contenedor de servicio Web, etc. Puede crear código que use estas clases sin necesidad de modificar el archivo creado por Visual Studio.
 
-- Para dividir una definición de clase, use el modificador de palabra clave [partial](../../../csharp/language-reference/keywords/partial-type.md), como se muestra aquí:
+- Para dividir una definición de clase, use el modificador de palabra clave [partial](../../language-reference/keywords/partial-type.md), como se muestra aquí:
 
   [!code-csharp[csProgGuideObjects#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#26)]
 
@@ -91,25 +91,25 @@ Debe seguir varias reglas al trabajar con definiciones de clase parcial:
 
 - Las siguientes palabras clave son opcionales en una definición de tipo parcial, pero si están presentes la definición, no pueden entrar en conflicto con las palabras clave especificadas en otra definición parcial para el mismo tipo:
 
-  - [public](../../../csharp/language-reference/keywords/public.md)
+  - [public](../../language-reference/keywords/public.md)
 
-  - [private](../../../csharp/language-reference/keywords/private.md)
+  - [private](../../language-reference/keywords/private.md)
 
-  - [protected](../../../csharp/language-reference/keywords/protected.md)
+  - [protected](../../language-reference/keywords/protected.md)
 
-  - [internal](../../../csharp/language-reference/keywords/internal.md)
+  - [internal](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../../csharp/language-reference/keywords/abstract.md)
+  - [abstract](../../language-reference/keywords/abstract.md)
 
-  - [sealed](../../../csharp/language-reference/keywords/sealed.md)
+  - [sealed](../../language-reference/keywords/sealed.md)
 
   - clase base
 
-  - modificador [new](../../../csharp/language-reference/keywords/new-modifier.md) (elementos anidados)
+  - modificador [new](../../language-reference/keywords/new-modifier.md) (elementos anidados)
 
   - restricciones genéricas
 
-Para obtener más información, vea [Restricciones de tipos de parámetros](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md).
+Para obtener más información, vea [Restricciones de tipos de parámetros](../generics/constraints-on-type-parameters.md).
 
 ## <a name="example-1"></a>Ejemplo 1
 
@@ -152,19 +152,19 @@ partial void onNameChanged()
 }
 ```
 
-- Las declaraciones de método parcial deben comenzar con la palabra clave contextual [partial](../../../csharp/language-reference/keywords/partial-type.md) y el método debe devolver [void](../../../csharp/language-reference/keywords/void.md).
+- Las declaraciones de método parcial deben comenzar con la palabra clave contextual [partial](../../language-reference/keywords/partial-type.md) y el método debe devolver [void](../../language-reference/keywords/void.md).
 
-- Los métodos parciales pueden tener parámetros [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) o [ref](../../../csharp/language-reference/keywords/ref.md), pero no parámetros [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md).
+- Los métodos parciales pueden tener parámetros [in](../../language-reference/keywords/in-parameter-modifier.md) o [ref](../../language-reference/keywords/ref.md), pero no parámetros [out](../../language-reference/keywords/out-parameter-modifier.md).
 
-- Los métodos parciales son implícitamente [private](../../../csharp/language-reference/keywords/private.md) y, por tanto, no pueden ser [virtual](../../../csharp/language-reference/keywords/virtual.md).
+- Los métodos parciales son implícitamente [private](../../language-reference/keywords/private.md) y, por tanto, no pueden ser [virtual](../../language-reference/keywords/virtual.md).
 
-- Los métodos parciales no pueden ser [extern](../../../csharp/language-reference/keywords/extern.md), ya que la presencia del cuerpo determina si son de definición o de implementación.
+- Los métodos parciales no pueden ser [extern](../../language-reference/keywords/extern.md), ya que la presencia del cuerpo determina si son de definición o de implementación.
 
-- Los métodos parciales pueden tener modificadores [static](../../../csharp/language-reference/keywords/static.md) y [unsafe](../../../csharp/language-reference/keywords/unsafe.md).
+- Los métodos parciales pueden tener modificadores [static](../../language-reference/keywords/static.md) y [unsafe](../../language-reference/keywords/unsafe.md).
 
 - Los métodos parciales pueden ser genéricos. Las restricciones se colocan en la declaración de método parcial de definición y opcionalmente pueden repetirse en el de implementación. Los nombres del parámetro y del parámetro de tipo no tienen que ser iguales en la declaración de implementación y en la declaración de definición.
 
-- Puede crear un [delegado](../../../csharp/language-reference/keywords/delegate.md) para un método parcial que se ha definido e implementado, pero no para un método parcial que solo se ha definido.
+- Puede crear un [delegado](../../language-reference/keywords/delegate.md) para un método parcial que se ha definido e implementado, pero no para un método parcial que solo se ha definido.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
@@ -172,8 +172,8 @@ Para obtener más información, vea la sección [Tipos parciales](~/_csharplang/
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)
-- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
-- [partial (Tipos)](../../../csharp/language-reference/keywords/partial-type.md)
+- [Guía de programación de C#](../index.md)
+- [Clases](./classes.md)
+- [Structs](./structs.md)
+- [Interfaces](../interfaces/index.md)
+- [partial (Tipos)](../../language-reference/keywords/partial-type.md)

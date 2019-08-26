@@ -2,12 +2,12 @@
 title: Crear atributos personalizados (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: 0277a88b7e5beda511f6490261a7009adcfed4ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674640"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595407"
 ---
 # <a name="creating-custom-attributes-c"></a>Crear atributos personalizados (C#)
 Para crear sus propios atributos personalizados, defina una clase de atributo derivada directa o indirectamente de <xref:System.Attribute>, que agiliza y facilita la identificación de las definiciones de atributos en los metadatos. Imagínese que desea etiquetar tipos con el nombre del programador que los escribió. Puede definir una clase de atributos `Author` personalizada:  
@@ -66,9 +66,9 @@ class SampleClass
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Reflection>
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
+- [Guía de programación de C#](../../index.md)
 - [Escribir atributos personalizados](../../../../standard/attributes/writing-custom-attributes.md)
-- [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Atributos (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [Acceder a atributos mediante reflexión (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
-- [AttributeUsage (C#)](../../../../csharp/programming-guide/concepts/attributes/attributeusage.md)
+- [Reflexión (C#)](../reflection.md)
+- [Atributos (C#)](./index.md)
+- [Acceder a atributos mediante reflexión (C#)](./accessing-attributes-by-using-reflection.md)
+- [AttributeUsage (C#)](./attributeusage.md)
