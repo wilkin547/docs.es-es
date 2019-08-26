@@ -6,16 +6,16 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: f40e14163850716204584f5d5651a08715b80241
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4592fa9350ff9b03620a0739388f59652062235f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634780"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587850"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Procesar el archivo XML (Guía de programación de C#)
 
-El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para más información sobre cómo etiquetar el código, vea [Etiquetas recomendadas para comentarios de documentación](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos correspondiente de .NET Framework al que se aplica la documentación.
+El compilador genera una cadena de identificador para cada construcción del código que se etiqueta para generar documentación. (Para más información sobre cómo etiquetar el código, vea [Etiquetas recomendadas para comentarios de documentación](./recommended-tags-for-documentation-comments.md)). La cadena de identificador identifica la construcción de forma exclusiva. Los programas que procesan el archivo XML pueden usar la cadena de identificador para identificar el elemento de reflexión o de metadatos correspondiente de .NET Framework al que se aplica la documentación.
 
  El archivo XML no es una representación jerárquica del código; se trata de una lista plana que tiene un identificador generado para cada elemento.
 
@@ -25,7 +25,7 @@ El compilador genera una cadena de identificador para cada construcción del có
 
 - La primera parte de la cadena de identificador identifica el tipo de miembro identificado, mediante un carácter único seguido de dos puntos. Se utilizan los siguientes tipos de miembros:
 
-    |Carácter|Descripción|
+    |Carácter|DESCRIPCIÓN|
     |---------------|-----------------|
     |N|namespace<br /><br /> No puede agregar comentarios de documentación a un espacio de nombres, pero sí puede hacer referencias cruzadas a ellos, en caso de que se admitan.|
     |T|tipo: clase, interfaz, estructura, enumeración y delegado|
@@ -85,6 +85,6 @@ En los ejemplos siguientes se muestra cómo se generarían las cadenas de identi
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [/doc (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [Comentarios de documentación XML](../../../csharp/programming-guide/xmldoc/index.md)
+- [Guía de programación de C#](../index.md)
+- [/doc (Opciones del compilador de C#)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [Comentarios de documentación XML](./index.md)

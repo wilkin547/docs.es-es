@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f9741944dcf8a5fcc05c169a1c3c3f679902474
-ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
+ms.openlocfilehash: f9c34b237655eb49b6a44c366586b3cabb5a684f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67859678"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937976"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>TlbImp.exe (Importador de la biblioteca de tipos)
 El Importador de la biblioteca de tipos convierte las definiciones de tipos encontradas en una biblioteca de tipos COM en las definiciones equivalentes en un ensamblado de Common Language Runtime. El resultado de Tlbimp.exe es un archivo binario (un ensamblado) que contiene los metadatos en tiempo de ejecución para los tipos definidos en la biblioteca de tipos original. Este archivo se puede examinar con herramientas como [Ildasm.exe](ildasm-exe-il-disassembler.md).  
@@ -71,7 +71,7 @@ tlbimp tlbFile [options]
 |**/?**|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
   
 > [!NOTE]
->  Las opciones de la línea de comandos de Tlbimp.exe no distinguen entre mayúsculas y minúsculas, y se pueden proporcionar en cualquier orden. Por otra parte, basta con especificar parte de la opción de forma que se identifique de manera inequívoca. Por lo tanto, **/n** equivale a **/nologo** y **/ou:** *outfile.dll* equivale a **/out:** *outfile.dll*.  
+> Las opciones de la línea de comandos de Tlbimp.exe no distinguen entre mayúsculas y minúsculas, y se pueden proporcionar en cualquier orden. Por otra parte, basta con especificar parte de la opción de forma que se identifique de manera inequívoca. Por lo tanto, **/n** equivale a **/nologo** y **/ou:** *outfile.dll* equivale a **/out:** *outfile.dll*.  
   
 ## <a name="remarks"></a>Comentarios  
  Tlbimp.exe realiza las conversiones de una biblioteca completa de tipos de una vez. No se puede utilizar esta herramienta para generar información de tipos para un subconjunto de los tipos definidos en una biblioteca de tipos sencilla.  

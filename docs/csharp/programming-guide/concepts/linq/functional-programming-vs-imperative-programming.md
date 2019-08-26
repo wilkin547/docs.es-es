@@ -2,12 +2,12 @@
 title: Diferencias entre la programación funcional y La programación imperativa (C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 2b6a53943ea2363869530ae773c19a52b5578b56
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596703"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594321"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Diferencias entre la programación funcional y La programación imperativa (C#)
 Este tema compara y contrasta la programación funcional y la programación imperativa (orientada a procedimientos) más tradicional.  
@@ -52,6 +52,6 @@ Este tema compara y contrasta la programación funcional y la programación impe
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción a las transformaciones funcionales puras (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introducción a las transformaciones funcionales puras (C#)](./introduction-to-pure-functional-transformations.md)
 - [Transformaciones XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactorizar en funciones puras (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refactorizar en funciones puras (C#)](./refactoring-into-pure-functions.md)

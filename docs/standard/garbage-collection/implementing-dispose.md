@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 683a71b27d3e3dd1c0db4e49c2c188ccad0fb6d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607126"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666463"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementar un método Dispose
 
@@ -101,7 +101,7 @@ A continuación se muestra el patrón general para implementar el patrón de Dis
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> En C#, invalida a <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definiendo un [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> En C#, invalida a <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definiendo un [destructor](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>Implementación del patrón de Dispose para una clase derivada
 
@@ -109,7 +109,7 @@ Una clase derivada de una clase que implemente la interfaz <xref:System.IDisposa
   
 * Un método `protected Dispose(Boolean)` que invalide el método de la clase base y realice el trabajo real de liberar los recursos de la clase derivada. Este método también debe llamar al método `Dispose(Boolean)` de la clase base y pasar su estado disposing para el argumento.  
   
-* Una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> que contiene el recurso no administrado (recomendado), o una invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La clase <xref:System.Runtime.InteropServices.SafeHandle> proporciona un finalizador que evita que tenga que programar uno. Si proporciona un finalizador, debe llamar a la sobrecarga de `Dispose(Boolean)` con un argumento *disposing* que sea `false`.  
+* Una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> que contiene el recurso no administrado (recomendado), o una invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La clase <xref:System.Runtime.InteropServices.SafeHandle> proporciona un finalizador que evita que tenga que codificar uno. Si proporciona un finalizador, debe llamar a la sobrecarga de `Dispose(Boolean)` con un argumento *disposing* que sea `false`.  
   
 A continuación se muestra el patrón general para implementar el patrón de Dispose para una clase derivada que utiliza un controlador seguro:  
   
@@ -125,7 +125,7 @@ A continuación se muestra el patrón general para implementar el patrón de Dis
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> En C#, invalida a <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definiendo un [destructor](~/docs/csharp/programming-guide/classes-and-structs/destructors.md).  
+> En C#, invalida a <xref:System.Object.Finalize%2A?displayProperty=nameWithType> definiendo un [destructor](../../csharp/programming-guide/classes-and-structs/destructors.md).  
   
 <a name="SafeHandles"></a>   
 ## <a name="using-safe-handles"></a>Uso de controladores seguros

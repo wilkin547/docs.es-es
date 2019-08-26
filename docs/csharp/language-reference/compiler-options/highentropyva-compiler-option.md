@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -highentropyva compiler option [C#]
 - highentropyva compiler option [C#]
 ms.assetid: eaf409b3-384e-49dd-9417-62453658f421
-ms.openlocfilehash: 2ff63ddc48a4f5c4287fe1badb092a1db93f68dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b710bb829f6a7591159d2f2e6bacc670d21c42d1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216683"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606844"
 ---
 # <a name="-highentropyva-c-compiler-options"></a>-highentropyva (Opciones del compilador de C#)
 La opción del compilador **-highentropyva** indica al kernel de Windows si un archivo ejecutable determinado admite la selección aleatoria del diseño del espacio de direcciones (ASLR) de alta entropía.  
@@ -26,7 +26,7 @@ La opción del compilador **-highentropyva** indica al kernel de Windows si un a
   
 ## <a name="arguments"></a>Argumentos  
  `+` &#124; `-`  
- Esta opción especifica que un archivo ejecutable de 64 bits o un archivo ejecutable que está marcado con la opción del compilador [-platform:anycpu](../../../csharp/language-reference/compiler-options/platform-compiler-option.md) admite un espacio de direcciones virtuales de alta entropía. La opción está deshabilitada de forma predeterminada. Para habilitarla, use **-highentropyva+** o **-highentropyva**.  
+ Esta opción especifica que un archivo ejecutable de 64 bits o un archivo ejecutable que está marcado con la opción del compilador [-platform:anycpu](./platform-compiler-option.md) admite un espacio de direcciones virtuales de alta entropía. La opción está deshabilitada de forma predeterminada. Para habilitarla, use **-highentropyva+** o **-highentropyva**.  
   
 ## <a name="remarks"></a>Comentarios  
  La opción **-highentropyva** habilita las versiones compatibles del kernel de Windows para usar niveles superiores de entropía al aleatorizar el diseño del espacio de direcciones de un proceso como parte de ASLR. El uso de niveles superiores de entropía significa que un mayor número de direcciones se puede asignar a las regiones de memoria como pilas y montones. Como resultado, la ubicación de un área de memoria específica es más difícil de adivinar.  

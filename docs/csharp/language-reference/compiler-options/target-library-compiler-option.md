@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 2e0935965e9225ab524290429803fe4c9ccc80c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c947b2015c19d0809cab4535e989ee83ebf17fd9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313650"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606396"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (Opciones del compilador de C#)
 La opción **-target:library** hace que el compilador cree una biblioteca de vínculos dinámicos (DLL) en lugar de un archivo ejecutable (EXE).  
@@ -27,11 +27,11 @@ La opción **-target:library** hace que el compilador cree una biblioteca de ví
 ## <a name="remarks"></a>Comentarios  
  El archivo DLL se creará con la extensión .dll.  
   
- A menos que se especifique lo contrario con la opción [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), el archivo de salida adopta el nombre del primer archivo de entrada.  
+ A menos que se especifique lo contrario con la opción [-out](./out-compiler-option.md), el archivo de salida adopta el nombre del primer archivo de entrada.  
   
  Cuando se especifica en la línea de comandos, se usan todos los archivos hasta la siguiente opción **-out** o **-target:module** para crear el archivo .dll.  
   
- Al compilar un archivo .dll, no es necesario un método [Main](../../../csharp/programming-guide/main-and-command-args/index.md).  
+ Al compilar un archivo .dll, no es necesario un método [Main](../../programming-guide/main-and-command-args/index.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
@@ -52,5 +52,5 @@ csc -target:library in.cs
   
 ## <a name="see-also"></a>Vea también
 
-- [-target (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [-target (Opciones del compilador de C#)](./target-compiler-option.md)
+- [Opciones del compilador de C#](./index.md)

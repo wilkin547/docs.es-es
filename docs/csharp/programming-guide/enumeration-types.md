@@ -8,20 +8,20 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 669357bbd6527324bbedbcf1f537bf570c63ce5b
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423666"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590549"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipos de enumeración (Guía de programación de C#)
 
-Un tipo de enumeración (también denominado enumeración) proporciona una manera eficaz de definir un conjunto de constantes enteras con nombre que se pueden asignar a una variable. Por ejemplo, suponga que tiene que definir una variable cuyo valor representará un día de la semana. Dicha variable solo almacenará siete valores significativos. Para definir esos valores, puede usar un tipo de enumeración, que se declara mediante la palabra clave [enum](../../csharp/language-reference/keywords/enum.md).
+Un tipo de enumeración (también denominado enumeración) proporciona una manera eficaz de definir un conjunto de constantes enteras con nombre que se pueden asignar a una variable. Por ejemplo, suponga que tiene que definir una variable cuyo valor representará un día de la semana. Dicha variable solo almacenará siete valores significativos. Para definir esos valores, puede usar un tipo de enumeración, que se declara mediante la palabra clave [enum](../language-reference/keywords/enum.md).
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-De forma predeterminada, el tipo subyacente de cada elemento de la enumeración es [int](../../csharp/language-reference/builtin-types/integral-numeric-types.md). Puede especificar otro tipo numérico entero mediante el uso del signo de dos puntos, como se muestra en el ejemplo anterior. Para obtener una lista completa de los tipos posibles, vea [enum (Referencia de C#)](../../csharp/language-reference/keywords/enum.md).
+De forma predeterminada, el tipo subyacente de cada elemento de la enumeración es [int](../language-reference/builtin-types/integral-numeric-types.md). Puede especificar otro tipo numérico entero mediante el uso del signo de dos puntos, como se muestra en el ejemplo anterior. Para obtener una lista completa de los tipos posibles, vea [enum (Referencia de C#)](../language-reference/keywords/enum.md).
 
 Puede comprobar los valores numéricos subyacentes mediante la conversión al tipo subyacente, como se muestra en el ejemplo siguiente.
 
@@ -86,10 +86,10 @@ Todas las enumeraciones son instancias del tipo <xref:System.Enum?displayPropert
 
 Para más información, consulte <xref:System.Enum?displayProperty=nameWithType>.
 
-También puede crear un método nuevo para una enumeración mediante un método de extensión. Para obtener más información, vea [Cómo: Crear un método nuevo para una enumeración](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+También puede crear un método nuevo para una enumeración mediante un método de extensión. Para obtener más información, vea [Cómo: Crear un método nuevo para una enumeración](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Enum?displayProperty=nameWithType>
-- [Guía de programación de C#](../../csharp/programming-guide/index.md)
-- [enum](../../csharp/language-reference/keywords/enum.md)
+- [Guía de programación de C#](./index.md)
+- [enum](../language-reference/keywords/enum.md)

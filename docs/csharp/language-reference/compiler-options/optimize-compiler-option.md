@@ -12,12 +12,12 @@ helpviewer_keywords:
 - compiler optimization [C#]
 - o compiler option [C#]
 ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
-ms.openlocfilehash: 25a9ee1b27836dfb00dcbc72712ed068639fa2fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bec99ca582070a99fd8b734ef8a7b9e71d945488
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320037"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606598"
 ---
 # <a name="-optimize-c-compiler-options"></a>-optimize (Opciones del compilador de C#)
 La opción **-optimize** habilita o deshabilita las optimizaciones realizadas por el compilador para que el archivo de salida sea menor, más rápido y más eficaz.  
@@ -37,7 +37,7 @@ La opción **-optimize** habilita o deshabilita las optimizaciones realizadas po
   
  **-o** es la forma abreviada de **-optimize**.  
   
- Es posible combinar las opciones **-optimize** y [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md).  
+ Es posible combinar las opciones **-optimize** y [-debug](./debug-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
@@ -58,5 +58,5 @@ csc t2.cs -optimize
   
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opciones del compilador de C#](./index.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

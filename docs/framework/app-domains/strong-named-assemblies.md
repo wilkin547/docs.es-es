@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f87fb330fbea1344cc8532519d358fe8580a9fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f283aad7c6727aff111aaaf78beb1e8da4b45898
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592703"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988373"
 ---
 # <a name="strong-named-assemblies"></a>Ensamblados con nombre seguro
 Al asignar un nombre seguro a un ensamblado, se crea una identidad única para este, lo que puede evitar conflictos de ensamblado.  
@@ -25,7 +25,7 @@ Al asignar un nombre seguro a un ensamblado, se crea una identidad única para e
  Al crear un ensamblado con nombre seguro, este contiene el nombre de texto simple del ensamblado, el número de versión, información opcional de referencia cultural, una firma digital y la clave pública que se corresponda con la clave privada usada para la firma.  
   
 > [!WARNING]
->  Para garantizar la seguridad, no confíe únicamente en el uso de nombres seguros. Estos solo proporcionan una identidad única.  
+> Para garantizar la seguridad, no confíe únicamente en el uso de nombres seguros. Estos solo proporcionan una identidad única.  
   
 ## <a name="why-strong-name-your-assemblies"></a>¿Por qué asignar nombres seguros a los ensamblados?  
  Cuando se hace referencia a un ensamblado con nombre seguro, se espera obtener ciertas ventajas, como el control de versiones y la protección de nombres. Los ensamblados con nombre seguro se pueden instalar en la caché global de ensamblados, que es necesaria para permitir algunos escenarios.  

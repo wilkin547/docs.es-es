@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: 5ce9291fd047dfa9c69048887ccbd878819f2de8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69bd8cc95012533a6be279b04dc883a56f6f78ea
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533143"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605916"
 ---
 # <a name="checked-c-reference"></a>checked (Referencia de C#)
 
@@ -29,7 +29,7 @@ La comprobación de desbordamiento se puede habilitar mediante opciones del comp
 
 [!code-csharp[csrefKeywordsChecked#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#4)]
 
-Se puede usar la palabra clave [unchecked](../../../csharp/language-reference/keywords/unchecked.md) para evitar la comprobación de desbordamiento.
+Se puede usar la palabra clave [unchecked](./unchecked.md) para evitar la comprobación de desbordamiento.
 
 ## <a name="example"></a>Ejemplo
 
@@ -43,8 +43,8 @@ En este ejemplo, se muestra cómo usar `checked` para habilitar la comprobación
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
-- [Checked y Unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)
-- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](./index.md)
+- [Checked y Unchecked](./checked-and-unchecked.md)
+- [unchecked](./unchecked.md)

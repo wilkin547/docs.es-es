@@ -8,15 +8,15 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 814e8f3aa7130c6a64e7e27951854bed7b7cbe6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4e07698e7abdad00983b61412fa2a57e651d4d46
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333943"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606989"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (Opciones del compilador de C#)
-La opción **-checked** especifica si una instrucción aritmética de enteros que produce un valor fuera del intervalo del tipo de datos y que no está en el ámbito de las palabras clave [checked](../../../csharp/language-reference/keywords/checked.md) o [unchecked](../../../csharp/language-reference/keywords/unchecked.md) provocará una excepción en tiempo de ejecución.  
+La opción **-checked** especifica si una instrucción aritmética de enteros que produce un valor fuera del intervalo del tipo de datos y que no está en el ámbito de las palabras clave [checked](../keywords/checked.md) o [unchecked](../keywords/unchecked.md) provocará una excepción en tiempo de ejecución.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -54,5 +54,5 @@ csc t2.cs -checked
   
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opciones del compilador de C#](./index.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a581cc17859f7f4e0215017bfc405eae3cc15e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 791c6c8b0396ec958ff0c8378038051b23d486d1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660886"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956709"
 ---
 # <a name="security-considerations-for-reflection"></a>Consideraciones de seguridad sobre la reflexión
 
@@ -98,7 +98,7 @@ Por ejemplo, suponga que concede a un dominio de aplicación permisos de Interne
 
 ## <a name="serialization"></a>Serialización
 
-Para la serialización, <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> proporciona la capacidad de obtener y establecer miembros de tipos serializables, independientemente de la accesibilidad. Este permiso permite al código descubrir y cambiar el estado privado de una instancia. (Además de tener concedidos los permisos adecuados, el tipo debe estar [marcado](../../../docs/standard/attributes/applying-attributes.md) como serializable en los metadatos).
+Para la serialización, <xref:System.Security.Permissions.SecurityPermission> con la marca <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> proporciona la capacidad de obtener y establecer miembros de tipos serializables, independientemente de la accesibilidad. Este permiso permite al código descubrir y cambiar el estado privado de una instancia. (Además de tener concedidos los permisos adecuados, el tipo debe estar [marcado](../../standard/attributes/applying-attributes.md) como serializable en los metadatos).
 
 ## <a name="parameters-of-type-methodinfo"></a>Parámetros de tipo MethodInfo
 
@@ -121,5 +121,5 @@ Evite escribir miembros públicos que toman parámetros <xref:System.Reflection.
 - [Seguridad de acceso del código](../../../docs/framework/misc/code-access-security.md)
 - [Problemas de seguridad en la emisión de la reflexión](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Viewing Type Information](../../../docs/framework/reflection-and-codedom/viewing-type-information.md) (Ver información tipos)
-- [Aplicar atributos](../../../docs/standard/attributes/applying-attributes.md)
+- [Aplicar atributos](../../standard/attributes/applying-attributes.md)
 - [Acceso a atributos personalizados](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

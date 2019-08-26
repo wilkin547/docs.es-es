@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: b12aeaeb5414d911abea4dfda654183ffa02b3e6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a2cf05dc6b288ffdaf1a20cf594231f48046a724
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398454"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596750"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Procedimiento Invalidar el método ToString (Guía de programación de C#)
 
@@ -47,10 +47,10 @@ Para reemplazar el método `ToString` en una clase o struct:
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.IFormattable>
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Cadenas](../../../csharp/programming-guide/strings/index.md)
-- [string](../../../csharp/language-reference/keywords/string.md)
-- [override](../../../csharp/language-reference/keywords/override.md)
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)
+- [Guía de programación de C#](../index.md)
+- [Clases y structs](./index.md)
+- [Cadenas](../strings/index.md)
+- [string](../../language-reference/keywords/string.md)
+- [override](../../language-reference/keywords/override.md)
+- [virtual](../../language-reference/keywords/virtual.md)
 - [Aplicación de formato a tipos](../../../standard/base-types/formatting-types.md)

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: a7cd450fbc2e0a5acd32675ab2c6b46dc2c92757
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: e98399ac49e70f9139281ab75947c4acaf2dee7c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398366"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922081"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polimorfismo (Guía de programación de C#)
 El polimorfismo suele considerarse el tercer pilar de la programación orientada a objetos, después de la encapsulación y la herencia. Polimorfismo es una palabra griega que significa "con muchas formas" y tiene dos aspectos diferentes:  
   
 - En tiempo de ejecución, los objetos de una clase derivada pueden ser tratados como objetos de una clase base en lugares como parámetros de métodos y colecciones o matrices. Cuando ocurre, el tipo declarado del objeto ya no es idéntico a su tipo en tiempo de ejecución.  
   
-- Las clases base pueden definir e implementar *métodos* [virtuales](../../../csharp/language-reference/keywords/virtual.md), y las clases derivadas pueden [invalidarlos](../../../csharp/language-reference/keywords/override.md), lo que significa que pueden proporcionar su propia definición e implementación. En tiempo de ejecución, cuando el código de cliente llama al método, CLR busca el tipo en tiempo de ejecución del objeto e invoca esa invalidación del método virtual. Por lo tanto, en el código fuente puede llamar a un método en una clase base y hacer que se ejecute una versión del método de la clase derivada.  
+- Las clases base pueden definir e implementar *métodos* [virtuales](../../language-reference/keywords/virtual.md), y las clases derivadas pueden [invalidarlos](../../language-reference/keywords/override.md), lo que significa que pueden proporcionar su propia definición e implementación. En tiempo de ejecución, cuando el código de cliente llama al método, CLR busca el tipo en tiempo de ejecución del objeto e invoca esa invalidación del método virtual. Por lo tanto, en el código fuente puede llamar a un método en una clase base y hacer que se ejecute una versión del método de la clase derivada.  
   
  Los métodos virtuales permiten trabajar con grupos de objetos relacionados de manera uniforme. Por ejemplo, supongamos que tiene una aplicación de dibujo que permite a un usuario crear varios tipos de formas en una superficie de dibujo. En tiempo de compilación, no sabe qué tipos específicos de formas creará el usuario. Sin embargo, la aplicación tiene que realizar el seguimiento de los distintos tipos de formas que se crean, y tiene que actualizarlos en respuesta a las acciones del mouse del usuario. Para solucionar este problema en dos pasos básicos, puede usar el polimorfismo:  
   
@@ -26,7 +26,7 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
 2. Usar un método virtual para invocar el método apropiado en una clase derivada mediante una sola llamada al método de la clase base.  
   
- Primero, cree una clase base llamada `Shape` y clases derivadas como `Rectangle`, `Circle` y `Triangle`. Dé a la clase `Shape` un método virtual llamado `Draw` e invalídelo en cada clase derivada para dibujar la forma determinada que la clase representa. Cree un objeto `List<Shape>` y agregue Circle, Triangle y Rectangle a él. Para actualizar la superficie de dibujo, use un bucle [foreach](../../../csharp/language-reference/keywords/foreach-in.md) para iterar por la lista y llamar al método `Draw` en cada objeto `Shape` de la lista. Aunque cada objeto de la lista tenga un tipo declarado de `Shape`, se invocará el tipo en tiempo de ejecución (la versión invalidada del método en cada clase derivada).  
+ Primero, cree una clase base llamada `Shape` y clases derivadas como `Rectangle`, `Circle` y `Triangle`. Dé a la clase `Shape` un método virtual llamado `Draw` e invalídelo en cada clase derivada para dibujar la forma determinada que la clase representa. Cree un objeto `List<Shape>` y agregue Circle, Triangle y Rectangle a él. Para actualizar la superficie de dibujo, use un bucle [foreach](../../language-reference/keywords/foreach-in.md) para iterar por la lista y llamar al método `Draw` en cada objeto `Shape` de la lista. Aunque cada objeto de la lista tenga un tipo declarado de `Shape`, se invocará el tipo en tiempo de ejecución (la versión invalidada del método en cada clase derivada).  
   
  [!code-csharp[csProgGuideInheritance#50](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#50)]  
   
@@ -43,7 +43,7 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
 - Definir una nueva implementación no virtual de esos miembros que oculte las implementaciones de la clase base.  
   
- Una clase derivada puede invalidar un miembro de la clase base si este se declara como [virtual](../../../csharp/language-reference/keywords/virtual.md) o [abstracto](../../../csharp/language-reference/keywords/abstract.md). El miembro derivado debe usar la palabra clave [override](../../../csharp/language-reference/keywords/override.md) para indicar explícitamente que el propósito del método es participar en una invocación virtual. El siguiente fragmento de código muestra un ejemplo:  
+ Una clase derivada puede invalidar un miembro de la clase base si este se declara como [virtual](../../language-reference/keywords/virtual.md) o [abstracto](../../language-reference/keywords/abstract.md). El miembro derivado debe usar la palabra clave [override](../../language-reference/keywords/override.md) para indicar explícitamente que el propósito del método es participar en una invocación virtual. El siguiente fragmento de código muestra un ejemplo:  
   
  [!code-csharp[csProgGuideInheritance#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#20)]  
   
@@ -51,10 +51,10 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
  [!code-csharp[csProgGuideInheritance#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#21)]  
   
- Los métodos y propiedades virtuales permiten a las clases derivadas extender una clase base sin necesidad de usar la implementación de clase base de un método. Para obtener más información, consulte [Control de versiones con las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md). Una interfaz proporciona otra manera de definir un método o conjunto de métodos cuya implementación se deja a las clases derivadas. Para más información, vea [Interfaces](../../../csharp/programming-guide/interfaces/index.md).  
+ Los métodos y propiedades virtuales permiten a las clases derivadas extender una clase base sin necesidad de usar la implementación de clase base de un método. Para obtener más información, consulte [Control de versiones con las palabras clave Override y New](./versioning-with-the-override-and-new-keywords.md). Una interfaz proporciona otra manera de definir un método o conjunto de métodos cuya implementación se deja a las clases derivadas. Para más información, vea [Interfaces](../interfaces/index.md).  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>Ocultar miembros de clase base con nuevos miembros  
- Si quiere que el miembro derivado tenga el mismo nombre que un miembro de una clase base, pero no quiere que participe en la invocación virtual, puede usar la palabra clave [new](../../../csharp/language-reference/keywords/new-modifier.md). La palabra clave `new` se coloca antes que el tipo devuelto del miembro de la clase que se está reemplazando. El siguiente fragmento de código muestra un ejemplo:  
+ Si quiere que el miembro derivado tenga el mismo nombre que un miembro de una clase base, pero no quiere que participe en la invocación virtual, puede usar la palabra clave [new](../../language-reference/keywords/new-modifier.md). La palabra clave `new` se coloca antes que el tipo devuelto del miembro de la clase que se está reemplazando. El siguiente fragmento de código muestra un ejemplo:  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
@@ -67,7 +67,7 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
  [!code-csharp[csProgGuideInheritance#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#22)]  
   
- Una clase derivada puede detener la herencia virtual al declarar una invalidación como [sealed](../../../csharp/language-reference/keywords/sealed.md). Para ello, es necesario colocar la palabra clave `sealed` antes de la palabra clave `override` en la declaración del miembro de la clase. El siguiente fragmento de código muestra un ejemplo:  
+ Una clase derivada puede detener la herencia virtual al declarar una invalidación como [sealed](../../language-reference/keywords/sealed.md). Para ello, es necesario colocar la palabra clave `sealed` antes de la palabra clave `override` en la declaración del miembro de la clase. El siguiente fragmento de código muestra un ejemplo:  
   
  [!code-csharp[csProgGuideInheritance#24](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#24)]  
   
@@ -82,26 +82,26 @@ El polimorfismo suele considerarse el tercer pilar de la programación orientada
   
  [!code-csharp[csProgGuideInheritance#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#26)]  
   
- Para obtener más información, vea [base](../../../csharp/language-reference/keywords/base.md).  
+ Para obtener más información, vea [base](../../language-reference/keywords/base.md).  
   
 > [!NOTE]
->  Se recomienda que las máquinas virtuales usen `base` para llamar a la implementación de la clase base de ese miembro en su propia implementación. Dejar que se produzca el comportamiento de la clase base permite a la clase derivada concentrarse en implementar el comportamiento específico de la clase derivada. Si no se llama a la implementación de la clase base, depende de la clase derivada hacer que su comportamiento sea compatible con el de la clase base.  
+> Se recomienda que las máquinas virtuales usen `base` para llamar a la implementación de la clase base de ese miembro en su propia implementación. Dejar que se produzca el comportamiento de la clase base permite a la clase derivada concentrarse en implementar el comportamiento específico de la clase derivada. Si no se llama a la implementación de la clase base, depende de la clase derivada hacer que su comportamiento sea compatible con el de la clase base.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
-- [Control de versiones con las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Control de versiones con las palabras clave Override y New](./versioning-with-the-override-and-new-keywords.md)  
   
-- [Saber cuándo utilizar las palabras clave Override y New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Saber cuándo utilizar las palabras clave Override y New](./knowing-when-to-use-override-and-new-keywords.md)  
   
-- [Cómo: Invalidar el método ToString](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [Cómo: Invalidar el método ToString](./how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
-- [Clases y miembros de clase abstractos y sellados](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
-- [Eventos](../../../csharp/programming-guide/events/index.md)
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
-- [Tipos](../../../csharp/programming-guide/types/index.md)
+- [Guía de programación de C#](../index.md)
+- [Herencia](./inheritance.md)
+- [Clases y miembros de clase abstractos y sellados](./abstract-and-sealed-classes-and-class-members.md)
+- [Métodos](./methods.md)
+- [Eventos](../events/index.md)
+- [Propiedades](./properties.md)
+- [Indizadores](../indexers/index.md)
+- [Tipos](../types/index.md)

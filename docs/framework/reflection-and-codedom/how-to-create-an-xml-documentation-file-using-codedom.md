@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d984257958354eb2c6be6aa57d8b68ca39039edc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 283fc91762bc4065bd9bd09efaa2bc0061451ef9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632802"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69962725"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>Procedimiento para crear un archivo de documentación XML mediante CodeDOM
 Se puede usar CodeDOM para crear código que genere documentación XML. El proceso implica crear el gráfico CodeDOM que contenga los comentarios de la documentación XML, generar el código y compilar el código generado con la opción del compilador que crea el archivo de documentación XML.  
@@ -81,6 +81,6 @@ Se puede usar CodeDOM para crear código que genere documentación XML. El proce
   
 ## <a name="see-also"></a>Vea también
 
-- [Documentar el código con XML](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [Comentarios de documentación XML](~/docs/csharp/programming-guide/xmldoc/index.md)
+- [Documentar el código con XML](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
+- [Comentarios de documentación XML](../../csharp/programming-guide/xmldoc/index.md)
 - [Documentación de XML](/cpp/ide/xml-documentation-visual-cpp)

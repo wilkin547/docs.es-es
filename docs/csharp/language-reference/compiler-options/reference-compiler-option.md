@@ -13,15 +13,15 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593079"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606579"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (Opciones del compilador de C#)
-La opción **-reference** hace que el compilador importe información de tipo [public](../../../csharp/language-reference/keywords/public.md) del archivo especificado al proyecto actual, lo que permite hacer referencia a metadatos de los archivos de ensamblado especificados.  
+La opción **-reference** hace que el compilador importe información de tipo [public](../keywords/public.md) del archivo especificado al proyecto actual, lo que permite hacer referencia a metadatos de los archivos de ensamblado especificados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,11 +40,11 @@ La opción **-reference** hace que el compilador importe información de tipo [p
 ## <a name="remarks"></a>Comentarios  
  Para importar desde más de un archivo, incluya una opción **-reference** para cada archivo.  
   
- Los archivos que se importen deben contener un manifiesto; el archivo de salida debe haberse compilado con una de las opciones [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) distinta de [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
+ Los archivos que se importen deben contener un manifiesto; el archivo de salida debe haberse compilado con una de las opciones [-target](./target-compiler-option.md) distinta de [-target:module](./target-module-compiler-option.md).  
   
  **-r** es la forma abreviada de **-reference**.  
   
- Use [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) para importar metadatos de un archivo de salida que no contenga un manifiesto de ensamblado.  
+ Use [-addmodule](./addmodule-compiler-option.md) para importar metadatos de un archivo de salida que no contenga un manifiesto de ensamblado.  
   
  Si hace referencia a un ensamblado (ensamblado A) que hace referencia a otro ensamblado (ensamblado B), debe hacer referencia al ensamblado B si:  
   
@@ -52,19 +52,19 @@ La opción **-reference** hace que el compilador importe información de tipo [p
   
 - Se invoca un campo, una propiedad, un evento o un método que tiene un tipo de parámetro o un tipo de valor devuelto del ensamblado B.  
   
- Use [-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado. En el tema **-lib** también se describen los directorios en los que el compilador busca ensamblados.  
+ Use [-lib](./lib-compiler-option.md) para especificar el directorio en el que se encuentran una o varias de las referencias de ensamblado. En el tema **-lib** también se describen los directorios en los que el compilador busca ensamblados.  
   
  Para que el compilador reconozca un tipo de un ensamblado (y no de un módulo), debe obligársele a que resuelva el tipo, lo que se puede conseguir si se define una instancia del tipo. Existen otras formas de que el compilador resuelva nombres de tipos en un ensamblado; por ejemplo, si se hereda de un tipo de un ensamblado, el compilador reconocerá el nombre del tipo.  
   
  A veces es necesario hacer referencia a dos versiones diferentes del mismo componente desde un ensamblado. Para ello, use la subopción de alias en el modificador **-reference** de cada archivo para distinguir entre los dos archivos. Este alias se usará como calificador para el nombre del componente y se resolverá en el componente de uno de los archivos.  
   
- De forma predeterminada se usa el archivo de respuesta (.rsp) csc, que hace referencia a los ensamblados de .NET Framework usados habitualmente. Use [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) si no quiere que el compilador use csc.rsp.  
+ De forma predeterminada se usa el archivo de respuesta (.rsp) csc, que hace referencia a los ensamblados de .NET Framework usados habitualmente. Use [-noconfig](./noconfig-compiler-option.md) si no quiere que el compilador use csc.rsp.  
   
 > [!NOTE]
 > En Visual Studio, use el cuadro de diálogo **Agregar referencia**. Para obtener más información, vea [Cómo: Agregar o quitar referencias con el Administrador de referencias](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager) Para garantizar un comportamiento equivalente entre agregar referencias mediante `-reference` y agregar referencias mediante el cuadro de diálogo **Agregar referencia**, establezca la propiedad **Incrustar tipos de interoperabilidad** en **False** para el ensamblado que se va a agregar. El valor predeterminado de la propiedad es **True**.  
   
 ## <a name="example"></a>Ejemplo  
- En este ejemplo se muestra cómo usar la característica [alias externo](../../../csharp/language-reference/keywords/extern-alias.md).  
+ En este ejemplo se muestra cómo usar la característica [alias externo](../keywords/extern-alias.md).  
   
  Compile el archivo de origen e importe los metadatos desde `grid.dll` y `grid20.dll`, que se han compilado previamente. Los dos archivos DLL contienen versiones independientes del mismo componente y se usan dos **-reference** con opciones de alias para compilar el archivo de origen. Las opciones tiene este aspecto:  
 
@@ -94,5 +94,5 @@ GridV2::Grid
   
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opciones del compilador de C#](./index.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338493"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922512"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (Opciones del compilador de C#)
 La opción **-debug** da lugar a que el compilador genere información de depuración y la incluya en el archivo o los archivos de salida.  
@@ -38,11 +38,11 @@ La opción **-debug** da lugar a que el compilador genere información de depura
  Si usa **-debug:full**, sea consciente de que se producirá algún impacto en la velocidad y el tamaño del código optimizado JIT y un pequeño impacto en la calidad del código con **-debug:full**. Recomendamos **-debug:pdbonly** o ningún PDB para generar el código de la versión de lanzamiento.  
   
 > [!NOTE]
->  Una diferencia entre **-debug:pdbonly** y **-debug:full** es que con **-debug:full** el compilador emite <xref:System.Diagnostics.DebuggableAttribute>, que se usa para indicar al compilador JIT que la información de depuración está disponible. Por consiguiente, aparecerá un error si el código contiene <xref:System.Diagnostics.DebuggableAttribute> establecido en false cuando se usa **-debug:full**.  
+> Una diferencia entre **-debug:pdbonly** y **-debug:full** es que con **-debug:full** el compilador emite <xref:System.Diagnostics.DebuggableAttribute>, que se usa para indicar al compilador JIT que la información de depuración está disponible. Por consiguiente, aparecerá un error si el código contiene <xref:System.Diagnostics.DebuggableAttribute> establecido en false cuando se usa **-debug:full**.  
   
  Para obtener más información sobre cómo configurar el rendimiento de depuración de una aplicación, vea [Facilitar la depuración de una imagen](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md).  
   
- Para cambiar la ubicación del archivo .pdb, vea [-pdb (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md).  
+ Para cambiar la ubicación del archivo .pdb, vea [-pdb (Opciones del compilador de C#)](./pdb-compiler-option.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Para establecer esta opción del compilador en el entorno de desarrollo de Visual Studio  
   
@@ -65,5 +65,5 @@ csc -debug -pdb:app.pdb test.cs
   
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opciones del compilador de C#](./index.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

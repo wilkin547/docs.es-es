@@ -2,12 +2,12 @@
 title: Atributos comunes (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: bb06fc72fc336df257c6b674d3eaa4fa47801da0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603334"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595461"
 ---
 # <a name="common-attributes-c"></a>Atributos comunes (C#)
 En este tema se describen los atributos que más se usan en los programas de C#.  
@@ -221,19 +221,19 @@ class SampleClass
   
  Para obtener la información del llamador del miembro, use los atributos que se aplican a los parámetros opcionales. Cada parámetro opcional especifica un valor predeterminado. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres <xref:System.Runtime.CompilerServices?displayProperty=nameWithType>:  
   
-|Atributo|Descripción|Tipo|  
+|Atributo|DESCRIPCIÓN|Tipo|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|Número de línea del archivo de código fuente desde el que se llama al método.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nombre de método o de propiedad del llamador. Para obtener más información, vea [Caller Information (C#)](../../../../csharp/programming-guide/concepts/caller-information.md) (Información del llamador (C#)).|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|Nombre de método o de propiedad del llamador. Para obtener más información, vea [Caller Information (C#)](../caller-information.md) (Información del llamador (C#)).|`String`|  
   
- Para obtener más información sobre los atributos de información del llamador, vea [Caller Information (C#)](../../../../csharp/programming-guide/concepts/caller-information.md) (Información del llamador (C#)).  
+ Para obtener más información sobre los atributos de información del llamador, vea [Caller Information (C#)](../caller-information.md) (Información del llamador (C#)).  
   
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Guía de programación de C#](../../../../csharp/programming-guide/index.md)
-- [Atributos](../../../../../docs/standard/attributes/index.md)
-- [Reflexión (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [Acceder a atributos mediante reflexión (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [Guía de programación de C#](../../index.md)
+- [Atributos](../../../../standard/attributes/index.md)
+- [Reflexión (C#)](../reflection.md)
+- [Acceder a atributos mediante reflexión (C#)](./accessing-attributes-by-using-reflection.md)

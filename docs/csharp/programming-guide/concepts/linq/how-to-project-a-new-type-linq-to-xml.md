@@ -2,12 +2,12 @@
 title: Procedimiento para proyectar un tipo nuevo (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 48145cf9-1e0b-4e73-bbfd-28fc04800dc4
-ms.openlocfilehash: 2bb521d1445dcecdad8b9c7b28bed90e1e38c8e8
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: bec4e7c7d87dffb90b49b76aa00a5de093d68436
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012923"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593037"
 ---
 # <a name="how-to-project-a-new-type-linq-to-xml-c"></a>Procedimiento para proyectar un tipo nuevo (LINQ to XML) (C#)
 
@@ -17,7 +17,7 @@ Otros ejemplos de esta sección han mostrado consultados que devuelven resultado
 
 En este ejemplo se muestra como crear instancias de objetos en la cláusula `select`. El código primero define una nueva clase con un constructor y después modifica la instrucción `select` para que la expresión sea una nueva instancia de la nueva clase.
 
-Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
+Este ejemplo utiliza el siguiente documento XML: [Archivo XML de ejemplo: Pedido de compra común (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).
 
 ```csharp
 class NameQty 

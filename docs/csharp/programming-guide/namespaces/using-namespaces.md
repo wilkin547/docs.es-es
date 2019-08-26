@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 32e36a3ebc0de3e5f4a850e0af0261c1e7fd5a07
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: b27a2fa42fc8e0d9ff0d1524c5d1bc19acbfbdb0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69039470"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588856"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Uso de espacios de nombres (Guía de programación de C#)
 
@@ -93,8 +93,8 @@ Los espacios de nombres se usan mucho en programas de C# de dos maneras. En prim
 
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Espacios de nombres](../../../csharp/programming-guide/namespaces/index.md)
-- [Operador .](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
-- [Operador ::](../../../csharp/language-reference/operators/namespace-alias-qualifier.md)
-- [extern alias](../../../csharp/language-reference/keywords/extern-alias.md)
+- [Guía de programación de C#](../index.md)
+- [Espacios de nombres](./index.md)
+- [Operador .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [Operador ::](../../language-reference/operators/namespace-alias-qualifier.md)
+- [extern alias](../../language-reference/keywords/extern-alias.md)

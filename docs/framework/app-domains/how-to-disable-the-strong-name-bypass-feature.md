@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7484e67202c430df6ec2d4bea9cff5a850720ff5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593616"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921555"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Procedimiento para deshabilitar la característica de omisión de nombres seguros
 A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nombre seguro no se validan cuando un ensamblado se carga en un objeto <xref:System.AppDomain> de plena confianza, como el objeto <xref:System.AppDomain> predeterminado para la zona `MyComputer`. Esta característica se denomina omisión de nombres seguros. En un entorno de plena confianza, las peticiones de <xref:System.Security.Permissions.StrongNameIdentityPermission> siempre se realizan correctamente para los ensamblados de plena confianza firmados, independientemente de su firma. La única restricción es que el ensamblado debe ser de plena confianza porque su zona es de plena confianza. Dado que el nombre seguro no es un factor determinante en estas condiciones, no hay ninguna razón para que se valide. La omisión de la validación de firmas de nombre seguro proporciona importantes mejoras en el rendimiento.  
@@ -24,7 +24,7 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nomb
  Cuando se invalida la característica de omisión, el nombre seguro se valida únicamente para comprobar que es correcto; no se comprueba su <xref:System.Security.Permissions.StrongNameIdentityPermission>. Si quiere confirmar un nombre seguro específico, tendrá que hacerlo por separado.  
   
 > [!IMPORTANT]
->  La capacidad de forzar la validación del nombre seguro depende de una clave del Registro, como se indica en el procedimiento siguiente. Si una aplicación se ejecuta en una cuenta que no tiene permiso de lista de control de acceso (ACL) para tener acceso a esa clave del Registro, el valor no tiene efecto. Debe asegurarse de que se han configurado permisos de ACL para esta clave de modo que se pueda leer para todos los ensamblados.  
+> La capacidad de forzar la validación del nombre seguro depende de una clave del Registro, como se indica en el procedimiento siguiente. Si una aplicación se ejecuta en una cuenta que no tiene permiso de lista de control de acceso (ACL) para tener acceso a esa clave del Registro, el valor no tiene efecto. Debe asegurarse de que se han configurado permisos de ACL para esta clave de modo que se pueda leer para todos los ensamblados.  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>Para deshabilitar la característica de omisión de nombres seguros para todas las aplicaciones  
   
@@ -51,7 +51,7 @@ A partir de .NET Framework versión 3.5 Service Pack 1 (SP1), las firmas de nomb
  Puede restaurar la característica de omisión de la aplicación. Para ello, elimine el valor del archivo de configuración o establezca el atributo en "true".  
   
 > [!NOTE]
->  Puede activar y desactivar la validación del nombre seguro de una aplicación únicamente si la característica de omisión está habilitada para el equipo. Si la característica de omisión se ha desactivado para el equipo, los nombres seguros se validan para todas las aplicaciones y no se puede omitir la validación de una sola aplicación.  
+> Puede activar y desactivar la validación del nombre seguro de una aplicación únicamente si la característica de omisión está habilitada para el equipo. Si la característica de omisión se ha desactivado para el equipo, los nombres seguros se validan para todas las aplicaciones y no se puede omitir la validación de una sola aplicación.  
   
 ## <a name="see-also"></a>Vea también
 

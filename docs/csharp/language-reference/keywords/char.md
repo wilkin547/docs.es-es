@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: b58730d945582ded7b76fcd5c4c65bc1dd9324da
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 754c04bfc3b4090906420d55d55e51606b72f187
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67661452"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605953"
 ---
 # <a name="char-c-reference"></a>char (Referencia de C#)
 
@@ -44,12 +44,12 @@ Para obtener más información, vea la sección [Tipos enteros](~/_csharplang/sp
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Char>
-- [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
-- [Tipos enteros](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
-- [Tabla de tipos integrados](../../../csharp/language-reference/keywords/built-in-types-table.md)
-- [Tabla de conversiones numéricas implícitas](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
-- [Tabla de conversiones numéricas explícitas](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
-- [Tipos que aceptan valores NULL](../../../csharp/programming-guide/nullable-types/index.md)
-- [Cadenas](../../../csharp/programming-guide/strings/index.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](./index.md)
+- [Tipos enteros](../builtin-types/integral-numeric-types.md)
+- [Tabla de tipos integrados](./built-in-types-table.md)
+- [Tabla de conversiones numéricas implícitas](./implicit-numeric-conversions-table.md)
+- [Tabla de conversiones numéricas explícitas](./explicit-numeric-conversions-table.md)
+- [Tipos que aceptan valores NULL](../../programming-guide/nullable-types/index.md)
+- [Cadenas](../../programming-guide/strings/index.md)

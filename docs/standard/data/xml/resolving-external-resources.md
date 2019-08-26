@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b4ba0cbb25e2c83a33ffba99ccbb29d5b414b3c1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664493"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918206"
 ---
 # <a name="resolving-external-resources"></a>Resolver recursos externos
 La clase **XmlDocument** utiliza la propiedad **XmlResolver** de **XmlDocument** para localizar recursos que no están alineados en los datos XML, como las definiciones de tipo de documento (DTD), entidades y esquemas externos. Estos elementos se pueden localizar en una red o en una unidad local, y se identifican mediante un identificador de recursos uniforme (URI). Esto permite a **XmlDocument** resolver los nodos **EntityReference** presentes en el documento y validar el documento de acuerdo con la DTD o el esquema externos.  
@@ -48,7 +48,7 @@ La clase **XmlDocument** utiliza la propiedad **XmlResolver** de **XmlDocument**
  El ajuste de XmlResolver para contener las credenciales correctas permite el acceso a los recursos externos.  
   
 > [!NOTE]
->  No hay ninguna forma de recuperar el valor de la propiedad **XmlResolver**. Esto ayuda a evitar que un usuario vuelva a utilizar una propiedad **XmlResolver** en la que se hayan establecido credenciales. Además, si se utiliza una clase **XmlTextReader** o se valida <xref:System.Xml.XmlReader> para cargar **XmlDocument** y **XmlDocument** tiene un sistema de resolución establecido, los correspondientes a estos sistemas de lectura no son almacenados en caché por **XmlDocument** después de la fase **Load**, puesto que esto también presenta un riesgo de seguridad.  
+> No hay ninguna forma de recuperar el valor de la propiedad **XmlResolver**. Esto ayuda a evitar que un usuario vuelva a utilizar una propiedad **XmlResolver** en la que se hayan establecido credenciales. Además, si se utiliza una clase **XmlTextReader** o se valida <xref:System.Xml.XmlReader> para cargar **XmlDocument** y **XmlDocument** tiene un sistema de resolución establecido, los correspondientes a estos sistemas de lectura no son almacenados en caché por **XmlDocument** después de la fase **Load**, puesto que esto también presenta un riesgo de seguridad.  
   
  Para obtener más información, vea la sección Comentarios de la página de referencia de <xref:System.Xml.XmlResolver>.  
   

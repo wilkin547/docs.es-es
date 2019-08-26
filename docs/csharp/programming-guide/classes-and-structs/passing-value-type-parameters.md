@@ -6,15 +6,15 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: ba693948bce91fa80f0c6cd73f2d5fc537e5f900
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: dfd2c39eff44b431ec10d85f855fb015a2391f29
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423749"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69596241"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Pasar parámetros de tipo de valor (Guía de programación de C#)
-Una variable [tipo de valor](../../../csharp/language-reference/keywords/value-types.md) contiene sus datos directamente, en oposición a la variable [tipo de referencia](../../../csharp/language-reference/keywords/reference-types.md), que contiene una referencia a sus datos. Pasar una variable tipo de valor a un método en función del valor significa pasar una copia de la variable al método. Ningún cambio realizado en el parámetro dentro del método afecta a los datos originales almacenados en la variable de argumentos. Si desea que el método al que se llama cambie el valor del argumento, debe pasarlo en función de la referencia, con la palabra clave [ref](../../../csharp/language-reference/keywords/ref.md) o [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). También puede usar la palabra clave [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) para pasar un parámetro de valor por referencia para evitar la copia, a la vez que se asegura de que el valor no se modificará. Para simplificar, en el ejemplo siguiente se usa `ref`.  
+Una variable [tipo de valor](../../language-reference/keywords/value-types.md) contiene sus datos directamente, en oposición a la variable [tipo de referencia](../../language-reference/keywords/reference-types.md), que contiene una referencia a sus datos. Pasar una variable tipo de valor a un método en función del valor significa pasar una copia de la variable al método. Ningún cambio realizado en el parámetro dentro del método afecta a los datos originales almacenados en la variable de argumentos. Si desea que el método al que se llama cambie el valor del argumento, debe pasarlo en función de la referencia, con la palabra clave [ref](../../language-reference/keywords/ref.md) o [out](../../language-reference/keywords/out-parameter-modifier.md). También puede usar la palabra clave [in](../../language-reference/keywords/in-parameter-modifier.md) para pasar un parámetro de valor por referencia para evitar la copia, a la vez que se asegura de que el valor no se modificará. Para simplificar, en el ejemplo siguiente se usa `ref`.  
   
 ## <a name="passing-value-types-by-value"></a>Pasar tipos de valor en función del valor  
  En el ejemplo siguiente se muestra cómo pasar los parámetros de tipo de valor en función del valor. La variable `n` se pasa en función del valor al método `SquareIt`. Los cambios que tienen lugar dentro del método no tienen ningún efecto en el valor original de la variable.  
@@ -28,7 +28,7 @@ Una variable [tipo de valor](../../../csharp/language-reference/keywords/value-t
   
  [!code-csharp[csProgGuideParameters#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#4)]  
   
- En este ejemplo, no es el valor de `n` el que se pasa, sino una referencia a `n`. El parámetro `x` no es un [entero](../../../csharp/language-reference/builtin-types/integral-numeric-types.md); se trata de una referencia a `int`, en este caso, una referencia a `n`. Por tanto, cuando `x` se multiplica dentro del método, lo que realmente se multiplica es a lo que `x` hace referencia, `n`.  
+ En este ejemplo, no es el valor de `n` el que se pasa, sino una referencia a `n`. El parámetro `x` no es un [entero](../../language-reference/builtin-types/integral-numeric-types.md); se trata de una referencia a `int`, en este caso, una referencia a `n`. Por tanto, cuando `x` se multiplica dentro del método, lo que realmente se multiplica es a lo que `x` hace referencia, `n`.  
   
 ## <a name="swapping-value-types"></a>Intercambiar tipos de valor  
  Un ejemplo común de modificación de valores de argumentos es un método de intercambio, donde se pasan dos variables al método, y el método intercambia su contenido. Debe pasar los argumentos al método de intercambio en función de la referencia. De lo contrario, se intercambian copias locales de los parámetros dentro del método, y no se produce ningún cambio en el método de llamada. En el ejemplo siguiente se intercambian valores enteros.  
@@ -41,6 +41,6 @@ Una variable [tipo de valor](../../../csharp/language-reference/keywords/value-t
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Pasar parámetros](../../../csharp/programming-guide/classes-and-structs/passing-parameters.md)
-- [Pasar parámetros Reference-Type](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md)
+- [Guía de programación de C#](../index.md)
+- [Pasar parámetros](./passing-parameters.md)
+- [Pasar parámetros Reference-Type](./passing-reference-type-parameters.md)

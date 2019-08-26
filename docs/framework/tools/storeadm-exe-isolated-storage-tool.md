@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4b0f66d692a60590e4f301f1d31ff379078e2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b947ea2bfabe1c3fa9afb43cb5ecc41ab92be89
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647249"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69929903"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (herramienta de almacenamiento aislado)
 La herramienta de almacenamiento aislado incluye o quita todos los almacenes existentes del usuario actual.  
@@ -32,7 +32,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>Parámetros  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |**/h**[**elp**]|Muestra las opciones y la sintaxis de los comandos para la herramienta.|  
 |**/list**|Muestra todos los almacenes existentes del usuario actual. Entre estos se incluyen los almacenes de todas las aplicaciones o ensamblados ejecutados por este usuario.|  
@@ -56,12 +56,12 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
 - El almacén del equipo, que es común a todos los usuarios del equipo y se almacena bajo un directorio común en dicho equipo.  
   
     > [!NOTE]
-    >  El almacén del equipo es una novedad de la versión 2.0 de .NET Framework.  
+    > El almacén del equipo es una novedad de la versión 2.0 de .NET Framework.  
   
  Si la movilidad está habilitada realmente para el usuario, no afecta a la administración de Storeadm.exe. Si la herramienta se ejecuta sin ninguna opción, todas las acciones se aplican al almacén local. Si la herramienta se ejecuta con la opción **/roaming**, todas las acciones se aplican al almacén que tiene posibilidad de movilidad. Si la herramienta se ejecuta con la opción **/machine**, todas las acciones se aplican al almacén del equipo.  
   
 ## <a name="see-also"></a>Vea también
 
 - [Herramientas](../../../docs/framework/tools/index.md)
-- [Almacenamiento aislado](../../../docs/standard/io/isolated-storage.md)
+- [Almacenamiento aislado](../../standard/io/isolated-storage.md)
 - [Símbolos del sistema](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

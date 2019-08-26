@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a941c99e1d22a71dc6d94e73f5402716f41e3a81
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647910"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966954"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Inserción de datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para insertar nodos de atributos, secundarios y relacionados en un documento XML. Para utilizar estos métodos, el objeto <xref:System.Xml.XPath.XPathNavigator> debe ser editable, es decir, su propiedad <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> debe ser `true`.  
@@ -236,7 +236,7 @@ navigator.SetTypedValue(DateTime.Now);
 - Si el prefijo y el identificador URI de espacio de nombres en el contexto del objeto <xref:System.Xml.XmlReader> y del objeto <xref:System.Xml.XPath.XPathNavigator> son los mismos, no se agrega ninguna declaración de espacio de nombres nueva al nodo que se acaba de insertar.  
   
 > [!NOTE]
->  La descripción anterior también se aplica a declaraciones de espacios de nombres con la `string` vacía como prefijo (por ejemplo, la declaración de espacio de nombres predeterminada).  
+> La descripción anterior también se aplica a declaraciones de espacios de nombres con la `string` vacía como prefijo (por ejemplo, la declaración de espacio de nombres predeterminada).  
   
  A continuación, se indican los posibles conflictos de `xml:lang`.  
   
@@ -256,7 +256,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  En la siguiente tabla se describen los métodos de la clase <xref:System.Xml.XmlWriter> que no son compatibles con la clase <xref:System.Xml.XPath.XPathNavigator>.  
   
-|Método|Descripción|  
+|Método|DESCRIPCIÓN|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|Inicia una excepción <xref:System.NotSupportedException>.|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|Se omite en el nivel raíz e inicia una excepción <xref:System.NotSupportedException> si se llama desde cualquier otro nivel del documento XML.|  

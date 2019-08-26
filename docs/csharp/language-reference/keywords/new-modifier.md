@@ -5,18 +5,18 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 675369936b9f90620b03365104255a622855fa9f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: f62255be9c74a221836b23058bd48a835f38f629
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401784"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608628"
 ---
 # <a name="new-modifier-c-reference"></a>new (Modificador, Referencia de C#)
 
 Cuando se utiliza como modificador de una declaración, la palabra clave `new` oculta explícitamente un miembro heredado de una clase base. Cuando se oculta un miembro heredado, la versión derivada del miembro reemplaza a la versión de la clase base. Aunque los miembros se pueden ocultar sin utilizar el modificador `new`, obtendrá una advertencia del compilador. Si utiliza `new` explícitamente para ocultar un miembro, se suprime esta advertencia.
 
-También puede usar la palabra clave `new` para [crear una instancia de un tipo](../operators/new-operator.md) o como una [restricción de tipo genérico](../keywords/new-constraint.md).
+También puede usar la palabra clave `new` para [crear una instancia de un tipo](../operators/new-operator.md) o como una [restricción de tipo genérico](./new-constraint.md).
 
 Para ocultar un miembro heredado, declárelo en la clase derivada con el mismo nombre de miembro y modifíquelo con la palabra clave `new`. Por ejemplo:
 

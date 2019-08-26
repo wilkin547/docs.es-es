@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 564f5f880f32dbab1387d03f30082e1972c3f353
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6cc4dc3a0692000958d66222e6cdc30acf874189
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591968"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666377"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Procedimiento Escritura y lectura de mensajes en un bloque de flujo de datos
 En este documento se describe cómo usar la biblioteca de flujos de datos TPL para escribir y leer mensajes en un bloque de flujo de datos. La biblioteca de flujos de datos TPL proporciona métodos sincrónicos y asincrónicos para escribir y leer mensajes en un bloque de flujo de datos. Este documento usa la clase <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. La clase <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> almacena mensajes en búfer y se comporta como origen y destino de los mismos.  
@@ -40,7 +40,7 @@ En este documento se describe cómo usar la biblioteca de flujos de datos TPL pa
  [!code-vb[TPLDataflow_ReadWrite#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#4)]  
   
 ## <a name="writing-to-and-reading-from-a-dataflow-block-asynchronously"></a>Escribir y leer en un bloque de flujo de datos de forma asincrónica  
- En el ejemplo siguiente se usa el método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> para escribir de forma asincrónica en un objeto <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> y el método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> para leer de forma asincrónica desde el mismo objeto. En este ejemplo se usan los operadores [async](~/docs/csharp/language-reference/keywords/async.md) y [await](~/docs/csharp/language-reference/keywords/await.md) ([Async](~/docs/visual-basic/language-reference/modifiers/async.md) y [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) en Visual Basic) para, asincrónicamente, enviar datos al bloque de destino y leerlos en él. El método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> resulta útil si debe habilitar un bloque de flujo de datos para posponer mensajes. El método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> resulta útil cuando desea actuar en los datos cuando dichos datos están disponibles. Para más información sobre la propagación de los mensajes entre los bloques de mensajes, consulte la sección Paso de mensajes en [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
+ En el ejemplo siguiente se usa el método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> para escribir de forma asincrónica en un objeto <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> y el método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> para leer de forma asincrónica desde el mismo objeto. En este ejemplo se usan los operadores [async](../../csharp/language-reference/keywords/async.md) y [await](../../csharp/language-reference/keywords/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) y [Await](../../visual-basic/language-reference/operators/await-operator.md) en Visual Basic) para, asincrónicamente, enviar datos al bloque de destino y leerlos en él. El método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.SendAsync%2A> resulta útil si debe habilitar un bloque de flujo de datos para posponer mensajes. El método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A> resulta útil cuando desea actuar en los datos cuando dichos datos están disponibles. Para más información sobre la propagación de los mensajes entre los bloques de mensajes, consulte la sección Paso de mensajes en [Flujo de datos](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md).  
   
  [!code-csharp[TPLDataflow_ReadWrite#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_readwrite/cs/dataflowreadwrite.cs#5)]
  [!code-vb[TPLDataflow_ReadWrite#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_readwrite/vb/dataflowreadwrite.vb#5)]  

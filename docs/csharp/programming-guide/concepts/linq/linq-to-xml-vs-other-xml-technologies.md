@@ -2,17 +2,17 @@
 title: LINQ to XML frente a Otras tecnologías XML
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 345e777b93497f483ca30f5c42fbf5a5c146dea3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1cafa8b690afb753dfdb0301dc6a19f5f257e9c0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484308"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591875"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML frente a otras tecnologías XML
 Este tema compara [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con las siguientes tecnologías XML: <xref:System.Xml.XmlReader>, XSLT, MSXML y XmlLite. Esta información puede ayudarle a decidir la tecnología que utilizará.  
   
- Para ver una comparación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con Document Object Model (DOM), vea [LINQ to XML frente a DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
+ Para ver una comparación de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con Document Object Model (DOM), vea [LINQ to XML frente a DOM (C#)](./linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML frente a XmlReader  
  <xref:System.Xml.XmlReader> es un analizador rápido, de solo avance y sin almacenamiento en caché.  
@@ -54,4 +54,4 @@ Este tema compara [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] con las 
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)
+- [Introducción (LINQ to XML)](./linq-to-xml-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: f25455fac84903f9c39861e1f6863f6b2f6928f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0989678be070910c410d71717fe66679e1b70557
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587385"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69603084"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (Opciones del compilador de C#)
 Especifica que esa información de depuración debe colocarse en un archivo para su análisis posterior.  
@@ -55,6 +55,6 @@ Especifica que esa información de depuración debe colocarse en un archivo para
   
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
-- [-errorreport (Opciones del compilador de C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)
+- [Opciones del compilador de C#](./index.md)
+- [-errorreport (Opciones del compilador de C#)](./errorreport-compiler-option.md)
 - [Administrar propiedades de soluciones y proyectos](/visualstudio/ide/managing-project-and-solution-properties)

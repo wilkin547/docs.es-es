@@ -2,12 +2,12 @@
 title: Ejecución aplazada y evaluación diferida en LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: 1f68a6c7de943d4a38ad0e5777298368e1c4e554
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9cf28afb5b7b8b3047c8b1b21915ffe7409eb25e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487566"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594569"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Ejecución aplazada y evaluación diferida en LINQ to XML (C#)
 Las operaciones de consulta y de eje a menudo se implementan para usar la ejecución aplazada. Este tema describe los requisitos y las ventajas de la ejecución aplazada, y algunas consideraciones acerca de la implementación.  
@@ -17,7 +17,7 @@ Las operaciones de consulta y de eje a menudo se implementan para usar la ejecuc
   
  Las tecnologías LINQ usan intensivamente la ejecución aplazada tanto en los miembros de las clases <xref:System.Linq?displayProperty=nameWithType> principales como en los métodos de extensión de los diversos espacios de nombres LINQ, por ejemplo, <xref:System.Xml.Linq.Extensions?displayProperty=nameWithType>.  
   
- El lenguaje C# admite directamente la ejecución aplazada mediante la palabra clave [yield](../../../../csharp/language-reference/keywords/yield.md) (en forma de instrucción `yield-return`) cuando se usa en un bloque de iteradores. Este tipo de iterador debe devolver una colección de tipo <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601> (o bien un tipo derivado).  
+ El lenguaje C# admite directamente la ejecución aplazada mediante la palabra clave [yield](../../../language-reference/keywords/yield.md) (en forma de instrucción `yield-return`) cuando se usa en un bloque de iteradores. Este tipo de iterador debe devolver una colección de tipo <xref:System.Collections.IEnumerator> o <xref:System.Collections.Generic.IEnumerator%601> (o bien un tipo derivado).  
   
 ## <a name="eager-vs-lazy-evaluation"></a>Diferencias entre la evaluación diligente y la evaluación diferida  
  Al escribir un método que implemente una ejecución aplazada, también debe decidir si implementa el método con la evaluación diferida o la evaluación diligente.  
@@ -31,11 +31,11 @@ Las operaciones de consulta y de eje a menudo se implementan para usar la ejecuc
 ## <a name="next-steps"></a>Pasos siguientes  
  El siguiente tema de este tutorial ilustra la ejecución aplazada:  
   
-- [Deferred Execution Example (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md) (Ejemplo de ejecución diferida (C#))  
+- [Deferred Execution Example (C#)](./deferred-execution-example.md) (Ejemplo de ejecución diferida (C#))  
   
 ## <a name="see-also"></a>Vea también
 
-- [Tutorial: Encadenar cadenas juntas (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
-- [Conceptos y terminología (transformación funcional) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)
-- [Aggregation Operations (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md) (Operaciones de agregación [C#])
-- [yield](../../../../csharp/language-reference/keywords/yield.md)
+- [Tutorial: Encadenar cadenas juntas (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [Conceptos y terminología (transformación funcional) (C#)](./concepts-and-terminology-functional-transformation.md)
+- [Aggregation Operations (C#)](./aggregation-operations.md) (Operaciones de agregación [C#])
+- [yield](../../../language-reference/keywords/yield.md)

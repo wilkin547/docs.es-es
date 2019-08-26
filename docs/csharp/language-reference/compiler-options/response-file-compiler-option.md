@@ -7,12 +7,12 @@ helpviewer_keywords:
 - response files, specifying for compilation [C#]
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
-ms.openlocfilehash: 32a06c596c44cdf28e5c1bb3422b9cf8262f2c08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1884230f1779f9d425ef6e54cda6967c8e51d985
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738097"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602482"
 ---
 # <a name="-c-compiler-options"></a>@ (Opciones del compilador de C#)
 La opción @ le permite especificar un archivo que contiene opciones del compilador y archivos de código fuente para compilar.  
@@ -38,11 +38,11 @@ La opción @ le permite especificar un archivo que contiene opciones del compila
   
  En un archivo de respuesta, puede haber varias opciones del compilador y archivos de código fuente en una sola línea. Una sola especificación de opción del compilador debe aparecer en una línea (no puede abarcar varias líneas). Los archivos de respuesta pueden tener comentarios que comiencen con el símbolo #.  
   
- Especificar opciones del compilador desde un archivo de respuesta es igual que enviar esos comandos en la línea de comandos. Vea [Compilar desde la línea de comandos](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) para obtener más información.  
+ Especificar opciones del compilador desde un archivo de respuesta es igual que enviar esos comandos en la línea de comandos. Vea [Compilar desde la línea de comandos](./how-to-set-environment-variables-for-the-visual-studio-command-line.md) para obtener más información.  
   
  El compilador procesa las opciones de comando a medida que se encuentran. Por tanto, los argumentos de línea de comandos pueden reemplazar las opciones enumeradas anteriormente en archivos de respuesta. Por el contrario, las opciones en un archivo de respuesta reemplazarán las opciones enumeradas anteriormente en la línea de comandos o en otros archivos de respuesta.  
   
- C# proporciona el archivo csc.rsp, que se encuentra en el mismo directorio que el archivo csc.exe. Vea [-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) para saber más sobre csc.rsp.  
+ C# proporciona el archivo csc.rsp, que se encuentra en el mismo directorio que el archivo csc.exe. Vea [-noconfig](./noconfig-compiler-option.md) para saber más sobre csc.rsp.  
   
  No se puede establecer esta opción del compilador en el entorno de desarrollo de Visual Studio, ni se puede cambiar mediante programación.  
   
@@ -56,4 +56,4 @@ La opción @ le permite especificar un archivo que contiene opciones del compila
   
 ## <a name="see-also"></a>Vea también
 
-- [Opciones del compilador de C#](../../../csharp/language-reference/compiler-options/index.md)
+- [Opciones del compilador de C#](./index.md)

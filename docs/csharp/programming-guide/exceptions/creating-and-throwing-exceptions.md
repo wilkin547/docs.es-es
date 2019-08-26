@@ -8,15 +8,15 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: e569742943e121faeae340512544956b674da083
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 605a28f8f804c11a9a6636c7a17ec5782cc5a429
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595352"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590316"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Crear y producir excepciones (Guía de programación de C#)
-Las excepciones se usan para indicar que se ha producido un error mientras se ejecutaba el programa. Se crean los objetos de excepción que describen un error y, luego, se *producen* con la palabra clave [throw](../../../csharp/language-reference/keywords/throw.md). Después, el tiempo de ejecución busca el controlador de excepciones más compatible.  
+Las excepciones se usan para indicar que se ha producido un error mientras se ejecutaba el programa. Se crean los objetos de excepción que describen un error y, luego, se *producen* con la palabra clave [throw](../../language-reference/keywords/throw.md). Después, el tiempo de ejecución busca el controlador de excepciones más compatible.  
   
  Los programadores deberían producir excepciones cuando una o varias de las siguientes condiciones sean verdaderas:  
   
@@ -68,7 +68,7 @@ Para obtener más información, vea las secciones [Excepciones](~/_csharplang/sp
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Excepciones y control de excepciones](../../../csharp/programming-guide/exceptions/index.md)
+- [Guía de programación de C#](../index.md)
+- [Excepciones y control de excepciones](./index.md)
 - [Jerarquía de excepciones](../../../standard/exceptions/index.md)
-- [Control de excepciones](../../../csharp/programming-guide/exceptions/exception-handling.md)
+- [Control de excepciones](./exception-handling.md)

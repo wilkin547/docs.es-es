@@ -6,19 +6,19 @@ helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: 75b031773f8ac34b04f68ec01b12cd9263413bc3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 498c45ff1c5837f5dcb0d4a80d0e3bb249abd694
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200148"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589217"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>Implementación de interfaz explícita (Guía de programación de C#)
-Si una [clase](../../../csharp/language-reference/keywords/class.md) implementa dos interfaces que contienen un miembro con la misma firma, entonces al implementar ese miembro en la clase ambas interfaces usarán ese miembro como su implementación. En el ejemplo siguiente, todas las llamadas a `Paint` invocan el mismo método.  
+Si una [clase](../../language-reference/keywords/class.md) implementa dos interfaces que contienen un miembro con la misma firma, entonces al implementar ese miembro en la clase ambas interfaces usarán ese miembro como su implementación. En el ejemplo siguiente, todas las llamadas a `Paint` invocan el mismo método.  
   
  [!code-csharp[csProgGuideInheritance#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#39)]  
   
- En cambio, si los dos miembros de [interfaz](../../../csharp/language-reference/keywords/interface.md) no realizan la misma función, esto puede provocar una implementación incorrecta de una o ambas interfaces. Es posible implementar un miembro de interfaz explícitamente, mediante la creación de un miembro de clase que solo se llama a través de la interfaz, y es específico de esa interfaz. Esto se consigue asignando un nombre al miembro de clase con el nombre de la interfaz y un período. Por ejemplo:  
+ En cambio, si los dos miembros de [interfaz](../../language-reference/keywords/interface.md) no realizan la misma función, esto puede provocar una implementación incorrecta de una o ambas interfaces. Es posible implementar un miembro de interfaz explícitamente, mediante la creación de un miembro de clase que solo se llama a través de la interfaz, y es específico de esa interfaz. Esto se consigue asignando un nombre al miembro de clase con el nombre de la interfaz y un período. Por ejemplo:  
   
  [!code-csharp[csProgGuideInheritance#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#40)]  
   
@@ -36,7 +36,7 @@ Si una [clase](../../../csharp/language-reference/keywords/class.md) implementa 
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Clases y structs](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
-- [Herencia](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+- [Guía de programación de C#](../index.md)
+- [Clases y structs](../classes-and-structs/index.md)
+- [Interfaces](./index.md)
+- [Herencia](../classes-and-structs/inheritance.md)

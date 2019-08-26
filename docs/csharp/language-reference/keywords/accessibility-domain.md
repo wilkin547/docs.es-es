@@ -5,15 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 814aa8d3965674abe8bdb60b738cbeff93701ceb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141757"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606131"
 ---
 # <a name="accessibility-domain-c-reference"></a>Dominio de accesibilidad (Referencia de C#)
-El dominio de accesibilidad de un miembro especifica en qué secciones del programa se puede hacer referencia a dicho miembro. Si el miembro está anidado dentro de otro tipo, su dominio de accesibilidad viene determinado por el [nivel de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md) del miembro y por el dominio de accesibilidad del tipo contenedor inmediato.  
+El dominio de accesibilidad de un miembro especifica en qué secciones del programa se puede hacer referencia a dicho miembro. Si el miembro está anidado dentro de otro tipo, su dominio de accesibilidad viene determinado por el [nivel de accesibilidad](./accessibility-levels.md) del miembro y por el dominio de accesibilidad del tipo contenedor inmediato.  
   
  El dominio de accesibilidad de un tipo de nivel superior es por lo menos el texto del programa del proyecto en el que se declara. Es decir, el dominio incluye todos los archivos de origen de este proyecto. El dominio de accesibilidad de un tipo anidado es, al menos, el texto del programa del tipo en el que se declara. Es decir, el dominio es el cuerpo del tipo, que incluye todos los tipos anidados. El dominio de accesibilidad de un tipo anidado no puede superar nunca al del tipo contenedor. Estos conceptos se muestran en el siguiente ejemplo.  
   
@@ -27,14 +27,14 @@ El dominio de accesibilidad de un miembro especifica en qué secciones del progr
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
-- [Modificadores de acceso](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [Niveles de accesibilidad](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [Restricciones en el uso de los niveles de accesibilidad](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
-- [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [public](../../../csharp/language-reference/keywords/public.md)
-- [private](../../../csharp/language-reference/keywords/private.md)
-- [protected](../../../csharp/language-reference/keywords/protected.md)
-- [internal](../../../csharp/language-reference/keywords/internal.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](./index.md)
+- [Modificadores de acceso](./access-modifiers.md)
+- [Niveles de accesibilidad](./accessibility-levels.md)
+- [Restricciones en el uso de los niveles de accesibilidad](./restrictions-on-using-accessibility-levels.md)
+- [Modificadores de acceso](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)
+- [internal](./internal.md)
