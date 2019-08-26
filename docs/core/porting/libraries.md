@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo portar proyectos de .NET Framework
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8709c4942bcd1b0fc7f0e75ee41e5c9a01df83ee
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745565"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660711"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Traslado de bibliotecas de .NET Framework a .NET Core
 
@@ -29,16 +29,16 @@ También debe estar familiarizado con el contenido de los temas siguientes:
 [Estándar .NET](../../standard/net-standard.md)\
 En este tema se describe la especificación formal de las API de .NET que se prevé que estén disponibles en todas las implementaciones de .NET.
 
-[Paquetes, metapaquetes y marcos de trabajo](~/docs/core/packages.md)   
+[Paquetes, metapaquetes y marcos de trabajo](../packages.md)   
 En este artículo se trata cómo .NET Core define y usa paquetes y cómo los paquetes admiten el código que se ejecuta en varias implementaciones de .NET.
 
-[Desarrollo de bibliotecas con herramientas multiplataforma](~/docs/core/tutorials/libraries.md)   
+[Desarrollo de bibliotecas con herramientas multiplataforma](../tutorials/libraries.md)   
 En este tema se explica cómo escribir bibliotecas para .NET mediante el uso de herramientas multiplataforma de la CLI.
 
-[Adiciones al formato *csproj* para .NET Core](~/docs/core/tools/csproj.md)   
+[Adiciones al formato *csproj* para .NET Core](../tools/csproj.md)   
 En este artículo se describen los cambios que se han agregado al archivo de proyecto como parte del cambio a *csproj* y MSBuild.
 
-[Migración a .NET Core - Análisis de las dependencias de terceros](~/docs/core/porting/third-party-deps.md)   
+[Migración a .NET Core - Análisis de las dependencias de terceros](third-party-deps.md)   
 En este tema se trata la portabilidad de dependencias de terceros y qué hacer cuando una dependencia de paquetes de .NET Core no se ejecuta en .NET Core.
 
 ## <a name="retargeting-your-net-framework-code-to-net-framework-472"></a>Redestinar el código de .NET Framework a .NET Framework 4.7.2

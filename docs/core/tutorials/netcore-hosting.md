@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo hospedar el entorno de tiempo de e
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: d3bdaacd4be776e0e9fff01698cca360ea4c9c6d
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 8eebc04390514bca288b67952ec7748366a45d6e
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402023"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660525"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Escritura de un host personalizado de .NET Core para controlar el entorno de tiempo de ejecución de .NET desde el código nativo
 
@@ -23,7 +23,7 @@ En este artículo se proporciona información general sobre los pasos necesarios
 
 Como los hosts son aplicaciones nativas, este tutorial tratará la creación de una aplicación de C++ para hospedar .NET Core. Necesitará un entorno de desarrollo de C++ (como el que se proporciona mediante [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)).
 
-También querrá una aplicación de .NET Core sencilla con la que probar el host, por lo que debe instalar el [SDK de .NET Core](https://www.microsoft.com/net/core) y [crear una pequeña aplicación de prueba de .NET Core](../../core/tutorials/with-visual-studio.md) (como una aplicación "Hola a todos"). La aplicación "Hola a todos" que se ha creado mediante la nueva plantilla de proyecto de la consola de .NET Core es suficiente.
+También querrá una aplicación de .NET Core sencilla con la que probar el host, por lo que debe instalar el [SDK de .NET Core](https://www.microsoft.com/net/core) y [crear una pequeña aplicación de prueba de .NET Core](with-visual-studio.md) (como una aplicación "Hola a todos"). La aplicación "Hola a todos" que se ha creado mediante la nueva plantilla de proyecto de la consola de .NET Core es suficiente.
 
 ## <a name="hosting-apis"></a>API de hospedaje
 Hay tres API distintas que pueden usarse para hospedar .NET Core. En este documento (y sus [ejemplos](https://github.com/dotnet/samples/tree/master/core/hosting) asociados) se tratan todas las opciones.

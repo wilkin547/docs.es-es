@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110271"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660474"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Publicación de la aplicación Hola mundo de .NET Core con Visual Studio 2017
 
@@ -52,4 +52,4 @@ Para publicar y ejecutar la aplicación:
 
 El proceso de publicación crea una implementación dependiente del marco, que es un tipo de implementación donde la aplicación publicada se ejecutará en cualquier plataforma compatible con .NET Core con .NET Core instalado en el sistema. Los usuarios pueden ejecutar la aplicación mediante la emisión del comando `dotnet HelloWorld.dll` desde una ventana de consola.
 
-Para más información sobre cómo publicar e implementar aplicaciones de .NET Core, consulte [Implementación de aplicaciones .NET Core](../../core/deploying/index.md).
+Para más información sobre cómo publicar e implementar aplicaciones de .NET Core, consulte [Implementación de aplicaciones .NET Core](../deploying/index.md).

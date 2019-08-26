@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b92c3b293b37921e1a8b557a7842027ecce8851c
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: b85f878d8a391581fcc7419b3ca4d656eb5595af
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959255"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660446"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilación de una aplicación "Hola mundo" en C# con el SDK de .NET Core en Visual Studio 2017
 
@@ -20,7 +20,7 @@ En este tema se proporciona una introducción detallada para compilar, depurar y
 
 [Visual Studio de 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada. Puede desarrollar su aplicación con .NET Core 1.1 o .NET Core 2.0.
 
-Para obtener más información, vea el tema [Requisitos previos para .NET Core en Windows](../../core/windows-prerequisites.md).
+Para obtener más información, vea el tema [Requisitos previos para .NET Core en Windows](../windows-prerequisites.md).
 
 ## <a name="a-simple-hello-world-application"></a>Una aplicación Hola mundo sencilla
 

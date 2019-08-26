@@ -1,14 +1,14 @@
 ---
 title: 'Introducción a C#: tutoriales interactivos'
 description: Aprenda a usar C# en el explorador y empiece a trabajar con su entorno de desarrollo
-ms.date: 01/30/2018
+ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 580339f6724066c9fb33ee734ff35a34081e1426
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 65526dcf04525f3f2afb358a5b6289ff8bba7de8
+ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634498"
+ms.lasthandoff: 08/24/2019
+ms.locfileid: "70015006"
 ---
 # <a name="introduction-to-c"></a>Introducción a C\#
 
@@ -18,7 +18,7 @@ En las primeras lecciones se explican los conceptos de C# con la utilización de
 
 Todos los tutoriales de introducción posteriores a la lección Hola mundo se encuentran disponibles mediante la experiencia de explorador en línea o [en el entorno de desarrollo local](local-environment.md). Al final de cada tutorial, decida si desea continuar con la siguiente lección en línea o en su propia máquina. Hay vínculos que le ayudarán a configurar el entorno y continuar con el siguiente tutorial en su máquina.
 
-## <a name="hello-worldhello-worldyml"></a>[Hola mundo](hello-world.yml)
+## <a name="hello-worldhello-worldyml"></a>[Hello world](hello-world.yml)
 
 En el tutorial [Hola mundo](hello-world.yml), creará el programa de C# más básico. Explorará el tipo `string` y cómo trabajar con texto.
 

@@ -4,12 +4,12 @@ description: Más información sobre las tecnologías de .NET Framework no dispo
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: bfeea58f4d80b789a7174a77e0784f2326906416
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87c3dd337ad44fd21b255afa7c03b528cd8a42ad
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737093"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660596"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologías de .NET Framework no disponibles en .NET Core
 
@@ -33,13 +33,13 @@ En los equipos, utilice una solución basada en red como una alternativa. Si es 
 
 ## <a name="code-access-security-cas"></a>Seguridad de acceso del código (CAS)
 
-El espacio aislado, que se basa en el runtime o en el marco para restringir qué recursos usa o ejecuta una aplicación administrada, [no es compatible con .NET Framework](~/docs/framework/misc/code-access-security.md) y, por tanto, tampoco se admite en .NET Core. Hay demasiados casos en .NET Framework y en el runtime en los que se produce una elevación de privilegios para continuar tratando la seguridad de acceso al código (CAS) como un límite de seguridad. Además, la seguridad de acceso del código dificulta más la implementación y suele tener implicaciones en el rendimiento de corrección para las aplicaciones que no pretenden usar esta funcionalidad.
+El espacio aislado, que se basa en el runtime o en el marco para restringir qué recursos usa o ejecuta una aplicación administrada, [no es compatible con .NET Framework](../../framework/misc/code-access-security.md) y, por tanto, tampoco se admite en .NET Core. Hay demasiados casos en .NET Framework y en el runtime en los que se produce una elevación de privilegios para continuar tratando la seguridad de acceso al código (CAS) como un límite de seguridad. Además, la seguridad de acceso del código dificulta más la implementación y suele tener implicaciones en el rendimiento de corrección para las aplicaciones que no pretenden usar esta funcionalidad.
 
 Use los límites de seguridad que proporciona el sistema operativo, como la virtualización, los contenedores o las cuentas de usuario para ejecutar procesos con el menor conjunto de privilegios.
 
 ## <a name="security-transparency"></a>Transparencia de seguridad
 
-De forma similar a lo que ocurre con la seguridad de acceso al código, la transparencia de seguridad separa el código de espacios aislados del código crítico de seguridad de manera declarativa, pero [ya no se admite como un límite de seguridad](~/docs/framework/misc/security-transparent-code.md). Silverlight usa mucho esta característica. 
+De forma similar a lo que ocurre con la seguridad de acceso al código, la transparencia de seguridad separa el código de espacios aislados del código crítico de seguridad de manera declarativa, pero [ya no se admite como un límite de seguridad](../../framework/misc/security-transparent-code.md). Silverlight usa mucho esta característica. 
 
 Use los límites de seguridad que proporciona el sistema operativo, como visualización, contenedores o cuentas de usuario para ejecutar procesos con el menor conjunto de privilegios.
 

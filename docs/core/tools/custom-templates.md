@@ -3,12 +3,12 @@ title: Plantillas personalizadas para dotnet new
 description: Obtenga información sobre las plantillas personalizadas para cualquier tipo de proyecto o archivo de .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: 738c6b07f77bdbf6fd946253f95c8691e4172f31
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: d513965a60416392fb8acd15c9f89c8af0ec7876
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410346"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69660585"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Plantillas personalizadas para dotnet new
 
@@ -18,7 +18,7 @@ Puede instalar plantillas personalizadas desde un paquete NuGet en cualquier fue
 
 El motor de plantillas es de código abierto, y el repositorio de código en línea está en [dotnet/templating](https://github.com/dotnet/templating/) en GitHub. Visite el repositorio [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) para obtener ejemplos de plantillas. Puede encontrar más plantillas, incluidas las plantillas de terceros, en [Plantillas disponibles para dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) en GitHub. Para obtener información sobre cómo crear y usar plantillas personalizadas, vea [Cómo crear sus propias plantillas para dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) y la [Wiki del repositorio de GitHub dotnet/templating](https://github.com/dotnet/templating/wiki).
 
-Para seguir un tutorial y crear una plantilla, vea el tutorial [Creación de una plantilla personalizada para dotnet new](~/docs/core/tutorials/create-custom-template.md).
+Para seguir un tutorial y crear una plantilla, vea el tutorial [Creación de una plantilla personalizada para dotnet new](../tutorials/create-custom-template.md).
 
 ### <a name="net-default-templates"></a>Plantillas predeterminadas .NET
 
