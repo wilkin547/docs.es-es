@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5fd81a7eaf299217a17cd8051d77cd7a3695441e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305044"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939459"
 ---
 # <a name="traversing-xml-schemas"></a>Cómo atravesar esquemas XML
 Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), se obtiene acceso a los elementos, atributos y tipos almacenados en el SOM. Atravesar un esquema XML cargado en el SOM es también el primer paso para editar un esquema XML utilizando la API del SOM.  
@@ -35,7 +35,7 @@ Al atravesar un esquema XML con la API del Modelo de objetos de esquema (SOM), s
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (proporciona acceso a atributos que no pertenecen al espacio de nombres del esquema)|  
   
 > [!NOTE]
->  Todas las propiedades que se enumeran en la tabla anterior, excepto la propiedad <xref:System.Xml.Schema.XmlSchema.Items%2A>, son propiedades del conjunto de información posterior a la compilación de esquemas que no están disponibles hasta que se ha compilado el esquema. La propiedad <xref:System.Xml.Schema.XmlSchema.Items%2A> es una propiedad anterior a la compilación del esquema que se puede utilizar antes de que se haya compilado el esquema para tener acceso y editar todos los tipos, atributos y elementos de nivel globales.  
+> Todas las propiedades que se enumeran en la tabla anterior, excepto la propiedad <xref:System.Xml.Schema.XmlSchema.Items%2A>, son propiedades del conjunto de información posterior a la compilación de esquemas que no están disponibles hasta que se ha compilado el esquema. La propiedad <xref:System.Xml.Schema.XmlSchema.Items%2A> es una propiedad anterior a la compilación del esquema que se puede utilizar antes de que se haya compilado el esquema para tener acceso y editar todos los tipos, atributos y elementos de nivel globales.  
 >   
 >  La propiedad <xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A> proporciona acceso a todos atributos que no pertenecen al espacio de nombres del esquema. El procesador de esquemas no procesa estos atributos.  
   

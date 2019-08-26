@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc4850ff87d9ea827e86a16ee6b3a6953c1e3552
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: edf519621c2113843b89d96948243e9c095d2a57
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622706"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988857"
 ---
 # <a name="garbage-collection-notifications"></a>Notificaciones de recolección de elementos no utilizados
 Hay situaciones en que una colección de elementos no utilizados completa (es decir, una colección de generación 2) de Common Language Runtime puede afectar negativamente al rendimiento. Esto puede ser un problema especialmente con servidores que procesan grandes volúmenes de solicitudes; en este caso, una recolección grande de elementos no utilizados puede causar un tiempo de espera en la solicitud. Para evitar una recolección grande durante un período crítico, puede recibir una notificación de la proximidad de una recolección grande de elementos no utilizados y adoptar las medidas pertinentes para redirigir la carga de trabajo a otra instancia del servidor. También puede incluir una recolección por su cuenta, siempre que la instancia de servidor actual no necesite procesar solicitudes.  
@@ -24,7 +24,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
  El método <xref:System.GC.RegisterForFullGCNotification%2A> registra una notificación que se genera si el tiempo de ejecución detecta que una recolección de elementos no utilizados completa está próxima. Esta notificación consta de dos partes: cuando se está aproximando la recolección de elementos no utilizados completa y cuando finaliza la recolección de elementos no utilizados completa.  
   
 > [!WARNING]
->  Solo las recolecciones de elementos no utilizados bloqueadas generarán notificaciones. Cuando el elemento de configuración [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) está habilitado, las recolecciones de elementos no utilizados en segundo plano no generarán notificaciones.  
+> Solo las recolecciones de elementos no utilizados bloqueadas generarán notificaciones. Cuando el elemento de configuración [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) está habilitado, las recolecciones de elementos no utilizados en segundo plano no generarán notificaciones.  
   
  Para determinar cuándo se ha generado una notificación, use los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A>. Por lo general, utilice estos métodos en un bucle `while` para obtener continuamente una enumeración <xref:System.GCNotificationStatus> que muestra el estado de la notificación. Si el valor es <xref:System.GCNotificationStatus.Succeeded>, puede hacer lo siguiente:  
   
@@ -54,7 +54,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
 ## <a name="notification-threshold-parameters"></a>Parámetros del umbral de notificación  
  El método <xref:System.GC.RegisterForFullGCNotification%2A> tiene dos parámetros para especificar los valores de umbral de los objetos de generación 2 y del montón de objetos grandes. Cuando se alcanza dichos valores, debe generarse una notificación de recolección de elementos no utilizados. En la siguiente tabla se describen estos parámetros.  
   
-|Parámetro|Descripción|  
+|Parámetro|DESCRIPCIÓN|  
 |---------------|-----------------|  
 |`maxGenerationThreshold`|Número comprendido entre 1 y 99 que especifica cuándo debe emitirse la notificación basándose en los objetos promocionados en la generación 2.|  
 |`largeObjectHeapThreshold`|Un número comprendido entre 1 y 99 que especifica cuándo debe emitirse la notificación basándose en los objetos asignados en el montón de objetos grandes.|  
@@ -65,7 +65,7 @@ Hay situaciones en que una colección de elementos no utilizados completa (es de
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
+### <a name="description"></a>DESCRIPCIÓN  
  En el ejemplo siguiente, un grupo de solicitudes web entrantes del servicio de servidores. Para simular la carga de trabajo de procesamiento de solicitudes, se agregan matrices de bytes a una colección <xref:System.Collections.Generic.List%601>. Cada servidor registra una notificación de la recolección de elementos no utilizados y luego inicia un subproceso en el método del usuario `WaitForFullGCProc` para supervisar continuamente la enumeración <xref:System.GCNotificationStatus> devuelta por los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A>.  
   
  Los métodos <xref:System.GC.WaitForFullGCApproach%2A> y <xref:System.GC.WaitForFullGCComplete%2A> llaman a sus respectivos métodos de usuario de control de eventos cuando se emite una notificación:  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46865e398c3868e21b743cf45f42e8b9063a0cbe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b5cf6f0ae66141957d545134a2f8ff8eb799097
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298921"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946454"
 ---
 # <a name="plinq-data-sample"></a>Ejemplo de datos de PLINQ
 Este ejemplo contiene datos de ejemplo en formato .csv, junto con métodos que los transforman en colecciones en memoria de clientes, productos, pedidos y detalles de pedidos. Si desea realizar más pruebas con PLINQ, puede pegar los ejemplos de código de otros temas concretos en el código de este tema e invocarlo desde el método `Main`. También puede usar estos datos con sus propias consultas PLINQ.  
@@ -23,7 +23,7 @@ Este ejemplo contiene datos de ejemplo en formato .csv, junto con métodos que l
  Los datos representan un subconjunto de la base de datos Northwind. Se incluyen cincuenta (50) registros de clientes, pero no todos los campos. Se incluye un subconjunto de filas de los pedidos y los datos correspondientes de los detalles de los pedidos para cada cliente. Se incluyen todos los productos.  
   
 > [!NOTE]
->  El conjunto de datos no es lo suficientemente grande para mostrar que PLINQ es más rápido que LINQ to Objects para consultas que contienen solo las cláusulas básicas `where` y `select`. Para observar aumentos de velocidad de conjuntos de datos pequeños como este, use consultas que contengan operaciones caras desde el punto de vista del cálculo en cada elemento del conjunto de datos.  
+> El conjunto de datos no es lo suficientemente grande para mostrar que PLINQ es más rápido que LINQ to Objects para consultas que contienen solo las cláusulas básicas `where` y `select`. Para observar aumentos de velocidad de conjuntos de datos pequeños como este, use consultas que contengan operaciones caras desde el punto de vista del cálculo en cada elemento del conjunto de datos.  
   
 ### <a name="to-set-up-this-sample"></a>Para configurar este ejemplo  
   

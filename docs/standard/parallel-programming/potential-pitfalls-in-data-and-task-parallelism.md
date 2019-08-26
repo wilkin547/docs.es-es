@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4ee939096ef4e24397d03aa8a64405d66c740580
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620997"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946338"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Problemas potenciales en el paralelismo de datos y tareas
 En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> y <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> pueden proporcionar importantes mejoras de rendimiento con respecto a los bucles secuenciales normales. Sin embargo, el trabajo de paralelizar el bucle aporta una complejidad que puede conducir a problemas que, en código secuencial, no son tan comunes o no se producen en ningún caso. En este tema se indican algunas prácticas que se deben evitar al escribir bucles paralelos.  
@@ -49,7 +49,7 @@ En muchos casos, <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=na
  La mayoría de los métodos estáticos de .NET Framework son seguros para subprocesos y se les puede llamar simultáneamente desde varios subprocesos. Sin embargo, incluso en estos casos, la sincronización que esto supone puede conducir a una ralentización importante en la consulta.  
   
 > [!NOTE]
->  Puede comprobarlo si inserta algunas llamadas a <xref:System.Console.WriteLine%2A> en las consultas. Aunque este método se usa en los ejemplos de la documentación para fines de demostración, no debe usarlo en bucles paralelos a menos que sea necesario.  
+> Puede comprobarlo si inserta algunas llamadas a <xref:System.Console.WriteLine%2A> en las consultas. Aunque este método se usa en los ejemplos de la documentación para fines de demostración, no debe usarlo en bucles paralelos a menos que sea necesario.  
   
 ## <a name="be-aware-of-thread-affinity-issues"></a>Tener en cuenta los problemas de afinidad de los subprocesos  
  Algunas tecnologías, como la interoperabilidad COM para componentes de contenedor uniproceso (STA), Windows Forms y Windows Presentation Foundation (WPF), imponen restricciones de afinidad de subprocesos que exigen que el código se ejecute en un subproceso determinado. Por ejemplo, tanto en Windows Forms como en WPF, solo se puede tener acceso a un control en el subproceso donde se creó. Por ejemplo, esto significa que no puede actualizar un control de lista desde un bucle paralelo a menos que configure el programador del subproceso para que programe trabajo solo en el subproceso de la interfaz de usuario. Para obtener más información, vea cómo [especificar un contexto de sincronización](xref:System.Threading.Tasks.TaskScheduler#specifying-a-synchronization-context).  

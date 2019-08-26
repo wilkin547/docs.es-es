@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939c215633be10e487f9cd5bd25856c0c611921
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 298ac8eae0a8b125ddf5f1ff35658f426f6b10aa
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623664"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968584"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Recuperar información almacenada en atributos
 La recuperación de un atributo personalizado es un proceso sencillo. En primer lugar, declare una instancia del atributo que desea recuperar. A continuación, utilice el método <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> para inicializar el atributo nuevo en el valor del atributo que desea recuperar. Una vez inicializado el nuevo atributo, basta con usar sus propiedades para obtener los valores.  
   
 > [!IMPORTANT]
->  En este tema se describe cómo recuperar los atributos personalizados del código que se carga en el contexto de ejecución. Para recuperar los atributos del código que se carga en el contexto de solo reflexión, se debe usar la clase <xref:System.Reflection.CustomAttributeData>, como se muestra en [Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+> En este tema se describe cómo recuperar los atributos personalizados del código que se carga en el contexto de ejecución. Para recuperar los atributos del código que se carga en el contexto de solo reflexión, se debe usar la clase <xref:System.Reflection.CustomAttributeData>, como se muestra en [Cómo: Cargar ensamblados en el contexto de solo reflexión](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
  En esta sección se describen los siguientes métodos para recuperar atributos:  
   

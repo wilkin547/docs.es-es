@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d253e917d6f805c471f244cddea44f339343868
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 8875ed10c4cb144995b602287f904d3c98dcdb39
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025520"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948761"
 ---
 # <a name="types-of-isolation"></a>Tipos de aislamiento
 El acceso al almacenamiento aislado siempre está restringido al usuario que lo creó. Para implementar este tipo de aislamiento, Common Language Runtime usa el mismo concepto de identidad de usuario que reconoce el sistema operativo, que es la identidad asociada con el proceso en el que se ejecuta el código cuando se abre el almacén. Esta identidad es una identidad de usuario autenticado, pero la suplantación puede hacer que la identidad del usuario actual cambie de forma dinámica.  
@@ -53,7 +53,7 @@ El acceso al almacenamiento aislado siempre está restringido al usuario que lo 
  Tenga en cuenta que, excepto para los almacenes móviles, el equipo siempre aísla de forma implícita el almacenamiento aislado, porque usa los medios de almacenamiento locales en un equipo determinado.  
   
 > [!IMPORTANT]
->  El almacenamiento aislado no está disponible para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . En su lugar, use las clases de datos de la aplicación de los espacios de nombres `Windows.Storage` incluidas en la API de Windows Runtime para almacenar archivos y datos locales. Para más información, vea [Datos de aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) en el Centro de desarrollo de Windows.  
+> El almacenamiento aislado no está disponible para las aplicaciones de la [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . En su lugar, use las clases de datos de la aplicación de los espacios de nombres `Windows.Storage` incluidas en la API de Windows Runtime para almacenar archivos y datos locales. Para más información, vea [Datos de aplicación](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) en el Centro de desarrollo de Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Aislamiento por usuario y ensamblado  

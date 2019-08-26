@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 561d0759af4f7557bae39540cbb00f8038726ddc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882512"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950809"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Procedimientos recomendados para implementar el modelo asincrónico basado en eventos
 El modelo asincrónico basado en eventos proporciona un método eficaz de exponer el comportamiento asincrónico en clases, con una semántica de delegados y eventos ya conocida. Para implementar el modelo asincrónico basado en eventos, es necesario cumplir algunos requisitos de comportamiento específicos. En las secciones siguientes se describen los requisitos y las instrucciones que se deben tener en cuenta a la hora de implementar una clase que responda a este modelo.  
@@ -125,7 +125,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
  Para informar al cliente del progreso, los resultados incrementales y la finalización, llame a los métodos <xref:System.ComponentModel.AsyncOperation.Post%2A> y <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> en <xref:System.ComponentModel.AsyncOperation>. <xref:System.ComponentModel.AsyncOperation> es responsable de calcular las referencias de llamadas a los controladores de eventos del cliente para el subproceso o contexto apropiado.  
   
 > [!NOTE]
->  Puede sortear estas reglas si desea contravenir la directiva del modelo de aplicación, pero al mismo tiempo seguir beneficiándose de las otras ventajas de usar el modelo asincrónico basado en eventos. Por ejemplo, es posible que desee que una clase que opera en Windows Forms sea de subproceso libre. Puede crear una clase de subproceso libre si los desarrolladores entienden las restricciones implícitas. Las aplicaciones de consola no sincronizan la ejecución de llamadas <xref:System.ComponentModel.AsyncOperation.Post%2A>. Esto puede provocar que se generen eventos `ProgressChanged` fuera de lugar. Si desea serializar la ejecución de llamadas <xref:System.ComponentModel.AsyncOperation.Post%2A>, implemente e instale una clase <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>.  
+> Puede sortear estas reglas si desea contravenir la directiva del modelo de aplicación, pero al mismo tiempo seguir beneficiándose de las otras ventajas de usar el modelo asincrónico basado en eventos. Por ejemplo, es posible que desee que una clase que opera en Windows Forms sea de subproceso libre. Puede crear una clase de subproceso libre si los desarrolladores entienden las restricciones implícitas. Las aplicaciones de consola no sincronizan la ejecución de llamadas <xref:System.ComponentModel.AsyncOperation.Post%2A>. Esto puede provocar que se generen eventos `ProgressChanged` fuera de lugar. Si desea serializar la ejecución de llamadas <xref:System.ComponentModel.AsyncOperation.Post%2A>, implemente e instale una clase <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>.  
   
  Para obtener más información sobre el uso de <xref:System.ComponentModel.AsyncOperation> y <xref:System.ComponentModel.AsyncOperationManager> para habilitar operaciones asincrónicas, vea [Cómo: Implementación de un componente que admita el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   

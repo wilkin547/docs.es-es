@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97ea5c7389cf30f7f58c944c95e095ebe4146192
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 135459f84cee0a3c356882b193ff561befb43145
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590595"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963363"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Procedimiento para mostrar milisegundos en los valores de fecha y hora
 Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluyen las horas, minutos y segundos de un valor de tiempo, pero excluyen el componente correspondiente a los milisegundos. En este tema se muestra cómo se incluye un componente de milisegundos de un valor de fecha y hora en cadenas de fecha y hora con formato.  
@@ -49,7 +49,7 @@ Los métodos de formato de fecha y hora predeterminados, como <xref:System.DateT
  [!code-vb[Formatting.HowTo.Millisecond#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.Millisecond/vb/Millisecond.vb#3)]  
   
 > [!NOTE]
->  Es posible mostrar unidades fraccionarias de segundo muy pequeñas, como diezmilésimas o cienmilésimas de segundo. Sin embargo, estos valores no suelen ser significativos. La precisión de los valores de fecha y hora depende de la resolución del reloj del sistema. En Windows NT 3.5 y versiones posteriores y en los sistemas operativos de [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], la resolución del reloj es aproximadamente 10-15 milisegundos.  
+> Es posible mostrar unidades fraccionarias de segundo muy pequeñas, como diezmilésimas o cienmilésimas de segundo. Sin embargo, estos valores no suelen ser significativos. La precisión de los valores de fecha y hora depende de la resolución del reloj del sistema. En Windows NT 3.5 y versiones posteriores y en los sistemas operativos de [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], la resolución del reloj es aproximadamente 10-15 milisegundos.  
   
 ## <a name="see-also"></a>Vea también
 

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc2ed1a450921452dee894caeb52c477d501b573
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: d9c90a3bd272b54d2884d013e62123dd67d836e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758630"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960054"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 La clase <xref:System.Threading.EventWaitHandle> permite que los subprocesos se comuniquen entre sí mediante señalización y espera de señales. Los identificadores de espera de eventos (también denominados simplemente como eventos) son identificadores de espera que se pueden señalar con el fin de liberar uno o varios subprocesos en espera. Cuando se envía una señal, se restablece un identificador de espera de evento de forma manual o automática. La clase <xref:System.Threading.EventWaitHandle> puede representar cualquier identificador de espera de evento local (evento local) o identificador de espera de evento del sistema con nombre (denominado evento o evento del sistema y visible para todos los procesos).  
   
 > [!NOTE]
->  Los identificadores de espera de evento no son [eventos](../events/index.md) de .NET. No existen delegados ni controladores de eventos implicados. Se utiliza el término "evento" para describirlos porque tradicionalmente se ha hecho referencia a ellos como eventos del sistema operativo y porque el acto de señalar el indicador de espera indica a los subprocesos en espera que se ha producido un evento.  
+> Los identificadores de espera de evento no son [eventos](../events/index.md) de .NET. No existen delegados ni controladores de eventos implicados. Se utiliza el término "evento" para describirlos porque tradicionalmente se ha hecho referencia a ellos como eventos del sistema operativo y porque el acto de señalar el indicador de espera indica a los subprocesos en espera que se ha producido un evento.  
   
  Ambos identificadores de espera de evento local y con nombre usan objetos de sincronización del sistema, protegidos por contenedores <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> para garantizar la liberación de los recursos. Puede usar el método <xref:System.Threading.WaitHandle.Dispose%2A> para liberar los recursos inmediatamente cuando haya terminado de utilizar el objeto.  
   
@@ -31,7 +31,7 @@ La clase <xref:System.Threading.EventWaitHandle> permite que los subprocesos se 
  Los eventos de restablecimiento automático se utilizan normalmente para proporcionar acceso exclusivo a un recurso a un único subproceso cada vez. Un subproceso solicita el recurso mediante una llamada al método <xref:System.Threading.WaitHandle.WaitOne%2A>. Si ningún otro subproceso contiene el identificador de espera, el método devuelve `true` y el subproceso que realiza la llamada tiene el control del recurso.  
   
 > [!IMPORTANT]
->  Al igual que con todos los mecanismos de sincronización, debe asegurarse de que todas las rutas de acceso de código esperen al identificador de espera adecuado antes de obtener acceso a un recurso protegido. La sincronización de subprocesos es cooperativa.  
+> Al igual que con todos los mecanismos de sincronización, debe asegurarse de que todas las rutas de acceso de código esperen al identificador de espera adecuado antes de obtener acceso a un recurso protegido. La sincronización de subprocesos es cooperativa.  
   
  Si un evento de restablecimiento automático se señaliza cuando no hay ningún subproceso en espera, permanece señalado hasta que un subproceso intenta esperar en él. El evento libera el subproceso y lo restablece inmediatamente, bloqueando los subprocesos subsiguientes.  
   
@@ -53,14 +53,14 @@ La clase <xref:System.Threading.EventWaitHandle> permite que los subprocesos se 
  Puede crear un objeto <xref:System.Threading.EventWaitHandle> que represente un evento de sistema con nombre mediante el uso de uno de los constructores que especifica un nombre de evento.  
   
 > [!NOTE]
->  Dado que los eventos con nombre abarcan todo el sistema, es posible tener varios objetos <xref:System.Threading.EventWaitHandle> que representan el mismo evento con nombre. Cada vez que llama a un constructor o al método <xref:System.Threading.EventWaitHandle.OpenExisting%2A>, se crea un objeto <xref:System.Threading.EventWaitHandle>. Si se especifica el mismo nombre repetidamente, se crean varios objetos que representan el mismo evento con nombre.  
+> Dado que los eventos con nombre abarcan todo el sistema, es posible tener varios objetos <xref:System.Threading.EventWaitHandle> que representan el mismo evento con nombre. Cada vez que llama a un constructor o al método <xref:System.Threading.EventWaitHandle.OpenExisting%2A>, se crea un objeto <xref:System.Threading.EventWaitHandle>. Si se especifica el mismo nombre repetidamente, se crean varios objetos que representan el mismo evento con nombre.  
   
  Se recomienda actuar con precaución en el uso de los eventos con nombre. Dado que abarcan todo el sistema, otro proceso que utilice el mismo nombre puede bloquear los subprocesos inesperadamente. Si hubiera código malintencionado ejecutándose en el mismo equipo, dicho código podría utilizar esto como base de un ataque de denegación de servicio.  
   
  Utilice la seguridad de control de acceso para proteger un objeto <xref:System.Threading.EventWaitHandle> que representa un evento con nombre, a poder ser mediante un constructor que especifique un objeto <xref:System.Security.AccessControl.EventWaitHandleSecurity>. También puede aplicar la seguridad de control de acceso mediante el método <xref:System.Threading.EventWaitHandle.SetAccessControl%2A>, pero esto deja una ventana de vulnerabilidad entre el momento en que se crea el identificador de espera de evento y el momento en que se protege. Proteger los eventos con seguridad de control de acceso ayuda a evitar ataques malintencionados, pero no soluciona el problema de conflictos involuntarios de nombres.  
   
 > [!NOTE]
->  A diferencia de la clase <xref:System.Threading.EventWaitHandle>, las clases derivadas <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent> pueden representar solo identificadores de espera locales. No pueden representar eventos del sistema con nombre.  
+> A diferencia de la clase <xref:System.Threading.EventWaitHandle>, las clases derivadas <xref:System.Threading.AutoResetEvent> y <xref:System.Threading.ManualResetEvent> pueden representar solo identificadores de espera locales. No pueden representar eventos del sistema con nombre.  
   
 ## <a name="see-also"></a>Vea también
 

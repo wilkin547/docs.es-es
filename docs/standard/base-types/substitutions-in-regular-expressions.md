@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5c06a20e3d6cf3030da1cc63435423e087408aa6
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 4b079809fa76097cd575d96c70d17d1c6c85e3a1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301504"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968538"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Sustituciones en expresiones regulares
 <a name="Top"></a> Las sustituciones son elementos del lenguaje que se reconocen solo dentro de patrones de reemplazo. Usan un patrón de expresión regular para definir todo o parte del texto que reemplazará el texto coincidente en la cadena de entrada. El patrón de reemplazo puede estar compuesto de una o más sustituciones junto con caracteres literales. Los patrones de reemplazo se proporcionan a las sobrecargas del método <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> que tiene un parámetro `replacement` y al método <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . Los métodos reemplazan el patrón que coincide con el patrón que define el parámetro `replacement` .  
   
  .NET Framework define los elementos de sustitución que se enumeran en la siguiente tabla.  
   
-|Sustitución|Descripción|  
+|Sustitución|DESCRIPCIÓN|  
 |------------------|-----------------|  
 |$ *number*|Incluye la última subcadena coincidente por el grupo capturado que identifica *number*, donde *number* es un valor decimal, en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo numerado](#Numbered).|  
 |${ *name* }|Incluye la última subcadena coincidente por el grupo con nombre que designa `(?<`*name*`> )` en la cadena de reemplazo. Para obtener más información, vea [Sustituir un grupo con nombre](#Named).|  
@@ -44,7 +44,7 @@ ms.locfileid: "66301504"
  El único carácter que puede aparecer en un patrón de expresión regular o en una sustitución es el carácter `$` , aunque tiene un significado diferente en cada contexto. En un patrón de expresión regular, `$` es un delimitador que coincide con el final de la cadena. En un patrón de reemplazo, `$` indica el principio de una sustitución.  
   
 > [!NOTE]
->  Para obtener una funcionalidad similar a la de un patrón de reemplazo dentro de una expresión regular, use una referencia inversa. Para obtener más información acerca de las referencias inversas, vea [Construcciones de referencia inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
+> Para obtener una funcionalidad similar a la de un patrón de reemplazo dentro de una expresión regular, use una referencia inversa. Para obtener más información acerca de las referencias inversas, vea [Construcciones de referencia inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).  
   
 <a name="Numbered"></a>   
 ## <a name="substituting-a-numbered-group"></a>Sustituir un grupo numerado  
@@ -63,7 +63,7 @@ ms.locfileid: "66301504"
   
  El patrón de expresión regular `\p{Sc}*(\s?\d+[.,]?\d*)\p{Sc}*` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Busca una coincidencia con cero o más caracteres de símbolo de divisa.|  
 |`\s?`|Busca una coincidencia con cero o un carácter de espacio en blanco.|  
@@ -89,7 +89,7 @@ ms.locfileid: "66301504"
   
  El patrón de expresión regular `\p{Sc}*(?<amount>\s?\d[.,]?\d*)\p{Sc}*` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\p{Sc}*`|Busca una coincidencia con cero o más caracteres de símbolo de divisa.|  
 |`\s?`|Busca una coincidencia con cero o un carácter de espacio en blanco.|  
@@ -111,7 +111,7 @@ ms.locfileid: "66301504"
   
  El patrón de expresión regular `\b(\d+)(\.(\d+))?` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Comenzar la búsqueda de coincidencias al principio de un límite de palabras.|  
 |`(\d+)`|Buscar coincidencias con uno o más dígitos decimales. Este es el primer grupo de captura.|  
@@ -130,7 +130,7 @@ ms.locfileid: "66301504"
   
  El patrón de expresión regular `^(\w+\s?)+$` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Comenzar la búsqueda de coincidencias al principio de la cadena de entrada.|  
 |`(\w+\s?)+`|Buscar coincidencias con el patrón de uno o varios caracteres de palabra seguidos de cero o un carácter de espacio en blanco una o varias veces.|  

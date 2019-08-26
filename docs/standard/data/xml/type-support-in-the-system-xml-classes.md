@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 63570538-06e3-4401-ad4d-ac50be90c7bf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 979975e993a84dfe5c5527291f8cfe650be80ee6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 954ff12ae1ac8b4d601c35fcd76ea35b2bb3acbf
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647837"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939448"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a>Compatibilidad de tipos en las clases System.Xml
 En la versión 2.0 de .NET Framework, se han mejorado las clases XML principales para incluir características de compatibilidad de tipos. Las clases <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> y <xref:System.Xml.XPath.XPathNavigator> tienen características de compatibilidad de tipos, incluyendo la capacidad de realizar conversiones entre tipos de esquemas XML y tipos de Common Language Runtime (CLR).  
@@ -26,7 +26,7 @@ En la versión 2.0 de .NET Framework, se han mejorado las clases XML principales
 - Las propiedades **ValueAs** y <xref:System.Xml.XPath.XPathNavigator.TypedValue%2A> de la clase <xref:System.Xml.XPath.XPathNavigator> devuelven un valor de nodo y lo convierten en un valor CLR en una sola llamada de método.  
   
 > [!NOTE]
->  En la versión 1.0 de .NET Framework, se necesitaba la clase <xref:System.Xml.XmlConvert> para realizar la conversión entre esquemas XML y tipos CLR.  
+> En la versión 1.0 de .NET Framework, se necesitaba la clase <xref:System.Xml.XmlConvert> para realizar la conversión entre esquemas XML y tipos CLR.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Asignación de tipos de datos XML a tipos CLR](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  

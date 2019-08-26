@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93832a296f9b80a5374bc729c04e19d1f178e99f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502551"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960090"
 ---
 # <a name="destroying-threads"></a>Destrucción de subprocesos
-El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime produce una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para obtener más información, vea <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
+El método <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> se utiliza para detener un subproceso administrado de forma permanente. Cuando se llama a <xref:System.Threading.Thread.Abort%2A>, Common Language Runtime produce una clase <xref:System.Threading.ThreadAbortException> en el subproceso de destino, que este último puede detectar. Para más información, consulte <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Si un subproceso ejecuta código no administrado al llamar a su método <xref:System.Threading.Thread.Abort%2A>, el tiempo de ejecución lo marca como <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. La excepción se produce cuando el subproceso vuelve al código administrado.  
+> Si un subproceso ejecuta código no administrado al llamar a su método <xref:System.Threading.Thread.Abort%2A>, el tiempo de ejecución lo marca como <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. La excepción se produce cuando el subproceso vuelve al código administrado.  
   
  Una vez que se anula un subproceso, no se puede reiniciar.  
   

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f2be5881a7f663b13dd13ffc0e0faf88afd7efc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4188896fb36d8535f86b245c3b1942f5a058da9b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647959"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69936835"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Navegación por nodos de espacios de nombres y atributos con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye dos conjuntos de métodos de navegación. El primero, que se encuentra en el tema [Navegación por un conjunto de nodos con XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), se utiliza para navegar por *conjuntos de nodos* en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>. El segundo, que se describe en este tema, se utiliza para navegar por *nodos de espacios de nombres y atributos* en un objeto <xref:System.Xml.XPath.XPathDocument> o <xref:System.Xml.XmlDocument>.  
@@ -31,7 +31,7 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye dos conjuntos de método
  Cuando el nodo actual es un elemento, utilice la propiedad <xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> para ver si hay algún atributo asociado a dicho elemento. Una vez que se sabe que un elemento tiene atributos, existen varios métodos de acceso a atributos. Para recuperar un solo atributo del elemento, utilice el método <xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A>. Para mover <xref:System.Xml.XPath.XPathNavigator> a un atributo concreto, utilice el método <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>. También puede iterar por cada atributo de un elemento utilizando el método <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> y, a continuación, realizando varias llamadas al método <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>.  
   
 > [!NOTE]
->  Cuando el objeto <xref:System.Xml.XPath.XPathNavigator> se encuentra en un nodo de tipo atributo o espacio de nombres, los métodos <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> siempre devolverán `false`, y no afectarán a la posición del <xref:System.Xml.XPath.XPathNavigator>. Las excepciones son los métodos <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>.  
+> Cuando el objeto <xref:System.Xml.XPath.XPathNavigator> se encuentra en un nodo de tipo atributo o espacio de nombres, los métodos <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> siempre devolverán `false`, y no afectarán a la posición del <xref:System.Xml.XPath.XPathNavigator>. Las excepciones son los métodos <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>.  
   
 ## <a name="namespace-node-navigation"></a>Navegación por nodos de espacios de nombres  
  Cada elemento tiene un conjunto de nodos de espacios de nombres asociado, uno para cada prefijo de espacio de nombres distinto que esté ligado a un identificador URI de espacio de nombres en el ámbito del elemento (incluido el prefijo XML ligado al espacio de nombres `http://www.w3.org/XML/1998/namespace`, que se declara de forma implícita en cada documento XML) y uno para el espacio de nombres predeterminado si hay uno en el ámbito del elemento. El elemento es el principal de cada uno de estos nodos de espacio de nombres; sin embargo, un nodo de espacio de nombres no es un elemento secundario de su elemento principal.  
@@ -49,7 +49,7 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye dos conjuntos de método
  Siempre hay al menos un nodo de espacios de nombres para cualquier elemento de un documento XML. Éste es el nodo de espacios de nombres con el prefijo `xml` y el identificador URI de espacio de nombres `http://www.w3.org/XML/1998/namespace`. Para recuperar un identificador URI de espacio de nombres dado un prefijo concreto, utilice el método <xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A>. Para mover el objeto <xref:System.Xml.XPath.XPathNavigator> a un nodo de espacios de nombres en particular, utilice el método <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>. También puede iterar por cada nodo de espacios de nombres del ámbito de un elemento utilizando el método <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> y, a continuación, realizando varias llamadas al método <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>.  
   
 > [!NOTE]
->  Cuando el objeto <xref:System.Xml.XPath.XPathNavigator> se encuentra en un nodo de tipo atributo o espacio de nombres, los métodos <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> siempre devolverán `false`, y no afectarán a la posición del <xref:System.Xml.XPath.XPathNavigator>. Las excepciones son los métodos <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>.  
+> Cuando el objeto <xref:System.Xml.XPath.XPathNavigator> se encuentra en un nodo de tipo atributo o espacio de nombres, los métodos <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToFollowing%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A> siempre devolverán `false`, y no afectarán a la posición del <xref:System.Xml.XPath.XPathNavigator>. Las excepciones son los métodos <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>, <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToRoot%2A>.  
   
 ### <a name="the-xpathnamespacescope-enumeration"></a>Enumeración XPathNamespaceScope  
  Al navegar por nodos de espacios de nombres, es posible llamar a los métodos <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> con un parámetro <xref:System.Xml.XPath.XPathNamespaceScope>. Estos métodos se comportan de forma diferente a sus equivalentes que se llaman sin ningún parámetro. La enumeración <xref:System.Xml.XPath.XPathNamespaceScope> tiene valores de <xref:System.Xml.XPath.XPathNamespaceScope.All>, <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml> o <xref:System.Xml.XPath.XPathNamespaceScope.Local>.  
@@ -73,7 +73,7 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye dos conjuntos de método
 - Cuando está situado en `root`: `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
->  La clase <xref:System.Xml.XPath.XPathNavigator> devuelve nodos de espacios de nombres en el orden inverso del documento. Por lo tanto, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> se desplaza básicamente al último nodo de espacios de nombres del ámbito actual.  
+> La clase <xref:System.Xml.XPath.XPathNavigator> devuelve nodos de espacios de nombres en el orden inverso del documento. Por lo tanto, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> se desplaza básicamente al último nodo de espacios de nombres del ámbito actual.  
   
  Los siguientes ejemplos muestran qué espacios de nombres devuelven los métodos <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> y <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> con la enumeración <xref:System.Xml.XPath.XPathNamespaceScope> especificada en diversos ámbitos de un documento XML.  
   
@@ -94,7 +94,7 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye dos conjuntos de método
 - <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`.  
   
 > [!NOTE]
->  La clase <xref:System.Xml.XPath.XPathNavigator> devuelve nodos de espacios de nombres en el orden inverso del documento. Por lo tanto, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> se desplaza básicamente al último nodo de espacios de nombres del ámbito actual.  
+> La clase <xref:System.Xml.XPath.XPathNavigator> devuelve nodos de espacios de nombres en el orden inverso del documento. Por lo tanto, <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> se desplaza básicamente al último nodo de espacios de nombres del ámbito actual.  
   
 ## <a name="see-also"></a>Vea también
 

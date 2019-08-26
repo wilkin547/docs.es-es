@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 41c9793900c3e7accd5463a19de10d1cb81afd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce77e57eb049c031ed506e8812fff59ba97a978e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503838"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950863"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Programación asincrónica mediante delegados
 Los delegados permiten llamar a métodos sincrónicos de forma asincrónica. Cuando se llama a un delegado sincrónicamente, el método `Invoke` llama al método de destino directamente en el subproceso actual. Si se llama al método `BeginInvoke`, Common Language Runtime (CLR) coloca la solicitud en cola y devuelve inmediatamente el control al elemento que lo llamó. El método de destino se llama asincrónicamente desde un subproceso del grupo de subprocesos. El subproceso original, que envió la solicitud, puede continuar ejecutándose en paralelo con el método de destino. Si se ha especificado un método de devolución de llamada en la llamada al método `BeginInvoke`, el método de devolución de llamada se llama cuando finaliza el método de destino. En el método de devolución de llamada, el método `EndInvoke` obtiene el valor devuelto y cualquier parámetro de entrada y salida o de solo salida. Si no se especifica ningún método de devolución de llamada al llamar a `BeginInvoke`, se puede llamar a `EndInvoke` desde el subproceso que llamó a `BeginInvoke`.  
   
 > [!IMPORTANT]
->  Los compiladores deben emitir clases de delegados con los métodos `Invoke`, `BeginInvoke` y `EndInvoke` mediante la firma de delegados que especifique el usuario. Los métodos `BeginInvoke` y `EndInvoke` deben representarse como nativos. Debido a que estos métodos están marcados como nativos, Common Language Runtime proporciona automáticamente la implementación en el momento en que se carga la clase. El cargador se asegura de que no se reemplazarán.  
+> Los compiladores deben emitir clases de delegados con los métodos `Invoke`, `BeginInvoke` y `EndInvoke` mediante la firma de delegados que especifique el usuario. Los métodos `BeginInvoke` y `EndInvoke` deben representarse como nativos. Debido a que estos métodos están marcados como nativos, Common Language Runtime proporciona automáticamente la implementación en el momento en que se carga la clase. El cargador se asegura de que no se reemplazarán.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Llamada a métodos sincrónicos de forma asincrónica](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  

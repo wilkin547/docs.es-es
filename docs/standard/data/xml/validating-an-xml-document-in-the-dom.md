@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ea3bdea9c65b326953d16d7824114763ff4d017
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589862"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939407"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validación de un documento XML en el DOM
 La clase <xref:System.Xml.XmlDocument> no valida el código XML en el Modelo de objetos de documento (DOM) con un esquema del lenguaje de definición de esquemas XML (XSD) ni una definición de tipo de documento (DTD) de manera predeterminada; sólo se comprueba si el código XML es correcto.  
@@ -76,7 +76,7 @@ La clase <xref:System.Xml.XmlDocument> no valida el código XML en el Modelo de 
  <xref:System.Xml.Schema.ValidationEventHandler> controla los errores de validación. Si se ha asignado un <xref:System.Xml.Schema.ValidationEventHandler> a la instancia de <xref:System.Xml.XmlReaderSettings> o se ha pasado al método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument>, el <xref:System.Xml.Schema.ValidationEventHandler> controlará los errores de validación de esquemas; de lo contrario, se inicia una <xref:System.Xml.Schema.XmlSchemaValidationException> cuando se encuentra un error de validación de esquema.  
   
 > [!NOTE]
->  Los datos XML se cargan en el DOM a pesar de los errores de validación de esquemas, a menos que <xref:System.Xml.Schema.ValidationEventHandler> inicie una excepción para detener el proceso.  
+> Los datos XML se cargan en el DOM a pesar de los errores de validación de esquemas, a menos que <xref:System.Xml.Schema.ValidationEventHandler> inicie una excepción para detener el proceso.  
 >   
 >  No se notifican advertencias de validación de esquemas a menos que se especifique la marca <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> para el objeto <xref:System.Xml.XmlReaderSettings>.  
   

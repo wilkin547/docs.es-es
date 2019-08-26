@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e39324ee-72e5-42d4-a80d-bf3ee7fc6c59
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73440f2ed689bdad56bb1f05025f826da9c409e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8903d0443594885b3b0e8cca716eda8177c60cca
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633320"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988796"
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizar cadenas numéricas en .NET
 Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` y `TryParse`, que puede usar para convertir la representación de cadena de un número en un tipo numérico. Estos métodos permiten analizar cadenas generadas mediante el uso de las cadenas de formato que se documentan en [Cadenas con formato numérico estándar](../../../docs/standard/base-types/standard-numeric-format-strings.md) y [Cadenas con formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md). De forma predeterminada, los métodos `Parse` y `TryParse` pueden convertir correctamente las cadenas que contienen dígitos decimales enteros solo en valores enteros. Pueden convertir correctamente las cadenas que contienen dígitos decimales enteros y fraccionarios, separadores de grupos y un separador decimal en valores de punto flotante. El método `Parse` produce una excepción si se produce un error en la operación, mientras que el método `TryParse` devuelve `false`.  
@@ -46,7 +46,7 @@ Todos los tipos numéricos tienen dos métodos de análisis estáticos, `Parse` 
  [!code-vb[Parsing.Numbers#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/parsing.numbers/vb/styles1.vb#2)]  
   
 > [!WARNING]
->  La operación de análisis siempre usa las convenciones de formato de una referencia cultural determinada. Si no pasa un objeto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo> para especificar una referencia cultural, se usa la referencia cultural asociada al subproceso actual.  
+> La operación de análisis siempre usa las convenciones de formato de una referencia cultural determinada. Si no pasa un objeto <xref:System.Globalization.CultureInfo> o <xref:System.Globalization.NumberFormatInfo> para especificar una referencia cultural, se usa la referencia cultural asociada al subproceso actual.  
   
  En la tabla siguiente se enumeran los miembros de la enumeración <xref:System.Globalization.NumberStyles> y se describe el efecto que tienen en la operación de análisis.  
   

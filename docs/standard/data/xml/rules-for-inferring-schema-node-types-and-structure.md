@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6c68cd98b496143e6b964383f8fa0c3af5d2c87d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338714"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939642"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Reglas para deducir los tipos de nodo de esquema y estructura
 Este tema describe cómo el proceso de deducción del esquema traduce los tipos de nodo de un documento XML a una estructura de lenguaje de definición de esquema XML (XSD).  
@@ -35,7 +35,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
 8. Elemento con una secuencia de opciones de elementos secundarios y atributos  
   
 > [!NOTE]
->  Todas las declaraciones `complexType` se deducen como tipos anónimos. El único elemento global deducido es el elemento raíz; todos los demás elementos son locales.  
+> Todas las declaraciones `complexType` se deducen como tipos anónimos. El único elemento global deducido es el elemento raíz; todos los demás elementos son locales.  
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -79,7 +79,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
  La siguiente tabla muestra la entrada XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> y el esquema XML generado. Los elementos en negrita muestran el esquema deducido para un elemento con una secuencia de elementos secundarios.  
   
 > [!NOTE]
->  Incluso si un elemento solo tiene un elemento secundario, se trata todavía como secuencia.  
+> Incluso si un elemento solo tiene un elemento secundario, se trata todavía como secuencia.  
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -91,7 +91,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
  La siguiente tabla muestra la entrada XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> y el esquema XML generado. Los elementos en negrita muestran el esquema deducido para un elemento con una secuencia de elementos secundarios y atributos.  
   
 > [!NOTE]
->  Incluso si un elemento solo tiene un elemento secundario, se trata todavía como secuencia.  
+> Incluso si un elemento solo tiene un elemento secundario, se trata todavía como secuencia.  
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -103,7 +103,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
  La siguiente tabla muestra la entrada XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> y el esquema XML generado. Los elementos en negrita muestran el esquema deducido para un elemento con una secuencia y opción de elementos secundarios.  
   
 > [!NOTE]
->  El atributo `maxOccurs` del elemento `xs:choice` se establece en `"unbounded"` en el esquema deducido.  
+> El atributo `maxOccurs` del elemento `xs:choice` se establece en `"unbounded"` en el esquema deducido.  
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
@@ -115,7 +115,7 @@ Este tema describe cómo el proceso de deducción del esquema traduce los tipos 
  La siguiente tabla muestra la entrada XML en el método <xref:System.Xml.Schema.XmlSchemaInference.InferSchema%2A> y el esquema XML generado. Los elementos en negrita muestran el esquema deducido para un elemento con una secuencia y opción de elementos secundarios y atributos.  
   
 > [!NOTE]
->  El atributo `maxOccurs` del elemento `xs:choice` se establece en `"unbounded"` en el esquema deducido.  
+> El atributo `maxOccurs` del elemento `xs:choice` se establece en `"unbounded"` en el esquema deducido.  
   
  Para más información sobre el proceso de deducción de esquema, vea [Deducción de esquemas a partir de documentos XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   

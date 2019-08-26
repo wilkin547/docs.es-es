@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25c5ffa89e6ce4e589b8f12a7b8518272426c9e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 074b97f29946390170abe3c40d71d2ee2cb214ce
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597806"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666476"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Uso de objetos que implementan IDisposable
 
@@ -63,5 +63,5 @@ Puede seguir este patrón básico si elige implementar o debe implementar un blo
 ## <a name="see-also"></a>Vea también
 
 - [Limpieza de recursos no administrados](../../../docs/standard/garbage-collection/unmanaged.md)
-- [using (Instrucción) (Referencia de C#)](~/docs/csharp/language-reference/keywords/using-statement.md)
-- [Using (Instrucción, Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+- [using (Instrucción) (Referencia de C#)](../../csharp/language-reference/keywords/using-statement.md)
+- [Using (Instrucción, Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

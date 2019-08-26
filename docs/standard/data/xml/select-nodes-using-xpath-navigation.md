@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b2fc0846b3f3801d64ee3bf1f1dc4b347034ad38
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45596954"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939563"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Selección de nodos con la navegación XPath
 El Modelo de objetos del documento (DOM) XML contiene métodos que le permiten utilizar la navegación del lenguaje de ruta XML (XPath) para consultar información en el DOM. Puede utilizar XPath para buscar un solo nodo específico o para buscar todos los nodos que cumplen algunos criterios.  
@@ -108,7 +108,7 @@ foreach (XmlNode book in nodeList)
 doc.Save(Console.Out);  
 ```  
   
- Los ejemplos anteriores comienzan la consulta XPath en el elemento de documento. Al establecer el punto de inicio de la consulta XPath, se establece el nodo de contexto, que es el punto de inicio de la consulta XPath. Si no desea comenzar en el elemento de documento, sino en el primer elemento secundario del elemento de documento, puede programar la instrucción SELECT como se indica a continuación:  
+ Los ejemplos anteriores comienzan la consulta XPath en el elemento de documento. Al establecer el punto de inicio de la consulta XPath, se establece el nodo de contexto, que es el punto de inicio de la consulta XPath. Si no desea comenzar en el elemento de documento, sino en el primer elemento secundario del elemento de documento, puede codificar la instrucción SELECT como se indica a continuación:  
   
 ```vb  
 doc.DocumentElement.FirstChild.SelectNodes(. . . )  
@@ -121,13 +121,13 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
  Todos los objetos <xref:System.Xml.XmlNodeList> se sincronizan con el documento subyacente. Por lo tanto, si itera a través de la lista de nodos y modifica el valor de un nodo, ese nodo también se actualiza en el documento del que proviene. En el ejemplo anterior observe que cuando se modifica un nodo en el objeto <xref:System.Xml.XmlNodeList> seleccionado, se modifica también el documento subyacente.  
   
 > [!NOTE]
->  Cuando se modifica el documento subyacente, es aconsejable volver a ejecutar la selección. Si el nodo modificado puede provocar que el nodo se agregue a la lista de nodos cuando antes no estaba, o que se quite de la lista de nodos, no hay ninguna garantía de que la lista de nodos sea precisa.  
+> Cuando se modifica el documento subyacente, es aconsejable volver a ejecutar la selección. Si el nodo modificado puede provocar que el nodo se agregue a la lista de nodos cuando antes no estaba, o que se quite de la lista de nodos, no hay ninguna garantía de que la lista de nodos sea precisa.  
   
 ## <a name="namespaces-in-xpath-expressions"></a>Espacios de nombres en expresiones XPath  
  Las expresiones XPath pueden incluir espacios de nombres. La resolución de espacios de nombres es compatible con <xref:System.Xml.XmlNamespaceManager>. Si la expresión XPath incluye un prefijo, el par del prefijo y el identificador URI de espacio de nombres se debe agregar a <xref:System.Xml.XmlNamespaceManager>, y <xref:System.Xml.XmlNamespaceManager> se pasa al método <xref:System.Xml.XmlNode.SelectNodes%28System.String%2CSystem.Xml.XmlNamespaceManager%29> o <xref:System.Xml.XmlNode.SelectSingleNode%28System.String%2CSystem.Xml.XmlNamespaceManager%29>. Observe que los ejemplos de código anteriores utilizan <xref:System.Xml.XmlNamespaceManager> para resolver el espacio de nombres del documento bookstore.xml.  
   
 > [!NOTE]
->  Si la expresión XPath no incluye un prefijo, se asume que el identificador uniforme de recursos (URI) de espacio de nombres es el espacio de nombres vacío. Si el XML incluye un espacio de nombres predeterminado, deberá agregar también un prefijo y un identificador URI de espacio de nombres a <xref:System.Xml.XmlNamespaceManager>; de lo contrario, no se seleccionará ningún nodo.  
+> Si la expresión XPath no incluye un prefijo, se asume que el identificador uniforme de recursos (URI) de espacio de nombres es el espacio de nombres vacío. Si el XML incluye un espacio de nombres predeterminado, deberá agregar también un prefijo y un identificador URI de espacio de nombres a <xref:System.Xml.XmlNamespaceManager>; de lo contrario, no se seleccionará ningún nodo.  
   
 #### <a name="input-file"></a>Archivo de entrada  
  A continuación, se muestra el archivo bookstore.xml que se utiliza como archivo de entrada en los ejemplos incluidos en este tema:  

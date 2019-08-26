@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053589"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963422"
 ---
 # <a name="comparing-strings-in-net"></a>Comparación de cadenas en .NET
 .NET proporciona varios métodos para comparar los valores de cadenas. En la tabla siguiente se enumeran y describen los métodos de comparación de valores.  
@@ -46,12 +46,12 @@ ms.locfileid: "66053589"
   
 |Valor devuelto|Condición|  
 |------------------|---------------|  
-|Un entero negativo|La primera cadena precede a la segunda cadena en el criterio de ordenación.<br /><br /> o bien<br /><br /> La primera cadena es `null`.|  
-|0|La primera y la segunda cadena son iguales.<br /><br /> o bien<br /><br /> Ambas cadenas son `null`.|  
-|Un entero positivo.<br /><br /> o bien<br /><br /> 1|La primera cadena sigue a la segunda cadena en el criterio de ordenación.<br /><br /> o bien<br /><br /> La segunda cadena es `null`.|  
+|Un entero negativo|La primera cadena precede a la segunda cadena en el criterio de ordenación.<br /><br /> O bien<br /><br /> La primera cadena es `null`.|  
+|0|La primera y la segunda cadena son iguales.<br /><br /> O bien<br /><br /> Ambas cadenas son `null`.|  
+|Un entero positivo.<br /><br /> O bien<br /><br /> 1|La primera cadena sigue a la segunda cadena en el criterio de ordenación.<br /><br /> O bien<br /><br /> La segunda cadena es `null`.|  
   
 > [!IMPORTANT]
->  La finalidad principal del método <xref:System.String.Compare%2A?displayProperty=nameWithType> es que se utilice para la ordenación o clasificación de cadenas. El método <xref:System.String.Compare%2A?displayProperty=nameWithType> no debe utilizarse para comprobar la igualdad (es decir, para buscar explícitamente un valor devuelto que sea 0 sin tener en cuenta si una cadena es menor o mayor que otra). En su lugar, para determinar si dos cadenas son iguales, use el método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> La finalidad principal del método <xref:System.String.Compare%2A?displayProperty=nameWithType> es que se utilice para la ordenación o clasificación de cadenas. El método <xref:System.String.Compare%2A?displayProperty=nameWithType> no debe utilizarse para comprobar la igualdad (es decir, para buscar explícitamente un valor devuelto que sea 0 sin tener en cuenta si una cadena es menor o mayor que otra). En su lugar, para determinar si dos cadenas son iguales, use el método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  En el ejemplo siguiente, se usa el método <xref:System.String.Compare%2A?displayProperty=nameWithType> para determinar los valores relativos de dos cadenas.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66053589"
  El método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> compara dos objetos de cadena sin tener en cuenta la referencia cultural local. Los valores devueltos de este método son idénticos a los que devolvía el método **Compare** en la tabla anterior.  
   
 > [!IMPORTANT]
->  La finalidad principal del método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> es que se utilice para la ordenación o clasificación de cadenas. El método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> no debe utilizarse para comprobar la igualdad (es decir, para buscar explícitamente un valor devuelto que sea 0 sin tener en cuenta si una cadena es menor o mayor que otra). En su lugar, para determinar si dos cadenas son iguales, use el método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> La finalidad principal del método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> es que se utilice para la ordenación o clasificación de cadenas. El método <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> no debe utilizarse para comprobar la igualdad (es decir, para buscar explícitamente un valor devuelto que sea 0 sin tener en cuenta si una cadena es menor o mayor que otra). En su lugar, para determinar si dos cadenas son iguales, use el método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  En el ejemplo siguiente se usa el método **CompareOrdinal** para comparar los valores de dos cadenas.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66053589"
  El método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> compara la cadena que encapsula el objeto de cadena actual con otra cadena u objeto. Los valores devueltos de este método son idénticos a los que devolvía el método <xref:System.String.Compare%2A?displayProperty=nameWithType> en la tabla anterior.  
   
 > [!IMPORTANT]
->  La finalidad principal del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> es que se utilice para la ordenación o clasificación de cadenas. El método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> no debe utilizarse para comprobar la igualdad (es decir, para buscar explícitamente un valor devuelto que sea 0 sin tener en cuenta si una cadena es menor o mayor que otra). En su lugar, para determinar si dos cadenas son iguales, use el método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
+> La finalidad principal del método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> es que se utilice para la ordenación o clasificación de cadenas. El método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> no debe utilizarse para comprobar la igualdad (es decir, para buscar explícitamente un valor devuelto que sea 0 sin tener en cuenta si una cadena es menor o mayor que otra). En su lugar, para determinar si dos cadenas son iguales, use el método <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> .  
   
  En el ejemplo siguiente se usa el método <xref:System.String.CompareTo%2A?displayProperty=nameWithType> para comparar los objetos `string1` y `string2` .  
   

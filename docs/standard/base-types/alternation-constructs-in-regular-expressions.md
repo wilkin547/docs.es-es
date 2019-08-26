@@ -18,12 +18,12 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 61f1b93d2f54923f0dfc4832a79fe35dc319d0f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: 560597770d667cf8c7668bf2338ac4bac3eb192f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968572"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construcciones de alternancia en expresiones regulares
 <a name="top"></a> Las construcciones de alternancia modifican una expresión regular para habilitar la coincidencia condicional o “either/or”. .NET admite tres construcciones de alternancia:  
@@ -80,7 +80,7 @@ ms.locfileid: "68331758"
  donde `(?=`*expresión*`)` es una construcción de aserción de ancho cero. Para más información, consulte la sección sobre [Construcciones de agrupamiento en expresiones regulares](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md). Como el motor de expresiones regulares interpreta la *expresión* como un delimitador (una aserción de ancho cero), la *expresión* debe ser una aserción de ancho cero (para más información, consulte [Delimitadores en expresiones regulares](../../../docs/standard/base-types/anchors-in-regular-expressions.md)) o una subexpresión que también esté incluida en *sí*. De lo contrario, no se pueden encontrar coincidencias para el patrón *sí*.  
   
 > [!NOTE]
->  Si *expresión*es un grupo de captura con nombre o numerado, la construcción de alternancia se interpreta como una prueba de captura; para más información, vea la sección siguiente, [Coincidencia condicional basada en un grupo capturado válido](#Conditional_Group). En otras palabras, el motor de expresiones regulares no intenta coincidir con la subcadena capturada, sino que, en vez de eso, comprueba la presencia o la ausencia del grupo.  
+> Si *expresión*es un grupo de captura con nombre o numerado, la construcción de alternancia se interpreta como una prueba de captura; para más información, vea la sección siguiente, [Coincidencia condicional basada en un grupo capturado válido](#Conditional_Group). En otras palabras, el motor de expresiones regulares no intenta coincidir con la subcadena capturada, sino que, en vez de eso, comprueba la presencia o la ausencia del grupo.  
   
  El siguiente ejemplo es una variación del que aparece en la sección [Coincidencia de patrones either/or con &#124;](#Either_Or). En él se usa la coincidencia condicional para determinar si los tres primeros caracteres después de un límite de palabra son dos dígitos seguidos por un guión. Si es así, intenta buscar un número de identificación de empleador (EIN) de EE. UU. Si no, intenta buscar un número de la seguridad social (SSN) de EE.UU.  
   

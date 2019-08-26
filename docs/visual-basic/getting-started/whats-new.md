@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 49c39e12aa67b1f36fc46c21f5d2b23223b3264d
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 20d403e4a6410257068cc3414fcb8dc1e45709e9
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238648"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666862"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novedades de Visual Basic
 
@@ -51,7 +51,7 @@ Visual Basic o Visual Studio .NET 2002. La primera versión de Visual Basic .NET
 
 **Punto flotante optimizado para la conversión de enteros**
 
-En versiones anteriores de Visual Basic, la conversión de valores [dobles](../language-reference/data-types/double-data-type.md) y [únicos](../language-reference/data-types/single-data-type.md) a enteros ofrecía un rendimiento relativamente bajo. Visual Basic 15.8 mejora significativamente el rendimiento de las conversiones de punto flotante a enteros al pasar el valor devuelto por cualquiera de los métodos siguientes a uno de las [funciones de conversión de enteros de Visual Basic intrínsecas](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) o cuando el valor devuelto por cualquiera de los métodos siguientes se convierte implícitamente a un tipo entero cuando [Opción estricta](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) se establece en `Off`:
+En versiones anteriores de Visual Basic, la conversión de valores [dobles](../language-reference/data-types/double-data-type.md) y [únicos](../language-reference/data-types/single-data-type.md) a enteros ofrecía un rendimiento relativamente bajo. Visual Basic 15.8 mejora significativamente el rendimiento de las conversiones de punto flotante a enteros al pasar el valor devuelto por cualquiera de los métodos siguientes a uno de las [funciones de conversión de enteros de Visual Basic intrínsecas](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng) o cuando el valor devuelto por cualquiera de los métodos siguientes se convierte implícitamente a un tipo entero cuando [Opción estricta](../language-reference/statements/option-strict-statement.md) se establece en `Off`:
 
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>

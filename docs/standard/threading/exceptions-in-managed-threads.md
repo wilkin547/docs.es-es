@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca7f3a8d9ee840fc8c1c8a8efdadf8da033241f1
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 689ee44980a4a41b6d46ed9b68306c1b08c49586
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377465"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960060"
 ---
 # <a name="exceptions-in-managed-threads"></a>Excepciones en subprocesos administrados
 A partir de .NET Framework versión 2.0, Common Language Runtime permite que la mayoría de las excepciones no controladas en subprocesos continúen naturalmente. En la mayoría de los casos, esto implica que la excepción no controlada provoque la finalización de la aplicación.  
   
 > [!NOTE]
->  Se trata de un cambio significativo con respecto a las versiones 1.0 y 1.1 de .NET Framework, que ofrecen un mecanismo de seguridad para muchas excepciones no controladas; por ejemplo, excepciones no controladas en subprocesos de grupo. Vea [Cambio con respecto a las versiones anteriores](#ChangeFromPreviousVersions) más adelante en este tema.  
+> Se trata de un cambio significativo con respecto a las versiones 1.0 y 1.1 de .NET Framework, que ofrecen un mecanismo de seguridad para muchas excepciones no controladas; por ejemplo, excepciones no controladas en subprocesos de grupo. Vea [Cambio con respecto a las versiones anteriores](#ChangeFromPreviousVersions) más adelante en este tema.  
   
  Common Language Runtime ofrece un mecanismo de seguridad para determinadas excepciones no controladas que se usan para controlar el flujo del programa:  
   
@@ -36,7 +36,7 @@ A partir de .NET Framework versión 2.0, Common Language Runtime permite que la 
  Si no se controlan en el subproceso principal o en subprocesos que especifiquen el runtime desde código no administrado, estas excepciones continúan normalmente, lo que se traduce en la finalización de la aplicación.  
   
 > [!NOTE]
->  Es posible que el runtime inicie una excepción no controlada antes de que un código administrado haya tenido ocasión de instalar un controlador de excepciones. Aunque el código administrado no tuviera ninguna oportunidad de controlar la excepción, esta puede continuar normalmente.  
+> Es posible que el runtime inicie una excepción no controlada antes de que un código administrado haya tenido ocasión de instalar un controlador de excepciones. Aunque el código administrado no tuviera ninguna oportunidad de controlar la excepción, esta puede continuar normalmente.  
   
 ## <a name="exposing-threading-problems-during-development"></a>Exponer problemas de subprocesamiento durante el desarrollo  
  Cuando se permite que los subprocesos se interrumpan silenciosamente, sin finalizar la aplicación, graves problemas de programación pueden pasar inadvertidos. Se trata de un problema concreto de servicios y otras aplicaciones que se ejecutan durante períodos prolongados. A medida que los subprocesos dejan de ejecutarse, el estado del programa se daña gradualmente. Puede que el rendimiento de la aplicación se degrade o que la aplicación deje de responder.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2752ecd05caec207955b2366ed19b3713f571f91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37f55f5af70a232952bdb94f0c111a27fcbab1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948786"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegados genéricos para manipular matrices y listas
 En este tema se ofrece una introducción a los delegados genéricos para conversiones, predicados de búsqueda y acciones realizadas en los elementos de una matriz o colección.  
@@ -28,7 +28,7 @@ En este tema se ofrece una introducción a los delegados genéricos para convers
  La clase genérica <xref:System.Collections.Generic.List%601> también proporciona un método <xref:System.Collections.Generic.List%601.ForEach%2A> que usa el delegado <xref:System.Action%601>. Este método no es genérico.  
   
 > [!NOTE]
->  Este es un aspecto interesante de los tipos y métodos genéricos. El método <xref:System.Array.ForEach%2A?displayProperty=nameWithType> debe ser estático (`Shared` en Visual Basic) y genérico porque <xref:System.Array> no es un tipo genérico; la única razón por la que se puede especificar un tipo para que <xref:System.Array.ForEach%2A?displayProperty=nameWithType> opere sobre él es que el método tiene su propia lista de parámetros de tipo. Por el contrario, el método no genérico <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> pertenece a la clase genérica <xref:System.Collections.Generic.List%601>, por lo que simplemente utiliza el parámetro de tipo de su clase. La clase está fuertemente tipada, por lo que el método puede ser un método de instancia.  
+> Este es un aspecto interesante de los tipos y métodos genéricos. El método <xref:System.Array.ForEach%2A?displayProperty=nameWithType> debe ser estático (`Shared` en Visual Basic) y genérico porque <xref:System.Array> no es un tipo genérico; la única razón por la que se puede especificar un tipo para que <xref:System.Array.ForEach%2A?displayProperty=nameWithType> opere sobre él es que el método tiene su propia lista de parámetros de tipo. Por el contrario, el método no genérico <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> pertenece a la clase genérica <xref:System.Collections.Generic.List%601>, por lo que simplemente utiliza el parámetro de tipo de su clase. La clase está fuertemente tipada, por lo que el método puede ser un método de instancia.  
   
  El delegado genérico <xref:System.Predicate%601> representa un método que determina si un determinado elemento cumple los criterios definidos. Puede usar los siguientes métodos genéricos estáticos de <xref:System.Array> para buscar un elemento o un conjunto de elementos: <xref:System.Array.Exists%2A>, <xref:System.Array.Find%2A>, <xref:System.Array.FindAll%2A>, <xref:System.Array.FindIndex%2A>, <xref:System.Array.FindLast%2A>, <xref:System.Array.FindLastIndex%2A> y <xref:System.Array.TrueForAll%2A>.  
   

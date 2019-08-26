@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa6cd032ecf3a35c1dc32d9907218c9b6efd4bcc
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b0de14fd5d576774ed1605784f5f0c6b0fae2c8c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592269"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69948920"
 ---
 # <a name="generic-collections-in-net"></a>Colecciones genéricas en .NET
 
@@ -40,7 +40,7 @@ ms.locfileid: "65592269"
  La estructura genérica <xref:System.Nullable%601> permite usar tipos de valor como si se les pudiera asignar el valor `null`. Esto puede ser útil para trabajar con consultas de base de datos en las que pueden faltar campos que contienen tipos de valor. El parámetro de tipo genérico puede ser cualquier tipo de valor.  
   
 > [!NOTE]
->  En C# y Visual Basic no hay que usar <xref:System.Nullable%601> explícitamente porque el lenguaje tiene sintaxis para tipos que aceptan valores NULL. Vea [Tipos que aceptan valores NULL (Guía de programación de C#)](../../csharp/programming-guide/nullable-types/index.md) y [Tipos que admiten valores NULL (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
+> En C# y Visual Basic no hay que usar <xref:System.Nullable%601> explícitamente porque el lenguaje tiene sintaxis para tipos que aceptan valores NULL. Vea [Tipos que aceptan valores NULL (Guía de programación de C#)](../../csharp/programming-guide/nullable-types/index.md) y [Tipos que admiten valores NULL (Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md). 
   
  La estructura genérica <xref:System.ArraySegment%601> proporciona una manera de delimitar un intervalo de elementos en una matriz unidimensional basada en cero de cualquier tipo. El parámetro de tipo genérico es el tipo de los elementos de la matriz.  
   

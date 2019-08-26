@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 50127f24bfee0c2fe49da8f285e5052d2f753696
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250817"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934937"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Procedimientos recomendados para el uso de cadenas en .NET
 <a name="top"></a> .NET proporciona una gran compatibilidad para desarrollar aplicaciones localizadas y globalizadas, y simplifica la aplicación de las convenciones de la referencia cultural actual o de una referencia cultural concreta al realizar operaciones comunes como ordenar y mostrar cadenas. Pero ordenar o comparar cadenas no es siempre una operación dependiente de la referencia cultural. Por ejemplo, las cadenas usadas internamente por una aplicación normalmente se deben administrar de forma idéntica en todas las referencias culturales. Cuando los datos de cadenas independientes de la referencia cultural (como etiquetas XML, etiquetas HTML, nombres de usuario, rutas de acceso de archivos y nombres de objetos del sistema) se interpretan como si fueran dependientes de la referencia cultural, el código de aplicación puede estar sujeto a errores imperceptibles, un rendimiento inadecuado y, en algunos casos, a problemas de seguridad.  
@@ -87,7 +87,7 @@ ms.locfileid: "66250817"
 ## <a name="specifying-string-comparisons-explicitly"></a>Especificar comparaciones de cadenas explícitamente  
  La mayoría de los métodos de manipulación de cadenas de .NET están sobrecargados. Normalmente, una o más sobrecargas aceptan la configuración predeterminada, mientras que otras no aceptan ningún valor predeterminado y en su lugar definen la manera precisa en la que se van a comparar o manipular las cadenas. La mayoría de los métodos que no confían en los valores predeterminados incluye un parámetro de tipo <xref:System.StringComparison>, que es una enumeración que especifica explícitamente reglas para la comparación de cadenas por referencia cultural y uso de mayúsculas y minúsculas. En la tabla siguiente se describen los miembros de la enumeración <xref:System.StringComparison> .  
   
-|Miembro de StringComparison|Descripción|  
+|Miembro de StringComparison|DESCRIPCIÓN|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Realiza una comparación con distinción entre mayúsculas y minúsculas usando la referencia cultural actual.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Realiza una comparación sin distinción entre mayúsculas y minúsculas usando la referencia cultural actual.|  
@@ -185,7 +185,7 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
  En .NET, las cadenas pueden contener caracteres nulos incrustados. Una de las diferencias más claras entre la comparación ordinal y dependiente de la referencia cultural (incluyendo las comparaciones que usan la referencia cultural de todos los idiomas) tiene que ver con el control de caracteres nulos incrustados en una cadena. Estos caracteres se omiten cuando usa métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> y <xref:System.String.Equals%2A?displayProperty=nameWithType> para realizar comparaciones dependientes de la referencia cultural (incluyendo las comparaciones que usan la referencia cultural de todos los idiomas). Por tanto, en las comparaciones dependientes de la referencia cultural, las cadenas que contienen caracteres nulos incrustados pueden considerarse iguales que las cadenas que no los contienen.  
   
 > [!IMPORTANT]
->  Aunque los métodos de comparación de cadenas hacen caso omiso de los caracteres nulos incrustados, los métodos de búsqueda de cadenas como <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>y <xref:System.String.StartsWith%2A?displayProperty=nameWithType> sí los tienen en cuenta.  
+> Aunque los métodos de comparación de cadenas hacen caso omiso de los caracteres nulos incrustados, los métodos de búsqueda de cadenas como <xref:System.String.Contains%2A?displayProperty=nameWithType>, <xref:System.String.EndsWith%2A?displayProperty=nameWithType>, <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>y <xref:System.String.StartsWith%2A?displayProperty=nameWithType> sí los tienen en cuenta.  
   
  En el ejemplo siguiente se realiza una comparación dependiente de la referencia cultural de la cadena "Aa" con una cadena similar que contiene varios caracteres nulos incrustados entre "A" y "a", y se muestra cómo las dos cadenas se consideran iguales.  
   
@@ -210,7 +210,7 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
  Estas comparaciones siguen siendo muy rápidas.  
   
 > [!NOTE]
->  El comportamiento de las cadenas del sistema de archivos, claves del Registro y valores, y variables de entorno se representa mejor mediante <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>.  
+> El comportamiento de las cadenas del sistema de archivos, claves del Registro y valores, y variables de entorno se representa mejor mediante <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>.  
   
  Tanto <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> como <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> usan los valores binarios directamente y son más adecuados para la búsqueda de coincidencias. Si no sabe con seguridad qué configuración de comparación debe emplear, use uno de estos dos valores. Sin embargo, puesto que realizan una comparación byte a byte, no ordenan según un criterio de ordenación lingüístico (como un diccionario de inglés) sino según un criterio de ordenación binario. Los resultados pueden parecer extraños en la mayoría de los contextos si se muestran a los usuarios.  
   
@@ -244,8 +244,8 @@ Además, las comparaciones de cadenas mediante las diferentes versiones de .NET 
 |----------|--------------|-----------------------------------------------------|  
 |Identificadores internos con distinción entre mayúsculas y minúsculas.<br /><br /> Identificadores con distinción entre mayúsculas y minúsculas en estándares como XML y HTTP.<br /><br /> Configuraciones relacionadas con la seguridad con distinción entre mayúsculas y minúsculas.|Identificador no lingüístico, donde los bytes coinciden exactamente.|<xref:System.StringComparison.Ordinal>|  
 |Identificadores internos sin distinción entre mayúsculas y minúsculas.<br /><br /> Identificadores sin distinción entre mayúsculas y minúsculas en estándares como XML y HTTP.<br /><br /> Rutas de acceso a archivos.<br /><br /> Claves del Registro y valores.<br /><br /> Variables de entorno.<br /><br /> Identificadores de recursos (por ejemplo, nombres de identificadores).<br /><br /> Configuraciones relacionadas con la seguridad sin distinción entre mayúsculas y minúsculas.|Identificador no lingüístico, donde el uso de mayúsculas y minúsculas no es pertinente; especialmente datos almacenados en la mayoría de los servicios del sistema de Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Algunos datos almacenados lingüísticamente pertinentes.<br /><br /> Presentación de datos lingüísticos que necesitan un criterio de ordenación fijo.|Datos válidos culturalmente que siguen siendo lingüísticamente pertinentes.|<xref:System.StringComparison.InvariantCulture><br /><br /> o bien<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
-|Datos mostrados al usuario.<br /><br /> La mayoría de los datos proporcionados por el usuario.|Datos que necesitan personalizaciones lingüísticas locales.|<xref:System.StringComparison.CurrentCulture><br /><br /> o bien<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
+|Algunos datos almacenados lingüísticamente pertinentes.<br /><br /> Presentación de datos lingüísticos que necesitan un criterio de ordenación fijo.|Datos válidos culturalmente que siguen siendo lingüísticamente pertinentes.|<xref:System.StringComparison.InvariantCulture><br /><br /> O bien<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Datos mostrados al usuario.<br /><br /> La mayoría de los datos proporcionados por el usuario.|Datos que necesitan personalizaciones lingüísticas locales.|<xref:System.StringComparison.CurrentCulture><br /><br /> O bien<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [Volver al principio](#top)  
   

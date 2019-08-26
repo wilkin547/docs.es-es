@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 5171b9b9878331069e354eeb17ad57ca9bd594a8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2652c080951823e5289785b5906d2b0f48f5d658
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773666"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950786"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procedimiento para implementar un componente que admita el modelo asincrónico basado en eventos
 Si está escribiendo una clase con algunas operaciones que pueden dar lugar a retrasos evidentes, considere la posibilidad de darle funcionalidad asincrónica implementando [Información general sobre el modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -176,7 +176,7 @@ Si está escribiendo una clase con algunas operaciones que pueden dar lugar a re
  El método `CalculateWorker` se ajusta en un delegado y se invoca de forma asincrónica con una llamada a `BeginInvoke`.  
   
 > [!NOTE]
->  Los informes de progreso se implementan en el método `BuildPrimeNumberList`. En equipos rápidos, los eventos `ProgressChanged` se pueden producir en una sucesión rápida. El subproceso de cliente, en el que se producen estos eventos, debe ser capaz de controlar esta situación. El código de la interfaz de usuario puede estar congestionado con mensajes y no ser capaz de afrontar esta situación, de tal manera que se puede producir una falta de respuesta. Para obtener una interfaz de usuario de ejemplo en la que se controla esta situación, vea [Cómo: Implementar un cliente en un modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
+> Los informes de progreso se implementan en el método `BuildPrimeNumberList`. En equipos rápidos, los eventos `ProgressChanged` se pueden producir en una sucesión rápida. El subproceso de cliente, en el que se producen estos eventos, debe ser capaz de controlar esta situación. El código de la interfaz de usuario puede estar congestionado con mensajes y no ser capaz de afrontar esta situación, de tal manera que se puede producir una falta de respuesta. Para obtener una interfaz de usuario de ejemplo en la que se controla esta situación, vea [Cómo: Implementar un cliente en un modelo asincrónico basado en eventos](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>Para ejecutar de forma asincrónica el cálculo de números primos:  
   

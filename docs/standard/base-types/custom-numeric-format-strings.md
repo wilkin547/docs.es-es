@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e55ae32fc83d7879de9d1ecb743d17598bc175d
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 9f05d91dd53d9dee534e5dd429bf6399fd677258
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268219"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963408"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadenas con formato numérico personalizado
 
@@ -175,7 +175,7 @@ Puede crear una cadena de formato numérico personalizado, formada por uno o var
  Para incluir una barra diagonal inversa en una cadena de resultado, debe indicar su secuencia de escape con otra barra diagonal inversa (`\\`).  
   
 > [!NOTE]
->  Algunos compiladores, como los compiladores de C# y C++, también pueden interpretar un único carácter de barra diagonal inversa como un carácter de escape. Para asegurarse de que una cadena se interpreta correctamente al darle formato, puede usar el carácter literal de cadena textual (el carácter @) antes de la cadena en C# o puede agregar otro carácter de barra diagonal inversa delante de cada barra diagonal inversa en C# y C++. En el siguiente ejemplo de C# se muestran ambos enfoques.  
+> Algunos compiladores, como los compiladores de C# y C++, también pueden interpretar un único carácter de barra diagonal inversa como un carácter de escape. Para asegurarse de que una cadena se interpreta correctamente al darle formato, puede usar el carácter literal de cadena textual (el carácter @) antes de la cadena en C# o puede agregar otro carácter de barra diagonal inversa delante de cada barra diagonal inversa en C# y C++. En el siguiente ejemplo de C# se muestran ambos enfoques.  
   
  En el ejemplo siguiente se usa el carácter de escape para evitar que la operación de formato interprete los caracteres "#", "0" y "\\" como caracteres de escape o especificadores de formato. En el ejemplo de C# se usa una barra diagonal inversa adicional para asegurarse de que una barra diagonal inversa se interprete como un carácter literal.  
   

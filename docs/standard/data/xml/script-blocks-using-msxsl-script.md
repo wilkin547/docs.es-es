@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 32c76ae4556467759dad111b47e3ad8f6cf6df92
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589977"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939590"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Bloques de scripts con msxsl:script
 La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados mediante el elemento `msxsl:script`. Cuando se carga la hoja de estilos, cualquier función definida se compila en el lenguaje intermedio de Microsoft (MSIL) por medio del Code Document Object Model (CodeDOM) y se ejecutan en tiempo de ejecución. El ensamblado que se genera a partir del bloque de scripts incrustado es distinto al ensamblado que se genera para la hoja de estilos.  
@@ -22,7 +22,7 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados m
  La compatibilidad con scripts incrustados es un valor XSLT opcional de la clase <xref:System.Xml.Xsl.XslCompiledTransform>. Esta compatibilidad está deshabilitada de manera predeterminada. Para habilitarla, cree un objeto <xref:System.Xml.Xsl.XsltSettings> con el conjunto de propiedades <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> establecido en `true` y pase el objeto al método <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
 > [!NOTE]
->  El script XSLT solo se debería habilitar si necesita compatibilidad con scripts o si está trabajando en un entorno de total confianza.  
+> El script XSLT solo se debería habilitar si necesita compatibilidad con scripts o si está trabajando en un entorno de total confianza.  
   
 ## <a name="msxslscript-element-definition"></a>Definición del elemento msxsl:script  
  El elemento `msxsl:script` es una extensión de Microsoft de la recomendación de XSLT 1.0 y tiene la siguiente definición:  
@@ -38,7 +38,7 @@ La clase <xref:System.Xml.Xsl.XslCompiledTransform> admite scripts incrustados m
  El atributo `implements-prefix` es obligatorio. Este atributo se utiliza para declarar un espacio de nombres y asociarlo con el bloque del script. El valor de este atributo es el prefijo que representa el espacio de nombres. Este prefijo puede definirse en cualquier parte de la hoja de estilos.  
   
 > [!NOTE]
->  Al utilizar el elemento `msxsl:script`, se recomienda encarecidamente que el script, independientemente del lenguaje, se coloque dentro de una sección CDATA. Puesto que el script puede contener operadores, identificadores o delimitadores para un lenguaje específico, si no está contenido en la sección CDATA, podría interpretarse erróneamente como XML. El siguiente XML muestra una plantilla de la sección CDATA en donde se puede colocar el código.  
+> Al utilizar el elemento `msxsl:script`, se recomienda encarecidamente que el script, independientemente del lenguaje, se coloque dentro de una sección CDATA. Puesto que el script puede contener operadores, identificadores o delimitadores para un lenguaje específico, si no está contenido en la sección CDATA, podría interpretarse erróneamente como XML. El siguiente XML muestra una plantilla de la sección CDATA en donde se puede colocar el código.  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  

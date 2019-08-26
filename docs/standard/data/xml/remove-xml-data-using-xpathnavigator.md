@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9a94e0db3598cb5e2d00298144fa4826035a8e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27c19c82270b9d67b6cd308386aa93c6112d59ee
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674146"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69909681"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Cómo quitar datos XML con XPathNavigator
 La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos que se utilizan para quitar nodos y valores de un documento XML. Para utilizar estos métodos, el objeto <xref:System.Xml.XPath.XPathNavigator> debe ser editable, es decir, su propiedad <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> debe ser `true`.  
@@ -33,7 +33,7 @@ La clase <xref:System.Xml.XPath.XPathNavigator> incluye un conjunto de métodos 
  La operación de eliminación no afecta a la posición de ningún objeto <xref:System.Xml.XPath.XPathNavigator> situado en el nodo eliminado. Estos objetos <xref:System.Xml.XPath.XPathNavigator> son válidos en el sentido de que se pueden mover en el subárbol eliminado, pero no se pueden mover al árbol del nodo principal utilizando los métodos normales de navegación por conjuntos de nodos de la clase <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]
->  El método <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator> se puede utilizar para mover estos objetos <xref:System.Xml.XPath.XPathNavigator> de nuevo al árbol del nodo principal, o desde el árbol del nodo principal al subárbol eliminado.  
+> El método <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A> de la clase <xref:System.Xml.XPath.XPathNavigator> se puede utilizar para mover estos objetos <xref:System.Xml.XPath.XPathNavigator> de nuevo al árbol del nodo principal, o desde el árbol del nodo principal al subárbol eliminado.  
   
  En el siguiente ejemplo se elimina el elemento `price` del primer elemento `book` del archivo `contosoBooks.xml` utilizando el método <xref:System.Xml.XPath.XPathNavigator.DeleteSelf%2A>. La posición del objeto <xref:System.Xml.XPath.XPathNavigator> después de eliminar el elemento `price` se encuentra en el elemento `book` primario.  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c0dea7950f86da3d812783abd00d69e5bc38198
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: 758ddc603766462fc48885406c4e4ca1162bbbaf
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796880"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666485"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Procedimiento para controlar varios eventos mediante las propiedades de evento
 Para poder utilizar propiedades de evento, hay que definirlas en la clase que provoca los eventos y, a continuación, establecer los delegados de las propiedades de evento en las clases que controlan los eventos. Para implementar varias propiedades de evento en una clase, esta clase deberá almacenar internamente y mantener el delegado definido para cada evento. Para hacerlo, uno de los enfoques típicos consiste en implementar una colección de delegados que se indice por medio de una clave de evento.  
@@ -52,4 +52,4 @@ Para poder utilizar propiedades de evento, hay que definirlas en la clase que pr
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [Eventos](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
-- [Cómo: Declarar eventos personalizados para conservar memoria](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [Cómo: Declarar eventos personalizados para conservar memoria](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

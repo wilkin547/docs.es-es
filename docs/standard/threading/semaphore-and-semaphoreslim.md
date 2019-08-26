@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25121ea2b089df49efa77dcf363e2a0e400b3bff
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550493"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968434"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore y SemaphoreSlim
 La clase <xref:System.Threading.Semaphore?displayProperty=nameWithType> representa un semáforo local o con nombre (para todo el sistema). Se trata de un contenedor fino alrededor del objeto semáforo de Win32. Los semáforos de Win32 son semáforos de recuento, que se pueden utilizar para controlar el acceso a un grupo de recursos.  
@@ -40,7 +40,7 @@ La clase <xref:System.Threading.Semaphore?displayProperty=nameWithType> represen
  Puede crear un objeto <xref:System.Threading.Semaphore> que represente un semáforo de sistema con nombre mediante el uso de uno de los constructores que especifica un nombre.  
   
 > [!NOTE]
->  Dado que los semáforos con nombre abarcan todo el sistema, es posible tener varios objetos <xref:System.Threading.Semaphore> que representan el mismo semáforo con nombre. Cada vez que llama a un constructor o al método <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>, se crea un nuevo objeto <xref:System.Threading.Semaphore>. Si se especifica el mismo nombre repetidamente, se crean varios objetos que representan el mismo semáforo con nombre.  
+> Dado que los semáforos con nombre abarcan todo el sistema, es posible tener varios objetos <xref:System.Threading.Semaphore> que representan el mismo semáforo con nombre. Cada vez que llama a un constructor o al método <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>, se crea un nuevo objeto <xref:System.Threading.Semaphore>. Si se especifica el mismo nombre repetidamente, se crean varios objetos que representan el mismo semáforo con nombre.  
   
  Tenga cuidado al utilizar los semáforos con nombre. Dado que abarcan todo el sistema, otro proceso que utilice el mismo nombre puede entrar en el semáforo inesperadamente. Si hubiera código malintencionado ejecutándose en el mismo equipo, dicho código podría utilizar esto como base de un ataque de denegación de servicio.  
   

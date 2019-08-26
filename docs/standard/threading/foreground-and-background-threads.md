@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6605fa1923dc4fdaf4f12a7c8fc7c1e344673b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dbad5da42f5ed4e03751534a3a183615a9757cc
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697508"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960019"
 ---
 # <a name="foreground-and-background-threads"></a>Subprocesos de primer y segundo plano
 Un subproceso administrado es un subproceso en segundo plano o un subproceso en primer plano. Los subprocesos en segundo plano son idénticos a los subprocesos en primer plano con una excepción: un subproceso en segundo plano no mantiene el entorno de ejecución administrado en ejecución. Una vez que todos los subprocesos en primer plano se han detenido en un proceso administrado (donde el archivo .exe es un ensamblado administrado), el sistema detiene todos los subprocesos en segundo plano y se cierra.  
   
 > [!NOTE]
->  Cuando el tiempo de ejecución detiene un subproceso en segundo plano porque el proceso se va a cerrar, no se inicia ninguna excepción en el subproceso. Sin embargo, cuando se detienen los subprocesos porque el método <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> descarga el dominio de aplicación, se produce <xref:System.Threading.ThreadAbortException> en los subprocesos en primer y segundo plano.  
+> Cuando el tiempo de ejecución detiene un subproceso en segundo plano porque el proceso se va a cerrar, no se inicia ninguna excepción en el subproceso. Sin embargo, cuando se detienen los subprocesos porque el método <xref:System.AppDomain.Unload%2A?displayProperty=nameWithType> descarga el dominio de aplicación, se produce <xref:System.Threading.ThreadAbortException> en los subprocesos en primer y segundo plano.  
   
  Use la propiedad <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType> para determinar si un subproceso es de primer o segundo plano o para cambiar su estado. Un subproceso puede cambiar a un subproceso en segundo plano en cualquier momento estableciendo su propiedad <xref:System.Threading.Thread.IsBackground%2A> en `true`.  
   
 > [!IMPORTANT]
->  El estado de primer o segundo plano de un subproceso no afecta al resultado de una excepción no controlada del subproceso. En la versión 2.0 de .NET Framework, una excepción no controlada de subprocesos en primer o segundo plano resulta en la terminación de la aplicación. Vea [Excepciones en subprocesos administrados](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
+> El estado de primer o segundo plano de un subproceso no afecta al resultado de una excepción no controlada del subproceso. En la versión 2.0 de .NET Framework, una excepción no controlada de subprocesos en primer o segundo plano resulta en la terminación de la aplicación. Vea [Excepciones en subprocesos administrados](../../../docs/standard/threading/exceptions-in-managed-threads.md).  
   
  Los subprocesos que pertenecen al grupo de subprocesos administrados (es decir, subprocesos cuya propiedad <xref:System.Threading.Thread.IsThreadPoolThread%2A> es `true`) son subprocesos en segundo plano. Todos los subprocesos que entran en el entorno de ejecución administrado desde el código no administrado se marcan como subprocesos en segundo plano. Todos los subprocesos generados al crear e iniciar un nuevo objeto <xref:System.Threading.Thread> son subprocesos de primer plano predeterminados.  
   

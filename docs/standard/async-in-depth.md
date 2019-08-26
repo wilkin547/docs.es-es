@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57844741"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666580"
 ---
 # <a name="async-in-depth"></a>Async en profundidad
 
@@ -30,7 +30,7 @@ Las tareas exponen un protocolo de API para supervisar, esperar y acceder al val
 
 Mediante `await`, su aplicación o servicio puede realizar trabajo útil mientras se ejecuta una tarea al ceder el control a su llamador hasta que se realiza la tarea. El código no tiene que depender de las devoluciones de llamada ni eventos para seguir ejecutándose una vez completada la tarea. La integración de la API de tareas y lenguajes se encarga de ello. Si está usando `Task<T>`, la palabra clave `await` "desencapsulará" también el valor devuelto cuando se completa la tarea.  Más adelante se explican los detalles sobre cómo funciona esto.
 
-Puede obtener más información sobre las tareas y las distintas formas de interactuar con ellas en el tema [Task-based Asynchronous Pattern (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP]).
+Puede obtener más información sobre las tareas y las distintas formas de interactuar con ellas en el tema [Task-based Asynchronous Pattern (TAP)](./asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Modelo asincrónico basado en tareas [TAP]).
 
 ## <a name="deeper-dive-into-tasks-for-an-io-bound-operation"></a>Tareas para una operación enlazada a E/S en profundidad
 
@@ -146,7 +146,7 @@ Una vez se encuentra `await`, la ejecución de `CalculateResult()` se cede a su 
 
 ## <a name="see-also"></a>Vea también
 
-- [Programación asincrónica en C#](~/docs/csharp/async.md)
+- [Programación asincrónica en C#](../csharp/async.md)
 - [Programación asincrónica con async y await (C#)](../csharp/programming-guide/concepts/async/index.md)
-- [Programación asincrónica en F#](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-- [Programación asincrónica con Async y Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)
+- [Programación asincrónica en F#](../fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
+- [Programación asincrónica con Async y Await (Visual Basic)](../visual-basic/programming-guide/concepts/async/index.md)

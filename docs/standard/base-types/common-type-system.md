@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e916d7d335bcdeff64393a25ab697748209d147c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 050b2c2b8b55bc79cf388ce7a8c197b14f3437d7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782632"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934765"
 ---
 # <a name="common-type-system"></a>Sistema de tipos comunes
 Common Type System define cómo se declaran, usan y administran los tipos en Common Language Runtime. Es también una parte importante de la compatibilidad en tiempo de ejecución con la integración entre lenguajes. El sistema de tipos común realiza las funciones siguientes:  
@@ -82,7 +82,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 |exported o not exported|Indica si una clase está visible fuera del ensamblado en el que se define. Esta característica se aplica únicamente a las clases de nivel superior y no a las clases anidadas.|  
   
 > [!NOTE]
->  Una clase también puede estar anidada en una estructura o clase primaria. Las clases anidadas tienen también características de miembro. Para obtener más información, consulte [Tipos anidados](#NestedTypes).  
+> Una clase también puede estar anidada en una estructura o clase primaria. Las clases anidadas tienen también características de miembro. Para obtener más información, consulte [Tipos anidados](#NestedTypes).  
   
  Los miembros de clase que no tienen implementación son miembros abstractos. Una clase que tiene uno o varios miembros abstractos es abstracta y no se pueden crear nuevas instancias de ella. Algunos lenguajes destinados al motor en tiempo de ejecución permiten marcar una clase como abstracta incluso aunque no tenga ningún miembro abstracto. Se puede usar una clase abstracta cuando se desea encapsular un conjunto básico de funcionalidad que las clases derivadas pueden heredar o invalidar según corresponda. Las clases que no son abstractas se conocen como clases concretas.  
   
@@ -115,7 +115,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
 - No pueden ser genéricas, a menos que sean genéricas solo porque están anidadas dentro de un tipo genérico. Es decir, una enumeración no puede tener parámetros de tipo propios.  
   
     > [!NOTE]
-    >  Los tipos anidados (incluidas las enumeraciones) creados con Visual Basic, C# y C++ incluyen los parámetros de tipo de todos los tipos genéricos envolventes, por lo que son genéricos aunque no tengan parámetros de tipo propios. Para obtener más información, vea la sección "Tipos anidados" en el tema de referencia del método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
+    > Los tipos anidados (incluidas las enumeraciones) creados con Visual Basic, C# y C++ incluyen los parámetros de tipo de todos los tipos genéricos envolventes, por lo que son genéricos aunque no tengan parámetros de tipo propios. Para obtener más información, vea la sección "Tipos anidados" en el tema de referencia del método <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>.  
   
  El atributo <xref:System.FlagsAttribute> indica una clase especial de enumeración denominada campo de bits. El motor en tiempo de ejecución no distingue entre enumeraciones tradicionales y campos de bits, pero el lenguaje podría hacerlo. Cuando se hace esta distinción, se pueden utilizar operadores bit a bit en estos campos de bits, para generar valores sin nombre, pero no en las enumeraciones. Normalmente, las enumeraciones se utilizan para listas de elementos únicos, como los días de la semana, los nombres de países o regiones, etc. Los campos de bits se utilizan, en general, para listas de calidades o cantidades que pueden producirse en combinaciones, como `Red And Big And Fast`.  
   
@@ -157,14 +157,14 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
  Dado que los delegados heredan de <xref:System.MulticastDelegate>, un delegado tiene una lista de invocación, que es una lista de métodos que representa el delegado y que se ejecutan cuando se llama al delegado. Todos los métodos de la lista reciben los argumentos proporcionados cuando se invoca al delegado.  
   
 > [!NOTE]
->  El valor devuelto no se define para los delegados que tienen más de un método en su lista de invocación, aunque el delegado tenga un tipo de valor devuelto.  
+> El valor devuelto no se define para los delegados que tienen más de un método en su lista de invocación, aunque el delegado tenga un tipo de valor devuelto.  
   
  En muchos casos, como en el de los métodos de devolución de llamada, un delegado solo representa un método y las únicas acciones que se deben llevar a cabo son la creación y la invocación del delegado.  
   
  Por lo que se refiere a los delegados que representan varios métodos, .NET proporciona métodos de las clases de delegado <xref:System.Delegate> y <xref:System.MulticastDelegate> para operaciones tales como agregar un método a una lista de invocación del delegado (el método <xref:System.Delegate.Combine%2A?displayProperty=nameWithType>), quitar un método (el método <xref:System.Delegate.Remove%2A?displayProperty=nameWithType>) y obtener la lista de invocación (el método <xref:System.Delegate.GetInvocationList%2A?displayProperty=nameWithType>).  
   
 > [!NOTE]
->  No es preciso usar estos métodos para los delegados de controladores de eventos en C#, C++ ni Visual Basic, ya que estos lenguajes proporcionan sintaxis para agregar y quitar controladores de eventos.  
+> No es preciso usar estos métodos para los delegados de controladores de eventos en C#, C++ ni Visual Basic, ya que estos lenguajes proporcionan sintaxis para agregar y quitar controladores de eventos.  
 
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Definiciones de tipos  
@@ -307,7 +307,7 @@ Common Type System define cómo se declaran, usan y administran los tipos en Com
  Cada miembro de tipo tiene una firma única. Las firmas de método están formadas por el nombre del método y una lista de parámetros (el orden y los tipos de los argumentos del método). Se pueden definir varios métodos con el mismo nombre dentro un tipo, siempre y cuando sus firmas sean distintas. Cuando se definen dos o más métodos con el mismo nombre se dice que el método está sobrecargado. Por ejemplo, en <xref:System.Char?displayProperty=nameWithType>, se reemplaza el método <xref:System.Char.IsDigit%2A>. Un método toma un argumento de tipo <xref:System.Char>. El otro método toma un argumento de tipo <xref:System.String> y un argumento de tipo <xref:System.Int32>.  
   
 > [!NOTE]
->  El tipo de valor devuelto no se considera parte de la firma de un método. Es decir, no se pueden sobrecargar los métodos si solo difieren en el tipo de valor devuelto.  
+> El tipo de valor devuelto no se considera parte de la firma de un método. Es decir, no se pueden sobrecargar los métodos si solo difieren en el tipo de valor devuelto.  
   
 ### <a name="inheriting-overriding-and-hiding-members"></a>Heredar, reemplazar y ocultar miembros  
  Un tipo derivado hereda todos los miembros de su tipo base, es decir, estos miembros se definen en el tipo derivado y están disponibles para él. El comportamiento o cualidades de los miembros heredados se puede modificar de dos maneras:  

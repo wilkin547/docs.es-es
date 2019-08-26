@@ -6,12 +6,12 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: f9abf99a06437f08c65eca69e54760e44a217023
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a34b57eb0a22dcf206456775cdd5817431292e8
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665750"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956822"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Procedimiento para escribir información de eventos en un archivo de texto (Visual Basic)
 Puede usar los objetos `My.Application.Log` y `My.Log` para registrar información sobre los eventos que se producen en su aplicación. En este ejemplo se muestra cómo usar el método `My.Application.Log.WriteEntry` para registrar información de seguimiento en un archivo de registro.  
@@ -57,7 +57,7 @@ Puede usar los objetos `My.Application.Log` y `My.Log` para registrar informaci�
      Cambie el valor del atributo `customlocation` al directorio de registro.  
   
     > [!NOTE]
-    >  Para establecer el valor de una propiedad de agente de escucha, use un atributo que tenga el mismo nombre que la propiedad, con todas las letras del nombre en minúscula. Por ejemplo, los atributos `location` y `customlocation` establecen los valores de las propiedades <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> y <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A>.  
+    > Para establecer el valor de una propiedad de agente de escucha, use un atributo que tenga el mismo nombre que la propiedad, con todas las letras del nombre en minúscula. Por ejemplo, los atributos `location` y `customlocation` establecen los valores de las propiedades <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.Location%2A> y <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.CustomLocation%2A>.  
   
 ### <a name="to-write-event-information-to-the-file-log"></a>Para escribir información de eventos en el registro de archivo  
   

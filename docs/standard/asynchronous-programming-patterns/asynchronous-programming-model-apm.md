@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16e500a645df2b58fb2d2fd402120556922d1800
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3c03a6dadae98d75b06b96bb3cde67db4747b8c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628927"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950867"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modelo de programación asincrónica (APM)
 Una operación asincrónica que usa el modelo de diseño <xref:System.IAsyncResult> se implementa como dos métodos con nombre `BeginOperationName` y `EndOperationName` que comienzan y terminan la operación asincrónica *OperationName* respectivamente. Por ejemplo, la clase <xref:System.IO.FileStream> ofrece los métodos <xref:System.IO.FileStream.BeginRead%2A> y <xref:System.IO.FileStream.EndRead%2A> para leer bytes de un archivo de manera asincrónica. Estos métodos implementan la versión asincrónica del método <xref:System.IO.FileStream.Read%2A> .  
   
 > [!NOTE]
->  A partir de .NET Framework 4, la biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) ofrece un nuevo modelo para programación asincrónica y paralela. Para obtener más información, vea [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) y [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
+> A partir de .NET Framework 4, la biblioteca TPL (Task Parallel Library, biblioteca de procesamiento paralelo basado en tareas) ofrece un nuevo modelo para programación asincrónica y paralela. Para obtener más información, vea [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) y [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
   
  Después de llamar a `BeginOperationName`, una aplicación puede seguir ejecutando instrucciones en el subproceso de llamada mientras la operación asincrónica tiene lugar en un subproceso diferente. Para cada llamada a `BeginOperationName`, la aplicación debe llamar a `EndOperationName` para obtener los resultados de la operación.  
   
 ## <a name="beginning-an-asynchronous-operation"></a>Comenzar una operación asincrónica  
  El método `BeginOperationName` comienza la operación asincrónica *OperationName* y devuelve un objeto que implementa la interfaz <xref:System.IAsyncResult>. Los objetos<xref:System.IAsyncResult> almacenan información sobre una operación asincrónica. En la tabla siguiente se muestra información sobre una operación asincrónica.  
   
-|Miembro|Descripción|  
+|Miembro|DESCRIPCIÓN|  
 |------------|-----------------|  
 |<xref:System.IAsyncResult.AsyncState%2A>|Objeto opcional específico de la aplicación que contiene información sobre la operación asincrónica.|  
 |<xref:System.IAsyncResult.AsyncWaitHandle%2A>|Un <xref:System.Threading.WaitHandle> que se puede usar para bloquear la ejecución de la aplicación hasta que se complete la operación asincrónica.|  
@@ -48,10 +48,10 @@ Una operación asincrónica que usa el modelo de diseño <xref:System.IAsyncResu
  Si la operación asincrónica representada por el objeto <xref:System.IAsyncResult> no ha finalizado cuando se llama a `EndOperationName`, `EndOperationName` bloquea el subproceso de llamada hasta que finaliza la operación asincrónica. Las excepciones generadas por la operación asincrónica se generan desde el método `EndOperationName`. El efecto de llamar al método `EndOperationName` varias veces con el mismo <xref:System.IAsyncResult> no está definido. Del mismo modo, tampoco se ha definido la llamada al método `EndOperationName` con una interfaz <xref:System.IAsyncResult> no devuelta por el método Begin relacionado.  
   
 > [!NOTE]
->  En cualquiera de los escenarios sin definir, los implementadores deben considerar generar <xref:System.InvalidOperationException>.  
+> En cualquiera de los escenarios sin definir, los implementadores deben considerar generar <xref:System.InvalidOperationException>.  
   
 > [!NOTE]
->  Los implementadores de este patrón de diseño deben notificar al llamador que ha completado la operación asincrónica estableciendo <xref:System.IAsyncResult.IsCompleted%2A> en true, llamando al método de devolución de llamada asincrónica (si se especificó) y señalizando el <xref:System.IAsyncResult.AsyncWaitHandle%2A>.  
+> Los implementadores de este patrón de diseño deben notificar al llamador que ha completado la operación asincrónica estableciendo <xref:System.IAsyncResult.IsCompleted%2A> en true, llamando al método de devolución de llamada asincrónica (si se especificó) y señalizando el <xref:System.IAsyncResult.AsyncWaitHandle%2A>.  
   
  Los desarrolladores de aplicaciones tienen varias opciones de diseño para tener acceso a los resultados de la operación asincrónica. La opción correcta depende de si la aplicación tiene instrucciones que se pueden ejecutar mientras se completa la operación. Si una aplicación no puede realizar ningún trabajo adicional hasta que recibe los resultados de la operación asincrónica, debe bloquearse la aplicación hasta que los resultados estén disponibles. Para bloquear hasta que finalice una operación asincrónica, puede usar uno de los siguientes enfoques:  
   

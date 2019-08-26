@@ -6,18 +6,18 @@ ms.author: mairaw
 ms.date: 04/02/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: a7005cfe01d168febd97af5f8b41cfff26b2cfc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 20b13bb590a63a807c1894bf08051053f90c0fc4
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641473"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666521"
 ---
 # <a name="target-frameworks"></a>Versiones de .NET Framework de destino
 
 Cuando se dirige a un marco en una aplicación o biblioteca, debe especificar el conjunto de API que quiere poner a disposición de la aplicación o biblioteca. La plataforma de destino se especifica en el archivo del proyecto, mediante monikers de la plataforma de destino (TFM).
 
-Una aplicación o biblioteca puede tener como destino una versión de [.NET Standard](~/docs/standard/net-standard.md). Las versiones de .NET Standard representan conjuntos estandarizados de API en todas las implementaciones de .NET. Por ejemplo, una biblioteca puede tener como destino .NET Standard 1.6 y obtener acceso a las API que funcionan en .NET Core y .NET Framework con el mismo código base.
+Una aplicación o biblioteca puede tener como destino una versión de [.NET Standard](net-standard.md). Las versiones de .NET Standard representan conjuntos estandarizados de API en todas las implementaciones de .NET. Por ejemplo, una biblioteca puede tener como destino .NET Standard 1.6 y obtener acceso a las API que funcionan en .NET Core y .NET Framework con el mismo código base.
 
 Una aplicación o biblioteca también puede tener como destino una implementación específica de .NET para obtener acceso a las API específicas de la implementación. Por ejemplo, una aplicación que tenga como destino Xamarin.iOS (por ejemplo, `Xamarin.iOS10`) obtiene acceso a contenedores de API de iOS proporcionados por Xamarin para iOS 10, o una aplicación que tenga como destino la Plataforma universal de Windows (UWP, `uap10.0`) tiene acceso a las API que compilan para dispositivos que ejecutan Windows 10.
 
@@ -27,7 +27,7 @@ Para plataformas de destino basadas en paquetes (por ejemplo, .NET Standard y .N
 
 ## <a name="latest-target-framework-versions"></a>Versiones más recientes de las plataformas de destino
 
-En la tabla siguiente, se definen las plataformas de destino más usadas, cómo se hace referencia a ellas y la versión de [.NET Standard](~/docs/standard/net-standard.md) que implementan. Estas versiones de plataformas de destino son las últimas versiones estables. No se muestran las versiones preliminares. Un moniker de la plataforma de destino (TFM) es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET.
+En la tabla siguiente, se definen las plataformas de destino más usadas, cómo se hace referencia a ellas y la versión de [.NET Standard](net-standard.md) que implementan. Estas versiones de plataformas de destino son las últimas versiones estables. No se muestran las versiones preliminares. Un moniker de la plataforma de destino (TFM) es un formato de token normalizado para especificar la plataforma de destino de una aplicación o biblioteca de .NET.
 
 | Versión de .NET Framework de destino      | Latest <br/> Versión estable | Moniker de la plataforma de destino (TFM) | Implementado <br/> Versión de .NET Standard |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4f8e25edb7d61e21406a5f7719f6dc98f686a9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dbe5b5db580e06bfd3e5723addd404eae7950e6c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755052"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69946351"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Tutorial: Uso de flujos de datos en aplicaciones de Windows Forms
 Este documento muestra cómo crear una red de bloques de flujo de datos que realizan el procesamiento de imágenes en una aplicación de Windows Forms.  
@@ -82,7 +82,7 @@ Este documento muestra cómo crear una red de bloques de flujo de datos que real
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  La versión de C# del método `CreateCompositeBitmap` utiliza punteros para permitir un procesamiento eficaz de los objetos <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Por lo tanto, debe habilitar la opción **Permitir código no seguro** en el proyecto para utilizar la palabra clave [unsafe](~/docs/csharp/language-reference/keywords/unsafe.md). Para obtener más información sobre cómo habilitar el código no seguro en un proyecto de Visual C#, vea [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    > La versión de C# del método `CreateCompositeBitmap` utiliza punteros para permitir un procesamiento eficaz de los objetos <xref:System.Drawing.Bitmap?displayProperty=nameWithType>. Por lo tanto, debe habilitar la opción **Permitir código no seguro** en el proyecto para utilizar la palabra clave [unsafe](../../csharp/language-reference/keywords/unsafe.md). Para obtener más información sobre cómo habilitar el código no seguro en un proyecto de Visual C#, vea [Compilar (Página, Diseñador de proyectos) (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  En la tabla siguiente se describen los miembros de la red.  
   

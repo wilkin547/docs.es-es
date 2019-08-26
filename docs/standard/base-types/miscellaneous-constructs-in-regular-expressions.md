@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7b7783d3360bfb042880f5d1e74bfac77e729299
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836289"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959481"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Construcciones misceláneas en expresiones regulares
 Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misceláneas. Una permite habilitar o deshabilitar opciones de coincidencia determinadas en medio de un patrón de expresión regular. Las otras dos permiten incluir comentarios en una expresión regular.  
@@ -31,7 +31,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  Indique las opciones que quiere habilitar después del signo de interrogación y las opciones que quiere deshabilitar después del signo menos. En la siguiente tabla se describe cada una de las opciones. Para obtener más información sobre cada opción, consulte [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
-|Opción|Descripción|  
+|Opción|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`i`|Coincidencia sin distinción entre mayúsculas y minúsculas.|  
 |`m`|Modo multilínea.|  
@@ -42,7 +42,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
  Cualquier cambio en las opciones de expresión regular definido mediante la construcción `(?imnsx-imnsx)` permanece en vigor hasta el final del grupo envolvente.  
   
 > [!NOTE]
->  La construcción de agrupamiento `(?imnsx-imnsx:`*subexpresión*`)` proporciona una funcionalidad idéntica para una subexpresión. Para obtener más información, consulta [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+> La construcción de agrupamiento `(?imnsx-imnsx:`*subexpresión*`)` proporciona una funcionalidad idéntica para una subexpresión. Para obtener más información, consulte [Construcciones de agrupamiento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  En el ejemplo siguiente se usan las opciones `i`, `n` y `x` para habilitar las capturas explícitas y la opción que no hace distinción entre mayúsculas y minúsculas, y para omitir el espacio en blanco del patrón de expresión regular en medio de una expresión regular.  
   
@@ -51,7 +51,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  En el ejemplo se definen dos expresiones regulares. La primera, `\b(D\w+)\s(d\w+)\b`, coincide con dos palabras consecutivas que empiezan con una "D" mayúscula y una "d" minúscula. La segunda expresión regular, `\b(D\w+)(?ixn) \s (d\w+) \b`, usa opciones insertadas para modificar este patrón, como se describe en la tabla siguiente. Una comparación de los resultados confirma los efectos de la construcción `(?ixn)`.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(D\w+)`|Coincide con una "D" mayúscula seguida de uno o más caracteres de palabra. Este es el primer grupo de capturas.|  
@@ -65,7 +65,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  En el ejemplo siguiente se repite el primer patrón de expresión regular del ejemplo de la sección anterior. Se agregan dos comentarios alineados en la expresión regular para indicar si la comparación distingue entre mayúsculas y minúsculas. El patrón de expresión regular, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, se define como se indica a continuación.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(?# case-sensitive comparison)`|Comentario. No afecta al comportamiento de la coincidencia de patrones.|  
@@ -86,7 +86,7 @@ Las expresiones regulares en .NET incluyen tres construcciones de lenguaje misce
   
  `\{\d+(,-*\d+)*(\:\w{1,4}?)*\}(?x) # Looks for a composite format item.`  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\{`|Coincide con una llave de apertura.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  

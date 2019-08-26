@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 1d3fbe3ab8ff59d73dc5ec4f33e4dde2437bcbec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f830a0794f67c0f8f7aca24a181e323317901923
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623331"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69955955"
 ---
 # <a name="how-to-read-from-text-files-in-visual-basic"></a>Procedimiento para leer archivos de texto en Visual Basic
 El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> del objeto `My.Computer.FileSystem` permite leer de un archivo de texto. Se puede especificar la codificación del archivo si el contenido del mismo utiliza una codificación como ASCII o UTF-8.  
@@ -21,7 +21,7 @@ El método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A
  Si está leyendo de un archivo que incluye caracteres extendidos, deberá especificar la codificación del archivo.  
   
 > [!NOTE]
->  Para leer una única línea de texto de un archivo a la vez, utilice el método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> del objeto `My.Computer.FileSystem`. El método `OpenTextFileReader` devuelve un objeto <xref:System.IO.StreamReader>. Puede usar el método <xref:System.IO.StreamReader.ReadLine%2A> del objeto `StreamReader` para leer de un archivo una línea a la vez. Puede buscar el final del archivo con el método <xref:System.IO.StreamReader.EndOfStream%2A> del objeto `StreamReader`.  
+> Para leer una única línea de texto de un archivo a la vez, utilice el método <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.OpenTextFileReader%2A> del objeto `My.Computer.FileSystem`. El método `OpenTextFileReader` devuelve un objeto <xref:System.IO.StreamReader>. Puede usar el método <xref:System.IO.StreamReader.ReadLine%2A> del objeto `StreamReader` para leer de un archivo una línea a la vez. Puede buscar el final del archivo con el método <xref:System.IO.StreamReader.EndOfStream%2A> del objeto `StreamReader`.  
   
 ### <a name="to-read-from-a-text-file"></a>Para leer de un archivo de texto  
   

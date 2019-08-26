@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 335e6578767c130760f322aa2b015ea7b0f317f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557947"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939618"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Validación de esquemas con XPathNavigator
 Con la clase <xref:System.Xml.XmlDocument>, puede validar el contenido XML de un objeto <xref:System.Xml.XmlDocument> de dos formas. La primera forma sirve para validar el contenido XML utilizando un objeto <xref:System.Xml.XmlReader> de validación y, la segunda, consiste en utilizar el método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument>. También se puede realizar una validación de solo lectura del contenido XML utilizando la clase <xref:System.Xml.XPath.XPathDocument>.  
@@ -129,7 +129,7 @@ class ValidatingReaderExample
  La propiedad <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A> se puede utilizar para determinar si un elemento o atributo en particular es válido cuando se obtiene acceso a atributos o elementos con el <xref:System.Xml.XPath.XPathNavigator>.  
   
 > [!NOTE]
->  Cuando se carga un documento XML en un objeto <xref:System.Xml.XmlDocument> con un esquema asociado que define valores predeterminados, el objeto <xref:System.Xml.XmlDocument> trata estos valores predeterminados como si aparecieran en el documento XML. Esto significa que la propiedad <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> siempre devuelve `false` para un elemento que utilice los valores predeterminados de un esquema, incluso aunque el documento XML se hubiera escrito como un elemento vacío.  
+> Cuando se carga un documento XML en un objeto <xref:System.Xml.XmlDocument> con un esquema asociado que define valores predeterminados, el objeto <xref:System.Xml.XmlDocument> trata estos valores predeterminados como si aparecieran en el documento XML. Esto significa que la propiedad <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> siempre devuelve `false` para un elemento que utilice los valores predeterminados de un esquema, incluso aunque el documento XML se hubiera escrito como un elemento vacío.  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Validación de un documento con el método Validate  
  El método <xref:System.Xml.XmlDocument.Validate%2A> de la clase <xref:System.Xml.XmlDocument> valida el documento XML contenido en un objeto <xref:System.Xml.XmlDocument> con los esquemas que se especifican en la propiedad <xref:System.Xml.XmlDocument> del objeto <xref:System.Xml.XmlDocument.Schemas%2A> y aumenta el conjunto de información. El resultado es que se reemplaza un documento XML que previamente no tiene información de tipos del objeto <xref:System.Xml.XmlDocument> por un documento con información de tipos.  

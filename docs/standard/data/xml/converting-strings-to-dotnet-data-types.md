@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 376dd9df4666193f8e5a6be83f3fcaf5dc32f1a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f277d11cba8191c326d56f017b8acc6503c6b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544606"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968713"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Convertir cadenas en tipos de datos de .NET Framework
 Si desea convertir una cadena en un tipo de datos de .NET Framework, utilice el método **XmlConvert** que cumple los requisitos de la aplicación. Para obtener una lista de los métodos de conversión disponibles en la clase **XmlConvert**, vea <xref:System.Xml.XmlConvert>.  
@@ -33,7 +33,7 @@ Si desea convertir una cadena en un tipo de datos de .NET Framework, utilice el 
 |Timespan|El formato es PnYnMnTnHnMnS, es decir, `P2Y10M15DT10H30M20S` corresponde a una duración de 2 años, 10 meses, 15 días, 10 horas, 30 minutos y 20 segundos.|  
   
 > [!NOTE]
->  Si se convierte uno de los tipos de .NET Framework enumerados en la tabla en una cadena mediante el método **ToString**, la cadena devuelta no será el tipo base, sino el tipo de cadena de esquema XML (XSD).  
+> Si se convierte uno de los tipos de .NET Framework enumerados en la tabla en una cadena mediante el método **ToString**, la cadena devuelta no será el tipo base, sino el tipo de cadena de esquema XML (XSD).  
   
  Los tipos de valor de **DateTime** y **Timespan** difieren en que **DateTime** representa un instante en el tiempo, mientras que **TimeSpan** representa un intervalo de tiempo. Los formatos de **DateTime** y **Timespan** se describen en la especificación de tipos de datos de esquema XML (XSD). Por ejemplo:  
   

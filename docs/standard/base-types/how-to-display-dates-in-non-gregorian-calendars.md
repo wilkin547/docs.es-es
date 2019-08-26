@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea8b47e7d5c794ea1b33eaaae52a3f8250f80a82
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cdd500d8eda81708d67254cbc5dc8da701ae4e09
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588833"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963352"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Procedimiento para mostrar fechas en calendarios no gregorianos
 Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendario gregoriano como calendario predeterminado. Esto significa que al llamar al método `ToString` de un valor de fecha y hora se muestra la representación de cadena de esa fecha y hora en el calendario gregoriano, aunque se creara con otro calendario. Esto se muestra en el ejemplo siguiente, que usa dos maneras diferentes de crear un valor de fecha y hora con el calendario persa, pero muestra esos valores de fecha y hora en el calendario gregoriano cuando llama al método <xref:System.DateTime.ToString%2A>. En este ejemplo se reflejan dos técnicas usadas habitualmente, aunque incorrectas, para mostrar la fecha en un calendario determinado.  
@@ -39,7 +39,7 @@ Los tipos <xref:System.DateTime> y <xref:System.DateTimeOffset> usan el calendar
 4. Asigne el objeto de calendario a la propiedad <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> del objeto <xref:System.Globalization.DateTimeFormatInfo> devuelto por la propiedad <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  
   
     > [!NOTE]
-    >  La clase <xref:System.Globalization.CultureInfo> también tiene una propiedad <xref:System.Globalization.CultureInfo.Calendar%2A>. Pero es de solo lectura y constante; no cambia para reflejar el nuevo calendario predeterminado asignado a la propiedad <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
+    > La clase <xref:System.Globalization.CultureInfo> también tiene una propiedad <xref:System.Globalization.CultureInfo.Calendar%2A>. Pero es de solo lectura y constante; no cambia para reflejar el nuevo calendario predeterminado asignado a la propiedad <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType>.  
   
 5. Llame al método <xref:System.DateTime.ToString%2A> o <xref:System.DateTime.ToString%2A> y pásele el objeto <xref:System.Globalization.CultureInfo> cuyo calendario predeterminado se modificó en el paso anterior.  
   

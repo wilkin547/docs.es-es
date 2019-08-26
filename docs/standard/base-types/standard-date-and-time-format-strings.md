@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: efa3abdcb7aa9db6dee4f772c1c1564947151c96
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267914"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69949595"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Cadenas con formato de fecha y hora estándar
 Una cadena de formato de fecha y hora estándar usa un único especificador de formato para definir la representación de texto de un valor de fecha y hora. Cualquier cadena con formato de fecha y hora que contenga más de un carácter, incluido un espacio en blanco, se interpreta como una cadena con formato de fecha y hora personalizado; para obtener más información, consulte [Cadenas con formato de fecha y hora personalizado](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Una cadena de formato estándar o personalizado se puede usar de dos maneras:  
@@ -79,7 +79,7 @@ Las cadenas con formato de fecha y hora estándar se pueden utilizar tanto con v
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
->  Para obtener información sobre la personalización de patrones o cadenas usadas para dar formato a valores de fecha y hora, vea el tema sobre la clase <xref:System.Globalization.NumberFormatInfo>.  
+> Para obtener información sobre la personalización de patrones o cadenas usadas para dar formato a valores de fecha y hora, vea el tema sobre la clase <xref:System.Globalization.NumberFormatInfo>.  
   
  En algunos casos, la cadena con formato estándar actúa como la abreviatura correspondiente de una cadena con formato personalizado más larga que es invariable. Hay cuatro cadenas de formato estándar que pertenecen a esta categoría: "O" (u "o"), "R" (o "r"), "s" y "u". Estas cadenas se corresponden con las cadenas de formato personalizado definidas en la referencia cultural de todos los idiomas. Generan representaciones de cadena de valores de fecha y hora que están pensados para que sean idénticos en todas las referencias culturales. En la tabla siguiente se proporciona información sobre estas cuatro cadenas de formato de fecha y hora estándar.  
   

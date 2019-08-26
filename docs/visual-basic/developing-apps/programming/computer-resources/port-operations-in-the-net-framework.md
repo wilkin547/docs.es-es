@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, Visual Basic
 ms.assetid: 1eba223b-7bd3-401a-b097-982bce96df1b
-ms.openlocfilehash: e9927df7b646da6c66c11a5a686c4b038aaea774
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 936ff4c861444d3a971b38fd7b2a0af38b19494b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591372"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916602"
 ---
 # <a name="port-operations-in-the-net-framework-with-visual-basic"></a>Operaciones de puertos en .NET Framework con Visual Basic
 Puede acceder a los puertos serie del equipo mediante las clases de .NET Framework del espacio de nombres <xref:System.IO.Ports?displayProperty=nameWithType>. La clase más importante, <xref:System.IO.Ports.SerialPort>, proporciona un marco de trabajo para la E/S sincrónica y orientada a eventos, el acceso a los estados de punto de conexión e interrupción y el acceso a las propiedades del controlador serie. Se puede encapsular en un objeto <xref:System.IO.Stream>, al que se puede acceder a través de la propiedad <xref:System.IO.Ports.SerialPort.BaseStream>. Al encapsular <xref:System.IO.Ports.SerialPort> en un objeto <xref:System.IO.Stream> se puede acceder al puerto serie mediante las clases que usan flujos. El espacio de nombres incluye enumeraciones que simplifican el control de los puertos serie.  
@@ -17,12 +17,12 @@ Puede acceder a los puertos serie del equipo mediante las clases de .NET Framewo
  La forma más sencilla de crear un objeto <xref:System.IO.Ports.SerialPort> es a través del método <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>.  
   
 > [!NOTE]
->  No se pueden usar clases de .NET Framework para acceder directamente a otros tipos de puertos, como puertos paralelos, puertos USB, etc.  
+> No se pueden usar clases de .NET Framework para acceder directamente a otros tipos de puertos, como puertos paralelos, puertos USB, etc.  
   
 ## <a name="enumerations"></a>Enumeraciones  
  En esta tabla se enumeran y se describen las enumeraciones principales usadas para acceder a un puerto serie:  
   
-|Enumeración|Descripción|  
+|Enumeración|DESCRIPCIÓN|  
 |---|---|   
 |<xref:System.IO.Ports.Handshake>|Especifica el protocolo de control usado para establecer una comunicación de puerto serie para un objeto <xref:System.IO.Ports.SerialPort>.|  
 |<xref:System.IO.Ports.Parity>|Especifica el bit de paridad para un objeto <xref:System.IO.Ports.SerialPort>.|  

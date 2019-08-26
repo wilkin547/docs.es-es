@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a7e381a90d56ca220e275d9179a50502b4969ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fb14f919d0737b9d9c25bcd62a3cfb7228ff432
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626696"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916088"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Validación de esquemas XML (XSD) con XmlSchemaCollection
 Puede utilizar <xref:System.Xml.Schema.XmlSchemaCollection> para validar un documento XML con esquemas del lenguaje de definición de esquemas XML (XSD). <xref:System.Xml.Schema.XmlSchemaCollection> mejora el rendimiento al almacenar esquemas en la colección para que no se carguen en memoria cada vez que se produce la validación. Si el esquema está en la colección de esquemas, el atributo `schemaLocation` se utiliza para buscarlo en dicha colección.  
   
 > [!IMPORTANT]
->  La clase <xref:System.Xml.Schema.XmlSchemaCollection> está obsoleta y ha sido reemplazada por la clase <xref:System.Xml.Schema.XmlSchemaSet>. Para más información sobre la clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
+> La clase <xref:System.Xml.Schema.XmlSchemaCollection> está obsoleta y ha sido reemplazada por la clase <xref:System.Xml.Schema.XmlSchemaSet>. Para más información sobre la clase <xref:System.Xml.Schema.XmlSchemaSet>, vea [XmlSchemaSet para compilación de esquemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md).  
   
  En el ejemplo siguiente se muestra el elemento raíz de un archivo de datos.  
   

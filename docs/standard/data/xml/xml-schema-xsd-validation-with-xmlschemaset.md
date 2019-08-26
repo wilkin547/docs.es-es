@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7db1b0fe3d4b884bca2c2b00cc95c0872bfa7e7a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9bdcfe785d6f5f81d721acd45eebb580b08b2d14
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835582"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916071"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>Validación de esquema XML (XSD) con XmlSchemaSet
 Los documentos XML se pueden validar con un esquema del lenguaje de definición de esquemas (XSD) en un <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -23,7 +23,7 @@ Los documentos XML se pueden validar con un esquema del lenguaje de definición 
  El método <xref:System.Xml.XmlReader.Create%2A> de la clase <xref:System.Xml.XmlReader> valida los documentos XML. Para validar un documento XML, construya un objeto <xref:System.Xml.XmlReaderSettings> que contiene un esquema XSD con el que validar el documento XML.  
   
 > [!NOTE]
->  El espacio de nombres <xref:System.Xml.Schema> contiene métodos de extensión que facilitan el proceso de validar un árbol XML en un archivo XSD cuando se utiliza [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). Para más información sobre cómo validar documentos XML con LINQ to XML, vea [Cómo: Validar con XSD (LINQ to XML) (C#)](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) y [Cómo: Validar con XSD (LINQ to XML) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md).  
+> El espacio de nombres <xref:System.Xml.Schema> contiene métodos de extensión que facilitan el proceso de validar un árbol XML en un archivo XSD cuando se utiliza [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) y [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md). Para más información sobre cómo validar documentos XML con LINQ to XML, vea [Cómo: Validar con XSD (LINQ to XML) (C#)](../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) y [Cómo: Validar con XSD (LINQ to XML) (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md).  
   
  Es posible agregar un esquema en particular o un conjunto de esquemas (como un <xref:System.Xml.Schema.XmlSchemaSet>) a un <xref:System.Xml.Schema.XmlSchemaSet> pasando uno de ellos como parámetro del método <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> de <xref:System.Xml.Schema.XmlSchemaSet>. Observe que cuando se valida un documento, el espacio de nombres de destino del documento debe coincidir con el espacio de nombres de destino del esquema que forma parte del conjunto.  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: dfc8e1cfa6050a6e45373ad023ee8f358e388735
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423870"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950693"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Información general sobre el modelo asincrónico basado en eventos
 Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen respondiendo a la interacción del usuario, a menudo exigen un diseño que utiliza varios subprocesos. El espacio de nombres <xref:System.Threading> proporciona todas las herramientas necesarias para crear aplicaciones multiproceso de gran rendimiento, pero, para usar estas herramientas de forma eficaz, es necesario atesorar una gran experiencia en ingeniería de software multiproceso. Para aplicaciones multiproceso relativamente simples, el componente <xref:System.ComponentModel.BackgroundWorker> ofrece una solución sencilla. Para aplicaciones asincrónicas más sofisticadas, considere la opción de implementar una clase que se adhiera al modelo asincrónico basado en eventos.  
@@ -115,7 +115,7 @@ public class AsyncExample
  Si usa sobrecargas de invocación múltiple, el código necesitará realizar un seguimiento de los objetos `userState` (id. de tareas) de las tareas pendientes. En cada llamada a `Method1Async(string param, object userState)`, normalmente hay que generar un objeto `userState` nuevo y único y agregarlo a una colección. Cuando la tarea correspondiente a este objeto `userState` genera el evento de finalización, su implementación del método de finalización examinará <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> y lo quitará de su colección. Usado de este modo, el parámetro `userState` adopta el rol de id. de tarea.  
   
 > [!NOTE]
->  Asegúrese de proporcionar un valor único para `userState` en las llamadas a sobrecargas de invocación múltiple. Los id. de tarea que no sean únicos provocarán que la clase asincrónica genere una <xref:System.ArgumentException>.  
+> Asegúrese de proporcionar un valor único para `userState` en las llamadas a sobrecargas de invocación múltiple. Los id. de tarea que no sean únicos provocarán que la clase asincrónica genere una <xref:System.ArgumentException>.  
   
 ### <a name="canceling-pending-operations"></a>Cancelación de operaciones pendientes  
  Es importante ser capaz cancelar operaciones asincrónicas en cualquier momento antes de la finalización. Las clases que implementan el modelo asincrónico basado en eventos tendrán un método `CancelAsync` (si solo hay un método asincrónico) o un método _NombreDeMétodo_**AsyncCancel** (si hay varios métodos asincrónicos).  

@@ -10,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d13f123953c32cae01df501c0e251ec29b0478b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10fa77f6948a10959db5f79c37692eba67d47ecd
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367510"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666538"
 ---
 # <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>Procedimiento para usar ForEach para quitar elementos de BlockingCollection
 
-Además de obtener los elementos de <xref:System.Collections.Concurrent.BlockingCollection%601> mediante los métodos <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> y <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, también puede usar [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) ([For Each](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) en Visual Basic) para quitar elementos hasta que se complete la adición y se vacíe la colección. Esto se denomina una *enumeración de mutación* o *enumeración de consumo* porque, a diferencia de un bucle `foreach` (`For Each`) típico, este enumerador modifica la colección de origen mediante la eliminación de elementos.
+Además de obtener los elementos de <xref:System.Collections.Concurrent.BlockingCollection%601> mediante los métodos <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> y <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A>, también puede usar [foreach](../../../csharp/language-reference/keywords/foreach-in.md) ([For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md) en Visual Basic) para quitar elementos hasta que se complete la adición y se vacíe la colección. Esto se denomina una *enumeración de mutación* o *enumeración de consumo* porque, a diferencia de un bucle `foreach` (`For Each`) típico, este enumerador modifica la colección de origen mediante la eliminación de elementos.
 
 ## <a name="example"></a>Ejemplo
 
