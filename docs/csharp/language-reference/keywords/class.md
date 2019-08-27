@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 83e7d278b38e17dac668b32687a368211399d437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652077"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922385"
 ---
 # <a name="class-c-reference"></a>class (Referencia de C#)
 
@@ -33,48 +33,48 @@ Solo la herencia simple se permite en C#. En otras palabras, una clase puede her
 
 |Herencia|Ejemplo|
 |-----------------|-------------|
-|Ninguna|`class ClassA { }`|
+|None|`class ClassA { }`|
 |Single|`class DerivedClass: BaseClass { }`|
 |Ninguna, implementa dos interfaces|`class ImplClass: IFace1, IFace2 { }`|
 |Única, implementa una interfaz|`class ImplDerivedClass: BaseClass, IFace1 { }`|
 
-Las clases que se declaran directamente dentro de un espacio de nombres, que no están anidadas dentro de otras clases, pueden ser de tipo [public](../../../csharp/language-reference/keywords/public.md) o [internal](../../../csharp/language-reference/keywords/internal.md). De forma predeterminada, las clases son `internal`.
+Las clases que se declaran directamente dentro de un espacio de nombres, que no están anidadas dentro de otras clases, pueden ser de tipo [public](./public.md) o [internal](./internal.md). De forma predeterminada, las clases son `internal`.
 
 Los miembros de clase, incluidas las clases anidadas, pueden ser [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md) o [private protected](private-protected.md). De forma predeterminada, los miembros son `private`.
 
-Para obtener más información, consulte [Modificadores de acceso](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
+Para obtener más información, consulte [Modificadores de acceso](../../programming-guide/classes-and-structs/access-modifiers.md).
 
-Puede declarar clases genéricas que tengan parámetros de tipo. Para obtener más información, consulte [Clases genéricas](../../../csharp/programming-guide/generics/generic-classes.md).
+Puede declarar clases genéricas que tengan parámetros de tipo. Para obtener más información, consulte [Clases genéricas](../../programming-guide/generics/generic-classes.md).
 
 Una clase puede contener declaraciones de los miembros siguientes:
 
-- [Constructores](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [Constructores](../../programming-guide/classes-and-structs/constructors.md)
 
-- [Constantes](../../../csharp/programming-guide/classes-and-structs/constants.md)
+- [Constantes](../../programming-guide/classes-and-structs/constants.md)
 
-- [Campos](../../../csharp/programming-guide/classes-and-structs/fields.md)
+- [Campos](../../programming-guide/classes-and-structs/fields.md)
 
-- [Finalizadores](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [Finalizadores](../../programming-guide/classes-and-structs/destructors.md)
 
-- [Métodos](../../../csharp/programming-guide/classes-and-structs/methods.md)
+- [Métodos](../../programming-guide/classes-and-structs/methods.md)
 
-- [Propiedades](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [Propiedades](../../programming-guide/classes-and-structs/properties.md)
 
-- [Indizadores](../../../csharp/programming-guide/indexers/index.md)
+- [Indizadores](../../programming-guide/indexers/index.md)
 
-- [Operadores](../../../csharp/programming-guide/statements-expressions-operators/operators.md)
+- [Operadores](../operators/index.md)
 
-- [Eventos](../../../csharp/programming-guide/events/index.md)
+- [Eventos](../../programming-guide/events/index.md)
 
-- [Delegados](../../../csharp/programming-guide/delegates/index.md)
+- [Delegados](../../programming-guide/delegates/index.md)
 
-- [Clases](../../../csharp/programming-guide/classes-and-structs/classes.md)
+- [Clases](../../programming-guide/classes-and-structs/classes.md)
 
-- [Interfaces](../../../csharp/programming-guide/interfaces/index.md)
+- [Interfaces](../../programming-guide/interfaces/index.md)
 
-- [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md)
+- [Structs](../../programming-guide/classes-and-structs/structs.md)
 
-- [Enumeraciones](../../../csharp/programming-guide/enumeration-types.md)
+- [Enumeraciones](../../programming-guide/enumeration-types.md)
 
 ## <a name="example"></a>Ejemplo
 
@@ -94,7 +94,7 @@ El acceso a miembros privados de `Child` desde `Main` solo sería posible si `Ma
 
 Los tipos declarados dentro de una clase sin un modificador de acceso adoptan el valor predeterminado de `private`, por lo que los miembros de datos de este ejemplo seguirían siendo `private` si se quitara la palabra clave.
 
-Por último, tenga en cuenta que, para el objeto creado mediante el constructor predeterminado (`child3`), el campo `age` se ha inicializado a cero de forma predeterminada.
+Por último, tenga en cuenta que, para el objeto creado mediante el constructor sin parámetros (`child3`), el campo `age` se ha inicializado en cero de forma predeterminada.
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
@@ -102,7 +102,7 @@ Por último, tenga en cuenta que, para el objeto creado mediante el constructor 
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de C#](../../../csharp/language-reference/index.md)
-- [Guía de programación de C#](../../../csharp/programming-guide/index.md)
-- [Palabras clave de C#](../../../csharp/language-reference/keywords/index.md)
-- [Tipos de referencia](../../../csharp/language-reference/keywords/reference-types.md)
+- [Referencia de C#](../index.md)
+- [Guía de programación de C#](../../programming-guide/index.md)
+- [Palabras clave de C#](./index.md)
+- [Tipos de referencia](./reference-types.md)

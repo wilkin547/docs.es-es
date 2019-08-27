@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 6966d0b7a4f8a96bddb17ce2017fd53fc07ae922
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 62186409fdc1abb2275af535be3ae939a1e63323
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69572319"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922285"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Operadores de conversión y prueba de tipos (Referencia de C#)
 
@@ -115,7 +115,7 @@ Para obtener más información sobre las conversiones explícitas, vea la secci�
 
 También puede utilizar paréntesis para [llamar a un método o invocar un delegado](member-access-operators.md#invocation-operator-).
 
-Sirven además para especificar el orden en el que se van a evaluar operaciones en una expresión. Para más información, consulte la sección [Agregar paréntesis](../../programming-guide/statements-expressions-operators/operators.md#adding-parentheses) del artículo [Operadores](../../programming-guide/statements-expressions-operators/operators.md). Para ver la lista de operadores ordenados por nivel de precedencia, consulte [Operadores de C#](index.md).
+Sirven además para ajustar el orden en el que se van a evaluar operaciones en una expresión. Para obtener más información, vea [Operadores de C# (referencia de C#)](index.md).
 
 ## <a name="typeof-operator"></a>Operador typeof
 

@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 0bde31a004b1952be488569f89cfd3b129c82771
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5ef5d459195bea752ec5380f2853d8011cb189aa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68671230"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666635"
 ---
 # <a name="net-assembly-file-format"></a>Formato de archivo de ensamblado .NET
 
@@ -35,4 +35,4 @@ Encabezados de ensamblado de ECMA 335 II.25.1, Estructura del formato de archivo
 
 ## <a name="processing-the-assemblies"></a>Procesar los ensamblados
 
-Se pueden escribir herramientas o API para procesar ensamblados. La información de ensamblado permite tomar decisiones mediante programación en tiempo de ejecución, volver a escribir ensamblados, proporcionar API IntelliSense en un editor y generar documentación. <xref:System.Reflection?displayProperty=nameWithType> y [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) son buenos ejemplos de herramientas que se usan con frecuencia con este propósito.
+Se pueden escribir herramientas o API para procesar ensamblados. La información de ensamblado permite tomar decisiones mediante programación en tiempo de ejecución, volver a escribir ensamblados, proporcionar API IntelliSense en un editor y generar documentación. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> y [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) son buenos ejemplos de herramientas que se usan con frecuencia con este propósito.

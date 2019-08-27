@@ -9,33 +9,33 @@ helpviewer_keywords:
 ms.assetid: e9fd53f2-ed56-4b09-b2ea-e9bc9d65e6d6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee4d884a0efbeb6e57ed727396bf3bcb39979774
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc62fffe3ca51acf0f2098d2975665b91b052992
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172508"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69930894"
 ---
 # <a name="regular-expression-examples"></a>Ejemplos de expresiones regulares
 Esta sección contiene ejemplos de código que ilustran el uso de expresiones regulares en aplicaciones comunes.  
   
 > [!NOTE]
->  El espacio de nombres <xref:System.Web.RegularExpressions> contiene un número de objetos de expresión regular que implementan modelos de expresión regular predefinidos para el análisis de cadenas a partir de documentos HTML, XML y ASP.NET. Por ejemplo, la clase <xref:System.Web.RegularExpressions.TagRegex> identifica las etiquetas de inicio en una cadena y la clase <xref:System.Web.RegularExpressions.CommentRegex> identifica los comentarios de ASP.NET en una cadena.  
+> El espacio de nombres <xref:System.Web.RegularExpressions> contiene un número de objetos de expresión regular que implementan modelos de expresión regular predefinidos para el análisis de cadenas a partir de documentos HTML, XML y ASP.NET. Por ejemplo, la clase <xref:System.Web.RegularExpressions.TagRegex> identifica las etiquetas de inicio en una cadena y la clase <xref:System.Web.RegularExpressions.CommentRegex> identifica los comentarios de ASP.NET en una cadena.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Ejemplo: Buscar etiquetas HREF](../../../docs/standard/base-types/regular-expression-example-scanning-for-hrefs.md)  
  Ofrece un ejemplo en el que se busca una cadena de entrada y se muestran todos los valores href="…" y sus ubicaciones en la cadena.  
   
- [Ejemplo: Cambiar formatos de fecha](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
+ [Ejemplo: Cambio de formatos de fecha](../../../docs/standard/base-types/regular-expression-example-changing-date-formats.md)  
  Ofrece un ejemplo en el que se reemplazan las fechas en formato mm/dd/aa por fechas en el formato dd-mm-aa.  
   
- [Extraer un protocolo y un número de puerto de una dirección URL](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
+ [Cómo: Extraer un protocolo y un número de puerto de una dirección URL](../../../docs/standard/base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md)  
  Ofrece un ejemplo en el que se extrae un protocolo y número de puerto de una cadena que contiene una dirección URL. Por ejemplo, "http://www.contoso.com:8080/letters/readme.html" devuelve "http:8080".  
   
- [Quitar caracteres no válidos de una cadena](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
+ [Cómo: Quitar caracteres no válidos de una cadena](../../../docs/standard/base-types/how-to-strip-invalid-characters-from-a-string.md)  
  Ofrece un ejemplo en el que se eliminan los caracteres no alfanuméricos no válidos de una cadena.  
   
- [Comprobar si las cadenas tienen un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
+ [Cómo: Comprobación de que las cadenas están en un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)  
  Proporciona un ejemplo que comprueba si una cadena tiene un formato de correo electrónico válido.  
   
 ## <a name="reference"></a>Referencia  
