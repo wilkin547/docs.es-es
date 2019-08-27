@@ -18,12 +18,12 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 71da71d1331e9eab818a7492daa230f758840762
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 248d434f7aad56d84d952fa27cf49f3d370f4a1c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634669"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69934831"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escapes de carácter en expresiones regulares
 La barra diagonal inversa (\\) en una expresión regular indica una de las siguientes situaciones:  
@@ -33,12 +33,12 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
 - Un carácter que de otro modo se interpretaría como una construcción de lenguaje sin escape, se debe interpretar literalmente. Por ejemplo, una llave (`{`) inicia la definición de un cuantificador, pero una barra diagonal inversa seguida de una llave (`\{`) indica que el motor de expresiones regulares debería coincidir con la llave. De igual forma, una sola barra diagonal inversa marca el principio de una construcción de lenguaje con escape, pero dos barras diagonales inversas (`\\`) indican que el motor de expresiones regulares debería coincidir con la barra diagonal inversa.  
   
 > [!NOTE]
->  Los escapes de caracteres se reconocen en los patrones de expresiones regulares, pero no en los patrones de reemplazo.  
+> Los escapes de caracteres se reconocen en los patrones de expresiones regulares, pero no en los patrones de reemplazo.  
   
 ## <a name="character-escapes-in-net"></a>Escapes de carácter en .NET  
  En la tabla siguiente se enumeran los escapes de caracteres admitidos en las expresiones regulares de .NET.  
   
-|Carácter o secuencia|Descripción|  
+|Carácter o secuencia|DESCRIPCIÓN|  
 |---------------------------|-----------------|  
 |Todos los caracteres excepto los siguientes:<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Los caracteres que no aparecen en la columna **Carácter o secuencia** no tienen ningún significado especial en las expresiones regulares, sino que equivalen a sí mismos.<br /><br /> Los caracteres incluidos en la columna **Carácter o secuencia** son elementos del lenguaje especial de expresiones regulares. Para que coincidan en una expresión regular, deben escribirse entre secuencias de escape o incluirse en un [grupo de caracteres positivos](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Por ejemplo, las expresiones regulares `\$\d+` o `[$]\d+` coinciden con "$1200".|  
 |`\a`|Coincide con un carácter de campana (alarma), `\u0007`.|  
@@ -52,7 +52,7 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
 |`\` *nnn*|Coincide con un carácter ASCII, donde *nnn* está compuesto de dos o tres dígitos que representan el código de carácter octal. Por ejemplo, `\040` representa un carácter de espacio. Esta construcción se interpreta como una referencia inversa si tiene un solo dígito (por ejemplo, `\2`) o si se corresponde con el número de un grupo de captura. (Consulte [Construcciones de referencia inversa](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)).|  
 |`\x` *nn*|Coincide con un carácter ASCII, donde *nn* es un código de carácter hexadecimal de dos dígitos.|  
 |`\c` *X*|Coincide con un carácter de control ASCII, donde X es la letra del carácter de control. Por ejemplo, `\cC` es CTRL-C.|  
-|`\u` *nnnn*|Coincide con una unidad de código UTF-16 cuyo valor hexadecimal es *nnnn*. **Nota:**  .NET no admite el escape de caracteres de Perl 5 usado para especificar Unicode. El escape de caracteres de Perl 5 tiene el formato `\x{`*####*`…}`, donde *####*`…` es una serie de dígitos hexadecimales. En su lugar, use `\u`*nnnn*.|  
+|`\u` *nnnn*|Coincide con una unidad de código UTF-16 cuyo valor hexadecimal es *nnnn*. **Nota:**  .NET no admite el escape de caracteres de Perl 5 usado para especificar Unicode. El escape de caracteres de Perl 5 tiene el formato `\x{` *####* `…}`, donde *####* `…` es una serie de dígitos hexadecimales. En su lugar, use `\u`*nnnn*.|  
 |`\`|Si va seguido de un carácter que no se reconoce como carácter de escape, coincide con ese carácter. Por ejemplo, `\*` coincide con un asterisco (*) y es igual que `\x2A`.|  
   
 ## <a name="an-example"></a>Un ejemplo  
@@ -63,7 +63,7 @@ La barra diagonal inversa (\\) en una expresión regular indica una de las sigui
   
  La expresión regular `\G(.+)[\t|\u007c](.+)\r?\n` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\G`|Comienza la búsqueda de coincidencias donde finalizó la última coincidencia.|  
 |`(.+)`|Buscar cualquier carácter coincidente una o más veces. Este es el primer grupo de captura.|  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb43554d53051ce02a296f225c68c74352add5ed
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 7ceee0c228000982be83c79fed2f7af43712b3ae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567480"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963394"
 ---
 # <a name="details-of-regular-expression-behavior"></a>Detalles del comportamiento de expresiones regulares
 El motor de expresiones regulares de .NET Framework es un buscador de coincidencias de expresiones regulares con retroceso que incorpora un motor NFA (autómata finito no determinista) tradicional, como el que usa Perl, Python, Emacs y Tcl. Esto lo distingue de los motores DFA (autómatas finitos deterministas) de expresiones regulares puras, más rápidos pero más limitados, como los de awk, egrep o lex. Esto también lo distingue de los NFA POSIX, estandarizados pero más lentos. En la sección siguiente se describen los tres tipos de motores de expresiones regulares y se explica por qué las expresiones regulares de .NET Framework se implementan mediante un motor NFA tradicional.  
@@ -31,7 +31,7 @@ El motor de expresiones regulares de .NET Framework es un buscador de coincidenc
  Los motores NFA tradicionales son muy populares entre los programadores porque ofrecen mayor control sobre la coincidencia de cadenas que los motores de búsqueda DFA o NFA POSIX. Aunque, en el peor de los casos, se pueden ejecutar con lentitud, se les puede dirigir para que busquen coincidencias en tiempo lineal o polinómico mediante patrones que reduzcan las ambigüedades y limiten el retroceso. En otras palabras, aunque los motores NFA sacrifican el rendimiento a favor de la eficacia y la flexibilidad, en la mayoría de los casos ofrecen un rendimiento aceptable si una expresión regular está escrita correctamente y evitan los casos en los que el retroceso degrada exponencialmente el rendimiento.  
   
 > [!NOTE]
->  Para obtener información sobre la reducción del rendimiento que causa un retroceso excesivo y sobre las maneras de crear una expresión regular para solucionarlo, consulte [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> Para obtener información sobre la reducción del rendimiento que causa un retroceso excesivo y sobre las maneras de crear una expresión regular para solucionarlo, consulte [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
   
 ## <a name="net-framework-engine-capabilities"></a>Funciones del motor de .NET Framework  
  Para aprovechar las ventajas de un motor NFA tradicional, el motor de expresiones regulares de .NET Framework incluye un conjunto completo de construcciones que permiten a los programadores dirigir el motor de retroceso. Estas construcciones se pueden usar para buscar coincidencias con mayor rapidez o para dar preferencia a determinadas expansiones frente a otras.  

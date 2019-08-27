@@ -13,12 +13,12 @@ ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
 ms.custom: serodec18
-ms.openlocfilehash: c782ab0ce5886a95c8c914930d80d66b4839b9b8
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 8d887bb32d1bdd398353d00aba16c2cc8adfcacb
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "64634715"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988825"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Procedimientos recomendados con expresiones regulares en .NET
 <a name="top"></a> El motor de expresiones regulares de .NET es una herramienta eficaz y completa que procesa texto basándose en coincidencias de patrones en lugar de comparar y buscar coincidencias con texto literal. En la mayoría de los casos, realiza la coincidencia de modelos de manera rápida y eficaz. Sin embargo, en algunos casos, puede parecer que el motor de expresiones regulares es muy lento. En casos extremos, incluso puede parecer que deja de responder mientras procesa una entrada relativamente pequeña a lo largo de las horas o incluso los días.  
@@ -54,7 +54,7 @@ ms.locfileid: "64634715"
  El último tipo de texto es especialmente problemático para una expresión regular que se ha escrito para tratar datos de entrada restringidos. Si esa expresión regular también usa mucho [retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md), el motor de expresiones regulares puede dedicar una cantidad de tiempo excesiva (en algunos casos, muchas horas o días) procesando texto aparentemente inofensivo.  
   
 > [!WARNING]
->  En el ejemplo siguiente se utiliza una expresión regular que es propensa a un retroceso excesivo y que es probable que rechace direcciones de correo electrónico válidas. No debería utilizarse en una rutina de validación de correo electrónico. Si desea que una expresión regular valide las direcciones de correo electrónico, vea [Procedimiento: Comprobación de que las cadenas están en un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
+> En el ejemplo siguiente se utiliza una expresión regular que es propensa a un retroceso excesivo y que es probable que rechace direcciones de correo electrónico válidas. No debería utilizarse en una rutina de validación de correo electrónico. Si desea que una expresión regular valide las direcciones de correo electrónico, vea [Procedimiento: Comprobación de que las cadenas están en un formato de correo electrónico válido](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md).  
   
  Por ejemplo, considere una expresión regular de uso muy frecuente pero sumamente problemática para validar el alias de una dirección de correo electrónico. Se escribe la expresión regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*$` para procesar qué se considera una dirección de correo electrónico válida, que consta de un carácter alfanumérico seguido de cero o más caracteres que pueden ser alfanuméricos, puntos o guiones. La expresión regular debe finalizar con un carácter alfanumérico. Sin embargo, como se muestra en el ejemplo siguiente, aunque esta expresión regular trata la entrada válida fácilmente, su rendimiento es muy ineficaz cuando está procesando datos de entrada casi válidos.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64634715"
  El núcleo del modelo de objetos de expresiones regulares de .NET es la clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, que representa el motor de expresiones regulares. A menudo, el mayor factor único que afecta al rendimiento de las expresiones regulares es la manera en que se emplea el motor de <xref:System.Text.RegularExpressions.Regex>. La definición de una expresión regular implica acoplar estrechamente el motor de expresiones regulares con un patrón de expresión regular. Ese proceso de acoplamiento, tanto si consiste en crear una instancia de un objeto <xref:System.Text.RegularExpressions.Regex> pasando a su constructor una expresión regular como en llamar a un método estático pasándole el patrón de expresión regular junto con la cadena que se va a analizar, es necesariamente costoso.  
   
 > [!NOTE]
->  Para obtener una explicación más detallada de las implicaciones sobre el rendimiento de usar expresiones regulares interpretadas y compiladas, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)) en el blog del equipo de BCL.  
+> Para obtener una explicación más detallada de las implicaciones sobre el rendimiento de usar expresiones regulares interpretadas y compiladas, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)) en el blog del equipo de BCL.  
   
  Puede acoplar el motor de expresiones regulares con un determinado patrón de expresión regular y, a continuación, usar el motor para buscar coincidencias con texto de varias maneras:  
   
@@ -93,7 +93,7 @@ ms.locfileid: "64634715"
  La forma de llamar a los métodos de coincidencia de expresiones regulares puede tener un impacto significativo en la aplicación. En las próximas secciones se explica cómo usar llamadas a métodos estáticos, expresiones regulares interpretadas y expresiones regulares compiladas para mejorar el rendimiento de la aplicación.  
   
 > [!IMPORTANT]
->  El formato de la llamada al método (estático, interpretado o compilado) afecta al rendimiento si la misma expresión regular se usa repetidamente en llamadas a métodos o si una aplicación usa muchos objetos de expresiones regulares.  
+> El formato de la llamada al método (estático, interpretado o compilado) afecta al rendimiento si la misma expresión regular se usa repetidamente en llamadas a métodos o si una aplicación usa muchos objetos de expresiones regulares.  
   
 ### <a name="static-regular-expressions"></a>Expresiones regulares estáticas  
  Se recomienda el uso de métodos de expresiones regulares estáticas como alternativa a crear repetidamente instancias de un objeto de expresión regular con la misma expresión regular. A diferencia de los patrones de expresiones regulares usados por los objetos de expresiones regulares, el motor de expresiones regulares almacena internamente en memoria caché los códigos de operación o el lenguaje intermedio de Microsoft (MSIL) compilado de los modelos empleados en las llamadas al método de instancia.  
@@ -177,7 +177,7 @@ ms.locfileid: "64634715"
  Normalmente, el motor de expresiones regulares usa la progresión lineal para desplazarse a través de una cadena de entrada y compararla con un patrón de expresión regular. Sin embargo, cuando en un patrón de expresión regular se usan cuantificadores indeterminados como `*`, `+` y`?`, el motor de expresiones regulares puede abandonar una parte de las coincidencias parciales correctas y volver a un estado guardado previamente para buscar una coincidencia correcta de todo el patron. Este proceso se denomina retroceso.  
   
 > [!NOTE]
->  Para obtener más información acerca del retroceso, consulte [Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) y [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para obtener una explicación detallada del retroceso, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)) en el blog del equipo de BCL.  
+> Para obtener más información acerca del retroceso, consulte [Detalles del comportamiento de expresiones regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) y [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para obtener una explicación detallada del retroceso, vea [Optimizing Regular Expression Performance, Part II: (Optimización del rendimiento de expresiones regulares, Parte II: Control del retroceso](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/)) en el blog del equipo de BCL.  
   
  La compatibilidad con el retroceso aporta a las expresiones regulares eficacia y flexibilidad. También deja la responsabilidad de controlar el funcionamiento del motor de expresiones regulares en manos de los desarrolladores de expresiones regulares. Puesto que los desarrolladores no suelen ser conscientes de esta responsabilidad, su uso incorrecto del retroceso o su dependencia de un retroceso excesivo suele desempeñar el rol más significativo en la degradación del rendimiento de las expresiones regulares. En un escenario de caso peor, el tiempo de ejecución puede duplicarse por cada carácter adicional de la cadena de entrada. De hecho, usando excesivamente el retroceso, es fácil crear el equivalente en programación de un bucle infinito si la entrada coincide casi con el patrón de expresiones regulares; el motor de expresiones regulares puede tardar horas o incluso días en procesar una cadena de entrada relativamente corta.  
   
@@ -200,7 +200,7 @@ ms.locfileid: "64634715"
  En muchos casos, el retroceso es esencial para buscar una coincidencia de un patrón de expresión regular con el texto de entrada. Sin embargo, el retroceso excesivo puede degradar gravemente el rendimiento y dar la impresión de que una aplicación ha dejado de responder. En concreto, esto ocurre cuando se anidan los cuantificadores y el texto que coincide con la subexpresión externa es un subconjunto del texto que coincide con la subexpresión interna.  
   
 > [!WARNING]
->  Además de evitar el retroceso excesivo, se debe utilizar la característica de tiempo de espera para garantizar que el retroceso excesivo no reduzca gravemente el rendimiento de la expresión regular. Para obtener más información, consulte la sección [Usar valores de tiempo de espera](#Timeouts).  
+> Además de evitar el retroceso excesivo, se debe utilizar la característica de tiempo de espera para garantizar que el retroceso excesivo no reduzca gravemente el rendimiento de la expresión regular. Para obtener más información, consulte la sección [Usar valores de tiempo de espera](#Timeouts).  
   
  Por ejemplo, el patrón de expresión regular `^[0-9A-Z]([-.\w]*[0-9A-Z])*\$$` está diseñado para buscar coincidencias con un número de pieza que contiene al menos un carácter alfanumérico. Cualquier carácter adicional puede constar de un carácter alfanumérico, un guión, un carácter de subrayado o un punto, aunque el último carácter debe ser alfanumérico. El número de pieza termina con un signo de dólar. En algunos casos, este patrón de expresión regular puede presentar un rendimiento muy deficiente porque los cuantificadores están anidados y porque la subexpresión `[0-9A-Z]` es un subconjunto de la subexpresión `[-.\w]*`.  
   

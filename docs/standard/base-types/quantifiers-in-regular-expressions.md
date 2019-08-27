@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eddf605ab085aa39494bef0818ef51403cb032ef
+ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633637"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69988780"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>cuantificadores en expresiones regulares
 Los cuantificadores especifican cuántas instancias de un carácter, grupo o clase de caracteres deben estar presentes en la entrada para que se encuentre una coincidencia.  En la tabla siguiente se indican los cuantificadores compatibles con .NET.  
   
-|Cuantificador expansivo|Cuantificador diferido|Descripción|  
+|Cuantificador expansivo|Cuantificador diferido|DESCRIPCIÓN|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Coincide cero o más veces.|  
 |`+`|`+?`|Coincide una o más veces.|  
@@ -38,13 +38,13 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
  Las cantidades `n` y `m` son constantes de tipo entero. Normalmente, los cuantificadores son expansivos, ya que hacen que el motor de expresiones regulares busque el mayor número posible de repeticiones de patrones concretos. Si se anexa el carácter `?` a un cuantificador se convierte en diferido, ya que hace que el motor de expresiones regulares busque el menor número posible de repeticiones. Para obtener una descripción completa de la diferencia entre los cuantificadores expansivos y diferidos, consulte la sección [Cuantificadores expansivos y diferidos](#Greedy) más adelante en este tema.  
   
 > [!IMPORTANT]
->  El anidamiento de cuantificadores (por ejemplo, como hace el patrón de expresión regular `(a*)*`) puede aumentar el número de comparaciones que debe realizar el motor de expresiones regulares, como una función exponencial del número de caracteres de la cadena de entrada. Para obtener más información sobre este comportamiento y sus soluciones alternativas, consulte [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
+> El anidamiento de cuantificadores (por ejemplo, como hace el patrón de expresión regular `(a*)*`) puede aumentar el número de comparaciones que debe realizar el motor de expresiones regulares, como una función exponencial del número de caracteres de la cadena de entrada. Para obtener más información sobre este comportamiento y sus soluciones alternativas, consulte [Retroceso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md).  
   
 ## <a name="regular-expression-quantifiers"></a>Cuantificadores de expresiones regulares  
  En las secciones siguientes se enumeran los cuantificadores admitidos en expresiones regulares de .NET.  
   
 > [!NOTE]
->  Si los caracteres *, +, ?, { y } se encuentran en un patrón de expresión regular, el motor de expresiones regulares los interpreta como cuantificadores o como parte de construcciones de cuantificador, a menos que se incluyan en una [clase de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Para interpretarlos como caracteres literales fuera de una clase de caracteres, debe anteponerles una barra diagonal inversa para indicar su secuencia de escape. Por ejemplo, la cadena `\*` en un patrón de expresión regular se interpreta como un carácter de asterisco literal ("\*").  
+> Si los caracteres *, +, ?, { y } se encuentran en un patrón de expresión regular, el motor de expresiones regulares los interpreta como cuantificadores o como parte de construcciones de cuantificador, a menos que se incluyan en una [clase de caracteres](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Para interpretarlos como caracteres literales fuera de una clase de caracteres, debe anteponerles una barra diagonal inversa para indicar su secuencia de escape. Por ejemplo, la cadena `\*` en un patrón de expresión regular se interpreta como un carácter de asterisco literal ("\*").  
   
 ### <a name="match-zero-or-more-times-"></a>Coincidir cero o más veces: *  
  El cuantificador `*` coincide con el elemento anterior cero o más veces. Equivale al cuantificador `{0,}`. `*` es un cuantificador expansivo cuyo equivalente diferido es `*?`.  
@@ -56,7 +56,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`91*`|Coincide con un "9" seguido de cero o más caracteres "1".|  
@@ -73,7 +73,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`an+`|Coincide con una "a" seguida de uno o más caracteres "n".|  
@@ -90,7 +90,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`an?`|Coincide con una "a" seguida de cero o un carácter "n".|  
@@ -106,7 +106,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\d+`|Buscar coincidencias con uno o más dígitos decimales.|  
@@ -124,7 +124,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\d{2,}`|Coincide con al menos dos dígitos decimales.|  
@@ -149,7 +149,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`\w*?`|Coincide con cero o más caracteres de palabra, pero con el menor número de caracteres posible.|  
@@ -175,7 +175,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`^`|Coincide con el inicio del flujo de entrada.|  
 |`\s*`|Busca coincidencias con cero o más caracteres de espacio en blanco.|  
@@ -185,7 +185,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 |`\(??`|Coincide con cero o con una repetición del paréntesis de apertura.|  
   
 ### <a name="match-exactly-n-times-lazy-match-n"></a>Coincidir exactamente n veces (coincidencia diferida): {n}?  
- El cuantificador `{`*n*`}?` coincide con el elemento anterior exactamente `n` veces, donde *n* es un entero. Es el equivalente diferido del cuantificador expansivo `{`*n*`}+`.  
+ El cuantificador `{`*n*`}?` coincide con el elemento anterior exactamente `n` veces, donde *n* es un entero. Es el equivalente diferido del cuantificador expansivo `{`*n*`}`.  
   
  En el ejemplo siguiente, la expresión regular `\b(\w{3,}?\.){2}?\w{3,}?\b` se usa para identificar la dirección de un sitio web. Observe que coincide con "www.microsoft.com" y con "msdn.microsoft.com", pero no coincide con "mywebsite" ni con "mycompany.com".  
   
@@ -194,7 +194,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`(\w{3,}?\.)`|Coincide con al menos 3 caracteres de palabra, pero con el menor número de caracteres posible, seguidos de un carácter de punto. Este es el primer grupo de captura.|  
@@ -209,19 +209,19 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
 ### <a name="match-between-n-and-m-times-lazy-match-nm"></a>Coincidir de n a m veces (coincidencia diferida): {n,m}?  
  El cuantificador `{`*n*`,`*m*`}?` coincide con el elemento anterior de `n` a `m` veces, donde *n* y *m* son enteros, pero el menor número de veces posible. Es el equivalente diferido del cuantificador expansivo `{`*n*`,`*m*`}`.  
   
- En el ejemplo siguiente, la expresión regular `\b[A-Z](\w*\s+){1,10}?[.!?]` coincide con las frases que contengan de una a diez palabras. Coincidencia con todas las frases de la cadena de entrada, excepto con una frase que contiene 18 palabras.  
+ En el ejemplo siguiente, la expresión regular `\b[A-Z](\w*?\s*?){1,10}[.!?]` coincide con las frases que contengan de una a diez palabras. Coincidencia con todas las frases de la cadena de entrada, excepto con una frase que contiene 18 palabras.  
   
  [!code-csharp[RegularExpressions.Quantifiers#12](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Quantifiers/cs/Quantifiers1.cs#12)]
  [!code-vb[RegularExpressions.Quantifiers#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Quantifiers/vb/Quantifiers1.vb#12)]  
   
  El patrón de expresión regular se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\b`|Empieza en un límite de palabras.|  
 |`[A-Z]`|Coincide con cualquier letra mayúscula de la A a la Z.|  
-|`(\w*\s+)`|Coincide con cero o más caracteres de palabra, seguidos de uno o más caracteres de espacio en blanco. Este es el primer grupo de capturas.|  
-|`{1,10}?`|Coincide con el patrón anterior entre una y diez veces, pero el menor número de veces que sea posible.|  
+|`(\w*?\s*?)`|Coincide con cero o más caracteres de palabra, seguidos de uno o más caracteres de espacio en blanco, pero el menor número de veces posible. Este es el primer grupo de capturas.|  
+|`{1,10}`|Coincide con el patrón anterior entre una y diez veces.|  
 |`[.!?]`|Coincide con cualquiera de los caracteres de puntuación ".", "!" o "?".|  
   
 <a name="Greedy"></a>   
@@ -260,7 +260,7 @@ Los cuantificadores especifican cuántas instancias de un carácter, grupo o cla
   
  Para ver la diferencia práctica entre un grupo de captura que define un número mínimo y máximo de capturas y otro que define un número fijo de capturas, tenga en cuenta los patrones de expresiones regulares `(a\1|(?(1)\1)){0,2}` y `(a\1|(?(1)\1)){2}`. Ambas expresiones regulares constan de un único grupo de captura, que se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`(a\1`|Coincide con "a", junto con el valor del primer grupo capturado...|  
 |<code>&#124;(?(1)</code>|… o bien, prueba si se ha definido el primer grupo capturado. (Tenga en cuenta que la construcción `(?(1)` no define un grupo de captura).|  

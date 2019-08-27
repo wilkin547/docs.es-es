@@ -20,18 +20,18 @@ ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 289b6997a4d17463072418fbf17f5f99874f4988
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 0831a22b0c1d3333cc37f86a764006c934597390
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "66378164"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968558"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Retroceso en expresiones regulares
 <a name="top"></a> El retroceso se produce cuando un patrón de expresión regular contiene [cuantificadores](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) o [construcciones de alternancia](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)opcionales y el motor de expresiones regulares vuelve a un estado guardado anterior para continuar la búsqueda de una coincidencia. El retroceso es fundamental para la eficacia de las expresiones regulares; permite que las expresiones sean eficaces y flexibles, y que coincidan con modelos muy complejos. Al mismo tiempo, esta eficacia tiene un costo. El retroceso suele ser el factor único más importante que afecta al rendimiento del motor de expresiones regulares. Afortunadamente, el desarrollador tiene control sobre el comportamiento del motor de expresiones regulares y cómo usa el retroceso. En este tema se explica cómo funciona el retroceso y cómo se puede controlar.  
   
 > [!NOTE]
->  En general, un motor NFA (autómata finito no determinista), como el motor de expresiones regulares de .NET, se encarga de crear expresiones regulares eficaces y rápidas para el desarrollador.  
+> En general, un motor NFA (autómata finito no determinista), como el motor de expresiones regulares de .NET, se encarga de crear expresiones regulares eficaces y rápidas para el desarrollador.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66378164"
  A partir de .NET Framework 4.5, se puede establecer un valor de tiempo de espera que representa el intervalo más largo en el que el motor de expresión regular buscará una coincidencia única antes de abandonar el intento y generar una excepción <xref:System.Text.RegularExpressions.RegexMatchTimeoutException>. El intervalo de tiempo de espera se especifica al proporcionar un valor <xref:System.TimeSpan> al constructor <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> para las expresiones regulares de instancias. Además, cada método estático de coincidencia de patrones tiene una sobrecarga con un parámetro <xref:System.TimeSpan> que permite especificar un valor de tiempo de espera. De forma predeterminada, el intervalo de tiempo de espera se establece en <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> y el motor de expresiones regulares no agota dicho tiempo.  
   
 > [!IMPORTANT]
->  Recomendamos que se establezca siempre un intervalo de tiempo de espera si la expresión regular se basa en el retroceso.  
+> Recomendamos que se establezca siempre un intervalo de tiempo de espera si la expresión regular se basa en el retroceso.  
   
  Una excepción <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> indica que el motor de expresiones regulares no pudo encontrar una coincidencia en el intervalo de tiempo de espera especificado, pero no indica por qué se produjo la excepción. La razón puede ser un retroceso excesivo, aunque también es posible que el intervalo de tiempo de espera establecido fuera demasiado bajo, dada la carga del sistema en el momento en que se produjo la excepción. Cuando se controla la excepción, se puede elegir entre abandonar otras coincidencias con la cadena de entrada o incrementar el intervalo de tiempo de espera y reintentar la operación de coincidencia.  
   
