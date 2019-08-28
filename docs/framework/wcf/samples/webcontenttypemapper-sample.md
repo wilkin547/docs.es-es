@@ -2,17 +2,17 @@
 title: Ejemplo de WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 381fc4a3084b1a2620384a04de85b9085e02ae16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b15651859fd17673caf898df02c2b74a85d7612
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006327"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038538"
 ---
 # <a name="webcontenttypemapper-sample"></a>Ejemplo de WebContentTypeMapper
-Este ejemplo muestra cómo asignar nuevos tipos de contenido a los formatos de cuerpo de mensaje de Windows Communication Foundation (WCF).  
+Este ejemplo muestra cómo asignar los nuevos tipos de contenido a los formatos de cuerpo de mensaje de Windows Communication Foundation (WCF).  
   
- El <xref:System.ServiceModel.Description.WebHttpEndpoint> se conecta el elemento en el codificador de mensajes Web, que permite que WCF recibir mensajes binarios sin formato en el mismo extremo, XML o JSON. El codificador determina el formato del cuerpo del mensaje examinando el tipo de contenido del Http de la solicitud. Este ejemplo incluye la clase <xref:System.ServiceModel.Channels.WebContentTypeMapper>, que permite al usuario controlar la asignación entre el tipo de contenido y el formato del cuerpo.  
+ El <xref:System.ServiceModel.Description.WebHttpEndpoint> elemento se conecta en el codificador de mensajes Web, que permite a WCF recibir mensajes binarios JSON, XML o sin formato en el mismo punto de conexión. El codificador determina el formato del cuerpo del mensaje examinando el tipo de contenido del Http de la solicitud. Este ejemplo incluye la clase <xref:System.ServiceModel.Channels.WebContentTypeMapper>, que permite al usuario controlar la asignación entre el tipo de contenido y el formato del cuerpo.  
   
  WCF proporciona un conjunto de asignaciones predeterminadas para los tipos de contenido. Por ejemplo, `application/json` se asigna a JSON y `text/xml` se asigna a XML. Cualquier tipo de contenido que no está asignado a JSON o a XML, está asignado al formato binario sin formato.  
   
@@ -54,17 +54,17 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Compile la solución webcontenttypemappersample.sln tal y como se describe en [compilar los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Compile la solución WebContentTypeMapperSample. sln tal y como se describe en [Building the Windows Communication Foundation samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Vaya a `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (no abra JCTMClientPage.htm en el explorador desde dentro del directorio del proyecto).  
+3. Vaya a `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (no abra JCTMClientPage. htm en el explorador desde el directorio del proyecto).  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  

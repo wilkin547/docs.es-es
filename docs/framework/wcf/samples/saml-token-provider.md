@@ -2,12 +2,12 @@
 title: Proveedor de tokens SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 0ab33c5f0a24e97332fd84e43e9050fc8f406a27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4a6ee808d224696d4fc21337cc558fcc6218e71d
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965485"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044767"
 ---
 # <a name="saml-token-provider"></a>Proveedor de tokens SAML
 Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente personalizado. Un proveedor de tokens en Windows Communication Foundation (WCF) se usa para proporcionar credenciales a la infraestructura de seguridad. En general, el proveedor de tokens examina el destino y emite las credenciales adecuadas de manera que la infraestructura de seguridad pueda proteger el mensaje. WCF se suministra con el proveedor de tokens del administrador de credenciales predeterminado. WCF también se suministra con un proveedor de tokens de CardSpace. Los proveedores de tokens personalizados son útiles en los casos siguientes:
@@ -365,7 +365,7 @@ Este ejemplo muestra cómo implementar un proveedor de tokens de SAML de cliente
 1. Ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 y ejecute con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    >  El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.  
+    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.  
   
 2. Inicie Service.exe desde \service\bin.  
   

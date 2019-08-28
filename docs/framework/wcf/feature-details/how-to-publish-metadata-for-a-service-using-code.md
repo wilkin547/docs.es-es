@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: 5f60bcdb02f61d39711115b07ba989229e39c28c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1faed5717c65c4973c3f1965df649df6f2e24722
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929142"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045899"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>Procedimiento para publicar metadatos para un servicio mediante código
 Este es uno de los dos temas de procedimientos que tratan la publicación de metadatos para un servicio de Windows Communication Foundation (WCF). Hay dos maneras de especificar cómo debería publicar metadatos un servicio: mediante un archivo de configuración y mediante código. En este tema se muestra cómo publicar metadatos para un servicio mediante código.  
   
 > [!CAUTION]
->  En este tema se muestra cómo publicar metadatos de forma no segura. Cualquier cliente puede recuperar los metadatos del servicio. Si el servicio necesita publicar los metadatos de forma segura. consulte [punto de conexión de metadatos seguro personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
+> En este tema se muestra cómo publicar metadatos de forma no segura. Cualquier cliente puede recuperar los metadatos del servicio. Si el servicio necesita publicar los metadatos de forma segura. consulte [punto de conexión de metadatos seguro personalizado](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md).  
   
  Para obtener más información acerca de la publicación de metadatos en [un archivo de configuración, consulte Cómo: Publicar metadatos para un servicio mediante un archivo](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)de configuración. La publicación de metadatos permite a los clientes recuperar los metadatos mediante una solicitud GET WS-Transfer o mediante una solicitud HTTP/GET usando la cadena de solicitud `?wsdl`. Para asegurarse de que el código funciona, debe crear un servicio básico de WCF. En el código siguiente, se proporciona un servicio autohospedado básico.  
   
@@ -92,4 +92,4 @@ Este es uno de los dos temas de procedimientos que tratan la publicación de met
 - [Probar internamente](../../../../docs/framework/wcf/samples/self-host.md)
 - [Información general de la arquitectura de metadatos](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [Utilización de los metadatos](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Procedimientos: Publicar metadatos para un servicio mediante un archivo de configuración](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

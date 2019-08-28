@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: b433263cc4d72b6418cf75c278316444c83ada8c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bc23aff2f049f205d02e2fb1b5f8798c7f6a9931
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933504"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044235"
 ---
 # <a name="configuring-tracing"></a>Configurar seguimiento
 En este tema se describe cómo se puede habilitar el seguimiento, configurar los orígenes de seguimiento para emitir trazas y establecer niveles de seguimiento, establecer el seguimiento y la propagación de actividades para admitir la correlación de seguimiento de un extremo a otro, y establecer escuchas de seguimiento para tener acceso a las trazas.  
@@ -142,10 +142,10 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
   
  Puede configurar una escucha de seguimiento personalizada para enviar las trazas en la conexión, por ejemplo, a una base de datos remota. Como un implementador de la aplicación, debería exigir un control de acceso apropiado en los registros de seguimiento en el equipo remoto.  
   
- También puede configurar mediante programación una escucha de seguimiento. Para obtener más información, consulte [Cómo Crear e inicializar agentes](https://go.microsoft.com/fwlink/?LinkId=94648) de escucha de seguimiento y [crear un TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239).  
+ También puede configurar mediante programación una escucha de seguimiento. Para obtener más información, vea [Cómo: Crear e inicializar agentes](https://go.microsoft.com/fwlink/?LinkId=94648) de escucha de seguimiento y [crear un TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
->  Puesto que `System.Diagnostics.XmlWriterTraceListener` no es seguro para subprocesos, el origen de seguimiento puede bloquear los recursos de forma exclusiva al generar trazas. Cuando muchos subprocesos generan trazas para un origen de seguimiento configurado para utilizar esta escucha, puede producirse una contención de recursos, que genera un problema de rendimiento importante. Para solucionar este problema, debería implementar una escucha personalizada que sea segura para subprocesos.  
+> Puesto que `System.Diagnostics.XmlWriterTraceListener` no es seguro para subprocesos, el origen de seguimiento puede bloquear los recursos de forma exclusiva al generar trazas. Cuando muchos subprocesos generan trazas para un origen de seguimiento configurado para utilizar esta escucha, puede producirse una contención de recursos, que genera un problema de rendimiento importante. Para solucionar este problema, debería implementar una escucha personalizada que sea segura para subprocesos.  
   
 ## <a name="trace-level"></a>Nivel de seguimiento  
  El nivel de seguimiento está controlado por el valor `switchValue` del origen de seguimiento. En la siguiente tabla se describen los niveles de seguimiento disponibles.  
@@ -164,7 +164,7 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
  Los niveles de Detallado a Crítico se apilan unos encima de otros, es decir, cada nivel de seguimiento incluye todos los niveles anteriores él excepto el nivel Off. Por ejemplo, una escucha que realiza escuchas en el nivel de advertencia recibe trazas de Crítico, Error, y Advertencia. Todos los niveles incluye los eventos de Detallado a Crítico y eventos de seguimiento de actividad.  
   
 > [!CAUTION]
->  Los niveles de Información, Detallado, y ActivityTracing generan muchas trazas, lo que puede afectar negativamente al rendimiento de los mensajes si ha agotado todos los recursos disponibles en el equipo.  
+> Los niveles de Información, Detallado, y ActivityTracing generan muchas trazas, lo que puede afectar negativamente al rendimiento de los mensajes si ha agotado todos los recursos disponibles en el equipo.  
   
 ## <a name="configuring-activity-tracing-and-propagation-for-correlation"></a>Configurar el seguimiento de actividad y la propagación para la correlación  
  El valor `activityTracing` especificado para el atributo `switchValue` se utiliza para habilitar el seguimiento de actividad, que emite las trazas para los límites de actividad y las transferencias dentro de los puntos de conexión.  
@@ -184,5 +184,5 @@ En este tema se describe cómo se puede habilitar el seguimiento, configurar los
 
 - [Traza](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [Administración y diagnóstico](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [Procedimientos: Crear e inicializar agentes de escucha de seguimiento](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [Cómo: Crear e inicializar agentes de escucha de seguimiento](https://go.microsoft.com/fwlink/?LinkId=94648)
 - [Crear un TraceListener personalizado](https://go.microsoft.com/fwlink/?LinkId=96239)

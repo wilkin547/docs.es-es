@@ -2,12 +2,12 @@
 title: Extensión de control a control de errores y creación de informes
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: c8366be2023a49c05c5bd2fcf1f6847c9ee7466d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09216d8b0ff58ac90a0fd6183f43fd2ccf82ad52
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961458"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039677"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Extensión de control a control de errores y creación de informes
 Este ejemplo muestra cómo extender el control sobre el control de errores y los informes de errores en un servicio de Windows Communication Foundation <xref:System.ServiceModel.Dispatcher.IErrorHandler> (WCF) mediante la interfaz. El ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) con algún código adicional agregado al servicio para controlar los errores. El cliente fuerza varias condiciones de error. El servicio intercepta los errores y los registra en un archivo.  
@@ -150,10 +150,10 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

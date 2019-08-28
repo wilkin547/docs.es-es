@@ -2,24 +2,24 @@
 title: Validador de contraseña de nombre de usuario
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: b02533641785b24019f10a3c224b09e252cbb2ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4db661e80663b7b5b22a17d244f0204717fef652
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966785"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044561"
 ---
 # <a name="user-name-password-validator"></a>Validador de contraseña de nombre de usuario
 Este ejemplo muestra cómo implementar un validador UserNamePassword personalizado. Esto es útil en casos donde ninguno de los modos de validación UserNamePassword integrados es apropiado para los requisitos de la aplicación; por ejemplo, cuando los pares nombre de usuario/contraseña se almacenan en un almacén externo, como una base de datos. Este ejemplo muestra un servicio que tiene un validador personalizado que comprueba dos pares de nombre de usuario y contraseña determinados. El cliente usa un par de nombre de usuario y contraseña para autenticar en el servicio.
 
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
 > Dado que cualquiera puede construir una credencial de nombre de usuario que utilice los pares de nombre de usuario y contraseña que el validador personalizado acepta, el servicio es menos seguro que el comportamiento predeterminado proporcionado por el validador UserNamePassword estándar. El validador UserNamePassword estándar intenta asignar el par de nombre de usuario/contraseña proporcionado a una cuenta de Windows y si esta asignación no es correcta, se produce un error en la autenticación. El validador UserNamePassword personalizado en este ejemplo NO SE DEBE utilizar en el código de producción, solo es para fines informativos.
@@ -287,7 +287,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 1. Ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    >  El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.  
+    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.  
   
 2. Inicie Service.exe desde \service\bin.  
   

@@ -2,12 +2,12 @@
 title: Esquema de base de datos de persistencia
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 384a9aceaf0b5619bbc4eca5929b6e6d7855e3d3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962885"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038336"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de datos de persistencia
 En este tema se describen las vistas públicas admitidas por el almacén de instancias de flujo de trabajo de SQL.  
@@ -44,7 +44,7 @@ En este tema se describen las vistas públicas admitidas por el almacén de inst
 |Revisión|BigInt|Número de revisión de la versión de flujo de trabajo.|  
   
 > [!CAUTION]
->  La vista de **instancias** también contiene un desencadenador DELETE. Los usuarios con los permisos adecuados pueden ejecutar instrucciones de eliminación en esta vista que eliminarán de forma obligatoria las instancias de flujo de trabajo de la base de datos. Recomendamos eliminar directamente en la vista únicamente como último recurso, ya que la eliminación de una instancia bajo el motor el tiempo de ejecución de flujo de trabajo puede producir consecuencias imprevistas. En su lugar, utilice el punto de conexión de administración de instancias de flujo de trabajo para hacer que el motor en tiempo de ejecución de flujo de trabajo complete la instancia. Si desea eliminar un gran número de Instancias de la vista, asegúrese de que no existe ningún motor en tiempo de ejecución activo que pueda estar trabajando en estas instancias.  
+> La vista de **instancias** también contiene un desencadenador DELETE. Los usuarios con los permisos adecuados pueden ejecutar instrucciones de eliminación en esta vista que eliminarán de forma obligatoria las instancias de flujo de trabajo de la base de datos. Recomendamos eliminar directamente en la vista únicamente como último recurso, ya que la eliminación de una instancia bajo el motor el tiempo de ejecución de flujo de trabajo puede producir consecuencias imprevistas. En su lugar, utilice el punto de conexión de administración de instancias de flujo de trabajo para hacer que el motor en tiempo de ejecución de flujo de trabajo complete la instancia. Si desea eliminar un gran número de Instancias de la vista, asegúrese de que no existe ningún motor en tiempo de ejecución activo que pueda estar trabajando en estas instancias.  
   
 ## <a name="servicedeployments-view"></a>Vista ServiceDeployments  
  La vista **ServiceDeployments** contiene información de implementación para todos los servicios de flujo de trabajo hospedados en Web (IIS/was). Cada instancia de flujo de trabajo hospedada en Web contendrá un **ServiceDeploymentId** que hace referencia a una fila de esta vista.  

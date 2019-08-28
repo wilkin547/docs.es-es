@@ -2,12 +2,12 @@
 title: Ejemplo de extensiones fuertemente tipadas
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: eeef3fd05c66031fb2be573b1c1f56a35a3301ae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1fd873e02dcc1fc824c8b17c52231c80c61e7c60
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007791"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045482"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Ejemplo de extensiones fuertemente tipadas
 El ejemplo utiliza la clase <xref:System.ServiceModel.Syndication.SyndicationFeed> para el ejemplo. Sin embargo, los modelos mostrados en este ejemplo se pueden utilizar con todas las clases de sindicación que admiten los datos de la extensión:  
@@ -40,7 +40,7 @@ El ejemplo utiliza la clase <xref:System.ServiceModel.Syndication.SyndicationFee
 </entry>  
 ```  
   
- El `<in-reply-to>` elemento especifica tres atributos necesarios (`ref`, `type` y `href`) mientras que también permite la presencia de los atributos de extensión adicionales y elementos de extensión.  
+ El `<in-reply-to>` elemento especifica tres atributos obligatorios`ref`( `type` , `href`y), a la vez que también permite la presencia de atributos de extensión y elementos de extensión adicionales.  
   
 ## <a name="modeling-the-in-reply-to-element"></a>Modelar el elemento In-Reply-To  
  En este ejemplo, el elemento `<in-reply-to>` se modela como CLR que implementa <xref:System.Xml.Serialization.IXmlSerializable>, lo que habilita su uso con <xref:System.Runtime.Serialization.DataContractSerializer>. También implementa algunos métodos y propiedades para tener acceso a los datos del elemento, tal y como se muestra en el código de ejemplo siguiente.  
@@ -272,17 +272,17 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. Asegúrese de que ha realizado la [procedimiento de instalación de un solo uso para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Asegúrese de que ha realizado el [procedimiento de instalación única para los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2. Para compilar el código C# o Visual Basic .NET Edition de la solución, siga las instrucciones de [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

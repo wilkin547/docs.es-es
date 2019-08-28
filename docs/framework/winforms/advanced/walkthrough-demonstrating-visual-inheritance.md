@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 6fd504269ae9afbfd02b58276582a644674e1e0f
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 32df98852b28963ffb748895156f7d9977c74b92
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040318"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046150"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Tutorial: Demostración de la herencia visual
 
@@ -35,19 +35,19 @@ Por último, en este tutorial se mostrará la diferencia entre los controles pri
 > [!CAUTION]
 > No todos los controles admiten la herencia visual a partir de un formulario base. Los siguientes controles no admiten el escenario que se describe en este tutorial:
 >
->  <xref:System.Windows.Forms.WebBrowser>
+> - <xref:System.Windows.Forms.WebBrowser>
 >
->  <xref:System.Windows.Forms.ToolStrip>
+> - <xref:System.Windows.Forms.ToolStrip>
 >
->  <xref:System.Windows.Forms.ToolStripPanel>
+> - <xref:System.Windows.Forms.ToolStripPanel>
 >
->  <xref:System.Windows.Forms.TableLayoutPanel>
+> - <xref:System.Windows.Forms.TableLayoutPanel>
 >
->  <xref:System.Windows.Forms.FlowLayoutPanel>
+> - <xref:System.Windows.Forms.FlowLayoutPanel>
 >
->  <xref:System.Windows.Forms.DataGridView>
+> - <xref:System.Windows.Forms.DataGridView>
 >
->  Estos controles del formulario heredado siempre son de solo lectura, independientemente de los modificadores que utilice (`private`, `protected` o `public`).
+> Estos controles del formulario heredado siempre son de solo lectura, independientemente de los modificadores que utilice (`private`, `protected` o `public`).
 
 ## <a name="create-a-class-library-project-containing-a-base-form"></a>Crear un proyecto de biblioteca de clases que contenga un formulario base
 
@@ -61,7 +61,7 @@ Por último, en este tutorial se mostrará la diferencia entre los controles pri
 
 5. En el menú **archivo** , elija **guardar todo** para guardar el proyecto y los archivos en la ubicación predeterminada.
 
- Los dos procedimientos siguientes agregan botones al formulario base. Para ilustrar la herencia visual, proporcionará a los botones distintos niveles de acceso estableciendo sus propiedades `Modifiers`.
+Los dos procedimientos siguientes agregan botones al formulario base. Para ilustrar la herencia visual, proporcionará a los botones distintos niveles de acceso estableciendo sus propiedades `Modifiers`.
 
 ## <a name="add-a-button-that-inheritors-of-the-base-form-can-modify"></a>Agregar un botón que los herederos del formulario base pueden modificar
 
@@ -135,7 +135,7 @@ Por último, en este tutorial se mostrará la diferencia entre los controles pri
 
 5. Abra el formulario heredado (**Form2**) en el diseñador haciendo doble clic en él, si aún no está abierto.
 
-     En el diseñador, los botones heredados tienen un símbolo (![Captura de pantalla del símbolo de herencia Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) en la esquina superior, lo que indica que se han heredado.
+    En el diseñador, los botones heredados tienen un símbolo (![Captura de pantalla del símbolo de herencia Visual Basic.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) en la esquina superior, lo que indica que se han heredado.
 
 6. Seleccione el botón **Say Hola** y observe los controladores de tamaño. Como este botón está protegido, los herederos pueden moverlo, cambiarlo de tamaño, cambiar su descripción y realizar otras modificaciones.
 
@@ -157,7 +157,7 @@ Por último, en este tutorial se mostrará la diferencia entre los controles pri
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-La herencia de los controles de usuario funciona más o menos de la misma manera. Abra un proyecto nuevo de biblioteca de clases y agregue un control de usuario. Coloque en él controles constituyentes y compile el proyecto. Abra otro proyecto nuevo de biblioteca de clases y agregue una referencia a la biblioteca de clases compilada. Además, intente agregar un control heredado (mediante el cuadro de diálogo **agregar nuevos elementos** ) al proyecto y usando el **selector de herencia**. Agregue un control de usuario y cambie la `Inherits` instrucción`:` (en C#visual). Para obtener más información, consulte [Cómo Heredar](how-to-inherit-windows-forms.md)Windows Forms.
+La herencia de los controles de usuario funciona más o menos de la misma manera. Abra un proyecto nuevo de biblioteca de clases y agregue un control de usuario. Coloque en él controles constituyentes y compile el proyecto. Abra otro proyecto nuevo de biblioteca de clases y agregue una referencia a la biblioteca de clases compilada. Además, intente agregar un control heredado (mediante el cuadro de diálogo **agregar nuevos elementos** ) al proyecto y usando el **selector de herencia**. Agregue un control de usuario y cambie la `Inherits` instrucción`:` (en C#visual). Para obtener más información, vea [Cómo: Heredar](how-to-inherit-windows-forms.md)Windows Forms.
 
 ## <a name="see-also"></a>Vea también
 

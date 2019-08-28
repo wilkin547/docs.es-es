@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: b0cccefc9ceb186a5278cc4cabbab58944bf44d9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e45899ddbb4c244e43d3b097cc046acf34fd433e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961783"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045590"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding predeterminado
 Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> . Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa un servicio de calculadora. En este ejemplo, el servicio es hospedado por sí mismo. El cliente y el servicio son aplicaciones de consola.  
@@ -18,13 +18,13 @@ Este ejemplo muestra el uso del enlace <xref:System.ServiceModel.NetTcpBinding> 
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
  El enlace se especifica en los archivos de configuración para el cliente y servicio. El tipo de enlace se especifica en `binding` el atributo [ \<del punto de conexión >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento, tal y como se muestra en la configuración del ejemplo siguiente.  
   
@@ -107,7 +107,7 @@ Press ENTER to terminate client.
 4. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  Dado que el servidor es autohospedado, debe especificar una identidad en el archivo App.config del cliente para ejecutar el ejemplo en una configuración en varios equipos.  
+    > Dado que el servidor es autohospedado, debe especificar una identidad en el archivo App.config del cliente para ejecutar el ejemplo en una configuración en varios equipos.  
   
     ```xml  
     <client>  

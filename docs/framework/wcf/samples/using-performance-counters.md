@@ -2,12 +2,12 @@
 title: Uso de contadores de rendimiento
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 2d714af8802bd290b54d0bf3667220b25b24c3fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966769"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044528"
 ---
 # <a name="using-performance-counters"></a>Uso de contadores de rendimiento
 Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Windows Communication Foundation (WCF) y cómo crear contadores de rendimiento definidos por el usuario. Este ejemplo se basa en el [Introducción](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -44,14 +44,14 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
 1. Para iniciar la herramienta Monitor de rendimiento, haga clic en **Inicio**, **Ejecutar.** `perfmon` .., escriba y haga clic en **Aceptar,** o bien, en el panel de control, seleccione **herramientas administrativas** y haga doble clic en **rendimiento**.  
   
     > [!NOTE]
-    >  No puede agregar los contadores hasta que el código de ejemplo se esté ejecutando.  
+    > No puede agregar los contadores hasta que el código de ejemplo se esté ejecutando.  
   
 2. Quite los contadores de rendimiento que aparecen seleccionándolos y presionando la tecla Supr.  
   
 3. Agregue los contadores de WCF; para ello, haga clic con el botón secundario en el panel del gráfico y seleccione **Agregar contadores**. En el cuadro de diálogo **Agregar contadores** , seleccione **ServiceModelOperation 3.0.0.0, ServiceModelEndpoint 3.0.0.0 o ServiceModelService 3.0.0.0** en el cuadro de lista desplegable objeto de rendimiento. Seleccione los contadores que desea ver en la lista.  
   
     > [!NOTE]
-    >  No hay ningún contador de rendimiento de WCF para un servicio si no hay servicios WCF en ejecución en el equipo.  
+    > No hay ningún contador de rendimiento de WCF para un servicio si no hay servicios WCF en ejecución en el equipo.  
   
 ### <a name="to-use-the-configuration-editor-to-enable-counters"></a>Para utilizar el editor de configuración para habilitar los contadores  
   
@@ -68,13 +68,13 @@ Este ejemplo muestra cómo obtener acceso a los contadores de rendimiento de Win
 6. Guarde el archivo de configuración y cierre el editor.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
 ## <a name="see-also"></a>Vea también
 

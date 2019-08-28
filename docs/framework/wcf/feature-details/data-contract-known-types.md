@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 054beab97a77bd466d2c3d8c734e37f8ded7eb62
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2ab0a41e87a9b14d1beac9fb0c39586f0ea16a4a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69945270"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040194"
 ---
 # <a name="data-contract-known-types"></a>Tipos conocidos de contratos de datos
 La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite especificar, de antemano, los tipos que deberían tenerse en cuenta durante la deserialización. Para ver un ejemplo ilustrativo, consulte el ejemplo [Known Types](../../../../docs/framework/wcf/samples/known-types.md) .  
@@ -77,7 +77,7 @@ La clase <xref:System.Runtime.Serialization.KnownTypeAttribute> le permite espec
  En el siguiente ejemplo, un contrato de datos almacena un número y una operación que se va a realizar sobre el número. El miembro de datos `Numbers` puede ser un entero, una matriz de enteros, o una <xref:System.Collections.Generic.List%601> que contenga enteros.  
   
 > [!CAUTION]
->  Esto solo funcionará en el lado del cliente si se usa SVCUTIL.EXE para generar un proxy WCF. SVCUTIL.EXE recupera metadatos del servicio, incluyendo los tipos conocidos. Sin esta información, un cliente no podrá deserializar los tipos.  
+> Esto solo funcionará en el lado del cliente si se usa SVCUTIL.EXE para generar un proxy WCF. SVCUTIL.EXE recupera metadatos del servicio, incluyendo los tipos conocidos. Sin esta información, un cliente no podrá deserializar los tipos.  
   
  [!code-csharp[C_KnownTypeAttribute#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_knowntypeattribute/cs/source.cs#6)]
  [!code-vb[C_KnownTypeAttribute#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_knowntypeattribute/vb/source.vb#6)]  

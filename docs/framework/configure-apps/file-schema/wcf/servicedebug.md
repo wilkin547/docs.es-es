@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: cbeb0d254bf6716296f34020ea8796885e0f368a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936265"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041265"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Especifica las características de depuración y de información de ayuda para un servicio Windows Communication Foundation (WCF).  
@@ -62,7 +62,7 @@ Especifica las características de depuración y de información de ayuda para u
  Establecer `includeExceptionDetailInFaults` <xref:System.ServiceModel.FaultContractAttribute>en `true` permite al servicio devolver cualquier excepción producida por el código de aplicación incluso si la excepción no se declara mediante. Este valor es útil al depurar los casos donde el servidor produce una excepción inesperada. Al usar este atributo, se devuelve un formulario serializado de la excepción desconocida y usted puede examinar más detalles de la excepción.  
   
 > [!CAUTION]
->  Devolver la información de excepción administrada a los clientes puede suponer un riesgo para la seguridad porque los datos de la excepción exponen información sobre la implementación de servicio interna que los clientes desautorizados podrían utilizar. Debido a los problemas de seguridad implicados, se recomienda encarecidamente que sólo realice este procedimiento en escenarios de depuración controlados. Debería establecer `includeExceptionDetailInFaults` en `false` al implementar su aplicación.  
+> Devolver la información de excepción administrada a los clientes puede suponer un riesgo para la seguridad porque los datos de la excepción exponen información sobre la implementación de servicio interna que los clientes desautorizados podrían utilizar. Debido a los problemas de seguridad implicados, se recomienda encarecidamente que sólo realice este procedimiento en escenarios de depuración controlados. Debería establecer `includeExceptionDetailInFaults` en `false` al implementar su aplicación.  
   
  Para obtener más información sobre los problemas de seguridad relacionados con la excepción administrada, vea [especificar y controlar errores en contratos y servicios](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md). Para obtener un ejemplo de código, vea comportamiento de depuración del [servicio](../../../wcf/samples/service-debug-behavior.md).  
   

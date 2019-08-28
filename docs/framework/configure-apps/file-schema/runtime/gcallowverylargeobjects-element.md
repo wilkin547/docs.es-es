@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6db26d250de191559fdae0479aca9f41c147502
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 643e28217d41e825f0b3a3f4a4f062c30835cae8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663708"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040665"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects >, elemento
 En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 gigabytes (GB).  
@@ -39,7 +39,7 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`false`|Las matrices con un tamaño total superior a 2 GB no están habilitadas. Este es el valor predeterminado.|  
 |`true`|Las matrices con un tamaño total superior a 2 GB se habilitan en plataformas de 64 bits.|  
@@ -64,7 +64,7 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
 - El tamaño máximo de las cadenas y otros objetos que no sean de matriz no varía.  
   
 > [!CAUTION]
->  Antes de habilitar esta característica, asegúrese de que la aplicación no incluye código no seguro que supone que todas las matrices tienen un tamaño inferior a 2 GB. Por ejemplo, el código no seguro que usa matrices como búferes puede ser susceptible a saturaciones de búfer si se escribe basándose en la suposición de que las matrices no superarán los 2 GB de tamaño.  
+> Antes de habilitar esta característica, asegúrese de que la aplicación no incluye código no seguro que supone que todas las matrices tienen un tamaño inferior a 2 GB. Por ejemplo, el código no seguro que usa matrices como búferes puede ser susceptible a saturaciones de búfer si se escribe basándose en la suposición de que las matrices no superarán los 2 GB de tamaño.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo habilitar esta característica para una aplicación.  

@@ -2,12 +2,12 @@
 title: Uso de la ExpressionTextBox en un diseñador de actividad personalizado
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bfac07d64cd5e30c3475d4e269c16597905ea829
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004762"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045355"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Uso de la ExpressionTextBox en un diseñador de actividad personalizado
 En este ejemplo se muestra cómo utilizar el objeto <xref:System.Activities.Presentation.View.ExpressionTextBox> en un diseñador de actividad personalizado. La actividad personalizada, `MultiAssign`, asigna dos valores de cadena a dos variables de cadena. Algunos controles de <xref:System.Activities.Presentation.View.ExpressionTextBox> se enlazan a argumentos <xref:System.Activities.InArgument> y otros a argumentos <xref:System.Activities.OutArgument>.
@@ -23,7 +23,7 @@ En este ejemplo se muestra cómo utilizar el objeto <xref:System.Activities.Pres
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Con Visual Studio 2010, abra el archivo ExpressionTextBoxSample.sln.
+1. Con Visual Studio 2010, abra el archivo ExpressionTextBoxSample. sln.
 
 2. Para compilar la solución, presione Ctrl+MAYÚS+B.
 
@@ -31,20 +31,20 @@ En este ejemplo se muestra cómo utilizar el objeto <xref:System.Activities.Pres
 
 1. Agregue a la solución una aplicación de consola de flujos de trabajo.
 
-2. Agregue una referencia a la **ExpressionTextBoxSample** proyecto desde el nuevo proyecto de aplicación de consola de flujos de trabajo.
+2. Agregue una referencia al proyecto **ExpressionTextBoxSample** desde el nuevo proyecto de aplicación de consola de flujos de trabajo.
 
 3. Compile la solución.
 
-4. Arrastre el **MultiAssign** actividad desde el cuadro de herramientas y colóquelo en el flujo de trabajo.
+4. Arrastre la actividad de **asignación** multiasignada desde el cuadro de herramientas y colóquela en el flujo de trabajo.
 
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   
 ## <a name="see-also"></a>Vea también
 

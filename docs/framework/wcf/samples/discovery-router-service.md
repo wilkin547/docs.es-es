@@ -2,12 +2,12 @@
 title: Servicio de enrutador de detección
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9434c26fb12b73ea4f1c185658b03cb95a3a2310
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773040"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039828"
 ---
 # <a name="discovery-router-service"></a>Servicio de enrutador de detección
 En este ejemplo se muestra cómo reenviar los mensajes de detección a otro punto de conexión.  
@@ -31,10 +31,10 @@ En este ejemplo se muestra cómo reenviar los mensajes de detección a otro punt
 4. Ejecute la aplicación cliente. Observe que el cliente busca el servicio.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryRouter`

@@ -2,12 +2,12 @@
 title: Transacciones distribuidas
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: f5ed99928534dc31832ac0baf1bb1bfa7e83ded2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 60a455d51d7ae80f5434f9564ca7416c70bef9f5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956767"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041250"
 ---
 # <a name="distributed-transactions"></a>Transacciones distribuidas
 Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se ejecutan correctamente (confirman) o dan error (anulan) como una unidad. Una *transacción distribuida* es una transacción que afecta a varios recursos. Para que una transacción distribuida se confirme, todos los participantes deben garantizar que los cambios en los datos serán permanentes. Los cambios deben conservarse a pesar de bloqueos del sistema u otros eventos imprevistos. Si alguno de los participantes no cumple esta garantía, toda la transacción da error y se revertirán los cambios en los datos en el ámbito de la transacción.  
@@ -39,7 +39,7 @@ Entre otras cosas, una transacción es un conjunto de tareas relacionadas que se
 > Una vez que una conexión se inscribe explícitamente en una transacción, no se puede anular su inscripción ni inscribirse en otra transacción hasta que finaliza la primera transacción.  
   
 > [!CAUTION]
->  Si la conexión ya ha comenzado una transacción mediante el método `EnlistTransaction` de la conexión, <xref:System.Data.Common.DbConnection.BeginTransaction%2A> inicia una excepción. No obstante, si la transacción es una transacción local iniciada en el origen de datos (por ejemplo, al ejecutar la instrucción BEGIN TRANSACTION de forma explícita mediante un <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` la revertirá e inscribirá en la transacción distribuida existente como se ha solicitado. No recibirá aviso de que la transacción local se ha revertido y deberá administrar todas las transacciones locales no iniciadas mediante <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Si usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`) con SQL Server, se producirá una excepción al intentar una inscripción. Todos los demás casos no se detectarán.  
+> Si la conexión ya ha comenzado una transacción mediante el método `EnlistTransaction` de la conexión, <xref:System.Data.Common.DbConnection.BeginTransaction%2A> inicia una excepción. No obstante, si la transacción es una transacción local iniciada en el origen de datos (por ejemplo, al ejecutar la instrucción BEGIN TRANSACTION de forma explícita mediante un <xref:System.Data.SqlClient.SqlCommand>), `EnlistTransaction` la revertirá e inscribirá en la transacción distribuida existente como se ha solicitado. No recibirá aviso de que la transacción local se ha revertido y deberá administrar todas las transacciones locales no iniciadas mediante <xref:System.Data.Common.DbConnection.BeginTransaction%2A>. Si usa el proveedor de datos .NET Framework para SQL Server (`SqlClient`) con SQL Server, se producirá una excepción al intentar una inscripción. Todos los demás casos no se detectarán.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Transacciones que se pueden promover en SQL Server  
  SQL Server 2005 admite transacciones que se pueden promover en las que se pueda promover automáticamente una transacción ligera local a una transacción distribuida solamente cuando es necesario. Las transacciones promovibles no invocan la sobrecarga adicional de las transacciones distribuidas a menos que sea necesario. Para obtener más información y un ejemplo de código, vea [integración de System. Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  

@@ -2,15 +2,15 @@
 title: Obtener acceso a OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: fc3be627c8dfc8d8e49fde01684968a54912f548
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d1c8543180a282a1b196393e5823dc3686aa16e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617344"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70038405"
 ---
 # <a name="accessing-operationcontext"></a>Obtener acceso a OperationContext
-Este ejemplo se muestra cómo las actividades de mensajería (<xref:System.ServiceModel.Activities.Receive> y <xref:System.ServiceModel.Activities.Send>) puede usarse con una actividad de ámbito personalizada para tener acceso a <xref:System.ServiceModel.OperationContext.Current%2A> y adjuntar o recuperar un encabezado de mensaje personalizado dentro de un mensaje entrante o saliente.  
+Este ejemplo muestra cómo se pueden utilizar las<xref:System.ServiceModel.Activities.Receive> actividades <xref:System.ServiceModel.Activities.Send>de mensajería (y) con una actividad de ámbito personalizada <xref:System.ServiceModel.OperationContext.Current%2A> para tener acceso y adjuntar o recuperar un encabezado de mensaje personalizado dentro de un mensaje saliente o entrante.  
   
 ## <a name="demonstrates"></a>Demostraciones  
  Actividades de mensajería, <xref:System.ServiceModel.Activities.ISendMessageCallback>, <xref:System.ServiceModel.Activities.IReceiveMessageCallback>.  
@@ -20,7 +20,7 @@ Este ejemplo se muestra cómo las actividades de mensajería (<xref:System.Servi
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
-1. En este ejemplo se expone un servicio del flujo de trabajo mediante puntos de conexión HTTP. Para ejecutar este ejemplo las ACL de dirección URL apropiadas; debe agregarse (consulte [configurar HTTP y HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener más información), ya sea mediante la ejecución de Visual Studio como administrador o ejecutando el siguiente comando en un símbolo del sistema con privilegios elevados para agregar las ACL adecuadas. Asegúrese de que su dominio y su nombre de usuario se sustituyen.  
+1. En este ejemplo se expone un servicio del flujo de trabajo mediante puntos de conexión HTTP. Para ejecutar este ejemplo, se deben agregar las ACL de dirección URL adecuadas (consulte [configuración de http y https](https://go.microsoft.com/fwlink/?LinkId=70353) para obtener detalles), ya sea ejecutando Visual Studio como administrador o ejecutando el siguiente comando en un símbolo del sistema con privilegios elevados para agregar las ACL adecuadas. Asegúrese de que su dominio y su nombre de usuario se sustituyen.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -30,17 +30,17 @@ Este ejemplo se muestra cómo las actividades de mensajería (<xref:System.Servi
   
     1. Compile la solución.  
   
-    2. Establezca varios proyectos de inicio haciendo clic en la solución y seleccione **Establecer proyectos de inicio**.  
+    2. Establezca varios proyectos de inicio haciendo clic con el botón derecho en la solución y seleccionando **establecer proyectos de inicio**.  
   
-    3. Agregar **servicio** y **cliente** (en ese orden) como proyectos de inicio múltiples.  
+    3. Agregue el **servicio** y el **cliente** (en ese orden) como varios proyectos de inicio.  
   
     4. Ejecute la aplicación. La consola del cliente muestra un flujo de trabajo que se ejecuta dos veces y la ventana Service muestra el identificador de instancia de estos flujos de trabajo.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\Accessing Operation Context`

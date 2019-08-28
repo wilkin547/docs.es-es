@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 6d67629503d5acfeff7e14e1889a047444a8d399
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3afac76fc977f992e780d2ebe302c1ed94568835
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962391"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044399"
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Procedimiento para crear un flujo de trabajo de diagrama de flujo
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema se describe cómo crear un flujo de trabajo que usa tanto actividades integradas <xref:System.Activities.Statements.Flowchart> , como la actividad, y las actividades personalizadas [de los procedimientos anteriores: Cree un tema](how-to-create-an-activity.md) de la actividad. El flujo de trabajo modela un juego de adivinanzas de números.  
@@ -52,7 +52,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 9. Haga clic en **crear variable**.  
   
     > [!TIP]
-    >  Si no se muestra ningún cuadro **crear variable** , haga <xref:System.Activities.Statements.Flowchart> clic en la actividad en la superficie del diseñador de flujo de trabajo para seleccionarla.  
+    > Si no se muestra ningún cuadro **crear variable** , haga <xref:System.Activities.Statements.Flowchart> clic en la actividad en la superficie del diseñador de flujo de trabajo para seleccionarla.  
   
 10. Escriba `Guess` en el cuadro **nombre** , seleccione **Int32** en la lista desplegable **tipo de variable** y presione Entrar para guardar la variable.  
   
@@ -80,7 +80,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     ```  
   
     > [!TIP]
-    >  Si no se muestra la ventana **cuadro de herramientas** , seleccione **cuadro de herramientas** en el menú **Ver** .  
+    > Si no se muestra la ventana **cuadro de herramientas** , seleccione **cuadro de herramientas** en el menú **Ver** .  
   
 3. Arrastre una actividad **prompt** de la sección **NumberGuessWorkflowActivities** del **cuadro de herramientas**, colóquela debajo de la actividad Assign del paso anterior y conecte la actividad **prompt** a la actividad Assign. Hay tres maneras de conectar las dos actividades. La primera manera es conectarlas a medida que se coloca la actividad **prompt** en el flujo de trabajo. Cuando arrastre la actividad **prompt** al flujo de trabajo, mantenga el mouse sobre la actividad **assign** y colóquela en uno de los cuatro triángulos que aparecen cuando la actividad **prompt** está sobre la actividad **assign** . La segunda manera es colocar la actividad **prompt** en el flujo de trabajo en la ubicación deseada. A continuación, mantenga el mouse sobre la actividad Assign y arrastre uno de los rectángulos que aparece hacia abajo hasta la actividad **prompt** . Arrastre el mouse para que la línea de conexión de la actividad Assign se conecte a uno de los rectángulos de la actividad **prompt** y, a continuación, suelte el botón del mouse. La tercera manera es muy similar a la primera, salvo que en lugar de arrastrar la actividad **prompt** desde el cuadro de **herramientas**, se arrastra desde su ubicación en la superficie de diseño de flujo de trabajo, se mantiene el mouse sobre la actividad Assign y se coloca en una de las triángulos que aparece.  
   
@@ -95,7 +95,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     ```  
   
     > [!TIP]
-    >  Si no se muestra la **ventana Propiedades** , seleccione **ventana Propiedades** en el menú **Ver** .  
+    > Si no se muestra la **ventana Propiedades** , seleccione **ventana Propiedades** en el menú **Ver** .  
   
 5. Arrastre una actividad Assign de la sección **primitivas** del **cuadro de herramientas** y conéctela con uno de los métodos descritos en el paso anterior para que esté debajo de la actividad **prompt** .  
   
@@ -114,7 +114,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 8. Arrastre otra actividad **FlowDecision** desde el **cuadro de herramientas** y colóquela debajo de la primera. Conecte las dos actividades arrastrando desde el rectángulo con la etiqueta **false** en la actividad **FlowDecision** superior hasta el rectángulo situado en la parte superior de la segunda actividad **FlowDecision** .  
   
     > [!TIP]
-    >  Si no ve las etiquetas **true** y **false** en el **FlowDecision**, mantenga el mouse sobre el **FlowDecision**.  
+    > Si no ve las etiquetas **true** y **false** en el **FlowDecision**, mantenga el mouse sobre el **FlowDecision**.  
   
 9. Haga clic en la segunda actividad **FlowDecision** para seleccionarla. En la **ventana Propiedades**, escriba la siguiente expresión en el cuadro de valor de la propiedad **condición** .  
   
@@ -158,4 +158,4 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - [Diseño de flujos de trabajo](designing-workflows.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
 - [Cómo: Crear una actividad](how-to-create-an-activity.md)
-- [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
+- [Procedimientos: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)

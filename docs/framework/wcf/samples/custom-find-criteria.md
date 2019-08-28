@@ -2,12 +2,12 @@
 title: Criterios de búsqueda personalizados
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: 7409539c823243a783cacd4e04d6fab225b606cc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 236cce194d89409ab19732c239459418cddd251b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650188"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039942"
 ---
 # <a name="custom-find-criteria"></a>Criterios de búsqueda personalizados
 Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usando la lógica y cómo implementar un servicio de detección personalizado. Los clientes utilizan la funcionalidad de concordancia de ámbito personalizada para refinar y seguir usando la funcionalidad de búsqueda proporcionada por la detección WCF. El escenario que abarca este ejemplo es el siguiente:  
@@ -25,7 +25,7 @@ Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usand
 - Implementar una coincidencia del ámbito personalizada por algoritmo.  
   
 ## <a name="discussion"></a>Discusión  
- El cliente busca tipos "O" criterios de coincidencia. Un servicio responde si los ámbitos de sus puntos de conexión coinciden con alguno de los ámbitos que proporciona el cliente. En este caso, el cliente busca un servicio de calculadora que tenga cualquiera de los ámbitos de la siguiente lista:  
+ El cliente está buscando criterios de coincidencia de tipo "OR". Un servicio responde si los ámbitos de sus puntos de conexión coinciden con alguno de los ámbitos que proporciona el cliente. En este caso, el cliente busca un servicio de calculadora que tenga cualquiera de los ámbitos de la siguiente lista:  
   
 1. `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -39,13 +39,13 @@ Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usand
   
  Abra el proyecto de servicio. Se utilizan tres archivos para implementar el Servicio de descarga personalizado:  
   
-1. **AsyncResult.cs**: Esta es la implementación de la `AsyncResult` que se requieren los métodos de detección.  
+1. **AsyncResult.cs**: Se trata de la implementación de `AsyncResult` que es necesaria para los métodos de detección.  
   
 2. **CustomDiscoveryService.cs**: Este archivo implementa el servicio de detección personalizado. La implementación extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryService> e invalida los métodos necesarios. Observe la implementación del método <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A>. El método comprueba si el cliente especificó la coincidencia de ámbito personalizada por regla. Se trata del mismo URI personalizado que el cliente especificó previamente. Si se especifica la regla personalizada, se sigue la ruta de acceso del código que implementa la lógica de coincidencia "OR".  
   
      Esta lógica personalizada pasa por todos los ámbitos de cada uno de los puntos de conexión que el servicio tiene. Si alguno de los ámbitos del punto de conexión coincide con alguno de los ámbitos proporcionados por el cliente, el servicio de descarga agrega ese punto de conexión a la respuesta que se devuelve al cliente.  
   
-3. **CustomDiscoveryExtension.cs**: El último paso para implementar el servicio de detección es conectar esta implementación de personalizado detectar el servicio al host de servicio. La clase del asistente que se utiliza aquí es la clase `CustomDiscoveryExtension`. Esta clase extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. El usuario debe invalidar el método <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. En este caso, el método devuelve una instancia del servicio de detección personalizado que se creó antes. `PublishedEndpoints` es <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contiene todos los extremos de aplicación que se agregan a <xref:System.ServiceModel.ServiceHost>. El servicio de detección personalizado lo utiliza para rellenar su lista interna. El usuario puede agregar también otros metadatos de punto de conexión.  
+3. **CustomDiscoveryExtension.CS**: El último paso para implementar el servicio de detección es conectar esta implementación del servicio de detección personalizado al host de servicio. La clase del asistente que se utiliza aquí es la clase `CustomDiscoveryExtension`. Esta clase extiende la clase <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension>. El usuario debe invalidar el método <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A>. En este caso, el método devuelve una instancia del servicio de detección personalizado que se creó antes. `PublishedEndpoints` es <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> que contiene todos los extremos de aplicación que se agregan a <xref:System.ServiceModel.ServiceHost>. El servicio de detección personalizado lo utiliza para rellenar su lista interna. El usuario puede agregar también otros metadatos de punto de conexión.  
   
  Por último, abra Program.cs. Observe que tanto <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> como `CustomDiscoveryExtension` se agregan al host. Una vez hecho esto, si el host tiene un punto de conexión sobre el que recibir los mensajes de detección, la aplicación puede utilizar el servicio de detección personalizado.  
   
@@ -62,10 +62,10 @@ Este ejemplo muestra cómo crear una concordancia de ámbito personalizada usand
 4. Ejecute la aplicación cliente.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

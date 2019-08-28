@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: e8e8b294e05579a91a4557b23be6c65f4d619167
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb5766a3efc38750458ef0d354e8a2e3ab204000
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940874"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046404"
 ---
 # <a name="drag-and-drop-overview"></a>Información general sobre la función de arrastrar y colocar
 Este tema proporciona información general sobre la compatibilidad con arrastrar y colocar en aplicaciones [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Arrastrar y colocar se refiere normalmente a un método de transferencia de datos que implica el uso de un mouse (o cualquier otro dispositivo señalador) para seleccionar uno o más objetos, arrastrar estos objetos sobre un destino deseado en la [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] y soltarlos.  
@@ -166,7 +166,7 @@ Este tema proporciona información general sobre la compatibilidad con arrastrar
  El evento <xref:System.Windows.DragDrop.QueryContinueDrag> se produce continuamente mientras se arrastra el origen de arrastre. Puede controlar este evento para determinar qué acción finaliza la operación de arrastrar y colocar en función del estado de las teclas ESC, MAYÚS, CTRL y ALT, así como el estado de los botones del mouse. El controlador predeterminado para este evento cancela la operación de arrastrar y colocar si se presiona la tecla ESC y coloca los datos si se suelta el botón del mouse.  
   
 > [!CAUTION]
->  Estos eventos se generan continuamente durante la operación de arrastrar y colocar. Por lo tanto, debe evitar las tareas que consumen muchos recursos en los controladores de eventos.  Por ejemplo, use un cursor en caché en lugar de crear un nuevo cursor cada vez que se produzca el evento <xref:System.Windows.DragDrop.GiveFeedback>.  
+> Estos eventos se generan continuamente durante la operación de arrastrar y colocar. Por lo tanto, debe evitar las tareas que consumen muchos recursos en los controladores de eventos.  Por ejemplo, use un cursor en caché en lugar de crear un nuevo cursor cada vez que se produzca el evento <xref:System.Windows.DragDrop.GiveFeedback>.  
   
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>Habilitar un elemento para que sea un destino de colocación  
  Un objeto que es un destino de colocación es responsable de:  

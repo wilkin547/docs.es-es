@@ -2,12 +2,12 @@
 title: Instrucciones de firewall
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 5e557963c415cf39c4f25b4854c9863652201146
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69961399"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044952"
 ---
 # <a name="firewall-instructions"></a>Instrucciones de firewall
 Debe habilitar varios puertos o programas en el firewall para que los ejemplos de Windows Communication Foundation (WCF) funcionen. Muchos de los ejemplos se comunican utilizando los puertos del intervalo 8000-8003 y el puerto 9000. El firewall se activa de forma predeterminada y evita el acceso a estos puertos. Para habilitar el firewall para los ejemplos, complete uno de los procedimientos siguientes, dependiendo de sus requisitos y entorno de seguridad:  
@@ -21,7 +21,7 @@ Debe habilitar varios puertos o programas en el firewall para que los ejemplos d
  Si no está seguro de qué procedimiento utilizar, elija la primera opción. Si está ejecutando un firewall procedente de otro proveedor, quizá necesite realizar modificaciones similares.  
   
 > [!IMPORTANT]
->  Cambiar su configuración del firewall afecta a su seguridad. Se recomienda que grabe los cambios que efectúa y los quite cuando termine de trabajar con los ejemplos.  
+> Cambiar su configuración del firewall afecta a su seguridad. Se recomienda que grabe los cambios que efectúa y los quite cuando termine de trabajar con los ejemplos.  
   
 ### <a name="to-enable-samples-programs-in-advance"></a>Para habilitar de antemano los programas de ejemplo  
   
@@ -30,7 +30,7 @@ Debe habilitar varios puertos o programas en el firewall para que los ejemplos d
 2. Haga clic en **Inicio**, haga clic en `firewall.cpl` **Ejecutar**y escriba. Se abrirá el applet **Panel de control del firewall de Windows** .  
   
     > [!NOTE]
-    >  Debe tener permiso para cambiar los valores del Firewall para ejecutar los ejemplos que requieren la capacidad de comunicarse a través de Firewall de Windows. Si algunas configuraciones de firewall no están disponibles y su equipo está conectado a un dominio, el administrador del sistema podría estar controlando estos valores a través de Directiva de grupo.  
+    > Debe tener permiso para cambiar los valores del Firewall para ejecutar los ejemplos que requieren la capacidad de comunicarse a través de Firewall de Windows. Si algunas configuraciones de firewall no están disponibles y su equipo está conectado a un dominio, el administrador del sistema podría estar controlando estos valores a través de Directiva de grupo.  
   
 3. Complete uno de los siguientes pasos concretos para permitir que un programa pase a través del Firewall de Windows:  
   

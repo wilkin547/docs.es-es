@@ -2,12 +2,12 @@
 title: Proveedor de pertenencia y roles
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 894fcef0cbb25f85043aa6f5c55c45bae5161546
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948546"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039434"
 ---
 # <a name="membership-and-role-provider"></a>Proveedor de pertenencia y roles
 El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio puede usar la pertenencia a ASP.NET y los proveedores de roles para autenticar y autorizar a los clientes.  
@@ -123,10 +123,10 @@ El ejemplo de pertenencia y del proveedor de roles muestra cómo un servicio pue
 2. Asegúrese de que ha configurado la [base de datos de servicios de aplicación de ASP.net](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
-    >  Si está ejecutando SQL Server Express Edition, su nombre de servidor es .\SQLEXPRESS. Este servidor se debe usar al configurar la base de datos de Servicios de aplicación de ASP.NET, así como en la cadena de conexión Web. config.  
+    > Si está ejecutando SQL Server Express Edition, su nombre de servidor es .\SQLEXPRESS. Este servidor se debe usar al configurar la base de datos de Servicios de aplicación de ASP.NET, así como en la cadena de conexión Web. config.  
   
     > [!NOTE]
-    >  La cuenta de proceso de trabajo de ASP.NET debe tener permisos en la base de datos que se crea en este paso. Use la utilidad sqlcmd o SQL Server Management Studio para ello.  
+    > La cuenta de proceso de trabajo de ASP.NET debe tener permisos en la base de datos que se crea en este paso. Use la utilidad sqlcmd o SQL Server Management Studio para ello.  
   
 3. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, utilice las instrucciones siguientes.  
   

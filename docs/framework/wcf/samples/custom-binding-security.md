@@ -2,28 +2,29 @@
 title: Seguridad de enlace personalizado
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 99fa1e7dea09601de5efff9ef8d8c6a66eae1bac
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a597e1fb7c239b49c03e964b513b4248a9c020c3
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953777"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045612"
 ---
 # <a name="custom-binding-security"></a>Seguridad de enlace personalizado
+
 Este ejemplo muestra cómo configurar la seguridad mediante un enlace personalizado. Muestra cómo utilizar un enlace personalizado para habilitar la seguridad de nivel de mensaje junto con un transporte seguro. Esto es útil cuando se exige un transporte seguro que transmita los mensajes entre el cliente y servicio y simultáneamente los mensajes deben ser seguros en el nivel de mensaje. Los enlaces proporcionados por el sistema no admiten esta configuración.
 
- Este ejemplo está compuesto por un programa de consola de cliente (EXE) y un programa de consola de servicio (EXE). El servicio implementa un contrato dúplex. La interfaz `ICalculatorDuplex`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato. La interfaz `ICalculatorDuplex` permite al cliente realizar las operaciones de matemática, calculando un resultado en ejecución sobre una sesión. Independientemente, el servicio puede devolver resultados en la interfaz `ICalculatorDuplexCallback`. Un contrato dúplex requiere una sesión, porque se debe establecer un contexto para poner en correlación el conjunto de mensajes que se envían entre el cliente y el servicio. Se define un enlace personalizado que admite la comunicación dúplex y es seguro.
+Este ejemplo está compuesto por un programa de consola de cliente (EXE) y un programa de consola de servicio (EXE). El servicio implementa un contrato dúplex. La interfaz `ICalculatorDuplex`, que expone las operaciones matemáticas (sumar, restar, multiplicar y dividir), define el contrato. La interfaz `ICalculatorDuplex` permite al cliente realizar las operaciones de matemática, calculando un resultado en ejecución sobre una sesión. Independientemente, el servicio puede devolver resultados en la interfaz `ICalculatorDuplexCallback`. Un contrato dúplex requiere una sesión, porque se debe establecer un contexto para poner en correlación el conjunto de mensajes que se envían entre el cliente y el servicio. Se define un enlace personalizado que admite la comunicación dúplex y es seguro.
 
 > [!NOTE]
 > El procedimiento de instalación y las instrucciones de compilación de este ejemplo se encuentran al final de este tema.
 
- La configuración del servicio define un enlace personalizado que admite lo siguiente:
+La configuración del servicio define un enlace personalizado que admite lo siguiente:
 
 - Comunicación TCP protegida mediante el protocolo TLS/SSL.
 
 - Seguridad de mensaje de Windows.
 
- La configuración de enlace personalizado permite el transporte seguro, habilitando simultáneamente la seguridad de nivel de mensaje. El orden de los elementos de enlace es importante en la definición de un enlace personalizado, ya que cada uno representa una capa en la pila del canal (vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). El enlace personalizado se define en los archivos de configuración de cliente y servicio, como se muestra en la configuración del ejemplo siguiente.
+La configuración de enlace personalizado permite el transporte seguro, habilitando simultáneamente la seguridad de nivel de mensaje. El orden de los elementos de enlace es importante en la definición de un enlace personalizado, ya que cada uno representa una capa en la pila del canal (vea [enlaces personalizados](../../../../docs/framework/wcf/extending/custom-bindings.md)). El enlace personalizado se define en los archivos de configuración de cliente y servicio, como se muestra en la configuración del ejemplo siguiente.
 
 ```xml
 <bindings>
@@ -41,7 +42,7 @@ Este ejemplo muestra cómo configurar la seguridad mediante un enlace personaliz
 </bindings>
 ```
 
- El enlace personalizado utiliza un certificado de servicio para autenticar el servicio en el nivel de transporte y proteger los mensajes durante la transmisión entre el cliente y servicio. Esto lo lleva a cabo el elemento de enlace `sslStreamSecurity`. El certificado del servicio se configura utilizando un comportamiento del servicio como se muestra en la configuración del ejemplo siguiente.
+El enlace personalizado utiliza un certificado de servicio para autenticar el servicio en el nivel de transporte y proteger los mensajes durante la transmisión entre el cliente y servicio. Esto lo lleva a cabo el elemento de enlace `sslStreamSecurity`. El certificado del servicio se configura utilizando un comportamiento del servicio como se muestra en la configuración del ejemplo siguiente.
 
 ```xml
 <behaviors>
@@ -57,9 +58,9 @@ Este ejemplo muestra cómo configurar la seguridad mediante un enlace personaliz
 </behaviors>
 ```
 
- Además, el enlace personalizado utiliza seguridad de mensajes con tipo de credencial de Windows; éste es el tipo de credencial predeterminado. Esto lo lleva a cabo el elemento de enlace `security`. Cliente y servicio se autentican utilizando la seguridad de nivel de mensaje si el mecanismo de autenticación Kerberos está disponible. Esto sucede si el ejemplo se ejecuta en el entorno de Active Directory. Si el mecanismo de autenticación Kerberos no está disponible, se utiliza la autenticación NTLM. NTLM autentica el cliente para el servicio pero no autentica el servicio para el cliente. El elemento de enlace `security` se configura para utilizar `SecureConversation` `authenticationType`, lo que tiene como resultado la creación de una sesión de seguridad en el cliente y el servicio. Esto se exige para que funcione el contrato del dúplex del servicio.
+Además, el enlace personalizado utiliza seguridad de mensajes con tipo de credencial de Windows; éste es el tipo de credencial predeterminado. Esto lo lleva a cabo el elemento de enlace `security`. Cliente y servicio se autentican utilizando la seguridad de nivel de mensaje si el mecanismo de autenticación Kerberos está disponible. Esto sucede si el ejemplo se ejecuta en el entorno de Active Directory. Si el mecanismo de autenticación Kerberos no está disponible, se utiliza la autenticación NTLM. NTLM autentica el cliente para el servicio pero no autentica el servicio para el cliente. El elemento de enlace `security` se configura para utilizar `SecureConversation` `authenticationType`, lo que tiene como resultado la creación de una sesión de seguridad en el cliente y el servicio. Esto se exige para que funcione el contrato del dúplex del servicio.
 
- Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
+Al ejecutar el ejemplo, las solicitudes y respuestas de la operación se muestran en la ventana de la consola del cliente. Presione ENTRAR en la ventana de cliente para cerrar el cliente.
 
 ```
 Press <ENTER> to terminate client.
@@ -70,38 +71,38 @@ Result(441.25)
 Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 ```
 
- Al ejecutar el ejemplo, se ven los mensajes devueltos al cliente en la interfaz de devolución de llamada enviada del servicio. Se muestra cada resultado intermedio, seguido por la ecuación completa en la realización de todas las operaciones. Presione Entrar para cerrar el cliente.
+Al ejecutar el ejemplo, se ven los mensajes devueltos al cliente en la interfaz de devolución de llamada enviada del servicio. Se muestra cada resultado intermedio, seguido por la ecuación completa en la realización de todas las operaciones. Presione Entrar para cerrar el cliente.
 
- El archivo Setup.bat incluido con este ejemplo permite configurar el cliente y el servidor con los certificados de servicio pertinentes para ejecutar una aplicación hospedada que requiera seguridad basada en certificado. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.
+El archivo Setup.bat incluido con este ejemplo permite configurar el cliente y el servidor con los certificados de servicio pertinentes para ejecutar una aplicación hospedada que requiera seguridad basada en certificado. Este archivo por lotes debe modificarse para que funcione en varios equipos o en un escenario sin hospedaje.
 
- A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes que se aplican en este ejemplo con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.
+A continuación se proporciona una descripción breve de las diferentes secciones de los archivos por lotes que se aplican en este ejemplo con objeto de que se puedan modificar para ejecutarse con la configuración adecuada.
 
 - Crear el certificado de servidor.
 
-     Las líneas siguientes del archivo Setup.bat crean el certificado de servidor que se va a usar. La variable `%SERVER_NAME%`especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. Este archivo por lotes determina como valor predeterminado el nombre del servidor como host local.
+  Las líneas siguientes del archivo Setup.bat crean el certificado de servidor que se va a usar. La variable `%SERVER_NAME%`especifica el nombre del servidor. Cambie esta variable para especificar su propio nombre de servidor. Este archivo por lotes determina como valor predeterminado el nombre del servidor como host local.
 
-     El certificado se almacena en el almacén de CurrentUser para los servicios hospedados en web.
+  El certificado se almacena en el almacén de CurrentUser para los servicios hospedados en web.
 
-    ```bat
-    echo ************
-    echo Server cert setup starting
-    echo %SERVER_NAME%
-    echo ************
-    echo making server cert
-    echo ************
-    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
-    ```
+  ```bat
+  echo ************
+  echo Server cert setup starting
+  echo %SERVER_NAME%
+  echo ************
+  echo making server cert
+  echo ************
+  makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
+  ```
 
 - Instalar el certificado del servidor en el almacén de certificados de confianza del cliente.
 
-     Las líneas siguientes del archivo Setup.bat copian el certificado de servidor en el almacén de usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.
+  Las líneas siguientes del archivo Setup.bat copian el certificado de servidor en el almacén de usuarios de confianza del cliente. Este paso es necesario porque el sistema cliente no confía implícitamente en los certificados generados por Makecert.exe. Si ya tiene un certificado que se basa en un certificado raíz de confianza del cliente, por ejemplo, un certificado emitido por Microsoft, no es necesario el paso de rellenar el almacén del certificado de cliente con el certificado de servidor.
 
-    ```
-    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
-    ```
+  ```
+  certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
+  ```
 
-    > [!NOTE]
-    >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio 2010. Requiere que la variable de entorno de MSSDK se dirija al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio 2010.
+  > [!NOTE]
+  > El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio 2010. Requiere que la variable de entorno de MSSDK se dirija al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio 2010.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo
 
@@ -116,28 +117,28 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 1. Abra un Símbolo del sistema para desarrolladores para la ventana de Visual Studio con privilegios de administrador y ejecute setup. bat desde la carpeta de instalación de ejemplo. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    >  El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.  
-  
-2. Inicie Service.exe desde \service\bin.  
-  
-3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
-  
-4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
-  
-### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos  
-  
-1. En el equipo del servicio:  
-  
-    1. Cree un directorio virtual denominado servicemodelsamples en el equipo del servicio.  
-  
-    2. Copie los archivos de programa de servicio del directorio \inetpub\wwwroot\servicemodelsamples al directorio virtual del equipo de servicio. Asegúrese de que copia los archivos en el subdirectorio \bin.  
-  
-    3. Copie los archivos Setup.bat y Cleanup.bat en el equipo del servicio.  
-  
-    4. Ejecute el siguiente comando en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador `Setup.bat service`:. Así se crea el certificado del servicio con un nombre de sujeto que coincide con el nombre del equipo en el que se ejecutó el archivo por lotes.  
-  
+    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat.
+
+2. Inicie Service.exe desde \service\bin.
+
+3. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.
+
+4. Si el cliente y el servicio no pueden comunicarse, vea [sugerencias para la solución de problemas de ejemplos de WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).
+
+### <a name="to-run-the-sample-across-computers"></a>Para ejecutar el ejemplo en varios equipos
+
+1. En el equipo del servicio:
+
+    1. Cree un directorio virtual denominado servicemodelsamples en el equipo del servicio.
+
+    2. Copie los archivos de programa de servicio del directorio \inetpub\wwwroot\servicemodelsamples al directorio virtual del equipo de servicio. Asegúrese de que copia los archivos en el subdirectorio \bin.
+
+    3. Copie los archivos Setup.bat y Cleanup.bat en el equipo del servicio.
+
+    4. Ejecute el siguiente comando en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador `Setup.bat service`:. Así se crea el certificado del servicio con un nombre de sujeto que coincide con el nombre del equipo en el que se ejecutó el archivo por lotes.
+
         > [!NOTE]
-        >  El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio 2010. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio 2010.
+        > El archivo por lotes Setup.bat está diseñado para ejecutarse desde el símbolo del sistema de Visual Studio 2010. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de un símbolo del sistema de Visual Studio 2010.
 
     5. Cambie el [ \<> serviceCertificate](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) en el archivo Service. exe. config para que refleje el nombre de sujeto del certificado generado en el paso anterior.
 
@@ -163,7 +164,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
         certmgr.exe -add -c %SERVER_NAME%.cer -s -r CurrentUser TrustedPeople
         ```
 
-         Los pasos c, d y e no son necesarios si el certificado procede de un emisor de confianza.
+        Los pasos c, d y e no son necesarios si el certificado procede de un emisor de confianza.
 
     6. Modifique el archivo App.config del cliente como sigue:
 
@@ -174,7 +175,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
                 binding="customBinding"
                 bindingConfiguration="Binding1"
                 contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex"
-        behaviorConfiguration="CalculatorClientBehavior" />
+                behaviorConfiguration="CalculatorClientBehavior" />
         </client>
         ```
 

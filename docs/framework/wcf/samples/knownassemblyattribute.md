@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a911e0ae49955c5b089bb231f94e4afc0c05c97
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006621"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039540"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 Este ejemplo muestra cómo se pueden personalizar los procesos de deserialización y serialización utilizando la clase <xref:System.Runtime.Serialization.DataContractResolver>. En este ejemplo se muestra cómo agregar dinámicamente los tipos conocidos durante la serialización y deserialización.  
@@ -346,27 +346,27 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>Para configurar, compilar y ejecutar el ejemplo  
   
-1. Haga clic en la solución **KnownAssemblyAttribute** y seleccione **propiedades**.  
+1. Haga clic con el botón secundario en la solución **KnownAssemblyAttribute** y seleccione **propiedades**.  
   
-2. En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **varios proyectos de inicio**.  
+2. En **propiedades comunes**, seleccione **proyecto de inicio**y, a continuación, haga clic en **proyectos de inicio múltiples**.  
   
-3. Agregar el **iniciar** acción a la **servicio** y **cliente** proyectos.  
+3. Agregue la acción de **Inicio** al **servicio** y a los proyectos de **cliente** .  
   
 4. Haga clic en **Aceptar**y presione **F5** para ejecutar el ejemplo.  
   
 5. Si la aplicación no se ejecuta correctamente, siga estos pasos para asegurarse de que el entorno se ha configurado correctamente:  
   
-6. Asegúrese de que ha realizado la [procedimiento para los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
+6. Asegúrese de que ha realizado el [procedimiento de configuración único para los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150774).  
   
-7. Para compilar la solución, siga las instrucciones de [compilando el ejemplo de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
+7. Para compilar la solución, siga las instrucciones de [creación del ejemplo Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150775).  
   
-8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecutando los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
+8. Para ejecutar el ejemplo en una configuración de equipos única o cruzada, siga las instrucciones de [ejecución de los ejemplos de Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=150776).  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

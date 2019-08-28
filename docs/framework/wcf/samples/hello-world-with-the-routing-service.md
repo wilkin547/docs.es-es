@@ -2,24 +2,24 @@
 title: "\"Hola mundo\" con el Servicio de enrutamiento"
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 802135f61e1744acbfe5ae5fe4a6e92ec49d46b2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ab3da97bc94f864bbd28ca072f4df8f7d854ea1
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650030"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044936"
 ---
 # <a name="hello-world-with-the-routing-service"></a>"Hola mundo" con el Servicio de enrutamiento
-Este ejemplo muestra el servicio de enrutamiento de Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente WCF que facilita la tarea debe incluir un enrutador basado en contenido en la aplicación. Este ejemplo adapta el ejemplo de calculadora de WCF estándar para comunicarse con el servicio de enrutamiento. En este ejemplo, el cliente de la calculadora se configura para enviar los mensajes a un extremo que expone el enrutador. El servicio de enrutamiento se configura para aceptar todos los mensajes que se le envíen y reenviarlos a un punto de conexión que corresponde al servicio de calculadora. Por tanto, los mensajes enviados desde el cliente son recibidos por el enrutador y se vuelven a enrutar al servicio de calculadora real. Los mensajes del servicio de calculadora se devuelven al enrutador, que a su vez los devuelve al cliente de la calculadora.
+Este ejemplo muestra el servicio de enrutamiento Windows Communication Foundation (WCF). El servicio de enrutamiento es un componente de WCF que facilita la inclusión de un enrutador basado en contenido en la aplicación. En este ejemplo se adapta el ejemplo de calculadora WCF estándar para comunicarse mediante el servicio de enrutamiento. En este ejemplo, el cliente de la calculadora se configura para enviar los mensajes a un extremo que expone el enrutador. El servicio de enrutamiento se configura para aceptar todos los mensajes que se le envíen y reenviarlos a un punto de conexión que corresponde al servicio de calculadora. Por tanto, los mensajes enviados desde el cliente son recibidos por el enrutador y se vuelven a enrutar al servicio de calculadora real. Los mensajes del servicio de calculadora se devuelven al enrutador, que a su vez los devuelve al cliente de la calculadora.
 
 ### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Con Visual Studio 2012, abra HelloRoutingService.sln.
+1. Con Visual Studio 2012, abra HelloRoutingService. sln.
 
 2. Presione F5 o CTRL+MAYÚS+B.
 
     > [!NOTE]
-    >  Si presiona F5, el cliente de la calculadora se inicia automáticamente. Si presiona CTRL+MAYÚS+B (para compilar), debe iniciar las siguientes aplicaciones.
+    > Si presiona F5, el cliente de la calculadora se inicia automáticamente. Si presiona CTRL+MAYÚS+B (para compilar), debe iniciar las siguientes aplicaciones.
     >
     > 1. El cliente de la calculadora (./CalculatorClient/bin/client.exe)
     > 2. El servicio de calculadora (./CalculatorService/bin/service.exe)
@@ -49,14 +49,14 @@ Este ejemplo muestra el servicio de enrutamiento de Windows Communication Founda
  Contoso desea aumentar la flexibilidad que tiene en la denominación, tratamiento, configuración y seguridad de sus servicios. Para ello, coloca un suministro de mensajes básico delante de sus servicios de modo que actúen como punto de conexión expuesto al público. Esto les permite implantar seguridad adicional delante de sus servicios reales y facilitar la implementación de soluciones escaladas horizontalmente o de versiones del servicio más adelante.
 
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
 ## <a name="see-also"></a>Vea también
 
-- [Ejemplos de persistencia y el hospedaje de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Ejemplos de hospedaje y persistencia de AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

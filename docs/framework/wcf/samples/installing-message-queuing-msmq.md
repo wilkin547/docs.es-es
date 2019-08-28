@@ -2,12 +2,12 @@
 title: Instalar Message Queuing (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 42e66029f8538877ded424f72cb6c829444d1ee0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 118143f2d434e9f4399c3e9141743fc0254b61ab
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935991"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039624"
 ---
 # <a name="installing-message-queuing-msmq"></a>Instalar Message Queuing (MSMQ)
 Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Message Queuing 3.0.  
@@ -54,7 +54,7 @@ Los procedimientos siguientes muestran cómo instalar Message Queuing 4.0 y Mess
 3. Seleccione Message Queue Server y haga clic en **detalles**.  
   
     > [!NOTE]
-    >  Si ejecuta [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], seleccione Servidor de aplicaciones para obtener acceso a Message Queuing.  
+    > Si ejecuta [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], seleccione Servidor de aplicaciones para obtener acceso a Message Queuing.  
   
 4. Asegúrese de que la opción de compatibilidad HTTP con MSMQ está seleccionada en la página de detalles.  
   

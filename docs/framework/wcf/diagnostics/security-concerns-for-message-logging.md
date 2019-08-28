@@ -2,12 +2,12 @@
 title: Riesgos de seguridad relativos al registro de mensajes
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5db9fbf0dfb91ecb903660ebfb42c33f55b27bc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933609"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044265"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -91,7 +91,7 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
  El administrador del equipo e implementador de la aplicación debería ejercer una precaución extrema al utilizar estos dos modificadores. Si el registro de PII está habilitado, las claves de seguridad y PII están registradas. Si está deshabilitado, los datos sensibles y específicos de la aplicación todavía están registrados en encabezados del mensaje y cuerpos. Para obtener una explicación más detallada sobre la privacidad y la protección de PII, vea privacidad de los [usuarios](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
->  PII no se oculta en mensajes incorrectos. Tales mensajes se registran tal cual sin ninguna modificación. Los atributos mencionados previamente no tienen ningún efecto sobre esto.  
+> PII no se oculta en mensajes incorrectos. Tales mensajes se registran tal cual sin ninguna modificación. Los atributos mencionados previamente no tienen ningún efecto sobre esto.  
   
 ### <a name="custom-trace-listener"></a>Agente de escucha de traza personalizado  
  Agregar un agente de escucha de traza personalizado en el origen de traza del registro de mensajes es un privilegio que debe estar restringido al administrador. Esto se debe a que los agentes de escucha personalizados malintencionados se pueden configurar para enviar mensajes remotamente, lo que conduce a la divulgación de información confidencial. Además, si configura un agente de escucha personalizado para enviar mensajes en la conexión, como, por ejemplo, a una base de datos remota, debería exigir un control de acceso apropiado en los registros de mensajes en el equipo remoto.  

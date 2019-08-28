@@ -2,12 +2,12 @@
 title: Información general del modelo de programación web HTTP de WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: e63a6c4a68da2b7e51dc1fc24353922912262806
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8c13ad943bf4ef272c28266e12e175a0a21d5d40
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988576"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045229"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Información general del modelo de programación web HTTP de WCF
 El modelo de programación WEB HTTP de Windows Communication Foundation (WCF) proporciona los elementos básicos necesarios para crear servicios WEB HTTP con WCF. Los servicios WEB HTTP de WCF están diseñados para tener acceso a la gama más amplia de clientes posibles, incluidos los exploradores Web, y tienen los siguientes requisitos únicos:  
@@ -23,7 +23,7 @@ El modelo de programación WEB HTTP de Windows Communication Foundation (WCF) pr
  No existen restricciones adicionales en los tipos de datos que puedan devolverse desde un servicio WEB HTTP. Cualquier tipo serializable se puede devolver a partir de una operación de servicio WEB HTTP de WCF. Puesto que estas operaciones de servicio WEB HTTP las puede invocar un explorador web existe un límite en los tipos de datos que se pueden especificar en una dirección URL. Para obtener más información sobre los tipos que se admiten de forma predeterminada, consulte la sección **parámetros y direcciones URL** de la cadena de consulta de UriTemplate más adelante. El comportamiento predeterminado se puede cambiar proporcionando su propia implementación de la clase T:System.ServiceModel.Dispatcher.QueryStringConverter que especifica cómo convertir los parámetros especificados de una dirección URL en el tipo de parámetro real. Para obtener más información, vea <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
->  Los servicios escritos con el modelo de programación WEB HTTP de WCF no utilizan mensajes SOAP. Dado que no se utiliza SOAP, no se pueden usar las características de seguridad proporcionadas por WCF. Sin embargo, puede usar la seguridad basada en el transporte hospedando el servicio con HTTPS. Para obtener más información acerca de la seguridad de WCF, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+> Los servicios escritos con el modelo de programación WEB HTTP de WCF no utilizan mensajes SOAP. Dado que no se utiliza SOAP, no se pueden usar las características de seguridad proporcionadas por WCF. Sin embargo, puede usar la seguridad basada en el transporte hospedando el servicio con HTTPS. Para obtener más información acerca de la seguridad de WCF, consulte [información general sobre seguridad](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
 > [!WARNING]
 > Si se instala la extensión WebDAV para IIS, se puede provocar que los servicios web HTTP devuelvan un error 405 HTTP cuando la extensión WebDAV intente administrar todas las solicitudes PUT. Para evitar este problema puede desinstalar la extensión WebDAV o deshabilitarla para su sitio web. Para obtener más información, vea [IIS y WebDAV](https://learn.iis.net/page.aspx/357/webdav-for-iis-70/)  

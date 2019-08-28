@@ -2,12 +2,12 @@
 title: Migración de .NET Remoting a WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 71e26ddd93605b02031aecba280e382528378ba6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c42255a14a23cb50f3fe8be434efab4af7361daa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69943035"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045853"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migración de .NET Remoting a WCF
 En este artículo se describe el procedimiento para migrar una aplicación que usa .NET Remoting para que use Windows Communication Foundation (WCF). Se comparan conceptos similares entre estos productos y se describe cómo llevar a cabo varios escenarios comunes de comunicación remota en WCF.  
@@ -101,7 +101,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Existen muchas formas de configurar y hospedar los servicios WCF. Este es solo un ejemplo, conocido como "autohospedado". Para obtener más información, vea los temas siguientes:  
   
-- [Cómo: Definir un contrato de servicio](how-to-define-a-wcf-service-contract.md)  
+- [Procedimientos: Definir un contrato de servicio](how-to-define-a-wcf-service-contract.md)  
   
 - [Configuración de servicios mediante archivos de configuración](configuring-services-using-configuration-files.md)  
   
@@ -466,7 +466,7 @@ public class RemotingServer : MarshalByRefObject
    ```  
   
     > [!TIP]
-    >  Tenga en cuenta que el objeto con sesión está marcado con [ServiceContract], lo que hace que sea una interfaz de servicio WCF normal. El hecho de establecer la propiedad SessionMode indica que será un servicio con sesión. En WCF, una sesión es una manera de asociar varios mensajes enviados entre dos puntos de conexión. Esto significa que cuando un cliente obtiene una conexión a este servicio, se establecerá una sesión entre el cliente y el servidor. El cliente usará una única instancia del objeto del lado servidor para todas las interacciones dentro de esta sesión única.  
+    > Tenga en cuenta que el objeto con sesión está marcado con [ServiceContract], lo que hace que sea una interfaz de servicio WCF normal. El hecho de establecer la propiedad SessionMode indica que será un servicio con sesión. En WCF, una sesión es una manera de asociar varios mensajes enviados entre dos puntos de conexión. Esto significa que cuando un cliente obtiene una conexión a este servicio, se establecerá una sesión entre el cliente y el servidor. El cliente usará una única instancia del objeto del lado servidor para todas las interacciones dentro de esta sesión única.  
   
 2. A continuación, debemos proporcionar la implementación de esta interfaz de servicio. Al representarlo con [ServiceBehavior] y al configurar InstanceContextMode, le indicamos a WCF que queremos usar una instancia única de este tipo para cada sesión.  
   

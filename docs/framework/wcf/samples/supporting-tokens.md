@@ -2,12 +2,12 @@
 title: Tokens auxiliares
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: a8464d7f32b52152b5371ff9edbb396578df6a57
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 14cc7bed55d41352acd93d4443b20f8bda966263
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964466"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044627"
 ---
 # <a name="supporting-tokens"></a>Tokens auxiliares
 El ejemplo de los tokens auxiliares muestra cómo agregar tokens adicionales a un mensaje que utiliza WS-Security. El ejemplo agrega un token de seguridad binario de X.509 además de un token de seguridad del nombre de usuario. El token se pasa en un encabezado de mensaje de WS-Security desde el cliente al servicio y parte del mensaje se firma con una clave privada asociada con el token de seguridad de X.509 para demostrar la posesión del certificado X.509 al receptor. Esto es útil cuando es un requisito tener varias solicitudes asociadas con un mensaje para autenticar o autorizar el remitente. El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.
@@ -425,7 +425,7 @@ iisreset
 1. Ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 y ejecute con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    >  El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat. Asegúrese de quitar los certificados ejecutando Cleanup.bat cuando termine con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
+    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat. Asegúrese de quitar los certificados ejecutando Cleanup.bat cuando termine con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
   
 2. Inicie Client.exe desde \client\bin. La actividad del cliente se muestra en la aplicación de consola del cliente.  
   

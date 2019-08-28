@@ -2,12 +2,12 @@
 title: Ejemplo de identidad de servicio
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 999e05918eb7ac852336136a1e7512a2e9d7b9db
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0d5fce313200cdfdb8007ceffe9ff97b033d9f82
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964534"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045519"
 ---
 # <a name="service-identity-sample"></a>Ejemplo de identidad de servicio
 Este ejemplo de identidad de servicio muestra cómo establecer la identidad para un servicio. En el momento del diseño, un cliente puede recuperar la identidad mediante los metadatos del servicio y, en el tiempo de ejecución, el cliente puede autenticar la identidad del servicio. El concepto de identidad del servicio es permitir a un cliente autenticar un servicio antes de llamar a cualquiera de sus operaciones, protegiendo por lo tanto al cliente de llamadas no autenticadas. En una conexión segura, el servicio autentica también las credenciales de un cliente antes de permitirle acceso, pero éste no es el objetivo de este ejemplo. Vea los ejemplos de [cliente](../../../../docs/framework/wcf/samples/client.md) que muestran la autenticación de servidor.
@@ -24,7 +24,7 @@ Este ejemplo de identidad de servicio muestra cómo establecer la identidad para
 - Cómo definir una identidad personalizada en el cliente. Normalmente, una identidad personalizada es una personalización de un tipo existente de identidad que permite al cliente examinar otra información de notificación proporcionada en las credenciales del servicio para tomar decisiones de autorización antes de llamar al servicio.
 
     > [!NOTE]
-    >  Este ejemplo comprueba la identidad de un certificado concreto denominado identity.com y la clave RSA contenida dentro de este certificado. Al utilizar los tipos de identidad del certificado y RSA en la configuración en el cliente, una manera fácil de obtener estos valores es inspeccionar WSDL para el servicio donde se serializan estos valores.
+    > Este ejemplo comprueba la identidad de un certificado concreto denominado identity.com y la clave RSA contenida dentro de este certificado. Al utilizar los tipos de identidad del certificado y RSA en la configuración en el cliente, una manera fácil de obtener estos valores es inspeccionar WSDL para el servicio donde se serializan estos valores.
 
  El código de ejemplo siguiente muestra cómo configurar la identidad de un punto de conexión de servicio con el Servidor de nombres de dominio (DNS) de un certificado utilizando WSHttpBinding.
 
@@ -120,7 +120,7 @@ class CustomIdentityVerifier : IdentityVerifier
 2. En [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ejecute setup. bat desde la carpeta de instalación del ejemplo en un símbolo del sistema de Visual Studio 2012 con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.
 
     > [!NOTE]
-    >  El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat. Asegúrese de que quita los certificados ejecutando Cleanup.bat cuando haya terminado con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
+    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un símbolo del sistema de Visual Studio 2012. La variable de entorno PATH establecida en el símbolo del sistema de Visual Studio 2012 apunta al directorio que contiene los archivos ejecutables requeridos por el script Setup. bat. Asegúrese de que quita los certificados ejecutando Cleanup.bat cuando haya terminado con el ejemplo. Otros ejemplos de seguridad usan los mismos certificados.  
   
 3. Inicie Service.exe desde el directorio \service\bin. Asegúrese de que el servicio indica que está listo y muestra un mensaje que le \<pide que presione Entrar > para finalizar el servicio.  
   
@@ -157,4 +157,4 @@ class CustomIdentityVerifier : IdentityVerifier
 - Ejecute Cleanup.bat en la carpeta de ejemplos cuando haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+    > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.

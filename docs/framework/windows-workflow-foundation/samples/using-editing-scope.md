@@ -2,12 +2,12 @@
 title: Usar el ámbito de edición
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: d1e251abf2dd4d3f7ca15d66a4f5ea96e273a351
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c94e5c6761bb704efc9e48723d0e91a4aaf6b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623824"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037797"
 ---
 # <a name="using-editing-scope"></a>Usar el ámbito de edición
 Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se puedan deshacer en una unidad atómica única. De forma predeterminada, las acciones realizadas por un autor del diseñador de actividades se integran automáticamente en el sistema Deshacer/rehacer.  
@@ -26,19 +26,19 @@ Este ejemplo muestra cómo procesar un conjunto de cambios por lotes para que se
   
 1. Compile y ejecute el ejemplo y, a continuación, utilice los botones de la izquierda para modificar el flujo de trabajo.  
   
-2. Haga clic en **abrir el ámbito de edición**.  
+2. Haga clic en **abrir ámbito de edición**.  
   
     1. Este comando llama al método <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, que crea un ámbito de edición y lo inserta en la pila de edición.  
   
     2. A continuación, se agregan tres actividades a la clase <xref:System.Activities.Presentation.Model.ModelItem> seleccionada. Tenga en cuenta que si el ámbito de edición no se hubiera abierto con <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, las tres actividades aparecerían en el lienzo del diseñador. Dado que esta operación todavía está pendiente dentro de la clase <xref:System.Activities.Presentation.Model.EditingScope>, el diseñador todavía no se actualiza.  
   
-3. Presione **Close Editing Scope** para confirmar el ámbito de edición. Las tres actividades aparecen en el diseñador.  
+3. Presione **cerrar ámbito de edición** para confirmar el ámbito de edición. Las tres actividades aparecen en el diseñador.  
   
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

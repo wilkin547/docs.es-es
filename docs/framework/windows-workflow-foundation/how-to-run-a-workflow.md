@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 3badda7afeb25b44b0de574f97452d05efe75bfc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 07f0e5dc232411633626add460ffc29cc7a79d81
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962285"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044350"
 ---
 # <a name="how-to-run-a-workflow"></a>Procedimiento para ejecutar un flujo de trabajo
 Este tema es una continuación del tutorial de introducción de Windows Workflow Foundation y explica cómo crear un host de flujo de trabajo y ejecutar el flujo de trabajo [definido en el procedimiento anterior: Cree un tema](how-to-create-a-workflow.md) de flujo de trabajo.
@@ -28,7 +28,7 @@ Este tema es una continuación del tutorial de introducción de Windows Workflow
 2. Haga clic con el botón secundario en la solución **WF45GettingStartedTutorial** en el **Explorador de soluciones** y seleccione **Agregar**, **Nuevo proyecto**.  
   
     > [!TIP]
-    >  Si la ventana **Explorador de soluciones** no se muestra, seleccione **Explorador de soluciones** en el menú **Ver** .
+    > Si la ventana **Explorador de soluciones** no se muestra, seleccione **Explorador de soluciones** en el menú **Ver** .
 
 3. En el nodo **Instalado** , seleccione **Visual C#** , **Flujo de trabajo** (o **Visual Basic**, **Flujo de trabajo**).
 
@@ -46,7 +46,7 @@ Este tema es una continuación del tutorial de introducción de Windows Workflow
 1. Haga doble clic en **Program.cs** o en **Module1.vb** en el **Explorador de soluciones** para mostrar el código.
 
     > [!TIP]
-    >  Si la ventana **Explorador de soluciones** no se muestra, seleccione **Explorador de soluciones** en el menú **Ver** .
+    > Si la ventana **Explorador de soluciones** no se muestra, seleccione **Explorador de soluciones** en el menú **Ver** .
 
      Dado que este proyecto se creó con la plantilla **Aplicación de consola de flujos de trabajo** , **Program.cs** o **Module1.vb** , contiene el siguiente código básico de hospedaje de flujo de trabajo.
 
@@ -166,6 +166,6 @@ Este tema es una continuación del tutorial de introducción de Windows Workflow
 - [Programación de Windows Workflow Foundation](programming.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
 - [Procedimientos: Crear un flujo de trabajo](how-to-create-a-workflow.md)
-- [Cómo: Crear y ejecutar un flujo de trabajo de ejecución prolongada](how-to-create-and-run-a-long-running-workflow.md)
+- [Procedimientos: Crear y ejecutar un flujo de trabajo de ejecución prolongada](how-to-create-and-run-a-long-running-workflow.md)
 - [Espera de la entrada en un flujo de trabajo](waiting-for-input-in-a-workflow.md)
 - [Hospedaje de flujos de trabajo](hosting-workflows.md)

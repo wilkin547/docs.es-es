@@ -2,12 +2,12 @@
 title: Integración de WPF y WF en XAML
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-ms.openlocfilehash: 8b461ee3185aa60e885d7cc107124c37d9ffacef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 547049488a1bf97d5f5ef03a71278b8f653293a2
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948956"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045321"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Integración de WPF y WF en XAML
 En este ejemplo se muestra cómo crear una aplicación que utiliza características de Windows Presentation Foundation (WPF) y Windows Workflow Foundation (WF) en un único documento XAML. Para ello, el ejemplo utiliza la extensibilidad de Windows Workflow Foundation (WF) y XAML.
@@ -37,10 +37,10 @@ En este ejemplo se muestra cómo crear una aplicación que utiliza característi
 5. Cierre el diálogo y la consola repetirá su nombre.
 
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

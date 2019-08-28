@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 53836e473fa09e88b4e8266923247db337387944
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb1f42327333484f7952b6f95ea90115935a8fc8
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930450"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039286"
 ---
 # <a name="message-security-user-name"></a>Nombre de usuario de seguridad de mensaje
 Este ejemplo muestra cómo implementar una aplicación que utiliza WS-Security con autenticación de nombre de usuario para el cliente y que requiere la autenticación del servidor mediante el certificado X.509v3 del servidor. Todos los mensajes de la aplicación entre el cliente y el servidor se firman y se cifran. De forma predeterminada, el nombre de usuario y contraseña proporcionadas por el cliente se utilizan para iniciar una sesión con una cuenta de Windows válida. Este ejemplo se basa en [wsHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md). Este ejemplo está compuesto de un programa de consola de cliente (Client.exe) y una biblioteca de servicios (Service.dll) hospedada por Internet Information Services (IIS). El servicio implementa un contrato que define un modelo de comunicación de solicitud y respuesta.  
@@ -187,7 +187,7 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    >  Si está utilizando una edición que no esté en inglés de EE. UU. de Windows, es preciso que modifique el archivo Setup.bat y sustituya el nombre de la cuenta `NT AUTHORITY\NETWORK SERVICE` con su equivalente regional.  
+    > Si está utilizando una edición que no esté en inglés de EE. UU. de Windows, es preciso que modifique el archivo Setup.bat y sustituya el nombre de la cuenta `NT AUTHORITY\NETWORK SERVICE` con su equivalente regional.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Configurar, compilar y ejecutar el ejemplo  
   
@@ -202,7 +202,7 @@ Press <ENTER> to terminate client.
 2. Ejecute setup. bat desde la carpeta de instalación del ejemplo en un Símbolo del sistema para desarrolladores para Visual Studio abierto con privilegios de administrador. De esta forma, se instalan todos los certificados necesarios para ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  El archivo por lotes Setup. bat está diseñado para ejecutarse desde un Símbolo del sistema para desarrolladores para Visual Studio. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de una Símbolo del sistema para desarrolladores para Visual Studio.  
+    > El archivo por lotes Setup. bat está diseñado para ejecutarse desde un Símbolo del sistema para desarrolladores para Visual Studio. Requiere que la variable de entorno path señale al directorio donde está instalado el SDK. Esta variable de entorno se establece automáticamente dentro de una Símbolo del sistema para desarrolladores para Visual Studio.  
   
 3. Escriba la dirección `http://localhost/servicemodelsamples/service.svc`para comprobar el acceso al servicio mediante un explorador.
   
@@ -237,4 +237,4 @@ Press <ENTER> to terminate client.
 - Ejecute Cleanup.bat en la carpeta de ejemplos después de que haya terminado de ejecutar el ejemplo.  
   
     > [!NOTE]
-    >  Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    > Este script no quita los certificados del servicio en un cliente cuando el ejemplo se ejecuta en varios equipos. Si ha ejecutado ejemplos de Windows Communication Foundation (WCF) que usan certificados en los equipos, asegúrese de borrar los certificados de servicio que se han instalado en el almacén CurrentUser-TrustedPeople. Para ello, use el siguiente comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por ejemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

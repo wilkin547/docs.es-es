@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 8c222cb2cf70502024a5934c4c527334c9f24165
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9adf8078f52653940fe9ba5caa4a256a08cc489c
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966385"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044139"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtener elementos de UI Automation
 > [!NOTE]
@@ -19,7 +19,7 @@ ms.locfileid: "69966385"
  En este tema se describen las distintas formas de obtener objetos <xref:System.Windows.Automation.AutomationElement> para elementos [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
 > [!CAUTION]
->  Si la aplicación cliente intenta buscar elementos en su propia interfaz de usuario, debe realizar todos las llamadas a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] en un subproceso independiente. Para obtener más información, consulta [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
+> Si la aplicación cliente intenta buscar elementos en su propia interfaz de usuario, debe realizar todos las llamadas a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] en un subproceso independiente. Para obtener más información, consulta [UI Automation Threading Issues](../../../docs/framework/ui-automation/ui-automation-threading-issues.md).  
   
 <a name="The_Root_Element"></a>   
 ## <a name="root-element"></a>Elemento raíz  
@@ -28,7 +28,7 @@ ms.locfileid: "69966385"
  El elemento raíz para el escritorio, del que descienden todos los elementos, se obtiene de la propiedad estática <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> .  
   
 > [!CAUTION]
->  En general, debe intentar obtener solo elementos secundarios directos del elemento <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una búsqueda de descendientes puede iterar a través de cientos o incluso miles de elementos, lo que posiblemente provocaría un desbordamiento de pila. Si intenta obtener un elemento concreto en un nivel inferior, debe iniciar la búsqueda desde la ventana de aplicación o desde un contenedor en un nivel inferior.  
+> En general, debe intentar obtener solo elementos secundarios directos del elemento <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Una búsqueda de descendientes puede iterar a través de cientos o incluso miles de elementos, lo que posiblemente provocaría un desbordamiento de pila. Si intenta obtener un elemento concreto en un nivel inferior, debe iniciar la búsqueda desde la ventana de aplicación o desde un contenedor en un nivel inferior.  
   
 <a name="Using_Conditions"></a>   
 ## <a name="conditions"></a>Condiciones  

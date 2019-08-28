@@ -2,12 +2,12 @@
 title: Utilizar DataContractSerializer y DataContractResolver para proporcionar la funcionalidad de NetDataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: 0378f8d6e21f44eb1f39e9ebf51ef0dfaf8d8e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7102e60c8b5302d4f3bc83b356dbc7de117f57a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990410"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039860"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Utilizar DataContractSerializer y DataContractResolver para proporcionar la funcionalidad de NetDataContractSerializer
 En este ejemplo se muestra el modo en que el uso de un <xref:System.Runtime.Serialization.DataContractSerializer> con un <xref:System.Runtime.Serialization.DataContractResolver> adecuado proporciona la misma funcionalidad que <xref:System.Runtime.Serialization.NetDataContractSerializer>. En este ejemplo se muestra cómo crear el <xref:System.Runtime.Serialization.DataContractResolver> adecuado y cómo agregarlo a <xref:System.Runtime.Serialization.DataContractSerializer>.
@@ -57,15 +57,15 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>Para utilizar este ejemplo
 
-1. Con Visual Studio 2012, abra el archivo de Cdrsample.sln.
+1. Con Visual Studio 2012, abra el archivo de solución Cdrsample. sln.
 
-2. Haga clic en el archivo de solución y elija **propiedades**.
+2. Haga clic con el botón derecho en el archivo de solución y elija **propiedades**.
 
-3. En el **páginas de propiedades de la solución** cuadro de diálogo, en **propiedades comunes**, **proyecto de inicio**, seleccione **varios proyectos de inicio:**.
+3. En el cuadro de diálogo **páginas de propiedades** de la solución, en **propiedades comunes**, **proyecto de inicio**, seleccione **proyectos de inicio múltiples:** .
 
-4. Junto a la **DCSwithDCR** proyecto, seleccione **iniciar** desde el **acción** lista desplegable.
+4. Junto al proyecto **DCSwithDCR** , seleccione **iniciar** en la lista desplegable **acción** .
 
-5. Junto a la **NetDCS** proyecto, seleccione **iniciar** desde el **acción** lista desplegable.
+5. Junto al proyecto **NetDCS** , seleccione **iniciar** en la lista desplegable **acción** .
 
 6. Haga clic en **Aceptar** para cerrar el cuadro de diálogo.
 
@@ -74,10 +74,10 @@ class MyDataContractResolver : DataContractResolver
 8. Para ejecutar la solución, presione CTRL+F5.
 
 > [!IMPORTANT]
->  Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
+> Puede que los ejemplos ya estén instalados en su equipo. Compruebe el siguiente directorio (predeterminado) antes de continuar.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si no existe este directorio, vaya a [Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) Samples para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) y [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
+> Si este directorio no existe, vaya a [ejemplos de Windows Communication Foundation (WCF) y Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para descargar todos los Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] y ejemplos. Este ejemplo se encuentra en el siguiente directorio.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
