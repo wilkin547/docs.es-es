@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 3f1c1beda7519a113ea15c5fed84bcb017afae12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 451f9581ae997ad86fee968fa978713db2049455
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962348"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044385"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Procedimiento para crear un flujo de trabajo de máquina de estados
 Se pueden construir flujos de trabajo a partir de actividades integradas, así como de actividades personalizadas. En este tema se describe cómo crear un flujo de trabajo que usa tanto actividades integradas <xref:System.Activities.Statements.StateMachine> , como la actividad, y las actividades personalizadas [de los procedimientos anteriores: Cree un tema](how-to-create-an-activity.md) de la actividad. El flujo de trabajo modela un juego de adivinanzas de números.  
@@ -52,7 +52,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 9. Haga clic en **crear variable**.  
   
     > [!TIP]
-    >  Si no se muestra ningún cuadro **crear variable** , haga <xref:System.Activities.Statements.StateMachine> clic en la actividad en la superficie del diseñador de flujo de trabajo para seleccionarla.  
+    > Si no se muestra ningún cuadro **crear variable** , haga <xref:System.Activities.Statements.StateMachine> clic en la actividad en la superficie del diseñador de flujo de trabajo para seleccionarla.  
   
 10. Escriba `Guess` en el cuadro **nombre** , seleccione **Int32** en la lista desplegable **tipo de variable** y presione Entrar para guardar la variable.  
   
@@ -67,7 +67,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 1. Haga clic en **State1** para seleccionarlo. En la **ventana Propiedades**, cambie **displayName** a `Initialize Target`.  
   
     > [!TIP]
-    >  Si no se muestra la **ventana Propiedades** , seleccione **ventana Propiedades** en el menú **Ver** .  
+    > Si no se muestra la **ventana Propiedades** , seleccione **ventana Propiedades** en el menú **Ver** .  
   
 2. Haga doble clic en el estado de **destino Initialize** recién cambiado en el diseñador de flujo de trabajo para expandirlo.  
   
@@ -82,7 +82,7 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
     ```  
   
     > [!TIP]
-    >  Si no se muestra la ventana **cuadro de herramientas** , seleccione **cuadro de herramientas** en el menú **Ver** .  
+    > Si no se muestra la ventana **cuadro de herramientas** , seleccione **cuadro de herramientas** en el menú **Ver** .  
   
 4. Vuelva a la vista de equipo de estado general en el diseñador de flujo de trabajo haciendo clic en **StateMachine** en la pantalla de la ruta de navegación en la parte superior del diseñador de flujo de trabajo.  
   
@@ -195,4 +195,4 @@ Se pueden construir flujos de trabajo a partir de actividades integradas, así c
 - [Diseño de flujos de trabajo](designing-workflows.md)
 - [Tutorial de introducción](getting-started-tutorial.md)
 - [Cómo: Crear una actividad](how-to-create-an-activity.md)
-- [Procedimientos: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)
+- [Cómo: Ejecutar un flujo de trabajo](how-to-run-a-workflow.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b5a13b362f565cfae9247908bcf3cf35c899ae4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: e2a86fbcd78c6768a91cc0d12e45053f8da6cdec
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910717"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70041145"
 ---
 # <a name="using-the-assert-method"></a>Utilizar el método Assert
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -31,7 +31,7 @@ ms.locfileid: "69910717"
  <xref:System.Security.CodeAccessPermission.Assert%2A> es un método al que se puede llamar en las clases de permiso de acceso a código y en la clase <xref:System.Security.PermissionSet>. Puede usar **Assert** para permitir que el código (y los llamadores de nivel inferior) realicen acciones para las que el código tiene permiso, pero es posible que sus llamadores no tengan permiso para hacerlo. Una aserción o validación de seguridad cambia el proceso normal que realiza el runtime durante una comprobación de seguridad. Al validar un permiso, se indica al sistema de seguridad que no compruebe los llamadores de su código para el permiso validado.  
   
 > [!CAUTION]
->  Use las aserciones con cuidado, ya que crean vulnerabilidades de seguridad y minan el mecanismo de runtime para imponer las restricciones de seguridad.  
+> Use las aserciones con cuidado, ya que crean vulnerabilidades de seguridad y minan el mecanismo de runtime para imponer las restricciones de seguridad.  
   
  Las aserciones son útiles en situaciones en las que una biblioteca llama a código no administrado o realiza una llamada que requiere un permiso que no está claramente relacionado con el uso previsto de la biblioteca. Por ejemplo, todo el código administrado que llama a código no administrado debe tener **SecurityPermission** con la marca **UnmanagedCode** especificada. No concederá este permiso de forma predeterminada al código que no se origine en el equipo local, como es el caso del código que se descarga desde la intranet local. Por lo tanto, para que el código descargado de la intranet local pueda llamar a una biblioteca que usa código no administrado, la biblioteca debe validar el permiso. Además, algunas bibliotecas podrían realizar llamadas invisibles para los llamadores y que requieren permisos especiales.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "69910717"
  Por ejemplo, suponga que su clase de biblioteca de mucha confianza tiene un método que elimina los archivos. Accede al archivo llamando a una función Win32 no administrada. Un llamador invoca el método **Delete** del código, pasando el nombre del archivo que se va a eliminar, C:\Test.txt. Dentro del método **Delete** , el código crea un <xref:System.Security.Permissions.FileIOPermission> objeto que representa el acceso de escritura a C:\Test.txt. (Se requiere acceso de escritura para eliminar un archivo). A continuación, el código invoca una comprobación de seguridad imperativa llamando al método **Demand** del objeto **FileIOPermission** . Si uno de los llamadores de la pila de llamadas no tiene este permiso, se genera una <xref:System.Security.SecurityException>. Si no se genera ninguna excepción, sabe que todos los llamadores tienen derecho a acceder a C:\Test.txt. Dado que cree que la mayoría de los llamadores no tendrán permiso de acceso a código no administrado, el código crea un <xref:System.Security.Permissions.SecurityPermission> objeto que representa el derecho a llamar a código no administrado y llama al método Assert del objeto. Por último, llama a la función de Win32 no administrada para eliminar C:\Text.txt y devuelve el control al llamador.  
   
 > [!CAUTION]
->  Asegúrese de que su código no utilice aserciones en situaciones en las que su código pueda ser utilizado por otro código para acceder a un recurso que está protegido por el permiso que está validando. Por ejemplo, en el código que escribe en un archivo cuyo nombre se especifica mediante el autor de la llamada como un parámetro, no imponer el **FileIOPermission** para escribir en los archivos porque el código sería abierto para que un tercero no pueda utilizarlo.  
+> Asegúrese de que su código no utilice aserciones en situaciones en las que su código pueda ser utilizado por otro código para acceder a un recurso que está protegido por el permiso que está validando. Por ejemplo, en el código que escribe en un archivo cuyo nombre se especifica mediante el autor de la llamada como un parámetro, no imponer el **FileIOPermission** para escribir en los archivos porque el código sería abierto para que un tercero no pueda utilizarlo.  
   
  Cuando se usa la sintaxis de seguridad imperativa, al llamar al método Assert en varios permisos en el mismo método, se produce una excepción de seguridad. En su lugar, debe crear un objeto **PermissionSet** , pasarle los permisos individuales que desea invocar y, a continuación, llamar al método Assert en el objeto **PermissionSet** . Puede llamar al método **Assert** más de una vez al utilizar la sintaxis de seguridad declarativa.  
   
