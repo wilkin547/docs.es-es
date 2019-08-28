@@ -244,7 +244,7 @@ Un enlace personalizado se construye utilizando uno de <xref:System.ServiceModel
 
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>
 
-- Luego están las actualizaciones de transporte opcionales/elementos de enlace de el transporte opcional actualiza/los elementos de enlace auxiliares:
+- A continuación, se encuentran los elementos de enlace de asistentes/actualizaciones de transporte opcionales:
 
   - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 
