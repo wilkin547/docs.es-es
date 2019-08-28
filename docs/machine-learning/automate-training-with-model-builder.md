@@ -2,18 +2,18 @@
 title: ¿Qué es el Generador de modelos y cómo funciona?
 description: Cómo usar el Generador de modelos de ML.NET para entrenar un modelo de Machine Learning de forma automática
 author: natke
-ms.date: 06/26/2019
+ms.date: 08/07/2019
 ms.custom: overview
-ms.openlocfilehash: 6049db79753986544de18faebfd047aa190af153
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: a871c3a3751a93bdf0104c873215b164616f0664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539804"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611463"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>¿Qué es el Generador de modelos y cómo funciona?
 
-El Generador de modelos de ML.NET es una extensión gráfica fácil de entender de Visual Studio para compilar, entrenar e implementar modelos de Machine Learning personalizados.
+El Generador de modelos de ML.NET es una extensión gráfica intuitiva de Visual Studio para compilar, entrenar e implementar modelos de Machine Learning personalizados.
 
 El Generador de modelos usa aprendizaje automático automatizado (AutoML) para explorar distintos algoritmos y configuraciones de aprendizaje automático a fin de ayudar a encontrar el más adecuado a cada escenario.
 
@@ -28,66 +28,63 @@ Para usar el Generador de modelos no se necesita experiencia previa con el apren
 
 Se pueden incorporar muchos escenarios diferentes al Generador de modelos a fin de generar un modelo de Machine Learning para la aplicación.
 
-Un escenario es una descripción del tipo de predicción que se quiere realizar en los datos. Por ejemplo:
+Un escenario es una descripción del tipo de predicción que se quiere realizar usando los datos. Por ejemplo:
 - predecir el volumen futuro de ventas de productos en función de los datos de ventas históricos
 - clasificar opiniones como positivas o negativas en función de las revisiones de los clientes
 - detectar si una transacción bancaria es fraudulenta
 - dirigir problemas de comentarios de clientes al equipo correcto de la empresa
 
-En el Generador de modelos es necesario asignar el escenario a una [tarea de ML.NET](resources/tasks.md). Puede usar el Generador de modelos para la **regresión** (predicción de números) y la **clasificación** (predicción de categorías).
+## <a name="choose-a-model-type"></a>Elegir un tipo de modelo
 
-### <a name="which-machine-learning-scenario-is-right-for-me"></a>¿Qué escenario de aprendizaje automático es el más adecuado en cada caso?
+En el generador de modelos, debe seleccionar un tipo de modelo de Machine Learning. El tipo de modelo depende del tipo de predicción que esté intentando realizar.
 
-El Generador de modelos incluye plantillas para el análisis de opiniones, la clasificación de problemas, la predicción de precios y escenarios personalizados. Estas plantillas se pueden usar como punto de partida para un escenario de ML.NET concreto.
+En los escenarios que predicen un número, el tipo de modelo de Machine Learning se denomina `regression`.
 
-#### <a name="sentiment-analysis-binary-classification"></a>Análisis de opinión (clasificación binaria)
+En los escenarios que predicen una categoría, el tipo de modelo es `classification`. Hay dos tipos de clasificaciones:
+- la que cuenta con solo dos categorías: `binary classification`.
+- la que cuenta con tres categorías o más: `multiclass classification`.
 
-El análisis de opiniones se puede usar para predecir una opinión positiva o negativa de los comentarios del cliente. Es un ejemplo de la tarea de clasificación binaria.
+### <a name="which-model-type-is-right-for-me"></a>¿Qué tipo de modelo es el adecuado para mí?
 
-La clasificación binaria se usa para clasificar los datos en dos clases (sí o no; correcto o incorrecto; verdadero o falso; positivo o negativo). Se puede usar para responder a preguntas como:
+#### <a name="predict-a-category-when-there-are-only-two-categories"></a>Predecir una categoría (que cuente solo con dos categorías)
 
-- ¿Es este correo electrónico no deseado? (detección de spam)
-- ¿Qué candidatos pueden ser aptos para la pertenencia? (filtrado de solicitudes)
-- ¿Qué cuentas podrían no pagar sus facturas puntualmente? (mitigación de riesgos)
-- ¿Es esta transacción de tarjeta de crédito fraudulenta? (detección de fraudes)
+La clasificación binaria se usa para clasificar los datos en dos categorías (sí o no; correcto o incorrecto; verdadero o falso; positivo o negativo).
+
+![Diagrama en el que se muestran ejemplos de clasificación binaria, como detección de fraudes, mitigación de riesgos y filtrado de aplicaciones](media/binary-classification-examples.png)
+
+El análisis de opiniones se puede usar para predecir una opinión positiva o negativa de los comentarios del cliente. Es un ejemplo de un tipo de clasificación binaria.
 
 Si el escenario requiere clasificación en dos categorías, puede usar esta plantilla con un conjunto de datos propio.
 
-#### <a name="issue-classification-multiclass-classification"></a>Clasificación de problemas (clasificación multiclase)
+#### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>Predecir una categoría (que cuente con tres categorías o más)
 
-La clasificación de problemas se puede usar para clasificar problemas de comentarios de clientes (por ejemplo, en GitHub) mediante el título y la descripción del problema. Es un ejemplo de la tarea de clasificación multiclase.
+La clasificación multiclase puede usarse para clasificar los datos en tres o más clases. 
 
-La clasificación multiclase puede usarse para clasificar los datos en tres o más clases. Se puede usar para responder a preguntas como:
+![Ejemplos de clasificación multiclase que incluyen la clasificación de documentos y productos, el enrutamiento de incidencias de soporte técnico y la priorización de problemas de clientes](media/multiclass-classification-examples.png)
 
-- ¿A qué departamento debo dirigir una incidencia de soporte técnico? (enrutamiento de incidencias de soporte técnico)
-- ¿Cuál es la prioridad del problema de un cliente? (clasificación por orden de prioridad de problemas de clientes)
-- ¿A qué categoría pertenece un producto? (clasificación de productos)
-- ¿Qué tipo de documento? (clasificación de documentos o correo electrónico)
+La clasificación de problemas se puede usar para clasificar problemas de comentarios de clientes (por ejemplo, en GitHub) mediante el título y la descripción del problema. Es un ejemplo del tipo de modelo de clasificación multiclase.
 
 Puede usar la plantilla de clasificación de problemas para el escenario si quiere clasificar los datos en tres o más categorías.
 
-#### <a name="price-prediction-regression"></a>Predicción de precios (regresión)
+#### <a name="predict-a-number"></a>Predecir un número
 
-La predicción de precios puede usarse para predecir los precios de viviendas según la ubicación, el tamaño y otras características del inmueble. Es un ejemplo de la tarea de regresión.
+La regresión se usa para predecir números.
 
-La regresión se usa para predecir números. Se puede usar para responder a preguntas como:
+![Diagrama en el que se muestran ejemplos de regresión, como la predicción de precios, la previsión de ventas y el mantenimiento predictivo](media/regression-examples.png)
 
-- ¿Por qué precio se va a vender una casa? (predicción de precios)
-- ¿Después de cuánto tiempo va a necesitar mantenimiento una pieza mecánica? (mantenimiento predictivo)
-- ¿Cuál es el contenido de humedad de este secador? (supervisión de máquinas)
-- ¿Cuáles van a ser las ventas totales anuales de esta región? (previsión de ventas)
+La predicción de precios puede usarse para predecir los precios de viviendas según la ubicación, el tamaño y otras características del inmueble. Es un ejemplo de un tipo de modelo de regresión.
 
 Puede usar la plantilla de predicción de precios para el escenario si quiere predecir un valor numérico con un conjunto de datos propio.
 
-#### <a name="custom-scenario-choose-your-task"></a>Escenario personalizado (elija la tarea)
+#### <a name="custom-scenario-choose-your-model-type"></a>Escenario personalizado (elija el tipo de modelo)
 
-El escenario personalizado permite elegir una tarea propia. Elija el escenario que más sentido tenga para el problema.
-
-El escenario personalizado permite elegir una tarea de aprendizaje automático propia. En las plantillas anteriores, la tarea de aprendizaje automático se ha ajustado al escenario: clasificación binaria, clasificación multiclase o regresión. En esta plantilla, puede elegir la tarea de Machine Learning que quiere usar en los datos.
+El escenario personalizado permite elegir manualmente un tipo de modelo.
 
 ## <a name="data"></a>Datos
 
-Una vez que se ha asignado el escenario a una tarea, el Generador de modelos pide que se proporcione un conjunto de datos. Los datos se usan para entrenar, evaluar y elegir el mejor modelo para el escenario. También se debe elegir el resultado que se quiere predecir.
+Una vez que ha elegido el tipo de modelo, el generador de modelos pide que se proporcione un conjunto de datos. Los datos se usan para entrenar, evaluar y elegir el mejor modelo para el escenario.
+
+![Diagrama en el que se muestran los pasos del generador de modelos](media/model-builder-steps.png)
 
 ### <a name="choose-the-output-to-predict-label"></a>Selección del resultado que se va a predecir (etiqueta)
 
@@ -104,24 +101,15 @@ La etiqueta es el precio histórico de la vivienda para esa fila de valores de m
 
 ![Tabla donde se muestran las filas y columnas de datos de precios de viviendas con características que constan de etiquetas de tamaño, habitaciones, código postal y precio](media/model-builder-data.png)
 
-### <a name="data-formats"></a>Formatos de datos
-
-El Generador de modelos coloca las siguientes limitaciones en los datos:
-
-- Los datos deben estar almacenados en un archivo (.csv o .tsv con una fila de encabezado) o en una base de datos de SQL Server.
-- Un límite de 1 GB en el conjunto de datos de entrenamiento
-- SQL Server tiene un límite de 100 000 filas para entrenamiento
-- Los datos de SQL Server se copian desde el servidor en el equipo local antes del entrenamiento
-
 ### <a name="example-datasets"></a>Conjuntos de datos de ejemplo
 
 Si aún no tiene datos propios, pruebe uno de estos conjuntos de datos:
 
-|Escenario|Tarea de Machine Learning|Datos|Etiqueta|Características|
+|Escenario|Tipo de modelo|Datos|Etiqueta|Características|
 |-|-|-|-|-|
 |Predicción de precios|regresión|[datos de carreras de taxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Carrera|Tiempo de viaje, distancia|
 |Detección de anomalías|clasificación binaria|[datos de ventas de productos](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Ventas de productos|Mes|
-|análisis de opiniones|clasificación binaria|[datos de comentarios de sitio web](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_SentimentAnalysis/SentimentAnalysis/Data/wikiDetoxAnnotated40kRows.tsv)|Etiqueta (0 si la opinión es negativa, 1 si es positiva)|Comentario, año|
+|análisis de opiniones|clasificación binaria|[datos de comentarios de sitio web](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Etiqueta (0 si la opinión es negativa, 1 si es positiva)|Comentario, año|
 |Detección de fraudes|clasificación binaria|[datos de tarjetas de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Clase (1 si es fraudulenta, en caso contrario, 0)|Cantidad, V1-V28 (características anónimas)|
 |Clasificación de textos|clasificación multiclase|[datos de problemas de GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, descripción|
 
@@ -135,55 +123,11 @@ El entrenamiento es un proceso automático mediante el cual el Generador de mode
 
 Dado que el Generador de modelos usa aprendizaje automático automatizado (AutoML), no requiere ninguna entrada ni ajuste por parte del usuario durante el entrenamiento.
 
-### <a name="how-long-should-i-train-for"></a>¿Durante cuánto tiempo debe entrenarse?
-
-Puede proporcionar un tiempo de entrenamiento. En general, el entrenamiento durante más tiempo da lugar a un modelo más preciso. También se necesita más tiempo de entrenamiento a medida que aumenta el tamaño del conjunto de datos de entrenamiento. En la tabla siguiente se proporcionan algunas directrices de tiempo de entrenamiento para conjuntos de datos de tamaño en aumento.
-
-Tamaño del conjunto de datos  | Tipo de conjunto de datos       | Prom. Tiempo de entrenamiento
-------------- | ------------------ | --------------
-0 - 10 MB     | Numérico y texto   | 10 s
-10 - 100 MB   | Numérico y texto   | 10 min
-100 - 500 MB  | Numérico y texto   | 30 min
-500 - 1 GB    | Numérico y texto   | 60 min
-1 GB o más         | Numérico y texto   | Más de 3 horas
-
-El tiempo exacto de entrenamiento también depende de:
-
-- el tipo de columnas de que se trate, es decir, texto frente a números
-- el tipo de tarea de aprendizaje automático (regresión o clasificación)
-- el número de filas que se usan para el entrenamiento
-- el número de columnas de características que se usan para el entrenamiento
-
-El Generador de modelos se ha probado a escala con un conjunto de datos de 1 TB, pero la creación de un modelo de alta calidad para ese tamaño de conjunto de datos puede durar hasta cuatro días.
-
 ## <a name="evaluate"></a>Evaluate
 
 La evaluación es el proceso de usar el modelo entrenado para realizar predicciones con nuevos datos de prueba y luego medir la calidad de las predicciones.
 
-El Generador de modelos divide los datos de entrenamiento en un conjunto de entrenamiento y un conjunto de prueba. Los datos de entrenamiento (80 %) se usan para entrenar el modelo y los datos de prueba (20 %) se incluyen para evaluar el modelo.  Las métricas usadas para la evaluación dependen de la tarea de Machine Learning. Para obtener más información, vea [Métricas de evaluación de modelos](resources/metrics.md).
-
-### <a name="sentiment-analysis-binary-classification"></a>Análisis de opinión (clasificación binaria)
-
-La métrica predeterminada para los problemas de clasificación binaria es la **precisión**. La precisión define la proporción de predicciones correctas que realiza el modelo en el conjunto de datos de prueba. **Cuanto más cerca de 100 %, mejor es el modelo**.
-
-Otras métricas notificadas, como AUC (área bajo la curva), que mide la tasa de positivos verdaderos frente a la tasa de falsos positivos, deben ser superiores a 0,50 para que los modelos sean aceptables.
-
-Otras métricas, como la puntuación F1, pueden usarse para controlar el equilibrio entre precisión (relación de predicciones correctas con respecto al total de predicciones de esa clase) y coincidencia (proporción de predicciones correctas con respecto a los miembros reales totales de esa clase).
-
-### <a name="issue-classification-multiclass-classification"></a>Clasificación de problemas (clasificación multiclase)
-
-La métrica predeterminada para los problemas de clasificación multiclase es la **microprecisión**. **Cuanto más cerca de 100 %, mejor es el modelo**.
-
-En el caso de los problemas donde los datos se clasifican en varias clases, hay dos tipos de precisión:
-
-- Microprecisión: fracción de predicciones correctas en todas las instancias. En el escenario de clasificación de problemas, la microprecisión es la proporción de problemas entrantes que se asignan a la categoría correcta.
-- Macroprecisión: precisión media en el nivel de clase. En el escenario de clasificación de problemas, la precisión se mide para cada categoría y luego se calcula el promedio de precisión de las categorías. En el caso de esta métrica, todas las clases tienen el mismo peso. En los conjuntos de datos perfectamente equilibrados (donde hay un número igual de ejemplos de cada categoría), la microprecisión y la macroprecisión son lo mismo.
-
-### <a name="price-prediction-regression"></a>Predicción de precios (regresión)
-
-La métrica predeterminada para los problemas de regresión es **RSquared**. 1 es el mejor valor posible. Cuanto más se acerca RSquared a 1, mejor es el modelo.
-
-Otras métricas notificadas, como pérdida absoluta, pérdida al cuadrado y pérdida RMS, pueden usarse para comprender el modelo y compararlo con otros modelos de regresión.
+El Generador de modelos divide los datos de entrenamiento en un conjunto de entrenamiento y un conjunto de prueba. Los datos de entrenamiento (80 %) se usan para entrenar el modelo y los datos de prueba (20 %) se incluyen para evaluar el modelo. El generador de modelos usa métricas para medir el grado de calidad del modelo. Las métricas específicas que se usan dependen del tipo de modelo. Para obtener más información, vea [Métricas de evaluación de modelos](resources/metrics.md).
 
 ## <a name="improve"></a>Mejora
 
@@ -202,5 +146,7 @@ Después de la fase de evaluación, el Generador de modelos genera un archivo de
 Además, el Generador de modelos produce el código que ha generado el modelo, para que pueda entender los pasos llevados a cabo para generar el modelo. También puede usar el código de entrenamiento del modelo para volver a entrenar el modelo con nuevos datos.
 
 ## <a name="whats-next"></a>Pasos adicionales
+
+[Instalar](how-to-guides/install-model-builder.md) la extensión de Visual Studio del generador de modelos
 
 Pruebe la [predicción de precios o cualquier escenario de regresión](tutorials/predict-prices-with-model-builder.md)

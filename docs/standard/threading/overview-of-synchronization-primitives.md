@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24df4140e515483adb94fa542a7063bd2ae2120b
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 31d5df6521b7c420943a7d3d0efcf6e4bee2d3a2
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479794"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666287"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Información general sobre las primitivas de sincronización
 
 .NET proporciona una variedad de tipos que puede usar para sincronizar el acceso a un recurso compartido o coordinar la interacción de subprocesos.
 
 > [!IMPORTANT]
-> Use la misma instancia primitiva de sincronización para proteger todos los accesos a un recurso compartido. Varios subprocesos pueden acceder a un recurso al mismo tiempo si usa diferentes instancias primitivas de sincronización para proteger el acceso a un recurso o algunas partes del código acceden directamente a un recurso.
+> Use la misma instancia primitiva de sincronización para proteger el acceso de un recurso compartido. Si usa instancias primitivas de sincronización distintas para proteger el mismo recurso, se evitará la protección proporcionada por una primitiva de sincronización.
 
 ## <a name="waithandle-class-and-lightweight-synchronization-types"></a>Clase WaitHandle y tipos de sincronización ligeros
 

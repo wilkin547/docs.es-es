@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 57198cb9fb0042a3a74589e2781b3db1a2b829f1
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135681"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963380"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Construcciones de agrupamiento en expresiones regulares
 Las construcciones de agrupamiento definen las subexpresiones de una expresión regular y capturan las subcadenas de una cadena de entrada. Puede utilizar construcciones de agrupamiento para hacer lo siguiente:  
@@ -59,7 +59,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  donde *subexpresión* es cualquier patrón de expresión regular válido. Las capturas que usan paréntesis se numeran automáticamente de izquierda a derecha según el orden de los paréntesis de apertura de la expresión regular, empezando desde uno. La captura con el número cero es el texto coincidente con el patrón de la expresión regular completa.  
   
 > [!NOTE]
->  De manera predeterminada, el elemento de lenguaje `(`*subexpresión*`)` captura la subexpresión coincidente. No obstante, la subexpresión coincidente no se captura si el parámetro <xref:System.Text.RegularExpressions.RegexOptions> del método de coincidencia de patrones de una expresión regular incluye la marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o si se aplica la opción `n` a esta subexpresión (vea [Opciones de grupo](#group_options) más adelante en este tema).  
+> De manera predeterminada, el elemento de lenguaje `(`*subexpresión*`)` captura la subexpresión coincidente. No obstante, la subexpresión coincidente no se captura si el parámetro <xref:System.Text.RegularExpressions.RegexOptions> del método de coincidencia de patrones de una expresión regular incluye la marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o si se aplica la opción `n` a esta subexpresión (vea [Opciones de grupo](#group_options) más adelante en este tema).  
   
  Existen cuatro formas de tener acceso a los grupos capturados:  
   
@@ -108,7 +108,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  donde *nombre* es un nombre de grupo válido, y *subexpresión* es cualquier patrón de expresión regular válido. *nombre* no debe contener ningún carácter de puntuación y no puede comenzar por un número.  
   
 > [!NOTE]
->  Si el parámetro <xref:System.Text.RegularExpressions.RegexOptions> del método de coincidencia de patrones de una expresión regular incluye la marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o si se aplica la opción `n` a esta subexpresión (vea [Opciones de grupo](#group_options) más adelante en este tema), la única forma de capturar una subexpresión es asignar nombres explícitamente a los grupos de captura.  
+> Si el parámetro <xref:System.Text.RegularExpressions.RegexOptions> del método de coincidencia de patrones de una expresión regular incluye la marca <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture?displayProperty=nameWithType> o si se aplica la opción `n` a esta subexpresión (vea [Opciones de grupo](#group_options) más adelante en este tema), la única forma de capturar una subexpresión es asignar nombres explícitamente a los grupos de captura.  
   
  Puede tener acceso a los grupos capturados con nombre de las maneras siguientes:  
   
@@ -190,7 +190,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  La definición del grupo de compensación utiliza *nombre2* como pila. El carácter inicial de cada construcción anidada se coloca en el grupo y en su colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> . Cuando se encuentra una coincidencia con el carácter de cierre, el carácter de apertura correspondiente se quita del grupo, y la colección <xref:System.Text.RegularExpressions.Group.Captures%2A> disminuye en una unidad. Después de buscar las coincidencias con los caracteres de apertura y cierre de todas las construcciones anidadas, *nombre2* estará vacío.  
   
 > [!NOTE]
->  Después de modificar la expresión regular del ejemplo siguiente para que utilice el carácter de apertura y cierre adecuado de una construcción anidada, puede utilizarla con la mayoría de las estructuras anidadas, como expresiones matemáticas o líneas de código de programa que incluyen varias llamadas a métodos anidadas.  
+> Después de modificar la expresión regular del ejemplo siguiente para que utilice el carácter de apertura y cierre adecuado de una construcción anidada, puede utilizarla con la mayoría de las estructuras anidadas, como expresiones matemáticas o líneas de código de programa que incluyen varias llamadas a métodos anidadas.  
   
  En el ejemplo siguiente se usa una definición de grupo de compensación para que coincida con los corchetes angulares de apertura y de cierre (<>) de una cadena de entrada. En el ejemplo se definen dos grupos con nombre, `Open` y `Close`, que se utilizan como una pila para realizar el seguimiento de los pares de corchetes angulares coincidentes. Cada corchete angular de apertura capturado se inserta en la colección de captura del grupo `Open` , y cada corchete angular de cierre capturado se inserta en la colección de captura del grupo `Close` . Mediante la definición del grupo de compensación se comprueba que haya un corchete angular de cierre para cada corchete angular de apertura. Si no lo hay, el subpatrón final, `(?(Open)(?!))`, se evalúa solo si el grupo `Open` no está vacío (y, por consiguiente, si no se han cerrado todas las construcciones anidadas). Si se evalúa el subpatrón final, la coincidencia produce un error, porque el subpatrón `(?!)` es una aserción de búsqueda anticipada negativa de ancho cero que siempre produce un error.  
   
@@ -211,7 +211,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |`[^<>]*`|Coincide con cero o más caracteres que no son corchetes angulares de apertura o cierre.|  
 |`(?'Open'<)`|Coincide con un corchete angular de apertura y se lo asigna a un grupo denominado `Open`.|  
 |`[^<>]*`|Coincide con cero o más caracteres que no son corchetes angulares de apertura o cierre.|  
-|`((?'Open'<)[^<>]*) +`|Coincide con una o más apariciones de un corchete angular de apertura seguido de cero o más caracteres que no son corchetes angulares de apertura o cierre. Este es el segundo grupo de captura.|  
+|`((?'Open'<)[^<>]*)+`|Coincide con una o más apariciones de un corchete angular de apertura seguido de cero o más caracteres que no son corchetes angulares de apertura o cierre. Este es el segundo grupo de captura.|  
 |`(?'Close-Open'>)`|Coincide con un corchete angular de cierre, asigna la subcadena entre el grupo `Open` y el grupo actual al grupo `Close` y elimina la definición del grupo `Open` .|  
 |`[^<>]*`|Coincide con cero o más apariciones de cualquier carácter que no sea un corchete angular de apertura ni de cierre.|  
 |`((?'Close-Open'>)[^<>]*)+`|Coincide con una o más apariciones de un corchete angular de cierre, seguido de cero o más apariciones de cualquier carácter que no sea un corchete angular de apertura ni de cierre. Al buscar una coincidencia con el corchete angular de cierre, asigna la subcadena entre el grupo `Open` y el grupo actual al grupo `Close` , y elimina la definición del grupo `Open` . Éste es el tercer grupo de captura.|  
@@ -234,13 +234,13 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
 |7|`[^<>]*`|Busca caracteres que no sean corchetes angulares después del corchete angular de cierre; no encuentra ninguna coincidencia.|  
 |8|`)+`|El valor del tercer grupo capturado es ">".<br /><br /> El carácter siguiente de la cadena de entrada no es un corchete angular de cierre, por lo que el motor de expresiones regulares no retrocede al subpatrón `((?'Close-Open'>)[^<>]*)` .|  
 |9|`)*`|El valor del primer grupo capturado es "\<abc>".<br /><br /> El carácter siguiente de la cadena de entrada es un corchete angular de apertura, por lo que el motor de expresiones regulares retrocede al subpatrón `(((?'Open'<)` .|  
-|10|`(((?'Open'<)`|Encuentra el corchete angular de apertura de "\<mno>" y se lo asigna al grupo `Open`. Su colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> ahora tiene un solo valor, "<".|  
+|10|`(((?'Open'<)`|Encuentra el corchete angular de apertura de "\<mno" y se lo asigna al grupo `Open`. Su colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> ahora tiene un solo valor, "<".|  
 |11|`[^<>]*`|Encuentra "mno".|  
 |12|`)+`|"<mno" es el valor del segundo grupo capturado.<br /><br /> El carácter siguiente de la cadena de entrada es un corchete angular de apertura, por lo que el motor de expresiones regulares retrocede al subpatrón `(?'Open'<)[^<>]*)` .|  
-|13|`(((?'Open'<)`|Encuentra el corchete angular de apertura de "\<xyz>" y se lo asigna al grupo `Open`. La colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> del grupo `Open` ahora incluye dos capturas: el corchete angular de apertura de "\<mno>" y el corchete angular de apertura de "\<xyz>".|  
+|13|`(((?'Open'<)`|Encuentra el corchete angular de apertura de "\<xyz>" y se lo asigna al grupo `Open`. La colección <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> del grupo `Open` ahora incluye dos capturas: el corchete angular de apertura de "\<mno" y el corchete angular de apertura de "\<xyz>".|  
 |14|`[^<>]*`|Encuentra "xyz".|  
 |15|`)+`|"<xyz" es el valor del segundo grupo capturado.<br /><br /> El carácter siguiente de la cadena de entrada no es un corchete angular de apertura, por lo que el motor de expresiones regulares no retrocede al subpatrón `(?'Open'<)[^<>]*)` .|  
-|16|`((?'Close-Open'>)`|Coincide con el corchete angular de cierre de "\<xyz>". "xyz", asigna la subcadena entre el grupo `Open` y el corchete angular de cierre al grupo `Close` , y elimina el valor actual del grupo `Open` . El valor de la captura anterior (el corchete angular de apertura de "\<mno>") se convierte en el valor actual del grupo `Open`. La colección <xref:System.Text.RegularExpressions.Group.Captures%2A> del grupo `Open` ahora incluye una única captura, el corchete angular de apertura de "\<xyz>".|  
+|16|`((?'Close-Open'>)`|Coincide con el corchete angular de cierre de "\<xyz>". "xyz", asigna la subcadena entre el grupo `Open` y el corchete angular de cierre al grupo `Close` , y elimina el valor actual del grupo `Open` . El valor de la captura anterior (el corchete angular de apertura de "\<mno") se convierte en el valor actual del grupo `Open`. La colección <xref:System.Text.RegularExpressions.Group.Captures%2A> del grupo `Open` ahora incluye una única captura, el corchete angular de apertura de "\<xyz>".|  
 |17|`[^<>]*`|Busca caracteres que no sean corchetes angulares; no encuentra ninguna coincidencia.|  
 |18|`)+`|El valor del tercer grupo capturado es ">".<br /><br /> El carácter siguiente de la cadena de entrada es un corchete angular de cierre, por lo que el motor de expresiones regulares retrocede al subpatrón `((?'Close-Open'>)[^<>]*)` .|  
 |19|`((?'Close-Open'>)`|Encuentra el último corchete angular de cierre de "xyz>>", asigna "mno\<xyz>" (la subcadena entre el grupo `Open` y el corchete angular de cierre) al grupo `Close` y elimina el valor actual del grupo `Open`. El grupo `Open` está ahora vacío.|  
@@ -261,7 +261,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  donde *subexpresión* es cualquier patrón de expresión regular válido. La construcción de grupo sin captura se utiliza normalmente cuando un cuantificador se aplica a un grupo, pero las subcadenas capturadas por el grupo no tienen ningún interés.  
   
 > [!NOTE]
->  Si una expresión regular incluye construcciones de agrupamiento anidadas, no se aplica una construcción de grupo sin captura exterior a las construcciones de grupo anidadas interiores.  
+> Si una expresión regular incluye construcciones de agrupamiento anidadas, no se aplica una construcción de grupo sin captura exterior a las construcciones de grupo anidadas interiores.  
   
  En el ejemplo siguiente se muestra una expresión regular que incluye grupos sin captura. Observe que la salida no incluye ningún grupo capturado.  
   
@@ -287,7 +287,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  donde *subexpresión* es cualquier patrón de expresión regular válido. Por ejemplo, `(?i-s:)` activa la opción que no hace distinción entre mayúsculas y minúsculas y deshabilita el modo de una sola línea. Para obtener más información sobre las opciones insertadas que puede especificar, vea [Opciones de expresiones regulares](../../../docs/standard/base-types/regular-expression-options.md).  
   
 > [!NOTE]
->  Puede especificar opciones que se apliquen a una expresión regular completa en lugar de a una subexpresión usando un constructor de la clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o un método estático. También puede especificar opciones insertadas que se aplican después de un punto concreto en una expresión regular usando la construcción de lenguaje `(?imnsx-imnsx)` .  
+> Puede especificar opciones que se apliquen a una expresión regular completa en lugar de a una subexpresión usando un constructor de la clase <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> o un método estático. También puede especificar opciones insertadas que se aplican después de un punto concreto en una expresión regular usando la construcción de lenguaje `(?imnsx-imnsx)` .  
   
  La construcción de opciones de grupo no es un grupo de captura. Es decir, aunque cualquier parte de una cadena capturada por *subexpresión* se incluye en la coincidencia, no se incluye en un grupo capturado ni se usa para rellenar el objeto <xref:System.Text.RegularExpressions.GroupCollection> .  
   
@@ -396,7 +396,7 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
   
  donde *subexpresión* es cualquier patrón de expresión regular. Para que se produzca una coincidencia, *subexpresión* no debe encontrarse en la cadena de entrada a la izquierda de la posición actual. Sin embargo, cualquier subcadena que no coincida con `subexpression` no se incluye en el resultado de la coincidencia.  
   
- Las aserciones de búsqueda tardía negativa de ancho cero se usan normalmente al principio de las expresiones regulares. El patrón que definen impide una coincidencia en la cadena que sigue. También se usan para limitar el retroceso cuando el último carácter o caracteres de un grupo capturado no debe ser uno o varios de los caracteres que coinciden con el patrón de expresión regular de dicho grupo. Por ejemplo, si un grupo captura todos los caracteres que se usan para formar palabras consecutivos, se puede usar una aserción de búsqueda tardía positiva de ancho cero para requerir que el último carácter no sea de subrayado (_).  
+ Las aserciones de búsqueda tardía negativa de ancho cero se usan normalmente al principio de las expresiones regulares. El patrón que definen impide una coincidencia en la cadena que sigue. También se usan para limitar el retroceso cuando el último carácter o caracteres de un grupo capturado no debe ser uno o varios de los caracteres que coinciden con el patrón de expresión regular de dicho grupo. Por ejemplo, si un grupo captura todos los caracteres que se usan para formar palabras consecutivos, se puede usar una aserción de búsqueda tardía positiva de ancho cero para requerir que el último carácter no sea de subrayado (\_).  
   
  El ejemplo siguiente busca la fecha de cualquier día de la semana que no sea fin de semana (es decir, que no sea ni sábado ni domingo).  
   
@@ -459,16 +459,16 @@ Las construcciones de agrupamiento definen las subexpresiones de una expresión 
  [!code-csharp[RegularExpressions.Language.Grouping#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/objectmodel1.cs#4)]
  [!code-vb[RegularExpressions.Language.Grouping#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/objectmodel1.vb#4)]  
   
- El patrón de expresión regular `\b(\w+)\W+)+` extrae palabras individuales de una cadena. Se define como se muestra en la tabla siguiente.  
+ El patrón de expresión regular `(\b(\w+)\W+)+` extrae palabras individuales de una cadena. Se define como se muestra en la tabla siguiente.  
   
 |Modelo|Descripción|  
 |-------------|-----------------|  
 |`\b`|Iniciar la búsqueda de coincidencias en un límite de palabras.|  
 |`(\w+)`|Buscar coincidencias con uno o más caracteres alfabéticos. Juntos, estos caracteres forman una palabra. Este es el segundo grupo de captura.|  
 |`\W+`|Coincide con uno o varios caracteres que no se usan para formar palabras.|  
-|`(\w+)\W+)+`|Coincide una o varias veces con el patrón de uno o varios caracteres que se usan para formar palabras seguidos de uno o varios caracteres que no se usan para formar palabras. Este es el primer grupo de captura.|  
+|`(\b(\w+)\W+)`|Coincide una o varias veces con el patrón de uno o varios caracteres que se usan para formar palabras seguidos de uno o varios caracteres que no se usan para formar palabras. Este es el primer grupo de captura.|  
   
- El primer grupo de captura coincide con cada palabra de la frase. El segundo grupo de captura coincide con cada palabra, junto con la puntuación y el espacio en blanco que siguen a la palabra. El objeto <xref:System.Text.RegularExpressions.Group> cuyo índice es 2 proporciona información sobre el texto coincidente con el segundo grupo de captura. El conjunto de palabras completo capturado por el grupo de captura está disponible desde el objeto <xref:System.Text.RegularExpressions.CaptureCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
+ El segundo grupo de captura coincide con cada palabra de la frase. El primer grupo de captura coincide con cada palabra, junto con la puntuación y el espacio en blanco que siguen a la palabra. El objeto <xref:System.Text.RegularExpressions.Group> cuyo índice es 2 proporciona información sobre el texto coincidente con el segundo grupo de captura. El conjunto de palabras completo capturado por el grupo de captura está disponible desde el objeto <xref:System.Text.RegularExpressions.CaptureCollection> devuelto por la propiedad <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> .  
   
 ## <a name="see-also"></a>Vea también
 
