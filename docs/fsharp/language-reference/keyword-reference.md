@@ -2,12 +2,12 @@
 title: Referencia de palabras clave
 description: Busque vínculos a información sobre todas las F# palabras clave del lenguaje.
 ms.date: 05/16/2016
-ms.openlocfilehash: 680b270a99eff7aa98652579d2fd31b4b05080ca
-ms.sourcegitcommit: 8c6426a3d2adff5fbcbe1fed0f28eda718c15351
+ms.openlocfilehash: 8c2df9d081caae48489e3e316ca158f3b9106efb
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68733479"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107039"
 ---
 # <a name="keyword-reference"></a>Referencia de palabras clave
 
@@ -92,44 +92,44 @@ En la tabla siguiente se F# muestran todas las palabras clave en orden alfabéti
 
 Los tokens siguientes están reservados en F# porque son palabras clave en el lenguaje OCaml:
 
-* `asr`
-* `land`
-* `lor`
-* `lsl`
-* `lsr`
-* `lxor`
-* `mod`
-* `sig`
+- `asr`
+- `land`
+- `lor`
+- `lsl`
+- `lsr`
+- `lxor`
+- `mod`
+- `sig`
 
 Si usa la `--mlcompatibility` opción del compilador, las palabras clave anteriores se pueden usar como identificadores.
 
 Los tokens siguientes están reservados como palabras clave para una futura ampliación F# del lenguaje:
 
-* `atomic`
-* `break`
-* `checked`
-* `component`
-* `const`
-* `constraint`
-* `constructor`
-* `continue`
-* `eager`
-* `event`
-* `external`
-* `functor`
-* `include`
-* `method`
-* `mixin`
-* `object`
-* `parallel`
-* `process`
-* `protected`
-* `pure`
-* `sealed`
-* `tailcall`
-* `trait`
-* `virtual`
-* `volatile`
+- `atomic`
+- `break`
+- `checked`
+- `component`
+- `const`
+- `constraint`
+- `constructor`
+- `continue`
+- `eager`
+- `event`
+- `external`
+- `functor`
+- `include`
+- `method`
+- `mixin`
+- `object`
+- `parallel`
+- `process`
+- `protected`
+- `pure`
+- `sealed`
+- `tailcall`
+- `trait`
+- `virtual`
+- `volatile`
 
 ## <a name="see-also"></a>Vea también
 

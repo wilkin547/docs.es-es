@@ -11,49 +11,49 @@ helpviewer_keywords:
 ms.assetid: 6b7b4de9-da07-47e3-8f4c-823f81798ee7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71fc4e04c87dfa3b83eabb06361d1da94a512a5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98813bf6685be78d33ebd5cc5e8c07a61a811c25
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026541"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106758"
 ---
 # <a name="how-to-restore-time-zones-from-an-embedded-resource"></a>Procedimiento para restaurar zonas horarias de un recurso incrustado
 
-Este tema describe cómo restaurar zonas horarias que se han guardado en un archivo de recursos. Para obtener información e instrucciones acerca de cómo guardar zonas horarias, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md).
+En este tema se describe cómo restaurar zonas horarias que se han guardado en un archivo de recursos. Para obtener información e instrucciones acerca de cómo guardar zonas [horarias, consulte Cómo: Guardar zonas horarias en un recurso](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)incrustado.
 
-### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>Para deserializar un objeto TimeZoneInfo de un recurso incrustado
+### <a name="to-deserialize-a-timezoneinfo-object-from-an-embedded-resource"></a>Para deserializar un objeto TimeZoneInfo desde un recurso incrustado
 
-1. Si la zona horaria va a recuperar no es una zona horaria personalizada, intente crear instancias mediante la <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> método.
+1. Si la zona horaria que se va a recuperar no es una zona horaria personalizada, intente crear una instancia de ella <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> mediante el método.
 
-2. Crear una instancia de un <xref:System.Resources.ResourceManager> pasando el nombre completo del archivo de recursos incrustado y una referencia al ensamblado que contiene el archivo de recursos.
+2. Cree una instancia <xref:System.Resources.ResourceManager> de un objeto pasando el nombre completo del archivo de recursos incrustado y una referencia al ensamblado que contiene el archivo de recursos.
 
-   Si no se puede determinar el nombre completo del archivo de recursos incrustado, utilice la [Ildasm.exe (Desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar el manifiesto del ensamblado. Un `.mresource` entrada identifica el recurso. En el ejemplo, es el nombre completo del recurso `SerializeTimeZoneData.SerializedTimeZones`.
+   Si no puede determinar el nombre completo del archivo de recursos incrustado, use [Ildasm. exe (desensamblador de IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) para examinar el manifiesto del ensamblado. Una `.mresource` entrada identifica el recurso. En el ejemplo, el nombre completo del recurso es `SerializeTimeZoneData.SerializedTimeZones`.
 
-   Si el archivo de recursos está incrustado en el mismo ensamblado que contiene el código de creación de instancias de la zona horaria, puede recuperar una referencia a él mediante una llamada a la `static` (`Shared` en Visual Basic) <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> método.
+   Si el archivo de recursos está incrustado en el mismo ensamblado que contiene el código de creación de instancias de zona horaria, puede recuperar una referencia `static` a`Shared` él llamando al <xref:System.Reflection.Assembly.GetExecutingAssembly%2A> método (en Visual Basic).
 
-3. Si la llamada a la <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> método se produce un error, o si es una zona horaria personalizada que se creará una instancia, recuperar una cadena que contiene la zona horaria serializada mediante una llamada a la <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> método.
+3. Si se produce un error <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> en la llamada al método o si se va a crear una instancia de una zona horaria personalizada, recupere una cadena que contenga la zona <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> horaria serializada llamando al método.
 
-4. Deserializar los datos de zona horaria mediante una llamada a la <xref:System.TimeZoneInfo.FromSerializedString%2A> método.
+4. Deserializa los datos de la zona horaria llamando al <xref:System.TimeZoneInfo.FromSerializedString%2A> método.
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente ejemplo se deserializa un <xref:System.TimeZoneInfo> objeto almacenado en un archivo de recursos de .NET XML incrustado.
+En el siguiente ejemplo se deserializa <xref:System.TimeZoneInfo> un objeto almacenado en un archivo de recursos de .net XML incrustado.
 
 [!code-csharp[TimeZone2.Serialization#3](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#3)]
 [!code-vb[TimeZone2.Serialization#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#3)]
 
-Este código muestra el control de excepciones para asegurarse de que un <xref:System.TimeZoneInfo> objeto requerido por la aplicación está presente. Primero intenta crear una instancia de un <xref:System.TimeZoneInfo> objeto recuperarlos desde el registro mediante el <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> método. Si no pueden crearse instancias de la zona horaria, el código recupera del archivo de recursos incrustado.
+Este código muestra el control de excepciones para asegurarse de <xref:System.TimeZoneInfo> que existe un objeto requerido por la aplicación. Primero se intenta crear una instancia de <xref:System.TimeZoneInfo> un objeto mediante la recuperación del registro mediante el <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> método. Si no se puede crear una instancia de la zona horaria, el código la recupera del archivo de recursos incrustado.
 
-Porque datos para las zonas horarias personalizadas (zonas horarias que crea una instancia mediante el <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> método) no se almacenan en el registro, el código no llama a la <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> para crear instancias de la zona horaria para Palmer, Antártida. En su lugar, busca inmediatamente en el archivo de recursos incrustado para recuperar una cadena que contiene los datos de la zona horaria antes de llamar a la <xref:System.TimeZoneInfo.FromSerializedString%2A> método.
+Dado <xref:System.TimeZoneInfo.FindSystemTimeZoneById%2A> que los datos de las zonas horarias personalizadas (zonas horarias <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> a las que se ha creado una instancia mediante el método) no se almacenan en el registro, el código no llama a para crear una instancia de la zona horaria de Palmer, Antártida. En su lugar, busca inmediatamente en el archivo de recursos incrustado para recuperar una cadena que contiene los datos de la zona horaria antes <xref:System.TimeZoneInfo.FromSerializedString%2A> de llamar al método.
 
 ## <a name="compiling-the-code"></a>Compilación del código
 
 Para este ejemplo se necesita:
 
-* Que se agregarán al proyecto una referencia a System.Windows.Forms.dll y System.Core.dll.
+- Que se va a agregar al proyecto una referencia a System. Windows. Forms. dll y System. Core. dll.
 
-* Que se importarán los espacios de nombres siguientes:
+- Que se importen los espacios de nombres siguientes:
 
   [!code-csharp[TimeZone2.Serialization#2](../../../samples/snippets/csharp/VS_Snippets_CLR/TimeZone2.Serialization/cs/SerializeTimeZoneData.cs#2)]
   [!code-vb[TimeZone2.Serialization#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/TimeZone2.Serialization/vb/SerializeTimeZoneData.vb#2)]

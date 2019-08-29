@@ -19,60 +19,60 @@ helpviewer_keywords:
 ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ea44b29eaa0273baadbf02093108bc4da912a3e5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026528"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106742"
 ---
 # <a name="saving-and-restoring-time-zones"></a>Guardado y restauración de zonas horarias
 
-La <xref:System.TimeZoneInfo> clase se basa en el registro para recuperar los datos de zona horaria predefinidos. Sin embargo, el registro es una estructura dinámica. Además, se usa la información de zona horaria que el registro contiene el sistema operativo principalmente para controlar las conversiones y los ajustes de hora para el año actual. Esto tiene dos implicaciones importantes para las aplicaciones que dependen de datos de zona horaria precisos:
+La <xref:System.TimeZoneInfo> clase se basa en el registro para recuperar los datos de zona horaria predefinidos. Sin embargo, el registro es una estructura dinámica. Además, el sistema operativo usa la información de zona horaria que el registro contiene principalmente para controlar los ajustes de tiempo y las conversiones del año actual. Esto tiene dos implicaciones importantes en las aplicaciones que se basan en datos de zona horaria precisos:
 
-* No se puede definir una zona horaria que se requiere una aplicación en el registro, o es posible que se han cambiado o quitado del registro.
+- Es posible que una zona horaria requerida por una aplicación no se defina en el registro o que se le haya cambiado el nombre o que se haya quitado del registro.
 
-* Una zona horaria que se define en el registro puede carecer de información sobre las reglas de ajuste especial que son necesarios para las conversiones de zona horaria históricos.
+- Una zona horaria que se define en el registro puede carecer de información sobre las reglas de ajuste concretas que son necesarias para las conversiones de zona horaria históricas.
 
-La <xref:System.TimeZoneInfo> clase trata estas limitaciones a través de su compatibilidad para la serialización (Guardar) y deserialización (restaurar) de datos de zona horaria.
+La <xref:System.TimeZoneInfo> clase aborda estas limitaciones a través de su compatibilidad con la serialización (almacenamiento) y la deserialización (restauración) de datos de zona horaria.
 
-## <a name="time-zone-serialization-and-deserialization"></a>La zona horaria serialización y deserialización
+## <a name="time-zone-serialization-and-deserialization"></a>Serialización y deserialización de zona horaria
 
-Guardado y restauración de una zona horaria por serializar y deserializar los datos de zona horaria implica simplemente dos llamadas de método:
+Guardar y restaurar una zona horaria mediante la serialización y deserialización de datos de zona horaria implica solo dos llamadas al método:
 
-* Puede serializar un <xref:System.TimeZoneInfo> objeto mediante una llamada a ese objeto <xref:System.TimeZoneInfo.ToSerializedString%2A> método. El método no toma ningún parámetro y devuelve una cadena que contiene información de zona horaria.
+- Puede serializar un <xref:System.TimeZoneInfo> objeto llamando al método de <xref:System.TimeZoneInfo.ToSerializedString%2A> ese objeto. El método no toma ningún parámetro y devuelve una cadena que contiene información de zona horaria.
 
-* Puede deserializar un <xref:System.TimeZoneInfo> objeto a partir de una cadena serializada pasando esa cadena a la `static` (`Shared` en Visual Basic) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> método.
+- Puede deserializar un <xref:System.TimeZoneInfo> objeto a partir de una cadena serializada pasando esa cadena `static` al método (`Shared` en Visual Basic) <xref:System.TimeZoneInfo.FromSerializedString%2A?displayProperty=nameWithType> .
 
 ## <a name="serialization-and-deserialization-scenarios"></a>Escenarios de serialización y deserialización
 
-La capacidad de guardar (o serializar) un <xref:System.TimeZoneInfo> objeto en una cadena y a restaurar (o deserializar) para su uso posterior aumenta la utilidad y la flexibilidad de la <xref:System.TimeZoneInfo> clase. Esta sección examinan algunas de las situaciones en que la serialización y deserialización son más útiles.
+La capacidad de guardar (o serializar) <xref:System.TimeZoneInfo> un objeto en una cadena y restaurar (o deserializar) para su uso posterior aumenta la utilidad y la flexibilidad de la <xref:System.TimeZoneInfo> clase. En esta sección se examinan algunas de las situaciones en las que la serialización y deserialización son más útiles.
 
-### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a>Serializar y deserializar los datos de zona horaria en una aplicación
+### <a name="serializing-and-deserializing-time-zone-data-in-an-application"></a>Serialización y deserialización de datos de zona horaria en una aplicación
 
-Una zona horaria serializada se puede restaurar desde una cadena cuando sea necesario. Una aplicación podría hacer esto si la zona horaria que se puede recuperada del registro no puede convertir correctamente una fecha y hora dentro de un intervalo de fechas determinado. Por ejemplo, los datos de zona horaria en el registro de Windows XP es compatible con una única regla de ajuste, mientras que las zonas horarias definidas en el registro de Windows Vista normalmente proporcionan información acerca de las dos reglas de ajuste. Esto significa que las conversiones de tiempo históricos pueden ser inexactos. Serialización y deserialización de datos de zona horaria pueden controlar esta limitación.
+Una zona horaria serializada se puede restaurar a partir de una cadena cuando sea necesario. Una aplicación podría hacer esto si la zona horaria recuperada del registro no puede convertir correctamente una fecha y hora en un intervalo de fechas determinado. Por ejemplo, los datos de zona horaria en el registro de Windows XP admiten una única regla de ajuste, mientras que las zonas horarias definidas en el registro de Windows Vista normalmente proporcionan información sobre dos reglas de ajuste. Esto significa que las conversiones de hora históricas pueden ser inexactas. La serialización y deserialización de datos de zona horaria pueden controlar esta limitación.
 
-En el ejemplo siguiente, un personalizado <xref:System.TimeZoneInfo> se define la clase que no tiene ninguna regla de ajuste para representar los Estados Unidos. Zona de hora estándar de 1883 hasta 1917, antes de la introducción del horario de verano en Estados Unidos. La zona horaria personalizada se serializa en una variable que tiene ámbito global. El método de conversión de zona horaria, `ConvertUtcTime`, se pasa a veces de hora Universal coordinada (UTC) para convertir. Si la fecha y hora se produce en 1917 o versiones anteriores, la zona horaria estándar del este personalizada se restaura desde una cadena serializada y reemplaza la zona horaria que se puede recuperada del registro.
+En el ejemplo siguiente, se define <xref:System.TimeZoneInfo> una clase personalizada que no tiene reglas de ajuste para representar el Zona horaria estándar del este de 1883 a 1917, antes de la introducción del horario de verano en el Estados Unidos. La zona horaria personalizada se serializa en una variable que tiene ámbito global. El método de conversión de zona `ConvertUtcTime`horaria,, se pasa a la hora universal coordinada (UTC) horas que se va a convertir. Si la fecha y la hora se producen en 1917 o versiones anteriores, la zona horaria estándar del este se restaura a partir de una cadena serializada y reemplaza la zona horaria recuperada del registro.
 
 [!code-csharp[System.TimeZone2.Serialization.1#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/cs/Serialization.cs#1)]
 [!code-vb[System.TimeZone2.Serialization.1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.1/vb/Serialization.vb#1)]
 
 ### <a name="handling-time-zone-exceptions"></a>Control de excepciones de zona horaria
 
-Dado que el registro es una estructura dinámica, su contenido está sujeto a modificación accidental o deliberada. Esto significa que una zona horaria que debe definirse en el registro y que es necesario para una aplicación se ejecute correctamente puede que falte. Sin compatibilidad para la zona horaria serialización y deserialización, tiene pocas opciones, sino para controlar el resultado <xref:System.TimeZoneNotFoundException> al finalizar la aplicación. Sin embargo, mediante el uso de zona horaria serialización y deserialización, puede controlar inesperado <xref:System.TimeZoneNotFoundException> mediante la restauración de la zona horaria necesaria de una cadena serializada y la aplicación seguirá ejecutándose.
+Dado que el registro es una estructura dinámica, su contenido está sujeto a modificaciones accidentales o deliberadas. Esto significa que una zona horaria que debe definirse en el registro y que es necesaria para que una aplicación se ejecute correctamente puede que no esté presente. Sin compatibilidad con la serialización y deserialización de zona horaria, tiene poca elección pero controla el resultado <xref:System.TimeZoneNotFoundException> al finalizar la aplicación. Sin embargo, mediante la serialización y deserialización de zona horaria, puede controlar un <xref:System.TimeZoneNotFoundException> inesperado restaurando la zona horaria necesaria a partir de una cadena serializada y la aplicación continuará ejecutándose.
 
-El ejemplo siguiente se crea y serializa una zona horaria estándar Central personalizada. A continuación, intenta recuperar la zona horaria estándar Central en el registro. Si inicia la operación de recuperación ya sea un <xref:System.TimeZoneNotFoundException> o <xref:System.InvalidTimeZoneException>, el controlador de excepciones deserializa la zona horaria.
+En el ejemplo siguiente se crea y serializa una zona horaria estándar central personalizada. A continuación, intenta recuperar la zona horaria estándar central del registro. Si la operación de recuperación inicia <xref:System.TimeZoneNotFoundException> <xref:System.InvalidTimeZoneException>o, el controlador de excepciones deserializa la zona horaria.
 
 [!code-csharp[System.TimeZone2.Serialization.2#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/cs/Serialization2.cs#1)]
 [!code-vb[System.TimeZone2.Serialization.2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Serialization.2/vb/Serialization2.vb#1)]
 
-### <a name="storing-a-serialized-string-and-restoring-it-when-needed"></a>Almacenar una cadena serializada y restaurarlo cuando sea necesario
+### <a name="storing-a-serialized-string-and-restoring-it-when-needed"></a>Almacenar una cadena serializada y restaurarla cuando sea necesario
 
-Los ejemplos anteriores tiene almacenada información de zona horaria a una variable de cadena y restaurar cuando sea necesario. Sin embargo, la cadena que contiene información de zona sí se puede almacenar en algún medio de almacenamiento, como un archivo externo, un archivo de recursos de tiempo serializada se incrusta en la aplicación o el registro. (Tenga en cuenta que se debe almacenar información sobre zonas horarias personalizadas además de las claves de zona horaria del sistema en el registro.)
+En los ejemplos anteriores se ha almacenado información de zona horaria en una variable de cadena y se ha restaurado cuando es necesario. Sin embargo, la cadena que contiene la información de zona horaria serializada se puede almacenar en un medio de almacenamiento, como un archivo externo, un archivo de recursos incrustado en la aplicación o el registro. (Tenga en cuenta que la información acerca de las zonas horarias personalizadas debe almacenarse además de las claves de zona horaria del sistema en el registro).
 
-Almacenar una cadena de zona horaria serializada de esta manera, también separa la rutina de creación de la zona horaria desde la propia aplicación. Por ejemplo, puede ejecutar una rutina de creación de la zona horaria y se cree un archivo de datos que contiene información histórica de zonas horarias que puede usar una aplicación. El archivo de datos puede ser, a continuación, se puede instalar con la aplicación y se puede abrir y uno o varios de sus zonas horarias se pueden deserializar cuando la aplicación los necesita.
+Almacenar una cadena de zona horaria serializada de esta manera también separa la rutina de creación de zona horaria de la propia aplicación. Por ejemplo, una rutina de creación de zona horaria puede ejecutar y crear un archivo de datos que contiene información histórica de zona horaria que una aplicación puede utilizar. El archivo de datos se puede instalar con la aplicación y se puede abrir y una o varias de sus zonas horarias se pueden deserializar cuando la aplicación los necesite.
 
-Para obtener un ejemplo que usa un recurso incrustado para almacenar los datos serializados de zona horaria, vea [Cómo: Guardar zonas horarias en un recurso incrustado](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) y [Cómo: Restaurar zonas horarias de un recurso incrustado](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md).
+Para obtener un ejemplo en el que se usa un recurso incrustado para almacenar datos de [zona horaria serializados, consulte How to: Guardar zonas horarias en un recurso](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md) incrustado y [cómo: Restaure las zonas horarias de](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)un recurso incrustado.
 
 ## <a name="see-also"></a>Vea también
 

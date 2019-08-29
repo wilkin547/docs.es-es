@@ -2,12 +2,12 @@
 title: 'Tutorial: Acceso a la web mediante Async y Await (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 7240e78614353249c82e84feac66137828a589ed
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 225046992badba7013193163a191dbf068f0da6a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630987"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106958"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Tutorial: Acceso a la web mediante Async y Await (Visual Basic)
 
@@ -22,17 +22,17 @@ Si no desea compilar las aplicaciones por su cuenta, puede descargar "ejemplo de
 En este tutorial, se realizarán las siguientes tareas:
 
 > [!div class="checklist"]
-> * [Crear una aplicación de WPF](#create-a-wpf-application)
-> * [Diseñar un MainWindow de WPF sencillo](#design-a-simple-wpf-mainwindow)
-> * [Agregar una referencia](#add-a-reference)
-> * [Agregar instrucciones Imports necesarias](#add-necessary-imports-statements)
-> * [Crear una aplicación sincrónica](#create-a-synchronous-application)
-> * [Probar la solución sincrónica](#test-the-synchronous-solution)
-> * [Convertir GetURLContents en un método asincrónico](#convert-geturlcontents-to-an-asynchronous-method)
-> * [Convertir SumPageSizes en un método asincrónico](#convert-sumpagesizes-to-an-asynchronous-method)
-> * [Convertir startButton_Click en un método asincrónico](#convert-startbutton_click-to-an-asynchronous-method)
-> * [Probar la solución asincrónica](#test-the-asynchronous-solution)
-> * [Reemplazar el método GetURLContentsAsync por un método .NET Framework](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
+> - [Crear una aplicación de WPF](#create-a-wpf-application)
+> - [Diseñar un MainWindow de WPF sencillo](#design-a-simple-wpf-mainwindow)
+> - [Agregar una referencia](#add-a-reference)
+> - [Agregar instrucciones Imports necesarias](#add-necessary-imports-statements)
+> - [Crear una aplicación sincrónica](#create-a-synchronous-application)
+> - [Probar la solución sincrónica](#test-the-synchronous-solution)
+> - [Convertir GetURLContents en un método asincrónico](#convert-geturlcontents-to-an-asynchronous-method)
+> - [Convertir SumPageSizes en un método asincrónico](#convert-sumpagesizes-to-an-asynchronous-method)
+> - [Convertir startButton_Click en un método asincrónico](#convert-startbutton_click-to-an-asynchronous-method)
+> - [Probar la solución asincrónica](#test-the-asynchronous-solution)
+> - [Reemplazar el método GetURLContentsAsync por un método .NET Framework](#replace-the-geturlcontentsasync-method-with-a-net-framework-method)
 
 Vea la sección [ejemplo](#example) para ver el ejemplo asincrónico completo.
 

@@ -2,12 +2,12 @@
 title: Parámetros y argumentos
 description: Obtenga información F# sobre la compatibilidad de lenguajes para definir parámetros y pasar argumentos a funciones, métodos y propiedades.
 ms.date: 05/16/2016
-ms.openlocfilehash: 561cefb1d437b2f38f6ee4ca37cd955235ca06fa
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 67e82d031c4b22bc30a6f278d9698298ccff2e21
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627318"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106605"
 ---
 # <a name="parameters-and-arguments"></a>Parámetros y argumentos
 
@@ -163,9 +163,9 @@ En este caso, el compilador genera una advertencia y omitirá ambos atributos po
 
 Pasar un F# valor por referencia implica [byrefs](byrefs.md), que son tipos de puntero administrados. Instrucciones para el tipo que se va a usar es la siguiente:
 
-* Use `inref<'T>` si solo necesita leer el puntero.
-* Use `outref<'T>` si solo necesita escribir en el puntero.
-* Use `byref<'T>` si necesita leer y escribir en el puntero.
+- Use `inref<'T>` si solo necesita leer el puntero.
+- Use `outref<'T>` si solo necesita escribir en el puntero.
+- Use `byref<'T>` si necesita leer y escribir en el puntero.
 
 ```fsharp
 let example1 (x: inref<int>) = printfn "It's %d" x

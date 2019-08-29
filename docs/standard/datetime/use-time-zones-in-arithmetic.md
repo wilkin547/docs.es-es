@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d504aa9ad7d6e4084192a2434ac408e8fa7a041
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 417d8f00c9323f096a2d6228e853a55b1573f48c
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588544"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106715"
 ---
 # <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Procedimiento para usar zonas horarias en operaciones aritméticas de fecha y hora
 
-Normalmente, al realizar la fecha y hora aritmético mediante <xref:System.DateTime> o <xref:System.DateTimeOffset> valores, el resultado no refleja las reglas de ajuste de zona horaria. Esto es cierto incluso cuando la zona horaria del valor de fecha y hora es claramente identificable (por ejemplo, cuando el <xref:System.DateTime.Kind%2A> propiedad está establecida en <xref:System.DateTimeKind.Local>). En este tema se muestra cómo realizar operaciones aritméticas en valores de fecha y hora que pertenecen a una zona horaria determinada. Los resultados de las operaciones aritméticas reflejarán las reglas de ajuste de la zona horaria.
+Normalmente, cuando se realizan operaciones aritméticas de fecha y <xref:System.DateTime> hora <xref:System.DateTimeOffset> con valores o, el resultado no refleja ninguna regla de ajuste de zona horaria. Esto ocurre incluso cuando la zona horaria del valor de fecha y hora es claramente identificable (por ejemplo, cuando la <xref:System.DateTime.Kind%2A> propiedad está establecida en <xref:System.DateTimeKind.Local>). En este tema se muestra cómo realizar operaciones aritméticas en valores de fecha y hora que pertenecen a una zona horaria determinada. Los resultados de las operaciones aritméticas reflejarán las reglas de ajuste de la zona horaria.
 
 ### <a name="to-apply-adjustment-rules-to-date-and-time-arithmetic"></a>Para aplicar las reglas de ajuste a la fecha y hora aritmético
 
-1. Implemente algún método para acoplar estrechamente un valor de fecha y hora con la zona horaria a la que pertenece. Por ejemplo, declare una estructura que incluya tanto el valor de fecha y hora como su zona horaria. En el ejemplo siguiente se usa este enfoque para vincular un <xref:System.DateTime> valor con su zona horaria.
+1. Implemente algún método para acoplar estrechamente un valor de fecha y hora con la zona horaria a la que pertenece. Por ejemplo, declare una estructura que incluya tanto el valor de fecha y hora como su zona horaria. En el ejemplo siguiente se usa este enfoque para <xref:System.DateTime> vincular un valor con su zona horaria.
 
    [!code-csharp[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#6)]
    [!code-vb[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#6)]
 
-2. Convertir una hora en hora Universal coordinada (UTC) llamando el <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> método o la <xref:System.TimeZoneInfo.ConvertTime%2A> método.
+2. Convierta una hora en hora universal coordinada (UTC) llamando al <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> método o al <xref:System.TimeZoneInfo.ConvertTime%2A> método.
 
 3. Realice la operación aritmética en la hora UTC.
 
-4. Convertir la hora a la hora UTC a la zona horaria asociada de la hora original llamando a la <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> método.
+4. Convierta la hora de la hora UTC a la zona horaria asociada a la hora <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> original llamando al método.
 
 ## <a name="example"></a>Ejemplo
 
@@ -43,24 +43,24 @@ En el ejemplo siguiente se agregan dos horas y treinta minutos al 9 de marzo de 
 [!code-csharp[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual8.cs#8)]
 [!code-vb[System.DateTimeOffset.Conceptual#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual8.vb#8)]
 
-Ambos <xref:System.DateTime> y <xref:System.DateTimeOffset> valores están desasociados de cualquier zona horaria a la que puedan pertenecer. Para realizar operaciones aritméticas de fecha y hora de tal manera que apliquen automáticamente las reglas de ajuste de una zona horaria, la zona horaria a la que pertenezca cualquier valor de fecha y hora debe ser identificable de forma inmediata. Esto significa que un valor de fecha y hora y su zona horaria asociada deben estar estrechamente acoplados. Hay varias maneras de hacer esto, que incluyen las siguientes:
+Los valores <xref:System.DateTimeOffset> y están desasociados de cualquier zona horaria a la que puedan pertenecer. <xref:System.DateTime> Para realizar operaciones aritméticas de fecha y hora de tal manera que apliquen automáticamente las reglas de ajuste de una zona horaria, la zona horaria a la que pertenezca cualquier valor de fecha y hora debe ser identificable de forma inmediata. Esto significa que un valor de fecha y hora y su zona horaria asociada deben estar estrechamente acoplados. Hay varias maneras de hacer esto, que incluyen las siguientes:
 
-* Suponer que todas las horas usadas en una aplicación pertenecen a una zona horaria determinada. Aunque es adecuado en algunos casos, este enfoque tiene una flexibilidad limitada y posiblemente, una portabilidad limitada.
+- Suponer que todas las horas usadas en una aplicación pertenecen a una zona horaria determinada. Aunque es adecuado en algunos casos, este enfoque tiene una flexibilidad limitada y posiblemente, una portabilidad limitada.
 
-* Definir un tipo que acople estrechamente una fecha y hora con su zona horaria asociada, incluyendo ambas como campos del tipo. Este enfoque es el que se usa en el ejemplo de código, que define una estructura para almacenar la fecha y hora y la zona horaria en dos campos de miembro.
+- Definir un tipo que acople estrechamente una fecha y hora con su zona horaria asociada, incluyendo ambas como campos del tipo. Este enfoque es el que se usa en el ejemplo de código, que define una estructura para almacenar la fecha y hora y la zona horaria en dos campos de miembro.
 
-El ejemplo muestra cómo realizar operaciones aritméticas en <xref:System.DateTime> valores para que se aplican las reglas de ajuste de zona horaria al resultado. Sin embargo, <xref:System.DateTimeOffset> valores se pueden usar fácilmente. El ejemplo siguiente muestra cómo el código en el ejemplo original se podría adaptarse para su uso <xref:System.DateTimeOffset> en lugar de <xref:System.DateTime> valores.
+En el ejemplo se muestra cómo realizar operaciones aritméticas <xref:System.DateTime> en valores para que se apliquen reglas de ajuste de zona horaria al resultado. Sin embargo <xref:System.DateTimeOffset> , los valores se pueden usar de la misma manera. En el ejemplo siguiente se muestra cómo el código del ejemplo original podría adaptarse para usar <xref:System.DateTimeOffset> en lugar de <xref:System.DateTime> los valores.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#7)]
 
-Tenga en cuenta que si esta suma se realiza simplemente en el <xref:System.DateTimeOffset> valor sin convertirlo antes a UTC, el resultado refleja el punto correcto en el tiempo en primer lugar pero su desplazamiento no reflejará el de la zona horaria designada para esa hora.
+Tenga en cuenta que si esta suma se realiza simplemente <xref:System.DateTimeOffset> en el valor sin convertirla primero a UTC, el resultado reflejará el punto en el tiempo correcto, pero su desplazamiento no reflejará el de la zona horaria designada en ese momento.
 
 ## <a name="compiling-the-code"></a>Compilación del código
 
 Para este ejemplo se necesita:
 
-* Que el <xref:System> se importan el espacio de nombres con el `using` instrucción (obligatorio en el código de C#).
+- Que el <xref:System> espacio de nombres se debe `using` importar con la instrucción C# (necesario en el código).
 
 ## <a name="see-also"></a>Vea también
 

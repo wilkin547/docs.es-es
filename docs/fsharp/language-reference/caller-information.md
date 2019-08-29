@@ -1,29 +1,29 @@
 ---
 title: Información del llamador
-description: Describe cómo utilizar atributos de argumento de información del autor de llamada para obtener información del llamador de un método.
+description: Describe cómo usar los atributos de argumento de información del llamador para obtener información del llamador de un método.
 ms.date: 04/25/2017
-ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703171"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106582"
 ---
 # <a name="caller-information"></a>Información del llamador
 
 Mediante los atributos de información del llamador, se puede obtener información sobre el llamador de un método. Puede obtener la ruta de acceso al código fuente, el número de línea en el código fuente y el nombre de miembro del llamador. Esta información resulta útil para el seguimiento y la depuración, así como para crear herramientas de diagnóstico.
 
-Para obtener esta información, se usan los atributos que se aplican a los parámetros opcionales, que tienen valores predeterminados. En la tabla siguiente se enumera los atributos de información del llamador que se definen en el [System.Runtime.CompilerServices](/dotnet/api/system.runtime.compilerservices) espacio de nombres:
+Para obtener esta información, se usan los atributos que se aplican a los parámetros opcionales, que tienen valores predeterminados. En la tabla siguiente se enumeran los atributos de información del llamador que se definen en el espacio de nombres [System. Runtime. CompilerServices](/dotnet/api/system.runtime.compilerservices) :
 
-|Atributo|Descripción|Tipo|
+|Atributo|DESCRIPCIÓN|Type|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Ruta de acceso completa del archivo de código fuente que contiene el llamador. Esta es la ruta de acceso en tiempo de compilación.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Número de línea en el archivo de código fuente en el que se llama al método.|`Integer`|
-|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Método o nombre de propiedad del llamador. Consulte la sección de los nombres de miembro más adelante en este tema.|`String`|
+|[CallerMemberName](/dotnet/api/system.runtime.compilerservices.callermembernameattribute)|Método o nombre de propiedad del llamador. Vea la sección nombres de miembro más adelante en este tema.|`String`|
 
 ## <a name="example"></a>Ejemplo
 
-El ejemplo siguiente muestra cómo puede usar estos atributos para realizar un seguimiento de un autor de llamada.
+En el ejemplo siguiente se muestra cómo puede utilizar estos atributos para realizar el seguimiento de un llamador.
 
 ```fsharp
 open System.Diagnostics
@@ -43,20 +43,20 @@ type Tracer() =
 
 ## <a name="remarks"></a>Comentarios
 
-Atributos de información del autor de llamada solo pueden aplicarse a los parámetros opcionales. Los atributos de información del llamador que el compilador escribir el valor adecuado para cada parámetro opcional representado con un atributo de información del llamador.
+Los atributos de información del llamador solo se pueden aplicar a los parámetros opcionales. Los atributos de información del llamador hacen que el compilador escriba el valor adecuado para cada parámetro opcional decorado con un atributo de información del llamador.
 
-Los valores de información del llamador se emiten como literales en el lenguaje intermedio (IL) en tiempo de compilación. A diferencia de los resultados de la [StackTrace](/dotnet/api/system.diagnostics.stacktrace) propiedad para las excepciones, los resultados no se ven afectados por ofuscación.
+Los valores de información del llamador se emiten como literales en el lenguaje intermedio (IL) en tiempo de compilación. A diferencia de los resultados de la propiedad [StackTrace](/dotnet/api/system.diagnostics.stacktrace) para las excepciones, los resultados no se ven afectados por la ofuscación.
 
 Puede proporcionar explícitamente los argumentos opcionales para controlar la información del llamador u ocultarla.
 
 ## <a name="member-names"></a>Nombres de miembro
 
-Puede usar el [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar el nombre de miembro como un `String` argumento al método llamado. Mediante esta técnica, se evita el problema que cambiar el nombre de refactorización no cambia el `String` valores. Esta ventaja es especialmente útil para las siguientes tareas:
+Puede usar el [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar especificar el nombre de miembro como un `String` argumento para el método llamado. Mediante esta técnica, se evita el problema de que la refactorización de cambio de nombre `String` no cambie los valores. Esta ventaja es especialmente útil para las siguientes tareas:
 
-* Usar el seguimiento y las rutinas de diagnóstico.
-* Implementar el [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) al enlazar datos de la interfaz. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el [ `CallerMemberName` ](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo, debe especificar el nombre de propiedad como un literal.
+- Usar el seguimiento y las rutinas de diagnóstico.
+- Implementar la interfaz [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) al enlazar datos. Esta interfaz permite que la propiedad de un objeto notifique a un control enlazado que la propiedad ha cambiado, de forma que el control pueda mostrar información actualizada. Sin el [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo, debe especificar el nombre de la propiedad como un literal.
 
-El siguiente gráfico muestra al miembro de los nombres que se devuelven cuando se usa el atributo CallerMemberName.
+En el gráfico siguiente se muestran los nombres de miembro que se devuelven cuando se usa el atributo CallerMemberName.
 
 |Las llamadas se producen en|Resultado del nombre de miembro|
 |-------------------|------------------|

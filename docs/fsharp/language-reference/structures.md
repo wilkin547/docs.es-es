@@ -2,12 +2,12 @@
 title: Estructuras
 description: Obtenga información sobre F# la estructura, un tipo de objeto compacto a menudo más eficaz que una clase para tipos con una pequeña cantidad de datos y un comportamiento simple.
 ms.date: 05/16/2016
-ms.openlocfilehash: e638b450fe43e0993c9980cade246c3f26d25e2d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 1e9652cc4776e4d1d52eb20e41b6dd87a6c5ba05
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630774"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106824"
 ---
 # <a name="structures"></a>Estructuras
 
@@ -66,10 +66,10 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 Un struct`byref`"similar" en F# es un tipo de valor enlazado a la pila. Nunca se asigna en el montón administrado. Un `byref`struct similar a es útil para la programación de alto rendimiento, ya que se aplica con un conjunto de comprobaciones fuertes sobre la duración y la no captura. Las reglas son:
 
-* Se pueden usar como parámetros de función, parámetros de método, variables locales, devoluciones de métodos.
-* No pueden ser miembros estáticos o de instancia de una clase o un struct normal.
-* No se pueden capturar mediante ninguna construcción de cierre`async` (métodos o expresiones lambda).
-* No se pueden usar como parámetros genéricos.
+- Se pueden usar como parámetros de función, parámetros de método, variables locales, devoluciones de métodos.
+- No pueden ser miembros estáticos o de instancia de una clase o un struct normal.
+- No se pueden capturar mediante ninguna construcción de cierre`async` (métodos o expresiones lambda).
+- No se pueden usar como parámetros genéricos.
 
 Aunque estas reglas restringen considerablemente el uso, lo hacen para satisfacer la promesa de la informática de alto rendimiento de una manera segura.
 
