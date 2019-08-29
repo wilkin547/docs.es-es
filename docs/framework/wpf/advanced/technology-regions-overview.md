@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: a169064052a567694b1cbd1e2f8ac2f00b047a68
-ms.sourcegitcommit: 3eeea78f52ca771087a6736c23f74600cc662658
+ms.openlocfilehash: 4f1489065a70065700d2f8ceb974e66ecceeebd0
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68671835"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133815"
 ---
 # <a name="technology-regions-overview"></a>Información general sobre áreas de la tecnología
 Si se usan varias tecnologías de representación en una aplicación, como WPF, Win32 o DirectX, deben compartir las áreas de representación en una ventana común de nivel superior. En este tema se describen los problemas que podrían afectar a la presentación y la entrada de una aplicación de interoperación WPF.  
@@ -54,11 +54,9 @@ Si se usan varias tecnologías de representación en una aplicación, como WPF, 
   
  Las ventanas superpuestas de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tienen características diferentes según el sistema operativo. Esto se debe [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] a que usa DirectX para representarse y las ventanas superpuestas se diseñaron principalmente para la representación de GDI, no para la representación de DirectX.  
   
-- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] admite ventanas superpuestas con aceleración de hardware en [!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)] y versiones posteriores. Las ventanas superpuestas con [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)] aceleración de hardware en requieren soporte técnico de Microsoft DirectX, por lo que las funcionalidades dependerán de la versión de Microsoft DirectX de ese equipo.  
+- WPF admite ventanas superpuestas con aceleración de hardware.  
   
 - [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no admite las claves de color de transparencia, porque [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] no puede garantizar que se represente exactamente el color que se solicita, en particular cuando se aplica la aceleración de hardware a la representación.  
-  
-- Si la aplicación se ejecuta en [!INCLUDE[TLA2#tla_winxp](../../../../includes/tla2sharptla-winxp-md.md)], las ventanas superpuestas encima de las superficies de DirectX parpadean cuando se representa la aplicación de DirectX.  (La secuencia de representación real es que Microsoft Windows Interfaz de dispositivo gráfico (GDI) oculta la ventana en capas, después DirectX dibuja y, a continuación, Microsoft Windows Interfaz de dispositivo gráfico (GDI) coloca la ventana en capas de nuevo).  Las ventanas superpuestas que no son de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] también tienen esta limitación.  
   
 ## <a name="see-also"></a>Vea también
 

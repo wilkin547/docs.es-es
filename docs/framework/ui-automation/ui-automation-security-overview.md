@@ -5,17 +5,17 @@ helpviewer_keywords:
 - UI Automation, security model
 - security model, UI Automation
 ms.assetid: 1d853695-973c-48ae-b382-4132ae702805
-ms.openlocfilehash: c74f770f917fc3b2a7d3a18c08270745dac68b12
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8b798aef528cccdedb1fcaa53c1782632037600d
+ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422426"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70133783"
 ---
 # <a name="ui-automation-security-overview"></a>Información general sobre la seguridad de UI Automation
 
 > [!NOTE]
-> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener información más reciente sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: Automatización de interfaz de usuario](https://go.microsoft.com/fwlink/?LinkID=156746).
+> Esta documentación está dirigida a los desarrolladores de .NET Framework que quieran usar las clases [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] administradas definidas en el espacio de nombres <xref:System.Windows.Automation>. Para obtener la información más [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]reciente acerca [de, consulte API de automatización de Windows: Automatización](https://go.microsoft.com/fwlink/?LinkID=156746)de la interfaz de usuario.
 
 Esta información general describe el modelo de seguridad de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] en [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)].
 
@@ -41,7 +41,7 @@ Para que las aplicaciones sean de confianza y poder comunicarse con aplicaciones
 
 ## <a name="manifest-files"></a>Archivo de manifiesto
 
-Para obtener acceso a la interfaz de usuario protegidos del sistema, las aplicaciones deben compilarse con un archivo de manifiesto que incluye el `uiAccess` atributo en la `requestedExecutionLevel` etiqueta, como se indica a continuación:
+Para obtener acceso a la interfaz de usuario del sistema protegida, las aplicaciones deben compilarse con un `uiAccess` archivo de manifiesto `requestedExecutionLevel` que incluya el atributo en la etiqueta, como se indica a continuación:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -57,6 +57,4 @@ Para obtener acceso a la interfaz de usuario protegidos del sistema, las aplicac
 
 El valor del atributo `level` en este código es solo un ejemplo.
 
-`uiAccess` es "false" de forma predeterminada; es decir, si se omite el atributo, o si no hay ningún manifiesto del ensamblado, la aplicación no pueda obtener acceso a la interfaz de usuario protegido.
-
-Para obtener más información sobre [!INCLUDE[TLA#tla_longhorn2](../../../includes/tlasharptla-longhorn2-md.md)] seguridad, sobre cómo firmar aplicaciones y sobre la creación de manifiestos de ensamblado, vea [Developer Best Practices and Guidelines for Applications en un entorno con menos privilegios](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480150(v=msdn.10)).
+`uiAccess`es "false" de forma predeterminada; es decir, si se omite el atributo o si no hay ningún manifiesto para el ensamblado, la aplicación no podrá obtener acceso a la interfaz de usuario protegida.
