@@ -3,12 +3,12 @@ title: Migración de .NET Core desde project.json
 description: Aprenda a migrar un proyecto anterior de .NET Core con project.json.
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6334f06a998054cfaf766654dda59d87f5d23ed8
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663353"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105304"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migración de proyectos de .NET Core desde project.json
 
@@ -78,13 +78,13 @@ Si aún usa DNX para el desarrollo de .NET Core, el proceso de migración debe r
 
 El formato de csproj de .NET Core ha cambiado y evolucionado con cada nueva versión preliminar de las herramientas. No hay ninguna herramienta que migre el archivo del proyecto de versiones anteriores de csproj a la versión más reciente, por lo que tendrá que editar manualmente el archivo del proyecto. Los pasos reales dependen de la versión del archivo del proyecto que se va a migrar. Tenga en cuenta los siguientes consejos basados en los cambios que se produjeron entre las versiones:
 
-* Quite la propiedad de versión de las herramientas del elemento `<Project>`, si existe.
-* Quite el espacio de nombres XML (`xmlns`) del elemento `<Project>`.
-* Si no existe, agregue el atributo `Sdk` al elemento `<Project>` y establézcalo en `Microsoft.NET.Sdk` o `Microsoft.NET.Sdk.Web`. Este atributo especifica que el proyecto usa el SDK que se va a usar. `Microsoft.NET.Sdk.Web` se usa para las aplicaciones web.
-* Quite las instrucciones `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` de la parte superior e inferior del proyecto. Estas instrucciones de importación están implícitas en el SDK, por lo que no es necesario que estén en el proyecto.
-* Si tiene elementos `Microsoft.NETCore.App` o `NETStandard.Library` `<PackageReference>` en el proyecto, debe quitarlos. Estas referencias de paquete son [implícitas para el SDK ](https://aka.ms/sdkimplicitrefs).
-* Quite el elemento `Microsoft.NET.Sdk` `<PackageReference>`, si existe. La referencia del SDK procede del atributo `Sdk` del elemento `<Project>`.
-* Quite los [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que están [implícitos en el SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Dejar estos patrones globales en el proyecto producirá un error de compilación porque se duplicarán los elementos de compilación.
+- Quite la propiedad de versión de las herramientas del elemento `<Project>`, si existe.
+- Quite el espacio de nombres XML (`xmlns`) del elemento `<Project>`.
+- Si no existe, agregue el atributo `Sdk` al elemento `<Project>` y establézcalo en `Microsoft.NET.Sdk` o `Microsoft.NET.Sdk.Web`. Este atributo especifica que el proyecto usa el SDK que se va a usar. `Microsoft.NET.Sdk.Web` se usa para las aplicaciones web.
+- Quite las instrucciones `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` de la parte superior e inferior del proyecto. Estas instrucciones de importación están implícitas en el SDK, por lo que no es necesario que estén en el proyecto.
+- Si tiene elementos `Microsoft.NETCore.App` o `NETStandard.Library` `<PackageReference>` en el proyecto, debe quitarlos. Estas referencias de paquete son [implícitas para el SDK ](https://aka.ms/sdkimplicitrefs).
+- Quite el elemento `Microsoft.NET.Sdk` `<PackageReference>`, si existe. La referencia del SDK procede del atributo `Sdk` del elemento `<Project>`.
+- Quite los [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que están [implícitos en el SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Dejar estos patrones globales en el proyecto producirá un error de compilación porque se duplicarán los elementos de compilación.
 
 Tras seguir estos pasos, el proyecto debe ser totalmente compatible con el formato csproj RTM de .NET Core.
 

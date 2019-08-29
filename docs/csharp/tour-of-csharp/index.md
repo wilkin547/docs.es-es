@@ -3,12 +3,12 @@ title: Un paseo por C# - Guía de C#
 description: ¿Nuevo en C#? Conozca los conceptos básicos del lenguaje.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eaaa5a259f0776a2749ed899d0406aee041a8442
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706538"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105647"
 ---
 # <a name="a-tour-of-the-c-language"></a>Un paseo por el lenguaje C#
 
@@ -51,28 +51,28 @@ La salida del programa la genera el método `WriteLine` de la clase `Console` en
 
 Hay mucha más información sobre C#.  Los temas siguientes proporcionan introducciones a los elementos del lenguaje C#. Estas introducciones proporcionarán información básica sobre todos los elementos del lenguaje y ofrecerán los detalles necesarios para profundizar más en los elementos del lenguaje C#:
 
-* [Estructura del programa](program-structure.md)
+- [Estructura del programa](program-structure.md)
   - Conozca los principales conceptos organizativos del lenguaje C#: ***programas***, ***espacios de nombres***, ***tipos***, ***miembros*** y ***ensamblados***.
-* [Tipos y variables](types-and-variables.md)
+- [Tipos y variables](types-and-variables.md)
   - Obtenga información sobre los ***tipos de valor***, los ***tipos de referencia*** y las ***variables*** del lenguaje C#.
-* [Expresiones](expressions.md)
+- [Expresiones](expressions.md)
   - Las ***expresiones*** se construyen con ***operandos*** y ***operadores***. Las expresiones producen un valor.
-* [Instrucciones](statements.md)
+- [Instrucciones](statements.md)
   - Use ***instrucciones*** para expresar las acciones de un programa.
-* [Clases y objetos](classes-and-objects.md)
+- [Clases y objetos](classes-and-objects.md)
   - Las ***clases*** son los tipos más fundamentales de C#. Los ***objetos*** son instancias de una clase. Las clases se generan mediante ***miembros***, que también se tratan en este tema.
-* [Structs](structs.md)
+- [Structs](structs.md)
   - Las ***estructuras*** son estructuras de datos que, a diferencia de las clases, son tipos de valor.
-* [Matrices](arrays.md)
+- [Matrices](arrays.md)
   - Una ***matriz*** es una estructura de datos que contiene un número de variables a las que se accede mediante índices calculados.
-* [Interfaces](interfaces.md)
+- [Interfaces](interfaces.md)
   - Una ***interfaz*** define un contrato que se puede implementar mediante clases y structs. Una interfaz puede contener métodos, propiedades, eventos e indexadores. Una interfaz no proporciona implementaciones de los miembros que define, simplemente especifica los miembros que se deben proporcionar mediante clases o structs que implementan la interfaz.
-* [Enumeraciones](enums.md)
+- [Enumeraciones](enums.md)
   - Un ***tipo de enumeración*** es un tipo de valor distinto con un conjunto de constantes con nombre.
-* [Delegados](delegates.md)
+- [Delegados](delegates.md)
   - Un ***tipo de delegado*** representa las referencias a métodos con una lista de parámetros determinada y un tipo de valor devuelto. Los delegados permiten tratar métodos como entidades que se puedan asignar a variables y se puedan pasar como parámetros. Los delegados son similares al concepto de punteros de función en otros lenguajes, pero a diferencia de los punteros de función, los delegados están orientados a objetos y presentan seguridad de tipos.
-* [Atributos](attributes.md)
-  * Los ***atributos*** permiten a los programas especificar información declarativa adicional sobre los tipos, miembros y otras entidades.
+- [Atributos](attributes.md)
+  - Los ***atributos*** permiten a los programas especificar información declarativa adicional sobre los tipos, miembros y otras entidades.
 
 > [!div class="step-by-step"]
 > [Siguiente](program-structure.md)

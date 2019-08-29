@@ -4,12 +4,12 @@ description: En este artículo se le enseña cómo se crean versiones del entorn
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
-ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcf74f6fa892446555541f13a33130a93787cf70
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646870"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104955"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Introducción a la creación de versiones de .NET Core
 
@@ -36,8 +36,8 @@ La tercera posición del número de versión del SDK comunica tanto la versión 
 
 NOTAS:
 
-* Si el SDK tiene 10 actualizaciones de características anteriores a la actualización de una de las características del runtime, los números de versión progresarán en la serie de 1000 con números como 2.2.1000, tal como la publicación de características posterior a la versión 2.2.900. No se espera que esta situación llegue a producirse.
-* Nunca se publicarán 99 versiones sin publicar ninguna característica. Si una versión se acercase a este número, se forzaría una publicación de características.
+- Si el SDK tiene 10 actualizaciones de características anteriores a la actualización de una de las características del runtime, los números de versión progresarán en la serie de 1000 con números como 2.2.1000, tal como la publicación de características posterior a la versión 2.2.900. No se espera que esta situación llegue a producirse.
+- Nunca se publicarán 99 versiones sin publicar ninguna característica. Si una versión se acercase a este número, se forzaría una publicación de características.
 
 Puede ver más detalles en la propuesta inicial, que forma parte del repositorio [dotnet/designs](https://github.com/dotnet/designs/pull/29).
 
@@ -55,24 +55,24 @@ Los elementos opcionales `PRERELEASE` y `BUILDNUMBER` nunca forman parte de las 
 
 `MAJOR` se incrementa cuando:
 
-* Se producen cambios importantes en el producto, o bien este toma una nueva dirección.
-* Se han realizado cambios importantes. Hay un nivel de aceptación de cambios importantes elevado.
-* Ya no se admite una versión antigua.
-* Se adopta una versión `MAJOR` más reciente de una dependencia existente.
+- Se producen cambios importantes en el producto, o bien este toma una nueva dirección.
+- Se han realizado cambios importantes. Hay un nivel de aceptación de cambios importantes elevado.
+- Ya no se admite una versión antigua.
+- Se adopta una versión `MAJOR` más reciente de una dependencia existente.
 
 `MINOR` se incrementa cuando:
 
-* Se agrega un área expuesta de API pública.
-* Se agrega un nuevo comportamiento.
-* Se adopta una versión `MINOR` más reciente de una dependencia existente.
-* Se presenta una nueva dependencia.
+- Se agrega un área expuesta de API pública.
+- Se agrega un nuevo comportamiento.
+- Se adopta una versión `MINOR` más reciente de una dependencia existente.
+- Se presenta una nueva dependencia.
 
 `PATCH` se incrementa cuando:
 
-* Se realizan correcciones de errores.
-* Se agrega compatibilidad con una plataforma más reciente.
-* Se adopta una versión `PATCH` más reciente de una dependencia existente.
-* Cualquier otro cambio no se ajusta a uno de los casos anteriores.
+- Se realizan correcciones de errores.
+- Se agrega compatibilidad con una plataforma más reciente.
+- Se adopta una versión `PATCH` más reciente de una dependencia existente.
+- Cualquier otro cambio no se ajusta a uno de los casos anteriores.
 
 Cuando hay varios cambios, se incrementa el elemento superior afectado por cambios individuales, mientras que los siguientes se restablecen a cero. Por ejemplo, cuando se incrementa `MAJOR`, `MINOR` y `PATCH` se restablecen a cero. Cuando se incrementa `MINOR`, `PATCH` se restablece a cero mientras que `MAJOR` no se modifica.
 

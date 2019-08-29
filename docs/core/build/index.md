@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo compilar .NET Core y la CLI de .NE
 author: bleroy
 ms.date: 06/28/2017
 ms.custom: seodec18
-ms.openlocfilehash: 523b537ba07afd1b6c56192c5e2589082fe5820f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650887"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105396"
 ---
 # <a name="build-net-core-from-source"></a>Compilación de .NET Core a partir del código fuente
 
@@ -22,28 +22,28 @@ El código fuente de CLR de .NET Core puede encontrarse en el repositorio [dotne
 
 Actualmente, la compilación depende de los siguientes requisitos previos:
 
-* [Git](https://git-scm.com/)
-* [CMake](https://cmake.org/)
-* [Python](https://www.python.org/)
-* un compilador de C++.
+- [Git](https://git-scm.com/)
+- [CMake](https://cmake.org/)
+- [Python](https://www.python.org/)
+- un compilador de C++.
 
 Para compilar CLR después de instalar estos requisitos previos, invoque el script de compilación (`build.cmd` en Windows, o `build.sh` en Linux y macOS) en la base del repositorio [dotnet/coreclr](https://github.com/dotnet/coreclr/).
 
 La instalación de los componentes varía según el sistema operativo (SO). Consulte las instrucciones de compilación de su sistema operativo específico:
 
-* [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
-* [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
-* [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
-* [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
-* [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
+- [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
+- [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
+- [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+- [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md)
+- [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
 No hay ninguna compilación cruzada entre sistemas operativos (solo para ARM, que se basa en X64).  
 Debe estar en la plataforma concreta para compilar esa plataforma.  
 
 La compilación tiene dos `buildTypes` principales:
 
-* Debug (valor predeterminado): compila el tiempo de ejecución con las optimizaciones mínimas y las comprobaciones (aserciones) en tiempo de ejecución adicionales. Aunque esta reducción en el nivel de optimización y las comprobaciones adicionales ralentizan la ejecución en tiempo de ejecución, resultan útiles para realizar la depuración. Este es el valor recomendado para los entornos de desarrollo y pruebas.
-* Release: compila el tiempo de ejecución con las optimizaciones completas y sin las comprobaciones en tiempo de ejecución adicionales. Aunque el rendimiento en tiempo de ejecución será mucho más rápido, el tiempo de ejecución puede tardar un poco más en compilarse y puede resultar complicado realizar la depuración. Pase `release` al script de compilación para seleccionar este tipo de compilación.
+- Debug (valor predeterminado): compila el tiempo de ejecución con las optimizaciones mínimas y las comprobaciones (aserciones) en tiempo de ejecución adicionales. Aunque esta reducción en el nivel de optimización y las comprobaciones adicionales ralentizan la ejecución en tiempo de ejecución, resultan útiles para realizar la depuración. Este es el valor recomendado para los entornos de desarrollo y pruebas.
+- Release: compila el tiempo de ejecución con las optimizaciones completas y sin las comprobaciones en tiempo de ejecución adicionales. Aunque el rendimiento en tiempo de ejecución será mucho más rápido, el tiempo de ejecución puede tardar un poco más en compilarse y puede resultar complicado realizar la depuración. Pase `release` al script de compilación para seleccionar este tipo de compilación.
 
 Además, de forma predeterminada, la compilación no solo crea los archivos ejecutables en tiempo de ejecución, sino que también compila todas las pruebas.
 Hay bastantes pruebas, lo que exige una cantidad considerable de tiempo que no es necesario si tan solo se quiere experimentar con los cambios.
@@ -65,7 +65,7 @@ Puede encontrar más opciones de compilación con build si usa el calificador -?
 
 La compilación coloca todos los archivos generados en el directorio `bin` en la base del repositorio.
 Hay un directorio *bin\Log* que contiene archivos de registro generados durante la compilación (más útil cuando se produce un error en la compilación).
-La salida real se coloca en un directorio *bin\Producto\[plataforma].[arquitectura de CPU].[tipo de compilación]*, como *bin\Producto\Windows_NT.x64.Release*.
+La salida real se coloca en un directorio *bin\Producto\[plataforma].[arquitectura de CPU].[tipo de compilación]* , como *bin\Producto\Windows_NT.x64.Release*.
 
 Aunque el resultado de la compilación "sin procesar" a veces resulta útil, normalmente solo interesan los paquetes de NuGet, que se colocan en el subdirectorio `.nuget\pkg` del directorio de salida anterior.
 
@@ -86,12 +86,12 @@ El código fuente de la CLI de .NET Core puede encontrarse en el repositorio [do
 
 Para compilar la CLI de .NET Core, necesita tener lo siguiente instalado en su equipo.
 
-* Windows y Linux:
-  * GIT en la ruta de acceso
-* macOS:
-  * GIT en la ruta de acceso
-  * Xcode
-  * OpenSSL
+- Windows y Linux:
+  - GIT en la ruta de acceso
+- macOS:
+  - GIT en la ruta de acceso
+  - Xcode
+  - OpenSSL
 
 Para compilar, ejecute `build.cmd` en Windows, o `build.sh` en Linux y macOS desde la raíz. Si no quiere ejecutar pruebas, ejecute `build.cmd -t:Compile` o `./build.sh -t:Compile`. Para compilar la CLI en macOS Sierra, debe ejecutar `export DOTNET_RUNTIME_ID=osx.10.11-x64` para establecer la variable de entorno DOTNET_RUNTIME_ID.
 
