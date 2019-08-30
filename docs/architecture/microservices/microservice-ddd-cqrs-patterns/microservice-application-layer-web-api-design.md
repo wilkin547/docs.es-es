@@ -35,13 +35,13 @@ Necesitaríamos otra guía para tratar SOLID con detalle. Para esta guía solo n
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
-- **SOLID: Fundamental OOP Principles** \ (SOLID: principios fundamentales de OOP)
+- **SOLID: SOLID: principios fundamentales de OOP** \
   <https://deviq.com/solid/>
 
-- **Inversion of Control Containers and the Dependency Injection pattern** \ (Contenedores de Inversión de control y el patrón de inserción de dependencias)
+- **Contenedores de Inversión de control y el patrón de inserción de dependencias** \
   <https://martinfowler.com/articles/injection.html>
 
-- **Steve Smith. New is Glue** \ (New es como pegamento)
+- **Steve Smith. New es como pegamento** \
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]

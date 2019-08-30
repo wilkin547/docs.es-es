@@ -99,7 +99,7 @@ Después de la implementación inicial y de haber transcurrido potencialmente va
  De manera parecida al control de las versiones del contrato de datos, el contrato de servicios que también controla las versiones implica agregar, cambiar y quitar operaciones.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Especificar nombre, espacio de nombres y acción  
- De forma predeterminada, el nombre de un contrato de servicios es el nombre de la interfaz. Su espacio de nombres predeterminado http://tempuri.org es "", y la acción de cada http://tempuri.org/contractname/methodname operación es "". Se recomienda especificar explícitamente un nombre y espacio de nombres para el contrato de servicio y una acción para cada operación para evitar el uso http://tempuri.org de "" y evitar que los nombres de interfaz y método se expongan en el contrato del servicio.  
+ De forma predeterminada, el nombre de un contrato de servicios es el nombre de la interfaz. Su espacio de nombres predeterminado http://tempuri.org es "", y la acción de cada http://tempuri.org/contractname/methodname operación es "". Se recomienda especificar explícitamente un nombre y espacio de nombres para el contrato de servicio y una acción para cada operación para evitar el uso "http://tempuri.org " de y evitar que los nombres de interfaz y método se expongan en el contrato del servicio.  
   
 ### <a name="adding-parameters-and-operations"></a>Agregar parámetros y operaciones  
  Agregar operaciones del servicio expuestas por el servicio es un cambio sin interrupción porque los clientes existentes no necesitan ocuparse de esas nuevas operaciones.  

@@ -29,10 +29,10 @@ Puesto que en la documentación de Microsoft ya hay una introducción a EF Core,
 - **ASP.NET Core MVC con EF Core: serie de tutoriales** \
   [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
-- **DbContext Class** \ (Clase DbContext)
+- **Clase DbContext** \
   [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
-- **Compare EF Core & EF6.x** \ (Comparación de EF Core y EF6)
+- **Comparación de EF Core y EF6** \
   [https://docs.microsoft.com/ef/efcore-and-ef6/index](/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infraestructura en Entity Framework Core desde una perspectiva DDD
@@ -232,13 +232,13 @@ Tenga en cuenta que utilizar la duración de singleton para el repositorio puede
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Implementing the Repository and Unit of Work Patterns in an ASP.NET MVC Application** \ (Implementación de los patrones de repositorio y unidad de trabajo en una aplicación ASP.NET MVC)
+- **Implementación de los patrones de repositorio y unidad de trabajo en una aplicación ASP.NET MVC** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen. Implementation Strategies for the Repository Pattern with Entity Framework, Dapper, and Chain** \ (Estrategias de implementación para el patrón de repositorio con Entity Framework, Dapper y Chain)
+- **Jonathan Allen. Estrategias de implementación para el patrón de repositorio con Entity Framework, Dapper y Chain** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de la Torre. Comparing ASP.NET Core IoC container service lifetimes with Autofac IoC container instance scopes** \ (Comparación de las duraciones de servicio del contenedor IoC de ASP-NET Core con ámbitos de instancia de contenedor Autofac IoC)
+- **Cesar de la Torre. Comparación de las duraciones de servicio del contenedor IoC de ASP-NET Core con ámbitos de instancia de contenedor Autofac IoC** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Asignación de tabla
@@ -449,22 +449,22 @@ Aunque no se recomienda devolver IQueryable desde un repositorio, se puede usar 
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Table Mapping** \ (Asignación de tabla)
+- **Asignación de tabla** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
-- **Use HiLo to generate keys with Entity Framework Core** \ (Uso de Hi-Lo para generar claves con Entity Framework Core)
+- **Uso de Hi-Lo para generar claves con Entity Framework Core** \
   <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
-- **Backing Fields** \ (Campos de respaldo)
+- **Campos de respaldo** \
   [https://docs.microsoft.com/ef/core/modeling/backing-field](/ef/core/modeling/backing-field)
 
-- **Steve Smith. Encapsulated Collections in Entity Framework Core** \ (Colecciones encapsuladas en Entity Framework Core)
+- **Steve Smith. Colecciones encapsuladas en Entity Framework Core** \
   <https://ardalis.com/encapsulated-collections-in-entity-framework-core>
 
 - **Propiedades reemplazadas** \
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
-- **The Specification pattern** \ (Patrón de especificación)
+- **Patrón de especificación** \
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]

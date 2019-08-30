@@ -39,19 +39,19 @@ Le recomendamos que use las siguientes referencias para saber más información 
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Composite UI using ASP.NET (Particular's Workshop)**  \ [Composición de la interfaz de usuario con ASP.NET (taller de Particular)]
+- **Composición de la interfaz de usuario con ASP.NET (taller de Particular)**  \
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture** \ (El front-end monolítico en la arquitectura de microservicios)
+- **Ruben Oostinga. El front-end monolítico en la arquitectura de microservicios** \
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. The secret of better UI composition** \ (El secreto de una mejor composición de la interfaz de usuario)
+- **Mauro Servienti. El secreto de una mejor composición de la interfaz de usuario** \
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Including Front-End Web Components Into Microservices** \ (Inclusión de componentes web de front-end en los microservicios)
+- **Viktor Farcic. Inclusión de componentes web de front-end en los microservicios** \
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
-- **Managing Frontend in the Microservices Architecture (Administración de front-end en la arquitectura de microservicios)**  \
+- **Administración de front-end en la arquitectura de microservicios** \
   <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]
