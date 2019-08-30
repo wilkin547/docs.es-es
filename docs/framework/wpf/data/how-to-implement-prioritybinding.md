@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: ad19db9d686469e3ade1ff188553fceb8d525674
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937443"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169085"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Procedimiento Implementar PriorityBinding
 <xref:System.Windows.Data.PriorityBinding>en [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Works, especificando una lista de enlaces. La lista de enlaces se ordena de la prioridad más alta a la más baja. Si el enlace de prioridad más alta devuelve un valor correctamente cuando se procesa, no es necesario procesar los otros enlaces de la lista. Podría ser el caso de que el enlace de prioridad más alta tarde mucho tiempo en evaluarse; la siguiente prioridad más alta que devuelve un valor correctamente se usará hasta que un enlace de una prioridad más alta devuelva un valor correctamente.  
@@ -27,7 +27,7 @@ ms.locfileid: "69937443"
  El descriptor `SlowestDP` de acceso get de espera 5 segundos antes de devolver el `_slowestDP` valor del miembro de datos.  
   
 > [!NOTE]
-> Este ejemplo solamente sirve de demostración. Las [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] instrucciones recomendadas para definir las propiedades que son órdenes de magnitud más lentas que un conjunto de campos serían. Para obtener más información, vea [elegir entre propiedades y métodos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
+> Este ejemplo solamente sirve de demostración. Las instrucciones de .NET recomiendan la definición de propiedades que son órdenes de magnitud más lentas que un conjunto de campos. Para obtener más información, vea [elegir entre propiedades y métodos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100)).  
   
  [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  

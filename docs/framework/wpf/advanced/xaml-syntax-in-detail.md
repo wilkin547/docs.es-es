@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 3ac7d79660830601ca69951e56763fc923692b0e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 09f0a1b34e88be995fb9a386161a930457e4bb56
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958785"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168992"
 ---
 # <a name="xaml-syntax-in-detail"></a>Detalles de la sintaxis XAML
 En este tema se definen los términos que se usan para describir los elementos de la sintaxis XAML. Estos términos se usan con frecuencia en el resto de esta documentación, tanto para la documentación de WPF específicamente como para los otros marcos de trabajo que usan XAML o los conceptos básicos de XAML habilitados por la compatibilidad del lenguaje XAML en el nivel System. Xaml. En este tema se amplía la terminología básica introducida en el tema [información general sobre XAML (WPF)](xaml-overview-wpf.md).  
@@ -62,7 +62,7 @@ En este tema se definen los términos que se usan para describir los elementos d
   
 - La etiqueta de apertura debe completarse con un corchete angular de cierre (>). Otros elementos de objeto, elementos de propiedad o texto interno, pueden seguir la etiqueta de apertura. Exactamente, el contenido que se puede incluir aquí está restringido por el modelo de objetos del elemento. También debe existir la etiqueta de cierre equivalente para el elemento de objeto, en el anidamiento y el equilibrio adecuados con otros pares de etiquetas de apertura y cierre.  
   
- XAML, tal y como lo implementa .NET, tiene un conjunto de reglas que asignan elementos de objeto a tipos, atributos en propiedades o eventos, y espacios de nombres XAML a espacios de nombres CLR y ensamblado. Para WPF y el .NET Framework, los elementos de objeto XAML [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] se asignan a los tipos tal y como se definen en los ensamblados a los que se hace referencia, y los atributos se asignan a los miembros de esos tipos. Cuando se hace referencia a un tipo CLR en XAML, también se tiene acceso a los miembros heredados de ese tipo.  
+ XAML, tal y como lo implementa .NET, tiene un conjunto de reglas que asignan elementos de objeto a tipos, atributos en propiedades o eventos, y espacios de nombres XAML a espacios de nombres CLR y ensamblado. Para WPF y .NET, los elementos de objeto XAML se asignan a los tipos .NET tal y como se definen en los ensamblados a los que se hace referencia, y los atributos se asignan a los miembros de esos tipos. Cuando se hace referencia a un tipo CLR en XAML, también se tiene acceso a los miembros heredados de ese tipo.  
   
  Por ejemplo, el ejemplo siguiente es la sintaxis de elementos de objeto que crea instancias de una <xref:System.Windows.Controls.Button> nueva instancia de la clase y <xref:System.Windows.FrameworkElement.Name%2A> también especifica un atributo y un valor para ese atributo:  
   

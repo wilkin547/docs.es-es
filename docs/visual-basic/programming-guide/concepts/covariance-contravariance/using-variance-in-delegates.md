@@ -2,12 +2,12 @@
 title: Usar la varianza en delegados (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
-ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ebba7e862e1b4677d9438aa301ef2b713fba3712
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787262"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169069"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>Usar la varianza en delegados (Visual Basic)
 
@@ -15,7 +15,7 @@ Al asignar un método a un delegado, la *covarianza* y la *contravarianza* propo
 
 ## <a name="example-1-covariance"></a>Ejemplo 1: Covarianza
 
-### <a name="description"></a>Descripción
+### <a name="description"></a>DESCRIPCIÓN
 
 En este ejemplo se muestra cómo se pueden usar delegados con métodos que tienen tipos de valor devuelto derivados del tipo de valor devuelto en la firma del delegado. El tipo de datos devuelto por `DogsHandler` es de tipo `Dogs`, que se deriva del tipo `Mammals` definido en el delegado.
 
@@ -44,11 +44,25 @@ Class Test
 End Class
 ```
 
-## <a name="example-2-contravariance"></a>Ejemplo 2: Contravarianza
+## <a name="example-2-contravariance"></a>Ejemplo 2: Contravarianza
 
-### <a name="description"></a>Descripción
+### <a name="description"></a>DESCRIPCIÓN
 
-En este ejemplo se muestra cómo se pueden usar delegados con métodos que tienen parámetros de un tipo que son tipos base del tipo de parámetro de la firma del delegado. Con la contravarianza, puede usar un controlador de eventos en lugar de controladores independientes. Por ejemplo, puede crear un controlador de eventos que acepta un parámetro de entrada `EventArgs` y usarlo con un evento `Button.MouseClick` que envía un tipo `MouseEventArgs` como parámetro, pero también con un evento `TextBox.KeyDown` que envía un parámetro `KeyEventArgs`.
+En este ejemplo se muestra cómo se pueden utilizar los delegados con métodos que tienen parámetros cuyos tipos son tipos base del tipo de parámetro de firma de delegado. Con la contravarianza, puede usar un controlador de eventos en lugar de controladores independientes. En el ejemplo siguiente se usa dos delegados:
+
+- Delegado que define la firma del evento [Button. KeyDown.](xref:System.Windows.Forms.Control.KeyDown) <xref:System.Windows.Forms.KeyEventHandler> Su firma es:
+
+   ```vb
+   Public Delegate Sub KeyEventHandler(sender As Object, e As KeyEventArgs)
+   ```
+
+- Delegado que define la firma del evento [Button. mouseClick.](xref:System.Windows.Forms.Control.MouseDown) <xref:System.Windows.Forms.MouseEventHandler> Su firma es:
+
+   ```vb
+   Public Delegate Sub MouseEventHandler(sender As Object, e As MouseEventArgs)
+   ```
+
+En el ejemplo se define un controlador de <xref:System.EventArgs> eventos con un parámetro y se usa para `Button.KeyDown` controlar `Button.MouseClick` los eventos y. Esto puede hacer esto porque <xref:System.EventArgs> es un tipo base <xref:System.Windows.Forms.KeyEventArgs> de y <xref:System.Windows.Forms.MouseEventArgs>.
 
 ### <a name="code"></a>Código
 

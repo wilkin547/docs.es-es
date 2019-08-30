@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: eee10cbf3bbfc6f66ec9e0c3f35b27fdc485764b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4b7a5681840bf70eaebc824ff3d0dbeef3d1d799
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944682"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169092"
 ---
 # <a name="binding-sources-overview"></a>Información general sobre orígenes de enlaces
 En el enlace de datos, el objeto de origen de enlace hace referencia al objeto de que se obtienen los datos. En este tema se describen los tipos de objetos que se pueden usar como origen de enlace.  
@@ -42,7 +42,7 @@ En el enlace de datos, el objeto de origen de enlace hace referencia al objeto d
 ### <a name="other-characteristics"></a>Otras características  
  En la lista siguiente se proporcionan otros puntos importantes a tener en cuenta:  
   
-- Si desea crear el objeto en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la clase debe tener un constructor sin parámetros. En algunos [!INCLUDE[TLA2#tla_net](../../../../includes/tla2sharptla-net-md.md)] lenguajes, como C#, el constructor sin parámetros podría crearse automáticamente.  
+- Si desea crear el objeto en [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], la clase debe tener un constructor sin parámetros. En algunos lenguajes .NET, como C#, el constructor sin parámetros podría crearse automáticamente.  
   
 - Las propiedades que se utilizan como propiedades de origen de enlace para un enlace deben ser propiedades públicas de la clase. No se puede acceder a las propiedades de interfaz definidas explícitamente con fines de enlace, ni tampoco las propiedades protegidas, privadas, internas o virtuales que no tengan ninguna implementación base.  
   
