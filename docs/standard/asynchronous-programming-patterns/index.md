@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3535e2979d2430fcb434a578f94d8d5b3925631
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 36798fabcd42cf7e04b0a6f288736503eecad88b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666568"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169123"
 ---
 # <a name="asynchronous-programming-patterns"></a>Patrones para la programación asincrónica
 
 .NET proporciona tres patrones para realizar las operaciones asincrónicas:  
 
-- **Patrón asincrónico basado en tareas (TAP)** , que utiliza un método único para representar el inicio y la finalización de una operación asincrónica. TAP apareció por primera vez en .NET Framework 4. **Es el enfoque recomendado para la programación asincrónica en. NET.** Las palabras clave [2.async](../../csharp/language-reference/keywords/async.md) y [await](../../csharp/language-reference/keywords/await.md) en C# y los operadores [Async](../../visual-basic/language-reference/modifiers/async.md) y [Await](../../visual-basic/language-reference/operators/await-operator.md) en Visual Basic agregan compatibilidad de lenguaje para TAP. Para más información, consulte [Patrón asincrónico basado en tareas (TAP)](task-based-asynchronous-pattern-tap.md).  
+- **Patrón asincrónico basado en tareas (TAP)** , que utiliza un método único para representar el inicio y la finalización de una operación asincrónica. TAP apareció por primera vez en .NET Framework 4. **Es el enfoque recomendado para la programación asincrónica en. NET.** Las palabras clave [2.async](../../csharp/language-reference/keywords/async.md) y [await](../../csharp/language-reference/operators/await.md) en C# y los operadores [Async](../../visual-basic/language-reference/modifiers/async.md) y [Await](../../visual-basic/language-reference/operators/await-operator.md) en Visual Basic agregan compatibilidad de lenguaje para TAP. Para más información, consulte [Patrón asincrónico basado en tareas (TAP)](task-based-asynchronous-pattern-tap.md).  
 
 - El **modelo asincrónico basado en eventos (EAP)** , que es el patrón heredado basado en eventos para proporcionar el comportamiento asincrónico. Requiere un método con el sufijo `Async`, así como uno o más eventos, tipos de delegado de controlador de eventos y tipos derivados de `EventArg`. EAP apareció por primera vez en .NET Framework 2.0. Ya no se recomienda para nuevo desarrollo. Para más información, consulte [Modelo asincrónico basado en eventos (EAP)](event-based-asynchronous-pattern-eap.md).  
 
