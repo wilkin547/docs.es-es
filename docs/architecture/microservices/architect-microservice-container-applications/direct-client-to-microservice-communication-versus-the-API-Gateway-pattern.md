@@ -170,13 +170,13 @@ Después de las secciones iniciales de explicación de arquitectura y patrones, 
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Chris Richardson. Patrón: API Gateway / Backend for Front-End** \ (Puerta de enlace de API o back-end para front-end)
+- **Chris Richardson. Patrón: Puerta de enlace de API o back-end para front-end** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **Puertas de enlace de API** \
   <https://docs.microsoft.com/azure/architecture/microservices/gateway>
 
-- **Aggregation and composition pattern** \ (Patrón de agregación y composición)
+- **Patrón de agregación y composición** \
   <https://microservices.io/patterns/data/api-composition.html>
 
 - **Azure API Management** \
@@ -185,10 +185,10 @@ Después de las secciones iniciales de explicación de arquitectura y patrones, 
 - **Udi Dahan. Service Oriented Composition (Composición orientada a servicios)**  \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters. Messaging and Microservices at GOTO 2016 (vídeo)**  \ (Mensajería y microservicios en GOTO 2016; vídeo)
+- **Clemens Vasters. Mensajería y microservicios en GOTO 2016; vídeo** \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
-- **API Gateway in a Nutshell** (ASP.net Core API Gateway Tutorial Series) \ [Puerta de enlace de API en resumen (Serie de tutoriales de puerta de enlace de API de ASP.NET Core)] \
+- **Puerta de enlace de API en resumen** (Serie de tutoriales de puerta de enlace de API de ASP.NET Core) \
   <https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html>
 
 >[!div class="step-by-step"]
