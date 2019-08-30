@@ -82,19 +82,19 @@ public class CardType : Enumeration
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Enum’s are evil—update** \ (Las enumeraciones son contraproducentes: actualice)
+- **Enum’s are evil—update (Las enumeraciones son contraproducentes: actualice)**  \
   <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
-- **Daniel Hardman. How Enums Spread Disease — And How To Cure It** \ (Cómo las enumeraciones contagian la enfermedad y cómo curarla)
+- **Daniel Hardman. How Enums Spread Disease — And How To Cure It (Cómo las enumeraciones contagian la enfermedad y cómo curarla)**  \
   <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
-- **Jimmy Bogard. Enumeration classes** \ (Clases de enumeración)
+- **Jimmy Bogard. Enumeration classes (Clases de enumeración)**  \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
-- **Steve Smith. Enum Alternatives in C#**  \ (Alternativas de enumeración en C#)
+- **Steve Smith. Enum Alternatives in C# (Alternativas de enumeración en C#)**  \
   <https://ardalis.com/enum-alternatives-in-c>
 
-- **Enumeration.cs.** Base Enumeration class in eShopOnContainers \ (Clase base de enumeración en eShopOnContainers)
+- **Enumeration.cs.** Base Enumeration class in eShopOnContainers (Clase base de enumeración en eShopOnContainers) \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**. Sample Enumeration class in eShopOnContainers (CardType.cs. Clase de enumeración de ejemplo en eShopOnContainers) \
