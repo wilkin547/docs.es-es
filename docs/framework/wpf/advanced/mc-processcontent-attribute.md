@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: bc406659bec3fd8d5da87b597356a3411c7a2605
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 619c3ffbc68c8c72ea9dd6545ab8da536380483b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69567402"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206170"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent (Atributo)
 Especifica los [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] elementos que deben seguir teniendo el contenido procesado por los elementos primarios pertinentes, incluso si un procesador puede omitir [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] el elemento primario inmediato debido a la especificación de un [atributo MC: ignorable](mc-ignorable-attribute.md). El `mc:ProcessContent` atributo admite la compatibilidad de marcado para la asignación de espacio [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] de nombres personalizada y para el control de versiones.  
@@ -44,7 +44,7 @@ Especifica los [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-m
   
  Se pueden especificar varios prefijos en el atributo, mediante un separador de espacio, `mc:ProcessContent="ignore:Element1 ignore:Element2"`por ejemplo:.  
   
- El [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] espacio de nombres define otros elementos y atributos que no están documentados en esta área del SDK. Para obtener más información, vea [especificación de compatibilidad de marcado XML](https://go.microsoft.com/fwlink/?LinkId=73824).  
+ El `http://schemas.openxmlformats.org/markup-compatibility/2006` espacio de nombres define otros elementos y atributos que no están documentados en esta área del SDK. Para obtener más información, vea [especificación de compatibilidad de marcado XML](https://go.microsoft.com/fwlink/?LinkId=73824).  
   
 ## <a name="see-also"></a>Vea también
 
