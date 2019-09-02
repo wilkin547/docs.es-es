@@ -44,10 +44,10 @@ Solo hay una arquitectura de aplicación: la arquitectura del sistema o la aplic
 - **Martin Fowler. CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young. CQRS Documents** \ (Documentos de CQRS)
+- **Greg Young. Documentos de CQRS** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **Udi Dahan. Clarified CQRS** \ (CQRS aclarado)
+- **Udi Dahan. CQRS aclarado** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]

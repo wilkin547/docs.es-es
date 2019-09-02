@@ -46,16 +46,16 @@ En esta guía solo se cubren o introducen los tres primeros aspectos. Los dos ú
 - **Mark Russinovich. Microservices: Microservicios: una revolución de las aplicaciones con la tecnología de la nube** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **Martin Fowler. Microservices** \ (Microservicios)
+- **Martin Fowler. Microservicios** \
   <https://www.martinfowler.com/articles/microservices.html>
 
-- **Martin Fowler. Microservice Prerequisites** \ (Requisitos previos de microservicios)
+- **Martin Fowler. Requisitos previos de microservicios** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson. Chunk Cloud Computing** \ (Informática en la nube de fragmentos)
+- **Jimmy Nilsson. Informática en la nube de fragmentos** \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de la Torre. Containerized Docker Application Lifecycle with Microsoft Platform and Tools** (Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft; libro electrónico descargable)
+- **Cesar de la Torre. Ciclo de vida de aplicaciones de Docker en contenedor con la plataforma y las herramientas de Microsoft;** (libro electrónico descargable) \
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]

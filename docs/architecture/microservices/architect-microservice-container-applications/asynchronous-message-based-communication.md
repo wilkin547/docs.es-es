@@ -83,25 +83,25 @@ Temas adicionales que se deben tener en cuenta al usar la comunicación asincró
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Event Driven Messaging** \ (Mensajería controlada por eventos)
+- **Mensajería controlada por eventos** \
   <http://soapatterns.org/design_patterns/event_driven_messaging>
 
-- **Publish/Subscribe Channel** \ (Canal de publicación y suscripción)
+- **Canal de publicación y suscripción** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Udi Dahan. Clarified CQRS** \ (CQRS aclarado)
+- **Udi Dahan. CQRS aclarado** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **Patrón Command and Query Responsibility Segregation (CQRS)**  \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
-- **Communicating Between Bounded Contexts** \ (Comunicación entre contextos delimitados)
+- **Comunicación entre contextos delimitados** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Eventual Consistency** \ (Coherencia de los eventos)
+- **Coherencia de los eventos** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactorización hacia la resiliencia: evaluación del acoplamiento)
+- **Jimmy Bogard. Refactorización hacia la resiliencia: evaluación del acoplamiento** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
