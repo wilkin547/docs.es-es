@@ -2,12 +2,12 @@
 title: Usar System.Transactions en ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 866d7b69fa6c18f6edfb48655b213e140a095a28
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bfc75661ea538ac52b244e38eb10e6ae37a8fd62
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880219"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205838"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Usar System.Transactions en ASP.NET
 Este tema describe cómo se puede utilizar <xref:System.Transactions> correctamente dentro de una aplicación ASP.NET.  
@@ -17,9 +17,9 @@ Este tema describe cómo se puede utilizar <xref:System.Transactions> correctame
   
  Se exige<xref:System.Transactions.DistributedTransactionPermission> cuando la administración de la transacción se escala para que el Coordinador de transacciones distribuidas de Microsoft (MSDTC) la administre. Este tipo de escenario usa recursos de todo el proceso y particularmente un recurso global, que es el espacio reservado en el registro de MSDTC. Un ejemplo de este uso es un front-end web con una base de datos o una aplicación que usa una base de datos como parte de los servicios que proporciona.  
   
- ASP.NET tiene su propio conjunto de niveles de confianza y asocia un conjunto concreto de permisos con estos niveles de confianza a través de los archivos de directivas. Para obtener más información, consulte [niveles de confianza de ASP.NET y los archivos de directiva](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100)). Cuando se instala inicialmente Windows SDK, ninguno de los archivos de directiva predeterminada ASP.NET están asociado con el <xref:System.Transactions.DistributedTransactionPermission>. Como tal, cuando su transacción en una aplicación ASP.NET realiza una escalada para ser administrada por MSDTC, se produce un error en la subida con <xref:System.Security.SecurityException> al exigir <xref:System.Transactions.DistributedTransactionPermission>. Debería permitir <xref:System.Transactions.DistributedTransactionPermission> en los mismos niveles de confianza predeterminados como aquéllos de <xref:System.Data.SqlClient.SqlClientPermission>para habilitar la subida de la transacción en un entorno confiable parcial de ASP.NET. Puede configurar su propio nivel de confianza personalizado y archivo de directivas para admitirlo o bien modificar los archivos de directivas predeterminados, **Web_hightrust.config** y **Web_mediumtrust.config**.  
+ ASP.NET tiene su propio conjunto de niveles de confianza y asocia un conjunto concreto de permisos con estos niveles de confianza a través de los archivos de directivas. Para obtener más información, consulte [niveles de confianza y archivos de directiva de ASP.net](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100)). Al instalar inicialmente el Windows SDK, ninguno de los archivos de directiva de ASP.NET predeterminados está <xref:System.Transactions.DistributedTransactionPermission>asociado a. Como tal, cuando su transacción en una aplicación ASP.NET realiza una escalada para ser administrada por MSDTC, se produce un error en la subida con <xref:System.Security.SecurityException> al exigir <xref:System.Transactions.DistributedTransactionPermission>. Debería permitir <xref:System.Transactions.DistributedTransactionPermission> en los mismos niveles de confianza predeterminados como aquéllos de <xref:System.Data.SqlClient.SqlClientPermission>para habilitar la subida de la transacción en un entorno confiable parcial de ASP.NET. Puede configurar su propio nivel de confianza personalizado y archivo de directivas para admitirlo o bien modificar los archivos de directivas predeterminados, **Web_hightrust.config** y **Web_mediumtrust.config**.  
   
- Para modificar los archivos de directivas, agregue un **SecurityClass** (elemento) para **DistributedTransactionPermission** a la **SecurityClasses** elemento bajo el  **PolicyLevel** elemento y agregue correspondiente **IPermission** elemento bajo el ASP.NET **NamedPermissionSet** para System.Transactions. Esto se muestra en el siguiente archivo de configuración.  
+ Para modificar los archivos de directivas, agregue un elemento **SecurityClass** para **DistributedTransactionPermission** al elemento **SecurityClasses** en el elemento **PolicyLevel** y agregue un elemento **IPermission** correspondiente en el ASP.NET **NamedPermissionSet** para System. Transactions. Esto se muestra en el siguiente archivo de configuración.  
   
 ```xml  
 <SecurityClasses>  
@@ -40,7 +40,7 @@ Este tema describe cómo se puede utilizar <xref:System.Transactions> correctame
 </PermissionSet>  
 ```  
   
- Para obtener más información acerca de la directiva de seguridad ASP.NET, vea [securityPolicy Element (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100)).  
+ Para obtener más información sobre la Directiva de seguridad ASP.NET, vea [elemento securityPolicy (esquema de configuración de ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100)).  
   
 ## <a name="dynamic-compilation"></a>Compilación dinámica  
  Si desea importar y utilizar <xref:System.Transactions> en una aplicación ASP.NET que está compilada dinámicamente en acceso, debería colocar una referencia al ensamblado <xref:System.Transactions> en el archivo de configuración. Específicamente, la referencia debe agregarse en la sección **compilation**/**assemblies** del archivo de configuración **Web.config** de la raíz predeterminada, o bien en un archivo de configuración de una aplicación web concreta. En el siguiente ejemplo se muestra cómo hacerlo.  
@@ -57,10 +57,10 @@ Este tema describe cómo se puede utilizar <xref:System.Transactions> correctame
 </configuration>  
 ```  
   
- Para obtener más información, consulte [elemento add aplicado a assemblies para compilation (esquema de configuración de ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/37e2zyhb(v=vs.100)).  
+ Para obtener más información, vea [Add Element for assemblies for Compilation (ASP.NET Settings Schema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/37e2zyhb(v=vs.100)).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Niveles de confianza de ASP.NET y los archivos de directivas](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))
+- [Niveles de confianza y archivos de directiva de ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))
 - [Elemento securityPolicy (esquema de configuración de ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))
-- [Escalado de administración de transacciones](../../../../docs/framework/data/transactions/transaction-management-escalation.md)
+- [Escalado de administración de transacciones](transaction-management-escalation.md)

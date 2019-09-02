@@ -2,12 +2,12 @@
 title: Buscar el estilo de párrafo predeterminado (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: 702d3906f51b996f59dcd15067702b6de07c60a5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 45a3e293a88fc0d7fc6aa70d21d1d3a6a8bb9b13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594364"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204105"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Buscar el estilo de párrafo predeterminado (C#)
 La primera tarea del tutorial Manipular información en un documento WordprocessingML consiste en buscar el estilo predeterminado de los párrafos del documento.  
@@ -79,7 +79,7 @@ Console.WriteLine("The default style is: {0}", defaultStyle);
 ### <a name="comments"></a>Comentarios  
  Este ejemplo produce el siguiente resultado:  
   
-```  
+```output  
 The default style is: Normal  
 ```  
   
@@ -87,4 +87,3 @@ The default style is: Normal
  En el siguiente ejemplo, creará una consulta similar que busca todos los párrafos de un documento y sus estilos:  
   
 - [Recuperar los párrafos y sus estilos (C#)](./retrieving-the-paragraphs-and-their-styles.md)  
-  

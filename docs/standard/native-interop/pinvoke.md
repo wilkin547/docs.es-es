@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo llamar a funciones nativas a trav�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: c6dcfdb9543abceb688fee2d73c242f1742ab27d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cda738a173cbe61cf49f79ceef78c533a5a879d9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582553"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106799"
 ---
 # <a name="platform-invoke-pinvoke"></a>Invocación de plataforma (P/Invoke)
 
@@ -21,9 +21,9 @@ Empecemos por el ejemplo más común, es decir, llamar a funciones no administra
 
 El ejemplo anterior es simple, pero resalta lo que es necesario para invocar las funciones no administradas desde código administrado. Veamos en detalle el ejemplo:
 
-* En la línea 1 se muestra el uso de la instrucción para el espacio de nombres `System.Runtime.InteropServices`, que es el espacio de nombres que contiene todos los elementos que necesitamos.
-* En la línea 7 se introduce el atributo `DllImport`. Este atributo es fundamental, ya que le indica al tiempo de ejecución que debe cargar la DLL no administrada. La cadena que se pasa es la DLL en la que está nuestra función de destino. Además, especifica qué [juego de caracteres](./charset.md) se usará para serializar las cadenas. Por último, especifica que esta función llama a [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) y que el runtime debe capturar ese código de error para que el usuario pueda recuperarlo a través de <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
-* La línea 8 es la esencia del trabajo de P/Invoke. Define un método administrado que tiene **exactamente la misma firma** que el no administrado. Como puede ver, la declaración tiene una nueva palabra clave (`extern`) que le indica al tiempo de ejecución que esto es un método externo y que, cuando se invoca, el tiempo de ejecución debe buscarlo en el archivo DLL especificado en el atributo `DllImport`.
+- En la línea 1 se muestra el uso de la instrucción para el espacio de nombres `System.Runtime.InteropServices`, que es el espacio de nombres que contiene todos los elementos que necesitamos.
+- En la línea 7 se introduce el atributo `DllImport`. Este atributo es fundamental, ya que le indica al tiempo de ejecución que debe cargar la DLL no administrada. La cadena que se pasa es la DLL en la que está nuestra función de destino. Además, especifica qué [juego de caracteres](./charset.md) se usará para serializar las cadenas. Por último, especifica que esta función llama a [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) y que el runtime debe capturar ese código de error para que el usuario pueda recuperarlo a través de <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType>.
+- La línea 8 es la esencia del trabajo de P/Invoke. Define un método administrado que tiene **exactamente la misma firma** que el no administrado. Como puede ver, la declaración tiene una nueva palabra clave (`extern`) que le indica al tiempo de ejecución que esto es un método externo y que, cuando se invoca, el tiempo de ejecución debe buscarlo en el archivo DLL especificado en el atributo `DllImport`.
 
 El resto del ejemplo simplemente invoca el método como si se tratara de cualquier otro método administrado.
 
@@ -49,10 +49,10 @@ El primer parámetro es una devolución de llamada. Dicha devolución de llamada
 
 Ahora, examinemos el proceso:
 
-* En la línea 9 del ejemplo se define un delegado que coincide con la firma de la devolución de llamada desde código no administrado. Observe cómo se representan los tipos LPARAM y HWND mediante el uso de `IntPtr` en el código administrado.
-* En las líneas 13 y 14 se introduce la función `EnumWindows` desde la biblioteca user32.dll.
-* En las líneas de la 17 a la 20 se implementa el delegado. En este sencillo ejemplo, solo queremos generar el identificador de la consola.
-* Por último, en la línea 24, se invoca el método externo y se pasa el delegado.
+- En la línea 9 del ejemplo se define un delegado que coincide con la firma de la devolución de llamada desde código no administrado. Observe cómo se representan los tipos LPARAM y HWND mediante el uso de `IntPtr` en el código administrado.
+- En las líneas 13 y 14 se introduce la función `EnumWindows` desde la biblioteca user32.dll.
+- En las líneas de la 17 a la 20 se implementa el delegado. En este sencillo ejemplo, solo queremos generar el identificador de la consola.
+- Por último, en la línea 24, se invoca el método externo y se pasa el delegado.
 
 Los ejemplos de Linux y macOS se muestran a continuación. Para ellos, usamos la función `ftw` que se encuentra en `libc`, la biblioteca de C. Esta función se usa para atravesar las jerarquías de directorio y toma un puntero a una función como uno de sus parámetros. Dicha función tiene la firma siguiente: `int (*fn) (const char *fpath, const struct stat *sb, int typeflag)`.
 

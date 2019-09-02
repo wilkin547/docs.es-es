@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e08cb1b3f4708b4314f0cd663f70fa10aaa1aded
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 50428e4e28df812a3a0c985d0d1876dab7b5279c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910688"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206033"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>Utilizar bibliotecas de código que no es de plena confianza
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
 > [!NOTE]
-> En este tema se trata el comportamiento de los ensamblados con nombre seguro y se aplica solo a los ensamblados de [nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md) . El [código transparente en seguridad,](../../../docs/framework/misc/security-transparent-code-level-2.md) los ensamblados de nivel 2 en el .NET Framework 4 o posterior no se ven afectados por los nombres seguros. Para obtener más información acerca de los cambios en el sistema de seguridad, consulte [cambios de seguridad](../../../docs/framework/security/security-changes.md).  
+> En este tema se trata el comportamiento de los ensamblados con nombre seguro y se aplica solo a los ensamblados de [nivel 1](security-transparent-code-level-1.md) . El [código transparente en seguridad,](security-transparent-code-level-2.md) los ensamblados de nivel 2 en el .NET Framework 4 o posterior no se ven afectados por los nombres seguros. Para obtener más información acerca de los cambios en el sistema de seguridad, consulte [cambios de seguridad](../security/security-changes.md).  
   
- Las aplicaciones que reciben menos de la plena confianza de su host o espacio aislado no pueden llamar a las bibliotecas administradas compartidas a menos que el escritor de la biblioteca se lo permita específicamente mediante el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Por lo tanto, los escritores de aplicaciones deben tener en cuenta que habrá algunas bibliotecas que no estarán a su disposición desde un contexto de confianza parcial. De forma predeterminada, todo el código que se ejecuta en un [espacio aislado](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) de confianza parcial y no está en la lista de ensamblados de plena confianza es de confianza parcial. Si no espera que el código se ejecute desde un contexto de confianza parcial o que lo llame un código de confianza parcial, no tiene que preocuparse de la información de esta sección. Sin embargo, si escribe un código que debe interactuar con un código de confianza parcial o que debe funcionar desde un contexto de confianza parcial, debe considerar los siguientes factores:  
+ Las aplicaciones que reciben menos de la plena confianza de su host o espacio aislado no pueden llamar a las bibliotecas administradas compartidas a menos que el escritor de la biblioteca se lo permita específicamente mediante el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. Por lo tanto, los escritores de aplicaciones deben tener en cuenta que habrá algunas bibliotecas que no estarán a su disposición desde un contexto de confianza parcial. De forma predeterminada, todo el código que se ejecuta en un [espacio aislado](how-to-run-partially-trusted-code-in-a-sandbox.md) de confianza parcial y no está en la lista de ensamblados de plena confianza es de confianza parcial. Si no espera que el código se ejecute desde un contexto de confianza parcial o que lo llame un código de confianza parcial, no tiene que preocuparse de la información de esta sección. Sin embargo, si escribe un código que debe interactuar con un código de confianza parcial o que debe funcionar desde un contexto de confianza parcial, debe considerar los siguientes factores:  
   
 - Las bibliotecas deben firmarse con un nombre seguro para que las puedan compartir varias aplicaciones. Los nombres seguros permiten que el código se coloque en la caché global de ensamblados o se agregue a la lista de plena confianza de un espacio aislado <xref:System.AppDomain>, de manera que los consumidores puedan comprobar que un determinado fragmento del código móvil proviene de usted.  
   
-- De forma predeterminada, las bibliotecas compartidas de [nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md) con nombre seguro realizan una [LinkDemand](../../../docs/framework/misc/link-demands.md) implícita para la plena confianza automáticamente, sin que el escritor de la biblioteca tenga que hacer nada.  
+- De forma predeterminada, las bibliotecas compartidas de [nivel 1](security-transparent-code-level-1.md) con nombre seguro realizan una [LinkDemand](link-demands.md) implícita para la plena confianza automáticamente, sin que el escritor de la biblioteca tenga que hacer nada.  
   
 - Si un llamador no tiene plena confianza y, aun así, intenta llamar a dicha biblioteca, el tiempo de ejecución produce una <xref:System.Security.SecurityException>, de manera que el llamador no podrá vincularse a la biblioteca.  
   
@@ -53,4 +53,4 @@ ms.locfileid: "69910688"
   
 ## <a name="see-also"></a>Vea también
 
-- [Seguridad de acceso del código](../../../docs/framework/misc/code-access-security.md)
+- [Seguridad de acceso del código](code-access-security.md)

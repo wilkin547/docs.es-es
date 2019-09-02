@@ -2,12 +2,12 @@
 title: Novedades de C# 7.1
 description: Información general sobre las nuevas características en C# 7.1.
 ms.date: 04/09/2019
-ms.openlocfilehash: 18306da709ea30f03f6c42b4a917e9b39695eb16
-ms.sourcegitcommit: bbfcc913c275885381820be28f61efcf8e83eecc
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68796593"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105549"
 ---
 # <a name="whats-new-in-c-71"></a>Novedades de C# 7.1
 
@@ -17,13 +17,13 @@ C# 7.1 incorpora el elemento de configuración de [selección de versión de le
 
 Las nuevas características de lenguaje de esta versión son las siguientes:
 
-* [Método `async` `Main`](#async-main)
+- [Método `async` `Main`](#async-main)
   - El punto de entrada de una aplicación puede tener el modificador `async`.
-* [Expresiones literales `default`](#default-literal-expressions)
+- [Expresiones literales `default`](#default-literal-expressions)
   - Se pueden usar expresiones literales predeterminadas en expresiones de valor predeterminadas cuando el tipo de destino se pueda inferir.
-* [Nombres de elementos de tupla inferidos](#inferred-tuple-element-names)
+- [Nombres de elementos de tupla inferidos](#inferred-tuple-element-names)
   - En muchos casos, los nombres de elementos de tupla se pueden deducir de la inicialización de la tupla.
-* [Coincidencia de patrones en parámetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
+- [Coincidencia de patrones en parámetros de tipo genérico](#pattern-matching-on-generic-type-parameters)
   - Puede usar expresiones de coincidencia de patrones en variables cuyo tipo es un parámetro de tipo genérico.
 
 Por último, el compilador tiene dos opciones, `-refout` y `-refonly`, que controlan la [generación de ensamblados de referencia](#reference-assembly-generation).

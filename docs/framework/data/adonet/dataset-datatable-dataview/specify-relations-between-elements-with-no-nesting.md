@@ -2,17 +2,17 @@
 title: Especificar relaciones entre elementos sin anidamiento
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 4b7b216e58f36302db29c4b4b5176339521b0f17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83dce7173c016a7d7d2d626bb7a3606de29d54ae
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607922"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204473"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Especificar relaciones entre elementos sin anidamiento
-Cuando los elementos no están anidados, no se crea ninguna relación implícita. Sin embargo, puede especifican explícitamente relaciones entre elementos que no están anidados utilizando el **msdata: Relationship** anotación.  
+Cuando los elementos no están anidados, no se crea ninguna relación implícita. Sin embargo, puede especificar explícitamente las relaciones entre elementos que no están anidados mediante la anotación **msdata: Relationship** .  
   
- En el ejemplo siguiente se muestra un esquema XML en el que el **msdata: Relationship** anotación se especifica entre la **orden** y **OrderDetail** elementos, que no son anidar. El **msdata: Relationship** anotación se especifica como el elemento secundario de la **esquema** elemento.  
+ En el ejemplo siguiente se muestra un esquema XML en el que se especifica la anotación **msdata: Relationship** entre los elementos **Order** y **OrderDetail** , que no están anidados. La anotación **msdata: Relationship** se especifica como el elemento secundario del elemento **Schema** .  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -53,7 +53,7 @@ Cuando los elementos no están anidados, no se crea ninguna relación implícita
 </xs:schema>  
 ```  
   
- El proceso de asignación de esquema de esquema XML definition language (XSD) crea un <xref:System.Data.DataSet> con **orden** y **OrderDetail** tablas y una relación entre estas dos tablas, como se muestra a continuación.  
+ El proceso de asignación del esquema del lenguaje de definición de esquemas <xref:System.Data.DataSet> XML (XSD) crea un objeto con las tablas **Order** y **OrderDetail** y una relación especificada entre estas dos tablas, como se muestra a continuación.  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -66,6 +66,6 @@ Nested: False
   
 ## <a name="see-also"></a>Vea también
 
-- [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

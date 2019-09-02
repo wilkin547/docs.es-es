@@ -4,12 +4,12 @@ description: En este tutorial se muestra cómo crear una aplicación de consola 
 ms.date: 05/13/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2dc4d68eb6a3aa5890e4d091e33c4624d79317e9
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 4daa7734f12c57a177fab3c62fdd96bda22838af
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238372"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107167"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: Análisis de opinión de los comentarios del sitio web con clasificación binaria de ML.NET
 
@@ -17,21 +17,21 @@ En este tutorial se muestra cómo crear una aplicación de consola de .NET Core
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
-> * Creación de una aplicación de consola
-> * Preparar los datos
-> * Carga de los datos
-> * Creación y entrenamiento del modelo
-> * Evaluar el modelo
-> * Uso del modelo para realizar una predicción
-> * Ver los resultados
+> - Creación de una aplicación de consola
+> - Preparar los datos
+> - Carga de los datos
+> - Creación y entrenamiento del modelo
+> - Evaluar el modelo
+> - Uso del modelo para realizar una predicción
+> - Ver los resultados
 
 Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-* [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada
+- [Visual Studio 2017 15.6 o posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) con la carga de trabajo "Desarrollo multiplataforma de .NET Core" instalada
 
-* [Conjunto de datos de frases con etiqueta de opinión de UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (archivo ZIP)
+- [Conjunto de datos de frases con etiqueta de opinión de UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) (archivo ZIP)
 
 ## <a name="create-a-console-application"></a>Creación de una aplicación de consola
 
@@ -62,8 +62,8 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 2. Cree dos campos globales para contener la ruta de acceso del archivo de conjunto de datos recientemente descargado y la ruta de acceso del archivo de modelo guardado:
 
-    * `_dataPath` tiene la ruta de acceso al conjunto de datos utilizado para entrenar el modelo.
-    * `_modelPath` tiene la ruta de acceso donde se guarda el modelo entrenado.
+    - `_dataPath` tiene la ruta de acceso al conjunto de datos utilizado para entrenar el modelo.
+    - `_modelPath` tiene la ruta de acceso donde se guarda el modelo entrenado.
 
 3. Agregue el código siguiente a la línea inmediatamente por encima del método `Main` para especificar las rutas de acceso:
 
@@ -125,9 +125,9 @@ Prepare la aplicación y luego cargue datos:
 
     El método `LoadData()` ejecuta las tareas siguientes:
 
-    * Carga los datos.
-    * Divide el conjunto de datos cargado en conjuntos de datos de entrenamiento y prueba.
-    * Devuelve los conjuntos de datos divididos en entrenamiento y prueba.
+    - Carga los datos.
+    - Divide el conjunto de datos cargado en conjuntos de datos de entrenamiento y prueba.
+    - Devuelve los conjuntos de datos divididos en entrenamiento y prueba.
 
 4. Agregue el código siguiente a la primera línea del método `LoadData()`:
 
@@ -157,10 +157,10 @@ Al preparar un modelo, se utiliza parte del conjunto de datos para entrenarlo y 
 
     El método `BuildAndTrainModel()` ejecuta las tareas siguientes:
 
-    * Extrae y transforma los datos.
-    * Entrena el modelo.
-    * Predice sentimientos en función de datos de prueba.
-    * Devuelve el modelo.
+    - Extrae y transforma los datos.
+    - Entrena el modelo.
+    - Predice sentimientos en función de datos de prueba.
+    - Devuelve el modelo.
 
 2. Cree el método `BuildAndTrainModel()`, justo después del método `Main()`, mediante el código siguiente:
 
@@ -225,10 +225,10 @@ Cuando el modelo haya sido entrenado, use sus datos de prueba para validar el re
 
     El método `Evaluate()` ejecuta las tareas siguientes:
 
-    * Carga el conjunto de datos de prueba.
-    * Crea el evaluador BinaryClassification.
-    * Evalúa el modelo y crea las métricas.
-    * Muestra las métricas.
+    - Carga el conjunto de datos de prueba.
+    - Crea el evaluador BinaryClassification.
+    - Evalúa el modelo y crea las métricas.
+    - Muestra las métricas.
 
 2. Agregue una llamada al método nuevo desde el método `Main()`, justo debajo de la llamada al método `BuildAndTrainModel()`, utilizando el código siguiente:
 
@@ -252,11 +252,11 @@ Use el siguiente código para mostrar las métricas:
 
 [!code-csharp[DisplayMetrics](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#DisplayMetrics "Display selected metrics")]
 
-* La métrica `Accuracy` obtiene la precisión de un modelo, que corresponde a la proporción de predicciones correctas en el conjunto de pruebas.
+- La métrica `Accuracy` obtiene la precisión de un modelo, que corresponde a la proporción de predicciones correctas en el conjunto de pruebas.
 
-* La métrica `AreaUnderRocCurve` indica el nivel de confianza del modelo en clasificar correctamente las clases positivas y negativas. Se desea que `AreaUnderRocCurve` esté lo más cerca de uno posible.
+- La métrica `AreaUnderRocCurve` indica el nivel de confianza del modelo en clasificar correctamente las clases positivas y negativas. Se desea que `AreaUnderRocCurve` esté lo más cerca de uno posible.
 
-* La métrica `F1Score` obtiene la puntuación F1 del modelo, que es una medida del equilibrio entre [precisión](../resources/glossary.md#precision) y [recuperación](../resources/glossary.md#recall).  Se desea que `F1Score` esté lo más cerca de uno posible.
+- La métrica `F1Score` obtiene la puntuación F1 del modelo, que es una medida del equilibrio entre [precisión](../resources/glossary.md#precision) y [recuperación](../resources/glossary.md#recall).  Se desea que `F1Score` esté lo más cerca de uno posible.
 
 ### <a name="predict-the-test-data-outcome"></a>Predicción del resultado de datos de prueba
 
@@ -271,10 +271,10 @@ Use el siguiente código para mostrar las métricas:
 
     El método `UseModelWithSingleItem()` ejecuta las tareas siguientes:
 
-    * Crea un único comentario de datos de prueba.
-    * Predice sentimientos en función de datos de prueba.
-    * Combina datos de prueba y predicciones para la generación de informes.
-    * Muestra los resultados de la predicción.
+    - Crea un único comentario de datos de prueba.
+    - Predice sentimientos en función de datos de prueba.
+    - Combina datos de prueba y predicciones para la generación de informes.
+    - Muestra los resultados de la predicción.
 
 2. Agregue una llamada al método nuevo desde el método `Main()`, justo debajo de la llamada al método `Evaluate()`, utilizando el código siguiente:
 
@@ -315,10 +315,10 @@ Use el siguiente código para mostrar las métricas:
 
     El método `UseModelWithBatchItems()` ejecuta las tareas siguientes:
 
-    * Crea datos de prueba por lotes.
-    * Predice sentimientos en función de datos de prueba.
-    * Combina datos de prueba y predicciones para la generación de informes.
-    * Muestra los resultados de la predicción.
+    - Crea datos de prueba por lotes.
+    - Predice sentimientos en función de datos de prueba.
+    - Combina datos de prueba y predicciones para la generación de informes.
+    - Muestra los resultados de la predicción.
 
 2. Agregue una llamada al método nuevo desde el método `Main`, justo debajo de la llamada al método `UseModelWithSingleItem()`, utilizando el código siguiente:
 
@@ -383,13 +383,13 @@ Puede encontrar el código fuente para este tutorial en el repositorio [dotnet/s
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
-> * Creación de una aplicación de consola
-> * Preparar los datos
-> * Carga de los datos
-> * Creación y entrenamiento del modelo
-> * Evaluar el modelo
-> * Uso del modelo para realizar una predicción
-> * Ver los resultados
+> - Creación de una aplicación de consola
+> - Preparar los datos
+> - Carga de los datos
+> - Creación y entrenamiento del modelo
+> - Evaluar el modelo
+> - Uso del modelo para realizar una predicción
+> - Ver los resultados
 
 Siga con el siguiente tutorial para obtener más información
 > [!div class="nextstepaction"]

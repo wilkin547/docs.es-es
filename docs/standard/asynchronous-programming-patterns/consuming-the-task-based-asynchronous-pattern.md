@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 723f07fb3fb4eda1c0071eec2b1d012948a10f77
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 08b5dee94a9a23fdd1c9e635aa2ef848f59e86cf
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666555"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169132"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Utilizar el modelo asincrónico basado en tareas
 
 Cuando se utiliza el modelo asincrónico basado en tareas (TAP) para trabajar con operaciones asincrónicas, puede utilizar las devoluciones de llamada para conseguir esperas sin bloqueos.  Para las tareas, esto se consigue con métodos como <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. La compatibilidad asincrónica basada en lenguaje oculta las devoluciones de llamada al permitir que las operaciones asincrónicas se puedan esperar en el flujo de control normal y que el código generado por el compilador proporcione esta misma compatibilidad de nivel de API.
 
 ## <a name="suspending-execution-with-await"></a>Suspender la ejecución con Await
- A partir de .NET Framework 4.5, se puede utilizar la palabra clave [await](../../csharp/language-reference/keywords/await.md) de C# y el [operador Await](../../visual-basic/language-reference/operators/await-operator.md) de Visual Basic para esperar asincrónicamente los objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>. Cuando se espera una clase <xref:System.Threading.Tasks.Task>, la expresión `await` es de tipo `void`. Cuando se espera una clase <xref:System.Threading.Tasks.Task%601>, la expresión `await` es de tipo `TResult`. Debe producirse una expresión `await` dentro del cuerpo de un método asincrónico. Para obtener más información sobre la compatibilidad del lenguaje C# y Visual Basic en .NET Framework 4.5, consulte las especificaciones del lenguaje C# y Visual Basic.
+ A partir de .NET Framework 4.5, se puede utilizar la palabra clave [await](../../csharp/language-reference/operators/await.md) de C# y el [operador Await](../../visual-basic/language-reference/operators/await-operator.md) de Visual Basic para esperar asincrónicamente los objetos <xref:System.Threading.Tasks.Task> y <xref:System.Threading.Tasks.Task%601>. Cuando se espera una clase <xref:System.Threading.Tasks.Task>, la expresión `await` es de tipo `void`. Cuando se espera una clase <xref:System.Threading.Tasks.Task%601>, la expresión `await` es de tipo `TResult`. Debe producirse una expresión `await` dentro del cuerpo de un método asincrónico. Para obtener más información sobre la compatibilidad del lenguaje C# y Visual Basic en .NET Framework 4.5, consulte las especificaciones del lenguaje C# y Visual Basic.
 
  En realidad, la funcionalidad de await instala una devolución de llamada en la tarea mediante una continuación.  Esta devolución de llamada reanuda el método asincrónico en el punto de suspensión. Cuando se reanuda el método asincrónico, si la operación de espera finalizó correctamente y fue un objeto <xref:System.Threading.Tasks.Task%601>, se devuelve su `TResult`.  Si las clases <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> por la que esperaba finalizaron con el estado <xref:System.Threading.Tasks.TaskStatus.Canceled>, se produce una excepción <xref:System.OperationCanceledException>.  Si las clases <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601> por la que esperaba finalizaron con el estado <xref:System.Threading.Tasks.TaskStatus.Faulted>, se produce la excepción que causó el error. Un objeto `Task` puede producir un error como resultado de múltiples excepciones, pero solo una de estas excepciones se propaga. Sin embargo, la propiedad <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> devuelve una excepción <xref:System.AggregateException> que contiene todos los errores.
 

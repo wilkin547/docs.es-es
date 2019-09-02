@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8589b157bc2579a03d856b73802abc9a4b42855
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879910"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204080"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>Objetos AcceptChange y RejectChange
-Después de comprobar la exactitud de los cambios realizados a los datos en un <xref:System.Data.DataTable>, puede aceptar los cambios mediante el <xref:System.Data.DataRow.AcceptChanges%2A> método de la <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, o <xref:System.Data.DataSet>, que establecerá el **actual** fila los valores sean los **Original** valores y establecerá el **RowState** propiedad **Unchanged**. Aceptar o rechazar cambios, se elimina **RowError** información y establece el **HasErrors** propiedad **false**. Aceptar o rechazar cambios también puede afectar a la actualización de datos en el origen de datos. Para obtener más información, consulte [actualizar orígenes de datos con objetos DataAdapter](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md).  
+Después de comprobar la exactitud de los cambios realizados en los datos <xref:System.Data.DataTable>en un, puede aceptar los cambios mediante <xref:System.Data.DataRow.AcceptChanges%2A> el método de <xref:System.Data.DataRow>, <xref:System.Data.DataTable>o <xref:System.Data.DataSet>, que establecerá los valores de fila **actuales** comoLos valores originales y establecerán la propiedad **RowState** en Unchanged. Al aceptar o rechazar los cambios, se borra cualquier información de **RowError** y se establece la propiedad **hasErrors** en **false**. Aceptar o rechazar cambios también puede afectar a la actualización de datos en el origen de datos. Para obtener más información, vea [Actualizar orígenes de datos con DataAdapters](../updating-data-sources-with-dataadapters.md).  
   
- Si existen restricciones de clave externa en el **DataTable**, los cambios se aceptan o rechazan mediante **AcceptChanges** y **RejectChanges** se propagan a las filas secundarias de la  **DataRow** según la **ForeignKeyConstraint.AcceptRejectRule**. Para obtener más información, consulte [restricciones de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ Si existen restricciones Foreign Key en **DataTable**, los cambios aceptados o rechazados mediante **AcceptChanges** y **RejectChanges** se propagan a las filas secundarias de **DataRow** según el  **ForeignKeyConstraint. AcceptRejectRule**. Para obtener más información, vea [restricciones de DataTable](datatable-constraints.md).  
   
- En el ejemplo siguiente se comprueba si hay filas con errores, se resuelven los errores que haya y se rechazan las filas en las que no se puede resolver el error. Tenga en cuenta que, para resolver errores, el **RowError** valor se restablece en una cadena vacía, provocando la **HasErrors** propiedad se establece en **false**. Cuando todas las filas con errores se han resuelto o rechazado, **AcceptChanges** se llama para aceptar todos los cambios para toda la **DataTable**.  
+ En el ejemplo siguiente se comprueba si hay filas con errores, se resuelven los errores que haya y se rechazan las filas en las que no se puede resolver el error. Tenga en cuenta que, en el caso de los errores resueltos, el valor de **RowError** se restablece en una cadena vacía, lo que hace que la propiedad **hasErrors** se establezca en **false**. Cuando todas las filas con errores se han resuelto o rechazado, se llama a **AcceptChanges** para aceptar todos los cambios de la **DataTable**completa.  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -61,5 +61,5 @@ workTable.AcceptChanges();
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
-- [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

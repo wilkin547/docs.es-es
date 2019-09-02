@@ -3,12 +3,12 @@ title: Trabajar con el modelo semántico del SDK de .NET Compiler Platform
 description: En este tema se proporciona una descripción del tipo que se usa para entender y manipular el modelo semántico del código.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357493"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105665"
 ---
 # <a name="work-with-semantics"></a>Trabajar con semántica
 
@@ -51,8 +51,8 @@ Los símbolos son similares en concepto al sistema de tipos de CLR representado 
 
 Un modelo semántico representa toda la información semántica de un solo archivo de origen. Puede usarlo para descubrir lo siguiente: 
 
-* Los símbolos a los que se hace referencia en una ubicación concreta del origen.
-* El tipo resultante de cualquier expresión.
-* Todos los diagnósticos, que son errores y advertencias.
-* Cómo fluyen las variables hacia y desde las regiones del origen.
-* Las respuestas a preguntas más especulativas.
+- Los símbolos a los que se hace referencia en una ubicación concreta del origen.
+- El tipo resultante de cualquier expresión.
+- Todos los diagnósticos, que son errores y advertencias.
+- Cómo fluyen las variables hacia y desde las regiones del origen.
+- Las respuestas a preguntas más especulativas.

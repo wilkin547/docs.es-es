@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: 8932f393af58f2014f643c5b6ebd6dc7a127b7eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb39ead1fe15e3bfcf67370e4675dcae3bbf9801
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034442"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203900"
 ---
 # <a name="creating-a-datareader"></a>Crear un objeto DataReader
 Las clases <xref:System.Data.DataTable> y <xref:System.Data.DataSet> tienen un método <xref:System.Data.DataTable.CreateDataReader%2A> que devuelve el contenido de la <xref:System.Data.DataTable> o el contenido de la colección <xref:System.Data.DataSet> del objeto <xref:System.Data.DataSet.Tables%2A> como uno o más conjuntos de resultados de solo lectura y solo avance.  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente aplicación de consola crea una instancia de <xref:System.Data.DataTable>. El ejemplo a continuación, pasa el relleno <xref:System.Data.DataTable> a un procedimiento que llama el <xref:System.Data.DataTable.CreateDataReader%2A> método, que recorre en iteración los resultados incluidos en el <xref:System.Data.DataTableReader>.  
+ La siguiente aplicación de consola crea una instancia de <xref:System.Data.DataTable>. A continuación, en el ejemplo <xref:System.Data.DataTable> se pasa el rellenado <xref:System.Data.DataTable.CreateDataReader%2A> a un procedimiento que llama al método, que recorre <xref:System.Data.DataTableReader>en iteración los resultados contenidos dentro de.  
   
  [!code-csharp[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/VB/source.vb#1)]  
@@ -34,5 +34,5 @@ Las clases <xref:System.Data.DataTable> y <xref:System.Data.DataSet> tienen un m
 
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
-- [Objetos DataTableReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
+- [Objetos DataTableReader](datatablereaders.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

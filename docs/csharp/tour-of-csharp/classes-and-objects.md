@@ -3,12 +3,12 @@ title: 'Clases y objetos en C#: un paseo por el lenguaje C#'
 description: ¿Nuevo en C#? Lea esta información general sobre clases, objetos y herencia.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: ff83a3198c6c9fb4c4a438d2486614a211c913ec
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971457"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105626"
 ---
 # <a name="classes-and-objects"></a>Clases y objetos
 
@@ -32,42 +32,42 @@ Los miembros de una clase son miembros estáticos o miembros de instancia. Los m
 
 A continuación se proporciona una visión general de los tipos de miembros que puede contener una clase.
 
-* Constantes
+- Constantes
   - Valores constantes asociados a la clase
-* Campos
+- Campos
   - Variables de la clase
-* Métodos
+- Métodos
   - Cálculos y acciones que pueden realizarse mediante la clase
-* Propiedades
+- Propiedades
   - Acciones asociadas a la lectura y escritura de propiedades con nombre de la clase
-* Indizadores
+- Indizadores
   - Acciones asociadas a la indexación de instancias de la clase como una matriz
-* Eventos
+- Eventos
   - Notificaciones que puede generar la clase
-* Operadores
+- Operadores
   - Conversiones y operadores de expresión admitidos por la clase
-* Constructores
+- Constructores
   - Acciones necesarias para inicializar instancias de la clase o la clase propiamente dicha
-* Finalizadores
+- Finalizadores
   - Acciones que deben realizarse antes de que las instancias de la clase se descarten de forma permanente
-* Tipos
+- Tipos
   - Tipos anidados declarados por la clase
 
 ## <a name="accessibility"></a>Accesibilidad
 
 Cada miembro de una clase tiene asociada una accesibilidad, que controla las regiones del texto del programa que pueden tener acceso al miembro. Existen seis formas de accesibilidad posibles. Se resumen a continuación.
 
-* `public`
+- `public`
   - Acceso no limitado
-* `protected`
+- `protected`
   - Acceso limitado a esta clase o a las clases derivadas de esta clase
-* `internal`
+- `internal`
   - Acceso limitado al ensamblado actual (.exe, .dll, etc.)
-* `protected internal`
+- `protected internal`
   - Acceso limitado a la clase contenedora, las clases derivadas de la clase contenedora, o bien las clases dentro del mismo ensamblado
-* `private`
+- `private`
   - Acceso limitado a esta clase
-* `private protected`
+- `private protected`
   - Acceso limitado a la clase contenedora o las clases derivadas del tipo contenedor con el mismo ensamblado
 
 ## <a name="type-parameters"></a>Parámetros de tipo

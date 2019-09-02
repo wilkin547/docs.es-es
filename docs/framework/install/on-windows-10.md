@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 13ccdafc00f7a43d456126e3ec3afc1ae5897564
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 33805230e0aa6c75443773d60e73f9463ee1fde5
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422667"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106542"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Instalación de .NET Framework en Windows 10 y Windows Server 2016 y posterior
 
@@ -24,7 +24,7 @@ Es posible que haya llegado a esta página tras haber intentado ejecutar una apl
 
 .NET Framework 4.8 se incluye con:
 
-* [Actualización de mayo de 2019 de Windows 10](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
+- [Actualización de mayo de 2019 de Windows 10](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
 > [Descarga de .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
@@ -33,20 +33,20 @@ Es posible que haya llegado a esta página tras haber intentado ejecutar una apl
 
 Se puede instalar [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) en:
 
-* Actualización de octubre de 2018 de Windows 10 (versión 1809)
-* Actualización de abril de 2018 de Windows 10 (versión 1803)
-* Windows 10 Fall Creators Update (versión 1709)
-* Windows 10 Creators Update (versión 1703)
-* Actualización de aniversario de Windows 10 (versión 1607)
-* Windows Server 2019
-* Windows Server, versión 1809
-* Windows Server, versión 1803
-* Windows Server 2016
+- Actualización de octubre de 2018 de Windows 10 (versión 1809)
+- Actualización de abril de 2018 de Windows 10 (versión 1803)
+- Windows 10 Fall Creators Update (versión 1709)
+- Windows 10 Creators Update (versión 1703)
+- Actualización de aniversario de Windows 10 (versión 1607)
+- Windows Server 2019
+- Windows Server, versión 1809
+- Windows Server, versión 1803
+- Windows Server 2016
 
 .NET Framework 4.8 no se admite en:
 
-* Windows 10 1507
-* Windows 10 1511
+- Windows 10 1507
+- Windows 10 1511
 
 Si está usando Windows 10 1507 o 1511 y quiere instalar .NET Framework 4.8, primero debe actualizar a una versión posterior de Windows 10.
 

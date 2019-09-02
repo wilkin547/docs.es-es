@@ -2,12 +2,12 @@
 title: Procesar transacciones
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de88247e5916ab6e080c4de361efecee0b193e18
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61793671"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205906"
 ---
 # <a name="transaction-processing"></a>Procesar transacciones
 Al comprar un libro desde una librería en línea, se intercambia dinero (en forma de crédito) por un libro. Si su crédito es bueno, una serie de operaciones relacionadas le aseguran que obtendrá el libro y que la librería obtendrá su dinero. Sin embargo, si se producir un error en una operación única en la serie durante el intercambio, todo el intercambio falla. No obtiene el libro y la librería no obtiene su dinero.  
@@ -19,10 +19,10 @@ Al comprar un libro desde una librería en línea, se intercambia dinero (en for
  En esta sección se proporciona tanto información general sobre procesamiento de transacciones como información concreta sobre cómo escribir las aplicaciones transaccionales y los administradores de recursos mediante Microsoft .NET Framework.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Principios de la transacción](../../../../docs/framework/data/transactions/transaction-fundamentals.md)  
+ [Principios de la transacción](transaction-fundamentals.md)  
  Introduce condiciones del procesamiento de transacciones básicas y conceptos.  
   
- [Características proporcionadas por System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md)  
+ [Características proporcionadas por System.Transactions](features-provided-by-system-transactions.md)  
  Discute cómo puede utilizar las características en System.Transactions para escribir su propia aplicación transaccional.  
   
 ## <a name="reference"></a>Referencia  

@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: c70dd0401ea518613a2b51f047de13f6c7270152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36839574ae8a8acd1cb56fa82ebcfa6bddb0c97e
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621189"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203871"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Crear un objeto DataTable a partir de un objeto DataView
-Después de recuperar datos de un origen de datos y rellenar una <xref:System.Data.DataTable> con los mismos, puede ordenarlos, filtrarlos o limitar los datos devueltos sin volver a recuperarlos. Esto es posible gracias a la clase <xref:System.Data.DataView>. Además, si necesita crear un nuevo <xref:System.Data.DataTable> desde el <xref:System.Data.DataView>, puede usar el <xref:System.Data.DataView.ToTable%2A> método para copiar todas las filas y columnas o un subconjunto de los datos en un nuevo <xref:System.Data.DataTable>. El método <xref:System.Data.DataView.ToTable%2A> proporciona sobrecargas para:  
+Después de recuperar datos de un origen de datos y rellenar una <xref:System.Data.DataTable> con los mismos, puede ordenarlos, filtrarlos o limitar los datos devueltos sin volver a recuperarlos. Esto es posible gracias a la clase <xref:System.Data.DataView>. Además, si necesita crear un <xref:System.Data.DataTable> nuevo a <xref:System.Data.DataView>partir de, puede utilizar el <xref:System.Data.DataView.ToTable%2A> método para copiar todas las filas y columnas, o un subconjunto de los datos en un nuevo <xref:System.Data.DataTable>. El método <xref:System.Data.DataView.ToTable%2A> proporciona sobrecargas para:  
   
 - Crear una <xref:System.Data.DataTable> que contenga columnas que son un subconjunto de las columnas de la <xref:System.Data.DataView>.  
   
-- Crear un <xref:System.Data.DataTable> que incluya solamente filas distintas de la <xref:System.Data.DataView>, forma análoga a la palabra clave DISTINCT en Transact-SQL.  
+- Cree un <xref:System.Data.DataTable> que incluya solo filas distintas <xref:System.Data.DataView>de, de forma análoga a la palabra clave DISTINCT en Transact-SQL.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo de aplicación de consola siguiente se crea un <xref:System.Data.DataTable> que contiene los datos desde el **Person.Contact** de tabla en la **AdventureWorks** base de datos de ejemplo. A continuación, en el ejemplo se crea un ordenado y filtrado <xref:System.Data.DataView> según el <xref:System.Data.DataTable>. Después de mostrar el contenido de la <xref:System.Data.DataTable> y <xref:System.Data.DataView>, en el ejemplo se crea un nuevo <xref:System.Data.DataTable> desde el <xref:System.Data.DataView> mediante una llamada a la <xref:System.Data.DataView.ToTable%2A> método, se selecciona solamente un subconjunto de las columnas disponibles. Por último, se muestra el contenido de la <xref:System.Data.DataTable> nueva.  
+ En el siguiente ejemplo de aplicación de <xref:System.Data.DataTable> consola se crea un que contiene datos de la tabla **Person. contact** en la base de datos de ejemplo **AdventureWorks** . Después, <xref:System.Data.DataView> <xref:System.Data.DataTable>en el ejemplo se crea una ordenada y filtrada en función de. Después de mostrar el contenido de <xref:System.Data.DataTable> <xref:System.Data.DataView>y, en el ejemplo se <xref:System.Data.DataView> crea un <xref:System.Data.DataTable> nuevo a partir de llamando <xref:System.Data.DataView.ToTable%2A> al método, seleccionando solo un subconjunto de las columnas disponibles. Por último, se muestra el contenido de la <xref:System.Data.DataTable> nueva.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,5 +208,5 @@ Console.WriteLine();
 ## <a name="see-also"></a>Vea también
 
 - <xref:System.Data.DataView.ToTable%2A>
-- [Objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [Objetos DataView](dataviews.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,12 +3,12 @@ title: Acceso con privilegios elevados para comandos de dotnet
 description: Obtenga información sobre los procedimientos recomendados para los comandos de dotnet que requieren acceso con privilegios elevados.
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 3d874a76eadbf5330c4e5efe4e86bfeca0a9b504
-ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
+ms.openlocfilehash: b57e434fbb29a9c85ddf5086888a5291c7767ac9
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67410633"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105075"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Acceso con privilegios elevados para comandos de dotnet
 
@@ -33,9 +33,9 @@ Las instrucciones siguientes muestran la manera recomendada para instalar, ejecu
 
 Si la carpeta `%ProgramFiles%\dotnet-tools` ya existe, siga este procedimiento para comprobar si el grupo "Usuarios" tiene permiso para escribir o modificar ese directorio:
 
-* Haga clic con el botón derecho en la carpeta `%ProgramFiles%\dotnet-tools` y seleccione **Propiedades**. Se abrirá el cuadro de diálogo **Propiedades comunes**. 
-* Seleccione la pestaña **Seguridad**. En **Nombres de grupos o usuarios**, compruebe si el grupo "Usuarios" tiene permiso para escribir o modificar el directorio. 
-* Si el grupo "Usuarios" puede escribir o modificar el directorio, al instalar las herramientas, use otro nombre de directorio de *dotnet-tools*.
+- Haga clic con el botón derecho en la carpeta `%ProgramFiles%\dotnet-tools` y seleccione **Propiedades**. Se abrirá el cuadro de diálogo **Propiedades comunes**. 
+- Seleccione la pestaña **Seguridad**. En **Nombres de grupos o usuarios**, compruebe si el grupo "Usuarios" tiene permiso para escribir o modificar el directorio. 
+- Si el grupo "Usuarios" puede escribir o modificar el directorio, al instalar las herramientas, use otro nombre de directorio de *dotnet-tools*.
 
 Para instalar las herramientas, ejecute el siguiente comando en un símbolo del sistema con privilegios elevados. Creará la carpeta *dotnet-tools* durante la instalación.
 
@@ -105,4 +105,4 @@ Durante el desarrollo, puede que necesite acceso con privilegios elevados para p
 
 ## <a name="see-also"></a>Vea también
 
-* [Información general sobre las herramientas globales de .NET Core](global-tools.md)
+- [Información general sobre las herramientas globales de .NET Core](global-tools.md)

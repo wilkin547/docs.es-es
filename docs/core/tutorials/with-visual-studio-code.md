@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear y depurar su primera aplicac
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 1268a943d7cbf1033531a6c51f42c6fd672eaed3
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 910545a99f9d014ae572fbe95c93cdb44a69db99
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401839"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105103"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introducción a C# y Visual Studio Code
 
@@ -27,22 +27,22 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
 
 1. Abrir un proyecto:
 
-    * Abra Visual Studio Code.
-    * Haga clic en el icono del explorador en el menú de la izquierda y después haga clic en **Abrir carpeta**.
-    * Seleccione **Archivo** > **Abrir carpeta** en el menú principal para abrir la carpeta en la que quiere que esté el proyecto de C# y haga clic en **Seleccionar carpeta**. En el ejemplo se va a crear una carpeta para el proyecto denominada *HelloWorld*.
+    - Abra Visual Studio Code.
+    - Haga clic en el icono del explorador en el menú de la izquierda y después haga clic en **Abrir carpeta**.
+    - Seleccione **Archivo** > **Abrir carpeta** en el menú principal para abrir la carpeta en la que quiere que esté el proyecto de C# y haga clic en **Seleccionar carpeta**. En el ejemplo se va a crear una carpeta para el proyecto denominada *HelloWorld*.
 
       ![Abrir carpeta de Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. Inicializar un proyecto de C#:
-    * Abra el terminal integrado de Visual Studio Code al seleccionar **Ver** > **Terminal integrado** en el menú principal.
-    * En la ventana de terminal, escriba `dotnet new console`.
-    * Este comando crea un archivo `Program.cs` en la carpeta con un programa "Hello World" sencillo ya escrito, junto con un archivo de proyecto de C# denominado `HelloWorld.csproj`.
+    - Abra el terminal integrado de Visual Studio Code al seleccionar **Ver** > **Terminal integrado** en el menú principal.
+    - En la ventana de terminal, escriba `dotnet new console`.
+    - Este comando crea un archivo `Program.cs` en la carpeta con un programa "Hello World" sencillo ya escrito, junto con un archivo de proyecto de C# denominado `HelloWorld.csproj`.
 
       ![El nuevo comando de dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. Resolver los recursos de compilación:
 
-    * En **.NET Core 1.x**, escriba `dotnet restore`. Al ejecutar `dotnet restore`, se concede acceso a los paquetes de .NET Core necesarios para compilar el proyecto.
+    - En **.NET Core 1.x**, escriba `dotnet restore`. Al ejecutar `dotnet restore`, se concede acceso a los paquetes de .NET Core necesarios para compilar el proyecto.
 
       ![El comando de restauración de dotnet](media/with-visual-studio-code/dotnet-restore-command.png)
 
@@ -50,7 +50,7 @@ Se va a empezar con un programa "Hola mundo" sencillo basado en .NET Core:
 
 4. Ejecutar el programa "Hola mundo":
 
-    * Escriba `dotnet run`.
+    - Escriba `dotnet run`.
 
       ![El comando de ejecución de dotnet](media/with-visual-studio-code/dotnet-run-command.png)
 
@@ -79,7 +79,7 @@ También puede ver un breve tutorial de vídeo para obtener ayuda del programa d
     ![Establecer un punto de interrupción](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. Para comenzar a depurar, seleccione <kbd>F5</kbd> o la flecha verde. El depurador detiene la ejecución del programa cuando alcanza el punto de interrupción establecido en el paso anterior.
-    * Mientras depura, puede ver las variables locales en el panel superior izquierdo o usar la consola de depuración.
+    - Mientras depura, puede ver las variables locales en el panel superior izquierdo o usar la consola de depuración.
 
 7. Seleccione la flecha azul de la parte superior para continuar la depuración o seleccione el cuadrado rojo de la parte superior para detenerla.
 

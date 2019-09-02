@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 82f840ab7dd26a4888ebf024d696f2c70701eb18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b704deeffcd06bca09b6c26d60a66218b46fc55c
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607237"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203175"
 ---
 # <a name="the-load-method"></a>El método de carga
-Se puede utilizar el método <xref:System.Data.DataTable.Load%2A> para cargar una <xref:System.Data.DataTable> con filas desde un origen de datos. Se trata de un método sobrecargado que, en su forma más sencilla, acepta un único parámetro, un **DataReader**. En este formulario, simplemente se cargan los **DataTable** con filas. Opcionalmente, puede especificar el **LoadOption** parámetro para controlar cómo se agregan datos a la **DataTable**.  
+Se puede utilizar el método <xref:System.Data.DataTable.Load%2A> para cargar una <xref:System.Data.DataTable> con filas desde un origen de datos. Se trata de un método sobrecargado que, en su forma más simple, acepta un único parámetro, un **DataReader**. En este formato, simplemente carga la **DataTable** con filas. Opcionalmente, puede especificar el parámetro **LoadOption** para controlar el modo en que se agregan los datos a la **DataTable**.  
   
- El **LoadOption** parámetro es especialmente útil en casos donde el **DataTable** ya contiene filas de datos, porque describe los datos entrantes del origen de datos se combinarán con los datos ya está en la tabla. Por ejemplo, **PreserveCurrentValues** (valor predeterminado) especifica que en los casos donde una fila está marcada como **Added** en el **DataTable**, el **Original** cada columna o valor se establece en el contenido de la fila coincidente del origen de datos. El **actual** valor conservará los valores asignados cuando se agregó la fila y el **RowState** de la fila se establecerá en **Changed**.  
+ El parámetro **LoadOption** es especialmente útil en los casos en los que **DataTable** ya contiene filas de datos, ya que describe cómo se combinarán los datos entrantes del origen de datos con los datos que ya están en la tabla. Por ejemplo, **PreserveCurrentValues** (valor predeterminado) especifica que en los casos en los que una fila se marca como agregada en la **DataTable**, el valor **original** o cada columna se establece en el contenido de la fila coincidente del origen de datos. El valor **actual** conservará los valores asignados al agregar la fila y el **RowState** de la fila se establecerá en **cambiado**.  
   
  En la siguiente tabla se ofrece una breve descripción de los valores de enumeración <xref:System.Data.LoadOption>.  
   
-|Valor LoadOption|Descripción|  
+|Valor LoadOption|DESCRIPCIÓN|  
 |----------------------|-----------------|  
-|**OverwriteRow**|Si las filas entrantes tienen el mismo **PrimaryKey** valor como una fila ya existente en el **DataTable**, **Original** y **actual** valores de cada uno columna se reemplazan por los valores de la fila entrante y el **RowState** propiedad está establecida en **Unchanged**.<br /><br /> Las filas del origen de datos que aún no existen en el **DataTable** se agregan con un **RowState** valor **Unchanged**.<br /><br /> Esta opción activa actualiza el contenido de la **DataTable** para que coincida con el contenido del origen de datos.|  
-|**PreserveCurrentValues (default)**|Si las filas entrantes tienen el mismo **PrimaryKey** valor como una fila ya existente en el **DataTable**, **Original** valor se establece en el contenido de la fila entrante y la **Actual** no se cambia el valor.<br /><br /> Si el **RowState** es **Added** o **Modified**, se establece en **Modified**.<br /><br /> Si el **RowState** era **Deleted**, permanece **Deleted**.<br /><br /> Las filas del origen de datos que aún no existen en el **DataTable** se agregan y el **RowState** está establecido en **Unchanged**.|  
-|**UpdateCurrentValues**|Si las filas entrantes tienen el mismo **PrimaryKey** valor como la fila existente en el **DataTable**, **actual** valor se copia en el **Original**valor y el **actual** , a continuación, se establece el valor en el contenido de la fila entrante.<br /><br /> Si el **RowState** en el **DataTable** era **Added**, **RowState** permanece **Added**. Las filas marcadas como **Modified** o **Deleted**, **RowState** es **Modified**.<br /><br /> Las filas del origen de datos que aún no existen en el **DataTable** se agregan y el **RowState** está establecido en **Added**.|  
+|**OverwriteRow**|Si las filas entrantes tienen el mismo valor **PrimaryKey** que una fila ya existente en la **DataTable**, los valores **originales** y **actuales** de cada columna se reemplazan por los valores de la fila entrante y la propiedad **RowState** está establecida en **Sin cambios**.<br /><br /> Las filas del origen de datos que aún no existen en la **DataTable** se agregan con un valor **RowState** de Unchanged.<br /><br /> Esta opción en efecto actualiza el contenido de la **DataTable** para que coincida con el contenido del origen de datos.|  
+|**PreserveCurrentValues (valor predeterminado)**|Si las filas entrantes tienen el mismo valor **PrimaryKey** que una fila ya existente en la **DataTable**, el valor **original** se establece en el contenido de la fila entrante y no se cambia el valor **actual** .<br /><br /> Si el **RowState** se **agrega** o se **modifica**, se establece en **Modified**.<br /><br /> Si se eliminóel **RowState** , permanecerá **eliminado**.<br /><br /> Las filas del origen de datos que aún no existen en la **DataTable** se agregan y el **RowState** se establece enUnchanged.|  
+|**UpdateCurrentValues**|Si las filas entrantes tienen el mismo valor **PrimaryKey** que la fila que ya está en la **DataTable**, el valor **actual** se copia en el valor **original** y el valor **actual** se establece en el contenido de la fila entrante.<br /><br /> Si se **agregó**el **RowState** en la **DataTable** , el **RowState** permanece **agregado**. En el caso de las filas marcadas como modificadas o **eliminadas**, se **modifica**el **RowState** .<br /><br /> Las filas del origen de datos que aún no existen en la **DataTable** se agregan y el **RowState** se establece en **Added**.|  
   
- El ejemplo siguiente usa el **carga** método para mostrar una lista de cumpleaños de los empleados de la **Northwind** base de datos.  
+ En el ejemplo siguiente se usa el método **Load** para mostrar una lista de cumpleaños para los empleados de la base de datos **Northwind** .  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -70,5 +70,5 @@ End Sub
   
 ## <a name="see-also"></a>Vea también
 
-- [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

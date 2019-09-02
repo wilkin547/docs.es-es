@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881ef5b4cbc5850fde64fc68640021ebf42df43
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 964c788c5fc1ac791ed3ddd20c9c5c972d07b2c1
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666463"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106887"
 ---
 # <a name="implementing-a-dispose-method"></a>Implementar un método Dispose
 
@@ -26,12 +26,12 @@ El modelo para desechar un objeto, lo que se conoce como [modelo de Dispose](../
   
 El patrón de Dispose tiene dos variaciones:  
   
-* Incluir los recursos no administrados que utilice un tipo en un controlador seguro (es decir, en una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). En este caso, se implementa la interfaz <xref:System.IDisposable> y un método `Dispose(Boolean)` adicional. Esta es la variación recomendada y no requiere invalidar el método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
+- Incluir los recursos no administrados que utilice un tipo en un controlador seguro (es decir, en una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>). En este caso, se implementa la interfaz <xref:System.IDisposable> y un método `Dispose(Boolean)` adicional. Esta es la variación recomendada y no requiere invalidar el método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>.  
   
   > [!NOTE]
   > El espacio de nombres <xref:Microsoft.Win32.SafeHandles?displayProperty=nameWithType> proporciona un conjunto de clases derivadas de <xref:System.Runtime.InteropServices.SafeHandle> que aparecen enumeradas en la sección [Uso de controladores seguros](#SafeHandles). Si no encuentra ninguna clase que sea capaz de liberar el recurso no administrado, puede implementar su propia subclase de <xref:System.Runtime.InteropServices.SafeHandle>.  
   
-* Puede implementar la interfaz <xref:System.IDisposable> y un método `Dispose(Boolean)` adicional, así como invalidar el método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Debe invalidar <xref:System.Object.Finalize%2A> para asegurarse de que los recursos no administrados se eliminan en el caso de que un consumidor de su tipo no llame a la implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. Si utiliza la técnica recomendada analizada en el punto anterior, la clase <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> realiza este procedimiento en su nombre.  
+- Puede implementar la interfaz <xref:System.IDisposable> y un método `Dispose(Boolean)` adicional, así como invalidar el método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. Debe invalidar <xref:System.Object.Finalize%2A> para asegurarse de que los recursos no administrados se eliminan en el caso de que un consumidor de su tipo no llame a la implementación <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>. Si utiliza la técnica recomendada analizada en el punto anterior, la clase <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> realiza este procedimiento en su nombre.  
   
 Para asegurarse de que los recursos se limpien siempre correctamente, un método <xref:System.IDisposable.Dispose%2A> debe debe ser invocable varias veces sin que se produzca una excepción.  
   
@@ -42,9 +42,9 @@ El ejemplo de código proporcionado para el método <xref:System.GC.KeepAlive%2A
 
 La interfaz <xref:System.IDisposable> requiere la implementación de un único método sin parámetros, <xref:System.IDisposable.Dispose%2A>. Sin embargo, el patrón de Dispose requiere dos métodos `Dispose` para implementarse:  
   
-* Una implementación pública que no sea virtual (`NonInheritable` en Visual Basic) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> y que no tenga parámetros.  
+- Una implementación pública que no sea virtual (`NonInheritable` en Visual Basic) <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> y que no tenga parámetros.  
   
-* Un método protegido virtual (`Overridable` in Visual Basic) `Dispose` cuya signatura es:  
+- Un método protegido virtual (`Overridable` in Visual Basic) `Dispose` cuya signatura es:  
   
   [!code-csharp[Conceptual.Disposable#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/dispose1.cs#8)]
   [!code-vb[Conceptual.Disposable#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/dispose1.vb#8)]  
@@ -64,9 +64,9 @@ En la segunda sobrecarga, el parámetro *disposing* es un valor <xref:System.Boo
   
 El cuerpo del método consta de dos bloques de código:  
   
-* Un bloque que libera los recursos no administrados. Este bloque se ejecuta independientemente del valor del parámetro `disposing`.  
+- Un bloque que libera los recursos no administrados. Este bloque se ejecuta independientemente del valor del parámetro `disposing`.  
   
-* Un bloque condicional que libera los recursos administrados. Este bloque se ejecuta si el valor de `disposing` es `true`. Estos son algunos de los recursos administrados que se liberan:  
+- Un bloque condicional que libera los recursos administrados. Este bloque se ejecuta si el valor de `disposing` es `true`. Estos son algunos de los recursos administrados que se liberan:  
   
   **Objetos administrados que implementan <xref:System.IDisposable>.** El bloque condicional se puede utilizar para llamar a la implementación <xref:System.IDisposable.Dispose%2A>. Si ha utilizado un controlador seguro para incluir el recurso no administrado, debe llamar aquí a la implementación <xref:System.Runtime.InteropServices.SafeHandle.Dispose%28System.Boolean%29?displayProperty=nameWithType>.  
   
@@ -81,11 +81,11 @@ Cuando se implementa el patrón de Dispose para una clase base, debe proporciona
 > [!IMPORTANT]
 > Implemente este patrón para todas las clases base que implementen <xref:System.IDisposable.Dispose> y no sean `sealed` (`NotInheritable` en Visual Basic).  
   
-* Una implementación <xref:System.IDisposable.Dispose%2A> que llame al método `Dispose(Boolean)`.  
+- Una implementación <xref:System.IDisposable.Dispose%2A> que llame al método `Dispose(Boolean)`.  
   
-* Un método `Dispose(Boolean)` que realiza el trabajo real de liberar recursos.  
+- Un método `Dispose(Boolean)` que realiza el trabajo real de liberar recursos.  
   
-* Una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> que contiene el recurso no administrado (recomendado), o una invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La clase <xref:System.Runtime.InteropServices.SafeHandle> proporciona un finalizador que evita que tenga que codificar uno.  
+- Una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> que contiene el recurso no administrado (recomendado), o una invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La clase <xref:System.Runtime.InteropServices.SafeHandle> proporciona un finalizador que evita que tenga que codificar uno.  
   
 A continuación se muestra el patrón general para implementar el patrón de Dispose para una clase base que utiliza un controlador seguro.  
   
@@ -107,9 +107,9 @@ A continuación se muestra el patrón general para implementar el patrón de Dis
 
 Una clase derivada de una clase que implemente la interfaz <xref:System.IDisposable> no debe implementar <xref:System.IDisposable>, porque la implementación de la clase base de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> la heredan sus clases derivadas. En su lugar, para implementar el patrón de Dispose para una clase derivada, debe proporcionar lo siguiente:  
   
-* Un método `protected Dispose(Boolean)` que invalide el método de la clase base y realice el trabajo real de liberar los recursos de la clase derivada. Este método también debe llamar al método `Dispose(Boolean)` de la clase base y pasar su estado disposing para el argumento.  
+- Un método `protected Dispose(Boolean)` que invalide el método de la clase base y realice el trabajo real de liberar los recursos de la clase derivada. Este método también debe llamar al método `Dispose(Boolean)` de la clase base y pasar su estado disposing para el argumento.  
   
-* Una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> que contiene el recurso no administrado (recomendado), o una invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La clase <xref:System.Runtime.InteropServices.SafeHandle> proporciona un finalizador que evita que tenga que codificar uno. Si proporciona un finalizador, debe llamar a la sobrecarga de `Dispose(Boolean)` con un argumento *disposing* que sea `false`.  
+- Una clase derivada de <xref:System.Runtime.InteropServices.SafeHandle> que contiene el recurso no administrado (recomendado), o una invalidación del método <xref:System.Object.Finalize%2A?displayProperty=nameWithType>. La clase <xref:System.Runtime.InteropServices.SafeHandle> proporciona un finalizador que evita que tenga que codificar uno. Si proporciona un finalizador, debe llamar a la sobrecarga de `Dispose(Boolean)` con un argumento *disposing* que sea `false`.  
   
 A continuación se muestra el patrón general para implementar el patrón de Dispose para una clase derivada que utiliza un controlador seguro:  
   
@@ -134,15 +134,15 @@ La escritura de código para el finalizador de un objeto es una tarea compleja q
   
 Las clases derivadas de la clase <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> simplifican los problemas de duración de objetos mediante la asignación y liberación de identificadores sin interrupción. Contienen un finalizador crítico cuya ejecución está garantizada mientras se descarga un dominio de aplicación. Para obtener más información sobre las ventajas de usar un controlador seguro, vea <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>. Las clases derivadas siguientes en el espacio de nombres <xref:Microsoft.Win32.SafeHandles> proporcionan controladores seguros:  
   
-* La clase <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> y <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> para archivos, archivos asignados en memoria y canalizaciones.  
+- La clase <xref:Microsoft.Win32.SafeHandles.SafeFileHandle>, <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedFileHandle> y <xref:Microsoft.Win32.SafeHandles.SafePipeHandle> para archivos, archivos asignados en memoria y canalizaciones.  
   
-* La clase <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> para vistas de memoria.  
+- La clase <xref:Microsoft.Win32.SafeHandles.SafeMemoryMappedViewHandle> para vistas de memoria.  
   
-* Las clases <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> y <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> para construcciones criptográficas.  
+- Las clases <xref:Microsoft.Win32.SafeHandles.SafeNCryptKeyHandle>, <xref:Microsoft.Win32.SafeHandles.SafeNCryptProviderHandle> y <xref:Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle> para construcciones criptográficas.  
   
-* La clase <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> para claves del Registro.  
+- La clase <xref:Microsoft.Win32.SafeHandles.SafeRegistryHandle> para claves del Registro.  
   
-* La clase <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> para identificadores de espera.  
+- La clase <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> para identificadores de espera.  
   
 <a name="base"></a>   
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>Uso de un controlador seguro para implementar el patrón de Dispose para una clase base

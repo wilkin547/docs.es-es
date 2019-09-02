@@ -3,12 +3,12 @@ title: Explorar los intervalos de datos con índices y rangos
 description: En este tutorial avanzado se explica cómo explorar datos con índices e intervalos para examinar los segmentos de un conjunto de datos secuencial.
 ms.date: 04/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 118d3c9ccad98ec02195c2b5e26a2ca203990adf
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: d53f32bcb310d4859cea67a742ac0e2c4be5d942
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557183"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105786"
 ---
 # <a name="indices-and-ranges"></a>Índices y rangos
 
@@ -17,9 +17,9 @@ Los rangos e índices proporcionan una sintaxis concisa para acceder a elementos
 En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
-> * Usar la sintaxis para intervalos de una secuencia.
-> * Comprender las decisiones de diseño para iniciar y finalizar cada secuencia.
-> * Descubrir escenarios para los tipos <xref:System.Index> y <xref:System.Range>.
+> - Usar la sintaxis para intervalos de una secuencia.
+> - Comprender las decisiones de diseño para iniciar y finalizar cada secuencia.
+> - Descubrir escenarios para los tipos <xref:System.Index> y <xref:System.Range>.
 
 ## <a name="language-support-for-indices-and-ranges"></a>Compatibilidad con idiomas para los índices y los rangos
 

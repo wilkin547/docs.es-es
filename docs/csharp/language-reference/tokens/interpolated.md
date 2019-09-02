@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: bc27eedcf1957a109a9bcb80cf9a49e9606921fd
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 1f0d63a549daa9fecd0cce3a7e5a6496929c37d2
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250997"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202957"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - Interpolación de cadenas (Referencia de C#)
 
@@ -34,13 +34,13 @@ Para distinguir un literal de cadena como una cadena interpolada, antepóngale e
 
 La estructura de un elemento con una expresión de interpolación es como se muestra aquí:
 
-```
+```csharp
 {<interpolationExpression>[,<alignment>][:<formatString>]}
 ```
 
 Los elementos entre corchetes son opcionales. En esta tabla se describe cada elemento:
 
-|Elemento|Descripción|
+|Elemento|DESCRIPCIÓN|
 |-------------|-----------------|
 |`interpolationExpression`|Expresión que genera un resultado al que se va a aplicar formato. La representación de cadena del resultado de `null` es <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|La expresión constante cuyo valor define el número mínimo de caracteres en la representación de cadena del resultado de la expresión de interpolación. Si es positivo, la representación de cadena está alineada a la derecha; si es negativo, está alineada a la izquierda. Para más información, vea [Alignment (Componente)](../../../standard/base-types/composite-formatting.md#alignment-component).|

@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo usar la herramienta Analizador de 
 ms.date: 07/18/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 32b4f980061b0975c413a8cde436074f76cfabc9
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
+ms.openlocfilehash: fdd2e9f288649b35b778b5da505408822e0ea8fe
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433950"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107505"
 ---
 # <a name="the-net-portability-analyzer"></a>Analizador de portabilidad de .NET
 
@@ -17,11 +17,11 @@ ms.locfileid: "68433950"
 
 ## <a name="common-targets"></a>Destinos comunes
 
-* [.NET Core](../../core/index.md): tiene un diseño modular, emplea el modo en paralelo y tiene como destino escenarios multiplataforma. El modo en paralelo permite adoptar nuevas versiones de .NET Core sin que ello afecte a otras aplicaciones. Si su objetivo es portar su aplicación a .NET Core compatible con varias plataformas, éste es el destino recomendado. 
-* .[NET Standard](../../standard/net-standard.md): Incluye las API de .NET Standard disponibles en todas las implementaciones de .NET. Si su objetivo es que la biblioteca se ejecute en todas las plataformas compatibles con .NET, éste es el destino recomendado.  
-* [ASP.NET Core](/aspnet/core): Un marco web moderno basado en .NET Core. Si su objetivo es portar su aplicación web a .NET Core para que sea compatible con varias plataformas, éste es el destino recomendado.
-* .NET Core + [extensiones de plataforma](../../core/porting/windows-compat-pack.md): Incluye las API de .NET Core además del paquete de compatibilidad de Windows, que proporciona muchas de las tecnologías disponibles de .NET Framework. Se trata de un destino recomendado para la portabilidad de la aplicación de .NET Framework a .NET Core en Windows.
-* .NET standard + [extensiones de la plataforma](../../core/porting/windows-compat-pack.md): Incluye las API de .NET Standard además del paquete de compatibilidad de Windows, que proporciona muchas de las tecnologías disponibles de .NET Framework. Se trata de un destino recomendado para la portabilidad de la biblioteca de .NET Framework a .NET Core en Windows.
+- [.NET Core](../../core/index.md): tiene un diseño modular, emplea el modo en paralelo y tiene como destino escenarios multiplataforma. El modo en paralelo permite adoptar nuevas versiones de .NET Core sin que ello afecte a otras aplicaciones. Si su objetivo es portar su aplicación a .NET Core compatible con varias plataformas, éste es el destino recomendado. 
+- .[NET Standard](../../standard/net-standard.md): Incluye las API de .NET Standard disponibles en todas las implementaciones de .NET. Si su objetivo es que la biblioteca se ejecute en todas las plataformas compatibles con .NET, éste es el destino recomendado.  
+- [ASP.NET Core](/aspnet/core): Un marco web moderno basado en .NET Core. Si su objetivo es portar su aplicación web a .NET Core para que sea compatible con varias plataformas, éste es el destino recomendado.
+- .NET Core + [extensiones de plataforma](../../core/porting/windows-compat-pack.md): Incluye las API de .NET Core además del paquete de compatibilidad de Windows, que proporciona muchas de las tecnologías disponibles de .NET Framework. Se trata de un destino recomendado para la portabilidad de la aplicación de .NET Framework a .NET Core en Windows.
+- .NET standard + [extensiones de la plataforma](../../core/porting/windows-compat-pack.md): Incluye las API de .NET Standard además del paquete de compatibilidad de Windows, que proporciona muchas de las tecnologías disponibles de .NET Framework. Se trata de un destino recomendado para la portabilidad de la biblioteca de .NET Framework a .NET Core en Windows.
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>Cómo usar el Analizador de portabilidad de .NET
 
@@ -38,9 +38,9 @@ Para analizar todo el proyecto en Visual Studio, haga clic con el botón derecho
 
 También puede usar la [aplicación de consola ApiPort](https://aka.ms/apiportdownload). 
 
-* Escriba el comando siguiente para analizar el directorio actual: `ApiPort.exe analyze -f .`
-* Para analizar una lista específica de archivos .dll, escriba el comando siguiente: `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
-* Ejecute `ApiPort.exe -?` para obtener más ayuda.
+- Escriba el comando siguiente para analizar el directorio actual: `ApiPort.exe analyze -f .`
+- Para analizar una lista específica de archivos .dll, escriba el comando siguiente: `ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+- Ejecute `ApiPort.exe -?` para obtener más ayuda.
 
 Se recomienda que incluya todos los archivos exe y dll relacionados que posea y desea portar, y que excluya los archivos de los que depende la aplicación, pero que no posee y no puede portar. Esto le proporcionará un informe de portabilidad más relevante.  
 

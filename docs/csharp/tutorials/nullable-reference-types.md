@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 570d071172c4048adfddfd55a5e38556e7fd7c69
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195834"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105842"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Expresar la intención del diseño con mayor claridad con tipos de referencia que aceptan valores NULL y que no aceptan valores NULL
 
@@ -17,10 +17,10 @@ C#8 presenta **tipos de referencia que aceptan valores NULL**, qué complementan
 En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
-> * Incorporar los tipos de referencia que aceptan valores NULL y que no aceptan valores NULL en los diseños
-> * Habilitar las comprobaciones de tipos de referencia que aceptan valores NULL en todo el código
-> * Escribir código en la parte en la que el compilador aplica esas decisiones de diseño
-> * Usar la característica de referencia que acepta valores NULL en sus propios diseños
+> - Incorporar los tipos de referencia que aceptan valores NULL y que no aceptan valores NULL en los diseños
+> - Habilitar las comprobaciones de tipos de referencia que aceptan valores NULL en todo el código
+> - Escribir código en la parte en la que el compilador aplica esas decisiones de diseño
+> - Usar la característica de referencia que acepta valores NULL en sus propios diseños
 
 ## <a name="prerequisites"></a>Requisitos previos
 

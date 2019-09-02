@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 6f1900eaabafe2931d88959bf79bf4ca1f5bc98b
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 91fd37ce329c03b43b5472e4579be7f5ef961738
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666580"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169108"
 ---
 # <a name="async-in-depth"></a>Async en profundidad
 
@@ -21,8 +21,8 @@ La escritura de código asincrónico enlazado a E/S y CPU es sencilla al usar el
 
 Las tareas son construcciones que se usan para implementar lo que se conoce como el [modelo de promesa de simultaneidad](https://en.wikipedia.org/wiki/Futures_and_promises).  En resumen, le ofrecen una "promesa" de que el trabajo se completará en un momento posterior, lo que le permite coordinarse con la promesa con una API limpia.
 
-* `Task` representa una única operación que no devuelve un valor.
-* `Task<T>` representa una única operación que devuelve un valor de tipo `T`.
+- `Task` representa una única operación que no devuelve un valor.
+- `Task<T>` representa una única operación que devuelve un valor de tipo `T`.
 
 Es importante razonar sobre las tareas como abstracciones de trabajo que se producen de forma asincrónica y *no* una abstracción sobre subprocesos. De manera predeterminada, las tareas se ejecutan en el trabajo de subproceso y delegado actual del sistema operativo, según corresponda. De forma opcional, se puede solicitar de forma explícita que se ejecuten las tareas en un subproceso independiente mediante la API `Task.Run`.
 
@@ -90,9 +90,9 @@ Aunque lo anterior puede parecer mucho trabajo que realizar, al medirlo en térm
 
 0-1————————————————————————————————————————————————–2-3
 
-* El tiempo empleado de los puntos `0` a `1` es todo hasta que un método asincrónico cede el control a su llamador.
-* El tiempo empleado de los puntos `1` a `2` es el tiempo transcurrido en E/S, sin ningún costo de CPU.
-* Por último, el tiempo empleado de los puntos `2` a `3` es durante el que se pasa el control (y posiblemente un valor) de nuevo al método asincrónico, momento en que se vuelve a ejecutar.
+- El tiempo empleado de los puntos `0` a `1` es todo hasta que un método asincrónico cede el control a su llamador.
+- El tiempo empleado de los puntos `1` a `2` es el tiempo transcurrido en E/S, sin ningún costo de CPU.
+- Por último, el tiempo empleado de los puntos `2` a `3` es durante el que se pasa el control (y posiblemente un valor) de nuevo al método asincrónico, momento en que se vuelve a ejecutar.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>¿Qué significa esto en un escenario de servidor?
 

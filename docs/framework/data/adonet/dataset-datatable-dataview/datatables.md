@@ -2,15 +2,15 @@
 title: Objetos DataTable
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: 369855d1aff854b60c251010ec42557b70c093c0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 365eafc938f3db511fd6714bec02cea2bd27ea25
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952653"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204962"
 ---
 # <a name="datatables"></a>Objetos DataTable
-Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas, relaciones y restricciones. En ADO.net, <xref:System.Data.DataTable> los objetos se utilizan para representar las tablas de un **conjunto de DataSet**. Un **objeto DataTable** representa una tabla de datos relacionales en memoria; los datos son locales para. Aplicación basada en NET en la que reside, pero se puede rellenar a partir de un origen de datos, como Microsoft SQL Server usar un objeto **DataAdapter** para obtener más información, vea rellenar [un DataSet desde un DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
+Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas, relaciones y restricciones. En ADO.net, <xref:System.Data.DataTable> los objetos se utilizan para representar las tablas de un **conjunto de DataSet**. Un **objeto DataTable** representa una tabla de datos relacionales en memoria; los datos son locales para. Aplicación basada en NET en la que reside, pero se puede rellenar a partir de un origen de datos, como Microsoft SQL Server usar un objeto **DataAdapter** para obtener más información, vea rellenar [un DataSet desde un DataAdapter](../populating-a-dataset-from-a-dataadapter.md).  
   
  La clase **DataTable** es un miembro del espacio de nombres **System. Data** dentro de la biblioteca de clases de .NET Framework. Puede crear y usar un **objeto DataTable** de forma independiente o como miembro de un **conjunto**de los objetos, y los <xref:System.Data.DataView>objetos **DataTable** también se pueden usar junto con otros objetos .NET Framework, incluido. Se tiene acceso a la colección de tablas de un **DataSet** a través de la propiedad **tables** del objeto **DataSet** .  
   
@@ -18,26 +18,26 @@ Un objeto <xref:System.Data.DataSet> está formado por una colección de tablas,
   
  Además de un esquema, un **objeto DataTable** también debe tener filas que contengan y ordenen los datos. La clase <xref:System.Data.DataRow> representa los datos reales que contiene una tabla. Use **DataRow** y sus propiedades y métodos para recuperar, evaluar y manipular los datos de una tabla. Al tener acceso a los datos de una fila y cambiarlos, el objeto **DataRow** mantiene su estado actual y original.  
   
- Se pueden crear relaciones primarias-secundarias entre tablas utilizando una o varias columnas relacionadas de las tablas. Cree una relación entre los objetos **DataTable** mediante <xref:System.Data.DataRelation>. Los objetos **DataRelation** se pueden usar para devolver las filas secundarias o primarias relacionadas de una fila determinada. Para obtener más información, vea [agregar objetos DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
+ Se pueden crear relaciones primarias-secundarias entre tablas utilizando una o varias columnas relacionadas de las tablas. Cree una relación entre los objetos **DataTable** mediante <xref:System.Data.DataRelation>. Los objetos **DataRelation** se pueden usar para devolver las filas secundarias o primarias relacionadas de una fila determinada. Para obtener más información, vea [agregar objetos DataRelation](adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Creación de un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
+ [Creación de un objeto DataTable](creating-a-datatable.md)  
  Explica cómo crear un **objeto DataTable** y agregarlo a un **conjunto de DataSet**.  
   
- [Definición del esquema de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
+ [Definición del esquema de DataTable](datatable-schema-definition.md)  
  Proporciona información sobre la creación y el uso de objetos **DataColumn** y restricciones.  
   
- [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
+ [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)  
  Explica cómo se agregan, modifican y eliminan datos en una tabla. Explica cómo utilizar los eventos **DataTable** para examinar los cambios en los datos de la tabla.  
   
- [Control de eventos de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [Control de eventos de DataTable](handling-datatable-events.md)  
  Proporciona información sobre los eventos disponibles para su uso con una **DataTable**, incluidos los eventos cuando se modifican los valores de columna y se agregan o eliminan filas.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
+ [ADO.NET](../index.md)  
  Describe la arquitectura y los componentes de ADO.NET, así como su uso para tener acceso a orígenes de datos existentes y para administrar los datos de las aplicaciones.  
   
- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Objetos DataSet, DataTable y DataView](index.md)  
  Proporciona información sobre el **conjunto** de datos ADO.net, incluido cómo crear relaciones entre las tablas.  
   
  <xref:System.Data.Constraint>  

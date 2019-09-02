@@ -2,12 +2,12 @@
 title: Novedades de C# 7.2
 description: Información general sobre las nuevas características en C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 79402c9b569cb6848aaf240d83ba71338d525b35
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: a2010b2bda769a625deb545964a2cc127aaf2e06
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347414"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105742"
 ---
 # <a name="whats-new-in-c-72"></a>Novedades de C# 7.2
 
@@ -20,22 +20,22 @@ C# 7.2 usa el elemento de configuración de [selección de versión de lenguaje]
 
 Las nuevas características de lenguaje de esta versión son las siguientes:
 
-* [Técnicas para escribir código eficiente seguro](#safe-efficient-code-enhancements)
+- [Técnicas para escribir código eficiente seguro](#safe-efficient-code-enhancements)
   - Una combinación de mejoras en la sintaxis que permiten trabajar con tipos de valor mediante la semántica de referencia.
-* [Argumentos con nombre no finales](#non-trailing-named-arguments)
+- [Argumentos con nombre no finales](#non-trailing-named-arguments)
   - Los argumentos con nombre pueden ir seguidos de argumentos posicionales.
-* [Caracteres de subrayado iniciales en literales numéricos](#leading-underscores-in-numeric-literals)
+- [Caracteres de subrayado iniciales en literales numéricos](#leading-underscores-in-numeric-literals)
   - Los literales numéricos ahora pueden tener caracteres de subrayado iniciales antes de los dígitos impresos.
-* [Modificador de acceso `private protected`](#private-protected-access-modifier)
+- [Modificador de acceso `private protected`](#private-protected-access-modifier)
   - El modificador de acceso `private protected` permite el acceso de clases derivadas en el mismo ensamblado.
-* [Expresiones `ref` condicionales](#conditional-ref-expressions)
+- [Expresiones `ref` condicionales](#conditional-ref-expressions)
   - El resultado de una expresión condicional (`?:`) ahora puede ser una referencia.
 
 En el resto de este artículo se proporciona información general sobre cada característica. Para cada característica, conocerá el razonamiento subyacente. Aprenderá la sintaxis. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
 
-1. Instalar la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
-1. Clonar el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
-1. Establecer el directorio actual en el subdirectorio *csharp7* para el repositorio *try-samples*.
+1. Instale la herramienta global [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup).
+1. Clone el repositorio [dotnet/try-samples](https://github.com/dotnet/try-samples).
+1. Establezca el directorio actual en el subdirectorio *csharp7* para el repositorio *try-samples*.
 1. Ejecute `dotnet try`.
 
 ## <a name="safe-efficient-code-enhancements"></a>Mejoras de código eficiente seguro
@@ -63,7 +63,7 @@ Por ejemplo:
 int binaryValue = 0b_0101_0101;
 ```
 
-## <a name="private-protected-access-modifier"></a>Modificador de acceso _private protected_
+## <a name="_private-protected_-access-modifier"></a>Modificador de acceso _private protected_
 
 Presentamos un nuevo modificador de acceso compuesto: `private protected` indica que se puede tener acceso a un miembro mediante una clase o clases derivadas declaradas en un mismo ensamblado. Mientras que `protected internal` permite el acceso a las clases derivadas o clases que se encuentran en un mismo ensamblado, `private protected` limita el acceso a los tipos derivados que se declaran en un mismo ensamblado.
 

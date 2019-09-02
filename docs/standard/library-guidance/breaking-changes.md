@@ -4,12 +4,12 @@ description: Procedimientos recomendados para explorar los cambios importantes a
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: a5cfd2dfb544b2e47a87bd0939990ae73e5eda9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564229"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104656"
 ---
 # <a name="breaking-changes"></a>Cambios importantes
 
@@ -19,11 +19,11 @@ Es importante para una biblioteca de .NET buscar el equilibrio entre la estabili
 
 El uso que la comunidad de .NET realiza de una biblioteca cambia el efecto de los cambios importantes en los usuarios finales.
 
-* **Las bibliotecas de nivel bajo e intermedio**, como un serializador, un analizador de HTML, un asignador relacional de objetos de base de datos o un marco web, son las más afectadas por cambios importantes.
+- **Las bibliotecas de nivel bajo e intermedio**, como un serializador, un analizador de HTML, un asignador relacional de objetos de base de datos o un marco web, son las más afectadas por cambios importantes.
 
   Los usuarios finales y otras bibliotecas como dependencias de NuGet usan los paquetes de bloques de creación para desarrollar aplicaciones. Por ejemplo, está creando una aplicación y está usando a un cliente de código abierto para llamar a un servicio web. Una actualización importante a una dependencia que usa el cliente no es algo que pueda solucionar. Debería cambiarse el cliente de código abierto y no tiene control sobre él. Tendrá que buscar versiones compatibles de las bibliotecas o enviar una corrección a la biblioteca de cliente y esperar a una nueva versión. La peor situación posible es si quiere usar dos bibliotecas que dependen de versiones incompatibles de una biblioteca de terceros.
 
-* **Las bibliotecas generales** como un conjunto de controles de IU, son menos sensibles a los cambios importantes.
+- **Las bibliotecas generales** como un conjunto de controles de IU, son menos sensibles a los cambios importantes.
 
   En las aplicaciones de usuario final se hace referencia directa a las bibliotecas generales. Si se producen cambios importantes, el desarrollador puede elegir si quiere actualizar a la versión más reciente o puede modificar su aplicación para que funcione con el cambio.
 

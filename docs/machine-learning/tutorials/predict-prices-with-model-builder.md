@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 07/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4471e4feffb23b7f256ada2116444aaa7899e209
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 1bdbe31e16408da2d7dfe17941c90a022f3d8c32
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611444"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107142"
 ---
 # <a name="predict-prices-using-regression-with-model-builder"></a>Predicción de precios mediante regresión con el Generador de modelos
 
@@ -21,12 +21,12 @@ La plantilla de predicción de precios del Generador de modelos puede usarse par
 
 En este tutorial aprenderá a:
 > [!div class="checklist"]
-> * Preparar y entender los datos
-> * Elección de un escenario
-> * Carga de los datos
-> * Entrenar el modelo
-> * Evaluar el modelo
-> * Usar el modelo para las predicciones
+> - Preparar y entender los datos
+> - Elección de un escenario
+> - Carga de los datos
+> - Entrenar el modelo
+> - Evaluar el modelo
+> - Usar el modelo para las predicciones
 
 > [!NOTE]
 > El Generador de modelos se encuentra en versión preliminar.
@@ -59,13 +59,13 @@ Cada fila del conjunto de datos `taxi-fare-train.csv` contiene los detalles de l
 
     El conjunto de datos proporcionado contiene las columnas siguientes:
 
-    * **vendor_id:** el identificador del taxista es una característica.
-    * **rate_code:** el tipo de tarifa del viaje en taxi es una característica.
-    * **passenger_count:** el número de pasajeros en el recorrido es una característica.
-    * **trip_time_in_secs:** la cantidad de tiempo que tardó el viaje.
-    * **trip_distance:** la distancia del viaje es una característica.
-    * **payment_type:** el método de pago (efectivo o tarjeta de crédito) es una característica.
-    * **fare_amount:** la tarifa de taxi total pagada es la etiqueta.
+    - **vendor_id:** el identificador del taxista es una característica.
+    - **rate_code:** el tipo de tarifa del viaje en taxi es una característica.
+    - **passenger_count:** el número de pasajeros en el recorrido es una característica.
+    - **trip_time_in_secs:** la cantidad de tiempo que tardó el viaje.
+    - **trip_distance:** la distancia del viaje es una característica.
+    - **payment_type:** el método de pago (efectivo o tarjeta de crédito) es una característica.
+    - **fare_amount:** la tarifa de taxi total pagada es la etiqueta.
 
 `label` es la columna que quiere predecir. Al realizar una tarea de regresión, el objetivo es predecir un valor numérico. En este escenario de predicción de precio, se predice el coste de un viaje de taxi. Por lo tanto, **fare_amount** es la etiqueta. Los valores de `features` identificados son las entradas que se proporcionan al modelo para predecir `label`. En este caso, el resto de columnas se usan como entradas o características para predecir el importe de la tarifa.
 
@@ -190,12 +190,12 @@ Si tiene que hacer referencia a los proyectos generados en un momento posterior 
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
-> * Preparar y entender los datos
-> * Elección de un escenario
-> * Carga de los datos
-> * Entrenar el modelo
-> * Evaluar el modelo
-> * Usar el modelo para las predicciones
+> - Preparar y entender los datos
+> - Elección de un escenario
+> - Carga de los datos
+> - Entrenar el modelo
+> - Evaluar el modelo
+> - Usar el modelo para las predicciones
 
 ### <a name="additional-resources"></a>Recursos adicionales
 

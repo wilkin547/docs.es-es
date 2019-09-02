@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 08/21/2019
-ms.openlocfilehash: 5f9d7026b270a010d2ba5d4b1165728a100ab6ed
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f62afe79ec3ace98a3bd8997e20672bef81b89c4
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922555"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037835"
 ---
 # <a name="whats-new-in-net-core-30-preview-8"></a>Novedades de .NET Core 3.0 (versión preliminar 8)
 
@@ -430,7 +430,7 @@ Este es un ejemplo de deserialización de una cadena JSON en un objeto. Puede us
 
 ### <a name="type-nativelibrary"></a>Tipo: NativeLibrary
 
-<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> ofrece una encapsulación para cargar una biblioteca nativa (con la misma lógica de carga que P/Invoke en .NET Core) y proporcionar funciones auxiliares relevantes, como `getSymbol`. Para obtener un ejemplo de código, vea la [demostración de DLLMap](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin).
+<xref:System.Runtime.InteropServices.NativeLibrary?displayProperty=nameWithType> ofrece una encapsulación para cargar una biblioteca nativa (con la misma lógica de carga que P/Invoke en .NET Core) y proporcionar funciones auxiliares relevantes, como `getSymbol`. Para obtener un ejemplo de código, vea la [demostración de DLLMap](https://github.com/dotnet/samples/tree/master/core/extensions/DllMapDemo).
 
 ### <a name="windows-native-interop"></a>Interoperabilidad nativa de Windows
 

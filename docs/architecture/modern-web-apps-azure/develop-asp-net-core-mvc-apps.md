@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Des
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fd804176a7579fe7c5e226bf5b4feb457cb2df14
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 9f8c9c47757379d641b821f312b89666456343d4
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971201"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105462"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desarrollo de aplicaciones ASP.NET Core MVC
 
@@ -43,7 +43,7 @@ En su núcleo, las aplicaciones ASP.NET Core asignan las solicitudes entrantes a
 Las aplicaciones ASP.NET Core MVC pueden usar rutas convencionales, rutas de atributo o las dos. Las rutas convencionales se definen en el código, especificando _convenciones_ de enrutamiento con una sintaxis similar a la del ejemplo siguiente:
 
 ```csharp
-app.UseMvc(routes =>;
+app.UseMvc(routes =>
 {
     routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
 });
@@ -208,7 +208,7 @@ Además de la compatibilidad integrada con las áreas, también se puede usar un
 ASP.NET Core usa tipos de convención integrados para controlar su comportamiento. Estas convenciones se pueden modificar o reemplazar. Por ejemplo, se puede crear una convención que obtenga automáticamente el nombre de característica de un controlador determinado en función de su espacio de nombres (lo que normalmente se correlaciona con la carpeta en la que se encuentra el controlador):
 
 ```csharp
-FeatureConvention : IControllerModelConvention
+public class FeatureConvention : IControllerModelConvention
 {
     public void Apply(ControllerModel controller)
     {
@@ -474,7 +474,7 @@ public class Program
     public static void Main(string[] args)
     {
         StartConnectionAsync();
-        _connection.On("receiveMessage", (arguments) =>;
+        _connection.On("receiveMessage", (arguments) =>
         {
             Console.WriteLine($"{arguments[0]} said: {arguments[1]}");
         });

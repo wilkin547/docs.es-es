@@ -2,18 +2,18 @@
 title: Controlar el flujo en los programas asincrónicos (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 8adf4bcf193d9fa8d7335996539933ce71282bac
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595849"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204444"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Controlar el flujo en los programas asincrónicos (C#)
 
 Puede escribir y mantener los programas asincrónicos más fácilmente usando las palabras clave `async` y `await`. Aun así, los resultados pueden sorprenderle si no sabe cómo funciona el programa. En este tema se hace un seguimiento del flujo de control a través de un programa asincrónico simple en el que se muestra cuándo se mueve el control de un método a otro y qué información se transfiere cada vez.
 
-En general, los métodos que contienen código asincrónico se marcan con el modificador [async (C#)](../../../language-reference/keywords/async.md). En un método que está marcado con un modificador async, puede usar un operador [await (C#)](../../../language-reference/keywords/await.md) para especificar dónde se para el método para esperar a que concluya un proceso asincrónico al que se ha llamado. Para obtener más información, vea [Programación asincrónica con async y await (C#)](./index.md).
+En general, los métodos que contienen código asincrónico se marcan con el modificador [async (C#)](../../../language-reference/keywords/async.md). En un método que está marcado con un modificador async, puede usar un operador [await (C#)](../../../language-reference/operators/await.md) para especificar dónde se para el método para esperar a que concluya un proceso asincrónico al que se ha llamado. Para obtener más información, vea [Programación asincrónica con async y await (C#)](./index.md).
 
 En el ejemplo siguiente se usan métodos asincrónicos para descargar el contenido de un sitio web especificado como una cadena y mostrar la longitud de la cadena. El ejemplo contiene los dos métodos siguientes:
 
@@ -60,7 +60,7 @@ public partial class MainWindow : Window
 
 Cada una de las ubicaciones etiquetadas (del "UNO" al "SEIS") muestra información sobre el estado actual del programa. Se produce el siguiente resultado:
 
-```text
+```output
 ONE:   Entering startButton_Click.
            Calling AccessTheWebAsync.
 
@@ -240,7 +240,7 @@ Para ejecutar el proyecto, realice los pasos siguientes:
 
     Aparece el siguiente resultado:
 
-    ```text
+    ```output
     ONE:   Entering startButton_Click.
                Calling AccessTheWebAsync.
 
@@ -292,7 +292,7 @@ Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com")
 
  Puede considerar la tarea como una promesa de `client.GetStringAsync` de generar una cadena real. Mientras tanto, si `AccessTheWebAsync` tiene trabajo que no depende de la cadena prometida de `client.GetStringAsync`, dicho trabajo puede continuar mientras `client.GetStringAsync` espera. En el ejemplo, las siguientes líneas de salida, que tienen la etiqueta "TRES", representan la oportunidad de realizar un trabajo independiente
 
-```
+```output
 THREE: Back in AccessTheWebAsync.
            Task getStringTask is started.
            About to await getStringTask & return a Task<int> to startButton_Click.
@@ -327,7 +327,7 @@ Task<int> getLengthTask = AccessTheWebAsync();
 
  Como en `AccessTheWebAsync`, `startButton_Click` puede continuar con el trabajo que no depende de los resultados de la tarea asincrónica (`getLengthTask`) hasta que se espere la tarea. Las siguientes líneas de salida representan ese trabajo.
 
-```
+```output
 FOUR:  Back in startButton_Click.
            Task getLengthTask is started.
            About to await getLengthTask -- no caller to return to.
@@ -347,7 +347,7 @@ int contentLength = await getLengthTask;
 
 Cuando `client.GetStringAsync` indica que ha finalizado, el procesamiento de `AccessTheWebAsync` sale de la suspensión y puede continuar una vez superada la instrucción await. En las siguientes líneas de salida se representa la reanudación del procesamiento.
 
-```
+```output
 FIVE:  Back in AccessTheWebAsync.
            Task getStringTask is complete.
            Processing the return statement.
@@ -368,7 +368,7 @@ Cuando `AccessTheWebAsync` indica que ha finalizado, el procesamiento puede cont
 
 En las siguientes líneas de salida se representa la reanudación del procesamiento en `startButton_Async`:
 
-```
+```output
 SIX:   Back in startButton_Click.
            Task getLengthTask is finished.
            Result from AccessTheWebAsync is stored in contentLength.

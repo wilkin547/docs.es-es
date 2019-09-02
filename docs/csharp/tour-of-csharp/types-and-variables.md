@@ -3,12 +3,12 @@ title: 'Variables y tipos de C#: un paseo por el lenguaje C#'
 description: Obtenga información sobre cómo definir tipos y declarar variables de C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: f06894d986973e4394b0586906d67ef41a9d9152
-ms.sourcegitcommit: 46c68557bf6395f0ab9915f7558f2faae0097695
+ms.openlocfilehash: 22a91b101d5361091b09217d4562703851c86940
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "67661066"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105586"
 ---
 # <a name="types-and-variables"></a>Tipos y variables
 
@@ -18,31 +18,31 @@ Los tipos de valor de C# se dividen en *tipos simples*, *tipos de enumeración*,
 
 A continuación se proporciona información general del sistema de tipos de C#.
 
-* [Tipos de valor][ValueTypes]
+- [Tipos de valor][ValueTypes]
   - [Tipos simples][SimpleTypes]
-    * Entero con signo: `sbyte`, `short`, `int`,`long`
-    * Entero sin signo: `byte`, `ushort`, `uint`,`ulong`
-    * Caracteres Unicode: `char`
-    * Punto flotante binario IEEE: `float`, `double`
-    * Punto flotante decimal de alta precisión: `decimal`
-    * Booleano: `bool`
+    - Entero con signo: `sbyte`, `short`, `int`,`long`
+    - Entero sin signo: `byte`, `ushort`, `uint`,`ulong`
+    - Caracteres Unicode: `char`
+    - Punto flotante binario IEEE: `float`, `double`
+    - Punto flotante decimal de alta precisión: `decimal`
+    - Booleano: `bool`
   - [Tipos de enumeración][EnumTypes]
-    * Tipos definidos por el usuario con el formato `enum E {...}`
+    - Tipos definidos por el usuario con el formato `enum E {...}`
   - [Tipos de estructura][StructTypes]
-    * Tipos definidos por el usuario con el formato `struct S {...}`
+    - Tipos definidos por el usuario con el formato `struct S {...}`
   - [Tipos de valores que aceptan valores NULL][NullableTypes]
-    * Extensiones de todos los demás tipos de valor con un valor `null`
-* [Tipos de referencia][ReferenceTypes]
+    - Extensiones de todos los demás tipos de valor con un valor `null`
+- [Tipos de referencia][ReferenceTypes]
   - [Tipos de clase][ClassTypes]
-    * Clase base definitiva de todos los demás tipos: `object`
-    * Cadenas Unicode: `string`
-    * Tipos definidos por el usuario con el formato `class C {...}`
+    - Clase base definitiva de todos los demás tipos: `object`
+    - Cadenas Unicode: `string`
+    - Tipos definidos por el usuario con el formato `class C {...}`
   - [Tipos de interfaz][InterfaceTypes]
-    * Tipos definidos por el usuario con el formato `interface I {...}`
+    - Tipos definidos por el usuario con el formato `interface I {...}`
   - [Tipos de matriz][ArrayTypes]
-    * Unidimensional y multidimensional; por ejemplo, `int[]` y `int[,]`
+    - Unidimensional y multidimensional; por ejemplo, `int[]` y `int[,]`
   - [Tipos delegados][DelegateTypes]
-    * Tipos definidos por el usuario con el formato `delegate int D(...)`
+    - Tipos definidos por el usuario con el formato `delegate int D(...)`
 
 [ValueTypes]: ../language-reference/keywords/value-types-table.md
 [SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
@@ -89,19 +89,19 @@ El sistema de tipos unificado de C# conlleva efectivamente que los tipos de valo
 
 Hay varios tipos de *variables* en C#, entre otras, campos, elementos de matriz, variables locales y parámetros. Las variables representan ubicaciones de almacenamiento, y cada variable tiene un tipo que determina qué valores pueden almacenarse en la variable, como se muestra a continuación.
 
-* Tipo de valor distinto a NULL
+- Tipo de valor distinto a NULL
   - Un valor de ese tipo exacto
-* Tipos de valor NULL
+- Tipos de valor NULL
   - Un valor `null` o un valor de ese tipo exacto
-* objeto
+- objeto
   - Una referencia `null`, una referencia a un objeto de cualquier tipo de referencia o una referencia a un valor de conversión boxing de cualquier tipo de valor
-* Tipo de clase
+- Tipo de clase
   - Una referencia `null`, una referencia a una instancia de ese tipo de clase o una referencia a una instancia de una clase derivada de ese tipo de clase
-* Tipo de interfaz
+- Tipo de interfaz
   - Un referencia `null`, una referencia a una instancia de un tipo de clase que implementa dicho tipo de interfaz o una referencia a un valor de conversión boxing de un tipo de valor que implementa dicho tipo de interfaz
-* Tipo de matriz
+- Tipo de matriz
   - Una referencia `null`, una referencia a una instancia de ese tipo de matriz o una referencia a una instancia de un tipo de matriz compatible
-* Tipo delegado
+- Tipo delegado
   - Una referencia `null` o una referencia a una instancia de un tipo delegado compatible
 
 > [!div class="step-by-step"]

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 044e726a1c668335780fe3d4322fbce83d8dcbba
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 6f57c0e2098cbd73edc34f34ba6e309bbf68fac9
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666355"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167932"
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Procedimiento Implementación de un modelo de flujo de datos productor-consumidor
 Este documento describe cómo utilizar la biblioteca de flujos de datos TPL para implementar un modelo productor-consumidor. En este modelo, el *productor* envía mensajes a un bloque de mensajes y el *consumidor* lee los mensajes de este bloque.  
@@ -27,7 +27,7 @@ Este documento describe cómo utilizar la biblioteca de flujos de datos TPL para
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra un modelo productor-consumidor básico que usa el flujo de datos. El método `Produce` escribe matrices que contienen bytes de datos aleatorios en un objeto <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> y el método `Consume` lee los bytes de un objeto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType>. Al actuar en las interfaces <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> y <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601>, en lugar de en sus tipos derivados, puede escribir código reutilizable que puede actuar en una variedad de tipos de bloques de flujo de datos. Este ejemplo utiliza la clase <xref:System.Threading.Tasks.Dataflow.BufferBlock%601>. Puesto que la clase <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> actúa como origen y como un bloque de origen y destino, el productor y el consumidor pueden utilizar un objeto compartido para transferir datos.  
   
- El método `Produce` llama al método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> en un bucle para escribir datos de forma sincrónica en el bloque de destino. Después de que el método `Produce` escriba todos los datos en el bloque de destino, llama al método <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> para indicar que el bloque nunca tendrá datos adicionales disponibles. El método `Consume` usa los operadores [async](../../csharp/language-reference/keywords/async.md) y [await](../../csharp/language-reference/keywords/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) y [Await](../../visual-basic/language-reference/operators/await-operator.md) en Visual Basic) para calcular de forma asincrónica el número total de bytes recibidos del objeto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>. Para que actúe de forma asincrónica, el método `Consume` llama al método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> para recibir una notificación cuando el bloque de origen tiene datos disponibles y cuando el bloque de origen nunca va a tener datos adicionales disponibles.  
+ El método `Produce` llama al método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> en un bucle para escribir datos de forma sincrónica en el bloque de destino. Después de que el método `Produce` escriba todos los datos en el bloque de destino, llama al método <xref:System.Threading.Tasks.Dataflow.IDataflowBlock.Complete%2A> para indicar que el bloque nunca tendrá datos adicionales disponibles. El método `Consume` usa los operadores [async](../../csharp/language-reference/keywords/async.md) y [await](../../csharp/language-reference/operators/await.md) ([Async](../../visual-basic/language-reference/modifiers/async.md) y [Await](../../visual-basic/language-reference/operators/await-operator.md) en Visual Basic) para calcular de forma asincrónica el número total de bytes recibidos del objeto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601>. Para que actúe de forma asincrónica, el método `Consume` llama al método <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A> para recibir una notificación cuando el bloque de origen tiene datos disponibles y cuando el bloque de origen nunca va a tener datos adicionales disponibles.  
   
  [!code-csharp[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_producerconsumer/cs/dataflowproducerconsumer.cs#1)]
  [!code-vb[TPLDataflow_ProducerConsumer#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_producerconsumer/vb/dataflowproducerconsumer.vb#1)]  

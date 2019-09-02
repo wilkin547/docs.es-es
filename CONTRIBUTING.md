@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 21266130bd44d45d03f85cdeee9480b7a9944b55
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 303d6790f1e4a42b021de3a214e3e7b44e1a4320
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876934"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104628"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -15,10 +15,10 @@ Le agradecemos el interés en colaborar con la documentación de .NET.
 
 En este documento se describe el proceso para colaborar en los artículos y ejemplos de código que se hospedan en el [sitio de documentación de .NET](https://docs.microsoft.com/dotnet). Las contribuciones pueden ser tan simples como corregir errores ortográficos o tan complejos como redactar nuevos artículos.
 
-* [Proceso de contribución](#process-for-contributing)
-* [La experiencia interactiva de C#](#the-c-interactive-experience)
-* [Qué se debe hacer y qué no](#dos-and-donts)
-* [Contrato de licencia del colaborador](#contributor-license-agreement)
+- [Proceso de contribución](#process-for-contributing)
+- [La experiencia interactiva de C#](#the-c-interactive-experience)
+- [Qué se debe hacer y qué no](#dos-and-donts)
+- [Contrato de licencia del colaborador](#contributor-license-agreement)
 
 Este repositorio contiene documentación conceptual de .NET. El sitio de documentación de .NET se compiló a partir de varios repositorios, además de este:
 
@@ -35,7 +35,7 @@ Necesita tener conocimientos básicos de [Git y GitHub.com](https://guides.githu
 **Paso 1:** En el caso de pequeños cambios, omita este paso (por ejemplo, si corrige un error de escritura o abre inmediatamente una solicitud de incorporación de cambios para resolver un problema que encuentre en los documentos). Si está interesado en escribir nuevo contenido o en revisar exhaustivamente el contenido existente, abra una [incidencia ](https://github.com/dotnet/docs/issues) que describa lo que quiere hacer.
 El contenido de la carpeta **docs** se organiza en secciones que se reflejan en la tabla de contenido (TOC). Defina dónde se ubicará el tema en la tabla de contenido. Recabe opiniones sobre su propuesta.
 
-o bien
+O bien
 
 Puede elegir entre las incidencias existentes aquellas en las que las contribuciones son bienvenidas. En [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (Proyectos para los colaboradores de la comunidad de .NET) se muestran muchos de los elementos de trabajo que están disponibles para los colaboradores de la comunidad. En función de sus intereses y su nivel de compromiso, puede elegir entre las incidencias de las siguientes categorías:
 
@@ -103,7 +103,7 @@ Hacemos la siguiente distinción para el código que existe en nuestro repositor
 Todo el código reside en el repositorio [dotnet/samples](https://github.com/dotnet/samples). Trabajamos hacia un modelo en el que la estructura de nuestra carpeta samples coincide con la estructura de nuestra carpeta docs. Los estándares que seguimos son:
 
 - La carpeta *snippets* de nivel superior contiene fragmentos de código para ejemplos pequeños y centrados.
-- Los ejemplos de referencia de API han estado en una carpeta que sigue este patrón: *snippets/\<idioma>/api/\<espacio de nombres>/\<nombre de la api>*.
+- Los ejemplos de referencia de API han estado en una carpeta que sigue este patrón: *snippets/\<idioma>/api/\<espacio de nombres>/\<nombre de la api>* .
 - Otras carpetas de nivel superior coinciden con las carpetas de nivel superior del repositorio *docs*. Por ejemplo, el repositorio de documentos incluye una carpeta *machine-learning/tutorials* y los ejemplos para tutoriales de aprendizaje automático se encuentran en la carpeta *samples/machine-learning/tutorials*.
 
 Además, todos los ejemplos de las carpetas *core* y *standard* se deben compilar y ejecutar en todas las plataformas compatibles con .NET Core. Nuestro sistema de compilación de CI aplicará esto. La carpeta *framework* de nivel superior contiene ejemplos que solo se compilan y validan en Windows.

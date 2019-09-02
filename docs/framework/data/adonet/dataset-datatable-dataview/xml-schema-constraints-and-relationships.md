@@ -2,22 +2,22 @@
 title: Restricciones y relaciones del esquema XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 990ae2eef8d9fbd28472494c989ae9ecca34251d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ffb11814be14b3f9601abaad6e95c00f9f7a634
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606988"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202990"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Restricciones y relaciones del esquema XML
-En un esquema (XSD) del lenguaje de definición de esquemas XML, puede especificar restricciones (unique, key y keyref) y relaciones (mediante la **msdata: Relationship** anotación). En este tema se explica cómo se interpretan las restricciones y relaciones especificadas en un esquema XML para generar el <xref:System.Data.DataSet>.  
+En un esquema del lenguaje de definición de esquemas XML (XSD), puede especificar las restricciones (Unique, Key y keyref) y las relaciones (mediante la anotación **msdata: Relationship** ). En este tema se explica cómo se interpretan las restricciones y relaciones especificadas en un esquema XML para generar el <xref:System.Data.DataSet>.  
   
- En general, en un esquema XML, especifique el **msdata: Relationship** anotación si desea generar únicamente relaciones en el **DataSet**. Para obtener más información, consulte [relaciones de conjunto de datos de generación de esquemas XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md). Especificar restricciones (unique, key y keyref) si desea generar restricciones en el **DataSet**. Tenga en cuenta que las restricciones key y keyref también se utilizan para generar relaciones, como se explica más adelante en este tema.  
+ En general, en un esquema XML, se especifica la anotación **msdata: Relationship** si se desea generar solo relaciones en el **DataSet**. Para obtener más información, vea [generar relaciones de conjunto de datos a partir de un esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md). Puede especificar restricciones (Unique, Key y keyref) Si desea generar restricciones en el **conjunto de DataSet**. Tenga en cuenta que las restricciones key y keyref también se utilizan para generar relaciones, como se explica más adelante en este tema.  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>Generar una relación a partir de restricciones key y keyref  
- En lugar de especificar el **msdata: Relationship** anotación, puede especificar restricciones key y keyref, que se usan durante el proceso de asignación de esquema XML para generar no sólo las restricciones, sino también la relación en el  **Conjunto de datos**. Sin embargo, si especifica `msdata:ConstraintOnly="true"` en el **keyref** elemento, el **DataSet** sólo incluirá las restricciones y no incluirá la relación.  
+ En lugar de especificar la anotación **msdata: Relationship** , puede especificar las restricciones Key y keyref, que se utilizan durante el proceso de asignación del esquema XML para generar no solo las restricciones, sino también la relación en el **DataSet**. Sin embargo, si especifica `msdata:ConstraintOnly="true"` en el elemento **keyref** , el **conjunto** de elementos solo incluirá las restricciones y no incluirá la relación.  
   
- En el ejemplo siguiente se muestra un esquema XML que incluye **orden** y **OrderDetail** elementos, que no están anidados. El esquema también especifica restricciones key y keyref.  
+ En el ejemplo siguiente se muestra un esquema XML que incluye los elementos **Order** y **OrderDetail** , que no están anidados. El esquema también especifica restricciones key y keyref.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -59,7 +59,7 @@ En un esquema (XSD) del lenguaje de definición de esquemas XML, puede especific
 </xs:schema>  
 ```  
   
- El **DataSet** que se genera durante el esquema XML incluye el proceso de asignación del **orden** y **OrderDetail** tablas. Además, el **DataSet** incluye relaciones y restricciones. En el siguiente ejemplo se muestran estas relaciones y restricciones. Tenga en cuenta que el esquema no especifica la **msdata: Relationship** anotación; en su lugar, las restricciones key y keyref se utilizan para generar la relación.  
+ El **DataSet** que se genera durante el proceso de asignación del esquema XML incluye las tablas **Order** y **OrderDetail** . Además, el **conjunto** de elementos incluye relaciones y restricciones. En el siguiente ejemplo se muestran estas relaciones y restricciones. Tenga en cuenta que el esquema no especifica la anotación **msdata: Relationship** ; en su lugar, se usan las restricciones Key y keyref para generar la relación.  
   
 ```  
 ....ConstraintName: OrderNumberKey  
@@ -85,7 +85,7 @@ En un esquema (XSD) del lenguaje de definición de esquemas XML, puede especific
 ..Nested: False  
 ```  
   
- En el ejemplo de esquema anterior, el **orden** y **OrderDetail** elementos no están anidados. En el siguiente ejemplo de esquema, estos elementos están anidados. Sin embargo, no hay **msdata: Relationship** anotación se especifica; por lo tanto, se supone una relación implícita. Para obtener más información, consulte [asignación implícita relaciones entre elementos de esquema anidados](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md). El esquema también especifica restricciones key y keyref.  
+ En el ejemplo de esquema anterior, los elementos **Order** y **OrderDetail** no están anidados. En el siguiente ejemplo de esquema, estos elementos están anidados. Sin embargo, no se especifica ninguna anotación **msdata: Relationship** ; por lo tanto, se supone una relación implícita. Para obtener más información, vea [asignar relaciones implícitas entre elementos de esquema anidados](map-implicit-relations-between-nested-schema-elements.md). El esquema también especifica restricciones key y keyref.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -129,14 +129,14 @@ En un esquema (XSD) del lenguaje de definición de esquemas XML, puede especific
 </xs:schema>  
 ```  
   
- El **DataSet** resultante del proceso de asignación del esquema XML incluye dos tablas:  
+ El **conjunto** de resultados resultante del proceso de asignación de esquemas XML incluye dos tablas:  
   
 ```  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- El **DataSet** también incluye las dos relaciones (uno basado en la **msdata: Relationship** anotación y otro en función de las restricciones key y keyref) y varias restricciones. En el siguiente ejemplo se muestran las relaciones y restricciones.  
+ El **DataSet** también incluye las dos relaciones (una basada en la anotación **msdata: Relationship** y la otra basándose en las restricciones Key y keyref) y varias restricciones. En el siguiente ejemplo se muestran las relaciones y restricciones.  
   
 ```  
 ..RelationName: Order_OrderDetail  
@@ -184,9 +184,9 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- Si una restricción keyref que hace referencia a una tabla anidada contiene el **msdata: IsNested = "true"** anotación, la **DataSet** creará una única relación anidada basada en la restricción keyref y relacionados con la restricción unique/key.  
+ Si una restricción keyref que hace referencia a una tabla anidada contiene la anotación **msdata: IsNested = "true"** , el **conjunto de DataSet** creará una única relación anidada basada en la restricción keyref y en la restricción UNIQUE/Key relacionada.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Derivación de una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
+- [Derivación de una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

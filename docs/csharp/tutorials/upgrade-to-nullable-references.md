@@ -3,12 +3,12 @@ title: Diseño con tipos de referencia que aceptan valores NULL
 description: En este tutorial avanzado se ofrece una introducción a los tipos de referencia que aceptan valores NULL. Sabrá expresar la intención de su diseño cuando los valores de referencia puedan ser NULL y hacer que el compilador aplique esas decisiones cuando no puedan ser NULL.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 357ebd13ca4c610f1c65009621ee628a90c70b15
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195844"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105771"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migración del código existente con tipos de referencia que admiten valores NULL
 
@@ -17,10 +17,10 @@ C#8 presenta **tipos de referencia que aceptan valores NULL**, qué complementan
 En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
-> * Habilitar las comprobaciones de referencia NULL mientras trabaja con código.
-> * Diagnosticar y corregir diferentes advertencias relacionadas con los valores NULL.
-> * Administrar la interfaz entre contextos habilitados y deshabilitados que admiten valores NULL.
-> * Controlar contextos de anotación que admiten valores NULL.
+> - Habilitar las comprobaciones de referencia NULL mientras trabaja con código.
+> - Diagnosticar y corregir diferentes advertencias relacionadas con los valores NULL.
+> - Administrar la interfaz entre contextos habilitados y deshabilitados que admiten valores NULL.
+> - Controlar contextos de anotación que admiten valores NULL.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

@@ -4,12 +4,12 @@ description: Diseño de aplicaciones web modernas con ASP.NET Core y Azure | Pri
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 74ff7196ce17807b98a975687a524041f15a7f5b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 93a0fd5c484e27853ec9a6919aa573f68471ceaa
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675582"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105483"
 ---
 # <a name="architectural-principles"></a>Principios de la arquitectura
 
@@ -101,8 +101,8 @@ Como mínimo, las aplicaciones web individuales deberían intentar ser su propio
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-* [Patrones de diseño de JAVA: principios](https://java-design-patterns.com/principles/)
-* [Bounded Context](https://martinfowler.com/bliki/BoundedContext.html) (Contexto delimitado)
+- [Patrones de diseño de JAVA: principios](https://java-design-patterns.com/principles/)
+- [Bounded Context](https://martinfowler.com/bliki/BoundedContext.html) (Contexto delimitado)
 
 >[!div class="step-by-step"]
 >[Anterior](choose-between-traditional-web-and-single-page-apps.md)

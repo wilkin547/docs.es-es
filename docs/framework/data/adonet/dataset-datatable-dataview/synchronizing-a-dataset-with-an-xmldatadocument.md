@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: b4682d60e213ad57308143b2c7ea06d123daf61d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f788e1732f083c01542fcdacdfc042553741350b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607502"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204414"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Sincronizar un objeto DataSet con un objeto XmlDataDocument
-En esta sección se muestra un paso del procesamiento de una orden de compra, donde se utiliza un <xref:System.Data.DataSet> fuertemente tipado sincronizado con un <xref:System.Xml.XmlDataDocument>. Los ejemplos siguientes crean un **DataSet** con un esquema minimizado que coincida con solo una parte del documento XML de origen. Los ejemplos se usa un **XmlDataDocument** para conservar la fidelidad del documento XML de origen, lo que permite el **conjunto de datos** que se usará para exponer un subconjunto del documento XML.  
+En esta sección se muestra un paso del procesamiento de una orden de compra, donde se utiliza un <xref:System.Data.DataSet> fuertemente tipado sincronizado con un <xref:System.Xml.XmlDataDocument>. En los ejemplos siguientes se crea un **conjunto** de resultados con un esquema minimizado que solo coincide con una parte del documento XML de origen. En los ejemplos se usa un **XmlDataDocument** para conservar la fidelidad del documento XML de origen, lo que permite utilizar el **conjunto** de documentos para exponer un subconjunto del documento XML.  
   
  El siguiente documento XML contiene toda la información relativa a una orden de compra: información del cliente, artículos pedidos, información de envío, etc.  
   
@@ -109,9 +109,9 @@ En esta sección se muestra un paso del procesamiento de una orden de compra, do
 </PurchaseOrder>  
 ```  
   
- Un paso del procesamiento de la información de la orden de compra contenida en el documento XML anterior es para rellenar la orden desde el inventario actual de la compañía. El empleado responsable de rellenar la orden de compra desde el almacén de la compañía no necesita ver todo el contenido de la orden de compra; solo necesita ver la información de producto. Para exponer únicamente la información de producto desde el documento XML, crear un establecimiento inflexible **DataSet** con un esquema, escrito como esquema de lenguaje (XSD) de definición de esquemas XML, que se asigne a los productos y cantidades pedidos. Para obtener más información acerca de establecimiento inflexible de tipos **DataSet** objetos, vea [DataSets con tipo](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
+ Un paso del procesamiento de la información de la orden de compra contenida en el documento XML anterior es para rellenar la orden desde el inventario actual de la compañía. El empleado responsable de rellenar la orden de compra desde el almacén de la compañía no necesita ver todo el contenido de la orden de compra; solo necesita ver la información de producto. Para exponer solo la información del producto del documento XML, cree un **conjunto** de datos fuertemente tipado con un esquema, escrito como esquema del lenguaje de definición de esquemas XML (XSD), que se asigna a los productos y cantidades solicitados. Para obtener más información sobre los objetos de **conjunto** de datos fuertemente tipados, vea [conjuntos de datos con tipo](typed-datasets.md).  
   
- El código siguiente muestra el esquema desde el que fuertemente tipado **DataSet** generado para este ejemplo.  
+ En el código siguiente se muestra el esquema del que se genera el **DataSet** fuertemente tipado para este ejemplo.  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -157,11 +157,11 @@ En esta sección se muestra un paso del procesamiento de una orden de compra, do
 </xs:schema>  
 ```  
   
- Tenga en cuenta esa única información desde el **OrderDetails** y **productos** se incluyen elementos del documento XML original en el esquema para el **DataSet**. Sincronizar el **DataSet** con un **XmlDataDocument** garantiza que los elementos no incluidos en el **DataSet** se conservarán con el documento XML.  
+ Tenga en cuenta que solo se incluye en el esquema del **conjunto**de datos la información de los elementos **OrderDetails** y **Products** del documento XML original. Sincronizar el **DataSet** con un **XmlDataDocument** garantiza que los elementos que no se incluyen en el **conjunto** de documentos se conservarán con el documento XML.  
   
- Con fuertemente tipado **DataSet** generado a partir del esquema XML (con un espacio de nombres de **Northwind.FillOrder**), se puede exponer una parte del documento XML original si sincroniza el  **Conjunto de datos** con el **XmlDataDocument** cargado desde el documento XML de origen. Tenga en cuenta que el **conjunto de datos** generado desde el esquema contiene estructura, pero ningún dato. Los datos se rellenan al cargar el XML en el **XmlDataDocument**. Si intenta cargar un **XmlDataDocument** que se ha sincronizado con un **DataSet** que ya contiene datos, se producirá una excepción.  
+ Con el **DataSet** fuertemente tipado generado a partir del esquema XML (con un espacio de nombres **Northwind. FillOrder**), se puede exponer una parte del documento XML original sincronizando el **DataSet** con el **XmlDataDocument** cargado. del documento XML de origen. Observe que el **conjunto** de datos generado a partir del esquema contiene la estructura, pero no los datos. Los datos se rellenan cuando se carga el XML en el **XmlDataDocument**. Si intenta cargar un **XmlDataDocument** que se ha sincronizado con un **conjunto** de datos que ya contiene datos, se producirá una excepción.  
   
- Después de la **DataSet** (y el **XmlDataDocument**) se ha actualizado el **XmlDataDocument** , a continuación, puede escribir el documento XML modificado con los elementos omitidos por el **DataSet** todavía intactos, como se muestra a continuación. En el escenario de la orden de compra, una vez rellenados los artículos pedidos, se puede pasar el documento XML modificado al siguiente paso del proceso de pedido, quizás al departamento de envíos de la compañía.  
+ Una vez que se ha actualizado el **conjunto** de información (y el **XmlDataDocument**), el **XMLDATADOCUMENT** puede escribir el documento XML modificado con los elementos omitidos por el **conjunto** de documentos que todavía están intactos, como se muestra a continuación. En el escenario de la orden de compra, una vez rellenados los artículos pedidos, se puede pasar el documento XML modificado al siguiente paso del proceso de pedido, quizás al departamento de envíos de la compañía.  
   
 ```vb  
 Imports System  
@@ -233,5 +233,5 @@ public class Sample
   
 ## <a name="see-also"></a>Vea también
 
-- [Sincronización de DataSet y XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
+- [Sincronización de DataSet y XmlDataDocument](dataset-and-xmldatadocument-synchronization.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4e4e472185b3b2ba39393c029bca3966fb5ec4b3
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487849"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206056"
 ---
 # <a name="security-transparent-code"></a>Código transparente en seguridad
 
@@ -23,15 +23,15 @@ ms.locfileid: "66487849"
 En la seguridad participan tres partes interrelacionadas: espacio aislado, permisos y cumplimiento. Espacio aislado se refiere a la práctica de crear dominios aislados, donde una parte del código se trata como un código de plena confianza y la otra se restringe al conjunto de permisos concedidos al espacio aislado. El código de aplicación que se ejecuta en el conjunto de permisos del espacio aislado se considera transparente, es decir, no puede realizar operaciones que puedan afectar a la seguridad. El conjunto de permisos del espacio aislado se determina mediante evidencia (clase <xref:System.Security.Policy.Evidence>). La evidencia identifica los permisos específicos que los espacios aislados requieren y los tipos de espacios aislados que se pueden crear. El cumplimiento se refiere a permitir que el código transparente tan solo se ejecute dentro su conjunto de permisos.
 
 > [!IMPORTANT]
-> La directiva de seguridad era un elemento clave en las versiones anteriores de .NET Framework, A partir de .NET Framework 4, la directiva de seguridad está obsoleta. La eliminación de la directiva de seguridad es independiente de la transparencia de seguridad. Para obtener información acerca de los efectos de este cambio, consulte [migración y compatibilidad con la directiva de seguridad de acceso de código](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md).
+> La directiva de seguridad era un elemento clave en las versiones anteriores de .NET Framework, A partir de la .NET Framework 4, la Directiva de seguridad está obsoleta. La eliminación de la directiva de seguridad es independiente de la transparencia de seguridad. Para obtener información sobre los efectos de este cambio, vea [compatibilidad y migración](code-access-security-policy-compatibility-and-migration.md)de la Directiva de seguridad de acceso del código.
 
 En este tema se describe el modelo de transparencia con más detalle. Contiene las siguientes secciones:
 
 - [Propósito del modelo de transparencia](#purpose)
 
-- [Especifica el nivel de transparencia](#level)
+- [Especificar el nivel de transparencia](#level)
 
-- [Cumplimiento de la transparencia](#enforcement)
+- [Aplicación de transparencia](#enforcement)
 
 <a name="purpose"></a>
 
@@ -59,18 +59,18 @@ El atributo <xref:System.Security.SecurityRulesAttribute> de nivel de ensamblado
 
 Los niveles son los siguientes:
 
-- Nivel 2 (<xref:System.Security.SecurityRuleSet.Level2>): las reglas de transparencia de .NET Framework 4.
+- Nivel 2 (<xref:System.Security.SecurityRuleSet.Level2>): las reglas de transparencia .NET Framework 4.
 
 - Nivel 1 (<xref:System.Security.SecurityRuleSet.Level1>): las reglas de transparencia de .NET Framework 2.0.
 
 La diferencia principal entre los dos niveles de transparencia es que el nivel 1 no exige el cumplimiento de las reglas de transparencia en las llamadas hechas desde fuera del ensamblado y se usa únicamente por razones de compatibilidad.
 
 > [!IMPORTANT]
-> Debe especificar la transparencia de nivel 1 solo para la compatibilidad; es decir, especifique el nivel 1 únicamente para el código que se desarrolló con .NET Framework 3.5 o versiones anteriores que usa el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o que no usa el modelo de transparencia. Por ejemplo, use la transparencia de nivel 1 para ensamblados de .NET Framework 2.0 que permiten llamadas de llamadores de confianza parcial (APTCA). Para el código que se desarrolló para .NET Framework 4, use siempre la transparencia de nivel 2.
+> Debe especificar la transparencia de nivel 1 solo para la compatibilidad; es decir, especifique el nivel 1 únicamente para el código que se desarrolló con .NET Framework 3.5 o versiones anteriores que usa el atributo <xref:System.Security.AllowPartiallyTrustedCallersAttribute> o que no usa el modelo de transparencia. Por ejemplo, use la transparencia de nivel 1 para ensamblados de .NET Framework 2.0 que permiten llamadas de llamadores de confianza parcial (APTCA). Para el código que se desarrolla para el .NET Framework 4, use siempre la transparencia de nivel 2.
 
 ### <a name="level-2-transparency"></a>Transparencia de nivel 2
 
-Transparencia de nivel 2 se introdujo en .NET Framework 4. Los tres principios de este modelo son código transparente, código crítico para la seguridad y disponible desde código transparente, y código crítico para la seguridad.
+La transparencia de nivel 2 se presentó en el .NET Framework 4. Los tres principios de este modelo son código transparente, código crítico para la seguridad y disponible desde código transparente, y código crítico para la seguridad.
 
 - El código transparente, independientemente de los permisos que se le conceden (incluida la plena confianza), solo puede llamar a otro código transparente o a código crítico para la seguridad y disponible desde código transparente. Si el código es de confianza parcial, solo puede realizar acciones permitidas por el conjunto de permisos del dominio. El código transparente no puede hacer lo siguiente:
 
@@ -114,9 +114,9 @@ El modelo de transparencia de nivel 1 tiene las siguientes limitaciones:
 
 ## <a name="transparency-enforcement"></a>Cumplimiento de la transparencia
 
-Las reglas de transparencia no se aplican hasta que se calcula la transparencia. En ese momento, se genera una <xref:System.InvalidOperationException> si se infringe una regla de transparencia. El momento en que se calcula la transparencia depende de varios factores y no se puede predecir. Se calcula lo más tarde posible. En .NET Framework 4, el cálculo de transparencia de nivel de ensamblado se produce antes de que en .NET Framework 2.0. La única garantía es que el cálculo de transparencia se producirá cuando sea necesario. Esto es similar a cómo el compilador Just-In-Time (JIT) puede cambiar el punto cuando se compila un método y se detectan errores en ese método. El cálculo de transparencia es invisible si el código no tiene errores de transparencia.
+Las reglas de transparencia no se aplican hasta que se calcula la transparencia. En ese momento, se genera una <xref:System.InvalidOperationException> si se infringe una regla de transparencia. El momento en que se calcula la transparencia depende de varios factores y no se puede predecir. Se calcula lo más tarde posible. En el .NET Framework 4, el cálculo de transparencia de nivel de ensamblado se produce antes que en el .NET Framework 2,0. La única garantía es que el cálculo de transparencia se producirá cuando sea necesario. Esto es similar a cómo el compilador Just-In-Time (JIT) puede cambiar el punto cuando se compila un método y se detectan errores en ese método. El cálculo de transparencia es invisible si el código no tiene errores de transparencia.
 
 ## <a name="see-also"></a>Vea también
 
-- [Código transparente en seguridad, nivel 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
-- [Código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+- [Código transparente en seguridad, nivel 1](security-transparent-code-level-1.md)
+- [Código transparente en seguridad, nivel 2](security-transparent-code-level-2.md)

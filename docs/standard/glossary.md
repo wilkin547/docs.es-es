@@ -3,12 +3,12 @@ title: Glosario de .NET
 description: Descubra el significado de algunos de los términos usados en la documentación de .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: caff1ee4c8e3ad133016b774fdb235bd1ef59637
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674515"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106922"
 ---
 # <a name="net-glossary"></a>Glosario de .NET
 
@@ -38,7 +38,7 @@ Vea la [documentación de ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>ensamblado
 
-Un archivo *.dll*/*.exe* que puede contener una colección de API a la que puede llamarse mediante aplicaciones u otros ensamblados.
+Un archivo *.dll*/ *.exe* que puede contener una colección de API a la que puede llamarse mediante aplicaciones u otros ensamblados.
 
 Un ensamblado puede incluir tipos como interfaces, clases, estructuras, enumeraciones y delegados. A veces, se hace referencia a los ensamblados de la carpeta *bin* de un proyecto como *archivos binarios*. Vea también [biblioteca](#library).
 
@@ -85,9 +85,9 @@ El término "ecosistema de .NET" se diferencia de términos parecidos como "pila
 En general, una colección completa de API que facilita el desarrollo y la implementación de aplicaciones que se basan en una tecnología concreta. En este sentido general, ASP.NET Core y Windows Forms son ejemplos de marcos de trabajo de la aplicación. Vea también [biblioteca](#library).
 
 Los siguientes términos tienen un significado técnico más específico:
-* [.NET Framework](#net-framework)
-* [Plataforma de destino](#target-framework)
-* [TFM (moniker de la plataforma de destino)](#tfm)
+- [.NET Framework](#net-framework)
+- [Plataforma de destino](#target-framework)
+- [TFM (moniker de la plataforma de destino)](#tfm)
 
 En la documentación existente, "marco de trabajo" a veces hace referencia a una [implementación de .NET](#implementation-of-net). Por ejemplo, un artículo puede llamar marco de trabajo a .NET Core. Tenemos previsto eliminar de la documentación este uso confuso.
 

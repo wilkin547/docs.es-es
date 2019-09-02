@@ -9,18 +9,18 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 71b2b1d32c06afca4abd89df4f6449dacb32046c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 74f834261d464430547ba3e1113db0ea780f593e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988524"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044441"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Procedimiento para depurar aplicaciones de servicios de Windows
 Un servicio se debe ejecutar desde el contexto del Administrador de control de servicios en lugar de desde Visual Studio. Por este motivo, la depuración de un servicio no es tan simple como depurar otros tipos de aplicaciones de Visual Studio. Para depurar un servicio, debe iniciar el servicio y, a continuación, asociar un depurador al proceso en el que se ejecuta. Entonces puede depurar la aplicación mediante el uso de todas las funciones de depuración estándar de Visual Studio.  
   
 > [!CAUTION]
->  No debe asociarse a un proceso a menos que sepa en qué consiste el proceso y comprenda las consecuencias de la asociación al proceso y de su probable finalización. Por ejemplo, si se asocia al proceso WinLogon y luego detiene la depuración, el sistema se detendrá, porque no puede funcionar sin WinLogon.  
+> No debe asociarse a un proceso a menos que sepa en qué consiste el proceso y comprenda las consecuencias de la asociación al proceso y de su probable finalización. Por ejemplo, si se asocia al proceso WinLogon y luego detiene la depuración, el sistema se detendrá, porque no puede funcionar sin WinLogon.  
   
  Puede asociar el depurador a un servicio en ejecución. El proceso de asociación interrumpe el funcionamiento actual del servicio; no detiene ni pausa el procesamiento del servicio. Es decir, si el servicio se está ejecutando al iniciar la depuración, todavía está técnicamente en el estado Iniciado al depurarlo, pero su procesamiento se ha suspendido.  
   
@@ -55,7 +55,7 @@ Un servicio se debe ejecutar desde el contexto del Administrador de control de s
 8. En la sección **Procesos disponibles**, elija el proceso del servicio y, a continuación, seleccione **Asociar**.  
   
     > [!TIP]
-    >  El proceso tendrá el mismo nombre que el archivo ejecutable para el servicio.  
+    > El proceso tendrá el mismo nombre que el archivo ejecutable para el servicio.  
   
      Aparecerá el cuadro de diálogo **Asociar al proceso** .  
   

@@ -3,12 +3,12 @@ title: Documentar el código con comentarios XML
 description: Obtenga información sobre cómo documentar el código con comentarios de documentación XML y generar un archivo de documentación XML en tiempo de compilación.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b6744921f4703f53a16b6bdadcfbf375c2fb3332
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633733"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104770"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentar el código con comentarios XML
 
@@ -212,12 +212,12 @@ También se pueden usar herramientas de generación de documentación internas o
 
 Se recomienda documentar código por diversos motivos. A continuación se muestran algunos procedimientos recomendados, escenarios generales de casos de uso y conceptos que debe conocer al usar etiquetas de documentación XML en el código de C#.
 
-* Por motivos de coherencia, se deben documentar todos los tipos públicamente visibles y sus miembros. Si debe hacerlo, hágalo en todos los elementos.
-* Los miembros privados también se pueden documentar mediante comentarios XML, pero esto expone el funcionamiento interno (potencialmente confidencial) de la biblioteca.
-* Como mínimo, los tipos y sus miembros deben tener una etiqueta `<summary>`, ya que su contenido es necesario para IntelliSense.
-* El texto de la documentación se debe escribir con frases completas que terminen en punto.
-* Las clases parciales son totalmente compatibles y la información de documentación se concatenará en una única entrada para ese tipo.
-* El compilador comprueba la sintaxis de las etiquetas `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` y `<typeparam>`.
+- Por motivos de coherencia, se deben documentar todos los tipos públicamente visibles y sus miembros. Si debe hacerlo, hágalo en todos los elementos.
+- Los miembros privados también se pueden documentar mediante comentarios XML, pero esto expone el funcionamiento interno (potencialmente confidencial) de la biblioteca.
+- Como mínimo, los tipos y sus miembros deben tener una etiqueta `<summary>`, ya que su contenido es necesario para IntelliSense.
+- El texto de la documentación se debe escribir con frases completas que terminen en punto.
+- Las clases parciales son totalmente compatibles y la información de documentación se concatenará en una única entrada para ese tipo.
+- El compilador comprueba la sintaxis de las etiquetas `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` y `<typeparam>`.
 - El compilador valida los parámetros que contienen rutas de acceso de archivo y referencias a otras partes del código.
 
 ## <a name="see-also"></a>Vea también

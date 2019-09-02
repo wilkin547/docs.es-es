@@ -2,12 +2,12 @@
 title: Procedimiento para detectar errores de análisis (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
-ms.openlocfilehash: 094485b24cdccee7898bd0344aa7c100e26bf4e9
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4195ff50d1b4d23cd9eb07fc27f20861d1504672
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487487"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204138"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Procedimiento para detectar errores de análisis (C#)
 En este tema se describe cómo detectar XML no válido o mal formado.  
@@ -36,7 +36,7 @@ catch (System.Xml.XmlException e)
   
  Cuando ejecuta este código, devuelve la siguiente excepción:  
   
-```  
+```console  
 The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line 5, position 13.  
 ```  
   

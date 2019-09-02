@@ -2,15 +2,15 @@
 title: Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: edba5ed5026c16ca1f1b09e8504ecfdf408ae5ef
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 06b70f5f3b2e1f3e7e423b16463f0b6b613f62c2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922002"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168377"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Procedimiento para realizar varias solicitudes web en paralelo con async y await (C#)
-En un método asincrónico, las tareas se inician en el momento de crearse. El operador [await](../../../language-reference/keywords/await.md) se aplica a la tarea en el momento del método en que no se puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
+En un método asincrónico, las tareas se inician en el momento de crearse. El operador [await](../../../language-reference/operators/await.md) se aplica a la tarea en el momento del método en que no se puede continuar el procesamiento hasta que finalice la tarea. A menudo se espera una tarea en cuanto se crea, como se muestra en el ejemplo siguiente.  
   
 ```csharp  
 var result = await someWebAccessMethodAsync(url);  

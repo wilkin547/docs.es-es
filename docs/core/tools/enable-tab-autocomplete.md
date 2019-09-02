@@ -4,12 +4,12 @@ description: En este artículo se describe cómo habilitar la finalización con 
 author: thraka
 ms.author: adegeo
 ms.date: 12/17/2018
-ms.openlocfilehash: 16574e02aa9f9167602401eef2ad7a73e07ad107
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: c7673d95f3710d78d3a09b26f031396587f9c669
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203342"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202495"
 ---
 # <a name="how-to-enable-tab-completion-for-net-core-cli"></a>Cómo habilitar la finalización con tabulación para la CLI de .NET Core
 
@@ -19,7 +19,7 @@ A partir del SDK de .NET Core 2.0, la CLI de .NET Core admite la finalización c
 
 Una vez configurada, para desencadenar la finalización con tabulación para la CLI de .NET Core, escriba un comando `dotnet` en el shell y, después, presione el tabulador. La línea de comandos que se envía al comando `dotnet complete` y los resultados se procesan mediante el shell. Puede probar los resultados sin habilitar la finalización con tabulación si envía algo directamente al comando `dotnet complete`. Por ejemplo:
 
-```
+```console
 > dotnet complete "dotnet a"
 add
 clean

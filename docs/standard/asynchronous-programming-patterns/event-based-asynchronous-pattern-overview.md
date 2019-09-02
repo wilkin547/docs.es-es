@@ -16,12 +16,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 7dba7afe9ab0348082ec9538b268a387b64ad050
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05b5ab19c5206395ab138465eccf2035b5cebe3e
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950693"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046482"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>Información general sobre el modelo asincrónico basado en eventos
 Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen respondiendo a la interacción del usuario, a menudo exigen un diseño que utiliza varios subprocesos. El espacio de nombres <xref:System.Threading> proporciona todas las herramientas necesarias para crear aplicaciones multiproceso de gran rendimiento, pero, para usar estas herramientas de forma eficaz, es necesario atesorar una gran experiencia en ingeniería de software multiproceso. Para aplicaciones multiproceso relativamente simples, el componente <xref:System.ComponentModel.BackgroundWorker> ofrece una solución sencilla. Para aplicaciones asincrónicas más sofisticadas, considere la opción de implementar una clase que se adhiera al modelo asincrónico basado en eventos.  
@@ -45,7 +45,7 @@ Las aplicaciones que desempeñan muchas tareas simultáneamente, aunque siguen r
  El modelo asincrónico basado en eventos requiere que se pueda cancelar una operación asincrónica y que el control <xref:System.Windows.Forms.PictureBox> admita este requisito con su método <xref:System.Windows.Forms.PictureBox.CancelAsync%2A>. La llamada a <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> envía una solicitud para detener la carga pendiente y, cuando se cancela la operación, se genera el evento <xref:System.Windows.Forms.PictureBox.LoadCompleted>.  
   
 > [!CAUTION]
->  Es posible que la descarga finalice justo en el momento de realizar la solicitud <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> y, por tanto, puede que <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> no refleje la solicitud de cancelación. Esto se denomina *condición de carrera* y es un problema habitual en la programación multiproceso. Para obtener más información sobre problemas en la programación multiproceso, vea [Procedimientos recomendados para el subprocesamiento administrado](../../../docs/standard/threading/managed-threading-best-practices.md).  
+> Es posible que la descarga finalice justo en el momento de realizar la solicitud <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> y, por tanto, puede que <xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> no refleje la solicitud de cancelación. Esto se denomina *condición de carrera* y es un problema habitual en la programación multiproceso. Para obtener más información sobre problemas en la programación multiproceso, vea [Procedimientos recomendados para el subprocesamiento administrado](../../../docs/standard/threading/managed-threading-best-practices.md).  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>Características del modelo asincrónico basado en eventos  
  El modelo asincrónico basado en eventos puede tener varias formas, en función de la complejidad de las operaciones admitidas por una clase en particular. Las clases más simples pueden tener un único método _NombreDeMétodo_**Async** y su correspondiente evento _NombreDeMétodo_**Completed**. Las clases más complejas pueden tener varios métodos _NombreDeMétodo_**Async**, cada uno con su correspondiente evento _NombreDeMétodo_**Completed**, así como versiones sincrónicas de estos métodos. Opcionalmente, las clases pueden admitir cancelación, informes de progreso y resultados incrementales para los métodos asincrónicos.  

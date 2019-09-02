@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: 72af4b049153ce647cc1ceb2d40c3b17cc7ed988
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ff2b6b6d00c854d07f36d37986268a388c7f31b
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880066"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203720"
 ---
 # <a name="finding-rows"></a>Buscar filas
-Es posible buscar filas en función de los valores clave de ordenación mediante los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> de la <xref:System.Data.DataView>. Distingue mayúsculas de minúsculas de buscar valores en el **buscar** y **FindRows** métodos viene determinada por la **CaseSensitive** propiedad de subyacente <xref:System.Data.DataTable>. Los valores de búsqueda deben coincidir en su totalidad con los valores de clave de ordenación existentes para que se devuelva un resultado.  
+Es posible buscar filas en función de los valores clave de ordenación mediante los métodos <xref:System.Data.DataView.Find%2A> y <xref:System.Data.DataView.FindRows%2A> de la <xref:System.Data.DataView>. La distinción de mayúsculas y minúsculas de los valores de búsqueda en los métodos **Find** y **FindRows** viene determinada por la propiedad **CaseSensitive** del subyacente <xref:System.Data.DataTable>. Los valores de búsqueda deben coincidir en su totalidad con los valores de clave de ordenación existentes para que se devuelva un resultado.  
   
- El **buscar** método devuelve un entero con el índice de la <xref:System.Data.DataRowView> que coincida con los criterios de búsqueda. Si más de una fila coincide con los criterios de búsqueda, solo el índice de la primera coincidencia **DataRowView** se devuelve. Si se encuentra ninguna coincidencia, **buscar** devuelve -1.  
+ El método **Find** devuelve un entero con el índice de <xref:System.Data.DataRowView> que coincide con los criterios de búsqueda. Si hay más de una fila que coincide con los criterios de búsqueda, solo se devuelve el índice de la primera **DataRowView** coincidente. Si no se encuentran coincidencias, **Find** devuelve-1.  
   
- Para devolver los resultados de búsqueda que coincidan con varias filas, utilice el **FindRows** método. **FindRows** funciona igual que el **buscar** método, salvo que devuelva un **DataRowView** matriz que hace referencia a todas las filas coincidentes en la **DataView**. Si se encuentra ninguna coincidencia, la **DataRowView** matriz estará vacía.  
+ Para devolver los resultados de la búsqueda que coinciden con varias filas, use el método **FindRows** . **FindRows** funciona igual que el método **Find** , con la salvedad de que devuelve una matriz de **DataRowView** que hace referencia a todas las filas coincidentes de **DataView**. Si no se encuentran coincidencias, la matriz de **DataRowView** estará vacía.  
   
- Para usar el **buscar** o **FindRows** métodos debe especificar un criterio de ordenación orden estableciendo **ApplyDefaultSort** a **true** o mediante el **Ordenación** propiedad. Si no se especifica ningún criterio de ordenación, se inicia una excepción.  
+ Para usar los métodos **Find** o **FindRows** , debe especificar un criterio de ordenación estableciendo el valor de **ApplyDefaultSort** en **true** o mediante la propiedad **Sort** . Si no se especifica ningún criterio de ordenación, se inicia una excepción.  
   
- El **buscar** y **FindRows** métodos toman una matriz de valores como entrada cuya longitud coincide con el número de columnas en el criterio de ordenación. En el caso de una ordenación por una única columna, puede pasar un único valor. Para los criterios de ordenación que contienen varias columnas, debe pasar una matriz de objetos. Tenga en cuenta que para una ordenación según varias columnas, los valores de la matriz de objetos deben coincidir con el orden de las columnas especificadas en el **ordenación** propiedad de la **DataView**.  
+ Los métodos **Find** y **FindRows** toman una matriz de valores como entrada cuya longitud coincide con el número de columnas en el criterio de ordenación. En el caso de una ordenación por una única columna, puede pasar un único valor. Para los criterios de ordenación que contienen varias columnas, debe pasar una matriz de objetos. Tenga en cuenta que para una ordenación en varias columnas, los valores de la matriz de objetos deben coincidir con el orden de las columnas especificadas en la propiedad **Sort** de **DataView**.  
   
- El siguiente ejemplo de código muestra la **buscar** método que se llama con un **DataView** con una sola columna de ordenación.  
+ En el ejemplo de código siguiente se muestra el método **Find** al que se llama en una **DataView** con un criterio de ordenación de una sola columna.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -55,7 +55,7 @@ else
     custView[rowIndex]["CompanyName"].ToString());  
 ```  
   
- Si su **ordenación** propiedad especifica varias columnas, debe pasar una matriz de objetos con los valores de búsqueda para cada columna en el orden especificado por el **ordenación** propiedad, como se muestra en el siguiente ejemplo de código.  
+ Si la propiedad **Sort** especifica varias columnas, debe pasar una matriz de objetos con los valores de búsqueda de cada columna en el orden especificado por la propiedad **Sort** , como en el ejemplo de código siguiente.  
   
 ```vb  
 Dim custView As DataView = _  
@@ -97,5 +97,5 @@ else
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [Objetos DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [Objetos DataView](dataviews.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

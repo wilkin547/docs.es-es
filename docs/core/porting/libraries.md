@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo portar proyectos de .NET Framework
 author: cartermp
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: c7a770ba2da8c245ba9140852fc7c2a33a55f7a2
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 3e3c613f6be50ae5ff2b07052c7c1bced2047855
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660711"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105287"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Traslado de bibliotecas de .NET Framework a .NET Core
 
@@ -113,11 +113,11 @@ Es probable que vaya a combinar los enfoques anteriores en función de cada proy
 La mejor forma de asegurarse de que todo funciona correctamente cuando traslada el código es probarlo mientras lo traslada a .NET Core. Para ello, debe usar un marco de pruebas que compila y ejecuta pruebas para .NET Core. Actualmente tiene 3 opciones:
 
 - [xUnit](https://xunit.github.io/)
-  * [Introducción](https://xunit.github.io/docs/getting-started-dotnet-core.html)
-  * [Herramienta para convertir un proyecto MSTest en xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
+  - [Introducción](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [Herramienta para convertir un proyecto MSTest en xUnit](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  * [Introducción](https://github.com/nunit/docs/wiki/Installation)
-  * [Entrada de blog sobre la migración de MSTest a NUnit.](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
+  - [Introducción](https://github.com/nunit/docs/wiki/Installation)
+  - [Entrada de blog sobre la migración de MSTest a NUnit.](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](https://docs.microsoft.com/visualstudio/test/unit-test-basics)
 
 ## <a name="recommended-approach-to-porting"></a>Enfoque recomendado de portabilidad
