@@ -9,11 +9,11 @@ ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ebd1de46eb2757098a369b58dd9a6c0009e5b95
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742476"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "61674900"
 ---
 # <a name="using-application-domains"></a>Utilizar dominios de aplicación
 Los dominios de aplicación proporcionan una unidad de aislamiento para Common Language Runtime. Se crean y se ejecutan dentro de un proceso. Los dominios de aplicación suele crearlos un host en tiempo de ejecución, que es una aplicación encargada de cargar el tiempo de ejecución en un proceso y ejecutar el código de usuario dentro de un dominio de aplicación. El host en tiempo de ejecución crea un proceso y un dominio de aplicación predeterminado y ejecuta el código administrado dentro de él. Entre los hosts en tiempo de ejecución se incluyen ASP.NET, Microsoft Internet Explorer y el shell de Windows.  
@@ -21,13 +21,13 @@ Los dominios de aplicación proporcionan una unidad de aislamiento para Common L
  En la mayoría de las aplicaciones, no es necesario que cree su propio dominio de aplicación, ya que el host en tiempo de ejecución crea automáticamente los dominios de aplicación necesarios. A pesar de ello, puede crear y configurar dominios de aplicación adicionales si su aplicación necesita aislar el código o usar y descargar archivos DLL.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
+ [Cómo: Crear un dominio de aplicación](../../../docs/framework/app-domains/how-to-create-an-application-domain.md)  
  Describe cómo crear mediante programación un dominio de aplicación.  
   
- [Descargar un dominio de aplicación](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
+ [Cómo: Descargar un dominio de aplicación](../../../docs/framework/app-domains/how-to-unload-an-application-domain.md)  
  Describe cómo descargar mediante programación un dominio de aplicación.  
   
- [Configurar un dominio de aplicación](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
+ [Cómo: Configurar un dominio de aplicación](../../../docs/framework/app-domains/how-to-configure-an-application-domain.md)  
  Proporciona una introducción a la configuración de un dominio de aplicación.  
   
  [Recuperar información de instalación de un dominio de aplicación](../../../docs/framework/app-domains/retrieve-setup-information.md)  
@@ -36,13 +36,13 @@ Los dominios de aplicación proporcionan una unidad de aislamiento para Common L
  [Cómo: Cargar ensamblados en un dominio de aplicación](../../../docs/framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)  
  Describe cómo cargar un ensamblado en un dominio de aplicación.  
   
- [Obtener información sobre tipos y miembros desde un ensamblado](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
+ [Cómo: Obtener información sobre tipos y miembros desde un ensamblado](../../../docs/framework/app-domains/how-to-obtain-type-and-member-information-from-an-assembly.md)  
  Describe cómo recuperar información sobre un ensamblado.  
   
  [Copias sombra de ensamblados](../../../docs/framework/app-domains/shadow-copy-assemblies.md)  
  Describe la manera en que la creación de instantáneas permite actualizaciones en los ensamblados mientras están en uso y cómo se configura la creación de instantáneas.  
   
- [Recibir notificaciones de excepciones de primera oportunidad](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
+ [Cómo: para recibir notificaciones de excepciones de primera oportunidad](../../../docs/framework/app-domains/how-to-receive-first-chance-exception-notifications.md)  
  Explica cómo se puede recibir una notificación de que se ha producido una excepción antes de que Common Language Runtime empiece a buscar controladores de excepciones.  
   
  [Resolver cargas de ensamblado](../../../docs/framework/app-domains/resolve-assembly-loads.md)  
