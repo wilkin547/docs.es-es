@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571b049300a7c7de963bd762e0266f66060479fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c9ab95124264b2b59be77695755ab1d1f1c3b1aa
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927994"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70040732"
 ---
 # <a name="application-domains"></a>Dominios de aplicación
 
@@ -145,7 +145,7 @@ COMPLUS_LoaderOptimization = 1
  Cuando se establece en 1, la marca de entorno COMPLUS_LoaderOptimization obliga al host del runtime a cargar todos los ensamblados de una manera no neutra para el dominio que se conoce como SingleDomain. SingleDomain no carga ensamblados con dominio neutro, a excepción de Mscorlib, que siempre se carga con dominio neutro. Esta configuración se denomina dominio simple porque suele utilizarse cuando el host ejecuta una sola aplicación en el proceso.  
   
 > [!CAUTION]
->  La marca de entorno COMPLUS_LoaderOptimization se diseñó para utilizarse en escenarios de diagnóstico y prueba. Tener la marca activada puede producir una considerable ralentización y un aumento del uso de memoria.  
+> La marca de entorno COMPLUS_LoaderOptimization se diseñó para utilizarse en escenarios de diagnóstico y prueba. Tener la marca activada puede producir una considerable ralentización y un aumento del uso de memoria.  
   
 ### <a name="code-example"></a>Ejemplo de código
 

@@ -2,17 +2,17 @@
 title: Objetos DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 2bf736445a041ec678ab30474da51fddfba1773b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b9e6fb4ce1c2c7ee7d081a1cb2106d30960853c7
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934482"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204881"
 ---
 # <a name="diffgrams"></a>Objetos DiffGram
 Un DiffGram es un formato XML que identifica las versiones actual y original de los elementos de datos. El <xref:System.Data.DataSet> utiliza el formato DiffGram para cargar y hacer persistente su contenido, así como para serializar su contenido con el fin de transportarlo a través de una conexión de red. Cuando un <xref:System.Data.DataSet> se escribe como un DiffGram, rellena el DiffGram con toda la información necesaria para volver a crear con precisión el contenido, aunque no el esquema, <xref:System.Data.DataSet>de, incluidos los valores de columna de los valores **originales** yVersiones de fila actuales, información de error de fila y orden de filas.  
   
- Cuando se envía y recupera un <xref:System.Data.DataSet> desde un servicio Web XML, se utiliza implícitamente el formato DiffGram. Además, al cargar el contenido de un <xref:System.Data.DataSet> desde XML mediante el método **ReadXml** , o al escribir el contenido de un <xref:System.Data.DataSet> en XML mediante el método **WriteXml** , puede especificar que el contenido se lea o se escriba como un DiffGram. Para obtener más información, vea [cargar un DataSet desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) y escribir el contenido del conjunto de [datos como datos XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md).  
+ Cuando se envía y recupera un <xref:System.Data.DataSet> desde un servicio Web XML, se utiliza implícitamente el formato DiffGram. Además, al cargar el contenido de un <xref:System.Data.DataSet> desde XML mediante el método **ReadXml** , o al escribir el contenido de un <xref:System.Data.DataSet> en XML mediante el método **WriteXml** , puede especificar que el contenido se lea o se escriba como un DiffGram. Para obtener más información, vea [cargar un DataSet desde XML](loading-a-dataset-from-xml.md) y escribir el contenido del conjunto de [datos como datos XML](writing-dataset-contents-as-xml-data.md).  
   
  Si bien .NET Framework utiliza principalmente el formato DiffGram como formato de serialización para el contenido de un <xref:System.Data.DataSet>, también es posible usar DiffGrams para modificar datos en tablas de una base de datos de Microsoft SQL Server.  
   
@@ -133,8 +133,8 @@ Un DiffGram es un formato XML que identifica las versiones actual y original de 
   
 ## <a name="see-also"></a>Vea también
 
-- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Carga de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Escritura de contenido de un conjunto de datos como datos XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
+- [Carga de un conjunto de datos desde XML](loading-a-dataset-from-xml.md)
+- [Escritura de contenido de un conjunto de datos como datos XML](writing-dataset-contents-as-xml-data.md)
+- [Objetos DataSet, DataTable y DataView](index.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

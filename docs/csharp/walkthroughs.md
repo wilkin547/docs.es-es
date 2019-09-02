@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 0c666d62c21d3e4f7b1041c1d5360ac43d2cf03f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e70d2b708eefa9762bef15403a63b2a908f7a149
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587057"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168968"
 ---
 # <a name="c-walkthroughs"></a>Tutoriales de C#
 Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, lo que hace que un buen lugar para empezar a conocer el producto o una característica en particular.  
@@ -21,7 +21,7 @@ Los tutoriales proporcionan instrucciones paso a paso para escenarios comunes, l
 ## <a name="in-this-section"></a>En esta sección  
 
  [Acceso a la Web usando async y await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- Muestra cómo crear una solución asincrónica mediante el uso de [async](./language-reference/keywords/async.md) y [await](./language-reference/keywords/await.md).  
+ Muestra cómo crear una solución asincrónica mediante el uso de [async](./language-reference/keywords/async.md) y [await](./language-reference/operators/await.md).  
   
  [Crear un componente de Windows Runtime en C# o Visual Basic y llamarlo desde JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
  Muestra cómo crear un tipo de Windows Runtime, empaquetarlo en un componente de Windows Runtime y, a continuación, llamar al componente desde una aplicación de [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] creada para Windows mediante JavaScript.  

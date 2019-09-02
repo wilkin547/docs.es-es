@@ -3,12 +3,12 @@ title: Generación y consumo de secuencias asincrónicas
 description: En este tutorial avanzado se muestran escenarios donde la generación y utilización de secuencias asincrónicas proporciona una manera más natural de trabajar con secuencias de datos que pueden generarse de forma asincrónica.
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd1159c139f2c885eacf55b8577bea9e79bf0d7a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308554"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105866"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>Tutorial: Generación y uso de secuencias asincrónicas con C# 8.0 y .NET Core 3.0
 
@@ -17,9 +17,9 @@ C#8.0 presenta **secuencias asincrónicas**, que modelan un origen de datos en s
 En este tutorial aprenderá lo siguiente:
 
 > [!div class="checklist"]
-> * Crear un origen de datos que genera una secuencia de elementos de datos de forma asincrónica.
-> * Utilizar ese origen de datos de forma asincrónica.
-> * Reconocer cuándo la interfaz y el origen de datos nuevos son preferibles a las secuencias de datos sincrónicas anteriores.
+> - Crear un origen de datos que genera una secuencia de elementos de datos de forma asincrónica.
+> - Utilizar ese origen de datos de forma asincrónica.
+> - Reconocer cuándo la interfaz y el origen de datos nuevos son preferibles a las secuencias de datos sincrónicas anteriores.
 
 ## <a name="prerequisites"></a>Requisitos previos
 

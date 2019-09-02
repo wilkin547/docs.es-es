@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d636496599d4419518ce53c956c83f6ae175aa8
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
+ms.openlocfilehash: 4092d8694bdb896db1332bd73afae3f62bba36cf
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135654"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105914"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Empaquetado e implementación de recursos en aplicaciones .NET
 
@@ -141,7 +141,7 @@ El sondeo optimizado de los ensamblados satélite es una característica opciona
 El proceso de reserva de recursos de .NET Core conlleva los pasos siguientes:
 
 1. El entorno de ejecución intenta cargar un ensamblado satélite para la referencia cultural solicitada.
-     * Busca en el directorio del ensamblado actualmente en ejecución un directorio que coincida con la referencia cultural solicitada. Si lo encuentra, busca en ese directorio un ensamblado satélite válido para la referencia cultural solicitada y lo carga.
+     - Busca en el directorio del ensamblado actualmente en ejecución un directorio que coincida con la referencia cultural solicitada. Si lo encuentra, busca en ese directorio un ensamblado satélite válido para la referencia cultural solicitada y lo carga.
 
        > [!NOTE]
        > En sistemas operativos con sistemas de archivos que distinguen mayúsculas de minúsculas (es decir, Linux y macOS), la búsqueda del subdirectorio de nombres de referencias culturales distingue mayúsculas de minúsculas. El nombre del subdirectorio debe coincidir exactamente con las mayúsculas y minúsculas de <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (por ejemplo, `es` o `es-MX`).
@@ -149,8 +149,8 @@ El proceso de reserva de recursos de .NET Core conlleva los pasos siguientes:
        > [!NOTE]
        > Si el programador ha derivado un contexto local de ensamblado personalizado de <xref:System.Runtime.Loader.AssemblyLoadContext>, la situación es complicada. Si el ensamblado que se ejecuta se cargó en el contexto personalizado, el entorno de ejecución carga el ensamblado satélite en el contexto personalizado. Los detalles quedan fuera del ámbito de este documento. Consulte <xref:System.Runtime.Loader.AssemblyLoadContext>.
 
-     * Si no se encuentra un ensamblado satélite, <xref:System.Runtime.Loader.AssemblyLoadContext> genera el evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> para indicar que no se puede encontrarlo. Si opta por controlar el evento, el controlador de eventos puede cargar y devolver una referencia al ensamblado satélite.
-     * Si todavía no se encuentra un ensamblado satélite, AssemblyLoadContext hace que AppDomain desencadene un evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para indicar que no es posible encontrar el ensamblado satélite. Si opta por controlar el evento, el controlador de eventos puede cargar y devolver una referencia al ensamblado satélite.
+     - Si no se encuentra un ensamblado satélite, <xref:System.Runtime.Loader.AssemblyLoadContext> genera el evento <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> para indicar que no se puede encontrarlo. Si opta por controlar el evento, el controlador de eventos puede cargar y devolver una referencia al ensamblado satélite.
+     - Si todavía no se encuentra un ensamblado satélite, AssemblyLoadContext hace que AppDomain desencadene un evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para indicar que no es posible encontrar el ensamblado satélite. Si opta por controlar el evento, el controlador de eventos puede cargar y devolver una referencia al ensamblado satélite.
 
 2. Si se encuentra un ensamblado satélite, el entorno de ejecución lo busca para el recurso solicitado. Si encuentra el recurso en el ensamblado, lo usará. Si no encuentra el recurso, seguirá con la búsqueda.
 

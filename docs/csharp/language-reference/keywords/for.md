@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: a0252493ffd251b8d760927345c71e2f5ef55aaa
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 61315a04ca8d5a619a3dcaf43b15a309919d3c42
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67401519"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167868"
 ---
 # <a name="for-c-reference"></a>for (Referencia de C#)
 
@@ -53,7 +53,7 @@ Las instrucciones de la sección *inicializador* se ejecutan solo una vez, antes
 
   - creación de un objeto mediante el operador [new](../operators/new-operator.md)
 
-  - expresión [await](await.md)
+  - expresión [await](../operators/await.md)
 
 La sección *inicializador* del ejemplo anterior declara e inicializa la variable de bucle local `i`:
 
@@ -85,7 +85,7 @@ La sección *iterador* define lo que sucede después de cada iteración del cuer
 
 - creación de un objeto mediante el operador [new](../operators/new-operator.md)
 
-- expresión [await](await.md)
+- expresión [await](../operators/await.md)
 
 La sección *iterador* del ejemplo anterior incrementa la variable de bucle local:
 

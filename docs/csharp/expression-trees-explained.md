@@ -3,12 +3,12 @@ title: Árboles de expresiones en detalle
 description: Obtenga información sobre los árboles de expresión y cómo son útiles en la traducción de algoritmos para la ejecución externa y la inspección de código antes de ejecutarlo.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613426"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104806"
 ---
 # <a name="expression-trees-explained"></a>Árboles de expresiones en detalle
 
@@ -33,11 +33,11 @@ La expresión es `1 + 2`. Se trata de una expresión binaria. Concretamente, es 
 Visualmente, toda la instrucción es un árbol: puede empezar en el nodo raíz y desplazarse a cada uno de los nodos del árbol para ver el código que compone la instrucción:
 
 - Instrucción de declaración de variable con asignación (`var sum = 1 + 2;`)
-  * Declaración de tipo de variable implícita (`var sum`)
+  - Declaración de tipo de variable implícita (`var sum`)
     - Palabra clave var implícita (`var`)
     - Declaración de nombre de variable (`sum`)
-  * Operador de asignación (`=`)
-  * Expresión binaria de suma (`1 + 2`)
+  - Operador de asignación (`=`)
+  - Expresión binaria de suma (`1 + 2`)
     - Operando izquierdo (`1`)
     - Operador de suma (`+`)
     - Operando derecho (`2`)

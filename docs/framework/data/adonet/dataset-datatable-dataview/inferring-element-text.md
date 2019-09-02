@@ -2,15 +2,15 @@
 title: Inferir texto de elemento
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: 6ffe8f2fbf01fbe8dfa9d78f3dfb9e39b6e80b16
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d64c0cbb0aecf736a54fa6816e286ab7efa191
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879637"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203527"
 ---
 # <a name="inferring-element-text"></a>Inferir texto de elemento
-Si un elemento contiene texto y no tiene elementos secundarios que se deducen como tablas (como elementos con atributos) o elementos repetidos, una nueva columna con el nombre **TableName_Text** se agregarán a la tabla que se deduzca para el elemento. El texto contenido en el elemento se agregará a una fila de la tabla y se almacenará en la nueva columna. El **ColumnMapping** propiedad de la nueva columna se establecerá en **MappingType.SimpleContent**.  
+Si un elemento contiene texto y no tiene ningún elemento secundario que se infiera como tabla (como elementos con atributos o elementos repetidos), se agregará una nueva columna con el nombre **TableName_Text** a la tabla que se infiere para el elemento. El texto contenido en el elemento se agregará a una fila de la tabla y se almacenará en la nueva columna. La propiedad **ColumnMapping** de la nueva columna se establecerá en **MappingType. SimpleContent**.  
   
  Por ejemplo, tomemos el siguiente código XML.  
   
@@ -20,9 +20,9 @@ Si un elemento contiene texto y no tiene elementos secundarios que se deducen co
 </DocumentElement>  
 ```  
   
- El proceso de inferencia producirá una tabla denominada **Element1** con dos columnas: **attr1** y **Element1_Text**. El **ColumnMapping** propiedad de la **attr1** columna se establecerá en **MappingType.Attribute**. El **ColumnMapping** propiedad de la **Element1_Text** columna se establecerá en **MappingType.SimpleContent**.  
+ El proceso de inferencia producirá una tabla denominada **Element1** con dos columnas: **attr1** y **Element1_Text**. La propiedad **ColumnMapping** de la columna **attr1** se establecerá en **MappingType. Attribute**. La propiedad **ColumnMapping** de la columna **Element1_Text** se establecerá en **MappingType. SimpleContent**.  
   
- **DataSet:** DocumentElement  
+ **Authors1** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -40,9 +40,9 @@ Si un elemento contiene texto y no tiene elementos secundarios que se deducen co
 </Element1>  
 ```  
   
- El proceso de inferencia producirá una tabla denominada **Element1** con una columna denominada **ChildElement1**. El texto para el **ChildElement1** elemento se incluirá en una fila en la tabla. El otro texto se pasará por alto. El **ColumnMapping** propiedad de la **ChildElement1** columna se establecerá en **MappingType.Element**.  
+ El proceso de inferencia producirá una tabla denominada **Element1** con una columna denominada **ChildElement1**. El texto del elemento **ChildElement1** se incluirá en una fila de la tabla. El otro texto se pasará por alto. La propiedad **ColumnMapping** de la columna **ChildElement1** se establecerá en **MappingType. Element**.  
   
- **DataSet:** DocumentElement  
+ **Authors1** DocumentElement  
   
  **Tabla:** Element1  
   
@@ -52,9 +52,9 @@ Si un elemento contiene texto y no tiene elementos secundarios que se deducen co
   
 ## <a name="see-also"></a>Vea también
 
-- [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Carga de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [Carga de información del esquema de un conjunto de datos desde XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Inferencia de una estructura relacional de un conjunto de datos a partir de XML](inferring-dataset-relational-structure-from-xml.md)
+- [Carga de un conjunto de datos desde XML](loading-a-dataset-from-xml.md)
+- [Carga de información del esquema de un conjunto de datos desde XML](loading-dataset-schema-information-from-xml.md)
+- [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)
+- [Objetos DataSet, DataTable y DataView](index.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

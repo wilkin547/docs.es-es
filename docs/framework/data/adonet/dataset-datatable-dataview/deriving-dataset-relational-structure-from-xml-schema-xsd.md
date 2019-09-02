@@ -2,17 +2,17 @@
 title: Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 98c43b6af2913b9737085d2d983b37c6da4c1724
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 29b905c42f15cad4eb8521c4d702b56093982445
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934463"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203777"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Derivar una estructura relacional de un conjunto de datos a partir de un esquema XML (XSD)
 Esta sección ofrece información general sobre cómo se crea el esquema relacional de un `DataSet` a partir del documento de esquema del lenguaje de definición de esquema XML (XSD). En general, para cada `complexType` elemento secundario de un elemento de esquema, se genera una tabla `DataSet`en. La estructura de la tabla está determinada por la definición del tipo complejo. Las tablas se crean en `DataSet` para los elementos de nivel superior del esquema. Sin embargo, solo se crea una tabla para un elemento de `complexType` nivel superior cuando `complexType` el elemento está anidado dentro `complexType` de otro `complexType` elemento, en cuyo caso el elemento anidado se asigna `DataTable` a un `DataSet`dentro de.  
   
- Para obtener más información acerca de XSD, vea el esquema XML de [World Wide Web Consortium (W3C) parte 0: Recomendación](https://www.w3.org/TR/xmlschema-0/)básica, la parte [1 del esquema XML: Recomendación](https://www.w3.org/TR/xmlschema-1/)de estructuras y el [esquema XML parte 2: Recomendación](https://www.w3.org/TR/xmlschema-2/)de tipos de los tipos de.  
+ Para obtener más información acerca de XSD, vea el esquema XML de [World Wide Web Consortium (W3C) parte 0: Recomendación](https://www.w3.org/TR/xmlschema-0/)básica, la parte [1 del esquema XML: Recomendación](https://www.w3.org/TR/xmlschema-1/)de estructuras y el [esquema XML parte 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) (Parte 2 del esquema XML: recomendación de tipos de datos) del W3C.  
   
  En el ejemplo siguiente se muestra un esquema `customers` XML donde es el elemento secundario `MyDataSet` del elemento, que es un elemento **DataSet** .  
   
@@ -83,17 +83,17 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Describe los elementos de esquema XML utilizados para crear restricciones de clave única y externa en `DataSet`.  
   
- [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)  
  Describe los elementos de esquema XML utilizados para crear relaciones entre las columnas de `DataSet`la tabla en un.  
   
- [Restricciones y relaciones del esquema XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
+ [Restricciones y relaciones del esquema XML](xml-schema-constraints-and-relationships.md)  
  Describe cómo se crean implícitamente las relaciones al utilizar elementos de esquema XML para crear restricciones en un `DataSet`.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Usar XML en un conjunto de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Usar XML en un conjunto de datos](using-xml-in-a-dataset.md)  
  Describe cómo cargar y conservar la estructura relacional y los datos de `DataSet` como datos XML.  
   
 ## <a name="see-also"></a>Vea también

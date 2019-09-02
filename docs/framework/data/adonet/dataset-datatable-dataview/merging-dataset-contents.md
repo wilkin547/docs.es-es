@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5a8040a803fbc9b098fc1b56e0f5d837c4cdb94
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607935"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203362"
 ---
 # <a name="merging-dataset-contents"></a>Combinar contenido de DataSet
 
@@ -35,7 +35,7 @@ A los objetos <xref:System.Data.DataTable> se les puede asignarse también un va
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-Cuando se pasa una matriz de `DataSet`, `DataTable` o `DataRow` al método `Merge`, es posible incluir parámetros opcionales que especifiquen si se conservarán o no los cambios en el `DataSet` existente y cómo tratar los nuevos elementos de esquema de los datos entrantes. El primero de estos parámetros después de los datos entrantes es una marca booleana, <xref:System.Data.LoadOption.PreserveChanges>, que especifica si se conservarán o no los cambios en el `DataSet` existente. Si la marca `PreserveChanges` está establecida en `true`, los valores entrantes no sobrescriben los existentes en la versión de fila `Current` de la fila existente. Si la marca `PreserveChanges` está establecida en `false`, los valores entrantes sobrescriben los existentes en la versión de fila `Current` de la fila existente. Si la marca `PreserveChanges` no está especificado, de forma predeterminada se establece en `false`. Para obtener más información acerca de las versiones de fila, vea [Estados de fila y las versiones de fila](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).
+Cuando se pasa una matriz de `DataSet`, `DataTable` o `DataRow` al método `Merge`, es posible incluir parámetros opcionales que especifiquen si se conservarán o no los cambios en el `DataSet` existente y cómo tratar los nuevos elementos de esquema de los datos entrantes. El primero de estos parámetros después de los datos entrantes es una marca booleana, <xref:System.Data.LoadOption.PreserveChanges>, que especifica si se conservarán o no los cambios en el `DataSet` existente. Si la marca `PreserveChanges` está establecida en `true`, los valores entrantes no sobrescriben los existentes en la versión de fila `Current` de la fila existente. Si la marca `PreserveChanges` está establecida en `false`, los valores entrantes sobrescriben los existentes en la versión de fila `Current` de la fila existente. Si la marca `PreserveChanges` no está especificado, de forma predeterminada se establece en `false`. Para obtener más información sobre las versiones de fila, vea [Estados de fila y versiones de fila](row-states-and-row-versions.md).
 
 Cuando `PreserveChanges` es `true`, los datos de la fila existente se mantienen en la versión de fila <xref:System.Data.DataRowVersion.Current> de la fila existente, mientras que los datos de la versión de fila <xref:System.Data.DataRowVersion.Original> de la fila existente se sobrescriben con los datos de la versión de fila `Original` de la fila entrante. El <xref:System.Data.DataRow.RowState%2A> de la fila existente se establece en <xref:System.Data.DataRowState.Modified>. Se aplican las excepciones siguientes:
 
@@ -55,7 +55,7 @@ Es posible utilizar el parámetro opcional <xref:System.Data.MissingSchemaAction
 
 En la siguiente tabla se describen las opciones de `MissingSchemaAction`.
 
-|Opción MissingSchemaAction|Descripción|
+|Opción MissingSchemaAction|DESCRIPCIÓN|
 |--------------------------------|-----------------|
 |<xref:System.Data.MissingSchemaAction.Add>|Agrega al `DataSet` la nueva información de esquema y rellena las nuevas columnas con los valores entrantes. Este es el valor predeterminado.|
 |<xref:System.Data.MissingSchemaAction.AddWithKey>|Agrega al `DataSet` la nueva información de esquema y de clave principal y rellena las nuevas columnas con los valores entrantes.|
@@ -69,9 +69,9 @@ Con el método `Merge` no se comprueban las restricciones hasta que se agregan t
 Tomemos como ejemplo un caso en el que una fila existente de un `DataSet` es una fila `Unchanged` con un valor de clave principal de 1. Durante una operación de combinación con una fila entrante `Modified` cuyo valor de clave principal `Original` es 2 y de clave principal `Current` es 1, la fila existente y la fila entrante no se consideran coincidentes porque los valores de clave principal `Original` son diferentes. Sin embargo, cuando se completa la combinación y se comprueban las restricciones, se iniciará una excepción porque los valores de clave principal `Current` infringen la restricción única de la columna de clave principal.
 
 > [!NOTE]
-> Cuando las filas están insertadas en una base de datos con columnas de incremento automático como puede ser una columna de identidad, el valor de columna de identidad devuelto por la inserción no coincide con el valor de `DataSet`, lo que da lugar a que las filas devueltas se agreguen en lugar de combinarse. Para obtener más información, consulte [recuperar la identidad o valores de autonumeración](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md).
+> Cuando las filas están insertadas en una base de datos con columnas de incremento automático como puede ser una columna de identidad, el valor de columna de identidad devuelto por la inserción no coincide con el valor de `DataSet`, lo que da lugar a que las filas devueltas se agreguen en lugar de combinarse. Para obtener más información, vea [recuperar valores de identidad o Autonumérico](../retrieving-identity-or-autonumber-values.md).
 
-El ejemplo de código siguiente combina dos `DataSet` objetos con esquemas diferentes en una `DataSet` con los esquemas combinados de dos entrante `DataSet` objetos.
+En el ejemplo de código siguiente se `DataSet` combinan dos objetos con esquemas diferentes `DataSet` en uno con los esquemas combinados de los `DataSet` dos objetos de entrada.
 
 [!code-csharp[DataWorks DataSet.Merge#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/CS/source.cs#1)]
 [!code-vb[DataWorks DataSet.Merge#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataSet.Merge/VB/source.vb#1)]
@@ -86,9 +86,9 @@ En el siguiente ejemplo de código se toma un `DataSet` existente con actualizac
 
 ## <a name="see-also"></a>Vea también
 
-- [Objetos DataSet, DataTable y DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [Estados y versiones de filas](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- [Objetos DataAdapter y DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Recuperar y modificar datos en ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Recuperación de valores autonuméricos y de identidad](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [Objetos DataSet, DataTable y DataView](index.md)
+- [Estados y versiones de filas](row-states-and-row-versions.md)
+- [Objetos DataAdapter y DataReader](../dataadapters-and-datareaders.md)
+- [Recuperar y modificar datos en ADO.NET](../retrieving-and-modifying-data.md)
+- [Recuperación de valores autonuméricos y de identidad](../retrieving-identity-or-autonumber-values.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

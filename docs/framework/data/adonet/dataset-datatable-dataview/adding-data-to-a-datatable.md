@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 91c635e2bc2ed617e8c45171d9ec7d7359b9ca88
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034533"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205479"
 ---
 # <a name="adding-data-to-a-datatable"></a>Agregar datos a un objeto DataTable
-Después de crear una <xref:System.Data.DataTable> y definir su estructura usando columnas y restricciones, se le pueden agregar nuevas filas de datos. Para agregar una nueva fila, declare una nueva variable como tipo <xref:System.Data.DataRow>. Un nuevo **DataRow** objeto se devuelve al llamar a la <xref:System.Data.DataTable.NewRow%2A> método. El **DataTable** , a continuación, se crea el **DataRow** objeto basándose en la estructura de la tabla, tal como se define por la <xref:System.Data.DataColumnCollection>.  
+Después de crear una <xref:System.Data.DataTable> y definir su estructura usando columnas y restricciones, se le pueden agregar nuevas filas de datos. Para agregar una nueva fila, declare una nueva variable como tipo <xref:System.Data.DataRow>. Cuando se llama al <xref:System.Data.DataTable.NewRow%2A> método, se devuelve un nuevo objeto DataRow. A continuación, **DataTable** crea el objeto **DataRow** basándose en la estructura de la tabla, tal y <xref:System.Data.DataColumnCollection>como se define en.  
   
- En el ejemplo siguiente se muestra cómo crear una nueva fila mediante una llamada a la **NewRow** método.  
+ En el ejemplo siguiente se muestra cómo crear una nueva fila llamando al método **NewRow** .  
   
 ```vb  
 Dim workRow As DataRow = workTable.NewRow()  
@@ -37,7 +37,7 @@ workRow["CustLName"] = "Smith";
 workRow[1] = "Smith";  
 ```  
   
- Después de insertan datos en la nueva fila, el **agregar** método se usa para agregar la fila a la <xref:System.Data.DataRowCollection>, como se muestra en el código siguiente.  
+ Después de insertar los datos en la nueva fila, se usa el método **Add** para agregar la fila a <xref:System.Data.DataRowCollection>, que se muestra en el código siguiente.  
   
 ```vb  
 workTable.Rows.Add(workRow)  
@@ -47,7 +47,7 @@ workTable.Rows.Add(workRow)
 workTable.Rows.Add(workRow);  
 ```  
   
- También puede llamar a la **agregar** método para agregar una nueva fila pasando una matriz de valores, el tipo <xref:System.Object>, como se muestra en el ejemplo siguiente.  
+ También puede llamar al método **Add** para agregar una nueva fila pasando una matriz de valores, con el tipo <xref:System.Object>, tal como se muestra en el ejemplo siguiente.  
   
 ```vb  
 workTable.Rows.Add(new Object() {1, "Smith"})  
@@ -57,9 +57,9 @@ workTable.Rows.Add(new Object() {1, "Smith"})
 workTable.Rows.Add(new Object[] {1, "Smith"});  
 ```  
   
- Pasa una matriz de valores de tipo **objeto**, a la **agregar** método crea una nueva fila dentro de la tabla y establece sus valores de columna a los valores de la matriz de objetos. Tenga en cuenta que los valores de la matriz se hacen coincidir en secuencia con las columnas, basándose en el orden en que aparecen en la tabla.  
+ Al pasar una matriz de valores, con tipo **Object**, al método **Add** , se crea una nueva fila dentro de la tabla y se establecen sus valores de columna en los valores de la matriz de objetos. Tenga en cuenta que los valores de la matriz se hacen coincidir en secuencia con las columnas, basándose en el orden en que aparecen en la tabla.  
   
- El ejemplo siguiente agrega a 10 filas recién creado **clientes** tabla.  
+ En el ejemplo siguiente se agregan 10 filas a la tabla Customers recién creada.  
   
 ```vb  
 Dim workRow As DataRow  
@@ -91,5 +91,5 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Manipulación de datos en un objeto DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Manipulación de datos en un objeto DataTable](manipulating-data-in-a-datatable.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

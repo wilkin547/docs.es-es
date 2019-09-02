@@ -3,35 +3,35 @@ title: Novedades de C# 7.0 | Guía de C#
 description: Obtenga información general de las nuevas características de la versión 7.0 del lenguaje C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 148ecdf7a3a99ac73132593272ecff3a5bb4195e
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347458"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105713"
 ---
 # <a name="whats-new-in-c-70"></a>Novedades de C# 7.0
 
 C# 7.0 incorpora varias características nuevas al lenguaje C#:
-* [Variables de `out`](#out-variables)
+- [Variables de `out`](#out-variables)
   - Puede declarar valores `out` insertados como argumentos en el método cuando se usen.
-* [Tuplas](#tuples)
+- [Tuplas](#tuples)
   - Puede crear tipos ligeros sin nombre que contengan varios campos públicos. Los compiladores y las herramientas IDE comprenden la semántica de estos tipos.
-* [Descartes](#discards)
+- [Descartes](#discards)
   - Los descartes son variables temporales y de solo escritura que se usan en argumentos cuando el valor asignado es indiferente. Son especialmente útiles al deconstruir tuplas y tipos definidos por el usuario, así como al realizar llamadas a métodos con parámetros `out`.
-* [Coincidencia de patrones](#pattern-matching)
+- [Coincidencia de patrones](#pattern-matching)
   - Puede crear la lógica de bifurcación en función de tipos y valores arbitrarios de los miembros de esos tipos.
-* [Devoluciones y variables locales `ref`](#ref-locals-and-returns)
+- [Devoluciones y variables locales `ref`](#ref-locals-and-returns)
   - Las variables locales de método y los valores devueltos pueden ser referencias a otro almacenamiento.
-* [Funciones locales](#local-functions)
+- [Funciones locales](#local-functions)
   - Puede anidar funciones en otras funciones para limitar su ámbito y visibilidad.
-* [Más miembros con forma de expresión](#more-expression-bodied-members)
+- [Más miembros con forma de expresión](#more-expression-bodied-members)
   - La lista de miembros que se pueden crear con expresiones ha crecido.
-* [Expresiones `throw`](#throw-expressions)
+- [Expresiones `throw`](#throw-expressions)
   - Puede iniciar excepciones en construcciones de código que antes no se permitían porque `throw` era una instrucción.
-* [Tipos de valor devueltos de async generalizados](#generalized-async-return-types)
+- [Tipos de valor devueltos de async generalizados](#generalized-async-return-types)
   - Los métodos declarados con el modificador `async` pueden devolver otros tipos además de `Task` y `Task<T>`.
-* [Mejoras en la sintaxis de literales numéricos](#numeric-literal-syntax-improvements)
+- [Mejoras en la sintaxis de literales numéricos](#numeric-literal-syntax-improvements)
   - Nuevos tokens mejoran la legibilidad de las constantes numéricas.
 
 En el resto de este artículo se proporciona información general sobre cada característica. Para cada característica, conocerá el razonamiento subyacente. Aprenderá la sintaxis. Puede explorar estas características en su entorno mediante la herramienta global `dotnet try`:
@@ -51,9 +51,9 @@ Para mayor claridad, puede que prefiera especificar el tipo de la variable `out`
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* El código es más fácil de leer.
+- El código es más fácil de leer.
   - Declare la variable out donde la use, no en otra línea anterior.
-* No es preciso asignar ningún valor inicial.
+- No es preciso asignar ningún valor inicial.
   - Al declarar la variable `out` cuando se usa en una llamada de método, no podrá usarla accidentalmente antes de que se asigne.
 
 ## <a name="tuples"></a>Tuplas
@@ -95,10 +95,10 @@ Habitualmente, al deconstruir una tupla o realizar una llamada a un método medi
 
 Los descartes se admiten en los escenarios siguientes:
 
-* Al deconstruir tuplas o tipos definidos por el usuario.
-* Al realizar llamadas a métodos mediante parámetros [out](../language-reference/keywords/out-parameter-modifier.md).
-* En una operación de coincidencia de patrones con las instrucciones [is](../language-reference/keywords/is.md) y [switch](../language-reference/keywords/switch.md).
-* Como un identificador independiente cuando quiera identificar explícitamente el valor de una asignación como descarte.
+- Al deconstruir tuplas o tipos definidos por el usuario.
+- Al realizar llamadas a métodos mediante parámetros [out](../language-reference/keywords/out-parameter-modifier.md).
+- En una operación de coincidencia de patrones con las instrucciones [is](../language-reference/keywords/is.md) y [switch](../language-reference/keywords/switch.md).
+- Como un identificador independiente cuando quiera identificar explícitamente el valor de una asignación como descarte.
 
 En el ejemplo siguiente se define un método `QueryCityDataForYears` que devuelve una tupla de tipo 6 con datos de una ciudad correspondientes a dos años diferentes. La llamada de método del ejemplo se refiere únicamente a los dos valores de rellenado que devuelve el método, por lo que trata los valores restantes de la tupla como descartes al deconstruirla.
 
@@ -180,15 +180,15 @@ Puede declarar el valor devuelto como un elemento `ref` y modificar ese valor en
 
 El lenguaje C# tiene varias reglas que impiden el uso incorrecto de las variables locales y devoluciones de `ref`:
 
-* Tendrá que agregar la palabra clave `ref` a la firma del método y a todas las instrucciones `return` de un método.
+- Tendrá que agregar la palabra clave `ref` a la firma del método y a todas las instrucciones `return` de un método.
   - Esto evidencia que el método se devuelve por referencia a lo largo del método.
-* Se puede asignar `ref return` a una variable de valor, o bien a una variable `ref`.
+- Se puede asignar `ref return` a una variable de valor, o bien a una variable `ref`.
   - El autor de la llamada controla si se copia el valor devuelto o no. La omisión del modificador `ref` al asignar el valor devuelto indica que el autor de la llamada quiere una copia del valor, no una referencia al almacenamiento.
-* No se puede asignar un valor devuelto de método estándar a una variable local `ref`.
+- No se puede asignar un valor devuelto de método estándar a una variable local `ref`.
   - No permite instrucciones como `ref int i = sequence.Count();`
-* No se puede devolver un elemento `ref` a una variable cuya duración se extiende más allá de la ejecución del método.
+- No se puede devolver un elemento `ref` a una variable cuya duración se extiende más allá de la ejecución del método.
   - Esto significa que no se puede devolver una referencia a una variable local o a una variable con un ámbito similar.
-* Las `ref` locales y las devoluciones no se pueden usar con métodos asíncronos.
+- Las `ref` locales y las devoluciones no se pueden usar con métodos asíncronos.
   - El compilador no puede identificar si una variable a la que se hace referencia se ha establecido en su valor final en la devolución del método asíncrono.
 
 La incorporación de variables locales ref y devoluciones de ref permite usar algoritmos que resultan más eficientes si se evita copiar los valores o se realizan operaciones de desreferencia varias veces.

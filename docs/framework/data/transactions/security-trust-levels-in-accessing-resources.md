@@ -2,12 +2,12 @@
 title: Niveles de confianza de seguridad para acceder a los recursos
 ms.date: 03/30/2017
 ms.assetid: fb5be924-317d-4d69-b33a-3d18ecfb9d6e
-ms.openlocfilehash: 4cd229737d7569afe84d945dce0fbb6867f3ef76
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7070d82c430b762059153c544e26478dc2d7ae39
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69948721"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205870"
 ---
 # <a name="security-trust-levels-in-accessing-resources"></a>Niveles de confianza de seguridad para acceder a los recursos
 En este tema se discute cómo el acceso está restringido en los tipos de recursos que <xref:System.Transactions> expone.  
@@ -38,7 +38,7 @@ En este tema se discute cómo el acceso está restringido en los tipos de recurs
   
  Para habilitar la recuperación, este tipo de aplicación tiene la capacidad de utilizar permanentemente los recursos del sistema. Esto sucede porque el administrador de transacciones recuperable debe recordar transacciones que se han confirmado hasta que pueda confirmar que todos los administradores de recursos duraderos que están participando en la transacción han recibido el resultado. Por consiguiente, este tipo de aplicación requiere la plena confianza y no se ejecuta a menos que se haya permitido ese nivel de confianza.  
   
- Para obtener más información sobre las inlistas y la recuperación duraderas, consulte los temas [dar de alta los recursos como participantes en una transacción](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) y [realizar la recuperación](../../../../docs/framework/data/transactions/performing-recovery.md) .  
+ Para obtener más información sobre las inlistas y la recuperación duraderas, consulte los temas [dar de alta los recursos como participantes en una transacción](enlisting-resources-as-participants-in-a-transaction.md) y [realizar la recuperación](performing-recovery.md) .  
   
  También exigen a las aplicaciones que realizan el trabajo de la interoperabilidad heredado con COM+ que tengan la plena confianza.  
   

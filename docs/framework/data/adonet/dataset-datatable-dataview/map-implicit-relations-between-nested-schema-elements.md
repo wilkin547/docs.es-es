@@ -2,27 +2,27 @@
 title: Asignar relaciones implícitas entre elementos de esquema anidados
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 6fcb0b9bb7c947359c2334d3d116f5317f84af83
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e9ea85db98a577991e06e0239a0738a2ca5bada6
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586816"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203480"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Asignar relaciones implícitas entre elementos de esquema anidados
 Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos complejos anidados dentro de otros. En este caso, el proceso de asignación aplica la asignación predeterminada y crea lo siguiente en el <xref:System.Data.DataSet>:  
   
 - Una tabla para cada uno de los tipos complejos (primario y secundario).  
   
-- Si no existe ninguna restricción única en el elemento primario, una columna de clave principal adicional por cada definición de tabla denominado *TableName*_Id donde *TableName* es el nombre de la tabla primaria.  
+- Si no existe ninguna restricción UNIQUE en el elemento principal, una columna de clave principal adicional por cada definición de tabla denominada *TableName*_ ID, donde *TableName* es el nombre de la tabla primaria.  
   
-- Una restricción primary key en la tabla primaria que identifica la columna adicional como clave principal (estableciendo la **IsPrimaryKey** propiedad **True**). La restricción recibe el nombre Constraint\#, donde \# es 1, 2, 3, etc. Por ejemplo, el nombre predeterminado de la primera restricción es Constraint1.  
+- Una restricción primary key en la tabla primaria que identifica la columna adicional como clave principal (estableciendo la propiedad **IsPrimaryKey** en **true**). La restricción recibe el nombre Constraint\#, donde \# es 1, 2, 3, etc. Por ejemplo, el nombre predeterminado de la primera restricción es Constraint1.  
   
-- Una restricción de clave externa en la tabla secundaria que identifica la columna adicional como clave externa que hace referencia a la clave principal de la tabla primaria. La restricción recibe el nombre *ParentTable_ChildTable* donde *ParentTable* es el nombre de la tabla primaria y *ChildTable* es el nombre de la tabla secundaria.  
+- Una restricción de clave externa en la tabla secundaria que identifica la columna adicional como clave externa que hace referencia a la clave principal de la tabla primaria. La restricción se denomina *ParentTable_ChildTable* , donde *ParentTable* es el nombre de la tabla primaria y *ChildTable* es el nombre de la tabla secundaria.  
   
 - Una relación de datos entre las tablas primaria y secundaria.  
   
- El ejemplo siguiente muestra un esquema donde **OrderDetail** es un elemento secundario de **orden**.  
+ En el ejemplo siguiente se muestra un esquema en el que **OrderDetail** es un elemento secundario de **Order**.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
 </xs:schema>  
 ```  
   
- El proceso de asignación de esquema XML crea lo siguiente en el **DataSet**:  
+ El proceso de asignación del esquema XML crea lo siguiente en el **conjunto**de elementos:  
   
-- Un **orden** y un **OrderDetail** tabla.  
+- Un **pedido** y una tabla **OrderDetail** .  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- Una restricción unique en la **orden** tabla. Tenga en cuenta que el **IsPrimaryKey** propiedad está establecida en **True**.  
+- Una restricción UNIQUE en la tabla **Order** . Tenga en cuenta que la propiedad **IsPrimaryKey** está establecida en **true**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
     IsPrimaryKey: True  
     ```  
   
-- Una restricción foreign key en el **OrderDetail** tabla.  
+- Una restricción FOREIGN KEY en la tabla **OrderDetail** .  
   
     ```  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
     RelatedColumns: Order_Id   
     ```  
   
-- Una relación entre el **orden** y **OrderDetail** tablas. El **Nested** propiedad para esta relación se establece en **True** porque el **orden** y **OrderDetail** elementos están anidados en el esquema .  
+- Una relación entre las tablas **Order** y **OrderDetail** . La propiedad Nested de esta relación está establecida en **true** porque los elementos **Order** y **OrderDetail** están anidados en el esquema.  
   
     ```  
     ParentTable: Order  
@@ -99,6 +99,6 @@ Un esquema del lenguaje de definición de esquema XML (XSD) puede tener tipos co
   
 ## <a name="see-also"></a>Vea también
 
-- [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Generación de relaciones de objetos DataSet en un esquema XML (XSD)](generating-dataset-relations-from-xml-schema-xsd.md)
+- [Asignación de restricciones de un esquema XML (XSD) a restricciones de conjuntos de datos](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e824fd686176d83c26ca2c042348c9423fbcc884
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ee78c1c1f92515472bb3ea3ce77405a5e3447fd9
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910750"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70206106"
 ---
 # <a name="securing-wrapper-code"></a>Insertar en el repositorio código de contenedor
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -47,7 +47,7 @@ ms.locfileid: "69910750"
 ## <a name="link-demands-and-wrappers"></a>Peticiones de vínculo y contenedores  
  Se ha reforzado un caso especial de protección con peticiones de vínculo en la infraestructura de seguridad, pero sigue siendo una fuente de posibles vulnerabilidades en el código.  
   
- Si el código de plena confianza llama a una propiedad, un evento o un método protegido por [LinkDemand](../../../docs/framework/misc/link-demands.md), la llamada se realiza correctamente si se cumple la comprobación del permiso **LinkDemand** para el llamador. Además, si el código de plena confianza expone una clase que toma el nombre de una propiedad y llama a su descriptor de acceso **Get** mediante reflexión, esa llamada al descriptor de acceso **Get** se realiza correctamente aunque el código de usuario no tenga el derecho a obtener acceso a esta propiedad. Esto se debe a que **LinkDemand** comprueba solo el llamador inmediato, que es el código de plena confianza. Básicamente, el código de plena confianza realiza una llamada privilegiada en nombre del código de usuario sin comprobar si el código de usuario tiene derecho a hacer esa llamada.  
+ Si el código de plena confianza llama a una propiedad, un evento o un método protegido por [LinkDemand](link-demands.md), la llamada se realiza correctamente si se cumple la comprobación del permiso **LinkDemand** para el llamador. Además, si el código de plena confianza expone una clase que toma el nombre de una propiedad y llama a su descriptor de acceso **Get** mediante reflexión, esa llamada al descriptor de acceso **Get** se realiza correctamente aunque el código de usuario no tenga el derecho a obtener acceso a esta propiedad. Esto se debe a que **LinkDemand** comprueba solo el llamador inmediato, que es el código de plena confianza. Básicamente, el código de plena confianza realiza una llamada privilegiada en nombre del código de usuario sin comprobar si el código de usuario tiene derecho a hacer esa llamada.  
   
  Para ayudar a evitar este tipo de carencias de seguridad, el Common Language Runtime extiende la comprobación a una demanda completa de recorrido de pila en cualquier llamada indirecta a un método, constructor, propiedad o evento protegido por una **LinkDemand**. Esta protección conlleva algunos costos de rendimiento y cambia la semántica de la comprobación de seguridad; la petición de recorrido de pila completo puede provocar errores que no se producirían en la comprobación rápida de un nivel.  
   
@@ -73,10 +73,10 @@ ms.locfileid: "69910750"
   
 - <xref:System.Security.Permissions.SecurityAction.Demand> especifica el recorrido de pila de seguridad de acceso del código. Todos los llamadores de la pila deben tener el permiso o la identidad especificados para pasar. La **demanda** se produce en cada llamada porque la pila puede contener diferentes llamadores. Si llama a un método repetidas veces, esta comprobación de seguridad se realiza cada vez. La **demanda** es una buena protección contra los ataques por Señuelos; se detectará un código no autorizado que intente obtener acceso a través de él.  
   
-- [LinkDemand](../../../docs/framework/misc/link-demands.md) se produce en el momento de la compilación Just-in-Time (JIT) y comprueba solo el llamador inmediato. Esta comprobación de seguridad no comprueba el llamador del llamador. Una vez que se supera esta comprobación, no hay ninguna seguridad adicional posterior independientemente de las veces que el llamador pueda llamar. Sin embargo, tampoco hay protección contra los ataques por señuelo. Con **LinkDemand**, cualquier código que pase la prueba y puede hacer referencia a su código podría interrumpir la seguridad permitiendo que el código malintencionado llame a mediante el código autorizado. Por lo tanto, no use **LinkDemand** a menos que todos los puntos débiles posibles se puedan evitar con detalle.  
+- [LinkDemand](link-demands.md) se produce en el momento de la compilación Just-in-Time (JIT) y comprueba solo el llamador inmediato. Esta comprobación de seguridad no comprueba el llamador del llamador. Una vez que se supera esta comprobación, no hay ninguna seguridad adicional posterior independientemente de las veces que el llamador pueda llamar. Sin embargo, tampoco hay protección contra los ataques por señuelo. Con **LinkDemand**, cualquier código que pase la prueba y puede hacer referencia a su código podría interrumpir la seguridad permitiendo que el código malintencionado llame a mediante el código autorizado. Por lo tanto, no use **LinkDemand** a menos que todos los puntos débiles posibles se puedan evitar con detalle.  
   
     > [!NOTE]
-    > En el .NET Framework 4, las peticiones de vínculo se han reemplazado por <xref:System.Security.SecurityRuleSet.Level2> el <xref:System.Security.SecurityCriticalAttribute> atributo de los ensamblados. <xref:System.Security.SecurityCriticalAttribute> Es equivalente a una petición de vínculo para la plena confianza; sin embargo, también afecta a las reglas de herencia. Para obtener más información sobre este cambio, vea [código transparente en seguridad, nivel 2](../../../docs/framework/misc/security-transparent-code-level-2.md).  
+    > En el .NET Framework 4, las peticiones de vínculo se han reemplazado por <xref:System.Security.SecurityRuleSet.Level2> el <xref:System.Security.SecurityCriticalAttribute> atributo de los ensamblados. <xref:System.Security.SecurityCriticalAttribute> Es equivalente a una petición de vínculo para la plena confianza; sin embargo, también afecta a las reglas de herencia. Para obtener más información sobre este cambio, vea [código transparente en seguridad, nivel 2](security-transparent-code-level-2.md).  
   
  Las precauciones adicionales necesarias cuando se usa **LinkDemand** deben programarse individualmente. el sistema de seguridad puede ayudar en la aplicación. Cualquier error abre una vulnerabilidad en la seguridad. Todo código autorizado que use su código debe hacerse responsable de implementar seguridad adicional mediante lo siguiente:  
   

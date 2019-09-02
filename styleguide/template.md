@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: 0e8548745768bc9137e8fc76f86fc9fc7982b8de
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e6c912f5ff9590f3b8cbb0f7e3f88e08fa9dd556
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "68616355"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106910"
 ---
 # <a name="metadata-and-markdown-template"></a>Plantilla de Markdown y metadatos
 
@@ -61,12 +61,12 @@ Markdown utiliza caracteres especiales como \*, \` y \# para dar formato. Si des
 
 Los nombres de archivo utilizan las siguientes reglas:
 
-* Solo contienen letras minúsculas, números y guiones.
-* No incluyen espacios ni signos de puntuación. Se usan guiones para separar palabras y números en el nombre de archivo.
-* Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. Ninguna palabra en gerundio.
-* No se incluye ninguna palabra pequeña. No incluya a y, el, en, o, etcétera.
-* Debe estar en Markdown y utilizar la extensión de archivo .md.
-* Los nombres de archivo deben ser razonablemente cortos. Forman parte de la dirección URL para los artículos.
+- Solo contienen letras minúsculas, números y guiones.
+- No incluyen espacios ni signos de puntuación. Se usan guiones para separar palabras y números en el nombre de archivo.
+- Se usan verbos de acción de uso específicos, como desarrollar, comparar, compilar, solucionar problemas. Ninguna palabra en gerundio.
+- No se incluye ninguna palabra pequeña. No incluya a y, el, en, o, etcétera.
+- Debe estar en Markdown y utilizar la extensión de archivo .md.
+- Los nombres de archivo deben ser razonablemente cortos. Forman parte de la dirección URL para los artículos.
 
 ## <a name="headings"></a>Encabezados
 
@@ -244,22 +244,22 @@ Puede incluir el código con la sintaxis siguiente:
 [!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
 ```
 
-* `-<language>` (*opcional*, pero *recomendado*)
-  * El lenguaje del fragmento de código al que se hace referencia. Si quiere ver una lista de los valores admitidos, consulte [Lenguajes admitidos](#supported-languages).
+- `-<language>` (*opcional*, pero *recomendado*)
+  - El lenguaje del fragmento de código al que se hace referencia. Si quiere ver una lista de los valores admitidos, consulte [Lenguajes admitidos](#supported-languages).
 
-* `<name>` (*opcional*)
-  * El nombre del fragmento de código. No tienen ningún impacto en el HTML de salida, pero lo puede usar para mejorar la legibilidad de su propio origen de Markdown.
+- `<name>` (*opcional*)
+  - El nombre del fragmento de código. No tienen ningún impacto en el HTML de salida, pero lo puede usar para mejorar la legibilidad de su propio origen de Markdown.
 
-* `<pathToFile>` (*obligatorio*)
-  * Ruta de acceso relativa en el sistema de archivos que indica el archivo de fragmento de código al que se va a hacer referencia.
+- `<pathToFile>` (*obligatorio*)
+  - Ruta de acceso relativa en el sistema de archivos que indica el archivo de fragmento de código al que se va a hacer referencia.
 
-* `<queryoption>` y `<queryoptionvalue>` (*opcional*)
-  * Se usan en conjunto para especificar cómo se debe recuperar el código desde el archivo:
-    * `#`: `#L{startlinenumber}-L{endlinenumber}` (intervalo de líneas) *o* `#{tagname}` (nombre de etiqueta).
+- `<queryoption>` y `<queryoptionvalue>` (*opcional*)
+  - Se usan en conjunto para especificar cómo se debe recuperar el código desde el archivo:
+    - `#`: `#L{startlinenumber}-L{endlinenumber}` (intervalo de líneas) *o* `#{tagname}` (nombre de etiqueta).
     No se recomienda usar números de línea, porque son muy complicados. La mejor manera de hacer referencia a fragmentos de código es el nombre de etiqueta.
-    * `range`: `?range=1,3-5` Un intervalo de líneas. Este ejemplo incluye las líneas 1, 3, 4 y 5.
-    * `dedent`: `?dedent=8` Aplica una sangría a las líneas según un número de espacios; en este caso, 8. Se puede combinar con `range` y otras opciones de consulta que seleccionan un subconjunto de las líneas de un archivo.
-    * `outdent`: `?outdent=8` Invierte la sangría de las líneas según un número de espacios; en este caso, 8. Se puede combinar con `range` y otras opciones de consulta que seleccionan un subconjunto de las líneas de un archivo.
+    - `range`: `?range=1,3-5` Un intervalo de líneas. Este ejemplo incluye las líneas 1, 3, 4 y 5.
+    - `dedent`: `?dedent=8` Aplica una sangría a las líneas según un número de espacios; en este caso, 8. Se puede combinar con `range` y otras opciones de consulta que seleccionan un subconjunto de las líneas de un archivo.
+    - `outdent`: `?outdent=8` Invierte la sangría de las líneas según un número de espacios; en este caso, 8. Se puede combinar con `range` y otras opciones de consulta que seleccionan un subconjunto de las líneas de un archivo.
 
 Se recomienda usar la opción de nombre de etiqueta siempre que sea posible. El nombre de etiqueta es el nombre de una región o de un comentario de código con el formato de `Snippettagname` presente en el código fuente. En el ejemplo siguiente se muestra cómo hacer referencia al nombre de etiqueta `1`:
 
@@ -448,11 +448,11 @@ Puede insertar el Markdown de un archivo en otro con Include.
 Hay disponible un estilo personalizado para las listas. Puede representar las listas con marcas de verificación verdes.
 
 > [!div class="checklist"]
-> * Cómo crear una aplicación .NET Core
-> * Cómo agregar una referencia al paquete Microsoft.XmlSerializer.Generator
-> * Cómo editar MyApp.csproj para agregar dependencias
-> * Cómo agregar una clase y un XmlSerializer
-> * Cómo compilar y ejecutar la aplicación
+> - Cómo crear una aplicación .NET Core
+> - Cómo agregar una referencia al paquete Microsoft.XmlSerializer.Generator
+> - Cómo editar MyApp.csproj para agregar dependencias
+> - Cómo agregar una clase y un XmlSerializer
+> - Cómo compilar y ejecutar la aplicación
 
 Puede ver un ejemplo de las listas comprobadas en acción en la [documentación de .NET Core](https://docs.microsoft.com/dotnet/core/additional-tools/xml-serializer-generator).
 

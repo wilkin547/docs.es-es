@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 154640499e99767f73a148c6980e6a2a4cfbce2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 56f0ebccc1bd46a26b5247ac2668e963cbeac828
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623790"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106486"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Compatibilidad de aplicaciones en .NET Framework
 
@@ -22,9 +22,9 @@ La compatibilidad es un objetivo muy importante de cada versión .NET. La compat
 
 Cada aplicación se refiere a una versión específica de .NET Framework, que puede especificarse:
 
-* Al definir una plataforma de destino en Visual Studio.
-* Al especificar la plataforma de destino en un archivo de proyecto.
-* Al aplicar <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en el código fuente.
+- Al definir una plataforma de destino en Visual Studio.
+- Al especificar la plataforma de destino en un archivo de proyecto.
+- Al aplicar <xref:System.Runtime.Versioning.TargetFrameworkAttribute> en el código fuente.
 
 Al ejecutarse en una versión más reciente que a la que se refería, .NET Framework usará un comportamiento anómalo para imitar la versión de destino anterior. En otras palabras, la aplicación se ejecutará en la versión más reciente de Framework pero actuará como si se estuviera ejecutando en la versión anterior. Muchos de los problemas de compatibilidad entre versiones de .NET Framework se mitigan a través de este peculiar modelo. La versión de .NET Framework a la que se destina una aplicación se determina por la versión de destino del ensamblado de entrada para el dominio de aplicación en el que se ejecuta el código. Todos los ensamblados adicionales que se cargan en ese dominio de aplicación tienen como destino esa versión de .NET Framework. Por ejemplo, en el caso de un archivo ejecutable, el marco de trabajo de destino del archivo ejecutable es el modo de compatibilidad en el que se ejecutarán todos los ensamblados de ese AppDomain.
 
@@ -71,8 +71,8 @@ Cada problema incluye la siguiente información:
 ## <a name="usage"></a>Uso
 Para comenzar, seleccione el tipo de cambio de compatibilidad a continuación:
 
-* [Cambios de redestinación](./retargeting/index.md)
-* [Cambios en el runtime](./runtime/index.md)
+- [Cambios de redestinación](./retargeting/index.md)
+- [Cambios en el runtime](./runtime/index.md)
 
 ## <a name="see-also"></a>Vea también
 

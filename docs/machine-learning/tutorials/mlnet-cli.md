@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 403b1759164d588cb5af49c6cb05e001b030235f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c0e188286821f0e3822fde4af74a1561edfbb868
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963604"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70107278"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>Generación automática de un clasificador binario mediante la CLI
 
@@ -19,11 +19,11 @@ Aprenda a usar la CLI de ML.NET para generar automáticamente un modelo de ML.NE
 
 En este tutorial, llevará a cabo los pasos siguientes:
 > [!div class="checklist"]
-> * Preparar los datos para la tarea de aprendizaje automático seleccionada
-> * Ejecutar el comando "mlnet auto-train" desde la CLI
-> * Revisar los resultados de métrica de calidad
-> * Comprender el código de C# generado para usar el modelo en la aplicación
-> * Explorar el código de C# generado que se usó para entrenar el modelo
+> - Preparar los datos para la tarea de aprendizaje automático seleccionada
+> - Ejecutar el comando "mlnet auto-train" desde la CLI
+> - Revisar los resultados de métrica de calidad
+> - Comprender el código de C# generado para usar el modelo en la aplicación
+> - Explorar el código de C# generado que se usó para entrenar el modelo
 
 > [!NOTE]
 > Este tema hace referencia a la herramienta de la CLI de ML.NET, que se encuentra actualmente en versión preliminar, por lo que el material está sujeto a cambios. Para obtener más información, visite [la introducción de ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -259,11 +259,11 @@ Resulta interesante comparar el algoritmo elegido y la configuración de canaliz
 
 En este tutorial ha aprendido a:
 > [!div class="checklist"]
-> * Preparar los datos para la tarea de ML seleccionada (problema para resolver)
-> * Ejecutar el comando "mlnet auto-train" en la herramienta de la CLI
-> * Revisar los resultados de métrica de calidad
-> * Comprender el código de C# generado para ejecutar el modelo (código para usar en la aplicación del usuario final)
-> * Explorar el código de C# generado que se usó para entrenar el modelo de "mejor calidad" (con fines de aprendizaje)
+> - Preparar los datos para la tarea de ML seleccionada (problema para resolver)
+> - Ejecutar el comando "mlnet auto-train" en la herramienta de la CLI
+> - Revisar los resultados de métrica de calidad
+> - Comprender el código de C# generado para ejecutar el modelo (código para usar en la aplicación del usuario final)
+> - Explorar el código de C# generado que se usó para entrenar el modelo de "mejor calidad" (con fines de aprendizaje)
 
 > [!div class="nextstepaction"]
 > [Automatizar el entrenamiento del modelo con la CLI de ML.NET](../automate-training-with-cli.md)
