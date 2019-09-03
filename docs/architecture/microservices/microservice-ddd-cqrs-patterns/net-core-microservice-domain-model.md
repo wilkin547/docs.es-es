@@ -172,7 +172,7 @@ Por ejemplo, en el ejemplo de código OrderAggregate anterior, hay varios campos
 - **Julie Lerman. Puntos de datos - Programación para un diseño guiado por el dominio: sugerencias para los desarrolladores enfocados en datos** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
-- **Udi Dahan. How to create fully encapsulated Domain Models** \ (Cómo crear modelos de dominio totalmente encapsulados)
+- **Udi Dahan. Cómo crear modelos de dominio totalmente encapsulados** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
