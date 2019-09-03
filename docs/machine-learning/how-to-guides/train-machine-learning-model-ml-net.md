@@ -1,16 +1,16 @@
 ---
 title: Entrenamiento y evaluación de un modelo
 description: Obtenga más información sobre cómo compilar modelos de aprendizaje automático, recopilar métricas y medir el rendimiento con ML.NET. Un modelo de aprendizaje automático identifica patrones en los datos de entrenamiento para realizar predicciones mediante datos nuevos.
-ms.date: 06/25/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3fb586b218f1769949efc362cacc3957623dd43b
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397638"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169047"
 ---
 # <a name="train-and-evaluate-a-model"></a>Entrenamiento y evaluación de un modelo
 
@@ -20,7 +20,7 @@ Obtenga más información sobre cómo compilar modelos de aprendizaje automátic
 
 El objetivo de un modelo de aprendizaje automático es identificar patrones en los datos de entrenamiento. Estos patrones se usan para realizar predicciones con datos nuevos.
 
-Dado el modelo de datos siguiente:
+Los datos se pueden modelar mediante una clase como `HousingData`.
 
 ```csharp
 public class HousingData
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-Cargue los datos en un [`IDataView`](xref:Microsoft.ML.IDataView):
+Empleando los siguientes datos que se cargan en un [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 HousingData[] housingData = new HousingData[]

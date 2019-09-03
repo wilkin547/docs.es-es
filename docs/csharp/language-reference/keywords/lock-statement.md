@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 7ae19e48467bf5feca115c993c2299c1ecbaadc7
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 70fcd8041946f2b1db3b37de79318b87771ee676
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566335"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168773"
 ---
 # <a name="lock-statement-c-reference"></a>Instrucción lock (Referencia de C#)
 
@@ -47,7 +47,7 @@ finally
 
 Puesto que el código usa un bloque [try... finally](try-finally.md), el bloqueo se libera aunque se produzca una excepción dentro del cuerpo de una instrucción `lock`.
 
-No se puede usar la palabra clave [await](await.md) en el cuerpo de una instrucción `lock`.
+No se puede usar el operador [await](../operators/await.md) en el cuerpo de una instrucción `lock`.
 
 ## <a name="remarks"></a>Comentarios
 

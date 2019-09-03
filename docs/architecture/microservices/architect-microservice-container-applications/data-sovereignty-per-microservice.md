@@ -56,7 +56,7 @@ DDD se beneficia de los microservicios al obtener límites reales en forma de mi
 - **Martin Fowler. PolyglotPersistence** \
   <https://martinfowler.com/bliki/PolyglotPersistence.html>
 
-- **Alberto Brandolini. Strategic Domain Driven Design with Context Mapping** \ (Diseño orientado a dominios estratégicos con asignación de contexto)
+- **Alberto Brandolini. Diseño orientado a dominios estratégicos con asignación de contexto** \
   <https://www.infoq.com/articles/ddd-contextmapping>
 
 >[!div class="step-by-step"]

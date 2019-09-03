@@ -19,17 +19,17 @@ ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 85e971d3464b6f2a073288e7f8b5406563598f79
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5f722977928604e5876e52a7329eef5c933bf2a7
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634749"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70046468"
 ---
 # <a name="anchors-in-regular-expressions"></a>Delimitadores en expresiones regulares
 <a name="top"></a> Los delimitadores, o aserciones atómicas de ancho cero, especifican la posición de la cadena en que se debe producir una coincidencia. Cuando se usa un delimitador en una expresión de búsqueda, el motor de expresiones regulares no avanza por la cadena o ni consume caracteres, sino que solo busca una coincidencia en la posición especificada. Por ejemplo, `^` especifica que la coincidencia debe empezar al principio de una cadena o línea. Por consiguiente, la expresión regular `^http:` coincide con "http": solo cuando se encuentra al principio de una línea. En la tabla siguiente, se enumeran los delimitadores que admiten las expresiones regulares de .NET.  
   
-|Delimitador|Descripción|  
+|Delimitador|DESCRIPCIÓN|  
 |------------|-----------------|  
 |`^`|De forma predeterminada, la coincidencia se debe producir al principio de la cadena. Por su parte, en el modo multilínea, se debe producir al principio de la línea. Para obtener más información, vea [Principio de cadena o línea](#Start).|  
 |`$`|De forma predeterminada, la coincidencia se debe producir al final de la cadena o antes de `\n` al final de la cadena. Por su parte, en el modo multilínea, se debe producir al final de la línea o antes de `\n` al final de la línea. Para obtener más información, vea [Final de cadena o línea](#End).|  
@@ -55,10 +55,10 @@ ms.locfileid: "64634749"
   
  El patrón de expresión regular `^((\w+(\s?)){2,}),\s(\w+\s\w+),(\s\d{4}(-(\d{4}|present))?,?)+` se define como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
-|`^`|Comienza la búsqueda de coincidencias al principio de la cadena de entrada (o al principio de la línea si se llama al método con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>).|  
-|`((\w+(\s?)){2,}`|Coincide con uno o varios caracteres que se usan para formar palabras seguidos de cero o un espacio, exactamente dos veces. Este es el primer grupo de captura. Esta expresión también define un segundo y tercer grupo de captura: el segundo grupo está compuesto por la palabra capturada y el tercero consta de los espacios capturados.|  
+|`^`|Comienza la búsqueda de coincidencias al principio de la cadena de entrada (o al principio de la línea si se llama al método con la opción <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> ).|  
+|`((\w+(\s?)){2,}`|Coincide con uno o varios caracteres que se usan para formar palabras seguidos de cero o un espacio, al menos dos veces. Este es el primer grupo de captura. Esta expresión también define un segundo y tercer grupo de captura: El segundo grupo está compuesto por la palabra capturada y el tercero consta de los espacios en blanco capturados.|  
 |`,\s`|Coincide con una coma seguida de un carácter de espacio en blanco.|  
 |`(\w+\s\w+)`|Coincide con uno o varios caracteres que se usan para formar palabras seguidos de un espacio, seguidos de uno o varios caracteres que se usan para formar palabras. Este es el cuarto grupo de captura.|  
 |`,`|Coincide con una coma.|  
@@ -128,7 +128,7 @@ ms.locfileid: "64634749"
   
  La expresión regular `\G(\w+\s?\w*),?` se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\G`|Comienza donde finalizó la última coincidencia.|  
 |`\w+`|Buscar coincidencias con uno o más caracteres alfabéticos.|  
@@ -170,7 +170,7 @@ ms.locfileid: "64634749"
   
  El patrón de la expresión regular se interpreta como se muestra en la tabla siguiente.  
   
-|Modelo|Descripción|  
+|Modelo|DESCRIPCIÓN|  
 |-------------|-----------------|  
 |`\B`|La búsqueda de coincidencias no comienza en un límite de palabras.|  
 |`qu`|Coincide con la subcadena "qu".|  

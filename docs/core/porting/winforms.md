@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.custom: ''
-ms.openlocfilehash: aebfaa85338e014ca47256b85a1bd6529ad803bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7ef36be47648ae338b5fe70b75431006c99be31f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327170"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105214"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Procedimiento Migración de una aplicación de escritorio de Windows Forms a .NET Core
 
@@ -18,7 +18,7 @@ En este artículo se describe cómo migrar la aplicación de escritorio basada e
 
 En este artículo, se usan diferentes nombres para identificar los tipos de archivos que se utilizan para la migración. Al migrar su proyecto, sus archivos se nombrarán de manera diferente, así que establezca una relación mental con los que se enumeran a continuación:
 
-| Archivo | Descripción |
+| Archivo | DESCRIPCIÓN |
 | ---- | ----------- |
 | **MyApps.sln** | Nombre del archivo de la solución. |
 | **MyForms.csproj** | Nombre del proyecto de Windows Forms de .NET Framework para migrar. |
@@ -189,7 +189,7 @@ Si tiene un proyecto de biblioteca de controles de Windows Forms para migrar, la
 
 Usando el ejemplo del paso anterior, vamos a expandir los proyectos y archivos con los que estamos trabajando.
 
-| Archivo | Descripción |
+| Archivo | DESCRIPCIÓN |
 | ---- | ----------- |
 | **MyApps.sln** | Nombre del archivo de la solución. |
 | **MyControls.csproj** | Nombre del proyecto de controles de Windows Forms de .NET Framework para migrar. |
@@ -300,7 +300,7 @@ Una vez que Visual Studio 2019 sea compatible con el Diseñador de Windows Forms
  
 ## <a name="next-steps"></a>Pasos siguientes
 
-* Obtenga más información sobre el [paquete de compatibilidad de Windows][compat-pack].
-* Vea un [vídeo sobre cómo migrar](https://www.youtube.com/watch?v=upVQEUc_KwU) el proyecto de Windows Forms de .NET Framework a .NET Core.
+- Obtenga más información sobre el [paquete de compatibilidad de Windows][compat-pack].
+- Vea un [vídeo sobre cómo migrar](https://www.youtube.com/watch?v=upVQEUc_KwU) el proyecto de Windows Forms de .NET Framework a .NET Core.
 
 [compat-pack]: windows-compat-pack.md

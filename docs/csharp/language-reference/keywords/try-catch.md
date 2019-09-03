@@ -11,18 +11,16 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 8f901bd8ab5dcdcf4f5674e3f235267c9f535725
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422587"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168716"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (Referencia de C#)
 
 La instrucción try-catch consta de un bloque `try` seguido de una o más cláusulas `catch` que especifican controladores para diferentes excepciones.
-
-## <a name="remarks"></a>Comentarios
 
 Cuando se produce una excepción, Common Language Runtime (CLR) busca la instrucción `catch` que controla esta excepción. Si el método que se ejecuta actualmente no contiene un bloque `catch`, CLR busca el método que llamó el método actual, y así sucesivamente hasta la pila de llamadas. Si no existe ningún bloque `catch`, CLR muestra al usuario un mensaje de excepción no controlada y detiene la ejecución del programa.
 
@@ -131,15 +129,16 @@ static void Main()
 Para obtener más información sobre la captura,vea [try-catch-finally](try-catch-finally.md) (try-catch-finally [Referencia de C#]).
 
 ## <a name="exceptions-in-async-methods"></a>Excepciones en métodos asincrónicos
-Un método asincrónico está marcado por un modificador [async](async.md) y normalmente contiene una o más instrucciones o expresiones await. Una expresión await aplica el operador [await](await.md) a <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.
+
+Un método asincrónico está marcado por un modificador [async](async.md) y normalmente contiene una o más instrucciones o expresiones await. Una expresión await aplica el operador [await](../operators/await.md) a <xref:System.Threading.Tasks.Task> o <xref:System.Threading.Tasks.Task%601>.
 
 Cuando el control alcanza un `await` en el método asincrónico, el progreso del método se suspende hasta que la tarea esperada se completa. Cuando se completa la tarea, la ejecución puede reanudarse en el método. Para más información, vea [Programación asincrónica con Async y Await](../../programming-guide/concepts/async/index.md) y [Controlar el flujo en los programas asincrónicos](../../programming-guide/concepts/async/control-flow-in-async-programs.md).
 
 La tarea completada a la que se aplica `await` puede encontrarse en un estado de error debido a una excepción no controlada en el método que devuelve la tarea. La espera de la tarea produce una excepción. Una tarea también puede terminar en un estado cancelado si se cancela el proceso asincrónico que devuelve. La espera de una tarea cancelada devuelve una `OperationCanceledException`. Para obtener más información sobre cómo cancelar un proceso asincrónico, vea [Ajustar una aplicación asincrónica (C# y Visual Basic)](../../programming-guide/concepts/async/fine-tuning-your-async-application.md).
 
-Para detectar la excepción, espere la tarea en un bloque `try` y detéctela en el bloque asociado `catch`. Para obtener un ejemplo, vea la sección "Ejemplo".
+Para detectar la excepción, espere la tarea en un bloque `try` y detéctela en el bloque asociado `catch`. Para obtener un ejemplo, vea la sección [Ejemplo de método async](#async-method-example).
 
-Una tarea puede encontrarse en un estado de error debido a que ocurrieron varias excepciones en el método asincrónico esperado. Por ejemplo, la tarea podría ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Cuando espera una tarea de este tipo, solo se captura una de las excepciones y no puede predecir qué excepción se capturará. Para obtener un ejemplo, vea la sección "Ejemplo".
+Una tarea puede encontrarse en un estado de error debido a que ocurrieron varias excepciones en el método asincrónico esperado. Por ejemplo, la tarea podría ser el resultado de una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Cuando espera una tarea de este tipo, solo se captura una de las excepciones y no puede predecir qué excepción se capturará. Para obtener un ejemplo, vea la sección [Ejemplo de Task.WhenAll](#taskwhenall-example).
 
 ## <a name="example"></a>Ejemplo
 
@@ -147,7 +146,7 @@ En el ejemplo siguiente, el bloque `try` contiene una llamada al método `Proces
 
 [!code-csharp[csrefKeywordsExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#2)]
 
-## <a name="example"></a>Ejemplo
+## <a name="two-catch-blocks-example"></a>Ejemplo de dos bloques catch
 
 En el ejemplo siguiente, se utilizan dos bloques de detección y la excepción más específica, que es la que aparece primero, es la que se captura.
 
@@ -157,7 +156,7 @@ Si coloca primero el bloque catch menos específico en el ejemplo, aparece el si
 
 [!code-csharp[csrefKeywordsExceptions#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsExceptions/CS/csrefKeywordsExceptions.cs#3)]
 
-## <a name="example"></a>Ejemplo
+## <a name="async-method-example"></a>Ejemplo de método async
 
 En el ejemplo siguiente se muestra el control de excepciones de los métodos asincrónicos. Para capturar una excepción que produce una tarea asincrónica, coloque la expresión `await` en un bloque `try` y capture la excepción en un bloque `catch`.
 
@@ -167,7 +166,7 @@ Quite la marca de comentario de la línea `throw new OperationCanceledException`
 
 [!code-csharp[csAsyncExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncexceptions/cs/class1.cs#2)]  
 
-## <a name="example"></a>Ejemplo
+## <a name="taskwhenall-example"></a>Ejemplo de Task.WhenAll
 
 En el ejemplo siguiente se muestra el control de excepciones en el que varias tareas pueden producir varias excepciones. El bloque `try` espera la tarea devuelta por una llamada a <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. La tarea se completa cuando se hayan completado las tres tareas a las que se aplica el método WhenAll.
 
@@ -177,7 +176,7 @@ Cada una de las tres tareas produce una excepción. El bloque `catch` se itera a
 
 ## <a name="c-language-specification"></a>Especificación del lenguaje C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Para obtener más información, vea la sección sobre la [instrucción try](~/_csharplang/spec/statements.md#the-try-statement) de la [Especificación del lenguaje C#](~/_csharplang/spec/introduction.md).
 
 ## <a name="see-also"></a>Vea también
 

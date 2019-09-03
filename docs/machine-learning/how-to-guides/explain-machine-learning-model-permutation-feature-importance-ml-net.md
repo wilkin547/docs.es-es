@@ -1,16 +1,16 @@
 ---
 title: Explicación de las predicciones del modelo mediante la importancia de características de permutación
 description: Descripción de la importancia de características de modelos con importancia de característica de permutación en ML.NET
-ms.date: 05/02/2019
+ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 1037a1f1c21ef2c9b9a87a070a7d2003c1e76eb4
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 9617582c79b2278e3a68e7acf84568247b81eca1
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307371"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70167650"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Explicación de las predicciones del modelo mediante la importancia de características de permutación
 
@@ -18,7 +18,7 @@ Obtenga información sobre cómo explicar predicciones del modelo de Machine Lea
 
 A menudo se piensa en los modelos de Machine Learning como cajas negras que toman entradas y generan salidas. Rara vez se entienden los pasos intermedios o las interacciones entre las características que afectan a la salida. A medida que el aprendizaje automático se introduce en otros aspectos de la vida diaria como la asistencia sanitaria, es de vital importancia comprender por qué un modelo de Machine Learning toma esas decisiones. Por ejemplo, si un modelo de Machine Learning realiza diagnósticos, los profesionales sanitarios necesitan una forma de buscar en los factores que se incluyeron en la realización de dicho diagnóstico. Proporcionar el diagnóstico correcto puede marcar una gran diferencia en el hecho de que un paciente tenga una recuperación rápida o no. Por lo tanto, cuanto mayor sea el nivel de explicación en un modelo, mayor será la confianza que tengan los profesionales sanitarios para aceptar o rechazar las decisiones tomadas por el modelo.
 
-Se utilizan diversas técnicas para explicar modelos, una de los cuales es PFI. PFI es una técnica utilizada para explicar los modelos de clasificación y regresión que se inspira en el artículo [Random Forests*de* Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (consulte la sección 10). En un nivel alto, esto funciona de manera es revolviendo los datos de manera aleatoria en una característica a la vez para todo el conjunto de datos y calculando cuánto se reduce la métrica de rendimiento de interés. Cuanto mayor sea el cambio, más importante será esa característica. 
+Se utilizan diversas técnicas para explicar modelos, una de los cuales es PFI. PFI es una técnica utilizada para explicar los modelos de clasificación y regresión que se inspira en el artículo [Random Forests*de*Breiman](https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf) (consulte la sección 10). En un nivel alto, esto funciona de manera es revolviendo los datos de manera aleatoria en una característica a la vez para todo el conjunto de datos y calculando cuánto se reduce la métrica de rendimiento de interés. Cuanto mayor sea el cambio, más importante será esa característica. 
 
 Además, al resaltar las características más importantes, los compiladores del modelo pueden centrarse en el uso de un subconjunto de características más significativas que potencialmente pueden reducir el ruido y el tiempo de entrenamiento.
 
@@ -50,7 +50,7 @@ A continuación, se muestra un ejemplo del conjunto de datos:
 2,98,16,1,0.25,10,5,1,8,689,13,36,12
 ```
 
-Los datos en este ejemplo se pueden modelar mediante una clase como `HousingPriceData`:
+Los datos en este ejemplo se pueden modelar mediante una clase como `HousingPriceData` y se pueden cargar en [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ```csharp
 class HousingPriceData
@@ -96,8 +96,6 @@ class HousingPriceData
     public float Price { get; set; }
 }
 ```
-
-Cargue los datos en un [`IDataView`](xref:Microsoft.ML.IDataView).
 
 ## <a name="train-the-model"></a>Entrenar el modelo
 
