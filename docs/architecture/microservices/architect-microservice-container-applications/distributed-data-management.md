@@ -86,13 +86,13 @@ El uso de comunicación asincrónica se explica con más detalle más adelante e
 - **Teorema CAP** \
   <https://en.wikipedia.org/wiki/CAP_theorem>
 
-- **Eventual Consistency** \ (Coherencia de los eventos)
+- **Coherencia de los eventos** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Data Consistency Primer** \ (Manual de coherencia de datos)
+- **Manual de coherencia de datos** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Martin Fowler. CQRS (Command and Query Responsibility Segregation)**  \ [CQRS (Segregación de responsabilidades de consultas y comandos)]
+- **Martin Fowler. [CQRS (Segregación de responsabilidades de consultas y comandos)]**  \
   <https://martinfowler.com/bliki/CQRS.html>
 
 - **Patrón Materialized View** \
@@ -101,7 +101,7 @@ El uso de comunicación asincrónica se explica con más detalle más adelante e
 - **Charles Row. ACID vs. BASE: el cambio del pH del procesamiento de transacciones de bases de datos** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
-- **Patrón Compensating Transaction** \ (Transacción de compensación)
+- **Transacción de compensación** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **Udi Dahan. Service Oriented Composition (Composición orientada a servicios)**  \

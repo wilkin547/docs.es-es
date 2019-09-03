@@ -322,61 +322,61 @@ Si se establece la marca "entregado de nuevo", el receptor debe tenerlo en cuent
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Forked eShopOnContainers using NServiceBus (Particular Software)**  \ (Bifurcación de eShopOnContainers mediante NServiceBus [Particular Software])
+- **Bifurcación de eShopOnContainers mediante NServiceBus [Particular Software]**  \
     <https://go.particular.net/eShopOnContainers>
 
-- **Event Driven Messaging** \ (Mensajería controlada por eventos)
+- **Mensajería controlada por eventos** \
     [http://soapatterns.org/design\_patterns/event\_driven\_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
-- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling** \ (Refactorización hacia la resiliencia: evaluación del acoplamiento)
+- **Jimmy Bogard. Refactorización hacia la resiliencia: evaluación del acoplamiento** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
-- **Publish-Subscribe channel** \ (Canal de publicación y suscripción)
+- **Canal de publicación y suscripción** \
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Communicating Between Bounded Contexts** \ (Comunicación entre contextos delimitados)
+- **Comunicación entre contextos delimitados** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
-- **Eventual Consistency** \ (Coherencia de los eventos)
+- **Coherencia de los eventos** \
     [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
-- **Philip Brown. Strategies for Integrating Bounded Contexts** \ (Estrategias para la integración de contextos delimitados)
+- **Philip Brown. Estrategias para la integración de contextos delimitados** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2** \ (Desarrollo de microservicios transaccionales mediante agregados, orígenes de eventos y CQRS: parte 2)
+- **Chris Richardson. Desarrollo de microservicios transaccionales mediante agregados, orígenes de eventos y CQRS: parte 2** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson. Event Sourcing pattern** \ (Patrón de orígenes de eventos)
+- **Chris Richardson. Patrón de orígenes de eventos** \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
-- **Introducing Event Sourcing** \ (Introducción a los orígenes de eventos)
+- **Introducción a los orígenes de eventos** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Base de datos Event Store**. Sitio oficial. \
     <https://geteventstore.com/>
 
-- **Patrick Nommensen. Event-Driven Data Management for Microservices** \ (Administración de datos orientada a eventos para microservicios)
+- **Patrick Nommensen. Administración de datos orientada a eventos para microservicios** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **Teorema CAP** \
     [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
-- **What is CAP Theorem?** (¿Qué es el teorema CAP?) \
+- **¿Qué es el teorema CAP?** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
-- **Data Consistency Primer** \ (Manual de coherencia de datos)
+- **Manual de coherencia de datos** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling. The CAP Theorem: Why "Everything is Different" with the Cloud and Internet** \ (Teorema CAP: por qué "todo es diferente" con la nube e Internet)
+- **Rick Saling. Teorema CAP: por qué "todo es diferente" con la nube e Internet** \
     <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed** \ (CAP doce años más tarde: ¿cómo han cambiado las "normas"?)
+- **Eric Brewer. ¿cómo han cambiado las "normas"? CAP doce años más tarde:**  \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
 - **Azure Service Bus. Mensajería asincrónica: Detección de duplicados**  \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
-- **Reliability Guide** (RabbitMQ documentation) \ (Guía de confiabilidad [documentación de RabbitMQ])
+- **Guía de confiabilidad**[documentación de RabbitMQ] \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
 
 > [!div class="step-by-step"]
