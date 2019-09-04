@@ -27,10 +27,10 @@ La implementación de la validación del lado cliente depende del tipo de aplica
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validación en aplicaciones móviles de Xamarin
 
-- **Validate Text Input and Show Errors** \ (Validar la entrada de texto y mostrar errores)
+- **Validar la entrada de texto y mostrar errores** \
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
-- **Validation Callback** \ (Devolución de llamada de validación)
+- **Devolución de llamada de validación** \
   <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>Validación en aplicaciones ASP.NET Core
@@ -40,10 +40,10 @@ La implementación de la validación del lado cliente depende del tipo de aplica
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validación en aplicaciones SPA Web (Angular 2, TypeScript, JavaScript)
 
-- **Ado Kukic. Angular 2 Form Validation** \ (Validación de formularios de Angular 2)
+- **Ado Kukic. Validación de formularios de Angular 2** \
   <https://scotch.io/tutorials/angular-2-form-validation>
 
-- **Form Validation** \ (Validación de formularios)
+- **Validación de formularios** \
   <https://angular.io/guide/form-validation>
 
 - **Validation (Validación).** Documentación de Breeze. \
