@@ -24,7 +24,7 @@ Para crear una nueva instancia de un tipo, normalmente se invoca uno de los [con
 
 [!code-csharp-interactive[invoke constructor](~/samples/csharp/language-reference/operators/NewOperator.cs#Constructor)]
 
-Puede usar un [inicializador de colección u objeto](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) con el `new` operador para crear una instancia e inicializar un objeto en una sola instrucción, como se muestra en el ejemplo siguiente:
+Puede usar un [inicializador de colección u objeto](../../programming-guide/classes-and-structs/object-and-collection-initializers.md) con el operador "new" para crear una instancia e inicializar un objeto en una sola instrucción, como se muestra en el ejemplo siguiente:
 
 [!code-csharp-interactive[constructor with initializer](~/samples/csharp/language-reference/operators/NewOperator.cs#ConstructorWithInitializer)]
 
