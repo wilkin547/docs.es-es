@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46cf37ee800c05eb7fe12e8491ad3b2130c3a04d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f132ce0a114a6fc904d86ca3ce893c447366523f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920819"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252631"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment >, elemento
 Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado de reglas para analizar las cadenas de fecha que contienen un día, un mes, una hora y un designador AM/PM.  
   
- \<configuration>  
- \<> en tiempo de ejecución  
-\<EnableAmPmParseAdjustment>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<EnableAmPmParseAdjustment>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -35,7 +35,7 @@ Determina si los métodos de análisis de fecha y hora usan un conjunto ajustado
   
 ### <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |0|Los métodos de análisis de fecha y hora no usan reglas ajustadas para analizar cadenas de fecha que contengan solo un día, un mes, una hora y un designador AM/PM.|  
 |1|Los métodos de análisis de fecha y hora usan reglas ajustadas para analizar las cadenas de fecha que contienen solo un día, un mes, una hora y el designador AM/PM.|  

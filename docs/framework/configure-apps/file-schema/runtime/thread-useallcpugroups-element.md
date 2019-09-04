@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: d30fe7c5-8469-46e2-b804-e3eec7b24256
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9ee6bdb7094ea2bc9e283e331c0f6ad9b68e4f9
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: e964f1b2861926803b0449be06cbfd9567ac74a3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663422"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252270"
 ---
 # <a name="thread_useallcpugroups-element"></a>\<Thread_UseAllCpuGroups >, elemento
 
 Especifica si el runtime distribuye subprocesos administrados en todos los grupos de CPU.
 
-\<configuration>\
-\<> en tiempo de ejecución \
-\<> Thread_UseAllCpuGroups
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> Thread_UseAllCpuGroups**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -38,7 +38,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="enabled-attribute"></a>Atributo enabled
 
-|Valor|DESCRIPCIÓN|
+|Value|DESCRIPCIÓN|
 |-----------|-----------------|
 |`false`|El runtime no distribuye los subprocesos administrados entre varios grupos de CPU. Este es el valor predeterminado.|
 |`true`|El motor en tiempo de ejecución distribuye los subprocesos administrados entre varios grupos de CPU, si el equipo tiene varios grupos de CPU y el [ \<elemento > GCCpuGroup](gccpugroup-element.md) está habilitado.|

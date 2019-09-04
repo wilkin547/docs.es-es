@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92873277b4b25e4c1c5981628187078ac7cb5704
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3fb198d6a19e25df4c86186d35aab3330c53121c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920887"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252766"
 ---
 # <a name="bypasstrustedappstrongnames-element"></a>Elemento \<bypassTrustedAppStrongNames>
 Especifica si se omitirá la validación de nombres seguros en ensamblados de plena confianza que se cargan en una <xref:System.AppDomain>plena confianza.  
   
- \<configuration>  
-\<> en tiempo de ejecución  
-\<bypassTrustedAppStrongNames>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<bypassTrustedAppStrongNames>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -87,4 +87,4 @@ Especifica si se omitirá la validación de nombres seguros en ensamblados de pl
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Cómo: Deshabilitar la característica de omisión de nombres seguros](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)
+- [Procedimientos: Deshabilitar la característica de omisión de nombres seguros](../../../app-domains/how-to-disable-the-strong-name-bypass-feature.md)

@@ -2,12 +2,12 @@
 title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: 6ce88cecf210d8b3cf541fe7e870e19a59e344ec
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 2c6c2ae4c593da1d5fe8cdf3015eb0e31e4b12b5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307335"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249937"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 
@@ -21,13 +21,13 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 ## <a name="arguments"></a>Argumentos
 
-`instance-expression` Una instancia de una entidad.
+`instance-expression`Instancia de una entidad.
 
-`relationship-type` El nombre de tipo de la relación desde el archivo conceptual schema definition language) (CSDL). El `relationship-type` se califica como \<espacio de nombres >.\< nombre de tipo de relación >.
+`relationship-type`El nombre de tipo de la relación, del archivo de lenguaje de definición de esquemas conceptuales (CSDL). Se califica como espacio \<de nombres >\<. `relationship-type` nombre del tipo de relación >.
 
-`to` El extremo de la relación.
+`to`Final de la relación.
 
-`from` El comienzo de la relación.
+`from`Principio de la relación.
 
 ## <a name="return-value"></a>Valor devuelto
 
@@ -35,7 +35,7 @@ Si la cardinalidad del extremo final es 1, el valor devuelto será `Ref<T>`. Si 
 
 ## <a name="remarks"></a>Comentarios
 
-Las relaciones son estructuras de primera clase en el Entity Data Model (EDM). Se pueden establecer relaciones entre dos o más tipos de entidad y los usuarios pueden navegar en la relación de un extremo (entidad) al otro. `from` y `to` son condicionalmente opcionales cuando no hay ambigüedad en la resolución de nombres dentro de la relación.
+Las relaciones son construcciones de primera clase en el Entity Data Model (EDM). Se pueden establecer relaciones entre dos o más tipos de entidad y los usuarios pueden navegar en la relación de un extremo (entidad) al otro. `from` y `to` son condicionalmente opcionales cuando no hay ambigüedad en la resolución de nombres dentro de la relación.
 
 NAVIGATE es válido en espacios O y C.
 
@@ -50,7 +50,7 @@ Select o.Id, navigate(o, OrderCustomer, Customer, Order)
 From LOB.Orders as o
 ```
 
-Donde OrderCustomer es el valor de `relationship`, y Customer y Order son los valores de `to-end` (cliente) y `from-end` (pedido) de la relación. Si OrderCustomer es una relación de n a 1, entonces el tipo de resultado de la expresión navigate es Ref\<Customer >.
+Donde OrderCustomer es el valor de `relationship`, y Customer y Order son los valores de `to-end` (cliente) y `from-end` (pedido) de la relación. Si OrderCustomer era una relación de n:1, el tipo de resultado de la expresión Navigate\<es Ref Customer >.
 
 Lo forma más simple de esta expresión es la siguiente:
 
@@ -59,7 +59,7 @@ Select o.Id, navigate(o, OrderCustomer)
 From LOB.Orders as o
 ```
 
-De forma similar, en una consulta de la forma siguiente, la expresión navigate generaría una colección < Ref\<orden >>.
+Del mismo modo, en una consulta de la forma siguiente, la expresión Navigate produciría una\<colección < orden de referencia > >.
 
 ```sql
 Select c.Id, navigate(c, OrderCustomer, Order, Customer)
@@ -72,7 +72,7 @@ El valor de instance-expression debe ser de tipo entidad/referencia.
 
 La consulta de Entity SQL siguiente utiliza el operador NAVIGATE para navegar por la relación establecida entre los tipos de entidad Address y SalesOrderHeader. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:
 
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.
 
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :
 
@@ -80,5 +80,5 @@ La consulta de Entity SQL siguiente utiliza el operador NAVIGATE para navegar po
 
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Cómo: Navegar por relaciones con el operador Navigate](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)
+- [Procedimientos: Navegar por las relaciones con el operador Navigate](navigate-entity-sql.md)

@@ -2,30 +2,30 @@
 title: Referencia del lenguaje Entity SQL
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
-ms.openlocfilehash: 32e70c67bb36df167f7a6fbc8f2a855d63ed815a
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 5f5bbf59fa2d775c42ff5b94d6dc775e27408d3d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539485"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250703"
 ---
 # <a name="entity-sql-language-reference"></a>Referencia del lenguaje Entity SQL
-Esta sección proporciona documentación detallada de LINQ to Entities, [!INCLUDE[esql](../../../../../../includes/esql-md.md)]y los lenguajes de modelado y asignación utilizados por la [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)].  
+En esta sección se proporciona documentación detallada [!INCLUDE[esql](../../../../../../includes/esql-md.md)]LINQ to Entities, y los lenguajes de modelado y [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]asignación que usa.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Especificaciones CSDL, SSDL MSL](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)  
+ [Especificaciones CSDL, SSDL MSL](csdl-ssdl-and-msl-specifications.md)  
   
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)  
+ [LINQ to Entities](linq-to-entities.md)  
   
- [Lenguaje Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+ [Lenguaje Entity SQL](entity-sql-language.md)  
   
- [Funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
+ [Funciones canónicas](index.md)  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Herramientas de ADO.NET Entity Data Model](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))  
+ [ADO.NET Entity Data Model herramientas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))  
   
 ## <a name="see-also"></a>Vea también
 
-- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
-- [Introducción](../../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [ADO.NET Entity Framework](../index.md)
+- [Introducción](../getting-started.md)
 - [Muestras](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738547(v=vs.100))

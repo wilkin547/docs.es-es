@@ -2,12 +2,12 @@
 title: EXCEPT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
-ms.openlocfilehash: 32b5148e43a38e5cf8dcce0ae16260d7a6b6a018
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d00fdeed01de80e441d28e2bcd5da084571b0361
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034221"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251047"
 ---
 # <a name="except-entity-sql"></a>EXCEPT (Entity SQL)
 Devuelve una colección de los valores distintos de la expresión de consulta situada a la izquierda del operando EXCEPT, que tampoco se devuelven en la expresión de consulta situada a la derecha del operando EXCEPT. Todas las expresiones deben ser del mismo tipo que `expression`o de un tipo base común o derivado.  
@@ -38,7 +38,7 @@ expression EXCEPT expression
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa el operador EXCEPT para devolver una colección de valores distintos de dos expresiones de consulta. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -46,4 +46,4 @@ expression EXCEPT expression
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

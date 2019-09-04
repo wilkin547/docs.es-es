@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 383339241194c56d0c3178f538f2ac08b2f1b437
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 5262d2bca07525aba6db5303e730c8b358641d52
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69950388"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250971"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Expresiones en consultas de LINQ to Entities
 Una expresión es un fragmento de código que se puede evaluar como un valor, objeto, método o espacio de nombres único. Las expresiones pueden contener un valor literal, una llamada a un método, un operador y sus operandos, o un nombre simple. Los nombres simples pueden ser el nombre de una variable, el miembro de un tipo, el parámetro de un método, un espacio de nombres o un tipo. Las expresiones pueden utilizar operadores que a su vez utilizan otras expresiones como parámetros, o llamadas a métodos cuyos parámetros son a su vez otras llamadas a métodos. Por consiguiente, las expresiones pueden ser de muy simples a muy complejas.  
@@ -26,16 +26,16 @@ Una expresión es un fragmento de código que se puede evaluar como un valor, ob
 > Las construcciones de lenguaje específicas, como C# `unchecked`, no tienen ningún significado en LINQ to Entities.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Expresiones constantes](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
+ [Expresiones constantes](constant-expressions.md)  
   
- [Expresiones de comparación](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
+ [Expresiones de comparación](comparison-expressions.md)  
   
- [Comparaciones NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/null-comparisons.md)  
+ [Comparaciones NULL](null-comparisons.md)  
   
- [Expresiones de inicialización](../../../../../../docs/framework/data/adonet/ef/language-reference/initialization-expressions.md)  
+ [Expresiones de inicialización](initialization-expressions.md)  
   
  [Relaciones, propiedades de navegación y claves externas](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>Vea también
 
-- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+- [ADO.NET Entity Framework](../index.md)

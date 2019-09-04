@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 441e8ef3-998c-4d12-8825-ce66a178f90f
-ms.openlocfilehash: 61230ffc5cd055ee64de9d519cdfb4d76c856ca3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a242ecdc774d67721aee640e75847317c1b815d6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038056"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247544"
 ---
 # <a name="customizing-operations-by-using-stored-procedures-exclusively"></a>Personalizar operaciones utilizando exclusivamente procedimientos almacenados
 Un escenario común es obtener acceso a los datos utilizando únicamente procedimientos almacenados.  
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="description"></a>Descripción  
- Puede modificar el ejemplo proporcionado en [personalizar operaciones utilizando procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md) reemplazando incluso la primera consulta (que hace que la ejecución de SQL dinámica) con una llamada al método que contiene un procedimiento almacenado.  
+### <a name="description"></a>DESCRIPCIÓN  
+ Puede modificar el ejemplo que se proporciona en la [Personalización de operaciones utilizando procedimientos almacenados](customizing-operations-by-using-stored-procedures.md) reemplazando incluso la primera consulta (que provoca la ejecución dinámica de SQL) con una llamada al método que contiene un procedimiento almacenado.  
   
  Supongamos que `CustomersByCity` es el método, como en el siguiente ejemplo.  
   
@@ -33,4 +33,4 @@ Un escenario común es obtener acceso a los datos utilizando únicamente procedi
   
 ## <a name="see-also"></a>Vea también
 
-- [Responsabilidades del desarrollador al invalidar un comportamiento predeterminado](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
+- [Responsabilidades del desarrollador al invalidar un comportamiento predeterminado](responsibilities-of-the-developer-in-overriding-default-behavior.md)

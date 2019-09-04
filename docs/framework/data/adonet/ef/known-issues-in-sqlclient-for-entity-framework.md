@@ -2,26 +2,26 @@
 title: Problemas conocidos en SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c0b7c32e00a0cc90367a559a41f5a7ab59a33a4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662267"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251388"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Problemas conocidos en SqlClient para Entity Framework
 En esta sección se describen problemas conocidos relacionados con el proveedor de datos .NET Framework para SQL Server (SqlClient).  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Espacios finales en funciones de cadena  
- SQL Server pasa por alto los espacios finales en los valores de cadena. Por consiguiente, al pasar espacios finales en una cadena, se pueden producir resultados imprevisibles, incluso errores.  
+ SQL Server omite los espacios finales en los valores de cadena. Por consiguiente, al pasar espacios finales en una cadena, se pueden producir resultados imprevisibles, incluso errores.  
   
- Si tiene que tener espacios finales en la cadena, debería considerar anexar un carácter de espacio en blanco al final, para que SQL Server no recorte la cadena. Si no se requieren los espacios finales, se deberían recortar antes de pasarse a la canalización de la consulta.  
+ Si tiene que tener espacios finales en la cadena, considere la posibilidad de anexar un carácter de espacio en blanco al final, de modo que SQL Server no recorte la cadena. Si no se requieren los espacios finales, se deberían recortar antes de pasarse a la canalización de la consulta.  
   
 ## <a name="right-function"></a>Función RIGHT  
  Si se pasa un valor no `null` como primer argumento y se pasa 0 como segundo argumento a la función `RIGHT(nvarchar(max)`, 0`)` o `RIGHT(varchar(max)`, 0`)`, se devolverá un valor `NULL` en lugar de una cadena `empty`.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Operadores CROSS APPLY y OUTER APPLY  
- CROSS APPLY y OUTER APPLY operadores se introdujeron en SQL Server 2005. En algunos casos, la canalización de la consulta podría generar una instrucción de Transact-SQL que contenga los operadores CROSS APPLY y/o OUTER APPLY. Dado que algunos proveedores back-end, incluidas las versiones de SQL Server anteriores a SQL Server 2005, no admiten estos operadores, tales consultas no se pueden ejecutar en estos proveedores back-end.  
+ Los operadores CROSS APPLY y OUTER APPLY se introdujeron en SQL Server 2005. En algunos casos, la canalización de la consulta podría generar una instrucción de Transact-SQL que contenga los operadores CROSS APPLY y/o OUTER APPLY. Dado que algunos proveedores de back-end, incluidas las versiones de SQL Server anteriores a SQL Server 2005, no admiten estos operadores, tales consultas no se pueden ejecutar en estos proveedores de back-end.  
   
  A continuación se ilustran escenarios típicos que podrían conducir a la presencia de los operadores CROSS APPLY y/o OUTER APPLY en la consulta de salida:  
   
@@ -36,19 +36,19 @@ En esta sección se describen problemas conocidos relacionados con el proveedor 
 - Una consulta que tiene una construcción DEREF sobre una construcción REF.  
   
 ## <a name="skip-operator"></a>Operador SKIP  
- Si usas SQL Server 2000, el uso de SKIP con ORDER BY en columnas sin clave podría devolver resultados incorrectos. Se puede omitir un número superior al número especificado de filas si la columna sin clave tiene datos duplicados en ella. Esto es debido a cómo se convierte SKIP para SQL Server 2000. Por ejemplo, en la siguiente consulta, más de cinco filas pueden omitirse si `E.NonKeyColumn` tiene valores duplicados:  
+ Si usa SQL Server 2000, el uso de SKIP con ORDER BY en columnas que no son de clave puede devolver resultados incorrectos. Se puede omitir un número superior al número especificado de filas si la columna sin clave tiene datos duplicados en ella. Esto se debe a la forma en que se traduce SKIP para SQL Server 2000. Por ejemplo, en la consulta siguiente, se pueden omitir más de cinco filas si `E.NonKeyColumn` tiene valores duplicados:  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  
 ```  
   
 ## <a name="targeting-the-correct-sql-server-version"></a>Cuál es la versión correcta de SQL Server  
- El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] tiene como destino de la consulta de Transact-SQL, según la versión de SQL Server que se especifica en el `ProviderManifestToken` atributo del elemento Schema en el archivo de almacenamiento (.ssdl) del modelo. Esta versión podría diferir de la versión de SQL Server real al que está conectado. Por ejemplo, si usa SQL Server 2005, pero su `ProviderManifestToken` atributo está establecido en 2008, la consulta de Transact-SQL generada podría no ejecutarse en el servidor. Por ejemplo, una consulta que use los nuevos tipos de fecha y hora que se incluyeron en SQL Server 2008 no se ejecutará en las versiones anteriores de SQL Server. Si usa SQL Server 2005, pero su `ProviderManifestToken` atributo está establecido en 2000, la consulta de Transact-SQL generada se podría optimizar menos o podría obtener una excepción que indica que no se admite la consulta. Para obtener más información, vea la sección Operadores CROSS APPLY y OUTER APPLY, anteriormente en este tema.  
+ El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] destino de la consulta de Transact-SQL en función de la versión de SQL Server que `ProviderManifestToken` se especifica en el atributo del elemento Schema en el archivo de modelo de almacenamiento (. SSDL). Esta versión podría diferir de la versión de SQL Server real al que está conectado. Por ejemplo, si utiliza SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2008, la consulta Transact-SQL generada podría no ejecutarse en el servidor. Por ejemplo, una consulta que use los nuevos tipos de fecha y hora que se incluyeron en SQL Server 2008 no se ejecutará en las versiones anteriores de SQL Server. Si utiliza SQL Server 2005, pero el `ProviderManifestToken` atributo está establecido en 2000, la consulta Transact-SQL generada podría estar menos optimizada, o podría obtener una excepción que indica que no se admite la consulta. Para obtener más información, vea la sección Operadores CROSS APPLY y OUTER APPLY, anteriormente en este tema.  
   
- Ciertos comportamientos de las bases de datos dependen del nivel de compatibilidad establecida en la base de datos. Si su `ProviderManifestToken` atributo está establecido en 2005 y la versión de SQL Server es 2005, pero el nivel de compatibilidad de una base de datos está establecido en "80" (SQL Server 2000), la instrucción Transact-SQL generado estará destinado a SQL Server 2005, pero podría no ejecutarse según lo esperado debido a la configuración del nivel de compatibilidad. Por ejemplo, podría perder la información de los pedidos si un nombre de columna de la lista ORDER BY coincide con un nombre de columna en el selector.  
+ Ciertos comportamientos de las bases de datos dependen del nivel de compatibilidad establecida en la base de datos. Si el `ProviderManifestToken` atributo se establece en 2005 y la versión de SQL Server es 2005, pero el nivel de compatibilidad de una base de datos se establece en "80" (SQL Server 2000), el valor de Transact-SQL generado será SQL Server 2005, pero es posible que no se ejecute según lo esperado debido a la configuración del nivel de compatibilidad. Por ejemplo, podría perder la información de los pedidos si un nombre de columna de la lista ORDER BY coincide con un nombre de columna en el selector.  
   
 ## <a name="nested-queries-in-projection"></a>Consultas anidadas en proyección  
- Las consultas anidadas en una cláusula de proyección se podrían traducir en consultas de producto cartesiano en el servidor. En algunos servidores back-end, incluido SLQ Server, esto puede causar la tabla TempDB bastante grande. Esto puede hacer que disminuya el rendimiento del servidor.  
+ Las consultas anidadas en una cláusula de proyección se podrían traducir en consultas de producto cartesiano en el servidor. En algunos servidores back-end, incluido SLQ Server, esto puede hacer que la tabla TempDB sea bastante grande. Esto puede hacer que disminuya el rendimiento del servidor.  
   
  El siguiente es un ejemplo de una consulta anidada en una cláusula de proyección:  
   
@@ -57,9 +57,9 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Valores de identidad de GUID generados por el servidor  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con los valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir a su vez la devolución de dichos valores después de la inserción de una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos de SQL Server a través de la [cláusula OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] es compatible con los valores de identidad de tipo GUID generados por el servidor, pero el proveedor debe admitir a su vez la devolución de dichos valores después de la inserción de una fila. A partir de SQL Server 2005, puede devolver el tipo GUID generado por el servidor en una base de datos SQL Server mediante la [cláusula OUTPUT](https://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Vea también
 
-- [SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
-- [Problemas conocidos y consideraciones en LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
+- [SqlClient para Entity Framework](sqlclient-for-the-entity-framework.md)
+- [Problemas conocidos y consideraciones en LINQ to Entities](./language-reference/known-issues-and-considerations-in-linq-to-entities.md)

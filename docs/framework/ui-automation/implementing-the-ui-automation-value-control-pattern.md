@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 55290e8f14f81c50239097905e5407dbcf547c4c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4af35b3ad1277723d4102b3aeac48748588ef8bf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968223"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70244006"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementar el patrón de control Value de UI Automation
 > [!NOTE]
@@ -36,7 +36,7 @@ Ejemplo de un elemento de lista modificable
   
 - <xref:System.Windows.Automation.Provider.IValueProvider> no admite la recuperación de la información de formato ni los valores de subcadenas. Implemente <xref:System.Windows.Automation.Provider.ITextProvider> en estos escenarios.  
   
-- <xref:System.Windows.Automation.Provider.IValueProvider> debe implementarse mediante controles, como el control de selección **Selector de colores** de [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (se muestra a continuación), que admite la asignación de cadenas entre un valor de color (por ejemplo, "amarillo") y una estructura [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] interna equivalente.  
+- <xref:System.Windows.Automation.Provider.IValueProvider>debe implementarse mediante controles como el control de selección del **selector** de colores [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] de (se muestra a continuación), que admite la asignación de cadenas entre un valor de color (por ejemplo, "amarillo") y una estructura RGB interna equivalente.  
   
  ![Selector de colores con amarillo resaltado.](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Ejemplo de asignación de cadena de muestrario de colores  

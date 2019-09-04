@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c79c76717acf7ff309375313b30534dd0aff9399
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: d793c8d84a15f554ada78f3c0dd1f0e936893fd4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920704"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252405"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting >, elemento
 Especifica si el tiempo de ejecución usará la interoperabilidad COM en lugar de la comunicación remota para todas las llamadas en los límites del dominio de aplicación.  
   
- \<configuration>  
-\<> en tiempo de ejecución  
-\<PreferComInsteadOfManagedRemoting>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ Especifica si el tiempo de ejecución usará la interoperabilidad COM en lugar d
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`false`|El Runtime usará la comunicación remota en los límites del dominio de aplicación. Este es el valor predeterminado.|  
 |`true`|El Runtime usará la interoperabilidad COM en los límites del dominio de aplicación.|  

@@ -2,22 +2,22 @@
 title: Tipos de constructores (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: d43793b1d514b9dd81f524a30cd5bf1622aa5258
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7113aaf1c2caa982a8ab4751928856c1271570cb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64632222"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251117"
 ---
 # <a name="constructing-types-entity-sql"></a>Tipos de constructores (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] proporciona tres tipos de constructores: los constructores row, los constructores de tipo con nombre y colección.  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)]proporciona tres tipos de constructores: constructores Row, constructores de tipos con nombre y constructores de colección.  
   
 ## <a name="row-constructors"></a>Constructores ROW  
  Los constructores ROW de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se usan para crear registros anónimos con tipo estructural de uno o más valores. El tipo de resultado de un constructor ROW es un tipo de fila cuyos tipos de campo corresponden a los tipos de los valores que se utilizaron para crear la fila. Por ejemplo, la expresión siguiente crea un valor de tipo `Record(a int, b string, c int)`:  
   
  `ROW(1 AS a, "abc" AS b, a + 34 AS c)`  
   
- Si no proporciona un alias para una expresión en un constructor ROW, Entity Framework intentará generar uno. Para obtener más información, vea la sección "Reglas de alias" en [identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md).  
+ Si no proporciona un alias para una expresión en un constructor ROW, Entity Framework intentará generar uno. Para obtener más información, vea la sección "reglas de alias" en [identificadores](identifiers-entity-sql.md).  
   
  Las reglas siguientes se aplican a expresiones que usan alias en un constructor ROW:  
   
@@ -25,7 +25,7 @@ ms.locfileid: "64632222"
   
 - Dos expresiones en el mismo constructor ROW no pueden tener el mismo alias.  
   
- Para obtener más información sobre los constructores row, vea [fila](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md).  
+ Para obtener más información sobre los constructores de filas, vea [Row](row-entity-sql.md).  
   
 ## <a name="collection-constructors"></a>Constructores de colecciones  
  Los constructores de colecciones de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] se usan para crear una instancia de un elemento multiset a partir de una lista de valores. Todos los valores del constructor deben ser del tipo `T` mutuamente compatible y el constructor genera una colección de tipo `Multiset<T>`. Por ejemplo, la expresión siguiente crea una colección de enteros:  
@@ -38,7 +38,7 @@ ms.locfileid: "64632222"
   
  `multiset() {}`  
   
- Para obtener más información, consulte [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md).  
+ Para obtener más información, vea [MultiSet](multiset-entity-sql.md).  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>Constructores de tipos con nombre (inicializadores NamedType)  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] permite a los constructores de tipos (inicializadores) crear instancias de tipos complejos con nombre y de tipos de entidad. Por ejemplo, la expresión siguiente crea una instancia de un tipo `Person`.  
@@ -61,10 +61,10 @@ ms.locfileid: "64632222"
   
  Los argumentos del constructor se supone que están en el mismo orden que en la declaración de los atributos del tipo.  
   
- Para obtener más información, consulte [denominado Constructor de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md).  
+ Para obtener más información, vea [constructor de tipo con nombre](named-type-constructor-entity-sql.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Sistema de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)
+- [Información general sobre Entity SQL](entity-sql-overview.md)
+- [Sistema de tipos](type-system-entity-sql.md)

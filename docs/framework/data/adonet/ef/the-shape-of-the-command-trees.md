@@ -2,12 +2,12 @@
 title: Forma de los árboles de comandos
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3568f3deeaeeb31b69b41ac7c767001b792a8eb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763989"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248221"
 ---
 # <a name="the-shape-of-the-command-trees"></a>Forma de los árboles de comandos
 
@@ -25,7 +25,7 @@ Los árboles de comandos de consulta admiten una semántica más enriquecida que
 
 La propiedad DBQueryCommandTree.Query es la raíz del árbol de expresiones que describe la lógica de la consulta. La propiedad DBQueryCommandTree.Parameters contiene una lista de parámetros que se utilizan en la consulta. El árbol de expresiones está compuesto por objetos DbExpression.
 
-Un objeto DbExpression representa algún cálculo. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proporciona varios tipos de expresiones para crear expresiones de consulta, incluidos constantes, variables, funciones, constructores y operadores relacionales estándar como el filtro y la combinación. Cada objeto DbExpression tiene una propiedad ResultType que representa el tipo del resultado generado por la expresión. Este tipo se expresa como TypeUsage.
+Un objeto DbExpression representa algún cálculo. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] proporciona varios tipos de expresiones para crear expresiones de consulta, incluidos constantes, variables, funciones, constructores y operadores relacionales estándar como el filtro y la combinación. Cada objeto DbExpression tiene una propiedad ResultType que representa el tipo del resultado producido por esa expresión. Este tipo se expresa como TypeUsage.
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>Formas del árbol de comandos de consulta de salida
 
@@ -75,9 +75,9 @@ Se pueden pasar los siguientes tipos de función:
 
 - Funciones definidas por el usuario.
 
-Funciones canónicas (vea [funciones canónicas](../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md) para obtener más información) se especifican como parte de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], y los proveedores deben proporcionar implementaciones para las funciones canónicas basadas en estas especificaciones. Las funciones de almacén se basan en las especificaciones del manifiesto de proveedor correspondiente. Las funciones definidas por el usuario se basan en especificaciones de SSDL.
+Las funciones canónicas (vea [funciones canónicas](./language-reference/canonical-functions.md) para obtener más información) se especifican como parte de y los [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]proveedores deben proporcionar implementaciones para funciones canónicas basadas en esas especificaciones. Las funciones de almacén se basan en las especificaciones del manifiesto de proveedor correspondiente. Las funciones definidas por el usuario se basan en especificaciones de SSDL.
 
-Además, las funciones con el atributo NiladicFunction no tienen ningún argumento y se deben traducir sin el paréntesis al final.  Es decir, a  *\<functionName >* en lugar de  *\<functionName > ()*.
+Además, las funciones con el atributo NiladicFunction no tienen ningún argumento y se deben traducir sin el paréntesis al final.  Es decir, para  *\<functionname >* en lugar de  *\<functionname > ()* .
 
 #### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression
 
@@ -105,11 +105,11 @@ La propiedad Limite solo puede ser DbConstantExpression o DbParameterReferenceEx
 
 #### <a name="dbscanexpression"></a>DbScanExpression
 
-Cuando se utiliza en árboles de comandos de salida, DbScanExpression representa eficazmente una búsqueda a través de una tabla, una vista o una consulta de almacén, representada por EntitySetBase::Target.
+Cuando se usa en árboles de comandos de salida, DbScanExpression representa eficazmente un recorrido en una tabla, una vista o una consulta de almacén, representada por EntitySetBase:: target.
 
-Si la propiedad de metadatos "Definición de consulta" de destino es distinto de null, representa una consulta, el texto de consulta para el que se proporciona en esa propiedad de metadatos de lenguaje específico del proveedor (o dialecto) como se especifica en la definición de esquema del almacén.
+Si la propiedad de metadatos "definiendo consulta" del destino no es null, representa una consulta, el texto de la consulta para el que se proporciona en esa propiedad de metadatos en el idioma específico del proveedor (o dialecto) tal y como se especifica en la definición del esquema de almacenamiento.
 
-De lo contrario, el destino representa una tabla o una vista. Su prefijo de esquema está en la propiedad de metadatos "Schema", si no es null, en caso contrario, es el nombre del contenedor de entidades.  El nombre de tabla o vista es tanto la propiedad de metadatos "Table", si no es null, en caso contrario, la propiedad de nombre de la entidad establecida base.
+De lo contrario, el destino representa una tabla o una vista. El prefijo de esquema está en la propiedad de metadatos "Schema", si no es null; de lo contrario, es el nombre del contenedor de entidades.  El nombre de la tabla o vista es la propiedad de metadatos "Table", si no es null; de lo contrario, es la propiedad Name de la base del conjunto de entidades.
 
 Todas estas propiedades proceden de la definición del elemento EntitySet correspondiente en el archivo de definición de esquemas de almacenamiento (SSDL).
 
@@ -119,4 +119,4 @@ Cuando se hace referencia a los tipos primitivos en los árboles de comandos de 
 
 ## <a name="see-also"></a>Vea también
 
-- [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [Generación de SQL](sql-generation.md)

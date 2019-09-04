@@ -6,19 +6,19 @@ helpviewer_keywords:
 - caching [.NET Framework], configuration
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
-ms.openlocfilehash: 46f430f7cf112da40aa3b25bfb280c5014612eae
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 25467fc751ad772e74ca714e6059bc5134300ed6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663616"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252482"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > elemento (configuración de caché)
 Define un elemento que se usa para configurar una memoria caché basada en la clase <xref:System.Runtime.Caching.MemoryCache> . La clase <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> define un elemento [memoryCache](memorycache-element-cache-settings.md) que se puede usar para configurar la memoria caché. Se pueden usar varias instancias de la clase <xref:System.Runtime.Caching.MemoryCache> en una sola aplicación. Cada elemento `memoryCache` del archivo de configuración puede contener valores de configuración para una instancia de <xref:System.Runtime.Caching.MemoryCache> con nombre.  
   
- \<configuration>  
-\<system.runtime.caching>  
-\<memoryCache>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. Runtime. Caching >** ](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<memoryCache >**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,6 +55,7 @@ Define un elemento que se usa para configurar una memoria caché basada en la cl
   
 |Elemento|DESCRIPCIÓN|  
 |-------------|-----------------|  
+|[\<configuration>](../configuration-element.md)|Especifica el elemento raíz de cada archivo de configuración usado por las aplicaciones Common Language Runtime y .NET Framework.|  
 |[\<system.runtime.caching>](system-runtime-caching-element-cache-settings.md)|Contiene tipos que permiten implementar el almacenamiento en caché de resultados en las aplicaciones integradas en el .NET Framework.|  
   
 ## <a name="remarks"></a>Comentarios  

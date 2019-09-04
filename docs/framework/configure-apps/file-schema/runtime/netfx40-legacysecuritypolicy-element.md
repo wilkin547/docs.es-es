@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 881862b6b81ace1c1923b2a22d2fbe54d939d84e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 2cd6f937811ae503dd4de7ff989510c4eb8b8933
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663568"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252440"
 ---
 # <a name="netfx40_legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy >, elemento
 
 Especifica si el runtime usa la directiva de seguridad de acceso al código (CAS) heredada.
 
-\<configuration>\
-\<> en tiempo de ejecución \
-\<NetFx40_LegacySecurityPolicy>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> NetFx40_LegacySecurityPolicy**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -41,7 +41,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="enabled-attribute"></a>Atributo enabled
 
-|Value|DESCRIPCIÓN|
+|Valor|DESCRIPCIÓN|
 |-----------|-----------------|
 |`false`|El runtime no utiliza la Directiva CAS heredada. Este es el valor predeterminado.|
 |`true`|El Runtime usa una directiva CAS heredada.|
@@ -66,7 +66,7 @@ La Directiva CAS es específica de la versión. Las directivas de CA personaliza
 Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento a un ensamblado de .NET Framework 4 no afecta al [código transparente en seguridad](../../../misc/security-transparent-code.md); las reglas de transparencia se siguen aplicando.
 
 > [!IMPORTANT]
-> Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento puede dar lugar a penalizaciones de rendimiento significativas para los ensamblados de imagen nativa creados por el [generador de imágenes nativas (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) que no están instalados en la [caché global](../../../app-domains/gac.md)de ensamblados. La degradación del rendimiento se debe a la incapacidad del tiempo de ejecución para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que da lugar a que se carguen como ensamblados Just-in-Time.
+> Aplicar el `<NetFx40_LegacySecurityPolicy>` elemento puede dar lugar a penalizaciones de rendimiento significativas para los ensamblados de imagen nativa creados por el [generador de imágenes nativas (Ngen. exe)](../../../tools/ngen-exe-native-image-generator.md) que no están instalados en la [caché global de ensamblados](../../../app-domains/gac.md). La degradación del rendimiento se debe a la incapacidad del tiempo de ejecución para cargar los ensamblados como imágenes nativas cuando se aplica el atributo, lo que da lugar a que se carguen como ensamblados Just-in-Time.
 
 > [!NOTE]
 > Si especifica una versión de .NET Framework de destino anterior a la .NET Framework 4 en la configuración del proyecto para el proyecto de Visual Studio, se habilitará la Directiva de CAS, incluidas las directivas CA personalizadas que haya especificado para esa versión. Sin embargo, no podrá usar los nuevos tipos y miembros de .NET Framework 4. También puede especificar una versión anterior del .NET Framework mediante el [ \<elemento supportedRuntime >](../startup/supportedruntime-element.md) en el esquema de configuración de inicio en el [archivo de configuración](../../index.md)de la aplicación.

@@ -2,12 +2,12 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: 676080a6cc4208ea1a4d72b85a4a55e01fafe638
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfd0031f49cbdf41797cecf21c149fafde4d7a8c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641448"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249247"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 Crea registros anónimos con tipos asignados estructuralmente a partir de uno o varios valores.  
@@ -35,7 +35,7 @@ ROW ( expression [ AS alias ] [,...] )
 ROW(1 AS a, "abc" AS b, a+34 AS c)  
 ```  
   
- Si no proporciona un alias para una expresión en un constructor ROW, Entity Framework intentará generar uno. Para obtener más información, vea la sección "Reglas de alias" del tema [Identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md) .  
+ Si no proporciona un alias para una expresión en un constructor ROW, Entity Framework intentará generar uno. Para obtener más información, vea la sección "Reglas de alias" del tema [Identificadores](identifiers-entity-sql.md) .  
   
  Las reglas siguientes se aplican a expresiones que usan alias en un constructor ROW:  
   
@@ -43,12 +43,12 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 - Dos expresiones en el mismo constructor ROW no pueden tener el mismo alias.  
   
- Para obtener más información acerca de los constructores de consultas, vea [construir tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md).  
+ Para obtener más información sobre los constructores de consultas, vea [construir tipos](constructing-types-entity-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador ROW para construir registros anónimos escritos estructuralmente. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -56,6 +56,6 @@ ROW(1 AS a, "abc" AS b, a+34 AS c)
   
 ## <a name="see-also"></a>Vea también
 
-- [Tipos de constructores](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Definiciones de tipo](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md)
+- [Tipos de constructores](constructing-types-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)
+- [Definiciones de tipo](type-definitions-entity-sql.md)

@@ -2,15 +2,15 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: d9074b1c2ea4f8f9206c8de1e658c1aac762a74f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 641231825ca00c6accd19039ba1ec403208a077e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936094"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250892"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
-Especifica los grupos en los que se van a colocar los objetos devueltos por una expresión de consulta ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)).  
+Especifica los grupos en los que se van a colocar los objetos devueltos por una expresión de consulta ([SELECT](select-entity-sql.md)).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,12 +57,12 @@ GROUP BY Q   -- BAD
 GROUP BY 1   -- BAD, a constant is not allowed  
 ```  
   
- Para obtener un ejemplo de cómo se usa GROUP BY, vea [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md).  
+ Para obtener un ejemplo de cómo se usa GROUP BY, vea [HAVING](having-entity-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador GROUP BY para especificar los grupos en los que una consulta devuelve los objetos. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
+1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
@@ -70,5 +70,5 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Expresiones de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)
+- [Expresiones de consulta](query-expressions-entity-sql.md)

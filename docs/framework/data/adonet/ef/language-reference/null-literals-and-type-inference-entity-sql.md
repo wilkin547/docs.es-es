@@ -2,15 +2,15 @@
 title: Literales NULL e inferencia de tipos (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 3fea03146549f3d42bf08bbd5e7ce355d25bd4eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb2d9184e17ee2a9916a731eb20eefa105a73753
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641811"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249826"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Literales NULL e inferencia de tipos (Entity SQL)
-Los literales null son compatibles con cualquier tipo del sistema de tipos [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Sin embargo, para el tipo de un literal null se infiera correctamente, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] impone determinadas restricciones sobre dónde se puede usar un literal null.  
+Los literales null son compatibles con cualquier tipo del sistema de tipos [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Sin embargo, para que el tipo de un literal NULL se infiera correctamente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] , impone ciertas restricciones sobre dónde se puede utilizar un literal null.  
   
 ## <a name="typed-nulls"></a>Valores null con tipo  
  Los valores null con tipo se pueden utilizar en cualquier lugar. La inferencia de tipos no es necesaria para los valores null con tipo porque el tipo es conocido. Por ejemplo, puede crear un valor null de tipo Int16 con la siguiente construcción [!INCLUDE[esql](../../../../../../includes/esql-md.md)]:  
@@ -42,4 +42,4 @@ Los literales null son compatibles con cualquier tipo del sistema de tipos [!INC
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Información general sobre Entity SQL](entity-sql-overview.md)

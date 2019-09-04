@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3510cbf0a63a8031669bb7a819a8b3c7321aaea4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cb4d0ed5b33170c40aacb32bebbf1b59ca659be4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920762"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252612"
 ---
 # <a name="etwenable-element"></a>\<etwEnable >, elemento
 Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para los eventos de Common Language Runtime.  
   
- \<Elemento Configuration >  
-\<Elemento > en tiempo de ejecución  
-\<etwEnabled>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> etwEnabled**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ Especifica si se debe habilitar Seguimiento de eventos para Windows (ETW) para l
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|DESCRIPCIÓN|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |true|Habilitar ETW. Este es el valor predeterminado para las versiones de Windows a partir de los sistemas operativos Windows Vista y Windows Server 2008.|  
 |false|Deshabilitar ETW. Este es el valor predeterminado para versiones anteriores de Windows.|  

@@ -2,12 +2,12 @@
 title: Literales (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 6196c1b026b49847bd06cc9cda5ea6b6af289858
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aba737b522f75f1f81cc054fb87b414b06f9611
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69953286"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250343"
 ---
 # <a name="literals-entity-sql"></a>Literales (Entity SQL)
 En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
@@ -15,9 +15,9 @@ En este tema se describe la compatibilidad con los literales en [!INCLUDE[esql](
 ## <a name="null"></a>Null  
  El literal null se utiliza para representar valores null de cualquier tipo. Un literal null es compatible con todos los tipos.  
   
- Los valores null con tipo se pueden crear realizando una conversión de un literal null. Para obtener más información, vea [Cast](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md).  
+ Los valores null con tipo se pueden crear realizando una conversión de un literal null. Para obtener más información, vea [Cast](cast-entity-sql.md).  
   
- Para las reglas sobre dónde se pueden usar los literales null flotantes, vea [literales null e inferencia de tipos](../../../../../../docs/framework/data/adonet/ef/language-reference/null-literals-and-type-inference-entity-sql.md).  
+ Para las reglas sobre dónde se pueden usar los literales null flotantes, vea [literales null e inferencia de tipos](null-literals-and-type-inference-entity-sql.md).  
   
 ## <a name="boolean"></a>Boolean  
  Los literales booleanos se representan mediante las palabras clave `true` y `false`.  
@@ -103,4 +103,4 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Información general sobre Entity SQL](entity-sql-overview.md)

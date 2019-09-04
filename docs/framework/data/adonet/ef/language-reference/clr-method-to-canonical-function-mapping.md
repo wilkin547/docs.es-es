@@ -2,16 +2,16 @@
 title: Asignar un método CLR a una función canónica
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
-ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f14ad8d9e8f919fe820447cc991b102319b38d5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605722"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251223"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Asignar un método CLR a una función canónica
 
-Entity Framework proporciona un conjunto de funciones canónicas que implementan funcionalidad que es común en muchos sistemas de base de datos, como la manipulación de cadenas y las funciones matemáticas. Esto permite a los programadores dirigir sus conocimientos a un amplio intervalo de sistemas de base de datos. Cuando se invocan desde una tecnología de creación de consultas, como LINQ to Entities, estas funciones canónicas se convierten en la correspondiente función de almacenamiento correcta para ser utilizada por el proveedor. Esto permite que las llamadas a funciones se expresen de forma común en los orígenes de datos, proporcionando una experiencia de consultas coherente en los citados orígenes de datos. Los operadores bit a bit AND, OR, NOT y XOR también se asignan a funciones canónicas cuando el operando es un tipo numérico. En el caso de operandos booleanos, los operadores bit a bit AND, OR, NOT y XOR calculan las operaciones lógicas AND, OR, NOT y XOR de sus operandos. Para obtener más información, consulte [funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).
+Entity Framework proporciona un conjunto de funciones canónicas que implementan funcionalidad que es común en muchos sistemas de base de datos, como la manipulación de cadenas y las funciones matemáticas. Esto permite a los programadores dirigir sus conocimientos a un amplio intervalo de sistemas de base de datos. Cuando se invocan desde una tecnología de creación de consultas, como LINQ to Entities, estas funciones canónicas se convierten en la correspondiente función de almacenamiento correcta para ser utilizada por el proveedor. Esto permite que las llamadas a funciones se expresen de forma común en los orígenes de datos, proporcionando una experiencia de consultas coherente en los citados orígenes de datos. Los operadores bit a bit AND, OR, NOT y XOR también se asignan a funciones canónicas cuando el operando es un tipo numérico. En el caso de operandos booleanos, los operadores bit a bit AND, OR, NOT y XOR calculan las operaciones lógicas AND, OR, NOT y XOR de sus operandos. Para obtener más información, vea [funciones canónicas](canonical-functions.md).
 
 En los escenarios LINQ, las consultas en Entity Framework implican la asignación de ciertos métodos de CLR a métodos en el origen de datos subyacente a través de funciones canónicas. Las llamadas a métodos en una consulta en LINQ to Entities no asignadas explícitamente a una función canónica harán que se lance una excepción <xref:System.NotSupportedException> en tiempo de ejecución.
 
@@ -40,14 +40,14 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 
 |Método System.String (instancia)|Función canónica|Notas|
 |---------------------------------------|------------------------|-----------|
-|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` no es una constante, entonces asigna a IndexOf (`this`, `value`) > 0|
-|Boolean EndsWith(String `value`)|`this` AL IGUAL QUE `'` % `value`'|Si `value` no es una constante, entonces asigna a Right(`this`, length(`value`)) = `value`.|
+|Boolean Contains(String `value`)|`this` LIKE '%`value`%'|Si `value` no es una constante, se asigna a IndexOf (`this`, `value`) > 0|
+|Boolean EndsWith(String `value`)|`this`LIKE `'` '% `value`|Si `value` no es una constante, entonces asigna a Right(`this`, length(`value`)) = `value`.|
 |Boolean StartsWith(String `value`)|`this` LIKE '`value`%'|Si `value` no es una constante, entonces asigna a IndexOf(`this`, `value`) = 1.|
 |Length|Length(`this`)||
 |Int32 IndexOf(String `value`)|IndexOf(`this`, `value`) - 1||
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat(Concat(Substring(`this`, 1, `startIndex`), `value`), Substring(`this`, `startIndex`+1, Length(`this`) - `startIndex`))||
 |System.String Remove(Int32 `startIndex`)|Substring(`this`, 1, `startIndex`)||
-|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (subcadena (`this`, 1, `startIndex`), subcadena (`this`, `startIndex`  +  `count` + 1, longitud (`this`)-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) solo es compatible si `count` es un número entero mayor o igual que 0.|
+|System.String Remove(Int32 `startIndex`, Int32 `count`)|Concat (subcadena (`this`, 1, `startIndex`), subcadena (`this`, `startIndex` `this` `count`  +  + 1, longitud ()-(`startIndex` + `count`)))|Remove(`startIndex`, `count`) solo es compatible si `count` es un número entero mayor o igual que 0.|
 |System.String Replace(String `oldValue`, String `newValue`)|Replace(`this`, `oldValue`, `newValue`)||
 |System.String Substring(Int32 `startIndex`)|Substring(`this`, `startIndex` +1, Length(`this`) - `startIndex`)||
 |System.String Substring(Int32 `startIndex`, Int32 `length`)|Substring (`this`, `startIndex` + 1, `length`)||
@@ -69,9 +69,9 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 |Boolean op_GreaterThan(DateTime `t1`, DateTime `t2`)|> (operador)||
 |Boolean op_GreaterThanOrEqual(DateTime `t1`, DateTime `t2`)|> = (operador)||
 |Boolean op_Inequality(DateTime `t1`, DateTime `t2`)|!= (operador)||
-|Booleano op_LessThan (fecha y hora `t1`, fecha y hora `t2`)|< (operador)||
+|Boolean op_LessThan (DateTime `t1`, DateTime `t2`)|< (operador)||
 |Boolean op_LessThanOrEqual(DateTime `t1`, DateTime `t2`)|< = (operador)||
-|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` como DateInterval, \_<br /><br /> ByVal `DateValue` como DateTime, \_<br /><br /> ByVal opcional `FirstDayOfWeekValue` como FirstDayOfWeek = VbSunday, \_<br /><br /> ByVal opcional `FirstWeekOfYearValue` como FirstWeekOfYear = VbFirstJan1 \_<br /><br /> ) As Integer||Para obtener más información, consulte la sección Función DatePart.|
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` as DateInterval,\_<br /><br /> ByVal `DateValue` as DateTime,\_<br /><br /> Opcional ByVal `FirstDayOfWeekValue` as FirstDayOfWeek = VbSunday,\_<br /><br /> Opcional ByVal `FirstWeekOfYearValue` as primera_semana_año = VbFirstJan1\_<br /><br /> ) As Integer||Para obtener más información, consulte la sección Función DatePart.|
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||
 |Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||
 |Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||
@@ -85,13 +85,13 @@ En los escenarios LINQ, las consultas en Entity Framework implican la asignació
 |Método System.DateTime (instancia)|Función canónica|
 |-----------------------------------------|------------------------|
 |Boolean Equals(DateTime `value`)|= (operador)|
-|Day|Day(`this`)|
+|Día|Day(`this`)|
 |Hour|Hour(`this`)|
 |Millisecond|Millisecond(`this`)|
 |Minute|Minute(`this`)|
 |Mes|Month(`this`)|
 |Second|Second(`this`)|
-|Año|Year(`this`)|
+|Year|Year(`this`)|
 
 ## <a name="systemdatetimeoffset-method-instance-mapping"></a>Asignación del método System.DateTimeOffset (instancia)
 
@@ -99,13 +99,13 @@ La asignación mostrada para los métodos `get` sobre las propiedades enumeradas
 
 |Método System.DateTimeOffset (instancia)|Función canónica|Notas|
 |-----------------------------------------------|------------------------|-----------|
-|Day|Day(`this`)|No se admite en SQL Server 2005.|
+|Día|Day(`this`)|No se admite en SQL Server 2005.|
 |Hour|Hour(`this`)|No se admite en SQL Server 2005.|
 |Millisecond|Millisecond(`this`)|No se admite en SQL Server 2005.|
 |Minute|Minute(`this`)|No se admite en SQL Server 2005.|
 |Mes|Month(`this`)|No se admite en SQL Server 2005.|
 |Second|Second(`this`)|No se admite en SQL Server 2005.|
-|Año|Year(`this`)|No se admite en SQL Server 2005.|
+|Year|Year(`this`)|No se admite en SQL Server 2005.|
 
 > [!NOTE]
 > El método <xref:System.DateTimeOffset.Equals%2A> devuelve `true` si los objetos <xref:System.DateTimeOffset> comparados son iguales; de lo contrario, devuelve `false`. El método <xref:System.DateTimeOffset.CompareTo%2A> devuelve 0, 1 o -1 dependiendo de si el objeto <xref:System.DateTimeOffset> comparado es igual, mayor que, o menor que, respectivamente.
@@ -203,4 +203,4 @@ La función `DatePart` está asignada a una función canónica de entre un grupo
 
 ## <a name="see-also"></a>Vea también
 
-- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+- [LINQ to Entities](linq-to-entities.md)

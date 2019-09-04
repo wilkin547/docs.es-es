@@ -2,12 +2,12 @@
 title: TOP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4a4a0954-82e2-4eae-bcaf-7c4552f3532d
-ms.openlocfilehash: e7c6cf6b67dc3af29f7ca8fb22af419235a9b833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b55519b7f95deb6463af4c0a6a2a53975e5b5a2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879767"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248974"
 ---
 # <a name="top-entity-sql"></a>TOP (Entity SQL)
 
@@ -21,7 +21,7 @@ La cláusula SELECT puede tener una subcláusula TOP opcional después del modif
 
 ## <a name="arguments"></a>Argumentos
 
-`n` La expresión numérica que especifica el número de filas que se va a devolver. `n` puede ser un literal numérico único o un parámetro único.
+`n`Expresión numérica que especifica el número de filas que se van a devolver. `n` puede ser un literal numérico único o un parámetro único.
 
 ## <a name="remarks"></a>Comentarios
 
@@ -33,19 +33,19 @@ El siguiente es un ejemplo de expresión TOP constante:
 select distinct top(10) c.a1, c.a2 from T as a
 ```
 
-El siguiente es un ejemplo de expresión TOP con parámetros:
+El siguiente es un ejemplo de expresión TOP parametrizada:
 
 ```sql
 select distinct top(@topParam) c.a1, c.a2 from T as a
 ```
 
-TOP es no determinista a menos que la consulta esté ordenada. Si necesita un resultado determinista, utilice las subcláusulas [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md) y [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md) en la cláusula [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) . TOP y SKIP/LIMIT se excluyen mutuamente.
+TOP es no determinista a menos que la consulta esté ordenada. Si necesita un resultado determinista, utilice las subcláusulas [SKIP](skip-entity-sql.md) y [LIMIT](limit-entity-sql.md) en la cláusula [ORDER BY](order-by-entity-sql.md) . TOP y SKIP/LIMIT se excluyen mutuamente.
 
 ## <a name="example"></a>Ejemplo
 
 La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa la cláusula TOP para especificar la fila superior que se va a devolver del resultado de la consulta. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:
 
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.
 
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :
 
@@ -53,8 +53,8 @@ La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente
 
 ## <a name="see-also"></a>Vea también
 
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)
-- [LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)
-- [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [SELECT](select-entity-sql.md)
+- [SKIP](skip-entity-sql.md)
+- [LIMIT](limit-entity-sql.md)
+- [ORDER BY](order-by-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

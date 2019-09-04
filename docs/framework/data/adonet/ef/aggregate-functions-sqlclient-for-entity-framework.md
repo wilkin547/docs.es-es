@@ -2,25 +2,25 @@
 title: Funciones de agregado (SqlClient para Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: f2f2b557cd9f126ddd513a0f42d3ac95114c3822
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf476192cf049f230c1956e390d215ad4abaa821
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606787"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251708"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Funciones de agregado (SqlClient para Entity Framework)
 El Proveedor de datos .NET Framework para SQL Server (SqlClient) proporciona funciones de agregado. Las funciones de agregado realizan cálculos en un conjunto de valores de entrada y devuelven un valor. Estas funciones están en el espacio de nombres SqlServer, que está disponible al utilizar SqlClient. La propiedad del espacio de nombres de un proveedor permite a Entity Framework detectar qué prefijo usa este proveedor para estructuras concretas, como tipos y funciones.  
   
- Las siguientes son las funciones de agregado de SqlClient.  
+ A continuación se enumeran las funciones de agregado SqlClient.  
 
-## <a name="avgexpression"></a>AVG(Expression)
+## <a name="avgexpression"></a>AVG (expresión)
 
 Devuelve el promedio de los valores de una colección. Los valores Null se pasan por alto.
 
 **Argumentos**
 
-Un `Int32`, `Int64`, `Double`, y `Decimal`.
+`Int32` ,`Int64`, Y .`Decimal` `Double`
 
 **Valor devuelto**
 
@@ -31,13 +31,13 @@ Tipo de `expression`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
 
-## <a name="checksumaggcollection"></a>CHECKSUM_AGG(Collection)
+## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (colección)
  
  Devuelve la suma de comprobación de los valores de una colección. Los valores Null se pasan por alto.
  
  **Argumentos**
  
- Una colección (`Int32`).
+ Colección (`Int32`).
  
  **Valor devuelto**
  
@@ -48,18 +48,18 @@ Tipo de `expression`.
  [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
  [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]
    
-## <a name="countexpression"></a>COUNT_BIG
+## <a name="countexpression"></a>COUNT (expresión)
 
 Devuelve el número de elementos de una colección como un valor `Int32`.
 
 **Argumentos**
 
-Una colección\<T >, donde T es uno de los siguientes tipos:
+Colección\<t >, donde t es uno de los tipos siguientes:
 
 |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` (no se devuelve en SQL Server 2000)|
+|`Time`|`String`|`Binary`|`Guid`(no se devuelve en SQL Server 2000)|
 
 **Valor devuelto**
 
@@ -68,20 +68,20 @@ Una clase `Int32`.
 **Ejemplo**
 
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
-[!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)
+[! code-SQL[DP EntityServices conceptos # SQLSERVER_COUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)
  
-## <a name="countbigexpression"></a>COUNT_BIG(Expression)
+## <a name="count_bigexpression"></a>COUNT_BIG (expresión)
  
  Devuelve el número de elementos de una colección como un valor `bigint`.
  
  **Argumentos**
  
- Collection(T), donde T es uno de los siguientes tipos:
+ Colección (T), donde T es uno de los tipos siguientes:
  
  |   |   |   |   |
 |---|---|---|---|
 |`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
-|`Time`|`String`|`Binary`|`Guid` (no se devuelve en SQL Server 2000)|
+|`Time`|`String`|`Binary`|`Guid`(no se devuelve en SQL Server 2000)|
 
 **Valor devuelto**
 
@@ -92,13 +92,13 @@ Una clase `Int64`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]
 
-## <a name="maxexpression"></a>Max(Expression)
+## <a name="maxexpression"></a>MAX (expresión)
 
 Devuelve el valor máximo de la colección.
 
 **Argumentos**
 
-Collection(T), donde T es uno de los siguientes tipos: 
+Colección (T), donde T es uno de los tipos siguientes: 
 
 |   |   |   |   |
 |---|---|---|---|
@@ -114,13 +114,13 @@ Tipo de `expression`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]
 
-## <a name="minexpression"></a>MIN(Expression)
+## <a name="minexpression"></a>MIN (expresión)
 
 Devuelve el valor mínimo de una colección.
 
 **Argumentos**
 
-Collection(T), donde T es uno de los siguientes tipos: 
+Colección (T), donde T es uno de los tipos siguientes: 
 
 |   |   |   |   |
 |---|---|---|---|
@@ -136,13 +136,13 @@ Tipo de `expression`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]
 
-## <a name="stdevexpression"></a>STDEV(Expression)
+## <a name="stdevexpression"></a>STDEV (expresión)
 
 Devuelve la desviación estándar estadística de todos los valores de la expresión especificada.
 
 **Argumentos**
 
-Una colección (`Double`).
+Colección (`Double`).
 
 **Valor devuelto**
 
@@ -153,13 +153,13 @@ Objeto `Double`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]
 
-## <a name="stdevpexpression"></a>STDEVP(Expression)
+## <a name="stdevpexpression"></a>STDEVP (expresión)
 
 Devuelve la desviación estándar estadística de la población para todos los valores de la expresión especificada.
 
 **Argumentos**
 
-Una colección (`Double`).
+Colección (`Double`).
 
 **Valor devuelto**
 
@@ -170,13 +170,13 @@ Objeto `Double`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]
 
-## <a name="sumexpression"></a>SUM(Expression)
+## <a name="sumexpression"></a>SUM (expresión)
 
 Devuelve la suma de todos los valores de la colección.
 
 **Argumentos**
 
-Un Collection(T) donde T es uno de los siguientes tipos: `Int32`, `Int64`, `Double`, `Decimal`.
+Colección (T), donde T es uno de los tipos siguientes: `Int32`, `Int64`, `Double`, `Decimal`.
 
 **Valor devuelto**
 
@@ -187,13 +187,13 @@ Tipo de `expression`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]
 
-## <a name="varexpression"></a>Var
+## <a name="varexpression"></a>VAR (expresión)
 
 Devuelve la varianza estadística de todos los valores de la expresión especificada.
 
 **Argumentos**
 
-Una colección (`Double`).
+Colección (`Double`).
 
 **Valor devuelto**
 
@@ -204,13 +204,13 @@ Objeto `Double`.
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]
 
-## <a name="varpexpression"></a>VarP(Expression)
+## <a name="varpexpression"></a>VARP (expresión)
 
 Devuelve la varianza estadística de la población para todos los valores de la expresión especificada.
 
 **Argumentos**
 
-Una colección (`Double`).
+Colección (`Double`).
 
 **Valor devuelto**
 
@@ -226,7 +226,7 @@ Objeto `Double`.
 Para obtener más información sobre las funciones de agregado que SqlClient admite, consulte la documentación de la versión de SQL Server que especificó en el manifiesto del proveedor SQLCLIENT:
 
 - **SQL Server 2005:** [Funciones de agregado (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))
-- **SQL Server 2008 y versiones posterior:** [Funciones de agregado (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
+- **SQL Server 2008 y versiones posteriores:** [Funciones de agregado (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)
 
-- [Lenguaje Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [Funciones canónicas de agregado](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+- [Lenguaje Entity SQL](./language-reference/entity-sql-language.md)
+- [Funciones canónicas de agregado](./language-reference/aggregate-canonical-functions.md)

@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 79544f4180313a008669c56c4f2740c889043c6d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489501"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251246"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 Evalúa un conjunto de expresiones `Boolean` para determinar el resultado.  
@@ -41,7 +41,7 @@ END
  Devuelve el tipo de prioridad más alto del conjunto de tipos de `result_expression` y de la expresión `else_result_expression`opcional.  
   
 ## <a name="remarks"></a>Comentarios  
- El [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresión case es similar a la expresión case de Transact-SQL. Puede usar la expresión case para efectuar una serie de pruebas condicionales que permitan determinar qué expresión dará el resultado apropiado. Este formato de expresión case se aplica a una serie de una o varias expresiones `Boolean` para determinar la que produce el resultado correcto.  
+ La [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresión Case es similar a la expresión case de Transact-SQL. Puede usar la expresión case para efectuar una serie de pruebas condicionales que permitan determinar qué expresión dará el resultado apropiado. Este formato de expresión case se aplica a una serie de una o varias expresiones `Boolean` para determinar la que produce el resultado correcto.  
   
  La función CASE evalúa la `Boolean_expression` de cada cláusula WHEN en el orden especificado, y devuelve la `result_expression` de la primera `Boolean_expression` que se evalúa como `true`. Las expresiones restantes no se evalúan. Si ninguna `Boolean_expression` se evalúa como `true`, el motor de base de datos devuelve la `else_result_expression` si se especifica una cláusula ELSE, o un valor Null en otro caso.  
   
@@ -50,7 +50,7 @@ END
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa la expresión CASE para evaluar un conjunto de expresiones `Boolean` en orden con el fin de determinar el resultado. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados PrimitiveType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
@@ -58,6 +58,6 @@ END
   
 ## <a name="see-also"></a>Vea también
 
-- [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
-- [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [THEN](then-entity-sql.md)
+- [SELECT](select-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

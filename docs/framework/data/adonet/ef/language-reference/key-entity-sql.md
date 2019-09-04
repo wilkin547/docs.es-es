@@ -2,12 +2,12 @@
 title: KEY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 9cd3276583741f2b0261cb8a0e55f4185d20100e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 44ab5352c3b2a94cb210c3de775d2347d2df7fe7
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780268"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250482"
 ---
 # <a name="key-entity-sql"></a>KEY (Entity SQL)
 Extrae la clave de una referencia o de una expresión de entidad.  
@@ -31,7 +31,7 @@ from LOB.Orders as o
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador KEY para extraer la parte de la clave de una expresión con referencia de tipo. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -39,7 +39,7 @@ from LOB.Orders as o
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)
-- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)
-- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)
+- [CREATEREF](createref-entity-sql.md)
+- [REF](ref-entity-sql.md)
+- [DEREF](deref-entity-sql.md)

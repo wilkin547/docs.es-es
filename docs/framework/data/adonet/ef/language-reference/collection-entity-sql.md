@@ -2,12 +2,12 @@
 title: COLLECTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 03228bfa-be3a-4ccc-82f8-eee429f85cf1
-ms.openlocfilehash: 8cd440571726796ee3d2c91e0d2f6b50571e8e27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e611add4ce3f20e42bb01b0bf0392bbe81ec548
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785332"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251195"
 ---
 # <a name="collection-entity-sql"></a>COLLECTION (Entity SQL)
 La palabra clave COLLECTION solo se usa en la definición de una función inline. Las funciones de colección son funciones que operan en una colección de valores y generan un resultado escalar.  
@@ -23,7 +23,7 @@ COLLECTION(type_definition)
  Una expresión que devuelve una colección de tipos, filas o referencias compatibles.  
   
 ## <a name="remarks"></a>Comentarios  
- Para obtener más información sobre la palabra clave COLLECTION, vea [Type Definitions](../../../../../../docs/framework/data/adonet/ef/language-reference/type-definitions-entity-sql.md).  
+ Para obtener más información sobre la palabra clave COLLECTION, vea [Type Definitions](type-definitions-entity-sql.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se muestra cómo usar la palabra clave COLLECTION para declarar una colección de decimales como un argumento para una función inline de consulta.  
@@ -32,4 +32,4 @@ COLLECTION(type_definition)
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

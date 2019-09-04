@@ -2,12 +2,12 @@
 title: HAVING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b5d52d97-8372-4335-beac-2d0b79dc3707
-ms.openlocfilehash: 76a63140668fb1f41cf9e6f901d9a43240a1d098
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fe8a177b83932c1c7607f8444c05292c0ee29684
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936082"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250846"
 ---
 # <a name="having-entity-sql"></a>HAVING (Entity SQL)
 Especifica una condición de búsqueda para un grupo o agregado.  
@@ -26,7 +26,7 @@ Especifica una condición de búsqueda para un grupo o agregado.
  La cláusula HAVING se utiliza para especificar una condición de filtrado adicional en el resultado de una agrupación. Si no se especifica una cláusula GROUP BY en la expresión de consulta, se supone un grupo de conjunto único implícito.  
   
 > [!NOTE]
-> HAVING solo se puede usar con la instrucción [Select](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) . Cuando no se usa [Group by](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md) , having se comporta como una cláusula WHERE.  
+> HAVING solo se puede usar con la instrucción [Select](select-entity-sql.md) . Cuando no se usa [Group by](group-by-entity-sql.md) , having se comporta como una cláusula WHERE.  
   
  La cláusula HAVING funciona como la cláusula WHERE salvo que se aplica después de la operación GROUP BY. Esto significa que la cláusula HAVING solo puede hacer referencias a agrupar alias y agregados, como se muestra en el ejemplo siguiente.  
   
@@ -40,7 +40,7 @@ HAVING SUM(o.Quantity) > 1
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza los operadores HAVING y GROUP BY para especificar una condición de búsqueda para un grupo o un agregado. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
+1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
@@ -48,5 +48,5 @@ HAVING SUM(o.Quantity) > 1
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Expresiones de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)
+- [Expresiones de consulta](query-expressions-entity-sql.md)

@@ -2,12 +2,12 @@
 title: 'Generar SQL a partir de árboles de comandos: procedimientos recomendados'
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 366e27f8c8a04c5d2507ab37459ad6d5abc255ae
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606672"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251575"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generar SQL a partir de árboles de comandos: procedimientos recomendados
 
@@ -125,7 +125,7 @@ Considere el primer ejemplo de este tema. Si se realiza una traducción básica 
 
 ## <a name="join-alias-flattening"></a>Eliminación de la información de estructura jerárquica de los alias de combinación
 
-A diferencia de cualquier otra expresión relacional en un árbol de comandos de salida, DbJoinExpression genera un tipo de resultado que es una fila compuesta de dos columnas, cada una de las cuales corresponde a una de las entradas. Cuando se compila una expresión DbPropertyExpression para tener acceso a una propiedad escalar que se origina en una combinación, es a través de otra expresión DbPropertyExpression.
+A diferencia de cualquier otra expresión relacional en un árbol de comandos de salida, DbJoinExpression genera un tipo de resultado que es una fila compuesta de dos columnas, cada una de las cuales corresponde a una de las entradas. Cuando se crea una DbPropertyExpression para tener acceso a una propiedad escalar que se origina a partir de una combinación, se trata de otro DbPropertyExpression.
 
 En los ejemplos se incluye "a.b.y" en el ejemplo 2 y "b.c.y" en el ejemplo 3. Sin embargo, en las instrucciones SQL correspondientes se hace referencia a ellos como "b.y". Este nuevo uso de alias se denomina reducción de alias de combinación.
 
@@ -137,7 +137,7 @@ También, al reducir las combinaciones, las tablas (o subconsultas) que particip
 
 ## <a name="avoid-select-"></a>Evitar SELECT *
 
-No utilice `SELECT *` para seleccionar en las tablas bases. El modelo de almacenamiento en un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplicación solo puede contener un subconjunto de las columnas que se encuentran en la tabla de base de datos. En este caso, `SELECT *` puede generar un resultado incorrecto. En su lugar, debe especificar todas las columnas que participan utilizando los nombres de columna del tipo de resultado de las expresiones que participan.
+No utilice `SELECT *` para seleccionar en las tablas bases. El modelo de almacenamiento de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] una aplicación solo puede incluir un subconjunto de las columnas que se encuentran en la tabla de base de datos. En este caso, `SELECT *` puede generar un resultado incorrecto. En su lugar, debe especificar todas las columnas que participan utilizando los nombres de columna del tipo de resultado de las expresiones que participan.
 
 ## <a name="reuse-of-expressions"></a>Reutilizar expresiones
 
@@ -145,8 +145,8 @@ Las expresiones se pueden reutilizar en el árbol de comandos de consulta pasado
 
 ## <a name="mapping-primitive-types"></a>Asignar tipos primitivos
 
-Al asignar tipos conceptuales (EDM) a los tipos de proveedor, debe asignar al tipo más ancho (Int32) para que quepan todos los valores posibles. Evite además la asignación a tipos que no se puede usar para muchas operaciones, como los tipos BLOB (por ejemplo, `ntext` en SQL Server).
+Al asignar tipos conceptuales (EDM) a los tipos de proveedor, debe asignar al tipo más ancho (Int32) para que quepan todos los valores posibles. Además, evite la asignación a tipos que no se pueden usar para muchas operaciones, como los tipos de blob `ntext` (por ejemplo, en SQL Server).
 
 ## <a name="see-also"></a>Vea también
 
-- [Generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)
+- [Generación de SQL](sql-generation.md)

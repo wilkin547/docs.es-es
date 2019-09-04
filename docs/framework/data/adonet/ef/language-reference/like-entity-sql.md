@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 58828b812ce374a664e4d232b707f22d5ca438c1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fbe27f6e25c9d69f092a060fa2c3fbf0abc93318
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912282"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250514"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Determina si un elemento `String` de caracteres específico coincide con un patrón especificado.  
@@ -68,7 +68,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 ## <a name="example"></a>Ejemplo  
  Las dos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consultas siguientes utilizan los operadores Like y escape para determinar si una cadena de caracteres específica coincide con un patrón especificado. La primera consulta busca el `Name` que empieza con los caracteres. `Down_` Esta consulta utiliza la opción ESCAPE porque el carácter de subrayado (`_`) es un carácter comodín. Sin especificar la opción ESCAPE, la consulta buscaría valores de `Name` que empezasen con la palabra `Down` seguida de cualquier carácter individual diferente del carácter de subrayado. Las consultas se basan en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
+1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
@@ -76,4 +76,4 @@ match [NOT] LIKE pattern [ESCAPE escape]
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

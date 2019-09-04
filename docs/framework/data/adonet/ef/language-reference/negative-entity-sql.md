@@ -1,13 +1,13 @@
 ---
-title: '- (Negativo) (Entity SQL)'
+title: '- Afectar (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 208e54ef-4741-4ec5-89d6-6ff700863cb0
-ms.openlocfilehash: 6e5512546faeaa9760dcf135165a999a6f95322b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: effd537bcd53052830f2195e18ca959b49d87255
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760394"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249922"
 ---
 # <a name="--negative-entity-sql"></a>- (Negativo) (Entity SQL)
 Devuelve el valor negativo de una expresión numérica.  
@@ -31,7 +31,7 @@ Devuelve el valor negativo de una expresión numérica.
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa el operador aritmético - para devolver el valor negativo de una expresión numérica. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -39,4 +39,4 @@ Devuelve el valor negativo de una expresión numérica.
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

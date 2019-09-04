@@ -2,22 +2,22 @@
 title: Asignación basada en atributos
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: 41152aa81ab84a2ab77e9a4ebf16e102ee5c0e3f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1e11a2efc3d1afa56a27d6e2c60149a509511080
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964092"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248061"
 ---
 # <a name="attribute-based-mapping"></a>Asignación basada en atributos
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]asigna una base de datos SQL Server [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] a un modelo de objetos aplicando atributos o utilizando un archivo de asignación externo. En este tema se describe el enfoque basado en atributos.  
   
- En su forma más elemental, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna una base de datos a un <xref:System.Data.Linq.DataContext>, una tabla a una clase y las columnas y relaciones a las propiedades de esas clases. También puede utilizar atributos para asignar una jerarquía de herencia en su modelo de objetos. Para obtener más información, consulte [Cómo Genere el modelo de objetos en Visual Basic C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)o.  
+ En su forma más elemental, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] asigna una base de datos a un <xref:System.Data.Linq.DataContext>, una tabla a una clase y las columnas y relaciones a las propiedades de esas clases. También puede utilizar atributos para asignar una jerarquía de herencia en su modelo de objetos. Para obtener más información, vea [Cómo: Genere el modelo de objetos en Visual Basic C# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)o.  
   
- Los desarrolladores que usan Visual Studio normalmente realizan la asignación basada en atributos mediante el Object Relational Designer. También puede usar la herramienta de la línea de comandos de SQLMetal o incluir los atributos en el código manualmente. Para obtener más información, vea [Cómo: Genere el modelo de objetos en Visual Basic C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)o.  
+ Los desarrolladores que usan Visual Studio normalmente realizan la asignación basada en atributos mediante el Object Relational Designer. También puede usar la herramienta de la línea de comandos de SQLMetal o incluir los atributos en el código manualmente. Para obtener más información, consulte [Cómo Genere el modelo de objetos en Visual Basic C# ](how-to-generate-the-object-model-in-visual-basic-or-csharp.md)o.  
   
 > [!NOTE]
-> También puede realizar la asignación utilizando un archivo XML externo. Para obtener más información, consulte [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+> También puede realizar la asignación utilizando un archivo XML externo. Para obtener más información, consulte [asignación externa](external-mapping.md).  
   
  En las secciones siguientes se describe con más detalle la asignación basada en atributos. Para obtener más información, vea el espacio de nombres <xref:System.Data.Linq.Mapping>.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "69964092"
 > Los valores de propiedad AssociationAttribute y ColumnAttribute Storage distinguen entre mayúsculas y minúsculas. Por ejemplo, asegúrese de que los valores utilizados en el atributo de la propiedad AssociationAttribute.Storage coinciden con el uso de mayúsculas y minúsculas para los nombres de propiedad correspondientes del resto del código. Esto se aplica a todos los lenguajes de programación de .NET, incluso aquellos que normalmente no distinguen mayúsculas de minúsculas, incluido Visual Basic. Para obtener más información acerca de la propiedad Storage, vea <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Atributo AssociationAttribute  
- Utilice este atributo para designar una propiedad que represente una asociación en la base de datos, como una relación entre clave externa y clave principal. Para obtener más información acerca de las [relaciones, consulte Cómo: Asignar relaciones de base de datos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
+ Utilice este atributo para designar una propiedad que represente una asociación en la base de datos, como una relación entre clave externa y clave principal. Para obtener más información acerca de las [relaciones, consulte Cómo: Asignar relaciones de base de datos](how-to-map-database-relationships.md).  
   
  En la tabla siguiente se describen las propiedades de este atributo.  
   
@@ -144,4 +144,4 @@ ms.locfileid: "69964092"
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Referencia](reference.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf97cc1ec544c7cf640c43b1b45760fca8cffe89
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 8f4dffe5428ccb7541055fa4f3f335f57deaf2ec
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663555"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252431"
 ---
 # <a name="netfx40_pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience >, elemento
 
 Especifica si el runtime corrige automáticamente las declaraciones de invocación de plataforma incorrectas en tiempo de ejecución, a costa de transiciones más lentas entre código administrado y código no administrado.
 
-\<configuration>\
-\<> en tiempo de ejecución \
-\<NetFx40_PInvokeStackResilience>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> NetFx40_PInvokeStackResilience**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -40,7 +40,7 @@ En las siguientes secciones se describen los atributos, los elementos secundario
 
 ## <a name="enabled-attribute"></a>Atributo enabled
 
-|Valor|DESCRIPCIÓN|
+|Value|DESCRIPCIÓN|
 |-----------|-----------------|
 |`0`|El motor en tiempo de ejecución utiliza la arquitectura de serialización de interoperabilidad más rápida incluida en el .NET Framework 4, que no detecta ni corrige las declaraciones de invocación de plataforma incorrectas. Este es el valor predeterminado.|
 |`1`|El motor en tiempo de ejecución utiliza transiciones más lentas que detectan y corrigen declaraciones de invocación de plataforma incorrectas.|

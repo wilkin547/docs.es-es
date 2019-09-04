@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d5b5b8a479efd3918dc23616aa331cc07a901ac
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 4919424339df1f8d2c68465bd9f9af42f344fe37
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972210"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254065"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Tutorial: Mi primera aplicación de escritorio WPF
 
@@ -55,7 +55,7 @@ El primer paso es crear la infraestructura de la aplicación, que incluye una de
 
 1. Cree un nuevo proyecto de aplicación de WPF en Visual Basic C# o **`ExpenseIt`** visual llamado:
 
-   1. Abra Visual Studio y seleccione **crear un nuevo proyecto** en el menú introducción.
+   1. Abra Visual Studio y seleccione **crear un nuevo proyecto** **en el menú introducción.**
 
       Se abre el cuadro de diálogo **crear nuevo proyecto** .
 
@@ -143,7 +143,7 @@ En esta sección, agregará dos páginas y una imagen a la aplicación.
 
 1. Establezca en "`ExpenseIt - Home`". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Establezca los `DesignHeight` valores `DesignWidth` de los elementos y en 300 píxeles.
+1. Establezca el `DesignHeight` en 350 píxeles y el `DesignWidth` en 500 píxeles.
 
     El XAML aparece ahora como se indica a continuación para Visual Basic:
 
@@ -184,7 +184,7 @@ En esta sección, agregará dos páginas y una imagen a la aplicación.
 
 1. Establezca en "`ExpenseIt - View Expense`". <xref:System.Windows.Controls.Page.Title%2A>
 
-1. Establezca los `DesignHeight` valores `DesignWidth` de los elementos y en 300 píxeles.
+1. Establezca el `DesignHeight` en 350 píxeles y el `DesignWidth` en 500 píxeles. 
 
     *ExpenseReportPage. Xaml* tiene ahora el siguiente aspecto en Visual Basic:
 
@@ -218,7 +218,7 @@ En esta sección, agregará dos páginas y una imagen a la aplicación.
 
 ## <a name="build-and-run-the-application"></a>Compilar y ejecutar la aplicación
 
-1. Para compilar y ejecutar la aplicación, presione **F5** o seleccione **iniciar** depuración en el menú Depurar.
+1. Para compilar y ejecutar la aplicación, presione **F5** o seleccione **iniciar depuración** en el menú **depurar** .
 
     En la ilustración siguiente se muestra la aplicación <xref:System.Windows.Navigation.NavigationWindow> con los botones:
 
@@ -275,7 +275,7 @@ Para crear esta interfaz de usuario, agregará los siguientes elementos *`Expens
 - Un <xref:System.Windows.Controls.Label> (para el encabezado de lista).
 - Un <xref:System.Windows.Controls.Button> (para ver el informe de gastos de la persona que está seleccionada en la lista).
 
-Cada control se coloca en una fila de <xref:System.Windows.Controls.Grid> estableciendo la <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> propiedad adjunta. Para obtener más información sobre las propiedades adjuntas, vea [información general sobre las propiedades](../advanced/attached-properties-overview.md)adjuntas.
+Cada control se coloca en una fila de <xref:System.Windows.Controls.Grid> estableciendo la <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> propiedad adjunta. Para obtener más información sobre las propiedades adjuntas, vea [información general sobre las propiedades adjuntas](../advanced/attached-properties-overview.md).
 
 1. En *`ExpenseItHome.xaml`* , agregue el código XAML siguiente en algún <xref:System.Windows.Controls.Grid> lugar entre las etiquetas:
 

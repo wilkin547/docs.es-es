@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 253dcf092deadd1049d0556af4ea0630602110d0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 385f9a8057ea6aa3637f7fae6fec79154ac625ba
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69935821"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251230"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 Convierte una expresión de un tipo de datos a otro.  
@@ -23,7 +23,7 @@ CAST ( expression AS data_type )
  Cualquier expresión válida que se pueda convertir a `data_type`.  
   
  `data_type`  
- Tipo de datos de destino proporcionado por el sistema. Debe ser un tipo (escalar) primitivo. El valor de `data_type` usado depende del espacio de la consulta. Si se ejecuta una consulta con la clase <xref:System.Data.EntityClient.EntityCommand>, el tipo de datos es un tipo definido en el modelo conceptual. Para obtener más información, consulta [CSDL Specification](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md). Si se ejecuta una consulta con la clase <xref:System.Data.Objects.ObjectQuery%601>, el tipo de datos es un tipo de Common Language Runtime (CLR).  
+ Tipo de datos de destino proporcionado por el sistema. Debe ser un tipo (escalar) primitivo. El valor de `data_type` usado depende del espacio de la consulta. Si se ejecuta una consulta con la clase <xref:System.Data.EntityClient.EntityCommand>, el tipo de datos es un tipo definido en el modelo conceptual. Para obtener más información, consulta [CSDL Specification](csdl-specification.md). Si se ejecuta una consulta con la clase <xref:System.Data.Objects.ObjectQuery%601>, el tipo de datos es un tipo de Common Language Runtime (CLR).  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve el mismo valor que `data_type`.  
@@ -53,7 +53,7 @@ CAST( e as T )
 ## <a name="example"></a>Ejemplo  
  La consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] siguiente usa el operador CAST para convertir una expresión de un tipo de datos a otro. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
+1. Siga el procedimiento descrito [en cómo: Ejecuta una consulta que devuelve resultados](../how-to-execute-a-query-that-returns-primitivetype-results.md)PrimitiveType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecutePrimitiveTypeQuery` :  
   
@@ -61,4 +61,4 @@ CAST( e as T )
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

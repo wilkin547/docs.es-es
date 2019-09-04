@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
-ms.openlocfilehash: bf6c889fff2635cd50597e72151c46fbb4d9b97d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5506c37ea4f313599f666014fd305a79f5cc7ffb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760589"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250248"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>Ejemplos de sintaxis de consulta basada en métodos: Conversión
-Los ejemplos de este tema muestran cómo usar el <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> y <xref:System.Linq.Enumerable.ToList%2A> métodos para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) utilizando sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
+En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.ToArray%2A>los <xref:System.Linq.Enumerable.ToDictionary%2A> métodos <xref:System.Linq.Enumerable.ToList%2A> , y para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) con la sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
   
- Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:  
+ En los ejemplos de este tema se usan `using` las siguientes / `Imports` instrucciones:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -46,4 +46,4 @@ Los ejemplos de este tema muestran cómo usar el <xref:System.Linq.Enumerable.To
   
 ## <a name="see-also"></a>Vea también
 
-- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

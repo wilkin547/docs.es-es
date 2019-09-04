@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
-ms.openlocfilehash: 8f09983aa90be666cc13ae4eba018db2ae706daa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3a9bcef1944d0d018134383d3e556fe6ac24822
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760602"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250218"
 ---
 # <a name="method-based-query-syntax-examples-grouping"></a>Ejemplos de sintaxis de consulta basada en métodos: Agrupar
-Los ejemplos de este tema muestran cómo usar el `GroupBy` método para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) utilizando sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail de la base de datos de ejemplo AdventureWorks.  
+En los ejemplos de este tema se muestra cómo usar el `GroupBy` método para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) con la sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail de la base de datos de ejemplo AdventureWorks.  
   
- Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:  
+ En los ejemplos de este tema se usan `using` las siguientes / `Imports` instrucciones:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -40,4 +40,4 @@ Los ejemplos de este tema muestran cómo usar el `GroupBy` método para consulta
   
 ## <a name="see-also"></a>Vea también
 
-- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

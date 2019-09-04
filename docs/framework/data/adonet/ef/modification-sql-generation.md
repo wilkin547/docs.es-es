@@ -2,18 +2,18 @@
 title: Generar SQL de modificación
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab0c18473e73b2d6fe9eb45c43e9b47947a55d99
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034135"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248575"
 ---
 # <a name="modification-sql-generation"></a>Generar SQL de modificación
 
 En esta sección se describe cómo desarrollar un módulo de generación de SQL de modificación para el proveedor (de bases de datos conformes a SQL:1999). Este módulo es responsable de la conversión de un árbol de comandos de modificación en las instrucciones INSERT, UPDATE o DELETE de SQL adecuadas.
 
-Para obtener información sobre la generación de SQL para las instrucciones select, vea [generación de SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).
+Para obtener información sobre la generación de SQL para las instrucciones SELECT, vea [generación de SQL](sql-generation.md).
 
 ## <a name="overview-of-modification-command-trees"></a>Información general sobre los árboles de comandos de modificación
 
@@ -27,11 +27,11 @@ DbModificationCommandTree es una representación del modelo de objetos de una op
 
 - DbDeleteCommandTree
 
-DbModificationCommandTree y sus implementaciones producidos por el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] siempre representan una operación única fila. En esta sección se describen estos tipos con sus restricciones en .NET Framework versión 3.5.
+DbModificationCommandTree y sus implementaciones generadas por [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] siempre representan una operación de una sola fila. En esta sección se describen estos tipos con sus restricciones en .NET Framework versión 3.5.
 
-![Diagram](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
+![Diagram](./media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")
 
-DbModificationCommandTree tiene una propiedad de destino que representa el conjunto de destinos para la operación de modificación. La propiedad Expression del destino, que define el conjunto de entrada, siempre es DbScanExpression.  Una expresión DbScanExpression puede representar una tabla o una vista o un conjunto de datos definidos con una consulta si la propiedad de metadatos "Definición de consulta" de su destino es distinto de null.
+DbModificationCommandTree tiene una propiedad de destino que representa el conjunto de destinos para la operación de modificación. La propiedad Expression del destino, que define el conjunto de entrada, siempre es DbScanExpression.  Un DbScanExpression puede representar una tabla o una vista, o un conjunto de datos definido con una consulta si la propiedad de metadatos "definiendo consulta" de su destino no es NULL.
 
 Una expresión DbScanExpression que representa una consulta solo puede alcanzar un proveedor como destino de la modificación si el conjunto se definió mediante una consulta de definición del modelo pero no se proporcionó ninguna función para la operación de modificación correspondiente. Es posible que los proveedores no puedan admitir este tipo de escenario (por ejemplo, SqlClient no puede).
 
@@ -74,11 +74,11 @@ Value especifica el nuevo valor con el que se actualiza la propiedad. Es de tipo
 
 Predicate especifica el predicado que se usa para determinar qué miembros de la colección de destino se deben actualizar o eliminar. Es un árbol de expresión generado del siguiente subconjunto de DbExpressions:
 
-- DbComparisonExpression de tipo Equals, con el elemento secundario derecho es DbPropertyExpression como restringidas a continuación y el elemento secundario izquierdo DbConstantExpression.
+- DbComparisonExpression of Kind es igual a, donde el elemento secundario Right es DbPropertyExpression como Restricted a continuación y el elemento secundario Left a DbConstantExpression.
 
 - DbConstantExpression
 
-- DbIsNullExpression en una expresión DbPropertyExpression como restringidas a continuación
+- DbIsNullExpression a través de DbPropertyExpression como restringido a continuación
 
 - DbPropertyExpression en DbVariableReferenceExpression, que representa una referencia al destino del árbol DbModificationCommandTree correspondiente.
 
@@ -90,7 +90,7 @@ Predicate especifica el predicado que se usa para determinar qué miembros de la
 
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Generación de SQL de modificación en el proveedor de ejemplo
 
-El [proveedor de ejemplo de Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) muestra los componentes de proveedores de datos de ADO.NET que admiten la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Tiene como destino una base de datos de SQL Server 2005 y se implementa como un contenedor en el proveedor de datos ADO.NET 2.0 System.Data.SqlClient.
+En el [proveedor de ejemplo Entity Framework](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) se muestran los componentes de los proveedores de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]datos ADO.net que admiten. Tiene como destino una base de datos de SQL Server 2005 y se implementa como un contenedor en el proveedor de datos ADO.NET 2.0 System.Data.SqlClient.
 
 El módulo de generación de SQL de modificación del proveedor de ejemplo (situado en el archivo SQL Generation\DmlSqlGenerator.cs) toma un árbol DbModificationCommandTree como entrada y genera una única instrucción SQL de modificación posiblemente seguida por una instrucción SELECT para devolver un lector si se especifica en DbModificationCommandTree. Observe que la base de datos de SQL Server de destino afecta a la forma de los comandos generados.
 
@@ -116,7 +116,7 @@ Dado que la instancia de DbPropertyExpression siempre representa la tabla de ent
 
 Para una implementación DbInsertCommandTree determinada en el proveedor de ejemplo, el comando de inserción generado sigue una de las dos plantillas de inserción siguientes.
 
-La primera plantilla incluye un comando para realizar la inserción dados los valores de la lista de SetClauses y una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning para la fila insertada si la propiedad Returning no es NULL. El elemento de predicado "\@ @ROWCOUNT > 0" es true si se ha insertado una fila. El elemento de predicado "keyMemberI = keyValueI &#124; SCOPE_IDENTITY ()" toma la forma "keyMemberI = SCOPE_IDENTITY ()" solo si keyMemberI es una clave generada por el almacén, ya que SCOPE_IDENTITY () devuelve el último valor identity insertado en una identidad () columna generada por el almacén).
+La primera plantilla incluye un comando para realizar la inserción dados los valores de la lista de SetClauses y una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning para la fila insertada si la propiedad Returning no es NULL. El elemento de predicado "\@ @ROWCOUNT > 0" es true si se insertó una fila. El elemento de predicado "keyMemberI &#124; = keyValueI SCOPE_IDENTITY ()" toma la forma "keyMemberI = SCOPE_IDENTITY ()" solo si keyMemberI es una clave generada por el almacén, ya que SCOPE_IDENTITY () devuelve el último valor de identidad insertado en una identidad ( columna generada por el almacén).
 
 ```sql
 -- first insert Template
@@ -212,7 +212,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]
 ```
 
-La cláusula set incluye la cláusula set falsa ("@i = 0") solo si no se especifica ninguna cláusula. Esto permite garantizar que las columnas calculadas en el almacén se vuelven a calcular.
+La cláusula SET tiene la cláusula SET falsa ("@i = 0") solo si no se especifica ninguna cláusula SET. Esto permite garantizar que las columnas calculadas en el almacén se vuelven a calcular.
 
 Únicamente si la propiedad Returning no es NULL, se genera una instrucción SELECT para devolver las propiedades especificadas en la propiedad Returning.
 
@@ -302,4 +302,4 @@ where ([CategoryID] = @p0)
 
 ## <a name="see-also"></a>Vea también
 
-- [Escritura de un proveedor de datos de Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Escritura de un proveedor de datos de Entity Framework](writing-an-ef-data-provider.md)

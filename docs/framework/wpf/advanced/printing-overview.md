@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: bfac0248e6d9dae3ef87f43b2c713e1dc64a9464
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: b6de7aab77c168f353b39b44853fc224cbf0244d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016107"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254079"
 ---
 # <a name="printing-overview"></a>Información general sobre impresión
-Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windows Presentation Foundation (WPF) tienen un nuevo conjunto de API de impresión y administración del sistema de impresión. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean aplicaciones de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], así como para los que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] y la ruta de impresión [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windows Presentation Foundation (WPF) tienen un nuevo conjunto de API de impresión y administración del sistema de impresión. Con [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], algunas de estas mejoras del sistema de impresión también están disponibles para los desarrolladores que crean aplicaciones de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)], así como para los que usan código no administrado. La base de esta nueva funcionalidad es el nuevo formato de archivo XML Paper Specification (XPS) y la ruta de impresión XPS.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -31,11 +31,11 @@ Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windo
 ## <a name="about-xps"></a>Sobre XPS  
  XPS es un formato de documento electrónico, un formato de archivo de cola de impresión y un lenguaje de descripción de página. Es un formato de documento abierto que usa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], convenciones de empaquetado abierto (OPC) y otros estándares del sector para crear documentos multiplataforma. XPS simplifica el proceso mediante el cual los documentos digitales se crean, comparten, imprimen, ven y archivan. Para obtener información adicional sobre XPS, consulte [documentos XPS](/windows/desktop/printdocs/documents).  
   
- Varias técnicas para imprimir contenido basado en XPS mediante [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se muestran en [Imprimir archivos XPS mediante programación](how-to-programmatically-print-xps-files.md). Estos ejemplos le resultarán útil para comprender el contenido de este tema. (Los desarrolladores de código no administrado deben ver la documentación de la [función MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Windows Forms desarrolladores deben usar la API en el <xref:System.Drawing.Printing> espacio de nombres que no admite la [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ruta de impresión completa, pero admite una ruta de impresión híbrida de GDI a XPS. Consulte el siguiente apartado **Arquitectura de la ruta de impresión**).  
+ Varias técnicas para imprimir contenido basado en XPS mediante [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se muestran en [Imprimir archivos XPS mediante programación](how-to-programmatically-print-xps-files.md). Estos ejemplos le resultarán útil para comprender el contenido de este tema. (Los desarrolladores de código no administrado deben ver la documentación de la [función MXDC_ESCAPE](/windows/desktop/printdocs/mxdc-escape). Windows Forms desarrolladores deben usar la API en el <xref:System.Drawing.Printing> espacio de nombres que no admite la ruta de impresión completa de XPS, pero admite una ruta de impresión híbrida de GDI a XPS. Consulte el siguiente apartado **Arquitectura de la ruta de impresión**).  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Ruta de impresión XPS  
- La ruta de impresión de XML Paper Specification (XPS) es una nueva característica de Windows que vuelve a definir la forma en que se controla la impresión en aplicaciones de Windows. Dado [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] que puede reemplazar un lenguaje de presentación de documentos (como RTF), un formato de administrador de trabajos de impresión (como WMF) y un lenguaje de descripción de página (como PCL o PostScript), la nueva ruta de impresión mantiene el formato XPS de la publicación de la aplicación al procesamiento final en el dispositivo o controlador de impresión.  
+ La ruta de impresión de XML Paper Specification (XPS) es una nueva característica de Windows que vuelve a definir la forma en que se controla la impresión en aplicaciones de Windows. Dado que XPS puede reemplazar un lenguaje de presentación de documentos (como RTF), un formato de administrador de trabajos de impresión (como WMF) y un lenguaje de descripción de páginas (como PCL o PostScript); la nueva ruta de impresión mantiene el formato XPS de la publicación de la aplicación al procesamiento final en el dispositivo o controlador de impresión.  
   
  La ruta de impresión XPS se basa en el modelo de controlador de impresora XPS (XPSDrv), que proporciona varias ventajas a [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] los desarrolladores, como impresión, soporte de color mejorado y rendimiento de impresión considerablemente mejorado. (Para obtener más información sobre XPSDrv, consulte la [documentación del kit de controladores de Windows](/windows-hardware/drivers/)).  
   
@@ -62,7 +62,7 @@ Con Microsoft .NET Framework, los desarrolladores de aplicaciones que usan Windo
 ### <a name="print-path-architecture"></a>Arquitectura de la ruta de impresión  
  Aunque las aplicaciones [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] dey.NETFrameworkadmitenXPS,ylasaplicacionesdeWindowsFormsusanunaconversióndeGDIaXPSparacrearcontenidoconformatoXPSparaelcontroladordeimpresoraXPS[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] (XPSDrv). Estas aplicaciones no necesitan usar la ruta de impresión XPS y pueden seguir utilizando la impresión basada en metarchivo mejorado (EMF). Sin embargo, la mayoría de las características y mejoras de XPS solo están disponibles para las aplicaciones que tienen como destino la ruta de impresión XPS.  
   
- Para habilitar el uso de las impresoras basadas en XPSDrv [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] por parte de y Windows Forms aplicaciones, el controlador de impresora XPS (XPSDrv) admite la conversión de GDI al formato XPS. El modelo XPSDrv también proporciona un convertidor para el formato de XPS a GDI [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] para que las [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] aplicaciones puedan imprimir documentos. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] el caso de las aplicaciones, los <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> métodos y <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> de la <xref:System.Windows.Xps.XpsDocumentWriter> clase realizan automáticamente la conversión del formato XPS a GDI siempre que la cola de impresión de destino de la operación de escritura no tenga un controlador XPSDrv. (Windows Forms aplicaciones no pueden [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] imprimir documentos).  
+ Para habilitar el uso de las impresoras basadas en XPSDrv [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] por parte de y Windows Forms aplicaciones, el controlador de impresora XPS (XPSDrv) admite la conversión de GDI al formato XPS. El modelo XPSDrv también proporciona un convertidor para el formato de XPS a GDI [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] para que las aplicaciones puedan imprimir documentos XPS. En [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] el caso de las aplicaciones, los <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> métodos y <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> de la <xref:System.Windows.Xps.XpsDocumentWriter> clase realizan automáticamente la conversión del formato XPS a GDI siempre que la cola de impresión de destino de la operación de escritura no tenga un controlador XPSDrv. (Windows Forms aplicaciones no pueden imprimir documentos XPS).  
   
  En la ilustración siguiente se muestra el subsistema de impresión y se definen las partes proporcionadas por Microsoft y las partes definidas por los proveedores de software y hardware:  
   
@@ -128,7 +128,7 @@ En el caso de las aplicaciones que no requieren funcionalidad o soporte XPS, la 
   
 - **Creación de un subconjunto de fuentes**. Solo los caracteres usados en el documento real se almacenan en el archivo XPS.  
   
-- **Compatibilidad con gráficos avanzados**. El soporte nativo para transparencia y primitivas de degradado evita la rasterización del contenido en el documento [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+- **Compatibilidad con gráficos avanzados**. La compatibilidad nativa con la transparencia y las primitivas de degradado evita la rasterización del contenido en el documento XPS.  
   
 - **Identificación de recursos comunes**. Los recursos que se usan varias veces (como una imagen que representa un logotipo corporativo) se tratan como recursos compartidos y se cargan solamente una vez.  
   
