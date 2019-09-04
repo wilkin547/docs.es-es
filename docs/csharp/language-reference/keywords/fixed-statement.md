@@ -30,7 +30,7 @@ A partir de C# 7.3, la instrucción `fixed` funciona en tipos adicionales más 
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
-Si crea tipos que deben participar en este patrón, consulta <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> para ver un ejemplo de implementación del patrón.
+Si crea tipos que deben participar en este patrón, consulte <xref:System.Span%601.GetPinnableReference?displayProperty=nameWithType> para ver un ejemplo de implementación del patrón.
 
 Es posible inicializar varios punteros en una sola instrucción si todos son del mismo tipo:
 
