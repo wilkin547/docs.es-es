@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: d9453f931bba9b1d3b5db3b4f80aa365677c0b76
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 8dacd4bf0102ccc2e769d10ce51e481b36004c3a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988425"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252975"
 ---
 # <a name="strings-c-programming-guide"></a>Cadenas (Guía de programación de C#)
 Una cadena es un objeto de tipo <xref:System.String> cuyo valor es texto. Internamente, el texto se almacena como una colección secuencial de solo lectura de objetos <xref:System.Char>. No hay ningún carácter que finaliza en null al final de una cadena de C#; por lo tanto, la cadena de C# puede contener cualquier número de caracteres nulos insertados ('\0'). La propiedad <xref:System.String.Length%2A> de una cadena representa el número de objetos `Char` que contiene, no el número de caracteres Unicode. Para obtener acceso a los puntos de código Unicode individuales de una cadena, use el objeto <xref:System.Globalization.StringInfo>.  
@@ -107,7 +107,7 @@ Para más información sobre cómo dar formato a los tipos .NET, consulte [Aplic
 ## <a name="null-strings-and-empty-strings"></a>Cadenas nulas y cadenas vacías  
  Una cadena vacía es una instancia de un objeto <xref:System.String?displayProperty=nameWithType> que contiene cero caracteres. Las cadenas vacías se utilizan a menudo en distintos escenarios de programación para representar un campo de texto en blanco. Puede llamar a métodos en cadenas vacías porque son objetos <xref:System.String?displayProperty=nameWithType> válidos. Las cadenas vacías se inicializan como sigue:  
   
-```  
+```csharp  
 string s = String.Empty;  
 ```  
   
