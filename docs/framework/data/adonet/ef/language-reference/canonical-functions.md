@@ -2,12 +2,12 @@
 title: Funciones canónicas
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8949735ba4712b721460335b4579f0a268c91aea
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606093"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251273"
 ---
 # <a name="canonical-functions"></a>Funciones canónicas
 Esta sección describe las funciones canónicas que son admitidas por todos los proveedores de datos y pueden ser utilizadas por todas las tecnologías de creación de consultas. Las funciones canónicas no pueden ser ampliadas por un proveedor.  
@@ -20,36 +20,36 @@ Esta sección describe las funciones canónicas que son admitidas por todos los 
   
  Todas las funciones canónicas tienen comportamiento de entrada NULL y condiciones de error especificadas explícitamente. Los proveedores de almacenamiento deben satisfacer ese comportamiento, pero [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] no lo exige.  
   
- Para los escenarios LINQ, las consultas con el [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] implican la asignación de métodos CLR a métodos en el origen de datos subyacente. Los métodos de CLR se asignan a funciones canónicas de modo que un conjunto específico de métodos se asignará correctamente, con independencia del origen de datos.  
+ En los escenarios de LINQ, las [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] consultas en implican la asignación de métodos CLR a métodos en el origen de datos subyacente. Los métodos de CLR se asignan a funciones canónicas de modo que un conjunto específico de métodos se asignará correctamente, con independencia del origen de datos.  
   
 ## <a name="canonical-functions-namespace"></a>Espacio de nombres de funciones canónicas  
  El espacio de nombres para una función canónica es <xref:System.Data.Metadata.Edm>. El espacio de nombres <xref:System.Data.Metadata.Edm> se incluye automáticamente en todas las consultas. Sin embargo, si se importa otro espacio de nombres que contiene una función con el mismo nombre que una función canónica (en el espacio de nombres <xref:System.Data.Metadata.Edm>), se debe especificar el espacio de nombres.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Funciones canónicas de agregado](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
+ [Funciones canónicas de agregado](aggregate-canonical-functions.md)  
  Describe las funciones canónicas de agregado de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Funciones canónicas matemáticas](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
+ [Funciones canónicas matemáticas](math-canonical-functions.md)  
  Describe las funciones canónicas matemáticas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Funciones canónicas de cadena](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
+ [Funciones canónicas de cadena](string-canonical-functions.md)  
  Describe las funciones canónicas de cadena de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Funciones canónicas de fecha y hora](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
+ [Funciones canónicas de fecha y hora](date-and-time-canonical-functions.md)  
  Describe las funciones canónicas de fecha y hora de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Funciones canónicas bit a bit](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
+ [Funciones canónicas bit a bit](bitwise-canonical-functions.md)  
  Describe las funciones canónicas bit a bit de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Funciones espaciales](../../../../../../docs/framework/data/adonet/ef/language-reference/spatial-functions.md)  
+ [Funciones espaciales](spatial-functions.md)  
  Describe las funciones canónicas y espaciales de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Otras funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)  
+ [Otras funciones canónicas](other-canonical-functions.md)  
  Describe las funciones no clasificadas como funciones bit a bit, de fecha y hora, de cadena, matemáticas o de agregado.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [Asignación entre las funciones canónicas del modelo conceptual y las funciones de SQL Server](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)
-- [Funciones definidas por el usuario](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)
+- [Información general sobre Entity SQL](entity-sql-overview.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)
+- [Asignación entre las funciones canónicas del modelo conceptual y las funciones de SQL Server](../conceptual-model-canonical-to-sql-server-functions-mapping.md)
+- [Funciones definidas por el usuario](user-defined-functions-entity-sql.md)

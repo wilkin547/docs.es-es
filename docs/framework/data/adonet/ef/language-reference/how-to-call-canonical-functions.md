@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
-ms.openlocfilehash: 01a638d494b988e29ccf07763a7e0aecf54cc11c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3ad4576a5c7a3f2be4b68e4060df191932ceeb19
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936068"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250832"
 ---
 # <a name="how-to-call-canonical-functions"></a>Procedimiento para llamar a funciones canónicas
-La clase <xref:System.Data.Objects.EntityFunctions> contiene métodos que exponen funciones canónicas para usarlas en consultas LINQ to Entities. Para obtener información sobre las funciones canónicas, vea [Funciones canónicas](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
+La clase <xref:System.Data.Objects.EntityFunctions> contiene métodos que exponen funciones canónicas para usarlas en consultas LINQ to Entities. Para obtener información sobre las funciones canónicas, vea [Funciones canónicas](canonical-functions.md).  
   
 > [!NOTE]
 > Los métodos <xref:System.Data.Objects.EntityFunctions.AsUnicode%2A> y <xref:System.Data.Objects.EntityFunctions.AsNonUnicode%2A> de la clase <xref:System.Data.Objects.EntityFunctions> no tienen equivalentes de función canónica.  
   
  Las funciones canónicas que realizan un cálculo en un conjunto de valores y devuelven un valor único (también denominadas funciones canónicas de agregado) se pueden invocar directamente. Otras funciones canónicas solo se pueden llamar como parte de una consulta LINQ to Entities. Para llamar directamente a una función de agregado, debe pasar un objeto <xref:System.Data.Objects.ObjectQuery%601> a la función. Para obtener más información, vea el segundo ejemplo siguiente.  
   
- Puede llamar a algunas funciones canónicas utilizando los métodos de Common Language Runtime (CLR) en consultas LINQ to Entities. Para obtener una lista de los métodos de CLR que se asignan a funciones canónicas, vea [asignación del método a la función canónica](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
+ Puede llamar a algunas funciones canónicas utilizando los métodos de Common Language Runtime (CLR) en consultas LINQ to Entities. Para obtener una lista de los métodos de CLR que se asignan a funciones canónicas, vea [asignación del método a la función canónica](clr-method-to-canonical-function-mapping.md).  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se usa el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples). En el ejemplo se ejecuta una consulta LINQ to Entities que utiliza el método <xref:System.Data.Objects.EntityFunctions.DiffDays%2A> para devolver todos los productos para los que la diferencia entre `SellEndDate` y `SellStartDate` es menor a 365 días:  
@@ -36,5 +36,5 @@ La clase <xref:System.Data.Objects.EntityFunctions> contiene métodos que expone
   
 ## <a name="see-also"></a>Vea también
 
-- [Llamada a funciones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Llamada a funciones en consultas de LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)
+- [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

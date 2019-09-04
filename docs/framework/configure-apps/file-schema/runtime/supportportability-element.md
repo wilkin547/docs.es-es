@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1848db96b8f466f617c58f0fdd879ffe3b2022bd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 011793006f2aff32486fbe4537b46517e0a2b888
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69927255"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252301"
 ---
 # <a name="supportportability-element"></a>\<supportPortability >, elemento
 Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos implementaciones diferentes de .NET Framework, deshabilitando el comportamiento predeterminado que trata los ensamblados como equivalentes para los propósitos de portabilidad de aplicación.  
   
- \<Elemento Configuration >  
-\<Elemento > en tiempo de ejecución  
-\<assemblyBinding >, elemento  
-\<supportPortability >, elemento  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> assemblyBinding**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> supportPortability**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,7 +29,8 @@ Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos y elementos  
- En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
+
+En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -46,7 +47,8 @@ Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos
 |false|Deshabilita el soporte para la portabilidad entre las implementaciones del ensamblado de .NET Framework especificado. Esto permite a la aplicación tener referencias a varias implementaciones del ensamblado especificado.|  
   
 ### <a name="child-elements"></a>Elementos secundarios  
- Ninguno.  
+
+Ninguno.  
   
 ### <a name="parent-elements"></a>Elementos primarios  
   
@@ -57,15 +59,17 @@ Especifica que una aplicación puede hacer referencia al mismo ensamblado en dos
 |`assemblyBinding`|Contiene información sobre la redirección de versiones de ensamblado y las ubicaciones de ensamblados.|  
   
 ## <a name="remarks"></a>Comentarios  
- A partir de la .NET Framework 4, se proporciona automáticamente compatibilidad para las aplicaciones que pueden utilizar cualquiera de las dos implementaciones de la .NET Framework, por ejemplo, la implementación de .NET Framework o la .NET Framework para la implementación de Silverlight. El enlazador del ensamblado considera equivalentes las dos implementaciones de un ensamblado de .NET Framework determinado. En algunos escenarios, esta característica de portabilidad de aplicación produce problemas. En esos escenarios, se puede usar el elemento `<supportPortability>` para deshabilitar la característica.  
+
+A partir de la .NET Framework 4, se proporciona automáticamente compatibilidad para las aplicaciones que pueden utilizar cualquiera de las dos implementaciones de la .NET Framework, por ejemplo, la implementación de .NET Framework o la .NET Framework para la implementación de Silverlight. El enlazador del ensamblado considera equivalentes las dos implementaciones de un ensamblado de .NET Framework determinado. En algunos escenarios, esta característica de portabilidad de aplicación produce problemas. En esos escenarios, se puede usar el elemento `<supportPortability>` para deshabilitar la característica.  
   
- Uno de estos escenarios es un ensamblado que tiene que hacer referencia al mismo tiempo a la implementación de .NET Framework y a la implementación de .NET Framework para Silverlight de un ensamblado de referencia determinado. Por ejemplo, un diseñador de XAML escrito en Windows Presentation Foundation (WPF) podría tener que hacer referencia a la implementación del escritorio de WPF, para la interfaz de usuario del diseñador, y al subconjunto de WPF que se incluye en la implementación de Silverlight. De forma predeterminada, las referencias independientes producen un error del compilador, ya que el enlace del ensamblado considera los dos ensamblados equivalentes. Este elemento deshabilita el comportamiento predeterminado y permite que la compilación se realice correctamente.  
+Uno de estos escenarios es un ensamblado que tiene que hacer referencia al mismo tiempo a la implementación de .NET Framework y a la implementación de .NET Framework para Silverlight de un ensamblado de referencia determinado. Por ejemplo, un diseñador de XAML escrito en Windows Presentation Foundation (WPF) podría tener que hacer referencia a la implementación del escritorio de WPF, para la interfaz de usuario del diseñador, y al subconjunto de WPF que se incluye en la implementación de Silverlight. De forma predeterminada, las referencias independientes producen un error del compilador, ya que el enlace del ensamblado considera los dos ensamblados equivalentes. Este elemento deshabilita el comportamiento predeterminado y permite que la compilación se realice correctamente.  
   
 > [!IMPORTANT]
 > Para que el compilador pase la información a la lógica de enlace del ensamblado de Common Language Runtime, debe usar la opción de compilador `/appconfig` para especificar la ubicación del archivo app.config que contiene este elemento.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo permite a una aplicación tener referencias a la implementación de .NET Framework y de .NET Framework para Silverlight de cualquier ensamblado de .NET Framework que exista en ambas implementaciones. Se debe usar la opción de compilador `/appconfig` para especificar la ubicación de este archivo app.config.  
+
+El siguiente ejemplo permite a una aplicación tener referencias a la implementación de .NET Framework y de .NET Framework para Silverlight de cualquier ensamblado de .NET Framework que exista en ambas implementaciones. Se debe usar la opción de compilador `/appconfig` para especificar la ubicación de este archivo app.config.  
   
 ```xml  
 <configuration>  

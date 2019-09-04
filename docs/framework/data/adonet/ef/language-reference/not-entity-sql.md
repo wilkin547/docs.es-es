@@ -2,12 +2,12 @@
 title: '! (NOT) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-ms.openlocfilehash: 51d3bdbc4adb0b5fd6275629219698dd9b42fa86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4055d56d878b817fe88bb0dacb53ea39061bc4b2
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760382"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249860"
 ---
 # <a name="-not-entity-sql"></a>! (NOT) (Entity SQL)
 Niega una expresión `Boolean` .  
@@ -30,7 +30,7 @@ or
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta de Entity SQL usa el operador NOT para negar una expresión `Boolean` . La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -38,4 +38,4 @@ or
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

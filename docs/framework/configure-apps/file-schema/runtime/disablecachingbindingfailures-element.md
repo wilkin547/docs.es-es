@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba74907e2f6fc2ca14e12a24113fa7654c9b967e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: d5b45ea4b30677d17e72685b16c19f9192c8c144
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663797"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252677"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures >, elemento
 Especifica si se va a deshabilitar el almacenamiento en caché de errores de enlace que se producen porque el sondeo no ha encontrado el ensamblado.  
   
- \<Elemento Configuration >  
-\<Elemento > en tiempo de ejecución  
-\<disableCachingBindingFailures>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableCachingBindingFailures>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
