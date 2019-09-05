@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a71277c6e5183f855ef07a6fc3a20e29b06998f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7fe354a929aad93ba4d4a6ea3cb43b2607be1f05
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920923"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252868"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides >, elemento
 Define uno o varios modificadores usados por la clase <xref:System.AppContext> para proporcionar un mecanismo para cancelar la participación con nueva funcionalidad.  
   
- \<configuration>  
- \<> en tiempo de ejecución  
-\<AppContextSwitchOverrides>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<AppContextSwitchOverrides>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
   
 ### <a name="value-attribute"></a>Atributo de valor  
   
-|Value|DESCRIPCIÓN|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |"nombre = valor"|Un nombre de conmutador predefinido junto con su valor`true` ( `false`o). Varios pares de nombre/valor de modificador se separan mediante signos de punto y coma (";"). Para obtener una lista de nombres de conmutadores predefinidos admitidos por el .NET Framework, vea la sección Comentarios.|  
   
@@ -95,7 +95,7 @@ Define uno o varios modificadores usados por la clase <xref:System.AppContext> p
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Controla si <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> admite varios ajustes o un solo ajuste para una zona horaria. Si `true`es, utiliza el <xref:System.TimeZoneInfo> tipo para serializar y deserializar los datos de fecha y hora; de lo <xref:System.TimeZone> contrario, usa el tipo, que no admite varias reglas de ajuste.|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|Controla si <xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType> usa un tamaño de matriz mayor durante la serialización y deserialización de objetos. Establezca este modificador `true` en para mejorar el rendimiento de la serialización y deserialización de gráficos de objetos grandes por tipos <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>como. |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Controla si el <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> constructor establece la propiedad del nuevo <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> objeto con una referencia de objeto existente. Para más información, vea [Mitigación: Constructor](../../../migration-guide/mitigation-claimsidentity-constructor.md)ClaimsIdentity.|.NET Framework 4.6.2|  
-|`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Controla si el intento de reutilizar <xref:System.Security.Cryptography.AesCryptoServiceProvider> un descifrador produce una <xref:System.Security.Cryptography.CryptographicException>excepción. Para obtener más información, vea el descifrador de [AesCryptoServiceProvider proporciona una transformación](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)reutilizable.|.NET Framework 4.6.2|
+|`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Controla si el intento de reutilizar <xref:System.Security.Cryptography.AesCryptoServiceProvider> un descifrador produce una <xref:System.Security.Cryptography.CryptographicException>excepción. Para obtener más información, vea [el descifrador de AesCryptoServiceProvider proporciona una transformación reutilizable](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform).|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Controla si el valor de la propiedad [CspParameters. ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) es un [IntPtr](xref:System.IntPtr) que representa la ubicación de memoria de un identificador de ventana o si es un identificador de ventana (HWND). Para más información, vea [Mitigación: CspParameters. ParentWindowHandle espera un HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Controla si el uso de clases de criptografía administradas en modo FIPS produce una <xref:System.Security.Cryptography.CryptographicException> excepción`true`() o se basa en la implementación de las bibliotecas`false`del sistema ().|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Determina si el valor predeterminado para algunas operaciones SignedCMS es SHA1 o SHA256.<br>Debido a problemas de colisión con SHA1, Microsoft recomienda SHA256.|.NET Framework 4.7.1|

@@ -2,12 +2,12 @@
 title: Tipos estructurados que aceptan valores NULL [Entity SQL]
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
-ms.openlocfilehash: 6e1669bdc62de379051df60d6650fddb0c808da4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b078ae458aba73e82957f84408b1000b216aef9
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641829"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249811"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>Tipos estructurados que aceptan valores NULL [Entity SQL]
 Una instancia `null` de un tipo estructurado es una instancia que no existe. Es diferente de una instancia existente en la que todas las propiedades tienen valores `null`.  
@@ -90,4 +90,4 @@ Una instancia `null` de un tipo estructurado es una instancia que no existe. Es 
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+- [Información general sobre Entity SQL](entity-sql-overview.md)

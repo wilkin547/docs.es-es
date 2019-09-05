@@ -2,12 +2,12 @@
 title: Constructor de tipos con nombre (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f95f0dcb92068675b2efff0af7e97b349976bf42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760459"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250005"
 ---
 # <a name="named-type-constructor-entity-sql"></a>Constructor de tipos con nombre (Entity SQL)
 Se usa para crear instancias de los tipos nominales del modelo conceptual como los tipos de entidad o los tipos complejos.  
@@ -20,7 +20,7 @@ Se usa para crear instancias de los tipos nominales del modelo conceptual como l
   
 ## <a name="arguments"></a>Argumentos  
  `identifier`  
- Valor que es un identificador simple o incluido entre comillas. Para obtener más información, vea [identificadores](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
+ Valor que es un identificador simple o incluido entre comillas. Para obtener más información, vea [identificadores](identifiers-entity-sql.md)  
   
  `expression`  
  Atributos del tipo que se suponen que conservan el mismo orden que cuando aparecen en la declaración del tipo.  
@@ -52,7 +52,7 @@ Se usa para crear instancias de los tipos nominales del modelo conceptual como l
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente usa el constructor de tipos con nombre para crear una instancia de un tipo del modelo conceptual. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -60,5 +60,5 @@ Se usa para crear instancias de los tipos nominales del modelo conceptual como l
   
 ## <a name="see-also"></a>Vea también
 
-- [Tipos de constructores](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Tipos de constructores](constructing-types-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

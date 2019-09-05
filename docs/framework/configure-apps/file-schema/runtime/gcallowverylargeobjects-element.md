@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 643e28217d41e825f0b3a3f4a4f062c30835cae8
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3f638a880aaa21bc41d2575f3609dabae158c1a0
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040665"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252578"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects >, elemento
 En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 gigabytes (GB).  
   
- \<Elemento Configuration >  
-\<Elemento > en tiempo de ejecución  
-\<gcAllowVeryLargeObjects >, elemento  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,7 +39,7 @@ En plataformas de 64 bits, habilita matrices con un tamaño total superior a 2 g
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Value|DESCRIPCIÓN|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`false`|Las matrices con un tamaño total superior a 2 GB no están habilitadas. Este es el valor predeterminado.|  
 |`true`|Las matrices con un tamaño total superior a 2 GB se habilitan en plataformas de 64 bits.|  

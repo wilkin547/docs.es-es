@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7c7f866cdbcd39194d61a3db821bf973b4e057e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 0253c3ced52b575097fe5d18abb8ce188c0164fb
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663816"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252693"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode >, elemento
 Especifica si el runtime busca ensamblados en los directorios especificados por la variable de entorno DEVPATH.  
   
- \<configuration>  
-\<> en tiempo de ejecución  
-\<developmentMode>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<developmentMode>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -75,4 +75,4 @@ Especifica si el runtime busca ensamblados en los directorios especificados por 
 
 - [Esquema de la configuración de Common Language Runtime](index.md)
 - [Esquema de los archivos de configuración](../index.md)
-- [Cómo: Buscar ensamblados mediante DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)
+- [Procedimientos: Buscar ensamblados mediante DEVPATH](../../how-to-locate-assemblies-by-using-devpath.md)

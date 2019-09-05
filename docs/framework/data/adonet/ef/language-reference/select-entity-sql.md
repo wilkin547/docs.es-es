@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: af704d00800a72b4ab670781c5bb3adec93683cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 3d3564c37d8971d3261cb47acb774bd1b9f92192
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489883"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249214"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Especifica los elementos devueltos por una consulta.  
@@ -34,18 +34,18 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `topSubclause`  
  Cualquier expresión válida que indique el número de primeros resultados que ha de devolver la consulta, del tipo `top(expr)`.  
   
- El parámetro de límite de la [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) operador también le permite seleccionar los primeros n elementos del conjunto de resultados.  
+ El parámetro LIMIT del operador [order by](order-by-entity-sql.md) también permite seleccionar los primeros n elementos del conjunto de resultados.  
   
  `aliasedExpr`  
  Expresión del tipo:  
   
- `expr` como `identifier`&#124; `expr`  
+ `expr`como `identifier` &#124;`expr`  
   
  `expr`  
  Literal o expresión.  
   
 ## <a name="remarks"></a>Comentarios  
- La cláusula SELECT se evalúa después de la [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), y [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) cláusulas que se hayan evaluado. La cláusula SELECT solo puede hacer referencia a elementos que están actualmente en el ámbito (de la cláusula FROM o de ámbitos externos). Si se ha especificado una cláusula GROUP BY, la cláusula SELECT solo se permite para hacer referencia a los alias para las claves GROUP BY. La referencia a los elementos de la cláusula de FROM solo se permite en funciones de agregado.  
+ La cláusula SELECT se evalúa después de que se hayan evaluado las cláusulas [from](from-entity-sql.md), [Group by](group-by-entity-sql.md)y [having](having-entity-sql.md) . La cláusula SELECT solo puede hacer referencia a elementos que están actualmente en el ámbito (de la cláusula FROM o de ámbitos externos). Si se ha especificado una cláusula GROUP BY, la cláusula SELECT solo se permite para hacer referencia a los alias para las claves GROUP BY. La referencia a los elementos de la cláusula de FROM solo se permite en funciones de agregado.  
   
  La lista de una o más expresiones de consulta que siguen a la palabra clave SELECT se conoce como lista de selección o más formalmente como proyección. La forma más general de proyección es una expresión de consulta única. Si selecciona un miembro `member1` de una colección `collection1`, generará una nueva colección de todos los valores de `member1` para cada objeto de `collection1`, como se muestra en el ejemplo siguiente.  
   
@@ -85,7 +85,7 @@ SELECT VALUE ROW(1 AS a, "abc" AS b) FROM C
 SELECT * FROM T1, T2  
 ```  
   
- La expresión de consulta de Transact-SQL anterior se expresa en [!INCLUDE[esql](../../../../../../includes/esql-md.md)] de la manera siguiente.  
+ La expresión de consulta de Transact-SQL anterior se [!INCLUDE[esql](../../../../../../includes/esql-md.md)] expresa en de la siguiente manera.  
   
 ```  
 SELECT a1, a2 FROM T1 AS a1, T2 AS a2  
@@ -94,7 +94,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
 ## <a name="example"></a>Ejemplo  
  La consulta de Entity SQL siguiente utiliza el operador SELECT para especificar los elementos que ha de devolver una consulta. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -102,6 +102,6 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
   
 ## <a name="see-also"></a>Vea también
 
-- [Expresiones de consulta](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)
+- [Expresiones de consulta](query-expressions-entity-sql.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)
+- [TOP](top-entity-sql.md)

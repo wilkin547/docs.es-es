@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c804e4d-f348-4afd-9f63-d3f0f24bc6a9
-ms.openlocfilehash: 32cdb5b0f27817856ab586eb38f89df63c1c4d3b
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: 33f26896dd0d4ff08beb4a011fa6bd468cba7207
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539860"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250753"
 ---
 # <a name="how-to-call-model-defined-functions-in-queries"></a>Procedimiento para llamar a funciones definidas por el modelo en consultas
-Este tema describe cómo llamar a funciones que se definen en el modelo conceptual desde dentro de LINQ a consultas de entidades.  
+En este tema se describe cómo llamar a las funciones definidas en el modelo conceptual desde LINQ to Entities consultas.  
   
- El siguiente procedimiento proporciona un esquema general para llamar a una modelo de función definida por dentro de LINQ para consultar entidades. El ejemplo que sigue proporciona más detalles sobre los pasos del procedimiento. El procedimiento da por hecho que se ha definido una función en el modelo conceptual. Para obtener más información, vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).  
+ En el procedimiento siguiente se proporciona un esquema de alto nivel para llamar a una función definida por el modelo desde una consulta LINQ to Entities. El ejemplo que sigue proporciona más detalles sobre los pasos del procedimiento. El procedimiento da por hecho que se ha definido una función en el modelo conceptual. Para obtener más información, consulte [Cómo Definir funciones personalizadas en el modelo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))conceptual.  
   
 ### <a name="to-call-a-function-defined-in-the-conceptual-model"></a>Para llamar a una función definida en el modelo conceptual  
   
@@ -24,9 +24,9 @@ Este tema describe cómo llamar a funciones que se definen en el modelo conceptu
 2. Llame a la función en una consulta LINQ to Entities.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra cómo llamar a una función que se define en el modelo conceptual desde dentro de LINQ para consultar entidades. En el ejemplo se usa el modelo School. Para obtener información sobre el modelo School, vea [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) y [generar el archivo .edmx de School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
+ En el ejemplo siguiente se muestra cómo llamar a una función que se define en el modelo conceptual desde una consulta LINQ to Entities. En el ejemplo se usa el modelo School. Para obtener información sobre el modelo School, vea [crear la base de datos de ejemplo School](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) y [generar el archivo School. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  
   
- La siguiente función del modelo conceptual devuelve el número de años transcurridos desde que se contrató a un instructor. Para obtener información sobre cómo agregar la función a un modelo conceptual, vea [Cómo: Definir funciones personalizadas en el modelo Conceptual](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)).)  
+ La siguiente función del modelo conceptual devuelve el número de años transcurridos desde que se contrató a un instructor. Para obtener información sobre cómo agregar la función a un modelo conceptual [, consulte How to: Definir funciones personalizadas en el modelo](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))conceptual).  
   
  [!code-xml[DP ConceptualModelFunctions#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp conceptualmodelfunctions/xml/school.edmx#1)]
   
@@ -37,14 +37,14 @@ Este tema describe cómo llamar a funciones que se definen en el modelo conceptu
  [!code-vb[DP ConceptualModelFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#2)]  
   
 ## <a name="example"></a>Ejemplo  
- Ahora puede llamar a la función de modelo conceptual desde dentro de LINQ para consultar entidades. El siguiente código llama al método para mostrar todos los instructores que se contrataron hace más de diez años:  
+ Ahora puede llamar a la función de modelo conceptual desde una consulta de LINQ to Entities. El siguiente código llama al método para mostrar todos los instructores que se contrataron hace más de diez años:  
   
  [!code-csharp[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp conceptualmodelfunctions/cs/program.cs#3)]
  [!code-vb[DP ConceptualModelFunctions#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp conceptualmodelfunctions/vb/module1.vb#3)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción al archivo .edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
-- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Llamada a funciones en consultas de LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
-- [Cómo: Llamar a funciones definidas por el modelo como métodos de objeto](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)
+- [Información general sobre el archivo. edmx](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+- [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)
+- [Llamada a funciones en consultas de LINQ to Entities](calling-functions-in-linq-to-entities-queries.md)
+- [Cómo: Llamar a funciones definidas por el modelo como métodos de objeto](how-to-call-model-defined-functions-as-object-methods.md)

@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: aaecce3ff74d64b8e07b31329ced5b5e581fca5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d54c350196ad1ef7cfafa6d931d9d1ad8f267177
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780411"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250556"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 Determina si una expresión de consulta es nula.  
@@ -57,9 +57,9 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|Produce un error.|  
   
 ## <a name="example"></a>Ejemplo  
- La siguiente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta usa el operador IS NOT NULL para determinar si una expresión de consulta no es null. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
+ La siguiente [!INCLUDE[esql](../../../../../../includes/esql-md.md)] consulta utiliza el operador is not null para determinar si una expresión de consulta no es NULL. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -67,4 +67,4 @@ select c from LOB.Customer as c where c.DOB is not null
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

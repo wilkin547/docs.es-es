@@ -2,12 +2,12 @@
 title: Especificación del manifiesto del proveedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 6b924f484e6635760d08d0eba9fb9436bdd8bc88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422715"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248589"
 ---
 # <a name="provider-manifest-specification"></a>Especificación del manifiesto del proveedor
 En esta sección se explica cómo puede un proveedor de almacén de datos admitir los tipos y funciones del almacén de datos.  
@@ -23,9 +23,9 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
   
  Las herramientas deben ser capaces de cargar el manifiesto del proveedor en tiempo de diseño sin tener que abrir una conexión al almacén de datos.  
   
- El [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] sucede confidenciales, pero no puede ser el almacén de datos subyacente. Cuando los artefactos de EDM (identificadores y nombres de tipo, por ejemplo) se definen y se utilizan en el manifiesto, deben utilizar la distinción entre mayúsculas y minúsculas de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Si en el manifiesto del proveedor aparecen elementos de almacén de datos que pueden distinguir entre mayúsculas y minúsculas, esa grafía debe mantenerse en el manifiesto del proveedor.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Distingue mayúsculas de minúsculas, pero es posible que el almacén de datos subyacente no sea. Cuando los artefactos de EDM (identificadores y nombres de tipo, por ejemplo) se definen y se utilizan en el manifiesto, deben utilizar la distinción entre mayúsculas y minúsculas de [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Si en el manifiesto del proveedor aparecen elementos de almacén de datos que pueden distinguir entre mayúsculas y minúsculas, esa grafía debe mantenerse en el manifiesto del proveedor.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] requiere un manifiesto del proveedor para todos los proveedores de datos. Si intenta usar un proveedor que no tiene un proveedor de manifiesto con el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], obtendrá un error.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] requiere un manifiesto del proveedor para todos los proveedores de datos. Si intenta usar un proveedor que no tiene un manifiesto de proveedor con [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], obtendrá un error.  
   
  En la siguiente tabla se describen los tipos de excepción que [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] genera cuando surgen excepciones de la interacción con los proveedores:  
   
@@ -39,7 +39,7 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
  Un proveedor debe admitir los siguientes escenarios:  
   
 ### <a name="writing-a-provider-with-symmetric-type-mapping"></a>Escribir un proveedor con asignación de tipos simétrica  
- Puede escribir un proveedor para el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] donde cada tipo de almacén se asigna a un único tipo EDM, independientemente de la dirección de asignación. En el caso de un tipo de proveedor que tenga una asignación simple que se corresponda con un tipo de EDM, puede utilizar una solución simétrica, porque el sistema de tipos es simple o coincide con los tipos de EDM.  
+ Puede escribir un proveedor para el [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] donde cada tipo de almacén se asigna a un tipo de EDM único, independientemente de la dirección de asignación. En el caso de un tipo de proveedor que tenga una asignación simple que se corresponda con un tipo de EDM, puede utilizar una solución simétrica, porque el sistema de tipos es simple o coincide con los tipos de EDM.  
   
  Puede utilizar la simplicidad de su dominio y generar un manifiesto del proveedor declarativo estático.  
   
@@ -54,14 +54,14 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
   
  Puede escribir un archivo XML que tenga dos secciones:  
   
-- Una lista de tipos de proveedor expresada en términos de EDM y defina la asignación para ambas direcciones: EDM a proveedor y proveedor a EDM.  
+- Una lista de tipos de proveedor expresada en términos de EDM y definir la asignación para ambas direcciones: De EDM a proveedor y de proveedor a EDM.  
   
 - Una lista de funciones admitida por el proveedor donde los tipos de parámetro y de valores devueltos se expresen en términos de EDM.  
   
 ## <a name="provider-manifest-discoverability"></a>Detectabilidad del manifiesto del proveedor  
  Varios tipos de componente utilizan indirectamente el manifiesto en Servicios de entidad (por ejemplo Tools o Query), pero los metadatos lo aprovechan de forma más directa con el uso del cargador de metadatos del almacén de datos.  
   
- ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](./media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  Sin embargo, un proveedor determinado puede admitir almacenes diferentes o distintas versiones del mismo almacén. Por consiguiente, un proveedor debe notificar un manifiesto distinto para cada almacén de datos compatible.  
   
@@ -77,13 +77,13 @@ En esta sección se explica cómo puede un proveedor de almacén de datos admiti
 ## <a name="provider-manifest-programming-model"></a>Modelo de programación del manifiesto del proveedor  
  Los proveedores se derivan de <xref:System.Data.Common.DbXmlEnabledProviderManifest>, lo que les permite especificar sus manifiestos mediante declaración. La siguiente ilustración muestra la jerarquía de clases de un proveedor:  
   
- ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](./media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>API de detectabilidad  
  El cargador Metadatos de almacenamiento (StoreItemCollection) carga el manifiesto de proveedor, bien mediante una conexión al almacén de datos o utilizando un token de manifiesto del proveedor.  
   
 #### <a name="using-a-data-store-connection"></a>Utilizar una conexión al almacén de datos  
- Cuando la conexión de almacén de datos está disponible, llame a <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> para devolver el token que se pasa a la <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> método, que devuelve <xref:System.Data.Common.DbProviderManifest>. Este método delega a la implementación del proveedor de `GetDbProviderManifestToken`.  
+ Cuando la conexión del almacén de datos está disponible <xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType> , llame a para devolver el token que se <xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A> pasa al método, <xref:System.Data.Common.DbProviderManifest>que devuelve. Este método delega en la implementación del proveedor de `GetDbProviderManifestToken`.  
   
 ```csharp
 public string GetProviderManifestToken(DbConnection connection);  
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Usar un token de manifiesto del proveedor  
- En el caso del escenario sin conexión, el token se toma de la representación SSDL. SSDL le permite especificar un ProviderManifestToken (vea [elemento de esquema de almacenamiento (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) para obtener más información). Por ejemplo, si no se puede abrir una conexión, SSDL tiene un token de manifiesto del proveedor que especifica información sobre el manifiesto.  
+ En el caso del escenario sin conexión, el token se toma de la representación SSDL. El SSDL le permite especificar un ProviderManifestToken (vea el [elemento Schema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) para obtener más información). Por ejemplo, si no se puede abrir una conexión, SSDL tiene un token de manifiesto del proveedor que especifica información sobre el manifiesto.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
@@ -248,37 +248,37 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
  Para expresar esta información de tipos en el manifiesto del proveedor, cada declaración de TypeInformation debe definir distintas descripciones de facetas para cada Type:  
   
-|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|Descripción|  
+|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|DESCRIPCIÓN|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Sí|N/D|El nombre del tipo de datos específico del proveedor|  
+|NOMBRE|string|Sí|N/D|El nombre del tipo de datos específico del proveedor|  
 |PrimitiveTypeKind|PrimitiveTypeKind|Sí|N/D|Nombre de tipo EDM|  
   
 ###### <a name="function-node"></a>Nodo Function  
  Cada nodo Function define una función única disponible a través del proveedor.  
   
-|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|Descripción|  
+|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|DESCRIPCIÓN|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Sí|N/D|Identificador/nombre de la función|  
-|ReturnType|String|No|Void|El tipo de valor devuelto EDM de la función|  
-|Agregar|Booleano|No|False|True si la función es una función de agregado|  
-|BuiltIn|Booleano|No|True|True si la función está integrada en el almacén de datos|  
-|StoreFunctionName|String|No|\<Nombre >|Nombre de la función en el almacén de datos.  Permite un nivel de redirección de nombres de función.|  
-|NiladicFunction|Booleano|No|False|True si la función no requiere parámetros y se invoca sin ningún parámetro|  
-|ParameterType<br /><br /> Semántica|ParameterSemantics|No|AllowImplicit<br /><br /> Conversión|Opción de cómo la canalización de la consulta debe tratar la sustitución de tipos de parámetro:<br /><br /> -ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
+|NOMBRE|string|Sí|N/D|Identificador/nombre de la función|  
+|ReturnType|string|Sin|Void|El tipo de valor devuelto EDM de la función|  
+|Agregar|Boolean|Sin|False|True si la función es una función de agregado|  
+|BuiltIn|Boolean|Sin|True|True si la función está integrada en el almacén de datos|  
+|StoreFunctionName|string|Sin|\<Nombre >|Nombre de la función en el almacén de datos.  Permite un nivel de redirección de nombres de función.|  
+|NiladicFunction|Boolean|Sin|False|True si la función no requiere parámetros y se invoca sin ningún parámetro|  
+|ParameterType<br /><br /> Semántica|ParameterSemantics|Sin|AllowImplicit<br /><br /> Conversión|Opción de cómo la canalización de la consulta debe tratar la sustitución de tipos de parámetro:<br /><br /> - ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
- **Nodo de parámetros**  
+ **Nodo parámetros**  
   
  Cada función tiene una colección de uno o más nodos Parameter.  
   
-|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|Descripción|  
+|Nombre de atributo|Tipo de datos|Obligatorio|Valor predeterminado|DESCRIPCIÓN|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|String|Sí|N/D|Identificador/nombre del parámetro.|  
-|Tipo|String|Sí|N/D|El tipo EDM del parámetro.|  
-|Modo|Parámetro<br /><br /> Dirección|Sí|N/D|Dirección del parámetro:<br /><br /> -en<br />-out<br />-inout|  
+|NOMBRE|string|Sí|N/D|Identificador/nombre del parámetro.|  
+|Type|string|Sí|N/D|El tipo EDM del parámetro.|  
+|Mode|Parámetro<br /><br /> Direction|Sí|N/D|Dirección del parámetro:<br /><br /> -en<br />-out<br />-Inout|  
   
 ##### <a name="namespace-attribute"></a>Atributo Namespace  
- Cada proveedor de almacén de datos debe definir un espacio de nombres o un grupo de espacios de nombres para la información definida en el manifiesto. Este espacio de nombres se puede utilizar en consultas de Entity SQL para resolver nombres de funciones y tipos. Por ejemplo: SQL Server. Ese espacio de nombres debe ser distinto del espacio de nombres canónico, EDM, definido por Servicios de entidad para que las consultas de Entity SQL admitan las funciones estándar.  
+ Cada proveedor de almacén de datos debe definir un espacio de nombres o un grupo de espacios de nombres para la información definida en el manifiesto. Este espacio de nombres se puede utilizar en consultas de Entity SQL para resolver nombres de funciones y tipos. Por ejemplo: Server. Ese espacio de nombres debe ser distinto del espacio de nombres canónico, EDM, definido por Servicios de entidad para que las consultas de Entity SQL admitan las funciones estándar.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Escritura de un proveedor de datos de Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+- [Escritura de un proveedor de datos de Entity Framework](writing-an-ef-data-provider.md)

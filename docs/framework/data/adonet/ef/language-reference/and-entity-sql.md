@@ -1,15 +1,15 @@
 ---
-title: '&amp;&amp; (Y) (Entity SQL)'
+title: '&amp;&amp;ETC (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: eab05f7454f8ebc88ed29030503bfa96d0c70756
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02e404b73e5a9a9c3963e2d2b58ab7592afabc13
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61605754"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251316"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp; (Y) (Entity SQL)
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp;ETC (Entity SQL)
 Devuelve `true` si las dos expresiones son `true`; en caso contrario, `false` o `NULL`.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -31,14 +31,14 @@ boolean_expression && boolean_expression
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|false|NULL|  
-|`FALSE`|false|false|false|  
+|`TRUE`|TRUE|FALSE|NULL|  
+|`FALSE`|FALSE|FALSE|FALSE|  
 |`NULL`|NULL|false|NULL|  
   
 ## <a name="example"></a>Ejemplo  
  En la siguiente consulta de Entity SQL se muestra cómo usar el operador AND. La consulta se basa en el modelo AdventureWorks Sales. Para compilar y ejecutar esta consulta, siga estos pasos:  
   
-1. Siga el procedimiento de [Cómo: Ejecutar una consulta que devuelve resultados StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1. Siga el procedimiento descrito [en cómo: Ejecute una consulta que devuelva resultados](../how-to-execute-a-query-that-returns-structuraltype-results.md)de StructuralType.  
   
 2. Pase la consulta siguiente como argumento al método `ExecuteStructuralTypeQuery` :  
   
@@ -46,4 +46,4 @@ boolean_expression && boolean_expression
   
 ## <a name="see-also"></a>Vea también
 
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

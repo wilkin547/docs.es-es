@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: 56ae913da3ca06a08b5bacc5ce225597980467a6
-ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
+ms.openlocfilehash: c749a7bb1575ee52418f0953ff8216bf4221b674
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67539461"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250149"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>Ejemplos de sintaxis de consulta basada en métodos: Navegar por relaciones
-Las propiedades de navegación de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] son propiedades de acceso directo que se emplean para localizar las entidades situadas en los extremos de una asociación. Las propiedades de navegación permiten a un usuario navegar de una entidad a otra, o desde una entidad a entidades relacionadas a través de un conjunto de asociaciones. Este tema proporciona ejemplos de sintaxis de consulta basada en métodos de cómo navegar por las relaciones mediante propiedades de navegación en LINQ a consultas de entidades.  
+Las propiedades de navegación de [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] son propiedades de acceso directo que se emplean para localizar las entidades situadas en los extremos de una asociación. Las propiedades de navegación permiten a un usuario navegar de una entidad a otra, o desde una entidad a entidades relacionadas a través de un conjunto de asociaciones. En este tema se proporcionan ejemplos de sintaxis de consulta basada en métodos sobre cómo navegar por las relaciones a través de las propiedades de navegación en LINQ to Entities consultas.  
   
  El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
   
- Los ejemplos de este tema usan los siguientes `using` / `Imports` instrucciones:  
+ En los ejemplos de este tema se usan `using` las siguientes / `Imports` instrucciones:  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -54,5 +54,5 @@ Las propiedades de navegación de [!INCLUDE[adonet_ef](../../../../../../include
   
 ## <a name="see-also"></a>Vea también
 
-- [Las relaciones, las propiedades de navegación y las claves externas](/ef/ef6/fundamentals/relationships)
-- [Consultas en LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+- [Relaciones, propiedades de navegación y claves externas](/ef/ef6/fundamentals/relationships)
+- [Consultas en LINQ to Entities](queries-in-linq-to-entities.md)

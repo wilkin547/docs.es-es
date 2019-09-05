@@ -2,12 +2,12 @@
 title: SqlClient para Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-ms.openlocfilehash: ec67637c416f2560c1f5d0a9fd0e856703820a84
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f7077cf9c9b8eb8a86b01e8b38431d1b9a87a80c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69954966"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248359"
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient para Entity Framework
 En esta sección se describe el Proveedor de datos de .NET Framework para SQL Server (SqlClient), el cual permite a Entity Framework trabajar sobre Microsoft SQL Server.  
@@ -32,23 +32,23 @@ En esta sección se describe el Proveedor de datos de .NET Framework para SQL Se
 > A partir de Visual Studio 2010, las [herramientas de Entity Data Model de ADO.net](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100)) no admiten SQL Server 2000.  
   
 ## <a name="provider-namespace-name"></a>Nombre del espacio de nombres de proveedor  
- Todos los proveedores deben especificar un espacio de nombres. Esta propiedad indica a Entity Framework qué prefijo usa el proveedor para estructuras concretas, como los tipos y funciones. El espacio de nombres para los manifiestos del proveedor SqlClient es `SqlServer`. Para obtener más información sobre los espacios de nombres, vea [espacios de nombres](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  
+ Todos los proveedores deben especificar un espacio de nombres. Esta propiedad indica a Entity Framework qué prefijo usa el proveedor para estructuras concretas, como los tipos y funciones. El espacio de nombres para los manifiestos del proveedor SqlClient es `SqlServer`. Para obtener más información sobre los espacios de nombres, vea [espacios de nombres](./language-reference/namespaces-entity-sql.md).  
   
 ## <a name="types"></a>Tipos  
- El proveedor SqlCliente para Entity Framework proporciona información de asignación entre los tipos del modelo conceptual y los tipos de SQL Server. Para obtener más información, vea [SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
+ El proveedor SqlCliente para Entity Framework proporciona información de asignación entre los tipos del modelo conceptual y los tipos de SQL Server. Para obtener más información, vea [SqlClient para Entity Framework](sqlclient-for-ef-types.md).  
   
 ## <a name="functions"></a>Funciones  
- El proveedor de SqlClient para Entity Framework define la lista de funciones admitidas por el proveedor. Para obtener una lista de las funciones admitidas, vea [SqlClient para funciones de Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
+ El proveedor de SqlClient para Entity Framework define la lista de funciones admitidas por el proveedor. Para obtener una lista de las funciones admitidas, vea [SqlClient para funciones de Entity Framework](sqlclient-for-ef-functions.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [SqlClient para las funciones de Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
+ [SqlClient para las funciones de Entity Framework](sqlclient-for-ef-functions.md)  
   
- [SqlClient para tipos de Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
+ [SqlClient para tipos de Entity Framework](sqlclient-for-ef-types.md)  
   
- [Problemas conocidos en SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
+ [Problemas conocidos en SqlClient para Entity Framework](known-issues-in-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [Lenguaje Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
-- [Referencia del lenguaje](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)
-- [Problemas conocidos del proveedor SqlClient para Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
+- [Lenguaje Entity SQL](./language-reference/entity-sql-language.md)
+- [Referencia del lenguaje](./language-reference/index.md)
+- [Problemas conocidos del proveedor SqlClient para Entity Framework](sqlclient-for-the-entity-framework.md)

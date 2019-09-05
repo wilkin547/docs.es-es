@@ -2,18 +2,18 @@
 title: Definiciones de tipo (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 471964266c290d5eba95804dbe1c2bc5225e3f83
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641398"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248949"
 ---
 # <a name="type-definitions-entity-sql"></a>Definiciones de tipo (Entity SQL)
 Las definiciones de tipo se usan en la instrucción de declaración de una función inline de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 ## <a name="remarks"></a>Comentarios  
- La instrucción de declaración para una función inline consta de los [función](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) palabra clave seguido por el identificador que representa el nombre de función (por ejemplo, "MiFuncion") seguido por una lista de definiciones de parámetro entre paréntesis (para ejemplo, "cuota Collection.  
+ La instrucción de declaración de una función insertada se compone de la palabra clave [function](function-entity-sql.md) seguida del identificador que representa el nombre de función (por ejemplo, "MiFuncion") seguido de una lista de definiciones de parámetros entre paréntesis (por ejemplo, "colección de tasas ()". Decimal) ").  
   
  La lista de definición de parámetros está formada por cero o más definiciones de parámetro. Cada definición de parámetro consta de un identificador (el nombre del parámetro proporcionado a la función, por ejemplo, "cuota") seguido de una definición de tipo (por ejemplo, "Collection(Decimal)").  
   
@@ -23,7 +23,7 @@ Las definiciones de tipo se usan en la instrucción de declaración de una funci
   
 - La palabra clave `COLLECTION` seguida de otra definición de tipo entre paréntesis (por ejemplo, "Collection(AdventureWorks.Order)").  
   
-- La palabra clave ROW seguida de una lista de definiciones de propiedad entre paréntesis (por ejemplo, "Row(x AdventureWorks.Order)"). Definiciones de propiedad tienen un formato como "`identifier type_definition`, `identifier type_definition`,...".  
+- La palabra clave ROW seguida de una lista de definiciones de propiedad entre paréntesis (por ejemplo, "Row(x AdventureWorks.Order)"). Las definiciones de propiedad tienen un formato como`identifier type_definition`" `identifier type_definition`,,...".  
   
 - La palabra clave REF seguida del tipo del identificador entre paréntesis (por ejemplo, "Ref(AdventureWorks.Order)"). El operador de definición de tipo REF requiere un tipo de entidad como argumento. No puede especificar un tipo primitivo como argumento.  
   
@@ -88,5 +88,5 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [Referencia de Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [Información general sobre Entity SQL](entity-sql-overview.md)
+- [Referencia de Entity SQL](entity-sql-reference.md)

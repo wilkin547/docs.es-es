@@ -6,18 +6,17 @@ f1_keywords:
 - vb.AutoImplementedProperty
 helpviewer_keywords:
 - properties [Visual Basic], auto-implemented
-- properties [Visual Basic], auto-implemented
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
-ms.openlocfilehash: 4577609c78271ac91e011b20ef6a8b4066072428
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f2e25c7bcd3556f93dfedee7aa8e49bb14888123
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649665"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254031"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>Propiedades implementadas automáticamente (Visual Basic)
-*Propiedades autoimplementadas* le permiten especificar rápidamente una propiedad de una clase sin tener que escribir código para `Get` y `Set` la propiedad. Al escribir código para una propiedad implementada automáticamente, el compilador de Visual Basic crea de manera automática un campo privado para almacenar la variable de propiedad, además de crear los procedimientos `Get` y `Set` asociados.  
+*Las propiedades implementadas automáticamente* permiten especificar rápidamente una propiedad de una clase sin tener que escribir código en `Get` y `Set` la propiedad. Al escribir código para una propiedad implementada automáticamente, el compilador de Visual Basic crea de manera automática un campo privado para almacenar la variable de propiedad, además de crear los procedimientos `Get` y `Set` asociados.  
   
  Con las propiedades implementadas automáticamente, una propiedad (incluido un valor predeterminado) puede declararse en una sola línea. En el ejemplo siguiente se muestran tres declaraciones de propiedad.  
   
@@ -48,7 +47,7 @@ End Class
  Se pueden realizar asignaciones a la propiedad con expresiones de inicialización, como se muestra en el ejemplo, o se pueden realizar asignaciones a las propiedades en el constructor del tipo contenedor.  Siempre que lo desee, puede realizar asignaciones a los campos de respaldo de propiedades de solo lectura.  
   
 ## <a name="backing-field"></a>Campo de respaldo  
- Cuando se declara una propiedad implementada automáticamente, Visual Basic crea automáticamente un campo privado oculto denominado el *campo de respaldo* para contener el valor de propiedad. El nombre del campo de respaldo es el nombre de la propiedad implementada automáticamente precedido por un carácter de subrayado (_). Por ejemplo, si declara una propiedad implementada automáticamente denominada `ID`, el campo de respaldo se denominará `_ID`. Si se incluye un miembro de la clase que también se denomina `_ID`, se produce un conflicto de nomenclatura y Visual Basic informa de un error del compilador.  
+ Cuando se declara una propiedad implementada automáticamente, Visual Basic crea automáticamente un campo privado oculto denominado *campo de respaldo* para contener el valor de la propiedad. El nombre del campo de respaldo es el nombre de la propiedad implementada automáticamente precedido por un carácter de subrayado (_). Por ejemplo, si declara una propiedad implementada automáticamente denominada `ID`, el campo de respaldo se denominará `_ID`. Si se incluye un miembro de la clase que también se denomina `_ID`, se produce un conflicto de nomenclatura y Visual Basic informa de un error del compilador.  
   
  El campo de respaldo también tiene las siguientes características:  
   
@@ -58,7 +57,7 @@ End Class
   
 - Los atributos especificados para la propiedad no se aplican al campo de respaldo.  
   
-- El acceso al campo de respaldo se puede realizar desde el código contenido en la clase y desde herramientas de depuración como la ventana Inspección.  Sin embargo, dicho campo no se muestra en una lista de finalización de palabras de IntelliSense.  
+- El acceso al campo de respaldo se puede realizar desde el código contenido en la clase y desde herramientas de depuración como la ventana Inspección. Sin embargo, dicho campo no se muestra en una lista de finalización de palabras de IntelliSense.  
   
 ## <a name="initializing-an-auto-implemented-property"></a>Inicializar una propiedad implementada automáticamente  
  Cualquier expresión que se pueda usar para inicializar un campo es válida para inicializar una propiedad implementada automáticamente. Al inicializar una propiedad implementada automáticamente, la expresión se evalúa y se pasa al procedimiento `Set` para la propiedad. En los ejemplos de código siguientes se muestran algunas propiedades implementadas automáticamente que incluyen valores iniciales.  
@@ -74,7 +73,7 @@ End Class
  [!code-vb[VbVbalrAutoImplementedProperties#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrautoimplementedproperties/vb/module1.vb#4)]  
   
 ## <a name="property-definitions-that-require-standard-syntax"></a>Definiciones de propiedades que requieren sintaxis estándar  
- Las propiedades implementadas automáticamente son fáciles de usar y admiten muchos escenarios de programación. Sin embargo, hay situaciones en las que no se puede usar una propiedad implementada automáticamente y en su lugar se debe usar el estándar, o *expandido*, sintaxis de la propiedad.  
+ Las propiedades implementadas automáticamente son fáciles de usar y admiten muchos escenarios de programación. Sin embargo, hay situaciones en las que no se puede usar una propiedad implementada automáticamente y, en su lugar, se debe usar la sintaxis de propiedades estándar o *expandida*.  
   
  Si desea realizar una de las acciones siguientes, tiene que usar la sintaxis de definición de propiedades expandidas:  
   
@@ -91,11 +90,11 @@ End Class
 - Proporcionar comentarios XML para el campo de respaldo.  
   
 ## <a name="expanding-an-auto-implemented-property"></a>Expandir una propiedad implementada automáticamente  
- Si tiene que convertir una propiedad implementada automáticamente en una propiedad expandida que contiene un procedimiento `Get` o `Set`, el Editor de código de Visual Basic puede generar automáticamente los procedimientos `Get` y `Set` y la instrucción `End Property` para la propiedad. El código se genera si se coloca el cursor en una línea en blanco que sigue el `Property` (instrucción), escriba un `G` (para `Get`) o un `S` (para `Set`) y presione ENTRAR. El Editor de código de Visual Basic genera automáticamente el procedimiento `Get` o `Set` para las propiedades de solo lectura y de solo escritura al presionar ENTRAR al final de una instrucción `Property`.  
+ Si tiene que convertir una propiedad implementada automáticamente en una propiedad expandida que contiene un procedimiento `Get` o `Set`, el Editor de código de Visual Basic puede generar automáticamente los procedimientos `Get` y `Set` y la instrucción `End Property` para la propiedad. El código se genera si coloca el cursor en una línea en blanco después de `Property` la instrucción, `G` escriba `S` (para `Get`) o (para `Set`) y presione Entrar. El Editor de código de Visual Basic genera automáticamente el procedimiento `Get` o `Set` para las propiedades de solo lectura y de solo escritura al presionar ENTRAR al final de una instrucción `Property`.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Cómo: Declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Procedimientos: Declarar y llamar a una propiedad predeterminada en Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - [Cómo: Declarar una propiedad con niveles de acceso mixtos](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Property (instrucción)](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)

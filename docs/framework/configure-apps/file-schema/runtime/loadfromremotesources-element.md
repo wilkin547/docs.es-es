@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2268d07fb643621c944ef9bf561156b5332aaafc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83980d315c83aa5cc23944dbd271c29e0ed83206
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920716"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252476"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources >, elemento
 Especifica si se debe conceder plena confianza a los ensamblados cargados desde orígenes remotos en .NET Framework 4 y versiones posteriores.
@@ -20,9 +20,9 @@ Especifica si se debe conceder plena confianza a los ensamblados cargados desde 
 > [!NOTE]
 > Si se le dirigió a este artículo debido a un mensaje de error en la lista de errores del proyecto de Visual Studio o un [error de compilación, consulte Cómo: Usar un ensamblado desde la web en Visual](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))Studio.  
   
- \<configuration>  
-\<> en tiempo de ejecución  
-\<loadFromRemoteSources>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> loadFromRemoteSources**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,7 +42,7 @@ Especifica si se debe conceder plena confianza a los ensamblados cargados desde 
   
 ## <a name="enabled-attribute"></a>atributo Enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`false`|No conceda plena confianza a las aplicaciones de orígenes remotos. Este es el valor predeterminado.|  
 |`true`|Conceda plena confianza a las aplicaciones desde orígenes remotos.|  

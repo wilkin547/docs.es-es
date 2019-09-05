@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5314fe5927abf2d3855acb45c763507ab6cb3c8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 3dd3105e573d40ae234ba7e122f20566911124d4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920747"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252537"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence >, elemento
 Especifica si el tiempo de <xref:System.Security.Policy.Publisher> ejecución crea evidencia para la seguridad de acceso del código (CAS).  
   
- \<configuration>  
-\<> en tiempo de ejecución  
-\<generatePublisherEvidence>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence>**  
   
 ## <a name="syntax"></a>Sintaxis  
   

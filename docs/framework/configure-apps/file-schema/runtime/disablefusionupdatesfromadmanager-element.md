@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1923e70143ea2a158447eccdb35d347fe4f51ea
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: b65711ad8c404d1c4f54a6197faf598e2215226f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69663770"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252648"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager >, elemento
 Especifica si el comportamiento predeterminado, que consiste en permitir el host en tiempo de ejecución para invalidar los valores de configuración de un dominio de aplicación, está deshabilitado.  
   
- \<Elemento Configuration >  
-\<Elemento > en tiempo de ejecución  
-\<disableFusionUpdatesFromADManager>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> en tiempo de ejecución**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<disableFusionUpdatesFromADManager>**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,7 +38,7 @@ Especifica si el comportamiento predeterminado, que consiste en permitir el host
   
 ## <a name="enabled-attribute"></a>Atributo enabled  
   
-|Valor|DESCRIPCIÓN|  
+|Value|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |0|No deshabilite la capacidad de invalidar la configuración de fusión. Este es el comportamiento predeterminado, comenzando por el .NET Framework 4.|  
 |1|Deshabilitar la capacidad de invalidar la configuración de fusión. Esto revierte el comportamiento de las versiones anteriores del .NET Framework.|  
