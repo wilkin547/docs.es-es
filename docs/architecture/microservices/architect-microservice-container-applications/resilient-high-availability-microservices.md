@@ -74,7 +74,7 @@ Distintos orquestadores podrían parecer similares, pero las comprobaciones de d
 - Sitio oficial de **Splunk**. \
   <https://www.splunk.com/>
 
-- API **EventSource Class** para el seguimiento de eventos para Windows (ETW)
+- API **EventSource Class** para el seguimiento de eventos para Windows (ETW) \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]

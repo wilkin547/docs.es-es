@@ -307,7 +307,7 @@ public class Address
 
 ## <a name="additional-resources"></a>Recursos adicionales
 
-- **Martin Fowler. ValueObject pattern** \ (El patrón ValueObject)
+- **Martin Fowler. El patrón ValueObject** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
 - **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Diseño orientado al dominio: abordar la complejidad en el corazón del software) (Libro; incluye una descripción de los objetos de valor) \

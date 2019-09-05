@@ -55,13 +55,13 @@ Hay usuarios que afirman que el modelo de dominio anémico es un antipatrón. En
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
-- **DevIQ. Domain Entity** \ (Entidad de dominio)
+- **DevIQ. Entidad de dominio** \
   <https://deviq.com/entity/>
 
-- **Martin Fowler. The Domain Model** \ (El modelo de dominio)
+- **Martin Fowler. El modelo de dominio** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
-- **Martin Fowler. The Anemic Domain Model** \ (El modelo de dominio anémico)
+- **Martin Fowler. El modelo de dominio anémico** \
   <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>El patrón de objeto de valor
@@ -133,7 +133,7 @@ Para identificar y trabajar con agregados se requiere investigación y experienc
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
-- **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate** (Diseño eficaz de agregados - Parte I: modelado de un único agregado) (de <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Diseño eficaz de agregados - Parte I: modelado de un único agregado** (de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
 - **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together** (Diseño eficaz de agregados - Parte II: hacer que los agregados funcionen de forma conjunta) (de <http://dddcommunity.org/>) \
@@ -142,13 +142,13 @@ Para identificar y trabajar con agregados se requiere investigación y experienc
 - **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery** (Diseño eficaz de agregados - Parte III: obtención de datos mediante la detección) (de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak. DDD Tactical Design Patterns** \ (Patrones de diseño tácticos de diseño guiado por el dominio)
+- **Sergey Grybniak. Patrones de diseño tácticos de diseño guiado por el dominio** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson. Developing Transactional Microservices Using Aggregates** \ (Desarrollo de microservicios transaccionales con agregados)
+- **Chris Richardson. Desarrollo de microservicios transaccionales con agregados** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ. The Aggregate pattern** \ (El patrón de agregado)
+- **DevIQ. El patrón de agregado** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]

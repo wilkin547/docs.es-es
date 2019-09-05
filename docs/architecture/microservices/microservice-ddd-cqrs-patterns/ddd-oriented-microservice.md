@@ -93,13 +93,13 @@ Este diseño de nivel debe ser independiente para cada microservicio. Como se in
 
 #### <a name="additional-resources"></a>Recursos adicionales
 
-- **DevIQ. Persistence Ignorance principle** \ (Principio de omisión de persistencia)
+- **DevIQ. Principio de omisión de persistencia** \
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini. Infrastructure Ignorance** \ (Omisión de infraestructura)
+- **Oren Eini. Omisión de infraestructura** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Angel Lopez. Layered Architecture In Domain-Driven Design** \ (Arquitectura por capas en un diseño controlado por dominios)
+- **Angel Lopez. Arquitectura por capas en un diseño controlado por dominios** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
