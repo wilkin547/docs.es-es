@@ -53,7 +53,7 @@ Este método funciona para los métodos dinámicos y no dinámicos. Es un suprac
 
 **Biblioteca** CorGuids.lib
 
-**.NET Framework versiones:** [! INCLUIR[net_current_v472plus](../../../../includes/net-current-v472plus.md)
+**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)
 
 ## <a name="see-also"></a>Vea también
 
