@@ -2,12 +2,12 @@
 title: Migración a escenarios de nube híbrida
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Migración a escenarios de nube híbrida
 ms.date: 04/30/2018
-ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 313608c41427b3833bbc873398595ceb37bd7c7d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578218"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373940"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>Migración a escenarios de nube híbrida
 
@@ -27,7 +27,7 @@ En la figura 4-13 se muestra una visión general de la verdadera plataforma en l
 
 ![Plataforma de nube híbrida de Microsoft con Azure Stack y Azure](./media/image13.jpg)
 
-> **Figura 4-13.** Plataforma de nube híbrida de Microsoft con Azure Stack y Azure
+**Figura 4-13.** Plataforma de nube híbrida de Microsoft con Azure Stack y Azure
 
 Azure Stack se ofrece en dos opciones de implementación, para satisfacer sus necesidades:
 

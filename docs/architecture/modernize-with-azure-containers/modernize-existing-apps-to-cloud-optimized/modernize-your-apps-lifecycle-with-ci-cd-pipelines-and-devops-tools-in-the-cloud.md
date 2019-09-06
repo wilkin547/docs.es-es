@@ -2,12 +2,12 @@
 title: Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 ms.date: 04/30/2018
-ms.openlocfilehash: fb4bfab4a891e9c8a73867f18cb8249775f9b7b9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 62b6c541780ed3bf82c55e576fa485f811b55b17
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578168"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374137"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Modernización del ciclo de vida de la aplicación con canalizaciones de CI/CD y herramientas de DevOps en la nube
 
@@ -29,7 +29,7 @@ En la figura 4-12 se muestra una canalización de implementación continua que s
 
 ![Azure DevOps Services canalización de implementación continua, implementar en un clúster de Kubernetes](./media/image12.png)
 
-> **Figura 4-12.** Azure DevOps Services canalización de implementación continua, implementar en un clúster de Kubernetes
+**Figura 4-12.** Azure DevOps Services canalización de implementación continua, implementar en un clúster de Kubernetes
 
 >[!div class="step-by-step"]
 >[Anterior](modernize-your-apps-with-monitoring-and-telemetry.md)

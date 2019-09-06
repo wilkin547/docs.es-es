@@ -2,12 +2,12 @@
 title: Modernización de aplicaciones con supervisión y telemetría
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Modernice sus aplicaciones con supervisión y telemetría
 ms.date: 04/30/2018
-ms.openlocfilehash: 5bffb336234f63dca150acc9ef31f9efa2e3937b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 65c464e27e326f6a60b4879ec787253dea019d92
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578178"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373950"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>Modernización de aplicaciones con supervisión y telemetría
 
@@ -21,7 +21,7 @@ En la figura 4-10 se muestra un ejemplo de cómo Application Insights supervisa 
 
 ![Panel de supervisión de Application Insights](./media/image10.png)
 
-> **Figura 4-10.** Panel de supervisión de Application Insights
+**Figura 4-10.** Panel de supervisión de Application Insights
 
 ## <a name="monitor-your-docker-infrastructure-with-log-analytics-and-its-container-monitoring-solution"></a>Supervise la infraestructura de Docker con Log Analytics y su solución de supervisión de contenedores
 
@@ -45,7 +45,7 @@ En la figura 4-11 se muestran las relaciones entre varios hosts de contenedor y 
 
 ![Log Analytics solución de supervisión de contenedores](./media/image11.png)
 
-> **Figura 4-11.** Log Analytics solución de supervisión de contenedores
+**Figura 4-11.** Log Analytics solución de supervisión de contenedores
 
 Puede usar la solución de supervisión de contenedores Log Analytics para:
 

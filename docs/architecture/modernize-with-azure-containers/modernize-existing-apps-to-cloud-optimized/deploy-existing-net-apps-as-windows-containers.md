@@ -2,18 +2,18 @@
 title: Implementación de aplicaciones .NET existentes como contenedores de Windows
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Implementación de aplicaciones .NET existentes como contenedores de Windows
 ms.date: 04/29/2018
-ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 4d58be828418abe4964e26a983f194fd5d30b93d
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578318"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374015"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implementación de aplicaciones .NET existentes como contenedores de Windows
 
 Las implementaciones basadas en contenedores de Windows se aplican a aplicaciones optimizadas para la nube y aplicaciones nativas en la nube.
 
-Sin embargo, en esta guía y especialmente en las secciones siguientes, se centra principalmente en el uso de contenedores de Windows para aplicaciones optimizadas para *la nube* donde no es necesario rediseñar la aplicación.
+Sin embargo, en esta guía y especialmente en las secciones siguientes, se centra principalmente en el uso de contenedores de Windows para aplicaciones *optimizadas para la nube* donde no es necesario rediseñar la aplicación.
 
 ## <a name="what-are-containers-linux-or-windows"></a>¿Qué son los contenedores? (Linux o Windows)
 
@@ -51,9 +51,9 @@ En última instancia, las mejoras significativas en la agilidad, la portabilidad
 
 [Docker](https://www.docker.com/) es un [proyecto de código abierto](https://github.com/docker/docker) que automatiza la implementación de aplicaciones como contenedores portátiles y autosuficientes que se pueden ejecutar en la nube o de forma local. Docker es también una [empresa](https://www.docker.com/) que promueve esta tecnología y la hace evolucionar. La compañía trabaja en colaboración con proveedores de nube, Linux y Windows, incluido Microsoft.
 
-![](./media/image6.png)
+![Docker implementa contenedores en todas las capas de la nube híbrida](./media/image6.png)
 
-> **Figura 4-6.** Docker implementa contenedores en todas las capas de la nube híbrida
+**Figura 4-6.** Docker implementa contenedores en todas las capas de la nube híbrida
 
 Para alguien familiarizado con las máquinas virtuales, es posible que los contenedores parezcan bastante similares. Un contenedor ejecuta un sistema operativo, tiene un sistema de archivos y se puede acceder a él a través de una red, al igual que un sistema de equipo físico o virtual. Sin embargo, la tecnología y los conceptos relacionados con los contenedores son muy diferentes de las máquinas virtuales. Desde el punto de vista del desarrollador, un contenedor se debe tratar más como un proceso único. De hecho, un contenedor tiene un único punto de entrada para un proceso.
 
@@ -83,9 +83,9 @@ Para Linux, hay varias distribuciones disponibles y compatibles en imágenes ofi
 
 En la figura 4-7 se muestran las versiones del sistema operativo a las que puede dirigirse, en función de la versión de la aplicación del .NET Framework.
 
-![](./media/image7.png)
+![Sistemas operativos de destino en función de la versión de .NET Framework](./media/image7.png)
 
-> **Figura 4-7.** Sistemas operativos de destino en función de la versión de .NET Framework
+**Figura 4-7.** Sistemas operativos de destino en función de la versión de .NET Framework
 
 En los escenarios de migración de aplicaciones existentes o heredadas basadas en .NET Framework aplicaciones, las dependencias principales se encuentran en Windows e IIS. La única opción es usar imágenes de Docker basadas en Windows Server Core y en el .NET Framework.
 
@@ -138,9 +138,9 @@ Ejecutar un contenedor en Windows con o sin el aislamiento de Hyper-V es una dec
 En las secciones anteriores, se ha explicado Cuáles son las ventajas de los contenedores de Docker, así como los detalles de las imágenes de contenedor específicas para aplicaciones .NET. Toda la información genérica es fundamental para desarrollar o incluir una aplicación en contenedores.
 Sin embargo, al pensar en el entorno de implementación de producción o incluso en entornos de QA y desarrollo y pruebas, Microsoft Azure proporciona una amplia variedad de opciones, un ecosistema de contenedores completo en la nube (que se muestra en el diagrama siguiente). En función de las necesidades específicas de la aplicación, debe elegir uno u otro producto de Azure.
 
-![](./media/image7.5.png)
+![El ecosistema de contenedores en Azure](./media/image7.5.png)
 
-> **Ilustración 4:7.5.** El ecosistema de contenedores en Azure
+**Ilustración 4:7.5.** El ecosistema de contenedores en Azure
 
 Desde el ecosistema de contenedores de Azure, los siguientes productos admiten contenedores que se consideran infraestructura:
 - **Azure Container Instances (ACI)**

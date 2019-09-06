@@ -122,7 +122,7 @@ Puede especificar otros valores de configuración en el Dockerfile, según el le
 - **Compile su propia imagen**. En la documentación oficial de Docker.\
   <https://docs.docker.com/engine/tutorials/dockerimages/>
 
-- **Staying up-to-date with .NET Container Images** \ (Mantenerse actualizado con imágenes de contenedor de .NET)
+- **Mantenerse actualizado con imágenes de contenedor de .NET** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
 
 - **Uso conjunto de .NET y Docket: actualización de DockerCon de 2018** \
@@ -539,7 +539,7 @@ Además, debe realizar el paso 2 (agregar compatibilidad con Docker a los proyec
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
-- **Steve Lasker. .NET Docker Development with Visual Studio 2017** \ (Desarrollo de Docker de .NET con Visual Studio 2017, de Steve Lasker)
+- **Desarrollo de Docker de .NET con Visual Studio 2017, de Steve Lasker** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Uso de comandos de PowerShell en un Dockerfile para configurar contenedores de Windows

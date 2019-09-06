@@ -2,12 +2,12 @@
 title: Cree servicios resistentes preparados para la nube. aceptación de errores transitorios en la nube
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Cree servicios resistentes preparados para la nube. aceptación de errores transitorios en la nube
 ms.date: 04/30/2018
-ms.openlocfilehash: 5d25fb0d15ff7b9f04b9491454d1368e4aa7f593
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 5f44029a214cf1f366fc787e27a9ac34599c4dca
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578358"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373969"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Creación de servicios resistentes y aptos para la nube: aceptación de errores transitorios en la nube
 
@@ -29,7 +29,7 @@ Una aplicación resistente como la que se muestra en la figura 4-9 debe implemen
 
 ![Errores parciales administrados por reintentos con retroceso exponencial](./media/image9.png)
 
-> **Figura 4-9.** Errores parciales administrados por reintentos con retroceso exponencial
+**Figura 4-9.** Errores parciales administrados por reintentos con retroceso exponencial
 
 Puede usar estas técnicas tanto en recursos HTTP como en recursos de base de datos. En la figura 4-9, la aplicación se basa en una arquitectura de tres niveles, por lo que necesita estas técnicas en el nivel de servicios (HTTP) y en el nivel de capa de datos (TCP). En una aplicación monolítica que solo usa una capa de aplicación única, además de la base de datos (sin servicios o microservicios adicionales), es posible que el control de los errores transitorios en el nivel de conexión de base de datos sea suficiente. En ese escenario, solo se requiere una configuración concreta de la conexión de base de datos.
 

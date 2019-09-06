@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c15b2c27e51557494f10c2445d75a4bd56c47f91
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: bbf7c1203a1f6089eefce3ed2876c9ade91cc697
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987240"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374451"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novedades de .NET Framework
 
@@ -174,7 +174,7 @@ El estado de mantenimiento del servicio se puede mostrar en HTML mediante la esp
 
 **Altas mejoras de PPP**
 
-En .NET Framework 4.8, WPF proporciona compatibilidad con el reconocimiento de PPP por Monitor V2 y escala de PPP en modo mixto. Consulte [High DPI Desktop Application Development on Windows](/desktop/hidpi/high-dpi-desktop-application-development-on-windows) (Desarrollo de aplicaciones de escritorio de alto PPP en Windows).
+En .NET Framework 4.8, WPF proporciona compatibilidad con el reconocimiento de PPP por Monitor V2 y escala de PPP en modo mixto. Consulte [High DPI Desktop Application Development on Windows](/windows/win32/hidpi/high-dpi-desktop-application-development-on-windows) (Desarrollo de aplicaciones de escritorio de alto PPP en Windows).
 
 .NET Framework 4.8 mejora la compatibilidad con la interoperación de HWND hospedado y Windows Forms en aplicaciones WPF de alto PPP en plataformas que admiten la escalabilidad de PPP en modo mixto (a partir de la actualización de abril de 2018 de Windows 10). Cuando se crean HWND hospedados o controles de Windows Forms como ventanas con escala PPP en modo mixto mediante la llamada a [SetThreadDpiHostingBehavior](/windows/desktop/api/winuser/nf-winuser-setthreaddpihostingbehavior) y [SetThreadDpiAwarenessContext](/windows/desktop/api/winuser/nf-winuser-setthreaddpiawarenesscontext), se pueden hospedar en una aplicación WPF por Monitor V2 y ajustar su tamaño y escalarse correctamente. Este contenido hospedado no se representa en el valor de PPP nativo, sino que el sistema operativo escala el contenido hospedado al tamaño adecuado. La compatibilidad con el modo de reconocimiento de PPP por Monitor v2 también permite hospedar los controles de WPF (es decir, convertir en elementos primarios) en una ventana nativa de una aplicación de alto PPP.
 

@@ -2,12 +2,12 @@
 title: Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 ms.date: 04/28/2018
-ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: aabce73efaae520a3b59c70d53519b847f2c6a94
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578128"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373933"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Razones para modernizar las aplicaciones .NET existentes en aplicaciones optimizadas para la nube
 
@@ -41,9 +41,9 @@ En la lista siguiente se describen los principios principales o las prácticas r
 
 En la figura 4-2 se muestran los pilares opcionales principales de una aplicación optimizada para la nube. Cuanto mayor sea el número de pilares que implemente, readier su aplicación será correcta para satisfacer las expectativas de sus clientes.
 
-> ![Principales pilares de una aplicación optimizada para la nube](./media/image2.png)
->
-> **Figura 4-2.** Principales pilares de una aplicación optimizada para la nube
+![Principales pilares de una aplicación optimizada para la nube](./media/image2.png)
+
+**Figura 4-2.** Principales pilares de una aplicación optimizada para la nube
 
 En Resumen, una aplicación optimizada para la nube es un enfoque para crear y administrar aplicaciones que aprovechan el modelo de informática en la nube, al tiempo que se usa una combinación de contenedores, una infraestructura en la nube administrada, técnicas de aplicación resistentes. supervisión, entrega continua y DevOps, todo sin necesidad de rediseñar y recodificar las aplicaciones existentes.
 

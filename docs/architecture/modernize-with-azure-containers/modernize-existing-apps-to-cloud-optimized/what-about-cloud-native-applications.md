@@ -2,22 +2,22 @@
 title: ¿Qué son las aplicaciones nativas para la nube?
 description: Modernización de las aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows | ¿Qué ocurre con las aplicaciones nativas de la nube?
 ms.date: 04/28/2018
-ms.openlocfilehash: 26adb87c426442ebf0e88165e521819e3a49d175
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 86153b04790eb21276e58b3fe33c0a680d9ea1c4
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "69578018"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373915"
 ---
 # <a name="what-about-cloud-native-applications"></a>¿Qué son las aplicaciones nativas para la nube?
 
-Aunque las aplicaciones nativas de [la nube](https://azure.microsoft.com/overview/cloudnative/) no son el objetivo principal de esta guía, es útil conocer este nivel de madurez de modernización y distinguirlo de las aplicaciones optimizadas para la nube.
+Aunque las aplicaciones [nativas de la nube](https://azure.microsoft.com/overview/cloudnative/) no son el objetivo principal de esta guía, es útil conocer este nivel de madurez de modernización y distinguirlo de las aplicaciones optimizadas para la nube.
 
 La figura 4-3 coloca las aplicaciones nativas en la nube en los niveles de madurez de modernización de aplicaciones:
 
 ![Posicionamiento de aplicaciones nativas en la nube](./media/image3.png)
 
-> **Figura 4-3.** Posicionamiento de aplicaciones nativas en la nube
+**Figura 4-3.** Posicionamiento de aplicaciones nativas en la nube
 
 Normalmente, el nivel de madurez de modernización nativo de la nube requiere nuevas inversiones de desarrollo. Pasar al nivel nativo de la nube se basa normalmente en la necesidad empresarial de modernizar las aplicaciones tanto como sea posible para mejorar drásticamente la escala en aplicaciones de gran tamaño mediante la creación de subsistemas autónomos (microservicios) que se pueden implementar y escalar de forma independiente. desde otras áreas de la aplicación, a la vez que reduce los costos a largo plazo y aumenta la agilidad de la evolución de esas partes de la aplicación autónoma que proporcionan ventajas de competir significativas.
 
@@ -25,9 +25,9 @@ Los principales pilares de las aplicaciones nativas en la nube se basan en los e
 
 En la figura 4-4 se muestran las principales características del modelo nativo de la nube.
 
-> ![Las características nativas en la nube son microservicios, contenedores, resistentes en la nube, orquestadores y sin servidor](./media/image4.png)
->
-> **Figura 4-4.** Características nativas de la nube
+![Las características nativas en la nube son microservicios, contenedores, resistentes en la nube, orquestadores y sin servidor](./media/image4.png)
+
+**Figura 4-4.** Características nativas de la nube
 
 Además, puede ampliar aplicaciones web modernas básicas y aplicaciones nativas en la nube agregando otros servicios, como inteligencia artificial (AI), machine learning (ML) y IoT. Puede usar cualquiera de estos servicios para extender cualquiera de los posibles enfoques optimizados para la nube.
 
@@ -41,7 +41,7 @@ La [aplicación de doce factores](https://12factor.net/) (una colección de patr
 
 [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) es un promotor principal de principios nativos de la nube. Microsoft es [miembro de CNCF](https://azure.microsoft.com/blog/announcing-cncf/).
 
-Para ver una definición de ejemplo y obtener más información sobre las características de las aplicaciones nativas de la nube, consulte el artículo de Gartner [Cómo diseñar y diseñar aplicaciones nativas](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)en la nube. Para obtener instrucciones específicas de Microsoft sobre cómo implementar una aplicación nativa en la nube, [consulte microservicios de .net: Arquitectura de aplicaciones](https://aka.ms/microservicesebook).net en contenedor.
+Para ver una definición de ejemplo y obtener más información sobre las características de las aplicaciones nativas de la nube, consulte el artículo de Gartner [Cómo diseñar y diseñar aplicaciones nativas](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)en la nube. Para obtener instrucciones específicas de Microsoft sobre cómo implementar una aplicación nativa en la nube, [consulte microservicios de .net: Arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook).
 
 El factor más importante a tener en cuenta si migra una aplicación completa al modelo nativo de la nube es que debe rediseñar una arquitectura basada en microservicios. Esto requiere claramente una inversión significativa en el desarrollo debido al gran proceso de refactorización implicado. Esta opción se elige normalmente para las aplicaciones críticas que necesitan nuevos niveles de escalabilidad y agilidad a largo plazo. Sin embargo, puede empezar a pasar a la plataforma nativa mediante la adición de microservicios para unos pocos escenarios nuevos y, finalmente, refactorizar la aplicación por completo como microservicios. Se trata de un enfoque incremental que es la mejor opción para algunos escenarios.
 
@@ -55,7 +55,7 @@ Sin embargo, los microservicios no son obligatorios para una aplicación nueva o
 
 La arquitectura de microservicios se está convirtiendo en el método preferido para aplicaciones críticas distribuidas y grandes o complejas basadas en varios subsistemas independientes en forma de servicios autónomos. En una arquitectura basada en microservicios, una aplicación se crea como una colección de servicios que se pueden desarrollar, probar, crear versiones, implementar y escalar de forma independiente. Esto puede incluir cualquier base de datos autónoma relacionada por microservicio.
 
-Para obtener una visión detallada de una arquitectura de microservicios que puede implementar con .net Core, consulte los microservicios de .net de [libro electrónico descargable PDF: Arquitectura de aplicaciones](https://aka.ms/microservicesebook).net en contenedor. La guía también está disponible [en línea](../../microservices/index.md).
+Para obtener una visión detallada de una arquitectura de microservicios que puede implementar con .net Core, consulte los microservicios de .net de [libro electrónico descargable PDF: Arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook). La guía también está disponible [en línea](../../microservices/index.md).
 
 Sin embargo, incluso en escenarios en los que los microservicios ofrecen una implementación independiente de funcionalidades, límites de subsistema seguro y diversidad tecnológica, también plantean muchos desafíos nuevos. Los desafíos están relacionados con el desarrollo de aplicaciones distribuidas, como los modelos de datos fragmentados e independientes. lograr una comunicación resistente entre los microservicios; la necesidad de coherencia final; y la complejidad operativa. Los microservicios presentan un nivel de complejidad superior en comparación con las aplicaciones monolíticas tradicionales.
 
