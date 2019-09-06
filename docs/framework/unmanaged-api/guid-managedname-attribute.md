@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 110d6eb0abcf4b4ce73f1ee9d27e27122f360270
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777915"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374437"
 ---
-# <a name="guidmanagedname-attribute"></a><span data-ttu-id="1842b-102">GUID_ManagedName (Atributo)</span><span class="sxs-lookup"><span data-stu-id="1842b-102">GUID_ManagedName Attribute</span></span>
-<span data-ttu-id="1842b-103">Define un atributo de interfaz personalizado que especifica el nombre de espacio de nombres administrado para una biblioteca de modelo (COM) del objeto de componente.</span><span class="sxs-lookup"><span data-stu-id="1842b-103">Defines a custom interface attribute that specifies the managed namespace name for a component object model (COM) library.</span></span>  
+# <a name="guid_managedname-attribute"></a><span data-ttu-id="f771f-102">GUID_ManagedName (Atributo)</span><span class="sxs-lookup"><span data-stu-id="f771f-102">GUID_ManagedName Attribute</span></span>
+<span data-ttu-id="f771f-103">Define un atributo de interfaz personalizada que especifica el nombre de espacio de nombres administrado para una biblioteca COM (modelo de objetos componentes).</span><span class="sxs-lookup"><span data-stu-id="f771f-103">Defines a custom interface attribute that specifies the managed namespace name for a component object model (COM) library.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1842b-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="1842b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f771f-104">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="f771f-104">Syntax</span></span>  
   
 ```  
 [  
@@ -34,27 +34,27 @@ ms.locfileid: "61777915"
 ]  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1842b-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="1842b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f771f-105">Parámetros</span><span class="sxs-lookup"><span data-stu-id="f771f-105">Parameters</span></span>  
  `value`  
- <span data-ttu-id="1842b-106">El nombre de espacio de nombres administrado para la biblioteca.</span><span class="sxs-lookup"><span data-stu-id="1842b-106">The managed namespace name for the library.</span></span>  
+ <span data-ttu-id="f771f-106">Nombre del espacio de nombres administrado de la biblioteca.</span><span class="sxs-lookup"><span data-stu-id="f771f-106">The managed namespace name for the library.</span></span>  
   
-## <a name="definition"></a><span data-ttu-id="1842b-107">Definición</span><span class="sxs-lookup"><span data-stu-id="1842b-107">Definition</span></span>  
- <span data-ttu-id="1842b-108">`GUID_ManagedName` se define en Cor.h como sigue:</span><span class="sxs-lookup"><span data-stu-id="1842b-108">`GUID_ManagedName` is defined in Cor.h as follows:</span></span>  
+## <a name="definition"></a><span data-ttu-id="f771f-107">Definición</span><span class="sxs-lookup"><span data-stu-id="f771f-107">Definition</span></span>  
+ <span data-ttu-id="f771f-108">`GUID_ManagedName`se define en Cor. h de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="f771f-108">`GUID_ManagedName` is defined in Cor.h as follows:</span></span>  
   
 ```  
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
 EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1, 0x10, 0xe6, 0xd2, 0xf9);  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="1842b-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="1842b-109">Remarks</span></span>  
- <span data-ttu-id="1842b-110">Un atributo de interfaz personalizado define los metadatos de un objeto en la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="1842b-110">A custom interface attribute defines metadata for an object in the type library.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f771f-109">Comentarios</span><span class="sxs-lookup"><span data-stu-id="f771f-109">Remarks</span></span>  
+ <span data-ttu-id="f771f-110">Un atributo de interfaz personalizada define los metadatos de un objeto en la biblioteca de tipos.</span><span class="sxs-lookup"><span data-stu-id="f771f-110">A custom interface attribute defines metadata for an object in the type library.</span></span>  
   
- <span data-ttu-id="1842b-111">Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> para recuperar el nombre administrado en el atributo.</span><span class="sxs-lookup"><span data-stu-id="1842b-111">Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> or <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> to retrieve the managed name from the attribute.</span></span>  
+ <span data-ttu-id="f771f-111">Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> para recuperar el nombre administrado del atributo.</span><span class="sxs-lookup"><span data-stu-id="f771f-111">Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> or <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> to retrieve the managed name from the attribute.</span></span>  
   
- <span data-ttu-id="1842b-112">Para obtener más información, consulte [atributos de interfaz](/cpp/windows/interface-attributes) documentación de referencia de Visual C++.</span><span class="sxs-lookup"><span data-stu-id="1842b-112">For more information, see [Interface Attributes](/cpp/windows/interface-attributes) in the Visual C++ reference documentation.</span></span>  
+ <span data-ttu-id="f771f-112">Para obtener más información, vea [atributos de interfaz](/cpp/windows/attributes/interface-attributes) en C++ la documentación de referencia visual.</span><span class="sxs-lookup"><span data-stu-id="f771f-112">For more information, see [Interface Attributes](/cpp/windows/attributes/interface-attributes) in the Visual C++ reference documentation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1842b-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="1842b-113">Example</span></span>  
- <span data-ttu-id="1842b-114">El ejemplo siguiente muestra una definición de la biblioteca con el `GUID_ManagedName` atributo.</span><span class="sxs-lookup"><span data-stu-id="1842b-114">The following example shows a library definition using the `GUID_ManagedName` attribute.</span></span>  
+## <a name="example"></a><span data-ttu-id="f771f-113">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f771f-113">Example</span></span>  
+ <span data-ttu-id="f771f-114">En el ejemplo siguiente se muestra una definición de `GUID_ManagedName` biblioteca mediante el atributo.</span><span class="sxs-lookup"><span data-stu-id="f771f-114">The following example shows a library definition using the `GUID_ManagedName` attribute.</span></span>  
   
 ```  
 [  
@@ -67,5 +67,5 @@ library Microsoft_VisualStudio_CommandBars
 }  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="1842b-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1842b-115">Requirements</span></span>  
- <span data-ttu-id="1842b-116">**Encabezado**: Cor.h</span><span class="sxs-lookup"><span data-stu-id="1842b-116">**Header:** Cor.h</span></span>
+## <a name="requirements"></a><span data-ttu-id="f771f-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f771f-115">Requirements</span></span>  
+ <span data-ttu-id="f771f-116">**Encabezado**: Cor. h</span><span class="sxs-lookup"><span data-stu-id="f771f-116">**Header:** Cor.h</span></span>
