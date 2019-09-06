@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48ad6e4d1d03d8362123e65f16907880b18893f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 110d6eb0abcf4b4ce73f1ee9d27e27122f360270
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777915"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374437"
 ---
-# <a name="guidmanagedname-attribute"></a>GUID_ManagedName (Atributo)
-Define un atributo de interfaz personalizado que especifica el nombre de espacio de nombres administrado para una biblioteca de modelo (COM) del objeto de componente.  
+# <a name="guid_managedname-attribute"></a>GUID_ManagedName (Atributo)
+Define un atributo de interfaz personalizada que especifica el nombre de espacio de nombres administrado para una biblioteca COM (modelo de objetos componentes).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -36,10 +36,10 @@ Define un atributo de interfaz personalizado que especifica el nombre de espacio
   
 ## <a name="parameters"></a>Parámetros  
  `value`  
- El nombre de espacio de nombres administrado para la biblioteca.  
+ Nombre del espacio de nombres administrado de la biblioteca.  
   
 ## <a name="definition"></a>Definición  
- `GUID_ManagedName` se define en Cor.h como sigue:  
+ `GUID_ManagedName`se define en Cor. h de la siguiente manera:  
   
 ```  
 // {0F21F359-AB84-41e8-9A78-36D110E6D2F9}  
@@ -47,14 +47,14 @@ EXTERN_GUID(GUID_ManagedName, 0xf21f359, 0xab84, 0x41e8, 0x9a, 0x78, 0x36, 0xd1,
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- Un atributo de interfaz personalizado define los metadatos de un objeto en la biblioteca de tipos.  
+ Un atributo de interfaz personalizada define los metadatos de un objeto en la biblioteca de tipos.  
   
- Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o <xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> para recuperar el nombre administrado en el atributo.  
+ Use <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo2.GetCustData%2A?displayProperty=nameWithType> o<xref:System.Runtime.InteropServices.ComTypes.ITypeLib2.GetCustData%2A?displayProperty=nameWithType> para recuperar el nombre administrado del atributo.  
   
- Para obtener más información, consulte [atributos de interfaz](/cpp/windows/interface-attributes) documentación de referencia de Visual C++.  
+ Para obtener más información, vea [atributos de interfaz](/cpp/windows/attributes/interface-attributes) en C++ la documentación de referencia visual.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente muestra una definición de la biblioteca con el `GUID_ManagedName` atributo.  
+ En el ejemplo siguiente se muestra una definición de `GUID_ManagedName` biblioteca mediante el atributo.  
   
 ```  
 [  
@@ -68,4 +68,4 @@ library Microsoft_VisualStudio_CommandBars
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado**: Cor.h
+ **Encabezado**: Cor. h

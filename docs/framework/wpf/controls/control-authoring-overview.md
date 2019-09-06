@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 3ea5519259ba2ee31bfd6bc25f6bedf1f1250799
-ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
+ms.openlocfilehash: 61cd7b61a586afa2addd55acff7cac6d16d92a1f
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68401545"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374523"
 ---
 # <a name="control-authoring-overview"></a>Información general sobre la creación de controles
 
@@ -197,7 +197,7 @@ Asegúrese de implementar los descriptores de acceso y CLR `get` tal y `set` com
 
 Para implementar propiedades adjuntas en controles personalizados, es recomendable que utilice las siguientes instrucciones:
 
-- Tener una `public` `static` <xref:System.Windows.DependencyProperty.RegisterAttached%2A> con el formato  PropertyNamequesecreabamedianteelmétodo`Property`. `readonly` <xref:System.Windows.DependencyProperty> El nombre de propiedad que se pasa <xref:System.Windows.DependencyProperty.RegisterAttached%2A> a debe coincidir con *PropertyName*.
+- Tener una `public` `static` <xref:System.Windows.DependencyProperty.RegisterAttached%2A> con el formato PropertyNamequesecreabamedianteelmétodo`Property`. `readonly` <xref:System.Windows.DependencyProperty> El nombre de propiedad que se pasa <xref:System.Windows.DependencyProperty.RegisterAttached%2A> a debe coincidir con *PropertyName*.
 
 - Implemente un par de métodos CLR `public` `static` denominados `Set`*NombreDePropiedad* y `Get`*NombreDePropiedad*. Ambos métodos deben aceptar una clase derivada de <xref:System.Windows.DependencyProperty> como primer argumento. El método `Set`*NombreDePropiedad* también acepta un argumento cuyo tipo coincida con el tipo de datos registrado para la propiedad. El método `Get` *NombreDePropiedad* método debe devolver un valor del mismo tipo. Si falta el método `Set`*NombreDePropiedad*, la propiedad se marca como de solo lectura.
 
@@ -264,7 +264,7 @@ Los recursos específicos de un tema se mantienen en un diccionario de recursos 
 
 No es necesario definir un recurso para cada tema. Si no se ha definido un recurso para un tema concreto, el control comprueba `Classic.xaml` para el recurso. Si no se ha definido el recurso en el archivo correspondiente al tema actual o en `Classic.xaml`, el control utiliza el recurso genérico, que está en un archivo de diccionario de recursos denominado `generic.xaml`.  El archivo `generic.xaml` se encuentra en la misma carpeta que los archivos de diccionario de recursos específicos del tema. Aunque `generic.xaml` no corresponde a un tema específico de Windows, sigue siendo un diccionario de nivel de tema.
 
-El [ejemplo NumericUpDown Custom Control with Theme and UI Automation Support](https://go.microsoft.com/fwlink/?LinkID=160025) contiene dos diccionarios de recursos para el control `NumericUpDown`: uno es genérico y el otro se encuentra en Luna.NormalColor.xaml.  Puede ejecutar la aplicación y cambiar entre el tema plateado de Windows XP y otro tema a fin de ver la diferencia entre las dos plantillas de control. (Si está ejecutando Windows Vista, puede cambiar el nombre de Luna.NormalColor.xaml a Aero.NormalColor.xaml y cambiar entre dos temas, como el de Windows clásico y el tema predeterminado de Windows Vista).
+El [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp) ejemplo o [Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) control personalizado NumericUpDown con el tema y la compatibilidad con la automatización de la interfaz `NumericUpDown` de usuario contiene dos diccionarios de recursos para el control: uno está en Generic. XAML y el otro en luna. NormalColor. Xaml. 
 
 Al colocar un <xref:System.Windows.Controls.ControlTemplate> en cualquiera de los archivos de Diccionario de recursos específicos del tema, debe crear un constructor estático para el control y llamar al <xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29> método en <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>, como se muestra en el ejemplo siguiente.
 

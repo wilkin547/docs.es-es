@@ -14,12 +14,12 @@ ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 2fbb0715d148b443b1eca8f400e4ad43eb51fa43
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: 4fd1f1dc0c2c0ad9ae2009ed592e48b8eeaa2783
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015735"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373685"
 ---
 # <a name="walkthrough-serialize-collections-of-standard-types"></a>Tutorial: Serializar colecciones de tipos estándar
 
@@ -37,7 +37,7 @@ El primer paso es crear un control que tenga una colección serializable como un
 
 1. En Visual Studio, cree un proyecto de biblioteca de controles de Windows y asígnele el nombre **SerializationDemoControlLib**.
 
-2. Cambie el `UserControl1` nombre `SerializationDemoControl`a. Para obtener más información, vea [cambiar el nombre de una](/visualstudio/ide/reference/rename)refactorización de símbolo de código.
+2. Cambie el `UserControl1` nombre `SerializationDemoControl`a. Para obtener más información, vea [cambiar el nombre de una refactorización de símbolo de código](/visualstudio/ide/reference/rename).
 
 3. En la ventana **propiedades** , establezca el valor de la <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> propiedad en **10**.
 
@@ -90,14 +90,14 @@ Para probar el comportamiento de la serialización del control, lo colocará en 
 
 5. Escriba varias cadenas en el **Editor**de la colección de cadenas. Sepárelos presionando **entrar** al final de cada cadena. Haga clic en **Aceptar** cuando haya terminado de escribir las cadenas.
 
-> [!NOTE]
-> Las cadenas que escribió aparecen en el <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`del.
+    > [!NOTE]
+    > Las cadenas que escribió aparecen en el <xref:System.Windows.Forms.TextBox> `SerializationDemoControl`del.
 
 6. En el **Explorador de soluciones**, haga clic en el botón **Mostrar todos los archivos**.
 
 7. Abra el nodo **Form1** . Debajo, se trata de un archivo denominado **Form1.Designer.CS** o **Form1. Designer. VB**. Este es el archivo en el que el **Diseñador de Windows Forms** emite código que representa el estado de tiempo de diseño del formulario y sus controles secundarios. Abra este archivo en el **Editor de código**.
 
-8. Abra la región denominada **código generado** por el diseñador de Windows Forms y busque la sección con la etiqueta **serializationDemoControl1**. Debajo de esta etiqueta se encuentra el código que representa el estado serializado del control. Las cadenas que escribió en el paso 5 aparecen en una asignación a la `Strings` propiedad. En los siguientes ejemplos de C# código de y Visual Basic, se muestra código similar al que se verá si se escriben las cadenas "red", "naranja" y "amarillo".
+8. Abra la región denominada **código generado por el diseñador de Windows Forms** y busque la sección con la etiqueta **serializationDemoControl1**. Debajo de esta etiqueta se encuentra el código que representa el estado serializado del control. Las cadenas que escribió en el paso 5 aparecen en una asignación a la `Strings` propiedad. En los siguientes ejemplos de C# código de y Visual Basic, se muestra código similar al que se verá si se escriben las cadenas "red", "naranja" y "amarillo".
 
     ```csharp
     this.serializationDemoControl1.Strings = new string[] {

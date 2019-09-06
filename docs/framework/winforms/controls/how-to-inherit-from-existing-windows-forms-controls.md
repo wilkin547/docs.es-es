@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 0571bd6b169b94b1626bffb0d0793bbb22a93ba0
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: fcf95e08296f5a8ec5a386ac614482c034e72c8b
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015863"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373236"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>Procedimiento para heredar de controles de formularios Windows Forms existentes
 
@@ -26,22 +26,22 @@ Si desea ampliar la funcionalidad de un control existente, puede crear un contro
 
 1. En Visual Studio, cree un nuevo proyecto de **aplicación de Windows Forms** .
 
-2. En el menú **Proyecto** , elija **Agregar nuevo elemento**.
+1. En el menú **Proyecto** , elija **Agregar nuevo elemento**.
 
-     Aparecerá el cuadro de diálogo **Agregar nuevo elemento**.
+    Aparecerá el cuadro de diálogo **Agregar nuevo elemento**.
 
-3. En el cuadro de diálogo **Agregar nuevo elemento**, haga doble clic en **Control personalizado**.
+1. En el cuadro de diálogo **Agregar nuevo elemento**, haga doble clic en **Control personalizado**.
 
-     Se agrega un nuevo control personalizado al proyecto.
+    Se agrega un nuevo control personalizado al proyecto.
 
-4. Si usa:
+1. Si usa:
 
-   - Visual Basic, en la parte superior de **Explorador de soluciones**, haga clic en **Mostrar todos los archivos**. Expanda CustomControl1.vb y, a continuación, abra CustomControl1.Designer.vb en el Editor de código.
-   - C#, abra CustomControl1.cs en el editor de código.
+    - Visual Basic, en la parte superior de **Explorador de soluciones**, haga clic en **Mostrar todos los archivos**. Expanda CustomControl1.vb y, a continuación, abra CustomControl1.Designer.vb en el Editor de código.
+    - C#, abra CustomControl1.cs en el editor de código.
 
-6. Busque la declaración de clase, que hereda de <xref:System.Windows.Forms.Control>.
+1. Busque la declaración de clase, que hereda de <xref:System.Windows.Forms.Control>.
 
-7. Cambie la clase base para el control a partir del que desee heredar.
+1. Cambie la clase base para el control a partir del que desee heredar.
 
      Por ejemplo, si desea heredar de <xref:System.Windows.Forms.Button>, cambie la declaración de clase a lo siguiente:
 
@@ -54,11 +54,11 @@ Si desea ampliar la funcionalidad de un control existente, puede crear un contro
     public partial class CustomControl1 : System.Windows.Forms.Button
     ```
 
-8. Si está utilizando Visual Basic, guarde y cierre CustomControl1.Designer.vb. Abra CustomControl1.vb en el Editor de código.
+1. Si está utilizando Visual Basic, guarde y cierre CustomControl1.Designer.vb. Abra CustomControl1.vb en el Editor de código.
 
-9. Implemente los métodos o propiedades personalizados que vaya a incorporar el control.
+1. Implemente los métodos o propiedades personalizados que vaya a incorporar el control.
 
-10. Si desea modificar la apariencia gráfica del control, invalide el <xref:System.Windows.Forms.Control.OnPaint%2A> método.
+1. Si desea modificar la apariencia gráfica del control, invalide el <xref:System.Windows.Forms.Control.OnPaint%2A> método.
 
     > [!NOTE]
     > La invalidación <xref:System.Windows.Forms.Control.OnPaint%2A> no le permitirá modificar la apariencia de todos los controles. Los controles que tienen todo su dibujo realizado por Windows (por ejemplo,) <xref:System.Windows.Forms.TextBox>nunca llaman a su <xref:System.Windows.Forms.Control.OnPaint%2A> método y, por tanto, nunca usarán el código personalizado. Consulte la documentación de ayuda del control determinado que desea modificar para ver si el <xref:System.Windows.Forms.Control.OnPaint%2A> método está disponible. Para obtener una lista de todos los controles de Windows Form, vea el artículo sobre [controles que se utilizan en Windows Forms](controls-to-use-on-windows-forms.md). Si un control no <xref:System.Windows.Forms.Control.OnPaint%2A> aparece como un método de miembro, no se puede modificar su apariencia invalidando este método. Para información sobre el dibujo personalizado, vea [Dibujo y representación personalizados de controles](custom-control-painting-and-rendering.md).
@@ -83,13 +83,13 @@ Si desea ampliar la funcionalidad de un control existente, puede crear un contro
     }
     ```
 
-11. Guarde y pruebe el control.
+1. Guarde y pruebe el control.
 
 ## <a name="see-also"></a>Vea también
 
 - [Variedades de controles personalizados](varieties-of-custom-controls.md)
 - [Cómo: Heredar de la clase control](how-to-inherit-from-the-control-class.md)
 - [Cómo: Heredar de la clase UserControl](how-to-inherit-from-the-usercontrol-class.md)
-- [Procedimientos: Controles de autor para Windows Forms](how-to-author-controls-for-windows-forms.md)
+- [Cómo: Controles de autor para Windows Forms](how-to-author-controls-for-windows-forms.md)
 - [Solucionar problemas de controladores de eventos heredados en Visual Basic](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [Tutorial: Heredar de un control Windows Forms](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
