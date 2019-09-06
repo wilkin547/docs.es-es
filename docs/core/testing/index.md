@@ -5,16 +5,18 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0c74aeaf02bc6380d7627ce39f65603e94952c0
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614874"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70373871"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Pruebas unitaria en .NET Core y .NET Standard
 
 .NET Core facilita la creación de pruebas unitarias. En este artículo se presentan las pruebas unitarias y se indican las diferencias con otros tipos de pruebas. En los recursos vinculados al final de la página se muestra cómo agregar un proyecto de prueba a una solución. Una vez que haya configurado el proyecto de prueba, podrá ejecutar las pruebas unitarias con la línea de comandos o con Visual Studio.
+
+Si está realizando pruebas con un proyecto de **ASP.NET Core**, consulte [Pruebas de integración en ASP.NET Core](/aspnet/core/test/integration-tests#test-app-prerequisites).
 
 .NET Core 2.0 y versiones posteriores admiten [.NET Standard 2.0](../../standard/net-standard.md), cuyas bibliotecas usaremos para mostrar las pruebas unitarias.
 
