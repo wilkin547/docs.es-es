@@ -2,18 +2,21 @@
 title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: b29f7173b4d75ec9adff37449d3d56266f01a03c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e00bbad452398e7f8f4f50208da572986391fc9e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759166"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399477"
 ---
-# <a name="systemservicemodelactivation"></a><span data-ttu-id="05d5b-102">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="05d5b-102">\<system.serviceModel.activation></span></span>
-<span data-ttu-id="05d5b-103">Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="05d5b-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="05d5b-104">Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="05d5b-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="05d5b-105">Específicamente, incluye todos los valores de equipo que se deben configurar.</span><span class="sxs-lookup"><span data-stu-id="05d5b-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+# <a name="systemservicemodelactivation"></a><span data-ttu-id="ac145-102">\<system.serviceModel.activation></span><span class="sxs-lookup"><span data-stu-id="ac145-102">\<system.serviceModel.activation></span></span>
+<span data-ttu-id="ac145-103">Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="ac145-103">This configuration section represents the configuration settings for the SMSvcHost.exe tool.</span></span> <span data-ttu-id="ac145-104">Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config.</span><span class="sxs-lookup"><span data-stu-id="ac145-104">The configuration elements can be configured in the SMSvcHost.exe.config file.</span></span> <span data-ttu-id="ac145-105">Específicamente, incluye todos los valores de equipo que se deben configurar.</span><span class="sxs-lookup"><span data-stu-id="ac145-105">Specifically, it includes all machine-wide settings that must be configured.</span></span>  
+
+<span data-ttu-id="ac145-106">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="ac145-106">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="ac145-107">&nbsp;&nbsp; **\<System. serviceModel. Activation >**</span><span class="sxs-lookup"><span data-stu-id="ac145-107">&nbsp;&nbsp;**\<system.serviceModel.activation>**</span></span>  
   
-## <a name="sample-configuration-file"></a><span data-ttu-id="05d5b-106">Archivo de configuración del ejemplo</span><span class="sxs-lookup"><span data-stu-id="05d5b-106">Sample Configuration File</span></span>  
- <span data-ttu-id="05d5b-107">A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="05d5b-107">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
+## <a name="sample-configuration-file"></a><span data-ttu-id="ac145-108">Archivo de configuración del ejemplo</span><span class="sxs-lookup"><span data-stu-id="ac145-108">Sample Configuration File</span></span>  
+ <span data-ttu-id="ac145-109">A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="ac145-109">The following is a sample configuration file (SMSvcHost.exe.config), which is used by the listener process SMSvcHost.exe.</span></span>  
   
 ```xml  
 <configuration>
@@ -60,6 +63,6 @@ ms.locfileid: "61759166"
 </configuration>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="05d5b-108">Vea también</span><span class="sxs-lookup"><span data-stu-id="05d5b-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac145-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="ac145-110">See also</span></span>
 
 - <xref:System.ServiceModel.Activation.Configuration>

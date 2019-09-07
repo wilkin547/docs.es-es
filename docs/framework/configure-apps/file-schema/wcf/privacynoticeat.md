@@ -2,57 +2,58 @@
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: f7349bf61082c5d8e5bd4249e01b8835a1861cb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 624b52c0618362f48063c8f7e7c53c5a68d7de8f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934257"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400037"
 ---
-# <a name="privacynoticeat"></a><span data-ttu-id="63bce-101">\<privacyNoticeAt></span><span class="sxs-lookup"><span data-stu-id="63bce-101">\<privacyNoticeAt></span></span>
-<span data-ttu-id="63bce-102">Representa un elemento de configuración que especifica un aviso de privacidad usado en el enlace `wsFederationHttp`.</span><span class="sxs-lookup"><span data-stu-id="63bce-102">Represents a configuration element that specifies a privacy notice used in `wsFederationHttp` binding.</span></span>  
+# <a name="privacynoticeat"></a><span data-ttu-id="911e3-101">\<privacyNoticeAt></span><span class="sxs-lookup"><span data-stu-id="911e3-101">\<privacyNoticeAt></span></span>
+<span data-ttu-id="911e3-102">Representa un elemento de configuración que especifica un aviso de privacidad usado en el enlace `wsFederationHttp`.</span><span class="sxs-lookup"><span data-stu-id="911e3-102">Represents a configuration element that specifies a privacy notice used in `wsFederationHttp` binding.</span></span>  
   
- <span data-ttu-id="63bce-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="63bce-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="63bce-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="63bce-104">\<bindings></span></span>  
-<span data-ttu-id="63bce-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="63bce-105">\<customBinding></span></span>  
-<span data-ttu-id="63bce-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="63bce-106">\<binding></span></span>  
-<span data-ttu-id="63bce-107">\<privacyNotice></span><span class="sxs-lookup"><span data-stu-id="63bce-107">\<privacyNotice></span></span>  
+<span data-ttu-id="911e3-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="911e3-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="911e3-104">&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)</span><span class="sxs-lookup"><span data-stu-id="911e3-104">&nbsp;&nbsp;[**\<system.serviceModel>**](system-servicemodel.md)</span></span>\
+<span data-ttu-id="911e3-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)</span><span class="sxs-lookup"><span data-stu-id="911e3-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<bindings>**](bindings.md)</span></span>\
+<span data-ttu-id="911e3-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)</span><span class="sxs-lookup"><span data-stu-id="911e3-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<customBinding>**](custombinding.md)</span></span>\
+<span data-ttu-id="911e3-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de enlace**</span><span class="sxs-lookup"><span data-stu-id="911e3-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<binding>**</span></span>\
+<span data-ttu-id="911e3-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> privacyNotice**</span><span class="sxs-lookup"><span data-stu-id="911e3-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<privacyNotice>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="63bce-108">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="63bce-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="911e3-109">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="911e3-109">Syntax</span></span>  
   
 ```xml  
 <privacyNotice url="String"
                version="Integer" />
 ```  
   
-## <a name="type"></a><span data-ttu-id="63bce-109">Type</span><span class="sxs-lookup"><span data-stu-id="63bce-109">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="911e3-110">Type</span><span class="sxs-lookup"><span data-stu-id="911e3-110">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="63bce-110">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="63bce-110">Attributes and Elements</span></span>  
- <span data-ttu-id="63bce-111">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="63bce-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="911e3-111">Atributos y elementos</span><span class="sxs-lookup"><span data-stu-id="911e3-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="911e3-112">En las siguientes secciones se describen los atributos, los elementos secundarios y los elementos primarios.</span><span class="sxs-lookup"><span data-stu-id="911e3-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="63bce-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="63bce-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="911e3-113">Atributos</span><span class="sxs-lookup"><span data-stu-id="911e3-113">Attributes</span></span>  
   
-|<span data-ttu-id="63bce-113">Atributo</span><span class="sxs-lookup"><span data-stu-id="63bce-113">Attribute</span></span>|<span data-ttu-id="63bce-114">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="63bce-114">Description</span></span>|  
+|<span data-ttu-id="911e3-114">Atributo</span><span class="sxs-lookup"><span data-stu-id="911e3-114">Attribute</span></span>|<span data-ttu-id="911e3-115">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="911e3-115">Description</span></span>|  
 |---------------|-----------------|  
-|`url`|<span data-ttu-id="63bce-115">Una cadena que especifica el URI en el que el aviso de privacidad se encuentra.</span><span class="sxs-lookup"><span data-stu-id="63bce-115">A string that specifies the URI at which the privacy notice is located.</span></span>|  
-|`version`|<span data-ttu-id="63bce-116">Un entero que especifica la versión de este aviso de privacidad.</span><span class="sxs-lookup"><span data-stu-id="63bce-116">An integer that specifies the version of this privacy notice.</span></span>|  
+|`url`|<span data-ttu-id="911e3-116">Una cadena que especifica el URI en el que el aviso de privacidad se encuentra.</span><span class="sxs-lookup"><span data-stu-id="911e3-116">A string that specifies the URI at which the privacy notice is located.</span></span>|  
+|`version`|<span data-ttu-id="911e3-117">Un entero que especifica la versión de este aviso de privacidad.</span><span class="sxs-lookup"><span data-stu-id="911e3-117">An integer that specifies the version of this privacy notice.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="63bce-117">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="63bce-117">Child Elements</span></span>  
- <span data-ttu-id="63bce-118">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="63bce-118">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="911e3-118">Elementos secundarios</span><span class="sxs-lookup"><span data-stu-id="911e3-118">Child Elements</span></span>  
+ <span data-ttu-id="911e3-119">Ninguno.</span><span class="sxs-lookup"><span data-stu-id="911e3-119">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="63bce-119">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="63bce-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="911e3-120">Elementos primarios</span><span class="sxs-lookup"><span data-stu-id="911e3-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="63bce-120">Elemento</span><span class="sxs-lookup"><span data-stu-id="63bce-120">Element</span></span>|<span data-ttu-id="63bce-121">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="63bce-121">Description</span></span>|  
+|<span data-ttu-id="911e3-121">Elemento</span><span class="sxs-lookup"><span data-stu-id="911e3-121">Element</span></span>|<span data-ttu-id="911e3-122">DESCRIPCIÓN</span><span class="sxs-lookup"><span data-stu-id="911e3-122">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="63bce-122">\<binding></span><span class="sxs-lookup"><span data-stu-id="63bce-122">\<binding></span></span>](../../../misc/binding.md)|<span data-ttu-id="63bce-123">Define todas las funcionalidades de enlace del enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="63bce-123">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="911e3-123">\<binding></span><span class="sxs-lookup"><span data-stu-id="911e3-123">\<binding></span></span>](../../../misc/binding.md)|<span data-ttu-id="911e3-124">Define todas las funcionalidades de enlace del enlace personalizado.</span><span class="sxs-lookup"><span data-stu-id="911e3-124">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="63bce-124">Vea también</span><span class="sxs-lookup"><span data-stu-id="63bce-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="911e3-125">Vea también</span><span class="sxs-lookup"><span data-stu-id="911e3-125">See also</span></span>
 
 - <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>
 - <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [<span data-ttu-id="63bce-125">Enlaces</span><span class="sxs-lookup"><span data-stu-id="63bce-125">Bindings</span></span>](../../../wcf/bindings.md)
-- [<span data-ttu-id="63bce-126">Extensión de enlaces</span><span class="sxs-lookup"><span data-stu-id="63bce-126">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="63bce-127">Enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="63bce-127">Custom Bindings</span></span>](../../../wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="63bce-128">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="63bce-128">\<customBinding></span></span>](custombinding.md)
+- [<span data-ttu-id="911e3-126">Enlaces</span><span class="sxs-lookup"><span data-stu-id="911e3-126">Bindings</span></span>](../../../wcf/bindings.md)
+- [<span data-ttu-id="911e3-127">Extensión de enlaces</span><span class="sxs-lookup"><span data-stu-id="911e3-127">Extending Bindings</span></span>](../../../wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="911e3-128">Enlaces personalizados</span><span class="sxs-lookup"><span data-stu-id="911e3-128">Custom Bindings</span></span>](../../../wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="911e3-129">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="911e3-129">\<customBinding></span></span>](custombinding.md)
