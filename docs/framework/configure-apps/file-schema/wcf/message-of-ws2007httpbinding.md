@@ -2,22 +2,23 @@
 title: <message> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 59449ec5f8f048e27313d088be0ca951915ef5e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 987c51f65f5c36a70724fd62fecaf737943c2d9a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931503"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398031"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<> de mensajes \<de ws2007HttpBinding >
 Define la configuración para la [ \<](ws2007httpbinding.md) seguridad de nivel de mensaje del elemento > de ws2007HttpBinding.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<ws2007HttpBinding>  
-\<binding>  
-\<> de seguridad  
-\<message>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> ws2007HttpBinding**](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de enlace**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de seguridad**](security-of-ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de mensajes**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -73,7 +74,7 @@ Define la configuración para la [ \<](ws2007httpbinding.md) seguridad de nivel 
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialType  
   
-|Value|DESCRIPCIÓN|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`None`|Esto permite al servicio interactuar con clientes anónimos. En el servicio, esto indica que el servicio no requiere ninguna credencial del cliente. En el cliente, esto indica que el cliente no proporciona ninguna credencial del cliente.|  
 |`Certificate`|Permite al servicio exigir la autenticación del cliente mediante un certificado. Si se usa el modo de seguridad de `message` y el atributo `negotiateServiceCredential` está establecido en `false`, se debe proporcionar al cliente el certificado de servicio.|  

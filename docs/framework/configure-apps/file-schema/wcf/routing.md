@@ -2,19 +2,20 @@
 title: <routing>
 ms.date: 03/30/2017
 ms.assetid: a210c209-3940-4288-9a8e-39b1e62606bc
-ms.openlocfilehash: 3c7e9cb1284ab55c8dd199d9fb47a223698814f0
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fcf2d4eec93fd7127c6f800e1c739ad1fac49203
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934127"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399972"
 ---
 # <a name="routing"></a>\<> de enrutamiento
 
 Representa una sección de configuración para definir un conjunto de filtros de enrutamiento, que determinan el tipo de <xref:System.ServiceModel.Dispatcher.MessageFilter> Windows Communication Foundation (WCF) que se va a usar al evaluar los mensajes entrantes, así como las tablas de enrutamiento que definen los extremos de destino. enviar mensajes a cuando coincida un filtro.
 
-[ **\<system.serviceModel>** ](system-servicemodel.md)   
-&nbsp;&nbsp; **\<> de enrutamiento**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> de enrutamiento**
   
 ## <a name="syntax"></a>Sintaxis  
   

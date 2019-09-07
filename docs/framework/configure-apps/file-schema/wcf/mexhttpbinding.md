@@ -2,19 +2,20 @@
 title: <mexHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-ms.openlocfilehash: bb9e1fc0b3ec62c824864a74efb64c34d2076e66
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6ff5b2cfee1d55b9399b97f3b3397e6bbf8eca2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931297"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400241"
 ---
 # <a name="mexhttpbinding"></a>\<mexHttpBinding>
 Especifica los valores para un enlace utilizado para el intercambio de mensajes de WS-MetadataExchange (WS-MEX) sobre HTTP.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<mexHttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> mexHttpBinding**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -58,7 +59,7 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpBindingElement>
-- [Procedimientos: Publicar metadatos para un servicio mediante un archivo de configuración](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Publicación y recuperación de metadatos a través de un enlace personalizado](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [Metadatos](../../../wcf/feature-details/metadata.md)
 - [Enlaces](../../../wcf/bindings.md)

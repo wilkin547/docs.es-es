@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8438b995-bd07-4223-b22d-13adadef33fb
-ms.openlocfilehash: 9a057cd80b3dc110626d1a9a850ee7c9704b33b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7add62a2792a0fc82346851b7dd835aad5082742
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250253"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397459"
 ---
 # <a name="method-based-query-syntax-examples-element-operators"></a>Ejemplos de sintaxis de consulta basada en métodos: Operadores de elementos
-En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.First%2A> el método para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) utilizando la sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
+En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.First%2A> el método para consultar el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) utilizando la sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
   
  En el ejemplo de este tema se usan `using` las siguientes / `Imports` instrucciones:  
   

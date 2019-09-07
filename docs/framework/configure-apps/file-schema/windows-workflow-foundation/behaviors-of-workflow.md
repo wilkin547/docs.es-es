@@ -3,17 +3,19 @@ title: <behaviors>del flujo de trabajo
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-ms.openlocfilehash: 7dd3b0b20c9d7accd80a85b3693e67ffc9b729e5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 05a15cdf5c043eb5d94b36028324310d2b7a8413
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946004"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398877"
 ---
 # <a name="behaviors-of-workflow"></a>\<comportamientos > del flujo de trabajo
 Este elemento contiene la colección **serviceBehaviors** .  Cada elemento de la colección define elementos de comportamiento utilizados por servicios del flujo de trabajo. Cada elemento de comportamiento se identifica mediante su atributo de **nombre** único.  
   
- \<system.ServiceModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<integrado. > De ServiceModel**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<comportamientos >**  
   
 ## <a name="syntax"></a>Sintaxis  
   

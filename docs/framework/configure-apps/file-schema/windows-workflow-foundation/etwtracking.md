@@ -3,21 +3,22 @@ title: <etwTracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: cb45c82e-6ea1-4c4d-924c-118a25ae1f35
-ms.openlocfilehash: 653693fef92072cb1e6e23234359b765f0f18fc9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 094fbf95042c00287fb8dfcca28753cfe501a8d8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940232"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398753"
 ---
 # <a name="etwtracking"></a>\<etwTracking>
 Un comportamiento del servicio que permite a un servicio usar el seguimiento de <xref:System.Activities.Tracking.EtwTrackingParticipant>ETW mediante.  
   
-\<system.ServiceModel>  
-\<comportamientos >  
-\<serviceBehaviors>  
-\<comportamiento >  
-\<etwTracking>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<integrado. > De ServiceModel**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> etwTracking**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,7 +58,7 @@ Un comportamiento del servicio que permite a un servicio usar el seguimiento de 
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo de configuración muestra el participante de seguimiento de ETW estándar que se está configurando en el archivo Web.config.  
   
- El identificador de proveedor que el participante de seguimiento de ETW usa para escribir los registros de seguimiento en ETW  **\<** se define en la sección Diagnostics >. El participante de seguimiento tiene un perfil asociado para especificar los registros de seguimiento a los que se ha suscrito. Se define mediante el atributo **ProfileName** del  **\<elemento Add >** . Una vez definidos, el participante de seguimiento se agrega al comportamiento del  **\<servicio etwTracking >** . Esto agregará los participantes de seguimiento seleccionados a las extensiones de la instancia de flujo de trabajo para que puedan empezar a recibir los registros de seguimiento.  
+ El identificador de proveedor que el participante de seguimiento de ETW usa para escribir los registros de seguimiento en ETW se define en la  **\<sección Diagnostics >** . El participante de seguimiento tiene un perfil asociado para especificar los registros de seguimiento a los que se ha suscrito. Se define mediante el atributo **ProfileName** del  **\<elemento Add >** . Una vez definidos, el participante de seguimiento se agrega al comportamiento del  **\<servicio etwTracking >** . Esto agregará los participantes de seguimiento seleccionados a las extensiones de la instancia de flujo de trabajo para que puedan empezar a recibir los registros de seguimiento.  
   
 ```xml  
 <configuration>   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: c873961982cd1642d8b354e5d77b06105c0b7a1e
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
+ms.openlocfilehash: d6b2975b8e0338b121d00f5ec7f4ffb69d32ab6a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68364310"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400733"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Introducción a las estructuras y conceptos de secuencias de nodo XAML
 
@@ -85,9 +85,6 @@ Este ejemplo básico de un bucle de nodo XAML de ruta de acceso de carga conecta
 ### <a name="accessing-xaml-beyond-the-node-loop-concept"></a>Acceder a XAML más allá del concepto de bucle de nodo
 
 Existen otras maneras de trabajar con una representación de XAML, además del bucle de nodo XAML. Por ejemplo, podría existir un lector XAML que puede leer un nodo indexado o en concreto acceder a los nodos directamente a través de `x:Name`, `x:Uid`u otros identificadores. Los servicios XAML de .NET Framework no proporcionan una implementación completa, pero ofrecen un patrón sugerido a través de los tipos de servicios y de soporte. Para obtener más información, vea <xref:System.Xaml.IXamlIndexingReader> y <xref:System.Xaml.XamlNodeList>.
-
-> [!TIP]
-> Microsoft también genera una versión fuera de banda, conocida como el Kit de herramientas de Microsoft XAML. Esta versión fuera de banda todavía se encuentra en las fases preliminares. Sin embargo, si está dispuesto a trabajar con componentes de la versión preliminar, el Kit de herramientas de Microsoft XAML proporciona algunos recursos interesantes para las herramientas de XAML y el análisis estático de XAML. El Kit de herramientas de Microsoft XAML incluye una API de DOM de XAML, soporte técnico para el análisis de FxCop y un contexto de esquema XAML para Silverlight. Para obtener más información, vea [Kit de herramientas de Microsoft XAML](https://code.msdn.microsoft.com/XAML).
 
 <a name="working_with_the_current_node"></a>
 

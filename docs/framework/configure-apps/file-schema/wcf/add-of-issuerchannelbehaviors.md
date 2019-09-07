@@ -2,12 +2,12 @@
 title: <add> de <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
-ms.openlocfilehash: 325d6b8111115384b18547bd11ccec8a4a8af711
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cf7ac2691ad1c641352a8047373ced538b19e983
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69920111"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398330"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<Agregar > de \<issuerChannelBehaviors >
 
@@ -16,13 +16,15 @@ Agrega un comportamiento del punto de conexión que se va a usar al comunicar co
 > [!NOTE]
 > Si algún comportamiento del punto de conexión contiene un [ \<elemento clientCredentials >](clientcredentials.md) , se producirá una excepción.
 
-\<system.ServiceModel>\
-\<comportamientos > \
-comportamiento de \<la sección endpointBehaviors > \
-\<clientCredentials > \
-\<issuedToken>\
-\<issuerChannelBehaviors > elemento \
-\<add>
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> issuedToken**](issuedtoken.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> issuerChannelBehaviors**](issuerchannelbehaviors-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Agregar >**  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -67,7 +69,7 @@ Ninguno.
 - [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [Protección de servicios y clientes](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Protección de clientes](../../../wcf/securing-clients.md)
-- [Cómo: Creación de un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
-- [Cómo: Configuración de un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
+- [Procedimientos: Creación de un cliente federado](../../../wcf/feature-details/how-to-create-a-federated-client.md)
+- [Procedimientos: Configuración de un emisor local](../../../wcf/feature-details/how-to-configure-a-local-issuer.md)
 - [Federación y tokens emitidos](../../../wcf/feature-details/federation-and-issued-tokens.md)
 - [\<issuerChannelBehaviors>](issuerchannelbehaviors-element.md)

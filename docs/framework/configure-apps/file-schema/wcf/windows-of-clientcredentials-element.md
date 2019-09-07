@@ -2,22 +2,23 @@
 title: <windows>del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: e9f0ed9879cc42ea25b83e6b626139a40a593112
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 61ca99213f0b83a5af5df0184a8c1de405366288
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940307"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399129"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<Windows > de \<elemento > clientCredentials
 Especifica los valores para una credencial de Windows que se va a utilizar para representar al cliente.  
   
- \<system.ServiceModel>  
-\<comportamientos >  
-\<endpointBehaviors>  
-\<comportamiento >  
-\<clientCredentials>  
-\<windows>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de Windows**  
   
 ## <a name="syntax"></a>Sintaxis  
   

@@ -2,22 +2,23 @@
 title: <peer>del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 2f1cb5689125e2483a74dcac515beb07abbb7c70
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: dce7ef64de1e3eb248e3553c97cbce8e9b205b4c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69934032"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400096"
 ---
 # <a name="peer-of-clientcredentials-element"></a>\<> del mismo \<nivel de elemento > clientCredentials
 Especifica las credenciales usadas al autenticar clientes punto a punto.  
   
- \<system.ServiceModel>  
-\<comportamientos >  
-\<endpointBehaviors>  
-\<comportamiento >  
-\<clientCredentials>  
-\<> del mismo nivel  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> del mismo nivel**  
   
 ## <a name="syntax"></a>Sintaxis  
   

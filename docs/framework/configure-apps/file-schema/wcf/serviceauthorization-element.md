@@ -2,21 +2,22 @@
 title: Elemento <serviceAuthorization>
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: b73e2049afb460bf9be8b76ee272ba0547b61453
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b636b7006900ecff1be553cf32105df7cea7e800
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936394"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399691"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization >, elemento
 Especifica valores que autorizan que el acceso repare las operaciones  
   
- \<system.ServiceModel>  
-\<comportamientos >  
-\<serviceBehaviors>  
-\<comportamiento >  
-\<serviceAuthorization>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceAuthorization**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -93,7 +94,7 @@ Especifica valores que autorizan que el acceso repare las operaciones
 </behaviors>
 ```  
   
- Para obtener un ejemplo detallado del uso de este elemento de configuración, vea autorizar el [acceso a las operaciones de servicio y a](../../../wcf/samples/authorizing-access-to-service-operations.md) la [Directiva de autorización](../../../wcf/samples/authorization-policy.md).  
+ Para obtener un ejemplo detallado del uso de este elemento de configuración, vea [autorizar el acceso a las operaciones de servicio y a](../../../wcf/samples/authorizing-access-to-service-operations.md) la [Directiva de autorización](../../../wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Vea también
 

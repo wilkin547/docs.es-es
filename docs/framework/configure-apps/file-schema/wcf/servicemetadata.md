@@ -2,21 +2,22 @@
 title: <serviceMetadata>
 ms.date: 03/30/2017
 ms.assetid: 2b4c3b4c-31d4-4908-a9b7-5bb411c221f2
-ms.openlocfilehash: 1e9fdc67ee0502383995854d7decced7ac2d4178
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04d160535126cf2383cd9d0fa98d99cd76445735
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936194"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399608"
 ---
 # <a name="servicemetadata"></a>\<serviceMetadata>
 Especifica la publicación de metadatos e información asociada del servicio.  
   
-\<system.serviceModel>  
-\<comportamientos >  
-\<serviceBehaviors>  
-\<comportamiento >  
-\<serviceMetadata>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceMetadata**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -63,7 +64,7 @@ Especifica la publicación de metadatos e información asociada del servicio.
 ## <a name="remarks"></a>Comentarios  
  Este elemento de configuración permite controlar los metadatos que publican características de un servicio. Para evitar la revelación involuntaria de metadatos de servicio potencialmente confidenciales, la configuración predeterminada de los servicios Windows Communication Foundation (WCF) deshabilita la publicación de metadatos. Este comportamiento es seguro de forma predeterminada, pero también quiere decir que no puede usar una herramienta de importación de metadatos (como Svcutil.exe) Para compilar el código de cliente necesario para llamar al servicio a menos que el comportamiento de publicación de metadatos del servicio se habilite de manera explícita en la configuración. Con este elemento de configuración, puede habilitar este comportamiento de publicación para su servicio.  
   
- Para obtener un ejemplo detallado de cómo configurar este comportamiento, vea [comportamiento de publicación](../../../wcf/samples/metadata-publishing-behavior.md)de metadatos.  
+ Para obtener un ejemplo detallado de cómo configurar este comportamiento, vea [comportamiento de publicación de metadatos](../../../wcf/samples/metadata-publishing-behavior.md).  
   
  Los atributos `httpGetBinding` y `httpsGetBinding` opcionales le permiten configurar los enlaces utilizados para la recuperación de metadatos a través de HTTP GET (o HTTPS GET). Si no se especifican, los enlaces predeterminados (`HttpTransportBindingElement`, en el caso de HTTP y `HttpsTransportBindingElement`, en el caso de HTTPS) se utilizan según corresponda para la recuperación de metadatos. Observe que no puede utilizar estos atributos con los enlaces WCF integrados. Solo se admitirán los enlaces con elementos de enlace internos que admiten <xref:System.ServiceModel.Channels.IReplyChannel>. Además, la propiedad <xref:System.ServiceModel.Channels.MessageVersion> del enlace debe ser <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.  
   

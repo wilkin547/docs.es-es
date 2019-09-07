@@ -2,19 +2,20 @@
 title: <mexNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
-ms.openlocfilehash: 0d0904c02e31def1b5264bec9f61eac0c9a8e964
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b26201064aad3a8a09d8604a9706fe3c149cbf58
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931231"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400232"
 ---
 # <a name="mexnamedpipebinding"></a>\<mexNamedPipeBinding>
 Especifica los valores para un enlace utilizado para el intercambio de mensajes de WS-MetadataExchange (WS-MEX) sobre una canalización con nombre.  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<mexNamedPipeBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> mexNamedPipeBinding**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -55,7 +56,7 @@ Especifica los valores para un enlace utilizado para el intercambio de mensajes 
 
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexNamedPipeBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexNamedPipeBindingElement>
-- [Cómo: Publicar metadatos para un servicio mediante un archivo de configuración](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [Procedimientos: Publicar metadatos para un servicio mediante un archivo de configuración](../../../wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [Publicación y recuperación de metadatos a través de un enlace personalizado](../../../wcf/extending/publishing-and-retrieving-metadata-over-a-custom-binding.md)
 - [Metadatos](../../../wcf/feature-details/metadata.md)
 - [Enlaces](../../../wcf/bindings.md)

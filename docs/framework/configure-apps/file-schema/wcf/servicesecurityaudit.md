@@ -2,21 +2,22 @@
 title: <serviceSecurityAudit>
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: a1fcc59550904a34eced8e87fa9bc54a334acd03
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 10888f26053014ffb1fec49d1dfe87c7fd09ab54
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937169"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399578"
 ---
 # <a name="servicesecurityaudit"></a>\<serviceSecurityAudit>
 Especifica valores que habilitan la auditoría de eventos de seguridad durante las operaciones del servicio.  
   
- \<system.ServiceModel>  
-\<comportamientos >  
-\<serviceBehaviors>  
-\<comportamiento >  
-\<serviceSecurityAudit>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceSecurityAudit**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -53,7 +54,7 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
   
  Para obtener un ejemplo detallado del uso de este elemento de configuración, vea comportamiento de la [Auditoría del servicio](../../../wcf/samples/service-auditing-behavior.md).  
   
- De forma predeterminada, en Windows XP los eventos de auditoría se pueden ver en el registro de aplicaciones, mientras que en Windows Server 2003 y Windows Vista, los eventos de auditoría se pueden ver en el registro de seguridad. Se puede especificar la ubicación de los eventos de auditoría estableciendo el atributo `auditLogLocation` en 'Aplicación' o 'Seguridad'. Para obtener más información, consulte [Cómo Auditar eventos](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)de seguridad. Si los eventos se escriben en el registro de seguridad, se debe establecer el valor de LocalSecurityPolicy-> habilitar el acceso a objetos para "Success" y "Failure".  
+ De forma predeterminada, en Windows XP los eventos de auditoría se pueden ver en el registro de aplicaciones, mientras que en Windows Server 2003 y Windows Vista, los eventos de auditoría se pueden ver en el registro de seguridad. Se puede especificar la ubicación de los eventos de auditoría estableciendo el atributo `auditLogLocation` en 'Aplicación' o 'Seguridad'. Para obtener más información, vea [Cómo: Auditar eventos](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)de seguridad. Si los eventos se escriben en el registro de seguridad, se debe establecer el valor de LocalSecurityPolicy-> habilitar el acceso a objetos para "Success" y "Failure".  
   
  Al examinar el registro de eventos, el origen de los eventos de auditoría es "ServiceModel Audit 3.0.0.0". Los registros de auditoría de autenticación de mensajes tienen una categoría de "MessageAuthentication" mientras que los registros de auditoría de autorización tienen una categoría de 'ServiceAuthorization'.  
   
@@ -84,5 +85,5 @@ Especifica valores que habilitan la auditoría de eventos de seguridad durante l
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - [Comportamientos de seguridad](../../../wcf/feature-details/security-behaviors-in-wcf.md)
 - [Auditoría](../../../wcf/feature-details/auditing-security-events.md)
-- [Procedimientos: Auditar eventos de seguridad](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [Cómo: Auditar eventos de seguridad](../../../wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [Comportamiento de auditoría de servicio](../../../wcf/samples/service-auditing-behavior.md)

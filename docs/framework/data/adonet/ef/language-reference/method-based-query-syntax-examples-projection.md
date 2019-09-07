@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 505491fa-5920-43ce-8a96-c25389e125d8
-ms.openlocfilehash: 231fe6072d9a9a561aa91d3cb52fa6963f2d72dd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3a9203a51bbb61b32300919656084d7d95ddfa79
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250066"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397320"
 ---
 # <a name="method-based-query-syntax-examples-projection"></a>Ejemplos de sintaxis de consulta basada en métodos: Proyección
-En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.Select%2A> los <xref:System.Linq.Enumerable.SelectMany%2A> métodos y para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) con la sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
+En los ejemplos de este tema se muestra cómo usar <xref:System.Linq.Enumerable.Select%2A> los <xref:System.Linq.Enumerable.SelectMany%2A> métodos y para consultar el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) con la sintaxis de consulta basada en métodos. El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo de AdventureWorks.  
   
  En los ejemplos de este tema se usan `using` las siguientes / `Imports` instrucciones:  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40e314c-eb30-4f44-a054-41e511e35832
-ms.openlocfilehash: e0eb29b750c474c277ef54c343726b338fbf5dbe
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8bc8f46a1afa6afad0b1893dfd0f09878be0e7a2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70250226"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397475"
 ---
 # <a name="method-based-query-syntax-examples-filtering"></a>Ejemplos de sintaxis de consulta basada en métodos: Filtrado
-En los ejemplos de este tema se muestra cómo usar `Where` los `Where…Contains` métodos y para consultar el [modelo AdventureWorks Sales](https://archive.codeplex.com/?p=msftdbprodsamples) con la sintaxis de consulta basada en métodos. Tenga en cuenta dónde...`Contains` no se puede usar como parte de una [consulta compilada](compiled-queries-linq-to-entities.md).  
+En los ejemplos de este tema se muestra cómo usar `Where` los `Where…Contains` métodos y para consultar el [modelo AdventureWorks Sales](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) con la sintaxis de consulta basada en métodos. Tenga en cuenta dónde...`Contains` no se puede usar como parte de una [consulta compilada](compiled-queries-linq-to-entities.md).  
   
  El modelo AdventureWorks Sales que se usa en estos ejemplos se crea a partir de las tablas Contact, Address, Product, SalesOrderHeader y SalesOrderDetail en la base de datos de ejemplo AdventureWorks.  
   

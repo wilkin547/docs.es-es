@@ -2,21 +2,22 @@
 title: <security> de <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
-ms.openlocfilehash: a895df027bee7430e51e76c480136a49b6b2a0be
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ab5969da6a2d7cb59c057fd5bb909add6b6398a4
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936575"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399785"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<> de seguridad \<de ws2007HttpBinding >
 Representa la configuración de seguridad utilizada con [ \<](ws2007httpbinding.md) el elemento > de ws2007HttpBinding.  
   
- \<system.serviceModel>  
-\<bindings>  
-\<ws2007HttpBinding>  
-\<binding>  
-\<> de seguridad  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> ws2007HttpBinding**](ws2007httpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de enlace**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de seguridad**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,7 +49,7 @@ Representa la configuración de seguridad utilizada con [ \<](ws2007httpbinding.
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
-|Value|DESCRIPCIÓN|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |`None`|La seguridad está deshabilitada.|  
 |`Transport`|La seguridad se proporciona utilizando HTTPS. El servicio se debe configurar con certificados de Capa de sockets seguros (SSL). El mensaje se protege completamente utilizando HTTPS y el servicio se autentica por el cliente usando el certificado SSL del servicio. La autenticación del cliente se controla a `ClientCredentials` través del atributo [ \<](transport-of-ws2007httpbinding.md) del elemento > de transporte.|  

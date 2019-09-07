@@ -2,21 +2,22 @@
 title: <security> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 806cf8524ed1a1439ca85a4b918e8e486e5dc94b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2f0bc97e10fcd72f2f33cc20730320cbbfc42dd8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936582"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399772"
 ---
 # <a name="security-of-webhttpbinding"></a>\<> de seguridad \<de webHttpBinding >
 Especifica los requisitos de seguridad para un extremo configurado con un [ \<> webHttpBinding](webhttpbinding.md).  
   
- \<system.ServiceModel>  
-\<bindings>  
-\<webHttpBinding>  
-\<binding>  
-\<> de seguridad  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de enlaces**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webHttpBinding >** ](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de enlace**\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de seguridad**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +48,7 @@ Especifica los requisitos de seguridad para un extremo configurado con un [ \<> 
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
-|Value|DESCRIPCIÓN|  
+|Valor|DESCRIPCIÓN|  
 |-----------|-----------------|  
 |None|La seguridad está deshabilitada.|  
 |Transporte|La seguridad se proporciona utilizando HTTPS. El servicio necesita ser configurado con certificados SSL. El mensaje se protege completamente utilizando HTTPS y el servicio se autentica por el cliente usando el certificado SSL del servicio. La autenticación del cliente se controla a `ClientCredentialType` través del atributo [ \<del > de transporte](transport-of-webhttpbinding.md).|  

@@ -2,15 +2,18 @@
 title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: b29f7173b4d75ec9adff37449d3d56266f01a03c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e00bbad452398e7f8f4f50208da572986391fc9e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759166"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399477"
 ---
 # <a name="systemservicemodelactivation"></a>\<system.serviceModel.activation>
 Esta sección de configuración representa la configuración de la herramienta SMSvcHost.exe. Los elementos de configuración se pueden configurar en el archivo SMSvcHost.exe.config. Específicamente, incluye todos los valores de equipo que se deben configurar.  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<System. serviceModel. Activation >**  
   
 ## <a name="sample-configuration-file"></a>Archivo de configuración del ejemplo  
  A continuación, se muestra un archivo de configuración del ejemplo (SMSvcHost.exe.config), que es utilizado por el proceso de agente de escucha SMSvcHost.exe.  

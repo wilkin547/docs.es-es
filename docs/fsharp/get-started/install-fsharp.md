@@ -1,62 +1,62 @@
 ---
-title: InstalarF#
-description: Obtenga información sobre cómo instalar F# basándose en su entorno.
-ms.date: 08/28/2018
-ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+title: Instalación de F#
+description: Obtenga información sobre cómo F# instalar en función de su entorno.
+ms.date: 09/05/2019
+ms.openlocfilehash: 18b660ff640904119d63f57405752a14f7673e0c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62017025"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400719"
 ---
 # <a name="install-f"></a>Instalar F\#
 
-Puede instalar F# de varias maneras, dependiendo de su entorno.
+Puede instalar F# de varias maneras, en función de su entorno.
 
-## <a name="install-f-with-visual-studio"></a>Instalar F# con Visual Studio
+## <a name="install-f-with-visual-studio"></a>Instalación F# con Visual Studio
 
-Si está descargando [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) por primera vez, instalará el instalador de Visual Studio. Instale el adecuado SKU de Visual Studio desde el instalador. Si ya tiene instalado, haga clic en **modificar**.
+Si está descargando [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) por primera vez, primero instalará el instalador de Visual Studio. Instale la SKU adecuada de Visual Studio desde el instalador. Si ya lo tiene instalado, haga clic en **modificar**.
 
-A continuación verá una lista de las cargas de trabajo. Seleccione **ASP.NET y desarrollo web** que instalará F# soporte de soporte técnico y .NET Core para proyectos de ASP.NET Core.
+A continuación verá una lista de cargas de trabajo. Seleccione **ASP.net y desarrollo web** , que instalarán F# compatibilidad con y .net Core para proyectos de ASP.net Core.
 
-A continuación, haga clic en **modificar** en el lado inferior derecho.  Así instalará todo lo que ha seleccionado. A continuación, puede abrir Visual Studio 2017 con F# compatibilidad de idioma, haga clic en **iniciar**.
+A continuación, haga clic en **modificar** en la parte inferior derecha.  Se instalará todo lo que haya seleccionado. Después, puede abrir Visual Studio 2017 con F# compatibilidad con idiomas haciendo clic en **iniciar**.
 
-## <a name="install-f-with-visual-studio-for-mac"></a>Instalar F# con Visual Studio para Mac
+## <a name="install-f-with-visual-studio-for-mac"></a>Instalación F# con Visual Studio para Mac
 
-F#se instala de forma predeterminada en [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), con independencia de la configuración elija.
+F#se instala de forma predeterminada en [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link), independientemente de la configuración que elija.
 
-Una vez finalizada la instalación, elija "Iniciar Visual Studio". También puede iniciar a través de Finder de macOS.
+Una vez finalizada la instalación, elija "iniciar Visual Studio". También puede iniciarlo a través de Finder en macOS.
 
-## <a name="install-f-with-visual-studio-code"></a>Instalar F# con Visual Studio Code
+## <a name="install-f-with-visual-studio-code"></a>Instalación F# con Visual Studio Code
 
-Debe tener [git instalado](https://git-scm.com/download) y está disponible en la ruta de acceso para hacer uso de plantillas de proyecto. Puede comprobar que está instalado correctamente escribiendo `git --version` en un símbolo del sistema y presione **ENTRAR**.
+Debe tener [git instalado](https://git-scm.com/download) y disponible en su ruta de acceso para hacer uso de las plantillas de proyecto. Para comprobar que se ha instalado correctamente, escriba `git --version` en un símbolo del sistema y presione **entrar**.
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Mono](https://www.mono-project.com) se usa para [ F# interactivo](../tutorials/fsharp-interactive/index.md) admite. La manera más fácil para instalar Mono en macOS es a través de Homebrew. Basta con escribir lo siguiente en el terminal:
+[Mono](https://www.mono-project.com) se usa para [ F# ](../tutorials/fsharp-interactive/index.md) el soporte interactivo. La forma más fácil de instalar mono en macOS es a través de homebrew. Simplemente escriba lo siguiente en el terminal:
 
 ```console
 brew install mono
 ```
 
-Instale también la [SDK de .NET Core](https://www.microsoft.com/net/download).
+Instale también el [SDK de .net Core](https://www.microsoft.com/net/download).
 
 ### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-[Mono](https://www.mono-project.com) se usa para [ F# interactivo](../tutorials/fsharp-interactive/index.md) admite. Si se encuentra en Debian o Ubuntu, puede utilizar lo siguiente:
+[Mono](https://www.mono-project.com) se usa para [ F# ](../tutorials/fsharp-interactive/index.md) el soporte interactivo. Si se encuentra en Debian o Ubuntu, puede utilizar lo siguiente:
 
 ```console
 sudo apt-get update
 sudo apt-get install mono-complete fsharp
 ```
 
-Instale también la [SDK de .NET Core](https://www.microsoft.com/net/download).
+Instale también el [SDK de .net Core](https://www.microsoft.com/net/download).
 
 ### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
-Instalar [Visual Studio con F# admite](#install-f-with-visual-studio). Esto instala todos los componentes necesarios para escribir, compilar y ejecutar F# código.
+Instale [Visual Studio con F# compatibilidad](#install-f-with-visual-studio). Esto instala todos los componentes necesarios para escribir, compilar y ejecutar F# código.
 
-Instale también la [SDK de .NET Core](https://www.microsoft.com/net/download/).
+Instale también el [SDK de .net Core](https://www.microsoft.com/net/download/).
 
 ---
 
@@ -64,4 +64,10 @@ A continuación, necesitará [Visual Studio Code](https://code.visualstudio.com)
 
 A continuación, haga clic en el icono de extensiones y busque "Ionide":
 
-El complemento solo necesario para F# compatibilidad en Visual Studio Code es [Ionide-fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp). Sin embargo, también puede instalar [Ionide FALSIFICACIÓN](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) obtener [IMITAR](https://fsharp.github.io/FAKE/) admite y [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) para obtener [Paket](https://fsprojects.github.io/Paket/) admite. FALSIFICAR y Paket son adicionales F# herramientas de la Comunidad para crear proyectos y administrar las dependencias, respectivamente.
+El único complemento necesario para F# la compatibilidad en Visual Studio Code es [Ionide-FSharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp). Sin embargo, también puede instalar [Ionide-falsificación](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) para obtener compatibilidad [falsa](https://fsharp.github.io/FAKE/) y [Ionide-Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) para obtener soporte técnico de [Paket](https://fsprojects.github.io/Paket/) . FALSAS y Paket son herramientas F# de la comunidad adicionales para la creación de proyectos y la administración de dependencias, respectivamente.
+
+## <a name="install-f-on-a-build-server"></a>Instalar F# en un servidor de compilación
+
+Si usa .NET Core o .NET Framework a través del SDK de .NET, solo tiene que instalar el SDK de .NET en el servidor de compilación. Tiene todo lo que necesita.
+
+Si usa .NET Framework y **no** usa el SDK de .net, tendrá que instalar la [SKU de Visual Studio build tools](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16) en el servidor de Windows. En el instalador, seleccione **herramientas de compilación de escritorio de .net** y, a continuación, seleccione el  **F# componente del compilador** en el lado derecho del menú del instalador.

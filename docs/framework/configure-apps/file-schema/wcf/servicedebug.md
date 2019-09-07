@@ -2,21 +2,22 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 5ca1d4e7f9107c798213d760d9780dbeded9eae0
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4eb79cc91ef489501c4c8bb6311f240d855ed053
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70041265"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399649"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 Especifica las características de depuración y de información de ayuda para un servicio Windows Communication Foundation (WCF).  
   
- \<system.ServiceModel>  
-\<comportamientos >  
-\<serviceBehaviors>  
-\<comportamiento >  
-\<serviceDebug>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> serviceDebug**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -64,7 +65,7 @@ Especifica las características de depuración y de información de ayuda para u
 > [!CAUTION]
 > Devolver la información de excepción administrada a los clientes puede suponer un riesgo para la seguridad porque los datos de la excepción exponen información sobre la implementación de servicio interna que los clientes desautorizados podrían utilizar. Debido a los problemas de seguridad implicados, se recomienda encarecidamente que sólo realice este procedimiento en escenarios de depuración controlados. Debería establecer `includeExceptionDetailInFaults` en `false` al implementar su aplicación.  
   
- Para obtener más información sobre los problemas de seguridad relacionados con la excepción administrada, vea [especificar y controlar errores en contratos y servicios](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md). Para obtener un ejemplo de código, vea comportamiento de depuración del [servicio](../../../wcf/samples/service-debug-behavior.md).  
+ Para obtener más información sobre los problemas de seguridad relacionados con la excepción administrada, vea [especificar y controlar errores en contratos y servicios](../../../wcf/specifying-and-handling-faults-in-contracts-and-services.md). Para obtener un ejemplo de código, vea [comportamiento de depuración del servicio](../../../wcf/samples/service-debug-behavior.md).  
   
  También puede establecer `httpsHelpPageEnabled` y `httpsHelpPageUrl` para habilitar o deshabilitar la página de ayuda. Cada servicio puede exponer opcionalmente una página de ayuda que contiene información sobre el servicio que incluye el extremo para obtener WSDL para el servicio. Esto puede estar habilitado estableciendo `httpHelpPageEnabled` como `true`. Esto permite devolver la página de ayuda a una solicitud GET en la dirección base del servicio. Puede cambiar esta dirección estableciendo el  atributo `httpHelpPageUrl`. Además, puede hacerlo de manera segura utilizando HTTPS en lugar de HTTP.  
   

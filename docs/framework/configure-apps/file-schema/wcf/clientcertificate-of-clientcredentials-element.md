@@ -2,22 +2,23 @@
 title: <clientCertificate>del <clientCredentials> elemento
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 3450df921da8c72a555c2faf424c51e0063cb235
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: fb95ef3168378227e41e55c6fd5e5b772cb7ad0f
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69926108"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400511"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > del \<elemento > clientCredentials
 Define un certificado X.509 que se usa para autenticar un cliente en un servicio.  
   
- \<system.ServiceModel>  
-\<comportamientos >  
-\<endpointBehaviors>  
-\<comportamiento >  
-\<clientCredentials>  
-\<clientCertificate>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> endpointBehaviors**](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<clientCredentials >** ](clientcredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> clientCertificate**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +51,7 @@ Define un certificado X.509 que se usa para autenticar un cliente en un servicio
 |[\<clientCredentials>](clientcredentials.md)|Especifica las credenciales usadas para autenticar el cliente en un servicio.|  
   
 ## <a name="remarks"></a>Comentarios  
- Este elemento de configuración especifica que el certificado utilizado para autenticar el cliente con este elemento. Para obtener más información, consulte [Cómo Especifique los valores](../../../wcf/how-to-specify-client-credential-values.md)de credencial de cliente.  
+ Este elemento de configuración especifica que el certificado utilizado para autenticar el cliente con este elemento. Para obtener más información, vea [Cómo: Especifique los valores](../../../wcf/how-to-specify-client-credential-values.md)de credencial de cliente.  
   
 ## <a name="see-also"></a>Vea también
 

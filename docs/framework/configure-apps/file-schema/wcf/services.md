@@ -2,18 +2,19 @@
 title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-ms.openlocfilehash: c00d5fe3e8b2ba05843e09aca6aaa79386541bad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f9cb6c95fa14a5b8a55cc561699e2a07e1dc80c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937200"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399596"
 ---
 # <a name="services"></a>\<> de servicios
 Los servicios se definen en la sección de `services` del archivo de configuración. Cada servicio tiene su propia sección de configuración de `service`.  
   
- \<system.ServiceModel>  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<> de servicios**  
 ## <a name="syntax"></a>Sintaxis  
   
 ```xml  

@@ -2,23 +2,23 @@
 title: <clientCertificate> de <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: 277e5e33bcc7f9d417da7ce24caa4c6200c23e23
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8a78bbfcd9dfbf6975503a845d5bb4e2d24b13d
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69919548"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398137"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<> clientCertificate de \<serviceCredentials >
 Define un certificado X.509 usado para firmar y cifrar mensajes a un formulario de cliente un servicio en un modelo de comunicación dúplex.  
   
- \<system.ServiceModel>  
-\<comportamientos >  
-\<serviceBehaviors>  
-\<serviceBehaviors>  
-\<comportamiento >  
-\<serviceCredentials>  
-\<clientCertificate>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> System. serviceModel**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamientos >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamiento >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de serviceCredentials**](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> clientCertificate**  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -60,6 +60,6 @@ Define un certificado X.509 usado para firmar y cifrar mensajes a un formulario 
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
-- [Procedimientos: Crear un contrato dúplex](../../../wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [Cómo: Crear un contrato dúplex](../../../wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [Comportamientos de seguridad](../../../wcf/feature-details/security-behaviors-in-wcf.md)
 - [Trabajo con certificados](../../../wcf/feature-details/working-with-certificates.md)
