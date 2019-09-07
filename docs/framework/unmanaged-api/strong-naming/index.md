@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 343abf450a49ad222c403c28e46c6e3aac33e1b6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a697d96864f336982c05b5bcc7c48efef2df0f6a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966159"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799203"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Nombres seguros (Referencia de la API no administrada)
 La API de nombres seguros permite a los clientes administrar la firma de ensamblados con nombre seguro.  
@@ -23,90 +23,90 @@ La API de nombres seguros permite a los clientes administrar la firma de ensambl
 ## <a name="in-this-section"></a>En esta sección  
   
 > [!NOTE]
-> Todas estas funciones han quedado en desuso a partir de .NET Framework 4. Para ver las alternativas sugeridas, consulte la interfaz [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md).  
+> Todas estas funciones han quedado en desuso a partir de .NET Framework 4. Para ver las alternativas sugeridas, consulte la interfaz [ICLRStrongName](../hosting/iclrstrongname-interface.md).  
   
- [GetHashFromAssemblyFile (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
+ [GetHashFromAssemblyFile (Función)](gethashfromassemblyfile-function.md)  
  Obtiene un hash del archivo de ensamblado especificado mediante un algoritmo hash concreto. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [GetHashFromAssemblyFileW (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfilew-function.md)  
+ [GetHashFromAssemblyFileW (Función)](gethashfromassemblyfilew-function.md)  
  Obtiene un hash del archivo de ensamblado especificado como cadena Unicode mediante un algoritmo hash concreto. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [GetHashFromBlob (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromblob-function.md)  
+ [GetHashFromBlob (Función)](gethashfromblob-function.md)  
  Obtiene un hash del ensamblado en la dirección de memoria especificada mediante un algoritmo hash concreto. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [GetHashFromFile (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfile-function.md)  
+ [GetHashFromFile (Función)](gethashfromfile-function.md)  
  Genera un hash a partir del contenido del archivo especificado.  Ha quedado en desuso a partir de .NET Framework 4.  
   
- [GetHashFromFileW (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)  
+ [GetHashFromFileW (Función)](gethashfromfilew-function.md)  
  Genera un hash a partir del contenido del archivo especificado por una cadena Unicode. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [GetHashFromHandle (Función)](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromhandle-function.md)  
+ [GetHashFromHandle (Función)](gethashfromhandle-function.md)  
  Genera un hash a partir del contenido del archivo con el identificador de archivos especificado mediante un algoritmo hash concreto.  Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameCompareAssemblies (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamecompareassemblies-function.md)  
+ [StrongNameCompareAssemblies (Función)](strongnamecompareassemblies-function.md)  
  Determina si dos ensamblados presentan diferencias solo mediante sus firmas de nombres seguros. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameErrorInfo (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)  
+ [StrongNameErrorInfo (Función)](strongnameerrorinfo-function.md)  
  Obtiene el último código de error generado por una de las funciones de nombres seguros.  
   
- [StrongNameFreeBuffer (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)  
- Libera la memoria asignada mediante una llamada anterior a una función de nombre seguro como [StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md) o [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md).   Ha quedado en desuso a partir de .NET Framework 4.  
+ [StrongNameFreeBuffer (Función)](strongnamefreebuffer-function.md)  
+ Libera la memoria asignada mediante una llamada anterior a una función de nombre seguro como [StrongNameGetPublicKey](strongnamegetpublickey-function.md), [StrongNameTokenFromPublicKey](strongnametokenfrompublickey-function.md) o [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md).   Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameGetBlob (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblob-function.md)  
+ [StrongNameGetBlob (Función)](strongnamegetblob-function.md)  
  Llena el búfer especificado con la representación binaria del archivo ejecutable en la dirección especificada. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameGetBlobFromImage (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetblobfromimage-function.md)  
+ [StrongNameGetBlobFromImage (Función)](strongnamegetblobfromimage-function.md)  
  Obtiene una representación binaria de la imagen de ensamblado en la dirección de memoria especificada. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameGetPublicKey (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)  
+ [StrongNameGetPublicKey (Función)](strongnamegetpublickey-function.md)  
  Obtiene la clave pública de un par de claves pública y privada. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameHashSize (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamehashsize-function.md)  
+ [StrongNameHashSize (Función)](strongnamehashsize-function.md)  
  Obtiene el tamaño de búfer necesario para un hash mediante el algoritmo hash especificado.  Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameKeyDelete (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeydelete-function.md)  
+ [StrongNameKeyDelete (Función)](strongnamekeydelete-function.md)  
  Elimina el contenedor de claves especificado. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameKeyGen (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygen-function.md)  
+ [StrongNameKeyGen (Función)](strongnamekeygen-function.md)  
  Crea un par de claves pública y privada para su uso en nombres seguros.  Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameKeyGenEx (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeygenex-function.md)  
+ [StrongNameKeyGenEx (Función)](strongnamekeygenex-function.md)  
  Genera un par de claves pública y privada con el tamaño de clave especificado para su uso en nombres seguros. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameKeyInstall (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md)  
+ [StrongNameKeyInstall (Función)](strongnamekeyinstall-function.md)  
  Importa un par de claves pública y privada a un contenedor.  Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameSignatureGeneration (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)  
+ [StrongNameSignatureGeneration (Función)](strongnamesignaturegeneration-function.md)  
  Genera una firma de nombres seguros para el ensamblado especificado.   Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameSignatureGenerationEx (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegenerationex-function.md)  
+ [StrongNameSignatureGenerationEx (Función)](strongnamesignaturegenerationex-function.md)  
  Genera una firma de nombre seguro para el ensamblado especificado en función de las marcas indicadas.    Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameSignatureSize (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturesize-function.md)  
+ [StrongNameSignatureSize (Función)](strongnamesignaturesize-function.md)  
  Devuelve el tamaño de la firma de nombre seguro. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameSignatureVerification (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)  
+ [StrongNameSignatureVerification (Función)](strongnamesignatureverification-function.md)  
  Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro, que se comprueba según las marcas indicadas. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameSignatureVerificationEx (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationex-function.md)  
+ [StrongNameSignatureVerificationEx (Función)](strongnamesignatureverificationex-function.md)  
  Obtiene un valor que indica si el manifiesto del ensamblado en la ruta de acceso proporcionada contiene una firma de nombre seguro.  Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameSignatureVerificationFromImage (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverificationfromimage-function.md)  
+ [StrongNameSignatureVerificationFromImage (Función)](strongnamesignatureverificationfromimage-function.md)  
  Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameTokenFromAssembly (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md)  
+ [StrongNameTokenFromAssembly (Función)](strongnametokenfromassembly-function.md)  
  Crea un token de nombre seguro desde el archivo de ensamblado especificado.  Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameTokenFromAssemblyEx (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassemblyex-function.md)  
+ [StrongNameTokenFromAssemblyEx (Función)](strongnametokenfromassemblyex-function.md)  
  Crea un token de nombre seguro desde el archivo de ensamblado especificado y devuelve la clave pública. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [StrongNameTokenFromPublicKey (Función)](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
+ [StrongNameTokenFromPublicKey (Función)](strongnametokenfrompublickey-function.md)  
  Obtiene un token que representa una clave pública. Ha quedado en desuso a partir de .NET Framework 4.  
   
- [PublicKeyBlob (estructura)](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  
+ [PublicKeyBlob (estructura)](publickeyblob-structure.md)  
  Representa la clave pública de un par de claves pública y privada en formato binario.  
   
 ## <a name="see-also"></a>Vea también
 
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
-- [Referencia de API no administrada](../../../../docs/framework/unmanaged-api/index.md)
+- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)
+- [Referencia de API no administrada](../index.md)
