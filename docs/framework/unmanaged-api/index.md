@@ -9,57 +9,57 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd84d84706a0d61f26b576b7300fae87fbe602e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677bee7319a80e405098f0dd5c8684765806c5f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984170"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796873"
 ---
 # <a name="unmanaged-api-reference"></a>Referencia de la API no administrada
 En esta sección se incluye información acerca de las API no administradas que se pueden utilizar en aplicaciones relacionadas con código administrado, como hosts en tiempo de ejecución, compiladores, desensambladores, ofuscadores, depuradores y generadores de perfiles.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Tipos de datos comunes](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
+ [Tipos de datos comunes](common-data-types-unmanaged-api-reference.md)  
  Enumera los tipos de datos comunes que se usan, especialmente en las API de depuración y de generación de perfiles no administradas.  
   
- [ALink](../../../docs/framework/unmanaged-api/alink/index.md)  
+ [ALink](./alink/index.md)  
  Describe la API ALink, que admite la creación de ensamblados .NET Framework y módulos no enlazados.  
   
- [Authenticode](../../../docs/framework/unmanaged-api/authenticode/index.md)  
+ [Authenticode](./authenticode/index.md)  
  Admite el módulo de creación y verificación de licencias Authenticode XrML.  
   
- [Constantes](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
+ [Constantes](constants-unmanaged-api-reference.md)  
  Describe las constantes que se definen en CorSym.idl.  
   
  [Atributos de interfaz personalizados](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms231946(v=vs.100))  
  Describe los atributos de interfaz personalizados del Modelo de objetos componentes (COM).  
   
- [Depuración](../../../docs/framework/unmanaged-api/debugging/index.md)  
+ [Depuración](./debugging/index.md)  
  Describe la API de depuración, que permite a un depurador depurar el código que se ejecuta en el entorno de Common Language Runtime (CLR).  
   
- [Almacén de símbolos de diagnósticos](../../../docs/framework/unmanaged-api/diagnostics/index.md)  
+ [Almacén de símbolos de diagnósticos](./diagnostics/index.md)  
  Describe la API de almacén de símbolos de diagnóstico, que permite a un compilador generar información sobre símbolos para que la use un depurador.  
   
- [Fusión](../../../docs/framework/unmanaged-api/fusion/index.md)  
+ [Fusión](./fusion/index.md)  
  Describe la API de fusión, que permite a un host de tiempo de ejecución acceder a las propiedades de los recursos de una aplicación para encontrar las versiones correctas de estos recursos para la aplicación.  
   
- [Hospedar aplicaciones de WPF](../../../docs/framework/unmanaged-api/hosting/index.md)  
+ [Hospedar aplicaciones de WPF](./hosting/index.md)  
  Describe la API de hospedaje, que permite a los hosts no administrados integrar CLR en sus aplicaciones.  
   
- [Metadatos](../../../docs/framework/unmanaged-api/metadata/index.md)  
+ [Metadata](./metadata/index.md)  
  Describe la API de metadatos, que permite a un cliente, como un compilador, generar o acceder a los metadatos de un componente sin que CLR cargue los tipos.  
   
- [Generación de perfiles](../../../docs/framework/unmanaged-api/profiling/index.md)  
+ [Generación de perfiles](./profiling/index.md)  
  Describe la API de generación de perfiles, que permite a un generador de perfiles supervisar la ejecución que CLR hace de un programa.  
   
- [Nombres seguros](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
+ [Nombres seguros](./strong-naming/index.md)  
  Describe la API de nombres seguros, que permite a un cliente administrar la firma de ensamblados con nombre seguro.  
 
  [WMI y contadores de rendimiento](wmi/index.md)  
  Describe las API que encapsulan llamadas a bibliotecas de Instrumental de administración de Windows (WMI).
   
- [Funciones del asistente Tlbexp](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [Funciones del asistente Tlbexp](./tlbexp/index.md)  
  Describe las dos funciones del asistente y la interfaz que usa el Exportador de la biblioteca de tipos (Tlbexp.exe) durante el proceso de conversión de ensamblado a biblioteca de tipos.  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
