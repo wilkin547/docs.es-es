@@ -4,82 +4,82 @@ description: Sepa cómo implementar una aplicación de .NET para Apache Spark en
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5414bc20de3bb90a5d2144bd006d1b859e184a39
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: bf52a53e8f282f55a0071deb266dabb798fa3348
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "69576932"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70254053"
 ---
-# <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a><span data-ttu-id="87f70-103">Implementación de una aplicación de .NET para Apache Spark en Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="87f70-103">Deploy a .NET for Apache Spark application to Amazon EMR Spark</span></span>
+# <a name="deploy-a-net-for-apache-spark-application-to-amazon-emr-spark"></a><span data-ttu-id="dd1e2-103">Implementación de una aplicación de .NET para Apache Spark en Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="dd1e2-103">Deploy a .NET for Apache Spark application to Amazon EMR Spark</span></span>
 
-<span data-ttu-id="87f70-104">En este tutorial aprenderá a implementar una aplicación de .NET para Apache Spark en Amazon EMR Spark.</span><span class="sxs-lookup"><span data-stu-id="87f70-104">This tutorial teaches how to deploy a .NET for Apache Spark application to Amazon EMR Spark.</span></span>
+<span data-ttu-id="dd1e2-104">En este tutorial aprenderá a implementar una aplicación de .NET para Apache Spark en Amazon EMR Spark.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-104">This tutorial teaches how to deploy a .NET for Apache Spark application to Amazon EMR Spark.</span></span>
 
-<span data-ttu-id="87f70-105">En este tutorial aprenderá a:</span><span class="sxs-lookup"><span data-stu-id="87f70-105">In this tutorial, you learn how to:</span></span>
+<span data-ttu-id="dd1e2-105">En este tutorial aprenderá a:</span><span class="sxs-lookup"><span data-stu-id="dd1e2-105">In this tutorial, you learn how to:</span></span>
 
 > [!div class="checklist"]
-> * <span data-ttu-id="87f70-106">Preparar Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="87f70-106">Prepare Microsoft.Spark.Worker</span></span>
-> * <span data-ttu-id="87f70-107">Publicar la aplicación de .NET para Spark</span><span class="sxs-lookup"><span data-stu-id="87f70-107">Publish your Spark .NET app</span></span>
-> * <span data-ttu-id="87f70-108">Implementar la aplicación en Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="87f70-108">Deploy your app to Amazon EMR Spark</span></span>
-> * <span data-ttu-id="87f70-109">Ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="87f70-109">Run your app</span></span>
+> * <span data-ttu-id="dd1e2-106">Preparar Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="dd1e2-106">Prepare Microsoft.Spark.Worker</span></span>
+> * <span data-ttu-id="dd1e2-107">Publicar la aplicación de .NET para Spark</span><span class="sxs-lookup"><span data-stu-id="dd1e2-107">Publish your Spark .NET app</span></span>
+> * <span data-ttu-id="dd1e2-108">Implementar la aplicación en Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="dd1e2-108">Deploy your app to Amazon EMR Spark</span></span>
+> * <span data-ttu-id="dd1e2-109">Ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="dd1e2-109">Run your app</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="87f70-110">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="87f70-110">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="dd1e2-110">Requisitos previos</span><span class="sxs-lookup"><span data-stu-id="dd1e2-110">Prerequisites</span></span>
 
-<span data-ttu-id="87f70-111">Antes de empezar, haga lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="87f70-111">Before you start, do the following:</span></span>
+<span data-ttu-id="dd1e2-111">Antes de empezar, haga lo siguiente:</span><span class="sxs-lookup"><span data-stu-id="dd1e2-111">Before you start, do the following:</span></span>
 
-* <span data-ttu-id="87f70-112">Descargue la [CLI de AWS](https://aws.amazon.com/cli/).</span><span class="sxs-lookup"><span data-stu-id="87f70-112">Download the [AWS CLI](https://aws.amazon.com/cli/).</span></span>
-* <span data-ttu-id="87f70-113">Descargue [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="87f70-113">Download [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to your local machine.</span></span> <span data-ttu-id="87f70-114">Es un script de aplicación auxiliar que usaremos más adelante para copiar archivos dependientes de .NET para Apache Spark en los nodos de trabajo del clúster de Spark.</span><span class="sxs-lookup"><span data-stu-id="87f70-114">This is a helper script that you use later to copy .NET for Apache Spark dependent files into your Spark cluster's worker nodes.</span></span>
+* <span data-ttu-id="dd1e2-112">Descargue la [CLI de AWS](https://aws.amazon.com/cli/).</span><span class="sxs-lookup"><span data-stu-id="dd1e2-112">Download the [AWS CLI](https://aws.amazon.com/cli/).</span></span>
+* <span data-ttu-id="dd1e2-113">Descargue [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) en el equipo local.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-113">Download [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to your local machine.</span></span> <span data-ttu-id="dd1e2-114">Es un script de aplicación auxiliar que usaremos más adelante para copiar archivos dependientes de .NET para Apache Spark en los nodos de trabajo del clúster de Spark.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-114">This is a helper script that you use later to copy .NET for Apache Spark dependent files into your Spark cluster's worker nodes.</span></span>
 
-## <a name="prepare-worker-dependencies"></a><span data-ttu-id="87f70-115">Preparación de las dependencias de trabajo</span><span class="sxs-lookup"><span data-stu-id="87f70-115">Prepare worker dependencies</span></span>
+## <a name="prepare-worker-dependencies"></a><span data-ttu-id="dd1e2-115">Preparación de las dependencias de trabajo</span><span class="sxs-lookup"><span data-stu-id="dd1e2-115">Prepare worker dependencies</span></span>
 
-<span data-ttu-id="87f70-116">**Microsoft.Spark.Worker** es un componente back-end que reside en los nodos de trabajo individuales del clúster de Spark.</span><span class="sxs-lookup"><span data-stu-id="87f70-116">**Microsoft.Spark.Worker** is a backend component that lives on the individual worker nodes of your Spark cluster.</span></span> <span data-ttu-id="87f70-117">Si quiere ejecutar una función definida por el usuario (UDF) de C#, Spark necesita saber cómo iniciar .NET CLR para ejecutar la UDF.</span><span class="sxs-lookup"><span data-stu-id="87f70-117">When you want to execute a C# UDF (user-defined function), Spark needs to understand how to launch the .NET CLR to execute the UDF.</span></span> <span data-ttu-id="87f70-118">**Microsoft.Spark.Worker** pone a disposición de Spark una colección de clases que habilitan esta funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="87f70-118">**Microsoft.Spark.Worker** provides a collection of classes to Spark that enable this functionality.</span></span>
+<span data-ttu-id="dd1e2-116">**Microsoft.Spark.Worker** es un componente back-end que reside en los nodos de trabajo individuales del clúster de Spark.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-116">**Microsoft.Spark.Worker** is a backend component that lives on the individual worker nodes of your Spark cluster.</span></span> <span data-ttu-id="dd1e2-117">Si quiere ejecutar una función definida por el usuario (UDF) de C#, Spark necesita saber cómo iniciar .NET CLR para ejecutar la UDF.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-117">When you want to execute a C# UDF (user-defined function), Spark needs to understand how to launch the .NET CLR to execute the UDF.</span></span> <span data-ttu-id="dd1e2-118">**Microsoft.Spark.Worker** pone a disposición de Spark una colección de clases que habilitan esta funcionalidad.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-118">**Microsoft.Spark.Worker** provides a collection of classes to Spark that enable this functionality.</span></span>
 
-1. <span data-ttu-id="87f70-119">Seleccione una versión netcoreapp de Linux de [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) para implementarla en el clúster.</span><span class="sxs-lookup"><span data-stu-id="87f70-119">Select a [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp release to be deployed on your cluster.</span></span>
+1. <span data-ttu-id="dd1e2-119">Seleccione una versión netcoreapp de Linux de [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) para implementarla en el clúster.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-119">Select a [Microsoft.Spark.Worker](https://github.com/dotnet/spark/releases) Linux netcoreapp release to be deployed on your cluster.</span></span>
 
-   <span data-ttu-id="87f70-120">Por ejemplo, si quiere que `.NET for Apache Spark v0.1.0` use `netcoreapp2.1`, tendría que descargar [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span><span class="sxs-lookup"><span data-stu-id="87f70-120">For example, if you want `.NET for Apache Spark v0.1.0` using `netcoreapp2.1`, you'd download [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span></span>
+   <span data-ttu-id="dd1e2-120">Por ejemplo, si quiere que `.NET for Apache Spark v0.1.0` use `netcoreapp2.1`, tendría que descargar [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span><span class="sxs-lookup"><span data-stu-id="dd1e2-120">For example, if you want `.NET for Apache Spark v0.1.0` using `netcoreapp2.1`, you'd download [Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz](https://github.com/dotnet/spark/releases/download/v0.1.0/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.1.0.tar.gz).</span></span>
 
-2. <span data-ttu-id="87f70-121">Cargue `Microsoft.Spark.Worker.<release>.tar.gz` e [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) en un sistema de archivos distribuido (por ejemplo, S3) al que el clúster tenga acceso.</span><span class="sxs-lookup"><span data-stu-id="87f70-121">Upload `Microsoft.Spark.Worker.<release>.tar.gz` and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to a distributed file system (e.g., S3) that your cluster has access to.</span></span>
+2. <span data-ttu-id="dd1e2-121">Cargue `Microsoft.Spark.Worker.<release>.tar.gz` e [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) en un sistema de archivos distribuido (por ejemplo, S3) al que el clúster tenga acceso.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-121">Upload `Microsoft.Spark.Worker.<release>.tar.gz` and [install-worker.sh](https://github.com/dotnet/spark/blob/master/deployment/install-worker.sh) to a distributed file system (e.g., S3) that your cluster has access to.</span></span>
 
-## <a name="prepare-your-net-for-apache-spark-app"></a><span data-ttu-id="87f70-122">Preparación de la aplicación de .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="87f70-122">Prepare your .NET for Apache Spark app</span></span>
+## <a name="prepare-your-net-for-apache-spark-app"></a><span data-ttu-id="dd1e2-122">Preparación de la aplicación de .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="dd1e2-122">Prepare your .NET for Apache Spark app</span></span>
 
-1. <span data-ttu-id="87f70-123">Siga el tutorial de [introducción](get-started.md) para crear la aplicación.</span><span class="sxs-lookup"><span data-stu-id="87f70-123">Follow the [Get Started](get-started.md) tutorial to build your app.</span></span>
+1. <span data-ttu-id="dd1e2-123">Siga el tutorial de [introducción](get-started.md) para crear la aplicación.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-123">Follow the [Get Started](get-started.md) tutorial to build your app.</span></span>
 
-2. <span data-ttu-id="87f70-124">Publique la aplicación de .NET para Spark como independiente.</span><span class="sxs-lookup"><span data-stu-id="87f70-124">Publish your Spark .NET app as self-contained.</span></span>
+2. <span data-ttu-id="dd1e2-124">Publique la aplicación de .NET para Spark como independiente.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-124">Publish your Spark .NET app as self-contained.</span></span>
 
-   <span data-ttu-id="87f70-125">Ejecute el siguiente comando en Linux.</span><span class="sxs-lookup"><span data-stu-id="87f70-125">Run the following command on Linux.</span></span>
+   <span data-ttu-id="dd1e2-125">Ejecute el siguiente comando en Linux.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-125">Run the following command on Linux.</span></span>
 
    ```bash
    dotnet publish -c Release -f netcoreapp2.1 -r ubuntu.16.04-x64
    ```
 
-3. <span data-ttu-id="87f70-126">Genere `<your app>.zip` para los archivos publicados.</span><span class="sxs-lookup"><span data-stu-id="87f70-126">Produce `<your app>.zip` for the published files.</span></span>
+3. <span data-ttu-id="dd1e2-126">Genere `<your app>.zip` para los archivos publicados.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-126">Produce `<your app>.zip` for the published files.</span></span>
 
-   <span data-ttu-id="87f70-127">Ejecute el siguiente comando en Linux usando `zip`.</span><span class="sxs-lookup"><span data-stu-id="87f70-127">Run the following command on Linux using `zip`.</span></span>
+   <span data-ttu-id="dd1e2-127">Ejecute el siguiente comando en Linux usando `zip`.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-127">Run the following command on Linux using `zip`.</span></span>
 
    ```bash
    zip -r <your app>.zip .
    ```
 
-4. <span data-ttu-id="87f70-128">Cargue los siguientes elementos en un sistema de archivos distribuido (por ejemplo, S3) al que el clúster tenga acceso:</span><span class="sxs-lookup"><span data-stu-id="87f70-128">Upload the following items to a distributed file system (e.g., S3) that your cluster has access to:</span></span>
+4. <span data-ttu-id="dd1e2-128">Cargue los siguientes elementos en un sistema de archivos distribuido (por ejemplo, S3) al que el clúster tenga acceso:</span><span class="sxs-lookup"><span data-stu-id="dd1e2-128">Upload the following items to a distributed file system (e.g., S3) that your cluster has access to:</span></span>
 
-   * <span data-ttu-id="87f70-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Este archivo jar se incluye como parte del paquete NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/), y se encuentra en el directorio de salida de creación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="87f70-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: This jar is included as part of the [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet package and is colocated in your app's build output directory.</span></span>
+   * <span data-ttu-id="dd1e2-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: Este archivo jar se incluye como parte del paquete NuGet [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/), y se encuentra en el directorio de salida de creación de la aplicación.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-129">`microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar`: This jar is included as part of the [Microsoft.Spark](https://www.nuget.org/packages/Microsoft.Spark/) NuGet package and is colocated in your app's build output directory.</span></span>
    * `<your app>.zip`
-   * <span data-ttu-id="87f70-130">Los archivos (como los archivos de dependencias o los datos comunes accesibles para todos los trabajos) o los ensamblados (como los archivos DLL que contienen las bibliotecas o las funciones definidas por el usuario de las que depende la aplicación) se colocarán en el directorio de trabajo de cada ejecutor.</span><span class="sxs-lookup"><span data-stu-id="87f70-130">Files (like dependency files or common data accessible to every worker) or assemblies (like DLLs that contain your user-defined functions or libraries that your app depends on) to be placed in the working directory of each executor.</span></span>
+   * <span data-ttu-id="dd1e2-130">Los archivos (como los archivos de dependencias o los datos comunes accesibles para todos los trabajos) o los ensamblados (como los archivos DLL que contienen las bibliotecas o las funciones definidas por el usuario de las que depende la aplicación) se colocarán en el directorio de trabajo de cada ejecutor.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-130">Files (like dependency files or common data accessible to every worker) or assemblies (like DLLs that contain your user-defined functions or libraries that your app depends on) to be placed in the working directory of each executor.</span></span>
 
-## <a name="deploy-to-amazon-emr-spark"></a><span data-ttu-id="87f70-131">Implementación en Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="87f70-131">Deploy to Amazon EMR Spark</span></span>
+## <a name="deploy-to-amazon-emr-spark"></a><span data-ttu-id="dd1e2-131">Implementación en Amazon EMR Spark</span><span class="sxs-lookup"><span data-stu-id="dd1e2-131">Deploy to Amazon EMR Spark</span></span>
 
-<span data-ttu-id="87f70-132">[Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) es una plataforma de clúster administrada que simplifica la ejecución de marcos de macrodatos en AWS.</span><span class="sxs-lookup"><span data-stu-id="87f70-132">[Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) is a managed cluster platform that simplifies running big data frameworks on AWS.</span></span>
+<span data-ttu-id="dd1e2-132">[Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) es una plataforma de clúster administrada que simplifica la ejecución de marcos de macrodatos en AWS.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-132">[Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-what-is-emr.html) is a managed cluster platform that simplifies running big data frameworks on AWS.</span></span>
 
 > [!NOTE] 
-> <span data-ttu-id="87f70-133">Amazon EMR Spark se basa en Linux.</span><span class="sxs-lookup"><span data-stu-id="87f70-133">Amazon EMR Spark is Linux-based.</span></span> <span data-ttu-id="87f70-134">Por lo tanto, si está interesado en implementar la aplicación en Amazon EMR Spark, asegúrese de que la aplicación es compatible con .NET Standard y, asimismo, de que usa el [compilador de .NET Core](https://dotnet.microsoft.com/download) para compilar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="87f70-134">Therefore, if you are interested in deploying your app to Amazon EMR Spark, make sure your app is .NET Standard compatible and that you use the [.NET Core compiler](https://dotnet.microsoft.com/download) to compile your app.</span></span>
+> <span data-ttu-id="dd1e2-133">Amazon EMR Spark se basa en Linux.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-133">Amazon EMR Spark is Linux-based.</span></span> <span data-ttu-id="dd1e2-134">Por lo tanto, si está interesado en implementar la aplicación en Amazon EMR Spark, asegúrese de que la aplicación es compatible con .NET Standard y, asimismo, de que usa el [compilador de .NET Core](https://dotnet.microsoft.com/download) para compilar la aplicación.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-134">Therefore, if you are interested in deploying your app to Amazon EMR Spark, make sure your app is .NET Standard compatible and that you use the [.NET Core compiler](https://dotnet.microsoft.com/download) to compile your app.</span></span>
 
-### <a name="deploy-microsoftsparkworker"></a><span data-ttu-id="87f70-135">Implementación de Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="87f70-135">Deploy Microsoft.Spark.Worker</span></span>
+### <a name="deploy-microsoftsparkworker"></a><span data-ttu-id="dd1e2-135">Implementación de Microsoft.Spark.Worker</span><span class="sxs-lookup"><span data-stu-id="dd1e2-135">Deploy Microsoft.Spark.Worker</span></span>
 
-<span data-ttu-id="87f70-136">Este paso solo es necesario realizarlo al crear un clúster.</span><span class="sxs-lookup"><span data-stu-id="87f70-136">This step is only required at cluster creation.</span></span>
+<span data-ttu-id="dd1e2-136">Este paso solo es necesario realizarlo al crear un clúster.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-136">This step is only required at cluster creation.</span></span>
 
-<span data-ttu-id="87f70-137">Ejecute `install-worker.sh` durante la creación del clúster mediante [acciones de arranque](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html).</span><span class="sxs-lookup"><span data-stu-id="87f70-137">Run `install-worker.sh` during cluster creation using [Bootstrap Actions](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html).</span></span>
+<span data-ttu-id="dd1e2-137">Ejecute `install-worker.sh` durante la creación del clúster mediante [acciones de arranque](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html).</span><span class="sxs-lookup"><span data-stu-id="dd1e2-137">Run `install-worker.sh` during cluster creation using [Bootstrap Actions](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-bootstrap.html).</span></span>
 
-<span data-ttu-id="87f70-138">Ejecute el siguiente comando en Linux usando la CLI de AWS.</span><span class="sxs-lookup"><span data-stu-id="87f70-138">Run the following command on Linux using AWS CLI.</span></span>
+<span data-ttu-id="dd1e2-138">Ejecute el siguiente comando en Linux usando la CLI de AWS.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-138">Run the following command on Linux using AWS CLI.</span></span>
 
 ```bash
 aws emr create-cluster \
@@ -93,42 +93,42 @@ aws emr create-cluster \
 --bootstrap-actions Path=s3://mybucket/<some dir>/install-worker.sh,Name="Install Microsoft.Spark.Worker",Args=["aws","s3://mybucket/<some dir>/Microsoft.Spark.Worker.<release>.tar.gz","/usr/local/bin"]
 ```
 
-## <a name="run-your-app"></a><span data-ttu-id="87f70-139">Ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="87f70-139">Run your app</span></span>
+## <a name="run-your-app"></a><span data-ttu-id="dd1e2-139">Ejecutar la aplicación</span><span class="sxs-lookup"><span data-stu-id="dd1e2-139">Run your app</span></span>
 
-<span data-ttu-id="87f70-140">Hay dos maneras de ejecutar la aplicación en Amazon EMR Spark: con spark-submit o con pasos de Amazon EMR.</span><span class="sxs-lookup"><span data-stu-id="87f70-140">There are two ways to run your app in Amazon EMR Spark: spark-submit and Amazon EMR Steps.</span></span>
+<span data-ttu-id="dd1e2-140">Hay dos maneras de ejecutar la aplicación en Amazon EMR Spark: con spark-submit o con pasos de Amazon EMR.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-140">There are two ways to run your app in Amazon EMR Spark: spark-submit and Amazon EMR Steps.</span></span>
 
-### <a name="use-spark-submit"></a><span data-ttu-id="87f70-141">Uso de spark-submit</span><span class="sxs-lookup"><span data-stu-id="87f70-141">Use spark-submit</span></span>
+### <a name="use-spark-submit"></a><span data-ttu-id="dd1e2-141">Uso de spark-submit</span><span class="sxs-lookup"><span data-stu-id="dd1e2-141">Use spark-submit</span></span>
 
-<span data-ttu-id="87f70-142">Puede usar el comando [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) para enviar trabajos de .NET para Apache Spark a Amazon EMR Spark.</span><span class="sxs-lookup"><span data-stu-id="87f70-142">You can use the [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command to submit .NET for Apache Spark jobs to Amazon EMR Spark.</span></span>
+<span data-ttu-id="dd1e2-142">Puede usar el comando [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) para enviar trabajos de .NET para Apache Spark a Amazon EMR Spark.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-142">You can use the [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) command to submit .NET for Apache Spark jobs to Amazon EMR Spark.</span></span>
 
-1. <span data-ttu-id="87f70-143">Aplique `ssh` en uno de los nodos del clúster.</span><span class="sxs-lookup"><span data-stu-id="87f70-143">`ssh` into one of the nodes in the cluster.</span></span>
+1. <span data-ttu-id="dd1e2-143">Aplique `ssh` en uno de los nodos del clúster.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-143">`ssh` into one of the nodes in the cluster.</span></span>
 
-2. <span data-ttu-id="87f70-144">Ejecute `spark-submit`.</span><span class="sxs-lookup"><span data-stu-id="87f70-144">Run `spark-submit`.</span></span>
+2. <span data-ttu-id="dd1e2-144">Ejecute `spark-submit`.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-144">Run `spark-submit`.</span></span>
 
    ```bash
    spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    --files <comma-separated list of assemblies that contain UDF definitions, if any> \
    s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar \
    s3://mybucket/<some dir>/<your app>.zip <your app> <app args>
    ```
 
-### <a name="use-amazon-emr-steps"></a><span data-ttu-id="87f70-145">Uso de pasos de Amazon EMR</span><span class="sxs-lookup"><span data-stu-id="87f70-145">Use Amazon EMR Steps</span></span>
+### <a name="use-amazon-emr-steps"></a><span data-ttu-id="dd1e2-145">Uso de pasos de Amazon EMR</span><span class="sxs-lookup"><span data-stu-id="dd1e2-145">Use Amazon EMR Steps</span></span>
 
-<span data-ttu-id="87f70-146">Se pueden usar [pasos de Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-submit-step.html) para enviar trabajos al marco de Spark instalado en el clúster de EMR.</span><span class="sxs-lookup"><span data-stu-id="87f70-146">[Amazon EMR Steps](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-submit-step.html) can be used to submit jobs to the Spark framework installed on the EMR cluster.</span></span>
+<span data-ttu-id="dd1e2-146">Se pueden usar [pasos de Amazon EMR](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-submit-step.html) para enviar trabajos al marco de Spark instalado en el clúster de EMR.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-146">[Amazon EMR Steps](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-spark-submit-step.html) can be used to submit jobs to the Spark framework installed on the EMR cluster.</span></span>
 
-<span data-ttu-id="87f70-147">Ejecute el siguiente comando en Linux usando la CLI de AWS.</span><span class="sxs-lookup"><span data-stu-id="87f70-147">Run the following command on Linux using AWS CLI.</span></span>
+<span data-ttu-id="dd1e2-147">Ejecute el siguiente comando en Linux usando la CLI de AWS.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-147">Run the following command on Linux using AWS CLI.</span></span>
 
 ```bash
 aws emr add-steps \
 --cluster-id j-xxxxxxxxxxxxx \
---steps Type=spark,Name="Spark Program",Args=[--master,yarn,--files,s3://mybucket/<some dir>/<udf assembly>,--class,org.apache.spark.deploy.DotnetRunner,s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar,s3://mybucket/<some dir>/<your app>.zip,<your app>,<app arg 1>,<app arg 2>,...,<app arg n>],ActionOnFailure=CONTINUE
+--steps Type=spark,Name="Spark Program",Args=[--master,yarn,--files,s3://mybucket/<some dir>/<udf assembly>,--class,org.apache.spark.deploy.dotnet.DotnetRunner,s3://mybucket/<some dir>/microsoft-spark-<spark_majorversion.spark_minorversion.x>-<spark_dotnet_version>.jar,s3://mybucket/<some dir>/<your app>.zip,<your app>,<app arg 1>,<app arg 2>,...,<app arg n>],ActionOnFailure=CONTINUE
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="87f70-148">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="87f70-148">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="dd1e2-148">Pasos siguientes</span><span class="sxs-lookup"><span data-stu-id="dd1e2-148">Next steps</span></span>
 
-<span data-ttu-id="87f70-149">En este tutorial ha implementado una aplicación de .NET para Apache Spark en Amazon EMR Spark.</span><span class="sxs-lookup"><span data-stu-id="87f70-149">In this tutorial, you deployed your .NET for Apache Spark application to Amazon EMR Spark.</span></span> <span data-ttu-id="87f70-150">Para ver proyectos de ejemplo de .NET para Apache Spark, continúe en GitHub.</span><span class="sxs-lookup"><span data-stu-id="87f70-150">For .NET for Apache Spark example projects, continue to GitHub.</span></span>
+<span data-ttu-id="dd1e2-149">En este tutorial ha implementado una aplicación de .NET para Apache Spark en Amazon EMR Spark.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-149">In this tutorial, you deployed your .NET for Apache Spark application to Amazon EMR Spark.</span></span> <span data-ttu-id="dd1e2-150">Para ver proyectos de ejemplo de .NET para Apache Spark, continúe en GitHub.</span><span class="sxs-lookup"><span data-stu-id="dd1e2-150">For .NET for Apache Spark example projects, continue to GitHub.</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="87f70-151">Ejemplos de .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="87f70-151">.NET for Apache Spark samples</span></span>](https://github.com/dotnet/spark/tree/master/examples)
+> [<span data-ttu-id="dd1e2-151">Ejemplos de .NET para Apache Spark</span><span class="sxs-lookup"><span data-stu-id="dd1e2-151">.NET for Apache Spark samples</span></span>](https://github.com/dotnet/spark/tree/master/examples)
