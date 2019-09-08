@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df2eb9d454f2037ef5f2a09d1309d52a8365e715
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c22339b7d48e89f99d1500cfdda53f00f1234b80
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782681"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799070"
 ---
-# <a name="strongnamesignatureverificationfromimage-function"></a><span data-ttu-id="0ebf7-102">StrongNameSignatureVerificationFromImage (Función)</span><span class="sxs-lookup"><span data-stu-id="0ebf7-102">StrongNameSignatureVerificationFromImage Function</span></span>
-<span data-ttu-id="0ebf7-103">Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  
+# <a name="strongnamesignatureverificationfromimage-function"></a><span data-ttu-id="76e38-102">StrongNameSignatureVerificationFromImage (Función)</span><span class="sxs-lookup"><span data-stu-id="76e38-102">StrongNameSignatureVerificationFromImage Function</span></span>
+<span data-ttu-id="76e38-103">Comprueba si un ensamblado que ya se ha asignado a la memoria es válido para la clave pública asociada.</span><span class="sxs-lookup"><span data-stu-id="76e38-103">Verifies that an assembly that has already been mapped to memory is valid for the associated public key.</span></span>  
   
- <span data-ttu-id="0ebf7-104">Esta función está desusada.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-104">This function has been deprecated.</span></span> <span data-ttu-id="0ebf7-105">Use la [ICLRStrongName::StrongNameVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) método en su lugar.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-105">Use the [ICLRStrongName::StrongNameVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) method instead.</span></span>  
+ <span data-ttu-id="76e38-104">Esta función está en desuso.</span><span class="sxs-lookup"><span data-stu-id="76e38-104">This function has been deprecated.</span></span> <span data-ttu-id="76e38-105">Use el método [ICLRStrongName:: StrongNameVerificationFromImage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) en su lugar.</span><span class="sxs-lookup"><span data-stu-id="76e38-105">Use the [ICLRStrongName::StrongNameVerificationFromImage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0ebf7-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="0ebf7-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="76e38-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="76e38-106">Syntax</span></span>  
   
 ```cpp  
 BOOLEAN StrongNameSignatureVerificationFromImage (  
@@ -39,49 +39,49 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0ebf7-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="0ebf7-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="76e38-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="76e38-107">Parameters</span></span>  
  `pbBase`  
- <span data-ttu-id="0ebf7-108">[in] La dirección virtual relativa del manifiesto del ensamblado asignado.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-108">[in] The relative virtual address of the mapped assembly manifest.</span></span>  
+ <span data-ttu-id="76e38-108">de Dirección virtual relativa del manifiesto del ensamblado asignado.</span><span class="sxs-lookup"><span data-stu-id="76e38-108">[in] The relative virtual address of the mapped assembly manifest.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="0ebf7-109">[in] El tamaño, en bytes, de la imagen asignada.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-109">[in] The size, in bytes, of the mapped image.</span></span>  
+ <span data-ttu-id="76e38-109">de Tamaño, en bytes, de la imagen asignada.</span><span class="sxs-lookup"><span data-stu-id="76e38-109">[in] The size, in bytes, of the mapped image.</span></span>  
   
  `dwInFlags`  
- <span data-ttu-id="0ebf7-110">[in] Marcas que influyen en el comportamiento de la comprobación.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-110">[in] Flags that influence verification behavior.</span></span> <span data-ttu-id="0ebf7-111">Se admiten los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="0ebf7-111">The following values are supported:</span></span>  
+ <span data-ttu-id="76e38-110">de Marcas que influyen en el comportamiento de la comprobación.</span><span class="sxs-lookup"><span data-stu-id="76e38-110">[in] Flags that influence verification behavior.</span></span> <span data-ttu-id="76e38-111">Se admiten los siguientes valores:</span><span class="sxs-lookup"><span data-stu-id="76e38-111">The following values are supported:</span></span>  
   
-- <span data-ttu-id="0ebf7-112">`SN_INFLAG_FORCE_VER` (0 x 00000001) - fuerza la comprobación incluso si es necesario invalidar la configuración del registro.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-112">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
+- <span data-ttu-id="76e38-112">`SN_INFLAG_FORCE_VER`(0x00000001): fuerza la comprobación aunque sea necesario invalidar la configuración del registro.</span><span class="sxs-lookup"><span data-stu-id="76e38-112">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
   
-- <span data-ttu-id="0ebf7-113">`SN_INFLAG_INSTALL` (0 x 00000002): Especifica que se trata de la primera comprobación realizada en esta imagen.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-113">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first verification performed on this image.</span></span>  
+- <span data-ttu-id="76e38-113">`SN_INFLAG_INSTALL`(0x00000002): especifica que esta es la primera comprobación realizada en esta imagen.</span><span class="sxs-lookup"><span data-stu-id="76e38-113">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first verification performed on this image.</span></span>  
   
-- <span data-ttu-id="0ebf7-114">`SN_INFLAG_ADMIN_ACCESS` (0 x 00000004): Especifica que la memoria caché permitirá el acceso únicamente a los usuarios que tienen privilegios administrativos.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-114">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
+- <span data-ttu-id="76e38-114">`SN_INFLAG_ADMIN_ACCESS`(0x00000004): especifica que la memoria caché permitirá el acceso solo a los usuarios que tengan privilegios administrativos.</span><span class="sxs-lookup"><span data-stu-id="76e38-114">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
   
-- <span data-ttu-id="0ebf7-115">`SN_INFLAG_USER_ACCESS` (0 x 00000008): Especifica que el ensamblado será accesible solo para el usuario actual.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-115">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
+- <span data-ttu-id="76e38-115">`SN_INFLAG_USER_ACCESS`(0x00000008): especifica que el ensamblado será accesible únicamente para el usuario actual.</span><span class="sxs-lookup"><span data-stu-id="76e38-115">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
   
-- <span data-ttu-id="0ebf7-116">`SN_INFLAG_ALL_ACCESS` (0 x 00000010): Especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-116">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
+- <span data-ttu-id="76e38-116">`SN_INFLAG_ALL_ACCESS`(0x00000010): especifica que la memoria caché no proporcionará ninguna garantía de restricción de acceso.</span><span class="sxs-lookup"><span data-stu-id="76e38-116">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
   
-- <span data-ttu-id="0ebf7-117">`SN_INFLAG_RUNTIME` (0 x 80000000): reservado para la depuración interna.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-117">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
+- <span data-ttu-id="76e38-117">`SN_INFLAG_RUNTIME`(0x80000000): reservado para la depuración interna.</span><span class="sxs-lookup"><span data-stu-id="76e38-117">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
   
  `pdwOutFlags`  
- <span data-ttu-id="0ebf7-118">[out] Una marca para obtener información de salida adicional.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-118">[out] A flag for additional output information.</span></span> <span data-ttu-id="0ebf7-119">Se admite el siguiente valor:</span><span class="sxs-lookup"><span data-stu-id="0ebf7-119">The following value is supported:</span></span>  
+ <span data-ttu-id="76e38-118">enuncia Marca para la información de salida adicional.</span><span class="sxs-lookup"><span data-stu-id="76e38-118">[out] A flag for additional output information.</span></span> <span data-ttu-id="76e38-119">Se admite el siguiente valor:</span><span class="sxs-lookup"><span data-stu-id="76e38-119">The following value is supported:</span></span>  
   
-- <span data-ttu-id="0ebf7-120">`SN_OUTFLAG_WAS_VERIFIED` (0 x 00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-120">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
+- <span data-ttu-id="76e38-120">`SN_OUTFLAG_WAS_VERIFIED`(0x00000001): este valor se establece en `false` para especificar que la comprobación se realizó correctamente debido a la configuración del registro.</span><span class="sxs-lookup"><span data-stu-id="76e38-120">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0ebf7-121">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="0ebf7-121">Return Value</span></span>  
- <span data-ttu-id="0ebf7-122">`true` Cuando se finaliza correctamente; en caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-122">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="76e38-121">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="76e38-121">Return Value</span></span>  
+ <span data-ttu-id="76e38-122">`true`Cuando se complete correctamente; en caso `false`contrario,.</span><span class="sxs-lookup"><span data-stu-id="76e38-122">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0ebf7-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="0ebf7-123">Remarks</span></span>  
- <span data-ttu-id="0ebf7-124">Si el `StrongNameSignatureVerificationFromImage` función no se completa correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.</span><span class="sxs-lookup"><span data-stu-id="0ebf7-124">If the `StrongNameSignatureVerificationFromImage` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="76e38-123">Comentarios</span><span class="sxs-lookup"><span data-stu-id="76e38-123">Remarks</span></span>  
+ <span data-ttu-id="76e38-124">Si la `StrongNameSignatureVerificationFromImage` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.</span><span class="sxs-lookup"><span data-stu-id="76e38-124">If the `StrongNameSignatureVerificationFromImage` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0ebf7-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0ebf7-125">Requirements</span></span>  
- <span data-ttu-id="0ebf7-126">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ebf7-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="76e38-125">Requisitos</span><span class="sxs-lookup"><span data-stu-id="76e38-125">Requirements</span></span>  
+ <span data-ttu-id="76e38-126">**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="76e38-126">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0ebf7-127">**Encabezado**: StrongName.h</span><span class="sxs-lookup"><span data-stu-id="0ebf7-127">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="76e38-127">**Encabezado**: StrongName. h</span><span class="sxs-lookup"><span data-stu-id="76e38-127">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="0ebf7-128">**Biblioteca:** Incluye como recurso en mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="0ebf7-128">**Library:** Included as a resource in mscoree.dll</span></span>  
+ <span data-ttu-id="76e38-128">**Biblioteca** Se incluye como recurso en Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="76e38-128">**Library:** Included as a resource in mscoree.dll</span></span>  
   
- <span data-ttu-id="0ebf7-129">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ebf7-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="76e38-129">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="76e38-129">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0ebf7-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="0ebf7-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="76e38-130">Vea también</span><span class="sxs-lookup"><span data-stu-id="76e38-130">See also</span></span>
 
-- [<span data-ttu-id="0ebf7-131">StrongNameSignatureVerificationFromImage (método)</span><span class="sxs-lookup"><span data-stu-id="0ebf7-131">StrongNameSignatureVerificationFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
-- [<span data-ttu-id="0ebf7-132">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="0ebf7-132">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="76e38-131">StrongNameSignatureVerificationFromImage (método)</span><span class="sxs-lookup"><span data-stu-id="76e38-131">StrongNameSignatureVerificationFromImage Method</span></span>](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
+- [<span data-ttu-id="76e38-132">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="76e38-132">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
