@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e9f51799ea56cb1e5819d708a0e4a8136a94f3d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 180eb1a3129cfcd96668ecfee11947c15c5e0915
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741483"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776916"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps (Método)
-Asigna las propiedades de nivel de ensamblado.  
+Asigna propiedades de nivel de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -39,25 +39,25 @@ HRESULT SetAssemblyProps(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Id. del ensamblado.  
+ IDENTIFICADOR del ensamblado.  
   
  `FileToken`  
- Archivo que define la propiedad. Puede ser NULL si `AssemblyID` no indica un netmodule independiente.  
+ Archivo que define la propiedad. Puede ser null si `AssemblyID` no indica un valor de netmodule sin enlazar.  
   
  `Option`  
- Indica la opción de modificar.  
+ Indica la opción que se va a modificar.  
   
  `Value`  
  Nuevo valor de la opción.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

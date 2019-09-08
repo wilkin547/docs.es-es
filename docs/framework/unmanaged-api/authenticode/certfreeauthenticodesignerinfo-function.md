@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 8029633c-b6e4-4665-a7c2-89607c3247ef
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42f5685a9a976be7a3a73badf286f77216e43106
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 357a2ca0ffc733adb14a21624cbe28fb754c8240
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741246"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70776732"
 ---
 # <a name="certfreeauthenticodesignerinfo-function"></a>CertFreeAuthenticodeSignerInfo (Función)
-Libera recursos asignados para el [AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) estructura.  
+Libera los recursos asignados para la estructura [AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md) .  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -29,11 +29,11 @@ HRESULT CertFreeAuthenticodeSignerInfo (
   
 ## <a name="parameters"></a>Parámetros  
  `pSignerInfo`  
- [in, out] Información sobre el firmante que se va a liberar. Consulte la [AXL_AUTHENTICODE_SIGNER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md) estructura.  
+ [in, out] Información sobre el firmante que se va a liberar. Vea la estructura [AXL_AUTHENTICODE_SIGNER_INFO](axl-authenticode-signer-info-structure.md) .  
   
 ## <a name="return-value"></a>Valor devuelto  
  `S_OK` si la función se realiza correctamente. De lo contrario, devuelve un código de error.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+- [Authenticode](index.md)

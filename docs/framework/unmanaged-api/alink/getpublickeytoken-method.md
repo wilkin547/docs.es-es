@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec2c357cd56670f4f2deed8023bed7842a7f4ed7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 158ecc036d56e2ad9a3fa650677c04ebcbfd7696
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741873"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777219"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken (Método)
-Recupera el token de clave pública para un determinado archivo de clave o un contenedor de claves.  
+Recupera el token de clave pública de un contenedor de claves o keyfile determinado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,19 +45,19 @@ HRESULT GetPublicKeyToken(
  Nombre del contenedor de claves.  
   
  `pvPublicKeyToken`  
- Dirección donde el token de clave es que se almacenará.  
+ Dirección en la que se va a almacenar el token de clave.  
   
  `pcbPublicKeyToken`  
- Especifica el tamaño, en bytes, del búfer indicado por `pvPublicKeyToken`. Cuando se devuelve, contiene el número real de bytes utilizados.  
+ Especifica el tamaño, en bytes, del búfer indicado por `pvPublicKeyToken`. En la devolución, contiene el número real de bytes utilizados.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [API de ALink](index.md)

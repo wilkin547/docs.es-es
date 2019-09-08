@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3c3142ca12789b086bcd8b5a9c00c943264ae7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741856"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777210"
 ---
 # <a name="getscope-method"></a>Método GetScope
 Obtiene un ámbito de importación.  
@@ -39,25 +39,25 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Identificador único del ensamblado para importar a.  
+ IDENTIFICADOR único del ensamblado en el que se va a importar.  
   
  `FileToken`  
- Identificador único del archivo para importar desde.  
+ IDENTIFICADOR único del archivo desde el que se va a importar.  
   
  `dwScope`  
- Ámbito de base cero para importar.  
+ Ámbito de base cero que se va a importar.  
   
  `ppImportScope`  
- Recibe [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfaz para el ámbito.  
+ Recibe la interfaz de [interfaz IMetaDataImport](../metadata/imetadataimport-interface.md) para el ámbito.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

@@ -8,41 +8,41 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a876e4db7656c7a9976aee61931af29078e410c0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789771"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777168"
 ---
 # <a name="ialink2-interface"></a>IALink2 (Interfaz)
-Complementa la [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) al declarar los métodos que operan en las interfaces de metadatos más recientes como [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). Además, IALink2 declara los métodos que proporcionan mayor flexibilidad a través de las interfaces IALink originales.  
+Complementa la [interfaz ialink (](ialink-interface.md) al declarar métodos que operan en interfaces de metadatos más recientes, como la [interfaz IMetaDataEmit2](../metadata/imetadataemit2-interface.md). Además, Ialink2 (declara métodos que proporcionan flexibilidad de uso adicional sobre las interfaces de Ialink (originales.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [AddFile2 (método)](../../../../docs/framework/unmanaged-api/alink/addfile2-method.md)  
+ [AddFile2 (método)](addfile2-method.md)  
   
- [EmitAssembly (método)](../../../../docs/framework/unmanaged-api/alink/emitassembly-method.md)  
+ [EmitAssembly (método)](emitassembly-method.md)  
   
- [EmitInternalExportedTypes (método)](../../../../docs/framework/unmanaged-api/alink/emitinternalexportedtypes-method.md)  
+ [EmitInternalExportedTypes (método)](emitinternalexportedtypes-method.md)  
   
- [GetFileDef (método)](../../../../docs/framework/unmanaged-api/alink/getfiledef-method.md)  
+ [GetFileDef (método)](getfiledef-method.md)  
   
  GetPublicKeyToken (Método)  
   
- [GetScope2 (método)](../../../../docs/framework/unmanaged-api/alink/getscope2-method.md)  
+ [GetScope2 (método)](getscope2-method.md)  
   
- [ImportFileEx (método)](../../../../docs/framework/unmanaged-api/alink/importfileex-method.md)  
+ [ImportFileEx (método)](importfileex-method.md)  
   
- [ImportFileEx2 (método)](../../../../docs/framework/unmanaged-api/alink/importfileex2-method.md)  
+ [ImportFileEx2 (método)](importfileex2-method.md)  
   
- [ImportTypes2 (método)](../../../../docs/framework/unmanaged-api/alink/importtypes2-method.md)  
+ [ImportTypes2 (método)](importtypes2-method.md)  
   
- [SetAssemblyFile2 (método)](../../../../docs/framework/unmanaged-api/alink/setassemblyfile2-method.md)  
+ [SetAssemblyFile2 (método)](setassemblyfile2-method.md)  
   
- [SetPEKind (método)](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
+ [SetPEKind (método)](setpekind-method.md)  
   
 ## <a name="see-also"></a>Vea también
 
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [API de ALink](index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

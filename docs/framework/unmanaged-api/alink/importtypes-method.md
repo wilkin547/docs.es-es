@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9876e3ba5ea67442714c2d00b1901c25e54494f2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741626"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777086"
 ---
 # <a name="importtypes-method"></a>ImportTypes (Método)
-Inicia la importación de los tipos de cada ámbito importado a través de [ImportFile (método)](../../../../docs/framework/unmanaged-api/alink/importfile-method.md).  
+Inicia la importación de tipos de cada ámbito importado mediante el [método importFile](importfile-method.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,31 +41,31 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Id. del ensamblado para importar a.  
+ IDENTIFICADOR del ensamblado en el que se va a importar.  
   
  `FileToken`  
- Id. del archivo para importar desde.  
+ IDENTIFICADOR del archivo desde el que se va a importar.  
   
  `dwScope`  
- Ámbito de base cero para importar.  
+ Ámbito de base cero que se va a importar.  
   
  `phEnum`  
- Recibe el identificador de enumerador para los tipos en este ámbito.  
+ Recibe el identificador de enumerador para los tipos de este ámbito.  
   
  `ppImportScope`  
- Si lo desea recibe [IMetaDataImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) interfaz.  
+ Opcionalmente, recibe la interfaz de [interfaz IMetaDataImport](../metadata/imetadataimport-interface.md) .  
   
  `pdwCountOfTypes`  
  Opcionalmente, recibe el recuento de tipos en el ámbito indicado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

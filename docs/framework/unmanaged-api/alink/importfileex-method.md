@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcf714cb0c1c1dd59ae2ec56279870c0bb3e1c4a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741723"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777118"
 ---
 # <a name="importfileex-method"></a>ImportFileEx (Método)
-Importaciones indican el ensamblado o módulo sin enlazar.  
+Importa el ensamblado indicado o el módulo sin enlazar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -48,28 +48,28 @@ HRESULT ImportFileEx(
  Nombre opcional del archivo de destino.  
   
  `fSmartImport`  
- Si es TRUE, se utiliza ImportTypes, en caso contrario, la importación debe realizarse manualmente.  
+ Si es TRUE, se usa ImportTypes (; de lo contrario, la importación se debe realizar manualmente.  
   
  `dwOpenFlags`  
- Marcas que se van a pasar a [OpenScope (método)](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md).  
+ Marcas que se van a pasar al [método OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
  Recibe el identificador del archivo que se va a importar.  
   
  `ppAssemblyScope`  
- Recibe el ámbito de la importación de ensamblado [IMetaDataAssemblyImport (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md) interfaz. Se establece en NULL si el archivo no es un ensamblado.  
+ Recibe la interfaz de [interfaz IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) de ámbito de importación de ensamblado. Se establece en NULL si el archivo no es un ensamblado.  
   
  `pdwCountOfScopes`  
- Recibe el recuento de los archivos importados de los ámbitos.  
+ Recibe el recuento de archivos y/o ámbitos importados.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [API de ALink](index.md)

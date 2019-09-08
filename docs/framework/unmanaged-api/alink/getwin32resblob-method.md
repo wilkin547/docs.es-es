@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdc1ef6490f250ebe93b0482adf244adfc0ffd56
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67741787"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777370"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob (Método)
-Recupera el objeto binario de recursos Win32. Llame a este método después de establecer las opciones de ensamblado.  
+Recupera el BLOB de recursos de Win32. Llame a este método después de establecer las opciones de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,31 +41,31 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Id. del ensamblado.  
+ IDENTIFICADOR del ensamblado.  
   
  `FileToken`  
- Token de archivo usado para recuperar el nombre de archivo que se utilizará al construir el recurso de versión de Win32  
+ Token de archivo que se usa para recuperar el nombre de archivo que se utilizará al construir el recurso de versión de Win32.  
   
  `fDll`  
- TRUE si el archivo es un archivo DLL, es false para un archivo EXE.  
+ TRUE si file es un archivo DLL, false para un archivo EXE.  
   
  `pszIconFile`  
- Icono opcional para insertar en el objeto binario de recursos.  
+ Icono opcional que se va a insertar en el BLOB de recursos.  
   
  `ppResBlob`  
- Recibe el objeto binario de recursos.  
+ Recibe el BLOB de recursos.  
   
  `pcbResBlob`  
- Recibe el tamaño del blob.  
+ Recibe el tamaño del BLOB.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)
