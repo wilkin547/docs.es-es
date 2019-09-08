@@ -2,15 +2,15 @@
 title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 2b4a8a559d7297543812f3c67e3b90d06a011b0f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1ac46c882b266fbb73d5c709c9fdf297e2b55b1b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959099"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783973"
 ---
 # <a name="facet"></a>facet
-Una *faceta* se usa para agregar detalles a una definición de propiedad de tipo primitivo. Una definición de [propiedad](../../../../docs/framework/data/adonet/property.md) contiene información sobre el tipo de propiedad, pero a menudo es necesario más detalles. Por ejemplo, un tipo de entidad en un modelo conceptual podría tener una propiedad de tipo `String` cuyo valor no se puede establecer en NULL. Las facetas permiten especificar este nivel de detalle.  
+Una *faceta* se usa para agregar detalles a una definición de propiedad de tipo primitivo. Una definición de [propiedad](property.md) contiene información sobre el tipo de propiedad, pero a menudo es necesario más detalles. Por ejemplo, un tipo de entidad en un modelo conceptual podría tener una propiedad de tipo `String` cuyo valor no se puede establecer en NULL. Las facetas permiten especificar este nivel de detalle.  
   
  En la siguiente tabla se describen las facetas que se admiten en EDM.  
   
@@ -30,11 +30,11 @@ Una *faceta* se usa para agregar detalles a una definición de propiedad de tipo
 |`Unicode`|Indica si el valor de propiedad está almacenado como Unicode.|`String`|  
   
 ## <a name="example"></a>Ejemplo  
- El [Entity Framework ADO.net](../../../../docs/framework/data/adonet/ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. En el ejemplo siguiente CSDL, se define un tipo de entidad `Book`. Observe que las facetas se implementan como atributos XML. Los valores de faceta indican que ninguna propiedad puede estar establecida en NULL, y que los valores `Scale` y `Precision` de la propiedad `Revision` están establecidos ambos en 29.  
+ El [Entity Framework ADO.net](./ef/index.md) usa un lenguaje específico de dominio (DSL) denominado lenguaje de definición de esquemas conceptuales ([CSDL](./ef/language-reference/csdl-specification.md)) para definir los modelos conceptuales. En el ejemplo siguiente CSDL, se define un tipo de entidad `Book`. Observe que las facetas se implementan como atributos XML. Los valores de faceta indican que ninguna propiedad puede estar establecida en NULL, y que los valores `Scale` y `Precision` de la propiedad `Revision` están establecidos ambos en 29.  
   
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Conceptos clave de Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Conceptos clave de Entity Data Model](entity-data-model-key-concepts.md)
+- [Entity Data Model](entity-data-model.md)

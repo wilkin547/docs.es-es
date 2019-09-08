@@ -2,12 +2,12 @@
 title: Pasos habituales para usar LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 26b88e4d45365bbaac986ce8751e1d3b5383909b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c7964c821a838e027302cddce704d86cc6a34f66
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69947001"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792346"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Pasos habituales para usar LINQ to SQL
 Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], debe seguir los pasos que se describen más adelante en este tema. Observe que muchos pasos son opcionales. Es muy posible que pueda utilizar su modelo de objetos en su estado predeterminado.  
@@ -15,7 +15,7 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
  Para un inicio muy rápido, use el Object Relational Designer para crear el modelo de objetos y comenzar a codificar las consultas.  
   
 ## <a name="creating-the-object-model"></a>Crear el modelo de objetos  
- El primer paso es crear un modelo de objetos a partir de los metadatos de una base de datos relacional existente. El modelo de objetos representa la base de datos según el lenguaje de programación del desarrollador. Para obtener más información, vea [el LINQ to SQL modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
+ El primer paso es crear un modelo de objetos a partir de los metadatos de una base de datos relacional existente. El modelo de objetos representa la base de datos según el lenguaje de programación del desarrollador. Para obtener más información, vea [el LINQ to SQL modelo de objetos](the-linq-to-sql-object-model.md).  
   
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Seleccionar una herramienta para crear el modelo  
  Tres herramientas están disponibles para crear el modelo.  
@@ -26,21 +26,21 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
   
 - Herramienta de generación de código SQLMetal  
   
-     Esta utilidad de línea de comandos proporciona un conjunto de opciones ligeramente diferente de Object Relational Designer. Las bases de datos grandes se modelan mejor con esta herramienta. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Esta utilidad de línea de comandos proporciona un conjunto de opciones ligeramente diferente de Object Relational Designer. Las bases de datos grandes se modelan mejor con esta herramienta. Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 - Editor de código  
   
-     Puede escribir su propio código mediante el editor de código de Visual Studio o cualquier otro editor. No se recomienda este enfoque, que puede ser propenso a errores, si tiene una base de datos existente y puede usar Object Relational Designer o la herramienta SQLMetal. Sin embargo, el editor de código puede ser muy útil para perfeccionar o modificar el código ya generado con otras herramientas. Para obtener más información, consulte [Cómo Personalizar las clases de entidad mediante el editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)de código.  
+     Puede escribir su propio código mediante el editor de código de Visual Studio o cualquier otro editor. No se recomienda este enfoque, que puede ser propenso a errores, si tiene una base de datos existente y puede usar Object Relational Designer o la herramienta SQLMetal. Sin embargo, el editor de código puede ser muy útil para perfeccionar o modificar el código ya generado con otras herramientas. Para obtener más información, consulte [Cómo Personalizar las clases de entidad mediante el editor](how-to-customize-entity-classes-by-using-the-code-editor.md)de código.  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Seleccionar el tipo de código que se desea generar  
   
 - C# O Visual Basic archivo de código fuente para la asignación basada en atributos.  
   
-     Después, incluya este archivo de código en el proyecto de Visual Studio. Para obtener más información, consulte [asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     Después, incluya este archivo de código en el proyecto de Visual Studio. Para obtener más información, consulte [asignación basada en atributos](attribute-based-mapping.md).  
   
 - Un archivo XML para la asignación externa.  
   
-     Con este enfoque puede mantener los metadatos de la asignación fuera del código de aplicación. Para obtener más información, consulte [asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
+     Con este enfoque puede mantener los metadatos de la asignación fuera del código de aplicación. Para obtener más información, consulte [asignación externa](external-mapping.md).  
   
     > [!NOTE]
     > Object Relational Designer no admite la generación de archivos de asignación externos. Debe utilizar la herramienta SQLMetal para implementar esta característica.  
@@ -53,7 +53,7 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
  Para este propósito, puede utilizar el Object Relational Designer o el editor de código.  
   
 ## <a name="using-the-object-model"></a>Usar el modelo de objetos  
- La ilustración siguiente muestra la relación entre el programador y los datos en un escenario de dos niveles. Para otros escenarios, consulte [aplicaciones de N niveles y remotas con LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md).  
+ La ilustración siguiente muestra la relación entre el programador y los datos en un escenario de dos niveles. Para otros escenarios, consulte [aplicaciones de N niveles y remotas con LINQ to SQL](n-tier-and-remote-applications-with-linq-to-sql.md).  
   
  ![Captura de pantalla que muestra el modelo de objetos de Linq.](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
@@ -64,25 +64,25 @@ Para implementar una aplicación [!INCLUDE[vbtecdlinq](../../../../../../include
  A continuación, se presentan los pasos típicos para utilizar el modelo de objetos creado.  
   
 ### <a name="1-create-queries-to-retrieve-information-from-the-database"></a>1. Crear consultas para recuperar información de la base de datos  
- Para obtener más información, vea [conceptos de consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md) y ejemplos de [consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md).  
+ Para obtener más información, vea [conceptos de consultas](query-concepts.md) y ejemplos de [consultas](query-examples.md).  
   
 ### <a name="2-override-default-behaviors-for-insert-update-and-delete"></a>2. Invalidar los comportamientos predeterminados de Insert, Update y Delete  
- Este paso es opcional. Para obtener más información, vea [personalizar las operaciones de inserción, actualización y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+ Este paso es opcional. Para obtener más información, vea [personalizar las operaciones de inserción, actualización y eliminación](customizing-insert-update-and-delete-operations.md).  
   
 ### <a name="3-set-appropriate-options-to-detect-and-report-concurrency-conflicts"></a>3. Establecer las opciones adecuadas para detectar y notificar conflictos de simultaneidad  
- Puede mantener la configuración de administración de conflictos de simultaneidad predeterminada del modelo o puede cambiarla para ajustarla sus fines concretos. Para obtener más información, consulte [Cómo Especifique en qué miembros se comprueban los](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) conflictos [de simultaneidad y cómo: Especifique cuándo se inician](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)las excepciones de simultaneidad.  
+ Puede mantener la configuración de administración de conflictos de simultaneidad predeterminada del modelo o puede cambiarla para ajustarla sus fines concretos. Para obtener más información, consulte [Cómo Especifique en qué miembros se comprueban los](how-to-specify-which-members-are-tested-for-concurrency-conflicts.md) conflictos [de simultaneidad y cómo: Especifique cuándo se inician](how-to-specify-when-concurrency-exceptions-are-thrown.md)las excepciones de simultaneidad.  
   
 ### <a name="4-establish-an-inheritance-hierarchy"></a>4. Establecer una jerarquía de herencia  
- Este paso es opcional. Para obtener más información, consulte [compatibilidad con la herencia](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).  
+ Este paso es opcional. Para obtener más información, consulte [compatibilidad con la herencia](inheritance-support.md).  
   
 ### <a name="5-provide-an-appropriate-user-interface"></a>5. Proporcionar una interfaz de usuario adecuada  
  Este paso es opcional y depende de cómo se vaya a utilizar la aplicación.  
   
 ### <a name="6-debug-and-test-your-application"></a>6. Depurar y probar la aplicación  
- Para obtener más información, consulte [compatibilidad con](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)la depuración.  
+ Para obtener más información, consulte [compatibilidad con la depuración](debugging-support.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Introducción](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
-- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Introducción](getting-started.md)
+- [Creación del modelo de objetos](creating-the-object-model.md)
+- [Procedimientos almacenados](stored-procedures.md)

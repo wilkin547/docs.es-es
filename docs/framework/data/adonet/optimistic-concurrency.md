@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 37641056f2f3110685c24266d2612845ffbf0b3d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a8cca707f8fa82e97e988fcbe015b55e35b93499
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929238"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794679"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidad optimista
 En un entorno multiusuario existen dos modelos para actualizar datos en una base de datos: simultaneidad optimista y simultaneidad pesimista. El objeto <xref:System.Data.DataSet> está diseñado para fomentar el uso de la simultaneidad optimista en actividades cuya ejecución tiene una larga duración, como cuando se trabaja con interacción remota y cuando los usuarios interactúan con datos.  
@@ -96,9 +96,9 @@ UPDATE Table1 Set Col1 = @NewVal1
  También se puede decidir la aplicación de criterios menos restrictivos al utilizar un modelo de simultaneidad optimista. Por ejemplo, si solo se utilizan las columnas de clave principal en la cláusula WHERE se sobrescribirán los datos, independientemente de que las otras columnas se hayan actualizado o no desde la última consulta. También se puede aplicar una cláusula WHERE solo a determinadas columnas, lo que hará que se sobrescriban los datos a menos que se hayan actualizado ciertos campos desde que se consultaron por última vez.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Evento DataAdapter.RowUpdated  
- El evento **RowUpdated** del <xref:System.Data.Common.DataAdapter> objeto se puede usar junto con las técnicas descritas anteriormente para proporcionar una notificación a la aplicación de infracciones de simultaneidad optimista. **RowUpdated** se produce después de cada intento de actualizar una fila modificada de un **conjunto de DataSet**. Esto permite agregar código especial de control, incluyendo el procesamiento cuando se produce una excepción, agregar información de error personalizada, agregar lógica de reintento, etc. El <xref:System.Data.Common.RowUpdatedEventArgs> objeto devuelve una propiedad **RecordsAffected** que contiene el número de filas afectadas por un comando UPDATE determinado para una fila modificada de una tabla. Al establecer el comando de actualización para comprobar la simultaneidad optimista, la propiedad **RecordsAffected** , como resultado, devolverá un valor de 0 cuando se haya producido una infracción de simultaneidad optimista, ya que no se ha actualizado ningún registro. En tal caso se inicia una excepción. El evento **RowUpdated** permite controlar esta aparición y evitar la excepción estableciendo un valor **RowUpdatedEventArgs. status** adecuado, como **updateStatus. SkipCurrentRow**. Para obtener más información acerca del evento **RowUpdated** , vea [controlar eventos DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ El evento **RowUpdated** del <xref:System.Data.Common.DataAdapter> objeto se puede usar junto con las técnicas descritas anteriormente para proporcionar una notificación a la aplicación de infracciones de simultaneidad optimista. **RowUpdated** se produce después de cada intento de actualizar una fila **modificada** de un **conjunto de DataSet**. Esto permite agregar código especial de control, incluyendo el procesamiento cuando se produce una excepción, agregar información de error personalizada, agregar lógica de reintento, etc. El <xref:System.Data.Common.RowUpdatedEventArgs> objeto devuelve una propiedad **RecordsAffected** que contiene el número de filas afectadas por un comando UPDATE determinado para una fila modificada de una tabla. Al establecer el comando de actualización para comprobar la simultaneidad optimista, la propiedad **RecordsAffected** , como resultado, devolverá un valor de 0 cuando se haya producido una infracción de simultaneidad optimista, ya que no se ha actualizado ningún registro. En tal caso se inicia una excepción. El evento **RowUpdated** permite controlar esta aparición y evitar la excepción estableciendo un valor **RowUpdatedEventArgs. status** adecuado, como **updateStatus. SkipCurrentRow**. Para obtener más información acerca del evento **RowUpdated** , vea [controlar eventos DataAdapter](handling-dataadapter-events.md).  
   
- Opcionalmente, puede establecer **DataAdapter. ContinueUpdateOnError** en **true**antes de llamar a **Update**y responder a la información de error almacenada en la propiedad **RowError** de una fila determinada cuando se complete la **actualización** . Para obtener más información, vea [información sobre los errores de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Opcionalmente, puede establecer **DataAdapter. ContinueUpdateOnError** en **true**antes de llamar a **Update**y responder a la información de error almacenada en la propiedad **RowError** de una fila determinada cuando se complete la **actualización** . Para obtener más información, vea [información sobre los errores de fila](./dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Ejemplo de simultaneidad optimista  
  A continuación se facilita un ejemplo sencillo en el que se establece el **UpdateCommand** de un **DataAdapter** para probar la simultaneidad optimista y, a continuación, se usa el evento **RowUpdated** para comprobar las infracciones de la simultaneidad optimista. Cuando se encuentra una infracción de simultaneidad optimista, la aplicación establece el **RowError** de la fila para la que se emitió la actualización para reflejar una infracción de simultaneidad optimista.  
@@ -208,8 +208,8 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
   
 ## <a name="see-also"></a>Vea también
 
-- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Actualizar orígenes de datos con objetos DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [Información de error de fila](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)
-- [Transacciones y simultaneidad](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)
+- [Actualizar orígenes de datos con objetos DataAdapter](updating-data-sources-with-dataadapters.md)
+- [Información de error de fila](./dataset-datatable-dataview/row-error-information.md)
+- [Transacciones y simultaneidad](transactions-and-concurrency.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

@@ -6,33 +6,33 @@ helpviewer_keywords:
 - extensibility [WCF]
 - Windows Communication Foundation, extensibility
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 037182a3cb105f544e15a05f955c142ba57f62f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768724"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795537"
 ---
 # <a name="extending-wcf"></a>Extensión de WCF
-Windows Communication Foundation (WCF) le permite modificar y extender los componentes de tiempo de ejecución para controlar con precisión y extender las aplicaciones basadas en servicios. Los temas de esta sección hacen profundizan en la arquitectura de la extensibilidad. Para obtener más información acerca de la programación básica, vea [programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+Windows Communication Foundation (WCF) permite modificar y extender los componentes en tiempo de ejecución para controlar y ampliar con precisión las aplicaciones basadas en servicio. Los temas de esta sección hacen profundizan en la arquitectura de la extensibilidad. Para obtener más información sobre la programación básica, vea [programación básica de WCF](../basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Extensión de ServiceHost y la capa de modelos de servicios](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
+ [Extensión de ServiceHost y la capa de modelos de servicios](extending-servicehost-and-the-service-model-layer.md)  
  El nivel de modelo de servicio es responsable de extraer los mensajes entrantes de los canales subyacentes, de modo que los traduce en código de aplicación en las invocaciones de método y devuelve los resultados al agente de llamada.  Las extensiones de modelo de servicio modifican o implementan la ejecución o comportamiento de la comunicación y características implicadas en la funcionalidad del distribuidor, comportamientos personalizados, interceptación de mensaje y parámetro, y otra funcionalidad de extensibilidad.  
   
- [Extensión de enlaces](../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [Extensión de enlaces](extending-bindings.md)  
  Los enlaces son los objetos que describen los datos de comunicación exigidos para conectar a un punto de conexión. Las extensiones de enlace o enlaces personalizados implementan la funcionalidad de la comunicación personalizada exigida para admitir las características de la aplicación.  
   
- [Extensión de la capa de canales](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)  
+ [Extensión de la capa de canales](extending-the-channel-layer.md)  
  El nivel del canal se encuentra bajo el nivel de modelo de servicio y es responsable para el intercambio de mensajes entre los clientes y servicios. Las extensiones de canal pueden implementar la nueva funcionalidad de protocolo, como la seguridad. Las extensiones del canal también transportan la funcionalidad, como implementar un nuevo transporte de red para llevar los mensajes SOAP.  
   
- [Extensión de la seguridad](../../../../docs/framework/wcf/extending/extending-security.md)  
- Seguridad en WCF consta de la transferencia de seguridad (integridad, confidencialidad y autenticación), control de acceso (autorización) y auditoría. Las clases que se encuentran en el `IdentityModel` espacio de nombres usan WCF para el control de acceso. Entender la arquitectura de seguridad le permite crear tipos de notificación personalizados para alojar los sistemas de control de acceso personalizados.  
+ [Extensión de la seguridad](extending-security.md)  
+ La seguridad en WCF se compone de la seguridad de la transferencia (integridad, confidencialidad y autenticación), control de acceso (autorización) y auditoría. WCF usa las clases que `IdentityModel` se encuentran en el espacio de nombres para el control de acceso. Entender la arquitectura de seguridad le permite crear tipos de notificación personalizados para alojar los sistemas de control de acceso personalizados.  
   
- [Extensión del sistema de metadatos](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- El sistema de metadatos WCF es un grupo de clases e interfaces que representan los metadatos necesarios para implementar aplicaciones basadas en servicio. Modifique o extienda las clases o implemente y configure las interfaces para exportar e importar metadatos personalizados, como las extensiones de Lenguaje de descripción de servicios Web (WSDL) o las aserciones personalizadas de WS-PolicyAttachments.  
+ [Extensión del sistema de metadatos](extending-the-metadata-system.md)  
+ El sistema de metadatos de WCF es un grupo de clases e interfaces que representan los metadatos necesarios para implementar aplicaciones basadas en servicio. Modifique o extienda las clases o implemente y configure las interfaces para exportar e importar metadatos personalizados, como las extensiones de Lenguaje de descripción de servicios Web (WSDL) o las aserciones personalizadas de WS-PolicyAttachments.  
   
- [Extensión de codificadores y serializadores](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
+ [Extensión de codificadores y serializadores](extending-encoders-and-serializers.md)  
  Los codificadores y serializadores traducen los datos de un formulario a otro. Los temas de esta sección exponen cómo extender las clases proporcionadas para cumplir los requisitos especiales.  
   
 ## <a name="reference"></a>Referencia  
@@ -51,8 +51,8 @@ Windows Communication Foundation (WCF) le permite modificar y extender los compo
  <xref:System.IdentityModel.Tokens>  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
- [Programación básica de WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Programación básica de WCF](../basic-wcf-programming.md)  
   
- [Detalles de las características de WCF](../../../../docs/framework/wcf/feature-details/index.md)  
+ [Detalles de las características de WCF](../feature-details/index.md)  
   
- [Instrucciones y procedimientos recomendados](../../../../docs/framework/wcf/guidelines-and-best-practices.md)
+ [Instrucciones y procedimientos recomendados](../guidelines-and-best-practices.md)

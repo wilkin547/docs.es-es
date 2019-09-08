@@ -2,19 +2,19 @@
 title: Procedimiento para recuperar metadatos mediante un enlace que no sea MEX
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd6e0ce5dc287c826179c152b989b5f7842bb6e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766784"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795575"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Procedimiento para recuperar metadatos mediante un enlace que no sea MEX
-En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un enlace que no sea MEX. El código en este ejemplo se basa en el [extremo de metadatos personalizada Secure](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) ejemplo.  
+En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un enlace que no sea MEX. El código de este ejemplo se basa en el ejemplo de [extremo de metadatos seguro personalizado](../samples/custom-secure-metadata-endpoint.md) .  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>Para recuperar metadatos mediante un enlace que no sea MEX  
   
-1. Determine el enlace utilizado por el extremo MEX. Para los servicios de Windows Communication Foundation (WCF), puede determinar el enlace MEX obteniendo acceso al archivo de configuración del servicio. En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
+1. Determine el enlace utilizado por el extremo MEX. En el caso de los servicios Windows Communication Foundation (WCF), puede determinar el enlace MEX accediendo al archivo de configuración del servicio. En este caso, el enlace de MEX se define en la configuración de servicio siguiente.  
   
     ```xml  
     <services>  
@@ -121,8 +121,8 @@ En este tema se describe cómo recuperar metadatos de un extremo MEX mediante un
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5. En este punto, tiene una colección de puntos de conexión de servicio. Para obtener más información sobre la importación de metadatos, vea [Cómo: Importar los metadatos en los puntos de conexión de servicio](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
+5. En este punto, tiene una colección de puntos de conexión de servicio. Para obtener más información acerca de la importación [de metadatos, consulte Cómo: Importe los metadatos en los](../feature-details/how-to-import-metadata-into-service-endpoints.md)puntos de conexión de servicio.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Metadatos](../../../../docs/framework/wcf/feature-details/metadata.md)
+- [Metadatos](../feature-details/metadata.md)

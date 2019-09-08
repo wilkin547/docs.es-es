@@ -2,18 +2,18 @@
 title: Compatibilidad de transmisión de datos de SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: c5325e60e8303ab46f1c32340a20473b31bcf52e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 9dc7ee573bd011bd18d6c4b8bbd2d147b1fe907f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489789"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791400"
 ---
 # <a name="sqlclient-streaming-support"></a>Compatibilidad de transmisión de datos de SqlClient
 
-Compatibilidad entre SQL Server y una aplicación (nueva en .NET Framework 4.5) de transmisión por secuencias es compatible con los datos no estructurados en el servidor (archivos de documentos, imágenes y multimedia). Una base de datos de SQL Server puede almacenar objetos binarios grandes (BLOB), pero al recuperar los BLOBS puede usar una gran cantidad de memoria.
+La compatibilidad de streaming entre SQL Server y una aplicación (novedad en .NET Framework 4,5) admite datos no estructurados en el servidor (documentos, imágenes y archivos multimedia). Una base de datos de SQL Server puede almacenar objetos binarios grandes (blobs), pero la recuperación de blobs puede utilizar mucha memoria.
 
-Streaming de soporte técnico del servidor de SQL Server simplifica escribir aplicaciones que transmitir datos, sin tener que cargar totalmente los datos en memoria, lo que resulta en menos excepciones de desbordamiento de memoria.
+La compatibilidad con streaming hacia y desde SQL Server simplifica la escritura de aplicaciones que transmiten datos, sin tener que cargar completamente los datos en la memoria, lo que da lugar a menos excepciones de desbordamiento de memoria.
 
 La compatibilidad con streaming también permitirá que las aplicaciones de nivel intermedio escalen mejor, especialmente en escenarios donde los objetos comerciales establezcan conexión con SQL Azure para enviar, recuperar y manipular BLOB grandes.
 
@@ -22,11 +22,11 @@ La compatibilidad con streaming también permitirá que las aplicaciones de nive
 >
 > Los miembros agregados para admitir streaming se usan para recuperar datos de consultas y para pasar parámetros a consultas y procedimientos almacenados. La característica de streaming está dirigida a escenarios OLTP y de migración de datos básicos, y es aplicable en entornos de migración de datos locales y remotos.
 
-## <a name="streaming-support-from-sql-server"></a>Compatibilidad con Streaming desde SQL Server
+## <a name="streaming-support-from-sql-server"></a>Compatibilidad con streaming desde SQL Server
 
-Compatibilidad con Streaming desde SQL Server presenta una nueva funcionalidad en el <xref:System.Data.Common.DbDataReader> y en el <xref:System.Data.SqlClient.SqlDataReader> clases con el fin de obtener <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, y <xref:System.IO.TextReader> objetos y reaccionar ante ellos. Estas clases se usan para recuperar datos de consultas. Como resultado, compatibilidad con Streaming desde SQL Server dirigida a escenarios OLTP y se aplica de forma local y entornos fuera de las instalaciones.
+La compatibilidad con streaming desde SQL Server introduce una <xref:System.Data.Common.DbDataReader> nueva funcionalidad en <xref:System.Data.SqlClient.SqlDataReader> y en las clases para <xref:System.IO.Stream>obtener <xref:System.Xml.XmlReader>objetos, <xref:System.IO.TextReader> y y reaccionar ante ellos. Estas clases se usan para recuperar datos de consultas. Como resultado, la compatibilidad con streaming desde SQL Server aborda escenarios de OLTP y se aplica a entornos locales y fuera de las instalaciones.
 
-Los miembros siguientes se agregaron a <xref:System.Data.SqlClient.SqlDataReader> para habilitar la compatibilidad con streaming desde SQL Server:
+Se han agregado los siguientes miembros <xref:System.Data.SqlClient.SqlDataReader> a para habilitar la compatibilidad con la transmisión por secuencias desde SQL Server:
 
 1. <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>
 
@@ -40,7 +40,7 @@ Los miembros siguientes se agregaron a <xref:System.Data.SqlClient.SqlDataReader
 
 6. <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>
 
-Los miembros siguientes se agregaron a <xref:System.Data.Common.DbDataReader> para habilitar la compatibilidad con streaming desde SQL Server:
+Se han agregado los siguientes miembros <xref:System.Data.Common.DbDataReader> a para habilitar la compatibilidad con la transmisión por secuencias desde SQL Server:
 
 1. <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>
 
@@ -48,9 +48,9 @@ Los miembros siguientes se agregaron a <xref:System.Data.Common.DbDataReader> pa
 
 3. <xref:System.Data.Common.DbDataReader.GetTextReader%2A>
 
-## <a name="streaming-support-to-sql-server"></a>Compatibilidad con la transmisión a SQL Server
+## <a name="streaming-support-to-sql-server"></a>Compatibilidad de streaming con SQL Server
 
-Compatibilidad con Streaming hacia SQL Server presenta una nueva funcionalidad en el <xref:System.Data.SqlClient.SqlParameter> clase para que pueda aceptar y reaccionar a <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, y <xref:System.IO.TextReader> objetos. <xref:System.Data.SqlClient.SqlParameter> se usa para pasar parámetros a consultas y procedimientos almacenados.
+La compatibilidad de streaming con SQL Server introduce una <xref:System.Data.SqlClient.SqlParameter> nueva funcionalidad en la clase para que pueda <xref:System.Xml.XmlReader>aceptar <xref:System.IO.Stream>y reaccionar a los objetos, y <xref:System.IO.TextReader> . <xref:System.Data.SqlClient.SqlParameter> se usa para pasar parámetros a consultas y procedimientos almacenados.
 
 Al desechar un objeto <xref:System.Data.SqlClient.SqlCommand> o llamar a <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> se cancela cualquier operación de streaming. Si una aplicación envía <xref:System.Threading.CancellationToken>, la cancelación no se puede garantizar.
 
@@ -70,13 +70,13 @@ Los siguientes tipos <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> acep
 
 - **Xml**
 
-El **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> tipo aceptará un <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader>.
+El tipo **XML** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> aceptará un <xref:System.Data.SqlClient.SqlParameter.Value%2A> de <xref:System.Xml.XmlReader>.
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> puede aceptar valores de tipo <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> y <xref:System.IO.Stream>.
 
 Los objetos <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> y <xref:System.IO.Stream> se transferirán al valor definido por <xref:System.Data.SqlClient.SqlParameter.Size%2A>.
 
-## <a name="sample----streaming-from-sql-server"></a>Ejemplo: Streaming desde SQL Server
+## <a name="sample----streaming-from-sql-server"></a>Ejemplo: streaming desde SQL Server
 
 Use el siguiente Transact-SQL para crear la base de datos de ejemplo:
 
@@ -101,13 +101,13 @@ El ejemplo muestra cómo hacer lo siguiente:
 
 - Evitar bloquear un subproceso de interfaz de usuario al proporcionar una manera asincrónica para recuperar archivos grandes.
 
-- Transferir un archivo de texto grande de SQL Server en .NET Framework 4.5.
+- Transfiera un archivo de texto grande desde SQL Server en .NET Framework 4,5.
 
-- Transferir un archivo XML grande de SQL Server en .NET Framework 4.5.
+- Transfiera un archivo XML de gran tamaño desde SQL Server en .NET Framework 4,5.
 
 - Recuperar datos de SQL Server.
 
-- Transferir archivos grandes (BLOB) de una base de datos de SQL Server a otra sin quedarse sin memoria.
+- Transfiera archivos de gran tamaño (BLOB) de una SQL Server base de datos a otra sin quedarse sin memoria.
 
 ```csharp
 using System;
@@ -298,7 +298,7 @@ namespace StreamingFromServer {
 }
 ```
 
-## <a name="sample----streaming-to-sql-server"></a>Ejemplo: Streaming a SQL Server
+## <a name="sample----streaming-to-sql-server"></a>Ejemplo: streaming a SQL Server
 
 Use el siguiente Transact-SQL para crear la base de datos de ejemplo:
 
@@ -323,17 +323,17 @@ GO
 
 El ejemplo muestra cómo hacer lo siguiente:
 
-- Transferir un BLOB grande a SQL Server en .NET Framework 4.5.
+- Transferencia de un BLOB grande a SQL Server en .NET Framework 4,5.
 
-- Transferir un archivo de texto grande a SQL Server en .NET Framework 4.5.
+- Transferir un archivo de texto grande a SQL Server en .NET Framework 4,5.
 
 - Usar la nueva característica asincrónica para transferir un BLOB grande.
 
 - Usar la nueva característica asincrónica y la palabra clave await para transferir un BLOB grande.
 
-- Cancelando a la transferencia de un BLOB grande.
+- Cancelar la transferencia de un BLOB grande.
 
-- Transmisión por secuencias desde un servidor SQL Server a otro mediante la nueva característica asincrónica.
+- Transmisión por secuencias de una SQL Server a otra mediante la nueva característica asincrónica.
 
 ```csharp
 using System;
@@ -455,9 +455,9 @@ namespace StreamingToServer {
 }
 ```
 
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Ejemplo: Streaming desde un servidor SQL Server a otro servidor SQL Server
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Ejemplo: transmisión por secuencias de un SQL Server a otro SQL Server
 
-Este ejemplo muestra cómo hacer streaming de forma asincrónica un BLOB grande desde un servidor SQL Server a otro, con compatibilidad con la cancelación.
+Este ejemplo muestra cómo transmitir de forma asincrónica un BLOB grande de un SQL Server a otro, con compatibilidad para la cancelación.
 
 ```csharp
 using System;
@@ -524,4 +524,4 @@ namespace StreamingFromServerToAnother {
 
 ## <a name="see-also"></a>Vea también
 
-- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)

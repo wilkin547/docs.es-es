@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec18d5d5a6574cb0e08a6c4d6eaedcbcbf6886cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9e81fb7c99b9fd03a69456a84f2191770f40121d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759365"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795347"
 ---
-# <a name="fusioninstallreference-structure"></a>FUSION_INSTALL_REFERENCE (Estructura)
-Representa una referencia a la que hace que una aplicación a un ensamblado que ha instalado la aplicación en la caché global de ensamblados.  
+# <a name="fusion_install_reference-structure"></a>FUSION_INSTALL_REFERENCE (Estructura)
+Representa una referencia que una aplicación realiza a un ensamblado que la aplicación ha instalado en la caché global de ensamblados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -42,20 +42,20 @@ typedef struct _FUSION_INSTALL_REFERENCE_ {
   
 |Member|DESCRIPCIÓN|  
 |------------|-----------------|  
-|`cbSize`|El tamaño de la estructura en bytes.|  
+|`cbSize`|Tamaño de la estructura en bytes.|  
 |`dwFlags`|Reservado para extensibilidad futura. Este valor debe ser 0 (cero).|  
-|`guidScheme`|La entidad que agrega la referencia. Este campo puede tener uno de los valores siguientes:<br /><br /> -FUSION_REFCOUNT_MSI_GUID: El ensamblado se hace referencia a una aplicación que se instaló mediante el instalador de Microsoft Windows. El `szIdentifier` campo se establece en `MSI`y el `szNonCanonicalData` campo se establece en `Windows Installer`. Este esquema se utiliza para los ensamblados en paralelo de Windows.<br />-   FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: El ensamblado se hace referencia a una aplicación que aparece en el **agregar o quitar programas** interfaz. El `szIdentifier` campo proporciona el token que registra la aplicación con el **agregar o quitar programas** interfaz.<br />-FUSION_REFCOUNT_FILEPATH_GUID: Una aplicación que se representa mediante un archivo en el sistema de archivos al que hace referencia el ensamblado. El `szIdentifier` campo proporciona la ruta de acceso a este archivo.<br />-   FUSION_REFCOUNT_OPAQUE_STRING_GUID: Se hace referencia al ensamblado por una aplicación que se representa sólo mediante una cadena opaca. El `szIdentifier` campo proporciona esta cadena opaca. La caché global de ensamblados no comprueba la existencia de referencias opacas cuando se quita este valor.<br />-FUSION_REFCOUNT_OSINSTALL_GUID: Este valor está reservado.|  
-|`szIdentifier`|Una cadena única que identifica la aplicación que instala al ensamblado en la caché global de ensamblados. Su valor depende del valor de la `guidScheme` campo.|  
-|`szNonCanonicalData`|Una cadena que solo entiende la entidad que agrega la referencia. La caché global de ensamblados almacena esta cadena, pero no lo usa.|  
+|`guidScheme`|Entidad que agrega la referencia. Este campo puede tener uno de los valores siguientes:<br /><br /> - FUSION_REFCOUNT_MSI_GUID: Una aplicación que se instaló mediante el Microsoft Windows Installer hace referencia al ensamblado. El `szIdentifier` campo se establece en `MSI`y el `szNonCanonicalData` campo se establece en `Windows Installer`. Este esquema se utiliza para los ensamblados en paralelo de Windows.<br />-   FUSION_REFCOUNT_UNINSTALL_SUBKEY_GUID: Una aplicación que aparece en la interfaz **Agregar o quitar programas** hace referencia al ensamblado. El `szIdentifier` campo proporciona el token que registra la aplicación con la interfaz **Agregar o quitar programas** .<br />- FUSION_REFCOUNT_FILEPATH_GUID: Una aplicación que representa un archivo en el sistema de archivos hace referencia al ensamblado. El `szIdentifier` campo proporciona la ruta de acceso a este archivo.<br />- FUSION_REFCOUNT_OPAQUE_STRING_GUID: Una aplicación que representa solo una cadena opaca hace referencia al ensamblado. El `szIdentifier` campo proporciona esta cadena opaca. La caché global de ensamblados no comprueba la existencia de referencias opacas al quitar este valor.<br />- FUSION_REFCOUNT_OSINSTALL_GUID: Este valor está reservado.|  
+|`szIdentifier`|Cadena única que identifica la aplicación que ha instalado el ensamblado en la caché global de ensamblados. Su valor depende del valor del `guidScheme` campo.|  
+|`szNonCanonicalData`|Cadena que solo entiende la entidad que agrega la referencia. La caché global de ensamblados almacena esta cadena, pero no la utiliza.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Estructuras de fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
-- [Caché global de ensamblados](../../../../docs/framework/app-domains/gac.md)
+- [Estructuras de fusión](fusion-structures.md)
+- [Caché global de ensamblados](../../app-domains/gac.md)

@@ -2,12 +2,12 @@
 title: Sintaxis de cadenas de conexión
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: 9b43dc780b8570bd671f6b5d9db14a0c98e822d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00b8dc4c7592daa200f1a2a6c3c7fa9a3c587087
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949467"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784918"
 ---
 # <a name="connection-string-syntax"></a>Sintaxis de cadenas de conexión
 Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda de la clase <xref:System.Data.Common.DbConnection>, así como una propiedad <xref:System.Data.Common.DbConnection.ConnectionString%2A> específica del proveedor. La sintaxis de la cadena de conexión específica de cada proveedor se indica en su propiedad `ConnectionString`. En la tabla siguiente se muestran los cuatro proveedores de datos que se incluyen en .NET Framework.  
@@ -30,7 +30,7 @@ Cada proveedor de datos .NET Framework tiene un objeto `Connection` que hereda d
   
 - <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
- Los compiladores de cadenas de conexión permiten crear cadenas de conexión sintácticamente válidas en tiempo de ejecución. Por tanto, el usuario no tiene que concatenar manualmente los valores de las cadenas de conexión del código. Para obtener más información, vea [Generadores de cadenas de conexión](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Los compiladores de cadenas de conexión permiten crear cadenas de conexión sintácticamente válidas en tiempo de ejecución. Por tanto, el usuario no tiene que concatenar manualmente los valores de las cadenas de conexión del código. Para obtener más información, vea [Generadores de cadenas de conexión](connection-string-builders.md).  
 
 ## <a name="windows-authentication"></a>Autenticación de Windows  
  Se recomienda usar la autenticación de Windows (a veces denominada *seguridad integrada*) para conectarse a los orígenes de datos que lo admiten. La sintaxis utilizada en la cadena de conexión varía dependiendo del proveedor. En la siguiente tabla se muestra la sintaxis de autenticación de Windows utilizada con los proveedores de datos .NET Framework.  
@@ -90,7 +90,7 @@ A la hora de crear una cadena de conexión, también puede establecer la propied
 ## <a name="connecting-and-attaching-to-sql-server-express-user-instances"></a>Concatenar y adjuntar a instancias de usuario de SQL Server Express  
  Las instancias de usuario son una característica de SQL Server Express. Permiten que un usuario que ejecuta una cuenta de Windows local y con privilegios mínimos adjunte y ejecute una base de datos de SQL Server sin necesidad de tener privilegios administrativos. Una instancia de usuario se ejecuta con las credenciales de Windows del usuario, no como un servicio.  
   
- Para obtener más información sobre cómo trabajar con instancias de usuario, vea [SQL Server Express las instancias de usuario](../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md).  
+ Para obtener más información sobre cómo trabajar con instancias de usuario, vea [SQL Server Express las instancias de usuario](./sql/sql-server-express-user-instances.md).  
   
 ## <a name="using-trustservercertificate"></a>Usar TrustServerCertificate  
  La `TrustServerCertificate` palabra clave solo es válida cuando se conecta a una instancia de SQL Server con un certificado válido. Cuando `TrustServerCertificate` se establece en `true`, la capa de transporte utilizará SSL para cifrar el canal y evitar recorrer la cadena de certificados para validar la confianza.  
@@ -103,9 +103,9 @@ A la hora de crear una cadena de conexión, también puede establecer la propied
 > Si `TrustServerCertificate` se establece en `true` y se activa el cifrado, se utilizará el nivel de cifrado especificado en el servidor aunque `Encrypt` esté establecido en `false` en la cadena de conexión. De lo contrario, se producirá un error en la conexión.  
   
 ### <a name="enabling-encryption"></a>Habilitar el cifrado  
- Para habilitar el cifrado cuando no se ha aprovisionado un certificado en el servidor, las opciones forzar cifrado de **Protocolo** y **confiar en certificado de servidor** deben establecerse en Administrador de configuración de SQL Server. En este caso, el cifrado utilizará un certificado del servidor autofirmado sin validación si no se ha incluido en el servidor ningún certificado que se pueda comprobar.  
+ Para habilitar el cifrado cuando no se ha aprovisionado un certificado en el servidor, las opciones **forzar cifrado de protocolo** y **confiar en certificado de servidor** deben establecerse en Administrador de configuración de SQL Server. En este caso, el cifrado utilizará un certificado del servidor autofirmado sin validación si no se ha incluido en el servidor ningún certificado que se pueda comprobar.  
   
- La configuración de las aplicaciones no puede reducir el nivel de seguridad configurado en SQL Server, sino que en todo caso puede reforzarlo. Una aplicación puede solicitar el cifrado estableciendo `TrustServerCertificate` las `Encrypt` palabras clave `true`y en, lo que garantiza que el cifrado se realiza incluso cuando no se ha aprovisionado un certificado de servidor y no se puede forzar el cifrado de **protocolos** . se ha configurado para el cliente. Sin embargo, si en la configuración del cliente no está habilitado `TrustServerCertificate`, seguirá siendo necesario un certificado de servidor.  
+ La configuración de las aplicaciones no puede reducir el nivel de seguridad configurado en SQL Server, sino que en todo caso puede reforzarlo. Una aplicación puede solicitar el cifrado estableciendo `TrustServerCertificate` las `Encrypt` palabras clave `true`y en, lo que garantiza que el cifrado se realiza incluso cuando no se ha aprovisionado un certificado de servidor y no se puede **forzar el cifrado de protocolos** . se ha configurado para el cliente. Sin embargo, si en la configuración del cliente no está habilitado `TrustServerCertificate`, seguirá siendo necesario un certificado de servidor.  
   
  En la siguiente tabla se describen todos los casos.  
   
@@ -196,6 +196,6 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
   
 ## <a name="see-also"></a>Vea también
 
-- [Cadenas de conexión](../../../../docs/framework/data/adonet/connection-strings.md)
-- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Cadenas de conexión](connection-strings.md)
+- [Conexión a un origen de datos](connecting-to-a-data-source.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)
