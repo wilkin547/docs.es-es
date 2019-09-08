@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14af44901e7c65933800e41328e95602ce715282
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c000aad12000a9c76fb6dd805a9b002c021be6ef
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783179"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798846"
 ---
-# <a name="strongnametokenfromassemblyex-function"></a><span data-ttu-id="e3045-102">StrongNameTokenFromAssemblyEx (Función)</span><span class="sxs-lookup"><span data-stu-id="e3045-102">StrongNameTokenFromAssemblyEx Function</span></span>
-<span data-ttu-id="e3045-103">Crea un token de nombre seguro desde el archivo de ensamblado especificado y devuelve la clave pública que representa el token.</span><span class="sxs-lookup"><span data-stu-id="e3045-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
+# <a name="strongnametokenfromassemblyex-function"></a><span data-ttu-id="5bb40-102">StrongNameTokenFromAssemblyEx (Función)</span><span class="sxs-lookup"><span data-stu-id="5bb40-102">StrongNameTokenFromAssemblyEx Function</span></span>
+<span data-ttu-id="5bb40-103">Crea un token de nombre seguro a partir del archivo de ensamblado especificado y devuelve la clave pública que representa el token.</span><span class="sxs-lookup"><span data-stu-id="5bb40-103">Creates a strong name token from the specified assembly file, and returns the public key that the token represents.</span></span>  
   
- <span data-ttu-id="e3045-104">Esta función está desusada.</span><span class="sxs-lookup"><span data-stu-id="e3045-104">This function has been deprecated.</span></span> <span data-ttu-id="e3045-105">Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) método en su lugar.</span><span class="sxs-lookup"><span data-stu-id="e3045-105">Use the [ICLRStrongName::StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) method instead.</span></span>  
+ <span data-ttu-id="5bb40-104">Esta función está en desuso.</span><span class="sxs-lookup"><span data-stu-id="5bb40-104">This function has been deprecated.</span></span> <span data-ttu-id="5bb40-105">Use el método [ICLRStrongName:: strongnametokenfromassemblyex (](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) en su lugar.</span><span class="sxs-lookup"><span data-stu-id="5bb40-105">Use the [ICLRStrongName::StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3045-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="e3045-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5bb40-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="5bb40-106">Syntax</span></span>  
   
 ```cpp  
 BOOLEAN StrongNameTokenFromAssemblyEx (  
@@ -40,43 +40,43 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e3045-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="e3045-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5bb40-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="5bb40-107">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="e3045-108">[in] La ruta de acceso al archivo ejecutable portable (PE) para el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="e3045-108">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
+ <span data-ttu-id="5bb40-108">de La ruta de acceso al archivo portable ejecutable (PE) para el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="5bb40-108">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="e3045-109">[out] El token de nombre seguro devuelto.</span><span class="sxs-lookup"><span data-stu-id="e3045-109">[out] The returned strong name token.</span></span>  
+ <span data-ttu-id="5bb40-109">enuncia El token de nombre seguro devuelto.</span><span class="sxs-lookup"><span data-stu-id="5bb40-109">[out] The returned strong name token.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="e3045-110">[out] El tamaño, en bytes, del token de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="e3045-110">[out] The size, in bytes, of the strong name token.</span></span>  
+ <span data-ttu-id="5bb40-110">enuncia Tamaño, en bytes, del token de nombre seguro.</span><span class="sxs-lookup"><span data-stu-id="5bb40-110">[out] The size, in bytes, of the strong name token.</span></span>  
   
  `ppbPublicKeyBlob`  
- <span data-ttu-id="e3045-111">[out] La clave pública devuelta.</span><span class="sxs-lookup"><span data-stu-id="e3045-111">[out] The returned public key.</span></span>  
+ <span data-ttu-id="5bb40-111">enuncia La clave pública devuelta.</span><span class="sxs-lookup"><span data-stu-id="5bb40-111">[out] The returned public key.</span></span>  
   
  `pcbPublicKeyBlob`  
- <span data-ttu-id="e3045-112">[out] El tamaño, en bytes, de la clave pública.</span><span class="sxs-lookup"><span data-stu-id="e3045-112">[out] The size, in bytes, of the public key.</span></span>  
+ <span data-ttu-id="5bb40-112">enuncia Tamaño, en bytes, de la clave pública.</span><span class="sxs-lookup"><span data-stu-id="5bb40-112">[out] The size, in bytes, of the public key.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e3045-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="e3045-113">Return Value</span></span>  
- <span data-ttu-id="e3045-114">`true` Cuando se finaliza correctamente; en caso contrario, `false`.</span><span class="sxs-lookup"><span data-stu-id="e3045-114">`true` on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5bb40-113">Valor devuelto</span><span class="sxs-lookup"><span data-stu-id="5bb40-113">Return Value</span></span>  
+ <span data-ttu-id="5bb40-114">`true`Cuando se complete correctamente; en caso `false`contrario,.</span><span class="sxs-lookup"><span data-stu-id="5bb40-114">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e3045-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="e3045-115">Remarks</span></span>  
- <span data-ttu-id="e3045-116">Un token de nombre seguro es la forma abreviada de una clave pública.</span><span class="sxs-lookup"><span data-stu-id="e3045-116">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="e3045-117">El token es un hash de 64 bits que se crea a partir de la clave pública utilizada para firmar el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="e3045-117">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="e3045-118">El token es una parte del nombre seguro del ensamblado y se puede leer desde los metadatos del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="e3045-118">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5bb40-115">Comentarios</span><span class="sxs-lookup"><span data-stu-id="5bb40-115">Remarks</span></span>  
+ <span data-ttu-id="5bb40-116">Un token de nombre seguro es la forma abreviada de una clave pública.</span><span class="sxs-lookup"><span data-stu-id="5bb40-116">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="5bb40-117">El token es un hash de 64 bits que se crea a partir de la clave pública utilizada para firmar el ensamblado.</span><span class="sxs-lookup"><span data-stu-id="5bb40-117">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="5bb40-118">El token es una parte del nombre seguro del ensamblado y se puede leer desde los metadatos del ensamblado.</span><span class="sxs-lookup"><span data-stu-id="5bb40-118">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
   
- <span data-ttu-id="e3045-119">Después de recuperar la clave y se crea el token, debe llamar a la [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) función para liberar la memoria asignada.</span><span class="sxs-lookup"><span data-stu-id="e3045-119">After the key is retrieved and the token is created, you should call the [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
+ <span data-ttu-id="5bb40-119">Una vez recuperada la clave y creado el token, debe llamar a la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) para liberar la memoria asignada.</span><span class="sxs-lookup"><span data-stu-id="5bb40-119">After the key is retrieved and the token is created, you should call the [StrongNameFreeBuffer](strongnamefreebuffer-function.md) function to release the allocated memory.</span></span>  
   
- <span data-ttu-id="e3045-120">Si el `StrongNameTokenFromAssemblyEx` función no se completa correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.</span><span class="sxs-lookup"><span data-stu-id="e3045-120">If the `StrongNameTokenFromAssemblyEx` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+ <span data-ttu-id="5bb40-120">Si la `StrongNameTokenFromAssemblyEx` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.</span><span class="sxs-lookup"><span data-stu-id="5bb40-120">If the `StrongNameTokenFromAssemblyEx` function does not complete successfully, call the [StrongNameErrorInfo](strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e3045-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="e3045-121">Requirements</span></span>  
- <span data-ttu-id="e3045-122">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3045-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5bb40-121">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5bb40-121">Requirements</span></span>  
+ <span data-ttu-id="5bb40-122">**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5bb40-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3045-123">**Encabezado**: StrongName.h</span><span class="sxs-lookup"><span data-stu-id="e3045-123">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="5bb40-123">**Encabezado**: StrongName. h</span><span class="sxs-lookup"><span data-stu-id="5bb40-123">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="e3045-124">**Biblioteca:** Incluye como recurso en mscoree.dll</span><span class="sxs-lookup"><span data-stu-id="e3045-124">**Library:** Included as a resource in mscoree.dll</span></span>  
+ <span data-ttu-id="5bb40-124">**Biblioteca** Se incluye como recurso en Mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="5bb40-124">**Library:** Included as a resource in mscoree.dll</span></span>  
   
- <span data-ttu-id="e3045-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3045-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5bb40-125">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bb40-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3045-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="e3045-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5bb40-126">Vea también</span><span class="sxs-lookup"><span data-stu-id="5bb40-126">See also</span></span>
 
-- [<span data-ttu-id="e3045-127">StrongNameTokenFromAssemblyEx (método)</span><span class="sxs-lookup"><span data-stu-id="e3045-127">StrongNameTokenFromAssemblyEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [<span data-ttu-id="e3045-128">StrongNameTokenFromAssembly (método)</span><span class="sxs-lookup"><span data-stu-id="e3045-128">StrongNameTokenFromAssembly Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [<span data-ttu-id="e3045-129">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="e3045-129">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="5bb40-127">StrongNameTokenFromAssemblyEx (método)</span><span class="sxs-lookup"><span data-stu-id="5bb40-127">StrongNameTokenFromAssemblyEx Method</span></span>](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [<span data-ttu-id="5bb40-128">StrongNameTokenFromAssembly (método)</span><span class="sxs-lookup"><span data-stu-id="5bb40-128">StrongNameTokenFromAssembly Method</span></span>](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [<span data-ttu-id="5bb40-129">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="5bb40-129">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
