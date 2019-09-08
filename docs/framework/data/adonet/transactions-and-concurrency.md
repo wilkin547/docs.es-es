@@ -2,12 +2,12 @@
 title: Transacciones y simultaneidad
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: c78031150d9b1209372dece49813dfcf0a03b9d5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 837fe6c42d64f7416dbd895e56a38d1a409e567a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965211"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791317"
 ---
 # <a name="transactions-and-concurrency"></a>Transacciones y simultaneidad
 Una transacción consiste en un comando único o en un grupo de comandos que se ejecutan como un paquete. Las transacciones permiten combinar varias operaciones en una sola unidad de trabajo. Si en un punto de la transacción se produjera un error, todas las actualizaciones podrían revertirse y devolverse al estado que tenían antes de la transacción.  
@@ -22,23 +22,23 @@ Una transacción consiste en un comando único o en un grupo de comandos que se 
  Las transacciones que implican diferentes administradores de recursos, como una transacción entre SQL Server y Oracle, requieren una transacción distribuida.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Transacciones locales](../../../../docs/framework/data/adonet/local-transactions.md)  
+ [Transacciones locales](local-transactions.md)  
  Muestra cómo realizar transacciones en una base de datos.  
   
- [Transacciones distribuidas](../../../../docs/framework/data/adonet/distributed-transactions.md)  
+ [Transacciones distribuidas](distributed-transactions.md)  
  Describe cómo realizar transacciones distribuidas en ADO.NET.  
   
- [Integración de System.Transactions con SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [Integración de System.Transactions con SQL Server](system-transactions-integration-with-sql-server.md)  
  Describe <xref:System.Transactions> la integración con SQL Server para trabajar con transacciones distribuidas.  
   
- [Simultaneidad optimista](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
+ [Simultaneidad optimista](optimistic-concurrency.md)  
  Describe la simultaneidad optimista y pesimista, y cómo puede probar las infracciones de simultaneidad.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Principios de la transacción](../../../../docs/framework/data/transactions/transaction-fundamentals.md)
-- [Conexión a un origen de datos](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [Comandos y parámetros](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Objetos DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Principios de la transacción](../transactions/transaction-fundamentals.md)
+- [Conexión a un origen de datos](connecting-to-a-data-source.md)
+- [Comandos y parámetros](commands-and-parameters.md)
+- [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
+- [Objetos DbProviderFactory](dbproviderfactories.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

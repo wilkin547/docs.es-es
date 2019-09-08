@@ -2,12 +2,12 @@
 title: Objetos DataTableReader
 ms.date: 03/30/2017
 ms.assetid: 97546ae2-0e42-4d26-961d-e0b244d81ded
-ms.openlocfilehash: 1ff7868b59c6fdc4e6c443be1b831accc84f36a6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 1559cde9cb786ccb2baf920347064b8b28d472c3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203820"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785351"
 ---
 # <a name="datatablereaders"></a>Objetos DataTableReader
 El <xref:System.Data.DataTableReader> presenta el contenido de una <xref:System.Data.DataTable> o un <xref:System.Data.DataSet> con formato de uno o más conjuntos de resultados de solo lectura y de solo avance.  
@@ -26,4 +26,4 @@ El <xref:System.Data.DataTableReader> presenta el contenido de una <xref:System.
 ## <a name="see-also"></a>Vea también
 
 - [Recuperar y modificar datos en ADO.NET](../retrieving-and-modifying-data.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

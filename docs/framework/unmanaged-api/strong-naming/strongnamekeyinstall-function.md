@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7121ace6777e7cf947fcc6ff30b1ea314851feff
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 353898b72f41acd0c49a43ff05e54f61b99444c4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636713"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798997"
 ---
 # <a name="strongnamekeyinstall-function"></a>StrongNameKeyInstall (Función)
 
 Importa un par de claves pública y privada a un contenedor.
 
-Esta función está desusada. Use la [ICLRStrongName](../hosting/iclrstrongname-strongnamekeyinstall-method.md) método en su lugar.
+Esta función está en desuso. Use el método [ICLRStrongName:: StrongNameKeyInstall (](../hosting/iclrstrongname-strongnamekeyinstall-method.md) en su lugar.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -42,31 +42,31 @@ BOOLEAN StrongNameKeyInstall (
 ## <a name="parameters"></a>Parámetros
 
 `wszKeyContainer`\
-[in] Nombre del contenedor de claves. `wszKeyContainer` debe ser una cadena no vacía.
+de Nombre del contenedor de claves. `wszKeyContainer`debe ser una cadena no vacía.
 
 `pbKeyBlob`\
-[in] El par de claves binario.
+de Par de claves binarias.
 
 `cbKeyBlob`\
-[in] El tamaño, en bytes, de `pbKeyBlob`.
+de Tamaño, en bytes, de `pbKeyBlob`.
 
 ## <a name="return-value"></a>Valor devuelto
 
-`true` Cuando se finaliza correctamente; en caso contrario, `false`.
+`true`Cuando se complete correctamente; en caso `false`contrario,.
 
 ## <a name="remarks"></a>Comentarios
 
-Use la [StrongNameKeyDelete](strongnamekeydelete-function.md) función para eliminar el contenedor de claves.
+Use la función [StrongNameKeyDelete (](strongnamekeydelete-function.md) para eliminar el contenedor de claves.
 
-Si el `StrongNameKeyInstall` función no se completa correctamente, llame a la [StrongNameErrorInfo](strongnameerrorinfo-function.md) función para recuperar el último error generado.
+Si la `StrongNameKeyInstall` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: StrongName.h
+**Encabezado**: StrongName. h
 
-**Biblioteca:** Incluye como recurso en MsCorEE.dll
+**Biblioteca** Se incluye como recurso en MsCorEE. dll
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

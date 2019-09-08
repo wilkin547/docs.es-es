@@ -6,19 +6,19 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 01212b859e10ec1bbbb452486ce1aa6a2cecb583
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: bb62b9ad214e5e268c3905df486f5914437b36d3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965827"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780529"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operaciones asincrónicas (Data Services de WCF)
 Las aplicaciones web deben tolerar una latencia superior entre cliente y servidor que las aplicaciones que se ejecutan en redes internas. Para optimizar el rendimiento y la experiencia del usuario de la aplicación, se recomienda usar los métodos asincrónicos de las clases <xref:System.Data.Services.Client.DataServiceContext> y <xref:System.Data.Services.Client.DataServiceQuery%601> cuando se tenga acceso a los servidores de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] en la web.  
   
  Aunque los servidores de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] procesen solicitudes HTTP de forma sincrónica, algunos métodos de las bibliotecas de cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] son sincrónicas y esperan hasta que se complete el intercambio completo de solicitudes y respuestas antes de continuar con la ejecución. Los métodos asincrónicos de las bibliotecas de cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] no esperan a que se complete este intercambio y pueden permitir que la aplicación mantenga una interfaz de usuario que siga respondiendo mientras tanto.  
   
- Puede realizar operaciones asincrónicas mediante el uso de un par de métodos en <xref:System.Data.Services.Client.DataServiceContext> las <xref:System.Data.Services.Client.DataServiceQuery%601> clases y que comienzan con *Begin* y *End* respectivamente. Los métodos *Begin* registran un delegado al que llama el servicio cuando se completa la operación. Se debe llamar a los métodos *End* en el delegado registrado para controlar la devolución de llamada desde las operaciones completadas. Al llamar al método *End* para completar una operación asincrónica, debe hacerlo desde la misma <xref:System.Data.Services.Client.DataServiceQuery%601> instancia de o <xref:System.Data.Services.Client.DataServiceContext> que usó para comenzar la operación. Cada método *Begin* toma un `state` parámetro que puede pasar un objeto de estado a la devolución de llamada. Este objeto de estado se recupera del <xref:System.IAsyncResult> que se proporciona con la devolución de llamada y se usa para llamar al método *End* correspondiente para completar la operación asincrónica. Por ejemplo, cuando se proporciona la instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> como parámetro `state` al llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> de la instancia, <xref:System.Data.Services.Client.DataServiceQuery%601> devuelve la misma instancia de <xref:System.IAsyncResult>. A continuación, esta instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> se usa para llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para completar la operación de consulta. Para obtener más información, vea [Cómo: Ejecutar consultas](../../../../docs/framework/data/wcf/how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)asincrónicas del servicio de datos.  
+ Puede realizar operaciones asincrónicas mediante el uso de un par de métodos en <xref:System.Data.Services.Client.DataServiceContext> las <xref:System.Data.Services.Client.DataServiceQuery%601> clases y que comienzan con *Begin* y *End* respectivamente. Los métodos *Begin* registran un delegado al que llama el servicio cuando se completa la operación. Se debe llamar a los métodos *End* en el delegado registrado para controlar la devolución de llamada desde las operaciones completadas. Al llamar al método *End* para completar una operación asincrónica, debe hacerlo desde la misma <xref:System.Data.Services.Client.DataServiceQuery%601> instancia de o <xref:System.Data.Services.Client.DataServiceContext> que usó para comenzar la operación. Cada método *Begin* toma un `state` parámetro que puede pasar un objeto de estado a la devolución de llamada. Este objeto de estado se recupera del <xref:System.IAsyncResult> que se proporciona con la devolución de llamada y se usa para llamar al método *End* correspondiente para completar la operación asincrónica. Por ejemplo, cuando se proporciona la instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> como parámetro `state` al llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> de la instancia, <xref:System.Data.Services.Client.DataServiceQuery%601> devuelve la misma instancia de <xref:System.IAsyncResult>. A continuación, esta instancia de <xref:System.Data.Services.Client.DataServiceQuery%601> se usa para llamar al método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para completar la operación de consulta. Para obtener más información, consulte [Cómo Ejecutar consultas](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md)asincrónicas del servicio de datos.  
   
 > [!NOTE]
 > Las bibliotecas de cliente que se proporcionan en .NET Framework para Silverlight solo admiten operaciones asincrónicas. Para obtener más información, vea [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
@@ -38,4 +38,4 @@ Las aplicaciones web deben tolerar una latencia superior entre cliente y servido
   
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)

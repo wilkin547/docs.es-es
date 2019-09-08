@@ -2,12 +2,12 @@
 title: Riesgos de seguridad relativos al registro de mensajes
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: b635591b7a3b07385ed48c6b1ea556139c6d77c5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044265"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795948"
 ---
 # <a name="security-concerns-for-message-logging"></a>Riesgos de seguridad relativos al registro de mensajes
 En este tema se describe cómo puede proteger los datos confidenciales para que no se expongan en registros de mensajes, así como los eventos generados por el registro de mensajes.  
@@ -107,9 +107,9 @@ En este tema se describe cómo puede proteger los datos confidenciales para que 
   
 - No se permite el registro de PII conocido: Este evento se genera cuando no se permite el registro de PII conocido. Esto sucede cuando el `logKnownPii` atributo `source` del elemento en el archivo app. config o Web. config está establecido en `true`, pero el `enableLoggingKnownPii` atributo `machineSettings` del elemento del archivo Machine. config se establece en. `false`. No se inicia ninguna excepción.  
   
- Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información sobre esto, vea [registro de eventos](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Estos eventos se pueden ver en la herramienta Visor de eventos que viene con Windows. Para obtener más información sobre esto, vea [registro de eventos](./event-logging/index.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Registro de mensajes](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [Riesgos de seguridad y sugerencias útiles para el seguimiento](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)
+- [Registro de mensajes](message-logging.md)
+- [Riesgos de seguridad y sugerencias útiles para el seguimiento](./tracing/security-concerns-and-useful-tips-for-tracing.md)

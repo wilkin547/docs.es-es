@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 159b65b4b58b9142a168401ea2a881af2714df5f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a1994d100c4d18d5fa3642e27d0dcb8823800549
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946639"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780970"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Tutorial: Usar solo procedimientos almacenados (Visual Basic)
 Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para tener acceso a los datos utilizando procedimientos almacenados solamente. Este enfoque suelen utilizarlo los administradores de bases de datos para limitar el acceso al almacén de datos.  
   
 > [!NOTE]
-> También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, vea [personalizar las operaciones de inserción, actualización y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md).  
+> También puede utilizar procedimientos almacenados en aplicaciones [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] para invalidar el comportamiento predeterminado, especialmente para los procesos `Create`, `Update` y `Delete`. Para obtener más información, vea [personalizar las operaciones de inserción, actualización y eliminación](customizing-insert-update-and-delete-operations.md).  
   
  Para los fines de este tutorial, usará dos métodos que se han asignado a procedimientos almacenados en la base de datos de ejemplo Northwind: CustOrdersDetail y CustOrderHist. La asignación se produce al ejecutar la herramienta de línea de comandos SqlMetal para generar un archivo de Visual Basic. Para obtener más información, vea la sección Requisitos previos que se incluye posteriormente en este tutorial.  
   
@@ -32,7 +32,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 - Base de datos de ejemplo Northwind.  
   
-     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest3.  
+     Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo northwnd.mdf en la carpeta c:\linqtest3.  
   
 - Archivo de código de Visual Basic generado a partir de la base de datos Northwind.  
   
@@ -40,7 +40,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      **sqlmetal /code:"c:\linqtest3\northwind.vb" /language:vb "c:\linqtest3\northwnd.mdf" /sprocs /functions /pluralize**  
   
-     Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
+     Para obtener más información, vea [SqlMetal.exe (Herramienta de generación de código)](../../../../tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="overview"></a>Información general  
  Este tutorial se compone de seis tareas principales:  
@@ -135,7 +135,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 6. Del mismo modo para **Label2**, cambie la propiedad **Text** de **Label2** a **Enter CustomerID:** .  
   
-7. Del mismo modo, cambie la propiedad **Text** de **button1** a **Order**details.  
+7. Del mismo modo, cambie la propiedad **Text** de **button1** a **Order Details**.  
   
 8. Cambie la propiedad **Text** de **BUTTON2** a **Order History**.  
   
@@ -143,7 +143,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 ### <a name="to-handle-button-clicks"></a>Para administrar los clics de botón  
   
-1. Haga doble clic en **Order** details en **Form1** para crear el `Button1` controlador de eventos y abrir el editor de código.  
+1. Haga doble clic en **Order Details** en **Form1** para crear el `Button1` controlador de eventos y abrir el editor de código.  
   
 2. Escriba el código siguiente en el controlador `Button1`:  
   
@@ -164,7 +164,7 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      Aparece Form1.  
   
-2. En el cuadro **Enter OrderID** , escriba **10249** y, a continuación, haga clic en **Order**details.  
+2. En el cuadro **Enter OrderID** , escriba **10249** y, a continuación, haga clic en **Order Details**.  
   
      Un cuadro de mensaje muestra los productos incluidos en el pedido 10249.  
   
@@ -176,13 +176,13 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
      Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
   
-4. En el cuadro **Enter OrderID** , escriba `123`y, a continuación, haga clic en **Order**details.  
+4. En el cuadro **Enter OrderID** , escriba `123`y, a continuación, haga clic en **Order Details**.  
   
      Aparece un cuadro de mensaje con el texto "No results".  
   
      Haga clic en **Aceptar** para cerrar el cuadro de mensaje.  
   
-5. En el menú Depurar, haga clic en **detener**depuración.  
+5. En el menú **depurar** , haga clic en **detener depuración**.  
   
      La sesión de depuración se cierra.  
   
@@ -193,5 +193,5 @@ Este tutorial proporciona un escenario completo básico de [!INCLUDE[vbtecdlinq]
   
 ## <a name="see-also"></a>Vea también
 
-- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
-- [Procedimientos almacenados](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
+- [Aprendizaje con tutoriales](learning-by-walkthroughs.md)
+- [Procedimientos almacenados](stored-procedures.md)

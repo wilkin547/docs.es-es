@@ -2,12 +2,12 @@
 title: Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: e1f5ccb8849d5f8f6bd9156cd428d395a86b1301
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 90aae0e22feec5d26fa7ee4c690904ed893489b4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046017"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795917"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilización del instrumental de administración de Windows (WMI) para diagnósticos
 Windows Communication Foundation (WCF) expone datos de inspección de un servicio en tiempo de ejecución a través de un proveedor de WCF Instrumental de administración de Windows (WMI).  
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) expone datos de inspección de un servici
   
  Un proveedor de WMI es un componente que expone la instrumentación en el tiempo de ejecución a través de una interfaz compatible con WBEM. Está compuesto de un conjunto de objetos WMI con pares atributo/valor. Los pares pueden ser de varios tipos simples. Las herramientas de administración pueden conectarse a los servicios a través de la interfaz en tiempo de ejecución. WCF expone atributos de servicios como direcciones, enlaces, comportamientos y agentes de escucha.  
   
- El proveedor de WMI integrado puede activarse en el archivo de configuración de la aplicación. Esto se realiza a través `wmiProviderEnabled` del atributo [ \<del > de diagnóstico](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) en la [ \<sección > de System. ServiceModel](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) , como se muestra en la configuración del ejemplo siguiente.  
+ El proveedor de WMI integrado puede activarse en el archivo de configuración de la aplicación. Esto se realiza a través `wmiProviderEnabled` del atributo [ \<del > de diagnóstico](../../../configure-apps/file-schema/wcf/diagnostics.md) en la [ \<sección > de System. ServiceModel](../../../configure-apps/file-schema/wcf/system-servicemodel.md) , como se muestra en la configuración del ejemplo siguiente.  
   
 ```xml  
 <system.serviceModel>  
@@ -35,9 +35,9 @@ Windows Communication Foundation (WCF) expone datos de inspección de un servici
 > [!CAUTION]
 > Si utiliza los métodos proporcionados por .NET Framework para tener acceso mediante programación a los datos de WMI, debe tener en cuenta que tales métodos pueden iniciar excepciones una vez establecida la conexión. La conexión no se establece durante la construcción de la instancia <xref:System.Management.ManagementObject>, sino con la primera solicitud que implique el intercambio real de datos. Por lo tanto, utilice un bloque `try..catch` para detectar las posibles excepciones.  
   
- Puede cambiar la traza y el nivel de registro de mensajes, así como las opciones de registro de mensajes para el origen de traza de la traza `System.ServiceModel` en WMI. Esto puede hacerse mediante el acceso a la instancia de [AppDomainInfo](../../../../../docs/framework/wcf/diagnostics/wmi/appdomaininfo.md) , que expone estas propiedades booleanas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, `LogMalformedMessages`y `TraceLevel`. Por consiguiente, si configura un agente de escucha de traza para el registro de mensajes, pero define estas opciones en `false`, en la configuración, puede cambiarlas después a `true`, una vez se esté ejecutando la aplicación. Esto habilitará de manera efectiva el registro de mensajes en el tiempo de ejecución. De igual forma, si habilita el registro de mensajes en su archivo de configuración, puede deshabilitarlo en el tiempo de ejecución mediante WMI.  
+ Puede cambiar la traza y el nivel de registro de mensajes, así como las opciones de registro de mensajes para el origen de traza de la traza `System.ServiceModel` en WMI. Esto puede hacerse mediante el acceso a la instancia de [AppDomainInfo](appdomaininfo.md) , que expone estas propiedades booleanas: `LogMessagesAtServiceLevel`, `LogMessagesAtTransportLevel`, `LogMalformedMessages`y `TraceLevel`. Por consiguiente, si configura un agente de escucha de traza para el registro de mensajes, pero define estas opciones en `false`, en la configuración, puede cambiarlas después a `true`, una vez se esté ejecutando la aplicación. Esto habilitará de manera efectiva el registro de mensajes en el tiempo de ejecución. De igual forma, si habilita el registro de mensajes en su archivo de configuración, puede deshabilitarlo en el tiempo de ejecución mediante WMI.  
   
- Debe tener en cuenta que si en el archivo de configuración no se especifica ningún agente de escucha de traza de registro de mensajes para el registro de mensajes, o no se especifica ningún agente de escucha de traza de `System.ServiceModel`, no se aplica ninguno de sus cambios, aunque WMI los acepte. Para obtener más información sobre cómo configurar correctamente los agentes de escucha respectivos, vea [configurar el registro de mensajes](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) y configurar el [seguimiento](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). El nivel de seguimiento de traza, del resto de los orígenes de traza de traza, especificado por la configuración es efectivo cuando se inicia la aplicación, y no se puede cambiar.  
+ Debe tener en cuenta que si en el archivo de configuración no se especifica ningún agente de escucha de traza de registro de mensajes para el registro de mensajes, o no se especifica ningún agente de escucha de traza de `System.ServiceModel`, no se aplica ninguno de sus cambios, aunque WMI los acepte. Para obtener más información sobre cómo configurar correctamente los agentes de escucha respectivos, vea [configurar el registro de mensajes](../configuring-message-logging.md) y configurar el [seguimiento](../tracing/configuring-tracing.md). El nivel de seguimiento de traza, del resto de los orígenes de traza de traza, especificado por la configuración es efectivo cuando se inicia la aplicación, y no se puede cambiar.  
   
  WCF expone un método `GetOperationCounterInstanceName` para el scripting. Este método devuelve un nombre de instancia del contador de rendimiento si le proporciona un nombre de operación. Sin embargo, no valida la entrada. Por lo tanto, si proporciona un nombre de operación incorrecto, se devuelve un nombre de contador incorrecto.  
   
@@ -62,7 +62,7 @@ Windows Communication Foundation (WCF) expone datos de inspección de un servici
   
 3. Seleccione la pestaña **seguridad** y navegue hasta el espacio de nombres **root/ServiceModel** . Haga clic en el botón **seguridad** .  
   
-4. Seleccione el grupo o usuario específico al que desea controlar el acceso y use la casilla **permitir** o denegar para configurar los permisos.  
+4. Seleccione el grupo o usuario específico al que desea controlar el acceso y use la casilla **permitir** o **denegar** para configurar los permisos.  
   
 ## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Conceder permisos de registro de WCF WMI a usuarios adicionales  
  WCF expone datos de administración a WMI. Para ello, hospeda un proveedor WMI en proceso, que a veces se denomina "proveedor desacoplado". La cuenta que registra este proveedor debe tener los permisos apropiados para poder exponer los datos de administración. En Windows, solo un pequeño conjunto de cuentas privilegiadas pueden registrar proveedores desacoplados de forma predeterminada. Esto supone un problema, ya que los usuarios normalmente desean exponer los datos WMI de un servicio WCF que se está ejecutando bajo una cuenta que no se encuentra en el conjunto predeterminado.  

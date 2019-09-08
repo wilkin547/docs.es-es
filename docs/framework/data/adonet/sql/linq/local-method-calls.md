@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ec288d5ac2f6466860362be82c619c89204e8f31
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033519"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781422"
 ---
 # <a name="local-method-calls"></a>Llamadas a métodos locales
-Las llamadas a métodos locales son las que se ejecutan dentro del modelo de objetos. Las llamadas a métodos remotos son la que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte a SQL y después transmite al motor de base de datos para su ejecución. Llamadas a métodos locales son necesarios cuando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no se puede convertir una llamada a SQL. De lo contrario, se produce una excepción <xref:System.InvalidOperationException>.  
+Las llamadas a métodos locales son las que se ejecutan dentro del modelo de objetos. Las llamadas a métodos remotos son la que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] convierte a SQL y después transmite al motor de base de datos para su ejecución. Las llamadas a métodos locales son [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] necesarias cuando no puede convertir la llamada en SQL. De lo contrario, se produce una excepción <xref:System.InvalidOperationException>.  
   
 ## <a name="example-1"></a>Ejemplo 1  
  En el ejemplo siguiente, se asigna una clase `Order` a la tabla Orders de la base de datos de ejemplo Northwind. Se ha agregado a la clase un método de instancia local.  
@@ -28,4 +28,4 @@ Las llamadas a métodos locales son las que se ejecutan dentro del modelo de obj
   
 ## <a name="see-also"></a>Vea también
 
-- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [Información general](background-information.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: eb6841dd24c4c7587cc2424cc1e606194da34585
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 357812aa95ea731fe86fbe49b2cb1b2806e3915a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69944062"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784866"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Correspondencias de DataTable y DataColumn en un objeto DataAdapter
 Un objeto **DataAdapter** contiene una colección de cero o <xref:System.Data.Common.DataTableMapping> más objetos en la propiedad **TableMappings** . Un **DataTableMapping** proporciona una asignación maestra entre los datos devueltos de una consulta en un origen de datos <xref:System.Data.DataTable>y un. Se puede pasar el nombre de **DataTableMapping** en lugar del nombre de **DataTable** al método **Fill** de **DataAdapter**. En el ejemplo siguiente se crea un **DataTableMapping** denominado **AuthorsMapping** para la tabla **authors** .  
@@ -27,7 +27,7 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors");
   
  Si no especifica un nombre **TableName** o **DataTableMapping** al llamar al método **Fill** o **Update** de **DataAdapter**, el **DataAdapter** busca un **DataTableMapping** denominado "Table". Si ese objeto **DataTableMapping** no existe, el **TableName** de la **DataTable** es "Table". Puede especificar un **DataTableMapping** predeterminado mediante la creación de un **DataTableMapping** con el nombre "Table".  
   
- En el ejemplo de código siguiente se crea un DataTableMapping <xref:System.Data.Common> (a partir del espacio de nombres) y se convierte en la asignación predeterminada para el **DataAdapter** especificado asignándole el nombre "Table". A continuación, en el ejemplo se asignan las columnas de la primera tabla del resultado de la consulta (la tabla Customers de la base de datos **Northwind** ) a un conjunto de nombres más descriptivos de la tabla Customers de **Northwind** en el <xref:System.Data.DataSet>. En las columnas que no se asignan se usa el nombre de la columna en el origen de datos.  
+ En el ejemplo de código siguiente se crea un DataTableMapping <xref:System.Data.Common> (a partir del espacio de nombres) y se convierte en la asignación predeterminada para el **DataAdapter** especificado asignándole el nombre "Table". A continuación, en el ejemplo se asignan las columnas de la primera tabla del resultado de la consulta (la tabla **Customers** de la base de datos **Northwind** ) a un conjunto de nombres más descriptivos de la tabla **Customers de Northwind** en el <xref:System.Data.DataSet>. En las columnas que no se asignan se usa el nombre de la columna en el origen de datos.  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -99,6 +99,6 @@ adapter.Fill(customersDataSet, "Customers")
   
 ## <a name="see-also"></a>Vea también
 
-- [Objetos DataAdapter y DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [Recuperar y modificar datos en ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Objetos DataAdapter y DataReader](dataadapters-and-datareaders.md)
+- [Recuperar y modificar datos en ADO.NET](retrieving-and-modifying-data.md)
+- [Información general sobre ADO.NET](ado-net-overview.md)

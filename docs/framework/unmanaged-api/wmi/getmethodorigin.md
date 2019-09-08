@@ -1,6 +1,6 @@
 ---
-title: GetMethodOrigin (función) (referencia de API no administrada)
-description: GetMethodOrigin (función) determina la clase en el que se declara un método.
+title: Función GetMethodOrigin (referencia de la API no administrada)
+description: La función GetMethodOrigin determina la clase en la que se declara un método.
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b21e08d3bf6845b9fc44d5a5edef0ea39b91da5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9cea7251353dae093f64448c8d84157917fa74c5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746527"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798560"
 ---
 # <a name="getmethodorigin-function"></a>Función GetMethodOrigin
 Determina la clase en la que se declara un método.
@@ -42,37 +42,37 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszMethodName`  
-[in] El nombre del método para el objeto cuya clase propietaria se solicita. 
+de Nombre del método para el objeto cuya clase propietaria se está solicitando. 
 
 `pstrClassName`  
-[out] Recibe el nombre de la clase que posee el método.
+enuncia Recibe el nombre de la clase a la que pertenece el método.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Value  |DESCRIPCIÓN  |
+|Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | No se encontró el método especificado. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) método.
+Esta función contiene una llamada al método [IWbemClassObject:: GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) .
 
-Porque una clase puede heredar los métodos de una o más clases bases, los desarrolladores a menudo desean determinar la clase en el que se define un método determinado.
+Dado que una clase puede heredar métodos de una o varias clases base, los desarrolladores suelen querer determinar la clase en la que se define un método determinado.
 
-El `pstrClassName` parámetro no debe apuntar a una `BSTR` antes de llama a la función porque se trata de un `out` parámetro; este puntero no se desasigna cuando la función vuelve.
+El `pstrClassName` parámetro no debe señalar a un válido `BSTR` antes de que se llame a la función porque `out` es un parámetro; este puntero no se desasigna después de que la función devuelva un error.
 
 ## <a name="requirements"></a>Requisitos  
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -80,4 +80,4 @@ El `pstrClassName` parámetro no debe apuntar a una `BSTR` antes de llama a la f
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

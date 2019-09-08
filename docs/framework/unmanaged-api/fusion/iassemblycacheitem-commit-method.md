@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d1f5988266fcbfc18ee937b6e7fdb1829646fa9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 380181d8e309ba4b51d49aae9159f0bbf7e0250f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778676"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796722"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit (Método)
-Confirma la referencia de ensamblado en la caché en memoria.  
+Confirma la referencia de ensamblado en caché a la memoria.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -38,18 +38,18 @@ HRESULT Commit (
   
 ## <a name="parameters"></a>Parámetros  
  `dwFlags`  
- [in] Marcadores definidos en Fusion.idl.  
+ de Marcas definidas en Fusion. idl.  
   
  `pulDisposition`  
- [out, optional] Un valor que indica el resultado de la operación.  
+ [out, opcional] Valor que indica el resultado de la operación.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [IAssemblyCacheItem (interfaz)](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [IAssemblyCacheItem (interfaz)](iassemblycacheitem-interface.md)

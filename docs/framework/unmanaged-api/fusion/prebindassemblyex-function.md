@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773861"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796331"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx (Función)
-Obtiene el nombre para mostrar tras aplicar la directiva para un ensamblado.  
+Obtiene el nombre para mostrar de la Directiva posterior de un ensamblado.  
   
- Esta función admite la infraestructura de .NET Framework y no está pensada para utilizarse directamente desde el código.  
+ Esta función admite la infraestructura de .NET Framework y no está diseñada para utilizarse directamente desde el código.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,35 +43,35 @@ HRESULT PreBindAssemblyEx (
   
 ## <a name="parameters"></a>Parámetros  
  `pAppCtx`  
- [in] Identifica el contexto de la aplicación.  
+ de Identifica el contexto de la aplicación.  
   
  `pName`  
- [in] Identifica el nombre del ensamblado.  
+ de Identifica el nombre del ensamblado.  
   
  `pAsmParent`  
- [in] Identifica el ensamblado principal. Este parámetro se ignora.  
+ de Identifica el ensamblado primario. Este parámetro se ignora.  
   
  `pwzRuntimeVersion`  
- [in] Identifica la versión en tiempo de ejecución.  
+ de Identifica la versión del tiempo de ejecución.  
   
  `ppNamePostPolicy`  
- [out] Contiene el nombre para mostrar tras aplicar la directiva.  
+ enuncia Contiene el nombre para mostrar de la Directiva posterior.  
   
  `pvReserved`  
- [in] Reservado para extensibilidad futura. `pvReserved` debe ser una referencia nula.  
+ [in] Reservado para extensibilidad futura. `pvReserved`debe ser una referencia nula.  
   
 ## <a name="remarks"></a>Comentarios  
- El `ppNamePostPolicy` parámetro de salida se establece únicamente si la función devuelve HRESULT FUSION_E_REF_DEF_MISMATCH. En caso contrario, es null.  
+ El `ppNamePostPolicy` parámetro de salida se establece solo si la función devuelve HRESULT FUSION_E_REF_DEF_MISMATCH. De lo contrario, es NULL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: Fusion.h  
+ **Encabezado**: Fusion. h  
   
- **Biblioteca:** Incluye como recurso en MsCorEE.dll  
+ **Biblioteca** Se incluye como recurso en MsCorEE. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

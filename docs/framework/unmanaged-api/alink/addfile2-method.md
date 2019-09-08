@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de85d264d709da747fab636f40c99bc0d0752251
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742356"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777519"
 ---
 # <a name="addfile2-method"></a>AddFile2 (Método)
-Agrega archivos al ensamblado. También puede utilizarse para crear módulos no enlazados.  
+Agrega archivos al ensamblado. También se puede usar para crear módulos sin enlazar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,28 +41,28 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Id. del ensamblado al que se agrega el archivo.  
+ IDENTIFICADOR del ensamblado al que se agrega el archivo.  
   
  `pszFilename`  
  Nombre del archivo que se va a agregar.  
   
  `dwFlags`  
- COM + `FileDef` marcas como `ffContainsNoMetaData` y `ffWriteable`. `dwFlags` se pasa a [DefineFile (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Marcas `FileDef` com+ `ffContainsNoMetaData` como y `ffWriteable`. `dwFlags`se pasa al [método definefile (](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- Interfaz para [IMetaDataEmit2 (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) interfaz.  
+ Interfaz para la interfaz de [interfaz IMetaDataEmit2](../metadata/imetadataemit2-interface.md) .  
   
  `pFileToken`  
  Recibe el identificador del archivo que se va a agregar.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [API de ALink](index.md)

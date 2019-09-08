@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 8ce7cd859ce0c9a5874751e9928e5bced33593d6
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 351175b96d354a264a9280018ce21de8870beda2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70205250"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784802"
 ---
 # <a name="annotating-typed-datasets"></a>Comentar conjuntos de datos con tipo
 Las anotaciones permiten modificar los nombres de los elementos del <xref:System.Data.DataSet> con información de tipos sin modificar el esquema subyacente. La modificación de los nombres de los elementos del esquema subyacente haría que el **conjunto** de datos con tipo hiciera referencia a objetos que no existen en el origen de datos, así como a perder una referencia a los objetos que existen en el origen de datos.  
   
- Con las anotaciones, puede personalizar los nombres de los objetos en el conjunto de **DataSet** con tipo con nombres más significativos, lo que hace que el código sea más legible y que el **conjunto** de los clientes con información sea más fácil de usar, a la vez que deja intacto el esquema subyacente. Por ejemplo, el siguiente elemento de esquema para la tabla Customers de la base de datos **Northwind** daría como resultado un nombre de objeto <xref:System.Data.DataRowCollection> **DataRow** de **CustomersRow** y un denominado **Customers**.  
+ Con las anotaciones, puede personalizar los nombres de los objetos en el conjunto de **DataSet** con tipo con nombres más significativos, lo que hace que el código sea más legible y que el **conjunto** de los clientes con información sea más fácil de usar, a la vez que deja intacto el esquema subyacente. Por ejemplo, el siguiente elemento de esquema para la tabla **Customers** de la base de datos **Northwind** daría como resultado un nombre de objeto <xref:System.Data.DataRowCollection> **DataRow** de **CustomersRow** y un denominado **Customers**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -80,7 +80,7 @@ Las anotaciones permiten modificar los nombres de los elementos del <xref:System
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- A continuación se muestra un esquema anotado de ejemplo que expone la tabla Customers de la base de datos **Northwind** con una relación con la tabla **Orders** incluida.  
+ A continuación se muestra un esquema anotado de ejemplo que expone la tabla **Customers** de la base de datos **Northwind** con una relación con la tabla **Orders** incluida.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- En el ejemplo de código siguiente se utiliza un **conjunto** de un DataSet fuertemente tipado creado a partir del esquema de ejemplo. Usa <xref:System.Data.SqlClient.SqlDataAdapter> una para rellenar la tabla Customers <xref:System.Data.SqlClient.SqlDataAdapter> y otra para rellenar la tabla Orders. El **DataSet** fuertemente tipado define los objetos **DataRelation**.  
+ En el ejemplo de código siguiente se utiliza un **conjunto** de un DataSet fuertemente tipado creado a partir del esquema de ejemplo. Usa una <xref:System.Data.SqlClient.SqlDataAdapter> para rellenar la tabla **Customers** y otra <xref:System.Data.SqlClient.SqlDataAdapter> para rellenar la tabla **Orders** . El **DataSet** fuertemente tipado define los objetos **DataRelation**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -228,4 +228,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
 - <xref:System.Data.DataSet>
 - [Objetos DataSet con tipo](typed-datasets.md)
 - [Objetos DataSet, DataTable y DataView](index.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

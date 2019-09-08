@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 4a1174dd1cd6ea785c118c61428ba73d1347316c
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: a4b3abfe9be25c9080a362eb4a6e4c7b070528f1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663876"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797225"
 ---
 # <a name="custom-bindings"></a>Enlaces personalizados
 
-Puede usar la clase <xref:System.ServiceModel.Channels.CustomBinding> cuando uno de los enlaces proporcionados por el sistema no cumple los requisitos de su servicio. Todos los enlaces se construyen a partir de un conjunto ordenado de elementos de enlace. Los enlaces personalizados pueden crearse a partir de un conjunto de elementos de enlace proporcionado por el sistema o incluir elementos de enlace personalizado definidos por el usuario. Puede utilizar elementos de enlaces personalizados, por ejemplo, para habilitar el uso de nuevos transportes o codificadores en un extremo de servicio. Para obtener ejemplos, vea [ejemplos de enlace personalizado](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Para obtener más información, consulte [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).
+Puede usar la clase <xref:System.ServiceModel.Channels.CustomBinding> cuando uno de los enlaces proporcionados por el sistema no cumple los requisitos de su servicio. Todos los enlaces se construyen a partir de un conjunto ordenado de elementos de enlace. Los enlaces personalizados pueden crearse a partir de un conjunto de elementos de enlace proporcionado por el sistema o incluir elementos de enlace personalizado definidos por el usuario. Puede utilizar elementos de enlaces personalizados, por ejemplo, para habilitar el uso de nuevos transportes o codificadores en un extremo de servicio. Para obtener ejemplos prácticos, vea [ejemplos de enlace personalizado](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Para obtener más información, consulte [ \<customBinding >](../../configure-apps/file-schema/wcf/custombinding.md).
 
 ## <a name="construction-of-a-custom-binding"></a>Construcción de un enlace personalizado
 
@@ -44,7 +44,7 @@ Un enlace personalizado se construye utilizando el constructor <xref:System.Serv
 
   - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
 
-En la parte inferior hay un elemento de transporte necesario. Puede usar su propio transporte o uno de los siguientes elementos de enlace de transporte proporciona Windows Communication Foundation (WCF):
+En la parte inferior hay un elemento de transporte necesario. Puede utilizar su propio transporte o uno de los siguientes elementos de enlace de transporte Windows Communication Foundation (WCF) proporciona:
 
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
 
@@ -66,19 +66,19 @@ La tabla siguiente resume las opciones de cada nivel.
 
 |Capa|Opciones|Obligatorio|
 |-----------|-------------|--------------|
-|Transacciones|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|No|
-|Confiabilidad|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|No|
-|Seguridad|<xref:System.ServiceModel.Channels.SecurityBindingElement>|No|
-|Codificación|Texto, binario, mecanismo de optimización de transmisión de mensajes (MTOM), personalizado|Sí|
+|Transacciones|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|Sin|
+|Confiabilidad|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|Sin|
+|Seguridad|<xref:System.ServiceModel.Channels.SecurityBindingElement>|Sin|
+|Encoding|Texto, binario, mecanismo de optimización de transmisión de mensajes (MTOM), personalizado|Sí|
 |Transporte|TCP, HTTP, HTTPS, canalizaciones con nombre (también conocidas como IPC), igual a igual (P2P), Message Queuing (también conocido como MSMQ), personalizado|Sí|
 
 Además, puede definir sus propios elementos de enlace e insertarlos entre cualquiera de las capas definidas anteriores.
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general sobre la creación de puntos finales](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [Utilización de enlaces para configurar servicios y clientes](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Enlaces proporcionados por el sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [Cómo: Personalización de un enlace proporcionado por el sistema](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
-- [\<customBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [Enlace personalizado](../../../../docs/framework/wcf/samples/custom-binding.md)
+- [Información general sobre la creación de puntos finales](../endpoint-creation-overview.md)
+- [Utilización de enlaces para configurar servicios y clientes](../using-bindings-to-configure-services-and-clients.md)
+- [Enlaces proporcionados por el sistema](../system-provided-bindings.md)
+- [Procedimientos: Personalización de un enlace proporcionado por el sistema](how-to-customize-a-system-provided-binding.md)
+- [\<customBinding>](../../configure-apps/file-schema/wcf/custombinding.md)
+- [Enlace personalizado](../samples/custom-binding.md)

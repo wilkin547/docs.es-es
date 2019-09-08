@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 5dd2bfa0884eac6864630bf393e232cf45bd1c99
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1f8cb573d051970414f3962057f6329683eea5bd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69938200"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782398"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Habilitar conjuntos de resultados activos múltiples
 MARS (Multiple Active Result Sets, conjuntos de resultados activos múltiples) es una característica que funciona con SQL Server y que permite la ejecución de varios lotes en una sola conexión. Cuando MARS está habilitado para su uso con SQL Server, cada objeto de comando usado agrega una sesión a la conexión.  
@@ -68,7 +68,7 @@ string connectionString = "Data Source=MSSQL1;" +
  Las operaciones MARS no proporcionan seguridad para subprocesos.  
   
 ### <a name="connection-pooling"></a>Agrupación de conexiones  
- Las conexiones habilitadas para MARS se agrupan como cualquier otra conexión. Si una aplicación abre dos conexiones, una con MARS habilitado y la otra con MARS deshabilitado, las dos conexiones estarán en grupos distintos. Para obtener más información, vea [Agrupación de conexiones de SQL Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Las conexiones habilitadas para MARS se agrupan como cualquier otra conexión. Si una aplicación abre dos conexiones, una con MARS habilitado y la otra con MARS deshabilitado, las dos conexiones estarán en grupos distintos. Para obtener más información, vea [Agrupación de conexiones de SQL Server (ADO.NET)](../sql-server-connection-pooling.md).  
   
 ### <a name="sql-server-batch-execution-environment"></a>Entorno de ejecución por lotes de SQL Server  
  Cuando se abre una conexión, se define un entorno predeterminado. A continuación, este entorno se copia en una sesión MARS lógica.  
@@ -113,5 +113,5 @@ string connectionString = "Data Source=MSSQL1;" +
   
 ## <a name="see-also"></a>Vea también
 
-- [Conjuntos de resultados activos múltiples (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Conjuntos de resultados activos múltiples (MARS)](multiple-active-result-sets-mars.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

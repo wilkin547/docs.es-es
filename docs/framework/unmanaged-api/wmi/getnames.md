@@ -1,6 +1,6 @@
 ---
-title: GetNames (función) (referencia de API no administrada)
-description: La función de GetNames recupera los nombres de las propiedades de un objeto.
+title: Función GetNames (referencia de la API no administrada)
+description: La función GetNames recupera los nombres de las propiedades de un objeto.
 ms.date: 11/06/2017
 api_name:
 - GetNames
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e75bf9aab820216373f2f33fe8aa567f10befcb1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 748767596a8f4680a2d7b63cb0579acaed5f53f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746517"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798517"
 ---
 # <a name="getnames-function"></a>Función GetNames
 Recupera un subconjunto o todos los nombres de las propiedades de un objeto. 
@@ -44,67 +44,67 @@ HRESULT GetNames (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszQualifierName`  
-[in] Un puntero a una `LPCWSTR` que especifica un nombre de calificador que opera como parte de un filtro. Para obtener más información, consulte el [comentarios](#remarks) sección. Este parámetro puede ser `null`. 
+de Un puntero a un válido `LPCWSTR` que especifica un nombre de calificador que funciona como parte de un filtro. Para obtener más información, vea la sección [comentarios](#remarks) . Este parámetro puede ser `null`. 
 
 `lFlags`  
-[in] Una combinación de campos de bits. Para obtener más información, consulte el [comentarios](#remarks) sección.
+de Combinación de campos de bits. Para obtener más información, vea la sección [comentarios](#remarks) .
 
 `pQualifierValue`   
-[in] Un puntero a una `VARIANT` estructura inicializada con un valor de filtro. Este parámetro puede ser `null`. 
+de Puntero a una estructura válida `VARIANT` inicializada en un valor de filtro. Este parámetro puede ser `null`. 
 
 `pstrNames`  
-[out] Un `SAFEARRAY` estructura que contiene los nombres de propiedad. En la entrada, este parámetro siempre debe ser un puntero a `null`. Consulte la [comentarios](#remarks) sección para obtener más información. 
+enuncia `SAFEARRAY` Estructura que contiene los nombres de propiedad. En la entrada, este parámetro siempre debe ser un puntero `null`a. Vea la sección [comentarios](#remarks) para obtener más información. 
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
 |Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0x80041001 | Ha habido un error general. |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos o se especificó una combinación de marcas y los parámetros incorrecta. |
+|`WBEM_E_FAILED` | 0x80041001 | Se ha producido un error general. |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Uno o más parámetros no son válidos o se ha especificado una combinación incorrecta de marcas y parámetros. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria disponible para completar la operación. |
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) método.
+Esta función contiene una llamada al método [IWbemClassObject:: GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) .
 
-Con el nombre devuelto se controla mediante una combinación de marcas y los parámetros. Por ejemplo, la función puede devolver los nombres de todas las propiedades o solo los nombres de las propiedades de clave.  El filtro primario se especifica en el `lFlags` parámetro y los demás parámetros varían en función de lo.
+El nombre devuelto se controla mediante una combinación de marcas y parámetros. Por ejemplo, la función puede devolver los nombres de todas las propiedades o solo los nombres de las propiedades de clave.  El filtro principal se especifica en el `lFlags` parámetro y los demás parámetros varían en función de él.
 
-Valores de la marca de `lFlags` son campos de bits
+Los valores de marca `lFlags` de son campos de bits
 
-Las marcas que se pueden pasar como el `lEnumFlags` argumento son campos de bits que se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código.  Puede combinar una marca de todos los grupos con cualquier marca de cualquier otro grupo. Sin embargo, las marcas del mismo grupo se excluyen mutuamente. 
+Las marcas que se pueden pasar como `lEnumFlags` argumento son campos de bits que se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código.  Puede combinar una marca de cada grupo con cualquier marca de cualquier otro grupo. Sin embargo, las marcas del mismo grupo se excluyen mutuamente. 
 
 | Marcas de grupo 1 |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_FLAG_ALWAYS` | 0 | Devolver todos los nombres de propiedad. `strQualifierName` y `pQualifierVal` no se usan. |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Devolver solo las propiedades que tienen un calificador del nombre especificado por el `strQualifierName` parámetro. Si se usa esta marca, debe especificar `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Devolver solo las propiedades que no tienen un calificador del nombre especificado por el `strQualifierName` parámetro. Si se usa esta marca, debe especificar `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Devolver solo las propiedades que tienen un calificador del nombre especificado por el `wszQualifierName` parámetro y también tiene un valor idéntico al especificado por el `pQualifierVal` estructura. Si se usa esta marca, debe especificar tanto un `wszQualifierName` y un `pQualifierValue`. |
+| `WBEM_FLAG_ALWAYS` | 0 | Devuelve todos los nombres de propiedad. `strQualifierName`y `pQualifierVal` no se utilizan. |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Solo devuelve las propiedades que tienen un calificador del nombre especificado por `strQualifierName` el parámetro. Si se usa esta marca, debe especificar `strQualifierName`. |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Solo devuelve las propiedades que no tienen un calificador del nombre especificado por el `strQualifierName` parámetro. Si se usa esta marca, debe especificar `strQualifierName`. |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Solo devuelve las propiedades que tienen un calificador del nombre especificado por `wszQualifierName` el parámetro y que también tienen un valor idéntico al especificado por `pQualifierVal` la estructura. Si se usa esta marca, debe especificar tanto un `wszQualifierName` como un. `pQualifierValue` |
 
-| Marcas de grupo 2 |Value  |DESCRIPCIÓN  |
+| Marcas de grupo 2 |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Devolver solo los nombres de propiedades que definen las claves. |
-|`WBEM_FLAG_REFS_ONLY` | 0x8 | Valor devuelto solo nombres de propiedad que son referencias a objetos. |
+|`WBEM_FLAG_KEYS_ONLY` | 0x4 | Devuelve solo los nombres de las propiedades que definen las claves. |
+|`WBEM_FLAG_REFS_ONLY` | 0x8 | Devuelve solo los nombres de propiedad que son referencias a objetos. |
 
 | Marcas de grupo 3 |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Devolver solo los nombres de propiedad que pertenecen a la clase más derivada. Excluir propiedades de las clases principales. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Devolver solo los nombres de propiedad que pertenecen a las clases principales. |
-|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Devolver solo los nombres de las propiedades del sistema. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Devolver solo los nombres de propiedades que no son de sistema. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Devuelva solo los nombres de propiedad que pertenezcan a la clase más derivada. Excluya las propiedades de las clases primarias. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Solo se devuelven los nombres de propiedad que pertenezcan a las clases primarias. |
+|`WBEM_FLAG_SYSTEM_ONLY` | 0x30 | Devuelve solo los nombres de las propiedades del sistema. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0x40 | Devuelve solo los nombres de las propiedades que no son del sistema. |
 
-La función siempre asigna un nuevo `SAFEARRAY` si devuelve `WBEM_S_NO_ERROR`, y `pstrNames` siempre se establece para que apunte a él. La matriz devuelta puede tener 0 elementos si no hay propiedades coinciden con los filtros especificados. Si la función devuelve un valor distinto de `WBM_S_NO_ERROR`, un nuevo `SAFEARRAY` estructura no se devuelve.
+La función siempre asigna un nuevo `SAFEARRAY` si devuelve `WBEM_S_NO_ERROR`y `pstrNames` siempre se establece para que apunte a él. La matriz devuelta puede tener 0 elementos si ninguna propiedad coincide con los filtros especificados. Si la función devuelve un valor distinto de `WBM_S_NO_ERROR`, no se `SAFEARRAY` devuelve una nueva estructura.
  
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -112,4 +112,4 @@ La función siempre asigna un nuevo `SAFEARRAY` si devuelve `WBEM_S_NO_ERROR`, y
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

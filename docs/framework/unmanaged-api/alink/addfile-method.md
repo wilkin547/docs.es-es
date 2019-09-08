@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ff6bde5009e834bfca156fe4d3ad16da53ded85
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742385"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787688"
 ---
 # <a name="addfile-method"></a>Método AddFile
-Agrega archivos al ensamblado. También puede utilizarse para crear módulos no enlazados.  
+Agrega archivos al ensamblado. También se puede usar para crear módulos sin enlazar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,28 +41,28 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Identificador único del ensamblado que se va a aumentar.  
+ IDENTIFICADOR único del ensamblado que se va a aumentar.  
   
  `pszFilename`  
- Nombre completo del archivo que se agregará.  
+ Nombre completo del archivo que se va a agregar.  
   
  `dwFlags`  
- COM + FileDef marcas como `ffContainsNoMetaData` y `ffWriteable`. `dwFlags` se pasa a [DefineFile (método)](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md).  
+ Marcas `ffContainsNoMetaData` de FileDef com+ como y `ffWriteable`. `dwFlags`se pasa al [método definefile (](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit (interfaz)](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interfaz que se usará para emitir metadatos, si es necesario.  
+ [IMetaDataEmit](../metadata/imetadataemit-interface.md) interfaz interface que se va a usar para emitir metadatos, si es necesario.  
   
  `pFileToken`  
- Puntero a donde se almacenará el identificador único del archivo agregado.  
+ Puntero al lugar donde se almacenará el identificador único del archivo agregado.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h.  
+ Requiere ALink. h.  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

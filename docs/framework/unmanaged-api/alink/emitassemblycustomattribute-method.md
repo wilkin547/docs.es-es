@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7dfcc2db3f1f0d8646f903fedb1eb06b39928d00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742121"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777443"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute (Método)
-Llamada para establecer los atributos personalizados de nivel de ensamblado.  
+Llame a para establecer los atributos personalizados de nivel de ensamblado.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -43,34 +43,34 @@ HRESULT EmitAssemblyCustomAttribute(
   
 ## <a name="parameters"></a>Parámetros  
  `AssemblyID`  
- Id. del ensamblado.  
+ IDENTIFICADOR del ensamblado.  
   
  `FileToken`  
- Archivo que define el atributo. Puede ser NULL si `AssemblyID` no indica un netmodule independiente.  
+ Archivo que Desarchiva el atributo. Puede ser null si `AssemblyID` no indica un valor de netmodule sin enlazar.  
   
  `tkType`  
  Tipo del atributo personalizado.  
   
  `pCustomValue`  
- Datos del valor personalizado.  
+ Datos de valores personalizados.  
   
  `cbCustomValue`  
- Longitud de datos de valor personalizado.  
+ Longitud de los datos de valor personalizados.  
   
  `bSecurity`  
  TRUE si el atributo personalizado está relacionado con la firma de ensamblados.  
   
  `bAllowMulti`  
- TRUE si deben emitirse varios atributos.  
+ TRUE si se van a emitir varios atributos.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve S_OK si el método tiene éxito.  
+ Devuelve S_OK si el método se ejecuta correctamente.  
   
 ## <a name="requirements"></a>Requisitos  
- Requiere alink.h  
+ Requiere ALink. h  
   
 ## <a name="see-also"></a>Vea también
 
-- [IALink (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 (interfaz)](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [API de ALink](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [IALink (interfaz)](ialink-interface.md)
+- [IALink2 (interfaz)](ialink2-interface.md)
+- [API de ALink](index.md)

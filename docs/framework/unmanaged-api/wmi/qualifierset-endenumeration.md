@@ -1,5 +1,5 @@
 ---
-title: Función QualifierSet_EndEnumeration (referencia de API no administrada)
+title: Función QualifierSet_EndEnumeration (referencia de la API no administrada)
 description: La función QualifierSet_EndEnumeration finaliza una enumeración.
 ms.date: 11/06/2017
 api_name:
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 206d6448835b60c55b378636ff5daa5fa4f8b5d0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2c5a817174ec4c4e4407c19bb1d6d2d852d86dd2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782593"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798316"
 ---
-# <a name="qualifiersetendenumeration-function"></a>Función QualifierSet_EndEnumeration
-Finaliza la enumeración iniciada con una llamada a la [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) función.  
+# <a name="qualifierset_endenumeration-function"></a>QualifierSet_EndEnumeration función)
+Finaliza la enumeración iniciada con una llamada a la función [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) .  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -40,28 +40,28 @@ HRESULT QualifierSet_EndEnumeration (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`   
-[in] Un puntero a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instancia.
+de Puntero a una instancia de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 ## <a name="return-value"></a>Valor devuelto
 
-El siguiente valor devuelto por esta función se define en el *WbemCli.h* archivo de encabezado, también puede definir como una constante en el código:
+El siguiente valor devuelto por esta función se define en el archivo de encabezado *WbemCli. h* , o bien se puede definir como una constante en el código:
 
 |Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+|`WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
   
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) método.
+Esta función contiene una llamada al método [IWbemQualifierSet:: EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) .
 
-Esta llamada es recomendable, pero no es necesario. Inmediatamente libera los recursos asociados a la enumeración.
+Se recomienda esta llamada, pero no es necesaria. Libera inmediatamente los recursos asociados a la enumeración.
 
 ## <a name="requirements"></a>Requisitos  
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
 **Encabezado**: WMINet_Utils.idl  
   
@@ -69,4 +69,4 @@ Esta llamada es recomendable, pero no es necesario. Inmediatamente libera los re
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

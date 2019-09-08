@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 989d046bba1ba3170649e9d908a850bd1177fdd2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 269e3702c21532f377735ba6087abb1603dde4f7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67773830"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796319"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly (Función)
 Obtiene un valor que indica si el ensamblado especificado está administrado.  
@@ -39,13 +39,13 @@ HRESULT IsFrameworkAssembly (
   
 ## <a name="parameters"></a>Parámetros  
  `pwzAssemblyReference`  
- [in] El nombre del ensamblado que se va a comprobar.  
+ de Nombre del ensamblado que se va a comprobar.  
   
  `pbIsFrameworkAssembly`  
- [out] Un valor booleano que indica si el ensamblado es administrado.  
+ enuncia Valor booleano que indica si el ensamblado está administrado.  
   
  `pwzFrameworkAssemblyIdentity`  
- [in] Una cadena sin formato canónico que contiene la identidad única del ensamblado.  
+ de Una cadena no canónica que contiene la identidad única del ensamblado.  
   
  `pccSize`  
  [in] Tamaño de `pwzFrameworkAssemblyIdentity`.  
@@ -53,13 +53,13 @@ HRESULT IsFrameworkAssembly (
 ## <a name="remarks"></a>Comentarios  
  El `pwzAssemblyReference` parámetro es un puntero a una cadena de caracteres que contiene el nombre de un ensamblado.  
   
- Si este ensamblado forma parte de .NET Framework, el `pbIsFrameworkAssembly` parámetro contendrá un valor booleano de `true`.  
+ Si este ensamblado forma parte del .NET Framework, el `pbIsFrameworkAssembly` parámetro contendrá un valor booleano de `true`.  
   
- Si el ensamblado con nombre no forma parte de .NET Framework, o si el `pwzAssemblyReference` parámetro no es un ensamblado, el nombre `pbIsFrameworkAssembly` contendrá un valor booleano de `false`.  
+ Si el ensamblado con nombre no forma parte de la .NET Framework, o `pwzAssemblyReference` si el parámetro no es un ensamblado, `pbIsFrameworkAssembly` contendrá un valor `false`booleano de.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Funciones estáticas globales de la fusión](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [Funciones estáticas globales de la fusión](fusion-global-static-functions.md)

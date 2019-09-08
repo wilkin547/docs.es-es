@@ -17,16 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a98273307003485202d8c12d5c27fda04ff5a0ae
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5af7dc4e1694b66fc4a5ce37e515c71e9fa3db49
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65629873"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796731"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream (Método)
 
-Crea una secuencia con el nombre especificado y el formato.
+Crea una secuencia con el nombre y el formato especificados.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -44,28 +44,28 @@ HRESULT CreateStream (
 ## <a name="parameters"></a>Parámetros
 
 `dwFlags`\
-[in] Marcadores definidos en Fusion.idl.
+de Marcas definidas en Fusion. idl.
 
 `pszStreamName`\
-[in] El nombre de la secuencia que se va a crear.
+de Nombre del flujo que se va a crear.
 
 `dwFormat`\
-[in] El formato del archivo que se transmite por secuencias.
+de Formato del archivo que se va a transmitir por secuencias.
 
 `dwFormatFlags`\
-[in] Marcas de formato específicos definidas en Fusion.idl.
+de Marcas específicas del formato definidas en Fusion. idl.
 
 `ppIStream`\
-[out] Un puntero a la dirección de devuelto [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instancia.
+enuncia Puntero a la dirección de la instancia de [IStream](/windows/desktop/api/objidl/nn-objidl-istream) devuelta.
 
 `puliMaxSize`\
-[in, optional] El tamaño máximo de la secuencia al que hace referencia `ppIStream`.
+[in, Optional] Tamaño máximo de la secuencia a `ppIStream`la que hace referencia.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
-**Encabezado**: Fusion.h
+**Encabezado**: Fusion. h
 
 **Versiones de .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

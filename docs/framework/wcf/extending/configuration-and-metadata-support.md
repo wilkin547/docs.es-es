@@ -2,18 +2,18 @@
 title: Compatibilidad con metadatos y configuración
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 16c386f8479778c7d2f17fbdfdb95dee558baf52
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587726"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795838"
 ---
 # <a name="configuration-and-metadata-support"></a>Compatibilidad con metadatos y configuración
 En este tema se describe cómo habilitar la compatibilidad con configuración y metadatos para los enlaces y elementos de enlaces.  
   
 ## <a name="overview-of-configuration-and-metadata"></a>Información general de configuración y metadatos  
- En este tema se describe las tareas siguientes, que son elementos opcionales 1, 2 y 4 en el [desarrollar canales](../../../../docs/framework/wcf/extending/developing-channels.md) lista de tareas.  
+ En este tema se describen las tareas siguientes, que son los elementos opcionales 1, 2 y 4 en la lista de tareas de [desarrollo de canales](developing-channels.md) .  
   
 - Habilitación de la compatibilidad con archivos de configuración para un elemento de enlace.  
   
@@ -23,15 +23,15 @@ En este tema se describe cómo habilitar la compatibilidad con configuración y 
   
 - Identificación de WSDL y aserciones de directivas para insertar y configurar su enlace o elemento de enlace.  
   
- Para obtener información sobre cómo crear enlaces definidos por el usuario y elementos de enlace, consulte [crear enlaces](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md) y [creación de un BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md), respectivamente.  
+ Para obtener información sobre cómo crear enlaces definidos por el usuario y elementos de enlace, vea [crear enlaces definidos por el usuario](creating-user-defined-bindings.md) y [crear un BindingElement](creating-a-bindingelement.md), respectivamente.  
   
 ## <a name="adding-configuration-support"></a>Agregación de la compatibilidad de configuración  
  Para habilitar la compatibilidad con archivos de configuración para un canal, debe implementar dos secciones de configuración, <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType>, que habilita la compatibilidad de configuración para los elementos de enlace, y <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> y <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType>, que habilitan la compatibilidad de configuración para los enlaces.  
   
- Una manera más fácil de hacerlo es usar el [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md) herramienta de ejemplo para generar código de configuración de los enlaces y elementos de enlace.  
+ Una manera más fácil de hacerlo es usar la herramienta de ejemplo [ConfigurationCodeGenerator](../samples/configurationcodegenerator.md) para generar el código de configuración de los enlaces y los elementos de enlace.  
   
 ### <a name="extending-bindingelementextensionelement"></a>Extender BindingElementExtensionElement  
- Ejemplo de código siguiente se toma de la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo. El elemento `UdpTransportElement` es una clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> que expone `UdpTransportBindingElement` en el sistema de configuración. Con unas pocas invalidaciones básicas, el ejemplo define el nombre de la sección de configuración, el tipo del elemento de enlace y cómo crear el elemento de enlace. Los usuarios pueden registrar a continuación la sección de extensión en un archivo de configuración de la siguiente manera.  
+ El siguiente código de ejemplo se toma del [transporte: Ejemplo](../samples/transport-udp.md) de UDP. El elemento `UdpTransportElement` es una clase <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> que expone `UdpTransportBindingElement` en el sistema de configuración. Con unas pocas invalidaciones básicas, el ejemplo define el nombre de la sección de configuración, el tipo del elemento de enlace y cómo crear el elemento de enlace. Los usuarios pueden registrar a continuación la sección de extensión en un archivo de configuración de la siguiente manera.  
   
 ```xml  
 <configuration>  
@@ -62,7 +62,7 @@ En este tema se describe cómo habilitar la compatibilidad con configuración y 
 ```  
   
 ### <a name="adding-configuration-for-a-binding"></a>Agregación de la configuración para un enlace  
- La sección `SampleProfileUdpBindingCollectionElement` es un objeto <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> que expone `SampleProfileUdpBinding` en el sistema de configuración. El volumen de la implementación se delega a `SampleProfileUdpBindingConfigurationElement`, que deriva de <xref:System.ServiceModel.Configuration.StandardBindingElement>. El `SampleProfileUdpBindingConfigurationElement` tiene propiedades que corresponden a las propiedades en `SampleProfileUdpBinding`y las funciones para asignar desde el `ConfigurationElement` enlace. Finalmente, el método `OnApplyConfiguration` es invalidado en el `SampleProfileUdpBinding`, tal y como se muestra en el siguiente código muestra.  
+ La sección `SampleProfileUdpBindingCollectionElement` es un objeto <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> que expone `SampleProfileUdpBinding` en el sistema de configuración. El volumen de la implementación se delega a `SampleProfileUdpBindingConfigurationElement`, que deriva de <xref:System.ServiceModel.Configuration.StandardBindingElement>. Tiene propiedades que corresponden a las propiedades de `SampleProfileUdpBinding`y a las funciones que se van a `ConfigurationElement` asignar desde el enlace. `SampleProfileUdpBindingConfigurationElement` Finalmente, el método `OnApplyConfiguration` es invalidado en el `SampleProfileUdpBinding`, tal y como se muestra en el siguiente código muestra.  
   
 ```csharp 
 protected override void OnApplyConfiguration(string configurationName)  
@@ -101,7 +101,7 @@ protected override void OnApplyConfiguration(string configurationName)
 </configuration>  
 ```  
   
- A continuación, puede hacer referencia desde el [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sección de configuración.  
+ Después, se puede hacer referencia a ella [ \<](../../configure-apps/file-schema/wcf/system-servicemodel.md) desde la sección de configuración de System. ServiceModel >.  
   
 ```xml  
 <configuration>  
@@ -119,13 +119,13 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="adding-metadata-support-for-a-binding-element"></a>Agregación de compatibilidad con metadatos para un elemento de enlace  
- Para integrar un canal en el sistema de metadatos, debe admitir la importación y exportación de la directiva. Esto permite que herramientas como [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) generar clientes del elemento de enlace.  
+ Para integrar un canal en el sistema de metadatos, debe admitir la importación y exportación de la directiva. Esto permite que herramientas como [ServiceModel Metadata Utility Tool (SvcUtil. exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) generen clientes del elemento de enlace.  
   
 ### <a name="adding-wsdl-support"></a>Agregación de la compatibilidad con WSDL  
- El elemento de enlace del transporte en un enlace es el responsable de la exportación e importación de la información de direccionamiento en metadatos. Al utilizar un enlace SOAP, el elemento de enlace del transporte también debería exportar un URI de transporte correcto en los metadatos. Ejemplo de código siguiente se toma de la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.  
+ El elemento de enlace del transporte en un enlace es el responsable de la exportación e importación de la información de direccionamiento en metadatos. Al utilizar un enlace SOAP, el elemento de enlace del transporte también debería exportar un URI de transporte correcto en los metadatos. El siguiente código de ejemplo se toma del [transporte: Ejemplo](../samples/transport-udp.md) de UDP.  
   
 #### <a name="wsdl-export"></a>Exportación de WSDL  
- Para exportar información de direccionamiento, el `UdpTransportBindingElement` implementa el <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interfaz. El método <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> agrega la información de direccionamiento correcta al puerto WSDL.  
+ Para exportar la información de direccionamiento `UdpTransportBindingElement` , implementa la <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interfaz. El método <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> agrega la información de direccionamiento correcta al puerto WSDL.  
   
 ```csharp  
 if (context.WsdlPort != null)  
@@ -163,7 +163,7 @@ if (soapBinding != null)
   
  Al ejecutar Svcutil.exe, hay dos opciones para conseguir que Svcutil.exe cargue las extensiones de importación de WSDL:  
   
-1. Señale Svcutil.exe al archivo de configuración utilizando el/svcutilconfig:\<archivo >.  
+1. Señale SvcUtil. exe al archivo de configuración mediante/SvcutilConfig:\<File >.  
   
 2. Agregue la sección de configuración a Svcutil.exe.config en el mismo directorio como Svcutil.exe.  
   
@@ -179,10 +179,10 @@ if (transportBindingElement is UdpTransportBindingElement)
 ```  
   
 ### <a name="adding-policy-support"></a>Agregación de compatibilidad de directiva  
- El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un extremo de servicio exprese las funciones de ese elemento de enlace. Ejemplo de código siguiente se toma de la [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) ejemplo.  
+ El elemento de enlace personalizado puede exportar aserciones de directiva en el enlace de WSDL para que un extremo de servicio exprese las funciones de ese elemento de enlace. El siguiente código de ejemplo se toma del [transporte: Ejemplo](../samples/transport-udp.md) de UDP.  
   
 #### <a name="policy-export"></a>Exportación de directivas  
- El `UdpTransportBindingElement` escriba implementa <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> para agregar compatibilidad para exportar la directiva. Como resultado, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> incluye `UdpTransportBindingElement` en la generación de directiva para cualquier enlace que la incluya.  
+ El `UdpTransportBindingElement` tipo<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> implementa para agregar compatibilidad para la exportación de la Directiva. Como resultado, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> incluye `UdpTransportBindingElement` en la generación de directiva para cualquier enlace que la incluya.  
   
  En <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, agregue una aserción para UDP y otra aserción si el canal está en modo de multidifusión. Esto se debe a que el modo de multidifusión afecta a cómo se construye la pila de comunicaciones, y, por tanto, debe coordinarse entre ambos lados.  
   
@@ -223,14 +223,14 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  A continuación, implementamos <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> desde nuestra clase registrada (`UdpBindingElementImporter`). En <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, examine las aserciones en el espacio de nombres adecuado y procese las que se encargan de la generación del transporte y de la comprobación de si es multidifusión. Además, elimine las aserciones que el importador administra desde la lista de aserciones de enlaces. De nuevo, al ejecutar Svcutil.exe, hay dos opciones para la integración:  
   
-1. Señale Svcutil.exe a nuestro archivo de configuración utilizando el/svcutilconfig:\<archivo >.  
+1. Señale SvcUtil. exe a nuestro archivo de configuración mediante/SvcutilConfig\<: File >.  
   
 2. Agregue la sección de configuración a Svcutil.exe.config en el mismo directorio como Svcutil.exe.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Agregación de un importador de enlace estándar personalizado  
  Svcutil.exe y el tipo <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>, de forma predeterminada, reconocen e importan los enlaces proporcionados por el sistema. De lo contrario, el enlace se importa como una instancia <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>. Para permitir que Svcutil.exe y <xref:System.ServiceModel.Description.WsdlImporter> importen el `SampleProfileUdpBinding`, el `UdpBindingElementImporter` actúa también como un importador de enlaces estándar personalizado.  
   
- Un importador de enlaces estándar personalizado implementa el `ImportEndpoint` método en el <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interfaz para examinar el <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> instancia importada desde los metadatos para ver si se podría haberla generado por el enlace estándar concreto.  
+ Un importador de enlaces estándar personalizado implementa el `ImportEndpoint` método en la <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interfaz para examinar la instancia <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> importada de los metadatos para ver si podría haber sido generada por un enlace estándar específico.  
   
 ```csharp  
 if (context.Endpoint.Binding is CustomBinding)  

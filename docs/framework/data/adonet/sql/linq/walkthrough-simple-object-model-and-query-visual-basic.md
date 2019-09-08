@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: e0840adba62e10640ef16908db6b57519191f7f7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c21a187739ba19be2dc8e89b4dddc94ad799f036
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946776"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792122"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Tutorial: Modelo de objetos simple y consultas (Visual Basic)
 
@@ -25,7 +25,7 @@ Este tutorial se escribió con la configuración de desarrollo de Visual Basic.
 
 - Este tutorial utiliza una carpeta dedicada ("c:\linqtest") que contiene los archivos. Cree esta carpeta antes de empezar el tutorial.
 
-- Este tutorial requiere la base de datos de ejemplo Northwind. Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo en la carpeta c:\linqtest.
+- Este tutorial requiere la base de datos de ejemplo Northwind. Si no dispone de esta base de datos en el equipo de desarrollo, puede descargarla del sitio web de descargas de Microsoft. Para obtener instrucciones, consulte [Descargar bases de datos de ejemplo](downloading-sample-databases.md). Después de haber descargado la base de datos, copie el archivo en la carpeta c:\linqtest.
 
 ## <a name="overview"></a>Información general
 
@@ -144,7 +144,7 @@ En este paso es donde realmente ejecutará la consulta. Las expresiones de consu
 2. Presione F5 para depurar la aplicación.
 
     > [!NOTE]
-    > Si la aplicación genera un error en tiempo de ejecución, consulte la sección de solución de problemas de [aprendizaje por tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md).
+    > Si la aplicación genera un error en tiempo de ejecución, consulte la sección de solución de problemas de [aprendizaje por tutoriales](learning-by-walkthroughs.md).
 
      El cuadro de mensaje muestra una lista de seis clientes. La ventana Consola muestra el código SQL generado.
 
@@ -158,10 +158,10 @@ En este paso es donde realmente ejecutará la consulta. Las expresiones de consu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-El [Tutorial: El tema consultas en varias relaciones (](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md) Visual Basic) continúa donde finaliza este tutorial. El tutorial consultas en varias relaciones muestra cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede realizar consultas entre tablas, de forma similar a las *combinaciones* en una base de datos relacional.
+El [Tutorial: El tema consultas en varias relaciones (](walkthrough-querying-across-relationships-visual-basic.md) Visual Basic) continúa donde finaliza este tutorial. El tutorial consultas en varias relaciones muestra cómo [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede realizar consultas entre tablas, de forma similar a las *combinaciones* en una base de datos relacional.
 
 Si desea seguir los pasos del tutorial Realizar consultas en varias relaciones, no olvide guardar la solución del tutorial que acaba de completar, que es un requisito previo.
 
 ## <a name="see-also"></a>Vea también
 
-- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Aprendizaje con tutoriales](learning-by-walkthroughs.md)

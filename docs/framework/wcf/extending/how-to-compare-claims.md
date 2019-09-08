@@ -8,16 +8,16 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: e2d3d33900dd894eea77420aac444ebde0df9a43
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
+ms.openlocfilehash: 29254bd661e72b926b21695ccb646480c53b5475
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68970776"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797099"
 ---
 # <a name="how-to-compare-claims"></a>Procedimiento para comparar notificaciones
 
-La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) se usa para realizar la comprobación de la autorización. Como tal, una tarea común es comparar las notificaciones en el contexto de autorización con las notificaciones necesarias para realizar la acción solicitada o tener acceso al recurso solicitado. En este tema se describe cómo comparar las notificaciones, incluidos los tipos de notificación integrados y personalizados. Para obtener más información sobre la infraestructura del modelo de identidad, consulte [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+La infraestructura del modelo de identidad en Windows Communication Foundation (WCF) se usa para realizar la comprobación de la autorización. Como tal, una tarea común es comparar las notificaciones en el contexto de autorización con las notificaciones necesarias para realizar la acción solicitada o tener acceso al recurso solicitado. En este tema se describe cómo comparar las notificaciones, incluidos los tipos de notificación integrados y personalizados. Para obtener más información sobre la infraestructura del modelo de identidad, consulte [Administración de notificaciones y autorización con el modelo de identidad](../feature-details/managing-claims-and-authorization-with-the-identity-model.md).
 
 La comparación de notificaciones implica la comparación de tres partes de una notificación (tipo, derecho y recurso) con las mismas partes en otra notificación para ver si son iguales. Consulte el ejemplo siguiente.
 
@@ -74,5 +74,5 @@ El ejemplo siguiente muestra una comparación de notificaciones personalizadas d
 
 ## <a name="see-also"></a>Vea también
 
-- [Administración de notificaciones y autorización con el modelo de identidad](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
-- [Procedimientos: Creación de una demanda personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [Administración de notificaciones y autorización con el modelo de identidad](../feature-details/managing-claims-and-authorization-with-the-identity-model.md)
+- [Cómo: Creación de una demanda personalizada](how-to-create-a-custom-claim.md)

@@ -1,5 +1,5 @@
 ---
-title: Función QualifierSet_Put (referencia de API no administrada)
+title: Función QualifierSet_Put (referencia de la API no administrada)
 description: La función QualifierSet_Put escribe el calificador con nombre y su valor.
 ms.date: 11/06/2017
 api_name:
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40688a0e4273233245d00fcd927f95945a43f712
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377868"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798271"
 ---
-# <a name="qualifiersetput-function"></a>Función QualifierSet_Put
+# <a name="qualifierset_put-function"></a>QualifierSet_Put función)
 
 Escribe el calificador y el valor con nombre. El nuevo calificador sobrescribe el valor anterior del mismo nombre. Si el calificador no existe, se crea.
 
@@ -44,23 +44,23 @@ HRESULT QualifierSet_Put (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`\
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`\
-[in] Un puntero a un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instancia.
+de Puntero a una instancia de [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) .
 
 `wszName`\
-[in] El nombre del calificador que se va a escribir.
+de Nombre del calificador que se va a escribir.
 
 `pVal`\
-[in] Un puntero a una `VARIANT` que contiene el calificador a escribir. Este parámetro no puede ser `null`.
+de Un puntero a un válido `VARIANT` que contiene el calificador que se va a escribir. Este parámetro no puede `null`ser.
 
 `lFlavor`\
-[in] Una de las constantes siguientes que define los tipos de calificador deseado para este calificador. El valor predeterminado es `WBEM_FLAVOR_OVERRIDABLE` (0).
+de Una de las constantes siguientes que define los tipos de calificador deseados para este calificador. El valor predeterminado es `WBEM_FLAVOR_OVERRIDABLE` (0).
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_OVERRIDABLE` | 0 | El calificador se puede invalidar en una clase derivada o una instancia. **Este es el valor predeterminado.** |
+| `WBEM_FLAVOR_OVERRIDABLE` | 0 | El calificador se puede invalidar en una clase o instancia derivada. **Este es el valor predeterminado.** |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_INSTANCE` | 1 | El calificador se propaga a las instancias. |
 | `WBEM_FLAVOR_FLAG_PROPAGATE_TO_DERIVED_CLASS` | 2 | El calificador se propaga a las clases derivadas. |
 | `WBEM_FLAVOR_NOT_OVERRIDABLE` | 0x10 | El calificador no puede invalidarse en una clase o instancia derivada. |
@@ -68,23 +68,23 @@ HRESULT QualifierSet_Put (
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
-|Constante  |Valor  |Descripción  |
+|Constante  |Value  |DESCRIPCIÓN  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Se produjo un intento no válido para especificar el **clave** calificador en una propiedad que no puede ser una clave. Las claves se especifican en la definición de clase para un objeto y no se pueden modificar por instancia. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Se produjo un intento no válido de especificar el calificador de **clave** en una propiedad que no puede ser una clave. Las claves se especifican en la definición de clase para un objeto y no se pueden modificar en cada instancia. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Un parámetro no es válido. |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | El `pVal` parámetro no es de un tipo de calificador válido. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | No es posible llamar a la `QualifierSet_Put` invalida el método en el calificador porque el objeto propietario no permite. |
-| `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | No es posible llamar `QualifierSet_Put` al método en el calificador porque el objeto propietario no permite invalidaciones. |
+| `WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) método.
+Esta función contiene una llamada al método [IWbemQualifierSet::P UT](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) .
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).
 
 **Encabezado**: WMINet_Utils.idl
 
@@ -92,4 +92,4 @@ Esta función contiene una llamada a la [IWbemQualifierSet::Put](/windows/deskto
 
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

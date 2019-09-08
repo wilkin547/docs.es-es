@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 0852622811b5efb362937b3af37f2b9d81b2d1ea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3164656bb183e7773b098cab79d8fe5e0dc5de34
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626437"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792148"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Tutorial: Realizar consultas en varias relaciones (Visual Basic)
-Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *asociaciones* para representar relaciones de clave externa en la base de datos.  
+En este tutorial se muestra el [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uso de *asociaciones* para representar relaciones de clave externa en la base de datos.  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  Este tutorial se escribió con la configuración de desarrollo de Visual Basic.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Debe haber completado [Tutorial: Modelo de objetos simple y consultas (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md). Este tutorial se basa en el tutorial mencionado, incluida la presencia del archivo northwnd.mdf en c:\linqtest.  
+ Debe haber completado [el tutorial: Modelo de objetos simple y consulta (Visual Basic](walkthrough-simple-object-model-and-query-visual-basic.md)). Este tutorial se basa en el tutorial mencionado, incluida la presencia del archivo northwnd.mdf en c:\linqtest.  
   
 ## <a name="overview"></a>Información general  
  Este tutorial conlleva tres tareas principales:  
@@ -49,7 +49,7 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
      [!code-vb[DLinqWalk2VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#2)]  
   
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Crear y ejecutar una consulta en la relación Customer-Order  
- Ahora puede tener acceso a los objetos `Order` directamente desde los objetos `Customer`, o a la inversa. No es necesario explícita *combinación* entre clientes y pedidos.  
+ Ahora puede tener acceso a los objetos `Order` directamente desde los objetos `Customer`, o a la inversa. No necesita una *combinación* explícita entre clientes y pedidos.  
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>Para tener acceso a los objetos Order a través de los objetos Customer  
   
@@ -86,11 +86,11 @@ Este tutorial muestra el uso de [!INCLUDE[vbtecdlinq](../../../../../../includes
   
 4. Presione Entrar en la ventana Consola para cerrar la aplicación.  
   
-5. En el **archivo** menú, haga clic en **guardar todo** si desea guardar esta aplicación.  
+5. En el menú **archivo** , haga clic en **guardar todo** si desea guardar esta aplicación.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- El tutorial siguiente ([Tutorial: Manipular datos (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) se muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
+ El siguiente tutorial ([Tutorial: La manipulación de datos (Visual Basic](walkthrough-manipulating-data-visual-basic.md))) muestra cómo manipular los datos. Este tutorial no requiere que guarde los dos tutoriales ya completados de esta serie.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Aprendizaje con tutoriales](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+- [Aprendizaje con tutoriales](learning-by-walkthroughs.md)

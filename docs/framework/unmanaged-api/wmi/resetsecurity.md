@@ -1,6 +1,6 @@
 ---
-title: Función ResetSecurity (referencia de API no administrada)
-description: La función ResetSecurity asigna un token de suplantación para el subproceso actual.
+title: Función ResetSecurity (referencia de la API no administrada)
+description: La función ResetSecurity asigna un token de suplantación al subproceso actual.
 ms.date: 11/06/2017
 api_name:
 - ResetSecurity
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3d87fa10dafba326147bcaa39836b631291ef1c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1636d7de8273389e785131dbc1145affd5d3b45f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783125"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798255"
 ---
-# <a name="resetsecurity-function"></a>Función ResetSecurity
+# <a name="resetsecurity-function"></a>ResetSecurity función)
 Asigna el token de suplantación proporcionado para el subproceso actual.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -39,16 +39,16 @@ HRESULT ResetSecurity (
 ## <a name="parameters"></a>Parámetros
 
 `token`  
-[in] El token de suplantación para asociar con el subproceso actual. Este valor puede ser `null`. 
+de El token de suplantación que se va a asociar al subproceso actual. Este valor puede ser `null`. 
 
 ## <a name="return-value"></a>Valor devuelto
 
-Si la función se realiza correctamente, el valor devuelto es `S_OK` (0).
+Si la función se ejecuta correctamente, el valor devuelto es `S_OK` (0).
 
-Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la [GetErrorInfo](geterrorinfo.md) función.
+Si se produce un error en la función, el valor devuelto es un código de error distinto de cero. Para obtener información de error extendida, llame a la función [GetErrorInfo](geterrorinfo.md) .
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -56,4 +56,4 @@ Si se produce un error en la función, el valor devuelto es un código de error 
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

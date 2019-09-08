@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324e30f6cbcaa1d1d81c7c03967dbb629d2cd6e9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 49e7b73559e8def890f8df8f596fbe8ad5bb5d3b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67742268"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777486"
 ---
 # <a name="assemblyoptions-enumeration"></a>AssemblyOptions (Enumeración)
 Enumera las opciones de ensamblado.  
@@ -61,29 +61,29 @@ typedef enum _AssemblyOptions {
 |optAssemTitle|Cadena: representa el título del ensamblado.|  
 |optAssemDescription|Cadena: contiene la descripción del ensamblado.|  
 |optAssemConfig|Cadena: contiene la configuración del ensamblado.|  
-|optAssemOS|Cadena: codificada como: "dwOSPlatformId.dwOSMajorVersion.dwOSMinorVersion".|  
+|optAssemOS|Codificada por cadena como: "dwOSPlatformId. dwOSMajorVersion. dwOSMinorVersion".|  
 |optAssemProcessor|ULONG|  
 |optAssemLocale|Cadena: contiene la configuración regional del ensamblado.|  
-|optAssemVersion|Cadena: codificada como: "Principal.secundaria.compilación.revisión".|  
-|optAssemCompany|Cadena: contiene la empresa.|  
+|optAssemVersion|Codificado por cadena como: "Major. minor. Build. revision".|  
+|optAssemCompany|Cadena: contiene la compañía.|  
 |optAssemProduct|Cadena: contiene el nombre del producto.|  
-|optAssemProductVersion|Cadena (también conocido como InformationalVersion).|  
+|optAssemProductVersion|Cadena (también conocida como InformationalVersion).|  
 |optAssemCopyright|Cadena: contiene la información de copyright.|  
 |optAssemTrademark|Cadena: contiene la información de marca comercial.|  
-|optAssemKeyFile|String (nombre de archivo).|  
-|optAssemKeyName|Cadena (el nombre de clave).|  
+|optAssemKeyFile|Cadena (nombre de archivo).|  
+|optAssemKeyName|Cadena (el nombre de la clave).|  
 |optAssemAlgID|ULONG|  
 |optAssemFlags|ULONG|  
-|optAssemHalfSign|BOOL (también conocida como DelaySign).|  
-|optAssemFileVersion|Cadena: codificada como "Major.Minor.Build.Revision" como ProductVersion.|  
-|optAssemSatelliteVer|Cadena - codificada como "Principal.secundaria.compilación.revisión".|  
-|optLastAssemOption|Un contador del número de elementos.|  
+|optAssemHalfSign|Bool (también conocido como DelaySign).|  
+|optAssemFileVersion|Codificación de cadena como "Major. minor. Build. revision", igual que ProductVersion.|  
+|optAssemSatelliteVer|Codificación de cadena como "Major. minor. Build. revision".|  
+|optLastAssemOption|Contador del número de elementos.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Encabezado:** alink.h  
+ **Encabezado:** ALink. h  
   
- **Biblioteca**: alink.dll  
+ **Biblioteca**: ALink. dll  
   
 ## <a name="see-also"></a>Vea también
 
-- [Al.exe (Assembly Linker)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+- [Al.exe (Assembly Linker)](../../tools/al-exe-assembly-linker.md)

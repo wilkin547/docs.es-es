@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 21501ec9d0af4c785dd86946fa34c1041bb34b9d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 35e7cc666307d589f21c128734df10430a1a8588
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043897"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779623"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Trabajar con datos binarios (Data Services de WCF)
 
@@ -23,10 +23,10 @@ La [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteca de cli
 
 - Como flujo de recursos binarios independiente. Este es el método recomendado para obtener acceso y cambiar datos de objetos binarios grandes (BLOB) que pueden representar una foto, un vídeo o cualquier otro tipo de datos codificados binarios.
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementa el streaming de datos binarios utilizando HTTP tal y como se [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]define en. En este mecanismo, los datos binarios se tratan como un recurso multimedia que es independiente de, pero que están relacionados con una entidad, lo que se denomina una entrada de vínculo multimedia. Para obtener más información, consulte [proveedor](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)de streaming.
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementa el streaming de datos binarios utilizando HTTP tal y como se [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]define en. En este mecanismo, los datos binarios se tratan como un recurso multimedia que es independiente de, pero que están relacionados con una entidad, lo que se denomina una entrada de vínculo multimedia. Para obtener más información, consulte [proveedor de streaming](streaming-provider-wcf-data-services.md).
 
 > [!TIP]
-> Para obtener un ejemplo paso a paso de cómo crear una aplicación cliente de Windows Presentation Foundation (WPF) que descargue archivos de imagen binarios de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] un servicio que almacene fotos, consulte [la sección post Data Services streaming Provider series-Part 2: Obtener acceso a un flujo de recursos multimedia desde](https://go.microsoft.com/fwlink/?LinkId=201637)el cliente. Para descargar el código de ejemplo para Stream Photo Data Service incluido en la entrada de blog, consulte el ejemplo de streaming de [datos](https://go.microsoft.com/fwlink/?LinkId=198988) de streaming en la galería de código de MSDN.
+> Para obtener un ejemplo paso a paso de cómo crear una aplicación cliente de Windows Presentation Foundation (WPF) que descargue archivos de imagen binarios de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] un servicio que almacene fotos, consulte [la sección post Data Services streaming Provider series-Part 2: Obtener acceso a un flujo de recursos multimedia desde](https://go.microsoft.com/fwlink/?LinkId=201637)el cliente. Para descargar el código de ejemplo para Stream Photo Data Service incluido en la entrada de blog, consulte el [ejemplo de streaming de datos](https://go.microsoft.com/fwlink/?LinkId=198988) de streaming en la galería de código de MSDN.
 
 ## <a name="entity-metadata"></a>Metadatos de entidad
 
@@ -41,7 +41,7 @@ En el resto de los ejemplos de este tema se muestra cómo acceder y cambiar el f
 La biblioteca cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] proporciona métodos para acceder a flujos de recursos binarios desde un servicio de datos basado en [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Cuando se descarga un recurso multimedia, puede usar el URI de dicho recurso u obtener un flujo binario que contenga los datos del propio recurso multimedia. También puede cargar los datos del recurso multimedia como flujo binario.
 
 > [!TIP]
-> Para obtener un ejemplo paso a paso de cómo crear una aplicación cliente de Windows Presentation Foundation (WPF) que descargue archivos de imagen binarios de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] un servicio que almacene fotos, consulte [la sección post Data Services streaming Provider series-Part 2: Obtener acceso a un flujo de recursos multimedia desde](https://go.microsoft.com/fwlink/?LinkId=201637)el cliente. Para descargar el código de ejemplo para Stream Photo Data Service incluido en la entrada de blog, consulte el ejemplo de streaming de [datos](https://go.microsoft.com/fwlink/?LinkId=198988) de streaming en la galería de código de MSDN.
+> Para obtener un ejemplo paso a paso de cómo crear una aplicación cliente de Windows Presentation Foundation (WPF) que descargue archivos de imagen binarios de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] un servicio que almacene fotos, consulte [la sección post Data Services streaming Provider series-Part 2: Obtener acceso a un flujo de recursos multimedia desde](https://go.microsoft.com/fwlink/?LinkId=201637)el cliente. Para descargar el código de ejemplo para Stream Photo Data Service incluido en la entrada de blog, consulte el [ejemplo de streaming de datos](https://go.microsoft.com/fwlink/?LinkId=198988) de streaming en la galería de código de MSDN.
 
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Obtener el URI del flujo binario
 
@@ -74,5 +74,5 @@ En este ejemplo, se llama al método <xref:System.Data.Services.Client.DataServi
 
 ## <a name="see-also"></a>Vea también
 
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [Enlace de datos a los controles](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)
+- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)
+- [Enlace de datos a los controles](binding-data-to-controls-wcf-data-services.md)

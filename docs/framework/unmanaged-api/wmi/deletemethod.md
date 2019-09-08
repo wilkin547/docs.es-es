@@ -1,5 +1,5 @@
 ---
-title: DeleteMethod (función) (referencia de API no administrada)
+title: Función DeleteMethod (referencia de la API no administrada)
 description: La función DeleteMethod elimina el método especificado de una definición de clase CIM.
 ms.date: 11/06/2017
 api_name:
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 291d5d0461da8d130d41f9a0eca67ea3be42b4bc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4db81c4c7e123eed82b3092912b8d871edb54618
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746813"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798657"
 ---
 # <a name="deletemethod-function"></a>Función DeleteMethod
 Elimina el método especificado de una definición de clase CIM.
@@ -41,32 +41,32 @@ HRESULT Delete (
 ## <a name="parameters"></a>Parámetros
 
 `vFunc`  
-[in] Este parámetro se usa.
+de Este parámetro no se utiliza.
 
 `ptr`  
-[in] Un puntero a un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instancia.
+de Puntero a una instancia de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) .
 
 `wszName`  
-[in] El nombre del método que se va a quitar de la tabla de la clase. `wszName` debe ser un puntero a una `LPCWSTR`.
+de Nombre del método que se va a quitar de la tabla de clases. `wszName`debe ser un puntero a un válido `LPCWSTR`.
 
 ## <a name="return-value"></a>Valor devuelto
 
-Los siguientes valores devueltos por esta función se definen en el *WbemCli.h* archivo de encabezado, también puede definir como constantes en el código:
+Los siguientes valores devueltos por esta función se definen en el archivo de encabezado *WbemCli. h* , o bien se pueden definir como constantes en el código:
 
 |Constante  |Valor  |DESCRIPCIÓN  |
 |---------|---------|---------|
 | `WBEM_E_NOT_FOUND` | 0x80041002 | El método especificado no existe. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay memoria suficiente para completar la operación. |
-| `WBEM_S_NO_ERROR` | 0 | La llamada de función fue correcta.  |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | No hay suficiente memoria para completar la operación. |
+| `WBEM_S_NO_ERROR` | 0 | La llamada de función se realizó correctamente.  |
 
 ## <a name="remarks"></a>Comentarios
 
-Esta función contiene una llamada a la [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) método.
+Esta función contiene una llamada al método [IWbemClassObject::D eletemethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) .
 
-No se admite la eliminación de método para [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) punteros que señalan a las instancias CIM.
+No se admite la eliminación de métodos para punteros [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) que apunten a las instancias CIM.
 
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
  **Encabezado**: WMINet_Utils.idl  
   
@@ -74,4 +74,4 @@ No se admite la eliminación de método para [IWbemClassObject](/windows/desktop
   
 ## <a name="see-also"></a>Vea también
 
-- [WMI y contadores de rendimiento (referencia de API no administrada)](index.md)
+- [WMI y contadores de rendimiento (referencia de la API no administrada)](index.md)

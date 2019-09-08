@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: 92db9bdb209a542cc4fa269b35bfa98f8f20d2b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4cadf20cdadb39483f26a29619cae058eac47e50
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940085"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793649"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Procedimiento para crear dinámicamente una base de datos
 En LINQ to SQL, se asigna un modelo de objetos a una base de datos relacional. La asignación se habilita mediante una asignación basada en atributos o mediante un archivo de asignación externo para describir la estructura de la base de datos relacional. En ambos escenarios, hay información suficiente sobre la base de datos relacional para crear una instancia nueva de la base de datos mediante el método <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>.  
@@ -50,8 +50,8 @@ En LINQ to SQL, se asigna un modelo de objetos a una base de datos relacional. L
   
 ## <a name="see-also"></a>Vea también
 
-- [Asignación basada en atributos](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
-- [Asignación externa](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Asignación de tipos entre CLR y SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Realización y envío de cambios de datos](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [Asignación basada en atributos](attribute-based-mapping.md)
+- [Asignación externa](external-mapping.md)
+- [Asignación de tipos entre CLR y SQL](sql-clr-type-mapping.md)
+- [Información general](background-information.md)
+- [Realización y envío de cambios de datos](making-and-submitting-data-changes.md)

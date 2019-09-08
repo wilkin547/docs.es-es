@@ -2,12 +2,12 @@
 title: Introducción a los cambios de estado
 ms.date: 03/30/2017
 ms.assetid: a79ed2aa-e49a-47a8-845a-c9f436ec9987
-ms.openlocfilehash: 154f49e7da059d20d0751a73c664aa2a0f89be12
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9f72d113c7160bdb6c4c5680669243323a30a4c1
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963083"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796943"
 ---
 # <a name="understanding-state-changes"></a>Introducción a los cambios de estado
 En este tema se discuten los estados y transiciones que los canales tienen, los tipos utilizados para estructurar los estados del canal, y cómo implementarlos.  
@@ -28,12 +28,12 @@ En este tema se discuten los estados y transiciones que los canales tienen, los 
   
  Cada <xref:System.ServiceModel.ICommunicationObject> empieza en el estado Creado. En este estado, una aplicación puede configurar el objeto estableciendo sus propiedades. Cuando un objeto está en un estado diferente a Creado, se considera inmutable.  
   
- ![Transición de estado de canal](../../../../docs/framework/wcf/extending/media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
+ ![Transición de estado de canal](./media/channelstatetranitionshighleveldiagram.gif "ChannelStateTranitionsHighLevelDiagram")  
 Figura 1. La máquina de estados de ICommunicationObject.  
   
  Windows Communication Foundation (WCF) proporciona una clase base abstracta denominada <xref:System.ServiceModel.Channels.CommunicationObject> que <xref:System.ServiceModel.ICommunicationObject> implementa y la máquina de Estados del canal. El gráfico siguiente es un diagrama de estados modificado que es específico de <xref:System.ServiceModel.Channels.CommunicationObject>. Además de la máquina de estados <xref:System.ServiceModel.ICommunicationObject>, muestra el control de tiempo cuando se invocan métodos <xref:System.ServiceModel.Channels.CommunicationObject> adicionales.  
   
- ![Cambios de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
+ ![Cambios de estado](./media/wcfc-wcfchannelsigure5statetransitionsdetailsc.gif "wcfc_WCFChannelsigure5StateTransitionsDetailsc")  
 Figura 2. La implementación de CommunicationObject del equipo de estados ICommunicationObject incluidas las llamadas a eventos y métodos protegidos.  
   
 ### <a name="icommunicationobject-events"></a>Eventos ICommunicationObject  
@@ -90,7 +90,7 @@ Figura 2. La implementación de CommunicationObject del equipo de estados ICommu
   
  A continuación establece el estado en Abriendo y llama a OnOpening () (que desencadena el evento Abriendo), OnOpen () y OnOpened () en ese orden. OnOpened () establece el estado en Abierto y desencadena el evento Abierto. Si cualquiera de estas operaciones provoca una excepción, Open() llama a Fault() y permite que se produzca la excepción. El diagrama siguiente muestra con más detalle el proceso Abrir.  
   
- ![Cambios de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
+ ![Cambios de estado](./media/wcfc-wcfchannelsigurecoopenflowchartf.gif "wcfc_WCFChannelsigureCOOpenFlowChartf")  
 Invalide el método OnOpen para implementar lógica abierta personalizada como abrir un objeto de comunicación interno.  
   
  Close (Método)  
@@ -101,7 +101,7 @@ Invalide el método OnOpen para implementar lógica abierta personalizada como a
   
  Se puede llamar al método Close() en cualquier estado. Intenta cerrar normalmente el objeto. Si se encuentra un error, finaliza el objeto. El método no hace nada si el estado actual es Cerrando o Cerrado. De lo contrario establece el estado en Cerrando. Si el estado original era Creado, Abriendo o Error, llama a Abort() (vea el diagrama siguiente). Si el estado original era Abierto, llama a OnClosing() (que desencadena el evento Cerrando), OnClose() y OnClosed() en ese orden. Si cualquiera de estas operaciones provoca una excepción, Close() llama a Abort() y permite que se produzca la excepción. OnClosed() establece el estado en Cerrado y desencadena el evento Cerrado. El diagrama siguiente muestra con más detalle el proceso Cerrar.  
   
- ![Cambios de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
+ ![Cambios de estado](./media/wcfc-wcfchannelsguire7ico-closeflowchartc.gif "wcfc_WCFChannelsguire7ICO-CloseFlowChartc")  
 Invalide el método OnClose para implementar la lógica del cierre personalizada, como cerrar un objeto de comunicación interno. Toda lógica de cierre elegante que se pueda bloquear durante mucho tiempo (por ejemplo, esperando a que el otro lado responda) se debería implementar en OnClose() porque toma un parámetro de tiempo de espera y porque no se llama como parte de Abort().  
   
  Abort  
@@ -111,7 +111,7 @@ Condición posterior: El estado es Closed. Podría iniciar una excepción.
   
  El método Abort() no hace nada si el estado actual es Cerrado o si el objeto se ha finalizado antes (por ejemplo, posiblemente teniendo Abort() ejecutándose en otro subproceso). De lo contrario establece el estado a Cerrando y llama a OnClosing() (que desencadena el evento Cerrando), OnAbort() y OnClosed() en ese orden (no llama a OnClose porque se está finalizando el objeto, no cerrado). OnClosed() establece el estado en Cerrado y desencadena el evento Cerrado. Si cualquiera de estas operaciones provoca una excepción, se reinicia el llamador de Anular. Las implementaciones de OnClosing(), OnClosed() y OnAbort() no se deberían bloquear (por ejemplo, en entrada/salida). El diagrama siguiente muestra con más detalle el proceso Anular.  
   
- ![Cambios de estado](../../../../docs/framework/wcf/extending/media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
+ ![Cambios de estado](./media/wcfc-wcfchannelsigure8ico-abortflowchartc.gif "wcfc_WCFChannelsigure8ICO-AbortFlowChartc")  
 Invalide el método OnAbort para implementar lógica de finalización personalizada como finalizar un objeto de comunicación interno.  
   
  Fault  

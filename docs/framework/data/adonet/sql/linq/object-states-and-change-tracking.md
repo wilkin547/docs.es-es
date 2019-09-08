@@ -2,12 +2,12 @@
 title: Estados de objetos y seguimiento de cambios
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: a60afab5158d0d5f66d12d6913ee890abc8ca730
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a9df200f4d2e5f64bf5883c7bc513ba7129dcaad
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70043516"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781277"
 ---
 # <a name="object-states-and-change-tracking"></a>Estados de objetos y seguimiento de cambios
 
@@ -21,7 +21,7 @@ La tabla siguiente enumera los posibles estados de los objetos de [!INCLUDE[vbte
 |-----------|-----------------|
 |`Untracked`|Objeto del que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no realiza un seguimiento. Algunos ejemplos son:<br /><br /> : Un objeto no consultado a través <xref:System.Data.Linq.DataContext> de la actual (por ejemplo, un objeto recién creado).<br />: Un objeto creado a través de la deserialización<br />: Un objeto consultado a través <xref:System.Data.Linq.DataContext>de un diferente.|
 |`Unchanged`|Un objeto recuperado utilizando el <xref:System.Data.Linq.DataContext> actual y que se desconoce si se ha modificado desde que se creó.|
-|`PossiblyModified`|Objeto que está *asociado* a <xref:System.Data.Linq.DataContext>. Para obtener más información, vea [operaciones de recuperación de datos y CUD en aplicaciones de N niveles (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).|
+|`PossiblyModified`|Objeto que está *asociado* a <xref:System.Data.Linq.DataContext>. Para obtener más información, vea [operaciones de recuperación de datos y CUD en aplicaciones de N niveles (LINQ to SQL)](data-retrieval-and-cud-operations-in-n-tier-applications.md).|
 |`ToBeInserted`|Objeto no recuperado utilizando el <xref:System.Data.Linq.DataContext> actual. Esto produce una operación `INSERT` en la base de datos durante la ejecución de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
 |`ToBeUpdated`|Objeto que se sabe que se modificó desde que se recuperó. Esto produce una operación `UPDATE` en la base de datos durante la ejecución de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
 |`ToBeDeleted`|Objeto marcado para la eliminación, que produce una operación `DELETE` en la base de datos durante la ejecución de <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.|
@@ -31,7 +31,7 @@ La tabla siguiente enumera los posibles estados de los objetos de [!INCLUDE[vbte
 
 Puede solicitar `Inserts` explícitamente mediante el método <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>. Como alternativa, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] puede deducir `Inserts` los objetos conectados a uno de los objetos conocidos que deben actualizarse. Por ejemplo, si `Untracked` agrega un objeto a una <xref:System.Data.Linq.EntitySet%601> o establece un <xref:System.Data.Linq.EntityRef%601> en un `Untracked` objeto, hace que el `Untracked` objeto sea accesible por medio de objetos de seguimiento en el gráfico. Durante el <xref:System.Data.Linq.DataContext.SubmitChanges%2A>procesamiento [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , recorre los objetos sometidos a seguimiento y detecta cualquier objeto persistente accesible del que no se realiza un seguimiento. Tales objetos son candidatos para la inserción en la base de datos.
 
-En el caso de las clases de <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>una`o`jerarquía de herencia, () también establece el valor del miembro designado como discriminador para que coincida `o`con el tipo del objeto. Si un tipo que coincide con el valor de discriminador predeterminado, esta acción hace que dicho valor se sobrescriba con el valor predeterminado. Para obtener más información, consulte [compatibilidad con la herencia](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md).
+En el caso de las clases de <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>una`o`jerarquía de herencia, () también establece el valor del miembro designado como *discriminador* para que coincida `o`con el tipo del objeto. Si un tipo que coincide con el valor de discriminador predeterminado, esta acción hace que dicho valor se sobrescriba con el valor predeterminado. Para obtener más información, consulte [compatibilidad con la herencia](inheritance-support.md).
 
 > [!IMPORTANT]
 > Un objeto agregado a `Table` no se encuentra en la memoria caché de identidad. La memoria caché de identidad solo refleja lo que se recupera de la base de datos. Después de una llamada a <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, la entidad agregada no aparece en las consultas en la base de datos hasta que se complete <xref:System.Data.Linq.DataContext.SubmitChanges%2A> correctamente.
@@ -69,5 +69,5 @@ Si actualiza la referencia requerida y la clave externa correspondiente, debe as
 
 ## <a name="see-also"></a>Vea también
 
-- [Información general](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Operaciones de inserción, actualización y eliminación](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+- [Información general](background-information.md)
+- [Operaciones de inserción, actualización y eliminación](insert-update-and-delete-operations.md)

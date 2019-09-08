@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
-ms.openlocfilehash: 21ed620ab5b7a78fc4f396cc474e7c62b70f1ddd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 8baf361ba66ba33927121ae20edcc6c12964c21c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946623"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792097"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>Qué puede hacer con LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] admite toda la funcionalidad clave que puede esperar un programador de SQL. Puede consultar, insertar, actualizar y eliminar información en las tablas.  
   
 ## <a name="selecting"></a>Selección  
- Para la selección (*proyección*), basta con que escriba una consulta [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] en su propio lenguaje de programación y, después, la ejecute para recuperar los resultados. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduce automáticamente todas las operaciones necesarias a las operaciones SQL correspondientes con la que ya está familiarizado. Para obtener más información, consulta [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md).  
+ Para la selección (*proyección*), basta con que escriba una consulta [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] en su propio lenguaje de programación y, después, la ejecute para recuperar los resultados. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduce automáticamente todas las operaciones necesarias a las operaciones SQL correspondientes con la que ya está familiarizado. Para obtener más información, consulta [LINQ to SQL](index.md).  
   
  En el ejemplo siguiente se recuperan los nombres de las compañías de los clientes de Londres y se muestran en la ventana de la consola.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "69946623"
  Para realizar una operación `Delete` en un elemento, quite el elemento de la colección a la que pertenece y, a continuación, llame al método <xref:System.Data.Linq.DataContext.SubmitChanges%2A> en <xref:System.Data.Linq.DataContext> para confirmar el cambio.  
   
 > [!NOTE]
-> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no reconoce las operaciones de eliminación en cascada. Si desea eliminar una fila de una tabla que tiene restricciones, consulte [How to: Eliminar filas de la base](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)de datos.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] no reconoce las operaciones de eliminación en cascada. Si desea eliminar una fila de una tabla que tiene restricciones, consulte [How to: Eliminar filas de la base](how-to-delete-rows-from-the-database.md)de datos.  
   
  En el ejemplo siguiente, se recupera el cliente cuyo `CustomerID` es `98128` de la base de datos. A continuación, después de confirmar que se recuperó la fila del cliente, se llama a <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> para quitar ese objeto de la colección. Finalmente, se llama a <xref:System.Data.Linq.DataContext.SubmitChanges%2A> para transmitir la eliminación a la base de datos.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "69946623"
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
-- [Modelo de objetos de LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [Introducción](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [Guía de programación](programming-guide.md)
+- [Modelo de objetos de LINQ to SQL](the-linq-to-sql-object-model.md)
+- [Introducción](getting-started.md)

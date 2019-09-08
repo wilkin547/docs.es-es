@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
-ms.openlocfilehash: 839642c4fea45f4f37c5dc351d71417d46d07093
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3719188064388b00c756dd037d4a475ca6debd13
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877674"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782424"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Detectar cambios con SqlDependency
 
@@ -18,7 +18,7 @@ Un objeto <xref:System.Data.SqlClient.SqlDependency> se puede asociar a <xref:Sy
 
 ## <a name="security-considerations"></a>Consideraciones de seguridad
 
-La infraestructura de dependencia se basa en un <xref:System.Data.SqlClient.SqlConnection> que se abre cuando se llama a <xref:System.Data.SqlClient.SqlDependency.Start%2A> para recibir notificaciones de que los datos subyacentes han cambiado para un comando concreto. La capacidad de un cliente de iniciar la llamada a `SqlDependency.Start` se controla mediante el uso de <xref:System.Data.SqlClient.SqlClientPermission> y los atributos de seguridad de acceso del código. Para obtener más información, consulte [habilitar las notificaciones de consulta](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md) y [Code Access Security and ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).
+La infraestructura de dependencia se basa en un <xref:System.Data.SqlClient.SqlConnection> que se abre cuando se llama a <xref:System.Data.SqlClient.SqlDependency.Start%2A> para recibir notificaciones de que los datos subyacentes han cambiado para un comando concreto. La capacidad de un cliente de iniciar la llamada a `SqlDependency.Start` se controla mediante el uso de <xref:System.Data.SqlClient.SqlClientPermission> y los atributos de seguridad de acceso del código. Para obtener más información, vea [habilitar notificaciones de consulta](enabling-query-notifications.md) y [seguridad de acceso del código y ADO.net](../code-access-security.md).
 
 ### <a name="example"></a>Ejemplo
 
@@ -127,5 +127,5 @@ void Termination()
 
 ## <a name="see-also"></a>Vea también
 
-- [Notificaciones de consulta en SQL Server](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [Proveedores administrados de ADO.NET y Centro para desarrolladores de DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [Notificaciones de consulta en SQL Server](query-notifications-in-sql-server.md)
+- [Información general sobre ADO.NET](../ado-net-overview.md)

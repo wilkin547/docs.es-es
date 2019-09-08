@@ -2,12 +2,12 @@
 title: System.DateTimeOffset (Métodos)
 ms.date: 03/30/2017
 ms.assetid: 25b3e5c0-7603-4a70-b3e5-2149e3da69a2
-ms.openlocfilehash: a638a4fcc156727f734ff480a18b9997bc9d2e34
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2e29cf02d4f7e8004782264bf940bb1faf393269
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69959084"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781550"
 ---
 # <a name="systemdatetimeoffset-methods"></a>System.DateTimeOffset (Métodos)
 LINQ to SQL permite llamar a la mayoría de los métodos, operadores y propiedades de <xref:System.DateTimeOffset?displayProperty=nameWithType> desde las consultas LINQ to SQL, cuando se hayan asignado en el modelo de objetos o en el archivo de asignación externo.  
@@ -28,6 +28,6 @@ LINQ to SQL permite llamar a la mayoría de los métodos, operadores y propiedad
   
 ## <a name="see-also"></a>Vea también
 
-- [Conceptos sobre consultas](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [Creación del modelo de objetos](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Asignación de tipos entre CLR y SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
+- [Conceptos sobre consultas](query-concepts.md)
+- [Creación del modelo de objetos](creating-the-object-model.md)
+- [Asignación de tipos entre CLR y SQL](sql-clr-type-mapping.md)

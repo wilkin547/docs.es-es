@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 484dacd4d9803139edf3fd5bad22c164d50de3dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 71058a1ff82335b2a341904805d06738e662c296
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757246"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798862"
 ---
 # <a name="strongnametokenfromassembly-function"></a>StrongNameTokenFromAssembly (Función)
 Crea un token de nombre seguro desde el archivo de ensamblado especificado.  
   
- Esta función está desusada. Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md) método en su lugar.  
+ Esta función está en desuso. Use el método [ICLRStrongName:: StrongNameTokenFromAssembly (](../hosting/iclrstrongname-strongnametokenfromassembly-method.md) en su lugar.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,35 +40,35 @@ BOOLEAN StrongNameTokenFromAssembly (
   
 ## <a name="parameters"></a>Parámetros  
  `wszFilePath`  
- [in] La ruta de acceso al archivo ejecutable portable (PE) para el ensamblado.  
+ de La ruta de acceso al archivo portable ejecutable (PE) para el ensamblado.  
   
  `ppbStrongNameToken`  
- [out] El token de nombre seguro devuelto.  
+ enuncia El token de nombre seguro devuelto.  
   
  `pcbStrongNameToken`  
- [out] El tamaño, en bytes, del token de nombre seguro.  
+ enuncia Tamaño, en bytes, del token de nombre seguro.  
   
 ## <a name="return-value"></a>Valor devuelto  
- `true` Cuando se finaliza correctamente; en caso contrario, `false`.  
+ `true`Cuando se complete correctamente; en caso `false`contrario,.  
   
 ## <a name="remarks"></a>Comentarios  
  Un token de nombre seguro es la forma abreviada de una clave pública. El token es un hash de 64 bits que se crea a partir de la clave pública utilizada para firmar el ensamblado. El token es una parte del nombre seguro del ensamblado y se puede leer desde los metadatos del ensamblado.  
   
- Una vez creado el token, debe llamar a la [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md) función para liberar la memoria asignada.  
+ Una vez creado el token, debe llamar a la función [StrongNameFreeBuffer](strongnamefreebuffer-function.md) para liberar la memoria asignada.  
   
- Si el `StrongNameTokenFromAssembly` función no se completa correctamente, llame a la [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) función para recuperar el último error generado.  
+ Si la `StrongNameTokenFromAssembly` función no se completa correctamente, llame a la función [StrongNameErrorInfo (](strongnameerrorinfo-function.md) para recuperar el último error generado.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).  
   
- **Encabezado**: StrongName.h  
+ **Encabezado**: StrongName. h  
   
- **Biblioteca:** Incluye como recurso en mscoree.dll  
+ **Biblioteca** Se incluye como recurso en Mscoree. dll  
   
  **Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Vea también
 
-- [StrongNameTokenFromAssembly (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [StrongNameTokenFromAssemblyEx (método)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [ICLRStrongName (interfaz)](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [StrongNameTokenFromAssembly (método)](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [StrongNameTokenFromAssemblyEx (método)](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [ICLRStrongName (interfaz)](../hosting/iclrstrongname-interface.md)

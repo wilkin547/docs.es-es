@@ -1,5 +1,5 @@
 ---
-title: Procedimiento Especifique las credenciales del cliente para un servicio de datos de solicitud (WCF Data Services)
+title: Procedimiento Especificar credenciales de cliente para una solicitud de servicio de datos (WCF Data Services)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,20 +7,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: ed32cb7d1c9da8a98333bc7eddd3e5707e4664ff
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4177b7f5138bd3e3ddd63e4a0d8d4bcb2be01fbb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660865"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790324"
 ---
-# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Procedimiento Especifique las credenciales del cliente para un servicio de datos de solicitud (WCF Data Services)
-De forma predeterminada, la biblioteca cliente no proporciona credenciales cuando se envía una solicitud a un servicio [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Sin embargo, puede especificar que las credenciales se envíen para autenticar solicitudes al servicio de datos proporcionando una clase <xref:System.Net.NetworkCredential> para la propiedad <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> de la clase <xref:System.Data.Services.Client.DataServiceContext>. Para obtener más información, consulta [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md). En el ejemplo de este tema se muestra cómo proporcionar explícitamente credenciales que el cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usará cuando solicite datos del servicio de datos.  
+# <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Procedimiento Especificar credenciales de cliente para una solicitud de servicio de datos (WCF Data Services)
+De forma predeterminada, la biblioteca cliente no proporciona credenciales cuando se envía una solicitud a un servicio [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Sin embargo, puede especificar que las credenciales se envíen para autenticar solicitudes al servicio de datos proporcionando una clase <xref:System.Net.NetworkCredential> para la propiedad <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> de la clase <xref:System.Data.Services.Client.DataServiceContext>. Para obtener más información, consulta [Securing WCF Data Services](securing-wcf-data-services.md). En el ejemplo de este tema se muestra cómo proporcionar explícitamente credenciales que el cliente de [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] usará cuando solicite datos del servicio de datos.  
   
- En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean cuando se completa la [inicio rápido de WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). También puede usar el [servicio de datos de ejemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) que se publica en el [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ; estos datos de ejemplo de sitio Web de servicio es de solo lectura y se intentan guardar los cambios devuelve un error. Los datos de ejemplo de servicios en la [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] sitio Web de permitir la autenticación anónima.  
+ En el ejemplo de este tema se usa el servicio de datos de ejemplo Northwind y las clases del servicio de datos de cliente generadas automáticamente. Este servicio y las clases de datos de cliente se crean al completar la guía de [Inicio rápido de WCF Data Services](quickstart-wcf-data-services.md). También puede usar el [servicio de datos de ejemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) que se publica en [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] el sitio web de; este servicio de datos de ejemplo es de solo lectura y si se intentan guardar los cambios, se devuelve un error. Los servicios de datos de [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ejemplo del sitio web permiten la autenticación anónima.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente es desde la página de código subyacente de un archivo de lenguaje de marcado de aplicaciones Extensible (XAML) que es la página principal de la aplicación de Windows Presentation Framework. En este ejemplo se muestra una instancia de `LoginWindow` para recopilar las credenciales de autenticación del usuario y, a continuación, las usa cuando realiza una solicitud al servicio de datos.  
+ El ejemplo siguiente procede de la página de código subyacente de un archivo lenguaje XAML (XAML) que es la Página principal de la aplicación de Windows Presentation Framework. En este ejemplo se muestra una instancia de `LoginWindow` para recopilar las credenciales de autenticación del usuario y, a continuación, las usa cuando realiza una solicitud al servicio de datos.  
   
  [!code-csharp[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/clientcredentials.xaml.cs#clientcredentials)]  
  [!code-vb[Astoria Northwind Client#ClientCredentials](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/clientcredentials.xaml.vb#clientcredentials)]
@@ -50,9 +50,9 @@ De forma predeterminada, la biblioteca cliente no proporciona credenciales cuand
   
 - Los datos enviados con la autenticación básica e implícita no se cifran. Por tanto, los puede ver un adversario. Además, se envían credenciales de autenticación básica (nombre de usuario y contraseña) en texto no cifrado y se pueden interceptar.  
   
- Para obtener más información, consulta [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md).  
+ Para obtener más información, consulta [Securing WCF Data Services](securing-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Vea también
 
-- [Protección de WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [Biblioteca cliente de Servicios de datos de WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [Protección de WCF Data Services](securing-wcf-data-services.md)
+- [Biblioteca cliente de Servicios de datos de WCF](wcf-data-services-client-library.md)

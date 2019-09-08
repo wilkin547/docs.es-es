@@ -2,57 +2,57 @@
 title: Ejemplos de LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
-ms.openlocfilehash: 484b4fcf39ef70fd0ec23c86b320d7f57f4f3eb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 68d4ed74713858a643c6db40b6982ba2775dbfa5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645933"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783757"
 ---
 # <a name="linq-to-dataset-examples"></a>Ejemplos de LINQ to DataSet
-Esta sección proporciona a los ejemplos de programación de conjunto de datos que usan los operadores de consulta estándar LINQ. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena usando el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Para obtener más información, consulte [Standard Query Operators Overview (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [Standard Query Operators Overview (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
+En esta sección se proporciona LINQ to DataSet ejemplos de programación que utilizan los operadores de consulta estándar. El <xref:System.Data.DataSet> usado en estos ejemplos se rellena con el `FillDataSet` método, que se especifica en [cargar datos en un conjunto de datos](loading-data-into-a-dataset.md). Para obtener más información, vea información general [sobre operadoresC#de consulta estándar ()](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md) o [información general sobre operadores de consulta estándar (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Ejemplos de expresiones de consultas](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+ [Ejemplos de expresiones de consultas](query-expression-examples-linq-to-dataset.md)  
  Contiene los siguientes ejemplos:  
   
-- [Proyección](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+- [Proyección](query-expression-syntax-examples-projection-linq-to-dataset.md)  
   
-- [Restricción](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
+- [Restricción](query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
-- [Particionamiento](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+- [Creación de particiones](query-expression-syntax-examples-partitioning.md)  
   
-- [Ordenación](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+- [Ordenación](query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
-- [Operadores de elementos](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+- [Operadores de elementos](query-expression-syntax-examples-element-operators.md)  
   
-- [Operadores de agregado](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+- [Operadores de agregado](query-expression-syntax-examples-aggregate-operators.md)  
   
-- [Operadores de combinación](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+- [Operadores de combinación](query-expression-syntax-examples-join-operators.md)  
   
- [Ejemplos de consultas basadas en métodos](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ [Ejemplos de consultas basadas en métodos](method-based-query-examples-linq-to-dataset.md)  
  Contiene los siguientes ejemplos:  
   
-- [Proyección](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+- [Proyección](method-based-query-syntax-examples-projection.md)  
   
-- [Particionamiento](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
+- [Particionamiento](method-based-query-syntax-examples-partitioning-linq.md)  
   
-- [Ordenación](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+- [Ordenación](method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
-- [Operadores Set](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+- [Operadores Set](method-based-query-syntax-examples-set-operators.md)  
   
-- [Operadores de conversión](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+- [Operadores de conversión](method-based-query-syntax-examples-conversion-operators.md)  
   
-- [Operadores de elementos](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
+- [Operadores de elementos](method-based-query-syntax-examples-element-operators.md)  
   
-- [Operadores de agregado](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+- [Operadores de agregado](method-based-query-syntax-examples-aggregate-operators.md)  
   
-- [Join](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
+- [Join](method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
- [Ejemplos de operadores específicos de conjuntos de datos](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ [Ejemplos de operadores específicos de conjuntos de datos](dataset-specific-operator-examples-linq-to-dataset.md)  
  Contiene ejemplos que demuestran cómo usar el método <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> y la clase <xref:System.Data.DataRowComparer>.  
   
 ## <a name="see-also"></a>Vea también
 
-- [Guía de programación](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
-- [Carga de datos en un conjunto de datos](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [Guía de programación](programming-guide-linq-to-dataset.md)
+- [Carga de datos en un conjunto de datos](loading-data-into-a-dataset.md)

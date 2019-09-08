@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: e118c9ec29b8d4e46fe799f24bb8a96929bf2ed8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: e464aff46f311ede1cd629fb459ade9a6e627d59
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663257"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796954"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Procedimiento para usar diferentes certificados X.509 para la firma y el cifrado
 
-En este tema se muestra cómo configurar Windows Communication Foundation (WCF) para usar certificados diferentes para firmar los mensajes y el cifrado en el cliente y el servicio.
+En este tema se muestra cómo configurar Windows Communication Foundation (WCF) para usar certificados diferentes para la firma y el cifrado de mensajes tanto en el cliente como en el servicio.
 
-Para habilitar certificados independientes que se usará para la firma y cifrado, un cliente personalizado o servicio credenciales (o ambos) deben crearse porque WCF no proporciona una API para establecer varios certificados de cliente o servicio. Además, se debe proporcionar un administrador de tokens de seguridad para sacar el máximo partido a la información de varios certificados y crear un proveedor de tokens de seguridad adecuado para el uso de claves especificado y la dirección del mensaje.
+Para permitir el uso de certificados independientes para la firma y el cifrado, se deben crear credenciales de cliente o servicio personalizadas (o ambas) porque WCF no proporciona una API para establecer varios certificados de cliente o de servicio. Además, se debe proporcionar un administrador de tokens de seguridad para sacar el máximo partido a la información de varios certificados y crear un proveedor de tokens de seguridad adecuado para el uso de claves especificado y la dirección del mensaje.
 
 El diagrama siguiente muestra las clases principales que se utilizan, las clases de las que se heredan (identificadas mediante una flecha que señala hacia arriba) y los tipos de valor devueltos de ciertos métodos y propiedades.
 
@@ -34,17 +34,17 @@ El diagrama siguiente muestra las clases principales que se utilizan, las clases
 
   - Su método <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> devuelve una instancia de <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider>.
 
-![Gráfico que muestra cómo se usan las credenciales del cliente](../../../../docs/framework/wcf/extending/media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
+![Gráfico que muestra cómo se usan las credenciales del cliente](./media/e4971edd-a59f-4571-b36f-7e6b2f0d610f.gif "e4971edd-a59f-4571-b36f-7e6b2f0d610f")
 
-Para obtener más información acerca de las credenciales personalizadas, vea [Tutorial: Creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).
+Para obtener más información acerca de las credenciales personalizadas, vea [Tutorial: Crear credenciales](walkthrough-creating-custom-client-and-service-credentials.md)de cliente y servicio personalizadas.
 
 Además, debe crear un comprobador de identidad personalizado y vincularlo a un elemento de enlace de seguridad en un enlace personalizado. También debe utilizar las credenciales personalizadas en lugar de las credenciales predeterminadas.
 
 En el diagrama siguiente, se muestran las clases implicadas en el enlace personalizado y cómo se vincula el comprobador de identidad personalizado. Hay varios elementos de enlace implicados. Todos ellos se heredan de <xref:System.ServiceModel.Channels.BindingElement>. <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> tiene la propiedad <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>, que devuelve una instancia de <xref:System.ServiceModel.Security.IdentityVerifier>, a partir de la cual se personaliza `MyIdentityVerifier`.
 
-![Gráfico que muestra un elemento de enlace personalizado](../../../../docs/framework/wcf/extending/media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
+![Gráfico que muestra un elemento de enlace personalizado](./media/dddea4a2-0bb4-4921-9bf4-20d4d82c3da5.gif "dddea4a2-0bb4-4921-9bf4-20d4d82c3da5")
 
-Para obtener más información acerca de cómo crear un comprobador de identidad personalizado, consulte Cómo: [Cómo: Crear un comprobador de identidad de cliente personalizada](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md).
+Para obtener más información acerca de cómo crear un comprobador de identidad personalizado, consulte Cómo: [Procedimientos: Cree un comprobador](how-to-create-a-custom-client-identity-verifier.md)de identidad de cliente personalizado.
 
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>Para utilizar certificados independientes para la firma y el cifrado
 
@@ -97,4 +97,4 @@ Para obtener más información acerca de cómo crear un comprobador de identidad
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [Tutorial: Creación de cliente personalizada y las credenciales de servicio](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [Tutorial: Creación de credenciales de cliente y servicio personalizadas](walkthrough-creating-custom-client-and-service-credentials.md)
