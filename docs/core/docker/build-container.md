@@ -4,12 +4,12 @@ description: En este tutorial obtendrá información sobre cómo incluir una apl
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 81b3ce2d6ebb73648d9026c92f490dcc723014f6
-ms.sourcegitcommit: 09d699aca28ae9723399bbd9d3d44aa0cbd3848d
+ms.openlocfilehash: ec1c6eb5c1a78a631b8205da5d082e44884cde7a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68331048"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253952"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: Incluir una aplicación de .NET Core en un contenedor
 
@@ -60,7 +60,7 @@ dotnet new console -o app -n myapp
 
 El árbol de carpetas tendrá un aspecto similar al siguiente:
 
-```console
+```
 docker-working
 │   global.json
 │
@@ -184,7 +184,7 @@ El comando `FROM` indica a Docker que extraiga la imagen con la etiqueta **2.2**
 
 Guarde el archivo *Dockerfile*. La estructura de directorios de la carpeta de trabajo debería tener el siguiente aspecto. Algunos de los archivos de carpetas y archivos inferiores se han cortado para ahorrar espacio en este artículo:
 
-```console
+```
 docker-working
 │   Dockerfile
 │   global.json
@@ -347,7 +347,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 
 Docker proporciona el comando `docker run` para crear y ejecutar el contenedor como comando único. Este comando elimina la necesidad de ejecutar `docker create` y luego `docker start`. También puede establecer este comando en que elimine automáticamente el contenedor cuando este se detenga. Por ejemplo, use `docker run -it --rm` para hacer dos cosas: primero, use automáticamente el terminal actual para conectarse al contenedor y cuando el contenedor finalice, quítelo:
 
-```
+```console
 > docker run -it --rm myimage
 Counter: 1
 Counter: 2
@@ -359,7 +359,7 @@ Counter: 5
 
 Con `docker run -it`, el comando <kbd>CTRL + C</kbd> detendrá el proceso que está en ejecución en el contenedor, lo que, a su vez, detendrá el contenedor. Como se proporcionó el parámetro `--rm`, el contenedor se elimina automáticamente cuando se detiene el proceso. Compruebe que no existe:
 
-```
+```console
 > docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS    PORTS   NAMES
 ```
