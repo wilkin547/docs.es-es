@@ -16,20 +16,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ba049723710b378a90d17c67735a05e8a09d05d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 59b4df08157ce14a58393e54b671e8f41b8998ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636858"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799231"
 ---
-# <a name="gethashfromblob-function"></a><span data-ttu-id="51152-102">GetHashFromBlob (Función)</span><span class="sxs-lookup"><span data-stu-id="51152-102">GetHashFromBlob Function</span></span>
+# <a name="gethashfromblob-function"></a><span data-ttu-id="b674b-102">GetHashFromBlob (Función)</span><span class="sxs-lookup"><span data-stu-id="b674b-102">GetHashFromBlob Function</span></span>
 
-<span data-ttu-id="51152-103">Obtiene un hash del ensamblado en la dirección de memoria especificada mediante un algoritmo hash concreto.</span><span class="sxs-lookup"><span data-stu-id="51152-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>
+<span data-ttu-id="b674b-103">Obtiene un hash del ensamblado en la dirección de memoria especificada mediante un algoritmo hash concreto.</span><span class="sxs-lookup"><span data-stu-id="b674b-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>
 
-<span data-ttu-id="51152-104">Esta función está desusada.</span><span class="sxs-lookup"><span data-stu-id="51152-104">This function has been deprecated.</span></span> <span data-ttu-id="51152-105">Use la [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) método en su lugar.</span><span class="sxs-lookup"><span data-stu-id="51152-105">Use the [ICLRStrongName::GetHashFromBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromblob-method.md) method instead.</span></span>
+<span data-ttu-id="b674b-104">Esta función está en desuso.</span><span class="sxs-lookup"><span data-stu-id="b674b-104">This function has been deprecated.</span></span> <span data-ttu-id="b674b-105">Use el método [ICLRStrongName:: GetHashFromBlob (](../hosting/iclrstrongname-gethashfromblob-method.md) en su lugar.</span><span class="sxs-lookup"><span data-stu-id="b674b-105">Use the [ICLRStrongName::GetHashFromBlob](../hosting/iclrstrongname-gethashfromblob-method.md) method instead.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="51152-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="51152-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b674b-106">Sintaxis</span><span class="sxs-lookup"><span data-stu-id="b674b-106">Syntax</span></span>
 
 ```cpp
 HRESULT GetHashFromBlob (
@@ -42,37 +42,37 @@ HRESULT GetHashFromBlob (
 );
 ```
 
-## <a name="parameters"></a><span data-ttu-id="51152-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="51152-107">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="b674b-107">Parámetros</span><span class="sxs-lookup"><span data-stu-id="b674b-107">Parameters</span></span>
 
 `pbBlob`\
-<span data-ttu-id="51152-108">[in] Un puntero a la dirección del bloque de memoria para un algoritmo hash.</span><span class="sxs-lookup"><span data-stu-id="51152-108">[in] A pointer to the address of the memory block to be hashed.</span></span>
+<span data-ttu-id="b674b-108">de Puntero a la dirección del bloque de memoria al que se va a aplicar un algoritmo hash.</span><span class="sxs-lookup"><span data-stu-id="b674b-108">[in] A pointer to the address of the memory block to be hashed.</span></span>
 
 `cchBlob`\
-<span data-ttu-id="51152-109">[in] La longitud, en bytes, del bloque de memoria.</span><span class="sxs-lookup"><span data-stu-id="51152-109">[in] The length, in bytes, of the memory block.</span></span>
+<span data-ttu-id="b674b-109">de La longitud, en bytes, del bloque de memoria.</span><span class="sxs-lookup"><span data-stu-id="b674b-109">[in] The length, in bytes, of the memory block.</span></span>
 
 `piHashAlg`\
-<span data-ttu-id="51152-110">[in, out] Una constante que especifica el algoritmo hash.</span><span class="sxs-lookup"><span data-stu-id="51152-110">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="51152-111">Usar cero para el algoritmo predeterminado.</span><span class="sxs-lookup"><span data-stu-id="51152-111">Use zero for the default algorithm.</span></span>
+<span data-ttu-id="b674b-110">[in, out] Constante que especifica el algoritmo hash.</span><span class="sxs-lookup"><span data-stu-id="b674b-110">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="b674b-111">Use cero para el algoritmo predeterminado.</span><span class="sxs-lookup"><span data-stu-id="b674b-111">Use zero for the default algorithm.</span></span>
 
 `pbHash`\
-<span data-ttu-id="51152-112">[out] El búfer hash devuelto.</span><span class="sxs-lookup"><span data-stu-id="51152-112">[out] The returned hash buffer.</span></span>
+<span data-ttu-id="b674b-112">enuncia Búfer hash devuelto.</span><span class="sxs-lookup"><span data-stu-id="b674b-112">[out] The returned hash buffer.</span></span>
 
 `cchHash`\
-<span data-ttu-id="51152-113">[in] El tamaño máximo solicitado de `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="51152-113">[in] The requested maximum size of `pbHash`.</span></span>
+<span data-ttu-id="b674b-113">de Tamaño máximo solicitado de `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="b674b-113">[in] The requested maximum size of `pbHash`.</span></span>
 
 `pchHash`\
-<span data-ttu-id="51152-114">[out] El tamaño, en bytes, del devuelto `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="51152-114">[out] The size, in bytes, of the returned `pbHash`.</span></span>
+<span data-ttu-id="b674b-114">enuncia Tamaño, en bytes, del devuelto `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="b674b-114">[out] The size, in bytes, of the returned `pbHash`.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="51152-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="51152-115">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="b674b-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b674b-115">Requirements</span></span>
 
-<span data-ttu-id="51152-116">**Plataformas:** Consulte [Requisitos del sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="51152-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="b674b-116">**Select** Consulte [Requisitos del sistema](../../get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b674b-116">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="51152-117">**Encabezado**: StrongName.h</span><span class="sxs-lookup"><span data-stu-id="51152-117">**Header:** StrongName.h</span></span>
+<span data-ttu-id="b674b-117">**Encabezado**: StrongName. h</span><span class="sxs-lookup"><span data-stu-id="b674b-117">**Header:** StrongName.h</span></span>
 
-<span data-ttu-id="51152-118">**Biblioteca:** Incluye como recurso en MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="51152-118">**Library:** Included as a resource in MsCorEE.dll</span></span>
+<span data-ttu-id="b674b-118">**Biblioteca** Se incluye como recurso en MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="b674b-118">**Library:** Included as a resource in MsCorEE.dll</span></span>
 
-<span data-ttu-id="51152-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51152-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+<span data-ttu-id="b674b-119">**Versiones de .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b674b-119">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="51152-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="51152-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b674b-120">Vea también</span><span class="sxs-lookup"><span data-stu-id="b674b-120">See also</span></span>
 
-- [<span data-ttu-id="51152-121">GetHashFromBlob (método)</span><span class="sxs-lookup"><span data-stu-id="51152-121">GetHashFromBlob Method</span></span>](../hosting/iclrstrongname-gethashfromblob-method.md)
-- [<span data-ttu-id="51152-122">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="51152-122">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="b674b-121">GetHashFromBlob (método)</span><span class="sxs-lookup"><span data-stu-id="b674b-121">GetHashFromBlob Method</span></span>](../hosting/iclrstrongname-gethashfromblob-method.md)
+- [<span data-ttu-id="b674b-122">ICLRStrongName (interfaz)</span><span class="sxs-lookup"><span data-stu-id="b674b-122">ICLRStrongName Interface</span></span>](../hosting/iclrstrongname-interface.md)
