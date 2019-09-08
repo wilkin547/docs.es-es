@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 91e27206-01fb-4c7a-8afc-1383a6ac5067
-ms.openlocfilehash: ff33196f83e2c0d8d759e4ffc3fb7442e8ba0e3b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2de0182cc0b87768a9cff553b7ec6e77f8ccc7b8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69940091"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793774"
 ---
-# <a name="how-to-detect-and-resolve-conflicting-submissions"></a><span data-ttu-id="b60f6-102">Procedimiento para detectar y resolver envíos con conflictos</span><span class="sxs-lookup"><span data-stu-id="b60f6-102">How to: Detect and Resolve Conflicting Submissions</span></span>
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="b60f6-103">proporciona muchos recursos para detectar y resolver los conflictos que ocasionan los cambios que realizan varios usuarios en la base de datos.</span><span class="sxs-lookup"><span data-stu-id="b60f6-103">provides many resources for detecting and resolving conflicts that stem from multi-user changes to the database.</span></span> <span data-ttu-id="b60f6-104">Para obtener más información, vea [Cómo: Administrar conflictos](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)de cambios.</span><span class="sxs-lookup"><span data-stu-id="b60f6-104">For more information, see [How to: Manage Change Conflicts](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).</span></span>  
+# <a name="how-to-detect-and-resolve-conflicting-submissions"></a><span data-ttu-id="f773f-102">Procedimiento para detectar y resolver envíos con conflictos</span><span class="sxs-lookup"><span data-stu-id="f773f-102">How to: Detect and Resolve Conflicting Submissions</span></span>
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <span data-ttu-id="f773f-103">proporciona muchos recursos para detectar y resolver los conflictos que ocasionan los cambios que realizan varios usuarios en la base de datos.</span><span class="sxs-lookup"><span data-stu-id="f773f-103">provides many resources for detecting and resolving conflicts that stem from multi-user changes to the database.</span></span> <span data-ttu-id="f773f-104">Para obtener más información, consulte [Cómo Administrar conflictos](how-to-manage-change-conflicts.md)de cambios.</span><span class="sxs-lookup"><span data-stu-id="f773f-104">For more information, see [How to: Manage Change Conflicts](how-to-manage-change-conflicts.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b60f6-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="b60f6-105">Example</span></span>  
- <span data-ttu-id="b60f6-106">En el ejemplo siguiente se `try` muestra un / `catch` bloque que detecta <xref:System.Data.Linq.ChangeConflictException> una excepción.</span><span class="sxs-lookup"><span data-stu-id="b60f6-106">The following example shows a `try`/`catch` block that catches a <xref:System.Data.Linq.ChangeConflictException> exception.</span></span> <span data-ttu-id="b60f6-107">La información de entidad y miembro de cada conflicto se muestra en la ventana de la consola.</span><span class="sxs-lookup"><span data-stu-id="b60f6-107">Entity and member information for each conflict is displayed in the console window.</span></span>  
+## <a name="example"></a><span data-ttu-id="f773f-105">Ejemplo</span><span class="sxs-lookup"><span data-stu-id="f773f-105">Example</span></span>  
+ <span data-ttu-id="f773f-106">En el ejemplo siguiente se `try` muestra un / `catch` bloque que detecta <xref:System.Data.Linq.ChangeConflictException> una excepción.</span><span class="sxs-lookup"><span data-stu-id="f773f-106">The following example shows a `try`/`catch` block that catches a <xref:System.Data.Linq.ChangeConflictException> exception.</span></span> <span data-ttu-id="f773f-107">La información de entidad y miembro de cada conflicto se muestra en la ventana de la consola.</span><span class="sxs-lookup"><span data-stu-id="f773f-107">Entity and member information for each conflict is displayed in the console window.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="b60f6-108">Debe incluir la directiva `using System.Reflection` (`Imports System.Reflection` en Visual Basic) para habilitar la recuperación de la información.</span><span class="sxs-lookup"><span data-stu-id="b60f6-108">You must include the `using System.Reflection` directive (`Imports System.Reflection` in Visual Basic) to support the information retrieval.</span></span> <span data-ttu-id="b60f6-109">Para obtener más información, consulta <xref:System.Reflection>.</span><span class="sxs-lookup"><span data-stu-id="b60f6-109">For more information, see <xref:System.Reflection>.</span></span>  
+> <span data-ttu-id="f773f-108">Debe incluir la directiva `using System.Reflection` (`Imports System.Reflection` en Visual Basic) para habilitar la recuperación de la información.</span><span class="sxs-lookup"><span data-stu-id="f773f-108">You must include the `using System.Reflection` directive (`Imports System.Reflection` in Visual Basic) to support the information retrieval.</span></span> <span data-ttu-id="f773f-109">Para obtener más información, consulta <xref:System.Reflection>.</span><span class="sxs-lookup"><span data-stu-id="f773f-109">For more information, see <xref:System.Reflection>.</span></span>  
   
  [!code-csharp[DLinqSubmittingChanges#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#2)]
  [!code-vb[DLinqSubmittingChanges#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="b60f6-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="b60f6-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f773f-110">Vea también</span><span class="sxs-lookup"><span data-stu-id="f773f-110">See also</span></span>
 
-- [<span data-ttu-id="b60f6-111">Realización y envío de cambios de datos</span><span class="sxs-lookup"><span data-stu-id="b60f6-111">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [<span data-ttu-id="b60f6-112">Cómo: Administrar conflictos de cambios</span><span class="sxs-lookup"><span data-stu-id="b60f6-112">How to: Manage Change Conflicts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [<span data-ttu-id="f773f-111">Realización y envío de cambios de datos</span><span class="sxs-lookup"><span data-stu-id="f773f-111">Making and Submitting Data Changes</span></span>](making-and-submitting-data-changes.md)
+- [<span data-ttu-id="f773f-112">Cómo: Administrar conflictos de cambios</span><span class="sxs-lookup"><span data-stu-id="f773f-112">How to: Manage Change Conflicts</span></span>](how-to-manage-change-conflicts.md)
